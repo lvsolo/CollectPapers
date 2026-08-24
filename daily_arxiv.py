@@ -138,6 +138,14 @@ def main():
             # 机构必显示：映射表 → S2 反查 → 待查标记
             inst = common.institutions_for_paper(p)
             lines.append(f"- **🏷️ 机构**: {inst}")
+            # 代码库：arXiv 摘要自报 GitHub 优先，PWC 兜底（有才显示）
+            code = common.code_link_from_abstract(p.get("abstract", ""))
+            if not code:
+                pwc = common.pwc_link(p["title"])
+                if pwc:
+                    code = pwc.get("official") or pwc.get("page")
+            if code:
+                lines.append(f"- **💻 代码**: [{code.replace('https://', '')}]({code})")
             lines.append(f"- **提交日期**: {p['date']} · **分类**: {', '.join(p.get('cats', [])[:3])}")
             if ev:
                 if ev.get("summary_cn"):

@@ -178,8 +178,27 @@ def arxiv_by_ids(ids: list[str]) -> list[dict]:
 # ----------------------------------------------------------------------
 # 代码库链接（Papers with Code，best-effort）
 # ----------------------------------------------------------------------
-def pwc_link(title: str) -> str | None:
-    """查询 Papers with Code API。限流时静默降级。"""
+GITHUB_RE = re.compile(
+    r"(?:https?://)?(?:www\.)?github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", re.I)
+
+
+def code_link_from_abstract(abstract: str) -> str | None:
+    """从 arXiv 摘要里提取作者自报的 GitHub 仓库链接（最可信的官方代码源）。"""
+    if not abstract:
+        return None
+    for m in GITHUB_RE.finditer(abstract):
+        repo = m.group(1).rstrip(".")
+        # 过滤明显不是论文代码库的（github.io 主页、org 主页等）
+        if repo.lower().endswith((".github.io",)):
+            continue
+        parts = repo.split("/")
+        if len(parts) == 2 and all(parts):
+            return f"https://github.com/{repo}"
+    return None
+
+
+def pwc_link(title: str) -> dict | None:
+    """查询 Papers with Code。返回 {'official': github_url|None, 'page': pwc_url}。"""
     q = urllib.parse.quote(title[:120])
     data = http_get_json(
         f"https://paperswithcode.com/api/v1/search/?q={q}&per_page=3",
@@ -187,10 +206,21 @@ def pwc_link(title: str) -> str | None:
     if not data or not data.get("results"):
         return None
     for r in data["results"]:
-        if r.get("paper") and _title_sim(title, r["paper"].get("title", "")) > 0.82:
-            if r.get("implementation_count", 0) > 0 or r.get("url"):
-                # pwc 返回的 url 是页面；官方 repo 需要另一跳，这里给 PWC 页面即可
-                return f"https://paperswithcode.com{r['url']}" if r["url"].startswith("/") else r["url"]
+        p = r.get("paper") or {}
+        if _title_sim(title, p.get("title", "")) <= 0.82:
+            continue
+        out = {"official": None, "page": None}
+        if r.get("url"):
+            out["page"] = (f"https://paperswithcode.com{r['url']}"
+                           if r["url"].startswith("/") else r["url"])
+        pid = str(p.get("id", ""))
+        if pid:
+            detail = http_get_json(
+                f"https://paperswithcode.com/api/v1/papers/{pid}/",
+                cache_hours=168, retries=1, timeout=15)
+            if detail and detail.get("official_implementation"):
+                out["official"] = detail["official_implementation"]
+        return out
     return None
 
 

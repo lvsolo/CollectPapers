@@ -35,6 +35,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install deps
+        run: pip install pyyaml
       - id: setmatrix
         run: |
           python3 - <<'EOF' > matrix.json
@@ -126,7 +128,7 @@ jobs:
   # ------------------------------------------------------------------
   llm-eval:
     needs: [plan, collect]
-    if: always() && !cancelled()
+    if: always() && needs.plan.result == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -183,8 +185,8 @@ jobs:
   # 阶段 4: 汇总 README 索引
   # ------------------------------------------------------------------
   finalize:
-    needs: [collect, llm-eval]
-    if: always() && !cancelled()
+    needs: [plan, collect, llm-eval]
+    if: always() && needs.plan.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

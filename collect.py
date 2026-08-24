@@ -443,12 +443,17 @@ def main():
         enrich_papers(list(all_papers.values()),
                       do_citations=not args.no_enrich,
                       citations_budget=args.citations_budget)
-        # 代码链接（仅 top 论文，PWC 慢）
-        for title, p in list(all_papers.items())[:150]:
+        # 代码链接：arXiv 摘要自报 GitHub（快，零网络）→ PWC 兜底（慢，限 top 150）
+        for title, p in list(all_papers.items())[:400]:
             if not p.get("code"):
-                link = common.pwc_link(title)
+                link = common.code_link_from_abstract(p.get("abstract", ""))
                 if link:
                     p["code"] = link
+        for title, p in list(all_papers.items())[:150]:
+            if not p.get("code"):
+                r = common.pwc_link(title)
+                if r:
+                    p["code"] = r.get("official") or r.get("page")
                 time.sleep(0.4)
 
     # 每年上限
