@@ -12,10 +12,10 @@
 
 | 领域 | 说明 |
 |------|------|
-| **3D Detection** | 3D 目标检测（LiDAR / 相机 / 多模态融合）<br/>[2024](topics/3d-detection/Guideline%202024.md) |
-| **BEV** | 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）<br/>[2024](topics/bev/Guideline%202024.md) |
+| **3D Detection** | 3D 目标检测（LiDAR / 相机 / 多模态融合）<br/>[2024](topics/3d-detection/Guideline%202024.md) [2023](topics/3d-detection/Guideline%202023.md) |
+| **BEV** | 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）<br/>[2024](topics/bev/Guideline%202024.md) [2023](topics/bev/Guideline%202023.md) |
 | Occupancy | 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）（暂无） |
-| **Multi-camera Perception** | 多相机 / 多视角感知（环视、深度估计与 3D 预测）<br/>[2024](topics/multi-camera-perception/Guideline%202024.md) |
+| **Multi-camera Perception** | 多相机 / 多视角感知（环视、深度估计与 3D 预测）<br/>[2024](topics/multi-camera-perception/Guideline%202024.md) [2023](topics/multi-camera-perception/Guideline%202023.md) |
 | **Tracking** | 目标跟踪（MOT / 3D 跟踪 / 多目标多相机跟踪）<br/>[2024](topics/tracking/Guideline%202024.md) |
 | Open Vocabulary Detection | 开放词表检测 / 开放世界感知（OVD / OWOD）（暂无） |
 | FOD Detection | 异物检测（Foreign Object Debris，机场跑道/铁路 FOD）（暂无） |
@@ -23,9 +23,9 @@
 | Vision Transformer | 视觉 Transformer（ViT、混合架构、高效注意力）（暂无） |
 | **Self-supervised Vision** | 视觉自监督学习（对比学习、MAE、DINO 系）<br/>[2024](topics/self-supervised-vision/Guideline%202024.md) |
 | **Video Understanding** | 视频理解（动作识别、时序动作、视频大模型）<br/>[2024](topics/video-understanding/Guideline%202024.md) |
-| **Multimodal** | 多模态学习（图文对齐、融合、多模态融合感知）<br/>[2024](topics/multimodal/Guideline%202024.md) |
-| Continual Learning | 持续学习 / 增量学习（含 VLM/多模态场景）（暂无） |
-| Neural Architecture Search | 神经架构搜索（NAS、Zero-Cost、搜索空间）（暂无） |
+| **Multimodal** | 多模态学习（图文对齐、融合、多模态融合感知）<br/>[2024](topics/multimodal/Guideline%202024.md) [2023](topics/multimodal/Guideline%202023.md) |
+| **Continual Learning** | 持续学习 / 增量学习（含 VLM/多模态场景）<br/>[2023](topics/continual-learning/Guideline%202023.md) |
+| **Neural Architecture Search** | 神经架构搜索（NAS、Zero-Cost、搜索空间）<br/>[2023](topics/neural-architecture-search/Guideline%202023.md) |
 | **Network Pruning** | 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）<br/>[2024](topics/network-pruning/Guideline%202024.md) |
 | Knowledge Distillation | 知识蒸馏（特征/逻辑蒸馏、VLM 蒸馏、自蒸馏）（暂无） |
 
