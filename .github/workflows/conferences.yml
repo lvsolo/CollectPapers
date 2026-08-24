@@ -35,7 +35,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .cache
-          key: collectpapers-cache-v1
+          # 动态 key：每次运行都保存新缓存（含 LLM 评估结果），restore 按前缀取最近的
+          key: collectpapers-v2-${{ github.run_id }}
+          restore-keys: |
+            collectpapers-v2-
 
       - name: Run conference collector
         env:

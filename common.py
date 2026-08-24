@@ -273,11 +273,36 @@ EVAL_PROMPT = """请评估以下 {n} 篇 arXiv 论文（领域：{topics}）。�
 {papers}"""
 
 
+EVAL_PROMPT_VERSION = "v2"  # 改 prompt 时递增，使旧缓存失效
+
+
 def llm_eval_papers(llm: LLM, papers: list[dict], topic_names: str) -> list[dict]:
-    """批量评估，返回 [{id, stars, relevance, quality, topic, assessment, ...}]。失败返回 []。"""
-    results = []
-    for i in range(0, len(papers), llm.batch):
-        batch = papers[i:i + llm.batch]
+    """批量评估，结果按 (arxiv_id|prompt版本) 磁盘缓存 —— 重复运行不重复计费。"""
+    cache_path = CACHE_DIR / "llm_evals.json"
+    cache: dict = {}
+    if cache_path.exists():
+        try:
+            cache = json.loads(cache_path.read_text())
+        except json.JSONDecodeError:
+            cache = {}
+
+    def key(pid: str) -> str:
+        return f"{pid}|{EVAL_PROMPT_VERSION}"
+
+    results, todo = [], []
+    for p in papers:
+        pid = p.get("arxiv_id") or p.get("title")
+        hit = cache.get(key(pid))
+        if hit:
+            results.append(hit)
+        else:
+            todo.append(p)
+    if papers:
+        log(f"  LLM cache: {len(results)}/{len(papers)} hit, {len(todo)} to evaluate")
+
+    dirty = False
+    for i in range(0, len(todo), llm.batch):
+        batch = todo[i:i + llm.batch]
         listing = "\n\n".join(
             f"[{j+1}] 标题: {p['title']}\n    摘要: {p.get('abstract', '')[:1200]}"
             for j, p in enumerate(batch))
@@ -299,7 +324,11 @@ def llm_eval_papers(llm: LLM, papers: list[dict], topic_names: str) -> list[dict
             if 1 <= item["id"] <= len(batch):
                 item["_arxiv_id"] = batch[item["id"] - 1]["arxiv_id"]  # arxiv_id 或 title 作键
                 results.append(item)
+                cache[key(item["_arxiv_id"])] = item
+                dirty = True
         time.sleep(1)  # 温和限速
+    if dirty:
+        cache_path.write_text(json.dumps(cache, ensure_ascii=False))
     return results
 
 

@@ -28,6 +28,14 @@ jobs:
       - name: Install deps
         run: pip install pyyaml
 
+      - name: Restore LLM eval cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/llm_evals.json
+          key: llm-evals-${{ github.run_id }}
+          restore-keys: |
+            llm-evals-
+
       - name: Run daily collector
         env:
           LLM_API_BASE: ${{ secrets.LLM_API_BASE }}
