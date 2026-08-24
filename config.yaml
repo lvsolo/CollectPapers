@@ -210,24 +210,47 @@ topics:
       - camera tracking shot
       - tracking shot film
 
-  - name: Open Vocabulary Detection
-    slug: open-vocabulary-detection
-    description: 开放词表检测 / 开放世界感知（OVD / OWOD）
+  - name: Open-set Detection
+    slug: open-set-detection
+    description: 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）
     weight: 1.1
     keywords:
+      # 开放词表
       - open vocabulary
       - open-vocabulary
+      - grounded open-vocabulary
+      - open category
+      # 开放世界 / 开集
       - open world detection
       - open-world object detection
-      - zero-shot detection
-      - novel class discovery
-      - category-agnostic
       - open-set detection
-      - open category
-      - grounded open-vocabulary
-    must_any: '\bopen[ -](vocab|world|set|category|class)'
+      - open-set recognition
+      - open-set
+      - open world learning
+      # 未知类 / 新类
+      - unknown class
+      - unknown object
+      - novel class discovery
+      - novel class
+      - unknown-aware
+      # 零样本
+      - zero-shot detection
+      - zero-shot instance segmentation
+      # 通用类别
+      - category-agnostic
+      - class-agnostic
+      # 开放词表检测的下游形态
+      - open-vocabulary detection
+      - open-vocabulary segmentation
+      - open-vocabulary tracking
+      - open-vocabulary 3d
+      - region-word alignment
+      # OOD（视觉开放集）
+      - out-of-distribution detection visual
+      - out-of-distribution object
+    must_any: '\bopen[ -](vocab|world|set|category|class)|\b(unknown|novel|zero.shot|unseen|category.agnostic|class.agnostic)\b'
     exclude:
-      - open vocabulary nlp only
+      - out-of-distribution tabular
 
   - name: FOD Detection
     slug: fod-detection
