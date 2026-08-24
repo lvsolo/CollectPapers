@@ -150,16 +150,55 @@ topics:
 
   - name: FOD Detection
     slug: fod-detection
-    description: 异物检测（Foreign Object Debris，机场跑道/铁路 FOD）
-    weight: 0.9
+    description: 自动驾驶路面异物/异常物体检测（Road Anomaly / 小物体检测 / 可碾压性判断）
+    weight: 1.2
     keywords:
-      - foreign object debris
-      - fod detection
-      - foreign object detection
-      - runway inspection
-      - railway intrusion detection
-      - surface anomaly foreign
-    must_any: '\b(fod|foreign object)\b'
+      # 路面异常/异物检测主线
+      - road anomaly detection
+      - road anomaly
+      - road hazard
+      - road debris
+      - obstacle detection road
+      - lost cargo
+      - object lost on road
+      - small object detection road
+      - small obstacle
+      - tiny object detection driving
+      # 通用类别检测（无白名单，未知类别）
+      - unknown object detection
+      - novel object detection
+      - object as generic category
+      - category-agnostic detection
+      - obstacle detection without prior categories
+      - zero-shot obstacle
+      - road obstacle discovery
+      # 可通行性 / 可碾压性（run-over / traversability）
+      - traversability
+      - traversable
+      - run over
+      - run-over
+      - drivable area
+      - drivable road
+      - free space detection
+      - negative obstacle
+      - road surface monitoring
+      # 异常检测语义（开放世界感知下的道路异常）
+      - anomaly detection on road scenes
+      - road scene anomaly
+      - unexpected obstacle
+      - hazard detection autonomous driving
+    must_any: '\b(road|driving|drivable|autonomous|traversab|run.?over|obstacle|anomal|debris|hazard|lost cargo|free space)\b'
+    exclude:
+      # 排除机场跑道/铁路等传统 FOD 场景（用户明确不要）
+      - runway
+      - airport
+      - railway
+      - rail track
+      - aircraft
+      # 排除纯工业检测场景
+      - industrial anomaly
+      - surface defect
+      - manufacturing
 
   - name: VLM
     slug: vlm

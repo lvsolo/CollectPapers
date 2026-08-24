@@ -91,11 +91,11 @@ QUERIES_BY_CONFERENCE = [
     "3d object detection", "lidar", "point cloud", "bird's eye view", "bev",
     "occupancy", "multi-view", "multi-camera", "monocular depth",
     "multi-object tracking", "tracking", "open vocabulary", "open-world",
-    "zero-shot detection", "foreign object", "vision-language", "multimodal",
-    "vision transformer", "self-supervised", "contrastive learning",
-    "masked image", "video understanding", "action recognition",
-    "continual learning", "incremental learning", "architecture search",
-    "pruning", "sparsity", "distillation", "knowledge distillation",
+    "zero-shot detection", "road anomaly", "obstacle detection", "traversability",
+    "vision-language", "multimodal", "vision transformer", "self-supervised",
+    "contrastive learning", "masked image", "video understanding",
+    "action recognition", "continual learning", "incremental learning",
+    "architecture search", "pruning", "sparsity", "distillation", "knowledge distillation",
 ]
 
 
