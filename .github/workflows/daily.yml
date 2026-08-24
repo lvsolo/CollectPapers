@@ -49,5 +49,7 @@ jobs:
             echo "No changes, skip commit"
           else
             git commit -m "docs(daily): arXiv report $(date -u +%F)"
+            # 远端可能同时有新提交（人工/另一 workflow），rebase 后再推
+            git pull --rebase origin main
             git push
           fi
