@@ -53,8 +53,8 @@ daily/arxiv_report_YYYY-MM-DD.md
 
 | Workflow | 频率 | 内容 |
 |----------|------|------|
-| Daily arXiv Report | 每天 UTC 09:17（北京 17:17） | 抓最近 3 天 arXiv，去重后生成当日报告 |
-| Conference Guidelines Update | 每两天 UTC 02:23（北京 10:23） | 增量刷新六大顶会 Guideline |
+| Daily arXiv Report | 每天北京时间 02:23（UTC 18:23） | 抓最近 3 天 arXiv，去重后生成当日报告 |
+| Conference Guidelines Update | 每两天北京时间 02:41（UTC 18:41） | 增量刷新六大顶会 Guideline（增量缓存，非公布季自动跳过） |
 
 两者均支持 Actions 页面手动触发（workflow_dispatch）。修改 `config.yaml` 会自动触发顶会线重刷。
 
