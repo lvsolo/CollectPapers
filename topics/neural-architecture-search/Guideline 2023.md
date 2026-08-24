@@ -5,36 +5,36 @@
 
 > 同领域其他年份: 
 
-### EvoPrompting: Language Models for Code-Level Neural Architecture Search.
-- **链接**: [arXiv:2302.14838](https://arxiv.org/abs/2302.14838) · [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/184c1e18d00d7752805324da48ad25be-Abstract-Conference.html) · 📚 171 citations
-- **作者**: Angelica Chen, David Dohan, David R. So
-- **🏷️ 机构**: New York University, Google Brain
-- **会议**: NeurIPS 2023
+### MDL-NAS: A Joint Multi-domain Learning Framework for Vision Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01924) · 📚 被引 16
+- **作者**: Shiguang Wang, Tao Xie, Jian Cheng, Xingcheng Zhang, Haijun Liu
+- **🏷️ 机构**: University of Electronic Science and Technology of China, Harbin Institute of Technology, SenseTime Research
+- **会议**: CVPR 2023
+
+### DisWOT: Student Architecture Search for Distillation WithOut Training.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01145) · 📚 被引 60
+- **作者**: Peijie Dong, Lujun Li, Zimian Wei
+- **🏷️ 机构**: National University of Defense Technology, Chinese Academy of Sciences
+- **会议**: CVPR 2023
+
+### Adversarially Robust Neural Architecture Search for Graph Neural Networks.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00787) · 📚 被引 21
+- **作者**: Beini Xie, Heng Chang, Ziwei Zhang, Xin Wang, Daixin Wang, Zhiqiang Zhang et al.
+- **🏷️ 机构**: Tsinghua University, Ant Group, Yale University
+- **会议**: CVPR 2023
+
+### HOTNAS: Hierarchical Optimal Transport for Neural Architecture Search.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01154) · 📚 被引 15
+- **作者**: Jiechao Yang, Yong Liu, Hongteng Xu
+- **🏷️ 机构**: Gaoling School of Artificial Intelligence, Renmin University of China,Beijing,China
+- **会议**: CVPR 2023
+
+### Differentiable Architecture Search with Random Features.
+- **链接**: [arXiv:2208.08835](https://arxiv.org/abs/2208.08835) · [出版页](https://doi.org/10.1109/CVPR52729.2023.01541) · 📚 被引 18
+- **作者**: Xuanyang Zhang, Yonggang Li, Xiangyu Zhang, Yongtao Wang, Jian Sun
+- **🏷️ 机构**: MEGVII
+- **会议**: CVPR 2023
 
 - **摘要（英，原文）**:
 
-  > Given the recent impressive accomplishments of language models (LMs) for code generation, we explore the use of LMs as adaptive mutation and crossover operators for an evolutionary neural architecture search (NAS) algorithm. While NAS still proves too difficult a task for LMs to succeed at solely through prompting, we find that the combination of evolutionary prompt engineering with soft prompt-tuning, a method we term EvoPrompting, consistently finds diverse and high performing models. We first demonstrate that EvoPrompting is effective on the computationally efficient MNIST-1D dataset, where EvoPrompting produces convolutional architecture variants that outperform both those designed by human experts and naive few-shot prompting in terms of accuracy and model size. We then apply our method to searching for graph neural networks on the CLRS Algorithmic Reasoning Benchmark, where EvoPrompting is able to design novel architectures that outperform current state-of-the-art models on 21 out of 30 algorithmic reasoning tasks while maintaining similar model size. EvoPrompting is successful at designing accurate and efficient neural network architectures across a variety of machine learning tasks, while also being general enough for easy adaptation to other tasks beyond neural network design.
-
-### Multi-task Graph Neural Architecture Search with Task-aware Collaboration and Curriculum.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/4e839c9c398c58c878a394633b806ccd-Abstract-Conference.html) · 📚 26 citations
-- **作者**: Yijian Qin, Xin Wang, Ziwei Zhang, Hong Chen, Wenwu Zhu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Construction of Hierarchical Neural Architecture Search Spaces based on Context-free Grammars.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/4869f3f967dfe954439408dd92c50ee1-Abstract-Conference.html) · 📚 14 citations
-- **作者**: Simon Schrodi, Danny Stoll, Binxin Ru, Rhea Sanjay Sukthanker, Thomas Brox, Frank Hutter
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Evolutionary Neural Architecture Search for Transformer in Knowledge Tracing.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/3e53d82a1113e3d240059a9195668edc-Abstract-Conference.html)
-- **作者**: Shangshang Yang, Xiaoshan Yu, Ye Tian, Xueming Yan, Haiping Ma, Xingyi Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Unsupervised Graph Neural Architecture Search with Disentangled Self-Supervision.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/e78399fc43dbb2d87b7e1e6906ce5baf-Abstract-Conference.html) · 📚 21 citations
-- **作者**: Zeyang Zhang, Xin Wang, Ziwei Zhang, Guangyao Shen, Shiqi Shen, Wenwu Zhu
-- **🏷️ 机构**: Tsinghua University
-- **会议**: NeurIPS 2023
+  > Differentiable architecture search (DARTS) has significantly promoted the development of NAS techniques because of its high search efficiency and effectiveness but suffers from performance collapse. In this paper, we make efforts to alleviate the performance collapse problem for DARTS from two aspects. First, we investigate the expressive power of the supernet in DARTS and then derive a new setup of DARTS paradigm with only training BatchNorm. Second, we theoretically find that random features dilute the auxiliary connection role of skip-connection in supernet optimization and enable search algorithm focus on fairer operation selection, thereby solving the performance collapse problem. We instantiate DARTS and PC-DARTS with random features to build an improved version for each named RF-DARTS and RF-PCDARTS respectively. Experimental results show that RF-DARTS obtains \textbf{94.36\%} test accuracy on CIFAR-10 (which is the nearest optimal result in NAS-Bench-201), and achieves the newest state-of-the-art top-1 test error of \textbf{24.0\%} on ImageNet when transferring from CIFAR-10. Moreover, RF-DARTS performs robustly across three datasets (CIFAR-10, CIFAR-100, and SVHN) and four search spaces (S1-S4). Besides, RF-PCDARTS achieves even better results on ImageNet, that is, \textbf{23.9\%} top-1 and \textbf{7.1\%} top-5 test error, surpassing representative methods like single-path, training-free, and partial-channel paradigms directly searched on ImageNet.

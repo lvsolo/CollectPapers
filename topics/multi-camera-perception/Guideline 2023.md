@@ -1,88 +1,62 @@
 # Multi-camera Perception — 2023 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 15 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 14 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### A High-Resolution Dataset for Instance Detection with Multi-View Object Capture.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/832ea0ff01bd512aab28bf416db9489c-Abstract-Datasets_and_Benchmarks.html) · 📚 8 citations
-- **作者**: Qianqian Shen, Yunhan Zhao, Nahyun Kwon, Jeeeun Kim, Yanan Li, Shu Kong
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Are We Ready for Vision-Centric Driving Streaming Perception? The ASAP Benchmark.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00926) · 📚 被引 21
+- **作者**: Xiaofeng Wang, Zheng Zhu, Yunpeng Zhang, Guan Huang, Yun Ye, Wenbo Xu et al.
+- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences, PhiGent Robotics, Southeast University
+- **会议**: CVPR 2023
 
-### Masked Two-channel Decoupling Framework for Incomplete Multi-view Weak Multi-label Learning.
-- **链接**: [arXiv:2404.17340](https://arxiv.org/abs/2404.17340) · [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/66772e6aa61e54ae16443ae1d78a7319-Abstract-Conference.html) · 📚 31 citations
-- **作者**: Chengliang Liu, Jie Wen, Yabo Liu, Chao Huang, Zhihao Wu, Xiaoling Luo et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Multi-view Adversarial Discriminator: Mine the Non-causal Factors for Object Detection in Unseen Domains.
+- **链接**: [arXiv:2304.02950](https://arxiv.org/abs/2304.02950) · [出版页](https://doi.org/10.1109/CVPR52729.2023.00783) · 📚 被引 56
+- **作者**: Mingjun Xu, Lingyun Qin, Weijie Chen, Shiliang Pu, Lei Zhang
+- **🏷️ 机构**: PolyU / OPPO
+- **会议**: CVPR 2023
 
 - **摘要（英，原文）**:
 
-  > Multi-view learning has become a popular research topic in recent years, but research on the cross-application of classic multi-label classification and multi-view learning is still in its early stages. In this paper, we focus on the complex yet highly realistic task of incomplete multi-view weak multi-label learning and propose a masked two-channel decoupling framework based on deep neural networks to solve this problem. The core innovation of our method lies in decoupling the single-channel view-level representation, which is common in deep multi-view learning methods, into a shared representation and a view-proprietary representation. We also design a cross-channel contrastive loss to enhance the semantic property of the two channels. Additionally, we exploit supervised information to design a label-guided graph regularization loss, helping the extracted embedding features preserve the geometric structure among samples. Inspired by the success of masking mechanisms in image and text analysis, we develop a random fragment masking strategy for vector features to improve the learning ability of encoders. Finally, it is important to emphasize that our model is fully adaptable to arbitrary view and label absences while also performing well on the ideal full data. We have conducted sufficient and convincing experiments to confirm the effectiveness and advancement of our model.
+  > Domain shift degrades the performance of object detection models in practical applications. To alleviate the influence of domain shift, plenty of previous work try to decouple and learn the domain-invariant (common) features from source domains via domain adversarial learning (DAL). However, inspired by causal mechanisms, we find that previous methods ignore the implicit insignificant non-causal factors hidden in the common features. This is mainly due to the single-view nature of DAL. In this work, we present an idea to remove non-causal factors from common features by multi-view adversarial training on source domains, because we observe that such insignificant non-causal factors may still be significant in other latent spaces (views) due to the multi-mode structure of data. To summarize, we propose a Multi-view Adversarial Discriminator (MAD) based domain generalization model, consisting of a Spurious Correlations Generator (SCG) that increases the diversity of source domain by random augmentation and a Multi-View Domain Classifier (MVDC) that maps features to multiple latent spaces, such that the non-causal factors are removed and the domain-invariant features are purified. Extensive experiments on six benchmarks show our MAD obtains state-of-the-art performance.
 
-### A Novel Approach for Effective Multi-View Clustering with Information-Theoretic Perspective.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/8c64bc3f7796d31caa7c3e6b969bf7da-Abstract-Conference.html) · 📚 66 citations
-- **作者**: Chenhang Cui, Yazhou Ren, Jingyu Pu, Jiawei Li, Xiaorong Pu, Tianyi Wu et al.
-- **🏷️ 机构**: Lehigh University
-- **会议**: NeurIPS 2023
+### Learning to Fuse Monocular and Multi-view Cues for Multi-frame Depth Estimation in Dynamic Scenes.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02063) · 📚 被引 41
+- **作者**: Rui Li, Dong Gong, Wei Yin, Hao Chen, Yu Zhu, Kaixuan Wang et al.
+- **🏷️ 机构**: Northwestern Polytechnical University, The University of New South Wales, DJI
+- **会议**: CVPR 2023
 
-### MVDoppler: Unleashing the Power of Multi-View Doppler for MicroMotion-based Gait Classification.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/b5727c1bab903e0ff21cec84a9a7f5a6-Abstract-Datasets_and_Benchmarks.html) · 📚 6 citations
-- **作者**: Soheil Hor, Shubo Yang, Jaeho Choi, Amin Arbabian
+### Trap Attention: Monocular Depth Estimation with Manual Traps.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00487) · 📚 被引 21
+- **作者**: Chao Ning, Hongping Gan
+- **🏷️ 机构**: Northwestern Polytechnical University,Xi&#x0027;an,China,710072
+- **会议**: CVPR 2023
+
+### iDisc: Internal Discretization for Monocular Depth Estimation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02057) · 📚 被引 119
+- **作者**: Luigi Piccinelli, Christos Sakaridis, Fisher Yu
+- **🏷️ 机构**: ETH Zurich
+- **会议**: CVPR 2023
+
+### Lite-Mono: A Lightweight CNN and Transformer Architecture for Self-Supervised Monocular Depth Estimation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01778)
+- **作者**: Ning Zhang, Francesco Nex, George Vosselman, Norman Kerle
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+- **会议**: CVPR 2023
 
-### Generalized Information-theoretic Multi-view Clustering.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/b7aa34d2d24f9bab3056993b7bfa0f1b-Abstract-Conference.html)
-- **作者**: Weitian Huang, Sirui Yang, Hongmin Cai
+### Standing Between Past and Future: Spatio-Temporal Modeling for Multi-Camera 3D Multi-Object Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01719)
+- **作者**: Ziqi Pang, Jie Li, Pavel Tokmakov, Dian Chen, Sergey Zagoruyko, Yu-Xiong Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Orthogonal Non-negative Tensor Factorization based Multi-view Clustering.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/3a5b75ce6cbd3aaaa32d6e935ffc4cff-Abstract-Conference.html) · 📚 65 citations
-- **作者**: Jing Li, Quanxue Gao, Qianqian Wang, Ming Yang, Wei Xia
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Factorized Contrastive Learning: Going Beyond Multi-view Redundancy.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/6818dcc65fdf3cbd4b05770fb957803e-Abstract-Conference.html)
-- **作者**: Paul Pu Liang, Zihao Deng, Martin Q. Ma, James Y. Zou, Louis-Philippe Morency, Ruslan Salakhutdinov
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### RayDF: Neural Ray-surface Distance Fields with Multi-view Consistency.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/4f86833d5cc98ec32e470ef1c8cb82e3-Abstract-Conference.html) · 📚 12 citations
-- **作者**: Zhuoman Liu, Bo Yang, Yan Luximon, Ajay Kumar, Jinxi Li
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### GenS: Generalizable Neural Surface Reconstruction from Multi-View Images.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/b29ab822442a1616f9bd390fddf6e425-Abstract-Conference.html)
-- **作者**: Rui Peng, Xiaodong Gu, Luyang Tang, Shihe Shen, Fanqi Yu, Ronggang Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### MVDiffusion: Enabling Holistic Multi-view Image Generation with Correspondence-Aware Diffusion.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/a0da690a47b2f52faa63f6fe054057b5-Abstract-Conference.html) · 📚 243 citations
-- **作者**: Shitao Tang, Fuyang Zhang, Jiacheng Chen, Peng Wang, Yasutaka Furukawa
-- **🏷️ 机构**: Simon Fraser University
-- **会议**: NeurIPS 2023
-
-### The Surprising Effectiveness of Diffusion Models for Optical Flow and Monocular Depth Estimation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/7c119415672ae2186e17d492e1d5da2f-Abstract-Conference.html) · 📚 148 citations
-- **作者**: Saurabh Saxena, Charles Herrmann, Junhwa Hur, Abhishek Kar, Mohammad Norouzi, Deqing Sun et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### IEBins: Iterative Elastic Bins for Monocular Depth Estimation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/a61023ce36d21010f1423304f8ec49af-Abstract-Conference.html)
-- **作者**: Shuwei Shao, Zhongcai Pei, Xingming Wu, Zhong Liu, Weihai Chen, Zhengguo Li
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+- **会议**: CVPR 2023
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- Leveraging Vision-Centric Multi-Modal Expertise for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- STXD: Structural and Temporal Cross-Modal Distillation for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- HotBEV: Hardware-oriented Transformer-based Multi-View 3D Detector for BEV Perception. → [bev](../bev/Guideline%202023.md)
+- Viewpoint Equivariance for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- AeDet: Azimuth-Invariant Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- X3KD: Knowledge Distillation Across Modalities, Tasks and Stages for Multi-Camera 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Weakly Supervised Monocular 3D Object Detection Using Multi-View Projection and Direction Consistency. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Towards Domain Generalization for Multi-view 3D Object Detection in Bird-Eye-View. → [3d-detection](../3d-detection/Guideline%202023.md)
+- CAPE: Camera View Position Embedding for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- TBP-Former: Learning Temporal Bird's-Eye-View Pyramid for Joint Perception and Prediction in Vision-Centric Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)

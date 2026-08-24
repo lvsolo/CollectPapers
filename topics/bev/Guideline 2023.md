@@ -5,18 +5,13 @@
 
 > 同领域其他年份: 
 
-### Asynchrony-Robust Collaborative Perception via Bird's Eye View Flow.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/5a829e299ebc1c1615ddb09e98fb6ce8-Abstract-Conference.html) · 📚 93 citations
-- **作者**: Sizhe Wei, Yuxi Wei, Yue Hu, Yifan Lu, Yiqi Zhong, Siheng Chen et al.
-- **🏷️ 机构**: Georgia Institute of Technology, University of Southern California
-- **会议**: NeurIPS 2023
-
-### HotBEV: Hardware-oriented Transformer-based Multi-View 3D Detector for BEV Perception.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/081b08068e4733ae3e7ad019fe8d172f-Abstract-Conference.html) · 📚 6 citations
-- **作者**: Peiyan Dong, Zhenglun Kong, Xin Meng, Pinrui Yu, Yifan Gong, Geng Yuan et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### BEV-Guided Multi-Modality Fusion for Driving Perception.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02103) · 📚 被引 59
+- **作者**: Yunze Man, Liang-Yan Gui, Yu-Xiong Wang
+- **🏷️ 机构**: UIUC
+- **会议**: CVPR 2023
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- CluB: Cluster Meets BEV for LiDAR-Based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- BEV-SAN: Accurate BEV 3D Object Detection via Slice Attention Networks. → [3d-detection](../3d-detection/Guideline%202023.md)
+- UniDistill: A Universal Cross-Modality Knowledge Distillation Framework for 3D Object Detection in Bird's-Eye View. → [3d-detection](../3d-detection/Guideline%202023.md)
