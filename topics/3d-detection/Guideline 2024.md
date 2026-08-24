@@ -12,7 +12,7 @@
 - **会议**: CVPR 2024
 
 ### SeaBird: Segmentation in Bird's View with Dice Loss Improves Monocular 3D Detection of Large Objects.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00978)
+- **链接**: [arXiv:2403.20318](https://arxiv.org/abs/2403.20318)
 - **作者**: Abhinav Kumar, Yuliang Guo, Xinyu Huang, Liu Ren, Xiaoming Liu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024

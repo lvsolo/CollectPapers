@@ -30,13 +30,13 @@
 - **会议**: CVPR 2024
 
 ### Generative Region-Language Pretraining for Open-Ended Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01324)
+- **链接**: [arXiv:2403.10191](https://arxiv.org/abs/2403.10191)
 - **作者**: Chuang Lin, Yi Jiang, Lizhen Qu, Zehuan Yuan, Jianfei Cai
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
 
 ### RadarDistill: Boosting Radar-Based Object Detection Performance via Knowledge Distillation from LiDAR Features.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01467)
+- **链接**: [arXiv:2403.05061](https://arxiv.org/abs/2403.05061)
 - **作者**: Geonho Bang, Kwangjin Choi, Jisong Kim, Dongsuk Kum, Jun Won Choi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
@@ -48,19 +48,19 @@
 - **会议**: CVPR 2024
 
 ### RadSimReal: Bridging the Gap Between Synthetic and Real Data in Radar Object Detection With Simulation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01459)
+- **链接**: [arXiv:2404.18150](https://arxiv.org/abs/2404.18150)
 - **作者**: Oded Bialer, Yuval Haitman
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
 
 ### Overload: Latency Attacks on Object Detection for Edge Devices.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02334)
+- **链接**: [arXiv:2304.05370](https://arxiv.org/abs/2304.05370)
 - **作者**: Erh-Chung Chen, Pin-Yu Chen, I-Hsin Chung, Che-Rung Lee
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
 
 ### YOLO-World: Real-Time Open-Vocabulary Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01599)
+- **链接**: [arXiv:2401.17270](https://arxiv.org/abs/2401.17270)
 - **作者**: Tianheng Cheng, Lin Song, Yixiao Ge, Wenyu Liu, Xinggang Wang, Ying Shan
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024

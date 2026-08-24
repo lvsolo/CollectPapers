@@ -254,11 +254,13 @@ def render_paper_md(paper: dict, llm_eval: dict | None, primary: bool,
     lines.append(title_line)
     links = []
     if paper.get("arxiv_id"):
+        # arXiv 链接优先且唯一入口（用户无法访问付费出版页）
         links.append(f"[arXiv:{paper['arxiv_id']}](https://arxiv.org/abs/{paper['arxiv_id']})")
-    if paper.get("ee") and "arxiv" not in (paper.get("ee") or ""):
-        links.append(f"[出版页]({paper['ee']})")
     if paper.get("code"):
         links.append(f"[代码]({paper['code']})")
+    if not links and paper.get("ee"):
+        # 仅当完全没有 arXiv id 时才退回 DOI（总比没有强）
+        links.append(f"[出版页]({paper['ee']})")
     lines.append(f"- **链接**: {' · '.join(links) if links else '（无）'}{cite}")
     authors = paper.get("authors") or []
     if authors:
@@ -332,6 +334,30 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
 # ----------------------------------------------------------------------
 # 主流程
 # ----------------------------------------------------------------------
+def _rewrite_batches(all_papers: dict) -> None:
+    """enrich 后把 arXiv id/摘要/机构/引用回写进 .cache/batches/*.json，
+    使 llm-only 重建渲染时能拿到完整数据（否则只有 DBLP 原始字段，链接会退化为 DOI）。"""
+    batch_dir = ROOT / ".cache" / "batches"
+    if not batch_dir.exists():
+        return
+    for bf in batch_dir.glob("*.json"):
+        try:
+            papers = json.loads(bf.read_text())
+        except json.JSONDecodeError:
+            continue
+        dirty = False
+        for p in papers:
+            ep = all_papers.get(p.get("title"))
+            if not ep:
+                continue
+            for k in ("arxiv_id", "abstract", "institutions", "citations", "code", "url"):
+                if ep.get(k) and p.get(k) != ep[k]:
+                    p[k] = ep[k]
+                    dirty = True
+        if dirty:
+            bf.write_text(json.dumps(papers, ensure_ascii=False, default=str))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--conference", default=None)
@@ -449,6 +475,8 @@ def main():
         enrich_papers(list(all_papers.values()),
                       do_citations=not args.no_enrich,
                       citations_budget=args.citations_budget)
+        # enrich 后回写 batch 文件（arXiv id/摘要/机构/引用），llm-only 重建时直接可用
+        _rewrite_batches(all_papers)
         # 代码链接：arXiv 摘要自报 GitHub（快，零网络）→ PWC 兜底（慢，限 top 150）
         for title, p in list(all_papers.items())[:400]:
             if not p.get("code"):
