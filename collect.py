@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common  # noqa: E402
 from common import (CONFIG, ROOT, Classifier, arxiv_by_ids, http_get_json,
-                    institution_for, importance_score, log)
+                    institution_for, importance_score, log, get_classifier)
 
 DBLP_API = "https://dblp.org/search/publ/api"
 S2_API = "https://api.semanticscholar.org/graph/v1/paper"
@@ -333,6 +333,10 @@ def main():
     ap.add_argument("--no-enrich", action="store_true", help="跳过摘要/引用 enrich")
     ap.add_argument("--citations-budget", type=int, default=400)
     ap.add_argument("--force", action="store_true", help="忽略会议公布窗口强制抓取")
+    ap.add_argument("--no-llm", action="store_true",
+                    help="分批模式1: 只抓取+归类+enrich，跳过 LLM（matrix collect 阶段用）")
+    ap.add_argument("--llm-only", action="store_true",
+                    help="分批模式2: 复用 HTTP 缓存重建 bucket，只跑 LLM 评估（llm-eval 阶段用）")
     args = ap.parse_args()
 
     confs = CONFIG["conferences"]
@@ -373,6 +377,8 @@ def main():
 
     for conf in confs:
         for year in years:
+            if args.llm_only:
+                break  # llm-only 不重新抓 DBLP，跳到后面的 batch 重建段
             log(f"[{conf['name']} {year}] fetching from DBLP...")
             papers = dblp_conference_papers(conf["dblp_venue"], year) if dblp_enabled else []
             log(f"  got {len(papers)} raw papers")
@@ -387,6 +393,12 @@ def main():
                 if cls:
                     matched += 1
             log(f"  matched into topics: {matched}")
+            if papers:
+                # 保存这个会议-年的原始数据，供 --llm-only 阶段复用
+                batch_dir = ROOT / ".cache" / "batches"
+                batch_dir.mkdir(exist_ok=True)
+                (batch_dir / f"{conf['dblp_venue']}-{year}.json").write_text(
+                    json.dumps([p for p in papers], ensure_ascii=False, default=str))
 
     # 去重（同领域同标题）
     for slug in bucket:
@@ -396,7 +408,31 @@ def main():
                 seen.setdefault(p["title"].lower().rstrip(". "), p)
             bucket[slug][year] = list(seen.values())
 
-    if not args.no_enrich and bucket:
+    if args.llm_only:
+        # 分批模式2: 不重新抓 DBLP，从落盘的 batch 文件重建 bucket（HTTP 缓存兜底）
+        batch_dir = ROOT / ".cache" / "batches"
+        classifier = get_classifier()
+        for bf in sorted(batch_dir.glob("*.json")):
+            m = re.match(r"([A-Za-z]+)-(\d{4})", bf.stem)
+            if not m:
+                continue
+            if args.conference and m.group(1).lower() != args.conference.lower():
+                continue
+            if args.year and int(m.group(2)) != args.year:
+                continue
+            try:
+                papers = json.loads(bf.read_text())
+            except json.JSONDecodeError:
+                continue
+            log(f"[llm-only] rebuilding {bf.stem}: {len(papers)} papers")
+            for p in papers:
+                cls = classifier.classify(p["title"], p.get("abstract", ""))
+                for t, score in cls:
+                    p2 = dict(p)
+                    p2["cls_score"] = score
+                    bucket.setdefault(t["slug"], {}).setdefault(int(m.group(2)), []).append(p2)
+
+    if not args.no_enrich and not args.llm_only and bucket:
         total = sum(len(ps) for ys in bucket.values() for ps in ys.values())
         log(f"enriching {total} papers (abstracts + citations)...")
         all_papers = {}
@@ -424,9 +460,9 @@ def main():
             papers.sort(key=lambda p: -importance_score(p))
             bucket[slug][year] = papers[: (cap_old if year < 2022 else cap)]
 
-    # LLM 中英对照摘要（可选，与日报线同一套评估器）
+    # LLM 中英对照摘要（可选，与日报线同一套评估器；--no-llm 跳过留给下一阶段）
     llm = common.LLM()
-    if llm.active:
+    if llm.active and not args.no_llm:
         # 只评每领域每年的前 N 篇（成本控制；其余保持英文摘要降级渲染）
         n_eval = CONFIG.get("llm", {}).get("guideline_eval_topn", 25)
         count = 0

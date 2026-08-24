@@ -4,11 +4,16 @@ on:
   schedule:
     # 每两天跑一次（北京时间凌晨 02:41 = 前一天 UTC 18:41，与日报错开）
     - cron: "41 18 */2 * *"
-  workflow_dispatch: {}   # 手动触发（想立即重刷某会议时用）
-  push:
-    branches: [main]
-    paths:
-      - "config.yaml"    # 改了配置自动重跑
+  workflow_dispatch:
+    inputs:
+      conference:
+        description: "只跑某个会议（留空 = 全部，按窗口过滤）"
+        required: false
+        default: ""
+      year:
+        description: "只跑某年（留空 = 全部年份）"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -18,11 +23,58 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update:
+  # ------------------------------------------------------------------
+  # 阶段 1: 决定本次要跑哪些 (会议, 年份) 组合（应用公布窗口过滤）
+  # ------------------------------------------------------------------
+  plan:
     runs-on: ubuntu-latest
-    # 首次全量约 3-4.5h（DBLP 扫描+enrich+LLM）；之后定时运行 15-25 分钟。
-    # GitHub 公开仓库单 job 上限 6 小时，360 分钟留足余量。
-    timeout-minutes: 360
+    outputs:
+      matrix: ${{ steps.setmatrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - id: setmatrix
+        run: |
+          python3 - <<'EOF' > matrix.json
+          import json, datetime as dt, sys, yaml
+          sys.path.insert(0, '.')
+          cfg = yaml.safe_load(open('config.yaml'))
+          conf_arg = '${{ github.event.inputs.conference }}'.strip()
+          year_arg = '${{ github.event.inputs.year }}'.strip()
+          start, end = cfg['start_year'], cfg['end_year']
+          now = dt.date.today()
+          combos = []
+          for c in cfg['conferences']:
+              if conf_arg and c['name'].lower() != conf_arg.lower():
+                  continue
+              for y in range(start, end + 1):
+                  if year_arg and str(y) != year_arg:
+                      continue
+                  if y == now.year:  # 当年按公布状态过滤
+                      if c.get('even_years_only') and y % 2 != 0: continue
+                      if c.get('odd_years_only') and y % 2 != 1: continue
+                      am = c.get('announce_month')
+                      if am and now.month < am: continue
+                  combos.append({'conference': c['dblp_venue'], 'year': y})
+          print(json.dumps({'include': combos}))
+          EOF
+          m=$(cat matrix.json | jq -c .)
+          echo "matrix=$m" >> "$GITHUB_OUTPUT"
+          echo "planned: $m" | head -c 400
+
+  # ------------------------------------------------------------------
+  # 阶段 2: 每个组合一个独立 job（分批，互不影响）
+  # ------------------------------------------------------------------
+  collect:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 40          # 单组合 DBLP+enrich 上限；LLM 评估单独阶段
+    strategy:
+      fail-fast: false           # 一个格子失败不拖垮其他格子
+      max-parallel: 3            # 并行 3 个（DBLP 压力可控：3×2.5s 间隔）
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -33,32 +85,121 @@ jobs:
       - name: Install deps
         run: pip install pyyaml
 
-      - name: Restore paper cache
+      - name: Restore caches
         uses: actions/cache@v4
         with:
           path: .cache
-          # 动态 key：每次运行都保存新缓存（含 LLM 评估结果），restore 按前缀取最近的
-          key: collectpapers-v2-${{ github.run_id }}
+          key: collectpapers-v3-${{ matrix.conference }}-${{ matrix.year }}-${{ github.run_id }}
           restore-keys: |
-            collectpapers-v2-
+            collectpapers-v3-${{ matrix.conference }}-${{ matrix.year }}-
+            collectpapers-v3-
 
-      - name: Run conference collector
+      - name: Run collector for this conference-year
         env:
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
-        run: python3 collect.py
+        run: |
+          python3 collect.py --conference ${{ matrix.conference }} --year ${{ matrix.year }} --no-llm
 
-      - name: Update README index
-        run: python3 update_readme.py
-
-      - name: Commit and push
+      - name: Commit this batch (serialized via git lock)
         run: |
           git config user.name "collectpapers-bot"
           git config user.email "actions@github.com"
-          git add topics/ README.md .cache/
-          if git diff --cached --quiet; then
-            echo "No changes, skip commit"
-          else
-            git commit -m "docs(topics): conference guidelines refresh $(date -u +%F)"
-            git pull --rebase origin main
-            git push
-          fi
+          for i in 1 2 3 4 5; do
+            git add topics/ .cache/ 2>/dev/null
+            if git diff --cached --quiet; then
+              echo "No changes for ${{ matrix.conference }} ${{ matrix.year }}"
+              break
+            fi
+            git commit -m "docs(topics): ${{ matrix.conference }} ${{ matrix.year }} refresh" || break
+            if git pull --rebase --autostash origin main && git push; then
+              echo "pushed batch ${{ matrix.conference }} ${{ matrix.year }}"
+              break
+            fi
+            echo "push conflict, retry $i/5 after backoff"
+            sleep $((i * 20))
+            git rebase --abort 2>/dev/null || true
+            git reset --hard origin/main || git fetch origin main
+          done
+
+  # ------------------------------------------------------------------
+  # 阶段 3: LLM 评估（单独阶段，逐领域小批次，读上一阶段落盘的数据）
+  # ------------------------------------------------------------------
+  llm-eval:
+    needs: [plan, collect]
+    if: always() && !cancelled()
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main               # 拿到 collect 阶段推上去的最新 topics 和缓存
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Restore LLM cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/llm_evals.json
+          key: llm-evals-${{ github.run_id }}
+          restore-keys: |
+            llm-evals-
+
+      - name: Run LLM evaluation over collected buckets
+        env:
+          LLM_API_BASE: ${{ secrets.LLM_API_BASE }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: |
+          # 从缓存里恢复完整 bucket 太重；改为直接重算（DBLP 全走 HTTP 缓存，很快），
+          # 再跑 LLM。此阶段 DBLP 不产生新请求（72h 缓存），只花 LLM 的钱（增量缓存）。
+          python3 collect.py --llm-only
+
+      - name: Commit LLM summaries (serialized)
+        run: |
+          git config user.name "collectpapers-bot"
+          git config user.email "actions@github.com"
+          for i in 1 2 3 4 5; do
+            git add topics/ .cache/llm_evals.json 2>/dev/null
+            if git diff --cached --quiet; then
+              echo "No LLM changes"
+              break
+            fi
+            git commit -m "docs(topics): LLM 中英对照摘要 batch $(date -u +%F)" || break
+            if git pull --rebase --autostash origin main && git push; then
+              break
+            fi
+            echo "push conflict, retry $i/5"
+            sleep $((i * 20))
+            git rebase --abort 2>/dev/null || true
+            git reset --hard origin/main
+          done
+
+  # ------------------------------------------------------------------
+  # 阶段 4: 汇总 README 索引
+  # ------------------------------------------------------------------
+  finalize:
+    needs: [collect, llm-eval]
+    if: always() && !cancelled()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install pyyaml
+      - name: Update README index
+        run: python3 update_readme.py
+      - name: Commit
+        run: |
+          git config user.name "collectpapers-bot"
+          git config user.email "actions@github.com"
+          git add README.md
+          git diff --cached --quiet || (git commit -m "docs: refresh README index" && git pull --rebase origin main && git push)
