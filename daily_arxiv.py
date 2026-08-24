@@ -56,8 +56,9 @@ def _merge_report(existing: str, new_lines: list[str], groups: dict,
 
 
 def fetch_recent(days: int) -> list[dict]:
-    """抓最近 N 天（按提交日期过滤）的 cs.CV 新论文。"""
-    since = (dt.date.today() - dt.timedelta(days=days)).isoformat()
+    """抓最近 N 天（按提交日期过滤）的 cs.CV 新论文。窗口按北京时间算。"""
+    today_bj = (dt.datetime.utcnow() + dt.timedelta(hours=8)).date()
+    since = (today_bj - dt.timedelta(days=days)).isoformat()
     cats = CONFIG["daily"]["categories"]
     query = " OR ".join(f"cat:{c}" for c in cats)
     log(f"fetching arXiv [{', '.join(cats)}] since {since} ...")
@@ -142,7 +143,8 @@ def main():
         log("LLM not configured (no LLM_API_KEY), fallback to excerpt mode")
 
     # 渲染 markdown
-    today = dt.date.today().isoformat()
+    # 北京时间日期（日报按北京日切，与用户作息一致；runner 是 UTC）
+    today = (dt.datetime.utcnow() + dt.timedelta(hours=8)).date().isoformat()
     lines = [f"# 📚 arXiv 每日论文报告（我的领域）", ""]
     lines.append(f"**报告日期**: {today}  ")
     lines.append(f"**论文来源**: [arXiv {'/'.join(dcfg['categories'])} Recent](https://arxiv.org/list/{dcfg['categories'][0]}/recent)  ")
