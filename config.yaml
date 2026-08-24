@@ -18,6 +18,87 @@ end_year: 2026
 # exclude:     排除关键词（如 tracking 领域排除 particle filter 等）
 # weight:      命中该领域时的重要性加权
 topics:
+  - name: Object Detection
+    slug: object-detection
+    description: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
+    weight: 1.1
+    keywords:
+      - object detection
+      - object detector
+      - detection framework
+      - deformable detection
+      - dense detector
+      - sparse detector
+      - query-based detection
+      - end-to-end object detection
+      - small object detection
+      - tiny object detection
+      - oriented object detection
+      - rotated object detection
+      - aerial detection
+      - remote sensing detection
+      - non-maximum suppression
+      - label assignment
+      - dense prediction
+      - one-stage detector
+      - two-stage detector
+      - anchor-free
+      - yolo
+      - detr
+      - rcnn
+      - faster rcnn
+      - deformable detr
+      - detection transformer
+    must_any: '\b(detector|detection|detr|rcnn|yolo)\b'
+    exclude:
+      # 深度学习之外的检测（非视觉）
+      - malware detection
+      - intrusion detection network
+      - community detection
+      - anomaly detection time series
+      # 医学图像的病灶检测放这里也可以，但避免纯分割
+      - change detection only segmentation
+
+  - name: Autonomous Driving
+    slug: autonomous-driving
+    description: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
+    weight: 1.2
+    keywords:
+      - autonomous driving
+      - self-driving
+      - driver assistance
+      - end-to-end driving
+      - driving policy
+      - motion planning driving
+      - trajectory prediction
+      - lane detection
+      - traffic light recognition
+      - driving scene understanding
+      - driving scenario
+      - vehicle perception
+      - v2x
+      - vehicle-to-everything
+      - nuScenes
+      - waymo
+      - argoverse
+      - lyft level 5
+      - onda
+      - driving simulator
+      - hd map
+      - vectorized map
+      - parking assist
+      - cut-in prediction
+      - driving safety
+      - vlm driving
+      - mllm driving
+      - language driving
+    must_any: '\b(autonomous|self.driving|driving|nuScenes|waymo|argoverse|v2x|vehicle)\b'
+    exclude:
+      # 纯车辆动力学/交通工程（非 AI 感知）方向
+      - traffic flow theory
+      - vehicle crashworthiness
+      - engine control
+
   - name: 3D Detection
     slug: 3d-detection
     description: 3D 目标检测（LiDAR / 相机 / 多模态融合）
