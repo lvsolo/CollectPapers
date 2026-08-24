@@ -134,11 +134,10 @@ def main():
             authors = p.get("authors") or []
             if authors:
                 astr = ", ".join(authors[:3]) + (f" et al. ({len(authors)} authors)" if len(authors) > 3 else "")
-                inst = institution_for(authors)
-                line = f"- **作者**: {astr}"
-                if inst:
-                    line += f"　🏷️ **机构**: {inst}"
-                lines.append(line)
+                lines.append(f"- **作者**: {astr}")
+            # 机构必显示：映射表 → S2 反查 → 待查标记
+            inst = common.institutions_for_paper(p)
+            lines.append(f"- **🏷️ 机构**: {inst}")
             lines.append(f"- **提交日期**: {p['date']} · **分类**: {', '.join(p.get('cats', [])[:3])}")
             if ev:
                 if ev.get("summary_cn"):

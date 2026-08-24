@@ -351,7 +351,56 @@ def _extract_json(text: str):
 # ----------------------------------------------------------------------
 # 机构标注
 # ----------------------------------------------------------------------
+AFFIL_CACHE = CACHE_DIR / "affiliations.json"
+
+
+def _affil_cache() -> dict:
+    if AFFIL_CACHE.exists():
+        try:
+            return json.loads(AFFIL_CACHE.read_text())
+        except json.JSONDecodeError:
+            return {}
+    return {}
+
+
+def _save_affil(cache: dict) -> None:
+    AFFIL_CACHE.write_text(json.dumps(cache, ensure_ascii=False))
+
+
+def s2_affiliations(title: str, authors: list[str]) -> list[str] | None:
+    """Semantic Scholar 反查作者单位。失败/无数据返回 None（磁盘缓存命中最优先）。"""
+    # 磁盘缓存（负结果也缓存，避免反复查询）
+    cache = _affil_cache()
+    key = title.lower().rstrip(". ")[:180]
+    if key in cache:
+        return cache[key]  # 可能是 []（查过但没有）
+
+    import os
+    import urllib.parse
+    q = urllib.parse.quote(title[:200])
+    headers = {"x-api-key": os.environ["S2_API_KEY"]} if os.environ.get("S2_API_KEY") else None
+    data = http_get_json(
+        f"https://api.semanticscholar.org/graph/v1/paper/search/match?query={q}"
+        f"&fields=authors.name,authors.affiliations",
+        cache_hours=0, retries=2, timeout=15, headers=headers)
+    insts: list[str] | None = []
+    if data and data.get("data"):
+        try:
+            for a in data["data"][0].get("authors", []):
+                for aff in (a.get("affiliations") or []):
+                    if aff and aff not in insts:
+                        insts.append(aff)
+        except (KeyError, IndexError, TypeError):
+            pass
+    if not insts:
+        insts = None
+    cache[key] = insts or []
+    _save_affil(cache)
+    return insts
+
+
 def institution_for(authors: list[str]) -> str | None:
+    """本地映射表快速通道（config.yaml author_map）。"""
     amap = CONFIG.get("institutions", {}).get("author_map", {})
     hits = []
     for a in authors[:8]:
@@ -359,6 +408,21 @@ def institution_for(authors: list[str]) -> str | None:
         if inst and inst not in hits:
             hits.append(inst)
     return ", ".join(hits[:2]) if hits else None
+
+
+def institutions_for_paper(paper: dict, *, online: bool = True) -> str:
+    """机构标注主入口：映射表 → S2 反查 → '（机构待查）'。
+    所有渲染端必须调用此函数，保证每篇论文都有机构行。"""
+    authors = paper.get("authors") or paper.get("arxiv_authors") or []
+    local = institution_for(authors)
+    if local:
+        return local
+    if online:
+        s2 = s2_affiliations(paper["title"], authors)
+        if s2:
+            # 取前三个不同机构（第一作者单位最有分量）
+            return ", ".join(s2[:3])
+    return "（机构待查）"
 
 
 # ----------------------------------------------------------------------

@@ -163,8 +163,8 @@ def _s2_key() -> str:
 
 
 def enrich_papers(papers: list[dict], *, do_abstract=True, do_citations=True,
-                  citations_budget=400) -> list[dict]:
-    """补 arXiv 摘要 + S2 引用数。in-place 修改并返回。"""
+                  citations_budget=400, do_institutions=True) -> list[dict]:
+    """补 arXiv 摘要 + S2 引用数 + 作者机构。in-place 修改并返回。"""
     # 1) arXiv id → 批量摘要
     if do_abstract:
         need = [p for p in papers if not p.get("abstract")]
@@ -195,6 +195,18 @@ def enrich_papers(papers: list[dict], *, do_abstract=True, do_citations=True,
                     p["citations"] = c
                     got += 1
                 time.sleep(1.2)  # 免费 S2 ~1 rps
+    # 3) 机构标注（映射表未命中才查 S2；磁盘缓存含负结果）
+    if do_institutions:
+        n_inst = 0
+        for p in papers:
+            if not p.get("institutions"):
+                inst = common.institutions_for_paper(p)
+                if inst and inst != "（机构待查）":
+                    p["institutions"] = inst
+                    n_inst += 1
+                time.sleep(0.6)  # S2 免费档限速
+        if papers:
+            log(f"  enrich: institutions resolved for {n_inst}/{len(papers)} papers")
     return papers
 
 
@@ -244,11 +256,10 @@ def render_paper_md(paper: dict, llm_eval: dict | None, primary: bool,
     authors = paper.get("authors") or []
     if authors:
         astr = ", ".join(authors[:6]) + (" et al." if len(authors) > 6 else "")
-        inst = institution_for(authors)
-        line = f"- **作者**: {astr}"
-        if inst:
-            line += f"　🏷️ **机构**: {inst}"
-        lines.append(line)
+        # 机构必显示：映射表 → S2 反查（enrich 阶段已预算好 → paper['institutions']）
+        inst = paper.get("institutions") or institution_for(authors) or "（机构待查）"
+        lines.append(f"- **作者**: {astr}")
+        lines.append(f"- **🏷️ 机构**: {inst}")
     lines.append(f"- **会议**: {paper['venue']} {paper['year']}")
     if llm_eval and llm_eval.get("summary_cn"):
         lines.append(f"- **摘要（中）**: {llm_eval['summary_cn']}")
