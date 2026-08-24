@@ -5,276 +5,300 @@
 
 > 同领域其他年份: 
 
-### Dynamic DETR: End-to-End Object Detection with Dynamic Attention.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00298) · 📚 462 citations
-- **作者**: Xiyang Dai, Yinpeng Chen, Jianwei Yang, Pengchuan Zhang, Lu Yuan, Lei Zhang
+### UP-DETR: Unsupervised Pre-Training for Object Detection With Transformers.
+- **链接**: [arXiv:2011.09094](https://arxiv.org/abs/2011.09094) · [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Dai_UP-DETR_Unsupervised_Pre-Training_for_Object_Detection_With_Transformers_CVPR_2021_paper.html) · [代码](https://github.com/dddzg/up-detr) · 📚 被引 447
+- **作者**: Zhigang Dai, Bolun Cai, Yugeng Lin, Junying Chen
+- **🏷️ 机构**: South China University of Technology,School of Software Engineering, Tencent Wechat AI
+- **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > DEtection TRansformer (DETR) for object detection reaches competitive performance compared with Faster R-CNN via a transformer encoder-decoder architecture. However, trained with scratch transformers, DETR needs large-scale training data and an extreme long training schedule even on COCO dataset. Inspired by the great success of pre-training transformers in natural language processing, we propose a novel pretext task named random query patch detection in Unsupervised Pre-training DETR (UP-DETR). Specifically, we randomly crop patches from the given image and then feed them as queries to the decoder. The model is pre-trained to detect these query patches from the input image. During the pre-training, we address two critical issues: multi-task learning and multi-query localization. (1) To trade off classification and localization preferences in the pretext task, we find that freezing the CNN backbone is the prerequisite for the success of pre-training transformers. (2) To perform multi-query localization, we develop UP-DETR with multi-query patch detection with attention mask. Besides, UP-DETR also provides a unified perspective for fine-tuning object detection and one-shot detection tasks. In our experiments, UP-DETR significantly boosts the performance of DETR with faster convergence and higher average precision on object detection, one-shot detection and panoptic segmentation. Code and pre-training models: https://github.com/dddzg/up-detr.
+
+### Uncertainty-Aware Joint Salient Object and Camouflaged Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_Uncertainty-Aware_Joint_Salient_Object_and_Camouflaged_Object_Detection_CVPR_2021_paper.html) · 📚 被引 270
+- **作者**: Aixuan Li, Jing Zhang, Yunqiu Lv, Bowen Liu, Tong Zhang, Yuchao Dai
+- **🏷️ 机构**: Northwestern Polytechnical University,China, Australian National University,Australia, EPFL,Switzerland
+- **会议**: CVPR 2021
+
+### Instant-Teaching: An End-to-End Semi-Supervised Object Detection Framework.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhou_Instant-Teaching_An_End-to-End_Semi-Supervised_Object_Detection_Framework_CVPR_2021_paper.html) · 📚 被引 194
+- **作者**: Qiang Zhou, Chaohui Yu, Zhibin Wang, Qi Qian, Hao Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Points As Queries: Weakly Semi-Supervised Object Detection by Points.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Points_As_Queries_Weakly_Semi-Supervised_Object_Detection_by_Points_CVPR_2021_paper.html) · 📚 被引 87
+- **作者**: Liangyu Chen, Tong Yang, Xiangyu Zhang, Wei Zhang, Jian Sun
+- **🏷️ 机构**: MEGVII
+- **会议**: CVPR 2021
+
+### GAIA: A Transfer Learning System of Object Detection That Fits Your Needs.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Bu_GAIA_A_Transfer_Learning_System_of_Object_Detection_That_Fits_CVPR_2021_paper.html) · 📚 被引 35
+- **作者**: Xingyuan Bu, Junran Peng, Junjie Yan, Tieniu Tan, Zhaoxiang Zhang
+- **🏷️ 机构**: ia.ac.cn
+- **会议**: CVPR 2021
+
+### Adaptive Image Transformer for One-Shot Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Adaptive_Image_Transformer_for_One-Shot_Object_Detection_CVPR_2021_paper.html) · 📚 被引 57
+- **作者**: Ding-Jie Chen, He-Yen Hsieh, Tyng-Luh Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Class-Aware Robust Adversarial Training for Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Class-Aware_Robust_Adversarial_Training_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 52
+- **作者**: Pin-Chun Chen, Bo-Han Kung, Jun-Cheng Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Scale-Aware Automatic Augmentation for Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Scale-Aware_Automatic_Augmentation_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 49
+- **作者**: Yukang Chen, Yanwei Li, Tao Kong, Lu Qi, Ruihang Chu, Lei Li et al.
+- **🏷️ 机构**: CUHK / SmartMore
+- **会议**: CVPR 2021
+
+### AQD: Towards Accurate Quantized Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_AQD_Towards_Accurate_Quantized_Object_Detection_CVPR_2021_paper.html) · 📚 被引 27
+- **作者**: Peng Chen, Jing Liu, Bohan Zhuang, Mingkui Tan, Chunhua Shen
+- **🏷️ 机构**: ZJU
+- **会议**: CVPR 2021
+
+### Robust and Accurate Object Detection via Adversarial Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Robust_and_Accurate_Object_Detection_via_Adversarial_Learning_CVPR_2021_paper.html) · 📚 被引 60
+- **作者**: Xiangning Chen, Cihang Xie, Mingxing Tan, Li Zhang, Cho-Jui Hsieh, Boqing Gong
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Dynamic Head: Unifying Object Detection Heads With Attentions.
+- **链接**: [arXiv:2106.08322](https://arxiv.org/abs/2106.08322) · [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Dai_Dynamic_Head_Unifying_Object_Detection_Heads_With_Attentions_CVPR_2021_paper.html) · [代码](https://github.com/microsoft/DynamicHead) · 📚 被引 940
+- **作者**: Xiyang Dai, Yinpeng Chen, Bin Xiao, Dongdong Chen, Mengchen Liu, Lu Yuan et al.
 - **🏷️ 机构**: PolyU / OPPO
-- **会议**: ICCV 2021
-
-### MosaicOS: A Simple and Effective Use of Object-Centric Images for Long-Tailed Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00047) · 📚 51 citations
-- **作者**: Cheng Zhang, Tai-Yu Pan, Yandong Li, Hexiang Hu, Dong Xuan, Soravit Changpinyo et al.
-- **🏷️ 机构**: Google DeepMind, Google Research
-- **会议**: ICCV 2021
-
-### Uncertainty-Guided Transformer Reasoning for Camouflaged Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00411) · 📚 312 citations
-- **作者**: Fan Yang, Qiang Zhai, Xin Li, Rui Huang, Ao Luo, Hong Cheng et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-### Robust Object Detection via Instance-Level Temporal Cycle Confusion.
-- **链接**: [arXiv:2104.08381](https://arxiv.org/abs/2104.08381) · [出版页](https://doi.org/10.1109/ICCV48922.2021.00901) · [代码](https://github.com/xinw1012/cycle-confusion) · 📚 37 citations
-- **作者**: Xin Wang, Thomas E. Huang, Benlin Liu, Fisher Yu, Xiaolong Wang, Joseph E. Gonzalez et al.
-- **🏷️ 机构**: ETH Zurich, UC Berkeley
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
 - **摘要（英，原文）**:
 
-  > Building reliable object detectors that are robust to domain shifts, such as various changes in context, viewpoint, and object appearances, is critical for real-world applications. In this work, we study the effectiveness of auxiliary self-supervised tasks to improve the out-of-distribution generalization of object detectors. Inspired by the principle of maximum entropy, we introduce a novel self-supervised task, instance-level temporal cycle confusion (CycConf), which operates on the region features of the object detectors. For each object, the task is to find the most different object proposals in the adjacent frame in a video and then cycle back to itself for self-supervision. CycConf encourages the object detector to explore invariant structures across instances under various motions, which leads to improved model robustness in unseen domains at test time. We observe consistent out-of-domain performance improvements when training object detectors in tandem with self-supervised tasks on large-scale video datasets (BDD100K and Waymo open data). The joint training framework also establishes a new state-of-the-art on standard unsupervised domain adaptative detection benchmarks (Cityscapes, Foggy Cityscapes, and Sim10K). The code and models are available at https://github.com/xinw1012/cycle-confusion.
+  > The complex nature of combining localization and classification in object detection has resulted in the flourished development of methods. Previous works tried to improve the performance in various object detection heads but failed to present a unified view. In this paper, we present a novel dynamic head framework to unify object detection heads with attentions. By coherently combining multiple self-attention mechanisms between feature levels for scale-awareness, among spatial locations for spatial-awareness, and within output channels for task-awareness, the proposed approach significantly improves the representation ability of object detection heads without any computational overhead. Further experiments demonstrate that the effectiveness and efficiency of the proposed dynamic head on the COCO benchmark. With a standard ResNeXt-101-DCN backbone, we largely improve the performance over popular object detectors and achieve a new state-of-the-art at 54.0 AP. Furthermore, with latest transformer backbone and extra data, we can push current best COCO result to a new record at 60.6 AP. The code will be released at https://github.com/microsoft/DynamicHead.
 
-### CaT: Weakly Supervised Object Detection with Category Transfer.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00306) · 📚 22 citations
-- **作者**: Tianyue Cao, Lianyu Du, Xiaoyun Zhang, Siheng Chen, Ya Zhang, Yanfeng Wang
+### General Instance Distillation for Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Dai_General_Instance_Distillation_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 234
+- **作者**: Xing Dai, Zeren Jiang, Zhao Wu, Yiping Bao, Zhicheng Wang, Si Liu et al.
+- **🏷️ 机构**: MEGVII Technology, BeiHang University
+- **会议**: CVPR 2021
+
+### Unbiased Mean Teacher for Cross-Domain Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Deng_Unbiased_Mean_Teacher_for_Cross-Domain_Object_Detection_CVPR_2021_paper.html) · 📚 被引 336
+- **作者**: Jinhong Deng, Wen Li, Yuhua Chen, Lixin Duan
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### Dual Bipartite Graph Learning: A General Approach for Domain Adaptive Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00270) · 📚 67 citations
-- **作者**: Chaoqi Chen, Jiongcheng Li, Zebiao Zheng, Yue Huang, Xinghao Ding, Yizhou Yu
+### Group Collaborative Learning for Co-Salient Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Fan_Group_Collaborative_Learning_for_Co-Salient_Object_Detection_CVPR_2021_paper.html) · 📚 被引 101
+- **作者**: Qi Fan, Deng-Ping Fan, Huazhu Fu, Chi-Keung Tang, Ling Shao, Yu-Wing Tai
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### Robust Small Object Detection on the Water Surface through Fusion of Camera and Millimeter Wave Radar.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01498) · 📚 89 citations
-- **作者**: Yuwei Cheng, Hu Xu, Yimin Liu
+### Generalized Few-Shot Object Detection Without Forgetting.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Fan_Generalized_Few-Shot_Object_Detection_Without_Forgetting_CVPR_2021_paper.html) · 📚 被引 165
+- **作者**: Zhibo Fan, Yuchen Ma, Zeming Li, Jian Sun
+- **🏷️ 机构**: MEGVII
+- **会议**: CVPR 2021
+
+### OTA: Optimal Transport Assignment for Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Ge_OTA_Optimal_Transport_Assignment_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 482
+- **作者**: Zheng Ge, Songtao Liu, Zeming Li, Osamu Yoshie, Jian Sun
+- **🏷️ 机构**: MEGVII
+- **会议**: CVPR 2021
+
+### Depth From Camera Motion and Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Griffin_Depth_From_Camera_Motion_and_Object_Detection_CVPR_2021_paper.html) · 📚 被引 33
+- **作者**: Brent A. Griffin, Jason J. Corso
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### Active Learning for Deep Object Detection via Probabilistic Modeling.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01010) · 📚 151 citations
-- **作者**: Jiwoong Choi, Ismail Elezi, Hyuk-Jae Lee, Clément Farabet, José M. Álvarez
+### Positive-Unlabeled Data Purification in the Wild for Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Guo_Positive-Unlabeled_Data_Purification_in_the_Wild_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 7
+- **作者**: Jianyuan Guo, Kai Han, Han Wu, Chao Zhang, Xinghao Chen, Chunjing Xu et al.
+- **🏷️ 机构**: Huawei Technologies,Noah&#x2019;s Ark Lab, University of Sydney,School of Computer Science, Faculty of Engineering, Peking University,Key Lab of Machine Perception (MOE),Dept. of Machine Intelligence
+- **会议**: CVPR 2021
+
+### Beyond Bounding-Box: Convex-Hull Feature Adaptation for Oriented and Densely Packed Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Guo_Beyond_Bounding-Box_Convex-Hull_Feature_Adaptation_for_Oriented_and_Densely_Packed_CVPR_2021_paper.html) · 📚 被引 244
+- **作者**: Zonghao Guo, Chang Liu, Xiaosong Zhang, Jianbin Jiao, Xiangyang Ji, Qixiang Ye
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### Multitask AET with Orthogonal Tangent Regularity for Dark Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00255) · 📚 182 citations
-- **作者**: Ziteng Cui, Guo-Jun Qi, Lin Gu, Shaodi You, Zenghui Zhang, Tatsuya Harada
+### ReDet: A Rotation-Equivariant Detector for Aerial Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Han_ReDet_A_Rotation-Equivariant_Detector_for_Aerial_Object_Detection_CVPR_2021_paper.html) · 📚 被引 886
+- **作者**: Jiaming Han, Jian Ding, Nan Xue, Gui-Song Xia
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### TF-Blender: Temporal Feature Blender for Video Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00803) · 📚 179 citations
-- **作者**: Yiming Cui, Liqi Yan, Zhiwen Cao, Dongfang Liu
-- **🏷️ 机构**: Fudan University
-- **会议**: ICCV 2021
-
-### Boosting Weakly Supervised Object Detection via Learning Bounding Box Adjusters.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00287) · 📚 59 citations
-- **作者**: Bowen Dong, Zitong Huang, Yuelin Guo, Qilong Wang, Zhenxing Niu, Wangmeng Zuo
+### Informative and Consistent Correspondence Mining for Cross-Domain Weakly Supervised Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hou_Informative_and_Consistent_Correspondence_Mining_for_Cross-Domain_Weakly_Supervised_Object_CVPR_2021_paper.html) · 📚 被引 16
+- **作者**: Luwei Hou, Yu Zhang, Kui Fu, Jia Li
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### TOOD: Task-aligned One-stage Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00349) · 📚 1383 citations
-- **作者**: Chengjian Feng, Yujie Zhong, Yu Gao, Matthew R. Scott, Weilin Huang
+### Dense Relation Distillation With Context-Aware Aggregation for Few-Shot Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hu_Dense_Relation_Distillation_With_Context-Aware_Aggregation_for_Few-Shot_Object_Detection_CVPR_2021_paper.html) · 📚 被引 192
+- **作者**: Hanzhe Hu, Shuai Bai, Aoxue Li, Jinshi Cui, Liwei Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### Exploring Classification Equilibrium in Long-Tailed Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00340)
-- **作者**: Chengjian Feng, Yujie Zhong, Weilin Huang
+### SAIL-VOS 3D: A Synthetic Dataset and Baselines for Object Detection and 3D Mesh Reconstruction From Video Data.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hu_SAIL-VOS_3D_A_Synthetic_Dataset_and_Baselines_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 15
+- **作者**: Yuan-Ting Hu, Jiahong Wang, Raymond A. Yeh, Alexander G. Schwing
+- **🏷️ 机构**: University of Illinois at Urbana-Champaign
+- **会议**: CVPR 2021
+
+### Interpolation-Based Semi-Supervised Learning for Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Jeong_Interpolation-Based_Semi-Supervised_Learning_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 45
+- **作者**: Jisoo Jeong, Vikas Verma, Minsung Hyun, Juho Kannala, Nojun Kwak
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### Mutual Supervision for Dense Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00362) · 📚 40 citations
-- **作者**: Ziteng Gao, Limin Wang, Gangshan Wu
+### Calibrated RGB-D Salient Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Ji_Calibrated_RGB-D_Salient_Object_Detection_CVPR_2021_paper.html) · 📚 被引 262
+- **作者**: Wei Ji, Jingjing Li, Shuang Yu, Miao Zhang, Yongri Piao, Shunyu Yao et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### Query Adaptive Few-Shot Object Detection with Heterogeneous Graph Convolutional Networks.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00325) · 📚 140 citations
-- **作者**: Guangxing Han, Yicheng He, Shiyuan Huang, Jiawei Ma, Shih-Fu Chang
+### Towards Open World Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Joseph_Towards_Open_World_Object_Detection_CVPR_2021_paper.html)
+- **作者**: K. J. Joseph, Salman H. Khan, Fahad Shahbaz Khan, Vineeth N. Balasubramanian
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### Towards Rotation Invariance in Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00351) · 📚 14 citations
-- **作者**: Agastya Kalra, Guy Stoppi, Bradley Brown, Rishav Agarwal, Achuta Kadambi
+### UniT: Unified Knowledge Transfer for Any-Shot Object Detection and Segmentation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Khandelwal_UniT_Unified_Knowledge_Transfer_for_Any-Shot_Object_Detection_and_Segmentation_CVPR_2021_paper.html) · 📚 被引 24
+- **作者**: Siddhesh Khandelwal, Raghav Goyal, Leonid Sigal
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### ODAM: Object Detection, Association, and Mapping using Posed RGB Video.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00594) · 📚 33 citations
-- **作者**: Kejie Li, Daniel DeTone, Steven Chen, Minh Vo, Ian Reid, Hamid Rezatofighi et al.
-- **🏷️ 机构**: Meta Reality Labs Research, MIT
-- **会议**: ICCV 2021
+### Transformation Invariant Few-Shot Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_Transformation_Invariant_Few-Shot_Object_Detection_CVPR_2021_paper.html) · 📚 被引 88
+- **作者**: Aoxue Li, Zhenguo Li
+- **🏷️ 机构**: Huawei Noah&#x2019;s Ark Lab,China
+- **会议**: CVPR 2021
 
-### Parallel Rectangle Flip Attack: A Query-based Black-box Attack against Object Detection.
-- **链接**: [arXiv:2201.08970](https://arxiv.org/abs/2201.08970) · [出版页](https://doi.org/10.1109/ICCV48922.2021.00760) · 📚 105 citations
-- **作者**: Siyuan Liang, Baoyuan Wu, Yanbo Fan, Xingxing Wei, Xiaochun Cao
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-- **摘要（英，原文）**:
-
-  > Object detection has been widely used in many safety-critical tasks, such as autonomous driving. However, its vulnerability to adversarial examples has not been sufficiently studied, especially under the practical scenario of black-box attacks, where the attacker can only access the query feedback of predicted bounding-boxes and top-1 scores returned by the attacked model. Compared with black-box attack to image classification, there are two main challenges in black-box attack to detection. Firstly, even if one bounding-box is successfully attacked, another sub-optimal bounding-box may be detected near the attacked bounding-box. Secondly, there are multiple bounding-boxes, leading to very high attack cost. To address these challenges, we propose a Parallel Rectangle Flip Attack (PRFA) via random search. We explain the difference between our method with other attacks in Fig.~\ref{fig1}. Specifically, we generate perturbations in each rectangle patch to avoid sub-optimal detection near the attacked region. Besides, utilizing the observation that adversarial perturbations mainly locate around objects' contours and critical points under white-box attacks, the search space of attacked rectangles is reduced to improve the attack efficiency. Moreover, we develop a parallel mechanism of attacking multiple rectangles simultaneously to further accelerate the attack process. Extensive experiments demonstrate that our method can effectively and efficiently attack various popular object detectors, including anchor-based and anchor-free, and generate transferable adversarial examples.
-
-### Domain-Invariant Disentangled Network for Generalizable Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00865) · 📚 98 citations
-- **作者**: Chuang Lin, Zehuan Yuan, Sicheng Zhao, Peize Sun, Changhu Wang, Jianfei Cai
-- **🏷️ 机构**: NUS
-- **会议**: ICCV 2021
-
-### Self-Supervised Object Detection via Generative Image Synthesis.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00849)
-- **作者**: Siva Karthik Mustikovela, Shalini De Mello, Aayush Prakash, Umar Iqbal, Sifei Liu, Thu Nguyen-Phuoc et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-### Rank & Sort Loss for Object Detection and Instance Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00300)
-- **作者**: Kemal Oksuz, Baris Can Cam, Emre Akbas, Sinan Kalkan
-- **🏷️ 机构**: Middle East Technical University, Roketsan Inc., Middle East Technical University
-- **会议**: ICCV 2021
-
-### MFNet: Multi-filter Directive Network for Weakly Supervised Salient Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00410) · 📚 71 citations
-- **作者**: Yongri Piao, Jian Wang, Miao Zhang, Huchuan Lu
-- **🏷️ 机构**: Dalian University of Technology
-- **会议**: ICCV 2021
-
-### DeFRCN: Decoupled Faster R-CNN for Few-Shot Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00856) · 📚 323 citations
-- **作者**: Limeng Qiao, Yuxuan Zhao, Zhiyuan Li, Xi Qiu, Jianan Wu, Chi Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-### CrossDet: Crossline Representation for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00318) · 📚 18 citations
-- **作者**: Heqian Qiu, Hongliang Li, Qingbo Wu, Jianhua Cui, Zichen Song, Lanxiao Wang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-### SimROD: A Simple Adaptation Method for Robust Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00355) · 📚 68 citations
-- **作者**: Rindra Ramamonjison, Amin Banitalebi-Dehkordi, Xinyu Kang, Xiaolong Bai, Yong Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-### Seeking Similarities over Differences: Similarity-based Domain Alignment for Adaptive Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00907) · 📚 92 citations
-- **作者**: Farzaneh Rezaeianaran, Rakshith Shetty, Rahaf Aljundi, Daniel Olmeda Reino, Shanshan Zhang, Bernt Schiele
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-### Scene Context-Aware Salient Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00412) · 📚 58 citations
-- **作者**: Avishek Siris, Jianbo Jiao, Gary K. L. Tam, Xianghua Xie, Rynson W. H. Lau
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-### Rethinking Transformer-based Set Prediction for Object Detection.
-- **链接**: [arXiv:2011.10881](https://arxiv.org/abs/2011.10881) · [出版页](https://doi.org/10.1109/ICCV48922.2021.00359) · 📚 388 citations
-- **作者**: Zhiqing Sun, Shengcao Cao, Yiming Yang, Kris Kitani
-- **🏷️ 机构**: Carnegie Mellon University
-- **会议**: ICCV 2021
-
-- **摘要（英，原文）**:
-
-  > DETR is a recently proposed Transformer-based method which views object detection as a set prediction problem and achieves state-of-the-art performance but demands extra-long training time to converge. In this paper, we investigate the causes of the optimization difficulty in the training of DETR. Our examinations reveal several factors contributing to the slow convergence of DETR, primarily the issues with the Hungarian loss and the Transformer cross-attention mechanism. To overcome these issues we propose two solutions, namely, TSP-FCOS (Transformer-based Set Prediction with FCOS) and TSP-RCNN (Transformer-based Set Prediction with RCNN). Experimental results show that the proposed methods not only converge much faster than the original DETR, but also significantly outperform DETR and other baselines in terms of detection accuracy.
-
-### Disentangled High Quality Salient Object Detection.
-- **链接**: [arXiv:2108.03551](https://arxiv.org/abs/2108.03551) · [出版页](https://doi.org/10.1109/ICCV48922.2021.00356) · 📚 89 citations
-- **作者**: Lv Tang, Bo Li, Yijie Zhong, Shouhong Ding, Mofei Song
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-- **摘要（英，原文）**:
-
-  > Aiming at discovering and locating most distinctive objects from visual scenes, salient object detection (SOD) plays an essential role in various computer vision systems. Coming to the era of high resolution, SOD methods are facing new challenges. The major limitation of previous methods is that they try to identify the salient regions and estimate the accurate objects boundaries simultaneously with a single regression task at low-resolution. This practice ignores the inherent difference between the two difficult problems, resulting in poor detection quality. In this paper, we propose a novel deep learning framework for high-resolution SOD task, which disentangles the task into a low-resolution saliency classification network (LRSCN) and a high-resolution refinement network (HRRN). As a pixel-wise classification task, LRSCN is designed to capture sufficient semantics at low-resolution to identify the definite salient, background and uncertain image regions. HRRN is a regression task, which aims at accurately refining the saliency value of pixels in the uncertain region to preserve a clear object boundary at high-resolution with limited GPU memory. It is worth noting that by introducing uncertainty into the training process, our HRRN can well address the high-resolution refinement task without using any high-resolution training data. Extensive experiments on high-resolution saliency datasets as well as some widely used saliency benchmarks show that the proposed method achieves superior performance compared to the state-of-the-art methods.
-
-### Knowledge Mining and Transferring for Domain Adaptive Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00900) · 📚 55 citations
-- **作者**: Kun Tian, Chenghao Zhang, Ying Wang, Shiming Xiang, Chunhong Pan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-### Reconcile Prediction Consistency for Balanced Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00361) · 📚 38 citations
-- **作者**: Keyang Wang, Lei Zhang
-- **🏷️ 机构**: PolyU / OPPO
-- **会议**: ICCV 2021
-
-### Universal-Prototype Enhancing for Few-Shot Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00943) · 📚 112 citations
-- **作者**: Aming Wu, Yahong Han, Linchao Zhu, Yi Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-### Vector-Decomposed Disentanglement for Domain-Invariant Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00921) · 📚 142 citations
-- **作者**: Aming Wu, Rui Liu, Yahong Han, Linchao Zhu, Yi Yang
-- **🏷️ 机构**: Tianjin University
-- **会议**: ICCV 2021
-
-### Oriented R-CNN for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00350) · 📚 1214 citations
-- **作者**: Xingxing Xie, Gong Cheng, Jiabao Wang, Xiwen Yao, Junwei Han
-- **🏷️ 机构**: Nanjing University
-- **会议**: ICCV 2021
-
-### DetCo: Unsupervised Contrastive Learning for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00828)
-- **作者**: Enze Xie, Jian Ding, Wenhai Wang, Xiaohang Zhan, Hang Xu, Peize Sun et al.
+### Generalized Focal Loss V2: Learning Reliable Localization Quality Estimation for Dense Object Detection.
+- **链接**: [arXiv:2011.12885](https://arxiv.org/abs/2011.12885) · [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_Generalized_Focal_Loss_V2_Learning_Reliable_Localization_Quality_Estimation_for_CVPR_2021_paper.html) · [代码](https://github.com/implus/GFocalV2) · 📚 被引 396
+- **作者**: Xiang Li, Wenhai Wang, Xiaolin Hu, Jun Li, Jinhui Tang, Jian Yang
 - **🏷️ 机构**: Shanghai AI Lab
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### End-to-End Semi-Supervised Object Detection with Soft Teacher.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00305) · 📚 676 citations
-- **作者**: Mengde Xu, Zheng Zhang, Han Hu, Jianfeng Wang, Lijuan Wang, Fangyun Wei et al.
-- **🏷️ 机构**: HUAST
-- **会议**: ICCV 2021
+- **摘要（英，原文）**:
 
-### Multi-Source Domain Adaptation for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00326) · 📚 58 citations
-- **作者**: Xingxu Yao, Sicheng Zhao, Pengfei Xu, Jufeng Yang
-- **🏷️ 机构**: NUS
-- **会议**: ICCV 2021
+  > Localization Quality Estimation (LQE) is crucial and popular in the recent advancement of dense object detectors since it can provide accurate ranking scores that benefit the Non-Maximum Suppression processing and improve detection performance. As a common practice, most existing methods predict LQE scores through vanilla convolutional features shared with object classification or bounding box regression. In this paper, we explore a completely novel and different perspective to perform LQE -- based on the learned distributions of the four parameters of the bounding box. The bounding box distributions are inspired and introduced as "General Distribution" in GFLV1, which describes the uncertainty of the predicted bounding boxes well. Such a property makes the distribution statistics of a bounding box highly correlated to its real localization quality. Specifically, a bounding box distribution with a sharp peak usually corresponds to high localization quality, and vice versa. By leveraging the close correlation between distribution statistics and the real localization quality, we develop a considerably lightweight Distribution-Guided Quality Predictor (DGQP) for reliable LQE based on GFLV1, thus producing GFLV2. To our best knowledge, it is the first attempt in object detection to use a highly relevant, statistical representation to facilitate LQE. Extensive experiments demonstrate the effectiveness of our method. Notably, GFLV2 (ResNet-101) achieves 46.2 AP at 14.6 FPS, surpassing the previous state-of-the-art ATSS baseline (43.6 AP at 14.6 FPS) by absolute 2.6 AP on COCO {\tt test-dev}, without sacrificing the efficiency both in training and inference. Code will be available at https://github.com/implus/GFocalV2.
 
-### Dynamic Context-Sensitive Filtering Network for Video Salient Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00158) · 📚 114 citations
-- **作者**: Miao Zhang, Jie Liu, Yifei Wang, Yongri Piao, Shunyu Yao, Wei Ji et al.
-- **🏷️ 机构**: Dalian University of Technology
-- **会议**: ICCV 2021
-
-### GraphFPN: Graph Feature Pyramid Network for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00276) · 📚 131 citations
-- **作者**: Gangming Zhao, Weifeng Ge, Yizhou Yu
+### Beyond Max-Margin: Class Margin Equilibrium for Few-Shot Object Detection.
+- **链接**: [arXiv:2103.04612](https://arxiv.org/abs/2103.04612) · [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_Beyond_Max-Margin_Class_Margin_Equilibrium_for_Few-Shot_Object_Detection_CVPR_2021_paper.html) · [代码](https://github.com/Bohao-Lee/CME) · 📚 被引 180
+- **作者**: Bohao Li, Boyu Yang, Chang Liu, Feng Liu, Rongrong Ji, Qixiang Ye
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > Few-shot object detection has made substantial progressby representing novel class objects using the feature representation learned upon a set of base class objects. However,an implicit contradiction between novel class classification and representation is unfortunately ignored. On the one hand, to achieve accurate novel class classification, the distributions of either two base classes must be far away fromeach other (max-margin). On the other hand, to precisely represent novel classes, the distributions of base classes should be close to each other to reduce the intra-class distance of novel classes (min-margin). In this paper, we propose a class margin equilibrium (CME) approach, with the aim to optimize both feature space partition and novel class reconstruction in a systematic way. CME first converts the few-shot detection problem to the few-shot classification problem by using a fully connected layer to decouple localization features. CME then reserves adequate margin space for novel classes by introducing simple-yet-effective class margin loss during feature learning. Finally, CME pursues margin equilibrium by disturbing the features of novel class instances in an adversarial min-max fashion. Experiments on Pascal VOC and MS-COCO datasets show that CME significantly improves upon two baseline detectors (up to $3\sim 5\%$ in average), achieving state-of-the-art performance. Code is available at https://github.com/Bohao-Lee/CME .
+
+### Few-Shot Object Detection via Classification Refinement and Distractor Retreatment.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_Few-Shot_Object_Detection_via_Classification_Refinement_and_Distractor_Retreatment_CVPR_2021_paper.html) · 📚 被引 83
+- **作者**: Yiting Li, Haiyue Zhu, Yu Cheng, Wenxin Wang, Chek Sing Teo, Cheng Xiang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### RankDetNet: Delving Into Ranking Constraints for Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Liu_RankDetNet_Delving_Into_Ranking_Constraints_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 15
+- **作者**: Ji Liu, Dong Li, Rongzhang Zheng, Lu Tian, Yi Shan
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### IQDet: Instance-Wise Quality Distribution Sampling for Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Ma_IQDet_Instance-Wise_Quality_Distribution_Sampling_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 62
+- **作者**: Yuchen Ma, Songtao Liu, Zeming Li, Jian Sun
+- **🏷️ 机构**: MEGVII
+- **会议**: CVPR 2021
+
+### Neural Auto-Exposure for High-Dynamic Range Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Onzon_Neural_Auto-Exposure_for_High-Dynamic_Range_Object_Detection_CVPR_2021_paper.html) · 📚 被引 50
+- **作者**: Emmanuel Onzon, Fahim Mannan, Felix Heide
+- **🏷️ 机构**: Algolux, Princeton University,Algolux
+- **会议**: CVPR 2021
+
+### Improved Handling of Motion Blur in Online Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sayed_Improved_Handling_of_Motion_Blur_in_Online_Object_Detection_CVPR_2021_paper.html) · 📚 被引 42
+- **作者**: Mohamed Sayed, Gabriel J. Brostow
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### FSCE: Few-Shot Object Detection via Contrastive Proposal Encoding.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_FSCE_Few-Shot_Object_Detection_via_Contrastive_Proposal_Encoding_CVPR_2021_paper.html) · 📚 被引 505
+- **作者**: Bo Sun, Banghuai Li, Shengcai Cai, Ye Yuan, Chi Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Sparse R-CNN: End-to-End Object Detection With Learnable Proposals.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Sparse_R-CNN_End-to-End_Object_Detection_With_Learnable_Proposals_CVPR_2021_paper.html) · 📚 被引 1308
+- **作者**: Peize Sun, Rufeng Zhang, Yi Jiang, Tao Kong, Chenfeng Xu, Wei Zhan et al.
+- **🏷️ 机构**: ByteDance Inc., Carnegie Mellon University
+- **会议**: CVPR 2021
+
+### Equalization Loss v2: A New Gradient Balance Approach for Long-Tailed Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Tan_Equalization_Loss_v2_A_New_Gradient_Balance_Approach_for_Long-Tailed_CVPR_2021_paper.html) · 📚 被引 179
+- **作者**: Jingru Tan, Xin Lu, Gang Zhang, Changqing Yin, Quanquan Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Humble Teachers Teach Better Students for Semi-Supervised Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Tang_Humble_Teachers_Teach_Better_Students_for_Semi-Supervised_Object_Detection_CVPR_2021_paper.html) · 📚 被引 179
+- **作者**: Yihe Tang, Weifeng Chen, Yijun Luo, Yuting Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Unsupervised Object Detection With LIDAR Clues.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Tian_Unsupervised_Object_Detection_With_LIDAR_Clues_CVPR_2021_paper.html) · 📚 被引 26
+- **作者**: Hao Tian, Yuntao Chen, Jifeng Dai, Zhaoxiang Zhang, Xizhou Zhu
+- **🏷️ 机构**: Tsinghua / Shanghai AI Lab
+- **会议**: CVPR 2021
+
+### MeGA-CDA: Memory Guided Attention for Category-Aware Unsupervised Domain Adaptive Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/VS_MeGA-CDA_Memory_Guided_Attention_for_Category-Aware_Unsupervised_Domain_Adaptive_Object_CVPR_2021_paper.html) · 📚 被引 160
+- **作者**: Vibashan VS, Vikram Gupta, Poojan Oza, Vishwanath A. Sindagi, Vishal M. Patel
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Data-Uncertainty Guided Multi-Phase Learning for Semi-Supervised Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Data-Uncertainty_Guided_Multi-Phase_Learning_for_Semi-Supervised_Object_Detection_CVPR_2021_paper.html) · 📚 被引 83
+- **作者**: Zhenyu Wang, Yali Li, Ye Guo, Lu Fang, Shengjin Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### End-to-End Object Detection With Fully Convolutional Network.
+- **链接**: [arXiv:2012.03544](https://arxiv.org/abs/2012.03544) · [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_End-to-End_Object_Detection_With_Fully_Convolutional_Network_CVPR_2021_paper.html) · [代码](https://github.com/Megvii-BaseDetection/DeFCN) · 📚 被引 247
+- **作者**: Jianfeng Wang, Lin Song, Zeming Li, Hongbin Sun, Jian Sun, Nanning Zheng
+- **🏷️ 机构**: MEGVII, XJTU
+- **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > Mainstream object detectors based on the fully convolutional network has achieved impressive performance. While most of them still need a hand-designed non-maximum suppression (NMS) post-processing, which impedes fully end-to-end training. In this paper, we give the analysis of discarding NMS, where the results reveal that a proper label assignment plays a crucial role. To this end, for fully convolutional detectors, we introduce a Prediction-aware One-To-One (POTO) label assignment for classification to enable end-to-end detection, which obtains comparable performance with NMS. Besides, a simple 3D Max Filtering (3DMF) is proposed to utilize the multi-scale features and improve the discriminability of convolutions in the local region. With these techniques, our end-to-end framework achieves competitive performance against many state-of-the-art detectors with NMS on COCO and CrowdHuman datasets. The code is available at https://github.com/Megvii-BaseDetection/DeFCN .
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- RangeDet: In Defense of Range View for LiDAR-based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- iNAS: Integral NAS for Device-Aware Salient Object Detection. → [neural-architecture-search](../neural-architecture-search/Guideline%202021.md)
-- Fog Simulation on Real LiDAR Point Clouds for 3D Object Detection in Adverse Weather. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Gated3D: Monocular 3D Object Detection From Temporal Illumination Cues. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Exploring Geometry-aware Contrast and Clustering Harmonization for Self-supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Group-Free 3D Object Detection via Transformers. → [3d-detection](../3d-detection/Guideline%202021.md)
-- AutoShape: Real-Time Shape-Aware Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Geometry Uncertainty Projection Network for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Multi-Echo LiDAR for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Pyramid R-CNN: Towards Better Performance and Adaptability for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Voxel Transformer for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- An End-to-End Transformer Model for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Is Pseudo-Lidar needed for Monocular 3D Object detection? → [3d-detection](../3d-detection/Guideline%202021.md)
-- RandomRooms: Unsupervised Pre-training from Synthetic Shapes and Randomized Layouts for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Improving 3D Object Detection with Channel-wise Transformer. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Geometry-based Distance Decomposition for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Are we Missing Confidence in Pseudo-LiDAR Methods for Monocular 3D Object Detection? → [3d-detection](../3d-detection/Guideline%202021.md)
-- You Don't Only Look Once: Constructing Spatial-Temporal Memory for Integrated 3D Object Detection and Tracking. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Wanderlust: Online Continual Object Detection in the Real World. → [continual-learning](../continual-learning/Guideline%202021.md)
-- VENet: Voting Enhancement Network for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- SPG: Unsupervised Domain Adaptation for 3D Object Detection via Semantic Point Generation. → [3d-detection](../3d-detection/Guideline%202021.md)
+- Objects Are Different: Flexible Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+- GrooMeD-NMS: Grouped Mathematically Differentiable NMS for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+- 3DIoUMatch: Leveraging IoU Prediction for Semi-Supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+- To the Point: Efficient 3D Object Detection in the Range Image With Graph Convolution Kernels. → [3d-detection](../3d-detection/Guideline%202021.md)
+- MonoRUn: Monocular 3D Object Detection by Reconstruction and Uncertainty Propagation. → [3d-detection](../3d-detection/Guideline%202021.md)
+- Back-Tracing Representative Points for Voting-Based 3D Object Detection in Point Clouds. → [3d-detection](../3d-detection/Guideline%202021.md)
+- LiDAR-Aug: A General Rendering-Based Augmentation Framework for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+- OPANAS: One-Shot Path Aggregation Network Architecture Search for Object Detection. → [neural-architecture-search](../neural-architecture-search/Guideline%202021.md)
+- Delving Into Localization Errors for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+- HVPR: Hybrid Voxel-Point Representation for Single-Stage 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+- 3D Object Detection With Pointformer. → [3d-detection](../3d-detection/Guideline%202021.md)
+- Offboard 3D Object Detection From Point Cloud Sequences. → [3d-detection](../3d-detection/Guideline%202021.md)
+- Categorical Depth Distribution Network for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+- RSN: Range Sparse Net for Efficient, Accurate LiDAR 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+- There Is More Than Meets the Eye: Self-Supervised Multi-Object Detection and Tracking With Sound by Distilling Multimodal Knowledge. → [multimodal](../multimodal/Guideline%202021.md)
+- PointAugmenting: Cross-Modal Augmentation for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+- Depth-Conditioned Dynamic Message Propagation for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
