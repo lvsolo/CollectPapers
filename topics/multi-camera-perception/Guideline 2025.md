@@ -1,0 +1,76 @@
+# Multi-camera Perception — 2025 Guideline
+
+> 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
+> 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
+
+> 同领域其他年份: 
+
+### MANTA: A Large-Scale Multi-View and Visual-Text Anomaly Detection Dataset for Tiny Objects.
+- **链接**: [arXiv:2412.04867](https://arxiv.org/abs/2412.04867) · [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Fan_MANTA_A_Large-Scale_Multi-View_and_Visual-Text_Anomaly_Detection_Dataset_for_CVPR_2025_paper.html) · 📚 被引 18
+- **作者**: Lei Fan, Dongdong Fan, Zhiguang Hu, Yiwen Ding, Donglin Di, Kai Yi et al.
+- **🏷️ 机构**: UNSW Sydney, Gaozhe Technology, SCAU
+- **会议**: CVPR 2025
+
+- **摘要（英，原文）**:
+
+  > We present MANTA, a visual-text anomaly detection dataset for tiny objects. The visual component comprises over 137.3K images across 38 object categories spanning five typical domains, of which 8.6K images are labeled as anomalous with pixel-level annotations. Each image is captured from five distinct viewpoints to ensure comprehensive object coverage. The text component consists of two subsets: Declarative Knowledge, including 875 words that describe common anomalies across various domains and specific categories, with detailed explanations for < what, why, how>, including causes and visual characteristics; and Constructivist Learning, providing 2K multiple-choice questions with varying levels of difficulty, each paired with images and corresponded answer explanations. We also propose a baseline for visual-text tasks and conduct extensive benchmarking experiments to evaluate advanced methods across different settings, highlighting the challenges and efficacy of our dataset.
+
+### Cross-Modal 3D Representation with Multi-View Images and Point Clouds.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_Cross-Modal_3D_Representation_with_Multi-View_Images_and_Point_Clouds_CVPR_2025_paper.html)
+- **作者**: Ziyang Zhou, Pinghui Wang, Zi Liang, Haitao Bai, Ruofei Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### PCDreamer: Point Cloud Completion Through Multi-view Diffusion Priors.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wei_PCDreamer_Point_Cloud_Completion_Through_Multi-view_Diffusion_Priors_CVPR_2025_paper.html) · 📚 被引 8
+- **作者**: Guangshun Wei, Yuan Feng, Long Ma, Chen Wang, Yuanfeng Zhou, Changjian Li
+- **🏷️ 机构**: Shandong University, University of Edinburgh
+- **会议**: CVPR 2025
+
+### HOT3D: Hand and Object Tracking in 3D from Egocentric Multi-View Videos.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Banerjee_HOT3D_Hand_and_Object_Tracking_in_3D_from_Egocentric_Multi-View_CVPR_2025_paper.html) · 📚 被引 34
+- **作者**: Prithviraj Banerjee, Sindi Shkodrani, Pierre Moulon, Shreyas Hampali, Shangchen Han, Fan Zhang et al.
+- **🏷️ 机构**: Meta Reality Labs
+- **会议**: CVPR 2025
+
+### MITracker: Multi-View Integration for Visual Object Tracking.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xu_MITracker_Multi-View_Integration_for_Visual_Object_Tracking_CVPR_2025_paper.html) · 📚 被引 7
+- **作者**: Mengjie Xu, Yitao Zhu, Haotian Jiang, Jiaming Li, Zhenrong Shen, Sheng Wang et al.
+- **🏷️ 机构**: ShanghaiTech University,School of Biomedical Engineering &#x0026; State Key Laboratory of Advanced Medical Materials and Devices, Shanghai Jiao Tong University,School of Biomedical Engineering
+- **会议**: CVPR 2025
+
+### All-Day Multi-Camera Multi-Target Tracking.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Fan_All-Day_Multi-Camera_Multi-Target_Tracking_CVPR_2025_paper.html)
+- **作者**: Huijie Fan, Yu Qiao, Yihao Zhen, Tinghui Zhao, Baojie Fan, Qiang Wang
+- **🏷️ 机构**: Shanghai AI Lab
+- **会议**: CVPR 2025
+
+### SkySense-O: Towards Open-World Remote Sensing Interpretation with Vision-Centric Visual-Language Modeling.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SkySense-O_Towards_Open-World_Remote_Sensing_Interpretation_with_Vision-Centric_Visual-Language_Modeling_CVPR_2025_paper.html) · 📚 被引 24
+- **作者**: Qi Zhu, Jiangwei Lao, Deyi Ji, Junwei Luo, Kang Wu, Yingying Zhang et al.
+- **🏷️ 机构**: USTC,MoE Key Laboratory of Brain-inspired Intelligent Perception and Cognition, Shanghai Jiaotong University, Wuhan University
+- **会议**: CVPR 2025
+
+### DriveScape: High-Resolution Driving Video Generation by Multi-View Feature Fusion.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_DriveScape_High-Resolution_Driving_Video_Generation_by_Multi-View_Feature_Fusion_CVPR_2025_paper.html) · 📚 被引 1
+- **作者**: Wei Wu, Xi Guo, Weixuan Tang, Tingxuan Huang, Chiyu Wang, Chenjing Ding
+- **🏷️ 机构**: Tsinghua University, Sensetime Research, Northeastern University
+- **会议**: CVPR 2025
+
+### SceneCrafter: Controllable Multi-View Driving Scene Editing.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SceneCrafter_Controllable_Multi-View_Driving_Scene_Editing_CVPR_2025_paper.html) · 📚 被引 0
+- **作者**: Zehao Zhu, Yuliang Zou, Chiyu Max Jiang, Bo Sun, Vincent Casser, Xiukun Huang et al.
+- **🏷️ 机构**: Waymo, Johns Hopkins University
+- **会议**: CVPR 2025
+
+### Enhanced Contrastive Learning with Multi-view Longitudinal Data for Chest X-ray Report Generation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Enhanced_Contrastive_Learning_with_Multi-view_Longitudinal_Data_for_Chest_X-ray_CVPR_2025_paper.html)
+- **作者**: Kang Liu, Zhuoqi Ma, Xiaolu Kang, Yunan Li, Kun Xie, Zhicheng Jiao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Leveraging Temporal Cues for Semi-Supervised Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202025.md)
+- CorrBEV: Multi-View 3D Object Detection by Correlation Learning with Multi-modal Prototypes. → [3d-detection](../3d-detection/Guideline%202025.md)
+- VisionPAD: A Vision-Centric Pre-training Paradigm for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
