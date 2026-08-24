@@ -2,8 +2,8 @@ name: Conference Guidelines Update
 
 on:
   schedule:
-    # 每两天跑一次（逢偶数日 UTC 02:23，北京 10:23）
-    - cron: "23 2 */2 * *"
+    # 每两天跑一次（北京时间凌晨 02:41 = 前一天 UTC 18:41，与日报错开）
+    - cron: "41 18 */2 * *"
   workflow_dispatch: {}   # 手动触发（想立即重刷某会议时用）
   push:
     branches: [main]

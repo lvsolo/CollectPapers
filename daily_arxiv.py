@@ -9,6 +9,7 @@
 import argparse
 import datetime as dt
 import json
+import re
 import sys
 import time
 from pathlib import Path
@@ -147,11 +148,13 @@ def main():
                         lines.append(f"- {label}: {ev[k]}")
             else:
                 ab = p.get("abstract", "")
-                # 摘录模式：抽前两句
-                import re
+                # 摘录模式：优先抽方法/贡献句，其次前两句（英文，用户可读）
                 sents = re.split(r"(?<=[.!?])\s+", ab)
-                excerpt = " ".join(sents[:2])[:500]
-                lines.append(f"- **摘要摘录**: {excerpt}")
+                key = [s for s in sents if re.search(
+                    r"\b(we propose|we present|we introduce|this paper|our method|"
+                    r"we develop|we design|we find|state-of-the-art|outperform)", s, re.I)][:2]
+                excerpt = " ".join(key) if key else " ".join(sents[:2])
+                lines.append(f"- **摘要摘录**: {excerpt[:700]}")
             lines.append("")
         lines.append("---")
         lines.append("")

@@ -2,9 +2,9 @@ name: Daily arXiv Report
 
 on:
   schedule:
-    # 每天 UTC 09:17（北京 17:17）跑一次，覆盖 arXiv 当日美东时间更新
-    # 注：GitHub cron 高峰整点易延迟，选了非整点分钟
-    - cron: "17 9 * * *"
+    # 北京时间凌晨 02:23（= 前一天 UTC 18:23）跑，早起即见昨日最新论文
+    # 注：GitHub cron 用 UTC；选非整点分钟避开高峰延迟
+    - cron: "23 18 * * *"
   workflow_dispatch: {}   # 支持手动触发
 
 permissions:

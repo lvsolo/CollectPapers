@@ -31,12 +31,15 @@ topics:
       - stereo 3d detection
       - 3d pedestrian
       - waymo open dataset
-      - nuScenes detection
+      - nuscenes detection
       - object detection in point clouds
       - frustum pointnet
       - centerpoint
       - voxel
       - pillar
+      - 3d bounding box
+      - object detection for autonomous driving
+      - camera-based 3d detection
     must_any: '\b(3d|three[- ]dimensional|lidar|point cloud|point-cloud)\b'
     exclude:
       - text detection
@@ -219,6 +222,7 @@ topics:
     keywords:
       - self-supervised learning
       - self-supervised representation
+      - self-supervised
       - contrastive learning
       - masked image modeling
       - masked image
@@ -232,6 +236,11 @@ topics:
       - unsupervised pretraining vision
       - pretext task
       - joint-embedding predictive
+      - jepa
+      - latent prediction
+      - masked modeling
+      - self-supervised video
+      - representation learning without labels
     must_any: '\b(self.supervised|contrastive|masked (image|autoencoder|visual)|byol|moco|simclr|dino|mae)\b'
     exclude:
       - nlp only bert
@@ -363,18 +372,26 @@ topics:
 # ---------- 顶会 Guideline 线 ----------
 conferences:
   # DBLP venue 名（查询参数用）
+  # publish_months: 论文列表在 DBLP 开始/持续增长的月份（录用公布 → 会议召开 + 收尾），
+  # 非窗口月份跳过抓取，避免无效重复（历史年份不受影响，只有"当前年"受窗口控制）
   - name: CVPR
     dblp_venue: CVPR
+    publish_months: [2, 3, 4, 5, 6, 7]      # 2月公示 → 6月开会 → 7月收尾
   - name: ECCV
     dblp_venue: ECCV
+    publish_months: [7, 8, 9, 10, 11]
   - name: ICCV
     dblp_venue: ICCV
+    publish_months: [8, 9, 10, 11]
   - name: NeurIPS
     dblp_venue: NeurIPS
+    publish_months: [9, 10, 11, 12, 1]
   - name: ICLR
     dblp_venue: ICLR
+    publish_months: [1, 2, 3, 4, 5]
   - name: ICML
     dblp_venue: ICML
+    publish_months: [5, 6, 7, 8]
 
 # 顶会线的分年份上限：早年份领域内论文太多时防止文件爆炸
 max_papers_per_year: 120          # 排序后取前 N 篇写入 Guideline
@@ -383,9 +400,9 @@ max_papers_per_year_before_2022: 60  # 2020/2021 只留最重要的
 # ---------- 日报线（arXiv daily） ----------
 daily:
   categories: [cs.CV]              # 主抓取类目
-  lookback_days: 2                 # 抓最近 2 天提交（跨周一时覆盖周五）
-  max_papers_per_topic: 8          # 每个领域日报最多展示条数
-  max_total: 60                    # 每日总量上限（控制 LLM 花费）
+  lookback_days: 3                 # 抓最近 3 天提交（覆盖周末空窗）
+  max_papers_per_topic: 10         # 每个领域日报最多展示条数
+  max_total: 120                   # 每日总量上限（控制 LLM 花费；无 LLM 时不受限于此值的评估成本）
   report_dir: daily                # 报告存放目录
 
 # ---------- LLM 评估（可选，无 Key 自动降级） ----------

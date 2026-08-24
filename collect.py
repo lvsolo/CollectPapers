@@ -8,6 +8,7 @@
 """
 
 import argparse
+import datetime as dt
 import json
 import re
 import sys
@@ -80,7 +81,8 @@ def dblp_conference_papers(venue: str, year: int, hint: str | None = None) -> li
             offset += 100
             if offset >= total or offset > 2000:
                 break
-            time.sleep(2.0)  # DBLP 礼貌限速，太快会被断连
+            time.sleep(2.5)  # DBLP 礼貌限速，429/断连时由 http_get 退避重试兜底
+        time.sleep(1.5)  # 关键词轮次之间也留间隔
     return list(seen.values())
 
 
@@ -101,12 +103,42 @@ QUERIES_BY_CONFERENCE = [
 # Enrichment
 # ----------------------------------------------------------------------
 def find_arxiv_id(paper: dict) -> str | None:
-    """从 DBLP ee 链接识别 arXiv id。"""
+    """从 DBLP ee 链接识别 arXiv id；没有时用 DBLP 自身的 arXiv 关联查询。"""
     ee = paper.get("ee", "") or ""
     m = re.search(r"arxiv\.org/abs/(\d{4}\.\d{4,5}|[a-z\-]+/\d{7})", ee, re.I)
     if m:
         return m.group(1)
-    # DBLP 常见格式: https://dblp.org/rec/conf/cvpr/xxx
+    return None
+
+
+def dblp_find_arxiv(title: str, authors: list[str]) -> str | None:
+    """按标题在 DBLP 全库搜 arXiv 版本（期刊 CoRR）。返回 arXiv id 或 None。"""
+    q = urllib.parse.quote(title[:150])
+    data = http_get_json(
+        f"https://dblp.org/search/publ/api?q={q}&format=json&h=10",
+        cache_hours=336, retries=2, timeout=15)
+    if not data:
+        return None
+    hits = data.get("result", {}).get("hits", {}).get("hit", [])
+    if isinstance(hits, dict):
+        hits = [hits]
+    for h in hits:
+        info = h.get("info", {})
+        t = common.clean_text(info.get("title", "")).lower().rstrip(". ")
+        if t != title.lower().rstrip(". "):
+            continue
+        if "informal" not in str(info.get("type", "")).lower():
+            continue  # CoRR（arXiv）条目在 DBLP 里标记为 informal
+        ees = info.get("ee", [])
+        if isinstance(ees, str):
+            ees = [ees]
+        for ee in ees:
+            m = re.search(r"arxiv\.org/abs/(\d{4}\.\d{4,5}|[a-z\-]+/\d{7})", ee, re.I)
+            if m:
+                return m.group(1)
+            m = re.search(r"doi\.org/10\.48550/arXiv\.(\S+)", ee, re.I)
+            if m:
+                return m.group(1)
     return None
 
 
@@ -136,6 +168,11 @@ def enrich_papers(papers: list[dict], *, do_abstract=True, do_citations=True,
     # 1) arXiv id → 批量摘要
     if do_abstract:
         need = [p for p in papers if not p.get("abstract")]
+        # 没有 arxiv_id 的先反查（DBLP 全库检索 CoRR 版本）
+        for p in need:
+            if not p.get("arxiv_id"):
+                p["arxiv_id"] = dblp_find_arxiv(p["title"], p.get("authors", []))
+                time.sleep(0.5)
         ids = [p["arxiv_id"] for p in need if p.get("arxiv_id")]
         log(f"  enrich: fetching abstracts for {len(ids)}/{len(need)} papers")
         fetched = {a["arxiv_id"]: a for a in arxiv_by_ids(ids)}
@@ -144,7 +181,8 @@ def enrich_papers(papers: list[dict], *, do_abstract=True, do_citations=True,
             if a:
                 p["abstract"] = a["abstract"]
                 p["arxiv_authors"] = a["authors"]
-            time.sleep(0)  # arxiv_by_ids 已按批缓存
+            if p.get("arxiv_id"):
+                p.setdefault("url", f"https://arxiv.org/abs/{p['arxiv_id']}")
     # 2) 引用数（预算内）
     if do_citations:
         got = 0
@@ -197,10 +235,9 @@ def render_paper_md(paper: dict, llm_eval: dict | None, primary: bool,
     lines.append(title_line)
     links = []
     if paper.get("arxiv_id"):
-        links.append(f"[arXiv:{paper['arxiv_id']}]({paper['url']})" if paper.get("url")
-                     else f"[arXiv:{paper['arxiv_id']}](https://arxiv.org/abs/{paper['arxiv_id']})")
-    if paper.get("ee") and "arxiv" not in paper["ee"]:
-        links.append(f"[原文]({paper['ee']})")
+        links.append(f"[arXiv:{paper['arxiv_id']}](https://arxiv.org/abs/{paper['arxiv_id']})")
+    if paper.get("ee") and "arxiv" not in (paper.get("ee") or ""):
+        links.append(f"[出版页]({paper['ee']})")
     if paper.get("code"):
         links.append(f"[代码]({paper['code']})")
     lines.append(f"- **链接**: {' · '.join(links) if links else '（无）'}{cite}")
@@ -277,6 +314,7 @@ def main():
     ap.add_argument("--year", type=int, default=None)
     ap.add_argument("--no-enrich", action="store_true", help="跳过摘要/引用 enrich")
     ap.add_argument("--citations-budget", type=int, default=400)
+    ap.add_argument("--force", action="store_true", help="忽略会议公布窗口强制抓取")
     args = ap.parse_args()
 
     confs = CONFIG["conferences"]
@@ -288,6 +326,22 @@ def main():
     years = list(range(CONFIG["start_year"], CONFIG["end_year"] + 1))
     if args.year:
         years = [args.year]
+
+    # 会议公布窗口：只有"当前年份"受窗口控制（历史年份是稳定数据，永远全量）
+    this_month = dt.date.today().month
+    this_year = dt.date.today().year
+    if not args.force:
+        active = []
+        for c in confs:
+            months = c.get("publish_months")
+            if months and this_year in years and this_month not in months:
+                log(f"[skip] {c['name']} {this_year}: 当前月份 {this_month} 不在公布窗口 {months}（--force 可强制）")
+                continue
+            active.append(c)
+        confs = active
+        if this_year in years and this_month == 1:
+            # 1月时 NeurIPS 已收尾，跳过当年其余会议的空跑
+            pass
 
     classifier = Classifier(CONFIG["topics"])
     bucket: dict[str, dict[int, list]] = {}

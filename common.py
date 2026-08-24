@@ -30,7 +30,7 @@ def _cache_path(key: str) -> Path:
 
 
 def http_get(url: str, *, cache_hours: float = 0.0, timeout: int = 30,
-             retries: int = 3, headers: dict | None = None) -> bytes | None:
+             retries: int = 4, headers: dict | None = None) -> bytes | None:
     """GET with disk cache and exponential backoff. Returns None on final failure."""
     cp = _cache_path(f"get:{url}")
     if cache_hours > 0 and cp.exists():
@@ -50,7 +50,7 @@ def http_get(url: str, *, cache_hours: float = 0.0, timeout: int = 30,
                 cp.write_text(json.dumps({"data": data.decode("utf-8", "replace")}))
             return data
         except Exception as e:  # noqa: BLE001 - network layer, degrade gracefully
-            wait = 2 ** attempt
+            wait = min(3 ** attempt + 2, 40)
             log(f"  ! GET failed ({e}), retry in {wait}s: {url[:100]}")
             time.sleep(wait)
     return None
