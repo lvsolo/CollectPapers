@@ -421,10 +421,39 @@ def crossref_paper(title: str) -> dict | None:
         item = data["message"]["items"][0]
     except (KeyError, IndexError):
         return None
-    # 标题相似度校验（crossref 是模糊检索，防错配）
+    return _parse_crossref(title, item)
+
+
+def crossref_batch(titles: list[str], max_workers: int = 6) -> dict[str, dict]:
+    """并行批量查询（线程池 6 并发 — Crossref 礼貌池实测上限附近）。
+    未命中的标题自动串行补查一轮（防并发限流丢包）。
+    返回 {原始标题: {'citations', 'affiliations'}}。"""
+    from concurrent.futures import ThreadPoolExecutor
+    out: dict[str, dict] = {}
+
+    def one(t: str):
+        return t, crossref_paper(t)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as ex:
+        for t, r in ex.map(one, titles):
+            if r:
+                out[t] = r
+    # 并发限流丢包补查（串行慢速）
+    missed = [t for t in titles if t not in out]
+    for t in missed:
+        r = crossref_paper(t)
+        if r:
+            out[t] = r
+        time.sleep(0.4)
+    return out
+
+
+def _parse_crossref(title: str, item: dict | None) -> dict | None:
+    if not item:
+        return None
     got = (item.get("title") or [""])[0]
     if _title_sim(title, got) < 0.7:
-        return None
+        return None  # 模糊检索防错配
     out = {"citations": item.get("is-referenced-by-count", 0), "affiliations": []}
     for a in item.get("author", [])[:8]:
         for aff in (a.get("affiliation") or []):

@@ -190,30 +190,38 @@ def enrich_papers(papers: list[dict], *, do_abstract=True, do_citations=True,
                 p["arxiv_authors"] = a["authors"]
             if p.get("arxiv_id"):
                 p.setdefault("url", f"https://arxiv.org/abs/{p['arxiv_id']}")
-    # 2) 引用数（预算内）
-    if do_citations:
-        got = 0
-        for p in papers:
-            if got >= citations_budget:
-                break
-            if p.get("citations") is None:
-                c = s2_citations(p["title"])
-                if c is not None:
-                    p["citations"] = c
-                    got += 1
-                time.sleep(1.2)  # 免费 S2 ~1 rps
-    # 3) 机构标注（映射表未命中才查 S2；磁盘缓存含负结果）
-    if do_institutions:
-        n_inst = 0
-        for p in papers:
+    # 2) 引用数 + 3) 机构：Crossref 一次并行批量查询同时拿两个字段（磁盘缓存优先）
+    if do_citations or do_institutions:
+        need = [p for p in papers
+                if p.get("citations") is None or not p.get("institutions")]
+        # 先走已有磁盘缓存（affiliations.json 里同时缓存过机构的不再查）
+        to_query = []
+        for p in need:
+            cached = common._affil_cache().get(p["title"].lower().rstrip(". ")[:180])
+            if cached and p.get("citations") is None:
+                p["citations"] = -1  # 占位，后面由 crossref 填（缓存里无引用数）
+            to_query.append(p)
+        t0 = time.time()
+        results = common.crossref_batch([p["title"] for p in to_query]) if to_query else {}
+        n_c, n_i = 0, 0
+        for p in to_query:
+            r = results.get(p["title"])
+            if r:
+                if p.get("citations") is None:
+                    p["citations"] = r["citations"]; n_c += 1
+                if not p.get("institutions") and r["affiliations"]:
+                    p["institutions"] = ", ".join(r["affiliations"][:3]); n_i += 1
+            if p.get("citations") == -1:
+                p["citations"] = None  # 占位还原
+        # 映射表兜底（零网络）
+        for p in to_query:
             if not p.get("institutions"):
-                inst = common.institutions_for_paper(p)
-                if inst and inst != "（机构待查）":
-                    p["institutions"] = inst
-                    n_inst += 1
-                time.sleep(0.6)  # S2 免费档限速
-        if papers:
-            log(f"  enrich: institutions resolved for {n_inst}/{len(papers)} papers")
+                inst = institution_for(p.get("authors") or [])
+                if inst:
+                    p["institutions"] = inst; n_i += 1
+        if to_query:
+            log(f"  enrich: crossref batch {len(results)}/{len(to_query)} hit in {time.time()-t0:.0f}s "
+                f"(citations {n_c}, institutions {n_i})")
     return papers
 
 
