@@ -141,20 +141,23 @@ def main():
                 lines.append(line)
             lines.append(f"- **提交日期**: {p['date']} · **分类**: {', '.join(p.get('cats', [])[:3])}")
             if ev:
+                if ev.get("summary_cn"):
+                    lines.append(f"- **摘要（中）**: {ev['summary_cn']}")
+                if ev.get("summary_en"):
+                    lines.append(f"- **摘要（英）**: {ev['summary_en']}")
                 for k, label in [("assessment", "**评估**"), ("contribution", "**核心贡献**"),
-                                 ("innovation", "**创新点**"), ("method", "**方法**"),
-                                 ("result", "**结果**")]:
+                                 ("innovation", "**创新点**"), ("result", "**结果**")]:
                     if ev.get(k):
                         lines.append(f"- {label}: {ev[k]}")
-            else:
-                ab = p.get("abstract", "")
-                # 摘录模式：优先抽方法/贡献句，其次前两句（英文，用户可读）
-                sents = re.split(r"(?<=[.!?])\s+", ab)
-                key = [s for s in sents if re.search(
-                    r"\b(we propose|we present|we introduce|this paper|our method|"
-                    r"we develop|we design|we find|state-of-the-art|outperform)", s, re.I)][:2]
-                excerpt = " ".join(key) if key else " ".join(sents[:2])
-                lines.append(f"- **摘要摘录**: {excerpt[:700]}")
+            # arXiv 原始摘要全文（折叠，供对照原文）
+            ab = p.get("abstract", "")
+            if ab:
+                lines.append("")
+                lines.append("<details><summary>📄 arXiv 原始摘要（点击展开）</summary>")
+                lines.append("")
+                lines.append(f"> {ab}")
+                lines.append("")
+                lines.append("</details>")
             lines.append("")
         lines.append("---")
         lines.append("")

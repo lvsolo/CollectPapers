@@ -250,14 +250,20 @@ def render_paper_md(paper: dict, llm_eval: dict | None, primary: bool,
             line += f"　🏷️ **机构**: {inst}"
         lines.append(line)
     lines.append(f"- **会议**: {paper['venue']} {paper['year']}")
-    if llm_eval and llm_eval.get("assessment"):
-        lines.append(f"- **评估**: {llm_eval['assessment']}")
+    if llm_eval and llm_eval.get("summary_cn"):
+        lines.append(f"- **摘要（中）**: {llm_eval['summary_cn']}")
+        if llm_eval.get("summary_en"):
+            lines.append(f"- **摘要（英）**: {llm_eval['summary_en']}")
         for k, label in [("contribution", "核心贡献"), ("innovation", "创新点"),
-                         ("method", "方法"), ("result", "结果")]:
+                         ("result", "结果")]:
             if llm_eval.get(k):
                 lines.append(f"- **{label}**: {llm_eval[k]}")
-    else:
-        lines.append(f"- **摘要摘录**: {extract_summary(paper)}")
+    elif paper.get("abstract"):
+        # 无 LLM：英文摘要全文放折叠块（用户可读英文，原文最完整）
+        lines.append("")
+        lines.append("- **摘要（英，原文）**:")
+        lines.append("")
+        lines.append(f"  > {paper['abstract']}")
     return "\n".join(lines)
 
 
