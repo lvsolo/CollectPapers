@@ -1,0 +1,6 @@
+.claude/
+__pycache__/
+*.pyc
+# .cache 目录被 workflow 缓存使用，但 daily_seen.json 需要提交以做跨运行去重
+.cache/*
+!.gitignore

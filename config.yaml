@@ -1,0 +1,487 @@
+# =====================================================================
+# CollectPapers 配置文件
+# 增删领域、改关键词、调论文数量都在这里改，改完直接提交即可生效。
+# =====================================================================
+
+# ---------- 通用 ----------
+github_repo: lvsolo/CollectPapers   # 推送目标仓库（仅作展示用途）
+
+# 顶会 Guideline 线：默认从 2020 年开始收录（含奠基性论文）
+# 日报线：arXiv 每日新论文
+start_year: 2020
+end_year: 2026
+
+# ---------- 领域定义 ----------
+# name:        显示名（中文备注写在 description）
+# keywords:    匹配标题+摘要的关键词（不区分大小写）
+# must_any:    正则，标题里命中才收录（收紧用，可省略）
+# exclude:     排除关键词（如 tracking 领域排除 particle filter 等）
+# weight:      命中该领域时的重要性加权
+topics:
+  - name: 3D Detection
+    slug: 3d-detection
+    description: 3D 目标检测（LiDAR / 相机 / 多模态融合）
+    weight: 1.2
+    keywords:
+      - 3d object detection
+      - 3d detection
+      - lidar detection
+      - point cloud detection
+      - monocular 3d
+      - stereo 3d detection
+      - 3d pedestrian
+      - waymo open dataset
+      - nuScenes detection
+      - object detection in point clouds
+      - frustum pointnet
+      - centerpoint
+      - voxel
+      - pillar
+    must_any: '\b(3d|three[- ]dimensional|lidar|point cloud|point-cloud)\b'
+    exclude:
+      - text detection
+      - anomaly detection
+      - fraud detection
+      - spam detection
+      - face detection
+      - deepfake detection
+
+  - name: BEV
+    slug: bev
+    description: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
+    weight: 1.2
+    keywords:
+      - bird's eye view
+      - birds eye view
+      - bird's-eye view
+      - bev
+      - bev perception
+      - lift splat shoot
+      - bevdet
+      - bevfusion
+      - bevformer
+      - surround-view
+    must_any: '\b(bev|bird.?s?.eye.view|surround.view)\b'
+    exclude:
+      - battery electric vehicle
+      - bev beverage
+
+  - name: Occupancy
+    slug: occupancy
+    description: 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）
+    weight: 1.1
+    keywords:
+      - occupancy prediction
+      - occupancy grid
+      - occupancy network
+      - occupancy field
+      - semantic occupancy
+      - 3d occupancy
+      - voxel occupancy
+      - occupancy perception
+      - scene occupancy
+    must_any: '\boccupanc(y|ies)\b'
+
+  - name: Multi-camera Perception
+    slug: multi-camera-perception
+    description: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
+    weight: 1.0
+    keywords:
+      - multi-camera
+      - multicamera
+      - multi-view
+      - multiview
+      - surround view
+      - camera-based perception
+      - camera-only 3d
+      - vision-centric
+      - multi-view 3d
+      - monocular depth estimation
+      - self-supervised depth
+      - surround-view fisheye
+    exclude:
+      - multi-view stereo reconstruction benchmark only
+
+  - name: Tracking
+    slug: tracking
+    description: 目标跟踪（MOT / 3D 跟踪 / 多目标多相机跟踪）
+    weight: 1.0
+    keywords:
+      - multi-object tracking
+      - multiple object tracking
+      - 3d tracking
+      - multi-target tracking
+      - point cloud tracking
+      - mot challenge
+      - joint detection and tracking
+      - tracklet
+      - visual tracking
+      - single object tracking
+      - pose tracking
+      - tracking-by-attention
+    must_any: '\btrack(ing|er|let)s?\b'
+    exclude:
+      - eye tracking
+      - gaze tracking
+      - camera tracking shot
+      - tracking shot film
+
+  - name: Open Vocabulary Detection
+    slug: open-vocabulary-detection
+    description: 开放词表检测 / 开放世界感知（OVD / OWOD）
+    weight: 1.1
+    keywords:
+      - open vocabulary
+      - open-vocabulary
+      - open world detection
+      - open-world object detection
+      - zero-shot detection
+      - novel class discovery
+      - category-agnostic
+      - open-set detection
+      - open category
+      - grounded open-vocabulary
+    must_any: '\bopen[ -](vocab|world|set|category|class)'
+    exclude:
+      - open vocabulary nlp only
+
+  - name: FOD Detection
+    slug: fod-detection
+    description: 异物检测（Foreign Object Debris，机场跑道/铁路 FOD）
+    weight: 0.9
+    keywords:
+      - foreign object debris
+      - fod detection
+      - foreign object detection
+      - runway inspection
+      - railway intrusion detection
+      - surface anomaly foreign
+    must_any: '\b(fod|foreign object)\b'
+
+  - name: VLM
+    slug: vlm
+    description: 视觉语言模型（多模态大模型、CLIP 系、grounding）
+    weight: 1.1
+    keywords:
+      - vision-language model
+      - vision-language models
+      - vision language model
+      - vision-language pretraining
+      - vision-language foundation
+      - multimodal large language model
+      - multimodal llm
+      - large vision-language
+      - large vision language
+      - vlm
+      - clip
+      - contrastive language-image
+      - grounded vision language
+      - visual grounding
+      - referring expression
+      - blip
+      - llava
+      - vision-language navigation
+      - image-text
+      - text-to-image grounding
+      - visual instruction tuning
+    must_any: '\b(vlm|vision.language|multimodal|multi.modal|cross.modal|visual grounding|referring|language.image|image.text|clip)\b'
+    exclude:
+      - speech-only
+      - audio-only
+
+  - name: Vision Transformer
+    slug: vision-transformer
+    description: 视觉 Transformer（ViT、混合架构、高效注意力）
+    weight: 1.0
+    keywords:
+      - vision transformer
+      - vit
+      - swin
+      - pyramid vision transformer
+      - hierarchical transformer
+      - patch embedding
+      - image transformer
+      - transformer for image recognition
+      - attention in vision
+      - efficient attention image
+      - deit
+      - window attention
+      - token merging
+    must_any: '\b(vit|vision transformer|visual transformer|swin|deit)\b'
+    exclude:
+      - vitis
+      - digital
+
+  - name: Self-supervised Vision
+    slug: self-supervised-vision
+    description: 视觉自监督学习（对比学习、MAE、DINO 系）
+    weight: 1.0
+    keywords:
+      - self-supervised learning
+      - self-supervised representation
+      - contrastive learning
+      - masked image modeling
+      - masked image
+      - mask latent modeling
+      - masked autoencoder
+      - mae
+      - dino
+      - byol
+      - moco
+      - simclr
+      - unsupervised pretraining vision
+      - pretext task
+      - joint-embedding predictive
+    must_any: '\b(self.supervised|contrastive|masked (image|autoencoder|visual)|byol|moco|simclr|dino|mae)\b'
+    exclude:
+      - nlp only bert
+
+  - name: Video Understanding
+    slug: video-understanding
+    description: 视频理解（动作识别、时序动作、视频大模型）
+    weight: 1.0
+    keywords:
+      - video understanding
+      - action recognition
+      - temporal action
+      - video representation
+      - video recognition
+      - video-language
+      - video large language model
+      - video retrieval
+      - video question answering
+      - spatio-temporal
+      - video segmentation
+      - video anomaly
+      - egocentric video
+      - long video understanding
+    must_any: '\bvideo\b'
+    exclude:
+      - video conferencing
+      - video streaming qos
+      - video codec only
+
+  - name: Multimodal
+    slug: multimodal
+    description: 多模态学习（图文对齐、融合、多模态融合感知）
+    weight: 1.0
+    keywords:
+      - multimodal
+      - multi-modal
+      - cross-modal
+      - visual question answering
+      - image-text matching
+      - image-text pretraining
+      - vision and language fusion
+      - audio-visual
+      - multimodal fusion
+      - anymodal
+      - image captioning
+      - text-image retrieval
+    must_any: '\b(multi.?modal|cross.modal|audio.visual)\b'
+    exclude:
+      - multimodal biometric only
+
+  - name: Continual Learning
+    slug: continual-learning
+    description: 持续学习 / 增量学习（含 VLM/多模态场景）
+    weight: 1.0
+    keywords:
+      - continual learning
+      - continuous learning
+      - incremental learning
+      - lifelong learning
+      - class-incremental
+      - task-incremental
+      - catastrophic forgetting
+      - rehearsal buffer
+      - domain-incremental
+      - online continual
+      - prompt-based continual
+    must_any: '\b(continual|incremental|lifelong)\b'
+    exclude:
+      - incremental optical flow only
+
+  - name: Neural Architecture Search
+    slug: neural-architecture-search
+    description: 神经架构搜索（NAS、Zero-Cost、搜索空间）
+    weight: 0.9
+    keywords:
+      - neural architecture search
+      - architecture search
+      - nas
+      - nas-bench
+      - zero-cost proxy
+      - differentiable architecture
+      - darts
+      - supernet
+      - hardware-aware nas
+      - efficient architecture design
+    must_any: '\b(nas|architecture search|darts|supernet)\b'
+    exclude:
+      - nas gateway network routing
+
+  - name: Network Pruning
+    slug: network-pruning
+    description: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
+    weight: 0.9
+    keywords:
+      - network pruning
+      - model pruning
+      - prune
+      - prunes
+      - pruning
+      - pruned
+      - structured pruning
+      - sparsity
+      - sparse training
+      - lottery ticket
+      - channel pruning
+      - filter pruning
+      - compression
+      - weight sparsification
+    must_any: '\b(prun\w*|spars\w*|lottery ticket|compress\w*)\b'
+    exclude:
+      - pruning fruit tree
+
+  - name: Knowledge Distillation
+    slug: knowledge-distillation
+    description: 知识蒸馏（特征/逻辑蒸馏、VLM 蒸馏、自蒸馏）
+    weight: 0.9
+    keywords:
+      - knowledge distillation
+      - distillation
+      - teacher-student
+      - teacher student
+      - self-distillation
+      - feature imitation
+      - distilling
+      - hint learning
+      - feature distillation
+    must_any: '\b(distill|teacher.student)\b'
+
+# ---------- 顶会 Guideline 线 ----------
+conferences:
+  # DBLP venue 名（查询参数用）
+  - name: CVPR
+    dblp_venue: CVPR
+  - name: ECCV
+    dblp_venue: ECCV
+  - name: ICCV
+    dblp_venue: ICCV
+  - name: NeurIPS
+    dblp_venue: NeurIPS
+  - name: ICLR
+    dblp_venue: ICLR
+  - name: ICML
+    dblp_venue: ICML
+
+# 顶会线的分年份上限：早年份领域内论文太多时防止文件爆炸
+max_papers_per_year: 120          # 排序后取前 N 篇写入 Guideline
+max_papers_per_year_before_2022: 60  # 2020/2021 只留最重要的
+
+# ---------- 日报线（arXiv daily） ----------
+daily:
+  categories: [cs.CV]              # 主抓取类目
+  lookback_days: 2                 # 抓最近 2 天提交（跨周一时覆盖周五）
+  max_papers_per_topic: 8          # 每个领域日报最多展示条数
+  max_total: 60                    # 每日总量上限（控制 LLM 花费）
+  report_dir: daily                # 报告存放目录
+
+# ---------- LLM 评估（可选，无 Key 自动降级） ----------
+llm:
+  enabled: true                    # 有 Key 才真正调用
+  # 兼容 OpenAI 接口。GitHub Secrets: LLM_API_BASE / LLM_API_KEY / LLM_MODEL
+  api_base_env: LLM_API_BASE
+  api_key_env: LLM_API_KEY
+  model_env: LLM_MODEL
+  default_base: https://api.deepseek.com/v1   # 未设 env 时的兜底
+  default_model: deepseek-chat
+  temperature: 0.2
+  max_papers_per_call: 6           # 单次评估的论文数（控制单条 prompt 长度）
+  timeout: 120
+
+# ---------- 机构标注 ----------
+institutions:
+  # OpenReview 可达时自动抓取作者单位；以下为兜底映射（作者名 → 机构）
+  # 知名自动驾驶/视觉实验室的关键作者（部分，可自行扩充）
+  author_map:
+    "Xiaogang Wang": "CUHK / Shanghai AI Lab"
+    "Hongsheng Li": "CUHK"
+    "Yu Qiao": "Shanghai AI Lab"
+    "Dahua Lin": "CUHK"
+    "Wayne Zhang": "CUHK / SenseTime"
+    "Chen Change Loy": "NTU S-Lab"
+    "Fisher Yu": "ETH Zurich"
+    "Andreas Geiger": "University of Tübingen"
+    "Philipp Krähenbühl": "UT Austin"
+    "Deva Ramanan": "CMU"
+    "Martial Hebert": "CMU"
+    "Raquel Urtasun": "Waabi / University of Toronto"
+    "Sanja Fidler": "NVIDIA / University of Toronto"
+    "Bryan Catanzaro": "NVIDIA"
+    "Jose M. Alvarez": "NVIDIA"
+    "Zhiding Yu": "NVIDIA"
+    "Trevor Darrell": "UC Berkeley"
+    "Jitendra Malik": "UC Berkeley"
+    "Alexei A. Efros": "UC Berkeley"
+    "Ross Girshick": "Meta FAIR"
+    "Kaiming He": "MIT"
+    "Ross Wightman": "Ross Wightman"
+    "Piotr Dollár": "Meta FAIR"
+    "Christoph Feichtenhofer": "Meta FAIR"
+    "Kaiming He": "MIT"
+    "Xiangyu Zhang": "MEGVII"
+    "Jian Sun": "MEGVII"
+    "Nanning Zheng": "XJTU"
+    "Yishi Wang": "Huazhong University of Science and Technology"
+    "Xiaoou Tang": "CUHK"
+    "Lei Zhang": "PolyU / OPPO"
+    "Jiaya Jia": "CUHK / SmartMore"
+    "Bo Dai": "Shanghai AI Lab"
+    "Wenhai Wang": "Shanghai AI Lab"
+    "Xizhou Zhu": "Tsinghua / Shanghai AI Lab"
+    "Jifeng Dai": "Tsinghua / Shanghai AI Lab"
+    "Yu Liu": "SenseTime"
+    "Hongyang Li": "Shanghai AI Lab"
+    "Chongruo Wu": "UT Austin"
+    "Tong He": "Fudan / Shanghai AI Lab"
+    "Gang Yu": "Tencent"
+    "Jian Yao": "Wuhan University"
+    "Zheng Ge": "MEGVII"
+    "Xiangang Wang": "MEGVII"
+    "Jianmin Li": "Tsinghua"
+    "Jun-Yan Zhu": "CMU"
+    "Ming-Hsuan Yang": "UC Merced"
+    "Pei Sun": "Waymo"
+    "Dragomir Anguelov": "Waymo"
+    "Yuning Chai": "Waymo"
+    "Ben Caine": "Waymo"
+    "Rebecca Roelofs": "Waymo"
+    "Ethan Perot": "Waymo"
+    "Sicheng Zhao": "NUS"
+    "Angela Yao": "NUS"
+    "Hanwang Zhang": "NUS"
+    "Song Bai": "USTC"
+    "Xiang Bai": "HUAST"
+    "Chunhua Shen": "ZJU"
+    "Mingli Song": "ZJU"
+    "Xi Li": "ZJU"
+    "Jieping Ye": " Alibaba / Zhejiang Lab"
+    "Zhouchen Lin": "Peking University"
+    "Yisen Wang": "Peking University"
+    "Zhiyuan Chen": "Tsinghua"
+    "Mu Li": "AWS / CMU"
+    "Zhijie Liu": "Shanghai AI Lab"
+    "Junhua Mao": "ByteDance"
+    "Ji-Rong Wen": "Renmin University"
+    "Tat-Seng Chua": "NUS"
+    "Steven Hoi": "Salesforce"
+    "Ming Tao": "Xidian University"
+
+# ---------- 数据源开关（探测结论 2026-08） ----------
+sources:
+  dblp: true            # ✅ 稳定，主数据源（会议全列表）
+  arxiv: true           # ✅ 稳定，摘要 + 日报线主源
+  semantic_scholar: true # ⚠️ 免费限流，带缓存+退避重试，仅用于引用数
+  openreview: try       # ⚠️ 2026-08 起有 challenge 验证，能过则抓机构

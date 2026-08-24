@@ -1,0 +1,53 @@
+name: Daily arXiv Report
+
+on:
+  schedule:
+    # 每天 UTC 09:17（北京 17:17）跑一次，覆盖 arXiv 当日美东时间更新
+    # 注：GitHub cron 高峰整点易延迟，选了非整点分钟
+    - cron: "17 9 * * *"
+  workflow_dispatch: {}   # 支持手动触发
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-arxiv
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Run daily collector
+        env:
+          LLM_API_BASE: ${{ secrets.LLM_API_BASE }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
+        run: python3 daily_arxiv.py --days 3
+
+      - name: Update README recent list
+        run: python3 update_readme.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "collectpapers-bot"
+          git config user.email "actions@github.com"
+          git add daily/ README.md .cache/daily_seen.json
+          # 无变化就不提交（避免空提交堆积）
+          if git diff --cached --quiet; then
+            echo "No changes, skip commit"
+          else
+            git commit -m "docs(daily): arXiv report $(date -u +%F)"
+            git push
+          fi

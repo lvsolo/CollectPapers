@@ -1,0 +1,58 @@
+name: Conference Guidelines Update
+
+on:
+  schedule:
+    # 每两天跑一次（逢偶数日 UTC 02:23，北京 10:23）
+    - cron: "23 2 */2 * *"
+  workflow_dispatch: {}   # 手动触发（想立即重刷某会议时用）
+  push:
+    branches: [main]
+    paths:
+      - "config.yaml"    # 改了配置自动重跑
+
+permissions:
+  contents: write
+
+concurrency:
+  group: conference-guidelines
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Restore paper cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: collectpapers-cache-v1
+
+      - name: Run conference collector
+        env:
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
+        run: python3 collect.py
+
+      - name: Update README index
+        run: python3 update_readme.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "collectpapers-bot"
+          git config user.email "actions@github.com"
+          git add topics/ README.md .cache/
+          if git diff --cached --quiet; then
+            echo "No changes, skip commit"
+          else
+            git commit -m "docs(topics): conference guidelines refresh $(date -u +%F)"
+            git push
+          fi
