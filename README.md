@@ -12,20 +12,22 @@
 
 | 领域 | 说明 |
 |------|------|
+| **Object Detection** | 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）<br/>[2024](topics/object-detection/Guideline%202024.md) |
+| **Autonomous Driving** | 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）<br/>[2024](topics/autonomous-driving/Guideline%202024.md) |
 | **3D Detection** | 3D 目标检测（LiDAR / 相机 / 多模态融合）<br/>[2024](topics/3d-detection/Guideline%202024.md) [2023](topics/3d-detection/Guideline%202023.md) |
 | **BEV** | 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）<br/>[2024](topics/bev/Guideline%202024.md) [2023](topics/bev/Guideline%202023.md) |
-| Occupancy | 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）（暂无） |
+| **Occupancy** | 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）<br/>[2024](topics/occupancy/Guideline%202024.md) |
 | **Multi-camera Perception** | 多相机 / 多视角感知（环视、深度估计与 3D 预测）<br/>[2024](topics/multi-camera-perception/Guideline%202024.md) [2023](topics/multi-camera-perception/Guideline%202023.md) |
 | **Tracking** | 目标跟踪（MOT / 3D 跟踪 / 多目标多相机跟踪）<br/>[2024](topics/tracking/Guideline%202024.md) |
-| Open Vocabulary Detection | 开放词表检测 / 开放世界感知（OVD / OWOD）（暂无） |
-| FOD Detection | 异物检测（Foreign Object Debris，机场跑道/铁路 FOD）（暂无） |
+| **Open-set Detection** | 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）<br/>[2024](topics/open-set-detection/Guideline%202024.md) |
+| FOD Detection | 自动驾驶路面异物/异常物体检测（Road Anomaly / 小物体检测 / 可碾压性判断）（暂无） |
 | **VLM** | 视觉语言模型（多模态大模型、CLIP 系、grounding）<br/>[2024](topics/vlm/Guideline%202024.md) |
-| Vision Transformer | 视觉 Transformer（ViT、混合架构、高效注意力）（暂无） |
+| **Vision Transformer** | 视觉 Transformer（ViT、混合架构、高效注意力）<br/>[2024](topics/vision-transformer/Guideline%202024.md) |
 | **Self-supervised Vision** | 视觉自监督学习（对比学习、MAE、DINO 系）<br/>[2024](topics/self-supervised-vision/Guideline%202024.md) |
 | **Video Understanding** | 视频理解（动作识别、时序动作、视频大模型）<br/>[2024](topics/video-understanding/Guideline%202024.md) |
 | **Multimodal** | 多模态学习（图文对齐、融合、多模态融合感知）<br/>[2024](topics/multimodal/Guideline%202024.md) [2023](topics/multimodal/Guideline%202023.md) |
-| **Continual Learning** | 持续学习 / 增量学习（含 VLM/多模态场景）<br/>[2023](topics/continual-learning/Guideline%202023.md) |
-| **Neural Architecture Search** | 神经架构搜索（NAS、Zero-Cost、搜索空间）<br/>[2023](topics/neural-architecture-search/Guideline%202023.md) |
+| **Continual Learning** | 持续学习 / 增量学习（含 VLM/多模态场景）<br/>[2024](topics/continual-learning/Guideline%202024.md) [2023](topics/continual-learning/Guideline%202023.md) |
+| **Neural Architecture Search** | 神经架构搜索（NAS、Zero-Cost、搜索空间）<br/>[2024](topics/neural-architecture-search/Guideline%202024.md) [2023](topics/neural-architecture-search/Guideline%202023.md) |
 | **Network Pruning** | 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）<br/>[2024](topics/network-pruning/Guideline%202024.md) |
 | Knowledge Distillation | 知识蒸馏（特征/逻辑蒸馏、VLM 蒸馏、自蒸馏）（暂无） |
 
