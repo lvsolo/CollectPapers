@@ -20,7 +20,9 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    # 首次全量约 3-4.5h（DBLP 扫描+enrich+LLM）；之后定时运行 15-25 分钟。
+    # GitHub 公开仓库单 job 上限 6 小时，360 分钟留足余量。
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
 
