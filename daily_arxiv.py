@@ -85,6 +85,13 @@ def main():
     # LLM 评估（可选）
     llm = LLM()
     evals: dict[str, dict] = {}
+    # 引用数预取（Crossref 主源；新论文多数为 0，有值的显示）
+    for p, _, _ in selected:
+        cr = common.crossref_paper(p["title"])
+        if cr is not None:
+            p["citations"] = cr["citations"]
+        time.sleep(0.15)
+
     if llm.active:
         log(f"LLM evaluation enabled (model={llm.model})")
         plist = [{"arxiv_id": p["arxiv_id"], "title": p["title"],
@@ -135,7 +142,7 @@ def main():
             if authors:
                 astr = ", ".join(authors[:3]) + (f" et al. ({len(authors)} authors)" if len(authors) > 3 else "")
                 lines.append(f"- **作者**: {astr}")
-            # 机构必显示：映射表 → S2 反查 → 待查标记
+            # 机构必显示：映射表 → Crossref/S2 反查 → 待查标记
             inst = common.institutions_for_paper(p)
             lines.append(f"- **🏷️ 机构**: {inst}")
             # 代码库：arXiv 摘要自报 GitHub 优先，PWC 兜底（有才显示）
@@ -146,7 +153,12 @@ def main():
                     code = pwc.get("official") or pwc.get("page")
             if code:
                 lines.append(f"- **💻 代码**: [{code.replace('https://', '')}]({code})")
-            lines.append(f"- **提交日期**: {p['date']} · **分类**: {', '.join(p.get('cats', [])[:3])}")
+            # 引用数（Crossref；新论文通常为 0，>=1 才显示）
+            cites = p.get("citations")
+            meta = f"- **提交日期**: {p['date']} · **分类**: {', '.join(p.get('cats', [])[:3])}"
+            if cites:
+                meta += f" · **📚 被引**: {cites}"
+            lines.append(meta)
             if ev:
                 if ev.get("summary_cn"):
                     lines.append(f"- **摘要（中）**: {ev['summary_cn']}")

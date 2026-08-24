@@ -245,7 +245,7 @@ def render_paper_md(paper: dict, llm_eval: dict | None, primary: bool,
     stars = ""
     cite = ""
     if paper.get("citations") is not None:
-        cite = f" · 📚 {paper['citations']} citations"
+        cite = f" · 📚 被引 {paper['citations']}"
     if llm_eval:
         stars = f" **{'⭐' * llm_eval.get('stars', 3)}** (相关度: {llm_eval.get('relevance', '?')}%)"
     title_line = f"### {paper['title']}{stars}"
