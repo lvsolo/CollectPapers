@@ -407,37 +407,68 @@ def _save_affil(cache: dict) -> None:
     AFFIL_CACHE.write_text(json.dumps(cache, ensure_ascii=False))
 
 
+def crossref_paper(title: str) -> dict | None:
+    """Crossref 查论文：返回 {'citations': int, 'affiliations': [str]}。免费无需 Key。
+    实测数据质量好（BEVFormer → 南大/上海AI Lab/NVIDIA + 261 引用）。"""
+    q = urllib.parse.quote(title[:250])
+    data = http_get_json(
+        f"https://api.crossref.org/works?query.bibliographic={q}&rows=1"
+        f"&select=title,is-referenced-by-count,author",
+        cache_hours=0, retries=2, timeout=15)
+    if not data:
+        return None
+    try:
+        item = data["message"]["items"][0]
+    except (KeyError, IndexError):
+        return None
+    # 标题相似度校验（crossref 是模糊检索，防错配）
+    got = (item.get("title") or [""])[0]
+    if _title_sim(title, got) < 0.7:
+        return None
+    out = {"citations": item.get("is-referenced-by-count", 0), "affiliations": []}
+    for a in item.get("author", [])[:8]:
+        for aff in (a.get("affiliation") or []):
+            name = aff.get("name")
+            if name and name not in out["affiliations"]:
+                out["affiliations"].append(name)
+    return out
+
+
 def s2_affiliations(title: str, authors: list[str]) -> list[str] | None:
-    """Semantic Scholar 反查作者单位。失败/无数据返回 None（磁盘缓存命中最优先）。"""
+    """机构反查：Crossref 主源（免费稳定）→ S2 备源（限流严重）。None=未查到。"""
     cache = _affil_cache()
     key = title.lower().rstrip(". ")[:180]
     if key in cache:
         return cache[key]  # 可能是 []（确认过没有）
 
-    import os
-    import urllib.parse
-    q = urllib.parse.quote(title[:200])
-    headers = {"x-api-key": os.environ["S2_API_KEY"]} if os.environ.get("S2_API_KEY") else None
-    _s2_throttle()
-    # retries=3 + 指数退避；429 限流时 http_get 返回 None（不写负缓存，下次重试）
-    data = http_get_json(
-        f"https://api.semanticscholar.org/graph/v1/paper/search/match?query={q}"
-        f"&fields=authors.name,authors.affiliations",
-        cache_hours=0, retries=3, timeout=15, headers=headers)
-    if data is None:
-        return None  # 网络失败/限流：不缓存，留待下次
-    insts: list[str] | None = []
-    if data.get("data"):
-        try:
-            for a in data["data"][0].get("authors", []):
-                for aff in (a.get("affiliations") or []):
-                    if aff and aff not in insts:
-                        insts.append(aff)
-        except (KeyError, IndexError, TypeError):
-            pass
-    if not insts:
-        insts = None
-    cache[key] = insts or []  # 查到了（含确实没有=负缓存）
+    insts: list[str] | None = None
+    # 1) Crossref（不限流，优先）
+    cr = crossref_paper(title)
+    if cr and cr["affiliations"]:
+        insts = cr["affiliations"][:3]
+    # 2) S2 兜底（Crossref 无机构数据时才走，限流返回 None 不缓存）
+    if insts is None:
+        import os
+        q = urllib.parse.quote(title[:200])
+        headers = {"x-api-key": os.environ["S2_API_KEY"]} if os.environ.get("S2_API_KEY") else None
+        _s2_throttle()
+        data = http_get_json(
+            f"https://api.semanticscholar.org/graph/v1/paper/search/match?query={q}"
+            f"&fields=authors.name,authors.affiliations",
+            cache_hours=0, retries=2, timeout=15, headers=headers)
+        if data is not None and data.get("data"):
+            insts = []
+            try:
+                for a in data["data"][0].get("authors", []):
+                    for aff in (a.get("affiliations") or []):
+                        if aff and aff not in insts:
+                            insts.append(aff)
+                insts = insts[:3] or None
+            except (KeyError, IndexError, TypeError):
+                insts = None
+        elif data is None and cr is None:
+            return None  # 两源都网络失败：不写缓存，下次重试
+    cache[key] = insts or []  # 查到了（含确认没有=负缓存）
     _save_affil(cache)
     return insts
 
