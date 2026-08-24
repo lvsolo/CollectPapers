@@ -20,6 +20,16 @@ UA = "CollectPapers/1.0 (github.com/lvsolo/CollectPapers; research paper tracker
 CACHE_DIR = ROOT / ".cache"
 CACHE_DIR.mkdir(exist_ok=True)
 
+# S2 免费档全局限速（跨函数共享）：两次请求至少间隔 1.3s
+_S2_LAST = [0.0]
+
+
+def _s2_throttle() -> None:
+    wait = 1.3 - (time.time() - _S2_LAST[0])
+    if wait > 0:
+        time.sleep(wait)
+    _S2_LAST[0] = time.time()
+
 
 # ----------------------------------------------------------------------
 # HTTP helpers（带磁盘缓存 + 简单退避）
@@ -399,22 +409,25 @@ def _save_affil(cache: dict) -> None:
 
 def s2_affiliations(title: str, authors: list[str]) -> list[str] | None:
     """Semantic Scholar 反查作者单位。失败/无数据返回 None（磁盘缓存命中最优先）。"""
-    # 磁盘缓存（负结果也缓存，避免反复查询）
     cache = _affil_cache()
     key = title.lower().rstrip(". ")[:180]
     if key in cache:
-        return cache[key]  # 可能是 []（查过但没有）
+        return cache[key]  # 可能是 []（确认过没有）
 
     import os
     import urllib.parse
     q = urllib.parse.quote(title[:200])
     headers = {"x-api-key": os.environ["S2_API_KEY"]} if os.environ.get("S2_API_KEY") else None
+    _s2_throttle()
+    # retries=3 + 指数退避；429 限流时 http_get 返回 None（不写负缓存，下次重试）
     data = http_get_json(
         f"https://api.semanticscholar.org/graph/v1/paper/search/match?query={q}"
         f"&fields=authors.name,authors.affiliations",
-        cache_hours=0, retries=2, timeout=15, headers=headers)
+        cache_hours=0, retries=3, timeout=15, headers=headers)
+    if data is None:
+        return None  # 网络失败/限流：不缓存，留待下次
     insts: list[str] | None = []
-    if data and data.get("data"):
+    if data.get("data"):
         try:
             for a in data["data"][0].get("authors", []):
                 for aff in (a.get("affiliations") or []):
@@ -424,7 +437,7 @@ def s2_affiliations(title: str, authors: list[str]) -> list[str] | None:
             pass
     if not insts:
         insts = None
-    cache[key] = insts or []
+    cache[key] = insts or []  # 查到了（含确实没有=负缓存）
     _save_affil(cache)
     return insts
 

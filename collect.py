@@ -144,11 +144,13 @@ def dblp_find_arxiv(title: str, authors: list[str]) -> str | None:
 
 
 def s2_citations(title: str) -> int | None:
-    """Semantic Scholar 引用数（限流严重，仅对最终入选论文调用）。"""
+    """Semantic Scholar 引用数（限流严重，仅对最终入选论文调用）。
+    注意：走 http_get 的 168h 正缓存，但失败（None）不落盘，429 后下次重试。"""
     q = urllib.parse.quote(title[:200])
+    common._s2_throttle()
     data = http_get_json(
         f"{S2_API}/search/match?query={q}&fields=citationCount",
-        cache_hours=168, retries=2, timeout=15,
+        cache_hours=168, retries=3, timeout=15,
         headers={"x-api-key": _s2_key()} if _s2_key() else None)
     if not data or data.get("code") == 404:
         return None
