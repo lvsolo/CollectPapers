@@ -1,66 +1,196 @@
 # 3D Detection — 2022 Guideline
 
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
-> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 29 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Sparse2Dense: Learning to Densify 3D Features for 3D Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/fb71332951af4ae27fbd457daadc5341-Abstract-Conference.html) · 📚 24 citations
-- **作者**: Tianyu Wang, Xiaowei Hu, Zhengzhe Liu, Chi-Wing Fu
-- **🏷️ 机构**: CUHK, The Chinese University of Hong Kong
-- **会议**: NeurIPS 2022
+### Bridged Transformer for Vision and Point Cloud 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01180) · 📚 被引 55
+- **作者**: Yikai Wang, TengQi Ye, Lele Cao, Wenbing Huang, Fuchun Sun, Fengxiang He et al.
+- **🏷️ 机构**: Tsinghua University,Beijing National Research Center for Information Science and Technology (BNRist), State Key Lab on Intelligent Technology and Systems,Department of Computer Science and Technology, ByteDance Inc., Institute for AI Industry Research (AIR), Tsinghua University
+- **会议**: CVPR 2022
 
-### MsSVT: Mixed-scale Sparse Voxel Transformer for 3D Object Detection on Point Clouds.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/4bad7c27534efca029ca0d366c47c0e3-Abstract-Conference.html) · 📚 35 citations
-- **作者**: Shaocong Dong, Lihe Ding, Haiyang Wang, Tingfa Xu, Xinli Xu, Jie Wang et al.
+### TransFusion: Robust LiDAR-Camera Fusion for 3D Object Detection with Transformers.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00116) · 📚 被引 901
+- **作者**: Xuyang Bai, Zeyu Hu, Xinge Zhu, Qingqiu Huang, Yilun Chen, Hongbo Fu et al.
+- **🏷️ 机构**: Hong Kong University of Science and Technology, ADS, IAS BU, Huawei, City University of Hong Kong
+- **会议**: CVPR 2022
+
+### Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00096)
+- **作者**: Yi-Nan Chen, Hang Dai, Yong Ding
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
+- **会议**: CVPR 2022
 
-### Fully Sparse 3D Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/0247fa3c511bbc415c8b768ee7b32f9e-Abstract-Conference.html) · 📚 163 citations
-- **作者**: Lue Fan, Feng Wang, Naiyan Wang, Zhaoxiang Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
-
-### Unifying Voxel-based Representation with Transformer for 3D Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/752df938681b2cf15e5fc9689f0bcf3a-Abstract-Conference.html) · 📚 394 citations
-- **作者**: Yanwei Li, Yilun Chen, Xiaojuan Qi, Zeming Li, Jian Sun, Jiaya Jia
+### Focal Sparse Convolutional Networks for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00535) · 📚 被引 314
+- **作者**: Yukang Chen, Yanwei Li, Xiangyu Zhang, Jian Sun, Jiaya Jia
 - **🏷️ 机构**: MEGVII, CUHK / SmartMore
-- **会议**: NeurIPS 2022
+- **会议**: CVPR 2022
 
-### Spatial Pruned Sparse Convolution for Efficient 3D Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/2ce10f144bb93449767f355c01f24cc1-Abstract-Conference.html)
-- **作者**: Jianhui Liu, Yukang Chen, Xiaoqing Ye, Zhuotao Tian, Xiao Tan, Xiaojuan Qi
+### VISTA: Boosting 3D Object Detection via Dual Cross-VIew SpaTial Attention.
+- **链接**: [arXiv:2203.09704](https://arxiv.org/abs/2203.09704) · [出版页](https://doi.org/10.1109/CVPR52688.2022.00826) · [代码](https://github.com/Gorilla-Lab-SCUT/VISTA) · 📚 被引 92
+- **作者**: Shengheng Deng, Zhihao Liang, Lin Sun, Kui Jia
+- **🏷️ 机构**: South China University of Technology, Magic Leap,Sunnyvale,CA
+- **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Detecting objects from LiDAR point clouds is of tremendous significance in autonomous driving. In spite of good progress, accurate and reliable 3D detection is yet to be achieved due to the sparsity and irregularity of LiDAR point clouds. Among existing strategies, multi-view methods have shown great promise by leveraging the more comprehensive information from both bird's eye view (BEV) and range view (RV). These multi-view methods either refine the proposals predicted from single view via fused features, or fuse the features without considering the global spatial context; their performance is limited consequently. In this paper, we propose to adaptively fuse multi-view features in a global spatial context via Dual Cross-VIew SpaTial Attention (VISTA). The proposed VISTA is a novel plug-and-play fusion module, wherein the multi-layer perceptron widely adopted in standard attention modules is replaced with a convolutional one. Thanks to the learned attention mechanism, VISTA can produce fused features of high quality for prediction of proposals. We decouple the classification and regression tasks in VISTA, and an additional constraint of attention variance is applied that enables the attention module to focus on specific targets instead of generic points. We conduct thorough experiments on the benchmarks of nuScenes and Waymo; results confirm the efficacy of our designs. At the time of submission, our method achieves 63.0% in overall mAP and 69.8% in NDS on the nuScenes benchmark, outperforming all published methods by up to 24% in safety-crucial categories such as cyclist. The source code in PyTorch is available at https://github.com/Gorilla-Lab-SCUT/VISTA
+
+### A Versatile Multi-View Framework for LiDAR-based 3D Object Detection with Guidance from Panoptic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01668)
+- **作者**: Hamidreza Fazlali, Yixuan Xu, Yuan Ren, Bingbing Liu
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
+- **会议**: CVPR 2022
 
-### Fully Convolutional One-Stage 3D Object Detection on LiDAR Range Images.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/e1f418450107c4a0ddc16d008d131573-Abstract-Conference.html)
-- **作者**: Zhi Tian, Xiangxiang Chu, Xiaoming Wang, Xiaolin Wei, Chunhua Shen
-- **🏷️ 机构**: ZJU
-- **会议**: NeurIPS 2022
+### Homography Loss for Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00115) · 📚 被引 48
+- **作者**: Jiaqi Gu, Bojian Wu, Lubin Fan, Jianqiang Huang, Shen Cao, Zhiyu Xiang et al.
+- **🏷️ 机构**: Alibaba Cloud Computing Ltd., Zhejiang University
+- **会议**: CVPR 2022
 
-### CAGroup3D: Class-Aware Grouping for 3D Object Detection on Point Clouds.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/c1aaf7c3f306fe94f77236dc0756d771-Abstract-Conference.html) · 📚 109 citations
-- **作者**: Haiyang Wang, Lihe Ding, Shaocong Dong, Shaoshuai Shi, Aoxue Li, Jianan Li et al.
-- **🏷️ 机构**: Peking University
-- **会议**: NeurIPS 2022
+### LiDAR Snowfall Simulation for Robust 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01588) · 📚 被引 168
+- **作者**: Martin Hahner, Christos Sakaridis, Mario Bijelic, Felix Heide, Fisher Yu, Dengxin Dai et al.
+- **🏷️ 机构**: ETH Zurich
+- **会议**: CVPR 2022
 
-### DeepInteraction: 3D Object Detection via Modality Interaction.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/0d18ab3b5fabfa6fe47c62e711af02f0-Abstract-Conference.html) · 📚 247 citations
-- **作者**: Zeyu Yang, Jiaqi Chen, Zhenwei Miao, Wei Li, Xiatian Zhu, Li Zhang
+### Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00823) · 📚 被引 220
+- **作者**: Chenhang He, Ruihuang Li, Shuai Li, Lei Zhang
+- **🏷️ 机构**: PolyU / OPPO
+- **会议**: CVPR 2022
+
+### Point Density-Aware Voxels for LiDAR 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00828) · 📚 被引 148
+- **作者**: Jordan S. K. Hu, Tianshu Kuai, Steven L. Waslander
+- **🏷️ 机构**: University of Toronto Robotics Institute
+- **会议**: CVPR 2022
+
+### Investigating the Impact of Multi-LiDAR Placement on Object Detection for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00258)
+- **作者**: Hanjiang Hu, Zuxin Liu, Sharad Chitlangia, Akhil Agnihotri, Ding Zhao
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
+- **会议**: CVPR 2022
 
-### Towards Efficient 3D Object Detection with Knowledge Distillation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/8625a8c2be8ba5197b7a14833dbea8ac-Abstract-Conference.html) · 📚 72 citations
-- **作者**: Jihan Yang, Shaoshuai Shi, Runyu Ding, Zhe Wang, Xiaojuan Qi
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
+### MonoDTR: Monocular 3D Object Detection with Depth-Aware Transformer.
+- **链接**: [arXiv:2203.10981](https://arxiv.org/abs/2203.10981) · [出版页](https://doi.org/10.1109/CVPR52688.2022.00398) · [代码](https://github.com/kuanchihhuang/MonoDTR) · 📚 被引 225
+- **作者**: Kuan-Chih Huang, Tsung-Han Wu, Hung-Ting Su, Winston H. Hsu
+- **🏷️ 机构**: National Taiwan University
+- **会议**: CVPR 2022
 
-### MoGDE: Boosting Mobile Monocular 3D Object Detection with Ground Depth Estimation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/0d81e6f2511fc78631ee0315fafeef9e-Abstract-Conference.html) · 📚 23 citations
-- **作者**: Yunsong Zhou, Quan Liu, Hongzi Zhu, Yunzhe Li, Shan Chang, Minyi Guo
+- **摘要（英，原文）**:
+
+  > Monocular 3D object detection is an important yet challenging task in autonomous driving. Some existing methods leverage depth information from an off-the-shelf depth estimator to assist 3D detection, but suffer from the additional computational burden and achieve limited performance caused by inaccurate depth priors. To alleviate this, we propose MonoDTR, a novel end-to-end depth-aware transformer network for monocular 3D object detection. It mainly consists of two components: (1) the Depth-Aware Feature Enhancement (DFE) module that implicitly learns depth-aware features with auxiliary supervision without requiring extra computation, and (2) the Depth-Aware Transformer (DTR) module that globally integrates context- and depth-aware features. Moreover, different from conventional pixel-wise positional encodings, we introduce a novel depth positional encoding (DPE) to inject depth positional hints into transformers. Our proposed depth-aware modules can be easily plugged into existing image-only monocular 3D object detectors to improve the performance. Extensive experiments on the KITTI dataset demonstrate that our approach outperforms previous state-of-the-art monocular-based methods and achieves real-time detection. Code is available at https://github.com/kuanchihhuang/MonoDTR
+
+### 3D-VField: Adversarial Augmentation of Point Clouds for Domain Generalization in 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01678) · 📚 被引 67
+- **作者**: Alexander Lehner, Stefano Gasperini, Alvaro Marcos-Ramiro, Michael Schmidt, Mohammad-Ali Nikouei Mahani, Nassir Navab et al.
+- **🏷️ 机构**: Technical University of Munich, BMW Group
+- **会议**: CVPR 2022
+
+### Time3D: End-to-End Joint Monocular 3D Object Detection and Tracking for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00386)
+- **作者**: Peixuan Li, Jieyu Jin
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
+- **会议**: CVPR 2022
+
+### Voxel Field Fusion for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00119)
+- **作者**: Yanwei Li, Xiaojuan Qi, Yukang Chen, Liwei Wang, Zeming Li, Jian Sun et al.
+- **🏷️ 机构**: MEGVII, CUHK / SmartMore
+- **会议**: CVPR 2022
+
+### Diversity Matters: Fully Exploiting Depth Clues for Reliable Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00281) · 📚 被引 87
+- **作者**: Zhuoling Li, Zhan Qu, Yang Zhou, Jianzhuang Liu, Haoqian Wang, Lihui Jiang
+- **🏷️ 机构**: Tsinghua University, Huawei Noah&#x0027;s Ark Lab
+- **会议**: CVPR 2022
+
+### DeepFusion: Lidar-Camera Deep Fusion for Multi-Modal 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01667)
+- **作者**: Yingwei Li, Adams Wei Yu, Tianjian Meng, Benjamin Caine, Jiquan Ngiam, Daiyi Peng et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
+
+### MonoJSG: Joint Semantic and Geometric Cost Volume for Monocular 3D Object Detection.
+- **链接**: [arXiv:2203.08563](https://arxiv.org/abs/2203.08563) · [出版页](https://doi.org/10.1109/CVPR52688.2022.00114) · 📚 被引 69
+- **作者**: Qing Lian, Peiliang Li, Xiaozhi Chen
+- **🏷️ 机构**: The Hong Kong University of Science and Technology, DJI
+- **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Due to the inherent ill-posed nature of 2D-3D projection, monocular 3D object detection lacks accurate depth recovery ability. Although the deep neural network (DNN) enables monocular depth-sensing from high-level learned features, the pixel-level cues are usually omitted due to the deep convolution mechanism. To benefit from both the powerful feature representation in DNN and pixel-level geometric constraints, we reformulate the monocular object depth estimation as a progressive refinement problem and propose a joint semantic and geometric cost volume to model the depth error. Specifically, we first leverage neural networks to learn the object position, dimension, and dense normalized 3D object coordinates. Based on the object depth, the dense coordinates patch together with the corresponding object features is reprojected to the image space to build a cost volume in a joint semantic and geometric error manner. The final depth is obtained by feeding the cost volume to a refinement network, where the distribution of semantic and geometric error is regularized by direct depth supervision. Through effectively mitigating depth error by the refinement framework, we achieve state-of-the-art results on both the KITTI and Waymo datasets.
+
+### Exploring Geometric Consistency for Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00173) · 📚 被引 33
+- **作者**: Qing Lian, Botao Ye, Ruijia Xu, Weilong Yao, Tong Zhang
+- **🏷️ 机构**: The Hong Kong University of Science and Technology, Institute of Computing Technology, Chinese Academy of Sciences,China, Autowise.AI
+- **会议**: CVPR 2022
+
+### SS3D: Sparsely-Supervised 3D Object Detection from Point Cloud.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00824) · 📚 被引 34
+- **作者**: Chuandong Liu, Chenqiang Gao, Fangcen Liu, Jiang Liu, Deyu Meng, Xinbo Gao
+- **🏷️ 机构**: School of Communication and Information Engineering, Chongqing University of Posts and Telecommunications,Chongqing,China, Meta,Menlo Park,USA, Xi&#x0027;an Jiaotong University,Xi&#x0027;an,China
+- **会议**: CVPR 2022
+
+### RBGNet: Ray-based Grouping for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00118) · 📚 被引 68
+- **作者**: Haiyang Wang, Shaoshuai Shi, Ze Yang, Rongyao Fang, Qi Qian, Hongsheng Li et al.
+- **🏷️ 机构**: CUHK
+- **会议**: CVPR 2022
+
+### Back to Reality: Weakly-supervised 3D Object Detection with Shape-guided Label Enhancement.
+- **链接**: [arXiv:2203.05238](https://arxiv.org/abs/2203.05238) · [出版页](https://doi.org/10.1109/CVPR52688.2022.00825) · [代码](https://github.com/wyf-ACCEPT/BackToReality) · 📚 被引 26
+- **作者**: Xiuwei Xu, Yifan Wang, Yu Zheng, Yongming Rao, Jie Zhou, Jiwen Lu
+- **🏷️ 机构**: Tsinghua University,Department of Automation,China
+- **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > In this paper, we propose a weakly-supervised approach for 3D object detection, which makes it possible to train a strong 3D detector with position-level annotations (i.e. annotations of object centers). In order to remedy the information loss from box annotations to centers, our method, namely Back to Reality (BR), makes use of synthetic 3D shapes to convert the weak labels into fully-annotated virtual scenes as stronger supervision, and in turn utilizes the perfect virtual labels to complement and refine the real labels. Specifically, we first assemble 3D shapes into physically reasonable virtual scenes according to the coarse scene layout extracted from position-level annotations. Then we go back to reality by applying a virtual-to-real domain adaptation method, which refine the weak labels and additionally supervise the training of detector with the virtual scenes. Furthermore, we propose a more challenging benckmark for indoor 3D object detection with more diversity in object sizes to better show the potential of BR. With less than 5% of the labeling labor, we achieve comparable detection performance with some popular fully-supervised approaches on the widely used ScanNet dataset. Code is available at: https://github.com/wyf-ACCEPT/BackToReality
+
+### Rope3D: The Roadside Perception Dataset for Autonomous Driving and Monocular 3D Object Detection Task.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02065)
+- **作者**: Xiaoqing Ye, Mao Shu, Hanyu Li, Yifeng Shi, Yingying Li, Guangjie Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
+
+### Rotationally Equivariant 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00151) · 📚 被引 27
+- **作者**: Hong-Xing Yu, Jiajun Wu, Li Yi
+- **🏷️ 机构**: Stanford University, Tsinghua University, Shanghai Qi Zhi Institute
+- **会议**: CVPR 2022
+
+### DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02067)
+- **作者**: Haibao Yu, Yizhen Luo, Mao Shu, Yiyi Huo, Zebang Yang, Yifeng Shi et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
+
+### LIFT: Learning 4D LiDAR Image Fusion Transformer for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01666) · 📚 被引 36
+- **作者**: Yihan Zeng, Da Zhang, Chunwei Wang, Zhenwei Miao, Ting Liu, Xin Zhan et al.
+- **🏷️ 机构**: AI Institute, Shanghai Jiao Tong University,MoE Key Lab of Artificial Intelligence, Alibaba DAMO Academy
+- **会议**: CVPR 2022
+
+### CAT-Det: Contrastively Augmented Transformer for Multimodal 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00098)
+- **作者**: Yanan Zhang, Jiaxin Chen, Di Huang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
+
+### Dimension Embeddings for Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00164) · 📚 被引 20
+- **作者**: Yunpeng Zhang, Wenzhao Zheng, Zheng Zhu, Guan Huang, Dalong Du, Jie Zhou et al.
+- **🏷️ 机构**: Beijing National Research Center for Information Science and Technology,China, PhiGent Robotics
+- **会议**: CVPR 2022
+
+### Boosting 3D Object Detection by Simulating Multimodality on Point Clouds.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01327) · 📚 被引 35
+- **作者**: Wu Zheng, Mingxuan Hong, Li Jiang, Chi-Wing Fu
+- **🏷️ 机构**: CUHK,Department of Computer Science and Engineering, Max Planck Institute
+- **会议**: CVPR 2022
