@@ -412,6 +412,28 @@ def main():
             papers.sort(key=lambda p: -importance_score(p))
             bucket[slug][year] = papers[: (cap_old if year < 2022 else cap)]
 
+    # LLM 中英对照摘要（可选，与日报线同一套评估器）
+    llm = common.LLM()
+    if llm.active:
+        # 只评每领域每年的前 N 篇（成本控制；其余保持英文摘要降级渲染）
+        n_eval = CONFIG.get("llm", {}).get("guideline_eval_topn", 25)
+        count = 0
+        log(f"LLM evaluation for guideline top-{n_eval} per topic-year ...")
+        for slug in bucket:
+            for year in bucket[slug]:
+                top = bucket[slug][year][:n_eval]
+                plist = [{"arxiv_id": p.get("arxiv_id") or p["title"], "title": p["title"],
+                          "abstract": p.get("abstract", "")} for p in top]
+                results = common.llm_eval_papers(llm, plist, "、".join(t["name"] for t in CONFIG["topics"]))
+                by_id = {r.get("_arxiv_id"): r for r in results if r.get("_arxiv_id")}
+                for p in top:
+                    ev = by_id.get(p.get("arxiv_id") or p["title"])
+                    if ev:
+                        p["llm"] = ev
+                        count += 1
+                log(f"  [{slug} {year}] {len(results)}/{len(top)} evaluated")
+        log(f"LLM evaluated {count} papers in total")
+
     written = generate_guidelines(bucket, ROOT / "topics")
     log(f"wrote {len(written)} guideline files:")
     for w in written:

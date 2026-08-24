@@ -421,6 +421,7 @@ llm:
   temperature: 0.2
   max_papers_per_call: 6           # 单次评估的论文数（控制单条 prompt 长度）
   timeout: 120
+  guideline_eval_topn: 25          # 顶会线每个领域每年只评前 N 篇（成本控制）
 
 # ---------- 机构标注 ----------
 institutions:

@@ -297,7 +297,7 @@ def llm_eval_papers(llm: LLM, papers: list[dict], topic_names: str) -> list[dict
             except (TypeError, ValueError):
                 continue
             if 1 <= item["id"] <= len(batch):
-                item["_arxiv_id"] = batch[item["id"] - 1]["arxiv_id"]
+                item["_arxiv_id"] = batch[item["id"] - 1]["arxiv_id"]  # arxiv_id 或 title 作键
                 results.append(item)
         time.sleep(1)  # 温和限速
     return results
