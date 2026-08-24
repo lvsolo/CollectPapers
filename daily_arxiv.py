@@ -23,6 +23,38 @@ TOPIC_NAMES = "、".join(t["name"] for t in CONFIG["topics"])
 TOPIC_BY_NAME = {t["name"]: t for t in CONFIG["topics"]}
 
 
+def _merge_report(existing: str, new_lines: list[str], groups: dict,
+                  topic_by_name: dict) -> list[str]:
+    """同一天二次运行时，把新论文条目合并进已有报告（按标题去重，不丢旧内容）。"""
+    import re as _re
+    # 已有报告里的论文标题集合
+    have = set(_re.findall(r"^### \d+\. (.+?)\s*(?:\*\*.*)?$", existing, _re.M))
+    # 抽出新报告里、已有报告没有的完整条目块（### 到下一个 ###/## 之前）
+    additions: list[str] = []
+    blocks = _re.split(r"(?=^### )", "\n".join(new_lines), flags=_re.M)
+    for b in blocks:
+        m = _re.match(r"### \d+\. (.+?)\s*(?:\*\*.*)?$", b.strip().splitlines()[0] if b.strip() else "")
+        if m and m.group(1).strip() not in have and b.strip():
+            additions.append(b.rstrip())
+    if not additions:
+        return existing.splitlines()
+    # 简单策略：追加到文末统计节之前，并在统计后补一行说明
+    parts = existing.split("## 📊 统计")
+    head = parts[0].rstrip()
+    merged = head.splitlines()
+    merged.append("")
+    merged.append("---")
+    merged.append("")
+    merged.append("## 🆕 当日更新（后续运行新增）")
+    merged.append("")
+    merged.extend(additions)
+    if len(parts) > 1:
+        merged.append("")
+        merged.append("## 📊 统计")
+        merged.append(parts[1].rstrip())
+    return merged
+
+
 def fetch_recent(days: int) -> list[dict]:
     """抓最近 N 天（按提交日期过滤）的 cs.CV 新论文。"""
     since = (dt.date.today() - dt.timedelta(days=days)).isoformat()
@@ -81,6 +113,11 @@ def main():
     selected.sort(key=lambda x: -x[2] * x[1].get("weight", 1.0))
     selected = selected[:max_total]
     log(f"  selected {len(selected)} papers for report")
+
+    # 硬性保护：没有新内容时绝不写文件（防止空报告覆盖已有内容）
+    if not selected:
+        log("no new papers to add — keep existing report untouched")
+        return 0
 
     # LLM 评估（可选）
     llm = LLM()
@@ -193,8 +230,13 @@ def main():
     out_dir = ROOT / dcfg.get("report_dir", "daily")
     out_dir.mkdir(exist_ok=True)
     out = out_dir / f"arxiv_report_{today}.md"
+    if out.exists():
+        # 同一天多次运行：追加合并（新论文插到各领域分组），不覆盖已有内容
+        existing = out.read_text(encoding="utf-8")
+        if existing.strip():
+            lines = _merge_report(existing, lines, groups, TOPIC_BY_NAME)
     out.write_text("\n".join(lines), encoding="utf-8")
-    log(f"wrote {out.relative_to(ROOT)}")
+    log(f"wrote {out.relative_to(ROOT)} ({len(selected)} new papers this run)")
 
     # 更新 seen
     for p, _, _ in selected:
