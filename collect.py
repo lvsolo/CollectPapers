@@ -327,21 +327,27 @@ def main():
     if args.year:
         years = [args.year]
 
-    # 会议公布窗口：只有"当前年份"受窗口控制（历史年份是稳定数据，永远全量）
+    # 会议公布状态：只对"当年"判断（历史年份是稳定数据，永远全量）。
+    # 语义：当前月 < 公示月 → 当年会议尚未公布，跳过；已过公示月 → 已公布，照常抓。
+    # 另：ECCV 仅偶数年、ICCV 仅奇数年，不存在的届次直接跳过。
     this_month = dt.date.today().month
     this_year = dt.date.today().year
     if not args.force:
         active = []
         for c in confs:
-            months = c.get("publish_months")
-            if months and this_year in years and this_month not in months:
-                log(f"[skip] {c['name']} {this_year}: 当前月份 {this_month} 不在公布窗口 {months}（--force 可强制）")
-                continue
+            if this_year in years:
+                if c.get("even_years_only") and this_year % 2 != 0:
+                    log(f"[skip] {c['name']} {this_year}: 双年会，本年不举办")
+                    continue
+                if c.get("odd_years_only") and this_year % 2 != 1:
+                    log(f"[skip] {c['name']} {this_year}: 双年会，本年不举办")
+                    continue
+                am = c.get("announce_month")
+                if am and this_month < am:
+                    log(f"[skip] {c['name']} {this_year}: {am} 月才公示录用，当前 {this_month} 月尚未公布（--force 可强制）")
+                    continue
             active.append(c)
         confs = active
-        if this_year in years and this_month == 1:
-            # 1月时 NeurIPS 已收尾，跳过当年其余会议的空跑
-            pass
 
     classifier = Classifier(CONFIG["topics"])
     bucket: dict[str, dict[int, list]] = {}
