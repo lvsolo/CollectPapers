@@ -72,7 +72,8 @@ jobs:
   collect:
     needs: plan
     runs-on: ubuntu-latest
-    timeout-minutes: 40          # 单组合 DBLP+enrich 上限；LLM 评估单独阶段
+    # 大会议批次（CVPR 大年份 2000+ 篇）DBLP 扫描+enrich 需要 40-70 分钟
+    timeout-minutes: 90
     strategy:
       fail-fast: false           # 一个格子失败不拖垮其他格子
       max-parallel: 3            # 并行 3 个（DBLP 压力可控：3×2.5s 间隔）
@@ -128,7 +129,8 @@ jobs:
   # ------------------------------------------------------------------
   llm-eval:
     needs: [plan, collect]
-    if: always() && needs.plan.result == 'success'
+    # collect 有失败批次也照跑（fail-fast 已关；失败的批次下轮重试，不阻塞 LLM 阶段）
+    if: always() && !cancelled() && needs.plan.result == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
