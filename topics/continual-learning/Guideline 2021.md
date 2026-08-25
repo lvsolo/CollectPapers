@@ -60,22 +60,34 @@
 - **会议**: CVPR 2021
 
 ### On Learning the Geodesic Path for Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Simon_On_Learning_the_Geodesic_Path_for_Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 111
+- **链接**: [arXiv:2104.08572](https://arxiv.org/abs/2104.08572) · 📚 被引 111
 - **作者**: Christian Simon, Piotr Koniusz, Mehrtash Harandi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
+- **摘要（英，原文）**:
+
+  > Neural networks notoriously suffer from the problem of catastrophic forgetting, the phenomenon of forgetting the past knowledge when acquiring new knowledge. Overcoming catastrophic forgetting is of significant importance to emulate the process of "incremental learning", where the model is capable of learning from sequential experience in an efficient and robust way. State-of-the-art techniques for incremental learning make use of knowledge distillation towards preventing catastrophic forgetting. Therein, one updates the network while ensuring that the network's responses to previously seen concepts remain stable throughout updates. This in practice is done by minimizing the dissimilarity between current and previous responses of the network one way or another. Our work contributes a novel method to the arsenal of distillation techniques. In contrast to the previous state of the art, we propose to firstly construct low-dimensional manifolds for previous and current responses and minimize the dissimilarity between the responses along the geodesic connecting the manifolds. This induces a more formidable knowledge distillation with smooth properties which preserves the past knowledge more efficiently as observed by our comprehensive empirical study.
+
 ### Self-Promoted Prototype Refinement for Few-Shot Class-Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhu_Self-Promoted_Prototype_Refinement_for_Few-Shot_Class-Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 170
+- **链接**: [arXiv:2107.08918](https://arxiv.org/abs/2107.08918) · 📚 被引 170
 - **作者**: Kai Zhu, Yang Cao, Wei Zhai, Jie Cheng, Zheng-Jun Zha
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
+- **摘要（英，原文）**:
+
+  > Few-shot class-incremental learning is to recognize the new classes given few samples and not forget the old classes. It is a challenging task since representation optimization and prototype reorganization can only be achieved under little supervision. To address this problem, we propose a novel incremental prototype learning scheme. Our scheme consists of a random episode selection strategy that adapts the feature representation to various generated incremental episodes to enhance the corresponding extensibility, and a self-promoted prototype refinement mechanism which strengthens the expression ability of the new classes by explicitly considering the dependencies among different classes. Particularly, a dynamic relation projection module is proposed to calculate the relation matrix in a shared embedding space and leverage it as the factor for bootstrapping the update of prototypes. Extensive experiments on three benchmark datasets demonstrate the above-par incremental performance, outperforming state-of-the-art methods by a margin of 13%, 17% and 11%, respectively.
+
 ### Semantic-Aware Knowledge Distillation for Few-Shot Class-Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Cheraghian_Semantic-Aware_Knowledge_Distillation_for_Few-Shot_Class-Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 185
+- **链接**: [arXiv:2103.04059](https://arxiv.org/abs/2103.04059) · 📚 被引 185
 - **作者**: Ali Cheraghian, Shafin Rahman, Pengfei Fang, Soumava Kumar Roy, Lars Petersson, Mehrtash Harandi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > Few-shot class incremental learning (FSCIL) portrays the problem of learning new concepts gradually, where only a few examples per concept are available to the learner. Due to the limited number of examples for training, the techniques developed for standard incremental learning cannot be applied verbatim to FSCIL. In this work, we introduce a distillation algorithm to address the problem of FSCIL and propose to make use of semantic information during training. To this end, we make use of word embeddings as semantic information which is cheap to obtain and which facilitate the distillation process. Furthermore, we propose a method based on an attention mechanism on multiple parallel embeddings of visual data to align visual and semantic vectors, which reduces issues related to catastrophic forgetting. Via experiments on MiniImageNet, CUB200, and CIFAR100 dataset, we establish new state-of-the-art results by outperforming existing approaches.
 
 ### Distilling Causal Effect of Data in Class-Incremental Learning.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hu_Distilling_Causal_Effect_of_Data_in_Class-Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 157

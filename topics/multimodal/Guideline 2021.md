@@ -30,10 +30,14 @@
 - **会议**: CVPR 2021
 
 ### Vx2Text: End-to-End Learning of Video-Based Text Generation From Multimodal Inputs.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Lin_Vx2Text_End-to-End_Learning_of_Video-Based_Text_Generation_From_Multimodal_Inputs_CVPR_2021_paper.html) · 📚 被引 43
+- **链接**: [arXiv:2101.12059](https://arxiv.org/abs/2101.12059) · 📚 被引 43
 - **作者**: Xudong Lin, Gedas Bertasius, Jue Wang, Shih-Fu Chang, Devi Parikh, Lorenzo Torresani
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > We present \textsc{Vx2Text}, a framework for text generation from multimodal inputs consisting of video plus text, speech, or audio. In order to leverage transformer networks, which have been shown to be effective at modeling language, each modality is first converted into a set of language embeddings by a learnable tokenizer. This allows our approach to perform multimodal fusion in the language space, thus eliminating the need for ad-hoc cross-modal fusion modules. To address the non-differentiability of tokenization on continuous inputs (e.g., video or audio), we utilize a relaxation scheme that enables end-to-end training. Furthermore, unlike prior encoder-only models, our network includes an autoregressive decoder to generate open-ended text from the multimodal embeddings fused by the language encoder. This renders our approach fully generative and makes it directly applicable to different "video+$x$ to text" problems without the need to design specialized network heads for each task. The proposed framework is not only conceptually simple but also remarkably effective: experiments demonstrate that our approach based on a single architecture outperforms the state-of-the-art on three video-based text-generation tasks -- captioning, question answering and audio-visual scene-aware dialog.
 
 ### How2Sign: A Large-Scale Multimodal Dataset for Continuous American Sign Language.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Duarte_How2Sign_A_Large-Scale_Multimodal_Dataset_for_Continuous_American_Sign_Language_CVPR_2021_paper.html)
@@ -78,16 +82,24 @@
 - **会议**: CVPR 2021
 
 ### Revamping Cross-Modal Recipe Retrieval With Hierarchical Transformers and Self-Supervised Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Salvador_Revamping_Cross-Modal_Recipe_Retrieval_With_Hierarchical_Transformers_and_Self-Supervised_Learning_CVPR_2021_paper.html) · 📚 被引 74
+- **链接**: [arXiv:2103.13061](https://arxiv.org/abs/2103.13061) · 📚 被引 74
 - **作者**: Amaia Salvador, Erhan Gundogdu, Loris Bazzani, Michael Donoser
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
+- **摘要（英，原文）**:
+
+  > Cross-modal recipe retrieval has recently gained substantial attention due to the importance of food in people's lives, as well as the availability of vast amounts of digital cooking recipes and food images to train machine learning models. In this work, we revisit existing approaches for cross-modal recipe retrieval and propose a simplified end-to-end model based on well established and high performing encoders for text and images. We introduce a hierarchical recipe Transformer which attentively encodes individual recipe components (titles, ingredients and instructions). Further, we propose a self-supervised loss function computed on top of pairs of individual recipe components, which is able to leverage semantic relationships within recipes, and enables training using both image-recipe and recipe-only samples. We conduct a thorough analysis and ablation studies to validate our design choices. As a result, our proposed method achieves state-of-the-art performance in the cross-modal recipe retrieval task on the Recipe1M dataset. We make code and models publicly available.
+
 ### Cross-Modal Contrastive Learning for Text-to-Image Generation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_Cross-Modal_Contrastive_Learning_for_Text-to-Image_Generation_CVPR_2021_paper.html) · 📚 被引 293
+- **链接**: [arXiv:2101.04702](https://arxiv.org/abs/2101.04702) · 📚 被引 293
 - **作者**: Han Zhang, Jing Yu Koh, Jason Baldridge, Honglak Lee, Yinfei Yang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > The output of text-to-image synthesis systems should be coherent, clear, photo-realistic scenes with high semantic fidelity to their conditioned text descriptions. Our Cross-Modal Contrastive Generative Adversarial Network (XMC-GAN) addresses this challenge by maximizing the mutual information between image and text. It does this via multiple contrastive losses which capture inter-modality and intra-modality correspondences. XMC-GAN uses an attentional self-modulation generator, which enforces strong text-image correspondence, and a contrastive discriminator, which acts as a critic as well as a feature encoder for contrastive learning. The quality of XMC-GAN's output is a major step up from previous models, as we show on three challenging datasets. On MS-COCO, not only does XMC-GAN improve state-of-the-art FID from 24.70 to 9.33, but--more importantly--people prefer XMC-GAN by 77.3 for image quality and 74.1 for image-text alignment, compared to three other recent models. XMC-GAN also generalizes to the challenging Localized Narratives dataset (which has longer, more detailed descriptions), improving state-of-the-art FID from 48.70 to 14.12. Lastly, we train and evaluate XMC-GAN on the challenging Open Images data, establishing a strong benchmark FID score of 26.91.
 
 ### Distilling Audio-Visual Knowledge by Compositional Contrastive Learning.
 - **链接**: [arXiv:2104.10955](https://arxiv.org/abs/2104.10955) · [代码](https://github.com/yanbeic/CCL) · 📚 被引 65
