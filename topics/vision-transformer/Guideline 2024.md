@@ -6,10 +6,14 @@
 > 同领域其他年份: 
 
 ### HEAL-SWIN: A Vision Transformer on the Sphere.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00580)
+- **链接**: [arXiv:2307.07313](https://arxiv.org/abs/2307.07313)
 - **作者**: Oscar Carlsson, Jan E. Gerken, Hampus Linander, Heiner Spieß, Fredrik Ohlsson, Christoffer Petersson et al.
 - **🏷️ 机构**: Chalmers University of Tech-nology, University of Gothenburg,Department of Mathematical Sciences,Gothenburg,Sweden,SE-41296, Neural Information Processing, Science of Intelligence, Technical University Berlin,Berlin,Germany,DE-10623, Ume&#x00E5; Uni-versity,Department of Mathematics and Mathematical Statistics,Ume&#x00E5;,Sweden,SE-90187
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > High-resolution wide-angle fisheye images are becoming more and more important for robotics applications such as autonomous driving. However, using ordinary convolutional neural networks or vision transformers on this data is problematic due to projection and distortion losses introduced when projecting to a rectangular grid on the plane. We introduce the HEAL-SWIN transformer, which combines the highly uniform Hierarchical Equal Area iso-Latitude Pixelation (HEALPix) grid used in astrophysics and cosmology with the Hierarchical Shifted-Window (SWIN) transformer to yield an efficient and flexible model capable of training on high-resolution, distortion-free spherical data. In HEAL-SWIN, the nested structure of the HEALPix grid is used to perform the patching and windowing operations of the SWIN transformer, enabling the network to process spherical representations with minimal computational overhead. We demonstrate the superior performance of our model on both synthetic and real automotive datasets, as well as a selection of other image datasets, for semantic segmentation, depth regression and classification tasks. Our code is publicly available at https://github.com/JanEGerken/HEAL-SWIN.
 
 ### H-ViT: A Hierarchical Vision Transformer for Deformable Image Registration.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01094)
@@ -24,7 +28,7 @@
 - **会议**: CVPR 2024
 
 ### ViT-CoMer: Vision Transformer with Convolutional Multi-scale Feature Interaction for Dense Predictions.
-- **链接**: [arXiv:2403.07392](https://arxiv.org/abs/2403.07392) · [代码](https://github.com/Traffic-X/ViT-CoMer)
+- **链接**: [arXiv:2403.07392](https://arxiv.org/abs/2403.07392)
 - **作者**: Chunlong Xia, Xinliang Wang, Feng Lv, Xin Hao, Yifeng Shi
 - **🏷️ 机构**: Baidu Inc.
 - **会议**: CVPR 2024
@@ -40,10 +44,14 @@
 - **会议**: CVPR 2024
 
 ### Low-Rank Rescaled Vision Transformer Fine-Tuning: A Residual Design Approach.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01524)
+- **链接**: [arXiv:2403.19067](https://arxiv.org/abs/2403.19067)
 - **作者**: Wei Dong, Xing Zhang, Bihui Chen, Dawei Yan, Zhijun Lin, Qingsen Yan et al.
 - **🏷️ 机构**: School of Computer Science and Engineering, University of Electronic Science and Technology of China, College of Information and Control Engineering, Xi&#x0027;an University of Architecture and Technology, School of Computer Science, Northwestern Polytechnical University
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Parameter-efficient fine-tuning for pre-trained Vision Transformers aims to adeptly tailor a model to downstream tasks by learning a minimal set of new adaptation parameters while preserving the frozen majority of pre-trained parameters. Striking a balance between retaining the generalizable representation capacity of the pre-trained model and acquiring task-specific features poses a key challenge. Currently, there is a lack of focus on guiding this delicate trade-off. In this study, we approach the problem from the perspective of Singular Value Decomposition (SVD) of pre-trained parameter matrices, providing insights into the tuning dynamics of existing methods. Building upon this understanding, we propose a Residual-based Low-Rank Rescaling (RLRR) fine-tuning strategy. This strategy not only enhances flexibility in parameter tuning but also ensures that new parameters do not deviate excessively from the pre-trained model through a residual design. Extensive experiments demonstrate that our method achieves competitive performance across various downstream image classification tasks, all while maintaining comparable new parameters. We believe this work takes a step forward in offering a unified perspective for interpreting existing methods and serves as motivation for the development of new approaches that move closer to effectively considering the crucial trade-off mentioned above. Our code is available at \href{https://github.com/zstarN70/RLRR.git}{https://github.com/zstarN70/RLRR.git}.
 
 ### Random Entangled Tokens for Adversarially Robust Vision Transformer.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02318)

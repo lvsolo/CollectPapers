@@ -6,10 +6,14 @@
 > 同领域其他年份: 
 
 ### Towards Scalable 3D Anomaly Detection and Localization: A Benchmark via 3D Anomaly Synthesis and A Self-Supervised Learning Network.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02096)
+- **链接**: [arXiv:2311.14897](https://arxiv.org/abs/2311.14897) · [代码](https://github.com/Chopper-233/Anomaly-ShapeNet)
 - **作者**: Wenqiao Li, Xiaohao Xu, Yao Gu, Bozhong Zheng, Shenghua Gao, Yingna Wu
 - **🏷️ 机构**: ShanghaiTech University, University of Michigan, Ann Arbor
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Recently, 3D anomaly detection, a crucial problem involving fine-grained geometry discrimination, is getting more attention. However, the lack of abundant real 3D anomaly data limits the scalability of current models. To enable scalable anomaly data collection, we propose a 3D anomaly synthesis pipeline to adapt existing large-scale 3Dmodels for 3D anomaly detection. Specifically, we construct a synthetic dataset, i.e., Anomaly-ShapeNet, basedon ShapeNet. Anomaly-ShapeNet consists of 1600 point cloud samples under 40 categories, which provides a rich and varied collection of data, enabling efficient training and enhancing adaptability to industrial scenarios. Meanwhile,to enable scalable representation learning for 3D anomaly localization, we propose a self-supervised method, i.e., Iterative Mask Reconstruction Network (IMRNet). During training, we propose a geometry-aware sample module to preserve potentially anomalous local regions during point cloud down-sampling. Then, we randomly mask out point patches and sent the visible patches to a transformer for reconstruction-based self-supervision. During testing, the point cloud repeatedly goes through the Mask Reconstruction Network, with each iteration's output becoming the next input. By merging and contrasting the final reconstructed point cloud with the initial input, our method successfully locates anomalies. Experiments show that IMRNet outperforms previous state-of-the-art methods, achieving 66.1% in I-AUC on Anomaly-ShapeNet dataset and 72.5% in I-AUC on Real3D-AD dataset. Our dataset will be released at https://github.com/Chopper-233/Anomaly-ShapeNet
 
 ### SCE-MAE: Selective Correspondence Enhancement with Masked Autoencoder for Self-Supervised Landmark Estimation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00131)
@@ -40,10 +44,14 @@
   > In this paper, we propose a novel concept of path consistency to learn robust object matching without using manual object identity supervision. Our key idea is that, to track a object through frames, we can obtain multiple different association results from a model by varying the frames it can observe, i.e., skipping frames in observation. As the differences in observations do not alter the identities of objects, the obtained association results should be consistent. Based on this rationale, we generate multiple observation paths, each specifying a different set of frames to be skipped, and formulate the Path Consistency Loss that enforces the association results are consistent across different observation paths. We use the proposed loss to train our object matching model with only self-supervision. By extensive experiments on three tracking datasets (MOT17, PersonPath22, KITTI), we demonstrate that our method outperforms existing unsupervised methods with consistent margins on various evaluation metrics, and even achieves performance close to supervised methods.
 
 ### RegionPLC: Regional Point-Language Contrastive Learning for Open-World 3D Scene Understanding.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01874)
+- **链接**: [arXiv:2304.00962](https://arxiv.org/abs/2304.00962) · [代码](https://github.com/CVMI-Lab/PLA)
 - **作者**: Jihan Yang, Runyu Ding, Weipeng Deng, Zhe Wang, Xiaojuan Qi
 - **🏷️ 机构**: The University of Hong Kong, SenseTime Research
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > We propose a lightweight and scalable Regional Point-Language Contrastive learning framework, namely \textbf{RegionPLC}, for open-world 3D scene understanding, aiming to identify and recognize open-set objects and categories. Specifically, based on our empirical studies, we introduce a 3D-aware SFusion strategy that fuses 3D vision-language pairs derived from multiple 2D foundation models, yielding high-quality, dense region-level language descriptions without human 3D annotations. Subsequently, we devise a region-aware point-discriminative contrastive learning objective to enable robust and effective 3D learning from dense regional language supervision. We carry out extensive experiments on ScanNet, ScanNet200, and nuScenes datasets, and our model outperforms prior 3D open-world scene understanding approaches by an average of 17.2\% and 9.1\% for semantic and instance segmentation, respectively, while maintaining greater scalability and lower resource demands. Furthermore, our method has the flexibility to be effortlessly integrated with language models to enable open-ended grounded 3D reasoning without extra task-specific training. Code is available at https://github.com/CVMI-Lab/PLA.
 
 ### Systematic comparison of semi-supervised and self-supervised learning for medical image classification.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02103)
@@ -80,10 +88,14 @@
 - **会议**: CVPR 2024
 
 ### Prompt Augmentation for Self-supervised Text-guided Image Manipulation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00843)
+- **链接**: [arXiv:2412.13081](https://arxiv.org/abs/2412.13081)
 - **作者**: Rumeysa Bodur, Binod Bhattarai, Tae-Kyun Kim
 - **🏷️ 机构**: Imperial College London,UK, University of Aberdeen,UK
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Text-guided image editing finds applications in various creative and practical fields. While recent studies in image generation have advanced the field, they often struggle with the dual challenges of coherent image transformation and context preservation. In response, our work introduces prompt augmentation, a method amplifying a single input prompt into several target prompts, strengthening textual context and enabling localised image editing. Specifically, we use the augmented prompts to delineate the intended manipulation area. We propose a Contrastive Loss tailored to driving effective image editing by displacing edited areas and drawing preserved regions closer. Acknowledging the continuous nature of image manipulations, we further refine our approach by incorporating the similarity concept, creating a Soft Contrastive Loss. The new losses are incorporated to the diffusion model, demonstrating improved or competitive image editing results on public datasets and generated images over state-of-the-art approaches.
 
 ### Exploring Efficient Asymmetric Blind-Spots for Self-Supervised Denoising in Real-World Scenarios.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00272)
@@ -288,10 +300,14 @@
 - **会议**: CVPR 2024
 
 ### OmniSeg3D: Omniversal 3D Segmentation via Hierarchical Contrastive Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01948) · 📚 被引 52
+- **链接**: [arXiv:2311.11666](https://arxiv.org/abs/2311.11666) · 📚 被引 52
 - **作者**: Haiyang Ying, Yixuan Yin, Jinzhi Zhang, Fan Wang, Tao Yu, Ruqi Huang et al.
 - **🏷️ 机构**: Tsinghua University, Alibaba Group
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Towards holistic understanding of 3D scenes, a general 3D segmentation method is needed that can segment diverse objects without restrictions on object quantity or categories, while also reflecting the inherent hierarchical structure. To achieve this, we propose OmniSeg3D, an omniversal segmentation method aims for segmenting anything in 3D all at once. The key insight is to lift multi-view inconsistent 2D segmentations into a consistent 3D feature field through a hierarchical contrastive learning framework, which is accomplished by two steps. Firstly, we design a novel hierarchical representation based on category-agnostic 2D segmentations to model the multi-level relationship among pixels. Secondly, image features rendered from the 3D feature field are clustered at different levels, which can be further drawn closer or pushed apart according to the hierarchical relationship between different levels. In tackling the challenges posed by inconsistent 2D segmentations, this framework yields a global consistent 3D feature field, which further enables hierarchical segmentation, multi-object selection, and global discretization. Extensive experiments demonstrate the effectiveness of our method on high-quality 3D segmentation and accurate hierarchical structure understanding. A graphical user interface further facilitates flexible interaction for omniversal 3D segmentation.
 
 ### Data Poisoning Based Backdoor Attacks to Contrastive Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02299) · 📚 被引 18
@@ -325,14 +341,14 @@
 
 - VideoGrounding-DINO: Towards Open-Vocabulary Spatio- Temporal Video Grounding. → [open-set-detection](../open-set-detection/Guideline%202024.md)
 - SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction. → [occupancy](../occupancy/Guideline%202024.md)
-- CLIP-Driven Open-Vocabulary 3D Scene Graph Generation via Cross-Modality Contrastive Learning. → [open-set-detection](../open-set-detection/Guideline%202024.md)
-- Hallucination Augmented Contrastive Learning for Multimodal Large Language Model. → [multimodal](../multimodal/Guideline%202024.md)
-- BadCLIP: Dual-Embedding Guided Backdoor Attack on Multimodal Contrastive Learning. → [multimodal](../multimodal/Guideline%202024.md)
 - SelfPose3d: Self-Supervised Multi-Person Multi-View 3d Pose Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
-- Bootstrapping Autonomous Driving Radars with Self-Supervised Learning. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- Investigating and Mitigating the Side Effects of Noisy Views for Self-Supervised Clustering Algorithms in Practical Multi-View Scenarios. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - From-Ground-To-Objects: Coarse-to-Fine Self-supervised Monocular Depth Estimation of Dynamic Objects with Ground Contact Prior. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - Mining Supervision for Dynamic Regions in Self-Supervised Monocular Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
+- CLIP-Driven Open-Vocabulary 3D Scene Graph Generation via Cross-Modality Contrastive Learning. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+- Bootstrapping Autonomous Driving Radars with Self-Supervised Learning. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- Hallucination Augmented Contrastive Learning for Multimodal Large Language Model. → [multimodal](../multimodal/Guideline%202024.md)
+- BadCLIP: Dual-Embedding Guided Backdoor Attack on Multimodal Contrastive Learning. → [multimodal](../multimodal/Guideline%202024.md)
 - Self-Supervised Class-Agnostic Motion Prediction with Spatial and Temporal Consistency Regularizations. → [open-set-detection](../open-set-detection/Guideline%202024.md)
-- Investigating and Mitigating the Side Effects of Noisy Views for Self-Supervised Clustering Algorithms in Practical Multi-View Scenarios. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - Continual Self-Supervised Learning: Towards Universal Multi-Modal Medical Data Representation Learning. → [multimodal](../multimodal/Guideline%202024.md)
 - ES3: Evolving Self-Supervised Learning of Robust Audio-Visual Speech Representations. → [multimodal](../multimodal/Guideline%202024.md)

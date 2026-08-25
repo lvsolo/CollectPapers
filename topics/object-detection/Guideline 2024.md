@@ -1,14 +1,24 @@
 # Object Detection — 2024 Guideline
 
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
-> 论文数: 69 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 70 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
 ### Sparse Semi-DETR: Sparse Learnable Queries for Semi-Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00558)
+- **链接**: [arXiv:2404.01819](https://arxiv.org/abs/2404.01819)
 - **作者**: Tahira Shehzadi, Khurram Azeem Hashmi, Didier Stricker, Muhammad Zeshan Afzal
 - **🏷️ 机构**: DFKI
+- **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > In this paper, we address the limitations of the DETR-based semi-supervised object detection (SSOD) framework, particularly focusing on the challenges posed by the quality of object queries. In DETR-based SSOD, the one-to-one assignment strategy provides inaccurate pseudo-labels, while the one-to-many assignments strategy leads to overlapping predictions. These issues compromise training efficiency and degrade model performance, especially in detecting small or occluded objects. We introduce Sparse Semi-DETR, a novel transformer-based, end-to-end semi-supervised object detection solution to overcome these challenges. Sparse Semi-DETR incorporates a Query Refinement Module to enhance the quality of object queries, significantly improving detection capabilities for small and partially obscured objects. Additionally, we integrate a Reliable Pseudo-Label Filtering Module that selectively filters high-quality pseudo-labels, thereby enhancing detection accuracy and consistency. On the MS-COCO and Pascal VOC object detection benchmarks, Sparse Semi-DETR achieves a significant improvement over current state-of-the-art methods that highlight Sparse Semi-DETR's effectiveness in semi-supervised object detection, particularly in challenging scenarios involving small or partially obscured objects.
+
+### KD-DETR: Knowledge Distillation for Detection Transformer with Consistent Distillation Points Sampling.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01516) · 📚 被引 22
+- **作者**: Yu Wang, Xin Li, Shengzhao Weng, Gang Zhang, Haixiao Yue, Haocheng Feng et al.
+- **🏷️ 机构**: Baidu VIS
 - **会议**: CVPR 2024
 
 ### YolOOD: Utilizing Object Detection Concepts for Multi-Label Out-of-Distribution Detection.
@@ -24,16 +34,24 @@
 - **会议**: CVPR 2024
 
 ### Generative Region-Language Pretraining for Open-Ended Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01324)
+- **链接**: [arXiv:2403.10191](https://arxiv.org/abs/2403.10191) · [代码](https://github.com/FoundationVision/GenerateU)
 - **作者**: Chuang Lin, Yi Jiang, Lizhen Qu, Zehuan Yuan, Jianfei Cai
 - **🏷️ 机构**: Monash University, ByteDance Inc.
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > In recent research, significant attention has been devoted to the open-vocabulary object detection task, aiming to generalize beyond the limited number of classes labeled during training and detect objects described by arbitrary category names at inference. Compared with conventional object detection, open vocabulary object detection largely extends the object detection categories. However, it relies on calculating the similarity between image regions and a set of arbitrary category names with a pretrained vision-and-language model. This implies that, despite its open-set nature, the task still needs the predefined object categories during the inference stage. This raises the question: What if we do not have exact knowledge of object categories during inference? In this paper, we call such a new setting as generative open-ended object detection, which is a more general and practical problem. To address it, we formulate object detection as a generative problem and propose a simple framework named GenerateU, which can detect dense objects and generate their names in a free-form way. Particularly, we employ Deformable DETR as a region proposal generator with a language model translating visual regions to object names. To assess the free-form object detection task, we introduce an evaluation method designed to quantitatively measure the performance of generative outcomes. Extensive experiments demonstrate strong zero-shot detection performance of our GenerateU. For example, on the LVIS dataset, our GenerateU achieves comparable results to the open-vocabulary object detection method GLIP, even though the category names are not seen by GenerateU during inference. Code is available at: https:// github.com/FoundationVision/GenerateU .
+
 ### RadarDistill: Boosting Radar-Based Object Detection Performance via Knowledge Distillation from LiDAR Features.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01467)
+- **链接**: [arXiv:2403.05061](https://arxiv.org/abs/2403.05061)
 - **作者**: Geonho Bang, Kwangjin Choi, Jisong Kim, Dongsuk Kum, Jun Won Choi
 - **🏷️ 机构**: Hanyang University,Korea, KAIST,Korea, Seoul National University,Korea
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > The inherent noisy and sparse characteristics of radar data pose challenges in finding effective representations for 3D object detection. In this paper, we propose RadarDistill, a novel knowledge distillation (KD) method, which can improve the representation of radar data by leveraging LiDAR data. RadarDistill successfully transfers desirable characteristics of LiDAR features into radar features using three key components: Cross-Modality Alignment (CMA), Activation-based Feature Distillation (AFD), and Proposal-based Feature Distillation (PFD). CMA enhances the density of radar features by employing multiple layers of dilation operations, effectively addressing the challenge of inefficient knowledge transfer from LiDAR to radar. AFD selectively transfers knowledge based on regions of the LiDAR features, with a specific focus on areas where activation intensity exceeds a predefined threshold. PFD similarly guides the radar network to selectively mimic features from the LiDAR network within the object proposals. Our comparative analyses conducted on the nuScenes datasets demonstrate that RadarDistill achieves state-of-the-art (SOTA) performance for radar-only object detection task, recording 20.5% in mAP and 43.7% in NDS. Also, RadarDistill significantly improves the performance of the camera-radar fusion model.
 
 ### GLOW: Global Layout Aware Attacks on Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01146)
@@ -182,10 +200,14 @@
 - **会议**: CVPR 2024
 
 ### Scene Adaptive Sparse Transformer for Event-based Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01589)
+- **链接**: [arXiv:2404.01882](https://arxiv.org/abs/2404.01882) · [代码](https://github.com/Peterande/SAST)
 - **作者**: Yansong Peng, Hebei Li, Yueyi Zhang, Xiaoyan Sun, Feng Wu
 - **🏷️ 机构**: University of Science and Technology of China
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > While recent Transformer-based approaches have shown impressive performances on event-based object detection tasks, their high computational costs still diminish the low power consumption advantage of event cameras. Image-based works attempt to reduce these costs by introducing sparse Transformers. However, they display inadequate sparsity and adaptability when applied to event-based object detection, since these approaches cannot balance the fine granularity of token-level sparsification and the efficiency of window-based Transformers, leading to reduced performance and efficiency. Furthermore, they lack scene-specific sparsity optimization, resulting in information loss and a lower recall rate. To overcome these limitations, we propose the Scene Adaptive Sparse Transformer (SAST). SAST enables window-token co-sparsification, significantly enhancing fault tolerance and reducing computational overhead. Leveraging the innovative scoring and selection modules, along with the Masked Sparse Window Self-Attention, SAST showcases remarkable scene-aware adaptability: It focuses only on important objects and dynamically optimizes sparsity level according to scene complexity, maintaining a remarkable balance between performance and computational cost. The evaluation results show that SAST outperforms all other dense and sparse networks in both performance and efficiency on two large-scale event-based object detection datasets (1Mpx and Gen1). Code: https://github.com/Peterande/SAST
 
 ### CrossKD: Cross-Head Knowledge Distillation for Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01563)
@@ -206,10 +228,14 @@
 - **会议**: CVPR 2024
 
 ### LEOD: Label-Efficient Object Detection for Event Cameras.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01602)
+- **链接**: [arXiv:2311.17286](https://arxiv.org/abs/2311.17286) · [代码](https://github.com/Wuziyi616/LEOD)
 - **作者**: Ziyi Wu, Mathias Gehrig, Qing Lyu, Xudong Liu, Igor Gilitschenski
 - **🏷️ 机构**: University of Toronto, University of Zurich
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Object detection with event cameras benefits from the sensor's low latency and high dynamic range. However, it is costly to fully label event streams for supervised training due to their high temporal resolution. To reduce this cost, we present LEOD, the first method for label-efficient event-based detection. Our approach unifies weakly- and semi-supervised object detection with a self-training mechanism. We first utilize a detector pre-trained on limited labels to produce pseudo ground truth on unlabeled events. Then, the detector is re-trained with both real and generated labels. Leveraging the temporal consistency of events, we run bi-directional inference and apply tracking-based post-processing to enhance the quality of pseudo labels. To stabilize training against label noise, we further design a soft anchor assignment strategy. We introduce new experimental protocols to evaluate the task of label-efficient event-based detection on Gen1 and 1Mpx datasets. LEOD consistently outperforms supervised baselines across various labeling ratios. For example, on Gen1, it improves mAP by 8.6% and 7.8% for RVT-S trained with 1% and 2% labels. On 1Mpx, RVT-S with 10% labels even surpasses its fully-supervised counterpart using 100% labels. LEOD maintains its effectiveness even when all labeled data are available, reaching new state-of-the-art results. Finally, we show that our method readily scales to improve larger detectors as well. Code is released at https://github.com/Wuziyi616/LEOD
 
 ### Relational Matching for Weakly Semi-Supervised Oriented Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02626)
@@ -228,16 +254,24 @@
   > Oriented object detection has been developed rapidly in the past few years, where rotation equivariance is crucial for detectors to predict rotated boxes. It is expected that the prediction can maintain the corresponding rotation when objects rotate, but severe mutation in angular prediction is sometimes observed when objects rotate near the boundary angle, which is well-known boundary discontinuity problem. The problem has been long believed to be caused by the sharp loss increase at the angular boundary, and widely used joint-optim IoU-like methods deal with this problem by loss-smoothing. However, we experimentally find that even state-of-the-art IoU-like methods actually fail to solve the problem. On further analysis, we find that the key to solution lies in encoding mode of the smoothing function rather than in joint or independent optimization. In existing IoU-like methods, the model essentially attempts to fit the angular relationship between box and object, where the break point at angular boundary makes the predictions highly unstable.To deal with this issue, we propose a dual-optimization paradigm for angles. We decouple reversibility and joint-optim from single smoothing function into two distinct entities, which for the first time achieves the objectives of both correcting angular boundary and blending angle with other parameters.Extensive experiments on multiple datasets show that boundary discontinuity problem is well-addressed. Moreover, typical IoU-like methods are improved to the same level without obvious performance gap. The code is available at https://github.com/hangxu-cv/cvpr24acm.
 
 ### Plug and Play Active Learning for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01684)
+- **链接**: [arXiv:2211.11612](https://arxiv.org/abs/2211.11612) · [代码](https://github.com/ChenhongyiYang/PPAL)
 - **作者**: Chenhongyi Yang, Lichao Huang, Elliot J. Crowley
 - **🏷️ 机构**: School of Engineering, University of Edinburgh, Horizon Robotics
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > Annotating datasets for object detection is an expensive and time-consuming endeavor. To minimize this burden, active learning (AL) techniques are employed to select the most informative samples for annotation within a constrained "annotation budget". Traditional AL strategies typically rely on model uncertainty or sample diversity for query sampling, while more advanced methods have focused on developing AL-specific object detector architectures to enhance performance. However, these specialized approaches are not readily adaptable to different object detectors due to the significant engineering effort required for integration. To overcome this challenge, we introduce Plug and Play Active Learning (PPAL), a simple and effective AL strategy for object detection. PPAL is a two-stage method comprising uncertainty-based and diversity-based sampling phases. In the first stage, our Difficulty Calibrated Uncertainty Sampling leverage a category-wise difficulty coefficient that combines both classification and localisation difficulties to re-weight instance uncertainties, from which we sample a candidate pool for the subsequent diversity-based sampling. In the second stage, we propose Category Conditioned Matching Similarity to better compute the similarities of multi-instance images as ensembles of their instance similarities, which is used by the k-Means++ algorithm to sample the final AL queries. PPAL makes no change to model architectures or detector training pipelines; hence it can be easily generalized to different object detectors. We benchmark PPAL on the MS-COCO and Pascal VOC datasets using different detector architectures and show that our method outperforms prior work by a large margin. Code is available at https://github.com/ChenhongyiYang/PPAL
+
 ### Active Object Detection with Knowledge Aggregation and Distillation from Large Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01573)
+- **链接**: [arXiv:2405.12509](https://arxiv.org/abs/2405.12509)
 - **作者**: Dejie Yang, Yang Liu
 - **🏷️ 机构**: Wangxuan Institute of Computer Technology, Peking University
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Accurately detecting active objects undergoing state changes is essential for comprehending human interactions and facilitating decision-making. The existing methods for active object detection (AOD) primarily rely on visual appearance of the objects within input, such as changes in size, shape and relationship with hands. However, these visual changes can be subtle, posing challenges, particularly in scenarios with multiple distracting no-change instances of the same category. We observe that the state changes are often the result of an interaction being performed upon the object, thus propose to use informed priors about object related plausible interactions (including semantics and visual appearance) to provide more reliable cues for AOD. Specifically, we propose a knowledge aggregation procedure to integrate the aforementioned informed priors into oracle queries within the teacher decoder, offering more object affordance commonsense to locate the active object. To streamline the inference process and reduce extra knowledge inputs, we propose a knowledge distillation approach that encourages the student decoder to mimic the detection capabilities of the teacher decoder using the oracle query by replicating its predictions and attention. Our proposed framework achieves state-of-the-art performance on four datasets, namely Ego4D, Epic-Kitchens, MECCANO, and 100DOH, which demonstrates the effectiveness of our approach in improving AOD.
 
 ### DetCLIPv3: Towards Versatile Generative Open-Vocabulary Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02586)

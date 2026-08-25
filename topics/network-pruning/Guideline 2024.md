@@ -1,7 +1,7 @@
 # Network Pruning — 2024 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 24 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 25 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -164,3 +164,4 @@
 - CaKDP: Category-Aware Knowledge Distillation and Pruning Framework for Lightweight 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - MADTP: Multimodal Alignment-Guided Dynamic Token Pruning for Accelerating Vision-Language Transformer. → [multimodal](../multimodal/Guideline%202024.md)
 - Sieve: Multimodal Dataset Pruning Using Image Captioning Models. → [multimodal](../multimodal/Guideline%202024.md)
+- Towards Backward-Compatible Continual Learning of Image Compression. → [continual-learning](../continual-learning/Guideline%202024.md)

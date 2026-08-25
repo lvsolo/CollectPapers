@@ -152,16 +152,24 @@
 - **会议**: CVPR 2024
 
 ### USE: Universal Segment Embeddings for Open-Vocabulary Image Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00401)
+- **链接**: [arXiv:2406.05271](https://arxiv.org/abs/2406.05271)
 - **作者**: Xiaoqi Wang, Wenbin He, Xiwei Xuan, Clint Sebastian, Jorge Piazentin Ono, Xin Li et al.
 - **🏷️ 机构**: Bosch Research North America, Bosch Center for Artificial Intelligence (BCAI)
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > The open-vocabulary image segmentation task involves partitioning images into semantically meaningful segments and classifying them with flexible text-defined categories. The recent vision-based foundation models such as the Segment Anything Model (SAM) have shown superior performance in generating class-agnostic image segments. The main challenge in open-vocabulary image segmentation now lies in accurately classifying these segments into text-defined categories. In this paper, we introduce the Universal Segment Embedding (USE) framework to address this challenge. This framework is comprised of two key components: 1) a data pipeline designed to efficiently curate a large amount of segment-text pairs at various granularities, and 2) a universal segment embedding model that enables precise segment classification into a vast range of text-defined categories. The USE model can not only help open-vocabulary image segmentation but also facilitate other downstream tasks (e.g., querying and ranking). Through comprehensive experimental studies on semantic segmentation and part segmentation benchmarks, we demonstrate that the USE framework outperforms state-of-the-art open-vocabulary segmentation methods.
+
 ### Image-to-Image Matching via Foundation Models: A New Perspective for Open-Vocabulary Semantic Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00379)
+- **链接**: [arXiv:2404.00262](https://arxiv.org/abs/2404.00262)
 - **作者**: Yuan Wang, Rui Sun, Naisong Luo, Yuwen Pan, Tianzhu Zhang
 - **🏷️ 机构**: University of Science and Technology of China
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Open-vocabulary semantic segmentation (OVS) aims to segment images of arbitrary categories specified by class labels or captions. However, most previous best-performing methods, whether pixel grouping methods or region recognition methods, suffer from false matches between image features and category labels. We attribute this to the natural gap between the textual features and visual features. In this work, we rethink how to mitigate false matches from the perspective of image-to-image matching and propose a novel relation-aware intra-modal matching (RIM) framework for OVS based on visual foundation models. RIM achieves robust region classification by firstly constructing diverse image-modal reference features and then matching them with region features based on relation-aware ranking distribution. The proposed RIM enjoys several merits. First, the intra-modal reference features are better aligned, circumventing potential ambiguities that may arise in cross-modal matching. Second, the ranking-based matching process harnesses the structure information implicit in the inter-class relationships, making it more robust than comparing individually. Extensive experiments on three benchmarks demonstrate that RIM outperforms previous state-of-the-art methods by large margins, obtaining a lead of more than 10% in mIoU on PASCAL VOC benchmark.
 
 ### OVFoodSeg: Elevating Open-Vocabulary Food Image Segmentation via Image-Informed Textual Representation.
 - **链接**: [arXiv:2404.01409](https://arxiv.org/abs/2404.01409)

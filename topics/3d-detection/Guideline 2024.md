@@ -84,10 +84,14 @@
 - **会议**: CVPR 2024
 
 ### Learning Occupancy for Monocular 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00979)
+- **链接**: [arXiv:2305.15694](https://arxiv.org/abs/2305.15694) · [代码](https://github.com/SPengLiang/OccupancyM3D)
 - **作者**: Liang Peng, Junkai Xu, Haoran Cheng, Zheng Yang, Xiaopei Wu, Wei Qian et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Monocular 3D detection is a challenging task due to the lack of accurate 3D information. Existing approaches typically rely on geometry constraints and dense depth estimates to facilitate the learning, but often fail to fully exploit the benefits of three-dimensional feature extraction in frustum and 3D space. In this paper, we propose \textbf{OccupancyM3D}, a method of learning occupancy for monocular 3D detection. It directly learns occupancy in frustum and 3D space, leading to more discriminative and informative 3D features and representations. Specifically, by using synchronized raw sparse LiDAR point clouds, we define the space status and generate voxel-based occupancy labels. We formulate occupancy prediction as a simple classification problem and design associated occupancy losses. Resulting occupancy estimates are employed to enhance original frustum/3D features. As a result, experiments on KITTI and Waymo open datasets demonstrate that the proposed method achieves a new state of the art and surpasses other methods by a significant margin. Codes and pre-trained models will be available at \url{https://github.com/SPengLiang/OccupancyM3D}.
 
 ### MonoDiff: Monocular 3D Object Detection and Pose Estimation with Diffusion Models.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01014)
@@ -102,10 +106,14 @@
 - **会议**: CVPR 2024
 
 ### Commonsense Prototype for Outdoor Unsupervised 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01418)
+- **链接**: [arXiv:2404.16493](https://arxiv.org/abs/2404.16493) · [代码](https://github.com/hailanyi/CPD)
 - **作者**: Hai Wu, Shijia Zhao, Xun Huang, Chenglu Wen, Xin Li, Cheng Wang
 - **🏷️ 机构**: Xiamen University,Fujian Key Laboratory of Sensing and Computing for Smart Cities, Texas A&#x0026;M University,Section of Visual Computing and Interactive Media
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > The prevalent approaches of unsupervised 3D object detection follow cluster-based pseudo-label generation and iterative self-training processes. However, the challenge arises due to the sparsity of LiDAR scans, which leads to pseudo-labels with erroneous size and position, resulting in subpar detection performance. To tackle this problem, this paper introduces a Commonsense Prototype-based Detector, termed CPD, for unsupervised 3D object detection. CPD first constructs Commonsense Prototype (CProto) characterized by high-quality bounding box and dense points, based on commonsense intuition. Subsequently, CPD refines the low-quality pseudo-labels by leveraging the size prior from CProto. Furthermore, CPD enhances the detection accuracy of sparsely scanned objects by the geometric knowledge from CProto. CPD outperforms state-of-the-art unsupervised 3D detectors on Waymo Open Dataset (WOD), PandaSet, and KITTI datasets by a large margin. Besides, by training CPD on WOD and testing on KITTI, CPD attains 90.85% and 81.01% 3D Average Precision on easy and moderate car classes, respectively. These achievements position CPD in close proximity to fully supervised detectors, highlighting the significance of our method. The code will be available at https://github.com/hailanyi/CPD.
 
 ### HINTED: Hard Instance Enhanced Detector with Mixed-Density Feature Fusion for Sparsely-Supervised 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01451)

@@ -5,12 +5,6 @@
 
 > 同领域其他年份: 
 
-### HIPTrack: Visual Tracking with Historical Prompts.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01822)
-- **作者**: Wenrui Cai, Qingjie Liu, Yunhong Wang
-- **🏷️ 机构**: State Key Laboratory of Virtual Reality Technology and Systems, Beihang University,Beijing,China
-- **会议**: CVPR 2024
-
 ### DeconfuseTrack: Dealing with Confusion for Multi-Object Tracking.
 - **链接**: [arXiv:2403.02767](https://arxiv.org/abs/2403.02767)
 - **作者**: Cheng Huang, Shoudong Han, Mengyu He, Wenbo Zheng, Yuhao Wei
@@ -36,6 +30,12 @@
 - **摘要（英，原文）**:
 
   > Low-light scenes are prevalent in real-world applications (e.g. autonomous driving and surveillance at night). Recently, multi-object tracking in various practical use cases have received much attention, but multi-object tracking in dark scenes is rarely considered. In this paper, we focus on multi-object tracking in dark scenes. To address the lack of datasets, we first build a Low-light Multi-Object Tracking (LMOT) dataset. LMOT provides well-aligned low-light video pairs captured by our dual-camera system, and high-quality multi-object tracking annotations for all videos. Then, we propose a low-light multi-object tracking method, termed as LTrack. We introduce the adaptive low-pass downsample module to enhance low-frequency components of images outside the sensor noises. The degradation suppression learning strategy enables the model to learn invariant information under noise disturbance and image quality degradation. These components improve the robustness of multi-object tracking in dark scenes. We conducted a comprehensive analysis of our LMOT dataset and proposed LTrack. Experimental results demonstrate the superiority of the proposed method and its competitiveness in real night low-light scenes. Dataset and Code: https: //github.com/ying-fu/LMOT
+
+### HIPTrack: Visual Tracking with Historical Prompts.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01822)
+- **作者**: Wenrui Cai, Qingjie Liu, Yunhong Wang
+- **🏷️ 机构**: State Key Laboratory of Virtual Reality Technology and Systems, Beihang University,Beijing,China
+- **会议**: CVPR 2024
 
 ### MS-MANO: Enabling Hand Pose Tracking with Biomechanical Constraints.
 - **链接**: [arXiv:2404.10227](https://arxiv.org/abs/2404.10227)

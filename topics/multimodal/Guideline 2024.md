@@ -1,7 +1,7 @@
 # Multimodal — 2024 Guideline
 
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
-> 论文数: 81 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 85 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -15,6 +15,12 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00913)
 - **作者**: Xiang Yue, Yuansheng Ni, Tianyu Zheng, Kai Zhang, Ruoqi Liu, Ge Zhang et al.
 - **🏷️ 机构**: IN. AI Research, University of Waterloo, Independent
+- **会议**: CVPR 2024
+
+### MVBench: A Comprehensive Multi-modal Video Understanding Benchmark.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02095)
+- **作者**: Kunchang Li, Yali Wang, Yinan He, Yizhuo Li, Yi Wang, Yi Liu et al.
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
 
 ### Weakly Misalignment-Free Adaptive Feature Alignment for UAVs-Based Multimodal Object Detection.
@@ -78,10 +84,14 @@
 - **会议**: CVPR 2024
 
 ### Unified-IO 2: Scaling Autoregressive Multimodal Models with Vision, Language, Audio, and Action.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02497)
+- **链接**: [arXiv:2312.17172](https://arxiv.org/abs/2312.17172)
 - **作者**: Jiasen Lu, Christopher Clark, Sangho Lee, Zichen Zhang, Savya Khosla, Ryan Marten et al.
 - **🏷️ 机构**: Allen Institute for AI, University of Illinois Urbana-Champaign
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > We present Unified-IO 2, the first autoregressive multimodal model that is capable of understanding and generating image, text, audio, and action. To unify different modalities, we tokenize inputs and outputs -- images, text, audio, action, bounding boxes, etc., into a shared semantic space and then process them with a single encoder-decoder transformer model. Since training with such diverse modalities is challenging, we propose various architectural improvements to stabilize model training. We train our model from scratch on a large multimodal pre-training corpus from diverse sources with a multimodal mixture of denoisers objective. To learn an expansive set of skills, such as following multimodal instructions, we construct and finetune on an ensemble of 120 datasets with prompts and augmentations. With a single unified model, Unified-IO 2 achieves state-of-the-art performance on the GRIT benchmark and strong results in more than 35 benchmarks, including image generation and understanding, natural language understanding, video and audio understanding, and robotic manipulation. We release all our models to the research community.
 
 ### MMA: Multi-Modal Adapter for Vision-Language Models.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02249)
@@ -90,10 +100,14 @@
 - **会议**: CVPR 2024
 
 ### Source-Free Domain Adaptation with Frozen Multimodal Foundation Model.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02238)
+- **链接**: [arXiv:2311.16510](https://arxiv.org/abs/2311.16510)
 - **作者**: Song Tang, Wenxin Su, Mao Ye, Xiatian Zhu
 - **🏷️ 机构**: University of Shanghai for Science and Technology, University of Electronic Science and Technology of China, University of Surrey
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Source-Free Domain Adaptation (SFDA) aims to adapt a source model for a target domain, with only access to unlabeled target training data and the source model pre-trained on a supervised source domain. Relying on pseudo labeling and/or auxiliary supervision, conventional methods are inevitably error-prone. To mitigate this limitation, in this work we for the first time explore the potentials of off-the-shelf vision-language (ViL) multimodal models (e.g.,CLIP) with rich whilst heterogeneous knowledge. We find that directly applying the ViL model to the target domain in a zero-shot fashion is unsatisfactory, as it is not specialized for this particular task but largely generic. To make it task specific, we propose a novel Distilling multimodal Foundation model(DIFO)approach. Specifically, DIFO alternates between two steps during adaptation: (i) Customizing the ViL model by maximizing the mutual information with the target model in a prompt learning manner, (ii) Distilling the knowledge of this customized ViL model to the target model. For more fine-grained and reliable distillation, we further introduce two effective regularization terms, namely most-likely category encouragement and predictive consistency. Extensive experiments show that DIFO significantly outperforms the state-of-the-art alternatives. Code is here
 
 ### Sieve: Multimodal Dataset Pruning Using Image Captioning Models.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02116)
@@ -310,10 +324,14 @@
 - **会议**: CVPR 2024
 
 ### Mirasol3B: A Multimodal Autoregressive Model for Time-Aligned and Contextual Modalities.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02531)
+- **链接**: [arXiv:2311.05698](https://arxiv.org/abs/2311.05698)
 - **作者**: A. J. Piergiovanni, Isaac Noble, Dahun Kim, Michael S. Ryoo, Victor Gomes, Anelia Angelova
 - **🏷️ 机构**: Google DeepMind, Google Research
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > One of the main challenges of multimodal learning is the need to combine heterogeneous modalities (e.g., video, audio, text). For example, video and audio are obtained at much higher rates than text and are roughly aligned in time. They are often not synchronized with text, which comes as a global context, e.g., a title, or a description. Furthermore, video and audio inputs are of much larger volumes, and grow as the video length increases, which naturally requires more compute dedicated to these modalities and makes modeling of long-range dependencies harder. We here decouple the multimodal modeling, dividing it into separate, focused autoregressive models, processing the inputs according to the characteristics of the modalities. We propose a multimodal model, called Mirasol3B, consisting of an autoregressive component for the time-synchronized modalities (audio and video), and an autoregressive component for the context modalities which are not necessarily aligned in time but are still sequential. To address the long-sequences of the video-audio inputs, we propose to further partition the video and audio sequences in consecutive snippets and autoregressively process their representations. To that end, we propose a Combiner mechanism, which models the audio-video information jointly within a timeframe. The Combiner learns to extract audio and video features from raw spatio-temporal signals, and then learns to fuse these features producing compact but expressive representations per snippet. Our approach achieves the state-of-the-art on well established multimodal benchmarks, outperforming much larger models. It effectively addresses the high computational demand of media inputs by both learning compact representations, controlling the sequence length of the audio-video feature representations, and modeling their dependencies in time.
 
 ### Sniffer: Multimodal Large Language Model for Explainable Out-of-Context Misinformation Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01240)
@@ -496,16 +514,24 @@
 - **会议**: CVPR 2024
 
 ### C3Net: Compound Conditioned ControlNet for Multimodal Content Generation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02539)
+- **链接**: [arXiv:2311.17951](https://arxiv.org/abs/2311.17951)
 - **作者**: Juntao Zhang, Yuehuai Liu, Yu-Wing Tai, Chi-Keung Tang
 - **🏷️ 机构**: HKUST, Dartmouth College
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > We present Compound Conditioned ControlNet, C3Net, a novel generative neural architecture taking conditions from multiple modalities and synthesizing multimodal contents simultaneously (e.g., image, text, audio). C3Net adapts the ControlNet architecture to jointly train and make inferences on a production-ready diffusion model and its trainable copies. Specifically, C3Net first aligns the conditions from multi-modalities to the same semantic latent space using modality-specific encoders based on contrastive training. Then, it generates multimodal outputs based on the aligned latent space, whose semantic information is combined using a ControlNet-like architecture called Control C3-UNet. Correspondingly, with this system design, our model offers an improved solution for joint-modality generation through learning and explaining multimodal conditions instead of simply taking linear interpolations on the latent space. Meanwhile, as we align conditions to a unified latent space, C3Net only requires one trainable Control C3-UNet to work on multimodal semantic information. Furthermore, our model employs unimodal pretraining on the condition alignment stage, outperforming the non-pretrained alignment even on relatively scarce training data and thus demonstrating high-quality compound condition generation. We contribute the first high-quality tri-modal validation set to validate quantitatively that C3Net outperforms or is on par with first and contemporary state-of-the-art multimodal generation. Our codes and tri-modal dataset will be released.
+
 ### MM-Narrator: Narrating Long-form Videos with Multimodal In-Context Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01295)
+- **链接**: [arXiv:2311.17435](https://arxiv.org/abs/2311.17435)
 - **作者**: Chaoyi Zhang, Kevin Lin, Zhengyuan Yang, Jianfeng Wang, Linjie Li, Chung-Ching Lin et al.
 - **🏷️ 机构**: University of Sydney, Microsoft, Advanced Micro Devices
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > We present MM-Narrator, a novel system leveraging GPT-4 with multimodal in-context learning for the generation of audio descriptions (AD). Unlike previous methods that primarily focused on downstream fine-tuning with short video clips, MM-Narrator excels in generating precise audio descriptions for videos of extensive lengths, even beyond hours, in an autoregressive manner. This capability is made possible by the proposed memory-augmented generation process, which effectively utilizes both the short-term textual context and long-term visual memory through an efficient register-and-recall mechanism. These contextual memories compile pertinent past information, including storylines and character identities, ensuring an accurate tracking and depicting of story-coherent and character-centric audio descriptions. Maintaining the training-free design of MM-Narrator, we further propose a complexity-based demonstration selection strategy to largely enhance its multi-step reasoning capability via few-shot multimodal in-context learning (MM-ICL). Experimental results on MAD-eval dataset demonstrate that MM-Narrator consistently outperforms both the existing fine-tuning-based approaches and LLM-based approaches in most scenarios, as measured by standard evaluation metrics. Additionally, we introduce the first segment-based evaluator for recurrent text generation. Empowered by GPT-4, this evaluator comprehensively reasons and marks AD generation performance in various extendable dimensions.
 
 ### MMVP: A Multimodal MoCap Dataset with Vision and Pressure Sensors.
 - **链接**: [arXiv:2403.17610](https://arxiv.org/abs/2403.17610)
@@ -539,7 +565,20 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
 
+### TIM: A Time Interval Machine for Audio-Visual Action Recognition.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01719) · 📚 被引 29
+- **作者**: Jacob Chalk, Jaesung Huh, Evangelos Kazakos, Andrew Zisserman, Dima Damen
+- **🏷️ 机构**: University of Bristol, University of Oxford,VGG, Czech Technical University in Prague
+- **会议**: CVPR 2024
+
+### C2KD: Bridging the Modality Gap for Cross-Modal Knowledge Distillation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01515)
+- **作者**: Fushuo Huo, Wenchao Xu, Jingcai Guo, Haozhao Wang, Song Guo
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+
 ## 跨领域论文（完整笔记在其他领域）
 
 - IS-Fusion: Instance-Scene Collaborative Fusion for Multimodal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Holistic Autonomous Driving Understanding by Bird'View Injected Multi-Modal Large Models. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
 - Multiagent Multitraversal Multimodal Self-Driving: Open MARS Dataset. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)

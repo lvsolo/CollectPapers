@@ -1,7 +1,7 @@
 # VLM — 2024 Guideline
 
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
-> 论文数: 73 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 74 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -36,10 +36,14 @@
 - **会议**: CVPR 2024
 
 ### Language Models as Black-Box Optimizers for Vision-Language Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01206) · 📚 被引 22
+- **链接**: [arXiv:2309.05950](https://arxiv.org/abs/2309.05950) · 📚 被引 22
 - **作者**: Shihong Liu, Samuel Yu, Zhiqiu Lin, Deepak Pathak, Deva Ramanan
 - **🏷️ 机构**: Carnegie Mellon University
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Vision-language models (VLMs) pre-trained on web-scale datasets have demonstrated remarkable capabilities on downstream tasks when fine-tuned with minimal data. However, many VLMs rely on proprietary data and are not open-source, which restricts the use of white-box approaches for fine-tuning. As such, we aim to develop a black-box approach to optimize VLMs through natural language prompts, thereby avoiding the need to access model parameters, feature embeddings, or even output logits. We propose employing chat-based LLMs to search for the best text prompt for VLMs. Specifically, we adopt an automatic hill-climbing procedure that converges to an effective prompt by evaluating the performance of current prompts and asking LLMs to refine them based on textual feedback, all within a conversational process without human-in-the-loop. In a challenging 1-shot image classification setup, our simple approach surpasses the white-box continuous prompting method (CoOp) by an average of 1.5% across 11 datasets including ImageNet. Our approach also outperforms both human-engineered and LLM-generated prompts. We highlight the advantage of conversational feedback that incorporates both positive and negative prompts, suggesting that LLMs can utilize the implicit gradient direction in textual feedback for a more efficient search. In addition, we find that the text prompts generated through our strategy are not only more interpretable but also transfer well across different VLM architectures in a black-box manner. Lastly, we apply our framework to optimize the state-of-the-art black-box VLM (DALL-E 3) for text-to-image generation, prompt inversion, and personalization.
 
 ### Sonic VisionLM: Playing Sound with Vision Language Models.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02537)
@@ -48,10 +52,14 @@
 - **会议**: CVPR 2024
 
 ### Consistency and Uncertainty: Identifying Unreliable Responses From Black-Box Vision-Language Models for Selective Visual Question Answering.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01032)
+- **链接**: [arXiv:2404.10193](https://arxiv.org/abs/2404.10193)
 - **作者**: Zaid Khan, Yun Fu
 - **🏷️ 机构**: Northeastern University
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > The goal of selective prediction is to allow an a model to abstain when it may not be able to deliver a reliable prediction, which is important in safety-critical contexts. Existing approaches to selective prediction typically require access to the internals of a model, require retraining a model or study only unimodal models. However, the most powerful models (e.g. GPT-4) are typically only available as black boxes with inaccessible internals, are not retrainable by end-users, and are frequently used for multimodal tasks. We study the possibility of selective prediction for vision-language models in a realistic, black-box setting. We propose using the principle of \textit{neighborhood consistency} to identify unreliable responses from a black-box vision-language model in question answering tasks. We hypothesize that given only a visual question and model response, the consistency of the model's responses over the neighborhood of a visual question will indicate reliability. It is impossible to directly sample neighbors in feature space in a black-box setting. Instead, we show that it is possible to use a smaller proxy model to approximately sample from the neighborhood. We find that neighborhood consistency can be used to identify model responses to visual questions that are likely unreliable, even in adversarial settings or settings that are out-of-distribution to the proxy model.
 
 ### PeVL: Pose-Enhanced Vision-Language Model for Fine-Grained Human Action Recognition.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01784)
@@ -266,16 +274,24 @@
 - **会议**: CVPR 2024
 
 ### PartDistill: 3D Shape Part Segmentation by Vision-Language Model Distillation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00333)
+- **链接**: [arXiv:2312.04016](https://arxiv.org/abs/2312.04016) · [代码](https://github.com/ardianumam/PartDistill)
 - **作者**: Ardian Umam, Cheng-Kun Yang, Min-Hung Chen, Jen-Hui Chuang, Yen-Yu Lin
 - **🏷️ 机构**: National Yang Ming Chiao Tung University, MediaTek, NVIDIA
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > This paper proposes a cross-modal distillation framework, PartDistill, which transfers 2D knowledge from vision-language models (VLMs) to facilitate 3D shape part segmentation. PartDistill addresses three major challenges in this task: the lack of 3D segmentation in invisible or undetected regions in the 2D projections, inconsistent 2D predictions by VLMs, and the lack of knowledge accumulation across different 3D shapes. PartDistill consists of a teacher network that uses a VLM to make 2D predictions and a student network that learns from the 2D predictions while extracting geometrical features from multiple 3D shapes to carry out 3D part segmentation. A bi-directional distillation, including forward and backward distillations, is carried out within the framework, where the former forward distills the 2D predictions to the student network, and the latter improves the quality of the 2D predictions, which subsequently enhances the final 3D segmentation. Moreover, PartDistill can exploit generative models that facilitate effortless 3D shape creation for generating knowledge sources to be distilled. Through extensive experiments, PartDistill boosts the existing methods with substantial margins on widely used ShapeNetPart and PartNetE datasets, by more than 15% and 12% higher mIoU scores, respectively. The code for this work is available at https://github.com/ardianumam/PartDistill.
+
 ### Lookahead Exploration with Neural Radiance Representation for Continuous Vision-Language Navigation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01305)
+- **链接**: [arXiv:2404.01943](https://arxiv.org/abs/2404.01943)
 - **作者**: Zihan Wang, Xiangyang Li, Jiahao Yang, Yeqi Liu, Junjie Hu, Ming Jiang et al.
 - **🏷️ 机构**: Institute of Computing Technology, Chinese Academy of Sciences,Beijing,China,100190, University of Wisconsin,Department of Computer Science,Madison,WI,USA, Indiana University,Department of Human-centered Computing,Indianapolis,IN,USA
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Vision-and-language navigation (VLN) enables the agent to navigate to a remote location following the natural language instruction in 3D environments. At each navigation step, the agent selects from possible candidate locations and then makes the move. For better navigation planning, the lookahead exploration strategy aims to effectively evaluate the agent's next action by accurately anticipating the future environment of candidate locations. To this end, some existing works predict RGB images for future environments, while this strategy suffers from image distortion and high computational cost. To address these issues, we propose the pre-trained hierarchical neural radiance representation model (HNR) to produce multi-level semantic features for future environments, which are more robust and efficient than pixel-wise RGB reconstruction. Furthermore, with the predicted future environmental representations, our lookahead VLN model is able to construct the navigable future path tree and select the optimal path via efficient parallel evaluation. Extensive experiments on the VLN-CE datasets confirm the effectiveness of our method.
 
 ### SC- Tune: Unleashing Self-Consistent Referential Comprehension in Large Vision Language Models.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01242)
@@ -310,6 +326,12 @@
 - **摘要（英，原文）**:
 
   > A fundamental characteristic common to both human vision and natural language is their compositional nature. Yet, despite the performance gains contributed by large vision and language pretraining, recent investigations find that most-if not all-our state-of-the-art vision-language models struggle at compositionality. They are unable to distinguish between images of " a girl in white facing a man in black" and "a girl in black facing a man in white". Moreover, prior work suggests that compositionality doesn't arise with scale: larger model sizes or training data don't help. This paper develops a new iterated training algorithm that incentivizes compositionality. We draw on decades of cognitive science research that identifies cultural transmission-the need to teach a new generation-as a necessary inductive prior that incentivizes humans to develop compositional languages. Specifically, we reframe vision-language contrastive learning as the Lewis Signaling Game between a vision agent and a language agent, and operationalize cultural transmission by iteratively resetting one of the agent's weights during training. After every iteration, this training paradigm induces representations that become "easier to learn", a property of compositional languages: e.g. our model trained on CC3M and CC12M improves standard CLIP by 4.7%, 4.0% respectfully in the SugarCrepe benchmark.
+
+### CLIP-KD: An Empirical Study of CLIP Model Distillation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01510) · 📚 被引 67
+- **作者**: Chuanguang Yang, Zhulin An, Libo Huang, Junyu Bi, Xinqiang Yu, Han Yang et al.
+- **🏷️ 机构**: Institute of Computing Technology,Chinese Academy of Sciences,Beijing,China
+- **会议**: CVPR 2024
 
 ## 跨领域论文（完整笔记在其他领域）
 
