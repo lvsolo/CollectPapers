@@ -1,7 +1,7 @@
 # VLM — 2023 Guideline
 
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
-> 论文数: 26 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 27 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -9,6 +9,12 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01463) · 📚 被引 83
 - **作者**: Yihan Zeng, Chenhan Jiang, Jiageng Mao, Jianhua Han, Chaoqiang Ye, Qingqiu Huang et al.
 - **🏷️ 机构**: Huawei Noah&#x0027;s Ark Lab, Hong Kong University of Science and Technology, The Chinese University of Hong Kong
+- **会议**: CVPR 2023
+
+### Joint Visual Grounding and Tracking with Natural Language Specification.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02217) · 📚 被引 138
+- **作者**: Li Zhou, Zikun Zhou, Kaige Mao, Zhenyu He
+- **🏷️ 机构**: Harbin Institute of Technology,Shenzhen, Peng Cheng Laboratory
 - **会议**: CVPR 2023
 
 ### Learning to Generate Text-Grounded Mask for Open-World Semantic Segmentation from Only Image-Text Pairs.
@@ -124,16 +130,24 @@
 - **会议**: CVPR 2023
 
 ### Reproducible Scaling Laws for Contrastive Language-Image Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00276) · 📚 被引 620
+- **链接**: [arXiv:2212.07143](https://arxiv.org/abs/2212.07143) · [代码](https://github.com/LAION-AI/scaling-laws-openclip) · 📚 被引 620
 - **作者**: Mehdi Cherti, Romain Beaumont, Ross Wightman, Mitchell Wortsman, Gabriel Ilharco, Cade Gordon et al.
 - **🏷️ 机构**: LAION, HuggingFace, University of Washington
 - **会议**: CVPR 2023
 
+- **摘要（英，原文）**:
+
+  > Scaling up neural networks has led to remarkable performance across a wide range of tasks. Moreover, performance often follows reliable scaling laws as a function of training set size, model size, and compute, which offers valuable guidance as large-scale experiments are becoming increasingly expensive. However, previous work on scaling laws has primarily used private data \& models or focused on uni-modal language or vision learning. To address these limitations, we investigate scaling laws for contrastive language-image pre-training (CLIP) with the public LAION dataset and the open-source OpenCLIP repository. Our large-scale experiments involve models trained on up to two billion image-text pairs and identify power law scaling for multiple downstream tasks including zero-shot classification, retrieval, linear probing, and end-to-end fine-tuning. We find that the training distribution plays a key role in scaling laws as the OpenAI and OpenCLIP models exhibit different scaling behavior despite identical model architectures and similar training recipes. We open-source our evaluation workflow and all models, including the largest public CLIP models, to ensure reproducibility and make scaling laws research more accessible. Source code and instructions to reproduce this study will be available at https://github.com/LAION-AI/scaling-laws-openclip
+
 ### MaskCLIP: Masked Self-Distillation Advances Contrastive Language-Image Pretraining.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01058)
+- **链接**: [arXiv:2208.12262](https://arxiv.org/abs/2208.12262) · [代码](https://github.com/LightDXY/MaskCLIP)
 - **作者**: Xiaoyi Dong, Jianmin Bao, Yinglin Zheng, Ting Zhang, Dongdong Chen, Hao Yang et al.
 - **🏷️ 机构**: University of Science and Technology of China, Microsoft Research Asia, Xiamen University
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > This paper presents a simple yet effective framework MaskCLIP, which incorporates a newly proposed masked self-distillation into contrastive language-image pretraining. The core idea of masked self-distillation is to distill representation from a full image to the representation predicted from a masked image. Such incorporation enjoys two vital benefits. First, masked self-distillation targets local patch representation learning, which is complementary to vision-language contrastive focusing on text-related representation. Second, masked self-distillation is also consistent with vision-language contrastive from the perspective of training objective as both utilize the visual encoder for feature aligning, and thus is able to learn local semantics getting indirect supervision from the language. We provide specially designed experiments with a comprehensive analysis to validate the two benefits. Symmetrically, we also introduce the local semantic supervision into the text branch, which further improves the pretraining performance. With extensive experiments, we show that MaskCLIP, when applied to various challenging downstream tasks, achieves superior results in linear probing, finetuning, and zero-shot performance with the guidance of the language encoder. Code will be release at \url{https://github.com/LightDXY/MaskCLIP}.
 
 ### Local 3D Editing via 3D Distillation of CLIP Knowledge.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01219)

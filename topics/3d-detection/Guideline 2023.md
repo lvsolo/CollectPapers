@@ -1,7 +1,7 @@
 # 3D Detection — 2023 Guideline
 
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
-> 论文数: 35 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 36 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -174,10 +174,14 @@
   > While most recent autonomous driving system focuses on developing perception methods on ego-vehicle sensors, people tend to overlook an alternative approach to leverage intelligent roadside cameras to extend the perception ability beyond the visual range. We discover that the state-of-the-art vision-centric bird's eye view detection methods have inferior performances on roadside cameras. This is because these methods mainly focus on recovering the depth regarding the camera center, where the depth difference between the car and the ground quickly shrinks while the distance increases. In this paper, we propose a simple yet effective approach, dubbed BEVHeight, to address this issue. In essence, instead of predicting the pixel-wise depth, we regress the height to the ground to achieve a distance-agnostic formulation to ease the optimization process of camera-only perception methods. On popular 3D detection benchmarks of roadside cameras, our method surpasses all previous vision-centric methods by a significant margin. The code is available at {\url{https://github.com/ADLab-AutoDrive/BEVHeight}}.
 
 ### Bi3D: Bi-Domain Active Learning for Cross-Domain 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01497) · 📚 被引 0
+- **链接**: [arXiv:2303.05886](https://arxiv.org/abs/2303.05886) · [代码](https://github.com/PJLabADG/3DTrans) · 📚 被引 0
 - **作者**: Jiakang Yuan, Bo Zhang, Xiangchao Yan, Tao Chen, Botian Shi, Yikang Li et al.
 - **🏷️ 机构**: Shanghai AI Lab
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Unsupervised Domain Adaptation (UDA) technique has been explored in 3D cross-domain tasks recently. Though preliminary progress has been made, the performance gap between the UDA-based 3D model and the supervised one trained with fully annotated target domain is still large. This motivates us to consider selecting partial-yet-important target data and labeling them at a minimum cost, to achieve a good trade-off between high performance and low annotation cost. To this end, we propose a Bi-domain active learning approach, namely Bi3D, to solve the cross-domain 3D object detection task. The Bi3D first develops a domainness-aware source sampling strategy, which identifies target-domain-like samples from the source domain to avoid the model being interfered by irrelevant source data. Then a diversity-based target sampling strategy is developed, which selects the most informative subset of target domain to improve the model adaptability to the target domain using as little annotation budget as possible. Experiments are conducted on typical cross-domain adaptation scenarios including cross-LiDAR-beam, cross-country, and cross-sensor, where Bi3D achieves a promising target-domain detection accuracy (89.63% on KITTI) compared with UDAbased work (84.29%), even surpassing the detector trained on the full set of the labeled target domain (88.98%). Our code is available at: https://github.com/PJLabADG/3DTrans.
 
 ### Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00102) · 📚 被引 13
@@ -239,6 +243,12 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02077) · 📚 被引 15
 - **作者**: Oren Shrout, Yizhak Ben-Shabat, Ayellet Tal
 - **🏷️ 机构**: Technion,Israel
+- **会议**: CVPR 2023
+
+### FrustumFormer: Adaptive Instance-aware Resampling for Multi-view 3D Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00493)
+- **作者**: Yuqi Wang, Yuntao Chen, Zhaoxiang Zhang
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
 ### PointDistiller: Structured Knowledge Distillation Towards Efficient and Compact 3D Detection.

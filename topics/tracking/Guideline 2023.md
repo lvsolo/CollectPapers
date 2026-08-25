@@ -1,7 +1,7 @@
 # Tracking — 2023 Guideline
 
 > 领域: 目标跟踪（MOT / 3D 跟踪 / 多目标多相机跟踪）
-> 论文数: 11 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -58,6 +58,16 @@
 - **作者**: Xing Wei, Yifan Bai, Yongchao Zheng, Dahu Shi, Yihong Gong
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
+
+### GarmentTracking: Category-Level Garment Pose Tracking.
+- **链接**: [arXiv:2303.13913](https://arxiv.org/abs/2303.13913) · 📚 被引 11
+- **作者**: Han Xue, Wenqiang Xu, Jieyi Zhang, Tutian Tang, Yutong Li, Wenxin Du et al.
+- **🏷️ 机构**: Shanghai Qi Zhi Institute, Shanghai Jiao Tong University, Cornell University
+- **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Garments are important to humans. A visual system that can estimate and track the complete garment pose can be useful for many downstream tasks and real-world applications. In this work, we present a complete package to address the category-level garment pose tracking task: (1) A recording system VR-Garment, with which users can manipulate virtual garment models in simulation through a VR interface. (2) A large-scale dataset VR-Folding, with complex garment pose configurations in manipulation like flattening and folding. (3) An end-to-end online tracking framework GarmentTracking, which predicts complete garment pose both in canonical space and task space given a point cloud sequence. Extensive experiments demonstrate that the proposed GarmentTracking achieves great performance even when the garment has large non-rigid deformation. It outperforms the baseline approach on both speed and accuracy. We hope our proposed solution can serve as a platform for future research. Codes and datasets are available in https://garment-tracking.robotflow.ai.
 
 ## 跨领域论文（完整笔记在其他领域）
 

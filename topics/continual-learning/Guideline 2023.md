@@ -12,10 +12,14 @@
 - **会议**: CVPR 2023
 
 ### Learning with Fantasy: Semantic-Aware Virtual Contrastive Constraint for Few-Shot Class-Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02316) · 📚 被引 119
+- **链接**: [arXiv:2304.00426](https://arxiv.org/abs/2304.00426) · [代码](https://github.com/zysong0113/SAVC) · 📚 被引 119
 - **作者**: Zeyin Song, Yifan Zhao, Yujun Shi, Peixi Peng, Li Yuan, Yonghong Tian
 - **🏷️ 机构**: School of Electronic and Computer Engineering, Peking University, School of Computer Science, Peking University, National University of Singapore
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Few-shot class-incremental learning (FSCIL) aims at learning to classify new classes continually from limited samples without forgetting the old classes. The mainstream framework tackling FSCIL is first to adopt the cross-entropy (CE) loss for training at the base session, then freeze the feature extractor to adapt to new classes. However, in this work, we find that the CE loss is not ideal for the base session training as it suffers poor class separation in terms of representations, which further degrades generalization to novel classes. One tempting method to mitigate this problem is to apply an additional naive supervised contrastive learning (SCL) in the base session. Unfortunately, we find that although SCL can create a slightly better representation separation among different base classes, it still struggles to separate base classes and new classes. Inspired by the observations made, we propose Semantic-Aware Virtual Contrastive model (SAVC), a novel method that facilitates separation between new classes and base classes by introducing virtual classes to SCL. These virtual classes, which are generated via pre-defined transformations, not only act as placeholders for unseen classes in the representation space, but also provide diverse semantic information. By learning to recognize and contrast in the fantasy space fostered by virtual classes, our SAVC significantly boosts base class separation and novel class generalization, achieving new state-of-the-art performance on the three widely-used FSCIL benchmark datasets. Code is available at: https://github.com/zysong0113/SAVC.
 
 ### PCR: Proxy-Based Contrastive Replay for Online Class-Incremental Continual Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02322)
@@ -174,10 +178,14 @@
 - **会议**: CVPR 2023
 
 ### Foundation Model Drives Weakly Incremental Learning for Semantic Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02268) · 📚 被引 21
+- **链接**: [arXiv:2302.14250](https://arxiv.org/abs/2302.14250) · 📚 被引 21
 - **作者**: Chaohui Yu, Qiang Zhou, Jingliang Li, Jianlong Yuan, Zhibin Wang, Fan Wang
 - **🏷️ 机构**: Alibaba Group, University of the Chinese Academy of Sciences
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Modern incremental learning for semantic segmentation methods usually learn new categories based on dense annotations. Although achieve promising results, pixel-by-pixel labeling is costly and time-consuming. Weakly incremental learning for semantic segmentation (WILSS) is a novel and attractive task, which aims at learning to segment new classes from cheap and widely available image-level labels. Despite the comparable results, the image-level labels can not provide details to locate each segment, which limits the performance of WILSS. This inspires us to think how to improve and effectively utilize the supervision of new classes given image-level labels while avoiding forgetting old ones. In this work, we propose a novel and data-efficient framework for WILSS, named FMWISS. Specifically, we propose pre-training based co-segmentation to distill the knowledge of complementary foundation models for generating dense pseudo labels. We further optimize the noisy pseudo masks with a teacher-student architecture, where a plug-in teacher is optimized with a proposed dense contrastive loss. Moreover, we introduce memory-based copy-paste augmentation to improve the catastrophic forgetting problem of old classes. Extensive experiments on Pascal VOC and COCO datasets demonstrate the superior performance of our framework, e.g., FMWISS achieves 70.7% and 73.3% in the 15-5 VOC setting, outperforming the state-of-the-art method by 3.4% and 6.1%, respectively.
 
 ### Few-Shot Class-Incremental Learning via Class-Aware Bilateral Distillation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01139)

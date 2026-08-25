@@ -72,10 +72,14 @@
 - **会议**: CVPR 2023
 
 ### Detection Hub: Unifying Object Detection Datasets via Query Adaptation on Language Embedding.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01097)
+- **链接**: [arXiv:2206.03484](https://arxiv.org/abs/2206.03484)
 - **作者**: Lingchen Meng, Xiyang Dai, Yinpeng Chen, Pengchuan Zhang, Dongdong Chen, Mengchen Liu et al.
 - **🏷️ 机构**: School of CS, Fudan University,Shanghai Key Lab of Intell. Info. Processing, Microsoft
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Combining multiple datasets enables performance boost on many computer vision tasks. But similar trend has not been witnessed in object detection when combining multiple datasets due to two inconsistencies among detection datasets: taxonomy difference and domain gap. In this paper, we address these challenges by a new design (named Detection Hub) that is dataset-aware and category-aligned. It not only mitigates the dataset inconsistency but also provides coherent guidance for the detector to learn across multiple datasets. In particular, the dataset-aware design is achieved by learning a dataset embedding that is used to adapt object queries as well as convolutional kernels in detection heads. The categories across datasets are semantically aligned into a unified space by replacing one-hot category representations with word embedding and leveraging the semantic coherence of language embedding. Detection Hub fulfills the benefits of large data on object detection. Experiments demonstrate that joint training on multiple datasets achieves significant performance gains over training on each dataset alone. Detection Hub further achieves SoTA performance on UODB benchmark with wide variety of datasets.
 
 ### Pixels, Regions, and Objects: Multiple Enhancement for Salient Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00967)
@@ -188,10 +192,14 @@
 - **会议**: CVPR 2023
 
 ### Recurrent Vision Transformers for Object Detection with Event Cameras.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01334)
+- **链接**: [arXiv:2212.05598](https://arxiv.org/abs/2212.05598)
 - **作者**: Mathias Gehrig, Davide Scaramuzza
 - **🏷️ 机构**: Robotics and Perception Group, University of Zurich,Switzerland
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > We present Recurrent Vision Transformers (RVTs), a novel backbone for object detection with event cameras. Event cameras provide visual information with sub-millisecond latency at a high-dynamic range and with strong robustness against motion blur. These unique properties offer great potential for low-latency object detection and tracking in time-critical scenarios. Prior work in event-based vision has achieved outstanding detection performance but at the cost of substantial inference time, typically beyond 40 milliseconds. By revisiting the high-level design of recurrent vision backbones, we reduce inference time by a factor of 6 while retaining similar performance. To achieve this, we explore a multi-stage design that utilizes three key concepts in each stage: First, a convolutional prior that can be regarded as a conditional positional embedding. Second, local and dilated global self-attention for spatial feature interaction. Third, recurrent temporal feature aggregation to minimize latency while retaining temporal information. RVTs can be trained from scratch to reach state-of-the-art performance on event-based object detection - achieving an mAP of 47.2% on the Gen1 automotive dataset. At the same time, RVTs offer fast inference (<12 ms on a T4 GPU) and favorable parameter efficiency (5 times fewer than prior art). Our study brings new insights into effective design choices that can be fruitful for research beyond event-based vision.
 
 ### Learned Two-Plane Perspective Prior based Image Resampling for Efficient Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01284)
@@ -308,10 +316,14 @@
 - **会议**: CVPR 2023
 
 ### DiGeo: Discriminative Geometry-Aware Learning for Generalized Few-Shot Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00313)
+- **链接**: [arXiv:2303.09674](https://arxiv.org/abs/2303.09674)
 - **作者**: Jiawei Ma, Yulei Niu, Jincheng Xu, Shiyuan Huang, Guangxing Han, Shih-Fu Chang
 - **🏷️ 机构**: Columbia University
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Generalized few-shot object detection aims to achieve precise detection on both base classes with abundant annotations and novel classes with limited training data. Existing approaches enhance few-shot generalization with the sacrifice of base-class performance, or maintain high precision in base-class detection with limited improvement in novel-class adaptation. In this paper, we point out the reason is insufficient Discriminative feature learning for all of the classes. As such, we propose a new training framework, DiGeo, to learn Geometry-aware features of inter-class separation and intra-class compactness. To guide the separation of feature clusters, we derive an offline simplex equiangular tight frame (ETF) classifier whose weights serve as class centers and are maximally and equally separated. To tighten the cluster for each class, we include adaptive class-specific margins into the classification loss and encourage the features close to the class centers. Experimental studies on two few-shot benchmark datasets (VOC, COCO) and one long-tail dataset (LVIS) demonstrate that, with a single model, our method can effectively improve generalization on novel classes without hurting the detection of base classes.
 
 ### Bridging Precision and Confidence: A Train-Time Loss for Calibrating Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01104)
@@ -414,10 +426,14 @@
 - **会议**: CVPR 2023
 
 ### Generating Features with Increased Crop-Related Diversity for Few-Shot Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01888)
+- **链接**: [arXiv:2304.05096](https://arxiv.org/abs/2304.05096)
 - **作者**: Jingyi Xu, Hieu Le, Dimitris Samaras
 - **🏷️ 机构**: Stony Brook University, EPFL
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Two-stage object detectors generate object proposals and classify them to detect objects in images. These proposals often do not contain the objects perfectly but overlap with them in many possible ways, exhibiting great variability in the difficulty levels of the proposals. Training a robust classifier against this crop-related variability requires abundant training data, which is not available in few-shot settings. To mitigate this issue, we propose a novel variational autoencoder (VAE) based data generation model, which is capable of generating data with increased crop-related diversity. The main idea is to transform the latent space such latent codes with different norms represent different crop-related variations. This allows us to generate features with increased crop-related diversity in difficulty levels by simply varying the latent norm. In particular, each latent code is rescaled such that its norm linearly correlates with the IoU score of the input crop w.r.t. the ground-truth box. Here the IoU score is a proxy that represents the difficulty level of the crop. We train this VAE model on base classes conditioned on the semantic code of each class and then use the trained model to generate features for novel classes. In our experiments our generated features consistently improve state-of-the-art few-shot object detection methods on the PASCAL VOC and MS COCO datasets.
 
 ### DetCLIPv2: Scalable Open-Vocabulary Object Detection Pre-training via Word-Region Alignment.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02250)

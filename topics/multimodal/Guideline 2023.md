@@ -1,7 +1,7 @@
 # Multimodal — 2023 Guideline
 
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
-> 论文数: 33 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 34 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -9,6 +9,12 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00886)
 - **作者**: Mingtao Feng, Haoran Hou, Liang Zhang, Zijie Wu, Yulan Guo, Ajmal Mian
 - **🏷️ 机构**: Xidian University, Hunan University, Sun Yat-Sen University
+- **会议**: CVPR 2023
+
+### Visual Prompt Multi-Modal Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00918) · 📚 被引 331
+- **作者**: Jiawen Zhu, Simiao Lai, Xin Chen, Dong Wang, Huchuan Lu
+- **🏷️ 机构**: Dalian University of Technology,China
 - **会议**: CVPR 2023
 
 ### MAP: Multimodal Uncertainty-Aware Vision-Language Pre-training Model.
@@ -156,10 +162,14 @@
 - **会议**: CVPR 2023
 
 ### Vita-CLIP: Video and text adaptive CLIP via Multimodal Prompting.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02206)
+- **链接**: [arXiv:2304.03307](https://arxiv.org/abs/2304.03307) · [代码](https://github.com/TalalWasim/Vita-CLIP)
 - **作者**: Syed Talal Wasim, Muzammal Naseer, Salman H. Khan, Fahad Shahbaz Khan, Mubarak Shah
 - **🏷️ 机构**: Mohamed bin Zayed University of AI, University of Central Florida
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Adopting contrastive image-text pretrained models like CLIP towards video classification has gained attention due to its cost-effectiveness and competitive performance. However, recent works in this area face a trade-off. Finetuning the pretrained model to achieve strong supervised performance results in low zero-shot generalization. Similarly, freezing the backbone to retain zero-shot capability causes significant drop in supervised accuracy. Because of this, recent works in literature typically train separate models for supervised and zero-shot action recognition. In this work, we propose a multimodal prompt learning scheme that works to balance the supervised and zero-shot performance under a single unified training. Our prompting approach on the vision side caters for three aspects: 1) Global video-level prompts to model the data distribution; 2) Local frame-level prompts to provide per-frame discriminative conditioning; and 3) a summary prompt to extract a condensed video representation. Additionally, we define a prompting scheme on the text side to augment the textual context. Through this prompting scheme, we can achieve state-of-the-art zero-shot performance on Kinetics-600, HMDB51 and UCF101 while remaining competitive in the supervised setting. By keeping the pretrained backbone frozen, we optimize a much lower number of parameters and retain the existing general representation which helps achieve the strong zero-shot performance. Our codes/models are released at https://github.com/TalalWasim/Vita-CLIP.
 
 ### MMANet: Margin-Aware Distillation and Modality-Aware Regularization for Incomplete Multimodal Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01919)
@@ -192,10 +202,14 @@
 - **会议**: CVPR 2023
 
 ### Self-Supervised Video Forensics by Audio-Visual Anomaly Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01011) · 📚 被引 92
+- **链接**: [arXiv:2301.01767](https://arxiv.org/abs/2301.01767) · 📚 被引 92
 - **作者**: Chao Feng, Ziyang Chen, Andrew Owens
 - **🏷️ 机构**: University of Michigan
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Manipulated videos often contain subtle inconsistencies between their visual and audio signals. We propose a video forensics method, based on anomaly detection, that can identify these inconsistencies, and that can be trained solely using real, unlabeled data. We train an autoregressive model to generate sequences of audio-visual features, using feature sets that capture the temporal synchronization between video frames and sound. At test time, we then flag videos that the model assigns low probability. Despite being trained entirely on real videos, our model obtains strong performance on the task of detecting manipulated speech videos. Project site: https://cfeng16.github.io/audio-visual-forensics
 
 ### Learning Audio-Visual Source Localization via False Negative Aware Contrastive Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00621) · 📚 被引 51
@@ -204,16 +218,24 @@
 - **会议**: CVPR 2023
 
 ### MMG-Ego4D: Multi-Modal Generalization in Egocentric Action Recognition.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00627) · 📚 被引 28
+- **链接**: [arXiv:2305.07214](https://arxiv.org/abs/2305.07214) · [代码](https://github.com/facebookresearch/MMG_Ego4D) · 📚 被引 28
 - **作者**: Xinyu Gong, Sreyas Mohan, Naina Dhingra, Jean-Charles Bazin, Yilei Li, Zhangyang Wang et al.
 - **🏷️ 机构**: The University of Texas,Austin, Meta Reality Labs
 - **会议**: CVPR 2023
 
+- **摘要（英，原文）**:
+
+  > In this paper, we study a novel problem in egocentric action recognition, which we term as "Multimodal Generalization" (MMG). MMG aims to study how systems can generalize when data from certain modalities is limited or even completely missing. We thoroughly investigate MMG in the context of standard supervised action recognition and the more challenging few-shot setting for learning new action categories. MMG consists of two novel scenarios, designed to support security, and efficiency considerations in real-world applications: (1) missing modality generalization where some modalities that were present during the train time are missing during the inference time, and (2) cross-modal zero-shot generalization, where the modalities present during the inference time and the training time are disjoint. To enable this investigation, we construct a new dataset MMG-Ego4D containing data points with video, audio, and inertial motion sensor (IMU) modalities. Our dataset is derived from Ego4D dataset, but processed and thoroughly re-annotated by human experts to facilitate research in the MMG problem. We evaluate a diverse array of models on MMG-Ego4D and propose new methods with improved generalization ability. In particular, we introduce a new fusion module with modality dropout training, contrastive-based alignment training, and a novel cross-modal prototypical loss for better few-shot performance. We hope this study will serve as a benchmark and guide future research in multimodal generalization problems. The benchmark and code will be available at https://github.com/facebookresearch/MMG_Ego4D.
+
 ### Decomposed Cross-Modal Distillation for RGB-based Temporal Action Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00235)
+- **链接**: [arXiv:2303.17285](https://arxiv.org/abs/2303.17285)
 - **作者**: Pilhyeon Lee, Taeoh Kim, Minho Shim, Dongyoon Wee, Hyeran Byun
 - **🏷️ 机构**: Yonsei University, Naver Cloud, AI Tech.
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Temporal action detection aims to predict the time intervals and the classes of action instances in the video. Despite the promising performance, existing two-stream models exhibit slow inference speed due to their reliance on computationally expensive optical flow. In this paper, we introduce a decomposed cross-modal distillation framework to build a strong RGB-based detector by transferring knowledge of the motion modality. Specifically, instead of direct distillation, we propose to separately learn RGB and motion representations, which are in turn combined to perform action localization. The dual-branch design and the asymmetric training objectives enable effective motion knowledge transfer while preserving RGB information intact. In addition, we introduce a local attentive fusion to better exploit the multimodal complementarity. It is designed to preserve the local discriminability of the features that is important for action localization. Extensive experiments on the benchmarks verify the effectiveness of the proposed method in enhancing RGB-based action detectors. Notably, our framework is agnostic to backbones and detection heads, bringing consistent gains across different model combinations.
 
 ## 跨领域论文（完整笔记在其他领域）
 

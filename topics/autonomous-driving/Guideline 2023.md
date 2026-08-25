@@ -85,16 +85,16 @@
 - **🏷️ 机构**: Shenzhen Campus of Sun Yat-sen University, Huawei Noah&#x0027;s Ark Lab
 - **会议**: CVPR 2023
 
-### ReasonNet: End-to-End Driving with Temporal and Global Reasoning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01319) · 📚 被引 100
-- **作者**: Hao Shao, Letian Wang, Ruobing Chen, Steven L. Waslander, Hongsheng Li, Yu Liu
-- **🏷️ 机构**: Sense Time Research, University of Toronto, CUHK MMLab
-- **会议**: CVPR 2023
-
 ### Neural Map Prior for Autonomous Driving.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01682)
 - **作者**: Xuan Xiong, Yicheng Liu, Tianyuan Yuan, Yue Wang, Yilun Wang, Hang Zhao
 - **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2023
+
+### ReasonNet: End-to-End Driving with Temporal and Global Reasoning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01319) · 📚 被引 100
+- **作者**: Hao Shao, Letian Wang, Ruobing Chen, Steven L. Waslander, Hongsheng Li, Yu Liu
+- **🏷️ 机构**: Sense Time Research, University of Toronto, CUHK MMLab
 - **会议**: CVPR 2023
 
 ## 跨领域论文（完整笔记在其他领域）
