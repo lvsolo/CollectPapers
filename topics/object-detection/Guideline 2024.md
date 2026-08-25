@@ -1,66 +1,68 @@
 # Object Detection — 2024 Guideline
 
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
-> 论文数: 70 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 69 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
 ### Sparse Semi-DETR: Sparse Learnable Queries for Semi-Supervised Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00558)
 - **作者**: Tahira Shehzadi, Khurram Azeem Hashmi, Didier Stricker, Muhammad Zeshan Afzal
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2024
-
-### KD-DETR: Knowledge Distillation for Detection Transformer with Consistent Distillation Points Sampling.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01516)
-- **作者**: Yu Wang, Xin Li, Shengzhao Weng, Gang Zhang, Haixiao Yue, Haocheng Feng et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: DFKI
 - **会议**: CVPR 2024
 
 ### YolOOD: Utilizing Object Detection Concepts for Multi-Label Out-of-Distribution Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00553)
 - **作者**: Alon Zolfi, Guy Amit, Amit Baras, Satoru Koda, Ikuya Morikawa, Yuval Elovici et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Ben-Gurion University of the Negev,Israel, Fujitsu Limited,Japan
 - **会议**: CVPR 2024
 
 ### Exploring Orthogonality in Open World Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01638)
 - **作者**: Zhicheng Sun, Jinghan Li, Yadong Mu
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Peking University,Beijing,China
 - **会议**: CVPR 2024
 
 ### Generative Region-Language Pretraining for Open-Ended Object Detection.
-- **链接**: [arXiv:2403.10191](https://arxiv.org/abs/2403.10191)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01324)
 - **作者**: Chuang Lin, Yi Jiang, Lizhen Qu, Zehuan Yuan, Jianfei Cai
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Monash University, ByteDance Inc.
 - **会议**: CVPR 2024
 
 ### RadarDistill: Boosting Radar-Based Object Detection Performance via Knowledge Distillation from LiDAR Features.
-- **链接**: [arXiv:2403.05061](https://arxiv.org/abs/2403.05061)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01467)
 - **作者**: Geonho Bang, Kwangjin Choi, Jisong Kim, Dongsuk Kum, Jun Won Choi
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Hanyang University,Korea, KAIST,Korea, Seoul National University,Korea
 - **会议**: CVPR 2024
 
 ### GLOW: Global Layout Aware Attacks on Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01146)
 - **作者**: Jun Bao, Buyu Liu, Kui Ren, Jun Yu
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: The State Key Laboratory of Blockchain and Data Security, Zhejiang University, Hangzhou Dianzi University
 - **会议**: CVPR 2024
 
 ### RadSimReal: Bridging the Gap Between Synthetic and Real Data in Radar Object Detection With Simulation.
 - **链接**: [arXiv:2404.18150](https://arxiv.org/abs/2404.18150)
 - **作者**: Oded Bialer, Yuval Haitman
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: General Motors, Technical Center Israel
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Object detection in radar imagery with neural networks shows great potential for improving autonomous driving. However, obtaining annotated datasets from real radar images, crucial for training these networks, is challenging, especially in scenarios with long-range detection and adverse weather and lighting conditions where radar performance excels. To address this challenge, we present RadSimReal, an innovative physical radar simulation capable of generating synthetic radar images with accompanying annotations for various radar types and environmental conditions, all without the need for real data collection. Remarkably, our findings demonstrate that training object detection models on RadSimReal data and subsequently evaluating them on real-world data produce performance levels comparable to models trained and tested on real data from the same dataset, and even achieves better performance when testing across different real datasets. RadSimReal offers advantages over other physical radar simulations that it does not necessitate knowledge of the radar design details, which are often not disclosed by radar suppliers, and has faster run-time. This innovative tool has the potential to advance the development of computer vision algorithms for radar-based autonomous driving applications.
 
 ### Overload: Latency Attacks on Object Detection for Edge Devices.
 - **链接**: [arXiv:2304.05370](https://arxiv.org/abs/2304.05370)
 - **作者**: Erh-Chung Chen, Pin-Yu Chen, I-Hsin Chung, Che-Rung Lee
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: National Tsing Hua University, IBM Research
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > Nowadays, the deployment of deep learning-based applications is an essential task owing to the increasing demands on intelligent services. In this paper, we investigate latency attacks on deep learning applications. Unlike common adversarial attacks for misclassification, the goal of latency attacks is to increase the inference time, which may stop applications from responding to the requests within a reasonable time. This kind of attack is ubiquitous for various applications, and we use object detection to demonstrate how such kind of attacks work. We also design a framework named Overload to generate latency attacks at scale. Our method is based on a newly formulated optimization problem and a novel technique, called spatial attention. This attack serves to escalate the required computing costs during the inference time, consequently leading to an extended inference time for object detection. It presents a significant threat, especially to systems with limited computing resources. We conducted experiments using YOLOv5 models on Nvidia NX. Compared to existing methods, our method is simpler and more effective. The experimental results show that with latency attacks, the inference time of a single image can be increased ten times longer in reference to the normal setting. Moreover, our findings pose a potential new threat to all object detection tasks requiring non-maximum suppression (NMS), as our attack is NMS-agnostic.
+
 ### YOLO-World: Real-Time Open-Vocabulary Object Detection.
-- **链接**: [arXiv:2401.17270](https://arxiv.org/abs/2401.17270)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01599)
 - **作者**: Tianheng Cheng, Lin Song, Yixiao Ge, Wenyu Liu, Xinggang Wang, Ying Shan
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
@@ -68,43 +70,43 @@
 ### Improving Single Domain-Generalized Object Detection: A Focus on Diversification and Alignment.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01679)
 - **作者**: Muhammad Sohail Danish, Muhammad Haris Khan, Muhammad Akhtar Munir, M. Saquib Sarfraz, Mohsen Ali
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Mohamed bin Zayed University of Artificial Intelligence, Mercedes-Benz Tech Innovation, Information Technology, University of Punjab
 - **会议**: CVPR 2024
 
 ### D3T: Distinctive Dual-Domain Teacher Zigzagging Across RGB-Thermal Gap for Domain-Adaptive Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02200)
 - **作者**: Dinh Phat Do, Taehoon Kim, Jaemin Na, Jiwon Kim, Keonho Lee, Kyunghwan Cho et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Ajou University,Korea, Hyundai Motor Company,Robotics Lab
 - **会议**: CVPR 2024
 
 ### Boosting Object Detection with Zero-Shot Day-Night Domain Adaptation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01204)
 - **作者**: Zhipeng Du, Miaojing Shi, Jiankang Deng
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: King&#x0027;s College,Department of Informatics,London, College of Electronic and Information Engineering, Tongji University, Imperial College,Department of Computing,London
 - **会议**: CVPR 2024
 
 ### InstaGen: Enhancing Object Detection by Training on Synthetic Dataset.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01339)
 - **作者**: Chengjian Feng, Yujie Zhong, Zequn Jie, Weidi Xie, Lin Ma
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Meituan Inc., CMIC, Shanghai Jiao Tong University
 - **会议**: CVPR 2024
 
 ### Few-Shot Object Detection with Foundation Models.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02703)
 - **作者**: Guangxing Han, Ser-Nam Lim
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Columbia University, University of Central Florida
 - **会议**: CVPR 2024
 
 ### Endow SAM with Keen Eyes: Temporal-Spatial Prompt Learning for Video Camouflaged Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01803)
 - **作者**: Wenjun Hui, Zhenfeng Zhu, Shuai Zheng, Yao Zhao
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Institute of Information Science, Beijing Jiaotong University
 - **会议**: CVPR 2024
 
 ### CAT: Exploiting Inter-Class Dynamics for Domain Adaptive Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01565)
 - **作者**: Mikhail Kennerley, Jian-Gang Wang, Bharadwaj Veeravalli, Robby T. Tan
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: National University of Singapore,Department of Electrical and Computer Engineering, Institute for Infocomm Research,A*STAR, ASUS Intelligent Cloud Services
 - **会议**: CVPR 2024
 
 ### Retrieval-Augmented Open-Vocabulary Object Detection.
@@ -114,15 +116,19 @@
 - **会议**: CVPR 2024
 
 ### SDDGR: Stable Diffusion-Based Deep Generative Replay for Class Incremental Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02718)
+- **链接**: [arXiv:2402.17323](https://arxiv.org/abs/2402.17323)
 - **作者**: Junsu Kim, Hoseong Cho, Jihyeon Kim, Yihalem Yimolal Tiruneh, Seungryul Baek
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: UNIST
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > In the field of class incremental learning (CIL), generative replay has become increasingly prominent as a method to mitigate the catastrophic forgetting, alongside the continuous improvements in generative models. However, its application in class incremental object detection (CIOD) has been significantly limited, primarily due to the complexities of scenes involving multiple labels. In this paper, we propose a novel approach called stable diffusion deep generative replay (SDDGR) for CIOD. Our method utilizes a diffusion-based generative model with pre-trained text-to-diffusion networks to generate realistic and diverse synthetic images. SDDGR incorporates an iterative refinement strategy to produce high-quality images encompassing old classes. Additionally, we adopt an L2 knowledge distillation technique to improve the retention of prior knowledge in synthetic images. Furthermore, our approach includes pseudo-labeling for old objects within new task images, preventing misclassification as background elements. Extensive experiments on the COCO 2017 dataset demonstrate that SDDGR significantly outperforms existing algorithms, achieving a new state-of-the-art in various CIOD scenarios. The source code will be made available to the public.
 
 ### Unleashing Channel Potential: Space-Frequency Selection Convolution for SAR Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01640)
 - **作者**: Ke Li, Di Wang, Zhangyuan Hu, Wenxuan Zhu, Shaofeng Li, Quan Wang
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: School of Computer Science and Technology, Xidian University,Xi&#x2019; an,China
 - **会议**: CVPR 2024
 
 ### Learning Background Prompts to Discover Implicit Knowledge for Open Vocabulary Object Detection.
@@ -140,85 +146,97 @@
 ### Unbiased Faster R-CNN for Single-source Domain Generalized Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02724)
 - **作者**: Yajing Liu, Shijun Zhou, Xiyao Liu, Chunhui Hao, Baojie Fan, Jiandong Tian
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Shenyang Institute of Automation, Chinese Academy of Sciences,State Key Laboratory of Robotics, Nanjing University of Posts and Telecommunications
 - **会议**: CVPR 2024
 
 ### PointOBB: Learning Oriented Object Detection via Single Point Supervision.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01583)
+- **链接**: [arXiv:2311.14757](https://arxiv.org/abs/2311.14757)
 - **作者**: Junwei Luo, Xue Yang, Yi Yu, Qingyun Li, Junchi Yan, Yansheng Li
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Wuhan University, Southeast University, Harbin Institute of Technology
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > Single point-supervised object detection is gaining attention due to its cost-effectiveness. However, existing approaches focus on generating horizontal bounding boxes (HBBs) while ignoring oriented bounding boxes (OBBs) commonly used for objects in aerial images. This paper proposes PointOBB, the first single Point-based OBB generation method, for oriented object detection. PointOBB operates through the collaborative utilization of three distinctive views: an original view, a resized view, and a rotated/flipped (rot/flp) view. Upon the original view, we leverage the resized and rot/flp views to build a scale augmentation module and an angle acquisition module, respectively. In the former module, a Scale-Sensitive Consistency (SSC) loss is designed to enhance the deep network's ability to perceive the object scale. For accurate object angle predictions, the latter module incorporates self-supervised learning to predict angles, which is associated with a scale-guided Dense-to-Sparse (DS) matching strategy for aggregating dense angles corresponding to sparse objects. The resized and rot/flp views are switched using a progressive multi-view switching strategy during training to achieve coupled optimization of scale and angle. Experimental results on the DIOR-R and DOTA-v1.0 datasets demonstrate that PointOBB achieves promising performance, and significantly outperforms potential point-supervised baselines.
+
 ### VSCode: General Visual Salient and Camouflaged Object Detection with 2D Prompt Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01625)
+- **链接**: [arXiv:2311.15011](https://arxiv.org/abs/2311.15011) · [代码](https://github.com/Sssssuperior/VSCode)
 - **作者**: Ziyang Luo, Nian Liu, Wangbo Zhao, Xuguang Yang, Dingwen Zhang, Deng-Ping Fan et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Northwestern Polytechnical University, Mohamed bin Zayed University of Artificial Intelligence, National University of Singapore
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Salient object detection (SOD) and camouflaged object detection (COD) are related yet distinct binary mapping tasks. These tasks involve multiple modalities, sharing commonalities and unique cues. Existing research often employs intricate task-specific specialist models, potentially leading to redundancy and suboptimal results. We introduce VSCode, a generalist model with novel 2D prompt learning, to jointly address four SOD tasks and three COD tasks. We utilize VST as the foundation model and introduce 2D prompts within the encoder-decoder architecture to learn domain and task-specific knowledge on two separate dimensions. A prompt discrimination loss helps disentangle peculiarities to benefit model optimization. VSCode outperforms state-of-the-art methods across six tasks on 26 datasets and exhibits zero-shot generalization to unseen tasks by combining 2D prompts, such as RGB-D COD. Source code has been available at https://github.com/Sssssuperior/VSCode.
 
 ### Active Domain Adaptation with False Negative Prediction for Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02719)
 - **作者**: Yuzuru Nakamura, Yasunori Ishii, Takayoshi Yamashita
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Panasonic Holdings Corporation, Chubu University
 - **会议**: CVPR 2024
 
 ### Neural Exposure Fusion for High-Dynamic Range Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01663)
 - **作者**: Emmanuel Onzon, Maximilian Bömer, Fahim Mannan, Felix Heide
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Torc Robotics
 - **会议**: CVPR 2024
 
 ### Scene Adaptive Sparse Transformer for Event-based Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01589)
 - **作者**: Yansong Peng, Hebei Li, Yueyi Zhang, Xiaoyan Sun, Feng Wu
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: University of Science and Technology of China
 - **会议**: CVPR 2024
 
 ### CrossKD: Cross-Head Knowledge Distillation for Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01563)
 - **作者**: Jiabao Wang, Yuming Chen, Zhaohui Zheng, Xiang Li, Ming-Ming Cheng, Qibin Hou
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: College of Computer Science, Nankai University,VCIP, NKIARI,Shenzhen Futian
 - **会议**: CVPR 2024
 
 ### A-Teacher: Asymmetric Network for 3D Semi-Supervised Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01419)
 - **作者**: Hanshi Wang, Zhipeng Zhang, Jin Gao, Weiming Hu
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: CASIA,State Key Laboratory of Multimodal Artificial Intelligence Systems (MAIS), KargoBot
 - **会议**: CVPR 2024
 
 ### SNIDA: Unlocking Few-Shot Object Detection with Non-Linear Semantic Decoupling Augmentation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01192)
 - **作者**: Yanjie Wang, Xu Zou, Luxin Yan, Sheng Zhong, Jiahuan Zhou
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Huazhong University of Science and Technology,Wuhan,China,430074, Wangxuan Institute of Computer Technology, Peking University,Beijing,China,100871
 - **会议**: CVPR 2024
 
 ### LEOD: Label-Efficient Object Detection for Event Cameras.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01602)
 - **作者**: Ziyi Wu, Mathias Gehrig, Qing Lyu, Xudong Liu, Igor Gilitschenski
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: University of Toronto, University of Zurich
 - **会议**: CVPR 2024
 
 ### Relational Matching for Weakly Semi-Supervised Oriented Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02626)
 - **作者**: Wenhao Wu, Hau-San Wong, Si Wu, Tianyou Zhang
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: City University of Hong Kong,Department of Computer Science, School of Computer Science and Engineering, South China University of Technology
 - **会议**: CVPR 2024
 
 ### Rethinking Boundary Discontinuity Problem for Oriented Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01648)
+- **链接**: [arXiv:2305.10061](https://arxiv.org/abs/2305.10061) · [代码](https://github.com/hangxu-cv/cvpr24acm)
 - **作者**: Hang Xu, Xinyuan Liu, Haonan Xu, Yike Ma, Zunjie Zhu, Chenggang Yan et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Hangzhou Dianzi University,Hangzhou,China, Institute of Computing Technology, Chinese Academy of Sciences,Beijing,China
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Oriented object detection has been developed rapidly in the past few years, where rotation equivariance is crucial for detectors to predict rotated boxes. It is expected that the prediction can maintain the corresponding rotation when objects rotate, but severe mutation in angular prediction is sometimes observed when objects rotate near the boundary angle, which is well-known boundary discontinuity problem. The problem has been long believed to be caused by the sharp loss increase at the angular boundary, and widely used joint-optim IoU-like methods deal with this problem by loss-smoothing. However, we experimentally find that even state-of-the-art IoU-like methods actually fail to solve the problem. On further analysis, we find that the key to solution lies in encoding mode of the smoothing function rather than in joint or independent optimization. In existing IoU-like methods, the model essentially attempts to fit the angular relationship between box and object, where the break point at angular boundary makes the predictions highly unstable.To deal with this issue, we propose a dual-optimization paradigm for angles. We decouple reversibility and joint-optim from single smoothing function into two distinct entities, which for the first time achieves the objectives of both correcting angular boundary and blending angle with other parameters.Extensive experiments on multiple datasets show that boundary discontinuity problem is well-addressed. Moreover, typical IoU-like methods are improved to the same level without obvious performance gap. The code is available at https://github.com/hangxu-cv/cvpr24acm.
 
 ### Plug and Play Active Learning for Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01684)
 - **作者**: Chenhongyi Yang, Lichao Huang, Elliot J. Crowley
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: School of Engineering, University of Edinburgh, Horizon Robotics
 - **会议**: CVPR 2024
 
 ### Active Object Detection with Knowledge Aggregation and Distillation from Large Models.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01573)
 - **作者**: Dejie Yang, Yang Liu
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Wangxuan Institute of Computer Technology, Peking University
 - **会议**: CVPR 2024
 
 ### DetCLIPv3: Towards Versatile Generative Open-Vocabulary Object Detection.
@@ -228,10 +246,14 @@
 - **会议**: CVPR 2024
 
 ### Point2RBox: Combine Knowledge from Synthetic Visual Patterns for End-to-End Oriented Object Detection with Single Point Supervision.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01588)
+- **链接**: [arXiv:2311.14758](https://arxiv.org/abs/2311.14758) · 📚 被引 41
 - **作者**: Yi Yu, Xue Yang, Qingyun Li, Feipeng Da, Jifeng Dai, Yu Qiao et al.
-- **🏷️ 机构**: Tsinghua / Shanghai AI Lab, Shanghai AI Lab
+- **🏷️ 机构**: Southeast University, Shanghai AI Laboratory, Harbin Institute of Technology
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > With the rapidly increasing demand for oriented object detection (OOD), recent research involving weakly-supervised detectors for learning rotated box (RBox) from the horizontal box (HBox) has attracted more and more attention. In this paper, we explore a more challenging yet label-efficient setting, namely single point-supervised OOD, and present our approach called Point2RBox. Specifically, we propose to leverage two principles: 1) Synthetic pattern knowledge combination: By sampling around each labeled point on the image, we spread the object feature to synthetic visual patterns with known boxes to provide the knowledge for box regression. 2) Transform self-supervision: With a transformed input image (e.g. scaled/rotated), the output RBoxes are trained to follow the same transformation so that the network can perceive the relative size/rotation between objects. The detector is further enhanced by a few devised techniques to cope with peripheral issues, e.g. the anchor/layer assignment as the size of the object is not available in our point supervision setting. To our best knowledge, Point2RBox is the first end-to-end solution for point-supervised OOD. In particular, our method uses a lightweight paradigm, yet it achieves a competitive performance among point-supervised alternatives, 41.05%/27.62%/80.01% on DOTA/DIOR/HRSC datasets.
 
 ### Exploring Region-Word Alignment in Built-in Detector for Open-Vocabulary Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01606)
@@ -240,10 +262,14 @@
 - **会议**: CVPR 2024
 
 ### DETRs Beat YOLOs on Real-time Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01605)
+- **链接**: [arXiv:2304.08069](https://arxiv.org/abs/2304.08069)
 - **作者**: Yian Zhao, Wenyu Lv, Shangliang Xu, Jinman Wei, Guanzhong Wang, Qingqing Dang et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Baidu Inc,Beijing,China, School of Electronic and Computer Engineering, Peking University,Shenzhen,China
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > The YOLO series has become the most popular framework for real-time object detection due to its reasonable trade-off between speed and accuracy. However, we observe that the speed and accuracy of YOLOs are negatively affected by the NMS. Recently, end-to-end Transformer-based detectors (DETRs) have provided an alternative to eliminating NMS. Nevertheless, the high computational cost limits their practicality and hinders them from fully exploiting the advantage of excluding NMS. In this paper, we propose the Real-Time DEtection TRansformer (RT-DETR), the first real-time end-to-end object detector to our best knowledge that addresses the above dilemma. We build RT-DETR in two steps, drawing on the advanced DETR: first we focus on maintaining accuracy while improving speed, followed by maintaining speed while improving accuracy. Specifically, we design an efficient hybrid encoder to expeditiously process multi-scale features by decoupling intra-scale interaction and cross-scale fusion to improve speed. Then, we propose the uncertainty-minimal query selection to provide high-quality initial queries to the decoder, thereby improving accuracy. In addition, RT-DETR supports flexible speed tuning by adjusting the number of decoder layers to adapt to various scenarios without retraining. Our RT-DETR-R50 / R101 achieves 53.1% / 54.3% AP on COCO and 108 / 74 FPS on T4 GPU, outperforming previously advanced YOLOs in both speed and accuracy. We also develop scaled RT-DETRs that outperform the lighter YOLO detectors (S and M models). Furthermore, RT-DETR-R50 outperforms DINO-R50 by 2.2% AP in accuracy and about 21 times in FPS. After pre-training with Objects365, RT-DETR-R50 / R101 achieves 55.3% / 56.2% AP. The project page: https://zhao-yian.github.io/RTDETR.
 
 ### Taming Self-Training for Open-Vocabulary Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01322)
@@ -252,10 +278,14 @@
 - **会议**: CVPR 2024
 
 ### CRKD: Enhanced Camera-Radar Object Detection with Cross-Modality Knowledge Distillation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01465)
+- **链接**: [arXiv:2403.19104](https://arxiv.org/abs/2403.19104)
 - **作者**: Lingjun Zhao, Jingyu Song, Katherine A. Skinner
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: University of Michigan,Ann Arbor,MI,USA
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > In the field of 3D object detection for autonomous driving, LiDAR-Camera (LC) fusion is the top-performing sensor configuration. Still, LiDAR is relatively high cost, which hinders adoption of this technology for consumer automobiles. Alternatively, camera and radar are commonly deployed on vehicles already on the road today, but performance of Camera-Radar (CR) fusion falls behind LC fusion. In this work, we propose Camera-Radar Knowledge Distillation (CRKD) to bridge the performance gap between LC and CR detectors with a novel cross-modality KD framework. We use the Bird's-Eye-View (BEV) representation as the shared feature space to enable effective knowledge distillation. To accommodate the unique cross-modality KD path, we propose four distillation losses to help the student learn crucial features from the teacher model. We present extensive evaluations on the nuScenes dataset to demonstrate the effectiveness of the proposed CRKD framework. The project page for CRKD is https://song-jingyu.github.io/CRKD.
 
 ## 跨领域论文（完整笔记在其他领域）
 
