@@ -1,6 +1,15 @@
 .claude/
 __pycache__/
 *.pyc
-# .cache 目录被 workflow 缓存使用，但 daily_seen.json 需要提交以做跨运行去重
+# .cache 大部分走 Actions 缓存；以下小文件必须入库（跨 job/跨 run 传递）：
+#   daily_seen.json  日报去重
+#   batches/*.json   会议-年批次数据（llm-eval 阶段重建 bucket 用，git 保证全量可见）
+#   llm_evals.json   LLM 评估结果缓存（防重复计费）
+#   affiliations.json机构查询缓存
 .cache/*
 !.gitignore
+!daily_seen.json
+!llm_evals.json
+!affiliations.json
+!batches/
+!batches/*.json
