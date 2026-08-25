@@ -12,7 +12,7 @@
 - **会议**: CVPR 2021
 
 ### Improving Multiple Object Tracking With Single Object Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Improving_Multiple_Object_Tracking_With_Single_Object_Tracking_CVPR_2021_paper.html) · 📚 被引 124
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Improving_Multiple_Object_Tracking_With_Single_Object_Tracking_CVPR_2021_paper.html)
 - **作者**: Linyu Zheng, Ming Tang, Yingying Chen, Guibo Zhu, Jinqiao Wang, Hanqing Lu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -30,13 +30,13 @@
 - **会议**: CVPR 2021
 
 ### Learning a Proposal Classifier for Multiple Object Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Dai_Learning_a_Proposal_Classifier_for_Multiple_Object_Tracking_CVPR_2021_paper.html) · 📚 被引 115
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Dai_Learning_a_Proposal_Classifier_for_Multiple_Object_Tracking_CVPR_2021_paper.html)
 - **作者**: Peng Dai, Renliang Weng, Wongun Choi, Changshui Zhang, Zhangping He, Wei Ding
-- **🏷️ 机构**: University of Massachusetts Boston
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
 ### Online Multiple Object Tracking With Cross-Task Synergy.
-- **链接**: [arXiv:2104.00380](https://arxiv.org/abs/2104.00380) · [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Guo_Online_Multiple_Object_Tracking_With_Cross-Task_Synergy_CVPR_2021_paper.html) · [代码](https://github.com/songguocode/TADAM) · 📚 被引 70
+- **链接**: [arXiv:2104.00380](https://arxiv.org/abs/2104.00380) · [代码](https://github.com/songguocode/TADAM) · 📚 被引 70
 - **作者**: Song Guo, Jingya Wang, Xinchao Wang, Dacheng Tao
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -46,9 +46,9 @@
   > Modern online multiple object tracking (MOT) methods usually focus on two directions to improve tracking performance. One is to predict new positions in an incoming frame based on tracking information from previous frames, and the other is to enhance data association by generating more discriminative identity embeddings. Some works combined both directions within one framework but handled them as two individual tasks, thus gaining little mutual benefits. In this paper, we propose a novel unified model with synergy between position prediction and embedding association. The two tasks are linked by temporal-aware target attention and distractor attention, as well as identity-aware memory aggregation model. Specifically, the attention modules can make the prediction focus more on targets and less on distractors, therefore more reliable embeddings can be extracted accordingly for association. On the other hand, such reliable embeddings can boost identity-awareness through memory aggregation, hence strengthen attention modules and suppress drifts. In this way, the synergy between position prediction and embedding association is achieved, which leads to strong robustness to occlusions. Extensive experiments demonstrate the superiority of our proposed model over a wide range of existing methods on MOTChallenge benchmarks. Our code and models are publicly available at https://github.com/songguocode/TADAM.
 
 ### Learnable Graph Matching: Incorporating Graph Partitioning With Deep Feature Learning for Multiple Object Tracking.
-- **链接**: [arXiv:2103.16178](https://arxiv.org/abs/2103.16178) · [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/He_Learnable_Graph_Matching_Incorporating_Graph_Partitioning_With_Deep_Feature_Learning_CVPR_2021_paper.html) · [代码](https://github.com/jiaweihe1996/GMTracker) · 📚 被引 124
+- **链接**: [arXiv:2103.16178](https://arxiv.org/abs/2103.16178) · [代码](https://github.com/jiaweihe1996/GMTracker)
 - **作者**: Jiawei He, Zehao Huang, Naiyan Wang, Zhaoxiang Zhang
-- **🏷️ 机构**: ia.ac.cn
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
 - **摘要（英，原文）**:
@@ -58,7 +58,7 @@
 ### Quasi-Dense Similarity Learning for Multiple Object Tracking.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Pang_Quasi-Dense_Similarity_Learning_for_Multiple_Object_Tracking_CVPR_2021_paper.html) · 📚 被引 425
 - **作者**: Jiangmiao Pang, Linlu Qiu, Xia Li, Haofeng Chen, Qi Li, Trevor Darrell et al.
-- **🏷️ 机构**: UC Berkeley, ETH Zurich
+- **🏷️ 机构**: Zhejiang University, Georgia Institute of Technology, ETH Z&#x00FC;rich
 - **会议**: CVPR 2021
 
 ### Probabilistic Tracklet Scoring and Inpainting for Multiple Object Tracking.
@@ -68,9 +68,9 @@
 - **会议**: CVPR 2021
 
 ### SiamMOT: Siamese Multi-Object Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Shuai_SiamMOT_Siamese_Multi-Object_Tracking_CVPR_2021_paper.html) · 📚 被引 143
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Shuai_SiamMOT_Siamese_Multi-Object_Tracking_CVPR_2021_paper.html)
 - **作者**: Bing Shuai, Andrew G. Berneshawi, Xinyu Li, Davide Modolo, Joseph Tighe
-- **🏷️ 机构**: Amazon
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
 ### Multiple Object Tracking With Correlation Learning.

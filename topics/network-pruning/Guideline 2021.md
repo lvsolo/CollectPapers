@@ -1,15 +1,9 @@
 # Network Pruning — 2021 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
-
-### Network Pruning via Performance Maximization.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Gao_Network_Pruning_via_Performance_Maximization_CVPR_2021_paper.html) · 📚 被引 110
-- **作者**: Shangqian Gao, Feihu Huang, Weidong Cai, Heng Huang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
 
 ### NPAS: A Compiler-Aware Framework of Unified Network Pruning and Architecture Search for Beyond Real-Time Mobile Acceleration.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_NPAS_A_Compiler-Aware_Framework_of_Unified_Network_Pruning_and_Architecture_CVPR_2021_paper.html) · 📚 被引 25
@@ -17,11 +11,21 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
+### Network Pruning via Performance Maximization.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Gao_Network_Pruning_via_Performance_Maximization_CVPR_2021_paper.html) · 📚 被引 110
+- **作者**: Shangqian Gao, Feihu Huang, Weidong Cai, Heng Huang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
 ### Learnable Motion Coherence for Correspondence Pruning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Liu_Learnable_Motion_Coherence_for_Correspondence_Pruning_CVPR_2021_paper.html) · 📚 被引 62
+- **链接**: [arXiv:2011.14563](https://arxiv.org/abs/2011.14563) · 📚 被引 62
 - **作者**: Yuan Liu, Lingjie Liu, Cheng Lin, Zhen Dong, Wenping Wang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > Motion coherence is an important clue for distinguishing true correspondences from false ones. Modeling motion coherence on sparse putative correspondences is challenging due to their sparsity and uneven distributions. Existing works on motion coherence are sensitive to parameter settings and have difficulty in dealing with complex motion patterns. In this paper, we introduce a network called Laplacian Motion Coherence Network (LMCNet) to learn motion coherence property for correspondence pruning. We propose a novel formulation of fitting coherent motions with a smooth function on a graph of correspondences and show that this formulation allows a closed-form solution by graph Laplacian. This closed-form solution enables us to design a differentiable layer in a learning framework to capture global motion coherence from putative correspondences. The global motion coherence is further combined with local coherence extracted by another local layer to robustly detect inlier correspondences. Experiments demonstrate that LMCNet has superior performances to the state of the art in relative camera pose estimation and correspondences pruning of dynamic scenes.
 
 ### Manifold Regularized Dynamic Network Pruning.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Tang_Manifold_Regularized_Dynamic_Network_Pruning_CVPR_2021_paper.html) · 📚 被引 87
@@ -36,15 +40,15 @@
 - **会议**: CVPR 2021
 
 ### Joint-DetNAS: Upgrade Your Detector With NAS, Pruning and Dynamic Distillation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yao_Joint-DetNAS_Upgrade_Your_Detector_With_NAS_Pruning_and_Dynamic_Distillation_CVPR_2021_paper.html) · 📚 被引 25
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yao_Joint-DetNAS_Upgrade_Your_Detector_With_NAS_Pruning_and_Dynamic_Distillation_CVPR_2021_paper.html)
 - **作者**: Lewei Yao, Renjie Pi, Hang Xu, Wei Zhang, Zhenguo Li, Tong Zhang
 - **🏷️ 机构**: Hong Kong University of Science and Technology, Huawei Noah&#x2019;s Ark Lab
 - **会议**: CVPR 2021
 
 ### Multi-Decoding Deraining Network and Quasi-Sparsity Based Training.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Multi-Decoding_Deraining_Network_and_Quasi-Sparsity_Based_Training_CVPR_2021_paper.html) · 📚 被引 33
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Multi-Decoding_Deraining_Network_and_Quasi-Sparsity_Based_Training_CVPR_2021_paper.html)
 - **作者**: Yinglong Wang, Chao Ma, Bing Zeng
-- **🏷️ 机构**: UESTC
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
 ### Exploring Sparsity in Image Super-Resolution for Efficient Inference.
@@ -58,3 +62,7 @@
 - **作者**: Xiao Zhou, Weizhong Zhang, Hang Xu, Tong Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+
+## 跨领域论文（完整笔记在其他领域）
+
+- VoxelContext-Net: An Octree Based Framework for Point Cloud Compression. → [3d-detection](../3d-detection/Guideline%202021.md)
