@@ -1,7 +1,7 @@
 # Multi-camera Perception — 2025 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 16 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -65,6 +65,24 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SceneCrafter_Controllable_Multi-View_Driving_Scene_Editing_CVPR_2025_paper.html)
 - **作者**: Zehao Zhu, Yuliang Zou, Chiyu Max Jiang, Bo Sun, Vincent Casser, Xiukun Huang et al.
 - **🏷️ 机构**: Waymo, Johns Hopkins University
+- **会议**: CVPR 2025
+
+### Revisiting Audio-Visual Segmentation with Vision-Centric Transformer.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Huang_Revisiting_Audio-Visual_Segmentation_with_Vision-Centric_Transformer_CVPR_2025_paper.html)
+- **作者**: Shaofei Huang, Rui Ling, Tianrui Hui, Hongyu Li, Xu Zhou, Shifeng Zhang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### Learning from Synchronization: Self-Supervised Uncalibrated Multi-View Person Association in Challenging Scenes.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Learning_from_Synchronization_Self-Supervised_Uncalibrated_Multi-View_Person_Association_in_Challenging_CVPR_2025_paper.html)
+- **作者**: Keqi Chen, Vinkle Srivastav, Didier Mutter, Nicolas Padoy
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### GeoDepth: From Point-to-Depth to Plane-to-Depth Modeling for Self-Supervised Monocular Depth Estimation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_GeoDepth_From_Point-to-Depth_to_Plane-to-Depth_Modeling_for_Self-Supervised_Monocular_Depth_CVPR_2025_paper.html)
+- **作者**: Haifeng Wu, Shuhang Gu, Lixin Duan, Wen Li
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
 
 ### Enhanced Contrastive Learning with Multi-view Longitudinal Data for Chest X-ray Report Generation.

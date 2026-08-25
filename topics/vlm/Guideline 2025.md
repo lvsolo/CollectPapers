@@ -1,7 +1,7 @@
 # VLM — 2025 Guideline
 
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
-> 论文数: 76 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 78 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -72,7 +72,7 @@
 - **会议**: CVPR 2025
 
 ### VisionZip: Longer is Better but Not Necessary in Vision Language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yang_VisionZip_Longer_is_Better_but_Not_Necessary_in_Vision_Language_CVPR_2025_paper.html) · 📚 被引 43
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yang_VisionZip_Longer_is_Better_but_Not_Necessary_in_Vision_Language_CVPR_2025_paper.html) · 📚 被引 44
 - **作者**: Senqiao Yang, Yukang Chen, Zhuotao Tian, Chengyao Wang, Jingyao Li, Bei Yu et al.
 - **🏷️ 机构**: CUHK, HITSZ
 - **会议**: CVPR 2025
@@ -170,10 +170,14 @@
 - **会议**: CVPR 2025
 
 ### Rethinking Few-Shot Adaptation of Vision-Language Models in Two Stages.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Farina_Rethinking_Few-Shot_Adaptation_of_Vision-Language_Models_in_Two_Stages_CVPR_2025_paper.html)
+- **链接**: [arXiv:2503.11609](https://arxiv.org/abs/2503.11609)
 - **作者**: Matteo Farina, Massimiliano Mancini, Giovanni Iacca, Elisa Ricci
 - **🏷️ 机构**: University of Trento
 - **会议**: CVPR 2025
+
+- **摘要（英，原文）**:
+
+  > An old-school recipe for training a classifier is to (i) learn a good feature extractor and (ii) optimize a linear layer atop. When only a handful of samples are available per category, as in Few-Shot Adaptation (FSA), data are insufficient to fit a large number of parameters, rendering the above impractical. This is especially true with large pre-trained Vision-Language Models (VLMs), which motivated successful research at the intersection of Parameter-Efficient Fine-tuning (PEFT) and FSA. In this work, we start by analyzing the learning dynamics of PEFT techniques when trained on few-shot data from only a subset of categories, referred to as the ``base'' classes. We show that such dynamics naturally splits into two distinct phases: (i) task-level feature extraction and (ii) specialization to the available concepts. To accommodate this dynamic, we then depart from prompt- or adapter-based methods and tackle FSA differently. Specifically, given a fixed computational budget, we split it to (i) learn a task-specific feature extractor via PEFT and (ii) train a linear classifier on top. We call this scheme Two-Stage Few-Shot Adaptation (2SFS). Differently from established methods, our scheme enables a novel form of selective inference at a category level, i.e., at test time, only novel categories are embedded by the adapted text encoder, while embeddings of base categories are available within the classifier. Results with fixed hyperparameters across two settings, three backbones, and eleven datasets, show that 2SFS matches or surpasses the state-of-the-art, while established methods degrade significantly across settings.
 
 ### ReVisionLLM: Recursive Vision-Language Model for Temporal Grounding in Hour-Long Videos.
 - **链接**: [arXiv:2411.14901](https://arxiv.org/abs/2411.14901) · [代码](https://github.com/Tanveer81/ReVisionLLM)
@@ -202,10 +206,14 @@
 - **会议**: CVPR 2025
 
 ### MotionBench: Benchmarking and Improving Fine-grained Video Motion Understanding for Vision Language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Hong_MotionBench_Benchmarking_and_Improving_Fine-grained_Video_Motion_Understanding_for_Vision_CVPR_2025_paper.html)
+- **链接**: [arXiv:2501.02955](https://arxiv.org/abs/2501.02955)
 - **作者**: Wenyi Hong, Yean Cheng, Zhuoyi Yang, Weihan Wang, Lefan Wang, Xiaotao Gu et al.
 - **🏷️ 机构**: Tsinghua University, Zhipu AI
 - **会议**: CVPR 2025
+
+- **摘要（英，原文）**:
+
+  > In recent years, vision language models (VLMs) have made significant advancements in video understanding. However, a crucial capability - fine-grained motion comprehension - remains under-explored in current benchmarks. To address this gap, we propose MotionBench, a comprehensive evaluation benchmark designed to assess the fine-grained motion comprehension of video understanding models. MotionBench evaluates models' motion-level perception through six primary categories of motion-oriented question types and includes data collected from diverse sources, ensuring a broad representation of real-world video content. Experimental results reveal that existing VLMs perform poorly in understanding fine-grained motions. To enhance VLM's ability to perceive fine-grained motion within a limited sequence length of LLM, we conduct extensive experiments reviewing VLM architectures optimized for video feature compression and propose a novel and efficient Through-Encoder (TE) Fusion method. Experiments show that higher frame rate inputs and TE Fusion yield improvements in motion understanding, yet there is still substantial room for enhancement. Our benchmark aims to guide and motivate the development of more capable video understanding models, emphasizing the importance of fine-grained motion comprehension. Project page: https://motion-bench.github.io .
 
 ### SLADE: Shielding against Dual Exploits in Large Vision-Language Models.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Hossain_SLADE_Shielding_against_Dual_Exploits_in_Large_Vision-Language_Models_CVPR_2025_paper.html)
@@ -214,10 +222,14 @@
 - **会议**: CVPR 2025
 
 ### HiRes-LLaVA: Restoring Fragmentation Input in High-Resolution Large Vision-Language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Huang_HiRes-LLaVA_Restoring_Fragmentation_Input_in_High-Resolution_Large_Vision-Language_Models_CVPR_2025_paper.html)
+- **链接**: [arXiv:2407.08706](https://arxiv.org/abs/2407.08706)
 - **作者**: Runhui Huang, Xinpeng Ding, Chunwei Wang, Jianhua Han, Yulong Liu, Hengshuang Zhao et al.
 - **🏷️ 机构**: Shenzhen Campus of Sun Yat-sen University, The Hong Kong University of Science and Technology, Huawei Noah&#x2019;s Ark Lab
 - **会议**: CVPR 2025
+
+- **摘要（英，原文）**:
+
+  > High-resolution inputs enable Large Vision-Language Models (LVLMs) to discern finer visual details, enhancing their comprehension capabilities. To reduce the training and computation costs caused by high-resolution input, one promising direction is to use sliding windows to slice the input into uniform patches, each matching the input size of the well-trained vision encoder. Although efficient, this slicing strategy leads to the fragmentation of original input, i.e., the continuity of contextual information and spatial geometry is lost across patches, adversely affecting performance in cross-patch context perception and position-specific tasks. To overcome these shortcomings, we introduce HiRes-LLaVA, a novel framework designed to efficiently process any size of high-resolution input without altering the original contextual and geometric information. HiRes-LLaVA comprises two innovative components: (i) a SliceRestore adapter that reconstructs sliced patches into their original form, efficiently extracting both global and local features via down-up-sampling and convolution layers, and (ii) a Self-Mining Sampler to compresses the vision tokens based on themselves, preserving the original context and positional information while reducing training overhead. To assess the ability of handling context fragmentation, we construct a new benchmark, EntityGrid-QA, consisting of edge-related and position-related tasks. Our comprehensive experiments demonstrate the superiority of HiRes-LLaVA on both existing public benchmarks and on EntityGrid-QA, particularly on document-oriented tasks, establishing new standards for handling high-resolution inputs.
 
 ### VL2Lite: Task-Specific Knowledge Distillation from Large Vision-Language Models to Lightweight Networks.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jang_VL2Lite_Task-Specific_Knowledge_Distillation_from_Large_Vision-Language_Models_to_Lightweight_CVPR_2025_paper.html)
@@ -226,22 +238,34 @@
 - **会议**: CVPR 2025
 
 ### Devils in Middle Layers of Large Vision-Language Models: Interpreting, Detecting and Mitigating Object Hallucinations via Attention Lens.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jiang_Devils_in_Middle_Layers_of_Large_Vision-Language_Models_Interpreting_Detecting_CVPR_2025_paper.html)
+- **链接**: [arXiv:2411.16724](https://arxiv.org/abs/2411.16724) · [代码](https://github.com/ZhangqiJiang07/middle_layers_indicating_hallucinations)
 - **作者**: Zhangqi Jiang, Junkai Chen, Beier Zhu, Tingjin Luo, Yankun Shen, Xu Yang
 - **🏷️ 机构**: National University of Defense Technology, Southeast University, Nanyang Technological University
 - **会议**: CVPR 2025
 
+- **摘要（英，原文）**:
+
+  > Hallucinations in Large Vision-Language Models (LVLMs) significantly undermine their reliability, motivating researchers to explore the causes of hallucination. However, most studies primarily focus on the language aspect rather than the visual. In this paper, we address how LVLMs process visual information and whether this process causes hallucination. Firstly, we use the attention lens to identify the stages at which LVLMs handle visual data, discovering that the middle layers are crucial. Moreover, we find that these layers can be further divided into two stages: ''visual information enrichment'' and ''semantic refinement'' which respectively propagate visual data to object tokens and interpret it through text. By analyzing attention patterns during the visual information enrichment stage, we find that real tokens consistently receive higher attention weights than hallucinated ones, serving as a strong indicator of hallucination. Further examination of multi-head attention maps reveals that hallucination tokens often result from heads interacting with inconsistent objects. Based on these insights, we propose a simple inference-time method that adjusts visual attention by integrating information across various heads. Extensive experiments demonstrate that this approach effectively mitigates hallucinations in mainstream LVLMs without additional training costs. Code is available at https://github.com/ZhangqiJiang07/middle_layers_indicating_hallucinations.
+
 ### Your Large Vision-Language Model Only Needs A Few Attention Heads For Visual Grounding.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kang_Your_Large_Vision-Language_Model_Only_Needs_A_Few_Attention_Heads_CVPR_2025_paper.html)
+- **链接**: [arXiv:2503.06287](https://arxiv.org/abs/2503.06287)
 - **作者**: Seil Kang, Jinyeong Kim, Junhyeok Kim, Seong Jae Hwang
 - **🏷️ 机构**: Yonsei University
 - **会议**: CVPR 2025
 
+- **摘要（英，原文）**:
+
+  > Visual grounding seeks to localize the image region corresponding to a free-form text description. Recently, the strong multimodal capabilities of Large Vision-Language Models (LVLMs) have driven substantial improvements in visual grounding, though they inevitably require fine-tuning and additional model components to explicitly generate bounding boxes or segmentation masks. However, we discover that a few attention heads in frozen LVLMs demonstrate strong visual grounding capabilities. We refer to these heads, which consistently capture object locations related to text semantics, as localization heads. Using localization heads, we introduce a straightforward and effective training-free visual grounding framework that utilizes text-to-image attention maps from localization heads to identify the target objects. Surprisingly, only three out of thousands of attention heads are sufficient to achieve competitive localization performance compared to existing LVLM-based visual grounding methods that require fine-tuning. Our findings suggest that LVLMs can innately ground objects based on a deep comprehension of the text-image relationship, as they implicitly focus on relevant image regions to generate informative text outputs. All the source codes will be made available to the public.
+
 ### GFlowVLM: Enhancing Multi-step Reasoning in Vision-Language Models with Generative Flow Networks.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kang_GFlowVLM_Enhancing_Multi-step_Reasoning_in_Vision-Language_Models_with_Generative_Flow_CVPR_2025_paper.html)
+- **链接**: [arXiv:2503.06514](https://arxiv.org/abs/2503.06514)
 - **作者**: Haoqiang Kang, Enna Sachdeva, Piyush Gupta, Sangjae Bae, Kwonjoon Lee
 - **🏷️ 机构**: Honda Research Institute,USA
 - **会议**: CVPR 2025
+
+- **摘要（英，原文）**:
+
+  > Vision-Language Models (VLMs) have recently shown promising advancements in sequential decision-making tasks through task-specific fine-tuning. However, common fine-tuning methods, such as Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) techniques like Proximal Policy Optimization (PPO), present notable limitations: SFT assumes Independent and Identically Distributed (IID) data, while PPO focuses on maximizing cumulative rewards. These limitations often restrict solution diversity and hinder generalization in multi-step reasoning tasks. To address these challenges, we introduce a novel framework, GFlowVLM, a framework that fine-tune VLMs using Generative Flow Networks (GFlowNets) to promote generation of diverse solutions for complex reasoning tasks. GFlowVLM models the environment as a non-Markovian decision process, allowing it to capture long-term dependencies essential for real-world applications. It takes observations and task descriptions as inputs to prompt chain-of-thought (CoT) reasoning which subsequently guides action selection. We use task based rewards to fine-tune VLM with GFlowNets. This approach enables VLMs to outperform prior fine-tuning methods, including SFT and RL. Empirical results demonstrate the effectiveness of GFlowVLM on complex tasks such as card games (NumberLine, BlackJack) and embodied planning tasks (ALFWorld), showing enhanced training efficiency, solution diversity, and stronger generalization capabilities across both in-distribution and out-of-distribution scenarios.
 
 ### BiomedCoOp: Learning to Prompt for Biomedical Vision-Language Models.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Koleilat_BiomedCoOp_Learning_to_Prompt_for_Biomedical_Vision-Language_Models_CVPR_2025_paper.html)
@@ -415,6 +439,8 @@
 - Rethinking Vision-Language Model in Face Forensics: Multi-Modal Interpretable Forged Face Detector. → [multimodal](../multimodal/Guideline%202025.md)
 - EfficientLLaVA: Generalizable Auto-Pruning for Large Vision-language Models. → [network-pruning](../network-pruning/Guideline%202025.md)
 - Video-XL: Extra-Long Vision Language Model for Hour-Scale Video Understanding. → [video-understanding](../video-understanding/Guideline%202025.md)
+- ImagineFSL: Self-Supervised Pretraining Matters on Imagined Base Set for VLM-based Few-shot Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)
+- Anyattack: Towards Large-scale Self-supervised Adversarial Attacks on Vision-language Models. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)
 - Instruct-CLIP: Improving Instruction-Guided Image Editing with Automated Data Refinement Using Contrastive Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)
 - Text-guided Sparse Voxel Pruning for Efficient 3D Visual Grounding. → [3d-detection](../3d-detection/Guideline%202025.md)
 - Libra-Merging: Importance-redundancy and Pruning-merging Trade-off for Acceleration Plug-in in Large Vision-Language Model. → [network-pruning](../network-pruning/Guideline%202025.md)

@@ -1,9 +1,15 @@
 # Neural Architecture Search — 2025 Guideline
 
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
-> 论文数: 2 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
+
+### L-SWAG: Layer-Sample Wise Activation with Gradients Information for Zero-Shot NAS on Vision Transformers.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Casarin_L-SWAG_Layer-Sample_Wise_Activation_with_Gradients_Information_for_Zero-Shot_NAS_CVPR_2025_paper.html) · 📚 被引 2
+- **作者**: Sofia Casarin, Sergio Escalera, Oswald Lanz
+- **🏷️ 机构**: Free University of Bozen-Bolzano,Bolzano,Italy, Computer Vision Center,Barcelona,Spain
+- **会议**: CVPR 2025
 
 ### Subnet-Aware Dynamic Supernet Training for Neural Architecture Search.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jeon_Subnet-Aware_Dynamic_Supernet_Training_for_Neural_Architecture_Search_CVPR_2025_paper.html)
