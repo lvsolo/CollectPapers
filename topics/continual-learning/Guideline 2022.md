@@ -27,6 +27,12 @@
 - **🏷️ 机构**: Alibaba Group, Zhejiang University
 - **会议**: CVPR 2022
 
+### Continual Learning with Lifelong Vision Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00027)
+- **作者**: Zhen Wang, Liu Liu, Yiqun Duan, Yajing Kong, Dacheng Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
+
 ### Learning to Prompt for Continual Learning.
 - **链接**: [arXiv:2112.08654](https://arxiv.org/abs/2112.08654) · [代码](https://github.com/google-research/l2p)
 - **作者**: Zifeng Wang, Zizhao Zhang, Chen-Yu Lee, Han Zhang, Ruoxi Sun, Xiaoqi Ren et al.
@@ -46,12 +52,6 @@
 - **摘要（英，原文）**:
 
   > Continual Learning (CL) methods aim to enable machine learning models to learn new tasks without catastrophic forgetting of those that have been previously mastered. Existing CL approaches often keep a buffer of previously-seen samples, perform knowledge distillation, or use regularization techniques towards this goal. Despite their performance, they still suffer from interference across tasks which leads to catastrophic forgetting. To ameliorate this problem, we propose to only activate and select sparse neurons for learning current and past tasks at any stage. More parameters space and model capacity can thus be reserved for the future tasks. This minimizes the interference between parameters for different tasks. To do so, we propose a Sparse neural Network for Continual Learning (SNCL), which employs variational Bayesian sparsity priors on the activations of the neurons in all layers. Full Experience Replay (FER) provides effective supervision in learning the sparse activations of the neurons in different layers. A loss-aware reservoir-sampling strategy is developed to maintain the memory buffer. The proposed method is agnostic as to the network structures and the task boundaries. Experiments on different datasets show that our approach achieves state-of-the-art performance for mitigating forgetting.
-
-### Continual Learning with Lifelong Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00027)
-- **作者**: Zhen Wang, Liu Liu, Yiqun Duan, Yajing Kong, Dacheng Tao
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2022
 
 ### Online Continual Learning on a Contaminated Data Stream with Blurry Task Boundaries.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00906)
@@ -84,10 +84,14 @@
 - **会议**: CVPR 2022
 
 ### GCR: Gradient Coreset based Replay Buffer Selection for Continual Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00020)
+- **链接**: [arXiv:2111.11210](https://arxiv.org/abs/2111.11210)
 - **作者**: Rishabh Tiwari, KrishnaTeja Killamsetty, Rishabh K. Iyer, Pradeep Shenoy
 - **🏷️ 机构**: Indian Institute of Technology (ISM),Department of Physics,Dhanbad, University of Texas at Dallas,Department of Computer Science, Google Research,India
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Continual learning (CL) aims to develop techniques by which a single model adapts to an increasing number of tasks encountered sequentially, thereby potentially leveraging learnings across tasks in a resource-efficient manner. A major challenge for CL systems is catastrophic forgetting, where earlier tasks are forgotten while learning a new task. To address this, replay-based CL approaches maintain and repeatedly retrain on a small buffer of data selected across encountered tasks. We propose Gradient Coreset Replay (GCR), a novel strategy for replay buffer selection and update using a carefully designed optimization criterion. Specifically, we select and maintain a "coreset" that closely approximates the gradient of all the data seen so far with respect to current model parameters, and discuss key strategies needed for its effective application to the continual learning setting. We show significant gains (2%-4% absolute) over the state-of-the-art in the well-studied offline continual learning setting. Our findings also effectively transfer to online / streaming CL settings, showing upto 5% gains over existing approaches. Finally, we demonstrate the value of supervised contrastive loss for continual learning, which yields a cumulative gain of up to 5% accuracy when combined with our subset selection strategy.
 
 ### Continual Learning for Visual Search with Backward Consistent Feature Embedding.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01620)
@@ -102,22 +106,34 @@
 - **会议**: CVPR 2022
 
 ### Learning to Imagine: Diversify Memory for Incremental Learning using Unlabeled Data.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00933)
+- **链接**: [arXiv:2204.08932](https://arxiv.org/abs/2204.08932)
 - **作者**: Yu-Ming Tang, Yi-Xing Peng, Wei-Shi Zheng
 - **🏷️ 机构**: Sun Yat-sen University,School of Computer Science and Engineering,China
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Deep neural network (DNN) suffers from catastrophic forgetting when learning incrementally, which greatly limits its applications. Although maintaining a handful of samples (called `exemplars`) of each task could alleviate forgetting to some extent, existing methods are still limited by the small number of exemplars since these exemplars are too few to carry enough task-specific knowledge, and therefore the forgetting remains. To overcome this problem, we propose to `imagine` diverse counterparts of given exemplars referring to the abundant semantic-irrelevant information from unlabeled data. Specifically, we develop a learnable feature generator to diversify exemplars by adaptively generating diverse counterparts of exemplars based on semantic information from exemplars and semantically-irrelevant information from unlabeled data. We introduce semantic contrastive learning to enforce the generated samples to be semantic consistent with exemplars and perform semanticdecoupling contrastive learning to encourage diversity of generated samples. The diverse generated samples could effectively prevent DNN from forgetting when learning new tasks. Our method does not bring any extra inference cost and outperforms state-of-the-art methods on two benchmarks CIFAR-100 and ImageNet-Subset by a clear margin.
+
 ### Forward Compatible Few-Shot Class-Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00884)
+- **链接**: [arXiv:2203.06953](https://arxiv.org/abs/2203.06953) · [代码](https://github.com/zhoudw-zdw/CVPR22-Fact)
 - **作者**: Da-Wei Zhou, Fu-Yun Wang, Han-Jia Ye, Liang Ma, Shiliang Pu, De-Chuan Zhan
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Novel classes frequently arise in our dynamically changing world, e.g., new users in the authentication system, and a machine learning model should recognize new classes without forgetting old ones. This scenario becomes more challenging when new class instances are insufficient, which is called few-shot class-incremental learning (FSCIL). Current methods handle incremental learning retrospectively by making the updated model similar to the old one. By contrast, we suggest learning prospectively to prepare for future updates, and propose ForwArd Compatible Training (FACT) for FSCIL. Forward compatibility requires future new classes to be easily incorporated into the current model based on the current stage data, and we seek to realize it by reserving embedding space for future new classes. In detail, we assign virtual prototypes to squeeze the embedding of known classes and reserve for new ones. Besides, we forecast possible new classes and prepare for the updating process. The virtual prototypes allow the model to accept possible updates in the future, which act as proxies scattered among embedding space to build a stronger classifier during inference. FACT efficiently incorporates new classes with forward compatibility and meanwhile resists forgetting of old ones. Extensive experiments validate FACT's state-of-the-art performance. Code is available at: https://github.com/zhoudw-zdw/CVPR22-Fact
+
 ### Self-Sustaining Representation Expansion for Non-Exemplar Class-Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00908)
+- **链接**: [arXiv:2203.06359](https://arxiv.org/abs/2203.06359)
 - **作者**: Kai Zhu, Wei Zhai, Yang Cao, Jiebo Luo, Zhengjun Zha
 - **🏷️ 机构**: University of Science and Technology of China, University of Rochester
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Non-exemplar class-incremental learning is to recognize both the old and new classes when old class samples cannot be saved. It is a challenging task since representation optimization and feature retention can only be achieved under supervision from new classes. To address this problem, we propose a novel self-sustaining representation expansion scheme. Our scheme consists of a structure reorganization strategy that fuses main-branch expansion and side-branch updating to maintain the old features, and a main-branch distillation scheme to transfer the invariant knowledge. Furthermore, a prototype selection mechanism is proposed to enhance the discrimination between the old and new classes by selectively incorporating new samples into the distillation process. Extensive experiments on three benchmarks demonstrate significant incremental performance, outperforming the state-of-the-art methods by a margin of 3%, 3% and 6%, respectively.
 
 ### Doodle It Yourself: Class Incremental Learning by Drawing a Few Sketches.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00233)
@@ -148,28 +164,44 @@
 - **会议**: CVPR 2022
 
 ### Constrained Few-shot Class-incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00885)
+- **链接**: [arXiv:2203.16588](https://arxiv.org/abs/2203.16588) · [代码](https://github.com/IBM/constrained-FSCIL)
 - **作者**: Michael Hersche, Geethan Karunaratne, Giovanni Cherubini, Luca Benini, Abu Sebastian, Abbas Rahimi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Continually learning new classes from fresh data without forgetting previous knowledge of old classes is a very challenging research problem. Moreover, it is imperative that such learning must respect certain memory and computational constraints such as (i) training samples are limited to only a few per class, (ii) the computational cost of learning a novel class remains constant, and (iii) the memory footprint of the model grows at most linearly with the number of classes observed. To meet the above constraints, we propose C-FSCIL, which is architecturally composed of a frozen meta-learned feature extractor, a trainable fixed-size fully connected layer, and a rewritable dynamically growing memory that stores as many vectors as the number of encountered classes. C-FSCIL provides three update modes that offer a trade-off between accuracy and compute-memory cost of learning novel classes. C-FSCIL exploits hyperdimensional embedding that allows to continually express many more classes than the fixed dimensions in the vector space, with minimal interference. The quality of class vector representations is further improved by aligning them quasi-orthogonally to each other by means of novel loss functions. Experiments on the CIFAR100, miniImageNet, and Omniglot datasets show that C-FSCIL outperforms the baselines with remarkable accuracy and compression. It also scales up to the largest problem size ever tried in this few-shot setting by learning 423 novel classes on top of 1200 base classes with less than 1.6% accuracy drop. Our code is available at https://github.com/IBM/constrained-FSCIL.
+
 ### Energy-based Latent Aligner for Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00730)
+- **链接**: [arXiv:2203.14952](https://arxiv.org/abs/2203.14952)
 - **作者**: K. J. Joseph, Salman Khan, Fahad Shahbaz Khan, Rao Muhammad Anwer, Vineeth N. Balasubramanian
 - **🏷️ 机构**: Indian Institute of Technology,Hyderabad,India, Mohamed bin Zayed University of AI,UAE
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Deep learning models tend to forget their earlier knowledge while incrementally learning new tasks. This behavior emerges because the parameter updates optimized for the new tasks may not align well with the updates suitable for older tasks. The resulting latent representation mismatch causes forgetting. In this work, we propose ELI: Energy-based Latent Aligner for Incremental Learning, which first learns an energy manifold for the latent representations such that previous task latents will have low energy and the current task latents have high energy values. This learned manifold is used to counter the representational shift that happens during incremental learning. The implicit regularization that is offered by our proposed methodology can be used as a plug-and-play module in existing incremental learning methodologies. We validate this through extensive evaluation on CIFAR-100, ImageNet subset, ImageNet 1k and Pascal VOC datasets. We observe consistent improvement when ELI is added to three prominent methodologies in class-incremental learning, across multiple incremental settings. Further, when added to the state-of-the-art incremental object detector, ELI provides over 5% improvement in detection accuracy, corroborating its effectiveness and complementary advantage to existing art.
+
 ### Class-Incremental Learning by Knowledge Distillation with Adaptive Feature Consolidation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01560)
+- **链接**: [arXiv:2204.00895](https://arxiv.org/abs/2204.00895)
 - **作者**: Minsoo Kang, Jaeyoo Park, Bohyung Han
 - **🏷️ 机构**: ECE, ASRI, &#x0026; IPAI, Seoul National University
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > We present a novel class incremental learning approach based on deep neural networks, which continually learns new tasks with limited memory for storing examples in the previous tasks. Our algorithm is based on knowledge distillation and provides a principled way to maintain the representations of old models while adjusting to new tasks effectively. The proposed method estimates the relationship between the representation changes and the resulting loss increases incurred by model updates. It minimizes the upper bound of the loss increases using the representations, which exploits the estimated importance of each feature map within a backbone model. Based on the importance, the model restricts updates of important features for robustness while allowing changes in less critical features for flexibility. This optimization strategy effectively alleviates the notorious catastrophic forgetting problem despite the limited accessibility of data in the previous tasks. The experimental results show significant accuracy improvement of the proposed algorithm over the existing methods on the standard datasets. Code is available.
+
 ### Towards Better Plasticity-Stability Trade-off in Incremental Learning: A Simple Linear Connector.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00019)
+- **链接**: [arXiv:2110.07905](https://arxiv.org/abs/2110.07905) · [代码](https://github.com/lingl1024/Connector)
 - **作者**: Guoliang Lin, Hanlu Chu, Hanjiang Lai
 - **🏷️ 机构**: Sun Yat-sen University,Guangdong,China, South China Normal University,Guangdong,China
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Plasticity-stability dilemma is a main problem for incremental learning, where plasticity is referring to the ability to learn new knowledge, and stability retains the knowledge of previous tasks. Many methods tackle this problem by storing previous samples, while in some applications, training data from previous tasks cannot be legally stored. In this work, we propose to employ mode connectivity in loss landscapes to achieve better plasticity-stability trade-off without any previous samples. We give an analysis of why and how to connect two independently optimized optima of networks, null-space projection for previous tasks and simple SGD for the current task, can attain a meaningful balance between preserving already learned knowledge and granting sufficient flexibility for learning a new task. This analysis of mode connectivity also provides us a new perspective and technology to control the trade-off between plasticity and stability. We evaluate the proposed method on several benchmark datasets. The results indicate our simple method can achieve notable improvement, and perform well on both the past and current tasks. On 10-split-CIFAR-100 task, our method achieves 79.79% accuracy, which is 6.02% higher. Our method also achieves 6.33% higher accuracy on TinyImageNet. Code is available at https://github.com/lingl1024/Connector.
 
 ### Mimicking the Oracle: An Initial Phase Decorrelation Approach for Class Incremental Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01622) · 📚 被引 61

@@ -142,10 +142,14 @@
 - **会议**: CVPR 2022
 
 ### RBGNet: Ray-based Grouping for 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00118) · 📚 被引 68
+- **链接**: [arXiv:2204.02251](https://arxiv.org/abs/2204.02251) · [代码](https://github.com/Haiyang-W/RBGNet) · 📚 被引 68
 - **作者**: Haiyang Wang, Shaoshuai Shi, Ze Yang, Rongyao Fang, Qi Qian, Hongsheng Li et al.
 - **🏷️ 机构**: Center for Data Science, Peking University, Max Planck Institute for Informatics, University of Toronto
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > As a fundamental problem in computer vision, 3D object detection is experiencing rapid growth. To extract the point-wise features from the irregularly and sparsely distributed points, previous methods usually take a feature grouping module to aggregate the point features to an object candidate. However, these methods have not yet leveraged the surface geometry of foreground objects to enhance grouping and 3D box generation. In this paper, we propose the RBGNet framework, a voting-based 3D detector for accurate 3D object detection from point clouds. In order to learn better representations of object shape to enhance cluster features for predicting 3D boxes, we propose a ray-based feature grouping module, which aggregates the point-wise features on object surfaces using a group of determined rays uniformly emitted from cluster centers. Considering the fact that foreground points are more meaningful for box estimation, we design a novel foreground biased sampling strategy in downsample process to sample more points on object surfaces and further boost the detection performance. Our model achieves state-of-the-art 3D detection performance on ScanNet V2 and SUN RGB-D with remarkable performance gains. Code will be available at https://github.com/Haiyang-W/RBGNet.
 
 ### Back to Reality: Weakly-supervised 3D Object Detection with Shape-guided Label Enhancement.
 - **链接**: [arXiv:2203.05238](https://arxiv.org/abs/2203.05238) · [代码](https://github.com/wyf-ACCEPT/BackToReality)
@@ -164,10 +168,14 @@
 - **会议**: CVPR 2022
 
 ### Rotationally Equivariant 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00151)
+- **链接**: [arXiv:2204.13630](https://arxiv.org/abs/2204.13630)
 - **作者**: Hong-Xing Yu, Jiajun Wu, Li Yi
 - **🏷️ 机构**: Stanford University, Tsinghua University, Shanghai Qi Zhi Institute
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Rotation equivariance has recently become a strongly desired property in the 3D deep learning community. Yet most existing methods focus on equivariance regarding a global input rotation while ignoring the fact that rotation symmetry has its own spatial support. Specifically, we consider the object detection problem in 3D scenes, where an object bounding box should be equivariant regarding the object pose, independent of the scene motion. This suggests a new desired property we call object-level rotation equivariance. To incorporate object-level rotation equivariance into 3D object detectors, we need a mechanism to extract equivariant features with local object-level spatial support while being able to model cross-object context information. To this end, we propose Equivariant Object detection Network (EON) with a rotation equivariance suspension design to achieve object-level equivariance. EON can be applied to modern point cloud object detectors, such as VoteNet and PointRCNN, enabling them to exploit object rotation symmetry in scene-scale inputs. Our experiments on both indoor scene and autonomous driving datasets show that significant improvements are obtained by plugging our EON design into existing state-of-the-art 3D object detectors.
 
 ### DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02067)

@@ -12,10 +12,14 @@
 - **会议**: CVPR 2022
 
 ### Omni-DETR: Omni-Supervised Object Detection with Transformers.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00915)
+- **链接**: [arXiv:2203.16089](https://arxiv.org/abs/2203.16089) · [代码](https://github.com/amazon-research/omni-detr)
 - **作者**: Pei Wang, Zhaowei Cai, Hao Yang, Gurumurthy Swaminathan, Nuno Vasconcelos, Bernt Schiele et al.
 - **🏷️ 机构**: UC San Diego, AWS AI Labs
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > We consider the problem of omni-supervised object detection, which can use unlabeled, fully labeled and weakly labeled annotations, such as image tags, counts, points, etc., for object detection. This is enabled by a unified architecture, Omni-DETR, based on the recent progress on student-teacher framework and end-to-end transformer based object detection. Under this unified architecture, different types of weak labels can be leveraged to generate accurate pseudo labels, by a bipartite matching based filtering mechanism, for the model to learn. In the experiments, Omni-DETR has achieved state-of-the-art results on multiple datasets and settings. And we have found that weak annotations can help to improve detection performance and a mixture of them can achieve a better trade-off between annotation cost and accuracy than the standard complete annotation. These findings could encourage larger object detection datasets with mixture annotations. The code is available at https://github.com/amazon-research/omni-detr.
 
 ### Explore Spatio-temporal Aggregation for Insubstantial Object Detection: Benchmark Dataset and Baseline.
 - **链接**: [arXiv:2206.11459](https://arxiv.org/abs/2206.11459) · [代码](https://github.com/CalayZhou/IOD-Video)
@@ -50,16 +54,24 @@
 - **会议**: CVPR 2022
 
 ### Label Matching Semi-Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01398)
+- **链接**: [arXiv:2206.06608](https://arxiv.org/abs/2206.06608) · [代码](https://github.com/hikvision-research/SSOD)
 - **作者**: Binbin Chen, Weijie Chen, Shicai Yang, Yunyi Xuan, Jie Song, Di Xie et al.
 - **🏷️ 机构**: ZJU
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Semi-supervised object detection has made significant progress with the development of mean teacher driven self-training. Despite the promising results, the label mismatch problem is not yet fully explored in the previous works, leading to severe confirmation bias during self-training. In this paper, we delve into this problem and propose a simple yet effective LabelMatch framework from two different yet complementary perspectives, i.e., distribution-level and instance-level. For the former one, it is reasonable to approximate the class distribution of the unlabeled data from that of the labeled data according to Monte Carlo Sampling. Guided by this weakly supervision cue, we introduce a re-distribution mean teacher, which leverages adaptive label-distribution-aware confidence thresholds to generate unbiased pseudo labels to drive student learning. For the latter one, there exists an overlooked label assignment ambiguity problem across teacher-student models. To remedy this issue, we present a novel label assignment mechanism for self-training framework, namely proposal self-assignment, which injects the proposals from student into teacher and generates accurate pseudo labels to match each proposal in the student model accordingly. Experiments on both MS-COCO and PASCAL-VOC datasets demonstrate the considerable superiority of our proposed framework to other state-of-the-arts. Code will be available at https://github.com/hikvision-research/SSOD.
+
 ### Dense Learning based Semi-Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00477) · 📚 被引 81
+- **链接**: [arXiv:2204.07300](https://arxiv.org/abs/2204.07300) · [代码](https://github.com/chenbinghui1/DSL) · 📚 被引 81
 - **作者**: Binghui Chen, Pengyu Li, Xiang Chen, Biao Wang, Lei Zhang, Xian-Sheng Hua
 - **🏷️ 机构**: Alibaba Group, The Hong Kong Polytechnic University
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Semi-supervised object detection (SSOD) aims to facilitate the training and deployment of object detectors with the help of a large amount of unlabeled data. Though various self-training based and consistency-regularization based SSOD methods have been proposed, most of them are anchor-based detectors, ignoring the fact that in many real-world applications anchor-free detectors are more demanded. In this paper, we intend to bridge this gap and propose a DenSe Learning (DSL) based anchor-free SSOD algorithm. Specifically, we achieve this goal by introducing several novel techniques, including an Adaptive Filtering strategy for assigning multi-level and accurate dense pixel-wise pseudo-labels, an Aggregated Teacher for producing stable and precise pseudo-labels, and an uncertainty-consistency-regularization term among scales and shuffled patches for improving the generalization capability of the detector. Extensive experiments are conducted on MS-COCO and PASCAL-VOC, and the results show that our proposed DSL method records new state-of-the-art SSOD performance, surpassing existing methods by a large margin. Codes can be found at \textcolor{blue}{https://github.com/chenbinghui1/DSL}.
 
 ### Implicit Motion Handling for Video Camouflaged Object Detection.
 - **链接**: [arXiv:2203.07363](https://arxiv.org/abs/2203.07363)
@@ -170,16 +182,24 @@
 - **会议**: CVPR 2022
 
 ### Interactron: Embodied Adaptive Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01444)
+- **链接**: [arXiv:2202.00660](https://arxiv.org/abs/2202.00660) · [代码](https://github.com/allenai/interactron)
 - **作者**: Klemen Kotar, Roozbeh Mottaghi
 - **🏷️ 机构**: PRIOR @ Allen Institute for AI
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Over the years various methods have been proposed for the problem of object detection. Recently, we have witnessed great strides in this domain owing to the emergence of powerful deep neural networks. However, there are typically two main assumptions common among these approaches. First, the model is trained on a fixed training set and is evaluated on a pre-recorded test set. Second, the model is kept frozen after the training phase, so no further updates are performed after the training is finished. These two assumptions limit the applicability of these methods to real-world settings. In this paper, we propose Interactron, a method for adaptive object detection in an interactive setting, where the goal is to perform object detection in images observed by an embodied agent navigating in different environments. Our idea is to continue training during inference and adapt the model at test time without any explicit supervision via interacting with the environment. Our adaptive object detection model provides a 7.2 point improvement in AP (and 12.7 points in AP50) over DETR, a recent, high-performance object detector. Moreover, we show that our object detection model adapts to environments with completely different appearance characteristics, and performs well in them. The code is available at: https://github.com/allenai/interactron .
+
 ### Interactive Multi-Class Tiny-Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01374)
+- **链接**: [arXiv:2203.15266](https://arxiv.org/abs/2203.15266) · [代码](https://github.com/ChungYi347/Interactive-Multi-Class-Tiny-Object-Detection)
 - **作者**: Chunggi Lee, Seonwook Park, Heon Song, Jeongun Ryu, Sanghoon Kim, Haejoon Kim et al.
 - **🏷️ 机构**: Lunit Inc.
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Annotating tens or hundreds of tiny objects in a given image is laborious yet crucial for a multitude of Computer Vision tasks. Such imagery typically contains objects from various categories, yet the multi-class interactive annotation setting for the detection task has thus far been unexplored. To address these needs, we propose a novel interactive annotation method for multiple instances of tiny objects from multiple classes, based on a few point-based user inputs. Our approach, C3Det, relates the full image context with annotator inputs in a local and global manner via late-fusion and feature-correlation, respectively. We perform experiments on the Tiny-DOTA and LCell datasets using both two-stage and one-stage object detection architectures to verify the efficacy of our approach. Our approach outperforms existing approaches in interactive annotation, achieving higher mAP with fewer clicks. Furthermore, we validate the annotation efficiency of our approach in a user study where it is shown to be 2.85x faster and yield only 0.36x task load (NASA-TLX, lower is better) compared to manual annotation. The code is available at https://github.com/ChungYi347/Interactive-Multi-Class-Tiny-Object-Detection.
 
 ### Source-Free Object Detection by Learning to Overlook Domain Style.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00785)
@@ -194,10 +214,14 @@
 - **会议**: CVPR 2022
 
 ### Oriented RepPoints for Aerial Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00187)
+- **链接**: [arXiv:2105.11111](https://arxiv.org/abs/2105.11111) · [代码](https://github.com/LiWentomng/OrientedRepPoints)
 - **作者**: Wentong Li, Yijie Chen, Kaixuan Hu, Jianke Zhu
 - **🏷️ 机构**: Zhejiang University, University of Electronic Science and Technology of China
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > In contrast to the generic object, aerial targets are often non-axis aligned with arbitrary orientations having the cluttered surroundings. Unlike the mainstreamed approaches regressing the bounding box orientations, this paper proposes an effective adaptive points learning approach to aerial object detection by taking advantage of the adaptive points representation, which is able to capture the geometric information of the arbitrary-oriented instances. To this end, three oriented conversion functions are presented to facilitate the classification and localization with accurate orientation. Moreover, we propose an effective quality assessment and sample assignment scheme for adaptive points learning toward choosing the representative oriented reppoints samples during training, which is able to capture the non-axis aligned features from adjacent objects or background noises. A spatial constraint is introduced to penalize the outlier points for roust adaptive learning. Experimental results on four challenging aerial datasets including DOTA, HRSC2016, UCAS-AOD and DIOR-R, demonstrate the efficacy of our proposed approach. The source code is availabel at: https://github.com/LiWentomng/OrientedRepPoints.
 
 ### Cross-Domain Adaptive Teacher for Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00743)
@@ -206,7 +230,7 @@
 - **会议**: CVPR 2022
 
 ### A Dual Weighting Label Assignment Scheme for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00917) · 📚 被引 116
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00917) · 📚 被引 117
 - **作者**: Shuai Li, Chenhang He, Ruihuang Li, Lei Zhang
 - **🏷️ 机构**: The Hong Kong Polytechnic University
 - **会议**: CVPR 2022
@@ -346,10 +370,14 @@
 - **会议**: CVPR 2022
 
 ### Revisiting AP Loss for Dense Object Detection: Adaptive Ranking Pair Selection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01379)
+- **链接**: [arXiv:2207.12042](https://arxiv.org/abs/2207.12042) · [代码](https://github.com/Xudangliatiger/APE-Loss)
 - **作者**: Dongli Xu, Jinhong Deng, Wen Li
 - **🏷️ 机构**: School of Computer Science and Engineering &#x0026; Shenzhen Institute for Advanced Study University of Electronic Science and Technology of China
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Average precision (AP) loss has recently shown promising performance on the dense object detection task. However,a deep understanding of how AP loss affects the detector from a pairwise ranking perspective has not yet been developed.In this work, we revisit the average precision (AP)loss and reveal that the crucial element is that of selecting the ranking pairs between positive and negative samples.Based on this observation, we propose two strategies to improve the AP loss. The first of these is a novel Adaptive Pairwise Error (APE) loss that focusing on ranking pairs in both positive and negative samples. Moreover,we select more accurate ranking pairs by exploiting the normalized ranking scores and localization scores with a clustering algorithm. Experiments conducted on the MSCOCO dataset support our analysis and demonstrate the superiority of our proposed method compared with current classification and ranking loss. The code is available at https://github.com/Xudangliatiger/APE-Loss.
 
 ### Smartadapt: Multi-branch Object Detection Framework for Videos on Mobiles.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00256)
@@ -400,10 +428,14 @@
   > Autonomous driving requires the model to perceive the environment and (re)act within a low latency for safety. While past works ignore the inevitable changes in the environment after processing, streaming perception is proposed to jointly evaluate the latency and accuracy into a single metric for video online perception. In this paper, instead of searching trade-offs between accuracy and speed like previous works, we point out that endowing real-time models with the ability to predict the future is the key to dealing with this problem. We build a simple and effective framework for streaming perception. It equips a novel DualFlow Perception module (DFP), which includes dynamic and static flows to capture the moving trend and basic detection feature for streaming prediction. Further, we introduce a Trend-Aware Loss (TAL) combined with a trend factor to generate adaptive weights for objects with different moving speeds. Our simple method achieves competitive performance on Argoverse-HD dataset and improves the AP by 4.9% compared to the strong baseline, validating its effectiveness. Our code will be made available at https://github.com/yancie-yjr/StreamYOLO.
 
 ### Sylph: A Hypernetwork Framework for Incremental Few-shot Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00883)
+- **链接**: [arXiv:2203.13903](https://arxiv.org/abs/2203.13903)
 - **作者**: Li Yin, Juan M. Perez-Rua, Kevin J. Liang
 - **🏷️ 机构**: Meta AI
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > We study the challenging incremental few-shot object detection (iFSD) setting. Recently, hypernetwork-based approaches have been studied in the context of continuous and finetune-free iFSD with limited success. We take a closer look at important design choices of such methods, leading to several key improvements and resulting in a more accurate and flexible framework, which we call Sylph. In particular, we demonstrate the effectiveness of decoupling object classification from localization by leveraging a base detector that is pretrained for class-agnostic localization on a large-scale dataset. Contrary to what previous results have suggested, we show that with a carefully designed class-conditional hypernetwork, finetune-free iFSD can be highly effective, especially when a large number of base categories with abundant data are available for meta-training, almost approaching alternatives that undergo test-time-training. This result is even more significant considering its many practical advantages: (1) incrementally learning new classes in sequence without additional training, (2) detecting both novel and seen classes in a single pass, and (3) no forgetting of previously seen classes. We benchmark our model on both COCO and LVIS, reporting as high as 17% AP on the long-tail rare classes on LVIS, indicating the promise of hypernetwork-based iFSD.
 
 ### Democracy Does Matter: Comprehensive Feature Mining for Co-Salient Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00105)
