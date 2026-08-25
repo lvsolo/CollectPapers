@@ -19,7 +19,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: conference-guidelines
+  # 单会议手动重跑（带参数）与全量 run 分组：互不取消
+  # 全量 run 共享一组排队；单点重跑各自独立组并行执行
+  group: conference-guidelines-${{ github.event.inputs.conference != '' && 'single' || 'full' }}
   cancel-in-progress: false
 
 jobs:
