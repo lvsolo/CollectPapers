@@ -1,30 +1,44 @@
 # Object Detection — 2022 Guideline
 
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
-> 论文数: 96 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 97 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
 ### Target-aware Dual Adversarial Learning and a Multi-scenario Multi-Modality Benchmark to Fuse Infrared and Visible for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00571) · 📚 被引 1100
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00571)
 - **作者**: Jinyuan Liu, Xin Fan, Zhanbo Huang, Guanyao Wu, Risheng Liu, Wei Zhong et al.
 - **🏷️ 机构**: School of Software Technology, Dalian University of Technology, DUT-RU International School of Information Science &#x0026; Engineering, Dalian University of Technology
 - **会议**: CVPR 2022
 
 ### Omni-DETR: Omni-Supervised Object Detection with Transformers.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00915) · 📚 被引 39
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00915)
 - **作者**: Pei Wang, Zhaowei Cai, Hao Yang, Gurumurthy Swaminathan, Nuno Vasconcelos, Bernt Schiele et al.
 - **🏷️ 机构**: UC San Diego, AWS AI Labs
 - **会议**: CVPR 2022
 
 ### Explore Spatio-temporal Aggregation for Insubstantial Object Detection: Benchmark Dataset and Baseline.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00311) · 📚 被引 25
+- **链接**: [arXiv:2206.11459](https://arxiv.org/abs/2206.11459) · [代码](https://github.com/CalayZhou/IOD-Video)
 - **作者**: Kailai Zhou, Yibo Wang, Tao Lv, Yunqian Li, Linsen Chen, Qiu Shen et al.
 - **🏷️ 机构**: Nanjing University,Nanjing,China
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > We endeavor on a rarely explored task named Insubstantial Object Detection (IOD), which aims to localize the object with following characteristics: (1) amorphous shape with indistinct boundary; (2) similarity to surroundings; (3) absence in color. Accordingly, it is far more challenging to distinguish insubstantial objects in a single static frame and the collaborative representation of spatial and temporal information is crucial. Thus, we construct an IOD-Video dataset comprised of 600 videos (141,017 frames) covering various distances, sizes, visibility, and scenes captured by different spectral ranges. In addition, we develop a spatio-temporal aggregation framework for IOD, in which different backbones are deployed and a spatio-temporal aggregation loss (STAloss) is elaborately designed to leverage the consistency along the time axis. Experiments conducted on IOD-Video dataset demonstrate that spatio-temporal aggregation can significantly improve the performance of IOD. We hope our work will attract further researches into this valuable yet challenging task. The code will be available at: \url{https://github.com/CalayZhou/IOD-Video}.
+
+### OW-DETR: Open-world Detection Transformer.
+- **链接**: [arXiv:2112.01513](https://arxiv.org/abs/2112.01513) · [代码](https://github.com/akshitac8/OW-DETR) · 📚 被引 215
+- **作者**: Akshita Gupta, Sanath Narayan, K. J. Joseph, Salman Khan, Fahad Shahbaz Khan, Mubarak Shah
+- **🏷️ 机构**: Inception Institute of Artificial Intelligence, IIT Hyderabad, Mohamed Bin Zayed University of Artificial Intelligence
+- **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Open-world object detection (OWOD) is a challenging computer vision problem, where the task is to detect a known set of object categories while simultaneously identifying unknown objects. Additionally, the model must incrementally learn new classes that become known in the next training episodes. Distinct from standard object detection, the OWOD setting poses significant challenges for generating quality candidate proposals on potentially unknown objects, separating the unknown objects from the background and detecting diverse unknown objects. Here, we introduce a novel end-to-end transformer-based framework, OW-DETR, for open-world object detection. The proposed OW-DETR comprises three dedicated components namely, attention-driven pseudo-labeling, novelty classification and objectness scoring to explicitly address the aforementioned OWOD challenges. Our OW-DETR explicitly encodes multi-scale contextual information, possesses less inductive bias, enables knowledge transfer from known classes to the unknown class and can better discriminate between unknown objects and background. Comprehensive experiments are performed on two benchmarks: MS-COCO and PASCAL VOC. The extensive ablations reveal the merits of our proposed contributions. Further, our model outperforms the recently introduced OWOD approach, ORE, with absolute gains ranging from 1.8% to 3.3% in terms of unknown recall on MS-COCO. In the case of incremental object detection, OW-DETR outperforms the state-of-the-art for all settings on PASCAL VOC. Our code is available at https://github.com/akshitac8/OW-DETR.
+
 ### Point-Level Region Contrast for Object Detection Pre-Training.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01559) · 📚 被引 39
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01559)
 - **作者**: Yutong Bai, Xinlei Chen, Alexander Kirillov, Alan L. Yuille, Alexander C. Berg
 - **🏷️ 机构**: Facebook AI Research (FAIR), Johns Hopkins University
 - **会议**: CVPR 2022
@@ -32,11 +46,11 @@
 ### DETReg: Unsupervised Pretraining with Region Priors for Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01420) · 📚 被引 113
 - **作者**: Amir Bar, Xin Wang, Vadim Kantorov, Colorado J. Reed, Roei Herzig, Gal Chechik et al.
-- **🏷️ 机构**: UC Berkeley
+- **🏷️ 机构**: Tel-Aviv University, Microsoft Research, Berkeley AI Research
 - **会议**: CVPR 2022
 
 ### Label Matching Semi-Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01398) · 📚 被引 92
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01398)
 - **作者**: Binbin Chen, Weijie Chen, Shicai Yang, Yunyi Xuan, Jie Song, Di Xie et al.
 - **🏷️ 机构**: ZJU
 - **会议**: CVPR 2022
@@ -44,11 +58,11 @@
 ### Dense Learning based Semi-Supervised Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00477) · 📚 被引 81
 - **作者**: Binghui Chen, Pengyu Li, Xiang Chen, Biao Wang, Lei Zhang, Xian-Sheng Hua
-- **🏷️ 机构**: PolyU / OPPO
+- **🏷️ 机构**: Alibaba Group, The Hong Kong Polytechnic University
 - **会议**: CVPR 2022
 
 ### Implicit Motion Handling for Video Camouflaged Object Detection.
-- **链接**: [arXiv:2203.07363](https://arxiv.org/abs/2203.07363) · [出版页](https://doi.org/10.1109/CVPR52688.2022.01349) · 📚 被引 79
+- **链接**: [arXiv:2203.07363](https://arxiv.org/abs/2203.07363)
 - **作者**: Xuelian Cheng, Huan Xiong, Deng-Ping Fan, Yiran Zhong, Mehrtash Harandi, Tom Drummond et al.
 - **🏷️ 机构**: Monash University,Faculty of Engineering, Mohamed bin Zayed University of Artificial Intelligence, CVL, ETH Zurich
 - **会议**: CVPR 2022
@@ -72,41 +86,41 @@
 ### Not All Labels Are Equal: Rationalizing The Labeling Costs for Training Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01409) · 📚 被引 42
 - **作者**: Ismail Elezi, Zhiding Yu, Anima Anandkumar, Laura Leal-Taixé, José M. Álvarez
-- **🏷️ 机构**: NVIDIA
+- **🏷️ 机构**: TUM, NVIDIA
 - **会议**: CVPR 2022
 
 ### Speed up Object Detection on Gigapixel-level Images with Patch Arrangement.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00461) · 📚 被引 12
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00461)
 - **作者**: Jiahao Fan, Huabin Liu, Wenjie Yang, John See, Aixin Zhang, Weiyao Lin
 - **🏷️ 机构**: Shanghai Jiao Tong University,China, Heriot- Watt University,Malaysia
 - **会议**: CVPR 2022
 
 ### Weakly Supervised Rotation-Invariant Aerial Object Detection Network.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01375) · 📚 被引 52
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01375)
 - **作者**: Xiaoxu Feng, Xiwen Yao, Gong Cheng, Junwei Han
 - **🏷️ 机构**: School of Automation, Northwestern Polytechnical University,Xi&#x0027;an,China
 - **会议**: CVPR 2022
 
 ### Sequential Voting with Relational Box Fields for Active Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00241) · 📚 被引 11
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00241)
 - **作者**: Qichen Fu, Xingyu Liu, Kris M. Kitani
 - **🏷️ 机构**: Carnegie Mellon University
 - **会议**: CVPR 2022
 
 ### Can You Spot the Chameleon? Adversarially Camouflaging Images from Co-Salient Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00219) · 📚 被引 18
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00219)
 - **作者**: Ruijun Gao, Qing Guo, Felix Juefei-Xu, Hongkai Yu, Huazhu Fu, Wei Feng et al.
 - **🏷️ 机构**: College of Intelligence and Computing, Tianjin University,China, Alibaba Group,USA, Cleveland State University,USA
 - **会议**: CVPR 2022
 
 ### Scale-Equivalent Distillation for Semi-Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01412) · 📚 被引 37
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01412)
 - **作者**: Qiushan Guo, Yao Mu, Jianyu Chen, Tianqi Wang, Yizhou Yu, Ping Luo
 - **🏷️ 机构**: The University of Hong Kong, Tsinghua University
 - **会议**: CVPR 2022
 
 ### Few-Shot Object Detection with Fully Cross-Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00525) · 📚 被引 187
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00525)
 - **作者**: Guangxing Han, Jiawei Ma, Shiyuan Huang, Long Chen, Shih-Fu Chang
 - **🏷️ 机构**: Columbia University
 - **会议**: CVPR 2022
@@ -118,19 +132,19 @@
 - **会议**: CVPR 2022
 
 ### DESTR: Object Detection with Split Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00916) · 📚 被引 69
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00916)
 - **作者**: Liqiang He, Sinisa Todorovic
 - **🏷️ 机构**: Oregon State University,Corvallis,OR,USA,97330
 - **会议**: CVPR 2022
 
 ### Cross Domain Object Detection by Target-Perceived Dual Branch Distillation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00935) · 📚 被引 94
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00935)
 - **作者**: Mengzhe He, Yali Wang, Jiaxi Wu, Yiru Wang, Hanqing Li, Bo Li et al.
 - **🏷️ 机构**: Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences,ShenZhen Key Lab of Computer Vision and Pattern Recognition, Beihang University, SenseTime Research
 - **会议**: CVPR 2022
 
 ### Robust Region Feature Synthesizer for Zero-Shot Object Detection.
-- **链接**: [arXiv:2201.00103](https://arxiv.org/abs/2201.00103) · [出版页](https://doi.org/10.1109/CVPR52688.2022.00747) · 📚 被引 51
+- **链接**: [arXiv:2201.00103](https://arxiv.org/abs/2201.00103)
 - **作者**: Peiliang Huang, Junwei Han, De Cheng, Dingwen Zhang
 - **🏷️ 机构**: School of Automation, Northwestern Poly technical University,Brain and Artificial Intelligence Lab, School of Telecommunications Engineering, Xidian University,State Key Laboratory of Integrated Services Networks
 - **会议**: CVPR 2022
@@ -140,7 +154,7 @@
   > Zero-shot object detection aims at incorporating class semantic vectors to realize the detection of (both seen and) unseen classes given an unconstrained test image. In this study, we reveal the core challenges in this research area: how to synthesize robust region features (for unseen objects) that are as intra-class diverse and inter-class separable as the real samples, so that strong unseen object detectors can be trained upon them. To address these challenges, we build a novel zero-shot object detection framework that contains an Intra-class Semantic Diverging component and an Inter-class Structure Preserving component. The former is used to realize the one-to-more mapping to obtain diverse visual features from each class semantic vector, preventing miss-classifying the real unseen objects as image backgrounds. While the latter is used to avoid the synthesized features too scattered to mix up the inter-class and foreground-background relationship. To demonstrate the effectiveness of the proposed approach, comprehensive experiments on PASCAL VOC, COCO, and DIOR datasets are conducted. Notably, our approach achieves the new state-of-the-art performance on PASCAL VOC and COCO and it is the first study to carry out zero-shot object detection in remote sensing imagery.
 
 ### Label, Verify, Correct: A Simple Few Shot Object Detection Method.
-- **链接**: [arXiv:2112.05749](https://arxiv.org/abs/2112.05749) · [出版页](https://doi.org/10.1109/CVPR52688.2022.01384) · 📚 被引 116
+- **链接**: [arXiv:2112.05749](https://arxiv.org/abs/2112.05749)
 - **作者**: Prannay Kaul, Weidi Xie, Andrew Zisserman
 - **🏷️ 机构**: Visual Geometry Group, University of Oxford
 - **会议**: CVPR 2022
@@ -150,37 +164,37 @@
   > The objective of this paper is few-shot object detection (FSOD) -- the task of expanding an object detector for a new category given only a few instances for training. We introduce a simple pseudo-labelling method to source high-quality pseudo-annotations from the training set, for each new category, vastly increasing the number of training instances and reducing class imbalance; our method finds previously unlabelled instances. Naïvely training with model predictions yields sub-optimal performance; we present two novel methods to improve the precision of the pseudo-labelling process: first, we introduce a verification technique to remove candidate detections with incorrect class labels; second, we train a specialised model to correct poor quality bounding boxes. After these two novel steps, we obtain a large set of high-quality pseudo-annotations that allow our final detector to be trained end-to-end. Additionally, we demonstrate our method maintains base class performance, and the utility of simple augmentations in FSOD. While benchmarking on PASCAL VOC and MS-COCO, our method achieves state-of-the-art or second-best performance compared to existing approaches across all number of shots.
 
 ### MUM: Mix Image Tiles and UnMix Feature Tiles for Semi-Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01411) · 📚 被引 35
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01411)
 - **作者**: Jongmok Kim, Jooyoung Jang, Seunghyeon Seo, Jisoo Jeong, Jongkeun Na, Nojun Kwak
 - **🏷️ 机构**: SNUAILAB,South Korea, Seoul National University,South Korea
 - **会议**: CVPR 2022
 
 ### Interactron: Embodied Adaptive Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01444) · 📚 被引 31
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01444)
 - **作者**: Klemen Kotar, Roozbeh Mottaghi
 - **🏷️ 机构**: PRIOR @ Allen Institute for AI
 - **会议**: CVPR 2022
 
 ### Interactive Multi-Class Tiny-Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01374) · 📚 被引 31
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01374)
 - **作者**: Chunggi Lee, Seonwook Park, Heon Song, Jeongun Ryu, Sanghoon Kim, Haejoon Kim et al.
 - **🏷️ 机构**: Lunit Inc.
 - **会议**: CVPR 2022
 
 ### Source-Free Object Detection by Learning to Overlook Domain Style.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00785) · 📚 被引 86
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00785)
 - **作者**: Shuaifeng Li, Mao Ye, Xiatian Zhu, Lihua Zhou, Lin Xiong
 - **🏷️ 机构**: School of Computer Science and Engineering, University of Electronic Science and Technology of China, Centre for Vision, Speech and Signal Processing, University of Surrey
 - **会议**: CVPR 2022
 
 ### Adaptive Hierarchical Representation Learning for Long-Tailed Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00235) · 📚 被引 17
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00235)
 - **作者**: Banghuai Li
 - **🏷️ 机构**: MEGVII Technology
 - **会议**: CVPR 2022
 
 ### Oriented RepPoints for Aerial Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00187) · 📚 被引 522
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00187)
 - **作者**: Wentong Li, Yijie Chen, Kaixuan Hu, Jianke Zhu
 - **🏷️ 机构**: Zhejiang University, University of Electronic Science and Technology of China
 - **会议**: CVPR 2022
@@ -188,47 +202,55 @@
 ### Cross-Domain Adaptive Teacher for Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00743)
 - **作者**: Yu-Jhe Li, Xiaoliang Dai, Chih-Yao Ma, Yen-Cheng Liu, Kan Chen, Bichen Wu et al.
-- **🏷️ 机构**: Carnegie Mellon University, Facebook
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
 
 ### A Dual Weighting Label Assignment Scheme for Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00917) · 📚 被引 116
 - **作者**: Shuai Li, Chenhang He, Ruihuang Li, Lei Zhang
-- **🏷️ 机构**: PolyU / OPPO
+- **🏷️ 机构**: The Hong Kong Polytechnic University
 - **会议**: CVPR 2022
 
 ### SIGMA: Semantic-complete Graph Matching for Domain Adaptive Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00522) · 📚 被引 227
+- **链接**: [arXiv:2203.06398](https://arxiv.org/abs/2203.06398) · [代码](https://github.com/CityU-AIM-Group/SIGMA)
 - **作者**: Wuyang Li, Xinyu Liu, Yixuan Yuan
 - **🏷️ 机构**: City University of Hong Kong
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Domain Adaptive Object Detection (DAOD) leverages a labeled domain to learn an object detector generalizing to a novel domain free of annotations. Recent advances align class-conditional distributions by narrowing down cross-domain prototypes (class centers). Though great success,they ignore the significant within-class variance and the domain-mismatched semantics within the training batch, leading to a sub-optimal adaptation. To overcome these challenges, we propose a novel SemantIc-complete Graph MAtching (SIGMA) framework for DAOD, which completes mismatched semantics and reformulates the adaptation with graph matching. Specifically, we design a Graph-embedded Semantic Completion module (GSC) that completes mismatched semantics through generating hallucination graph nodes in missing categories. Then, we establish cross-image graphs to model class-conditional distributions and learn a graph-guided memory bank for better semantic completion in turn. After representing the source and target data as graphs, we reformulate the adaptation as a graph matching problem, i.e., finding well-matched node pairs across graphs to reduce the domain gap, which is solved with a novel Bipartite Graph Matching adaptor (BGM). In a nutshell, we utilize graph nodes to establish semantic-aware node affinity and leverage graph edges as quadratic constraints in a structure-aware matching loss, achieving fine-grained adaptation with a node-to-node graph matching. Extensive experiments verify that SIGMA outperforms existing works significantly. Our code is available at https://github.com/CityU-AIM-Group/SIGMA.
+
 ### SIOD: Single Instance Annotated Per Category Per Image for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01380) · 📚 被引 20
+- **链接**: [arXiv:2203.15353](https://arxiv.org/abs/2203.15353)
 - **作者**: Hanjun Li, Xingjia Pan, Ke Yan, Fan Tang, Wei-Shi Zheng
 - **🏷️ 机构**: School of Computer Science and Engineering, Sun Yat-sen University, Tencent,Youtu Lab, Jilin University
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Object detection under imperfect data receives great attention recently. Weakly supervised object detection (WSOD) suffers from severe localization issues due to the lack of instance-level annotation, while semi-supervised object detection (SSOD) remains challenging led by the inter-image discrepancy between labeled and unlabeled data. In this study, we propose the Single Instance annotated Object Detection (SIOD), requiring only one instance annotation for each existing category in an image. Degraded from inter-task (WSOD) or inter-image (SSOD) discrepancies to the intra-image discrepancy, SIOD provides more reliable and rich prior knowledge for mining the rest of unlabeled instances and trades off the annotation cost and performance. Under the SIOD setting, we propose a simple yet effective framework, termed Dual-Mining (DMiner), which consists of a Similarity-based Pseudo Label Generating module (SPLG) and a Pixel-level Group Contrastive Learning module (PGCL). SPLG firstly mines latent instances from feature representation space to alleviate the annotation missing problem. To avoid being misled by inaccurate pseudo labels, we propose PGCL to boost the tolerance to false pseudo labels. Extensive experiments on MS COCO verify the feasibility of the SIOD setting and the superiority of the proposed method, which obtains consistent and significant improvements compared to baseline methods and achieves comparable results with fully supervised object detection (FSOD) methods with only 40% instances annotated.
+
 ### R(Det)2: Randomized Decision Routing for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00478) · 📚 被引 9
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00478)
 - **作者**: Yali Li, Shengjin Wang
 - **🏷️ 机构**: Tsinghua University and BNRist,Department of Electronic Engineering,Beijing,China
 - **会议**: CVPR 2022
 
 ### Semi-Supervised Object Detection via Multi-instance Alignment with Global Class Prototypes.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00958) · 📚 被引 14
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00958)
 - **作者**: Aoxue Li, Peng Yuan, Zhenguo Li
 - **🏷️ 机构**: Huawei Noah&#x0027;s Ark Lab,China
 - **会议**: CVPR 2022
 
 ### Equalized Focal Loss for Dense Long-Tailed Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00686) · 📚 被引 132
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00686)
 - **作者**: Bo Li, Yongqiang Yao, Jingru Tan, Gang Zhang, Fengwei Yu, Jianwei Lu et al.
 - **🏷️ 机构**: Tongji University, Sense Time Research, Tsinghua University
 - **会议**: CVPR 2022
 
 ### Segment and Complete: Defending Object Detectors against Adversarial Patch Attacks with Robust Patch Detection.
-- **链接**: [arXiv:2112.04532](https://arxiv.org/abs/2112.04532) · [出版页](https://doi.org/10.1109/CVPR52688.2022.01455) · [代码](https://github.com/joellliu/SegmentAndComplete) · 📚 被引 110
+- **链接**: [arXiv:2112.04532](https://arxiv.org/abs/2112.04532) · [代码](https://github.com/joellliu/SegmentAndComplete)
 - **作者**: Jiang Liu, Alexander Levine, Chun Pong Lau, Rama Chellappa, Soheil Feizi
 - **🏷️ 机构**: Johns Hopkins University, University of Maryland, College Park
 - **会议**: CVPR 2022
@@ -238,37 +260,37 @@
   > Object detection plays a key role in many security-critical systems. Adversarial patch attacks, which are easy to implement in the physical world, pose a serious threat to state-of-the-art object detectors. Developing reliable defenses for object detectors against patch attacks is critical but severely understudied. In this paper, we propose Segment and Complete defense (SAC), a general framework for defending object detectors against patch attacks through detection and removal of adversarial patches. We first train a patch segmenter that outputs patch masks which provide pixel-level localization of adversarial patches. We then propose a self adversarial training algorithm to robustify the patch segmenter. In addition, we design a robust shape completion algorithm, which is guaranteed to remove the entire patch from the images if the outputs of the patch segmenter are within a certain Hamming distance of the ground-truth patch masks. Our experiments on COCO and xView datasets demonstrate that SAC achieves superior robustness even under strong adaptive attacks with no reduction in performance on clean images, and generalizes well to unseen patch shapes, attack budgets, and unseen attack methods. Furthermore, we present the APRICOT-Mask dataset, which augments the APRICOT dataset with pixel-level annotations of adversarial patches. We show SAC can significantly reduce the targeted attack success rate of physical patch attacks. Our code is available at https://github.com/joellliu/SegmentAndComplete.
 
 ### Towards Robust Adaptive Object Detection under Noisy Annotations.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01381) · 📚 被引 42
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01381)
 - **作者**: Xinyu Liu, Wuyang Li, Qiushi Yang, Baopu Li, Yixuan Yuan
 - **🏷️ 机构**: City University of Hong Kong, Baidu USA LLC
 - **会议**: CVPR 2022
 
 ### Unbiased Teacher v2: Semi-supervised Object Detection for Anchor-free and Anchor-based Detectors.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00959) · 📚 被引 130
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00959)
 - **作者**: Yen-Cheng Liu, Chih-Yao Ma, Zsolt Kira
 - **🏷️ 机构**: Georgia Institute of Technology, Meta
 - **会议**: CVPR 2022
 
 ### OSKDet: Orientation-sensitive Keypoint Localization for Rotated Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00125) · 📚 被引 25
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00125)
 - **作者**: Dongchen Lu, Dongmei Li, Yali Li, Shengjin Wang
 - **🏷️ 机构**: Tsinghua University,Department of Electronic Engineering
 - **会议**: CVPR 2022
 
 ### Active Teacher for Semi-Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01408) · 📚 被引 94
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01408)
 - **作者**: Peng Mi, Jianghang Lin, Yiyi Zhou, Yunhang Shen, Gen Luo, Xiaoshuai Sun et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
 
 ### Optimal Correction Cost for Object Detection Evaluation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02043) · 📚 被引 21
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02043)
 - **作者**: Mayu Otani, Riku Togashi, Yuta Nakashima, Esa Rahtu, Janne Heikkilä, Shin'ichi Satoh
 - **🏷️ 机构**: CyberAgent, Inc., Osaka University, Tampere University
 - **会议**: CVPR 2022
 
 ### Zoom In and Out: A Mixed-scale Triplet Network for Camouflaged Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00220) · 📚 被引 443
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00220)
 - **作者**: Youwei Pang, Xiaoqi Zhao, Tian-Zhu Xiang, Lihe Zhang, Huchuan Lu
 - **🏷️ 机构**: Dalian University of Technology,China, Inception Institute of Artificial Intelligence,UAE
 - **会议**: CVPR 2022
@@ -276,71 +298,79 @@
 ### Forecasting from LiDAR via Future Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01669) · 📚 被引 34
 - **作者**: Neehar Peri, Jonathon Luiten, Mengtian Li, Aljosa Osep, Laura Leal-Taixé, Deva Ramanan
-- **🏷️ 机构**: CMU
+- **🏷️ 机构**: Carnegie Mellon University, TUM Munich
 - **会议**: CVPR 2022
 
 ### Salvage of Supervision in Weakly Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01383) · 📚 被引 21
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01383)
 - **作者**: Lin Sui, Chen-Lin Zhang, Jianxin Wu
 - **🏷️ 机构**: State Key Laboratory for Novel Software Technology, Nanjing University,China
 - **会议**: CVPR 2022
 
 ### Proper Reuse of Image Classification Features Improves Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01326) · 📚 被引 23
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01326)
 - **作者**: Cristina Nader Vasconcelos, Vighnesh Birodkar, Vincent Dumoulin
 - **🏷️ 机构**: Google Research, Brain Team
 - **会议**: CVPR 2022
 
 ### C2AM Loss: Chasing a Better Decision Boundary for Long-Tail Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00685) · 📚 被引 26
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00685)
 - **作者**: Tong Wang, Yousong Zhu, Yingying Chen, Chaoyang Zhao, Bin Yu, Jinqiao Wang et al.
 - **🏷️ 机构**: National Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences,Beijing,China
 - **会议**: CVPR 2022
 
 ### Entropy-based Active Learning for Object Detection with Progressive Diversity Constraint.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00918) · 📚 被引 90
+- **链接**: [arXiv:2204.07965](https://arxiv.org/abs/2204.07965)
 - **作者**: Jiaxi Wu, Jiaxin Chen, Di Huang
 - **🏷️ 机构**: Beihang University,State Key Laboratory of Software Development Environment,Beijing,China, School of Computer Science and Engineering, Beihang University,Beijing,China
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Active learning is a promising alternative to alleviate the issue of high annotation cost in the computer vision tasks by consciously selecting more informative samples to label. Active learning for object detection is more challenging and existing efforts on it are relatively rare. In this paper, we propose a novel hybrid approach to address this problem, where the instance-level uncertainty and diversity are jointly considered in a bottom-up manner. To balance the computational complexity, the proposed approach is designed as a two-stage procedure. At the first stage, an Entropy-based Non-Maximum Suppression (ENMS) is presented to estimate the uncertainty of every image, which performs NMS according to the entropy in the feature space to remove predictions with redundant information gains. At the second stage, a diverse prototype (DivProto) strategy is explored to ensure the diversity across images by progressively converting it into the intra-class and inter-class diversities of the entropy-based class-specific prototypes. Extensive experiments are conducted on MS COCO and Pascal VOC, and the proposed approach achieves state of the art results and significantly outperforms the other counterparts, highlighting its superiority.
+
 ### Target-Relevant Knowledge Preservation for Multi-Source Domain Adaptive Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00523) · 📚 被引 30
+- **链接**: [arXiv:2204.07964](https://arxiv.org/abs/2204.07964)
 - **作者**: Jiaxi Wu, Jiaxin Chen, Mengzhe He, Yiru Wang, Bo Li, Bingqi Ma et al.
 - **🏷️ 机构**: State Key Laboratory of Software Development Environment, Beihang University,Beijing,China, School of Computer Science and Engineering, Beihang University,Beijing,China, Shenzhen Institutes of Advanced Technology, Chinese Academy of Science
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Domain adaptive object detection (DAOD) is a promising way to alleviate performance drop of detectors in new scenes. Albeit great effort made in single source domain adaptation, a more generalized task with multiple source domains remains not being well explored, due to knowledge degradation during their combination. To address this issue, we propose a novel approach, namely target-relevant knowledge preservation (TRKP), to unsupervised multi-source DAOD. Specifically, TRKP adopts the teacher-student framework, where the multi-head teacher network is built to extract knowledge from labeled source domains and guide the student network to learn detectors in unlabeled target domain. The teacher network is further equipped with an adversarial multi-source disentanglement (AMSD) module to preserve source domain-specific knowledge and simultaneously perform cross-domain alignment. Besides, a holistic target-relevant mining (HTRM) scheme is developed to re-weight the source images according to the source-target relevance. By this means, the teacher network is enforced to capture target-relevant knowledge, thus benefiting decreasing domain shift when mentoring object detection in the target domain. Extensive experiments are conducted on various widely used benchmarks with new state-of-the-art scores reported, highlighting the effectiveness.
+
 ### Single-Domain Generalized Object Detection in Urban Scene via Cyclic-Disentangled Self-Distillation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00092) · 📚 被引 121
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00092)
 - **作者**: Aming Wu, Cheng Deng
 - **🏷️ 机构**: School of Electronic Engineering, Xidian University,Xi&#x0027;an,China
 - **会议**: CVPR 2022
 
 ### Revisiting AP Loss for Dense Object Detection: Adaptive Ranking Pair Selection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01379) · 📚 被引 9
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01379)
 - **作者**: Dongli Xu, Jinhong Deng, Wen Li
 - **🏷️ 机构**: School of Computer Science and Engineering &#x0026; Shenzhen Institute for Advanced Study University of Electronic Science and Technology of China
 - **会议**: CVPR 2022
 
 ### Smartadapt: Multi-branch Object Detection Framework for Videos on Mobiles.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00256) · 📚 被引 16
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00256)
 - **作者**: Ran Xu, Fangzhou Mu, Jayoung Lee, Preeti Mukherjee, Somali Chaterji, Saurabh Bagchi et al.
 - **🏷️ 机构**: Purdue University, University of Wisconsin-Madison
 - **会议**: CVPR 2022
 
 ### H2FA R-CNN: Holistic and Hierarchical Feature Alignment for Cross-domain Weakly Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01393) · 📚 被引 49
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01393)
 - **作者**: Yunqiu Xu, Yifan Sun, Zongxin Yang, Jiaxu Miao, Yi Yang
 - **🏷️ 机构**: Baidu Research, Zhejiang University,CCAI
 - **会议**: CVPR 2022
 
 ### Balanced and Hierarchical Relation Learning for One-shot Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00744) · 📚 被引 26
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00744)
 - **作者**: Hanqing Yang, Sijia Cai, Hualian Sheng, Bing Deng, Jianqiang Huang, Xian-Sheng Hua et al.
 - **🏷️ 机构**: State Key Laboratory of Industrial Control Technology, College of Control Science and Engineering, Zhejiang University, DAMO Academy, Alibaba Group, Shudao Investment Group Co., Ltd
 - **会议**: CVPR 2022
 
 ### Continual Object Detection via Prototypical Task Correlation Guided Gating Mechanism.
-- **链接**: [arXiv:2205.03055](https://arxiv.org/abs/2205.03055) · [出版页](https://doi.org/10.1109/CVPR52688.2022.00904) · 📚 被引 38
+- **链接**: [arXiv:2205.03055](https://arxiv.org/abs/2205.03055)
 - **作者**: Binbin Yang, Xinchi Deng, Han Shi, Changlin Li, Gengwei Zhang, Hang Xu et al.
 - **🏷️ 机构**: Sun Yat-sen University, The Hong Kong University of Science and Technology, ReLER, AAII, UTS
 - **会议**: CVPR 2022
@@ -350,7 +380,7 @@
   > Continual learning is a challenging real-world problem for constructing a mature AI system when data are provided in a streaming fashion. Despite recent progress in continual classification, the researches of continual object detection are impeded by the diverse sizes and numbers of objects in each image. Different from previous works that tune the whole network for all tasks, in this work, we present a simple and flexible framework for continual object detection via pRotOtypical taSk corrElaTion guided gaTing mechAnism (ROSETTA). Concretely, a unified framework is shared by all tasks while task-aware gates are introduced to automatically select sub-models for specific tasks. In this way, various knowledge can be successively memorized by storing their corresponding sub-model weights in this system. To make ROSETTA automatically determine which experience is available and useful, a prototypical task correlation guided Gating Diversity Controller(GDC) is introduced to adaptively adjust the diversity of gates for the new task based on class-specific prototypes. GDC module computes class-to-class correlation matrix to depict the cross-task correlation, and hereby activates more exclusive gates for the new task if a significant domain gap is observed. Comprehensive experiments on COCO-VOC, KITTI-Kitchen, class-incremental detection on VOC and sequential learning of four tasks show that ROSETTA yields state-of-the-art performance on both task-based and class-based continual object detection.
 
 ### QueryDet: Cascaded Sparse Query for Accelerating High-Resolution Small Object Detection.
-- **链接**: [arXiv:2103.09136](https://arxiv.org/abs/2103.09136) · [出版页](https://doi.org/10.1109/CVPR52688.2022.01330) · [代码](https://github.com/ChenhongyiYang/QueryDet-PyTorch) · 📚 被引 521
+- **链接**: [arXiv:2103.09136](https://arxiv.org/abs/2103.09136) · [代码](https://github.com/ChenhongyiYang/QueryDet-PyTorch)
 - **作者**: Chenhongyi Yang, Zehao Huang, Naiyan Wang
 - **🏷️ 机构**: University of Edinburgh, TuSimple
 - **会议**: CVPR 2022
@@ -360,9 +390,9 @@
   > While general object detection with deep learning has achieved great success in the past few years, the performance and efficiency of detecting small objects are far from satisfactory. The most common and effective way to promote small object detection is to use high-resolution images or feature maps. However, both approaches induce costly computation since the computational cost grows squarely as the size of images and features increases. To get the best of two worlds, we propose QueryDet that uses a novel query mechanism to accelerate the inference speed of feature-pyramid based object detectors. The pipeline composes two steps: it first predicts the coarse locations of small objects on low-resolution features and then computes the accurate detection results using high-resolution features sparsely guided by those coarse positions. In this way, we can not only harvest the benefit of high-resolution feature maps but also avoid useless computation for the background area. On the popular COCO dataset, the proposed method improves the detection mAP by 1.0 and mAP-small by 2.0, and the high-resolution inference speed is improved to 3.0x on average. On VisDrone dataset, which contains more small objects, we create a new state-of-the-art while gaining a 2.3x high-resolution acceleration on average. Code is available at https://github.com/ChenhongyiYang/QueryDet-PyTorch.
 
 ### Real-time Object Detection for Streaming Perception.
-- **链接**: [arXiv:2203.12338](https://arxiv.org/abs/2203.12338) · [出版页](https://doi.org/10.1109/CVPR52688.2022.00531) · [代码](https://github.com/yancie-yjr/StreamYOLO) · 📚 被引 58
+- **链接**: [arXiv:2203.12338](https://arxiv.org/abs/2203.12338) · [代码](https://github.com/yancie-yjr/StreamYOLO) · 📚 被引 58
 - **作者**: Jinrong Yang, Songtao Liu, Zeming Li, Xiaoping Li, Jian Sun
-- **🏷️ 机构**: MEGVII
+- **🏷️ 机构**: Huazhong University of Science and Technology, Megvii Technology
 - **会议**: CVPR 2022
 
 - **摘要（英，原文）**:
@@ -370,43 +400,43 @@
   > Autonomous driving requires the model to perceive the environment and (re)act within a low latency for safety. While past works ignore the inevitable changes in the environment after processing, streaming perception is proposed to jointly evaluate the latency and accuracy into a single metric for video online perception. In this paper, instead of searching trade-offs between accuracy and speed like previous works, we point out that endowing real-time models with the ability to predict the future is the key to dealing with this problem. We build a simple and effective framework for streaming perception. It equips a novel DualFlow Perception module (DFP), which includes dynamic and static flows to capture the moving trend and basic detection feature for streaming prediction. Further, we introduce a Trend-Aware Loss (TAL) combined with a trend factor to generate adaptive weights for objects with different moving speeds. Our simple method achieves competitive performance on Argoverse-HD dataset and improves the AP by 4.9% compared to the strong baseline, validating its effectiveness. Our code will be made available at https://github.com/yancie-yjr/StreamYOLO.
 
 ### Sylph: A Hypernetwork Framework for Incremental Few-shot Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00883) · 📚 被引 47
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00883)
 - **作者**: Li Yin, Juan M. Perez-Rua, Kevin J. Liang
 - **🏷️ 机构**: Meta AI
 - **会议**: CVPR 2022
 
 ### Democracy Does Matter: Comprehensive Feature Mining for Co-Salient Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00105) · 📚 被引 77
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00105)
 - **作者**: Siyue Yu, Jimin Xiao, Bingfeng Zhang, Eng Gee Lim
 - **🏷️ 机构**: XJTLU
 - **会议**: CVPR 2022
 
 ### Kernelized Few-shot Object Detection with Efficient Integral Aggregation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01861) · 📚 被引 64
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01861)
 - **作者**: Shan Zhang, Lei Wang, Naila Murray, Piotr Koniusz
 - **🏷️ 机构**: Australian National University, University of Wollongong, Meta AI Research
 - **会议**: CVPR 2022
 
 ### Group R-CNN for Weakly Semi-supervised Object Detection with Points.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00920) · 📚 被引 52
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00920)
 - **作者**: Shilong Zhang, Zhuoran Yu, Liyang Liu, Xinjiang Wang, Aojun Zhou, Kai Chen
 - **🏷️ 机构**: Shanghai AI Laboratory, Georgia Institute of Technology, Tencent AI Platform Department,China
 - **会议**: CVPR 2022
 
 ### Task-specific Inconsistency Alignment for Domain Adaptive Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01382) · 📚 被引 122
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01382)
 - **作者**: Liang Zhao, Limin Wang
 - **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology,China
 - **会议**: CVPR 2022
 
 ### Semantic-aligned Fusion Transformer for One-shot Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00745) · 📚 被引 30
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00745)
 - **作者**: Yizhou Zhao, Xun Guo, Yan Lu
 - **🏷️ 机构**: Carnegie Mellon University, Microsoft Research Asia
 - **会议**: CVPR 2022
 
 ### Localization Distillation for Dense Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00919) · 📚 被引 197
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00919)
 - **作者**: Zhaohui Zheng, Rongguang Ye, Ping Wang, Dongwei Ren, Wangmeng Zuo, Qibin Hou et al.
 - **🏷️ 机构**: Nankai University,TMCC, CS, School of Mathematics, Tianjin University, School of Computer Science and Technology, Harbin Institute of Technology
 - **会议**: CVPR 2022
@@ -414,11 +444,11 @@
 ### Progressive End-to-End Object Detection in Crowded Scenes.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00093) · 📚 被引 73
 - **作者**: Anlin Zheng, Yuang Zhang, Xiangyu Zhang, Xiaojuan Qi, Jian Sun
-- **🏷️ 机构**: MEGVII
+- **🏷️ 机构**: MEGVII Technology, Shanghai Jiao Tong University, University of Hong Kong
 - **会议**: CVPR 2022
 
 ### Multi-Granularity Alignment Domain Adaptation for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00936) · 📚 被引 110
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00936)
 - **作者**: Wenzhang Zhou, Dawei Du, Libo Zhang, Tiejian Luo, Yanjun Wu
 - **🏷️ 机构**: University of Chinese Academy of Sciences,Beijing,China, Kitware, Inc.,NY,USA, Institute of Software, Chinese Academy of Sciences,Beijing,China
 - **会议**: CVPR 2022
