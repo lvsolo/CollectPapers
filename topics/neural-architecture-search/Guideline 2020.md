@@ -6,10 +6,14 @@
 > 同领域其他年份: 
 
 ### Hit-Detector: Hierarchical Trinity Architecture Search for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Hit-Detector_Hierarchical_Trinity_Architecture_Search_for_Object_Detection_CVPR_2020_paper.html)
+- **链接**: [arXiv:2003.11818](https://arxiv.org/abs/2003.11818) · [代码](https://github.com/ggjy/HitDet.pytorch)
 - **作者**: Jianyuan Guo, Kai Han, Yunhe Wang, Chao Zhang, Zhaohui Yang, Han Wu et al.
 - **🏷️ 机构**: Key Lab of Machine Perception (MOE), Dept. of Machine Intelligence, Peking University; Noah's Ark Lab, Huawei Technologies, Noah's Ark Lab, Huawei Technologies, Key Lab of Machine Perception (MOE), Dept. of Machine Intelligence, Peking University
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Neural Architecture Search (NAS) has achieved great success in image classification task. Some recent works have managed to explore the automatic design of efficient backbone or feature fusion layer for object detection. However, these methods focus on searching only one certain component of object detector while leaving others manually designed. We identify the inconsistency between searched component and manually designed ones would withhold the detector of stronger performance. To this end, we propose a hierarchical trinity search framework to simultaneously discover efficient architectures for all components (i.e. backbone, neck, and head) of object detector in an end-to-end manner. In addition, we empirically reveal that different parts of the detector prefer different operators. Motivated by this, we employ a novel scheme to automatically screen different sub search spaces for different components so as to perform the end-to-end search for each component on the corresponding sub search space efficiently. Without bells and whistles, our searched architecture, namely Hit-Detector, achieves 41.4\% mAP on COCO minival set with 27M parameters. Our implementation is available at https://github.com/ggjy/HitDet.pytorch.
 
 ### SP-NAS: Serial-to-Parallel Backbone Search for Object Detection.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Jiang_SP-NAS_Serial-to-Parallel_Backbone_Search_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 55
@@ -18,22 +22,34 @@
 - **会议**: CVPR 2020
 
 ### NAS-FCOS: Fast Neural Architecture Search for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_NAS-FCOS_Fast_Neural_Architecture_Search_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 201
+- **链接**: [arXiv:1906.04423](https://arxiv.org/abs/1906.04423) · 📚 被引 201
 - **作者**: Ning Wang, Yang Gao, Hao Chen, Peng Wang, Zhi Tian, Chunhua Shen et al.
 - **🏷️ 机构**: ZJU
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > The success of deep neural networks relies on significant architecture engineering. Recently neural architecture search (NAS) has emerged as a promise to greatly reduce manual effort in network design by automatically searching for optimal architectures, although typically such algorithms need an excessive amount of computational resources, e.g., a few thousand GPU-days. To date, on challenging vision tasks such as object detection, NAS, especially fast versions of NAS, is less studied. Here we propose to search for the decoder structure of object detectors with search efficiency being taken into consideration. To be more specific, we aim to efficiently search for the feature pyramid network (FPN) as well as the prediction head of a simple anchor-free object detector, namely FCOS, using a tailored reinforcement learning paradigm. With carefully designed search space, search algorithms and strategies for evaluating network quality, we are able to efficiently search a top-performing detection architecture within 4 days using 8 V100 GPUs. The discovered architecture surpasses state-of-the-art object detection models (such as Faster R-CNN, RetinaNet and FCOS) by 1.5 to 3.5 points in AP on the COCO dataset, with comparable computation complexity and memory footprint, demonstrating the efficacy of the proposed NAS for object detection.
+
 ### Densely Connected Search Space for More Flexible Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Fang_Densely_Connected_Search_Space_for_More_Flexible_Neural_Architecture_Search_CVPR_2020_paper.html) · 📚 被引 98
+- **链接**: [arXiv:1906.09607](https://arxiv.org/abs/1906.09607) · [代码](https://github.com/JaminFong/DenseNAS) · 📚 被引 98
 - **作者**: Jiemin Fang, Yuzhu Sun, Qian Zhang, Yuan Li, Wenyu Liu, Xinggang Wang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Neural architecture search (NAS) has dramatically advanced the development of neural network design. We revisit the search space design in most previous NAS methods and find the number and widths of blocks are set manually. However, block counts and block widths determine the network scale (depth and width) and make a great influence on both the accuracy and the model cost (FLOPs/latency). In this paper, we propose to search block counts and block widths by designing a densely connected search space, i.e., DenseNAS. The new search space is represented as a dense super network, which is built upon our designed routing blocks. In the super network, routing blocks are densely connected and we search for the best path between them to derive the final architecture. We further propose a chained cost estimation algorithm to approximate the model cost during the search. Both the accuracy and model cost are optimized in DenseNAS. For experiments on the MobileNetV2-based search space, DenseNAS achieves 75.3% top-1 accuracy on ImageNet with only 361MB FLOPs and 17.9ms latency on a single TITAN-XP. The larger model searched by DenseNAS achieves 76.1% accuracy with only 479M FLOPs. DenseNAS further promotes the ImageNet classification accuracies of ResNet-18, -34 and -50-B by 1.5%, 0.5% and 0.3% with 200M, 600M and 680M FLOPs reduction respectively. The related code is available at https://github.com/JaminFong/DenseNAS.
+
 ### Can Weight Sharing Outperform Random Architecture Search? An Investigation With TuNAS.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Bender_Can_Weight_Sharing_Outperform_Random_Architecture_Search_An_Investigation_With_CVPR_2020_paper.html)
+- **链接**: [arXiv:2008.06120](https://arxiv.org/abs/2008.06120) · [代码](https://github.com/google-research/google-research)
 - **作者**: Gabriel Bender, Hanxiao Liu, Bo Chen, Grace Chu, Shuyang Cheng, Pieter-Jan Kindermans et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Efficient Neural Architecture Search methods based on weight sharing have shown good promise in democratizing Neural Architecture Search for computer vision models. There is, however, an ongoing debate whether these efficient methods are significantly better than random search. Here we perform a thorough comparison between efficient and random search methods on a family of progressively larger and more challenging search spaces for image classification and detection on ImageNet and COCO. While the efficacies of both methods are problem-dependent, our experiments demonstrate that there are large, realistic tasks where efficient search methods can provide substantial gains over random search. In addition, we propose and evaluate techniques which improve the quality of searched architectures and reduce the need for manual hyper-parameter tuning. Source code and experiment data are available at https://github.com/google-research/google-research/tree/master/tunas
 
 ### MTL-NAS: Task-Agnostic Neural Architecture Search Towards General-Purpose Multi-Task Learning.
 - **链接**: [arXiv:2003.14058](https://arxiv.org/abs/2003.14058) · [代码](https://github.com/bhpfelix/MTLNAS) · 📚 被引 66
@@ -72,22 +88,34 @@
 - **会议**: CVPR 2020
 
 ### MiLeNAS: Efficient Neural Architecture Search via Mixed-Level Reformulation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/He_MiLeNAS_Efficient_Neural_Architecture_Search_via_Mixed-Level_Reformulation_CVPR_2020_paper.html)
+- **链接**: [arXiv:2003.12238](https://arxiv.org/abs/2003.12238)
 - **作者**: Chaoyang He, Haishan Ye, Li Shen, Tong Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Many recently proposed methods for Neural Architecture Search (NAS) can be formulated as bilevel optimization. For efficient implementation, its solution requires approximations of second-order methods. In this paper, we demonstrate that gradient errors caused by such approximations lead to suboptimality, in the sense that the optimization procedure fails to converge to a (locally) optimal solution. To remedy this, this paper proposes \mldas, a mixed-level reformulation for NAS that can be optimized efficiently and reliably. It is shown that even when using a simple first-order method on the mixed-level formulation, \mldas\ can achieve a lower validation error for NAS problems. Consequently, architectures obtained by our method achieve consistently higher accuracies than those obtained from bilevel optimization. Moreover, \mldas\ proposes a framework beyond DARTS. It is upgraded via model size-based search and early stopping strategies to complete the search process in around 5 hours. Extensive experiments within the convolutional architecture search space validate the effectiveness of our approach.
+
 ### DSNAS: Direct Neural Architecture Search Without Parameter Retraining.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Hu_DSNAS_Direct_Neural_Architecture_Search_Without_Parameter_Retraining_CVPR_2020_paper.html) · 📚 被引 85
+- **链接**: [arXiv:2002.09128](https://arxiv.org/abs/2002.09128) · [代码](https://github.com/SNAS-Series/SNAS-Series) · 📚 被引 85
 - **作者**: Shoukang Hu, Sirui Xie, Hehui Zheng, Chunxiao Liu, Jianping Shi, Xunying Liu et al.
 - **🏷️ 机构**: CUHK
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > If NAS methods are solutions, what is the problem? Most existing NAS methods require two-stage parameter optimization. However, performance of the same architecture in the two stages correlates poorly. In this work, we propose a new problem definition for NAS, task-specific end-to-end, based on this observation. We argue that given a computer vision task for which a NAS method is expected, this definition can reduce the vaguely-defined NAS evaluation to i) accuracy of this task and ii) the total computation consumed to finally obtain a model with satisfying accuracy. Seeing that most existing methods do not solve this problem directly, we propose DSNAS, an efficient differentiable NAS framework that simultaneously optimizes architecture and parameters with a low-biased Monte Carlo estimate. Child networks derived from DSNAS can be deployed directly without parameter retraining. Comparing with two-stage methods, DSNAS successfully discovers networks with comparable accuracy (74.4%) on ImageNet in 420 GPU hours, reducing the total time by more than 34%. Our implementation is available at https://github.com/SNAS-Series/SNAS-Series.
+
 ### Neural Architecture Search for Lightweight Non-Local Networks.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_Neural_Architecture_Search_for_Lightweight_Non-Local_Networks_CVPR_2020_paper.html) · 📚 被引 35
+- **链接**: [arXiv:2004.01961](https://arxiv.org/abs/2004.01961) · [代码](https://github.com/LiYingwei/AutoNL) · 📚 被引 35
 - **作者**: Yingwei Li, Xiaojie Jin, Jieru Mei, Xiaochen Lian, Linjie Yang, Cihang Xie et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Non-Local (NL) blocks have been widely studied in various vision tasks. However, it has been rarely explored to embed the NL blocks in mobile neural networks, mainly due to the following challenges: 1) NL blocks generally have heavy computation cost which makes it difficult to be applied in applications where computational resources are limited, and 2) it is an open problem to discover an optimal configuration to embed NL blocks into mobile neural networks. We propose AutoNL to overcome the above two obstacles. Firstly, we propose a Lightweight Non-Local (LightNL) block by squeezing the transformation operations and incorporating compact features. With the novel design choices, the proposed LightNL block is 400x computationally cheaper} than its conventional counterpart without sacrificing the performance. Secondly, by relaxing the structure of the LightNL block to be differentiable during training, we propose an efficient neural architecture search algorithm to learn an optimal configuration of LightNL blocks in an end-to-end manner. Notably, using only 32 GPU hours, the searched AutoNL model achieves 77.7% top-1 accuracy on ImageNet under a typical mobile setting (350M FLOPs), significantly outperforming previous mobile models including MobileNetV2 (+5.7%), FBNet (+2.8%) and MnasNet (+2.1%). Code and models are available at https://github.com/LiYingwei/AutoNL.
 
 ### Block-Wisely Supervised Neural Architecture Search With Knowledge Distillation.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_Block-Wisely_Supervised_Neural_Architecture_Search_With_Knowledge_Distillation_CVPR_2020_paper.html) · 📚 被引 119
@@ -96,10 +124,14 @@
 - **会议**: CVPR 2020
 
 ### SGAS: Sequential Greedy Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_SGAS_Sequential_Greedy_Architecture_Search_CVPR_2020_paper.html)
+- **链接**: [arXiv:1912.00195](https://arxiv.org/abs/1912.00195)
 - **作者**: Guohao Li, Guocheng Qian, Itzel C. Delgadillo, Matthias Müller, Ali K. Thabet, Bernard Ghanem
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Architecture design has become a crucial component of successful deep learning. Recent progress in automatic neural architecture search (NAS) shows a lot of promise. However, discovered architectures often fail to generalize in the final evaluation. Architectures with a higher validation accuracy during the search phase may perform worse in the evaluation. Aiming to alleviate this common issue, we introduce sequential greedy architecture search (SGAS), an efficient method for neural architecture search. By dividing the search procedure into sub-problems, SGAS chooses and prunes candidate operations in a greedy fashion. We apply SGAS to search architectures for Convolutional Neural Networks (CNN) and Graph Convolutional Networks (GCN). Extensive experiments show that SGAS is able to find state-of-the-art architectures for tasks such as image classification, point cloud classification and node classification in protein-protein interaction graphs with minimal computational cost. Please visit https://www.deepgcns.org/auto/sgas for more information about SGAS.
 
 ### GP-NAS: Gaussian Process Based Neural Architecture Search.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_GP-NAS_Gaussian_Process_Based_Neural_Architecture_Search_CVPR_2020_paper.html)
@@ -108,10 +140,14 @@
 - **会议**: CVPR 2020
 
 ### Graph-Guided Architecture Search for Real-Time Semantic Segmentation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Lin_Graph-Guided_Architecture_Search_for_Real-Time_Semantic_Segmentation_CVPR_2020_paper.html) · 📚 被引 87
+- **链接**: [arXiv:1909.06793](https://arxiv.org/abs/1909.06793) · 📚 被引 87
 - **作者**: Peiwen Lin, Peng Sun, Guangliang Cheng, Sirui Xie, Xi Li, Jianping Shi
 - **🏷️ 机构**: ZJU
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Designing a lightweight semantic segmentation network often requires researchers to find a trade-off between performance and speed, which is always empirical due to the limited interpretability of neural networks. In order to release researchers from these tedious mechanical trials, we propose a Graph-guided Architecture Search (GAS) pipeline to automatically search real-time semantic segmentation networks. Unlike previous works that use a simplified search space and stack a repeatable cell to form a network, we introduce a novel search mechanism with new search space where a lightweight model can be effectively explored through the cell-level diversity and latencyoriented constraint. Specifically, to produce the cell-level diversity, the cell-sharing constraint is eliminated through the cell-independent manner. Then a graph convolution network (GCN) is seamlessly integrated as a communication mechanism between cells. Finally, a latency-oriented constraint is endowed into the search process to balance the speed and performance. Extensive experiments on Cityscapes and CamVid datasets demonstrate that GAS achieves the new state-of-the-art trade-off between accuracy and speed. In particular, on Cityscapes dataset, GAS achieves the new best performance of 73.5% mIoU with speed of 108.4 FPS on Titan Xp.
 
 ### MemNAS: Memory-Efficient Neural Architecture Search With Grow-Trim Learning.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Liu_MemNAS_Memory-Efficient_Neural_Architecture_Search_With_Grow-Trim_Learning_CVPR_2020_paper.html) · 📚 被引 12
@@ -120,16 +156,24 @@
 - **会议**: CVPR 2020
 
 ### UNAS: Differentiable Architecture Search Meets Reinforcement Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Vahdat_UNAS_Differentiable_Architecture_Search_Meets_Reinforcement_Learning_CVPR_2020_paper.html) · 📚 被引 24
+- **链接**: [arXiv:1912.07651](https://arxiv.org/abs/1912.07651) · [代码](https://github.com/NVlabs/unas) · 📚 被引 24
 - **作者**: Arash Vahdat, Arun Mallya, Ming-Yu Liu, Jan Kautz
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Neural architecture search (NAS) aims to discover network architectures with desired properties such as high accuracy or low latency. Recently, differentiable NAS (DNAS) has demonstrated promising results while maintaining a search cost orders of magnitude lower than reinforcement learning (RL) based NAS. However, DNAS models can only optimize differentiable loss functions in search, and they require an accurate differentiable approximation of non-differentiable criteria. In this work, we present UNAS, a unified framework for NAS, that encapsulates recent DNAS and RL-based approaches under one framework. Our framework brings the best of both worlds, and it enables us to search for architectures with both differentiable and non-differentiable criteria in one unified framework while maintaining a low search cost. Further, we introduce a new objective function for search based on the generalization gap that prevents the selection of architectures prone to overfitting. We present extensive experiments on the CIFAR-10, CIFAR-100, and ImageNet datasets and we perform search in two fundamentally different search spaces. We show that UNAS obtains the state-of-the-art average accuracy on all three datasets when compared to the architectures searched in the DARTS space. Moreover, we show that UNAS can find an efficient and accurate architecture in the ProxylessNAS search space, that outperforms existing MobileNetV2 based architectures. The source code is available at https://github.com/NVlabs/unas .
+
 ### FBNetV2: Differentiable Neural Architecture Search for Spatial and Channel Dimensions.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wan_FBNetV2_Differentiable_Neural_Architecture_Search_for_Spatial_and_Channel_Dimensions_CVPR_2020_paper.html) · 📚 被引 238
+- **链接**: [arXiv:2004.05565](https://arxiv.org/abs/2004.05565) · [代码](https://github.com/facebookresearch/mobile-vision) · 📚 被引 238
 - **作者**: Alvin Wan, Xiaoliang Dai, Peizhao Zhang, Zijian He, Yuandong Tian, Saining Xie et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Differentiable Neural Architecture Search (DNAS) has demonstrated great success in designing state-of-the-art, efficient neural networks. However, DARTS-based DNAS's search space is small when compared to other search methods', since all candidate network layers must be explicitly instantiated in memory. To address this bottleneck, we propose a memory and computationally efficient DNAS variant: DMaskingNAS. This algorithm expands the search space by up to $10^{14}\times$ over conventional DNAS, supporting searches over spatial and channel dimensions that are otherwise prohibitively expensive: input resolution and number of filters. We propose a masking mechanism for feature map reuse, so that memory and computational costs stay nearly constant as the search space expands. Furthermore, we employ effective shape propagation to maximize per-FLOP or per-parameter accuracy. The searched FBNetV2s yield state-of-the-art performance when compared with all previous architectures. With up to 421$\times$ less search cost, DMaskingNAS finds models with 0.9% higher accuracy, 15% fewer FLOPs than MobileNetV3-Small; and with similar accuracy but 20% fewer FLOPs than Efficient-B0. Furthermore, our FBNetV2 outperforms MobileNetV3 by 2.6% in accuracy, with equivalent model size. FBNetV2 models are open-sourced at https://github.com/facebookresearch/mobile-vision.
 
 ### CARS: Continuous Evolution for Efficient Neural Architecture Search.
 - **链接**: [arXiv:1909.04977](https://arxiv.org/abs/1909.04977) · 📚 被引 215
@@ -158,13 +202,21 @@
 - **会议**: CVPR 2020
 
 ### Rethinking Performance Estimation in Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zheng_Rethinking_Performance_Estimation_in_Neural_Architecture_Search_CVPR_2020_paper.html) · 📚 被引 24
+- **链接**: [arXiv:2005.09917](https://arxiv.org/abs/2005.09917) · 📚 被引 24
 - **作者**: Xiawu Zheng, Rongrong Ji, Qiang Wang, Qixiang Ye, Zhenguo Li, Yonghong Tian et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Neural architecture search (NAS) remains a challenging problem, which is attributed to the indispensable and time-consuming component of performance estimation (PE). In this paper, we provide a novel yet systematic rethinking of PE in a resource constrained regime, termed budgeted PE (BPE), which precisely and effectively estimates the performance of an architecture sampled from an architecture space. Since searching an optimal BPE is extremely time-consuming as it requires to train a large number of networks for evaluation, we propose a Minimum Importance Pruning (MIP) approach. Given a dataset and a BPE search space, MIP estimates the importance of hyper-parameters using random forest and subsequently prunes the minimum one from the next iteration. In this way, MIP effectively prunes less important hyper-parameters to allocate more computational resource on more important ones, thus achieving an effective exploration. By combining BPE with various search algorithms including reinforcement learning, evolution algorithm, random search, and differentiable architecture search, we achieve 1, 000x of NAS speed up with a negligible performance drop comparing to the SOTA
+
 ### EcoNAS: Finding Proxies for Economical Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhou_EcoNAS_Finding_Proxies_for_Economical_Neural_Architecture_Search_CVPR_2020_paper.html) · 📚 被引 93
+- **链接**: [arXiv:2001.01233](https://arxiv.org/abs/2001.01233) · 📚 被引 93
 - **作者**: Dongzhan Zhou, Xinchi Zhou, Wenwei Zhang, Chen Change Loy, Shuai Yi, Xuesen Zhang et al.
 - **🏷️ 机构**: NTU S-Lab
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Neural Architecture Search (NAS) achieves significant progress in many computer vision tasks. While many methods have been proposed to improve the efficiency of NAS, the search progress is still laborious because training and evaluating plausible architectures over large search space is time-consuming. Assessing network candidates under a proxy (i.e., computationally reduced setting) thus becomes inevitable. In this paper, we observe that most existing proxies exhibit different behaviors in maintaining the rank consistency among network candidates. In particular, some proxies can be more reliable -- the rank of candidates does not differ much comparing their reduced setting performance and final performance. In this paper, we systematically investigate some widely adopted reduction factors and report our observations. Inspired by these observations, we present a reliable proxy and further formulate a hierarchical proxy strategy. The strategy spends more computations on candidate networks that are potentially more accurate, while discards unpromising ones in early stage with a fast proxy. This leads to an economical evolutionary-based NAS (EcoNAS), which achieves an impressive 400x search time reduction in comparison to the evolutionary-based state of the art (8 vs. 3150 GPU days). Some new proxies led by our observations can also be applied to accelerate other NAS methods while still able to discover good candidate networks with performance matching those found by previous proxy strategies.

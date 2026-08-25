@@ -54,16 +54,24 @@
 - **会议**: CVPR 2020
 
 ### Weakly-Supervised 3D Human Pose Learning via Multi-View Images in the Wild.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Iqbal_Weakly-Supervised_3D_Human_Pose_Learning_via_Multi-View_Images_in_the_CVPR_2020_paper.html) · 📚 被引 98
+- **链接**: [arXiv:2003.07581](https://arxiv.org/abs/2003.07581) · 📚 被引 98
 - **作者**: Umar Iqbal, Pavlo Molchanov, Jan Kautz
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > One major challenge for monocular 3D human pose estimation in-the-wild is the acquisition of training data that contains unconstrained images annotated with accurate 3D poses. In this paper, we address this challenge by proposing a weakly-supervised approach that does not require 3D annotations and learns to estimate 3D poses from unlabeled multi-view data, which can be acquired easily in in-the-wild environments. We propose a novel end-to-end learning framework that enables weakly-supervised training using multi-view consistency. Since multi-view consistency is prone to degenerated solutions, we adopt a 2.5D pose representation and propose a novel objective function that can only be minimized when the predictions of the trained model are consistent and plausible across all camera views. We evaluate our proposed approach on two large scale datasets (Human3.6M and MPII-INF-3DHP) where it achieves state-of-the-art performance among semi-/weakly-supervised methods.
+
 ### A Novel Recurrent Encoder-Decoder Structure for Large-Scale Multi-View Stereo Reconstruction From an Open Aerial Dataset.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Liu_A_Novel_Recurrent_Encoder-Decoder_Structure_for_Large-Scale_Multi-View_Stereo_Reconstruction_CVPR_2020_paper.html) · 📚 被引 110
+- **链接**: [arXiv:2003.00637](https://arxiv.org/abs/2003.00637) · 📚 被引 110
 - **作者**: Jin Liu, Shunping Ji
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > A great deal of research has demonstrated recently that multi-view stereo (MVS) matching can be solved with deep learning methods. However, these efforts were focused on close-range objects and only a very few of the deep learning-based methods were specifically designed for large-scale 3D urban reconstruction due to the lack of multi-view aerial image benchmarks. In this paper, we present a synthetic aerial dataset, called the WHU dataset, we created for MVS tasks, which, to our knowledge, is the first large-scale multi-view aerial dataset. It was generated from a highly accurate 3D digital surface model produced from thousands of real aerial images with precise camera parameters. We also introduce in this paper a novel network, called RED-Net, for wide-range depth inference, which we developed from a recurrent encoder-decoder structure to regularize cost maps across depths and a 2D fully convolutional network as framework. RED-Net's low memory requirements and high performance make it suitable for large-scale and highly accurate 3D Earth surface reconstruction. Our experiments confirmed that not only did our method exceed the current state-of-the-art MVS methods by more than 50% mean absolute error (MAE) with less memory and computational cost, but its efficiency as well. It outperformed one of the best commercial software programs based on conventional methods, improving their efficiency 16 times over. Moreover, we proved that our RED-Net model pre-trained on the synthetic WHU dataset can be efficiently transferred to very different multi-view aerial image datasets without any fine-tuning. Dataset are available at http://gpcv.whu.edu.cn/data.
 
 ### KeyPose: Multi-View 3D Labeling and Keypoint Estimation for Transparent Objects.
 - **链接**: [arXiv:1912.02805](https://arxiv.org/abs/1912.02805) · 📚 被引 110
@@ -116,16 +124,24 @@
 - **会议**: CVPR 2020
 
 ### Fast-MVSNet: Sparse-to-Dense Multi-View Stereo With Learned Propagation and Gauss-Newton Refinement.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yu_Fast-MVSNet_Sparse-to-Dense_Multi-View_Stereo_With_Learned_Propagation_and_Gauss-Newton_Refinement_CVPR_2020_paper.html) · 📚 被引 231
+- **链接**: [arXiv:2003.13017](https://arxiv.org/abs/2003.13017) · [代码](https://github.com/svip-lab/FastMVSNet) · 📚 被引 231
 - **作者**: Zehao Yu, Shenghua Gao
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Almost all previous deep learning-based multi-view stereo (MVS) approaches focus on improving reconstruction quality. Besides quality, efficiency is also a desirable feature for MVS in real scenarios. Towards this end, this paper presents a Fast-MVSNet, a novel sparse-to-dense coarse-to-fine framework, for fast and accurate depth estimation in MVS. Specifically, in our Fast-MVSNet, we first construct a sparse cost volume for learning a sparse and high-resolution depth map. Then we leverage a small-scale convolutional neural network to encode the depth dependencies for pixels within a local region to densify the sparse high-resolution depth map. At last, a simple but efficient Gauss-Newton layer is proposed to further optimize the depth map. On one hand, the high-resolution depth map, the data-adaptive propagation method and the Gauss-Newton layer jointly guarantee the effectiveness of our method. On the other hand, all modules in our Fast-MVSNet are lightweight and thus guarantee the efficiency of our approach. Besides, our approach is also memory-friendly because of the sparse depth representation. Extensive experimental results show that our method is 5$\times$ and 14$\times$ faster than Point-MVSNet and R-MVSNet, respectively, while achieving comparable or even better results on the challenging Tanks and Temples dataset as well as the DTU dataset. Code is available at https://github.com/svip-lab/FastMVSNet.
+
 ### Fusing Wearable IMUs With Multi-View Images for Human Pose Estimation: A Geometric Approach.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhang_Fusing_Wearable_IMUs_With_Multi-View_Images_for_Human_Pose_Estimation_CVPR_2020_paper.html) · 📚 被引 66
+- **链接**: [arXiv:2003.11163](https://arxiv.org/abs/2003.11163) · [代码](https://github.com/CHUNYUWANG/imu-human-pose-pytorch) · 📚 被引 66
 - **作者**: Zhe Zhang, Chunyu Wang, Wenhu Qin, Wenjun Zeng
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > We propose to estimate 3D human pose from multi-view images and a few IMUs attached at person's limbs. It operates by firstly detecting 2D poses from the two signals, and then lifting them to the 3D space. We present a geometric approach to reinforce the visual features of each pair of joints based on the IMUs. This notably improves 2D pose estimation accuracy especially when one joint is occluded. We call this approach Orientation Regularized Network (ORN). Then we lift the multi-view 2D poses to the 3D space by an Orientation Regularized Pictorial Structure Model (ORPSM) which jointly minimizes the projection error between the 3D and 2D poses, along with the discrepancy between the 3D pose and IMU orientations. The simple two-step approach reduces the error of the state-of-the-art by a large margin on a public dataset. Our code will be released at https://github.com/CHUNYUWANG/imu-human-pose-pytorch.
 
 ### SDC-Depth: Semantic Divide-and-Conquer Network for Monocular Depth Estimation.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_SDC-Depth_Semantic_Divide-and-Conquer_Network_for_Monocular_Depth_Estimation_CVPR_2020_paper.html) · 📚 被引 111
@@ -146,7 +162,11 @@
 - **会议**: CVPR 2020
 
 ### Predicting Sharp and Accurate Occlusion Boundaries in Monocular Depth Estimation Using Displacement Fields.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Ramamonjisoa_Predicting_Sharp_and_Accurate_Occlusion_Boundaries_in_Monocular_Depth_Estimation_CVPR_2020_paper.html) · 📚 被引 54
+- **链接**: [arXiv:2002.12730](https://arxiv.org/abs/2002.12730) · 📚 被引 54
 - **作者**: Michaël Ramamonjisoa, Yuming Du, Vincent Lepetit
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Current methods for depth map prediction from monocular images tend to predict smooth, poorly localized contours for the occlusion boundaries in the input image. This is unfortunate as occlusion boundaries are important cues to recognize objects, and as we show, may lead to a way to discover new objects from scene reconstruction. To improve predicted depth maps, recent methods rely on various forms of filtering or predict an additive residual depth map to refine a first estimate. We instead learn to predict, given a depth map predicted by some reconstruction method, a 2D displacement field able to re-sample pixels around the occlusion boundaries into sharper reconstructions. Our method can be applied to the output of any depth estimation method, in an end-to-end trainable fashion. For evaluation, we manually annotated the occlusion boundaries in all the images in the test split of popular NYUv2-Depth dataset. We show that our approach improves the localization of occlusion boundaries for all state-of-the-art monocular depth estimation methods that we could evaluate, without degrading the depth accuracy for the rest of the images.

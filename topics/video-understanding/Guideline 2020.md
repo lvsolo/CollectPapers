@@ -1,7 +1,7 @@
 # Video Understanding — 2020 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 4 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -25,4 +25,5 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
+- Video Playback Rate Perception for Self-Supervised Spatio-Temporal Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202020.md)
 - 3DV: 3D Dynamic Voxel for Action Recognition in Depth Video. → [3d-detection](../3d-detection/Guideline%202020.md)
