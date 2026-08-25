@@ -1,16 +1,18 @@
 # Neural Architecture Search — 2025 Guideline
 
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
-> 论文数: 1 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 2 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Multi-objective Differentiable Neural Architecture Search.
-- **链接**: [arXiv:2402.18213](https://arxiv.org/abs/2402.18213) · 📚 被引 1
-- **作者**: Rhea Sanjay Sukthanker, Arber Zela, Benedikt Staffler, Samuel Dooley, Josif Grabocka, Frank Hutter
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Subnet-Aware Dynamic Supernet Training for Neural Architecture Search.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jeon_Subnet-Aware_Dynamic_Supernet_Training_for_Neural_Architecture_Search_CVPR_2025_paper.html)
+- **作者**: Jeimin Jeon, Youngmin Oh, Junghyup Lee, Donghyeon Baek, Dohyung Kim, Chanho Eom et al.
+- **🏷️ 机构**: Yonsei University, Samsung Research, Samsung Advanced Institute of Technology
+- **会议**: CVPR 2025
 
-- **摘要（英，原文）**:
-
-  > Pareto front profiling in multi-objective optimization (MOO), i.e., finding a diverse set of Pareto optimal solutions, is challenging, especially with expensive objectives that require training a neural network. Typically, in MOO for neural architecture search (NAS), we aim to balance performance and hardware metrics across devices. Prior NAS approaches simplify this task by incorporating hardware constraints into the objective function, but profiling the Pareto front necessitates a computationally expensive search for each constraint. In this work, we propose a novel NAS algorithm that encodes user preferences to trade-off performance and hardware metrics, yielding representative and diverse architectures across multiple devices in just a single search run. To this end, we parameterize the joint architectural distribution across devices and multiple objectives via a hypernetwork that can be conditioned on hardware features and preference vectors, enabling zero-shot transferability to new devices. Extensive experiments involving up to 19 hardware devices and 3 different objectives demonstrate the effectiveness and scalability of our method. Finally, we show that, without any additional costs, our method outperforms existing MOO NAS methods across a broad range of qualitatively different search spaces and datasets, including MobileNetV3 on ImageNet-1k, an encoder-decoder transformer space for machine translation and a decoder-only space for language modelling.
+### Training-free Neural Architecture Search through Variance of Knowledge of Deep Network Weights.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Tybl_Training-free_Neural_Architecture_Search_through_Variance_of_Knowledge_of_Deep_CVPR_2025_paper.html)
+- **作者**: Ondrej Týbl, Lukás Neumann
+- **🏷️ 机构**: Czech Technical University in Prague,CMP Visual Recognition Group, Faculty of Electrical Engineering
+- **会议**: CVPR 2025

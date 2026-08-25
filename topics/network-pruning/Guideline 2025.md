@@ -1,208 +1,123 @@
 # Network Pruning — 2025 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 33 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 21 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### VL-Cache: Sparsity and Modality-Aware KV Cache Compression for Vision-Language Model Inference Acceleration.
-- **链接**: [出版页](https://openreview.net/forum?id=HMrcv7Q4Ub)
-- **作者**: Dezhan Tu, Danylo Vashchilenko, Yuzhe Lu, Panpan Xu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Efficient Test-time Adaptive Object Detection via Sensitivity-Guided Pruning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Efficient_Test-time_Adaptive_Object_Detection_via_Sensitivity-Guided_Pruning_CVPR_2025_paper.html)
+- **作者**: Kunyu Wang, Xueyang Fu, Xin Lu, Chengjie Ge, Chengzhi Cao, Wei Zhai et al.
+- **🏷️ 机构**: University of Science and Technology of China,School of Information Science and Technology and MoE Key Laboratory of Brain-Inspired Intelligent Perception and Cognition,Hefei,China,230026
+- **会议**: CVPR 2025
 
-### Mutual Effort for Efficiency: A Similarity-based Token Pruning for Vision Transformers in Self-Supervised Learning.
-- **链接**: [出版页](https://openreview.net/forum?id=GTcEe5fayC)
-- **作者**: Sheng Li, Qitao Tan, Yue Dai, Zhenglun Kong, Tianyu Wang, Jun Liu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### RENO: Real-Time Neural Compression for 3D LiDAR Point Clouds.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/You_RENO_Real-Time_Neural_Compression_for_3D_LiDAR_Point_Clouds_CVPR_2025_paper.html)
+- **作者**: Kang You, Tong Chen, Dandan Ding, M. Salman Asif, Zhan Ma
+- **🏷️ 机构**: Nanjing University, Hangzhou Normal University, University of California Riverside
+- **会议**: CVPR 2025
 
-### Probe Pruning: Accelerating LLMs through Dynamic Pruning via Model-Probing.
-- **链接**: [出版页](https://openreview.net/forum?id=WOt1owGfuN)
-- **作者**: Qi Le, Enmao Diao, Ziyan Wang, Xinran Wang, Jie Ding, Li Yang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Generalized Gaussian Entropy Model for Point Cloud Attribute Compression with Dynamic Likelihood Intervals.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Peng_Generalized_Gaussian_Entropy_Model_for_Point_Cloud_Attribute_Compression_with_CVPR_2025_paper.html)
+- **作者**: Changhao Peng
+- **🏷️ 机构**: Peking University
+- **会议**: CVPR 2025
 
-### Perplexed by Perplexity: Perplexity-Based Data Pruning With Small Reference Models.
-- **链接**: [出版页](https://openreview.net/forum?id=1GTARJhxtq)
-- **作者**: Zachary Ankner, Cody Blakeney, Kartik Sreenivasan, Max Marion, Matthew L. Leavitt, Mansheej Paul
+### TopNet: Transformer-Efficient Occupancy Prediction Network for Octree-Structured Point Cloud Geometry Compression.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_TopNet_Transformer-Efficient_Occupancy_Prediction_Network_for_Octree-Structured_Point_Cloud_Geometry_CVPR_2025_paper.html)
+- **作者**: Xinjie Wang, Yifan Zhang, Ting Liu, Xinpu Liu, Ke Xu, Jianwei Wan et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
 
-### LLaMaFlex: Many-in-one LLMs via Generalized Pruning and Weight Sharing.
-- **链接**: [出版页](https://openreview.net/forum?id=AyC4uxx2HW)
-- **作者**: Ruisi Cai, Saurav Muralidharan, Hongxu Yin, Zhangyang Wang, Jan Kautz, Pavlo Molchanov
+### EfficientLLaVA: Generalizable Auto-Pruning for Large Vision-language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liang_EfficientLLaVA_Generalizable_Auto-Pruning_for_Large_Vision-language_Models_CVPR_2025_paper.html)
+- **作者**: Yinan Liang, Ziwei Wang, Xiuwei Xu, Jie Zhou, Jiwen Lu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
 
-### ConceptPrune: Concept Editing in Diffusion Models via Skilled Neuron Pruning.
-- **链接**: [出版页](https://openreview.net/forum?id=kSdWcw5mkp)
-- **作者**: Ruchika Chavhan, Da Li, Timothy M. Hospedales
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Provence: efficient and robust context pruning for retrieval-augmented generation.
-- **链接**: [出版页](https://openreview.net/forum?id=TDy5Ih78b4)
-- **作者**: Nadezhda Chirkova, Thibault Formal, Vassilina Nikoulina, Stéphane Clinchant
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Training-Free Dataset Pruning for Instance Segmentation.
-- **链接**: [出版页](https://openreview.net/forum?id=rvxWEbTtRY)
-- **作者**: Yalun Dai, Lingao Xiao, Ivor W. Tsang, Yang He
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### DARE the Extreme: Revisiting Delta-Parameter Pruning For Fine-Tuned Models.
-- **链接**: [出版页](https://openreview.net/forum?id=avSocG0oFA)
-- **作者**: Wenlong Deng, Yize Zhao, Vala Vakilian, Minghui Chen, Xiaoxiao Li, Christos Thrampoulidis
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Adaptive Pruning of Pretrained Transformer via Differential Inclusions.
-- **链接**: [出版页](https://openreview.net/forum?id=WA84oMWHaH)
-- **作者**: Yizhuo Ding, Ke Fan, Yikai Wang, Xinwei Sun, Yanwei Fu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Not All Prompts Are Made Equal: Prompt-based Pruning of Text-to-Image Diffusion Models.
-- **链接**: [出版页](https://openreview.net/forum?id=3BhZCfJ73Y)
-- **作者**: Alireza Ganjdanesh, Reza Shirkavand, Shangqian Gao, Heng Huang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Beware of Calibration Data for Pruning Large Language Models.
-- **链接**: [出版页](https://openreview.net/forum?id=x83w6yGIWb)
-- **作者**: Yixin Ji, Yang Xiang, Juntao Li, Qingrong Xia, Ping Li, Xinyu Duan et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Exploring Learning Complexity for Efficient Downstream Dataset Pruning.
-- **链接**: [出版页](https://openreview.net/forum?id=FN7n7JRjsk)
-- **作者**: Wenyu Jiang, Zhenlong Liu, Zejian Xie, Songxin Zhang, Bingyi Jing, Hongxin Wei
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Efficient Online Pruning and Abstraction for Imperfect Information Extensive-Form Games.
-- **链接**: [出版页](https://openreview.net/forum?id=MTcgsz1SHr)
-- **作者**: Boning Li, Longbo Huang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Beyond Linear Approximations: A Novel Pruning Approach for Attention Matrix.
-- **链接**: [出版页](https://openreview.net/forum?id=sgbI8Pxwie)
-- **作者**: Yingyu Liang, Jiangxuan Long, Zhenmei Shi, Zhao Song, Yufa Zhou
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Preserving Deep Representations in One-Shot Pruning: A Hessian-Free Second-Order Optimization Framework.
-- **链接**: [出版页](https://openreview.net/forum?id=eNQp79A5Oz)
-- **作者**: Ryan Lucas, Rahul Mazumder
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Probabilistic Neural Pruning via Sparsity Evolutionary Fokker-Planck-Kolmogorov Equation.
-- **链接**: [出版页](https://openreview.net/forum?id=hJ1BaJ5ELp)
-- **作者**: Zhanfeng Mo, Haosen Shi, Sinno Jialin Pan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Severing Spurious Correlations with Data Pruning.
-- **链接**: [arXiv:2503.18258](https://arxiv.org/abs/2503.18258)
-- **作者**: Varun Mulchandani, Jung-Eun Kim
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### PUP 3D-GS: Principled Uncertainty Pruning for 3D Gaussian Splatting.
+- **链接**: [arXiv:2406.10219](https://arxiv.org/abs/2406.10219) · 📚 被引 37
+- **作者**: Alex Hanson, Allen Tu, Vasu Singla, Mayuka Jayawardhana, Matthias Zwicker, Tom Goldstein
+- **🏷️ 机构**: University of Maryland,College Park
+- **会议**: CVPR 2025
 
 - **摘要（英，原文）**:
 
-  > Deep neural networks have been shown to learn and rely on spurious correlations present in the data that they are trained on. Reliance on such correlations can cause these networks to malfunction when deployed in the real world, where these correlations may no longer hold. To overcome the learning of and reliance on such correlations, recent studies propose approaches that yield promising results. These works, however, study settings where the strength of the spurious signal is significantly greater than that of the core, invariant signal, making it easier to detect the presence of spurious features in individual training samples and allow for further processing. In this paper, we identify new settings where the strength of the spurious signal is relatively weaker, making it difficult to detect any spurious information while continuing to have catastrophic consequences. We also discover that spurious correlations are learned primarily due to only a handful of all the samples containing the spurious feature and develop a novel data pruning technique that identifies and prunes small subsets of the training data that contain these samples. Our proposed technique does not require inferred domain knowledge, information regarding the sample-wise presence or nature of spurious information, or human intervention. Finally, we show that such data pruning attains state-of-the-art performance on previously studied settings where spurious information is identifiable.
+  > Recent advances in novel view synthesis have enabled real-time rendering speeds with high reconstruction accuracy. 3D Gaussian Splatting (3D-GS), a foundational point-based parametric 3D scene representation, models scenes as large sets of 3D Gaussians. However, complex scenes can consist of millions of Gaussians, resulting in high storage and memory requirements that limit the viability of 3D-GS on devices with limited resources. Current techniques for compressing these pretrained models by pruning Gaussians rely on combining heuristics to determine which Gaussians to remove. At high compression ratios, these pruned scenes suffer from heavy degradation of visual fidelity and loss of foreground details. In this paper, we propose a principled sensitivity pruning score that preserves visual fidelity and foreground details at significantly higher compression ratios than existing approaches. It is computed as a second-order approximation of the reconstruction error on the training views with respect to the spatial parameters of each Gaussian. Additionally, we propose a multi-round prune-refine pipeline that can be applied to any pretrained 3D-GS model without changing its training pipeline. After pruning 90% of Gaussians, a substantially higher percentage than previous methods, our PUP 3D-GS pipeline increases average rendering speed by 3.56$\times$ while retaining more salient foreground information and achieving higher image quality metrics than existing techniques on scenes from the Mip-NeRF 360, Tanks & Temples, and Deep Blending datasets.
 
-### Context-aware Dynamic Pruning for Speech Foundation Models.
-- **链接**: [出版页](https://openreview.net/forum?id=u2QdCiOgwA)
-- **作者**: Masao Someki, Yifan Peng, Siddhant Arora, Markus Müller, Athanasios Mouchtaris, Grant P. Strimel et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### ATP: Adaptive Threshold Pruning for Efficient Data Encoding in Quantum Neural Networks.
+- **链接**: [arXiv:2503.21815](https://arxiv.org/abs/2503.21815) · 📚 被引 3
+- **作者**: Mohamed Afane, Gabrielle Ebbrecht, Ying Wang, Juntao Chen, Junaid Farooq
+- **🏷️ 机构**: Fordham University, Stevens Institute of Technology, University of Michigan-Dearborn
+- **会议**: CVPR 2025
 
-### Data Pruning by Information Maximization.
-- **链接**: [出版页](https://openreview.net/forum?id=93XT0lKOct)
-- **作者**: Haoru Tan, Sitong Wu, Wei Huang, Shizhen Zhao, Xiaojuan Qi
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **摘要（英，原文）**:
 
-### DRoP: Distributionally Robust Data Pruning.
-- **链接**: [出版页](https://openreview.net/forum?id=fxv0FfmDAg)
-- **作者**: Artem M. Vysogorets, Kartik Ahuja, Julia Kempe
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+  > Quantum Neural Networks (QNNs) offer promising capabilities for complex data tasks, but are often constrained by limited qubit resources and high entanglement, which can hinder scalability and efficiency. In this paper, we introduce Adaptive Threshold Pruning (ATP), an encoding method that reduces entanglement and optimizes data complexity for efficient computations in QNNs. ATP dynamically prunes non-essential features in the data based on adaptive thresholds, effectively reducing quantum circuit requirements while preserving high performance. Extensive experiments across multiple datasets demonstrate that ATP reduces entanglement entropy and improves adversarial robustness when combined with adversarial training methods like FGSM. Our results highlight ATPs ability to balance computational efficiency and model resilience, achieving significant performance improvements with fewer resources, which will help make QNNs more feasible in practical, resource-constrained settings.
 
-### Revisit Micro-batch Clipping: Adaptive Data Pruning via Gradient Manipulation.
-- **链接**: [出版页](https://openreview.net/forum?id=pAkQhhn4vB)
-- **作者**: Lun Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### PACT: Pruning and Clustering-Based Token Reduction for Faster Visual Language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Dhouib_PACT_Pruning_and_Clustering-Based_Token_Reduction_for_Faster_Visual_Language_CVPR_2025_paper.html) · 📚 被引 2
+- **作者**: Mohamed Dhouib, Davide Buscaldi, Sonia Vanier, Aymen Shabou
+- **🏷️ 机构**: LIX, &#x00C9;cole Polytechnique, IP,Paris,France, LIPN, Universit&#x00E9; Sorbonne Paris Nord,France, DataLab Groupe, Cr&#x00E9;dit Agricole S.A,France
+- **会议**: CVPR 2025
 
-### DPaI: Differentiable Pruning at Initialization with Node-Path Balance Principle.
-- **链接**: [出版页](https://openreview.net/forum?id=hvLBTpiDt3)
-- **作者**: Lichuan Xiang, Quan Nguyen-Tri, Lan-Cuong Nguyen, Hoang Pham, Khoat Than, Long Tran-Thanh et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### ICP: Immediate Compensation Pruning for Mid-to-high Sparsity.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Luo_ICP_Immediate_Compensation_Pruning_for_Mid-to-high_Sparsity_CVPR_2025_paper.html) · 📚 被引 4
+- **作者**: Xin Luo, Xueming Fu, Zihang Jiang, S. Kevin Zhou
+- **🏷️ 机构**: USTC,School of Biomedical Engineering, Division of Life Sciences and Medicine
+- **会议**: CVPR 2025
 
-### ThinK: Thinner Key Cache by Query-Driven Pruning.
-- **链接**: [出版页](https://openreview.net/forum?id=n0OtGl6VGb)
-- **作者**: Yuhui Xu, Zhanming Jie, Hanze Dong, Lei Wang, Xudong Lu, Aojun Zhou et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Automatic Joint Structured Pruning and Quantization for Efficient Neural Network Training and Compression.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Qu_Automatic_Joint_Structured_Pruning_and_Quantization_for_Efficient_Neural_Network_CVPR_2025_paper.html) · 📚 被引 20
+- **作者**: Xiaoyi Qu, David Aponte, Colby R. Banbury, Daniel P. Robinson, Tianyu Ding, Kazuhito Koishida et al.
+- **🏷️ 机构**: Lehigh University, Microsoft
+- **会议**: CVPR 2025
 
-### OATS: Outlier-Aware Pruning Through Sparse and Low Rank Decomposition.
-- **链接**: [出版页](https://openreview.net/forum?id=DLDuVbxORA)
-- **作者**: Stephen Zhang, Vardan Papyan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### MDP: Multidimensional Vision Model Pruning with Latency Constraint.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Sun_MDP_Multidimensional_Vision_Model_Pruning_with_Latency_Constraint_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Xinglong Sun, Barath Lakshmanan, Maying Shen, Shiyi Lan, Jingde Chen, José M. Álvarez
+- **🏷️ 机构**: NVIDIA
+- **会议**: CVPR 2025
 
-### R-Sparse: Rank-Aware Activation Sparsity for Efficient LLM Inference.
-- **链接**: [出版页](https://openreview.net/forum?id=9VMW4iXfKt)
-- **作者**: Zhenyu Zhang, Zechun Liu, Yuandong Tian, Harshit Khaitan, Zhangyang Wang, Steven Li
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Libra-Merging: Importance-redundancy and Pruning-merging Trade-off for Acceleration Plug-in in Large Vision-Language Model.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yang_Libra-Merging_Importance-redundancy_and_Pruning-merging_Trade-off_for_Acceleration_Plug-in_in_Large_CVPR_2025_paper.html)
+- **作者**: Longrong Yang, Dong Shen, Chaoxiang Cai, Kaibing Chen, Fan Yang, Tingting Gao et al.
+- **🏷️ 机构**: ZJU
+- **会议**: CVPR 2025
 
-### Zeroth-Order Fine-Tuning of LLMs with Transferable Static Sparsity.
-- **链接**: [出版页](https://openreview.net/forum?id=myYzr50xBh)
-- **作者**: Wentao Guo, Jikai Long, Yimeng Zeng, Zirui Liu, Xinyu Yang, Yide Ran et al.
+### ATP-LLaVA: Adaptive Token Pruning for Large Vision Language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ye_ATP-LLaVA_Adaptive_Token_Pruning_for_Large_Vision_Language_Models_CVPR_2025_paper.html)
+- **作者**: Xubing Ye, Yukang Gan, Yixiao Ge, Xiao-Ping Zhang, Yansong Tang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
 
-### Effective Interplay between Sparsity and Quantization: From Theory to Practice.
-- **链接**: [出版页](https://openreview.net/forum?id=wJv4AIt4sK)
-- **作者**: Simla Burcu Harma, Ayan Chakraborty, Elizaveta Kostenok, Danila Mishin, Dongho Ha, Babak Falsafi et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Flexible Group Count Enables Hassle-Free Structured Pruning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Flexible_Group_Count_Enables_Hassle-Free_Structured_Pruning_CVPR_2025_paper.html) · 📚 被引 4
+- **作者**: Jiamu Zhang, Shaochen Zhong, Andrew Ye, Zirui Liu, Sebastian Zhao, Kaixiong Zhou et al.
+- **🏷️ 机构**: Rice University,USA, Stanford University,USA, University of Minnesota-Twin Cities,USA
+- **会议**: CVPR 2025
 
-### Leveraging Variable Sparsity to Refine Pareto Stationarity in Multi-Objective Optimization.
-- **链接**: [出版页](https://openreview.net/forum?id=Bl3e8HV9xW)
-- **作者**: Zeou Hu, Yaoliang Yu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### SINR: Sparsity Driven Compressed Implicit Neural Representations.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jayasundara_SINR_Sparsity_Driven_Compressed_Implicit_Neural_Representations_CVPR_2025_paper.html) · 📚 被引 1
+- **作者**: Dhananjaya Jayasundara, Sudarshan Rajagopalan, Yasiru Ranasinghe, Trac D. Tran, Vishal M. Patel
+- **🏷️ 机构**: Johns Hopkins University
+- **会议**: CVPR 2025
 
-### Improved Algorithms for Kernel Matrix-Vector Multiplication Under Sparsity Assumptions.
-- **链接**: [出版页](https://openreview.net/forum?id=wLnls9LS3x)
-- **作者**: Piotr Indyk, Michael Kapralov, Kshiteej Sheth, Tal Wagner
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### SURGEON: Memory-Adaptive Fully Test-Time Adaptation via Dynamic Activation Sparsity.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ma_SURGEON_Memory-Adaptive_Fully_Test-Time_Adaptation_via_Dynamic_Activation_Sparsity_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Ke Ma, Jiaqi Tang, Bin Guo, Fan Dang, Sicong Liu, Zhui Zhu et al.
+- **🏷️ 机构**: Northwestern Polytechnical University, The Hong Kong University of Science and Technology, Beijing Jiaotong University
+- **会议**: CVPR 2025
 
-### Training-Free Activation Sparsity in Large Language Models.
-- **链接**: [出版页](https://openreview.net/forum?id=dGVZwyq5tV)
-- **作者**: James Liu, Pragaash Ponnusamy, Tianle Cai, Han Guo, Yoon Kim, Ben Athiwaratkun
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Random Conditioning for Diffusion Model Compression with Distillation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kim_Random_Conditioning_for_Diffusion_Model_Compression_with_Distillation_CVPR_2025_paper.html) · 📚 被引 0
+- **作者**: Dohyun Kim, Sehwan Park, Geonhee Han, Seung Wook Kim, Paul Hongsuck Seo
+- **🏷️ 机构**: Korea University,Dept. of CSE, NVIDIA
+- **会议**: CVPR 2025
 
-### Wasserstein Distances, Neuronal Entanglement, and Sparsity.
-- **链接**: [出版页](https://openreview.net/forum?id=cnKhHxN3xj)
-- **作者**: Shashata Sawmya, Linghao Kong, Ilia Markov, Dan Alistarh, Nir Shavit
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+## 跨领域论文（完整笔记在其他领域）
 
-### Medium-Difficulty Samples Constitute Smoothed Decision Boundary for Knowledge Distillation on Pruned Datasets.
-- **链接**: [出版页](https://openreview.net/forum?id=Rz4UkJziFe)
-- **作者**: Yudong Chen, Xuwei Xu, Frank de Hoog, Jiajun Liu, Sen Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- DivPrune: Diversity-based Visual Token Pruning for Large Multimodal Models. → [multimodal](../multimodal/Guideline%202025.md)
+- Text-guided Sparse Voxel Pruning for Efficient 3D Visual Grounding. → [3d-detection](../3d-detection/Guideline%202025.md)
+- TopV: Compatible Token Pruning with Inference Time Optimization for Fast and Low-Memory Multimodal Vision Language Model. → [multimodal](../multimodal/Guideline%202025.md)
+- CASP: Compression of Large Multimodal Models Based on Attention Sparsity. → [multimodal](../multimodal/Guideline%202025.md)

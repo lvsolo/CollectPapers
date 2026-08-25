@@ -5,82 +5,76 @@
 
 > 同领域其他年份: 
 
-### Trusted Multi-View Classification via Evolutionary Multi-View Fusion.
-- **链接**: [出版页](https://openreview.net/forum?id=M3kBtqpys5)
-- **作者**: Xinyan Liang, Pinhan Fu, Yuhua Qian, Qian Guo, Guoqing Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Enhance Multi-View Classification Through Multi-Scale Alignment and Expanded Boundary.
-- **链接**: [出版页](https://openreview.net/forum?id=t1J2CnDFwj)
-- **作者**: Yuena Lin, Yiyuan Wang, Gengyu Lyu, Yongjian Deng, Haichun Cai, Huibin Lin et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### SV4D: Dynamic 3D Content Generation with Multi-Frame and Multi-View Consistency.
-- **链接**: [arXiv:2407.17470](https://arxiv.org/abs/2407.17470)
-- **作者**: Yiming Xie, Chun-Han Yao, Vikram Voleti, Huaizu Jiang, Varun Jampani
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### MANTA: A Large-Scale Multi-View and Visual-Text Anomaly Detection Dataset for Tiny Objects.
+- **链接**: [arXiv:2412.04867](https://arxiv.org/abs/2412.04867)
+- **作者**: Lei Fan, Dongdong Fan, Zhiguang Hu, Yiwen Ding, Donglin Di, Kai Yi et al.
+- **🏷️ 机构**: UNSW Sydney, Gaozhe Technology, SCAU
+- **会议**: CVPR 2025
 
 - **摘要（英，原文）**:
 
-  > We present Stable Video 4D (SV4D), a latent video diffusion model for multi-frame and multi-view consistent dynamic 3D content generation. Unlike previous methods that rely on separately trained generative models for video generation and novel view synthesis, we design a unified diffusion model to generate novel view videos of dynamic 3D objects. Specifically, given a monocular reference video, SV4D generates novel views for each video frame that are temporally consistent. We then use the generated novel view videos to optimize an implicit 4D representation (dynamic NeRF) efficiently, without the need for cumbersome SDS-based optimization used in most prior works. To train our unified novel view video generation model, we curate a dynamic 3D object dataset from the existing Objaverse dataset. Extensive experimental results on multiple datasets and user studies demonstrate SV4D's state-of-the-art performance on novel-view video synthesis as well as 4D generation compared to prior works.
+  > We present MANTA, a visual-text anomaly detection dataset for tiny objects. The visual component comprises over 137.3K images across 38 object categories spanning five typical domains, of which 8.6K images are labeled as anomalous with pixel-level annotations. Each image is captured from five distinct viewpoints to ensure comprehensive object coverage. The text component consists of two subsets: Declarative Knowledge, including 875 words that describe common anomalies across various domains and specific categories, with detailed explanations for < what, why, how>, including causes and visual characteristics; and Constructivist Learning, providing 2K multiple-choice questions with varying levels of difficulty, each paired with images and corresponded answer explanations. We also propose a baseline for visual-text tasks and conduct extensive benchmarking experiments to evaluate advanced methods across different settings, highlighting the challenges and efficacy of our dataset.
 
-### Simple yet Effective Incomplete Multi-view Clustering: Similarity-level Imputation and Intra-view Hybrid-group Prototype Construction.
-- **链接**: [出版页](https://openreview.net/forum?id=KijslFbfOL)
-- **作者**: Shengju Yu, Zhibin Dong, Siwei Wang, Pei Zhang, Yi Zhang, Xinwang Liu et al.
+### Cross-Modal 3D Representation with Multi-View Images and Point Clouds.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_Cross-Modal_3D_Representation_with_Multi-View_Images_and_Point_Clouds_CVPR_2025_paper.html)
+- **作者**: Ziyang Zhou, Pinghui Wang, Zi Liang, Haitao Bai, Ruofei Zhang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
 
-### econSG: Efficient and Multi-view Consistent Open-Vocabulary 3D Semantic Gaussians.
-- **链接**: [出版页](https://openreview.net/forum?id=qSEEQPNbu4)
-- **作者**: Can Zhang, Gim Hee Lee
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### PCDreamer: Point Cloud Completion Through Multi-view Diffusion Priors.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wei_PCDreamer_Point_Cloud_Completion_Through_Multi-view_Diffusion_Priors_CVPR_2025_paper.html)
+- **作者**: Guangshun Wei, Yuan Feng, Long Ma, Chen Wang, Yuanfeng Zhou, Changjian Li
+- **🏷️ 机构**: Shandong University, University of Edinburgh
+- **会议**: CVPR 2025
 
-### SynCamMaster: Synchronizing Multi-Camera Video Generation from Diverse Viewpoints.
-- **链接**: [出版页](https://openreview.net/forum?id=m8Rk3HLGFx)
-- **作者**: Jianhong Bai, Menghan Xia, Xintao Wang, Ziyang Yuan, Zuozhu Liu, Haoji Hu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### HOT3D: Hand and Object Tracking in 3D from Egocentric Multi-View Videos.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Banerjee_HOT3D_Hand_and_Object_Tracking_in_3D_from_Egocentric_Multi-View_CVPR_2025_paper.html)
+- **作者**: Prithviraj Banerjee, Sindi Shkodrani, Pierre Moulon, Shreyas Hampali, Shangchen Han, Fan Zhang et al.
+- **🏷️ 机构**: Meta Reality Labs
+- **会议**: CVPR 2025
 
-### COPER: Correlation-based Permutations for Multi-View Clustering.
-- **链接**: [出版页](https://openreview.net/forum?id=5ZEbpBYGwH)
-- **作者**: Ran Eisenberg, Jonathan Svirsky, Ofir Lindenbaum
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### MITracker: Multi-View Integration for Visual Object Tracking.
+- **链接**: [arXiv:2502.20111](https://arxiv.org/abs/2502.20111)
+- **作者**: Mengjie Xu, Yitao Zhu, Haotian Jiang, Jiaming Li, Zhenrong Shen, Sheng Wang et al.
+- **🏷️ 机构**: ShanghaiTech University,School of Biomedical Engineering &#x0026; State Key Laboratory of Advanced Medical Materials and Devices, Shanghai Jiao Tong University,School of Biomedical Engineering
+- **会议**: CVPR 2025
 
-### Deep Incomplete Multi-view Learning via Cyclic Permutation of VAEs.
-- **链接**: [出版页](https://openreview.net/forum?id=s4MwstmB8o)
-- **作者**: Xin Gao, Jian Pu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **摘要（英，原文）**:
 
-### Duoduo CLIP: Efficient 3D Understanding with Multi-View Images.
-- **链接**: [出版页](https://openreview.net/forum?id=iGbuc9ekKK)
-- **作者**: Han-Hung Lee, Yiming Zhang, Angel X. Chang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+  > Multi-view object tracking (MVOT) offers promising solutions to challenges such as occlusion and target loss, which are common in traditional single-view tracking. However, progress has been limited by the lack of comprehensive multi-view datasets and effective cross-view integration methods. To overcome these limitations, we compiled a Multi-View object Tracking (MVTrack) dataset of 234K high-quality annotated frames featuring 27 distinct objects across various scenes. In conjunction with this dataset, we introduce a novel MVOT method, Multi-View Integration Tracker (MITracker), to efficiently integrate multi-view object features and provide stable tracking outcomes. MITracker can track any object in video frames of arbitrary length from arbitrary viewpoints. The key advancements of our method over traditional single-view approaches come from two aspects: (1) MITracker transforms 2D image features into a 3D feature volume and compresses it into a bird's eye view (BEV) plane, facilitating inter-view information fusion; (2) we propose an attention mechanism that leverages geometric information from fused 3D feature volume to refine the tracking results at each view. MITracker outperforms existing methods on the MVTrack and GMTD datasets, achieving state-of-the-art performance. The code and the new dataset will be available at https://mii-laboratory.github.io/MITracker/.
 
-### CREIMBO: Cross-Regional Ensemble Interactions in Multi-view Brain Observations.
-- **链接**: [出版页](https://openreview.net/forum?id=28abpUEICJ)
-- **作者**: Noga Mudrik, Ryan Ly, Oliver Rübel, Adam Shabti Charles
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### All-Day Multi-Camera Multi-Target Tracking.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Fan_All-Day_Multi-Camera_Multi-Target_Tracking_CVPR_2025_paper.html)
+- **作者**: Huijie Fan, Yu Qiao, Yihao Zhen, Tinghui Zhao, Baojie Fan, Qiang Wang
+- **🏷️ 机构**: Shanghai AI Lab
+- **会议**: CVPR 2025
 
-### Diffusion2: Dynamic 3D Content Generation via Score Composition of Video and Multi-view Diffusion Models.
-- **链接**: [出版页](https://openreview.net/forum?id=fectsEG2GU)
-- **作者**: Zeyu Yang, Zijie Pan, Chun Gu, Li Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### SkySense-O: Towards Open-World Remote Sensing Interpretation with Vision-Centric Visual-Language Modeling.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SkySense-O_Towards_Open-World_Remote_Sensing_Interpretation_with_Vision-Centric_Visual-Language_Modeling_CVPR_2025_paper.html)
+- **作者**: Qi Zhu, Jiangwei Lao, Deyi Ji, Junwei Luo, Kang Wu, Yingying Zhang et al.
+- **🏷️ 机构**: USTC,MoE Key Laboratory of Brain-inspired Intelligent Perception and Cognition, Shanghai Jiaotong University, Wuhan University
+- **会议**: CVPR 2025
 
-### Self-supervised Monocular Depth Estimation Robust to Reflective Surface Leveraged by Triplet Mining.
-- **链接**: [出版页](https://openreview.net/forum?id=XdRIno98gG)
-- **作者**: Wonhyeok Choi, Kyumin Hwang, Wei Peng, Minwoo Choi, Sunghoon Im
+### DriveScape: High-Resolution Driving Video Generation by Multi-View Feature Fusion.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_DriveScape_High-Resolution_Driving_Video_Generation_by_Multi-View_Feature_Fusion_CVPR_2025_paper.html)
+- **作者**: Wei Wu, Xi Guo, Weixuan Tang, Tingxuan Huang, Chiyu Wang, Chenjing Ding
+- **🏷️ 机构**: Tsinghua University, Sensetime Research, Northeastern University
+- **会议**: CVPR 2025
+
+### SceneCrafter: Controllable Multi-View Driving Scene Editing.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SceneCrafter_Controllable_Multi-View_Driving_Scene_Editing_CVPR_2025_paper.html)
+- **作者**: Zehao Zhu, Yuliang Zou, Chiyu Max Jiang, Bo Sun, Vincent Casser, Xiukun Huang et al.
+- **🏷️ 机构**: Waymo, Johns Hopkins University
+- **会议**: CVPR 2025
+
+### Enhanced Contrastive Learning with Multi-view Longitudinal Data for Chest X-ray Report Generation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Enhanced_Contrastive_Learning_with_Multi-view_Longitudinal_Data_for_Chest_X-ray_CVPR_2025_paper.html)
+- **作者**: Kang Liu, Zhuoqi Ma, Xiaolu Kang, Yunan Li, Kun Xie, Zhicheng Jiao et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- Semi-Supervised Vision-Centric 3D Occupancy World Model for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
+- Leveraging Temporal Cues for Semi-Supervised Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202025.md)
+- CorrBEV: Multi-View 3D Object Detection by Correlation Learning with Multi-modal Prototypes. → [3d-detection](../3d-detection/Guideline%202025.md)
+- VisionPAD: A Vision-Centric Pre-training Paradigm for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
