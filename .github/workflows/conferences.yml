@@ -145,13 +145,16 @@ jobs:
       - name: Install deps
         run: pip install pyyaml
 
-      - name: Restore LLM cache
+      - name: Restore full cache (batches + LLM evals)
         uses: actions/cache@v4
         with:
-          path: .cache/llm_evals.json
-          key: llm-evals-${{ github.run_id }}
+          path: .cache
+          # 恢复整个 .cache：llm_evals.json + collect 阶段落盘的 batches/*.json
+          # （restore-keys 前缀匹配会拿到最近的 collectpapers-v3-* 缓存）
+          key: llm-stage-${{ github.run_id }}
           restore-keys: |
-            llm-evals-
+            llm-stage-
+            collectpapers-v3-
 
       - name: Run LLM evaluation over collected buckets
         env:
