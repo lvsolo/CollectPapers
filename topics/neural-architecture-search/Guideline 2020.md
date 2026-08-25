@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Hit-Detector: Hierarchical Trinity Architecture Search for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Hit-Detector_Hierarchical_Trinity_Architecture_Search_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 81
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Hit-Detector_Hierarchical_Trinity_Architecture_Search_for_Object_Detection_CVPR_2020_paper.html)
 - **作者**: Jianyuan Guo, Kai Han, Yunhe Wang, Chao Zhang, Zhaohui Yang, Han Wu et al.
 - **🏷️ 机构**: Key Lab of Machine Perception (MOE), Dept. of Machine Intelligence, Peking University; Noah's Ark Lab, Huawei Technologies, Noah's Ark Lab, Huawei Technologies, Key Lab of Machine Perception (MOE), Dept. of Machine Intelligence, Peking University
 - **会议**: CVPR 2020
@@ -30,28 +30,40 @@
 - **会议**: CVPR 2020
 
 ### Can Weight Sharing Outperform Random Architecture Search? An Investigation With TuNAS.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Bender_Can_Weight_Sharing_Outperform_Random_Architecture_Search_An_Investigation_With_CVPR_2020_paper.html) · 📚 被引 72
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Bender_Can_Weight_Sharing_Outperform_Random_Architecture_Search_An_Investigation_With_CVPR_2020_paper.html)
 - **作者**: Gabriel Bender, Hanxiao Liu, Bo Chen, Grace Chu, Shuyang Cheng, Pieter-Jan Kindermans et al.
-- **🏷️ 机构**: Google Brain
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### MTL-NAS: Task-Agnostic Neural Architecture Search Towards General-Purpose Multi-Task Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Gao_MTL-NAS_Task-Agnostic_Neural_Architecture_Search_Towards_General-Purpose_Multi-Task_Learning_CVPR_2020_paper.html) · 📚 被引 66
+- **链接**: [arXiv:2003.14058](https://arxiv.org/abs/2003.14058) · [代码](https://github.com/bhpfelix/MTLNAS) · 📚 被引 66
 - **作者**: Yuan Gao, Haoping Bai, Zequn Jie, Jiayi Ma, Kui Jia, Wei Liu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > We propose to incorporate neural architecture search (NAS) into general-purpose multi-task learning (GP-MTL). Existing NAS methods typically define different search spaces according to different tasks. In order to adapt to different task combinations (i.e., task sets), we disentangle the GP-MTL networks into single-task backbones (optionally encode the task priors), and a hierarchical and layerwise features sharing/fusing scheme across them. This enables us to design a novel and general task-agnostic search space, which inserts cross-task edges (i.e., feature fusion connections) into fixed single-task network backbones. Moreover, we also propose a novel single-shot gradient-based search algorithm that closes the performance gap between the searched architectures and the final evaluation architecture. This is realized with a minimum entropy regularization on the architecture weights during the search phase, which makes the architecture weights converge to near-discrete values and therefore achieves a single model. As a result, our searched model can be directly used for evaluation without (re-)training from scratch. We perform extensive experiments using different single-task backbones on various task sets, demonstrating the promising performance obtained by exploiting the hierarchical and layerwise features, as well as the desirable generalizability to different i) task sets and ii) single-task backbones. The code of our paper is available at https://github.com/bhpfelix/MTLNAS.
+
 ### AdversarialNAS: Adversarial Neural Architecture Search for GANs.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Gao_AdversarialNAS_Adversarial_Neural_Architecture_Search_for_GANs_CVPR_2020_paper.html) · 📚 被引 77
+- **链接**: [arXiv:1912.02037](https://arxiv.org/abs/1912.02037) · [代码](https://github.com/chengaopro/AdversarialNAS) · 📚 被引 77
 - **作者**: Chen Gao, Yunpeng Chen, Si Liu, Zhenxiong Tan, Shuicheng Yan
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Neural Architecture Search (NAS) that aims to automate the procedure of architecture design has achieved promising results in many computer vision fields. In this paper, we propose an AdversarialNAS method specially tailored for Generative Adversarial Networks (GANs) to search for a superior generative model on the task of unconditional image generation. The AdversarialNAS is the first method that can search the architectures of generator and discriminator simultaneously in a differentiable manner. During searching, the designed adversarial search algorithm does not need to comput any extra metric to evaluate the performance of the searched architecture, and the search paradigm considers the relevance between the two network architectures and improves their mutual balance. Therefore, AdversarialNAS is very efficient and only takes 1 GPU day to search for a superior generative model in the proposed large search space ($10^{38}$). Experiments demonstrate the effectiveness and superiority of our method. The discovered generative model sets a new state-of-the-art FID score of $10.87$ and highly competitive Inception Score of $8.74$ on CIFAR-10. Its transferability is also proven by setting new state-of-the-art FID score of $26.98$ and Inception score of $9.63$ on STL-10. Code is at: \url{https://github.com/chengaopro/AdversarialNAS}.
+
 ### Organ at Risk Segmentation for Head and Neck Cancer Using Stratified Learning and Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Organ_at_Risk_Segmentation_for_Head_and_Neck_Cancer_Using_CVPR_2020_paper.html) · 📚 被引 47
+- **链接**: [arXiv:2004.08426](https://arxiv.org/abs/2004.08426)
 - **作者**: Dazhou Guo, Dakai Jin, Zhuotun Zhu, Tsung-Ying Ho, Adam P. Harrison, Chun-Hung Chao et al.
-- **🏷️ 机构**: Ant Group
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > OAR segmentation is a critical step in radiotherapy of head and neck (H&N) cancer, where inconsistencies across radiation oncologists and prohibitive labor costs motivate automated approaches. However, leading methods using standard fully convolutional network workflows that are challenged when the number of OARs becomes large, e.g. > 40. For such scenarios, insights can be gained from the stratification approaches seen in manual clinical OAR delineation. This is the goal of our work, where we introduce stratified organ at risk segmentation (SOARS), an approach that stratifies OARs into anchor, mid-level, and small & hard (S&H) categories. SOARS stratifies across two dimensions. The first dimension is that distinct processing pipelines are used for each OAR category. In particular, inspired by clinical practices, anchor OARs are used to guide the mid-level and S&H categories. The second dimension is that distinct network architectures are used to manage the significant contrast, size, and anatomy variations between different OARs. We use differentiable neural architecture search (NAS), allowing the network to choose among 2D, 3D or Pseudo-3D convolutions. Extensive 4-fold cross-validation on 142 H&N cancer patients with 42 manually labeled OARs, the most comprehensive OAR dataset to date, demonstrates that both pipeline- and NAS-stratification significantly improves quantitative performance over the state-of-the-art (from 69.52% to 73.68% in absolute Dice scores). Thus, SOARS provides a powerful and principled means to manage the highly complex segmentation space of OARs.
 
 ### When NAS Meets Robustness: In Search of Robust Architectures Against Adversarial Attacks.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_When_NAS_Meets_Robustness_In_Search_of_Robust_Architectures_Against_CVPR_2020_paper.html) · 📚 被引 107
@@ -60,9 +72,9 @@
 - **会议**: CVPR 2020
 
 ### MiLeNAS: Efficient Neural Architecture Search via Mixed-Level Reformulation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/He_MiLeNAS_Efficient_Neural_Architecture_Search_via_Mixed-Level_Reformulation_CVPR_2020_paper.html) · 📚 被引 85
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/He_MiLeNAS_Efficient_Neural_Architecture_Search_via_Mixed-Level_Reformulation_CVPR_2020_paper.html)
 - **作者**: Chaoyang He, Haishan Ye, Li Shen, Tong Zhang
-- **🏷️ 机构**: University of Southern California
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### DSNAS: Direct Neural Architecture Search Without Parameter Retraining.
@@ -84,15 +96,15 @@
 - **会议**: CVPR 2020
 
 ### SGAS: Sequential Greedy Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_SGAS_Sequential_Greedy_Architecture_Search_CVPR_2020_paper.html) · 📚 被引 143
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_SGAS_Sequential_Greedy_Architecture_Search_CVPR_2020_paper.html)
 - **作者**: Guohao Li, Guocheng Qian, Itzel C. Delgadillo, Matthias Müller, Ali K. Thabet, Bernard Ghanem
-- **🏷️ 机构**: KAUST
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### GP-NAS: Gaussian Process Based Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_GP-NAS_Gaussian_Process_Based_Neural_Architecture_Search_CVPR_2020_paper.html) · 📚 被引 46
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_GP-NAS_Gaussian_Process_Based_Neural_Architecture_Search_CVPR_2020_paper.html)
 - **作者**: Zhihang Li, Teng Xi, Jiankang Deng, Gang Zhang, Shengzhao Wen, Ran He
-- **🏷️ 机构**: Imperial College London
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### Graph-Guided Architecture Search for Real-Time Semantic Segmentation.
@@ -120,7 +132,7 @@
 - **会议**: CVPR 2020
 
 ### CARS: Continuous Evolution for Efficient Neural Architecture Search.
-- **链接**: [arXiv:1909.04977](https://arxiv.org/abs/1909.04977) · [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yang_CARS_Continuous_Evolution_for_Efficient_Neural_Architecture_Search_CVPR_2020_paper.html) · 📚 被引 215
+- **链接**: [arXiv:1909.04977](https://arxiv.org/abs/1909.04977) · 📚 被引 215
 - **作者**: Zhaohui Yang, Yunhe Wang, Xinghao Chen, Boxin Shi, Chao Xu, Chunjing Xu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -130,9 +142,9 @@
   > Searching techniques in most of existing neural architecture search (NAS) algorithms are mainly dominated by differentiable methods for the efficiency reason. In contrast, we develop an efficient continuous evolutionary approach for searching neural networks. Architectures in the population that share parameters within one SuperNet in the latest generation will be tuned over the training dataset with a few epochs. The searching in the next evolution generation will directly inherit both the SuperNet and the population, which accelerates the optimal network generation. The non-dominated sorting strategy is further applied to preserve only results on the Pareto front for accurately updating the SuperNet. Several neural networks with different model sizes and performances will be produced after the continuous search with only 0.4 GPU days. As a result, our framework provides a series of networks with the number of parameters ranging from 3.7M to 5.1M under mobile settings. These networks surpass those produced by the state-of-the-art methods on the benchmark ImageNet dataset.
 
 ### C2FNAS: Coarse-to-Fine Neural Architecture Search for 3D Medical Image Segmentation.
-- **链接**: [arXiv:1912.09628](https://arxiv.org/abs/1912.09628) · [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yu_C2FNAS_Coarse-to-Fine_Neural_Architecture_Search_for_3D_Medical_Image_Segmentation_CVPR_2020_paper.html) · 📚 被引 121
+- **链接**: [arXiv:1912.09628](https://arxiv.org/abs/1912.09628)
 - **作者**: Qihang Yu, Dong Yang, Holger Roth, Yutong Bai, Yixiao Zhang, Alan L. Yuille et al.
-- **🏷️ 机构**: UC Berkeley,Johns Hopkins University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 - **摘要（英，原文）**:

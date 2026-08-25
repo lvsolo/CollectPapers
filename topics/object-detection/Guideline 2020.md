@@ -12,15 +12,15 @@
 - **会议**: CVPR 2020
 
 ### Rethinking Classification and Localization for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wu_Rethinking_Classification_and_Localization_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 622
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wu_Rethinking_Classification_and_Localization_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 623
 - **作者**: Yue Wu, Yinpeng Chen, Lu Yuan, Zicheng Liu, Lijuan Wang, Hongzhi Li et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### Context R-CNN: Long Term Temporal Context for Per-Camera Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Beery_Context_R-CNN_Long_Term_Temporal_Context_for_Per-Camera_Object_Detection_CVPR_2020_paper.html) · 📚 被引 113
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Beery_Context_R-CNN_Long_Term_Temporal_Context_for_Per-Camera_Object_Detection_CVPR_2020_paper.html)
 - **作者**: Sara Beery, Guanhang Wu, Vivek Rathod, Ronny Votel, Jonathan Huang
-- **🏷️ 机构**: MIT
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### Learning a Unified Sample Weighting Network for Object Detection.
@@ -54,19 +54,19 @@
 - **会议**: CVPR 2020
 
 ### MnasFPN: Learning Latency-Aware Pyramid Architecture for Object Detection on Mobile Devices.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_MnasFPN_Learning_Latency-Aware_Pyramid_Architecture_for_Object_Detection_on_Mobile_CVPR_2020_paper.html) · 📚 被引 40
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_MnasFPN_Learning_Latency-Aware_Pyramid_Architecture_for_Object_Detection_on_Mobile_CVPR_2020_paper.html)
 - **作者**: Bo Chen, Golnaz Ghiasi, Hanxiao Liu, Tsung-Yi Lin, Dmitry Kalenichenko, Hartwig Adam et al.
-- **🏷️ 机构**: Google Brain, Google DeepMind
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### CentripetalNet: Pursuing High-Quality Keypoint Pairs for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Dong_CentripetalNet_Pursuing_High-Quality_Keypoint_Pairs_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 163
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Dong_CentripetalNet_Pursuing_High-Quality_Keypoint_Pairs_for_Object_Detection_CVPR_2020_paper.html)
 - **作者**: Zhiwei Dong, Guoxuan Li, Yue Liao, Fei Wang, Pengju Ren, Chen Qian
 - **🏷️ 机构**: Institute of Artificial Intelligence and Robotics\, Xi&#x2019;an Jiaotong University; SenseTime Research, University of Chinese Academy of Sciences, Beihang University
 - **会议**: CVPR 2020
 
 ### Associate-3Ddet: Perceptual-to-Conceptual Association for 3D Point Cloud Object Detection.
-- **链接**: [arXiv:2006.04356](https://arxiv.org/abs/2006.04356) · [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Du_Associate-3Ddet_Perceptual-to-Conceptual_Association_for_3D_Point_Cloud_Object_Detection_CVPR_2020_paper.html) · 📚 被引 86
+- **链接**: [arXiv:2006.04356](https://arxiv.org/abs/2006.04356) · 📚 被引 86
 - **作者**: Liang Du, Xiaoqing Ye, Xiao Tan, Jianfeng Feng, Zhenbo Xu, Errui Ding et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -76,7 +76,7 @@
   > Object detection from 3D point clouds remains a challenging task, though recent studies pushed the envelope with the deep learning techniques. Owing to the severe spatial occlusion and inherent variance of point density with the distance to sensors, appearance of a same object varies a lot in point cloud data. Designing robust feature representation against such appearance changes is hence the key issue in a 3D object detection method. In this paper, we innovatively propose a domain adaptation like approach to enhance the robustness of the feature representation. More specifically, we bridge the gap between the perceptual domain where the feature comes from a real scene and the conceptual domain where the feature is extracted from an augmented scene consisting of non-occlusion point cloud rich of detailed information. This domain adaptation approach mimics the functionality of the human brain when proceeding object perception. Extensive experiments demonstrate that our simple yet effective approach fundamentally boosts the performance of 3D point cloud object detection and achieves the state-of-the-art results.
 
 ### Few-Shot Object Detection With Attention-RPN and Multi-Relation Detector.
-- **链接**: [arXiv:1908.01998](https://arxiv.org/abs/1908.01998) · [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Fan_Few-Shot_Object_Detection_With_Attention-RPN_and_Multi-Relation_Detector_CVPR_2020_paper.html) · [代码](https://github.com/fanq15/Few-Shot-Object-Detection-Dataset) · 📚 被引 522
+- **链接**: [arXiv:1908.01998](https://arxiv.org/abs/1908.01998) · [代码](https://github.com/fanq15/Few-Shot-Object-Detection-Dataset) · 📚 被引 522
 - **作者**: Qi Fan, Wei Zhuo, Chi-Keung Tang, Yu-Wing Tai
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -88,7 +88,7 @@
 ### Camouflaged Object Detection.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Fan_Camouflaged_Object_Detection_CVPR_2020_paper.html)
 - **作者**: Deng-Ping Fan, Ge-Peng Ji, Guolei Sun, Ming-Ming Cheng, Jianbing Shen, Ling Shao
-- **🏷️ 机构**: Nankai University, Australian National University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### Taking a Deeper Look at Co-Salient Object Detection.
@@ -140,9 +140,9 @@
 - **会议**: CVPR 2020
 
 ### Dynamic Refinement Network for Oriented and Densely Packed Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Pan_Dynamic_Refinement_Network_for_Oriented_and_Densely_Packed_Object_Detection_CVPR_2020_paper.html) · 📚 被引 379
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Pan_Dynamic_Refinement_Network_for_Oriented_and_Densely_Packed_Object_Detection_CVPR_2020_paper.html)
 - **作者**: Xingjia Pan, Yuqiang Ren, Kekai Sheng, Weiming Dong, Haolei Yuan, Xiaowei Guo et al.
-- **🏷️ 机构**: National Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### Multi-Scale Interactive Network for Salient Object Detection.
@@ -164,13 +164,13 @@
 - **会议**: CVPR 2020
 
 ### A2dele: Adaptive and Attentive Depth Distiller for Efficient RGB-D Salient Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Piao_A2dele_Adaptive_and_Attentive_Depth_Distiller_for_Efficient_RGB-D_Salient_CVPR_2020_paper.html) · 📚 被引 236
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Piao_A2dele_Adaptive_and_Attentive_Depth_Distiller_for_Efficient_RGB-D_Salient_CVPR_2020_paper.html)
 - **作者**: Yongri Piao, Zhengkun Rong, Miao Zhang, Weisong Ren, Huchuan Lu
-- **🏷️ 机构**: Dalian University of Technology
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### DR Loss: Improving Object Detection by Distributional Ranking.
-- **链接**: [arXiv:1907.10156](https://arxiv.org/abs/1907.10156) · [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Qian_DR_Loss_Improving_Object_Detection_by_Distributional_Ranking_CVPR_2020_paper.html) · [代码](https://github.com/idstcv/DR_loss) · 📚 被引 60
+- **链接**: [arXiv:1907.10156](https://arxiv.org/abs/1907.10156) · [代码](https://github.com/idstcv/DR_loss) · 📚 被引 60
 - **作者**: Qi Qian, Lei Chen, Hao Li, Rong Jin
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -198,7 +198,7 @@
 - **会议**: CVPR 2020
 
 ### EfficientDet: Scalable and Efficient Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Tan_EfficientDet_Scalable_and_Efficient_Object_Detection_CVPR_2020_paper.html) · 📚 被引 7834
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Tan_EfficientDet_Scalable_and_Efficient_Object_Detection_CVPR_2020_paper.html) · 📚 被引 7840
 - **作者**: Mingxing Tan, Ruoming Pang, Quoc V. Le
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -246,7 +246,7 @@
 - **会议**: CVPR 2020
 
 ### LiDAR-Based Online 3D Video Object Detection With Graph-Based Message Passing and Spatiotemporal Transformer Attention.
-- **链接**: [arXiv:2004.01389](https://arxiv.org/abs/2004.01389) · [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yin_LiDAR-Based_Online_3D_Video_Object_Detection_With_Graph-Based_Message_Passing_CVPR_2020_paper.html) · 📚 被引 133
+- **链接**: [arXiv:2004.01389](https://arxiv.org/abs/2004.01389) · 📚 被引 133
 - **作者**: Junbo Yin, Jianbing Shen, Chenye Guan, Dingfu Zhou, Ruigang Yang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -256,9 +256,9 @@
   > Existing LiDAR-based 3D object detectors usually focus on the single-frame detection, while ignoring the spatiotemporal information in consecutive point cloud frames. In this paper, we propose an end-to-end online 3D video object detector that operates on point cloud sequences. The proposed model comprises a spatial feature encoding component and a spatiotemporal feature aggregation component. In the former component, a novel Pillar Message Passing Network (PMPNet) is proposed to encode each discrete point cloud frame. It adaptively collects information for a pillar node from its neighbors by iterative message passing, which effectively enlarges the receptive field of the pillar feature. In the latter component, we propose an Attentive Spatiotemporal Transformer GRU (AST-GRU) to aggregate the spatiotemporal information, which enhances the conventional ConvGRU with an attentive memory gating mechanism. AST-GRU contains a Spatial Transformer Attention (STA) module and a Temporal Transformer Attention (TTA) module, which can emphasize the foreground objects and align the dynamic objects, respectively. Experimental results demonstrate that the proposed 3D video object detector achieves state-of-the-art performance on the large-scale nuScenes benchmark.
 
 ### Weakly-Supervised Salient Object Detection via Scribble Annotations.
-- **链接**: [arXiv:2003.07685](https://arxiv.org/abs/2003.07685) · [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhang_Weakly-Supervised_Salient_Object_Detection_via_Scribble_Annotations_CVPR_2020_paper.html) · [代码](https://github.com/JingZhang617/Scribble_Saliency) · 📚 被引 277
+- **链接**: [arXiv:2003.07685](https://arxiv.org/abs/2003.07685) · [代码](https://github.com/JingZhang617/Scribble_Saliency)
 - **作者**: Jing Zhang, Xin Yu, Aixuan Li, Peipei Song, Bowen Liu, Yuchao Dai
-- **🏷️ 机构**: Northwestern Polytechnical University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 - **摘要（英，原文）**:

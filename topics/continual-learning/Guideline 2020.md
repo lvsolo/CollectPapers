@@ -5,50 +5,50 @@
 
 > 同领域其他年份: 
 
-### Adversarial Continual Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58621-8_23)
-- **作者**: Sayna Ebrahimi, Franziska Meier, Roberto Calandra, Trevor Darrell, Marcus Rohrbach
-- **🏷️ 机构**: UC Berkeley
-- **会议**: ECCV 2020
-
-### Online Continual Learning Under Extreme Memory Constraints.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58604-1_43)
-- **作者**: Enrico Fini, Stéphane Lathuilière, Enver Sangineto, Moin Nabi, Elisa Ricci
+### Conditional Channel Gated Networks for Task-Aware Continual Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Abati_Conditional_Channel_Gated_Networks_for_Task-Aware_Continual_Learning_CVPR_2020_paper.html) · 📚 被引 140
+- **作者**: Davide Abati, Jakub M. Tomczak, Tijmen Blankevoort, Simone Calderara, Rita Cucchiara, Babak Ehteshami Bejnordi
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Imbalanced Continual Learning with Partitioning Reservoir Sampling.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58601-0_25) · 📚 139 citations
-- **作者**: Chris Dongjoo Kim, Jinseo Jeong, Gunhee Kim
+### Continual Learning With Extended Kronecker-Factored Approximate Curvature.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Lee_Continual_Learning_With_Extended_Kronecker-Factored_Approximate_Curvature_CVPR_2020_paper.html) · 📚 被引 44
+- **作者**: Janghyeon Lee, Hyeong Gwon Hong, Donggyu Joo, Junmo Kim
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### GDumb: A Simple Approach that Questions Our Progress in Continual Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58536-5_31) · 📚 743 citations
-- **作者**: Ameya Prabhu, Philip H. S. Torr, Puneet K. Dokania
+### Semantic Drift Compensation for Class-Incremental Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yu_Semantic_Drift_Compensation_for_Class-Incremental_Learning_CVPR_2020_paper.html) · 📚 被引 268
+- **作者**: Lu Yu, Bartlomiej Twardowski, Xialei Liu, Luis Herranz, Kai Wang, Yongmei Cheng et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### More Classifiers, Less Forgetting: A Generic Multi-classifier Paradigm for Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58574-7_42) · 📚 118 citations
-- **作者**: Yu Liu, Sarah Parisot, Gregory G. Slabaugh, Xu Jia, Ales Leonardis, Tinne Tuytelaars
-- **🏷️ 机构**: SenseTime
-- **会议**: ECCV 2020
-
-### PODNet: Pooled Outputs Distillation for Small-Tasks Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58565-5_6) · 📚 925 citations
-- **作者**: Arthur Douillard, Matthieu Cord, Charles Ollion, Thomas Robert, Eduardo Valle
+### Modeling the Background for Incremental Learning in Semantic Segmentation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Cermelli_Modeling_the_Background_for_Incremental_Learning_in_Semantic_Segmentation_CVPR_2020_paper.html) · 📚 被引 308
+- **作者**: Fabio Cermelli, Massimiliano Mancini, Samuel Rota Bulò, Elisa Ricci, Barbara Caputo
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Memory-Efficient Incremental Learning Through Feature Adaptation.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58517-4_41) · 📚 209 citations
-- **作者**: Ahmet Iscen, Jeffrey Zhang, Svetlana Lazebnik, Cordelia Schmid
+### Incremental Learning in Online Scenario.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/He_Incremental_Learning_in_Online_Scenario_CVPR_2020_paper.html) · 📚 被引 139
+- **作者**: Jiangpeng He, Runyu Mao, Zeman Shao, Fengqing Zhu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Topology-Preserving Class-Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_16)
-- **作者**: Xiaoyu Tao, Xinyuan Chang, Xiaopeng Hong, Xing Wei, Yihong Gong
+### Mnemonics Training: Multi-Class Incremental Learning Without Forgetting.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Liu_Mnemonics_Training_Multi-Class_Incremental_Learning_Without_Forgetting_CVPR_2020_paper.html) · 📚 被引 273
+- **作者**: Yaoyao Liu, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
+
+### Few-Shot Class-Incremental Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Tao_Few-Shot_Class-Incremental_Learning_CVPR_2020_paper.html)
+- **作者**: Xiaoyu Tao, Xiaopeng Hong, Xinyuan Chang, Songlin Dong, Xing Wei, Yihong Gong
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+### Maintaining Discrimination and Fairness in Class Incremental Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhao_Maintaining_Discrimination_and_Fairness_in_Class_Incremental_Learning_CVPR_2020_paper.html) · 📚 被引 429
+- **作者**: Bowen Zhao, Xi Xiao, Guojun Gan, Bin Zhang, Shu-Tao Xia
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
