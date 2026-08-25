@@ -76,9 +76,10 @@ jobs:
     runs-on: ubuntu-latest
     # 大会议批次（CVPR 大年份 2000+ 篇）DBLP 扫描+enrich 需要 40-70 分钟
     timeout-minutes: 90
+    # 单批超时只杀自己（fail-fast 已关）；串行模式下每批独立运行互不影响
     strategy:
       fail-fast: false           # 一个格子失败不拖垮其他格子
-      max-parallel: 3            # 并行 3 个（DBLP 压力可控：3×2.5s 间隔）
+      max-parallel: 1            # 串行执行：DBLP 限流（429）+ git 并发 push 冲突 双重根治
       matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
@@ -105,26 +106,34 @@ jobs:
         run: |
           python3 collect.py --conference ${{ matrix.conference }} --year ${{ matrix.year }} --no-llm
 
-      - name: Commit this batch (serialized via git lock)
+      - name: Commit this batch (rebase-safe retry)
         run: |
           git config user.name "collectpapers-bot"
           git config user.email "actions@github.com"
+          git fetch origin main
           for i in 1 2 3 4 5; do
             git add topics/ .cache/ 2>/dev/null
             if git diff --cached --quiet; then
               echo "No changes for ${{ matrix.conference }} ${{ matrix.year }}"
-              break
+              exit 0
             fi
-            git commit -m "docs(topics): ${{ matrix.conference }} ${{ matrix.year }} refresh" || break
+            # 串行模式下冲突罕见；若 rebase 撞车，用 cherry-pick 恢复本批提交
+            if ! git diff --cached --quiet; then
+              git commit -m "docs(topics): ${{ matrix.conference }} ${{ matrix.year }} refresh"
+            fi
             if git pull --rebase --autostash origin main && git push; then
               echo "pushed batch ${{ matrix.conference }} ${{ matrix.year }}"
-              break
+              exit 0
             fi
             echo "push conflict, retry $i/5 after backoff"
-            sleep $((i * 20))
+            sleep $((i * 30))
             git rebase --abort 2>/dev/null || true
-            git reset --hard origin/main || git fetch origin main
+            git fetch origin main
+            # rebase 失败：硬恢复到远端后重放本批的改动（重新 add 从工作区）
+            git reset --soft HEAD~1 2>/dev/null || true
           done
+          echo "::warning::batch ${{ matrix.conference }} ${{ matrix.year }} could not push after 5 tries"
+          exit 1
 
   # ------------------------------------------------------------------
   # 阶段 3: LLM 评估（单独阶段，逐领域小批次，读上一阶段落盘的数据）
