@@ -6,25 +6,29 @@
 > 同领域其他年份: 
 
 ### MDL-NAS: A Joint Multi-domain Learning Framework for Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01924)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01924) · 📚 被引 16
 - **作者**: Shiguang Wang, Tao Xie, Jian Cheng, Xingcheng Zhang, Haijun Liu
 - **🏷️ 机构**: University of Electronic Science and Technology of China, Harbin Institute of Technology, SenseTime Research
 - **会议**: CVPR 2023
 
 ### DisWOT: Student Architecture Search for Distillation WithOut Training.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01145)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01145) · 📚 被引 60
 - **作者**: Peijie Dong, Lujun Li, Zimian Wei
 - **🏷️ 机构**: National University of Defense Technology, Chinese Academy of Sciences
 - **会议**: CVPR 2023
 
 ### Adversarially Robust Neural Architecture Search for Graph Neural Networks.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00787)
+- **链接**: [arXiv:2304.04168](https://arxiv.org/abs/2304.04168) · 📚 被引 21
 - **作者**: Beini Xie, Heng Chang, Ziwei Zhang, Xin Wang, Daixin Wang, Zhiqiang Zhang et al.
 - **🏷️ 机构**: Tsinghua University, Ant Group, Yale University
 - **会议**: CVPR 2023
 
+- **摘要（英，原文）**:
+
+  > Graph Neural Networks (GNNs) obtain tremendous success in modeling relational data. Still, they are prone to adversarial attacks, which are massive threats to applying GNNs to risk-sensitive domains. Existing defensive methods neither guarantee performance facing new data/tasks or adversarial attacks nor provide insights to understand GNN robustness from an architectural perspective. Neural Architecture Search (NAS) has the potential to solve this problem by automating GNN architecture designs. Nevertheless, current graph NAS approaches lack robust design and are vulnerable to adversarial attacks. To tackle these challenges, we propose a novel Robust Neural Architecture search framework for GNNs (G-RNA). Specifically, we design a robust search space for the message-passing mechanism by adding graph structure mask operations into the search space, which comprises various defensive operation candidates and allows us to search for defensive GNNs. Furthermore, we define a robustness metric to guide the search procedure, which helps to filter robust architectures. In this way, G-RNA helps understand GNN robustness from an architectural perspective and effectively searches for optimal adversarial robust GNNs. Extensive experimental results on benchmark datasets show that G-RNA significantly outperforms manually designed robust GNNs and vanilla graph NAS baselines by 12.1% to 23.4% under adversarial attacks.
+
 ### HOTNAS: Hierarchical Optimal Transport for Neural Architecture Search.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01154)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01154) · 📚 被引 15
 - **作者**: Jiechao Yang, Yong Liu, Hongteng Xu
 - **🏷️ 机构**: Gaoling School of Artificial Intelligence, Renmin University of China,Beijing,China
 - **会议**: CVPR 2023

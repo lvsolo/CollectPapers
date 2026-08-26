@@ -6,19 +6,23 @@
 > 同领域其他年份: 
 
 ### Omni3D: A Large Benchmark and Model for 3D Object Detection in the Wild.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01264)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01264) · 📚 被引 106
 - **作者**: Garrick Brazil, Abhinav Kumar, Julian Straub, Nikhila Ravi, Justin Johnson, Georgia Gkioxari
 - **🏷️ 机构**: Meta AI, Michigan State University, Caltech
 - **会议**: CVPR 2023
 
 ### ConQueR: Query Contrast Voxel-DETR for 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00897) · 📚 被引 30
+- **链接**: [arXiv:2212.07289](https://arxiv.org/abs/2212.07289) · 📚 被引 30
 - **作者**: Benjin Zhu, Zhe Wang, Shaoshuai Shi, Hang Xu, Lanqing Hong, Hongsheng Li
 - **🏷️ 机构**: The Chinese University of Hong Kong,Multimedia Laboratory, Max Planck Institute for Informatics, Huawei Noah&#x0027;s Ark Lab
 - **会议**: CVPR 2023
 
+- **摘要（英，原文）**:
+
+  > Although DETR-based 3D detectors can simplify the detection pipeline and achieve direct sparse predictions, their performance still lags behind dense detectors with post-processing for 3D object detection from point clouds. DETRs usually adopt a larger number of queries than GTs (e.g., 300 queries v.s. 40 objects in Waymo) in a scene, which inevitably incur many false positives during inference. In this paper, we propose a simple yet effective sparse 3D detector, named Query Contrast Voxel-DETR (ConQueR), to eliminate the challenging false positives, and achieve more accurate and sparser predictions. We observe that most false positives are highly overlapping in local regions, caused by the lack of explicit supervision to discriminate locally similar queries. We thus propose a Query Contrast mechanism to explicitly enhance queries towards their best-matched GTs over all unmatched query predictions. This is achieved by the construction of positive and negative GT-query pairs for each GT, and a contrastive loss to enhance positive GT-query pairs against negative ones based on feature similarities. ConQueR closes the gap of sparse and dense 3D detectors, and reduces up to ~60% false positives. Our single-frame ConQueR achieves new state-of-the-art (sota) 71.6 mAPH/L2 on the challenging Waymo Open Dataset validation set, outperforming previous sota methods (e.g., PV-RCNN++) by over 2.0 mAPH/L2.
+
 ### AShapeFormer : Semantics-Guided Object-Level Active Shape Encoding for 3D Object Detection via Transformers.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00104)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00104) · 📚 被引 19
 - **作者**: Zechuan Li, Hongshan Yu, Zhengeng Yang, Tom Tongjia Chen, Naveed Akhtar
 - **🏷️ 机构**: Hunan University, The University of Western Australia
 - **会议**: CVPR 2023
@@ -36,7 +40,7 @@
 - **会议**: CVPR 2023
 
 ### PiMAE: Point Cloud and Image Interactive Masked Autoencoders for 3D Object Detection.
-- **链接**: [arXiv:2303.08129](https://arxiv.org/abs/2303.08129) · [代码](https://github.com/BLVLab/PiMAE)
+- **链接**: [arXiv:2303.08129](https://arxiv.org/abs/2303.08129) · [代码](https://github.com/BLVLab/PiMAE) · 📚 被引 78
 - **作者**: Anthony Chen, Kevin Zhang, Renrui Zhang, Zihan Wang, Yuheng Lu, Yandong Guo et al.
 - **🏷️ 机构**: School of Computer Science, Peking University,National Key Laboratory for Multimedia Information Processing, The Chinese University of Hong Kong, Beijing University of Posts and Telecommunications
 - **会议**: CVPR 2023
@@ -52,7 +56,7 @@
 - **会议**: CVPR 2023
 
 ### itKD: Interchange Transfer-based Knowledge Distillation for 3D Object Detection.
-- **链接**: [arXiv:2205.15531](https://arxiv.org/abs/2205.15531)
+- **链接**: [arXiv:2205.15531](https://arxiv.org/abs/2205.15531) · 📚 被引 34
 - **作者**: Hyeon Cho, Junyong Choi, Geonwoo Baek, Wonjun Hwang
 - **🏷️ 机构**: Ajou University
 - **会议**: CVPR 2023
@@ -74,19 +78,23 @@
 - **会议**: CVPR 2023
 
 ### MSF: Motion-guided Sequential Fusion for Efficient 3D Object Detection from Point Cloud Sequences.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00503) · 📚 被引 33
+- **链接**: [arXiv:2303.08316](https://arxiv.org/abs/2303.08316) · [代码](https://github.com/skyhehe123/MSF) · 📚 被引 33
 - **作者**: Chenhang He, Ruihuang Li, Yabin Zhang, Shuai Li, Lei Zhang
 - **🏷️ 机构**: The Hong Kong Polytechnic University
 - **会议**: CVPR 2023
 
+- **摘要（英，原文）**:
+
+  > Point cloud sequences are commonly used to accurately detect 3D objects in applications such as autonomous driving. Current top-performing multi-frame detectors mostly follow a Detect-and-Fuse framework, which extracts features from each frame of the sequence and fuses them to detect the objects in the current frame. However, this inevitably leads to redundant computation since adjacent frames are highly correlated. In this paper, we propose an efficient Motion-guided Sequential Fusion (MSF) method, which exploits the continuity of object motion to mine useful sequential contexts for object detection in the current frame. We first generate 3D proposals on the current frame and propagate them to preceding frames based on the estimated velocities. The points-of-interest are then pooled from the sequence and encoded as proposal features. A novel Bidirectional Feature Aggregation (BiFA) module is further proposed to facilitate the interactions of proposal features across frames. Besides, we optimize the point cloud pooling by a voxel-based sampling technique so that millions of points can be processed in several milliseconds. The proposed MSF method achieves not only better efficiency than other multi-frame detectors but also leading accuracy, with 83.12% and 78.30% mAP on the LEVEL1 and LEVEL2 test sets of Waymo Open Dataset, respectively. Codes can be found at \url{https://github.com/skyhehe123/MSF}.
+
 ### Density-Insensitive Unsupervised Domain Adaption on 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01684)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01684) · 📚 被引 40
 - **作者**: Qianjiang Hu, Daizong Liu, Wei Hu
 - **🏷️ 机构**: Wangxuan Institute of Computer Technology, Peking University,Beijing,China
 - **会议**: CVPR 2023
 
 ### MSMDFusion: Fusing LiDAR and Camera at Multiple Scales with Multi-Depth Seeds for 3D Object Detection.
-- **链接**: [arXiv:2209.03102](https://arxiv.org/abs/2209.03102) · [代码](https://github.com/SxJyJay/MSMDFusion)
+- **链接**: [arXiv:2209.03102](https://arxiv.org/abs/2209.03102) · [代码](https://github.com/SxJyJay/MSMDFusion) · 📚 被引 144
 - **作者**: Yang Jiao, Zequn Jie, Shaoxiang Chen, Jingjing Chen, Lin Ma, Yu-Gang Jiang
 - **🏷️ 机构**: School of CS, Fudan University,Shanghai Key Lab of Intell. Info. Processing, Meituan
 - **会议**: CVPR 2023
@@ -102,13 +110,13 @@
 - **会议**: CVPR 2023
 
 ### LoGoNet: Towards Accurate 3D Object Detection with Local-to-Global Cross- Modal Fusion.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01681)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01681) · 📚 被引 181
 - **作者**: Xin Li, Tao Ma, Yuenan Hou, Botian Shi, Yuchen Yang, Youquan Liu et al.
 - **🏷️ 机构**: The Chinese University of Hong Kong, Shanghai AI Laboratory, Fudan University
 - **会议**: CVPR 2023
 
 ### PillarNeXt: Rethinking Network Designs for 3D Object Detection in LiDAR Point Clouds.
-- **链接**: [arXiv:2305.04925](https://arxiv.org/abs/2305.04925)
+- **链接**: [arXiv:2305.04925](https://arxiv.org/abs/2305.04925) · 📚 被引 180
 - **作者**: Jinyu Li, Chenxu Luo, Xiaodong Yang
 - **🏷️ 机构**: QCraft
 - **会议**: CVPR 2023
@@ -128,7 +136,7 @@
   > Occluded and long-range objects are ubiquitous and challenging for 3D object detection. Point cloud sequence data provide unique opportunities to improve such cases, as an occluded or distant object can be observed from different viewpoints or gets better visibility over time. However, the efficiency and effectiveness in encoding long-term sequence data can still be improved. In this work, we propose MoDAR, using motion forecasting outputs as a type of virtual modality, to augment LiDAR point clouds. The MoDAR modality propagates object information from temporal contexts to a target frame, represented as a set of virtual points, one for each object from a waypoint on a forecasted trajectory. A fused point cloud of both raw sensor points and the virtual points can then be fed to any off-the-shelf point-cloud based 3D object detector. Evaluated on the Waymo Open Dataset, our method significantly improves prior art detectors by using motion forecasting from extra-long sequences (e.g. 18 seconds), achieving new state of the arts, while not adding much computation overhead.
 
 ### Deep Dive into Gradients: Better Optimization for 3D Object Detection with Gradient-Corrected IoU Supervision.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00497)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00497) · 📚 被引 15
 - **作者**: Qi Ming, Lingjuan Miao, Zhe Ma, Lin Zhao, Zhiqiang Zhou, Xuhui Huang et al.
 - **🏷️ 机构**: School of Automation, Beijing Institute of Technology,China
 - **会议**: CVPR 2023
@@ -146,7 +154,7 @@
 - **会议**: CVPR 2023
 
 ### Semi-Supervised Stereo-Based 3D Object Detection via Cross-View Consensus.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01676)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01676) · 📚 被引 5
 - **作者**: Wenhao Wu, Hau-San Wong, Si Wu
 - **🏷️ 机构**: City University of Hong Kong,Department of Computer Science, School of Computer Science and Engineering, South China University of Technology
 - **会议**: CVPR 2023
@@ -164,7 +172,7 @@
 - **会议**: CVPR 2023
 
 ### BEVHeight: A Robust Framework for Vision-based Roadside 3D Object Detection.
-- **链接**: [arXiv:2303.08498](https://arxiv.org/abs/2303.08498) · [代码](https://github.com/ADLab-AutoDrive/BEVHeight)
+- **链接**: [arXiv:2303.08498](https://arxiv.org/abs/2303.08498) · [代码](https://github.com/ADLab-AutoDrive/BEVHeight) · 📚 被引 122
 - **作者**: Lei Yang, Kaicheng Yu, Tao Tang, Jun Li, Kun Yuan, Li Wang et al.
 - **🏷️ 机构**: Tsinghua University,State Key Laboratory of Automotive Safety and Energy, Autonomous Driving Lab, Alibaba Group, Sun Yat-sen University,Shenzhen Campus
 - **会议**: CVPR 2023
@@ -196,7 +204,7 @@
 - **会议**: CVPR 2023
 
 ### OcTr: Octree-Based Transformer for 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00500)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00500) · 📚 被引 79
 - **作者**: Chao Zhou, Yanan Zhang, Jiaxin Chen, Di Huang
 - **🏷️ 机构**: Beihang University,State Key Laboratory of Software Development Environment,Beijing,China, School of Computer Science and Engineering, Beihang University,Beijing,China
 - **会议**: CVPR 2023
@@ -208,7 +216,7 @@
 - **会议**: CVPR 2023
 
 ### MonoATT: Online Monocular 3D Object Detection with Adaptive Token Transformer.
-- **链接**: [arXiv:2303.13018](https://arxiv.org/abs/2303.13018)
+- **链接**: [arXiv:2303.13018](https://arxiv.org/abs/2303.13018) · 📚 被引 45
 - **作者**: Yunsong Zhou, Hongzi Zhu, Quan Liu, Shan Chang, Minyi Guo
 - **🏷️ 机构**: Shanghai Jiao Tong University, Donghua University
 - **会议**: CVPR 2023
@@ -224,7 +232,7 @@
 - **会议**: CVPR 2023
 
 ### Collaboration Helps Camera Overtake LiDAR in 3D Detection.
-- **链接**: [arXiv:2303.13560](https://arxiv.org/abs/2303.13560) · [代码](https://github.com/MediaBrain-SJTU/CoCa3D)
+- **链接**: [arXiv:2303.13560](https://arxiv.org/abs/2303.13560) · [代码](https://github.com/MediaBrain-SJTU/CoCa3D) · 📚 被引 108
 - **作者**: Yue Hu, Yifan Lu, Runsheng Xu, Weidi Xie, Siheng Chen, Yanfeng Wang
 - **🏷️ 机构**: Shanghai Jiao Tong University,Cooperative Medianet Innovation Center, University of California,Los Angeles, Shanghai AI Laboratory
 - **会议**: CVPR 2023
@@ -252,7 +260,7 @@
 - **会议**: CVPR 2023
 
 ### PointDistiller: Structured Knowledge Distillation Towards Efficient and Compact 3D Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02087)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02087) · 📚 被引 59
 - **作者**: Linfeng Zhang, Runpei Dong, Hung-Shuo Tai, Kaisheng Ma
 - **🏷️ 机构**: Tsinghua University, Xi&#x0027;an Jiaotong University, DIDI
 - **会议**: CVPR 2023

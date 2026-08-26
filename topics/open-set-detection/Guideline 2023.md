@@ -12,9 +12,9 @@
 - **会议**: CVPR 2023
 
 ### Novel Class Discovery for 3D Point Cloud Semantic Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00906) · 📚 被引 18
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00906)
 - **作者**: Luigi Riz, Cristiano Saltori, Elisa Ricci, Fabio Poiesi
-- **🏷️ 机构**: Fondazione Bruno Kessler, University of Trento
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
 ### OVTrack: Open-Vocabulary Multiple Object Tracking.
@@ -24,13 +24,13 @@
 - **会议**: CVPR 2023
 
 ### BundleSDF: Neural 6-DoF Tracking and 3D Reconstruction of Unknown Objects.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00066)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00066) · 📚 被引 155
 - **作者**: Bowen Wen, Jonathan Tremblay, Valts Blukis, Stephen Tyree, Thomas Müller, Alex Evans et al.
 - **🏷️ 机构**: NVIDIA
 - **会议**: CVPR 2023
 
 ### Learning to Generate Language-Supervised and Open-Vocabulary Scene Graph Using Pre-Trained Visual-Semantic Space.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00285)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00285) · 📚 被引 41
 - **作者**: Yong Zhang, Yingwei Pan, Ting Yao, Rui Huang, Tao Mei, Chang Wen Chen
 - **🏷️ 机构**: The Chinese University of Hong Kong,Shenzhen, HiDream.ai Inc., The Hong Kong Polytechnic University
 - **会议**: CVPR 2023
@@ -42,7 +42,7 @@
 - **会议**: CVPR 2023
 
 ### OvarNet: Towards Open-Vocabulary Object Attribute Recognition.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02252)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02252) · 📚 被引 47
 - **作者**: Keyan Chen, Xiaolong Jiang, Yao Hu, Xu Tang, Yan Gao, Jianqi Chen et al.
 - **🏷️ 机构**: Beihang University, Xiaohongshu Inc, Shanghai Jiao Tong University,CMIC
 - **会议**: CVPR 2023
@@ -60,7 +60,7 @@
 - **会议**: CVPR 2023
 
 ### Being Comes from Not-Being: Open-Vocabulary Text-to-Motion Generation with Wordless Training.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02224)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02224) · 📚 被引 36
 - **作者**: Junfan Lin, Jianlong Chang, Lingbo Liu, Guanbin Li, Liang Lin, Qi Tian et al.
 - **🏷️ 机构**: Sun Yat-sen University, Huawei Cloud, The Hong Kong Polytechnic University
 - **会议**: CVPR 2023
@@ -72,13 +72,13 @@
 - **会议**: CVPR 2023
 
 ### FreeSeg: Unified, Universal and Open-Vocabulary Image Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01863)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01863) · 📚 被引 93
 - **作者**: Jie Qin, Jie Wu, Pengxiang Yan, Ming Li, Yuxi Ren, Xuefeng Xiao et al.
 - **🏷️ 机构**: Institute of Automation,Chinese Academy of Sciences, ByteDance Inc
 - **会议**: CVPR 2023
 
 ### Mask-Free OVIS: Open-Vocabulary Instance Segmentation without Manual Mask Annotations.
-- **链接**: [arXiv:2303.16891](https://arxiv.org/abs/2303.16891)
+- **链接**: [arXiv:2303.16891](https://arxiv.org/abs/2303.16891) · 📚 被引 15
 - **作者**: Vibashan VS, Ning Yu, Chen Xing, Can Qin, Mingfei Gao, Juan Carlos Niebles et al.
 - **🏷️ 机构**: Johns Hopkins University, Salesforce Research, Northeastern University
 - **会议**: CVPR 2023
@@ -104,7 +104,7 @@
   > In this paper, we consider the problem of open-vocabulary semantic segmentation (OVS), which aims to segment objects of arbitrary classes instead of pre-defined, closed-set categories. The main contributions are as follows: First, we propose a transformer-based model for OVS, termed as OVSegmentor, which only exploits web-crawled image-text pairs for pre-training without using any mask annotations. OVSegmentor assembles the image pixels into a set of learnable group tokens via a slot-attention based binding module, and aligns the group tokens to the corresponding caption embedding. Second, we propose two proxy tasks for training, namely masked entity completion and cross-image mask consistency. The former aims to infer all masked entities in the caption given the group tokens, that enables the model to learn fine-grained alignment between visual groups and text entities. The latter enforces consistent mask predictions between images that contain shared entities, which encourages the model to learn visual invariance. Third, we construct CC4M dataset for pre-training by filtering CC12M with frequently appeared entities, which significantly improves training efficiency. Fourth, we perform zero-shot transfer on three benchmark datasets, PASCAL VOC 2012, PASCAL Context, and COCO Object. Our model achieves superior segmentation results over the state-of-the-art method by using only 3\% data (4M vs 134M) for pre-training. Code and pre-trained models will be released for future research.
 
 ### Open-Vocabulary Panoptic Segmentation with Text-to-Image Diffusion Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00289)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00289) · 📚 被引 382
 - **作者**: Jiarui Xu, Sifei Liu, Arash Vahdat, Wonmin Byeon, Xiaolong Wang, Shalini De Mello
 - **🏷️ 机构**: UC San Diego, NVIDIA
 - **会议**: CVPR 2023
@@ -116,7 +116,7 @@
 - **会议**: CVPR 2023
 
 ### Open-Set Fine-Grained Retrieval via Prompting Vision-Language Evaluator.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01857)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01857) · 📚 被引 26
 - **作者**: Shijie Wang, Jianlong Chang, Haojie Li, Zhihui Wang, Wanli Ouyang, Qi Tian
 - **🏷️ 机构**: International School of Information Science &#x0026; Engineering, Dalian University of Technology,China, Huawei Cloud &#x0026; AI,China, The University of Sydney,Sense Time Computer Vision Research Group,Australia
 - **会议**: CVPR 2023

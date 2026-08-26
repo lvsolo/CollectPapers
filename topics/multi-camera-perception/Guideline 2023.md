@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Are We Ready for Vision-Centric Driving Streaming Perception? The ASAP Benchmark.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00926)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00926) · 📚 被引 21
 - **作者**: Xiaofeng Wang, Zheng Zhu, Yunpeng Zhang, Guan Huang, Yun Ye, Wenbo Xu et al.
 - **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences, PhiGent Robotics, Southeast University
 - **会议**: CVPR 2023
@@ -34,16 +34,24 @@
 - **会议**: CVPR 2023
 
 ### Deep Incomplete Multi-View Clustering with Cross-View Partial Sample and Prototype Alignment.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01116) · 📚 被引 102
+- **链接**: [arXiv:2303.15689](https://arxiv.org/abs/2303.15689) · 📚 被引 102
 - **作者**: Jiaqi Jin, Siwei Wang, Zhibin Dong, Xinwang Liu, En Zhu
 - **🏷️ 机构**: School of Computer, National University of Defense Technology,Changsha,China
 - **会议**: CVPR 2023
 
+- **摘要（英，原文）**:
+
+  > The success of existing multi-view clustering relies on the assumption of sample integrity across multiple views. However, in real-world scenarios, samples of multi-view are partially available due to data corruption or sensor failure, which leads to incomplete multi-view clustering study (IMVC). Although several attempts have been proposed to address IMVC, they suffer from the following drawbacks: i) Existing methods mainly adopt cross-view contrastive learning forcing the representations of each sample across views to be exactly the same, which might ignore view discrepancy and flexibility in representations; ii) Due to the absence of non-observed samples across multiple views, the obtained prototypes of clusters might be unaligned and biased, leading to incorrect fusion. To address the above issues, we propose a Cross-view Partial Sample and Prototype Alignment Network (CPSPAN) for Deep Incomplete Multi-view Clustering. Firstly, unlike existing contrastive-based methods, we adopt pair-observed data alignment as 'proxy supervised signals' to guide instance-to-instance correspondence construction among views. Then, regarding of the shifted prototypes in IMVC, we further propose a prototype alignment module to achieve incomplete distribution calibration across views. Extensive experimental results showcase the effectiveness of our proposed modules, attaining noteworthy performance improvements when compared to existing IMVC competitors on benchmark datasets.
+
 ### Learning to Fuse Monocular and Multi-view Cues for Multi-frame Depth Estimation in Dynamic Scenes.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02063)
+- **链接**: [arXiv:2304.08993](https://arxiv.org/abs/2304.08993) · 📚 被引 41
 - **作者**: Rui Li, Dong Gong, Wei Yin, Hao Chen, Yu Zhu, Kaixuan Wang et al.
 - **🏷️ 机构**: Northwestern Polytechnical University, The University of New South Wales, DJI
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Multi-frame depth estimation generally achieves high accuracy relying on the multi-view geometric consistency. When applied in dynamic scenes, e.g., autonomous driving, this consistency is usually violated in the dynamic areas, leading to corrupted estimations. Many multi-frame methods handle dynamic areas by identifying them with explicit masks and compensating the multi-view cues with monocular cues represented as local monocular depth or features. The improvements are limited due to the uncontrolled quality of the masks and the underutilized benefits of the fusion of the two types of cues. In this paper, we propose a novel method to learn to fuse the multi-view and monocular cues encoded as volumes without needing the heuristically crafted masks. As unveiled in our analyses, the multi-view cues capture more accurate geometric information in static areas, and the monocular cues capture more useful contexts in dynamic areas. To let the geometric perception learned from multi-view cues in static areas propagate to the monocular representation in dynamic areas and let monocular cues enhance the representation of multi-view cost volume, we propose a cross-cue fusion (CCF) module, which includes the cross-cue attention (CCA) to encode the spatially non-local relative intra-relations from each source to enhance the representation of the other. Experiments on real-world datasets prove the significant effectiveness and generalization ability of the proposed method.
 
 ### OmniCity: Omnipotent City Understanding with Multi-Level and Multi-View Images.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01669) · 📚 被引 30
@@ -192,10 +200,14 @@
 - **会议**: CVPR 2023
 
 ### On the Effects of Self-supervision and Contrastive Alignment in Deep Multi-view Clustering.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02296) · 📚 被引 57
+- **链接**: [arXiv:2303.09877](https://arxiv.org/abs/2303.09877) · 📚 被引 57
 - **作者**: Daniel J. Trosten, Sigurd Løkse, Robert Jenssen, Michael C. Kampffmeyer
 - **🏷️ 机构**: UiT The Arctic University of Norway,Department of Physics and Technology
 - **会议**: CVPR 2023
+
+- **摘要（英，原文）**:
+
+  > Self-supervised learning is a central component in recent approaches to deep multi-view clustering (MVC). However, we find large variations in the development of self-supervision-based methods for deep MVC, potentially slowing the progress of the field. To address this, we present DeepMVC, a unified framework for deep MVC that includes many recent methods as instances. We leverage our framework to make key observations about the effect of self-supervision, and in particular, drawbacks of aligning representations with contrastive learning. Further, we prove that contrastive alignment can negatively influence cluster separability, and that this effect becomes worse when the number of views increases. Motivated by our findings, we develop several new DeepMVC instances with new forms of self-supervision. We conduct extensive experiments and find that (i) in line with our theoretical findings, contrastive alignments decreases performance on datasets with many views; (ii) all methods benefit from some form of self-supervision; and (iii) our new instances outperform previous methods on several datasets. Based on our results, we suggest several promising directions for future research. To enhance the openness of the field, we provide an open-source implementation of DeepMVC, including recent models and our new instances. Our implementation includes a consistent evaluation protocol, facilitating fair and accurate evaluation of methods and components.
 
 ### Highly Confident Local Structure Based Consensus Graph Learning for Incomplete Multi-view Clustering.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01508) · 📚 被引 51
@@ -294,7 +306,7 @@
 - **会议**: CVPR 2023
 
 ### Trap Attention: Monocular Depth Estimation with Manual Traps.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00487)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00487) · 📚 被引 21
 - **作者**: Chao Ning, Hongping Gan
 - **🏷️ 机构**: Northwestern Polytechnical University,Xi&#x0027;an,China,710072
 - **会议**: CVPR 2023
