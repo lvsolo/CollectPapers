@@ -22,7 +22,7 @@
 - **会议**: CVPR 2025
 
 ### EvOcc: Accurate Semantic Occupancy for Automated Driving Using Evidence Theory.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kalble_EvOcc_Accurate_Semantic_Occupancy_for_Automated_Driving_Using_Evidence_Theory_CVPR_2025_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kalble_EvOcc_Accurate_Semantic_Occupancy_for_Automated_Driving_Using_Evidence_Theory_CVPR_2025_paper.html) · 📚 被引 1
 - **作者**: Jonas Kälble, Sascha Wirges, Maxim Tatarchenko, Eddy Ilg
 - **🏷️ 机构**: Bosch Center for Artificial Intelligence, University of Technology Nuremberg
 - **会议**: CVPR 2025
