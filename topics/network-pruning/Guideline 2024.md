@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### MULTIFLOW: Shifting Towards Task-Agnostic Vision-Language Pruning.
-- **链接**: [arXiv:2404.05621](https://arxiv.org/abs/2404.05621) · [代码](https://github.com/FarinaMatteo/multiflow)
+- **链接**: [arXiv:2404.05621](https://arxiv.org/abs/2404.05621) · [代码](https://github.com/FarinaMatteo/multiflow) · 📚 被引 8
 - **作者**: Matteo Farina, Massimiliano Mancini, Elia Cunegatti, Gaowen Liu, Giovanni Iacca, Elisa Ricci
 - **🏷️ 机构**: University of Trento, Cisco Research
 - **会议**: CVPR 2024
@@ -34,7 +34,7 @@
 - **会议**: CVPR 2024
 
 ### Diversity-Aware Channel Pruning for StyleGAN Compression.
-- **链接**: [arXiv:2403.13548](https://arxiv.org/abs/2403.13548)
+- **链接**: [arXiv:2403.13548](https://arxiv.org/abs/2403.13548) · 📚 被引 10
 - **作者**: Jiwoo Chung, Sangeek Hyun, Sang-Heon Shim, Jae-Pil Heo
 - **🏷️ 机构**: Sungkyunkwan University
 - **会议**: CVPR 2024
@@ -44,7 +44,7 @@
   > StyleGAN has shown remarkable performance in unconditional image generation. However, its high computational cost poses a significant challenge for practical applications. Although recent efforts have been made to compress StyleGAN while preserving its performance, existing compressed models still lag behind the original model, particularly in terms of sample diversity. To overcome this, we propose a novel channel pruning method that leverages varying sensitivities of channels to latent vectors, which is a key factor in sample diversity. Specifically, by assessing channel importance based on their sensitivities to latent vector perturbations, our method enhances the diversity of samples in the compressed model. Since our method solely focuses on the channel pruning stage, it has complementary benefits with prior training schemes without additional training cost. Extensive experiments demonstrate that our method significantly enhances sample diversity across various datasets. Moreover, in terms of FID scores, our method not only surpasses state-of-the-art by a large margin but also achieves comparable scores with only half training iterations.
 
 ### Jointly Training and Pruning CNNs via Learnable Agent Guidance and Alignment.
-- **链接**: [arXiv:2403.19490](https://arxiv.org/abs/2403.19490)
+- **链接**: [arXiv:2403.19490](https://arxiv.org/abs/2403.19490) · 📚 被引 21
 - **作者**: Alireza Ganjdanesh, Shangqian Gao, Heng Huang
 - **🏷️ 机构**: University of Maryland College Park,Department of Computer Science, University of Pittsburgh,Department of Electrical and Computer Engineering
 - **会议**: CVPR 2024
@@ -54,67 +54,79 @@
   > Structural model pruning is a prominent approach used for reducing the computational cost of Convolutional Neural Networks (CNNs) before their deployment on resource-constrained devices. Yet, the majority of proposed ideas require a pretrained model before pruning, which is costly to secure. In this paper, we propose a novel structural pruning approach to jointly learn the weights and structurally prune architectures of CNN models. The core element of our method is a Reinforcement Learning (RL) agent whose actions determine the pruning ratios of the CNN model's layers, and the resulting model's accuracy serves as its reward. We conduct the joint training and pruning by iteratively training the model's weights and the agent's policy, and we regularize the model's weights to align with the selected structure by the agent. The evolving model's weights result in a dynamic reward function for the agent, which prevents using prominent episodic RL methods with stationary environment assumption for our purpose. We address this challenge by designing a mechanism to model the complex changing dynamics of the reward function and provide a representation of it to the RL agent. To do so, we take a learnable embedding for each training epoch and employ a recurrent model to calculate a representation of the changing environment. We train the recurrent model and embeddings using a decoder model to reconstruct observed rewards. Such a design empowers our agent to effectively leverage episodic observations along with the environment representations to learn a proper policy to determine performant sub-networks of the CNN model. Our extensive experiments on CIFAR-10 and ImageNet using ResNets and MobileNets demonstrate the effectiveness of our method.
 
 ### Device-Wise Federated Network Pruning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01173)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01173) · 📚 被引 8
 - **作者**: Shangqian Gao, Junyi Li, Zeyu Zhang, Yanfu Zhang, Weidong Cai, Heng Huang
 - **🏷️ 机构**: University of Pittsburgh,Electrical and Computer Engineering, University of Maryland College Park,Computer Science, University of Arizona,Information
 - **会议**: CVPR 2024
 
 ### BilevelPruning: Unified Dynamic and Static Channel Pruning for Convolutional Neural Networks.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01523)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01523) · 📚 被引 14
 - **作者**: Shangqian Gao, Yanfu Zhang, Feihu Huang, Heng Huang
 - **🏷️ 机构**: University of Pittsburgh,Electrical and Computer Engineering, College of William and Mary,Computer Science, University of Maryland College Park,Computer Science
 - **会议**: CVPR 2024
 
 ### OrthCaps: An Orthogonal CapsNet with Sparse Attention Routing and Pruning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00577)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00577) · 📚 被引 8
 - **作者**: Xinyu Geng, Jiaming Wang, Jiawei Gong, Yuerong Xue, Jun Xu, Fanglin Chen et al.
 - **🏷️ 机构**: Harbin Institute of Technology,Shenzhen, Shanghai Jiao Tong University
 - **会议**: CVPR 2024
 
 ### FedMef: Towards Memory-Efficient Federated Dynamic Pruning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02601)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02601) · 📚 被引 20
 - **作者**: Hong Huang, Weiming Zhuang, Chen Chen, Lingjuan Lyu
 - **🏷️ 机构**: City University of Hong Kong, Sony AI
 - **会议**: CVPR 2024
 
 ### Resource- Efficient Transformer Pruning for Finetuning of Large Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01534)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01534) · 📚 被引 15
 - **作者**: Fatih Ilhan, Gong Su, Selim Furkan Tekin, Tiansheng Huang, Sihao Hu, Ling Liu
 - **🏷️ 机构**: Georgia Institute of Technology,Atlanta,GA, IBM Research,Yorktown Heights,NY
 - **会议**: CVPR 2024
 
 ### Finding Lottery Tickets in Vision Models via Data-Driven Spectral Foresight Pruning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01528)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01528) · 📚 被引 8
 - **作者**: Leonardo Iurada, Marco Ciccone, Tatiana Tommasi
 - **🏷️ 机构**: Politecnico di Torino,Italy
 - **会议**: CVPR 2024
 
 ### HiPose: Hierarchical Binary Surface Encoding and Correspondence Pruning for RGB-D 6DoF Object Pose Estimation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00967)
+- **链接**: [arXiv:2311.12588](https://arxiv.org/abs/2311.12588) · 📚 被引 23
 - **作者**: Yongliang Lin, Yongzhi Su, Praveen Nathan, Sandeep Inuganti, Yan Di, Martin Sundermeyer et al.
 - **🏷️ 机构**: Zhejiang University, German Research Center for Artificial Intelligence (DFKI), Technische Universit&#x00E4;t M&#x00FC;nchen
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > In this work, we present a novel dense-correspondence method for 6DoF object pose estimation from a single RGB-D image. While many existing data-driven methods achieve impressive performance, they tend to be time-consuming due to their reliance on rendering-based refinement approaches. To circumvent this limitation, we present HiPose, which establishes 3D-3D correspondences in a coarse-to-fine manner with a hierarchical binary surface encoding. Unlike previous dense-correspondence methods, we estimate the correspondence surface by employing point-to-surface matching and iteratively constricting the surface until it becomes a correspondence point while gradually removing outliers. Extensive experiments on public benchmarks LM-O, YCB-V, and T-Less demonstrate that our method surpasses all refinement-free methods and is even on par with expensive refinement-based approaches. Crucially, our approach is computationally efficient and enables real-time critical applications with high accuracy requirements.
+
 ### MAP: MAsk-Pruning for Source-Free Model Intellectual Property Protection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02226)
+- **链接**: [arXiv:2403.04149](https://arxiv.org/abs/2403.04149) · 📚 被引 7
 - **作者**: Boyang Peng, Sanqing Qu, Yong Wu, Tianpei Zou, Lianghua He, Alois Knoll et al.
 - **🏷️ 机构**: Tongji University, Technical University of Munich
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > Deep learning has achieved remarkable progress in various applications, heightening the importance of safeguarding the intellectual property (IP) of well-trained models. It entails not only authorizing usage but also ensuring the deployment of models in authorized data domains, i.e., making models exclusive to certain target domains. Previous methods necessitate concurrent access to source training data and target unauthorized data when performing IP protection, making them risky and inefficient for decentralized private data. In this paper, we target a practical setting where only a well-trained source model is available and investigate how we can realize IP protection. To achieve this, we propose a novel MAsk Pruning (MAP) framework. MAP stems from an intuitive hypothesis, i.e., there are target-related parameters in a well-trained model, locating and pruning them is the key to IP protection. Technically, MAP freezes the source model and learns a target-specific binary mask to prevent unauthorized data usage while minimizing performance degradation on authorized data. Moreover, we introduce a new metric aimed at achieving a better balance between source and target performance degradation. To verify the effectiveness and versatility, we have evaluated MAP in a variety of scenarios, including vanilla source-available, practical source-free, and challenging data-free. Extensive experiments indicate that MAP yields new state-of-the-art performance.
+
 ### Zero-TPrune: Zero-Shot Token Pruning Through Leveraging of the Attention Graph in Pre-Trained Transformers.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01521)
+- **链接**: [arXiv:2305.17328](https://arxiv.org/abs/2305.17328) · 📚 被引 42
 - **作者**: Hongjie Wang, Bhishma Dedhia, Niraj K. Jha
 - **🏷️ 机构**: Princeton University,Princeton,NJ,USA,08540
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > Deployment of Transformer models on edge devices is becoming increasingly challenging due to the exponentially growing inference cost that scales quadratically with the number of tokens in the input sequence. Token pruning is an emerging solution to address this challenge due to its ease of deployment on various Transformer backbones. However, most token pruning methods require computationally expensive fine-tuning, which is undesirable in many edge deployment cases. In this work, we propose Zero-TPrune, the first zero-shot method that considers both the importance and similarity of tokens in performing token pruning. It leverages the attention graph of pre-trained Transformer models to produce an importance distribution for tokens via our proposed Weighted Page Rank (WPR) algorithm. This distribution further guides token partitioning for efficient similarity-based pruning. Due to the elimination of the fine-tuning overhead, Zero-TPrune can prune large models at negligible computational cost, switch between different pruning configurations at no computational cost, and perform hyperparameter tuning efficiently. We evaluate the performance of Zero-TPrune on vision tasks by applying it to various vision Transformer backbones and testing them on ImageNet. Without any fine-tuning, Zero-TPrune reduces the FLOPs cost of DeiT-S by 34.7% and improves its throughput by 45.3% with only 0.4% accuracy loss. Compared with state-of-the-art pruning methods that require fine-tuning, Zero-TPrune not only eliminates the need for fine-tuning after pruning but also does so with only 0.1% accuracy loss. Compared with state-of-the-art fine-tuning-free pruning methods, Zero-TPrune reduces accuracy loss by up to 49% with similar FLOPs budgets. Project webpage: https://jha-lab.github.io/zerotprune.
+
 ### Auto- Train-Once: Controller Network Guided Automatic Network Pruning from Scratch.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01530)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01530) · 📚 被引 13
 - **作者**: Xidong Wu, Shangqian Gao, Zeyu Zhang, Zhenzhen Li, Runxue Bao, Yanfu Zhang et al.
 - **🏷️ 机构**: University of Pittsburgh, University of Arizona, Bosch Center for AI
 - **会议**: CVPR 2024
 
 ### Spanning Training Progress: Temporal Dual-Depth Scoring (TDDS) for Enhanced Dataset Pruning.
-- **链接**: [arXiv:2311.13613](https://arxiv.org/abs/2311.13613)
+- **链接**: [arXiv:2311.13613](https://arxiv.org/abs/2311.13613) · 📚 被引 20
 - **作者**: Xin Zhang, Jiawei Du, Yunsong Li, Weiying Xie, Joey Tianyi Zhou
 - **🏷️ 机构**: XiDian University,Xi&#x0027;an,China, Agency for Science, Technology and Research (A*STAR),Centre for Frontier AI Research (CFAR),Singapore
 - **会议**: CVPR 2024
@@ -124,7 +136,7 @@
   > Dataset pruning aims to construct a coreset capable of achieving performance comparable to the original, full dataset. Most existing dataset pruning methods rely on snapshot-based criteria to identify representative samples, often resulting in poor generalization across various pruning and cross-architecture scenarios. Recent studies have addressed this issue by expanding the scope of training dynamics considered, including factors such as forgetting event and probability change, typically using an averaging approach. However, these works struggle to integrate a broader range of training dynamics without overlooking well-generalized samples, which may not be sufficiently highlighted in an averaging manner. In this study, we propose a novel dataset pruning method termed as Temporal Dual-Depth Scoring (TDDS), to tackle this problem. TDDS utilizes a dual-depth strategy to achieve a balance between incorporating extensive training dynamics and identifying representative samples for dataset pruning. In the first depth, we estimate the series of each sample's individual contributions spanning the training progress, ensuring comprehensive integration of training dynamics. In the second depth, we focus on the variability of the sample-wise contributions identified in the first depth to highlight well-generalized samples. Extensive experiments conducted on CIFAR and ImageNet datasets verify the superiority of TDDS over previous SOTA methods. Specifically on CIFAR-100, our method achieves 54.51% accuracy with only 10% training data, surpassing random selection by 7.83% and other comparison methods by at least 12.69%.
 
 ### Masked Spatial Propagation Network for Sparsity-Adaptive Depth Refinement.
-- **链接**: [arXiv:2404.19294](https://arxiv.org/abs/2404.19294)
+- **链接**: [arXiv:2404.19294](https://arxiv.org/abs/2404.19294) · 📚 被引 6
 - **作者**: Jinyoung Jun, Jae-Han Lee, Chang-Su Kim
 - **🏷️ 机构**: Korea University, Gauss Labs Inc
 - **会议**: CVPR 2024
@@ -134,7 +146,7 @@
   > The main function of depth completion is to compensate for an insufficient and unpredictable number of sparse depth measurements of hardware sensors. However, existing research on depth completion assumes that the sparsity -- the number of points or LiDAR lines -- is fixed for training and testing. Hence, the completion performance drops severely when the number of sparse depths changes significantly. To address this issue, we propose the sparsity-adaptive depth refinement (SDR) framework, which refines monocular depth estimates using sparse depth points. For SDR, we propose the masked spatial propagation network (MSPN) to perform SDR with a varying number of sparse depths effectively by gradually propagating sparse depth information throughout the entire depth map. Experimental results demonstrate that MPSN achieves state-of-the-art performance on both SDR and conventional depth completion scenarios.
 
 ### Transferable Structural Sparse Adversarial Attack Via Exact Group Sparsity Training.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02332)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02332) · 📚 被引 9
 - **作者**: Di Ming, Peng Ren, Yunlong Wang, Xin Feng
 - **🏷️ 机构**: School of Computer Science and Engineering, Chongqing University of Technology,Chongqing,China
 - **会议**: CVPR 2024
@@ -150,7 +162,7 @@
   > N:M sparsity has received increasing attention due to its remarkable performance and latency trade-off compared with structured and unstructured sparsity. However, existing N:M sparsity methods do not differentiate the relative importance of weights among blocks and leave important weights underappreciated. Besides, they directly apply N:M sparsity to the whole network, which will cause severe information loss. Thus, they are still sub-optimal. In this paper, we propose an efficient and effective Multi-Axis Query methodology, dubbed as MaxQ, to rectify these problems. During the training, MaxQ employs a dynamic approach to generate soft N:M masks, considering the weight importance across multiple axes. This method enhances the weights with more importance and ensures more effective updates. Meanwhile, a sparsity strategy that gradually increases the percentage of N:M weight blocks is applied, which allows the network to heal from the pruning-induced damage progressively. During the runtime, the N:M soft masks can be precomputed as constants and folded into weights without causing any distortion to the sparse pattern and incurring additional computational overhead. Comprehensive experiments demonstrate that MaxQ achieves consistent improvements across diverse CNN architectures in various computer vision tasks, including image classification, object detection and instance segmentation. For ResNet50 with 1:16 sparse pattern, MaxQ can achieve 74.6\% top-1 accuracy on ImageNet and improve by over 2.8\% over the state-of-the-art. Codes and checkpoints are available at \url{https://github.com/JingyangXiang/MaxQ}.
 
 ### UniPTS: A Unified Framework for Proficient Post-Training Sparsity.
-- **链接**: [arXiv:2405.18810](https://arxiv.org/abs/2405.18810) · [代码](https://github.com/xjjxmu/UniPTS)
+- **链接**: [arXiv:2405.18810](https://arxiv.org/abs/2405.18810) · [代码](https://github.com/xjjxmu/UniPTS) · 📚 被引 0
 - **作者**: Jingjing Xie, Yuxin Zhang, Mingbao Lin, Zhihang Lin, Liujuan Cao, Rongrong Ji
 - **🏷️ 机构**: Efficient Computing, Ministry of Education of China, School of Informatics, Xiamen University,Key Laboratory of Multimedia Trusted Perception, Tencent Youtu Lab
 - **会议**: CVPR 2024

@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Enhancing 3D Object Detection with 2D Detection-Guided Query Anchors.
-- **链接**: [arXiv:2403.06093](https://arxiv.org/abs/2403.06093) · [代码](https://github.com/nullmax-vision/QAF2D)
+- **链接**: [arXiv:2403.06093](https://arxiv.org/abs/2403.06093) · [代码](https://github.com/nullmax-vision/QAF2D) · 📚 被引 13
 - **作者**: Haoxuanye Ji, Pengpeng Liang, Erkang Cheng
 - **🏷️ 机构**: Nullmax, School of Computer and Artificial Intelligence, Zhengzhou University
 - **会议**: CVPR 2024
@@ -16,31 +16,43 @@
   > Multi-camera-based 3D object detection has made notable progress in the past several years. However, we observe that there are cases (e.g. faraway regions) in which popular 2D object detectors are more reliable than state-of-the-art 3D detectors. In this paper, to improve the performance of query-based 3D object detectors, we present a novel query generating approach termed QAF2D, which infers 3D query anchors from 2D detection results. A 2D bounding box of an object in an image is lifted to a set of 3D anchors by associating each sampled point within the box with depth, yaw angle, and size candidates. Then, the validity of each 3D anchor is verified by comparing its projection in the image with its corresponding 2D box, and only valid anchors are kept and used to construct queries. The class information of the 2D bounding box associated with each query is also utilized to match the predicted boxes with ground truth for the set-based loss. The image feature extraction backbone is shared between the 3D detector and 2D detector by adding a small number of prompt parameters. We integrate QAF2D into three popular query-based 3D object detectors and carry out comprehensive evaluations on the nuScenes dataset. The largest improvement that QAF2D can bring about on the nuScenes validation subset is $2.3\%$ NDS and $2.7\%$ mAP. Code is available at https://github.com/nullmax-vision/QAF2D.
 
 ### SeaBird: Segmentation in Bird's View with Dice Loss Improves Monocular 3D Detection of Large Objects.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00978)
+- **链接**: [arXiv:2403.20318](https://arxiv.org/abs/2403.20318) · [代码](https://github.com/abhi1kumar/SeaBird) · 📚 被引 11
 - **作者**: Abhinav Kumar, Yuliang Guo, Xinyu Huang, Liu Ren, Xiaoming Liu
 - **🏷️ 机构**: Michigan State University, Bosch Research North America, Bosch Center for AI
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > Monocular 3D detectors achieve remarkable performance on cars and smaller objects. However, their performance drops on larger objects, leading to fatal accidents. Some attribute the failures to training data scarcity or their receptive field requirements of large objects. In this paper, we highlight this understudied problem of generalization to large objects. We find that modern frontal detectors struggle to generalize to large objects even on nearly balanced datasets. We argue that the cause of failure is the sensitivity of depth regression losses to noise of larger objects. To bridge this gap, we comprehensively investigate regression and dice losses, examining their robustness under varying error levels and object sizes. We mathematically prove that the dice loss leads to superior noise-robustness and model convergence for large objects compared to regression losses for a simplified case. Leveraging our theoretical insights, we propose SeaBird (Segmentation in Bird's View) as the first step towards generalizing to large objects. SeaBird effectively integrates BEV segmentation on foreground objects for 3D detection, with the segmentation head trained with the dice loss. SeaBird achieves SoTA results on the KITTI-360 leaderboard and improves existing detectors on the nuScenes leaderboard, particularly for large objects. Code and models at https://github.com/abhi1kumar/SeaBird
+
 ### Towards Robust 3D Object Detection with LiDAR and 4D Radar Fusion in Various Weather Conditions.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01436)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01436) · 📚 被引 44
 - **作者**: Yujeong Chae, Hyeonseong Kim, Kuk-Jin Yoon
 - **🏷️ 机构**: KAIST
 - **会议**: CVPR 2024
 
 ### Weak-to-Strong 3D Object Detection with X-Ray Distillation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01426)
+- **链接**: [arXiv:2404.00679](https://arxiv.org/abs/2404.00679) · [代码](https://github.com/sakharok13/X-Ray-Teacher-Patching-Tools) · 📚 被引 1
 - **作者**: Alexander Gambashidze, Aleksandr Dadukin, Maksim Golyadkin, Maria Razzhivina, Ilya Makarov
 - **🏷️ 机构**: Artificial Intelligence Research Institute, HSE University
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > This paper addresses the critical challenges of sparsity and occlusion in LiDAR-based 3D object detection. Current methods often rely on supplementary modules or specific architectural designs, potentially limiting their applicability to new and evolving architectures. To our knowledge, we are the first to propose a versatile technique that seamlessly integrates into any existing framework for 3D Object Detection, marking the first instance of Weak-to-Strong generalization in 3D computer vision. We introduce a novel framework, X-Ray Distillation with Object-Complete Frames, suitable for both supervised and semi-supervised settings, that leverages the temporal aspect of point cloud sequences. This method extracts crucial information from both previous and subsequent LiDAR frames, creating Object-Complete frames that represent objects from multiple viewpoints, thus addressing occlusion and sparsity. Given the limitation of not being able to generate Object-Complete frames during online inference, we utilize Knowledge Distillation within a Teacher-Student framework. This technique encourages the strong Student model to emulate the behavior of the weaker Teacher, which processes simple and informative Object-Complete frames, effectively offering a comprehensive view of objects as if seen through X-ray vision. Our proposed methods surpass state-of-the-art in semi-supervised learning by 1-1.5 mAP and enhance the performance of five established supervised models by 1-2 mAP on standard autonomous driving datasets, even with default hyperparameters. Code for Object-Complete frames is available here: https://github.com/sakharok13/X-Ray-Teacher-Patching-Tools.
+
 ### PTT: Point-Trajectory Transformer for Efficient Temporal 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01415) · 📚 被引 23
+- **链接**: [arXiv:2312.08371](https://arxiv.org/abs/2312.08371) · [代码](https://github.com/kuanchihhuang/PTT) · 📚 被引 23
 - **作者**: Kuan-Chih Huang, Weijie Lyu, Ming-Hsuan Yang, Yi-Hsuan Tsai
 - **🏷️ 机构**: University of California,Merced, Google
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > Recent temporal LiDAR-based 3D object detectors achieve promising performance based on the two-stage proposal-based approach. They generate 3D box candidates from the first-stage dense detector, followed by different temporal aggregation methods. However, these approaches require per-frame objects or whole point clouds, posing challenges related to memory bank utilization. Moreover, point clouds and trajectory features are combined solely based on concatenation, which may neglect effective interactions between them. In this paper, we propose a point-trajectory transformer with long short-term memory for efficient temporal 3D object detection. To this end, we only utilize point clouds of current-frame objects and their historical trajectories as input to minimize the memory bank storage requirement. Furthermore, we introduce modules to encode trajectory features, focusing on long short-term and future-aware perspectives, and then effectively aggregate them with point cloud features. We conduct extensive experiments on the large-scale Waymo dataset to demonstrate that our approach performs well against state-of-the-art methods. Code and models will be made publicly available at https://github.com/kuanchihhuang/PTT.
+
 ### GAFusion: Adaptive Fusing LiDAR and Camera with Multiple Guidance for 3D Object Detection.
-- **链接**: [arXiv:2411.00340](https://arxiv.org/abs/2411.00340)
+- **链接**: [arXiv:2411.00340](https://arxiv.org/abs/2411.00340) · 📚 被引 36
 - **作者**: Xiaotian Li, Baojie Fan, Jiandong Tian, Huijie Fan
 - **🏷️ 机构**: Nanjing University of Posts and Telecommunications, Shenyang Institute of Automation Chinese Academy of Science
 - **会议**: CVPR 2024
@@ -56,7 +68,7 @@
 - **会议**: CVPR 2024
 
 ### UniMODE: Unified Monocular 3D Object Detection.
-- **链接**: [arXiv:2402.18573](https://arxiv.org/abs/2402.18573)
+- **链接**: [arXiv:2402.18573](https://arxiv.org/abs/2402.18573) · 📚 被引 24
 - **作者**: Zhuoling Li, Xiaogang Xu, Ser-Nam Lim, Hengshuang Zhao
 - **🏷️ 机构**: IHKU, CUHK, UCF
 - **会议**: CVPR 2024
@@ -72,10 +84,14 @@
 - **会议**: CVPR 2024
 
 ### VSRD: Instance-Aware Volumetric Silhouette Rendering for Weakly Supervised 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01643)
+- **链接**: [arXiv:2404.00149](https://arxiv.org/abs/2404.00149) · [代码](https://github.com/skmhrk1209/VSRD) · 📚 被引 5
 - **作者**: Zihua Liu, Hiroki Sakuma, Masatoshi Okutomi
 - **🏷️ 机构**: Tokyo Institute of Technology, T2 Inc.
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Monocular 3D object detection poses a significant challenge in 3D scene understanding due to its inherently ill-posed nature in monocular depth estimation. Existing methods heavily rely on supervised learning using abundant 3D labels, typically obtained through expensive and labor-intensive annotation on LiDAR point clouds. To tackle this problem, we propose a novel weakly supervised 3D object detection framework named VSRD (Volumetric Silhouette Rendering for Detection) to train 3D object detectors without any 3D supervision but only weak 2D supervision. VSRD consists of multi-view 3D auto-labeling and subsequent training of monocular 3D object detectors using the pseudo labels generated in the auto-labeling stage. In the auto-labeling stage, we represent the surface of each instance as a signed distance field (SDF) and render its silhouette as an instance mask through our proposed instance-aware volumetric silhouette rendering. To directly optimize the 3D bounding boxes through rendering, we decompose the SDF of each instance into the SDF of a cuboid and the residual distance field (RDF) that represents the residual from the cuboid. This mechanism enables us to optimize the 3D bounding boxes in an end-to-end manner by comparing the rendered instance masks with the ground truth instance masks. The optimized 3D bounding boxes serve as effective training data for 3D object detection. We conduct extensive experiments on the KITTI-360 dataset, demonstrating that our method outperforms the existing weakly supervised 3D object detection methods. The code is available at https://github.com/skmhrk1209/VSRD.
 
 ### Multi-View Attentive Contextualization for Multi-View 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01579)
@@ -94,7 +110,7 @@
   > Monocular 3D detection is a challenging task due to the lack of accurate 3D information. Existing approaches typically rely on geometry constraints and dense depth estimates to facilitate the learning, but often fail to fully exploit the benefits of three-dimensional feature extraction in frustum and 3D space. In this paper, we propose \textbf{OccupancyM3D}, a method of learning occupancy for monocular 3D detection. It directly learns occupancy in frustum and 3D space, leading to more discriminative and informative 3D features and representations. Specifically, by using synchronized raw sparse LiDAR point clouds, we define the space status and generate voxel-based occupancy labels. We formulate occupancy prediction as a simple classification problem and design associated occupancy losses. Resulting occupancy estimates are employed to enhance original frustum/3D features. As a result, experiments on KITTI and Waymo open datasets demonstrate that the proposed method achieves a new state of the art and surpasses other methods by a significant margin. Codes and pre-trained models will be available at \url{https://github.com/SPengLiang/OccupancyM3D}.
 
 ### MonoDiff: Monocular 3D Object Detection and Pose Estimation with Diffusion Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01014)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01014) · 📚 被引 26
 - **作者**: Yasiru Ranasinghe, Deepti Hegde, Vishal M. Patel
 - **🏷️ 机构**: Johns Hopkins University,Baltimore,USA
 - **会议**: CVPR 2024
@@ -106,7 +122,7 @@
 - **会议**: CVPR 2024
 
 ### Commonsense Prototype for Outdoor Unsupervised 3D Object Detection.
-- **链接**: [arXiv:2404.16493](https://arxiv.org/abs/2404.16493) · [代码](https://github.com/hailanyi/CPD)
+- **链接**: [arXiv:2404.16493](https://arxiv.org/abs/2404.16493) · [代码](https://github.com/hailanyi/CPD) · 📚 被引 25
 - **作者**: Hai Wu, Shijia Zhao, Xun Huang, Chenglu Wen, Xin Li, Cheng Wang
 - **🏷️ 机构**: Xiamen University,Fujian Key Laboratory of Sensing and Computing for Smart Cities, Texas A&#x0026;M University,Section of Visual Computing and Interactive Media
 - **会议**: CVPR 2024
@@ -116,7 +132,7 @@
   > The prevalent approaches of unsupervised 3D object detection follow cluster-based pseudo-label generation and iterative self-training processes. However, the challenge arises due to the sparsity of LiDAR scans, which leads to pseudo-labels with erroneous size and position, resulting in subpar detection performance. To tackle this problem, this paper introduces a Commonsense Prototype-based Detector, termed CPD, for unsupervised 3D object detection. CPD first constructs Commonsense Prototype (CProto) characterized by high-quality bounding box and dense points, based on commonsense intuition. Subsequently, CPD refines the low-quality pseudo-labels by leveraging the size prior from CProto. Furthermore, CPD enhances the detection accuracy of sparsely scanned objects by the geometric knowledge from CProto. CPD outperforms state-of-the-art unsupervised 3D detectors on Waymo Open Dataset (WOD), PandaSet, and KITTI datasets by a large margin. Besides, by training CPD on WOD and testing on KITTI, CPD attains 90.85% and 81.01% 3D Average Precision on easy and moderate car classes, respectively. These achievements position CPD in close proximity to fully supervised detectors, highlighting the significance of our method. The code will be available at https://github.com/hailanyi/CPD.
 
 ### HINTED: Hard Instance Enhanced Detector with Mixed-Density Feature Fusion for Sparsely-Supervised 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01451)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01451) · 📚 被引 28
 - **作者**: Qiming Xia, Wei Ye, Hai Wu, Shijia Zhao, Leyuan Xing, Xun Huang et al.
 - **🏷️ 机构**: Xiamen University,Fujian Key Laboratory of Sensing and Computing for Smart Cities,Xiamen,China, Texas A&#x0026;M University,Section of Visual Computing and Interactive Media,Texas,USA
 - **会议**: CVPR 2024
@@ -132,7 +148,7 @@
   > We present 3DiffTection, a state-of-the-art method for 3D object detection from single images, leveraging features from a 3D-aware diffusion model. Annotating large-scale image data for 3D detection is resource-intensive and time-consuming. Recently, pretrained large image diffusion models have become prominent as effective feature extractors for 2D perception tasks. However, these features are initially trained on paired text and image data, which are not optimized for 3D tasks, and often exhibit a domain gap when applied to the target data. Our approach bridges these gaps through two specialized tuning strategies: geometric and semantic. For geometric tuning, we fine-tune a diffusion model to perform novel view synthesis conditioned on a single image, by introducing a novel epipolar warp operator. This task meets two essential criteria: the necessity for 3D awareness and reliance solely on posed image data, which are readily available (e.g., from videos) and does not require manual annotation. For semantic refinement, we further train the model on target data with detection supervision. Both tuning phases employ ControlNet to preserve the integrity of the original feature capabilities. In the final step, we harness these enhanced capabilities to conduct a test-time prediction ensemble across multiple virtual viewpoints. Through our methodology, we obtain 3D-aware features that are tailored for 3D detection and excel in identifying cross-view point correspondences. Consequently, our model emerges as a powerful 3D detector, substantially surpassing previous benchmarks, e.g., Cube-RCNN, a precedent in single-view 3D detection by 9.43\% in AP3D on the Omni3D-ARkitscene dataset. Furthermore, 3DiffTection showcases robust data efficiency and generalization to cross-domain data.
 
 ### MonoCD: Monocular 3D Object Detection with Complementary Depths.
-- **链接**: [arXiv:2404.03181](https://arxiv.org/abs/2404.03181) · [代码](https://github.com/elvintanhust/MonoCD)
+- **链接**: [arXiv:2404.03181](https://arxiv.org/abs/2404.03181) · [代码](https://github.com/elvintanhust/MonoCD) · 📚 被引 74
 - **作者**: Longfei Yan, Pei Yan, Shengzhou Xiong, Xuanyu Xiang, Yihua Tan
 - **🏷️ 机构**: School of Artificial Intelligence and Automation, Huazhong University of Science and Technology,Hubei Engineering Research Center of Machine Vision and Intelligent Systems,China
 - **会议**: CVPR 2024
@@ -142,10 +158,14 @@
   > Monocular 3D object detection has attracted widespread attention due to its potential to accurately obtain object 3D localization from a single image at a low cost. Depth estimation is an essential but challenging subtask of monocular 3D object detection due to the ill-posedness of 2D to 3D mapping. Many methods explore multiple local depth clues such as object heights and keypoints and then formulate the object depth estimation as an ensemble of multiple depth predictions to mitigate the insufficiency of single-depth information. However, the errors of existing multiple depths tend to have the same sign, which hinders them from neutralizing each other and limits the overall accuracy of combined depth. To alleviate this problem, we propose to increase the complementarity of depths with two novel designs. First, we add a new depth prediction branch named complementary depth that utilizes global and efficient depth clues from the entire image rather than the local clues to reduce the correlation of depth predictions. Second, we propose to fully exploit the geometric relations between multiple depth clues to achieve complementarity in form. Benefiting from these designs, our method achieves higher complementarity. Experiments on the KITTI benchmark demonstrate that our method achieves state-of-the-art performance without introducing extra data. In addition, complementary depth can also be a lightweight and plug-and-play module to boost multiple existing monocular 3d object detectors. Code is available at https://github.com/elvintanhust/MonoCD.
 
 ### Improving Distant 3D Object Detection Using 2D Box Supervision.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01407) · 📚 被引 9
+- **链接**: [arXiv:2403.09230](https://arxiv.org/abs/2403.09230) · 📚 被引 9
 - **作者**: Zetong Yang, Zhiding Yu, Christopher B. Choy, Renhao Wang, Anima Anandkumar, José M. Álvarez
 - **🏷️ 机构**: CUHK, NVIDIA, UC Berkeley
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Improving the detection of distant 3d objects is an important yet challenging task. For camera-based 3D perception, the annotation of 3d bounding relies heavily on LiDAR for accurate depth information. As such, the distance of annotation is often limited due to the sparsity of LiDAR points on distant objects, which hampers the capability of existing detectors for long-range scenarios. We address this challenge by considering only 2D box supervision for distant objects since they are easy to annotate. We propose LR3D, a framework that learns to recover the missing depth of distant objects. LR3D adopts an implicit projection head to learn the generation of mapping between 2D boxes and depth using the 3D supervision on close objects. This mapping allows the depth estimation of distant objects conditioned on their 2D boxes, making long-range 3D detection with 2D supervision feasible. Experiments show that without distant 3D annotations, LR3D allows camera-based methods to detect distant objects (over 200m) with comparable accuracy to full 3D supervision. Our framework is general, and could widely benefit 3D detection methods to a large extent.
 
 ### IS-Fusion: Instance-Scene Collaborative Fusion for Multimodal 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01412)
@@ -154,10 +174,14 @@
 - **会议**: CVPR 2024
 
 ### Pseudo Label Refinery for Unsupervised Domain Adaptation on Cross-Dataset 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01448)
+- **链接**: [arXiv:2404.19384](https://arxiv.org/abs/2404.19384) · [代码](https://github.com/Zhanwei-Z/PERE) · 📚 被引 12
 - **作者**: Zhanwei Zhang, Minghao Chen, Shuai Xiao, Liang Peng, Hengjia Li, Binbin Lin et al.
 - **🏷️ 机构**: Zhejiang University,State Key Lab of CAD&#x0026;CG, School of Computer Sciene and Technology, Hangzhou Dianzi University, Alibaba Group
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Recent self-training techniques have shown notable improvements in unsupervised domain adaptation for 3D object detection (3D UDA). These techniques typically select pseudo labels, i.e., 3D boxes, to supervise models for the target domain. However, this selection process inevitably introduces unreliable 3D boxes, in which 3D points cannot be definitively assigned as foreground or background. Previous techniques mitigate this by reweighting these boxes as pseudo labels, but these boxes can still poison the training process. To resolve this problem, in this paper, we propose a novel pseudo label refinery framework. Specifically, in the selection process, to improve the reliability of pseudo boxes, we propose a complementary augmentation strategy. This strategy involves either removing all points within an unreliable box or replacing it with a high-confidence box. Moreover, the point numbers of instances in high-beam datasets are considerably higher than those in low-beam datasets, also degrading the quality of pseudo labels during the training process. We alleviate this issue by generating additional proposals and aligning RoI features across different domains. Experimental results demonstrate that our method effectively enhances the quality of pseudo labels and consistently surpasses the state-of-the-art methods on six autonomous driving benchmarks. Code will be available at https://github.com/Zhanwei-Z/PERE.
 
 ### SAFDNet: A Simple and Effective Network for Fully Sparse 3D Object Detection.
 - **链接**: [arXiv:2403.05817](https://arxiv.org/abs/2403.05817) · [代码](https://github.com/zhanggang001/HEDNet) · 📚 被引 78
@@ -176,7 +200,7 @@
 - **会议**: CVPR 2024
 
 ### Decoupled Pseudo-Labeling for Semi-Supervised Monocular 3D Object Detection.
-- **链接**: [arXiv:2403.17387](https://arxiv.org/abs/2403.17387)
+- **链接**: [arXiv:2403.17387](https://arxiv.org/abs/2403.17387) · 📚 被引 21
 - **作者**: Jiacheng Zhang, Jiaming Li, Xiangru Lin, Wei Zhang, Xiao Tan, Junyu Han et al.
 - **🏷️ 机构**: School of Computer Science and Engineering, Sun Yat-sen University,Guangzhou,China, Baidu Inc.,Department of Computer Vision Technology (VIS),China
 - **会议**: CVPR 2024
@@ -186,13 +210,13 @@
   > We delve into pseudo-labeling for semi-supervised monocular 3D object detection (SSM3OD) and discover two primary issues: a misalignment between the prediction quality of 3D and 2D attributes and the tendency of depth supervision derived from pseudo-labels to be noisy, leading to significant optimization conflicts with other reliable forms of supervision. We introduce a novel decoupled pseudo-labeling (DPL) approach for SSM3OD. Our approach features a Decoupled Pseudo-label Generation (DPG) module, designed to efficiently generate pseudo-labels by separately processing 2D and 3D attributes. This module incorporates a unique homography-based method for identifying dependable pseudo-labels in BEV space, specifically for 3D attributes. Additionally, we present a DepthGradient Projection (DGP) module to mitigate optimization conflicts caused by noisy depth supervision of pseudo-labels, effectively decoupling the depth gradient and removing conflicting gradients. This dual decoupling strategy-at both the pseudo-label generation and gradient levels-significantly improves the utilization of pseudo-labels in SSM3OD. Our comprehensive experiments on the KITTI benchmark demonstrate the superiority of our method over existing approaches.
 
 ### Prompt3D: Random Prompt Assisted Weakly-Supervised 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02649)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02649) · 📚 被引 5
 - **作者**: Xiaohong Zhang, Huisheng Ye, Jingwen Li, Qinyu Tang, Yuanqi Li, Yanwen Guo et al.
 - **🏷️ 机构**: Nanjing University
 - **会议**: CVPR 2024
 
 ### Three Pillars Improving Vision Foundation Model Distillation for Lidar.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02033)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02033) · 📚 被引 28
 - **作者**: Gilles Puy, Spyros Gidaris, Alexandre Boulch, Oriane Siméoni, Corentin Sautier, Patrick Pérez et al.
 - **🏷️ 机构**: valeo.ai,Paris,France, Kyutai,Paris,France
 - **会议**: CVPR 2024

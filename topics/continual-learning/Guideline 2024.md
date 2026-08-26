@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Boosting Continual Learning of Vision-Language Models via Mixture-of-Experts Adapters.
-- **链接**: [arXiv:2403.11549](https://arxiv.org/abs/2403.11549) · [代码](https://github.com/JiazuoYu/MoE-Adapters4CL)
+- **链接**: [arXiv:2403.11549](https://arxiv.org/abs/2403.11549) · [代码](https://github.com/JiazuoYu/MoE-Adapters4CL) · 📚 被引 115
 - **作者**: Jiazuo Yu, Yunzhi Zhuge, Lu Zhang, Ping Hu, Dong Wang, Huchuan Lu et al.
 - **🏷️ 机构**: Dalian University of Technology,China, University of Electronic Science and Technology of China, Tsinghua University,China
 - **会议**: CVPR 2024
