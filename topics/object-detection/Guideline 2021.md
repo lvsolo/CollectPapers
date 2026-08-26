@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### UP-DETR: Unsupervised Pre-Training for Object Detection With Transformers.
-- **链接**: [arXiv:2011.09094](https://arxiv.org/abs/2011.09094) · [代码](https://github.com/dddzg/up-detr)
+- **链接**: [arXiv:2011.09094](https://arxiv.org/abs/2011.09094) · [代码](https://github.com/dddzg/up-detr) · 📚 被引 447
 - **作者**: Zhigang Dai, Bolun Cai, Yugeng Lin, Junying Chen
 - **🏷️ 机构**: South China University of Technology,School of Software Engineering, Tencent Wechat AI
 - **会议**: CVPR 2021
@@ -16,7 +16,7 @@
   > DEtection TRansformer (DETR) for object detection reaches competitive performance compared with Faster R-CNN via a transformer encoder-decoder architecture. However, trained with scratch transformers, DETR needs large-scale training data and an extreme long training schedule even on COCO dataset. Inspired by the great success of pre-training transformers in natural language processing, we propose a novel pretext task named random query patch detection in Unsupervised Pre-training DETR (UP-DETR). Specifically, we randomly crop patches from the given image and then feed them as queries to the decoder. The model is pre-trained to detect these query patches from the input image. During the pre-training, we address two critical issues: multi-task learning and multi-query localization. (1) To trade off classification and localization preferences in the pretext task, we find that freezing the CNN backbone is the prerequisite for the success of pre-training transformers. (2) To perform multi-query localization, we develop UP-DETR with multi-query patch detection with attention mask. Besides, UP-DETR also provides a unified perspective for fine-tuning object detection and one-shot detection tasks. In our experiments, UP-DETR significantly boosts the performance of DETR with faster convergence and higher average precision on object detection, one-shot detection and panoptic segmentation. Code and pre-training models: https://github.com/dddzg/up-detr.
 
 ### Uncertainty-Aware Joint Salient Object and Camouflaged Object Detection.
-- **链接**: [arXiv:2104.02628](https://arxiv.org/abs/2104.02628)
+- **链接**: [arXiv:2104.02628](https://arxiv.org/abs/2104.02628) · 📚 被引 270
 - **作者**: Aixuan Li, Jing Zhang, Yunqiu Lv, Bowen Liu, Tong Zhang, Yuchao Dai
 - **🏷️ 机构**: Northwestern Polytechnical University,China, Australian National University,Australia, EPFL,Switzerland
 - **会议**: CVPR 2021
@@ -46,7 +46,7 @@
   > We propose a novel point annotated setting for the weakly semi-supervised object detection task, in which the dataset comprises small fully annotated images and large weakly annotated images by points. It achieves a balance between tremendous annotation burden and detection performance. Based on this setting, we analyze existing detectors and find that these detectors have difficulty in fully exploiting the power of the annotated points. To solve this, we introduce a new detector, Point DETR, which extends DETR by adding a point encoder. Extensive experiments conducted on MS-COCO dataset in various data settings show the effectiveness of our method. In particular, when using 20% fully labeled data from COCO, our detector achieves a promising performance, 33.3 AP, which outperforms a strong baseline (FCOS) by 2.0 AP, and we demonstrate the point annotations bring over 10 points in various AR metrics.
 
 ### GAIA: A Transfer Learning System of Object Detection That Fits Your Needs.
-- **链接**: [arXiv:2106.11346](https://arxiv.org/abs/2106.11346)
+- **链接**: [arXiv:2106.11346](https://arxiv.org/abs/2106.11346) · 📚 被引 35
 - **作者**: Xingyuan Bu, Junran Peng, Junjie Yan, Tieniu Tan, Zhaoxiang Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -102,7 +102,7 @@
   > Data augmentation has become a de facto component for training high-performance deep image classifiers, but its potential is under-explored for object detection. Noting that most state-of-the-art object detectors benefit from fine-tuning a pre-trained classifier, we first study how the classifiers' gains from various data augmentations transfer to object detection. The results are discouraging; the gains diminish after fine-tuning in terms of either accuracy or robustness. This work instead augments the fine-tuning stage for object detectors by exploring adversarial examples, which can be viewed as a model-dependent data augmentation. Our method dynamically selects the stronger adversarial images sourced from a detector's classification and localization branches and evolves with the detector to ensure the augmentation policy stays current and relevant. This model-dependent augmentation generalizes to different object detectors better than AutoAugment, a model-agnostic augmentation policy searched based on one particular detector. Our approach boosts the performance of state-of-the-art EfficientDets by +1.1 mAP on the COCO object detection benchmark. It also improves the detectors' robustness against natural distortions by +3.8 mAP and against domain shift by +1.3 mAP. Models are available at https://github.com/google/automl/tree/master/efficientdet/Det-AdvProp.md
 
 ### Dynamic Head: Unifying Object Detection Heads With Attentions.
-- **链接**: [arXiv:2106.08322](https://arxiv.org/abs/2106.08322) · [代码](https://github.com/microsoft/DynamicHead) · 📚 被引 940
+- **链接**: [arXiv:2106.08322](https://arxiv.org/abs/2106.08322) · [代码](https://github.com/microsoft/DynamicHead) · 📚 被引 942
 - **作者**: Xiyang Dai, Yinpeng Chen, Bin Xiao, Dongdong Chen, Mengchen Liu, Lu Yuan et al.
 - **🏷️ 机构**: Microsoft,Redmond,USA
 - **会议**: CVPR 2021
@@ -112,7 +112,7 @@
   > The complex nature of combining localization and classification in object detection has resulted in the flourished development of methods. Previous works tried to improve the performance in various object detection heads but failed to present a unified view. In this paper, we present a novel dynamic head framework to unify object detection heads with attentions. By coherently combining multiple self-attention mechanisms between feature levels for scale-awareness, among spatial locations for spatial-awareness, and within output channels for task-awareness, the proposed approach significantly improves the representation ability of object detection heads without any computational overhead. Further experiments demonstrate that the effectiveness and efficiency of the proposed dynamic head on the COCO benchmark. With a standard ResNeXt-101-DCN backbone, we largely improve the performance over popular object detectors and achieve a new state-of-the-art at 54.0 AP. Furthermore, with latest transformer backbone and extra data, we can push current best COCO result to a new record at 60.6 AP. The code will be released at https://github.com/microsoft/DynamicHead.
 
 ### General Instance Distillation for Object Detection.
-- **链接**: [arXiv:2103.02340](https://arxiv.org/abs/2103.02340)
+- **链接**: [arXiv:2103.02340](https://arxiv.org/abs/2103.02340) · 📚 被引 235
 - **作者**: Xing Dai, Zeren Jiang, Zhao Wu, Yiping Bao, Zhicheng Wang, Si Liu et al.
 - **🏷️ 机构**: MEGVII Technology, BeiHang University
 - **会议**: CVPR 2021
@@ -148,7 +148,7 @@
   > Recently few-shot object detection is widely adopted to deal with data-limited situations. While most previous works merely focus on the performance on few-shot categories, we claim that detecting all classes is crucial as test samples may contain any instances in realistic applications, which requires the few-shot detector to learn new concepts without forgetting. Through analysis on transfer learning based methods, some neglected but beneficial properties are utilized to design a simple yet effective few-shot detector, Retentive R-CNN. It consists of Bias-Balanced RPN to debias the pretrained RPN and Re-detector to find few-shot class objects without forgetting previous knowledge. Extensive experiments on few-shot detection benchmarks show that Retentive R-CNN significantly outperforms state-of-the-art methods on overall performance among all settings as it can achieve competitive results on few-shot classes and does not degrade the base class performance at all. Our approach has demonstrated that the long desired never-forgetting learner is available in object detection.
 
 ### OTA: Optimal Transport Assignment for Object Detection.
-- **链接**: [arXiv:2103.14259](https://arxiv.org/abs/2103.14259) · [代码](https://github.com/Megvii-BaseDetection/OTA) · 📚 被引 482
+- **链接**: [arXiv:2103.14259](https://arxiv.org/abs/2103.14259) · [代码](https://github.com/Megvii-BaseDetection/OTA) · 📚 被引 484
 - **作者**: Zheng Ge, Songtao Liu, Zeming Li, Osamu Yoshie, Jian Sun
 - **🏷️ 机构**: MEGVII
 - **会议**: CVPR 2021
@@ -168,7 +168,7 @@
   > This paper addresses the problem of learning to estimate the depth of detected objects given some measurement of camera motion (e.g., from robot kinematics or vehicle odometry). We achieve this by 1) designing a recurrent neural network (DBox) that estimates the depth of objects using a generalized representation of bounding boxes and uncalibrated camera movement and 2) introducing the Object Depth via Motion and Detection Dataset (ODMD). ODMD training data are extensible and configurable, and the ODMD benchmark includes 21,600 examples across four validation and test sets. These sets include mobile robot experiments using an end-effector camera to locate objects from the YCB dataset and examples with perturbations added to camera motion or bounding box data. In addition to the ODMD benchmark, we evaluate DBox in other monocular application domains, achieving state-of-the-art results on existing driving and robotics benchmarks and estimating the depth of objects using a camera phone.
 
 ### Positive-Unlabeled Data Purification in the Wild for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Guo_Positive-Unlabeled_Data_Purification_in_the_Wild_for_Object_Detection_CVPR_2021_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Guo_Positive-Unlabeled_Data_Purification_in_the_Wild_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 7
 - **作者**: Jianyuan Guo, Kai Han, Han Wu, Chao Zhang, Xinghao Chen, Chunjing Xu et al.
 - **🏷️ 机构**: Huawei Technologies,Noah&#x2019;s Ark Lab, University of Sydney,School of Computer Science, Faculty of Engineering, Peking University,Key Lab of Machine Perception (MOE),Dept. of Machine Intelligence
 - **会议**: CVPR 2021
@@ -180,7 +180,7 @@
 - **会议**: CVPR 2021
 
 ### ReDet: A Rotation-Equivariant Detector for Aerial Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Han_ReDet_A_Rotation-Equivariant_Detector_for_Aerial_Object_Detection_CVPR_2021_paper.html) · 📚 被引 886
+- **链接**: [arXiv:2103.07733](https://arxiv.org/abs/2103.07733) · 📚 被引 887
 - **作者**: Jiaming Han, Jian Ding, Nan Xue, Gui-Song Xia
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -202,13 +202,13 @@
   > Conventional deep learning based methods for object detection require a large amount of bounding box annotations for training, which is expensive to obtain such high quality annotated data. Few-shot object detection, which learns to adapt to novel classes with only a few annotated examples, is very challenging since the fine-grained feature of novel object can be easily overlooked with only a few data available. In this work, aiming to fully exploit features of annotated novel object and capture fine-grained features of query object, we propose Dense Relation Distillation with Context-aware Aggregation (DCNet) to tackle the few-shot detection problem. Built on the meta-learning based framework, Dense Relation Distillation module targets at fully exploiting support features, where support features and query feature are densely matched, covering all spatial locations in a feed-forward fashion. The abundant usage of the guidance information endows model the capability to handle common challenges such as appearance changes and occlusions. Moreover, to better capture scale-aware features, Context-aware Aggregation module adaptively harnesses features from different scales for a more comprehensive feature representation. Extensive experiments illustrate that our proposed approach achieves state-of-the-art results on PASCAL VOC and MS COCO datasets. Code will be made available at https://github.com/hzhupku/DCNet.
 
 ### SAIL-VOS 3D: A Synthetic Dataset and Baselines for Object Detection and 3D Mesh Reconstruction From Video Data.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hu_SAIL-VOS_3D_A_Synthetic_Dataset_and_Baselines_for_Object_Detection_CVPR_2021_paper.html)
+- **链接**: [arXiv:2105.08612](https://arxiv.org/abs/2105.08612) · 📚 被引 15
 - **作者**: Yuan-Ting Hu, Jiahong Wang, Raymond A. Yeh, Alexander G. Schwing
 - **🏷️ 机构**: University of Illinois at Urbana-Champaign
 - **会议**: CVPR 2021
 
 ### Interpolation-Based Semi-Supervised Learning for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Jeong_Interpolation-Based_Semi-Supervised_Learning_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 45
+- **链接**: [arXiv:2006.02158](https://arxiv.org/abs/2006.02158) · 📚 被引 45
 - **作者**: Jisoo Jeong, Vikas Verma, Minsung Hyun, Juho Kannala, Nojun Kwak
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -232,13 +232,13 @@
 - **会议**: CVPR 2021
 
 ### Transformation Invariant Few-Shot Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_Transformation_Invariant_Few-Shot_Object_Detection_CVPR_2021_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_Transformation_Invariant_Few-Shot_Object_Detection_CVPR_2021_paper.html) · 📚 被引 88
 - **作者**: Aoxue Li, Zhenguo Li
 - **🏷️ 机构**: Huawei Noah&#x2019;s Ark Lab,China
 - **会议**: CVPR 2021
 
 ### Generalized Focal Loss V2: Learning Reliable Localization Quality Estimation for Dense Object Detection.
-- **链接**: [arXiv:2011.12885](https://arxiv.org/abs/2011.12885) · [代码](https://github.com/implus/GFocalV2) · 📚 被引 397
+- **链接**: [arXiv:2011.12885](https://arxiv.org/abs/2011.12885) · [代码](https://github.com/implus/GFocalV2) · 📚 被引 398
 - **作者**: Xiang Li, Wenhai Wang, Xiaolin Hu, Jun Li, Jinhui Tang, Jian Yang
 - **🏷️ 机构**: Shanghai AI Lab
 - **会议**: CVPR 2021
@@ -276,7 +276,7 @@
 - **会议**: CVPR 2021
 
 ### Neural Auto-Exposure for High-Dynamic Range Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Onzon_Neural_Auto-Exposure_for_High-Dynamic_Range_Object_Detection_CVPR_2021_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Onzon_Neural_Auto-Exposure_for_High-Dynamic_Range_Object_Detection_CVPR_2021_paper.html) · 📚 被引 50
 - **作者**: Emmanuel Onzon, Fahim Mannan, Felix Heide
 - **🏷️ 机构**: Algolux, Princeton University,Algolux
 - **会议**: CVPR 2021
@@ -298,7 +298,7 @@
 - **会议**: CVPR 2021
 
 ### Sparse R-CNN: End-to-End Object Detection With Learnable Proposals.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Sparse_R-CNN_End-to-End_Object_Detection_With_Learnable_Proposals_CVPR_2021_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Sparse_R-CNN_End-to-End_Object_Detection_With_Learnable_Proposals_CVPR_2021_paper.html) · 📚 被引 1309
 - **作者**: Peize Sun, Rufeng Zhang, Yi Jiang, Tao Kong, Chenfeng Xu, Wei Zhan et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -314,7 +314,7 @@
   > Recently proposed decoupled training methods emerge as a dominant paradigm for long-tailed object detection. But they require an extra fine-tuning stage, and the disjointed optimization of representation and classifier might lead to suboptimal results. However, end-to-end training methods, like equalization loss (EQL), still perform worse than decoupled training methods. In this paper, we reveal the main issue in long-tailed object detection is the imbalanced gradients between positives and negatives, and find that EQL does not solve it well. To address the problem of imbalanced gradients, we introduce a new version of equalization loss, called equalization loss v2 (EQL v2), a novel gradient guided reweighing mechanism that re-balances the training process for each category independently and equally. Extensive experiments are performed on the challenging LVIS benchmark. EQL v2 outperforms origin EQL by about 4 points overall AP with 14-18 points improvements on the rare categories. More importantly, it also surpasses decoupled training methods. Without further tuning for the Open Images dataset, EQL v2 improves EQL by 7.3 points AP, showing strong generalization ability. Codes have been released at https://github.com/tztztztztz/eqlv2
 
 ### Humble Teachers Teach Better Students for Semi-Supervised Object Detection.
-- **链接**: [arXiv:2106.10456](https://arxiv.org/abs/2106.10456) · 📚 被引 179
+- **链接**: [arXiv:2106.10456](https://arxiv.org/abs/2106.10456) · 📚 被引 180
 - **作者**: Yihe Tang, Weifeng Chen, Yijun Luo, Yuting Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021

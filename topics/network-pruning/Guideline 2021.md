@@ -40,7 +40,7 @@
 - **会议**: CVPR 2021
 
 ### Joint-DetNAS: Upgrade Your Detector With NAS, Pruning and Dynamic Distillation.
-- **链接**: [arXiv:2105.12971](https://arxiv.org/abs/2105.12971)
+- **链接**: [arXiv:2105.12971](https://arxiv.org/abs/2105.12971) · 📚 被引 25
 - **作者**: Lewei Yao, Renjie Pi, Hang Xu, Wei Zhang, Zhenguo Li, Tong Zhang
 - **🏷️ 机构**: Hong Kong University of Science and Technology, Huawei Noah&#x2019;s Ark Lab
 - **会议**: CVPR 2021
@@ -50,7 +50,7 @@
   > We propose Joint-DetNAS, a unified NAS framework for object detection, which integrates 3 key components: Neural Architecture Search, pruning, and Knowledge Distillation. Instead of naively pipelining these techniques, our Joint-DetNAS optimizes them jointly. The algorithm consists of two core processes: student morphism optimizes the student's architecture and removes the redundant parameters, while dynamic distillation aims to find the optimal matching teacher. For student morphism, weight inheritance strategy is adopted, allowing the student to flexibly update its architecture while fully utilize the predecessor's weights, which considerably accelerates the search; To facilitate dynamic distillation, an elastic teacher pool is trained via integrated progressive shrinking strategy, from which teacher detectors can be sampled without additional cost in subsequent searches. Given a base detector as the input, our algorithm directly outputs the derived student detector with high performance without additional training. Experiments demonstrate that our Joint-DetNAS outperforms the naive pipelining approach by a great margin. Given a classic R101-FPN as the base detector, Joint-DetNAS is able to boost its mAP from 41.4 to 43.9 on MS COCO and reduce the latency by 47%, which is on par with the SOTA EfficientDet while requiring less search cost. We hope our proposed method can provide the community with a new way of jointly optimizing NAS, KD and pruning.
 
 ### Multi-Decoding Deraining Network and Quasi-Sparsity Based Training.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Multi-Decoding_Deraining_Network_and_Quasi-Sparsity_Based_Training_CVPR_2021_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Multi-Decoding_Deraining_Network_and_Quasi-Sparsity_Based_Training_CVPR_2021_paper.html) · 📚 被引 33
 - **作者**: Yinglong Wang, Chao Ma, Bing Zeng
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021

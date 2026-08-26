@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Objects Are Different: Flexible Monocular 3D Object Detection.
-- **链接**: [arXiv:2104.02323](https://arxiv.org/abs/2104.02323) · [代码](https://github.com/zhangyp15/MonoFlex)
+- **链接**: [arXiv:2104.02323](https://arxiv.org/abs/2104.02323) · [代码](https://github.com/zhangyp15/MonoFlex) · 📚 被引 295
 - **作者**: Yunpeng Zhang, Jiwen Lu, Jie Zhou
 - **🏷️ 机构**: Tsinghua University,Beijing National Research Center for Information Science and Technology,China Department of Automation,China
 - **会议**: CVPR 2021
@@ -16,7 +16,7 @@
   > The precise localization of 3D objects from a single image without depth information is a highly challenging problem. Most existing methods adopt the same approach for all objects regardless of their diverse distributions, leading to limited performance for truncated objects. In this paper, we propose a flexible framework for monocular 3D object detection which explicitly decouples the truncated objects and adaptively combines multiple approaches for object depth estimation. Specifically, we decouple the edge of the feature map for predicting long-tail truncated objects so that the optimization of normal objects is not influenced. Furthermore, we formulate the object depth estimation as an uncertainty-guided ensemble of directly regressed object depth and solved depths from different groups of keypoints. Experiments demonstrate that our method outperforms the state-of-the-art method by relatively 27\% for the moderate level and 30\% for the hard level in the test set of KITTI benchmark while maintaining real-time efficiency. Code will be available at \url{https://github.com/zhangyp15/MonoFlex}.
 
 ### GrooMeD-NMS: Grouped Mathematically Differentiable NMS for Monocular 3D Object Detection.
-- **链接**: [arXiv:2103.17202](https://arxiv.org/abs/2103.17202) · [代码](https://github.com/abhi1kumar/groomed_nms)
+- **链接**: [arXiv:2103.17202](https://arxiv.org/abs/2103.17202) · [代码](https://github.com/abhi1kumar/groomed_nms) · 📚 被引 88
 - **作者**: Abhinav Kumar, Garrick Brazil, Xiaoming Liu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -66,7 +66,7 @@
   > 3D object detection in point clouds is a challenging vision task that benefits various applications for understanding the 3D visual world. Lots of recent research focuses on how to exploit end-to-end trainable Hough voting for generating object proposals. However, the current voting strategy can only receive partial votes from the surfaces of potential objects together with severe outlier votes from the cluttered backgrounds, which hampers full utilization of the information from the input point clouds. Inspired by the back-tracing strategy in the conventional Hough voting methods, in this work, we introduce a new 3D object detection method, named as Back-tracing Representative Points Network (BRNet), which generatively back-traces the representative points from the vote centers and also revisits complementary seed points around these generated points, so as to better capture the fine local structural features surrounding the potential objects from the raw point clouds. Therefore, this bottom-up and then top-down strategy in our BRNet enforces mutual consistency between the predicted vote centers and the raw surface points and thus achieves more reliable and flexible object localization and class prediction results. Our BRNet is simple but effective, which significantly outperforms the state-of-the-art methods on two large-scale point cloud datasets, ScanNet V2 (+7.5% in terms of mAP@0.50) and SUN RGB-D (+4.7% in terms of mAP@0.50), while it is still lightweight and efficient. Code will be available at https://github.com/cheng052/BRNet.
 
 ### LiDAR-Aug: A General Rendering-Based Augmentation Framework for 3D Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Fang_LiDAR-Aug_A_General_Rendering-Based_Augmentation_Framework_for_3D_Object_Detection_CVPR_2021_paper.html) · 📚 被引 51
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Fang_LiDAR-Aug_A_General_Rendering-Based_Augmentation_Framework_for_3D_Object_Detection_CVPR_2021_paper.html) · 📚 被引 52
 - **作者**: Jin Fang, Xinxin Zuo, Dingfu Zhou, Shengze Jin, Sen Wang, Liangjun Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -122,7 +122,7 @@
 - **会议**: CVPR 2021
 
 ### Depth-Conditioned Dynamic Message Propagation for Monocular 3D Object Detection.
-- **链接**: [arXiv:2103.16470](https://arxiv.org/abs/2103.16470) · [代码](https://github.com/fudan-zvg/DDMP)
+- **链接**: [arXiv:2103.16470](https://arxiv.org/abs/2103.16470) · [代码](https://github.com/fudan-zvg/DDMP) · 📚 被引 137
 - **作者**: Li Wang, Liang Du, Xiaoqing Ye, Yanwei Fu, Guodong Guo, Xiangyang Xue et al.
 - **🏷️ 机构**: Fudan University,School of Computer Science, Fudan University,Institute of Science and Technology for Brain-Inspired Intelligence, Baidu Inc.
 - **会议**: CVPR 2021
@@ -132,7 +132,7 @@
   > The objective of this paper is to learn context- and depth-aware feature representation to solve the problem of monocular 3D object detection. We make following contributions: (i) rather than appealing to the complicated pseudo-LiDAR based approach, we propose a depth-conditioned dynamic message propagation (DDMP) network to effectively integrate the multi-scale depth information with the image context;(ii) this is achieved by first adaptively sampling context-aware nodes in the image context and then dynamically predicting hybrid depth-dependent filter weights and affinity matrices for propagating information; (iii) by augmenting a center-aware depth encoding (CDE) task, our method successfully alleviates the inaccurate depth prior; (iv) we thoroughly demonstrate the effectiveness of our proposed approach and show state-of-the-art results among the monocular-based approaches on the KITTI benchmark dataset. Particularly, we rank $1^{st}$ in the highly competitive KITTI monocular 3D object detection track on the submission day (November 16th, 2020). Code and models are released at \url{https://github.com/fudan-zvg/DDMP}
 
 ### ST3D: Self-Training for Unsupervised Domain Adaptation on 3D Object Detection.
-- **链接**: [arXiv:2103.05346](https://arxiv.org/abs/2103.05346) · [代码](https://github.com/CVMI-Lab/ST3D) · 📚 被引 181
+- **链接**: [arXiv:2103.05346](https://arxiv.org/abs/2103.05346) · [代码](https://github.com/CVMI-Lab/ST3D) · 📚 被引 182
 - **作者**: Jihan Yang, Shaoshuai Shi, Zhe Wang, Hongsheng Li, Xiaojuan Qi
 - **🏷️ 机构**: CUHK
 - **会议**: CVPR 2021

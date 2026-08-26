@@ -112,7 +112,7 @@
   > Current deep learning architectures suffer from catastrophic forgetting, a failure to retain knowledge of previously learned classes when incrementally trained on new classes. The fundamental roadblock faced by deep learning methods is that deep learning models are optimized as "black boxes," making it difficult to properly adjust the model parameters to preserve knowledge about previously seen data. To overcome the problem of catastrophic forgetting, we propose utilizing an alternative "white box" architecture derived from the principle of rate reduction, where each layer of the network is explicitly computed without back propagation. Under this paradigm, we demonstrate that, given a pre-trained network and new data classes, our approach can provably construct a new network that emulates joint training with all past and new classes. Finally, our experiments show that our proposed learning algorithm observes significantly less decay in classification performance, outperforming state of the art methods on MNIST and CIFAR-10 by a large margin and justifying the use of "white box" algorithms for incremental learning even for sufficiently complex image data.
 
 ### DER: Dynamically Expandable Representation for Class Incremental Learning.
-- **链接**: [arXiv:2103.16788](https://arxiv.org/abs/2103.16788) · 📚 被引 653
+- **链接**: [arXiv:2103.16788](https://arxiv.org/abs/2103.16788) · 📚 被引 654
 - **作者**: Shipeng Yan, Jiangwei Xie, Xuming He
 - **🏷️ 机构**: ShanghaiTech University,School of Information Science and Technology
 - **会议**: CVPR 2021

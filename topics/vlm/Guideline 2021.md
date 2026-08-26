@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Structured Scene Memory for Vision-Language Navigation.
-- **链接**: [arXiv:2103.03454](https://arxiv.org/abs/2103.03454)
+- **链接**: [arXiv:2103.03454](https://arxiv.org/abs/2103.03454) · 📚 被引 106
 - **作者**: Hanqing Wang, Wenguan Wang, Wei Liang, Caiming Xiong, Jianbing Shen
 - **🏷️ 机构**: Beijing Institute of Technology, ETH Zurich, Salesforce Research
 - **会议**: CVPR 2021
@@ -16,7 +16,7 @@
   > Recently, numerous algorithms have been developed to tackle the problem of vision-language navigation (VLN), i.e., entailing an agent to navigate 3D environments through following linguistic instructions. However, current VLN agents simply store their past experiences/observations as latent states in recurrent networks, failing to capture environment layouts and make long-term planning. To address these limitations, we propose a crucial architecture, called Structured Scene Memory (SSM). It is compartmentalized enough to accurately memorize the percepts during navigation. It also serves as a structured scene representation, which captures and disentangles visual and geometric cues in the environment. SSM has a collect-read controller that adaptively collects information for supporting current decision making and mimics iterative algorithms for long-range reasoning. As SSM provides a complete action space, i.e., all the navigable places on the map, a frontier-exploration based navigation decision making strategy is introduced to enable efficient and global planning. Experiment results on two VLN datasets (i.e., R2R and R4R) show that our method achieves state-of-the-art performance on several metrics.
 
 ### VinVL: Revisiting Visual Representations in Vision-Language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_VinVL_Revisiting_Visual_Representations_in_Vision-Language_Models_CVPR_2021_paper.html) · 📚 被引 745
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_VinVL_Revisiting_Visual_Representations_in_Vision-Language_Models_CVPR_2021_paper.html) · 📚 被引 746
 - **作者**: Pengchuan Zhang, Xiujun Li, Xiaowei Hu, Jianwei Yang, Lei Zhang, Lijuan Wang et al.
 - **🏷️ 机构**: PolyU / OPPO
 - **会议**: CVPR 2021

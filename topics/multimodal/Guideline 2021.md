@@ -12,7 +12,7 @@
 - **会议**: CVPR 2021
 
 ### Robust Multimodal Vehicle Detection in Foggy Weather Using Complementary Lidar and Radar Signals.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Qian_Robust_Multimodal_Vehicle_Detection_in_Foggy_Weather_Using_Complementary_Lidar_CVPR_2021_paper.html) · 📚 被引 182
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Qian_Robust_Multimodal_Vehicle_Detection_in_Foggy_Weather_Using_Complementary_Lidar_CVPR_2021_paper.html) · 📚 被引 183
 - **作者**: Kun Qian, Shilin Zhu, Xinyu Zhang, Li Erran Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -24,7 +24,7 @@
 - **会议**: CVPR 2021
 
 ### Progressive Modality Reinforcement for Human Multimodal Emotion Recognition From Unaligned Multimodal Sequences.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Progressive_Modality_Reinforcement_for_Human_Multimodal_Emotion_Recognition_From_Unaligned_CVPR_2021_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Progressive_Modality_Reinforcement_for_Human_Multimodal_Emotion_Recognition_From_Unaligned_CVPR_2021_paper.html) · 📚 被引 191
 - **作者**: Fengmao Lv, Xiang Chen, Yanyong Huang, Lixin Duan, Guosheng Lin
 - **🏷️ 机构**: Southwest Jiaotong University, Platform and Content Group,Tencent, Southwestern University of Finance and Economics,Center of Statistical Research
 - **会议**: CVPR 2021
@@ -40,7 +40,7 @@
   > We present \textsc{Vx2Text}, a framework for text generation from multimodal inputs consisting of video plus text, speech, or audio. In order to leverage transformer networks, which have been shown to be effective at modeling language, each modality is first converted into a set of language embeddings by a learnable tokenizer. This allows our approach to perform multimodal fusion in the language space, thus eliminating the need for ad-hoc cross-modal fusion modules. To address the non-differentiability of tokenization on continuous inputs (e.g., video or audio), we utilize a relaxation scheme that enables end-to-end training. Furthermore, unlike prior encoder-only models, our network includes an autoregressive decoder to generate open-ended text from the multimodal embeddings fused by the language encoder. This renders our approach fully generative and makes it directly applicable to different "video+$x$ to text" problems without the need to design specialized network heads for each task. The proposed framework is not only conceptually simple but also remarkably effective: experiments demonstrate that our approach based on a single architecture outperforms the state-of-the-art on three video-based text-generation tasks -- captioning, question answering and audio-visual scene-aware dialog.
 
 ### How2Sign: A Large-Scale Multimodal Dataset for Continuous American Sign Language.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Duarte_How2Sign_A_Large-Scale_Multimodal_Dataset_for_Continuous_American_Sign_Language_CVPR_2021_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Duarte_How2Sign_A_Large-Scale_Multimodal_Dataset_for_Continuous_American_Sign_Language_CVPR_2021_paper.html) · 📚 被引 225
 - **作者**: Amanda Cardoso Duarte, Shruti Palaskar, Lucas Ventura, Deepti Ghadiyaram, Kenneth DeHaan, Florian Metze et al.
 - **🏷️ 机构**: Universitat Polit&#x00E8;cnica de Catalunya, Carnegie Mellon University, Facebook AI
 - **会议**: CVPR 2021
@@ -52,22 +52,34 @@
 - **会议**: CVPR 2021
 
 ### M3P: Learning Universal Representations via Multitask Multilingual Multimodal Pre-Training.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Ni_M3P_Learning_Universal_Representations_via_Multitask_Multilingual_Multimodal_Pre-Training_CVPR_2021_paper.html)
+- **链接**: [arXiv:2006.02635](https://arxiv.org/abs/2006.02635) · 📚 被引 55
 - **作者**: Minheng Ni, Haoyang Huang, Lin Su, Edward Cui, Taroon Bharti, Lijuan Wang et al.
 - **🏷️ 机构**: Harbin Institute of Technology,Research Center for Social Computing and Information Retrieval,China, Microsoft Research Asia,Natural Language Computing,China, Microsoft,Bing Multimedia Team,China
 - **会议**: CVPR 2021
 
+- **摘要（英，原文）**:
+
+  > We present M3P, a Multitask Multilingual Multimodal Pre-trained model that combines multilingual pre-training and multimodal pre-training into a unified framework via multitask pre-training. Our goal is to learn universal representations that can map objects occurred in different modalities or texts expressed in different languages into a common semantic space. In addition, to explicitly encourage fine-grained alignment between images and non-English languages, we also propose Multimodal Code-switched Training (MCT) to combine monolingual pre-training and multimodal pre-training via a code-switch strategy. Experiments are performed on the multilingual image retrieval task across two benchmark datasets, including MSCOCO and Multi30K. M3P can achieve comparable results for English and new state-of-the-art results for non-English languages.
+
 ### Can Audio-Visual Integration Strengthen Robustness Under Multimodal Attacks?
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Tian_Can_Audio-Visual_Integration_Strengthen_Robustness_Under_Multimodal_Attacks_CVPR_2021_paper.html) · 📚 被引 21
+- **链接**: [arXiv:2104.02000](https://arxiv.org/abs/2104.02000) · 📚 被引 21
 - **作者**: Yapeng Tian, Chenliang Xu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
+- **摘要（英，原文）**:
+
+  > In this paper, we propose to make a systematic study on machines multisensory perception under attacks. We use the audio-visual event recognition task against multimodal adversarial attacks as a proxy to investigate the robustness of audio-visual learning. We attack audio, visual, and both modalities to explore whether audio-visual integration still strengthens perception and how different fusion mechanisms affect the robustness of audio-visual models. For interpreting the multimodal interactions under attacks, we learn a weakly-supervised sound source visual localization model to localize sounding regions in videos. To mitigate multimodal attacks, we propose an audio-visual defense approach based on an audio-visual dissimilarity constraint and external feature memory banks. Extensive experiments demonstrate that audio-visual models are susceptible to multimodal adversarial attacks; audio-visual integration could decrease the model robustness rather than strengthen under multimodal attacks; even a weakly-supervised sound source visual localization model can be successfully fooled; our defense method can improve the invulnerability of audio-visual networks without significantly sacrificing clean model performance.
+
 ### Defending Multimodal Fusion Models Against Single-Source Adversaries.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yang_Defending_Multimodal_Fusion_Models_Against_Single-Source_Adversaries_CVPR_2021_paper.html)
+- **链接**: [arXiv:2206.12714](https://arxiv.org/abs/2206.12714) · 📚 被引 35
 - **作者**: Karren Yang, Wan-Yi Lin, Manash Barman, Filipe Condessa, J. Zico Kolter
 - **🏷️ 机构**: Massachusetts Institute of Technology, Bosch Center for AI&#x2217;, Carnegie Mellon University
 - **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > Beyond achieving high performance across many vision tasks, multimodal models are expected to be robust to single-source faults due to the availability of redundant information between modalities. In this paper, we investigate the robustness of multimodal neural networks against worst-case (i.e., adversarial) perturbations on a single modality. We first show that standard multimodal fusion models are vulnerable to single-source adversaries: an attack on any single modality can overcome the correct information from multiple unperturbed modalities and cause the model to fail. This surprising vulnerability holds across diverse multimodal tasks and necessitates a solution. Motivated by this finding, we propose an adversarially robust fusion strategy that trains the model to compare information coming from all the input sources, detect inconsistencies in the perturbed modality compared to the other modalities, and only allow information from the unperturbed modalities to pass through. Our approach significantly improves on state-of-the-art methods in single-source robustness, achieving gains of 7.8-25.2% on action recognition, 19.7-48.2% on object detection, and 1.6-6.7% on sentiment analysis, without degrading performance on unperturbed (i.e., clean) data.
 
 ### Multimodal Contrastive Training for Visual Representation Learning.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yuan_Multimodal_Contrastive_Training_for_Visual_Representation_Learning_CVPR_2021_paper.html)

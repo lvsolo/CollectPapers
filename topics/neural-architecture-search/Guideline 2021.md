@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### OPANAS: One-Shot Path Aggregation Network Architecture Search for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Liang_OPANAS_One-Shot_Path_Aggregation_Network_Architecture_Search_for_Object_Detection_CVPR_2021_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Liang_OPANAS_One-Shot_Path_Aggregation_Network_Architecture_Search_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 61
 - **作者**: Tingting Liang, Yongtao Wang, Zhi Tang, Guosheng Hu, Haibin Ling
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -22,13 +22,13 @@
   > Object tracking has achieved significant progress over the past few years. However, state-of-the-art trackers become increasingly heavy and expensive, which limits their deployments in resource-constrained applications. In this work, we present LightTrack, which uses neural architecture search (NAS) to design more lightweight and efficient object trackers. Comprehensive experiments show that our LightTrack is effective. It can find trackers that achieve superior performance compared to handcrafted SOTA trackers, such as SiamRPN++ and Ocean, while using much fewer model Flops and parameters. Moreover, when deployed on resource-constrained mobile chipsets, the discovered trackers run much faster. For example, on Snapdragon 845 Adreno GPU, LightTrack runs $12\times$ faster than Ocean, while using $13\times$ fewer parameters and $38\times$ fewer Flops. Such improvements might narrow the gap between academic models and industrial deployments in object tracking task. LightTrack is released at https://github.com/researchmm/LightTrack.
 
 ### One-Shot Neural Ensemble Architecture Search by Diversity-Guided Search Space Shrinking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_One-Shot_Neural_Ensemble_Architecture_Search_by_Diversity-Guided_Search_Space_Shrinking_CVPR_2021_paper.html) · 📚 被引 26
+- **链接**: [arXiv:2104.00597](https://arxiv.org/abs/2104.00597) · 📚 被引 26
 - **作者**: Minghao Chen, Jianlong Fu, Haibin Ling
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
 ### Contrastive Neural Architecture Search With Neural Architecture Comparators.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Contrastive_Neural_Architecture_Search_With_Neural_Architecture_Comparators_CVPR_2021_paper.html) · 📚 被引 66
+- **链接**: [arXiv:2103.05471](https://arxiv.org/abs/2103.05471) · 📚 被引 66
 - **作者**: Yaofo Chen, Yong Guo, Qi Chen, Minli Li, Wei Zeng, Yaowei Wang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -76,7 +76,7 @@
 - **会议**: CVPR 2021
 
 ### Retinex-Inspired Unrolling With Cooperative Prior Architecture Search for Low-Light Image Enhancement.
-- **链接**: [arXiv:2012.05609](https://arxiv.org/abs/2012.05609) · 📚 被引 966
+- **链接**: [arXiv:2012.05609](https://arxiv.org/abs/2012.05609) · 📚 被引 968
 - **作者**: Risheng Liu, Long Ma, Jiaao Zhang, Xin Fan, Zhongxuan Luo
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021

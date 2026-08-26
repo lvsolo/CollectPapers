@@ -60,10 +60,14 @@
 - **会议**: CVPR 2021
 
 ### SelfDoc: Self-Supervised Document Representation Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_SelfDoc_Self-Supervised_Document_Representation_Learning_CVPR_2021_paper.html) · 📚 被引 115
+- **链接**: [arXiv:2106.03331](https://arxiv.org/abs/2106.03331) · 📚 被引 115
 - **作者**: Peizhao Li, Jiuxiang Gu, Jason Kuen, Vlad I. Morariu, Handong Zhao, Rajiv Jain et al.
 - **🏷️ 机构**: Brandeis University, Adobe Research
 - **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > We propose SelfDoc, a task-agnostic pre-training framework for document image understanding. Because documents are multimodal and are intended for sequential reading, our framework exploits the positional, textual, and visual information of every semantically meaningful component in a document, and it models the contextualization between each block of content. Unlike existing document pre-training models, our model is coarse-grained instead of treating individual words as input, therefore avoiding an overly fine-grained with excessive contextualization. Beyond that, we introduce cross-modal learning in the model pre-training phase to fully leverage multimodal information from unlabeled documents. For downstream usage, we propose a novel modality-adaptive attention mechanism for multimodal feature fusion by adaptively emphasizing language and vision signals. Our framework benefits from self-supervised pre-training on documents without requiring annotations by a feature masking training strategy. It achieves superior performance on multiple downstream tasks with significantly fewer document images used in the pre-training stage compared to previous works.
 
 ### SelfAugment: Automatic Augmentation Policies for Self-Supervised Learning.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Reed_SelfAugment_Automatic_Augmentation_Policies_for_Self-Supervised_Learning_CVPR_2021_paper.html) · 📚 被引 25
@@ -232,7 +236,7 @@
   > Estimating the 3D motion of points in a scene, known as scene flow, is a core problem in computer vision. Traditional learning-based methods designed to learn end-to-end 3D flow often suffer from poor generalization. Here we present a recurrent architecture that learns a single step of an unrolled iterative alignment procedure for refining scene flow predictions. Inspired by classical algorithms, we demonstrate iterative convergence toward the solution using strong regularization. The proposed method can handle sizeable temporal deformations and suggests a slimmer architecture than competitive all-to-all correlation approaches. Trained on FlyingThings3D synthetic data only, our network successfully generalizes to real scans, outperforming all existing methods by a large margin on the KITTI self-supervised benchmark.
 
 ### Dual-Stream Multiple Instance Learning Network for Whole Slide Image Classification With Self-Supervised Contrastive Learning.
-- **链接**: [arXiv:2011.08939](https://arxiv.org/abs/2011.08939) · [代码](https://github.com/binli123/dsmil-wsi) · 📚 被引 775
+- **链接**: [arXiv:2011.08939](https://arxiv.org/abs/2011.08939) · [代码](https://github.com/binli123/dsmil-wsi) · 📚 被引 777
 - **作者**: Bin Li, Yin Li, Kevin W. Eliceiri
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -366,7 +370,7 @@
   > Learning discriminative image representations plays a vital role in long-tailed image classification because it can ease the classifier learning in imbalanced cases. Given the promising performance contrastive learning has shown recently in representation learning, in this work, we explore effective supervised contrastive learning strategies and tailor them to learn better image representations from imbalanced data in order to boost the classification accuracy thereon. Specifically, we propose a novel hybrid network structure being composed of a supervised contrastive loss to learn image representations and a cross-entropy loss to learn classifiers, where the learning is progressively transited from feature learning to the classifier learning to embody the idea that better features make better classifiers. We explore two variants of contrastive loss for feature learning, which vary in the forms but share a common idea of pulling the samples from the same class together in the normalized embedding space and pushing the samples from different classes apart. One of them is the recently proposed supervised contrastive (SC) loss, which is designed on top of the state-of-the-art unsupervised contrastive loss by incorporating positive samples from the same class. The other is a prototypical supervised contrastive (PSC) learning strategy which addresses the intensive memory consumption in standard SC loss and thus shows more promise under limited memory budget. Extensive experiments on three long-tailed classification datasets demonstrate the advantage of the proposed contrastive learning based hybrid networks in long-tailed classification.
 
 ### Sequence-to-Sequence Contrastive Learning for Text Recognition.
-- **链接**: [arXiv:2012.10873](https://arxiv.org/abs/2012.10873) · 📚 被引 129
+- **链接**: [arXiv:2012.10873](https://arxiv.org/abs/2012.10873) · 📚 被引 130
 - **作者**: Aviad Aberdam, Ron Litman, Shahar Tsiper, Oron Anschel, Ron Slossberg, Shai Mazor et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021

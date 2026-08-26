@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Open-Vocabulary Object Detection Using Captions.
-- **链接**: [arXiv:2011.10678](https://arxiv.org/abs/2011.10678) · 📚 被引 402
+- **链接**: [arXiv:2011.10678](https://arxiv.org/abs/2011.10678) · 📚 被引 403
 - **作者**: Alireza Zareian, Kevin Dela Rosa, Derek Hao Hu, Shih-Fu Chang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021

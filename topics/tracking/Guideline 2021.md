@@ -42,7 +42,7 @@
   > Multi-object tracking from RGB-D video sequences is a challenging problem due to the combination of changing viewpoints, motion, and occlusions over time. We observe that having the complete geometry of objects aids in their tracking, and thus propose to jointly infer the complete geometry of objects as well as track them, for rigidly moving objects over time. Our key insight is that inferring the complete geometry of the objects significantly helps in tracking. By hallucinating unseen regions of objects, we can obtain additional correspondences between the same instance, thus providing robust tracking even under strong change of appearance. From a sequence of RGB-D frames, we detect objects in each frame and learn to predict their complete object geometry as well as a dense correspondence mapping into a canonical space. This allows us to derive 6DoF poses for the objects in each frame, along with their correspondence between frames, providing robust object tracking across the RGB-D sequence. Experiments on both synthetic and real-world RGB-D data demonstrate that we achieve state-of-the-art performance on dynamic object tracking. Furthermore, we show that our object completion significantly helps tracking, providing an improvement of $6.5\%$ in mean MOTA.
 
 ### Learning a Proposal Classifier for Multiple Object Tracking.
-- **链接**: [arXiv:2103.07889](https://arxiv.org/abs/2103.07889) · [代码](https://github.com/daip13/LPC_MOT.git)
+- **链接**: [arXiv:2103.07889](https://arxiv.org/abs/2103.07889) · [代码](https://github.com/daip13/LPC_MOT.git) · 📚 被引 115
 - **作者**: Peng Dai, Renliang Weng, Wongun Choi, Changshui Zhang, Zhangping He, Wei Ding
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -62,7 +62,7 @@
   > Modern online multiple object tracking (MOT) methods usually focus on two directions to improve tracking performance. One is to predict new positions in an incoming frame based on tracking information from previous frames, and the other is to enhance data association by generating more discriminative identity embeddings. Some works combined both directions within one framework but handled them as two individual tasks, thus gaining little mutual benefits. In this paper, we propose a novel unified model with synergy between position prediction and embedding association. The two tasks are linked by temporal-aware target attention and distractor attention, as well as identity-aware memory aggregation model. Specifically, the attention modules can make the prediction focus more on targets and less on distractors, therefore more reliable embeddings can be extracted accordingly for association. On the other hand, such reliable embeddings can boost identity-awareness through memory aggregation, hence strengthen attention modules and suppress drifts. In this way, the synergy between position prediction and embedding association is achieved, which leads to strong robustness to occlusions. Extensive experiments demonstrate the superiority of our proposed model over a wide range of existing methods on MOTChallenge benchmarks. Our code and models are publicly available at https://github.com/songguocode/TADAM.
 
 ### Learnable Graph Matching: Incorporating Graph Partitioning With Deep Feature Learning for Multiple Object Tracking.
-- **链接**: [arXiv:2103.16178](https://arxiv.org/abs/2103.16178) · [代码](https://github.com/jiaweihe1996/GMTracker)
+- **链接**: [arXiv:2103.16178](https://arxiv.org/abs/2103.16178) · [代码](https://github.com/jiaweihe1996/GMTracker) · 📚 被引 124
 - **作者**: Jiawei He, Zehao Huang, Naiyan Wang, Zhaoxiang Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -84,7 +84,7 @@
 - **会议**: CVPR 2021
 
 ### SiamMOT: Siamese Multi-Object Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Shuai_SiamMOT_Siamese_Multi-Object_Tracking_CVPR_2021_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Shuai_SiamMOT_Siamese_Multi-Object_Tracking_CVPR_2021_paper.html) · 📚 被引 143
 - **作者**: Bing Shuai, Andrew G. Berneshawi, Xinyu Li, Davide Modolo, Joseph Tighe
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -102,10 +102,14 @@
 - **会议**: CVPR 2021
 
 ### STMTrack: Template-Free Visual Tracking With Space-Time Memory Networks.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Fu_STMTrack_Template-Free_Visual_Tracking_With_Space-Time_Memory_Networks_CVPR_2021_paper.html) · 📚 被引 350
+- **链接**: [arXiv:2104.00324](https://arxiv.org/abs/2104.00324) · [代码](https://github.com/fzh0917/STMTrack) · 📚 被引 350
 - **作者**: Zhihong Fu, Qingjie Liu, Zehua Fu, Yunhong Wang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+
+- **摘要（英，原文）**:
+
+  > Boosting performance of the offline trained siamese trackers is getting harder nowadays since the fixed information of the template cropped from the first frame has been almost thoroughly mined, but they are poorly capable of resisting target appearance changes. Existing trackers with template updating mechanisms rely on time-consuming numerical optimization and complex hand-designed strategies to achieve competitive performance, hindering them from real-time tracking and practical applications. In this paper, we propose a novel tracking framework built on top of a space-time memory network that is competent to make full use of historical information related to the target for better adapting to appearance variations during tracking. Specifically, a novel memory mechanism is introduced, which stores the historical information of the target to guide the tracker to focus on the most informative regions in the current frame. Furthermore, the pixel-level similarity computation of the memory network enables our tracker to generate much more accurate bounding boxes of the target. Extensive experiments and comparisons with many competitive trackers on challenging large-scale benchmarks, OTB-2015, TrackingNet, GOT-10k, LaSOT, UAV123, and VOT2018, show that, without bells and whistles, our tracker outperforms all previous state-of-the-art real-time methods while running at 37 FPS. The code is available at https://github.com/fzh0917/STMTrack.
 
 ### TesseTrack: End-to-End Learnable Multi-Person Articulated 3D Pose Tracking.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Reddy_TesseTrack_End-to-End_Learnable_Multi-Person_Articulated_3D_Pose_Tracking_CVPR_2021_paper.html) · 📚 被引 104
