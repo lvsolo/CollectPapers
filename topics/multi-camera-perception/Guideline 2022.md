@@ -50,10 +50,14 @@
   > This paper addresses a new problem of weakly-supervised online action segmentation in instructional videos. We present a framework to segment streaming videos online at test time using Dynamic Programming and show its advantages over greedy sliding window approach. We improve our framework by introducing the Online-Offline Discrepancy Loss (OODL) to encourage the segmentation results to have a higher temporal consistency. Furthermore, only during training, we exploit frame-wise correspondence between multiple views as supervision for training weakly-labeled instructional videos. In particular, we investigate three different multi-view inference techniques to generate more accurate frame-wise pseudo ground-truth with no additional annotation cost. We present results and ablation studies on two benchmark multi-view datasets, Breakfast and IKEA ASM. Experimental results show efficacy of the proposed methods both qualitatively and quantitatively in two domains of cooking and assembly.
 
 ### Multi-View Transformer for 3D Visual Grounding.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01508) · 📚 被引 112
+- **链接**: [arXiv:2204.02174](https://arxiv.org/abs/2204.02174) · [代码](https://github.com/sega-hsj/MVT-3DVG) · 📚 被引 112
 - **作者**: Shijia Huang, Yilun Chen, Jiaya Jia, Liwei Wang
 - **🏷️ 机构**: The Chinese University of Hong Kong
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > The 3D visual grounding task aims to ground a natural language description to the targeted object in a 3D scene, which is usually represented in 3D point clouds. Previous works studied visual grounding under specific views. The vision-language correspondence learned by this way can easily fail once the view changes. In this paper, we propose a Multi-View Transformer (MVT) for 3D visual grounding. We project the 3D scene to a multi-view space, in which the position information of the 3D scene under different views are modeled simultaneously and aggregated together. The multi-view space enables the network to learn a more robust multi-modal representation for 3D visual grounding and eliminates the dependence on specific views. Extensive experiments show that our approach significantly outperforms all state-of-the-art methods. Specifically, on Nr3D and Sr3D datasets, our method outperforms the best competitor by 11.2% and 7.1% and even surpasses recent work with extra 2D assistance by 5.9% and 6.6%. Our code is available at https://github.com/sega-hsj/MVT-3DVG.
 
 ### Uncertainty-Aware Deep Multi-View Photometric Stereo.
 - **链接**: [arXiv:2202.13071](https://arxiv.org/abs/2202.13071) · 📚 被引 36

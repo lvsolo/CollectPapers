@@ -1,7 +1,7 @@
 # Network Pruning — 2022 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -36,9 +36,31 @@
   > Local density of point clouds is crucial for representing local details, but has been overlooked by existing point cloud compression methods. To address this, we propose a novel deep point cloud compression method that preserves local density information. Our method works in an auto-encoder fashion: the encoder downsamples the points and learns point-wise features, while the decoder upsamples the points using these features. Specifically, we propose to encode local geometry and density with three embeddings: density embedding, local position embedding and ancestor embedding. During the decoding, we explicitly predict the upsampling factor for each point, and the directions and scales of the upsampled points. To mitigate the clustered points issue in existing methods, we design a novel sub-point convolution layer, and an upsampling block with adaptive scale. Furthermore, our method can also compress point-wise attributes, such as normal. Extensive qualitative and quantitative results on SemanticKITTI and ShapeNet demonstrate that our method achieves the state-of-the-art rate-distortion trade-off.
 
 ### Fire Together Wire Together: A Dynamic Pruning Approach with Self-Supervised Mask Prediction.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01213) · 📚 被引 43
+- **链接**: [arXiv:2110.08232](https://arxiv.org/abs/2110.08232) · 📚 被引 43
 - **作者**: Sara Elkerdawy, Mostafa Elhoushi, Hong Zhang, Nilanjan Ray
 - **🏷️ 机构**: University of Alberta,Huawei, Toronto Heterogeneous Compilers Lab,Huawei
+- **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Dynamic model pruning is a recent direction that allows for the inference of a different sub-network for each input sample during deployment. However, current dynamic methods rely on learning a continuous channel gating through regularization by inducing sparsity loss. This formulation introduces complexity in balancing different losses (e.g task loss, regularization loss). In addition, regularization based methods lack transparent tradeoff hyperparameter selection to realize a computational budget. Our contribution is two-fold: 1) decoupled task and pruning losses. 2) Simple hyperparameter selection that enables FLOPs reduction estimation before training. Inspired by the Hebbian theory in Neuroscience: "neurons that fire together wire together", we propose to predict a mask to process k filters in a layer based on the activation of its previous layer. We pose the problem as a self-supervised binary classification problem. Each mask predictor module is trained to predict if the log-likelihood for each filter in the current layer belongs to the top-k activated filters. The value k is dynamically estimated for each input based on a novel criterion using the mass of heatmaps. We show experiments on several neural architectures, such as VGG, ResNet and MobileNet on CIFAR and ImageNet datasets. On CIFAR, we reach similar accuracy to SOTA methods with 15% and 24% higher FLOPs reduction. Similarly in ImageNet, we achieve lower drop in accuracy with up to 13% improvement in FLOPs reduction.
+
+### Revisiting Random Channel Pruning for Neural Network Compression.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00029) · 📚 被引 110
+- **作者**: Yawei Li, Kamil Adamczewski, Wen Li, Shuhang Gu, Radu Timofte, Luc Van Gool
+- **🏷️ 机构**: Computer Vision Lab, ETH Zurich, MPI-IS, UESTC
+- **会议**: CVPR 2022
+
+### When to Prune? A Policy towards Early Structural Pruning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01193) · 📚 被引 49
+- **作者**: Maying Shen, Pavlo Molchanov, Hongxu Yin, José M. Álvarez
+- **🏷️ 机构**: NVIDIA
+- **会议**: CVPR 2022
+
+### Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01220) · 📚 被引 29
+- **作者**: Paul Wimmer, Jens Mehnert, Alexandru Condurache
+- **🏷️ 机构**: Automated Driving Research, Robert Bosch GmbH,Stuttgart,Germany,70469
 - **会议**: CVPR 2022
 
 ### Quarantine: Sparsity Can Uncover the Trojan Attack Trigger for Free.

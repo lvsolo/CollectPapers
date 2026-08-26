@@ -1,7 +1,7 @@
 # Video Understanding — 2022 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -19,6 +19,18 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00949) · 📚 被引 55
 - **作者**: Shuangrui Ding, Maomao Li, Tianyu Yang, Rui Qian, Haohang Xu, Qingyi Chen et al.
 - **🏷️ 机构**: Shanghai Jiao Tong University, Tencent AI Lab, The Chinese University of Hong Kong
+- **会议**: CVPR 2022
+
+### Revisiting the "Video" in Video-Language Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00293)
+- **作者**: Shyamal Buch, Cristóbal Eyzaguirre, Adrien Gaidon, Jiajun Wu, Li Fei-Fei, Juan Carlos Niebles
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
+
+### Recurring the Transformer for Video Action Recognition.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01367) · 📚 被引 123
+- **作者**: Jiewen Yang, Xingbo Dong, Liujun Liu, Chao Zhang, Jiajun Shen, Dahai Yu
+- **🏷️ 机构**: TCL Corporate Research (HK) Co., Ltd
 - **会议**: CVPR 2022
 
 ## 跨领域论文（完整笔记在其他领域）

@@ -108,10 +108,14 @@
 - **会议**: CVPR 2022
 
 ### SPAct: Self-supervised Privacy Preservation for Action Recognition.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01953) · 📚 被引 66
+- **链接**: [arXiv:2203.15205](https://arxiv.org/abs/2203.15205) · [代码](https://github.com/DAVEISHAN/SPAct) · 📚 被引 66
 - **作者**: Ishan Rajendrakumar Dave, Chen Chen, Mubarak Shah
 - **🏷️ 机构**: Center for Research in Computer Vision, University of Central Florida,Orlando,USA
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Visual private information leakage is an emerging key issue for the fast growing applications of video understanding like activity recognition. Existing approaches for mitigating privacy leakage in action recognition require privacy labels along with the action labels from the video dataset. However, annotating frames of video dataset for privacy labels is not feasible. Recent developments of self-supervised learning (SSL) have unleashed the untapped potential of the unlabeled data. For the first time, we present a novel training framework which removes privacy information from input video in a self-supervised manner without requiring privacy labels. Our training framework consists of three main components: anonymization function, self-supervised privacy removal branch, and action recognition branch. We train our framework using a minimax optimization strategy to minimize the action recognition cost function and maximize the privacy cost function through a contrastive self-supervised loss. Employing existing protocols of known-action and privacy attributes, our framework achieves a competitive action-privacy trade-off to the existing state-of-the-art supervised methods. In addition, we introduce a new protocol to evaluate the generalization of learned the anonymization function to novel-action and privacy attributes and show that our self-supervised framework outperforms existing supervised methods. Code available at: https://github.com/DAVEISHAN/SPAct
 
 ### TransRank: Self-supervised Video Representation Learning via Ranking-based Transformation Recognition.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00301)
@@ -284,16 +288,24 @@
   > Anomaly detection is commonly pursued as a one-class classification problem, where models can only learn from normal training samples, while being evaluated on both normal and abnormal test samples. Among the successful approaches for anomaly detection, a distinguished category of methods relies on predicting masked information (e.g. patches, future frames, etc.) and leveraging the reconstruction error with respect to the masked information as an abnormality score. Different from related methods, we propose to integrate the reconstruction-based functionality into a novel self-supervised predictive architectural building block. The proposed self-supervised block is generic and can easily be incorporated into various state-of-the-art anomaly detection methods. Our block starts with a convolutional layer with dilated filters, where the center area of the receptive field is masked. The resulting activation maps are passed through a channel attention module. Our block is equipped with a loss that minimizes the reconstruction error with respect to the masked area in the receptive field. We demonstrate the generality of our block by integrating it into several state-of-the-art frameworks for anomaly detection on image and video, providing empirical evidence that shows considerable performance improvements on MVTec AD, Avenue, and ShanghaiTech. We release our code as open source at https://github.com/ristea/sspcab.
 
 ### Backdoor Attacks on Self-Supervised Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01298)
+- **链接**: [arXiv:2105.10123](https://arxiv.org/abs/2105.10123) · [代码](https://github.com/UMBCvision/SSL-Backdoor)
 - **作者**: Aniruddha Saha, Ajinkya Tejankar, Soroush Abbasi Koohpayegani, Hamed Pirsiavash
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Large-scale unlabeled data has spurred recent progress in self-supervised learning methods that learn rich visual representations. State-of-the-art self-supervised methods for learning representations from images (e.g., MoCo, BYOL, MSF) use an inductive bias that random augmentations (e.g., random crops) of an image should produce similar embeddings. We show that such methods are vulnerable to backdoor attacks - where an attacker poisons a small part of the unlabeled data by adding a trigger (image patch chosen by the attacker) to the images. The model performance is good on clean test images, but the attacker can manipulate the decision of the model by showing the trigger at test time. Backdoor attacks have been studied extensively in supervised learning and to the best of our knowledge, we are the first to study them for self-supervised learning. Backdoor attacks are more practical in self-supervised learning, since the use of large unlabeled data makes data inspection to remove poisons prohibitive. We show that in our targeted attack, the attacker can produce many false positives for the target category by using the trigger at test time. We also propose a defense method based on knowledge distillation that succeeds in neutralizing the attack. Our code is available here: https://github.com/UMBCvision/SSL-Backdoor .
+
 ### ConDor: Self-Supervised Canonicalization of 3D Pose for Partial Shapes.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01646) · 📚 被引 29
+- **链接**: [arXiv:2201.07788](https://arxiv.org/abs/2201.07788) · 📚 被引 29
 - **作者**: Rahul Sajnani, Adrien Poulenard, Jivitesh Jain, Radhika Dua, Leonidas J. Guibas, Srinath Sridhar
 - **🏷️ 机构**: IIIT-Hyderabad,RRC, Stanford University, KAIST
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Progress in 3D object understanding has relied on manually canonicalized shape datasets that contain instances with consistent position and orientation (3D pose). This has made it hard to generalize these methods to in-the-wild shapes, eg., from internet model collections or depth sensors. ConDor is a self-supervised method that learns to Canonicalize the 3D orientation and position for full and partial 3D point clouds. We build on top of Tensor Field Networks (TFNs), a class of permutation- and rotation-equivariant, and translation-invariant 3D networks. During inference, our method takes an unseen full or partial 3D point cloud at an arbitrary pose and outputs an equivariant canonical pose. During training, this network uses self-supervision losses to learn the canonical pose from an un-canonicalized collection of full and partial 3D point clouds. ConDor can also learn to consistently co-segment object parts without any supervision. Extensive quantitative results on four new metrics show that our approach outperforms existing methods while enabling new applications such as operation on depth images and annotation transfer.
 
 ### SNUG: Self-Supervised Neural Dynamic Garments.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00797) · 📚 被引 119
@@ -424,16 +436,24 @@
 - **会议**: CVPR 2022
 
 ### Rethinking the Augmentation Module in Contrastive Learning: Learning Hierarchical Augmentation Invariance with Expanded Views.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01615) · 📚 被引 37
+- **链接**: [arXiv:2206.00227](https://arxiv.org/abs/2206.00227) · 📚 被引 37
 - **作者**: Junbo Zhang, Kaisheng Ma
 - **🏷️ 机构**: Tsinghua University
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > A data augmentation module is utilized in contrastive learning to transform the given data example into two views, which is considered essential and irreplaceable. However, the predetermined composition of multiple data augmentations brings two drawbacks. First, the artificial choice of augmentation types brings specific representational invariances to the model, which have different degrees of positive and negative effects on different downstream tasks. Treating each type of augmentation equally during training makes the model learn non-optimal representations for various downstream tasks and limits the flexibility to choose augmentation types beforehand. Second, the strong data augmentations used in classic contrastive learning methods may bring too much invariance in some cases, and fine-grained information that is essential to some downstream tasks may be lost. This paper proposes a general method to alleviate these two problems by considering where and what to contrast in a general contrastive learning framework. We first propose to learn different augmentation invariances at different depths of the model according to the importance of each data augmentation instead of learning representational invariances evenly in the backbone. We then propose to expand the contrast content with augmentation embeddings to reduce the misleading effects of strong data augmentations. Experiments based on several baseline methods demonstrate that we learn better representations for various benchmarks on classification, detection, and segmentation downstream tasks.
+
 ### Frame-wise Action Representations for Long Videos via Sequence Contrastive Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01343) · 📚 被引 40
+- **链接**: [arXiv:2203.14957](https://arxiv.org/abs/2203.14957) · [代码](https://github.com/minghchen/CARL_code) · 📚 被引 40
 - **作者**: Minghao Chen, Fangyun Wei, Chong Li, Deng Cai
 - **🏷️ 机构**: Zhejiang University,State Key Lab of CAD&#x0026;CG, College of Computer Science, Microsoft Research Asia
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Prior works on action representation learning mainly focus on designing various architectures to extract the global representations for short video clips. In contrast, many practical applications such as video alignment have strong demand for learning dense representations for long videos. In this paper, we introduce a novel contrastive action representation learning (CARL) framework to learn frame-wise action representations, especially for long videos, in a self-supervised manner. Concretely, we introduce a simple yet efficient video encoder that considers spatio-temporal context to extract frame-wise representations. Inspired by the recent progress of self-supervised learning, we present a novel sequence contrastive loss (SCL) applied on two correlated views obtained through a series of spatio-temporal data augmentations. SCL optimizes the embedding space by minimizing the KL-divergence between the sequence similarity of two augmented views and a prior Gaussian distribution of timestamp distance. Experiments on FineGym, PennAction and Pouring datasets show that our method outperforms previous state-of-the-art by a large margin for downstream fine-grained action classification. Surprisingly, although without training on paired videos, our approach also shows outstanding performance on video alignment and fine-grained frame retrieval tasks. Code and models are available at https://github.com/minghchen/CARL_code.
 
 ### Unpaired Deep Image Deraining Using Dual Contrastive Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00206) · 📚 被引 189
@@ -560,10 +580,14 @@
 - **会议**: CVPR 2022
 
 ### ContrastMask: Contrastive Learning to Segment Every Thing.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01131) · 📚 被引 46
+- **链接**: [arXiv:2203.09775](https://arxiv.org/abs/2203.09775) · 📚 被引 46
 - **作者**: Xuehui Wang, Kai Zhao, Ruixin Zhang, Shouhong Ding, Yan Wang, Wei Shen
 - **🏷️ 机构**: AI Institute, Shanghai Jiao Tong University,MoE Key Lab of Artificial Intelligence, Youtu Lab, Tencent, Shanghai Key Lab of Multidimensional Information Processing, ECNU
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Partially-supervised instance segmentation is a task which requests segmenting objects from novel unseen categories via learning on limited seen categories with annotated masks thus eliminating demands of heavy annotation burden. The key to addressing this task is to build an effective class-agnostic mask segmentation model. Unlike previous methods that learn such models only on seen categories, in this paper, we propose a new method, named ContrastMask, which learns a mask segmentation model on both seen and unseen categories under a unified pixel-level contrastive learning framework. In this framework, annotated masks of seen categories and pseudo masks of unseen categories serve as a prior for contrastive learning, where features from the mask regions (foreground) are pulled together, and are contrasted against those from the background, and vice versa. Through this framework, feature discrimination between foreground and background is largely improved, facilitating learning of the class-agnostic mask segmentation model. Exhaustive experiments on the COCO dataset demonstrate the superiority of our method, which outperforms previous state-of-the-arts.
 
 ### Cross-patch Dense Contrastive Learning for Semi-supervised Segmentation of Cellular Nuclei in Histopathologic Images.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01137) · 📚 被引 79

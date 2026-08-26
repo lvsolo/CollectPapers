@@ -1,21 +1,29 @@
 # Multimodal — 2022 Guideline
 
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
-> 论文数: 36 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 37 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
 ### Self-supervised object detection from audio-visual correspondence.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01032)
+- **链接**: [arXiv:2104.06401](https://arxiv.org/abs/2104.06401) · 📚 被引 40
 - **作者**: Triantafyllos Afouras, Yuki M. Asano, Francois Fagan, Andrea Vedaldi, Florian Metze
 - **🏷️ 机构**: University of Oxford, University of Amsterdam, Meta AI
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > We tackle the problem of learning object detectors without supervision. Differently from weakly-supervised object detection, we do not assume image-level class labels. Instead, we extract a supervisory signal from audio-visual data, using the audio component to "teach" the object detector. While this problem is related to sound source localisation, it is considerably harder because the detector must classify the objects by type, enumerate each instance of the object, and do so even when the object is silent. We tackle this problem by first designing a self-supervised framework with a contrastive objective that jointly learns to classify and localise objects. Then, without using any supervision, we simply use these self-supervised labels and boxes to train an image-based object detector. With this, we outperform previous unsupervised and weakly-supervised detectors for the task of object detection and sound source localization. We also show that we can align this detector to ground-truth classes with as little as one label per pseudo-class, and show how our method can learn to detect generic objects that go beyond instruments, such as airplanes and cats.
+
 ### CrossPoint: Self-Supervised Cross-Modal Contrastive Learning for 3D Point Cloud Understanding.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00967) · 📚 被引 274
+- **链接**: [arXiv:2203.00680](https://arxiv.org/abs/2203.00680) · [代码](https://github.com/MohamedAfham/CrossPoint) · 📚 被引 274
 - **作者**: Mohamed Afham, Isuru Dissanayake, Dinithi Dissanayake, Amaya Dharmasiri, Kanchana Thilakarathna, Ranga Rodrigo
 - **🏷️ 机构**: Univeristy of Moratuwa,Dept. of Electronic and Telecommunication Engineering,Sri Lanka, The University of Sydney
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Manual annotation of large-scale point cloud dataset for varying tasks such as 3D object classification, segmentation and detection is often laborious owing to the irregular structure of point clouds. Self-supervised learning, which operates without any human labeling, is a promising approach to address this issue. We observe in the real world that humans are capable of mapping the visual concepts learnt from 2D images to understand the 3D world. Encouraged by this insight, we propose CrossPoint, a simple cross-modal contrastive learning approach to learn transferable 3D point cloud representations. It enables a 3D-2D correspondence of objects by maximizing agreement between point clouds and the corresponding rendered 2D image in the invariant space, while encouraging invariance to transformations in the point cloud modality. Our joint training objective combines the feature correspondences within and across modalities, thus ensembles a rich learning signal from both 3D point cloud and 2D image modalities in a self-supervised fashion. Experimental results show that our approach outperforms the previous unsupervised learning methods on a diverse range of downstream tasks including 3D object classification and segmentation. Further, the ablation studies validate the potency of our approach for a better point cloud understanding. Code and pretrained models are available at http://github.com/MohamedAfham/CrossPoint.
 
 ### Text2Pos: Text-to-Point-Cloud Cross-Modal Localization.
 - **链接**: [arXiv:2203.15125](https://arxiv.org/abs/2203.15125) · 📚 被引 26
@@ -82,22 +90,34 @@
 - **会议**: CVPR 2022
 
 ### End-to-End Referring Video Object Segmentation with Multimodal Transformers.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00493) · 📚 被引 163
+- **链接**: [arXiv:2111.14821](https://arxiv.org/abs/2111.14821) · [代码](https://github.com/mttr2021/MTTR) · 📚 被引 163
 - **作者**: Adam Botach, Evgenii Zheltonozhskii, Chaim Baskin
 - **🏷️ 机构**: Technion -Israel Institute of Technology
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > The referring video object segmentation task (RVOS) involves segmentation of a text-referred object instance in the frames of a given video. Due to the complex nature of this multimodal task, which combines text reasoning, video understanding, instance segmentation and tracking, existing approaches typically rely on sophisticated pipelines in order to tackle it. In this paper, we propose a simple Transformer-based approach to RVOS. Our framework, termed Multimodal Tracking Transformer (MTTR), models the RVOS task as a sequence prediction problem. Following recent advancements in computer vision and natural language processing, MTTR is based on the realization that video and text can be processed together effectively and elegantly by a single multimodal Transformer model. MTTR is end-to-end trainable, free of text-related inductive bias components and requires no additional mask-refinement post-processing steps. As such, it simplifies the RVOS pipeline considerably compared to existing methods. Evaluation on standard benchmarks reveals that MTTR significantly outperforms previous art across multiple metrics. In particular, MTTR shows impressive +5.7 and +5.0 mAP gains on the A2D-Sentences and JHMDB-Sentences datasets respectively, while processing 76 frames per second. In addition, we report strong results on the public validation set of Refer-YouTube-VOS, a more challenging RVOS dataset that has yet to receive the attention of researchers. The code to reproduce our experiments is available at https://github.com/mttr2021/MTTR
+
 ### WebQA: Multihop and Multimodal QA.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01600) · 📚 被引 58
+- **链接**: [arXiv:2109.00590](https://arxiv.org/abs/2109.00590) · 📚 被引 58
 - **作者**: Yingshan Chang, Guihong Cao, Mridu Narang, Jianfeng Gao, Hisami Suzuki, Yonatan Bisk
 - **🏷️ 机构**: Carnegie Mellon University, Microsoft, Bing Search, Microsoft Research
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > Scaling Visual Question Answering (VQA) to the open-domain and multi-hop nature of web searches, requires fundamental advances in visual representation learning, knowledge aggregation, and language generation. In this work, we introduce WebQA, a challenging new benchmark that proves difficult for large-scale state-of-the-art models which lack language groundable visual representations for novel objects and the ability to reason, yet trivial for humans. WebQA mirrors the way humans use the web: 1) Ask a question, 2) Choose sources to aggregate, and 3) Produce a fluent language response. This is the behavior we should be expecting from IoT devices and digital assistants. Existing work prefers to assume that a model can either reason about knowledge in images or in text. WebQA includes a secondary text-only QA task to ensure improved visual performance does not come at the cost of language understanding. Our challenge for the community is to create unified multimodal reasoning models that answer questions regardless of the source modality, moving us closer to digital assistants that not only query language knowledge, but also the richer visual online world.
+
 ### STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01899) · 📚 被引 45
+- **链接**: [arXiv:2204.01026](https://arxiv.org/abs/2204.01026) · 📚 被引 45
 - **作者**: Peishan Cong, Xinge Zhu, Feng Qiao, Yiming Ren, Xidong Peng, Yuenan Hou et al.
 - **🏷️ 机构**: ShanghaiTech University, The Chinese University of Hong Kong, RWTH Aachen University
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Accurately detecting and tracking pedestrians in 3D space is challenging due to large variations in rotations, poses and scales. The situation becomes even worse for dense crowds with severe occlusions. However, existing benchmarks either only provide 2D annotations, or have limited 3D annotations with low-density pedestrian distribution, making it difficult to build a reliable pedestrian perception system especially in crowded scenes. To better evaluate pedestrian perception algorithms in crowded scenarios, we introduce a large-scale multimodal dataset,STCrowd. Specifically, in STCrowd, there are a total of 219 K pedestrian instances and 20 persons per frame on average, with various levels of occlusion. We provide synchronized LiDAR point clouds and camera images as well as their corresponding 3D labels and joint IDs. STCrowd can be used for various tasks, including LiDAR-only, image-only, and sensor-fusion based pedestrian detection and tracking. We provide baselines for most of the tasks. In addition, considering the property of sparse global distribution and density-varying local distribution of pedestrians, we further propose a novel method, Density-aware Hierarchical heatmap Aggregation (DHA), to enhance pedestrian perception in crowded scenes. Extensive experiments show that our new method achieves state-of-the-art performance for pedestrian detection on various datasets.
 
 ### MuKEA: Multimodal Knowledge Extraction and Accumulation for Knowledge-based Visual Question Answering.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00503) · 📚 被引 112
@@ -207,6 +227,12 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01752)
 - **作者**: Haoyu Ma, Handong Zhao, Zhe Lin, Ajinkya Kale, Zhangyang Wang, Tong Yu et al.
 - **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
+
+### Interact before Align: Leveraging Cross-Modal Knowledge for Domain Adaptive Action Recognition.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01431) · 📚 被引 32
+- **作者**: Lijin Yang, Yifei Huang, Yusuke Sugano, Yoichi Sato
+- **🏷️ 机构**: Institute of Industrial Science, The University of Tokyo
 - **会议**: CVPR 2022
 
 ### Robust Cross-Modal Representation Learning with Progressive Self-Distillation.

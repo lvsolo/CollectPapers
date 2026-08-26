@@ -6,16 +6,24 @@
 > 同领域其他年份: 
 
 ### Bridged Transformer for Vision and Point Cloud 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01180)
+- **链接**: [arXiv:2210.01391](https://arxiv.org/abs/2210.01391) · 📚 被引 55
 - **作者**: Yikai Wang, TengQi Ye, Lele Cao, Wenbing Huang, Fuchun Sun, Fengxiang He et al.
 - **🏷️ 机构**: Tsinghua University,Beijing National Research Center for Information Science and Technology (BNRist), State Key Lab on Intelligent Technology and Systems,Department of Computer Science and Technology, ByteDance Inc., Institute for AI Industry Research (AIR), Tsinghua University
 - **会议**: CVPR 2022
 
+- **摘要（英，原文）**:
+
+  > 3D object detection is a crucial research topic in computer vision, which usually uses 3D point clouds as input in conventional setups. Recently, there is a trend of leveraging multiple sources of input data, such as complementing the 3D point cloud with 2D images that often have richer color and fewer noises. However, due to the heterogeneous geometrics of the 2D and 3D representations, it prevents us from applying off-the-shelf neural networks to achieve multimodal fusion. To that end, we propose Bridged Transformer (BrT), an end-to-end architecture for 3D object detection. BrT is simple and effective, which learns to identify 3D and 2D object bounding boxes from both points and image patches. A key element of BrT lies in the utilization of object queries for bridging 3D and 2D spaces, which unifies different sources of data representations in Transformer. We adopt a form of feature aggregation realized by point-to-patch projections which further strengthen the correlations between images and points. Moreover, BrT works seamlessly for fusing the point cloud with multi-view images. We experimentally show that BrT surpasses state-of-the-art methods on SUN RGB-D and ScanNetV2 datasets.
+
 ### TransFusion: Robust LiDAR-Camera Fusion for 3D Object Detection with Transformers.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00116)
+- **链接**: [arXiv:2203.11496](https://arxiv.org/abs/2203.11496) · 📚 被引 904
 - **作者**: Xuyang Bai, Zeyu Hu, Xinge Zhu, Qingqiu Huang, Yilun Chen, Hongbo Fu et al.
 - **🏷️ 机构**: Hong Kong University of Science and Technology, ADS, IAS BU, Huawei, City University of Hong Kong
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > LiDAR and camera are two important sensors for 3D object detection in autonomous driving. Despite the increasing popularity of sensor fusion in this field, the robustness against inferior image conditions, e.g., bad illumination and sensor misalignment, is under-explored. Existing fusion methods are easily affected by such conditions, mainly due to a hard association of LiDAR points and image pixels, established by calibration matrices. We propose TransFusion, a robust solution to LiDAR-camera fusion with a soft-association mechanism to handle inferior image conditions. Specifically, our TransFusion consists of convolutional backbones and a detection head based on a transformer decoder. The first layer of the decoder predicts initial bounding boxes from a LiDAR point cloud using a sparse set of object queries, and its second decoder layer adaptively fuses the object queries with useful image features, leveraging both spatial and contextual relationships. The attention mechanism of the transformer enables our model to adaptively determine where and what information should be taken from the image, leading to a robust and effective fusion strategy. We additionally design an image-guided query initialization strategy to deal with objects that are difficult to detect in point clouds. TransFusion achieves state-of-the-art performance on large-scale datasets. We provide extensive experiments to demonstrate its robustness against degenerated image quality and calibration errors. We also extend the proposed method to the 3D tracking task and achieve the 1st place in the leaderboard of nuScenes tracking, showing its effectiveness and generalization capability.
 
 ### Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00096)
@@ -30,7 +38,7 @@
 - **会议**: CVPR 2022
 
 ### VISTA: Boosting 3D Object Detection via Dual Cross-VIew SpaTial Attention.
-- **链接**: [arXiv:2203.09704](https://arxiv.org/abs/2203.09704) · [代码](https://github.com/Gorilla-Lab-SCUT/VISTA)
+- **链接**: [arXiv:2203.09704](https://arxiv.org/abs/2203.09704) · [代码](https://github.com/Gorilla-Lab-SCUT/VISTA) · 📚 被引 92
 - **作者**: Shengheng Deng, Zhihao Liang, Lin Sun, Kui Jia
 - **🏷️ 机构**: South China University of Technology, Magic Leap,Sunnyvale,CA
 - **会议**: CVPR 2022
@@ -46,10 +54,14 @@
 - **会议**: CVPR 2022
 
 ### Homography Loss for Monocular 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00115)
+- **链接**: [arXiv:2204.00754](https://arxiv.org/abs/2204.00754) · 📚 被引 48
 - **作者**: Jiaqi Gu, Bojian Wu, Lubin Fan, Jianqiang Huang, Shen Cao, Zhiyu Xiang et al.
 - **🏷️ 机构**: Alibaba Cloud Computing Ltd., Zhejiang University
 - **会议**: CVPR 2022
+
+- **摘要（英，原文）**:
+
+  > Monocular 3D object detection is an essential task in autonomous driving. However, most current methods consider each 3D object in the scene as an independent training sample, while ignoring their inherent geometric relations, thus inevitably resulting in a lack of leveraging spatial constraints. In this paper, we propose a novel method that takes all the objects into consideration and explores their mutual relationships to help better estimate the 3D boxes. Moreover, since 2D detection is more reliable currently, we also investigate how to use the detected 2D boxes as guidance to globally constrain the optimization of the corresponding predicted 3D boxes. To this end, a differentiable loss function, termed as Homography Loss, is proposed to achieve the goal, which exploits both 2D and 3D information, aiming at balancing the positional relationships between different objects by global constraints, so as to obtain more accurately predicted 3D boxes. Thanks to the concise design, our loss function is universal and can be plugged into any mature monocular 3D detector, while significantly boosting the performance over their baseline. Experiments demonstrate that our method yields the best performance (Nov. 2021) compared with the other state-of-the-arts by a large margin on KITTI 3D datasets.
 
 ### LiDAR Snowfall Simulation for Robust 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01588) · 📚 被引 168
@@ -64,7 +76,7 @@
 - **会议**: CVPR 2022
 
 ### Point Density-Aware Voxels for LiDAR 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00828)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00828) · 📚 被引 148
 - **作者**: Jordan S. K. Hu, Tianshu Kuai, Steven L. Waslander
 - **🏷️ 机构**: University of Toronto Robotics Institute
 - **会议**: CVPR 2022
@@ -76,7 +88,7 @@
 - **会议**: CVPR 2022
 
 ### MonoDTR: Monocular 3D Object Detection with Depth-Aware Transformer.
-- **链接**: [arXiv:2203.10981](https://arxiv.org/abs/2203.10981) · [代码](https://github.com/kuanchihhuang/MonoDTR)
+- **链接**: [arXiv:2203.10981](https://arxiv.org/abs/2203.10981) · [代码](https://github.com/kuanchihhuang/MonoDTR) · 📚 被引 225
 - **作者**: Kuan-Chih Huang, Tsung-Han Wu, Hung-Ting Su, Winston H. Hsu
 - **🏷️ 机构**: National Taiwan University
 - **会议**: CVPR 2022
@@ -86,7 +98,7 @@
   > Monocular 3D object detection is an important yet challenging task in autonomous driving. Some existing methods leverage depth information from an off-the-shelf depth estimator to assist 3D detection, but suffer from the additional computational burden and achieve limited performance caused by inaccurate depth priors. To alleviate this, we propose MonoDTR, a novel end-to-end depth-aware transformer network for monocular 3D object detection. It mainly consists of two components: (1) the Depth-Aware Feature Enhancement (DFE) module that implicitly learns depth-aware features with auxiliary supervision without requiring extra computation, and (2) the Depth-Aware Transformer (DTR) module that globally integrates context- and depth-aware features. Moreover, different from conventional pixel-wise positional encodings, we introduce a novel depth positional encoding (DPE) to inject depth positional hints into transformers. Our proposed depth-aware modules can be easily plugged into existing image-only monocular 3D object detectors to improve the performance. Extensive experiments on the KITTI dataset demonstrate that our approach outperforms previous state-of-the-art monocular-based methods and achieves real-time detection. Code is available at https://github.com/kuanchihhuang/MonoDTR
 
 ### 3D-VField: Adversarial Augmentation of Point Clouds for Domain Generalization in 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01678)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01678) · 📚 被引 67
 - **作者**: Alexander Lehner, Stefano Gasperini, Alvaro Marcos-Ramiro, Michael Schmidt, Mohammad-Ali Nikouei Mahani, Nassir Navab et al.
 - **🏷️ 机构**: Technical University of Munich, BMW Group
 - **会议**: CVPR 2022
@@ -108,7 +120,7 @@
   > In this work, we present a conceptually simple yet effective framework for cross-modality 3D object detection, named voxel field fusion. The proposed approach aims to maintain cross-modality consistency by representing and fusing augmented image features as a ray in the voxel field. To this end, the learnable sampler is first designed to sample vital features from the image plane that are projected to the voxel grid in a point-to-ray manner, which maintains the consistency in feature representation with spatial context. In addition, ray-wise fusion is conducted to fuse features with the supplemental context in the constructed voxel field. We further develop mixed augmentor to align feature-variant transformations, which bridges the modality gap in data augmentation. The proposed framework is demonstrated to achieve consistent gains in various benchmarks and outperforms previous fusion-based methods on KITTI and nuScenes datasets. Code is made available at https://github.com/dvlab-research/VFF.
 
 ### Diversity Matters: Fully Exploiting Depth Clues for Reliable Monocular 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00281)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00281) · 📚 被引 87
 - **作者**: Zhuoling Li, Zhan Qu, Yang Zhou, Jianzhuang Liu, Haoqian Wang, Lihui Jiang
 - **🏷️ 机构**: Tsinghua University, Huawei Noah&#x0027;s Ark Lab
 - **会议**: CVPR 2022
@@ -120,7 +132,7 @@
 - **会议**: CVPR 2022
 
 ### MonoJSG: Joint Semantic and Geometric Cost Volume for Monocular 3D Object Detection.
-- **链接**: [arXiv:2203.08563](https://arxiv.org/abs/2203.08563)
+- **链接**: [arXiv:2203.08563](https://arxiv.org/abs/2203.08563) · 📚 被引 69
 - **作者**: Qing Lian, Peiliang Li, Xiaozhi Chen
 - **🏷️ 机构**: The Hong Kong University of Science and Technology, DJI
 - **会议**: CVPR 2022
@@ -130,13 +142,13 @@
   > Due to the inherent ill-posed nature of 2D-3D projection, monocular 3D object detection lacks accurate depth recovery ability. Although the deep neural network (DNN) enables monocular depth-sensing from high-level learned features, the pixel-level cues are usually omitted due to the deep convolution mechanism. To benefit from both the powerful feature representation in DNN and pixel-level geometric constraints, we reformulate the monocular object depth estimation as a progressive refinement problem and propose a joint semantic and geometric cost volume to model the depth error. Specifically, we first leverage neural networks to learn the object position, dimension, and dense normalized 3D object coordinates. Based on the object depth, the dense coordinates patch together with the corresponding object features is reprojected to the image space to build a cost volume in a joint semantic and geometric error manner. The final depth is obtained by feeding the cost volume to a refinement network, where the distribution of semantic and geometric error is regularized by direct depth supervision. Through effectively mitigating depth error by the refinement framework, we achieve state-of-the-art results on both the KITTI and Waymo datasets.
 
 ### Exploring Geometric Consistency for Monocular 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00173)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00173) · 📚 被引 33
 - **作者**: Qing Lian, Botao Ye, Ruijia Xu, Weilong Yao, Tong Zhang
 - **🏷️ 机构**: The Hong Kong University of Science and Technology, Institute of Computing Technology, Chinese Academy of Sciences,China, Autowise.AI
 - **会议**: CVPR 2022
 
 ### SS3D: Sparsely-Supervised 3D Object Detection from Point Cloud.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00824)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00824) · 📚 被引 34
 - **作者**: Chuandong Liu, Chenqiang Gao, Fangcen Liu, Jiang Liu, Deyu Meng, Xinbo Gao
 - **🏷️ 机构**: School of Communication and Information Engineering, Chongqing University of Posts and Telecommunications,Chongqing,China, Meta,Menlo Park,USA, Xi&#x0027;an Jiaotong University,Xi&#x0027;an,China
 - **会议**: CVPR 2022
@@ -152,7 +164,7 @@
   > As a fundamental problem in computer vision, 3D object detection is experiencing rapid growth. To extract the point-wise features from the irregularly and sparsely distributed points, previous methods usually take a feature grouping module to aggregate the point features to an object candidate. However, these methods have not yet leveraged the surface geometry of foreground objects to enhance grouping and 3D box generation. In this paper, we propose the RBGNet framework, a voting-based 3D detector for accurate 3D object detection from point clouds. In order to learn better representations of object shape to enhance cluster features for predicting 3D boxes, we propose a ray-based feature grouping module, which aggregates the point-wise features on object surfaces using a group of determined rays uniformly emitted from cluster centers. Considering the fact that foreground points are more meaningful for box estimation, we design a novel foreground biased sampling strategy in downsample process to sample more points on object surfaces and further boost the detection performance. Our model achieves state-of-the-art 3D detection performance on ScanNet V2 and SUN RGB-D with remarkable performance gains. Code will be available at https://github.com/Haiyang-W/RBGNet.
 
 ### Back to Reality: Weakly-supervised 3D Object Detection with Shape-guided Label Enhancement.
-- **链接**: [arXiv:2203.05238](https://arxiv.org/abs/2203.05238) · [代码](https://github.com/wyf-ACCEPT/BackToReality)
+- **链接**: [arXiv:2203.05238](https://arxiv.org/abs/2203.05238) · [代码](https://github.com/wyf-ACCEPT/BackToReality) · 📚 被引 26
 - **作者**: Xiuwei Xu, Yifan Wang, Yu Zheng, Yongming Rao, Jie Zhou, Jiwen Lu
 - **🏷️ 机构**: Tsinghua University,Department of Automation,China
 - **会议**: CVPR 2022
@@ -168,7 +180,7 @@
 - **会议**: CVPR 2022
 
 ### Rotationally Equivariant 3D Object Detection.
-- **链接**: [arXiv:2204.13630](https://arxiv.org/abs/2204.13630)
+- **链接**: [arXiv:2204.13630](https://arxiv.org/abs/2204.13630) · 📚 被引 27
 - **作者**: Hong-Xing Yu, Jiajun Wu, Li Yi
 - **🏷️ 机构**: Stanford University, Tsinghua University, Shanghai Qi Zhi Institute
 - **会议**: CVPR 2022
@@ -184,7 +196,7 @@
 - **会议**: CVPR 2022
 
 ### LIFT: Learning 4D LiDAR Image Fusion Transformer for 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01666)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01666) · 📚 被引 36
 - **作者**: Yihan Zeng, Da Zhang, Chunwei Wang, Zhenwei Miao, Ting Liu, Xin Zhan et al.
 - **🏷️ 机构**: AI Institute, Shanghai Jiao Tong University,MoE Key Lab of Artificial Intelligence, Alibaba DAMO Academy
 - **会议**: CVPR 2022
@@ -196,13 +208,13 @@
 - **会议**: CVPR 2022
 
 ### Dimension Embeddings for Monocular 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00164)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00164) · 📚 被引 20
 - **作者**: Yunpeng Zhang, Wenzhao Zheng, Zheng Zhu, Guan Huang, Dalong Du, Jie Zhou et al.
 - **🏷️ 机构**: Beijing National Research Center for Information Science and Technology,China, PhiGent Robotics
 - **会议**: CVPR 2022
 
 ### Boosting 3D Object Detection by Simulating Multimodality on Point Clouds.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01327)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01327) · 📚 被引 35
 - **作者**: Wu Zheng, Mingxuan Hong, Li Jiang, Chi-Wing Fu
 - **🏷️ 机构**: CUHK,Department of Computer Science and Engineering, Max Planck Institute
 - **会议**: CVPR 2022

@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### A-ViT: Adaptive Tokens for Efficient Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01054) · 📚 被引 311
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01054) · 📚 被引 315
 - **作者**: Hongxu Yin, Arash Vahdat, José M. Álvarez, Arun Mallya, Jan Kautz, Pavlo Molchanov
 - **🏷️ 机构**: NVIDIA
 - **会议**: CVPR 2022
@@ -22,7 +22,7 @@
   > Referring image segmentation is a fundamental vision-language task that aims to segment out an object referred to by a natural language expression from an image. One of the key challenges behind this task is leveraging the referring expression for highlighting relevant positions in the image. A paradigm for tackling this problem is to leverage a powerful vision-language ("cross-modal") decoder to fuse features independently extracted from a vision encoder and a language encoder. Recent methods have made remarkable advancements in this paradigm by exploiting Transformers as cross-modal decoders, concurrent to the Transformer's overwhelming success in many other vision-language tasks. Adopting a different approach in this work, we show that significantly better cross-modal alignments can be achieved through the early fusion of linguistic and visual features in intermediate layers of a vision Transformer encoder network. By conducting cross-modal feature fusion in the visual feature encoding stage, we can leverage the well-proven correlation modeling power of a Transformer encoder for excavating helpful multi-modal context. This way, accurate segmentation results are readily harvested with a light-weight mask predictor. Without bells and whistles, our method surpasses the previous state-of-the-art methods on RefCOCO, RefCOCO+, and G-Ref by large margins.
 
 ### CSWin Transformer: A General Vision Transformer Backbone with Cross-Shaped Windows.
-- **链接**: [arXiv:2107.00652](https://arxiv.org/abs/2107.00652) · [代码](https://github.com/microsoft/CSWin-Transformer) · 📚 被引 1159
+- **链接**: [arXiv:2107.00652](https://arxiv.org/abs/2107.00652) · [代码](https://github.com/microsoft/CSWin-Transformer) · 📚 被引 1160
 - **作者**: Xiaoyi Dong, Jianmin Bao, Dongdong Chen, Weiming Zhang, Nenghai Yu, Lu Yuan et al.
 - **🏷️ 机构**: University of Science and Technology of China, Microsoft Research Asia, Microsoft Cloud + AI
 - **会议**: CVPR 2022
