@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Hit-Detector: Hierarchical Trinity Architecture Search for Object Detection.
-- **链接**: [arXiv:2003.11818](https://arxiv.org/abs/2003.11818) · [代码](https://github.com/ggjy/HitDet.pytorch)
+- **链接**: [arXiv:2003.11818](https://arxiv.org/abs/2003.11818) · [代码](https://github.com/ggjy/HitDet.pytorch) · 📚 被引 81
 - **作者**: Jianyuan Guo, Kai Han, Yunhe Wang, Chao Zhang, Zhaohui Yang, Han Wu et al.
 - **🏷️ 机构**: Key Lab of Machine Perception (MOE), Dept. of Machine Intelligence, Peking University; Noah's Ark Lab, Huawei Technologies, Noah's Ark Lab, Huawei Technologies, Key Lab of Machine Perception (MOE), Dept. of Machine Intelligence, Peking University
 - **会议**: CVPR 2020
@@ -22,7 +22,7 @@
 - **会议**: CVPR 2020
 
 ### NAS-FCOS: Fast Neural Architecture Search for Object Detection.
-- **链接**: [arXiv:1906.04423](https://arxiv.org/abs/1906.04423) · 📚 被引 201
+- **链接**: [arXiv:1906.04423](https://arxiv.org/abs/1906.04423) · 📚 被引 200
 - **作者**: Ning Wang, Yang Gao, Hao Chen, Peng Wang, Zhi Tian, Chunhua Shen et al.
 - **🏷️ 机构**: ZJU
 - **会议**: CVPR 2020
@@ -42,7 +42,7 @@
   > Neural architecture search (NAS) has dramatically advanced the development of neural network design. We revisit the search space design in most previous NAS methods and find the number and widths of blocks are set manually. However, block counts and block widths determine the network scale (depth and width) and make a great influence on both the accuracy and the model cost (FLOPs/latency). In this paper, we propose to search block counts and block widths by designing a densely connected search space, i.e., DenseNAS. The new search space is represented as a dense super network, which is built upon our designed routing blocks. In the super network, routing blocks are densely connected and we search for the best path between them to derive the final architecture. We further propose a chained cost estimation algorithm to approximate the model cost during the search. Both the accuracy and model cost are optimized in DenseNAS. For experiments on the MobileNetV2-based search space, DenseNAS achieves 75.3% top-1 accuracy on ImageNet with only 361MB FLOPs and 17.9ms latency on a single TITAN-XP. The larger model searched by DenseNAS achieves 76.1% accuracy with only 479M FLOPs. DenseNAS further promotes the ImageNet classification accuracies of ResNet-18, -34 and -50-B by 1.5%, 0.5% and 0.3% with 200M, 600M and 680M FLOPs reduction respectively. The related code is available at https://github.com/JaminFong/DenseNAS.
 
 ### Can Weight Sharing Outperform Random Architecture Search? An Investigation With TuNAS.
-- **链接**: [arXiv:2008.06120](https://arxiv.org/abs/2008.06120) · [代码](https://github.com/google-research/google-research)
+- **链接**: [arXiv:2008.06120](https://arxiv.org/abs/2008.06120) · [代码](https://github.com/google-research/google-research) · 📚 被引 72
 - **作者**: Gabriel Bender, Hanxiao Liu, Bo Chen, Grace Chu, Shuyang Cheng, Pieter-Jan Kindermans et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -72,7 +72,7 @@
   > Neural Architecture Search (NAS) that aims to automate the procedure of architecture design has achieved promising results in many computer vision fields. In this paper, we propose an AdversarialNAS method specially tailored for Generative Adversarial Networks (GANs) to search for a superior generative model on the task of unconditional image generation. The AdversarialNAS is the first method that can search the architectures of generator and discriminator simultaneously in a differentiable manner. During searching, the designed adversarial search algorithm does not need to comput any extra metric to evaluate the performance of the searched architecture, and the search paradigm considers the relevance between the two network architectures and improves their mutual balance. Therefore, AdversarialNAS is very efficient and only takes 1 GPU day to search for a superior generative model in the proposed large search space ($10^{38}$). Experiments demonstrate the effectiveness and superiority of our method. The discovered generative model sets a new state-of-the-art FID score of $10.87$ and highly competitive Inception Score of $8.74$ on CIFAR-10. Its transferability is also proven by setting new state-of-the-art FID score of $26.98$ and Inception score of $9.63$ on STL-10. Code is at: \url{https://github.com/chengaopro/AdversarialNAS}.
 
 ### Organ at Risk Segmentation for Head and Neck Cancer Using Stratified Learning and Neural Architecture Search.
-- **链接**: [arXiv:2004.08426](https://arxiv.org/abs/2004.08426)
+- **链接**: [arXiv:2004.08426](https://arxiv.org/abs/2004.08426) · 📚 被引 47
 - **作者**: Dazhou Guo, Dakai Jin, Zhuotun Zhu, Tsung-Ying Ho, Adam P. Harrison, Chun-Hung Chao et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -88,7 +88,7 @@
 - **会议**: CVPR 2020
 
 ### MiLeNAS: Efficient Neural Architecture Search via Mixed-Level Reformulation.
-- **链接**: [arXiv:2003.12238](https://arxiv.org/abs/2003.12238)
+- **链接**: [arXiv:2003.12238](https://arxiv.org/abs/2003.12238) · 📚 被引 85
 - **作者**: Chaoyang He, Haishan Ye, Li Shen, Tong Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -124,7 +124,7 @@
 - **会议**: CVPR 2020
 
 ### SGAS: Sequential Greedy Architecture Search.
-- **链接**: [arXiv:1912.00195](https://arxiv.org/abs/1912.00195)
+- **链接**: [arXiv:1912.00195](https://arxiv.org/abs/1912.00195) · 📚 被引 143
 - **作者**: Guohao Li, Guocheng Qian, Itzel C. Delgadillo, Matthias Müller, Ali K. Thabet, Bernard Ghanem
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -134,7 +134,7 @@
   > Architecture design has become a crucial component of successful deep learning. Recent progress in automatic neural architecture search (NAS) shows a lot of promise. However, discovered architectures often fail to generalize in the final evaluation. Architectures with a higher validation accuracy during the search phase may perform worse in the evaluation. Aiming to alleviate this common issue, we introduce sequential greedy architecture search (SGAS), an efficient method for neural architecture search. By dividing the search procedure into sub-problems, SGAS chooses and prunes candidate operations in a greedy fashion. We apply SGAS to search architectures for Convolutional Neural Networks (CNN) and Graph Convolutional Networks (GCN). Extensive experiments show that SGAS is able to find state-of-the-art architectures for tasks such as image classification, point cloud classification and node classification in protein-protein interaction graphs with minimal computational cost. Please visit https://www.deepgcns.org/auto/sgas for more information about SGAS.
 
 ### GP-NAS: Gaussian Process Based Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_GP-NAS_Gaussian_Process_Based_Neural_Architecture_Search_CVPR_2020_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_GP-NAS_Gaussian_Process_Based_Neural_Architecture_Search_CVPR_2020_paper.html) · 📚 被引 46
 - **作者**: Zhihang Li, Teng Xi, Jiankang Deng, Gang Zhang, Shengzhao Wen, Ran He
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -186,7 +186,7 @@
   > Searching techniques in most of existing neural architecture search (NAS) algorithms are mainly dominated by differentiable methods for the efficiency reason. In contrast, we develop an efficient continuous evolutionary approach for searching neural networks. Architectures in the population that share parameters within one SuperNet in the latest generation will be tuned over the training dataset with a few epochs. The searching in the next evolution generation will directly inherit both the SuperNet and the population, which accelerates the optimal network generation. The non-dominated sorting strategy is further applied to preserve only results on the Pareto front for accurately updating the SuperNet. Several neural networks with different model sizes and performances will be produced after the continuous search with only 0.4 GPU days. As a result, our framework provides a series of networks with the number of parameters ranging from 3.7M to 5.1M under mobile settings. These networks surpass those produced by the state-of-the-art methods on the benchmark ImageNet dataset.
 
 ### C2FNAS: Coarse-to-Fine Neural Architecture Search for 3D Medical Image Segmentation.
-- **链接**: [arXiv:1912.09628](https://arxiv.org/abs/1912.09628)
+- **链接**: [arXiv:1912.09628](https://arxiv.org/abs/1912.09628) · 📚 被引 121
 - **作者**: Qihang Yu, Dong Yang, Holger Roth, Yutong Bai, Yixiao Zhang, Alan L. Yuille et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020

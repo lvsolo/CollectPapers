@@ -1,7 +1,7 @@
 # Self-supervised Vision — 2020 Guideline
 
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
-> 论文数: 33 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 34 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -48,7 +48,7 @@
 - **会议**: CVPR 2020
 
 ### Self-Supervised Equivariant Attention Mechanism for Weakly Supervised Semantic Segmentation.
-- **链接**: [arXiv:2004.04581](https://arxiv.org/abs/2004.04581) · 📚 被引 665
+- **链接**: [arXiv:2004.04581](https://arxiv.org/abs/2004.04581) · 📚 被引 667
 - **作者**: Yude Wang, Jie Zhang, Meina Kan, Shiguang Shan, Xilin Chen
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -168,22 +168,34 @@
 - **会议**: CVPR 2020
 
 ### A Self-supervised Approach for Adversarial Robustness.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Naseer_A_Self-supervised_Approach_for_Adversarial_Robustness_CVPR_2020_paper.html) · 📚 被引 260
+- **链接**: [arXiv:2006.04924](https://arxiv.org/abs/2006.04924) · [代码](https://github.com/Muzammal-Naseer/NRP) · 📚 被引 260
 - **作者**: Muzammal Naseer, Salman H. Khan, Munawar Hayat, Fahad Shahbaz Khan, Fatih Porikli
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Adversarial examples can cause catastrophic mistakes in Deep Neural Network (DNNs) based vision systems e.g., for classification, segmentation and object detection. The vulnerability of DNNs against such attacks can prove a major roadblock towards their real-world deployment. Transferability of adversarial examples demand generalizable defenses that can provide cross-task protection. Adversarial training that enhances robustness by modifying target model's parameters lacks such generalizability. On the other hand, different input processing based defenses fall short in the face of continuously evolving attacks. In this paper, we take the first step to combine the benefits of both approaches and propose a self-supervised adversarial training mechanism in the input space. By design, our defense is a generalizable approach and provides significant robustness against the \textbf{unseen} adversarial attacks (\eg by reducing the success rate of translation-invariant \textbf{ensemble} attack from 82.6\% to 31.9\% in comparison to previous state-of-the-art). It can be deployed as a plug-and-play solution to protect a variety of vision systems, as we demonstrate for the case of classification, segmentation and detection. Code is available at: {\small\url{https://github.com/Muzammal-Naseer/NRP}}.
+
 ### How Useful Is Self-Supervised Pretraining for Visual Tasks?
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Newell_How_Useful_Is_Self-Supervised_Pretraining_for_Visual_Tasks_CVPR_2020_paper.html) · 📚 被引 82
+- **链接**: [arXiv:2003.14323](https://arxiv.org/abs/2003.14323) · [代码](https://github.com/princeton-vl/selfstudy) · 📚 被引 82
 - **作者**: Alejandro Newell, Jia Deng
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Recent advances have spurred incredible progress in self-supervised pretraining for vision. We investigate what factors may play a role in the utility of these pretraining methods for practitioners. To do this, we evaluate various self-supervised algorithms across a comprehensive array of synthetic datasets and downstream tasks. We prepare a suite of synthetic data that enables an endless supply of annotated images as well as full control over dataset difficulty. Our experiments offer insights into how the utility of self-supervision changes as the number of available labels grows as well as how the utility changes as a function of the downstream task and the properties of the training data. We also find that linear evaluation does not correlate with finetuning performance. Code and data is available at \href{https://www.github.com/princeton-vl/selfstudy}{github.com/princeton-vl/selfstudy}.
+
 ### Fast(er) Reconstruction of Shredded Text Documents via Self-Supervised Deep Asymmetric Metric Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Paixao_Faster_Reconstruction_of_Shredded_Text_Documents_via_Self-Supervised_Deep_Asymmetric_CVPR_2020_paper.html) · 📚 被引 7
+- **链接**: [arXiv:2003.10063](https://arxiv.org/abs/2003.10063) · 📚 被引 7
 - **作者**: Thiago M. Paixão, Rodrigo Ferreira Berriel, Maria C. S. Boeres, Alessandro L. Koerich, Claudine Badue, Alberto F. De Souza et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > The reconstruction of shredded documents consists in arranging the pieces of paper (shreds) in order to reassemble the original aspect of such documents. This task is particularly relevant for supporting forensic investigation as documents may contain criminal evidence. As an alternative to the laborious and time-consuming manual process, several researchers have been investigating ways to perform automatic digital reconstruction. A central problem in automatic reconstruction of shredded documents is the pairwise compatibility evaluation of the shreds, notably for binary text documents. In this context, deep learning has enabled great progress for accurate reconstructions in the domain of mechanically-shredded documents. A sensitive issue, however, is that current deep model solutions require an inference whenever a pair of shreds has to be evaluated. This work proposes a scalable deep learning approach for measuring pairwise compatibility in which the number of inferences scales linearly (rather than quadratically) with the number of shreds. Instead of predicting compatibility directly, deep models are leveraged to asymmetrically project the raw shred content onto a common metric space in which distance is proportional to the compatibility. Experimental results show that our method has accuracy comparable to the state-of-the-art with a speed-up of about 22 times for a test instance with 505 shreds (20 mixed shredded-pages from different documents).
 
 ### Self-Supervised Learning of Video-Induced Visual Invariances.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Tschannen_Self-Supervised_Learning_of_Video-Induced_Visual_Invariances_CVPR_2020_paper.html) · 📚 被引 34
@@ -218,6 +230,12 @@
 ### S3VAE: Self-Supervised Sequential VAE for Representation Disentanglement and Data Generation.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhu_S3VAE_Self-Supervised_Sequential_VAE_for_Representation_Disentanglement_and_Data_Generation_CVPR_2020_paper.html) · 📚 被引 59
 - **作者**: Yizhe Zhu, Martin Renqiang Min, Asim Kadav, Hans Peter Graf
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+### Disentangled and Controllable Face Image Generation via 3D Imitative-Contrastive Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Deng_Disentangled_and_Controllable_Face_Image_Generation_via_3D_Imitative-Contrastive_Learning_CVPR_2020_paper.html) · 📚 被引 287
+- **作者**: Yu Deng, Jiaolong Yang, Dong Chen, Fang Wen, Xin Tong
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 

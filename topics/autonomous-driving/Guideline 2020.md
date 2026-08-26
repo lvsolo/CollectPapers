@@ -1,7 +1,7 @@
 # Autonomous Driving — 2020 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -58,6 +58,12 @@
 - **摘要（英，原文）**:
 
   > Autonomous driving system development is critically dependent on the ability to replay complex and diverse traffic scenarios in simulation. In such scenarios, the ability to accurately simulate the vehicle sensors such as cameras, lidar or radar is essential. However, current sensor simulators leverage gaming engines such as Unreal or Unity, requiring manual creation of environments, objects and material properties. Such approaches have limited scalability and fail to produce realistic approximations of camera, lidar, and radar data without significant additional work. In this paper, we present a simple yet effective approach to generate realistic scenario sensor data, based only on a limited amount of lidar and camera data collected by an autonomous vehicle. Our approach uses texture-mapped surfels to efficiently reconstruct the scene from an initial vehicle pass or set of passes, preserving rich information about object 3D geometry and appearance, as well as the scene conditions. We then leverage a SurfelGAN network to reconstruct realistic camera images for novel positions and orientations of the self-driving vehicle and moving objects in the scene. We demonstrate our approach on the Waymo Open Dataset and show that it can synthesize realistic camera data for simulated scenarios. We also create a novel dataset that contains cases in which two self-driving vehicles observe the same scene at the same time. We use this dataset to provide additional evaluation and demonstrate the usefulness of our SurfelGAN model.
+
+### Advisable Learning for Self-Driving Vehicles by Internalizing Observation-to-Action Rules.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Kim_Advisable_Learning_for_Self-Driving_Vehicles_by_Internalizing_Observation-to-Action_Rules_CVPR_2020_paper.html) · 📚 被引 36
+- **作者**: Jinkyu Kim, Suhong Moon, Anna Rohrbach, Trevor Darrell, John F. Canny
+- **🏷️ 机构**: UC Berkeley
+- **会议**: CVPR 2020
 
 ## 跨领域论文（完整笔记在其他领域）
 

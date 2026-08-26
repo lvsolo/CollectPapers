@@ -6,10 +6,14 @@
 > 同领域其他年份: 
 
 ### Learning Multiview 3D Point Cloud Registration.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Gojcic_Learning_Multiview_3D_Point_Cloud_Registration_CVPR_2020_paper.html) · 📚 被引 160
+- **链接**: [arXiv:2001.05119](https://arxiv.org/abs/2001.05119) · [代码](https://github.com/zgojcic/3D_multiview_reg) · 📚 被引 160
 - **作者**: Zan Gojcic, Caifa Zhou, Jan D. Wegner, Leonidas J. Guibas, Tolga Birdal
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > We present a novel, end-to-end learnable, multiview 3D point cloud registration algorithm. Registration of multiple scans typically follows a two-stage pipeline: the initial pairwise alignment and the globally consistent refinement. The former is often ambiguous due to the low overlap of neighboring point clouds, symmetries and repetitive scene parts. Therefore, the latter global refinement aims at establishing the cyclic consistency across multiple scans and helps in resolving the ambiguous cases. In this paper we propose, to the best of our knowledge, the first end-to-end algorithm for joint learning of both parts of this two-stage problem. Experimental evaluation on well accepted benchmark datasets shows that our approach outperforms the state-of-the-art by a significant margin, while being end-to-end trainable and computationally less costly. Moreover, we present detailed analysis and an ablation study that validate the novel components of our approach. The source code and pretrained models are publicly available under https://github.com/zgojcic/3D_multiview_reg.
 
 ### End-to-End Learning Local Multi-View Descriptors for 3D Point Clouds.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_End-to-End_Learning_Local_Multi-View_Descriptors_for_3D_Point_Clouds_CVPR_2020_paper.html) · 📚 被引 102
@@ -74,7 +78,7 @@
   > A great deal of research has demonstrated recently that multi-view stereo (MVS) matching can be solved with deep learning methods. However, these efforts were focused on close-range objects and only a very few of the deep learning-based methods were specifically designed for large-scale 3D urban reconstruction due to the lack of multi-view aerial image benchmarks. In this paper, we present a synthetic aerial dataset, called the WHU dataset, we created for MVS tasks, which, to our knowledge, is the first large-scale multi-view aerial dataset. It was generated from a highly accurate 3D digital surface model produced from thousands of real aerial images with precise camera parameters. We also introduce in this paper a novel network, called RED-Net, for wide-range depth inference, which we developed from a recurrent encoder-decoder structure to regularize cost maps across depths and a 2D fully convolutional network as framework. RED-Net's low memory requirements and high performance make it suitable for large-scale and highly accurate 3D Earth surface reconstruction. Our experiments confirmed that not only did our method exceed the current state-of-the-art MVS methods by more than 50% mean absolute error (MAE) with less memory and computational cost, but its efficiency as well. It outperformed one of the best commercial software programs based on conventional methods, improving their efficiency 16 times over. Moreover, we proved that our RED-Net model pre-trained on the synthetic WHU dataset can be efficiently transferred to very different multi-view aerial image datasets without any fine-tuning. Dataset are available at http://gpcv.whu.edu.cn/data.
 
 ### KeyPose: Multi-View 3D Labeling and Keypoint Estimation for Transparent Objects.
-- **链接**: [arXiv:1912.02805](https://arxiv.org/abs/1912.02805) · 📚 被引 110
+- **链接**: [arXiv:1912.02805](https://arxiv.org/abs/1912.02805) · 📚 被引 111
 - **作者**: Xingyu Liu, Rico Jonschkowski, Anelia Angelova, Kurt Konolige
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020

@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### MLCVNet: Multi-Level Context VoteNet for 3D Object Detection.
-- **链接**: [arXiv:2004.05679](https://arxiv.org/abs/2004.05679) · [代码](https://github.com/NUAAXQ/MLCVNet)
+- **链接**: [arXiv:2004.05679](https://arxiv.org/abs/2004.05679) · [代码](https://github.com/NUAAXQ/MLCVNet) · 📚 被引 172
 - **作者**: Qian Xie, Yu-Kun Lai, Jing Wu, Zhoutao Wang, Yiming Zhang, Kai Xu et al.
 - **🏷️ 机构**: Nanjing University of Aeronautics and Astronautics, Cardiff University, National University of Defense Technology
 - **会议**: CVPR 2020
@@ -22,10 +22,14 @@
 - **会议**: CVPR 2020
 
 ### DSGN: Deep Stereo Geometry Network for 3D Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_DSGN_Deep_Stereo_Geometry_Network_for_3D_Object_Detection_CVPR_2020_paper.html) · 📚 被引 179
+- **链接**: [arXiv:2001.03398](https://arxiv.org/abs/2001.03398) · [代码](https://github.com/chenyilun95/DSGN) · 📚 被引 179
 - **作者**: Yilun Chen, Shu Liu, Xiaoyong Shen, Jiaya Jia
 - **🏷️ 机构**: CUHK / SmartMore
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Most state-of-the-art 3D object detectors heavily rely on LiDAR sensors because there is a large performance gap between image-based and LiDAR-based methods. It is caused by the way to form representation for the prediction in 3D scenarios. Our method, called Deep Stereo Geometry Network (DSGN), significantly reduces this gap by detecting 3D objects on a differentiable volumetric representation -- 3D geometric volume, which effectively encodes 3D geometric structure for 3D regular space. With this representation, we learn depth information and semantic cues simultaneously. For the first time, we provide a simple and effective one-stage stereo-based 3D detection pipeline that jointly estimates the depth and detects 3D objects in an end-to-end learning manner. Our approach outperforms previous stereo-based 3D detectors (about 10 higher in terms of AP) and even achieves comparable performance with several LiDAR-based methods on the KITTI 3D object detection leaderboard. Our code is publicly available at https://github.com/chenyilun95/DSGN.
 
 ### A Hierarchical Graph Network for 3D Object Detection on Point Clouds.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_A_Hierarchical_Graph_Network_for_3D_Object_Detection_on_Point_CVPR_2020_paper.html) · 📚 被引 143
@@ -34,13 +38,17 @@
 - **会议**: CVPR 2020
 
 ### MonoPair: Monocular 3D Object Detection Using Pairwise Spatial Relationships.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_MonoPair_Monocular_3D_Object_Detection_Using_Pairwise_Spatial_Relationships_CVPR_2020_paper.html) · 📚 被引 285
+- **链接**: [arXiv:2003.00504](https://arxiv.org/abs/2003.00504) · 📚 被引 285
 - **作者**: Yongjian Chen, Lei Tai, Kai Sun, Mingyang Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Monocular 3D object detection is an essential component in autonomous driving while challenging to solve, especially for those occluded samples which are only partially visible. Most detectors consider each 3D object as an independent training target, inevitably resulting in a lack of useful information for occluded samples. To this end, we propose a novel method to improve the monocular 3D object detection by considering the relationship of paired samples. This allows us to encode spatial constraints for partially-occluded objects from their adjacent neighbors. Specifically, the proposed detector computes uncertainty-aware predictions for object locations and 3D distances for the adjacent object pairs, which are subsequently jointly optimized by nonlinear least squares. Finally, the one-stage uncertainty-aware prediction structure and the post-optimization module are dedicatedly integrated for ensuring the run-time efficiency. Experiments demonstrate that our method yields the best performance on KITTI 3D detection benchmark, by outperforming state-of-the-art competitors by wide margins, especially for the hard samples.
+
 ### Learning Depth-Guided Convolutions for Monocular 3D Object Detection.
-- **链接**: [arXiv:1912.04799](https://arxiv.org/abs/1912.04799) · [代码](https://github.com/dingmyu/D4LCN)
+- **链接**: [arXiv:1912.04799](https://arxiv.org/abs/1912.04799) · [代码](https://github.com/dingmyu/D4LCN) · 📚 被引 210
 - **作者**: Mingyu Ding, Yuqi Huo, Hongwei Yi, Zhe Wang, Jianping Shi, Zhiwu Lu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -92,7 +100,7 @@
   > Reliable and accurate 3D object detection is a necessity for safe autonomous driving. Although LiDAR sensors can provide accurate 3D point cloud estimates of the environment, they are also prohibitively expensive for many settings. Recently, the introduction of pseudo-LiDAR (PL) has led to a drastic reduction in the accuracy gap between methods based on LiDAR sensors and those based on cheap stereo cameras. PL combines state-of-the-art deep neural networks for 3D depth estimation with those for 3D object detection by converting 2D depth map outputs to 3D point cloud inputs. However, so far these two networks have to be trained separately. In this paper, we introduce a new framework based on differentiable Change of Representation (CoR) modules that allow the entire PL pipeline to be trained end-to-end. The resulting framework is compatible with most state-of-the-art networks for both tasks and in combination with PointRCNN improves over PL consistently across all benchmarks -- yielding the highest entry on the KITTI image-based 3D object detection leaderboard at the time of submission. Our code will be made available at https://github.com/mileyan/pseudo-LiDAR_e2e.
 
 ### PV-RCNN: Point-Voxel Feature Set Abstraction for 3D Object Detection.
-- **链接**: [arXiv:1912.13192](https://arxiv.org/abs/1912.13192) · [代码](https://github.com/open-mmlab/OpenPCDet) · 📚 被引 1983
+- **链接**: [arXiv:1912.13192](https://arxiv.org/abs/1912.13192) · [代码](https://github.com/open-mmlab/OpenPCDet) · 📚 被引 1985
 - **作者**: Shaoshuai Shi, Chaoxu Guo, Li Jiang, Zhe Wang, Jianping Shi, Xiaogang Wang et al.
 - **🏷️ 机构**: CUHK / Shanghai AI Lab, CUHK
 - **会议**: CVPR 2020
@@ -112,7 +120,7 @@
   > In this paper, we propose a graph neural network to detect objects from a LiDAR point cloud. Towards this end, we encode the point cloud efficiently in a fixed radius near-neighbors graph. We design a graph neural network, named Point-GNN, to predict the category and shape of the object that each vertex in the graph belongs to. In Point-GNN, we propose an auto-registration mechanism to reduce translation variance, and also design a box merging and scoring operation to combine detections from multiple vertices accurately. Our experiments on the KITTI benchmark show the proposed approach achieves leading accuracy using the point cloud alone and can even surpass fusion-based algorithms. Our results demonstrate the potential of using the graph neural network as a new approach for 3D object detection. The code is available https://github.com/WeijingShi/Point-GNN.
 
 ### Disp R-CNN: Stereo 3D Object Detection via Shape Prior Guided Instance Disparity Estimation.
-- **链接**: [arXiv:2004.03572](https://arxiv.org/abs/2004.03572)
+- **链接**: [arXiv:2004.03572](https://arxiv.org/abs/2004.03572) · 📚 被引 93
 - **作者**: Jiaming Sun, Linghao Chen, Yiming Xie, Siyu Zhang, Qinhong Jiang, Xiaowei Zhou et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -122,7 +130,7 @@
   > In this paper, we propose a novel system named Disp R-CNN for 3D object detection from stereo images. Many recent works solve this problem by first recovering a point cloud with disparity estimation and then apply a 3D detector. The disparity map is computed for the entire image, which is costly and fails to leverage category-specific prior. In contrast, we design an instance disparity estimation network (iDispNet) that predicts disparity only for pixels on objects of interest and learns a category-specific shape prior for more accurate disparity estimation. To address the challenge from scarcity of disparity annotation in training, we propose to use a statistical shape model to generate dense disparity pseudo-ground-truth without the need of LiDAR point clouds, which makes our system more widely applicable. Experiments on the KITTI dataset show that, even when LiDAR ground-truth is not available at training time, Disp R-CNN achieves competitive performance and outperforms previous state-of-the-art methods by 20% in terms of average precision.
 
 ### PointPainting: Sequential Fusion for 3D Object Detection.
-- **链接**: [arXiv:1911.10150](https://arxiv.org/abs/1911.10150) · 📚 被引 1118
+- **链接**: [arXiv:1911.10150](https://arxiv.org/abs/1911.10150) · 📚 被引 1121
 - **作者**: Sourabh Vora, Alex H. Lang, Bassam Helou, Oscar Beijbom
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020

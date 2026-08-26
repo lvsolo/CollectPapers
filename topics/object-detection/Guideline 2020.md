@@ -16,13 +16,13 @@
   > Decomposing images of document pages into high-level semantic regions (e.g., figures, tables, paragraphs), document object detection (DOD) is fundamental for downstream tasks like intelligent document editing and understanding. DOD remains a challenging problem as document objects vary significantly in layout, size, aspect ratio, texture, etc. An additional challenge arises in practice because large labeled training datasets are only available for domains that differ from the target domain. We investigate cross-domain DOD, where the goal is to learn a detector for the target domain using labeled data from the source domain and only unlabeled data from the target domain. Documents from the two domains may vary significantly in layout, language, and genre. We establish a benchmark suite consisting of different types of PDF document datasets that can be utilized for cross-domain DOD model training and evaluation. For each dataset, we provide the page images, bounding box annotations, PDF files, and the rendering layers extracted from the PDF files. Moreover, we propose a novel cross-domain DOD model which builds upon the standard detection model and addresses domain shifts by incorporating three novel alignment modules: Feature Pyramid Alignment (FPA) module, Region Alignment (RA) module and Rendering Layer alignment (RLA) module. Extensive experiments on the benchmark suite substantiate the efficacy of the three proposed modules and the proposed method significantly outperforms the baseline methods. The project page is at \url{https://github.com/kailigo/cddod}.
 
 ### Rethinking Classification and Localization for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wu_Rethinking_Classification_and_Localization_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 623
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wu_Rethinking_Classification_and_Localization_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 624
 - **作者**: Yue Wu, Yinpeng Chen, Lu Yuan, Zicheng Liu, Lijuan Wang, Hongzhi Li et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
 ### Context R-CNN: Long Term Temporal Context for Per-Camera Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Beery_Context_R-CNN_Long_Term_Temporal_Context_for_Per-Camera_Object_Detection_CVPR_2020_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Beery_Context_R-CNN_Long_Term_Temporal_Context_for_Per-Camera_Object_Detection_CVPR_2020_paper.html) · 📚 被引 113
 - **作者**: Sara Beery, Guanhang Wu, Vivek Rathod, Ronny Votel, Jonathan Huang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -74,7 +74,7 @@
   > Based on the framework of multiple instance learning (MIL), tremendous works have promoted the advances of weakly supervised object detection (WSOD). However, most MIL-based methods tend to localize instances to their discriminative parts instead of the whole content. In this paper, we propose a spatial likelihood voting (SLV) module to converge the proposal localizing process without any bounding box annotations. Specifically, all region proposals in a given image play the role of voters every iteration during training, voting for the likelihood of each category in spatial dimensions. After dilating alignment on the area with large likelihood values, the voting results are regularized as bounding boxes, being used for the final classification and localization. Based on SLV, we further propose an end-to-end training framework for multi-task learning. The classification and localization tasks promote each other, which further improves the detection performance. Extensive experiments on the PASCAL VOC 2007 and 2012 datasets demonstrate the superior performance of SLV.
 
 ### MnasFPN: Learning Latency-Aware Pyramid Architecture for Object Detection on Mobile Devices.
-- **链接**: [arXiv:1912.01106](https://arxiv.org/abs/1912.01106)
+- **链接**: [arXiv:1912.01106](https://arxiv.org/abs/1912.01106) · 📚 被引 40
 - **作者**: Bo Chen, Golnaz Ghiasi, Hanxiao Liu, Tsung-Yi Lin, Dmitry Kalenichenko, Hartwig Adam et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -84,7 +84,7 @@
   > Despite the blooming success of architecture search for vision tasks in resource-constrained environments, the design of on-device object detection architectures have mostly been manual. The few automated search efforts are either centered around non-mobile-friendly search spaces or not guided by on-device latency. We propose MnasFPN, a mobile-friendly search space for the detection head, and combine it with latency-aware architecture search to produce efficient object detection models. The learned MnasFPN head, when paired with MobileNetV2 body, outperforms MobileNetV3+SSDLite by 1.8 mAP at similar latency on Pixel. It is also both 1.0 mAP more accurate and 10% faster than NAS-FPNLite. Ablation studies show that the majority of the performance gain comes from innovations in the search space. Further explorations reveal an interesting coupling between the search space design and the search algorithm, and that the complexity of MnasFPN search space may be at a local optimum.
 
 ### CentripetalNet: Pursuing High-Quality Keypoint Pairs for Object Detection.
-- **链接**: [arXiv:2003.09119](https://arxiv.org/abs/2003.09119) · [代码](https://github.com/KiveeDong/CentripetalNet)
+- **链接**: [arXiv:2003.09119](https://arxiv.org/abs/2003.09119) · [代码](https://github.com/KiveeDong/CentripetalNet) · 📚 被引 163
 - **作者**: Zhiwei Dong, Guoxuan Li, Yue Liao, Fei Wang, Pengju Ren, Chen Qian
 - **🏷️ 机构**: Institute of Artificial Intelligence and Robotics\, Xi&#x2019;an Jiaotong University; SenseTime Research, University of Chinese Academy of Sciences, Beihang University
 - **会议**: CVPR 2020
@@ -136,7 +136,7 @@
   > This paper proposes a novel joint learning and densely-cooperative fusion (JL-DCF) architecture for RGB-D salient object detection. Existing models usually treat RGB and depth as independent information and design separate networks for feature extraction from each. Such schemes can easily be constrained by a limited amount of training data or over-reliance on an elaborately-designed training process. In contrast, our JL-DCF learns from both RGB and depth inputs through a Siamese network. To this end, we propose two effective components: joint learning (JL), and densely-cooperative fusion (DCF). The JL module provides robust saliency feature learning, while the latter is introduced for complementary feature discovery. Comprehensive experiments on four popular metrics show that the designed framework yields a robust RGB-D saliency detector with good generalization. As a result, JL-DCF significantly advances the top-1 D3Net model by an average of ~1.9% (S-measure) across six challenging datasets, showing that the proposed framework offers a potential solution for real-world applications and could provide more insight into the cross-modality complementarity task. The code will be available at https://github.com/kerenfu/JLDCF/.
 
 ### AugFPN: Improving Multi-Scale Feature Learning for Object Detection.
-- **链接**: [arXiv:1912.05384](https://arxiv.org/abs/1912.05384) · 📚 被引 514
+- **链接**: [arXiv:1912.05384](https://arxiv.org/abs/1912.05384) · 📚 被引 515
 - **作者**: Chaoxu Guo, Bin Fan, Qian Zhang, Shiming Xiang, Chunhong Pan
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -146,16 +146,24 @@
   > Current state-of-the-art detectors typically exploit feature pyramid to detect objects at different scales. Among them, FPN is one of the representative works that build a feature pyramid by multi-scale features summation. However, the design defects behind prevent the multi-scale features from being fully exploited. In this paper, we begin by first analyzing the design defects of feature pyramid in FPN, and then introduce a new feature pyramid architecture named AugFPN to address these problems. Specifically, AugFPN consists of three components: Consistent Supervision, Residual Feature Augmentation, and Soft RoI Selection. AugFPN narrows the semantic gaps between features of different scales before feature fusion through Consistent Supervision. In feature fusion, ratio-invariant context information is extracted by Residual Feature Augmentation to reduce the information loss of feature map at the highest pyramid level. Finally, Soft RoI Selection is employed to learn a better RoI feature adaptively after feature fusion. By replacing FPN with AugFPN in Faster R-CNN, our models achieve 2.3 and 1.6 points higher Average Precision (AP) when using ResNet50 and MobileNet-v2 as backbone respectively. Furthermore, AugFPN improves RetinaNet by 1.6 points AP and FCOS by 0.9 points AP when using ResNet50 as backbone. Codes will be made available.
 
 ### Cylindrical Convolutional Networks for Joint Object Detection and Viewpoint Estimation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Joung_Cylindrical_Convolutional_Networks_for_Joint_Object_Detection_and_Viewpoint_Estimation_CVPR_2020_paper.html) · 📚 被引 14
+- **链接**: [arXiv:2003.11303](https://arxiv.org/abs/2003.11303) · 📚 被引 14
 - **作者**: Sunghun Joung, Seungryong Kim, Hanjae Kim, Minsu Kim, Ig-Jae Kim, Junghyun Cho et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+- **摘要（英，原文）**:
+
+  > Existing techniques to encode spatial invariance within deep convolutional neural networks only model 2D transformation fields. This does not account for the fact that objects in a 2D space are a projection of 3D ones, and thus they have limited ability to severe object viewpoint changes. To overcome this limitation, we introduce a learnable module, cylindrical convolutional networks (CCNs), that exploit cylindrical representation of a convolutional kernel defined in the 3D space. CCNs extract a view-specific feature through a view-specific convolutional kernel to predict object category scores at each viewpoint. With the view-specific feature, we simultaneously determine objective category and viewpoints using the proposed sinusoidal soft-argmax module. Our experiments demonstrate the effectiveness of the cylindrical convolutional networks on joint object detection and viewpoint estimation.
+
 ### Multiple Anchor Learning for Visual Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Ke_Multiple_Anchor_Learning_for_Visual_Object_Detection_CVPR_2020_paper.html) · 📚 被引 82
+- **链接**: [arXiv:1912.02252](https://arxiv.org/abs/1912.02252) · 📚 被引 82
 - **作者**: Wei Ke, Tianliang Zhang, Zeyi Huang, Qixiang Ye, Jianzhuang Liu, Dong Huang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Classification and localization are two pillars of visual object detectors. However, in CNN-based detectors, these two modules are usually optimized under a fixed set of candidate (or anchor) bounding boxes. This configuration significantly limits the possibility to jointly optimize classification and localization. In this paper, we propose a Multiple Instance Learning (MIL) approach that selects anchors and jointly optimizes the two modules of a CNN-based object detector. Our approach, referred to as Multiple Anchor Learning (MAL), constructs anchor bags and selects the most representative anchors from each bag. Such an iterative selection process is potentially NP-hard to optimize. To address this issue, we solve MAL by repetitively depressing the confidence of selected anchors by perturbing their corresponding features. In an adversarial selection-depression manner, MAL not only pursues optimal solutions but also fully leverages multiple anchors/features to learn a detection model. Experiments show that MAL improves the baseline RetinaNet with significant margins on the commonly used MS-COCO object detection benchmark and achieves new state-of-the-art detection performance compared with recent methods.
 
 ### NETNet: Neighbor Erasing and Transferring Network for Better Single Shot Object Detection.
 - **链接**: [arXiv:2001.06690](https://arxiv.org/abs/2001.06690) · 📚 被引 36
@@ -188,10 +196,14 @@
   > State-of-the-art object detectors rely on regressing and classifying an extensive list of possible anchors, which are divided into positive and negative samples based on their intersection-over-union (IoU) with corresponding groundtruth objects. Such a harsh split conditioned on IoU results in binary labels that are potentially noisy and challenging for training. In this paper, we propose to mitigate noise incurred by imperfect label assignment such that the contributions of anchors are dynamically determined by a carefully constructed cleanliness score associated with each anchor. Exploring outputs from both regression and classification branches, the cleanliness scores, estimated without incurring any additional computational overhead, are used not only as soft labels to supervise the training of the classification branch but also sample re-weighting factors for improved localization and classification accuracy. We conduct extensive experiments on COCO, and demonstrate, among other things, the proposed approach steadily improves RetinaNet by ~2% with various backbones.
 
 ### Dynamic Refinement Network for Oriented and Densely Packed Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Pan_Dynamic_Refinement_Network_for_Oriented_and_Densely_Packed_Object_Detection_CVPR_2020_paper.html)
+- **链接**: [arXiv:2005.09973](https://arxiv.org/abs/2005.09973) · [代码](https://github.com/Anymake/DRN_CVPR2020) · 📚 被引 382
 - **作者**: Xingjia Pan, Yuqiang Ren, Kekai Sheng, Weiming Dong, Haolei Yuan, Xiaowei Guo et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+- **摘要（英，原文）**:
+
+  > Object detection has achieved remarkable progress in the past decade. However, the detection of oriented and densely packed objects remains challenging because of following inherent reasons: (1) receptive fields of neurons are all axis-aligned and of the same shape, whereas objects are usually of diverse shapes and align along various directions; (2) detection models are typically trained with generic knowledge and may not generalize well to handle specific objects at test time; (3) the limited dataset hinders the development on this task. To resolve the first two issues, we present a dynamic refinement network that consists of two novel components, i.e., a feature selection module (FSM) and a dynamic refinement head (DRH). Our FSM enables neurons to adjust receptive fields in accordance with the shapes and orientations of target objects, whereas the DRH empowers our model to refine the prediction dynamically in an object-aware manner. To address the limited availability of related benchmarks, we collect an extensive and fully annotated dataset, namely, SKU110K-R, which is relabeled with oriented bounding boxes based on SKU110K. We perform quantitative evaluations on several publicly available benchmarks including DOTA, HRSC2016, SKU110K, and our own SKU110K-R dataset. Experimental results show that our method achieves consistent and substantial gains compared with baseline approaches. The code and dataset are available at https://github.com/Anymake/DRN_CVPR2020.
 
 ### Multi-Scale Interactive Network for Salient Object Detection.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Pang_Multi-Scale_Interactive_Network_for_Salient_Object_Detection_CVPR_2020_paper.html) · 📚 被引 751
@@ -216,7 +228,7 @@
 - **会议**: CVPR 2020
 
 ### A2dele: Adaptive and Attentive Depth Distiller for Efficient RGB-D Salient Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Piao_A2dele_Adaptive_and_Attentive_Depth_Distiller_for_Efficient_RGB-D_Salient_CVPR_2020_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Piao_A2dele_Adaptive_and_Attentive_Depth_Distiller_for_Efficient_RGB-D_Salient_CVPR_2020_paper.html) · 📚 被引 236
 - **作者**: Yongri Piao, Zhengkun Rong, Miao Zhang, Weisong Ren, Huchuan Lu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -254,7 +266,7 @@
 - **会议**: CVPR 2020
 
 ### EfficientDet: Scalable and Efficient Object Detection.
-- **链接**: [arXiv:1911.09070](https://arxiv.org/abs/1911.09070) · [代码](https://github.com/google/automl) · 📚 被引 7840
+- **链接**: [arXiv:1911.09070](https://arxiv.org/abs/1911.09070) · [代码](https://github.com/google/automl) · 📚 被引 7847
 - **作者**: Mingxing Tan, Ruoming Pang, Quoc V. Le
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -340,7 +352,7 @@
   > Existing LiDAR-based 3D object detectors usually focus on the single-frame detection, while ignoring the spatiotemporal information in consecutive point cloud frames. In this paper, we propose an end-to-end online 3D video object detector that operates on point cloud sequences. The proposed model comprises a spatial feature encoding component and a spatiotemporal feature aggregation component. In the former component, a novel Pillar Message Passing Network (PMPNet) is proposed to encode each discrete point cloud frame. It adaptively collects information for a pillar node from its neighbors by iterative message passing, which effectively enlarges the receptive field of the pillar feature. In the latter component, we propose an Attentive Spatiotemporal Transformer GRU (AST-GRU) to aggregate the spatiotemporal information, which enhances the conventional ConvGRU with an attentive memory gating mechanism. AST-GRU contains a Spatial Transformer Attention (STA) module and a Temporal Transformer Attention (TTA) module, which can emphasize the foreground objects and align the dynamic objects, respectively. Experimental results demonstrate that the proposed 3D video object detector achieves state-of-the-art performance on the large-scale nuScenes benchmark.
 
 ### Weakly-Supervised Salient Object Detection via Scribble Annotations.
-- **链接**: [arXiv:2003.07685](https://arxiv.org/abs/2003.07685) · [代码](https://github.com/JingZhang617/Scribble_Saliency)
+- **链接**: [arXiv:2003.07685](https://arxiv.org/abs/2003.07685) · [代码](https://github.com/JingZhang617/Scribble_Saliency) · 📚 被引 277
 - **作者**: Jing Zhang, Xin Yu, Aixuan Li, Peipei Song, Bowen Liu, Yuchao Dai
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020

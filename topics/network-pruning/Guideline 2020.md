@@ -12,13 +12,13 @@
 - **会议**: CVPR 2020
 
 ### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_APQ_Joint_Search_for_Network_Architecture_Pruning_and_Quantization_Policy_CVPR_2020_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_APQ_Joint_Search_for_Network_Architecture_Pruning_and_Quantization_Policy_CVPR_2020_paper.html) · 📚 被引 159
 - **作者**: Tianzhe Wang, Kuan Wang, Han Cai, Ji Lin, Zhijian Liu, Hanrui Wang et al.
 - **🏷️ 机构**: Massachusetts Institute of Technology; Shanghai Jiao Tong University, Massachusetts Institute of Technology
 - **会议**: CVPR 2020
 
 ### Multi-Dimensional Pruning: A Unified Framework for Model Compression.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Multi-Dimensional_Pruning_A_Unified_Framework_for_Model_Compression_CVPR_2020_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Multi-Dimensional_Pruning_A_Unified_Framework_for_Model_Compression_CVPR_2020_paper.html) · 📚 被引 65
 - **作者**: Jinyang Guo, Wanli Ouyang, Dong Xu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -46,7 +46,7 @@
 - **会议**: CVPR 2020
 
 ### Group Sparsity: The Hinge Between Filter Pruning and Decomposition for Network Compression.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_Group_Sparsity_The_Hinge_Between_Filter_Pruning_and_Decomposition_for_CVPR_2020_paper.html)
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_Group_Sparsity_The_Hinge_Between_Filter_Pruning_and_Decomposition_for_CVPR_2020_paper.html) · 📚 被引 170
 - **作者**: Yawei Li, Shuhang Gu, Christoph Mayer, Luc Van Gool, Radu Timofte
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
