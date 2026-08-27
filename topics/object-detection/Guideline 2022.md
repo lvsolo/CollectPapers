@@ -1,15 +1,19 @@
 # Object Detection — 2022 Guideline
 
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
-> 论文数: 79 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 81 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
 ### Rethinking Few-Shot Object Detection on a Multi-Domain Benchmark.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20044-1_21)
+- **链接**: [arXiv:2207.11169](https://arxiv.org/abs/2207.11169) · [代码](https://github.com/amazon-research/few-shot-object-detection-benchmark)
 - **作者**: Kibok Lee, Hao Yang, Satyaki Chakraborty, Zhaowei Cai, Gurumurthy Swaminathan, Avinash Ravichandran et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Most existing works on few-shot object detection (FSOD) focus on a setting where both pre-training and few-shot learning datasets are from a similar domain. However, few-shot algorithms are important in multiple domains; hence evaluation needs to reflect the broad applications. We propose a Multi-dOmain Few-Shot Object Detection (MoFSOD) benchmark consisting of 10 datasets from a wide range of domains to evaluate FSOD algorithms. We comprehensively analyze the impacts of freezing layers, different architectures, and different pre-training datasets on FSOD performance. Our empirical results show several key factors that have not been explored in previous works: 1) contrary to previous belief, on a multi-domain benchmark, fine-tuning (FT) is a strong baseline for FSOD, performing on par or better than the state-of-the-art (SOTA) algorithms; 2) utilizing FT as the baseline allows us to explore multiple architectures, and we found them to have a significant impact on down-stream few-shot tasks, even with similar pre-training performances; 3) by decoupling pre-training and few-shot learning, MoFSOD allows us to explore the impact of different pre-training datasets, and the right choice can boost the performance of the down-stream tasks significantly. Based on these findings, we list possible avenues of investigation for improving FSOD performance and propose two simple modifications to existing algorithms that lead to SOTA performance on the MoFSOD benchmark. The code is available at https://github.com/amazon-research/few-shot-object-detection-benchmark.
 
 ### A Simple Approach and Benchmark for 21, 000-Category Object Detection.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-20083-0_1) · 📚 被引 1
@@ -20,6 +24,18 @@
 ### Towards Hard-Positive Query Mining for DETR-Based Human-Object Interaction Detection.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19812-0_26) · 📚 被引 26
 - **作者**: Xubin Zhong, Changxing Ding, Zijian Li, Shaoli Huang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Open-Vocabulary DETR with Conditional Matching.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20077-9_7)
+- **作者**: Yuhang Zang, Wei Li, Kaiyang Zhou, Chen Huang, Chen Change Loy
+- **🏷️ 机构**: NTU S-Lab
+- **会议**: ECCV 2022
+
+### X-DETR: A Versatile Architecture for Instance-wise Vision-Language Tasks.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20059-5_17) · 📚 被引 32
+- **作者**: Zhaowei Cai, Gukyeong Kwon, Avinash Ravichandran, Erhan Bas, Zhuowen Tu, Rahul Bhotika et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
 
@@ -72,16 +88,24 @@
 - **会议**: ECCV 2022
 
 ### MPPNet: Multi-frame Feature Intertwining with Proxy Points for 3D Temporal Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20074-8_39) · 📚 被引 75
+- **链接**: [arXiv:2205.05979](https://arxiv.org/abs/2205.05979) · [代码](https://github.com/open-mmlab/OpenPCDet) · 📚 被引 75
 - **作者**: Xuesong Chen, Shaoshuai Shi, Benjin Zhu, Ka Chun Cheung, Hang Xu, Hongsheng Li
 - **🏷️ 机构**: CUHK
 - **会议**: ECCV 2022
 
+- **摘要（英，原文）**:
+
+  > Accurate and reliable 3D detection is vital for many applications including autonomous driving vehicles and service robots. In this paper, we present a flexible and high-performance 3D detection framework, named MPPNet, for 3D temporal object detection with point cloud sequences. We propose a novel three-hierarchy framework with proxy points for multi-frame feature encoding and interactions to achieve better detection. The three hierarchies conduct per-frame feature encoding, short-clip feature fusion, and whole-sequence feature aggregation, respectively. To enable processing long-sequence point clouds with reasonable computational resources, intra-group feature mixing and inter-group feature attention are proposed to form the second and third feature encoding hierarchies, which are recurrently applied for aggregating multi-frame trajectory features. The proxy points not only act as consistent object representations for each frame, but also serve as the courier to facilitate feature interaction between frames. The experiments on large Waymo Open dataset show that our approach outperforms state-of-the-art methods with large margins when applied to both short (e.g., 4-frame) and long (e.g., 16-frame) point cloud sequences. Code is available at https://github.com/open-mmlab/OpenPCDet.
+
 ### Point-to-Box Network for Accurate Object Detection via Single Point Supervision.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20077-9_4) · 📚 被引 75
+- **链接**: [arXiv:2207.06827](https://arxiv.org/abs/2207.06827) · [代码](https://github.com/ucas-vg/P2BNet) · 📚 被引 75
 - **作者**: Pengfei Chen, Xuehui Yu, Xumeng Han, Najmul Hassan, Kai Wang, Jiachen Li et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Object detection using single point supervision has received increasing attention over the years. However, the performance gap between point supervised object detection (PSOD) and bounding box supervised detection remains large. In this paper, we attribute such a large performance gap to the failure of generating high-quality proposal bags which are crucial for multiple instance learning (MIL). To address this problem, we introduce a lightweight alternative to the off-the-shelf proposal (OTSP) method and thereby create the Point-to-Box Network (P2BNet), which can construct an inter-objects balanced proposal bag by generating proposals in an anchor-like way. By fully investigating the accurate position information, P2BNet further constructs an instance-level bag, avoiding the mixture of multiple objects. Finally, a coarse-to-fine policy in a cascade fashion is utilized to improve the IoU between proposals and ground-truth (GT). Benefiting from these strategies, P2BNet is able to produce high-quality instance-level bags for object detection. P2BNet improves the mean average precision (AP) by more than 50% relative to the previous best PSOD method on the MS COCO dataset. It also demonstrates the great potential to bridge the performance gap between point supervised and bounding-box supervised detectors. The code will be released at github.com/ucas-vg/P2BNet.
 
 ### Efficient Decoder-Free Object Detection with Transformers.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-20080-9_5) · 📚 被引 17
@@ -96,10 +120,14 @@
 - **会议**: ECCV 2022
 
 ### Salient Object Detection for Point Clouds.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19815-1_1)
+- **链接**: [arXiv:2207.11889](https://arxiv.org/abs/2207.11889)
 - **作者**: Songlin Fan, Wei Gao, Ge Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > This paper researches the unexplored task-point cloud salient object detection (SOD). Differing from SOD for images, we find the attention shift of point clouds may provoke saliency conflict, i.e., an object paradoxically belongs to salient and non-salient categories. To eschew this issue, we present a novel view-dependent perspective of salient objects, reasonably reflecting the most eye-catching objects in point cloud scenarios. Following this formulation, we introduce PCSOD, the first dataset proposed for point cloud SOD consisting of 2,872 in-/out-door 3D views. The samples in our dataset are labeled with hierarchical annotations, e.g., super-/sub-class, bounding box, and segmentation map, which endows the brilliant generalizability and broad applicability of our dataset verifying various conjectures. To evidence the feasibility of our solution, we further contribute a baseline model and benchmark five representative models for a comprehensive comparison. The proposed model can effectively analyze irregular and unordered points for detecting salient objects. Thanks to incorporating the task-tailored designs, our method shows visible superiority over other baselines, producing more satisfactory results. Extensive experiments and discussions reveal the promising potential of this research field, paving the way for further study.
 
 ### Few-Shot Video Object Detection.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-20044-1_5)
@@ -152,16 +180,24 @@
   > Weakly-supervised object detection (WSOD) aims to train an object detector only requiring the image-level annotations. Recently, some works have managed to select the accurate boxes generated from a well-trained WSOD network to supervise a semi-supervised detection framework for better performance. However, these approaches simply divide the training set into labeled and unlabeled sets according to the image-level criteria, such that sufficient mislabeled or wrongly localized box predictions are chosen as pseudo ground-truths, resulting in a sub-optimal solution of detection performance. To overcome this issue, we propose a novel WSOD framework with a new paradigm that switches from weak supervision to noisy supervision (W2N). Generally, with given pseudo ground-truths generated from the well-trained WSOD network, we propose a two-module iterative training algorithm to refine pseudo labels and supervise better object detector progressively. In the localization adaptation module, we propose a regularization loss to reduce the proportion of discriminative parts in original pseudo ground-truths, obtaining better pseudo ground-truths for further training. In the semi-supervised module, we propose a two tasks instance-level split method to select high-quality labels for training a semi-supervised detector. Experimental results on different benchmarks verify the effectiveness of W2N, and our W2N outperforms all existing pure WSOD methods and transfer learning methods. Our code is publicly available at https://github.com/1170300714/w2n_wsod.
 
 ### Talisman: Targeted Active Learning for Object Detection with Rare Classes and Slices Using Submodular Mutual Information.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19839-7_1) · 📚 被引 18
+- **链接**: [arXiv:2112.00166](https://arxiv.org/abs/2112.00166) · 📚 被引 18
 - **作者**: Suraj Kothawade, Saikat Ghosh, Sumit Shekhar, Yu Xiang, Rishabh K. Iyer
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
 
+- **摘要（英，原文）**:
+
+  > Deep neural networks based object detectors have shown great success in a variety of domains like autonomous vehicles, biomedical imaging, etc. It is known that their success depends on a large amount of data from the domain of interest. While deep models often perform well in terms of overall accuracy, they often struggle in performance on rare yet critical data slices. For example, data slices like "motorcycle at night" or "bicycle at night" are often rare but very critical slices for self-driving applications and false negatives on such rare slices could result in ill-fated failures and accidents. Active learning (AL) is a well-known paradigm to incrementally and adaptively build training datasets with a human in the loop. However, current AL based acquisition functions are not well-equipped to tackle real-world datasets with rare slices, since they are based on uncertainty scores or global descriptors of the image. We propose TALISMAN, a novel framework for Targeted Active Learning or object detectIon with rare slices using Submodular MutuAl iNformation. Our method uses the submodular mutual information functions instantiated using features of the region of interest (RoI) to efficiently target and acquire data points with rare slices. We evaluate our framework on the standard PASCAL VOC07+12 and BDD100K, a real-world self-driving dataset. We observe that TALISMAN outperforms other methods by in terms of average precision on rare slices, and in terms of mAP.
+
 ### SPSN: Superpixel Prototype Sampling Network for RGB-D Salient Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19818-2_36) · 📚 被引 91
+- **链接**: [arXiv:2207.07898](https://arxiv.org/abs/2207.07898) · 📚 被引 91
 - **作者**: Minhyeok Lee, Chaewon Park, Suhwan Cho, Sangyoun Lee
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > RGB-D salient object detection (SOD) has been in the spotlight recently because it is an important preprocessing operation for various vision tasks. However, despite advances in deep learning-based methods, RGB-D SOD is still challenging due to the large domain gap between an RGB image and the depth map and low-quality depth maps. To solve this problem, we propose a novel superpixel prototype sampling network (SPSN) architecture. The proposed model splits the input RGB image and depth map into component superpixels to generate component prototypes. We design a prototype sampling network so that the network only samples prototypes corresponding to salient objects. In addition, we propose a reliance selection module to recognize the quality of each RGB and depth feature map and adaptively weight them in proportion to their reliability. The proposed method makes the model robust to inconsistencies between RGB images and depth maps and eliminates the influence of non-salient objects. Our method is evaluated on five popular datasets, achieving state-of-the-art performance. We prove the effectiveness of the proposed method through comparative experiments.
 
 ### Should All Proposals Be Treated Equally in Object Detection?
 - **链接**: [arXiv:2207.03520](https://arxiv.org/abs/2207.03520) · 📚 被引 3
@@ -236,16 +272,24 @@
 - **会议**: ECCV 2022
 
 ### DetMatch: Two Teachers are Better than One for Joint 2D and 3D Semi-Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20080-9_22) · 📚 被引 24
+- **链接**: [arXiv:2203.09510](https://arxiv.org/abs/2203.09510) · [代码](https://github.com/Divadi/DetMatch) · 📚 被引 24
 - **作者**: Jinhyung Park, Chenfeng Xu, Yiyang Zhou, Masayoshi Tomizuka, Wei Zhan
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
 
+- **摘要（英，原文）**:
+
+  > While numerous 3D detection works leverage the complementary relationship between RGB images and point clouds, developments in the broader framework of semi-supervised object recognition remain uninfluenced by multi-modal fusion. Current methods develop independent pipelines for 2D and 3D semi-supervised learning despite the availability of paired image and point cloud frames. Observing that the distinct characteristics of each sensor cause them to be biased towards detecting different objects, we propose DetMatch, a flexible framework for joint semi-supervised learning on 2D and 3D modalities. By identifying objects detected in both sensors, our pipeline generates a cleaner, more robust set of pseudo-labels that both demonstrates stronger performance and stymies single-modality error propagation. Further, we leverage the richer semantics of RGB images to rectify incorrect 3D class predictions and improve localization of 3D boxes. Evaluating on the challenging KITTI and Waymo datasets, we improve upon strong semi-supervised learning methods and observe higher quality pseudo-labels. Code will be released at https://github.com/Divadi/DetMatch
+
 ### Few-Shot Object Detection by Knowledge Distillation Using Bag-of-Visual-Words Representations.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20080-9_17)
+- **链接**: [arXiv:2207.12049](https://arxiv.org/abs/2207.12049)
 - **作者**: Wenjie Pei, Shuang Wu, Dianwen Mei, Fanglin Chen, Jiandong Tian, Guangming Lu
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > While fine-tuning based methods for few-shot object detection have achieved remarkable progress, a crucial challenge that has not been addressed well is the potential class-specific overfitting on base classes and sample-specific overfitting on novel classes. In this work we design a novel knowledge distillation framework to guide the learning of the object detector and thereby restrain the overfitting in both the pre-training stage on base classes and fine-tuning stage on novel classes. To be specific, we first present a novel Position-Aware Bag-of-Visual-Words model for learning a representative bag of visual words (BoVW) from a limited size of image set, which is used to encode general images based on the similarities between the learned visual words and an image. Then we perform knowledge distillation based on the fact that an image should have consistent BoVW representations in two different feature spaces. To this end, we pre-learn a feature space independently from the object detection, and encode images using BoVW in this space. The obtained BoVW representation for an image can be considered as distilled knowledge to guide the learning of object detector: the extracted features by the object detector for the same image are expected to derive the consistent BoVW representations with the distilled knowledge. Extensive experiments validate the effectiveness of our method and demonstrate the superiority over other state-of-the-art methods.
 
 ### Efficient One-Stage Video Object Detection by Exploiting Temporal Consistency.
 - **链接**: [arXiv:2402.09241](https://arxiv.org/abs/2402.09241) · [代码](https://github.com/guanxiongsun/vfe.pytorch) · 📚 被引 15

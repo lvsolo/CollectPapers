@@ -18,10 +18,14 @@
 - **会议**: ECCV 2022
 
 ### RC-MVSNet: Unsupervised Multi-View Stereo with Neural Rendering.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19821-2_38) · 📚 被引 54
+- **链接**: [arXiv:2203.03949](https://arxiv.org/abs/2203.03949) · [代码](https://github.com/Boese0601/RC-MVSNet) · 📚 被引 54
 - **作者**: Di Chang, Aljaz Bozic, Tong Zhang, Qingsong Yan, Yingcong Chen, Sabine Süsstrunk et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Finding accurate correspondences among different views is the Achilles' heel of unsupervised Multi-View Stereo (MVS). Existing methods are built upon the assumption that corresponding pixels share similar photometric features. However, multi-view images in real scenarios observe non-Lambertian surfaces and experience occlusions. In this work, we propose a novel approach with neural rendering (RC-MVSNet) to solve such ambiguity issues of correspondences among views. Specifically, we impose a depth rendering consistency loss to constrain the geometry features close to the object surface to alleviate occlusions. Concurrently, we introduce a reference view synthesis loss to generate consistent supervision, even for non-Lambertian surfaces. Extensive experiments on DTU and Tanks\&Temples benchmarks demonstrate that our RC-MVSNet approach achieves state-of-the-art performance over unsupervised MVS frameworks and competitive performance to many supervised methods.The code is released at https://github.com/Boese0601/RC-MVSNet
 
 ### KD-MVS: Knowledge Distillation Based Self-supervised Learning for Multi-view Stereo.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19821-2_36) · 📚 被引 31
@@ -36,10 +40,14 @@
 - **会议**: ECCV 2022
 
 ### Depth Field Networks For Generalizable Multi-view Scene Representation.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19824-3_15) · 📚 被引 13
+- **链接**: [arXiv:2207.14287](https://arxiv.org/abs/2207.14287) · 📚 被引 13
 - **作者**: Vitor Guizilini, Igor Vasiljevic, Jiading Fang, Rare Ambru, Greg Shakhnarovich, Matthew R. Walter et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Modern 3D computer vision leverages learning to boost geometric reasoning, mapping image data to classical structures such as cost volumes or epipolar constraints to improve matching. These architectures are specialized according to the particular problem, and thus require significant task-specific tuning, often leading to poor domain generalization performance. Recently, generalist Transformer architectures have achieved impressive results in tasks such as optical flow and depth estimation by encoding geometric priors as inputs rather than as enforced constraints. In this paper, we extend this idea and propose to learn an implicit, multi-view consistent scene representation, introducing a series of 3D data augmentation techniques as a geometric inductive prior to increase view diversity. We also show that introducing view synthesis as an auxiliary task further improves depth estimation. Our Depth Field Networks (DeFiNe) achieve state-of-the-art results in stereo and video depth estimation without explicit geometric constraints, and improve on zero-shot domain generalization by a wide margin.
 
 ### Emotion-aware Multi-view Contrastive Learning for Facial Emotion Recognition.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19778-9_11) · 📚 被引 16
@@ -128,10 +136,14 @@
 - **会议**: ECCV 2022
 
 ### 3D Random Occlusion and Multi-layer Projection for Deep Multi-camera Pedestrian Localization.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20080-9_40) · 📚 被引 35
+- **链接**: [arXiv:2207.10895](https://arxiv.org/abs/2207.10895) · 📚 被引 35
 - **作者**: Rui Qiu, Ming Xu, Yuyao Yan, Jeremy S. Smith, Xi Yang
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Although deep-learning based methods for monocular pedestrian detection have made great progress, they are still vulnerable to heavy occlusions. Using multi-view information fusion is a potential solution but has limited applications, due to the lack of annotated training samples in existing multi-view datasets, which increases the risk of overfitting. To address this problem, a data augmentation method is proposed to randomly generate 3D cylinder occlusions, on the ground plane, which are of the average size of pedestrians and projected to multiple views, to relieve the impact of overfitting in the training. Moreover, the feature map of each view is projected to multiple parallel planes at different heights, by using homographies, which allows the CNNs to fully utilize the features across the height of each pedestrian to infer the locations of pedestrians on the ground plane. The proposed 3DROM method has a greatly improved performance in comparison with the state-of-the-art deep-learning based methods for multi-view pedestrian detection.
 
 ### Affine Correspondences Between Multi-camera Systems for 6DOF Relative Pose Estimation.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19824-3_37) · 📚 被引 0

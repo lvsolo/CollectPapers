@@ -18,10 +18,14 @@
 - **会议**: ECCV 2022
 
 ### 3D Object Detection with a Self-supervised Lidar Scene Flow Backbone.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20080-9_15) · 📚 被引 25
+- **链接**: [arXiv:2205.00705](https://arxiv.org/abs/2205.00705) · [代码](https://github.com/emecercelik/ssl-3d-detection.git) · 📚 被引 25
 - **作者**: Emeç Erçelik, Ekim Yurtsever, Mingyu Liu, Zhijie Yang, Hanzhen Zhang, Pinar Topçam et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > State-of-the-art lidar-based 3D object detection methods rely on supervised learning and large labeled datasets. However, annotating lidar data is resource-consuming, and depending only on supervised learning limits the applicability of trained models. Self-supervised training strategies can alleviate these issues by learning a general point cloud backbone model for downstream 3D vision tasks. Against this backdrop, we show the relationship between self-supervised multi-frame flow representations and single-frame 3D detection hypotheses. Our main contribution leverages learned flow and motion representations and combines a self-supervised backbone with a supervised 3D detection head. First, a self-supervised scene flow estimation model is trained with cycle consistency. Then, the point cloud encoder of this model is used as the backbone of a single-frame 3D object detection head model. This second 3D object detection model learns to utilize motion representations to distinguish dynamic objects exhibiting different movement patterns. Experiments on KITTI and nuScenes benchmarks show that the proposed self-supervised pre-training increases 3D detection performance significantly. https://github.com/emecercelik/ssl-3d-detection.git
 
 ### Cross-Modality Knowledge Distillation Network for Monocular 3D Object Detection.
 - **链接**: [arXiv:2211.07171](https://arxiv.org/abs/2211.07171)
@@ -34,16 +38,24 @@
   > Leveraging LiDAR-based detectors or real LiDAR point data to guide monocular 3D detection has brought significant improvement, e.g., Pseudo-LiDAR methods. However, the existing methods usually apply non-end-to-end training strategies and insufficiently leverage the LiDAR information, where the rich potential of the LiDAR data has not been well exploited. In this paper, we propose the Cross-Modality Knowledge Distillation (CMKD) network for monocular 3D detection to efficiently and directly transfer the knowledge from LiDAR modality to image modality on both features and responses. Moreover, we further extend CMKD as a semi-supervised training framework by distilling knowledge from large-scale unlabeled data and significantly boost the performance. Until submission, CMKD ranks $1^{st}$ among the monocular 3D detectors with publications on both KITTI $test$ set and Waymo $val$ set with significant performance gains compared to previous state-of-the-art methods.
 
 ### CramNet: Camera-Radar Fusion with Ray-Constrained Cross-Attention for Robust 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19839-7_23) · 📚 被引 57
+- **链接**: [arXiv:2210.09267](https://arxiv.org/abs/2210.09267) · 📚 被引 57
 - **作者**: Jyh-Jing Hwang, Henrik Kretzschmar, Joshua Manela, Sean Rafferty, Nicholas Armstrong-Crews, Tiffany L. Chen et al.
 - **🏷️ 机构**: Waymo
 - **会议**: ECCV 2022
 
+- **摘要（英，原文）**:
+
+  > Robust 3D object detection is critical for safe autonomous driving. Camera and radar sensors are synergistic as they capture complementary information and work well under different environmental conditions. Fusing camera and radar data is challenging, however, as each of the sensors lacks information along a perpendicular axis, that is, depth is unknown to camera and elevation is unknown to radar. We propose the camera-radar matching network CramNet, an efficient approach to fuse the sensor readings from camera and radar in a joint 3D space. To leverage radar range measurements for better camera depth predictions, we propose a novel ray-constrained cross-attention mechanism that resolves the ambiguity in the geometric correspondences between camera features and radar features. Our method supports training with sensor modality dropout, which leads to robust 3D object detection, even when a camera or radar sensor suddenly malfunctions on a vehicle. We demonstrate the effectiveness of our fusion approach through extensive experiments on the RADIATE dataset, one of the few large-scale datasets that provide radar radio frequency imagery. A camera-only variant of our method achieves competitive performance in monocular 3D object detection on the Waymo Open Dataset.
+
 ### DEVIANT: Depth EquiVarIAnt NeTwork for Monocular 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20077-9_39) · 📚 被引 69
+- **链接**: [arXiv:2207.10758](https://arxiv.org/abs/2207.10758) · [代码](https://github.com/abhi1kumar/DEVIANT) · 📚 被引 69
 - **作者**: Abhinav Kumar, Garrick Brazil, Enrique Corona, Armin Parchami, Xiaoming Liu
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Modern neural networks use building blocks such as convolutions that are equivariant to arbitrary 2D translations. However, these vanilla blocks are not equivariant to arbitrary 3D translations in the projective manifold. Even then, all monocular 3D detectors use vanilla blocks to obtain the 3D coordinates, a task for which the vanilla blocks are not designed for. This paper takes the first step towards convolutions equivariant to arbitrary 3D translations in the projective manifold. Since the depth is the hardest to estimate for monocular detection, this paper proposes Depth EquiVarIAnt NeTwork (DEVIANT) built with existing scale equivariant steerable blocks. As a result, DEVIANT is equivariant to the depth translations in the projective manifold whereas vanilla networks are not. The additional depth equivariance forces the DEVIANT to learn consistent depth estimates, and therefore, DEVIANT achieves state-of-the-art monocular 3D detection results on KITTI and Waymo datasets in the image-only category and performs competitively to methods using extra information. Moreover, DEVIANT works better than vanilla networks in cross-dataset evaluation. Code and models at https://github.com/abhi1kumar/DEVIANT
 
 ### Densely Constrained Depth Estimator for Monocular 3D Object Detection.
 - **链接**: [arXiv:2207.10047](https://arxiv.org/abs/2207.10047) · [代码](https://github.com/BraveGroup/DCD)
@@ -90,16 +102,24 @@
 - **会议**: ECCV 2022
 
 ### Lidar Point Cloud Guided Monocular 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19769-7_8)
+- **链接**: [arXiv:2104.09035](https://arxiv.org/abs/2104.09035) · [代码](https://github.com/SPengLiang/LPCG)
 - **作者**: Liang Peng, Fei Liu, Zhengxu Yu, Senbo Yan, Dan Deng, Zheng Yang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
 
+- **摘要（英，原文）**:
+
+  > Monocular 3D object detection is a challenging task in the self-driving and computer vision community. As a common practice, most previous works use manually annotated 3D box labels, where the annotating process is expensive. In this paper, we find that the precisely and carefully annotated labels may be unnecessary in monocular 3D detection, which is an interesting and counterintuitive finding. Using rough labels that are randomly disturbed, the detector can achieve very close accuracy compared to the one using the ground-truth labels. We delve into this underlying mechanism and then empirically find that: concerning the label accuracy, the 3D location part in the label is preferred compared to other parts of labels. Motivated by the conclusions above and considering the precise LiDAR 3D measurement, we propose a simple and effective framework, dubbed LiDAR point cloud guided monocular 3D object detection (LPCG). This framework is capable of either reducing the annotation costs or considerably boosting the detection accuracy without introducing extra annotation costs. Specifically, It generates pseudo labels from unlabeled LiDAR point clouds. Thanks to accurate LiDAR 3D measurements in 3D space, such pseudo labels can replace manually annotated labels in the training of monocular 3D detectors, since their 3D location information is precise. LPCG can be applied into any monocular 3D detector to fully use massive unlabeled data in a self-driving system. As a result, in KITTI benchmark, we take the first place on both monocular 3D and BEV (bird's-eye-view) detection with a significant margin. In Waymo benchmark, our method using 10% labeled data achieves comparable accuracy to the baseline detector using 100% labeled data. The codes are released at https://github.com/SPengLiang/LPCG.
+
 ### DID-M3D: Decoupling Instance Depth for Monocular 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19769-7_5) · 📚 被引 78
+- **链接**: [arXiv:2207.08531](https://arxiv.org/abs/2207.08531) · [代码](https://github.com/SPengLiang/DID-M3D) · 📚 被引 78
 - **作者**: Liang Peng, Xiaopei Wu, Zheng Yang, Haifeng Liu, Deng Cai
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Monocular 3D detection has drawn much attention from the community due to its low cost and setup simplicity. It takes an RGB image as input and predicts 3D boxes in the 3D space. The most challenging sub-task lies in the instance depth estimation. Previous works usually use a direct estimation method. However, in this paper we point out that the instance depth on the RGB image is non-intuitive. It is coupled by visual depth clues and instance attribute clues, making it hard to be directly learned in the network. Therefore, we propose to reformulate the instance depth to the combination of the instance visual surface depth (visual depth) and the instance attribute depth (attribute depth). The visual depth is related to objects' appearances and positions on the image. By contrast, the attribute depth relies on objects' inherent attributes, which are invariant to the object affine transformation on the image. Correspondingly, we decouple the 3D location uncertainty into visual depth uncertainty and attribute depth uncertainty. By combining different types of depths and associated uncertainties, we can obtain the final instance depth. Furthermore, data augmentation in monocular 3D detection is usually limited due to the physical nature, hindering the boost of performance. Based on the proposed instance depth disentanglement strategy, we can alleviate this problem. Evaluated on KITTI, our method achieves new state-of-the-art results, and extensive ablation studies validate the effectiveness of each component in our method. The codes are released at https://github.com/SPengLiang/DID-M3D.
 
 ### FCAF3D: Fully Convolutional Anchor-Free 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-20080-9_28) · 📚 被引 125
@@ -108,16 +128,24 @@
 - **会议**: ECCV 2022
 
 ### Rethinking IoU-based Optimization for Single-stage 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20077-9_32)
+- **链接**: [arXiv:2207.09332](https://arxiv.org/abs/2207.09332)
 - **作者**: Hualian Sheng, Sijia Cai, Na Zhao, Bing Deng, Jianqiang Huang, Xian-Sheng Hua et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
 
+- **摘要（英，原文）**:
+
+  > Since Intersection-over-Union (IoU) based optimization maintains the consistency of the final IoU prediction metric and losses, it has been widely used in both regression and classification branches of single-stage 2D object detectors. Recently, several 3D object detection methods adopt IoU-based optimization and directly replace the 2D IoU with 3D IoU. However, such a direct computation in 3D is very costly due to the complex implementation and inefficient backward operations. Moreover, 3D IoU-based optimization is sub-optimal as it is sensitive to rotation and thus can cause training instability and detection performance deterioration. In this paper, we propose a novel Rotation-Decoupled IoU (RDIoU) method that can mitigate the rotation-sensitivity issue, and produce more efficient optimization objectives compared with 3D IoU during the training stage. Specifically, our RDIoU simplifies the complex interactions of regression parameters by decoupling the rotation variable as an independent term, yet preserving the geometry of 3D IoU. By incorporating RDIoU into both the regression and classification branches, the network is encouraged to learn more precise bounding boxes and concurrently overcome the misalignment issue between classification and regression. Extensive experiments on the benchmark KITTI and Waymo Open Dataset validate that our RDIoU method can bring substantial improvement for the single-stage 3D object detection.
+
 ### PillarNet: Real-Time and High-Performance Pillar-Based 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20080-9_3) · 📚 被引 210
+- **链接**: [arXiv:2205.07403](https://arxiv.org/abs/2205.07403) · [代码](https://github.com/agent-sgs/PillarNet) · 📚 被引 211
 - **作者**: Guangsheng Shi, Ruifeng Li, Chao Ma
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Real-time and high-performance 3D object detection is of critical importance for autonomous driving. Recent top-performing 3D object detectors mainly rely on point-based or 3D voxel-based convolutions, which are both computationally inefficient for onboard deployment. In contrast, pillar-based methods use solely 2D convolutions, which consume less computation resources, but they lag far behind their voxel-based counterparts in detection accuracy. In this paper, by examining the primary performance gap between pillar- and voxel-based detectors, we develop a real-time and high-performance pillar-based detector, dubbed PillarNet.The proposed PillarNet consists of a powerful encoder network for effective pillar feature learning, a neck network for spatial-semantic feature fusion and the commonly used detect head. Using only 2D convolutions, PillarNet is flexible to an optional pillar size and compatible with classical 2D CNN backbones, such as VGGNet and ResNet. Additionally, PillarNet benefits from our designed orientation-decoupled IoU regression loss along with the IoU-aware prediction branch. Extensive experimental results on the large-scale nuScenes Dataset and Waymo Open Dataset demonstrate that the proposed PillarNet performs well over state-of-the-art 3D detectors in terms of effectiveness and efficiency. Code is available at \url{https://github.com/agent-sgs/PillarNet}.
 
 ### SWFormer: Sparse Window Transformer for 3D Object Detection in Point Clouds.
 - **链接**: [arXiv:2210.07372](https://arxiv.org/abs/2210.07372) · 📚 被引 129
@@ -150,10 +178,14 @@
   > In this paper, we propose the LiDAR Distillation to bridge the domain gap induced by different LiDAR beams for 3D object detection. In many real-world applications, the LiDAR points used by mass-produced robots and vehicles usually have fewer beams than that in large-scale public datasets. Moreover, as the LiDARs are upgraded to other product models with different beam amount, it becomes challenging to utilize the labeled data captured by previous versions' high-resolution sensors. Despite the recent progress on domain adaptive 3D detection, most methods struggle to eliminate the beam-induced domain gap. We find that it is essential to align the point cloud density of the source domain with that of the target domain during the training process. Inspired by this discovery, we propose a progressive framework to mitigate the beam-induced domain shift. In each iteration, we first generate low-beam pseudo LiDAR by downsampling the high-beam point clouds. Then the teacher-student framework is employed to distill rich information from the data with more beams. Extensive experiments on Waymo, nuScenes and KITTI datasets with three different LiDAR-based detectors demonstrate the effectiveness of our LiDAR Distillation. Notably, our approach does not increase any additional computation cost for inference.
 
 ### Graph R-CNN: Towards Accurate 3D Object Detection with Semantic-Decorated Local Graph.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20074-8_38) · 📚 被引 83
+- **链接**: [arXiv:2208.03624](https://arxiv.org/abs/2208.03624) · [代码](https://github.com/Nightmare-n/GraphRCNN) · 📚 被引 83
 - **作者**: Honghui Yang, Zili Liu, Xiaopei Wu, Wenxiao Wang, Wei Qian, Xiaofei He et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Two-stage detectors have gained much popularity in 3D object detection. Most two-stage 3D detectors utilize grid points, voxel grids, or sampled keypoints for RoI feature extraction in the second stage. Such methods, however, are inefficient in handling unevenly distributed and sparse outdoor points. This paper solves this problem in three aspects. 1) Dynamic Point Aggregation. We propose the patch search to quickly search points in a local region for each 3D proposal. The dynamic farthest voxel sampling is then applied to evenly sample the points. Especially, the voxel size varies along the distance to accommodate the uneven distribution of points. 2) RoI-graph Pooling. We build local graphs on the sampled points to better model contextual information and mine point relations through iterative message passing. 3) Visual Features Augmentation. We introduce a simple yet effective fusion strategy to compensate for sparse LiDAR points with limited semantic cues. Based on these modules, we construct our Graph R-CNN as the second stage, which can be applied to existing one-stage detectors to consistently improve the detection performance. Extensive experiments show that Graph R-CNN outperforms the state-of-the-art 3D detection models by a large margin on both the KITTI and Waymo Open Dataset. And we rank first place on the KITTI BEV car detection leaderboard. Code will be available at \url{https://github.com/Nightmare-n/GraphRCNN}.
 
 ### Semi-supervised 3D Object Detection with Proficient Teachers.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19839-7_42) · 📚 被引 73
@@ -162,10 +194,14 @@
 - **会议**: ECCV 2022
 
 ### ProposalContrast: Unsupervised Pre-training for LiDAR-Based 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19842-7_2) · 📚 被引 85
+- **链接**: [arXiv:2207.12654](https://arxiv.org/abs/2207.12654) · 📚 被引 85
 - **作者**: Junbo Yin, Dingfu Zhou, Liangjun Zhang, Jin Fang, Cheng-Zhong Xu, Jianbing Shen et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Existing approaches for unsupervised point cloud pre-training are constrained to either scene-level or point/voxel-level instance discrimination. Scene-level methods tend to lose local details that are crucial for recognizing the road objects, while point/voxel-level methods inherently suffer from limited receptive field that is incapable of perceiving large objects or context environments. Considering region-level representations are more suitable for 3D object detection, we devise a new unsupervised point cloud pre-training framework, called ProposalContrast, that learns robust 3D representations by contrasting region proposals. Specifically, with an exhaustive set of region proposals sampled from each point cloud, geometric point relations within each proposal are modeled for creating expressive proposal representations. To better accommodate 3D detection properties, ProposalContrast optimizes with both inter-cluster and inter-proposal separation, i.e., sharpening the discriminativeness of proposal representations across semantic classes and object instances. The generalizability and transferability of ProposalContrast are verified on various 3D detectors (i.e., PV-RCNN, CenterPoint, PointPillars and PointRCNN) and datasets (i.e., KITTI, Waymo and ONCE).
 
 ### CenterFormer: Center-Based Transformer for 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19839-7_29) · 📚 被引 162

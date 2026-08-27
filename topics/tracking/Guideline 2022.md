@@ -24,10 +24,14 @@
 - **会议**: ECCV 2022
 
 ### 3D Siamese Transformer Network for Single Object Tracking on Point Clouds.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20086-1_17)
+- **链接**: [arXiv:2207.11995](https://arxiv.org/abs/2207.11995)
 - **作者**: Le Hui, Lingpeng Wang, Linghua Tang, Kaihao Lan, Jin Xie, Jian Yang
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Siamese network based trackers formulate 3D single object tracking as cross-correlation learning between point features of a template and a search area. Due to the large appearance variation between the template and search area during tracking, how to learn the robust cross correlation between them for identifying the potential target in the search area is still a challenging problem. In this paper, we explicitly use Transformer to form a 3D Siamese Transformer network for learning robust cross correlation between the template and the search area of point clouds. Specifically, we develop a Siamese point Transformer network to learn shape context information of the target. Its encoder uses self-attention to capture non-local information of point clouds to characterize the shape information of the object, and the decoder utilizes cross-attention to upsample discriminative point features. After that, we develop an iterative coarse-to-fine correlation network to learn the robust cross correlation between the template and the search area. It formulates the cross-feature augmentation to associate the template with the potential target in the search area via cross attention. To further enhance the potential target, it employs the ego-feature augmentation that applies self-attention to the local k-NN graph of the feature space to aggregate target features. Experiments on the KITTI, nuScenes, and Waymo datasets show that our method achieves state-of-the-art performance on the 3D single object tracking task.
 
 ### PolarMOT: How Far Can Geometric Relations Take us in 3D Multi-object Tracking?
 - **链接**: [arXiv:2208.01957](https://arxiv.org/abs/2208.01957) · 📚 被引 46

@@ -12,10 +12,14 @@
 - **会议**: ECCV 2022
 
 ### UIA-ViT: Unsupervised Inconsistency-Aware Method Based on Vision Transformer for Face Forgery Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20065-6_23) · 📚 被引 130
+- **链接**: [arXiv:2210.12752](https://arxiv.org/abs/2210.12752) · 📚 被引 130
 - **作者**: Wanyi Zhuang, Qi Chu, Zhentao Tan, Qiankun Liu, Haojie Yuan, Changtao Miao et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Intra-frame inconsistency has been proved to be effective for the generalization of face forgery detection. However, learning to focus on these inconsistency requires extra pixel-level forged location annotations. Acquiring such annotations is non-trivial. Some existing methods generate large-scale synthesized data with location annotations, which is only composed of real images and cannot capture the properties of forgery regions. Others generate forgery location labels by subtracting paired real and fake images, yet such paired data is difficult to collected and the generated label is usually discontinuous. To overcome these limitations, we propose a novel Unsupervised Inconsistency-Aware method based on Vision Transformer, called UIA-ViT, which only makes use of video-level labels and can learn inconsistency-aware feature without pixel-level annotations. Due to the self-attention mechanism, the attention map among patch embeddings naturally represents the consistency relation, making the vision Transformer suitable for the consistency representation learning. Based on vision Transformer, we propose two key components: Unsupervised Patch Consistency Learning (UPCL) and Progressive Consistency Weighted Assemble (PCWA). UPCL is designed for learning the consistency-related representation with progressive optimized pseudo annotations. PCWA enhances the final classification embedding with previous patch embeddings optimized by UPCL to further improve the detection performance. Extensive experiments demonstrate the effectiveness of the proposed method.
 
 ### MaxViT: Multi-axis Vision Transformer.
 - **链接**: [arXiv:2204.01697](https://arxiv.org/abs/2204.01697) · [代码](https://github.com/google-research/maxvit)
@@ -44,10 +48,14 @@
 - **会议**: ECCV 2022
 
 ### ScalableViT: Rethinking the Context-Oriented Generalization of Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20053-3_28) · 📚 被引 50
+- **链接**: [arXiv:2203.10790](https://arxiv.org/abs/2203.10790) · 📚 被引 50
 - **作者**: Rui Yang, Hailong Ma, Jie Wu, Yansong Tang, Xuefeng Xiao, Min Zheng et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > The vanilla self-attention mechanism inherently relies on pre-defined and steadfast computational dimensions. Such inflexibility restricts it from possessing context-oriented generalization that can bring more contextual cues and global representations. To mitigate this issue, we propose a Scalable Self-Attention (SSA) mechanism that leverages two scaling factors to release dimensions of query, key, and value matrices while unbinding them with the input. This scalability fetches context-oriented generalization and enhances object sensitivity, which pushes the whole network into a more effective trade-off state between accuracy and cost. Furthermore, we propose an Interactive Window-based Self-Attention (IWSA), which establishes interaction between non-overlapping regions by re-merging independent value tokens and aggregating spatial information from adjacent windows. By stacking the SSA and IWSA alternately, the Scalable Vision Transformer (ScalableViT) achieves state-of-the-art performance in general-purpose vision tasks. For example, ScalableViT-S outperforms Twins-SVT-S by 1.4% and Swin-T by 1.8% on ImageNet-1K classification.
 
 ### Panoramic Vision Transformer for Saliency Detection in 360$\circ $ Videos.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19833-5_25) · 📚 被引 31
