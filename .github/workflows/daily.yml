@@ -51,13 +51,18 @@ jobs:
         run: |
           git config user.name "collectpapers-bot"
           git config user.email "actions@github.com"
-          git add daily/ README.md .cache/daily_seen.json
-          # 无变化就不提交（避免空提交堆积）
+          git add daily/ README.md .cache/daily_seen.json .cache/llm_evals.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes, skip commit"
-          else
-            git commit -m "docs(daily): arXiv report $(date -u +%F)"
-            # 远端可能同时有新提交（人工/另一 workflow），rebase 后再推
-            git pull --rebase origin main
+            exit 0
+          fi
+          git commit -m "docs(daily): arXiv report $(date -u +%F)"
+          # 未跟踪的 .cache HTTP 缓存文件会阻塞 rebase —— 先 stash 再拉
+          git stash --include-untracked -q 2>/dev/null || true
+          if git pull --rebase origin main; then
+            git stash pop -q 2>/dev/null || true
             git push
+          else
+            echo "::error::daily push failed after rebase"
+            exit 1
           fi
