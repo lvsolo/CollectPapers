@@ -29,7 +29,7 @@
 | **Continual Learning** | 持续学习 / 增量学习（含 VLM/多模态场景）<br/>[2025](topics/continual-learning/Guideline%202025.md) [2024](topics/continual-learning/Guideline%202024.md) [2023](topics/continual-learning/Guideline%202023.md) [2022](topics/continual-learning/Guideline%202022.md) [2021](topics/continual-learning/Guideline%202021.md) [2020](topics/continual-learning/Guideline%202020.md) |
 | **Neural Architecture Search** | 神经架构搜索（NAS、Zero-Cost、搜索空间）<br/>[2025](topics/neural-architecture-search/Guideline%202025.md) [2024](topics/neural-architecture-search/Guideline%202024.md) [2023](topics/neural-architecture-search/Guideline%202023.md) [2022](topics/neural-architecture-search/Guideline%202022.md) [2021](topics/neural-architecture-search/Guideline%202021.md) [2020](topics/neural-architecture-search/Guideline%202020.md) |
 | **Network Pruning** | 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）<br/>[2025](topics/network-pruning/Guideline%202025.md) [2024](topics/network-pruning/Guideline%202024.md) [2023](topics/network-pruning/Guideline%202023.md) [2022](topics/network-pruning/Guideline%202022.md) [2021](topics/network-pruning/Guideline%202021.md) [2020](topics/network-pruning/Guideline%202020.md) |
-| **Knowledge Distillation** | 知识蒸馏（特征/逻辑蒸馏、VLM 蒸馏、自蒸馏）<br/>[2025](topics/knowledge-distillation/Guideline%202025.md) |
+| **Knowledge Distillation** | 知识蒸馏（特征/逻辑蒸馏、VLM 蒸馏、自蒸馏）<br/>[2025](topics/knowledge-distillation/Guideline%202025.md) [2024](topics/knowledge-distillation/Guideline%202024.md) [2022](topics/knowledge-distillation/Guideline%202022.md) |
 
 ## 📰 最近日报（arXiv daily）
 
