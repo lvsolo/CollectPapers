@@ -22,6 +22,8 @@ CACHE_DIR.mkdir(exist_ok=True)
 
 # S2 免费档全局限速（跨函数共享）：两次请求至少间隔 1.3s
 _S2_LAST = [0.0]
+# DBLP 失败计数（enrich 自适应退避用）
+_dblp_fail_count = [0]
 
 
 def _s2_throttle() -> None:

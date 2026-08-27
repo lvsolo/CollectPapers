@@ -113,12 +113,14 @@ def find_arxiv_id(paper: dict) -> str | None:
 
 
 def dblp_find_arxiv(title: str, authors: list[str]) -> str | None:
-    """按标题在 DBLP 全库搜 arXiv 版本（期刊 CoRR）。返回 arXiv id 或 None。"""
+    """按标题在 DBLP 全库搜 arXiv 版本（期刊 CoRR）。返回 arXiv id 或 None。
+    网络失败（限流/5xx）计入全局失败计数，供自适应退避。"""
     q = urllib.parse.quote(title[:150])
     data = http_get_json(
         f"https://dblp.org/search/publ/api?q={q}&format=json&h=10",
         cache_hours=336, retries=2, timeout=15)
     if not data:
+        common._dblp_fail_count[0] += 1
         return None
     hits = data.get("result", {}).get("hits", {}).get("hit", [])
     if isinstance(hits, dict):
@@ -175,11 +177,18 @@ def enrich_papers(papers: list[dict], *, do_abstract=True, do_citations=True,
     # 1) arXiv id → 批量摘要
     if do_abstract:
         need = [p for p in papers if not p.get("abstract")]
-        # 没有 arxiv_id 的先反查（DBLP 全库检索 CoRR 版本）
+        # 没有 arxiv_id 的先反查（DBLP 全库检索 CoRR 版本）。
+        # 限速自适应：连续失败即加倍间隔（DBLP 5xx/断连时保命），成功则缓慢恢复
+        delay = 0.8
         for p in need:
             if not p.get("arxiv_id"):
+                before = common._dblp_fail_count
                 p["arxiv_id"] = dblp_find_arxiv(p["title"], p.get("authors", []))
-                time.sleep(0.5)
+                if common._dblp_fail_count > before:
+                    delay = min(delay * 2, 8.0)   # 失败：退避
+                else:
+                    delay = max(delay * 0.9, 0.8)  # 成功：缓慢恢复
+                time.sleep(delay)
         ids = [p["arxiv_id"] for p in need if p.get("arxiv_id")]
         log(f"  enrich: fetching abstracts for {len(ids)}/{len(need)} papers")
         fetched = {a["arxiv_id"]: a for a in arxiv_by_ids(ids)}
@@ -286,12 +295,14 @@ def render_paper_md(paper: dict, llm_eval: dict | None, primary: bool,
                          ("result", "结果")]:
             if llm_eval.get(k):
                 lines.append(f"- **{label}**: {llm_eval[k]}")
-    elif paper.get("abstract"):
-        # 无 LLM：英文摘要全文放折叠块（用户可读英文，原文最完整）
+    # arXiv 原始摘要：无论有无 LLM 总结都附上（带总结 + 不带总结的摘要都要有）
+    if paper.get("abstract"):
         lines.append("")
-        lines.append("- **摘要（英，原文）**:")
+        lines.append("<details><summary>📄 arXiv 原始摘要（点击展开）</summary>")
         lines.append("")
-        lines.append(f"  > {paper['abstract']}")
+        lines.append(f"> {paper['abstract']}")
+        lines.append("")
+        lines.append("</details>")
     return "\n".join(lines)
 
 
