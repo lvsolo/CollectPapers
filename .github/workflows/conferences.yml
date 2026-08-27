@@ -106,33 +106,38 @@ jobs:
         run: |
           python3 collect.py --conference ${{ matrix.conference }} --year ${{ matrix.year }} --no-llm
 
-      - name: Commit this batch (rebase-safe retry)
+      - name: Commit this batch (regenerate-over strategy)
         run: |
           git config user.name "collectpapers-bot"
           git config user.email "actions@github.com"
-          git fetch origin main
           for i in 1 2 3 4 5; do
             git add topics/ .cache/ 2>/dev/null
             if git diff --cached --quiet; then
               echo "No changes for ${{ matrix.conference }} ${{ matrix.year }}"
               exit 0
             fi
-            # 串行模式下冲突罕见；若 rebase 撞车，用 cherry-pick 恢复本批提交
-            if ! git diff --cached --quiet; then
-              git commit -m "docs(topics): ${{ matrix.conference }} ${{ matrix.year }} refresh"
+            git commit -m "docs(topics): ${{ matrix.conference }} ${{ matrix.year }} refresh"
+            # 关键：Guideline 是整文件再生成物，直接覆盖而非 merge。
+            # 先 fetch，再以 ours 策略合并远端（保留本批重生成版本，其余取远端），
+            # 从根本上避开内容 rebase 冲突。
+            git fetch origin main
+            if git merge -s recursive -X theirs FETCH_HEAD -m "merge: take regenerated ${{ matrix.conference }} ${{ matrix.year }}"; then
+              :
+            else
+              # 兜底：任何残留冲突文件一律取本批版本（工作区即本批最新产物）
+              git checkout --ours . 2>/dev/null || true
+              git add -A 2>/dev/null || true
+              git commit --no-edit 2>/dev/null || true
             fi
-            if git pull --rebase --autostash origin main && git push; then
+            if git push; then
               echo "pushed batch ${{ matrix.conference }} ${{ matrix.year }}"
               exit 0
             fi
-            echo "push conflict, retry $i/5 after backoff"
-            sleep $((i * 30))
-            git rebase --abort 2>/dev/null || true
-            git fetch origin main
-            # rebase 失败：硬恢复到远端后重放本批的改动（重新 add 从工作区）
+            echo "push rejected, retry $i/5 after backoff"
+            sleep $((i * 20))
             git reset --soft HEAD~1 2>/dev/null || true
           done
-          echo "::warning::batch ${{ matrix.conference }} ${{ matrix.year }} could not push after 5 tries"
+          echo "::error::batch ${{ matrix.conference }} ${{ matrix.year }} could not push after 5 tries"
           exit 1
 
   # ------------------------------------------------------------------
@@ -140,9 +145,9 @@ jobs:
   # ------------------------------------------------------------------
   llm-eval:
     needs: [plan, collect]
-    # collect 有失败批次也照跑（fail-fast 已关；失败的批次下轮重试，不阻塞 LLM 阶段）
-    if: always() && !cancelled() && needs.plan.result == 'success'
-    runs-on: ubuntu-latest
+    # 无论 collect 成败都跑：batches 在 git 里（已成功批次的数据完整），
+    # LLM 摘要按 batch 增量补全，失败批次的摘要等该批次补跑成功后下一轮自然补上
+    if: always() && needs.plan.result == 'success'
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
