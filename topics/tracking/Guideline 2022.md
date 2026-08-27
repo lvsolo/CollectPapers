@@ -5,95 +5,102 @@
 
 > 同领域其他年份: 
 
-### Beyond 3D Siamese Tracking: A Motion-Centric Paradigm for 3D Single Object Tracking in Point Clouds.
-- **链接**: [arXiv:2203.01730](https://arxiv.org/abs/2203.01730) · 📚 被引 103
-- **作者**: Chaoda Zheng, Xu Yan, Haiming Zhang, Baoyuan Wang, Shenghui Cheng, Shuguang Cui et al.
-- **🏷️ 机构**: The Chinese University of Hong Kong (Shenzhen), Xiaobing.AI, Westlake University
-- **会议**: CVPR 2022
+### Towards Generic 3D Tracking in RGBD Videos: Benchmark and Baseline.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20047-2_7) · 📚 被引 4
+- **作者**: Jinyu Yang, Zhongqun Zhang, Zhe Li, Hyung Jin Chang, Ales Leonardis, Feng Zheng
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### ByteTrack: Multi-object Tracking by Associating Every Detection Box.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20047-2_1) · 📚 被引 2132
+- **作者**: Yifu Zhang, Peize Sun, Yi Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### CMT: Context-Matching-Guided Transformer for 3D Tracking in Point Clouds.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20047-2_6) · 📚 被引 17
+- **作者**: Zhiyang Guo, Yunyao Mao, Wengang Zhou, Min Wang, Houqiang Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### 3D Siamese Transformer Network for Single Object Tracking on Point Clouds.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20086-1_17)
+- **作者**: Le Hui, Lingpeng Wang, Linghua Tang, Kaihao Lan, Jin Xie, Jian Yang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### PolarMOT: How Far Can Geometric Relations Take us in 3D Multi-object Tracking?
+- **链接**: [arXiv:2208.01957](https://arxiv.org/abs/2208.01957) · 📚 被引 46
+- **作者**: Aleksandr Kim, Guillem Brasó, Aljosa Osep, Laura Leal-Taixé
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
 - **摘要（英，原文）**:
 
-  > 3D single object tracking (3D SOT) in LiDAR point clouds plays a crucial role in autonomous driving. Current approaches all follow the Siamese paradigm based on appearance matching. However, LiDAR point clouds are usually textureless and incomplete, which hinders effective appearance matching. Besides, previous methods greatly overlook the critical motion clues among targets. In this work, beyond 3D Siamese tracking, we introduce a motion-centric paradigm to handle 3D SOT from a new perspective. Following this paradigm, we propose a matching-free two-stage tracker M^2-Track. At the 1^st-stage, M^2-Track localizes the target within successive frames via motion transformation. Then it refines the target box through motion-assisted shape completion at the 2^nd-stage. Extensive experiments confirm that M^2-Track significantly outperforms previous state-of-the-arts on three large-scale datasets while running at 57FPS (~8%, ~17%, and ~22%) precision gains on KITTI, NuScenes, and Waymo Open Dataset respectively). Further analysis verifies each component's effectiveness and shows the motion-centric paradigm's promising potential when combined with appearance matching.
+  > Most (3D) multi-object tracking methods rely on appearance-based cues for data association. By contrast, we investigate how far we can get by only encoding geometric relationships between objects in 3D space as cues for data-driven data association. We encode 3D detections as nodes in a graph, where spatial and temporal pairwise relations among objects are encoded via localized polar coordinates on graph edges. This representation makes our geometric relations invariant to global transformations and smooth trajectory changes, especially under non-holonomic motion. This allows our graph neural network to learn to effectively encode temporal and spatial interactions and fully leverage contextual and motion cues to obtain final scene interpretation by posing data association as edge classification. We establish a new state-of-the-art on nuScenes dataset and, more importantly, show that our method, PolarMOT, generalizes remarkably well across different locations (Boston, Singapore, Karlsruhe) and datasets (nuScenes and KITTI).
 
-### PoseTrack21: A Dataset for Person Search, Multi-Object Tracking and Multi-Person Pose Tracking.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02029) · 📚 被引 49
-- **作者**: Andreas Doering, Di Chen, Shanshan Zhang, Bernt Schiele, Juergen Gall
-- **🏷️ 机构**: University of Bonn, Nanjing University of Science and Technology, MPI for Informatics
-- **会议**: CVPR 2022
-
-### Learning of Global Objective for Network Flow in Multi-Object Tracking.
-- **链接**: [arXiv:2203.16210](https://arxiv.org/abs/2203.16210) · 📚 被引 24
-- **作者**: Shuai Li, Yu Kong, Hamid Rezatofighi
-- **🏷️ 机构**: Rochester Institute of Technology, Monash University
-- **会议**: CVPR 2022
+### MOTCOM: The Multi-Object Tracking Dataset Complexity Metric.
+- **链接**: [arXiv:2207.10031](https://arxiv.org/abs/2207.10031) · 📚 被引 4
+- **作者**: Malte Pedersen, Joakim Bruslund Haurum, Patrick Dendorfer, Thomas B. Moeslund
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
 - **摘要（英，原文）**:
 
-  > This paper concerns the problem of multi-object tracking based on the min-cost flow (MCF) formulation, which is conventionally studied as an instance of linear program. Given its computationally tractable inference, the success of MCF tracking largely relies on the learned cost function of underlying linear program. Most previous studies focus on learning the cost function by only taking into account two frames during training, therefore the learned cost function is sub-optimal for MCF where a multi-frame data association must be considered during inference. In order to address this problem, in this paper we propose a novel differentiable framework that ties training and inference together during learning by solving a bi-level optimization problem, where the lower-level solves a linear program and the upper-level contains a loss function that incorporates global tracking result. By back-propagating the loss through differentiable layers via gradient descent, the globally parameterized cost function is explicitly learned and regularized. With this approach, we are able to learn a better objective for global MCF tracking. As a result, we achieve competitive performances compared to the current state-of-the-art methods on the popular multi-object tracking benchmarks such as MOT16, MOT17 and MOT20.
+  > There exists no comprehensive metric for describing the complexity of Multi-Object Tracking (MOT) sequences. This lack of metrics decreases explainability, complicates comparison of datasets, and reduces the conversation on tracker performance to a matter of leader board position. As a remedy, we present the novel MOT dataset complexity metric (MOTCOM), which is a combination of three sub-metrics inspired by key problems in MOT: occlusion, erratic motion, and visual similarity. The insights of MOTCOM can open nuanced discussions on tracker performance and may lead to a wider acknowledgement of novel contributions developed for either less known datasets or those aimed at solving sub-problems. We evaluate MOTCOM on the comprehensive MOT17, MOT20, and MOTSynth datasets and show that MOTCOM is far better at describing the complexity of MOT sequences compared to the conventional density and number of tracks. Project page at https://vap.aau.dk/motcom
 
-### MeMOT: Multi-Object Tracking with Memory.
-- **链接**: [arXiv:2203.16761](https://arxiv.org/abs/2203.16761) · 📚 被引 231
-- **作者**: Jiarui Cai, Mingze Xu, Wei Li, Yuanjun Xiong, Wei Xia, Zhuowen Tu et al.
-- **🏷️ 机构**: University of Washington, AWS AI Labs
-- **会议**: CVPR 2022
-
-- **摘要（英，原文）**:
-
-  > We propose an online tracking algorithm that performs the object detection and data association under a common framework, capable of linking objects after a long time span. This is realized by preserving a large spatio-temporal memory to store the identity embeddings of the tracked objects, and by adaptively referencing and aggregating useful information from the memory as needed. Our model, called MeMOT, consists of three main modules that are all Transformer-based: 1) Hypothesis Generation that produce object proposals in the current video frame; 2) Memory Encoding that extracts the core information from the memory for each tracked object; and 3) Memory Decoding that solves the object detection and data association tasks simultaneously for multi-object tracking. When evaluated on widely adopted MOT benchmark datasets, MeMOT observes very competitive performance.
-
-### Multi-Object Tracking Meets Moving UAV.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00867) · 📚 被引 119
-- **作者**: Shuai Liu, Xin Li, Huchuan Lu, You He
-- **🏷️ 机构**: Dalian University of Technology,Dalian, Peng Cheng Laboratory,Shenzhen, Naval Aeronautical University,Yantai,China
-- **会议**: CVPR 2022
-
-### TrackFormer: Multi-Object Tracking with Transformers.
-- **链接**: [arXiv:2101.02702](https://arxiv.org/abs/2101.02702) · [代码](https://github.com/timmeinhardt/trackformer) · 📚 被引 875
-- **作者**: Tim Meinhardt, Alexander Kirillov, Laura Leal-Taixé, Christoph Feichtenhofer
-- **🏷️ 机构**: Technical University of Munich, Facebook AI Research (FAIR)
-- **会议**: CVPR 2022
+### Robust Multi-object Tracking by Marginal Inference.
+- **链接**: [arXiv:2208.03727](https://arxiv.org/abs/2208.03727)
+- **作者**: Yifu Zhang, Chunyu Wang, Xinggang Wang, Wenjun Zeng, Wenyu Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
 - **摘要（英，原文）**:
 
-  > The challenging task of multi-object tracking (MOT) requires simultaneous reasoning about track initialization, identity, and spatio-temporal trajectories. We formulate this task as a frame-to-frame set prediction problem and introduce TrackFormer, an end-to-end trainable MOT approach based on an encoder-decoder Transformer architecture. Our model achieves data association between frames via attention by evolving a set of track predictions through a video sequence. The Transformer decoder initializes new tracks from static object queries and autoregressively follows existing tracks in space and time with the conceptually new and identity preserving track queries. Both query types benefit from self- and encoder-decoder attention on global frame-level features, thereby omitting any additional graph optimization or modeling of motion and/or appearance. TrackFormer introduces a new tracking-by-attention paradigm and while simple in its design is able to achieve state-of-the-art performance on the task of multi-object tracking (MOT17 and MOT20) and segmentation (MOTS20). The code is available at https://github.com/timmeinhardt/trackformer .
+  > Multi-object tracking in videos requires to solve a fundamental problem of one-to-one assignment between objects in adjacent frames. Most methods address the problem by first discarding impossible pairs whose feature distances are larger than a threshold, followed by linking objects using Hungarian algorithm to minimize the overall distance. However, we find that the distribution of the distances computed from Re-ID features may vary significantly for different videos. So there isn't a single optimal threshold which allows us to safely discard impossible pairs. To address the problem, we present an efficient approach to compute a marginal probability for each pair of objects in real time. The marginal probability can be regarded as a normalized distance which is significantly more stable than the original feature distance. As a result, we can use a single threshold for all videos. The approach is general and can be applied to the existing trackers to obtain about one point improvement in terms of IDF1 metric. It achieves competitive results on MOT17 and MOT20 benchmarks. In addition, the computed probability is more interpretable which facilitates subsequent post-processing operations.
 
-### DanceTrack: Multi-Object Tracking in Uniform Appearance and Diverse Motion.
-- **链接**: [arXiv:2111.14690](https://arxiv.org/abs/2111.14690) · 📚 被引 338
-- **作者**: Peize Sun, Jinkun Cao, Yi Jiang, Zehuan Yuan, Song Bai, Kris Kitani et al.
-- **🏷️ 机构**: The University of Hong Kong, Carnegie Mellon University, ByteDance Inc
-- **会议**: CVPR 2022
-
-- **摘要（英，原文）**:
-
-  > A typical pipeline for multi-object tracking (MOT) is to use a detector for object localization, and following re-identification (re-ID) for object association. This pipeline is partially motivated by recent progress in both object detection and re-ID, and partially motivated by biases in existing tracking datasets, where most objects tend to have distinguishing appearance and re-ID models are sufficient for establishing associations. In response to such bias, we would like to re-emphasize that methods for multi-object tracking should also work when object appearance is not sufficiently discriminative. To this end, we propose a large-scale dataset for multi-human tracking, where humans have similar appearance, diverse motion and extreme articulation. As the dataset contains mostly group dancing videos, we name it "DanceTrack". We expect DanceTrack to provide a better platform to develop more MOT algorithms that rely less on visual discrimination and depend more on motion analysis. We benchmark several state-of-the-art trackers on our dataset and observe a significant performance drop on DanceTrack when compared against existing benchmarks. The dataset, project code and competition server are released at: \url{https://github.com/DanceTrack}.
-
-### Iterative Corresponding Geometry: Fusing Region and Depth for Highly Efficient 3D Tracking of Textureless Objects.
-- **链接**: [arXiv:2203.05334](https://arxiv.org/abs/2203.05334) · 📚 被引 49
-- **作者**: Manuel Stoiber, Martin Sundermeyer, Rudolph Triebel
-- **🏷️ 机构**: German Aerospace Center (DLR)
-- **会议**: CVPR 2022
+### AiATrack: Attention in Attention for Transformer Visual Tracking.
+- **链接**: [arXiv:2207.09603](https://arxiv.org/abs/2207.09603) · 📚 被引 333
+- **作者**: Shenyuan Gao, Chunluan Zhou, Chao Ma, Xinggang Wang, Junsong Yuan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
 - **摘要（英，原文）**:
 
-  > Tracking objects in 3D space and predicting their 6DoF pose is an essential task in computer vision. State-of-the-art approaches often rely on object texture to tackle this problem. However, while they achieve impressive results, many objects do not contain sufficient texture, violating the main underlying assumption. In the following, we thus propose ICG, a novel probabilistic tracker that fuses region and depth information and only requires the object geometry. Our method deploys correspondence lines and points to iteratively refine the pose. We also implement robust occlusion handling to improve performance in real-world settings. Experiments on the YCB-Video, OPT, and Choi datasets demonstrate that, even for textured objects, our approach outperforms the current state of the art with respect to accuracy and robustness. At the same time, ICG shows fast convergence and outstanding efficiency, requiring only 1.3 ms per frame on a single CPU core. Finally, we analyze the influence of individual components and discuss our performance compared to deep learning-based methods. The source code of our tracker is publicly available.
+  > Transformer trackers have achieved impressive advancements recently, where the attention mechanism plays an important role. However, the independent correlation computation in the attention mechanism could result in noisy and ambiguous attention weights, which inhibits further performance improvement. To address this issue, we propose an attention in attention (AiA) module, which enhances appropriate correlations and suppresses erroneous ones by seeking consensus among all correlation vectors. Our AiA module can be readily applied to both self-attention blocks and cross-attention blocks to facilitate feature aggregation and information propagation for visual tracking. Moreover, we propose a streamlined Transformer tracking framework, dubbed AiATrack, by introducing efficient feature reuse and target-background embeddings to make full use of temporal references. Experiments show that our tracker achieves state-of-the-art performance on six tracking benchmarks while running at a real-time speed.
 
-### Ranking-Based Siamese Visual Tracking.
-- **链接**: [arXiv:2205.11761](https://arxiv.org/abs/2205.11761) · [代码](https://github.com/sansanfree/RBO) · 📚 被引 87
-- **作者**: Feng Tang, Qiang Ling
-- **🏷️ 机构**: University of Science and Technology of China,Department of Automation,China
-- **会议**: CVPR 2022
+### AvatarPoser: Articulated Full-Body Pose Tracking from Sparse Motion Sensing.
+- **链接**: [arXiv:2207.13784](https://arxiv.org/abs/2207.13784) · 📚 被引 117
+- **作者**: Jiaxi Jiang, Paul Streli, Huajian Qiu, Andreas Fender, Larissa Laich, Patrick Snape et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
 - **摘要（英，原文）**:
 
-  > Current Siamese-based trackers mainly formulate the visual tracking into two independent subtasks, including classification and localization. They learn the classification subnetwork by processing each sample separately and neglect the relationship among positive and negative samples. Moreover, such tracking paradigm takes only the classification confidence of proposals for the final prediction, which may yield the misalignment between classification and localization. To resolve these issues, this paper proposes a ranking-based optimization algorithm to explore the relationship among different proposals. To this end, we introduce two ranking losses, including the classification one and the IoU-guided one, as optimization constraints. The classification ranking loss can ensure that positive samples rank higher than hard negative ones, i.e., distractors, so that the trackers can select the foreground samples successfully without being fooled by the distractors. The IoU-guided ranking loss aims to align classification confidence scores with the Intersection over Union(IoU) of the corresponding localization prediction for positive samples, enabling the well-localized prediction to be represented by high classification confidence. Specifically, the proposed two ranking losses are compatible with most Siamese trackers and incur no additional computation for inference. Extensive experiments on seven tracking benchmarks, including OTB100, UAV123, TC128, VOT2016, NFS30, GOT-10k and LaSOT, demonstrate the effectiveness of the proposed ranking-based optimization algorithm. The code and raw results are available at https://github.com/sansanfree/RBO.
+  > Today's Mixed Reality head-mounted displays track the user's head pose in world space as well as the user's hands for interaction in both Augmented Reality and Virtual Reality scenarios. While this is adequate to support user input, it unfortunately limits users' virtual representations to just their upper bodies. Current systems thus resort to floating avatars, whose limitation is particularly evident in collaborative settings. To estimate full-body poses from the sparse input sources, prior work has incorporated additional trackers and sensors at the pelvis or lower body, which increases setup complexity and limits practical application in mobile settings. In this paper, we present AvatarPoser, the first learning-based method that predicts full-body poses in world coordinates using only motion input from the user's head and hands. Our method builds on a Transformer encoder to extract deep features from the input signals and decouples global motion from the learned local joint orientations to guide pose estimation. To obtain accurate full-body motions that resemble motion capture animations, we refine the arm joints' positions using an optimization routine with inverse kinematics to match the original tracking input. In our evaluation, AvatarPoser achieved new state-of-the-art results in evaluations on large motion capture datasets (AMASS). At the same time, our method's inference speed supports real-time operation, providing a practical interface to support holistic avatar control and representation for Metaverse applications.
 
-### Spiking Transformers for Event-based Single Object Tracking.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00860) · 📚 被引 174
-- **作者**: Jiqing Zhang, Bo Dong, Haiwei Zhang, Jianchuan Ding, Felix Heide, Baocai Yin et al.
-- **🏷️ 机构**: Dalian University of Technology, Princeton University
-- **会议**: CVPR 2022
+### Towards Sequence-Level Training for Visual Tracking.
+- **链接**: [arXiv:2208.05810](https://arxiv.org/abs/2208.05810)
+- **作者**: Minji Kim, Seungkwan Lee, Jungseul Ok, Bohyung Han, Minsu Cho
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
-## 跨领域论文（完整笔记在其他领域）
+- **摘要（英，原文）**:
 
-- Towards Discriminative Representation: Multi-view Trajectory Contrastive Learning for Online Multi-object Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202022.md)
-- LMGP: Lifted Multicut Meets Geometry Projections for Multi-Camera Multi-Object Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202022.md)
+  > Despite the extensive adoption of machine learning on the task of visual object tracking, recent learning-based approaches have largely overlooked the fact that visual tracking is a sequence-level task in its nature; they rely heavily on frame-level training, which inevitably induces inconsistency between training and testing in terms of both data distributions and task objectives. This work introduces a sequence-level training strategy for visual tracking based on reinforcement learning and discusses how a sequence-level design of data sampling, learning objectives, and data augmentation can improve the accuracy and robustness of tracking algorithms. Our experiments on standard benchmarks including LaSOT, TrackingNet, and GOT-10k demonstrate that four representative tracking models, SiamRPN++, SiamAttn, TransT, and TrDiMP, consistently improve by incorporating the proposed methods in training without modifying architectures.
+
+### Robust Visual Tracking by Segmentation.
+- **链接**: [arXiv:2203.11191](https://arxiv.org/abs/2203.11191)
+- **作者**: Matthieu Paul, Martin Danelljan, Christoph Mayer, Luc Van Gool
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+- **摘要（英，原文）**:
+
+  > Estimating the target extent poses a fundamental challenge in visual object tracking. Typically, trackers are box-centric and fully rely on a bounding box to define the target in the scene. In practice, objects often have complex shapes and are not aligned with the image axis. In these cases, bounding boxes do not provide an accurate description of the target and often contain a majority of background pixels. We propose a segmentation-centric tracking pipeline that not only produces a highly accurate segmentation mask, but also internally works with segmentation masks instead of bounding boxes. Thus, our tracker is able to better learn a target representation that clearly differentiates the target in the scene from background content. In order to achieve the necessary robustness for the challenging tracking scenario, we propose a separate instance localization component that is used to condition the segmentation decoder when producing the output mask. We infer a bounding box from the segmentation mask, validate our tracker on challenging tracking datasets and achieve the new state of the art on LaSOT with a success AUC score of 69.7%. Since most tracking datasets do not contain mask annotations, we cannot use them to evaluate predicted segmentation masks. Instead, we validate our segmentation quality on two popular video object segmentation datasets.
+
+### Hierarchical Feature Embedding for Visual Tracking.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20047-2_25)
+- **作者**: Zhixiong Pi, Weitao Wan, Chong Sun, Changxin Gao, Nong Sang, Chen Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022

@@ -1,72 +1,70 @@
 # Autonomous Driving — 2022 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Image-to-Lidar Self-Supervised Distillation for Autonomous Driving Data.
-- **链接**: [arXiv:2203.16258](https://arxiv.org/abs/2203.16258) · 📚 被引 112
-- **作者**: Corentin Sautier, Gilles Puy, Spyros Gidaris, Alexandre Boulch, Andrei Bursuc, Renaud Marlet
-- **🏷️ 机构**: valeo.ai,Paris,France
-- **会议**: CVPR 2022
+### V2X-ViT: Vehicle-to-Everything Cooperative Perception with Vision Transformer.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19842-7_7) · 📚 被引 520
+- **作者**: Runsheng Xu, Hao Xiang, Zhengzhong Tu, Xin Xia, Ming-Hsuan Yang, Jiaqi Ma
+- **🏷️ 机构**: UC Merced
+- **会议**: ECCV 2022
+
+### CODA: A Real-World Road Corner Case Dataset for Object Detection in Autonomous Driving.
+- **链接**: [arXiv:2203.07724](https://arxiv.org/abs/2203.07724)
+- **作者**: Kaican Li, Kai Chen, Haoyu Wang, Lanqing Hong, Chaoqiang Ye, Jianhua Han et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
 - **摘要（英，原文）**:
 
-  > Segmenting or detecting objects in sparse Lidar point clouds are two important tasks in autonomous driving to allow a vehicle to act safely in its 3D environment. The best performing methods in 3D semantic segmentation or object detection rely on a large amount of annotated data. Yet annotating 3D Lidar data for these tasks is tedious and costly. In this context, we propose a self-supervised pre-training method for 3D perception models that is tailored to autonomous driving data. Specifically, we leverage the availability of synchronized and calibrated image and Lidar sensors in autonomous driving setups for distilling self-supervised pre-trained image representations into 3D models. Hence, our method does not require any point cloud nor image annotations. The key ingredient of our method is the use of superpixels which are used to pool 3D point features and 2D pixel features in visually similar regions. We then train a 3D network on the self-supervised task of matching these pooled point features with the corresponding pooled image pixel features. The advantages of contrasting regions obtained by superpixels are that: (1) grouping together pixels and points of visually coherent regions leads to a more meaningful contrastive task that produces features well adapted to 3D semantic segmentation and 3D object detection; (2) all the different regions have the same weight in the contrastive loss regardless of the number of 3D points sampled in these regions; (3) it mitigates the noise produced by incorrect matching of points and pixels due to occlusions between the different sensors. Extensive experiments on autonomous driving datasets demonstrate the ability of our image-to-Lidar distillation strategy to produce 3D representations that transfer well on semantic segmentation and object detection tasks.
+  > Contemporary deep-learning object detection methods for autonomous driving usually assume prefixed categories of common traffic participants, such as pedestrians and cars. Most existing detectors are unable to detect uncommon objects and corner cases (e.g., a dog crossing a street), which may lead to severe accidents in some situations, making the timeline for the real-world application of reliable autonomous driving uncertain. One main reason that impedes the development of truly reliably self-driving systems is the lack of public datasets for evaluating the performance of object detectors on corner cases. Hence, we introduce a challenging dataset named CODA that exposes this critical problem of vision-based detectors. The dataset consists of 1500 carefully selected real-world driving scenes, each containing four object-level corner cases (on average), spanning more than 30 object categories. On CODA, the performance of standard object detectors trained on large-scale autonomous driving datasets significantly drops to no more than 12.8% in mAR. Moreover, we experiment with the state-of-the-art open-world object detector and find that it also fails to reliably identify the novel objects in CODA, suggesting that a robust perception system for autonomous driving is probably still far from reach. We expect our CODA dataset to facilitate further research in reliable detection for real-world autonomous driving. Our dataset will be released at https://coda-dataset.github.io.
 
-### Exploiting Temporal Relations on Radar Perception for Autonomous Driving.
-- **链接**: [arXiv:2204.01184](https://arxiv.org/abs/2204.01184) · 📚 被引 56
-- **作者**: Peizhao Li, Pu Wang, Karl Berntorp, Hongfu Liu
-- **🏷️ 机构**: Brandeis University, Mitsubishi Electric Research Laboratories
-- **会议**: CVPR 2022
+### Self-Distillation for Robust LiDAR Semantic Segmentation in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19815-1_38) · 📚 被引 33
+- **作者**: Jiale Li, Hang Dai, Yong Ding
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
-- **摘要（英，原文）**:
+### Point Cloud Compression with Range Image-Based Entropy Model for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20047-2_19)
+- **作者**: Sukai Wang, Ming Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
-  > We consider the object recognition problem in autonomous driving using automotive radar sensors. Comparing to Lidar sensors, radar is cost-effective and robust in all-weather conditions for perception in autonomous driving. However, radar signals suffer from low angular resolution and precision in recognizing surrounding objects. To enhance the capacity of automotive radar, in this work, we exploit the temporal information from successive ego-centric bird-eye-view radar image frames for radar object recognition. We leverage the consistency of an object's existence and attributes (size, orientation, etc.), and propose a temporal relational layer to explicitly model the relations between objects within successive radar images. In both object detection and multiple object tracking, we show the superiority of our method compared to several baseline approaches.
-
-### LTP: Lane-based Trajectory Prediction for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01662) · 📚 被引 83
-- **作者**: Jingke Wang, Tengju Ye, Ziqing Gu, Junbo Chen
-- **🏷️ 机构**: Alibaba Group
-- **会议**: CVPR 2022
-
-### Unifying Panoptic Segmentation for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02066) · 📚 被引 47
-- **作者**: Oliver Zendel, Matthias Schörghuber, Bernhard Rainer, Markus Murschitz, Csaba Beleznai
-- **🏷️ 机构**: AIT Austrian Institute of Technology
-- **会议**: CVPR 2022
-
-### Coopernaut: End-to-End Driving with Cooperative Perception for Networked Vehicles.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01674) · 📚 被引 129
-- **作者**: Jiaxun Cui, Hang Qiu, Dian Chen, Peter Stone, Yuke Zhu
-- **🏷️ 机构**: The University of Texas at Austin, Stanford University
-- **会议**: CVPR 2022
-
-### Generating Useful Accident-Prone Driving Scenarios via a Learned Traffic Prior.
-- **链接**: [arXiv:2112.05077](https://arxiv.org/abs/2112.05077) · 📚 被引 134
-- **作者**: Davis Rempe, Jonah Philion, Leonidas J. Guibas, Sanja Fidler, Or Litany
-- **🏷️ 机构**: Stanford University, NVIDIA
-- **会议**: CVPR 2022
+### ST-P3: End-to-End Vision-Based Autonomous Driving via Spatial-Temporal Feature Learning.
+- **链接**: [arXiv:2207.07601](https://arxiv.org/abs/2207.07601) · [代码](https://github.com/OpenPerceptionX/ST-P3) · 📚 被引 258
+- **作者**: Shengchao Hu, Li Chen, Penghao Wu, Hongyang Li, Junchi Yan, Dacheng Tao
+- **🏷️ 机构**: Shanghai AI Lab
+- **会议**: ECCV 2022
 
 - **摘要（英，原文）**:
 
-  > Evaluating and improving planning for autonomous vehicles requires scalable generation of long-tail traffic scenarios. To be useful, these scenarios must be realistic and challenging, but not impossible to drive through safely. In this work, we introduce STRIVE, a method to automatically generate challenging scenarios that cause a given planner to produce undesirable behavior, like collisions. To maintain scenario plausibility, the key idea is to leverage a learned model of traffic motion in the form of a graph-based conditional VAE. Scenario generation is formulated as an optimization in the latent space of this traffic model, perturbing an initial real-world scene to produce trajectories that collide with a given planner. A subsequent optimization is used to find a "solution" to the scenario, ensuring it is useful to improve the given planner. Further analysis clusters generated scenarios based on collision type. We attack two planners and show that STRIVE successfully generates realistic, challenging scenarios in both cases. We additionally "close the loop" and use these scenarios to optimize hyperparameters of a rule-based planner.
+  > Many existing autonomous driving paradigms involve a multi-stage discrete pipeline of tasks. To better predict the control signals and enhance user safety, an end-to-end approach that benefits from joint spatial-temporal feature learning is desirable. While there are some pioneering works on LiDAR-based input or implicit design, in this paper we formulate the problem in an interpretable vision-based setting. In particular, we propose a spatial-temporal feature learning scheme towards a set of more representative features for perception, prediction and planning tasks simultaneously, which is called ST-P3. Specifically, an egocentric-aligned accumulation technique is proposed to preserve geometry information in 3D space before the bird's eye view transformation for perception; a dual pathway modeling is devised to take past motion variations into account for future prediction; a temporal-based refinement unit is introduced to compensate for recognizing vision-based elements for planning. To the best of our knowledge, we are the first to systematically investigate each part of an interpretable end-to-end vision-based autonomous driving system. We benchmark our approach against previous state-of-the-arts on both open-loop nuScenes dataset as well as closed-loop CARLA simulation. The results show the effectiveness of our method. Source code, model and protocol details are made publicly available at https://github.com/OpenPerceptionX/ST-P3.
 
-### Towards Driving-Oriented Metric for Lane Detection Models.
-- **链接**: [arXiv:2203.16851](https://arxiv.org/abs/2203.16851) · 📚 被引 15
-- **作者**: Takami Sato, Qi Alfred Chen
-- **🏷️ 机构**: University of California,Irvine
-- **会议**: CVPR 2022
+### InAction: Interpretable Action Decision Making for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19839-7_22) · 📚 被引 32
+- **作者**: Taotao Jing, Haifeng Xia, Renran Tian, Haoran Ding, Xiao Luo, Joshua E. Domeyer et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Motion Inspired Unsupervised Perception and Prediction in Autonomous Driving.
+- **链接**: [arXiv:2210.08061](https://arxiv.org/abs/2210.08061)
+- **作者**: Mahyar Najibi, Jingwei Ji, Yin Zhou, Charles R. Qi, Xinchen Yan, Scott Ettinger et al.
+- **🏷️ 机构**: Waymo
+- **会议**: ECCV 2022
 
 - **摘要（英，原文）**:
 
-  > After the 2017 TuSimple Lane Detection Challenge, its dataset and evaluation based on accuracy and F1 score have become the de facto standard to measure the performance of lane detection methods. While they have played a major role in improving the performance of lane detection methods, the validity of this evaluation method in downstream tasks has not been adequately researched. In this study, we design 2 new driving-oriented metrics for lane detection: End-to-End Lateral Deviation metric (E2E-LD) is directly formulated based on the requirements of autonomous driving, a core downstream task of lane detection; Per-frame Simulated Lateral Deviation metric (PSLD) is a lightweight surrogate metric of E2E-LD. To evaluate the validity of the metrics, we conduct a large-scale empirical study with 4 major types of lane detection approaches on the TuSimple dataset and our newly constructed dataset Comma2k19-LD. Our results show that the conventional metrics have strongly negative correlations ($\leq$-0.55) with E2E-LD, meaning that some recent improvements purely targeting the conventional metrics may not have led to meaningful improvements in autonomous driving, but rather may actually have made it worse by overfitting to the conventional metrics. As autonomous driving is a security/safety-critical system, the underestimation of robustness hinders the sound development of practical lane detection models. We hope that our study will help the community achieve more downstream task-aware evaluations for lane detection.
+  > Learning-based perception and prediction modules in modern autonomous driving systems typically rely on expensive human annotation and are designed to perceive only a handful of predefined object categories. This closed-set paradigm is insufficient for the safety-critical autonomous driving task, where the autonomous vehicle needs to process arbitrarily many types of traffic participants and their motion behaviors in a highly dynamic world. To address this difficulty, this paper pioneers a novel and challenging direction, i.e., training perception and prediction models to understand open-set moving objects, with no human supervision. Our proposed framework uses self-learned flow to trigger an automated meta labeling pipeline to achieve automatic supervision. 3D detection experiments on the Waymo Open Dataset show that our method significantly outperforms classical unsupervised approaches and is even competitive to the counterpart with supervised scene flow. We further show that our approach generates highly promising results in open-set 3D detection and trajectory prediction, confirming its potential in closing the safety gap of fully supervised systems.
 
-## 跨领域论文（完整笔记在其他领域）
+### Rethinking Closed-Loop Training for Autonomous Driving.
+- **链接**: [arXiv:2306.15713](https://arxiv.org/abs/2306.15713)
+- **作者**: Chris Zhang, Runsheng Guo, Wenyuan Zeng, Yuwen Xiong, Binbin Dai, Rui Hu et al.
+- **🏷️ 机构**: Waabi / University of Toronto
+- **会议**: ECCV 2022
 
-- Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
-- Investigating the Impact of Multi-LiDAR Placement on Object Detection for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
-- Time3D: End-to-End Joint Monocular 3D Object Detection and Tracking for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
-- Rope3D: The Roadside Perception Dataset for Autonomous Driving and Monocular 3D Object Detection Task. → [3d-detection](../3d-detection/Guideline%202022.md)
-- DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- **摘要（英，原文）**:
+
+  > Recent advances in high-fidelity simulators have enabled closed-loop training of autonomous driving agents, potentially solving the distribution shift in training v.s. deployment and allowing training to be scaled both safely and cheaply. However, there is a lack of understanding of how to build effective training benchmarks for closed-loop training. In this work, we present the first empirical study which analyzes the effects of different training benchmark designs on the success of learning agents, such as how to design traffic scenarios and scale training environments. Furthermore, we show that many popular RL algorithms cannot achieve satisfactory performance in the context of autonomous driving, as they lack long-term planning and take an extremely long time to train. To address these issues, we propose trajectory value learning (TRAVL), an RL-based driving agent that performs planning with multistep look-ahead and exploits cheaply generated imagined data for efficient learning. Our experiments show that TRAVL can learn much faster and produce safer maneuvers compared to all the baselines. For more information, visit the project website: https://waabi.ai/research/travl
