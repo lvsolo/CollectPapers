@@ -1,71 +1,75 @@
 # Self-supervised Vision — 2024 Guideline
 
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
-> 论文数: 61 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 70 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份: [2022](Guideline%202022.md)
 
-### Towards Scalable 3D Anomaly Detection and Localization: A Benchmark via 3D Anomaly Synthesis and A Self-Supervised Learning Network.
-- **链接**: [arXiv:2311.14897](https://arxiv.org/abs/2311.14897) · [代码](https://github.com/Chopper-233/Anomaly-ShapeNet) · 📚 被引 50
+### Towards Scalable 3D Anomaly Detection and Localization: A Benchmark via 3D Anomaly Synthesis and A Self-Supervised Learning Network. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2311.14897](https://arxiv.org/abs/2311.14897) · 📚 被引 50
 - **作者**: Wenqiao Li, Xiaohao Xu, Yao Gu, Bozhong Zheng, Shenghua Gao, Yingna Wu
 - **🏷️ 机构**: ShanghaiTech University, University of Michigan, Ann Arbor
 - **会议**: CVPR 2024
+- **摘要（中）**: 这篇论文针对3D异常检测中真实异常数据稀缺、限制模型可扩展性的问题。作者提出了一种3D异常合成流程，基于ShapeNet构建了包含40类1600个点云样本的Anomaly-ShapeNet数据集，并设计了一种自监督方法IMRNet，通过几何感知采样模块保留潜在异常区域，并利用掩码重建进行表示学习。相比现有方法，该方法提供了丰富多样的合成数据，增强了模型对工业场景的适应性。实验表明，该方法能有效训练模型并提升3D异常定位性能。
+- **摘要（英）**: This paper addresses the scarcity of real 3D anomaly data that limits model scalability. It proposes a 3D anomaly synthesis pipeline to create Anomaly-ShapeNet with 1600 samples across 40 categories, and a self-supervised IMRNet with geometry-aware sampling and mask reconstruction. This approach provides rich training data and improves adaptability to industrial scenarios, with experiments showing effective anomaly localization.
+- **核心贡献**: 提出了Anomaly-ShapeNet合成数据集和IMRNet自监督网络，用于可扩展的3D异常检测与定位。
+- **创新点**: 利用几何感知采样和掩码重建实现自监督3D异常表示学习。
+- **结果**: 在合成数据集上实现了有效的3D异常检测和定位，增强了模型泛化能力。
 
-- **摘要（英，原文）**:
-
-  > Recently, 3D anomaly detection, a crucial problem involving fine-grained geometry discrimination, is getting more attention. However, the lack of abundant real 3D anomaly data limits the scalability of current models. To enable scalable anomaly data collection, we propose a 3D anomaly synthesis pipeline to adapt existing large-scale 3Dmodels for 3D anomaly detection. Specifically, we construct a synthetic dataset, i.e., Anomaly-ShapeNet, basedon ShapeNet. Anomaly-ShapeNet consists of 1600 point cloud samples under 40 categories, which provides a rich and varied collection of data, enabling efficient training and enhancing adaptability to industrial scenarios. Meanwhile,to enable scalable representation learning for 3D anomaly localization, we propose a self-supervised method, i.e., Iterative Mask Reconstruction Network (IMRNet). During training, we propose a geometry-aware sample module to preserve potentially anomalous local regions during point cloud down-sampling. Then, we randomly mask out point patches and sent the visible patches to a transformer for reconstruction-based self-supervision. During testing, the point cloud repeatedly goes through the Mask Reconstruction Network, with each iteration's output becoming the next input. By merging and contrasting the final reconstructed point cloud with the initial input, our method successfully locates anomalies. Experiments show that IMRNet outperforms previous state-of-the-art methods, achieving 66.1% in I-AUC on Anomaly-ShapeNet dataset and 72.5% in I-AUC on Real3D-AD dataset. Our dataset will be released at https://github.com/Chopper-233/Anomaly-ShapeNet
-
-### SCE-MAE: Selective Correspondence Enhancement with Masked Autoencoder for Self-Supervised Landmark Estimation.
-- **链接**: [arXiv:2405.18322](https://arxiv.org/abs/2405.18322) · 📚 被引 3
-- **作者**: Kejia Yin, Varshanth S. Rao, Ruowei Jiang, Xudong Liu, Parham Aarabi, David B. Lindell
-- **🏷️ 机构**: University of Toronto, ModiFace
-- **会议**: CVPR 2024
-
-- **摘要（英，原文）**:
-
-  > Self-supervised landmark estimation is a challenging task that demands the formation of locally distinct feature representations to identify sparse facial landmarks in the absence of annotated data. To tackle this task, existing state-of-the-art (SOTA) methods (1) extract coarse features from backbones that are trained with instance-level self-supervised learning (SSL) paradigms, which neglect the dense prediction nature of the task, (2) aggregate them into memory-intensive hypercolumn formations, and (3) supervise lightweight projector networks to naively establish full local correspondences among all pairs of spatial features. In this paper, we introduce SCE-MAE, a framework that (1) leverages the MAE, a region-level SSL method that naturally better suits the landmark prediction task, (2) operates on the vanilla feature map instead of on expensive hypercolumns, and (3) employs a Correspondence Approximation and Refinement Block (CARB) that utilizes a simple density peak clustering algorithm and our proposed Locality-Constrained Repellence Loss to directly hone only select local correspondences. We demonstrate through extensive experiments that SCE-MAE is highly effective and robust, outperforming existing SOTA methods by large margins of approximately 20%-44% on the landmark matching and approximately 9%-15% on the landmark detection tasks.
-
-### SPU-PMD: Self-Supervised Point Cloud Upsampling via Progressive Mesh Deformation.
+### SPU-PMD: Self-Supervised Point Cloud Upsampling via Progressive Mesh Deformation. **⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00496) · 📚 被引 16
 - **作者**: Yanzhe Liu, Rong Chen, Yushi Li, Yixi Li, Xuehou Tan
 - **🏷️ 机构**: Dalian Maritime University, Xi&#x0027;an Jiaotong-Liverpool University, Tokai University
 - **会议**: CVPR 2024
+- **摘要（中）**: 该论文摘要为空，无法获取具体内容。根据标题推测，它可能针对点云上采样问题，提出了一种基于渐进网格变形的自监督方法。由于缺乏详细信息，无法评估其方法质量和效果。
+- **摘要（英）**: The abstract is empty, so details are unavailable. Based on the title, it likely addresses point cloud upsampling via a self-supervised progressive mesh deformation approach. Quality and results cannot be assessed due to missing information.
+- **核心贡献**: 未知，因摘要缺失。
+- **创新点**: 未知，因摘要缺失。
+- **结果**: 未知，因摘要缺失。
 
-### Mitigating Object Dependencies: Improving Point Cloud Self-Supervised Learning Through Object Exchange.
+### Mitigating Object Dependencies: Improving Point Cloud Self-Supervised Learning Through Object Exchange. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2404.07504](https://arxiv.org/abs/2404.07504) · 📚 被引 5
 - **作者**: Yanhao Wu, Tong Zhang, Wei Ke, Congpei Qiu, Sabine Süsstrunk, Mathieu Salzmann
 - **🏷️ 机构**: School of Software Engineering, Xi&#x0027;an Jiaotong University,China, School of Computer and Communication Sciences, EPFL,Switzerland
 - **会议**: CVPR 2024
+- **摘要（中）**: 这篇论文针对室内点云场景中物体间强依赖关系导致网络忽略个体模式的问题。作者提出了一种新的自监督学习策略，通过物体交换策略在不同场景间交换相似大小的物体对，以解耦上下文依赖，并引入上下文感知特征学习，聚合跨场景物体特征以编码物体模式。相比现有SSL方法，该方法在特征鲁棒性和环境变化适应性上表现更优。实验表明，该方法在点云场景理解任务上超越了现有技术，并展示了良好的迁移能力。
+- **摘要（英）**: This paper addresses the issue of strong inter-object dependencies in indoor point clouds that cause networks to bypass individual patterns. It proposes an SSL strategy with object exchange to disentangle context and context-aware feature learning to encode object patterns. The method outperforms existing SSL techniques in robustness and transferability, as shown in experiments.
+- **核心贡献**: 提出了基于物体交换和上下文感知特征学习的自监督策略，提升点云特征鲁棒性。
+- **创新点**: 通过物体交换解耦上下文依赖，并聚合跨场景特征学习物体模式。
+- **结果**: 在点云场景理解任务上超越了现有SSL方法，并展现出更强的环境鲁棒性。
 
-- **摘要（英，原文）**:
-
-  > In the realm of point cloud scene understanding, particularly in indoor scenes, objects are arranged following human habits, resulting in objects of certain semantics being closely positioned and displaying notable inter-object correlations. This can create a tendency for neural networks to exploit these strong dependencies, bypassing the individual object patterns. To address this challenge, we introduce a novel self-supervised learning (SSL) strategy. Our approach leverages both object patterns and contextual cues to produce robust features. It begins with the formulation of an object-exchanging strategy, where pairs of objects with comparable sizes are exchanged across different scenes, effectively disentangling the strong contextual dependencies. Subsequently, we introduce a context-aware feature learning strategy, which encodes object patterns without relying on their specific context by aggregating object features across various scenes. Our extensive experiments demonstrate the superiority of our method over existing SSL techniques, further showing its better robustness to environmental changes. Moreover, we showcase the applicability of our approach by transferring pre-trained models to diverse point cloud datasets.
-
-### Self-Supervised Multi-Object Tracking with Path Consistency.
+### Self-Supervised Multi-Object Tracking with Path Consistency. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2404.05136](https://arxiv.org/abs/2404.05136) · 📚 被引 15
 - **作者**: Zijia Lu, Bing Shuai, Yanbei Chen, Zhenlin Xu, Davide Modolo
 - **🏷️ 机构**: AWS AI Labs
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对无监督多目标跟踪中缺乏身份监督导致目标匹配学习困难的问题，提出了路径一致性概念，通过让模型在不同帧跳过组合下生成多个关联结果，并强制这些结果一致来训练匹配模型。设计了路径一致性损失，仅用自监督信号训练，无需人工身份标注。在MOT17、PersonPath22和KITTI三个数据集上，该方法显著优于现有无监督方法，并接近监督方法的性能。
+- **摘要（英）**: To learn robust object matching without identity supervision, this paper introduces path consistency, enforcing consistent association results across different frame-skipping observation paths. A path consistency loss trains the matching model purely self-supervised, outperforming existing unsupervised methods on MOT17, PersonPath22, and KITTI, approaching supervised performance.
+- **核心贡献**: 提出路径一致性损失，实现无需身份标注的自监督多目标跟踪训练。
+- **创新点**: 通过帧跳过生成多观测路径并强制关联一致性，创新性地利用观测不变性。
+- **结果**: 在三个跟踪数据集上超越现有无监督方法，接近监督方法性能。
 
-- **摘要（英，原文）**:
-
-  > In this paper, we propose a novel concept of path consistency to learn robust object matching without using manual object identity supervision. Our key idea is that, to track a object through frames, we can obtain multiple different association results from a model by varying the frames it can observe, i.e., skipping frames in observation. As the differences in observations do not alter the identities of objects, the obtained association results should be consistent. Based on this rationale, we generate multiple observation paths, each specifying a different set of frames to be skipped, and formulate the Path Consistency Loss that enforces the association results are consistent across different observation paths. We use the proposed loss to train our object matching model with only self-supervision. By extensive experiments on three tracking datasets (MOT17, PersonPath22, KITTI), we demonstrate that our method outperforms existing unsupervised methods with consistent margins on various evaluation metrics, and even achieves performance close to supervised methods.
-
-### RegionPLC: Regional Point-Language Contrastive Learning for Open-World 3D Scene Understanding.
-- **链接**: [arXiv:2304.00962](https://arxiv.org/abs/2304.00962) · [代码](https://github.com/CVMI-Lab/PLA) · 📚 被引 64
-- **作者**: Jihan Yang, Runyu Ding, Weipeng Deng, Zhe Wang, Xiaojuan Qi
-- **🏷️ 机构**: The University of Hong Kong, SenseTime Research
+### Iterated Learning Improves Compositionality in Large Vision-Language Models. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2404.02145](https://arxiv.org/abs/2404.02145) · 📚 被引 3
+- **作者**: Chenhao Zheng, Jieyu Zhang, Aniruddha Kembhavi, Ranjay Krishna
+- **🏷️ 机构**: University of Michigan, University of Washington, Allen Institute for Artificial Intelligence
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对大型视觉-语言模型在组合性理解上的不足，即难以区分细微差异的图像描述，提出了一种基于迭代学习的训练算法。该方法借鉴认知科学中的文化传播理论，将视觉-语言对比学习重构为Lewis信号博弈，并通过迭代重置一个智能体的权重来模拟文化传承，从而激励组合性语言的发展。相比仅增加模型规模或数据量，该方法在组合性任务上显著提升性能，但摘要未提供具体数值。
+- **摘要（英）**: To address the compositional understanding deficiency in large vision-language models, we propose an iterated learning algorithm inspired by cultural transmission, reframing contrastive learning as a Lewis Signaling Game and iteratively resetting one agent's weights. This incentivizes the development of compositional representations, outperforming scale-based approaches, though specific metrics are not provided in the abstract.
+- **核心贡献**: 提出迭代学习算法，通过文化传播机制提升VLM的组合性理解。
+- **创新点**: 将对比学习重构为信号博弈，并引入迭代重置模拟文化传承。
+- **结果**: 在组合性任务上显著提升，但具体数据未给出。
 
-- **摘要（英，原文）**:
-
-  > We propose a lightweight and scalable Regional Point-Language Contrastive learning framework, namely \textbf{RegionPLC}, for open-world 3D scene understanding, aiming to identify and recognize open-set objects and categories. Specifically, based on our empirical studies, we introduce a 3D-aware SFusion strategy that fuses 3D vision-language pairs derived from multiple 2D foundation models, yielding high-quality, dense region-level language descriptions without human 3D annotations. Subsequently, we devise a region-aware point-discriminative contrastive learning objective to enable robust and effective 3D learning from dense regional language supervision. We carry out extensive experiments on ScanNet, ScanNet200, and nuScenes datasets, and our model outperforms prior 3D open-world scene understanding approaches by an average of 17.2\% and 9.1\% for semantic and instance segmentation, respectively, while maintaining greater scalability and lower resource demands. Furthermore, our method has the flexibility to be effortlessly integrated with language models to enable open-ended grounded 3D reasoning without extra task-specific training. Code is available at https://github.com/CVMI-Lab/PLA.
-
-### Systematic comparison of semi-supervised and self-supervised learning for medical image classification.
+### Systematic comparison of semi-supervised and self-supervised learning for medical image classification. **⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02103) · 📚 被引 19
 - **作者**: Zhe Huang, Ruijie Jiang, Shuchin Aeron, Michael C. Hughes
 - **🏷️ 机构**: Tufts University, School of Engineering
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对医学图像分类中半监督和自监督学习方法的系统比较缺失问题。②对多种半监督和自监督方法在医学图像分类任务上进行了全面实验对比。③相比已有零散研究，提供了统一的评估框架和公平的比较基准。④实验揭示了不同方法在不同医学数据集上的性能差异，为实际应用提供了选择指导。
+- **摘要（英）**: This paper provides a systematic comparison of semi-supervised and self-supervised learning methods for medical image classification. It evaluates multiple approaches under a unified framework, revealing performance variations across datasets. The study offers practical guidance for method selection in medical imaging.
+- **核心贡献**: 提供医学图像分类中半监督与自监督方法的系统比较基准。
+- **创新点**: 统一评估框架下的多方法对比分析。
+- **结果**: 揭示了不同方法在医学数据集上的性能差异，提供选择建议。
 
 ### What, When, and Where? Self-Supervised Spatio- Temporal Grounding in Untrimmed Multi-Action Videos from Narrated Instructions.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01743) · 📚 被引 4
@@ -143,12 +147,6 @@
 - **🏷️ 机构**: University of Science and Technology of China
 - **会议**: CVPR 2024
 
-### Separating the "Chirp" from the "Chat": Self-supervised Visual Grounding of Sound and Language.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01246)
-- **作者**: Mark Hamilton, Andrew Zisserman, John R. Hershey, William T. Freeman
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2024
-
 ### An Asymmetric Augmented Self-Supervised Learning Method for Unsupervised Fine-Grained Image Hashing.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01671) · 📚 被引 15
 - **作者**: Feiran Hu, Chen-Lin Zhang, Jiangliang Guo, Xiu-Shen Wei, Lin Zhao, Anqi Xu et al.
@@ -188,7 +186,7 @@
   > In this work we focus on learning facial representations that can be adapted to train effective face recognition models, particularly in the absence of labels. Firstly, compared with existing labelled face datasets, a vastly larger magnitude of unlabeled faces exists in the real world. We explore the learning strategy of these unlabeled facial images through self-supervised pretraining to transfer generalized face recognition performance. Moreover, motivated by one recent finding, that is, the face saliency area is critical for face recognition, in contrast to utilizing random cropped blocks of images for constructing augmentations in pretraining, we utilize patches localized by extracted facial landmarks. This enables our method - namely LAndmark-based Facial Self-supervised learning LAFS), to learn key representation that is more critical for face recognition. We also incorporate two landmark-specific augmentations which introduce more diversity of landmark information to further regularize the learning. With learned landmark-based facial representations, we further adapt the representation for face recognition with regularization mitigating variations in landmark positions. Our method achieves significant improvement over the state-of-the-art on multiple face recognition benchmarks, especially on more challenging few-shot scenarios.
 
 ### Self-Supervised Dual Contouring.
-- **链接**: [arXiv:2405.18131](https://arxiv.org/abs/2405.18131) · [代码](https://github.com/Sentient07/SDC)
+- **链接**: [arXiv:2405.18131](https://arxiv.org/abs/2405.18131)
 - **作者**: Ramana Sundararaman, Roman Klokov, Maks Ovsjanikov
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
@@ -287,26 +285,6 @@
 - **🏷️ 机构**: Institute of Information Science, Academia Sinica,Taiwan
 - **会议**: CVPR 2024
 
-### Enhancing Visual Document Understanding with Contrastive Learning in Large Visual-Language Models.
-- **链接**: [arXiv:2402.19014](https://arxiv.org/abs/2402.19014) · 📚 被引 28
-- **作者**: Xin Li, Yunfei Wu, Xinghua Jiang, Zhihao Guo, Mingming Gong, Haoyu Cao et al.
-- **🏷️ 机构**: Tencent YouTu Lab
-- **会议**: CVPR 2024
-
-- **摘要（英，原文）**:
-
-  > Recently, the advent of Large Visual-Language Models (LVLMs) has received increasing attention across various domains, particularly in the field of visual document understanding (VDU). Different from conventional vision-language tasks, VDU is specifically concerned with text-rich scenarios containing abundant document elements. Nevertheless, the importance of fine-grained features remains largely unexplored within the community of LVLMs, leading to suboptimal performance in text-rich scenarios. In this paper, we abbreviate it as the fine-grained feature collapse issue. With the aim of filling this gap, we propose a contrastive learning framework, termed Document Object COntrastive learning (DoCo), specifically tailored for the downstream tasks of VDU. DoCo leverages an auxiliary multimodal encoder to obtain the features of document objects and align them to the visual features generated by the vision encoder of LVLM, which enhances visual representation in text-rich scenarios. It can represent that the contrastive learning between the visual holistic representations and the multimodal fine-grained features of document objects can assist the vision encoder in acquiring more effective visual cues, thereby enhancing the comprehension of text-rich documents in LVLMs. We also demonstrate that the proposed DoCo serves as a plug-and-play pre-training method, which can be employed in the pre-training of various LVLMs without inducing any increase in computational complexity during the inference process. Extensive experimental results on multiple benchmarks of VDU reveal that LVLMs equipped with our proposed DoCo can achieve superior performance and mitigate the gap between VDU and generic vision-language tasks.
-
-### MLIP: Enhancing Medical Visual Representation with Divergence Encoder and Knowledge-guided Contrastive Learning.
-- **链接**: [arXiv:2402.02045](https://arxiv.org/abs/2402.02045) · 📚 被引 31
-- **作者**: Zhe Li, Laurence T. Yang, Bocheng Ren, Xin Nie, Zhangyang Gao, Cheng Tan et al.
-- **🏷️ 机构**: Huazhong University of Science and Technology, AI Lab, Research Center for Industries of the Future, Westlake University
-- **会议**: CVPR 2024
-
-- **摘要（英，原文）**:
-
-  > The scarcity of annotated data has sparked significant interest in unsupervised pre-training methods that leverage medical reports as auxiliary signals for medical visual representation learning. However, existing research overlooks the multi-granularity nature of medical visual representation and lacks suitable contrastive learning techniques to improve the models' generalizability across different granularities, leading to the underutilization of image-text information. To address this, we propose MLIP, a novel framework leveraging domain-specific medical knowledge as guiding signals to integrate language information into the visual domain through image-text contrastive learning. Our model includes global contrastive learning with our designed divergence encoder, local token-knowledge-patch alignment contrastive learning, and knowledge-guided category-level contrastive learning with expert knowledge. Experimental evaluations reveal the efficacy of our model in enhancing transfer performance for tasks such as image classification, object detection, and semantic segmentation. Notably, MLIP surpasses state-of-the-art methods even with limited annotated data, highlighting the potential of multimodal pre-training in advancing medical representation learning.
-
 ### Universal Novelty Detection Through Adaptive Contrastive Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02162) · 📚 被引 10
 - **作者**: Hossein Mirzaei, Mojtaba Nafez, Mohammad Jafari, Mohammad Bagher Soltani, Mohammad Azizmalayeri, Jafar Habibi et al.
@@ -331,16 +309,6 @@
 - **🏷️ 机构**: Hong Kong University of Science and Technology
 - **会议**: CVPR 2024
 
-### OmniSeg3D: Omniversal 3D Segmentation via Hierarchical Contrastive Learning.
-- **链接**: [arXiv:2311.11666](https://arxiv.org/abs/2311.11666) · 📚 被引 52
-- **作者**: Haiyang Ying, Yixuan Yin, Jinzhi Zhang, Fan Wang, Tao Yu, Ruqi Huang et al.
-- **🏷️ 机构**: Tsinghua University, Alibaba Group
-- **会议**: CVPR 2024
-
-- **摘要（英，原文）**:
-
-  > Towards holistic understanding of 3D scenes, a general 3D segmentation method is needed that can segment diverse objects without restrictions on object quantity or categories, while also reflecting the inherent hierarchical structure. To achieve this, we propose OmniSeg3D, an omniversal segmentation method aims for segmenting anything in 3D all at once. The key insight is to lift multi-view inconsistent 2D segmentations into a consistent 3D feature field through a hierarchical contrastive learning framework, which is accomplished by two steps. Firstly, we design a novel hierarchical representation based on category-agnostic 2D segmentations to model the multi-level relationship among pixels. Secondly, image features rendered from the 3D feature field are clustered at different levels, which can be further drawn closer or pushed apart according to the hierarchical relationship between different levels. In tackling the challenges posed by inconsistent 2D segmentations, this framework yields a global consistent 3D feature field, which further enables hierarchical segmentation, multi-object selection, and global discretization. Extensive experiments demonstrate the effectiveness of our method on high-quality 3D segmentation and accurate hierarchical structure understanding. A graphical user interface further facilitates flexible interaction for omniversal 3D segmentation.
-
 ### Data Poisoning Based Backdoor Attacks to Contrastive Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02299) · 📚 被引 18
 - **作者**: Jinghuai Zhang, Hongbin Liu, Jinyuan Jia, Neil Zhenqiang Gong
@@ -359,28 +327,33 @@
 - **🏷️ 机构**: School of Artificial Intelligence, Hebei University of Technology,Tianjin,China, School of Computer Science and Engineering, Beihang University,Beijing,China, Institute of Information Engineering Chinese Academy of Sciences,Beijing,China
 - **会议**: CVPR 2024
 
-### EfficientSAM: Leveraged Masked Image Pretraining for Efficient Segment Anything.
-- **链接**: [arXiv:2312.00863](https://arxiv.org/abs/2312.00863) · 📚 被引 227
-- **作者**: Yunyang Xiong, Bala Varadarajan, Lemeng Wu, Xiaoyu Xiang, Fanyi Xiao, Chenchen Zhu et al.
-- **🏷️ 机构**: Meta AI Research
-- **会议**: CVPR 2024
-
-- **摘要（英，原文）**:
-
-  > Segment Anything Model (SAM) has emerged as a powerful tool for numerous vision applications. A key component that drives the impressive performance for zero-shot transfer and high versatility is a super large Transformer model trained on the extensive high-quality SA-1B dataset. While beneficial, the huge computation cost of SAM model has limited its applications to wider real-world applications. To address this limitation, we propose EfficientSAMs, light-weight SAM models that exhibits decent performance with largely reduced complexity. Our idea is based on leveraging masked image pretraining, SAMI, which learns to reconstruct features from SAM image encoder for effective visual representation learning. Further, we take SAMI-pretrained light-weight image encoders and mask decoder to build EfficientSAMs, and finetune the models on SA-1B for segment anything task. We perform evaluations on multiple vision tasks including image classification, object detection, instance segmentation, and semantic object detection, and find that our proposed pretraining method, SAMI, consistently outperforms other masked image pretraining methods. On segment anything task such as zero-shot instance segmentation, our EfficientSAMs with SAMI-pretrained lightweight image encoders perform favorably with a significant gain (e.g., ~4 AP on COCO/LVIS) over other fast SAM models.
-
 ## 跨领域论文（完整笔记在其他领域）
 
+- CLIP-BEVFormer: Enhancing Multi-View Image-Based BEV Detector with Ground Truth Flow. → [3d-detection](../3d-detection/Guideline%202024.md)
 - VideoGrounding-DINO: Towards Open-Vocabulary Spatio- Temporal Video Grounding. → [open-set-detection](../open-set-detection/Guideline%202024.md)
-- SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction. → [occupancy](../occupancy/Guideline%202024.md)
+- SCE-MAE: Selective Correspondence Enhancement with Masked Autoencoder for Self-Supervised Landmark Estimation. → [object-detection](../object-detection/Guideline%202024.md)
+- PointOBB: Learning Oriented Object Detection via Single Point Supervision. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
+- DETRs Beat YOLOs on Real-time Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction. → [3d-detection](../3d-detection/Guideline%202024.md)
 - SelfPose3d: Self-Supervised Multi-Person Multi-View 3d Pose Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - Investigating and Mitigating the Side Effects of Noisy Views for Self-Supervised Clustering Algorithms in Practical Multi-View Scenarios. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - From-Ground-To-Objects: Coarse-to-Fine Self-supervised Monocular Depth Estimation of Dynamic Objects with Ground Contact Prior. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - Mining Supervision for Dynamic Regions in Self-Supervised Monocular Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - CLIP-Driven Open-Vocabulary 3D Scene Graph Generation via Cross-Modality Contrastive Learning. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+- RegionPLC: Regional Point-Language Contrastive Learning for Open-World 3D Scene Understanding. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
 - Bootstrapping Autonomous Driving Radars with Self-Supervised Learning. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- UniPAD: A Universal Pre-Training Paradigm for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202024.md)
+- SyncMask: Synchronized Attentional Masking for Fashion-centric Vision-Language Pretraining. → [multimodal](../multimodal/Guideline%202024.md)
 - Hallucination Augmented Contrastive Learning for Multimodal Large Language Model. → [multimodal](../multimodal/Guideline%202024.md)
 - BadCLIP: Dual-Embedding Guided Backdoor Attack on Multimodal Contrastive Learning. → [multimodal](../multimodal/Guideline%202024.md)
-- Self-Supervised Class-Agnostic Motion Prediction with Spatial and Temporal Consistency Regularizations. → [open-set-detection](../open-set-detection/Guideline%202024.md)
-- Continual Self-Supervised Learning: Towards Universal Multi-Modal Medical Data Representation Learning. → [multimodal](../multimodal/Guideline%202024.md)
+- Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal LLMs. → [multimodal](../multimodal/Guideline%202024.md)
+- Polos: Multimodal Metric Learning from Human Feedback for Image Captioning. → [multimodal](../multimodal/Guideline%202024.md)
+- Separating the "Chirp" from the "Chat": Self-supervised Visual Grounding of Sound and Language. → [multimodal](../multimodal/Guideline%202024.md)
+- Self-Supervised Class-Agnostic Motion Prediction with Spatial and Temporal Consistency Regularizations. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- Continual Self-Supervised Learning: Towards Universal Multi-Modal Medical Data Representation Learning. → [continual-learning](../continual-learning/Guideline%202024.md)
 - ES3: Evolving Self-Supervised Learning of Robust Audio-Visual Speech Representations. → [multimodal](../multimodal/Guideline%202024.md)
+- Enhancing Visual Document Understanding with Contrastive Learning in Large Visual-Language Models. → [multimodal](../multimodal/Guideline%202024.md)
+- MLIP: Enhancing Medical Visual Representation with Divergence Encoder and Knowledge-guided Contrastive Learning. → [multimodal](../multimodal/Guideline%202024.md)
+- OmniSeg3D: Omniversal 3D Segmentation via Hierarchical Contrastive Learning. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
+- EfficientSAM: Leveraged Masked Image Pretraining for Efficient Segment Anything. → [object-detection](../object-detection/Guideline%202024.md)
+- Adaptive VIO: Deep Visual-Inertial Odometry with Online Continual Learning. → [continual-learning](../continual-learning/Guideline%202024.md)

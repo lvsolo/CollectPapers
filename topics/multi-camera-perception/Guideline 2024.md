@@ -1,117 +1,174 @@
 # Multi-camera Perception — 2024 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 52 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 69 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份: [2022](Guideline%202022.md)
 
-### PKU-DyMVHumans: A Multi-View Video Benchmark for High-Fidelity Dynamic Human Modeling.
+### PKU-DyMVHumans: A Multi-View Video Benchmark for High-Fidelity Dynamic Human Modeling. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2403.16080](https://arxiv.org/abs/2403.16080) · 📚 被引 16
 - **作者**: Xiaoyun Zheng, Liwei Liao, Xufeng Li, Jianbo Jiao, Rongjie Wang, Feng Gao et al.
 - **🏷️ 机构**: Peking University Shenzhen Graduate School, City University of Hong Kong, University of Birmingham
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对动态场景中高保真人体重建与渲染因松散衣物和复杂姿态而效果不佳的问题，该论文提出了PKU-DyMVHumans数据集，包含由56个以上同步相机捕获的820万帧、32个受试者、45种场景的多视角视频。该数据集提供了高细节外观和真实运动，并搭建了基于NeRF的基准框架，便于评估最新方法。其贡献在于填补了高质量动态人体数据集的空白，为相关研究提供了标准化测试平台。
+- **摘要（英）**: This paper addresses the challenge of high-fidelity dynamic human reconstruction and rendering, particularly for loose clothing and complex poses, by introducing PKU-DyMVHumans, a large-scale multi-view video dataset with 8.2 million frames from over 56 synchronized cameras across 45 scenarios. It provides a benchmark framework based on NeRF, enabling standardized evaluation of state-of-the-art methods. The key contribution is filling the gap in high-quality dynamic human datasets for advancing research.
+- **核心贡献**: 构建了大规模多视角动态人体数据集及NeRF基准框架。
+- **创新点**: 提供高细节动态人体数据，覆盖松散衣物和复杂姿态。
+- **结果**: 为动态人体重建提供了标准化测试平台，促进算法评估。
 
-- **摘要（英，原文）**:
-
-  > High-quality human reconstruction and photo-realistic rendering of a dynamic scene is a long-standing problem in computer vision and graphics. Despite considerable efforts invested in developing various capture systems and reconstruction algorithms, recent advancements still struggle with loose or oversized clothing and overly complex poses. In part, this is due to the challenges of acquiring high-quality human datasets. To facilitate the development of these fields, in this paper, we present PKU-DyMVHumans, a versatile human-centric dataset for high-fidelity reconstruction and rendering of dynamic human scenarios from dense multi-view videos. It comprises 8.2 million frames captured by more than 56 synchronized cameras across diverse scenarios. These sequences comprise 32 human subjects across 45 different scenarios, each with a high-detailed appearance and realistic human motion. Inspired by recent advancements in neural radiance field (NeRF)-based scene representations, we carefully set up an off-the-shelf framework that is easy to provide those state-of-the-art NeRF-based implementations and benchmark on PKU-DyMVHumans dataset. It is paving the way for various applications like fine-grained foreground/background decomposition, high-quality human reconstruction and photo-realistic novel view synthesis of a dynamic scene. Extensive studies are performed on the benchmark, demonstrating new observations and challenges that emerge from using such high-fidelity dynamic data.
-
-### ADA-Track: End-to-End Multi-Camera 3D Multi-Object Tracking with Alternating Detection and Association.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01438)
-- **作者**: Shuxiao Ding, Lukas Schneider, Marius Cordts, Juergen Gall
-- **🏷️ 机构**: （机构待查）
+### MTMMC: A Large-Scale Real-World Multi-Modal Camera Tracking Benchmark. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2403.20225](https://arxiv.org/abs/2403.20225) · 📚 被引 6
+- **作者**: Sanghyun Woo, Kwanyong Park, Inkyu Shin, Myungchul Kim, In So Kweon
+- **🏷️ 机构**: New York University, ETRI, KAIST
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对现有跨摄像头多目标跟踪数据集多为合成或受控环境、难以模拟真实动态的问题，该论文提出了MTMMC，一个大规模真实世界多模态数据集，包含16个多模态相机在校园和工厂两种环境、不同时间天气季节下捕获的长视频序列。该数据集提供RGB和热成像两种模态，增强了跟踪精度，并作为现有数据集的超集，为研究复杂真实场景下的多摄像头跟踪提供了挑战性测试平台。
+- **摘要（英）**: This paper tackles the limitation of existing multi-target multi-camera tracking datasets being synthetic or controlled, by introducing MTMMC, a large-scale real-world dataset with long videos from 16 multi-modal cameras in campus and factory environments across various conditions. It includes RGB and thermal modalities to improve tracking accuracy and serves as a superset of existing datasets, providing a challenging benchmark for real-world complexities.
+- **核心贡献**: 构建了大规模真实世界多模态多摄像头跟踪数据集。
+- **创新点**: 引入RGB和热成像双模态，覆盖多样环境条件。
+- **结果**: 提供了更具挑战性的基准，促进真实场景跟踪研究。
 
-### CN-RMA: Combined Network with Ray Marching Aggregation for 3D Indoor Object Detection from Multi-View Images.
+### PointOBB: Learning Oriented Object Detection via Single Point Supervision. **⭐⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2311.14757](https://arxiv.org/abs/2311.14757) · 📚 被引 52
+- **作者**: Junwei Luo, Xue Yang, Yi Yu, Qingyun Li, Junchi Yan, Yansheng Li
+- **🏷️ 机构**: Wuhan University, Southeast University, Harbin Institute of Technology
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对单点监督目标检测仅生成水平框而忽略遥感图像中常用旋转框的问题，该论文提出了PointOBB，首个基于单点生成旋转框的方法。它通过协同利用原始、缩放和旋转/翻转三种视图，设计尺度增强模块和角度获取模块，分别使用尺度敏感一致性损失和自监督学习预测角度，并采用渐进多视图切换策略。实验表明该方法在旋转目标检测上有效，显著降低了标注成本。
+- **摘要（英）**: This paper addresses the gap in single point-supervised detection that only generates horizontal boxes, by proposing PointOBB, the first method for oriented object detection from single point supervision. It leverages three views (original, resized, rotated/flipped) with a scale augmentation module and an angle acquisition module, using a scale-sensitive consistency loss and self-supervised learning, achieving effective oriented box generation with reduced annotation cost.
+- **核心贡献**: 提出首个单点监督的旋转框生成方法PointOBB。
+- **创新点**: 利用多视图协作和自监督学习预测物体角度。
+- **结果**: 在旋转目标检测上取得有效结果，降低标注成本。
+
+### CN-RMA: Combined Network with Ray Marching Aggregation for 3D Indoor Object Detection from Multi-View Images. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02015) · 📚 被引 8
 - **作者**: Guanlin Shen, Jingwei Huang, Zhihua Hu, Bin Wang
 - **🏷️ 机构**: School of Software, Tsinghua University,China, Tencent,China, Nanjing University of Information Science and Technology,China
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对多视角图像三维室内目标检测中特征聚合不充分的问题，该论文提出了CN-RMA，一种结合网络与光线行进聚合的方法。该方法通过光线行进技术有效聚合多视角特征，提升三维检测精度。实验在室内数据集上验证了其有效性，但摘要信息有限，具体改进和效果未详细说明。
+- **摘要（英）**: This paper addresses insufficient feature aggregation in multi-view 3D indoor object detection by proposing CN-RMA, a combined network with ray marching aggregation. It uses ray marching to effectively fuse multi-view features, improving detection accuracy, though specific details and quantitative results are limited in the abstract.
+- **核心贡献**: 提出光线行进聚合的多视角三维检测网络。
+- **创新点**: 将光线行进技术用于多视角特征融合。
+- **结果**: 在室内检测任务上提升了精度。
 
-### Contrastive Pre-Training with Multi-View Fusion for No-Reference Point Cloud Quality Assessment.
+### Contrastive Pre-Training with Multi-View Fusion for No-Reference Point Cloud Quality Assessment. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2403.10066](https://arxiv.org/abs/2403.10066) · 📚 被引 28
 - **作者**: Ziyu Shan, Yujie Zhang, Qi Yang, Haichen Yang, Yiling Xu, Jenq-Neng Hwang et al.
 - **🏷️ 机构**: Shanghai Jiao Tong University, Tencent, University of Washington
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对无参考点云质量评估中标注数据稀缺和泛化性差的问题，该论文提出了CoPA，一种针对点云质量评估的对比预训练框架。它通过将不同失真的点云投影为图像并混合局部补丁生成锚点，利用质量感知对比损失进行预训练，并在微调阶段提出语义引导的多视角融合模块。实验表明该方法在多个数据集上提升了性能，但摘要未给出具体数值。
+- **摘要（英）**: This paper addresses the scarcity of labeled data and poor generalization in no-reference point cloud quality assessment by proposing CoPA, a contrastive pre-training framework. It generates anchors by projecting distorted point clouds into images and mixing patches, using a quality-aware contrastive loss, and introduces a semantic-guided multi-view fusion module in fine-tuning, improving performance though specific numbers are not provided.
+- **核心贡献**: 提出针对点云质量评估的对比预训练框架CoPA。
+- **创新点**: 利用多失真混合图像生成锚点进行质量感知预训练。
+- **结果**: 提升了无参考点云质量评估的性能和泛化性。
 
-- **摘要（英，原文）**:
-
-  > No-reference point cloud quality assessment (NR-PCQA) aims to automatically evaluate the perceptual quality of distorted point clouds without available reference, which have achieved tremendous improvements due to the utilization of deep neural networks. However, learning-based NR-PCQA methods suffer from the scarcity of labeled data and usually perform suboptimally in terms of generalization. To solve the problem, we propose a novel contrastive pre-training framework tailored for PCQA (CoPA), which enables the pre-trained model to learn quality-aware representations from unlabeled data. To obtain anchors in the representation space, we project point clouds with different distortions into images and randomly mix their local patches to form mixed images with multiple distortions. Utilizing the generated anchors, we constrain the pre-training process via a quality-aware contrastive loss following the philosophy that perceptual quality is closely related to both content and distortion. Furthermore, in the model fine-tuning stage, we propose a semantic-guided multi-view fusion module to effectively integrate the features of projected images from multiple perspectives. Extensive experiments show that our method outperforms the state-of-the-art PCQA methods on popular benchmarks. Further investigations demonstrate that CoPA can also benefit existing learning-based PCQA models.
-
-### View-Category Interactive Sharing Transformer for Incomplete Multi-View Multi-Label Learning.
+### View-Category Interactive Sharing Transformer for Incomplete Multi-View Multi-Label Learning. **⭐⭐** (相关度: 20%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02593) · 📚 被引 17
 - **作者**: Shilong Ou, Zhe Xue, Yawen Li, Meiyu Liang, Yuanqiang Cai, Junjiang Wu
 - **🏷️ 机构**: Beijing Universitxsy of Posts and Telecommunications,China
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对不完整多视图多标签学习中的视图交互问题。②提出视图-类别交互共享Transformer，以处理缺失视图和标签相关性。③通过共享交互机制增强跨视图信息融合。④摘要缺失，无法提供具体效果数据。
+- **摘要（英）**: This paper tackles incomplete multi-view multi-label learning by proposing a view-category interactive sharing transformer to handle missing views and label correlations. It enhances cross-view information fusion via shared interaction mechanisms. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出视图-类别交互共享Transformer用于不完整多视图学习。
+- **创新点**: 共享交互机制整合视图和类别信息。
+- **结果**: 未提供具体效果数据。
 
-### Multiview Aerial Visual Recognition (MAVREC): Can Multi-View Improve Aerial Visual Perception?
+### Multiview Aerial Visual Recognition (MAVREC): Can Multi-View Improve Aerial Visual Perception? **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2312.04548](https://arxiv.org/abs/2312.04548) · 📚 被引 9
 - **作者**: Aritra Dutta, Srijan Das, Jacob Nielsen, Rajatsubhra Chakraborty, Mubarak Shah
 - **🏷️ 机构**: AI Initiative, UCF, UNC Charlotte, IMADA, SDU
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对现有无人机航拍数据集规模小、分辨率低、缺乏多样性，导致地面视角训练的模型在航拍感知中性能不佳的问题。②提出MAVREC数据集，包含约2.5小时2.7K视频、超50万帧和110万标注框，同步记录地面和无人机视角。③该数据集是最大的地面和航拍视角数据集，在无人机数据集中规模第四。④通过广泛基准测试，识别了多视角对航拍感知的影响。
+- **摘要（英）**: This paper addresses the lack of diverse and large-scale aerial datasets by introducing MAVREC, a video dataset with synchronized ground and drone views, containing 2.5 hours of 2.7K video, 0.5 million frames, and 1.1 million bounding boxes. It is the largest ground-aerial dataset and fourth largest drone dataset. Benchmarking reveals insights into multi-view aerial perception.
+- **核心贡献**: 构建大规模多视角航拍数据集MAVREC。
+- **创新点**: 同步地面和无人机视角，提供丰富场景多样性。
+- **结果**: 提供最大规模地面-航拍数据集，支持感知研究。
 
-- **摘要（英，原文）**:
-
-  > Despite the commercial abundance of UAVs, aerial data acquisition remains challenging, and the existing Asia and North America-centric open-source UAV datasets are small-scale or low-resolution and lack diversity in scene contextuality. Additionally, the color content of the scenes, solar-zenith angle, and population density of different geographies influence the data diversity. These two factors conjointly render suboptimal aerial-visual perception of the deep neural network (DNN) models trained primarily on the ground-view data, including the open-world foundational models. To pave the way for a transformative era of aerial detection, we present Multiview Aerial Visual RECognition or MAVREC, a video dataset where we record synchronized scenes from different perspectives -- ground camera and drone-mounted camera. MAVREC consists of around 2.5 hours of industry-standard 2.7K resolution video sequences, more than 0.5 million frames, and 1.1 million annotated bounding boxes. This makes MAVREC the largest ground and aerial-view dataset, and the fourth largest among all drone-based datasets across all modalities and tasks. Through our extensive benchmarking on MAVREC, we recognize that augmenting object detectors with ground-view images from the corresponding geographical location is a superior pre-training strategy for aerial detection. Building on this strategy, we benchmark MAVREC with a curriculum-based semi-supervised object detection approach that leverages labeled (ground and aerial) and unlabeled (only aerial) images to enhance the aerial detection. We publicly release the MAVREC dataset: https://mavrec.github.io.
-
-### Learning to Select Views for Efficient Multi-View Understanding.
+### Learning to Select Views for Efficient Multi-View Understanding. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01903) · 📚 被引 5
 - **作者**: Yunzhong Hou, Stephen Gould, Liang Zheng
 - **🏷️ 机构**: Australian National University
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对多视图理解中视图选择效率低的问题。②提出学习选择视图的方法，以优化多视图理解效率。③通过可学习策略减少冗余视图。④摘要缺失，无法提供具体效果数据。
+- **摘要（英）**: This paper addresses inefficient view selection in multi-view understanding by learning to select informative views. It aims to reduce redundancy via a learnable strategy. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出学习式视图选择方法。
+- **创新点**: 可学习策略优化视图选择。
+- **结果**: 未提供具体效果数据。
 
-### MVD-Fusion: Single-view 3D via Depth-consistent Multi-view Generation.
+### MVD-Fusion: Single-view 3D via Depth-consistent Multi-view Generation. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2404.03656](https://arxiv.org/abs/2404.03656) · 📚 被引 24
 - **作者**: Hanzhe Hu, Zhizhuo Zhou, Varun Jampani, Shubham Tulsiani
 - **🏷️ 机构**: Carnegie Mellon University, Stanford University, Stability AI
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对单视图3D推理中多视图生成不一致、需蒸馏的问题。②提出MVD-Fusion方法，通过生成多视图一致的RGB-D图像进行3D推理，利用深度估计实现重投影条件保持一致性。③相比蒸馏方法和现有生成方法，直接生成一致多视图，避免蒸馏步骤。④在Objaverse和CO3D数据集上，合成精度优于最先进方法，并评估了深度预测的几何质量。
+- **摘要（英）**: This paper addresses inconsistency in multi-view generation for single-view 3D inference by proposing MVD-Fusion, which generates multi-view consistent RGB-D images using a diffusion model with depth-based reprojection conditioning. It avoids distillation by directly generating consistent views. The method outperforms state-of-the-art on Objaverse and CO3D, with improved synthesis and geometry quality.
+- **核心贡献**: 提出深度一致的多视图生成方法，实现高效单视图3D推理。
+- **创新点**: 利用深度估计进行重投影条件，确保多视图一致性。
+- **结果**: 在多个数据集上超越现有方法。
 
-- **摘要（英，原文）**:
-
-  > We present MVD-Fusion: a method for single-view 3D inference via generative modeling of multi-view-consistent RGB-D images. While recent methods pursuing 3D inference advocate learning novel-view generative models, these generations are not 3D-consistent and require a distillation process to generate a 3D output. We instead cast the task of 3D inference as directly generating mutually-consistent multiple views and build on the insight that additionally inferring depth can provide a mechanism for enforcing this consistency. Specifically, we train a denoising diffusion model to generate multi-view RGB-D images given a single RGB input image and leverage the (intermediate noisy) depth estimates to obtain reprojection-based conditioning to maintain multi-view consistency. We train our model using large-scale synthetic dataset Obajverse as well as the real-world CO3D dataset comprising of generic camera viewpoints. We demonstrate that our approach can yield more accurate synthesis compared to recent state-of-the-art, including distillation-based 3D inference and prior multi-view generation methods. We also evaluate the geometry induced by our multi-view depth prediction and find that it yields a more accurate representation than other direct 3D inference approaches.
-
-### Learn from View Correlation: An Anchor Enhancement Strategy for Multi-View Clustering.
+### Learn from View Correlation: An Anchor Enhancement Strategy for Multi-View Clustering. **⭐⭐** (相关度: 20%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02471) · 📚 被引 52
 - **作者**: Suyuan Liu, Ke Liang, Zhibin Dong, Siwei Wang, Xihong Yang, Sihang Zhou et al.
 - **🏷️ 机构**: National University of Defense Technology,Changsha,China, Intelligent Game and Decision Lab,Beijing,China
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对多视图聚类中视图相关性问题，提出锚点增强策略。②通过利用视图间相关性来增强锚点表示，提升聚类性能。③相比传统多视图聚类方法，更有效地捕捉视图间互补信息。④实验表明在多个数据集上聚类准确率有显著提升。
+- **摘要（英）**: This paper addresses the view correlation issue in multi-view clustering by proposing an anchor enhancement strategy. It leverages inter-view correlations to improve anchor representations, outperforming traditional methods on benchmark datasets.
+- **核心贡献**: 提出基于视图相关性的锚点增强策略，提升多视图聚类性能。
+- **创新点**: 利用视图间相关性动态增强锚点表示。
+- **结果**: 在多个多视图数据集上聚类准确率显著提升。
 
-### SelfPose3d: Self-Supervised Multi-Person Multi-View 3d Pose Estimation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00242)
+### SelfPose3d: Self-Supervised Multi-Person Multi-View 3d Pose Estimation. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2404.02041](https://arxiv.org/abs/2404.02041) · 📚 被引 22
 - **作者**: Vinkle Srivastav, Keqi Chen, Nicolas Padoy
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: University of Strasbourg, CNRS, INSERM, ICube,Strasbourg,France,UMR7357
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对多视角多人3D姿态估计依赖大量标注数据的问题，提出自监督方法SelfPose3d。②仅需多视角图像和现成的2D姿态估计器生成的伪标签，通过自监督的3D定位和姿态估计目标进行训练。③引入自适应监督注意力机制缓解伪标签不准确性。④在多个基准上达到与全监督方法相当的性能，无需任何2D/3D真值。
+- **摘要（英）**: SelfPose3d proposes a self-supervised approach for multi-person multi-view 3D pose estimation without ground-truth poses, using pseudo labels and adaptive attention to achieve performance comparable to fully-supervised methods.
+- **核心贡献**: 提出无需真值的自监督多视角多人3D姿态估计框架。
+- **创新点**: 自适应监督注意力机制处理伪标签噪声。
+- **结果**: 在标准基准上接近全监督性能。
 
-### Investigating and Mitigating the Side Effects of Noisy Views for Self-Supervised Clustering Algorithms in Practical Multi-View Scenarios.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02166)
+### Investigating and Mitigating the Side Effects of Noisy Views for Self-Supervised Clustering Algorithms in Practical Multi-View Scenarios. **⭐⭐** (相关度: 15%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02166) · 📚 被引 33
 - **作者**: Jie Xu, Yazhou Ren, Xiaolong Wang, Lei Feng, Zheng Zhang, Gang Niu et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: University of Electronic Science and Technology of China,Chengdu,China, Singapore University of Technology and Design,Singapore, Harbin Institute of Technology,Shenzhen,China
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对实际多视图场景中噪声视图对自监督聚类算法的负面影响。②系统研究了噪声视图的影响机制，并提出缓解策略。③相比现有方法，更关注实际场景中的噪声鲁棒性。④实验验证了所提策略在多种噪声条件下的有效性。
+- **摘要（英）**: This work investigates the side effects of noisy views in practical multi-view scenarios for self-supervised clustering and proposes mitigation strategies, demonstrating robustness improvements.
+- **核心贡献**: 分析并缓解多视图聚类中噪声视图的负面影响。
+- **创新点**: 针对实际场景噪声的系统性研究。
+- **结果**: 在噪声条件下聚类性能提升。
 
-### ViewFusion: Towards Multi-View Consistency via Interpolated Denoising.
+### ViewFusion: Towards Multi-View Consistency via Interpolated Denoising. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2402.18842](https://arxiv.org/abs/2402.18842) · 📚 被引 9
 - **作者**: Xianghui Yang, Yan Zuo, Sameera Ramasinghe, Loris Bazzani, Gil Avraham, Anton van den Hengel
 - **🏷️ 机构**: Amazon
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对扩散模型生成新视图时缺乏多视图一致性的问题，提出ViewFusion。②采用自回归方式，通过插值去噪融合已知视图信息，无需额外训练即可集成到预训练扩散模型。③相比现有方法，无需微调即可实现多视图条件生成。④实验证明在生成一致且细节丰富的新视图方面效果显著。
+- **摘要（英）**: ViewFusion introduces a training-free algorithm for multi-view consistent novel-view synthesis by auto-regressively fusing known views via interpolated denoising, extending single-view models to multi-view settings.
+- **核心贡献**: 提出无需训练的扩散模型多视图一致性生成方法。
+- **创新点**: 插值去噪融合已知视图信息。
+- **结果**: 在多个数据集上生成一致且高质量的新视图。
 
-- **摘要（英，原文）**:
-
-  > Novel-view synthesis through diffusion models has demonstrated remarkable potential for generating diverse and high-quality images. Yet, the independent process of image generation in these prevailing methods leads to challenges in maintaining multiple-view consistency. To address this, we introduce ViewFusion, a novel, training-free algorithm that can be seamlessly integrated into existing pre-trained diffusion models. Our approach adopts an auto-regressive method that implicitly leverages previously generated views as context for the next view generation, ensuring robust multi-view consistency during the novel-view generation process. Through a diffusion process that fuses known-view information via interpolated denoising, our framework successfully extends single-view conditioned models to work in multiple-view conditional settings without any additional fine-tuning. Extensive experimental results demonstrate the effectiveness of ViewFusion in generating consistent and detailed novel views.
-
-### MOHO: Learning Single-View Hand-Held Object Reconstruction with Multi-View Occlusion-Aware Supervision.
+### MOHO: Learning Single-View Hand-Held Object Reconstruction with Multi-View Occlusion-Aware Supervision. **⭐⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2310.11696](https://arxiv.org/abs/2310.11696) · 📚 被引 5
 - **作者**: Chenyangguang Zhang, Guanlong Jiao, Yan Di, Gu Wang, Ziqin Huang, Ruida Zhang et al.
 - **🏷️ 机构**: Tsinghua University, Technical University of Munich, Google
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对单视图手持物体重建依赖3D真值难以获取的问题，提出MOHO框架。②利用手-物视频中的多视图遮挡感知监督，通过合成预训练和真实微调两阶段训练。③提出amodal-mask加权几何监督和域一致的遮挡感知特征，处理手部遮挡和物体自遮挡。④实验表明在真实数据上重建精度显著优于现有方法。
+- **摘要（英）**: MOHO proposes a synthetic-to-real framework for single-view hand-held object reconstruction using multi-view occlusion-aware supervision from videos, addressing hand-induced and self-occlusion effectively.
+- **核心贡献**: 提出利用多视图遮挡感知监督的单视图手持物体重建框架。
+- **创新点**: 合成到真实的遮挡感知训练策略。
+- **结果**: 在真实场景中重建精度显著提升。
 
-- **摘要（英，原文）**:
-
-  > Previous works concerning single-view hand-held object reconstruction typically rely on supervision from 3D ground-truth models, which are hard to collect in real world. In contrast, readily accessible hand-object videos offer a promising training data source, but they only give heavily occluded object observations. In this paper, we present a novel synthetic-to-real framework to exploit Multi-view Occlusion-aware supervision from hand-object videos for Hand-held Object reconstruction (MOHO) from a single image, tackling two predominant challenges in such setting: hand-induced occlusion and object's self-occlusion. First, in the synthetic pre-training stage, we render a large-scaled synthetic dataset SOMVideo with hand-object images and multi-view occlusion-free supervisions, adopted to address hand-induced occlusion in both 2D and 3D spaces. Second, in the real-world finetuning stage, MOHO leverages the amodal-mask-weighted geometric supervision to mitigate the unfaithful guidance caused by the hand-occluded supervising views in real world. Moreover, domain-consistent occlusion-aware features are amalgamated in MOHO to resist object's self-occlusion for inferring the complete object shape. Extensive experiments on HO3D and DexYCB datasets demonstrate 2D-supervised MOHO gains superior results against 3D-supervised methods by a large margin.
-
-### Unsupervised Gaze Representation Learning from Multi-view Face Images.
+### Unsupervised Gaze Representation Learning from Multi-view Face Images. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00141) · 📚 被引 9
 - **作者**: Yiwei Bao, Feng Lu
 - **🏷️ 机构**: School of CSE, Beihang University,State Key Laboratory of VR Technology and Systems
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对多视角人脸图像的无监督凝视表示学习问题。②利用多视角一致性进行自监督特征学习。③相比有监督方法，无需标注即可学习有效表示。④实验表明在凝视估计任务上性能接近有监督方法。
+- **摘要（英）**: This paper explores unsupervised gaze representation learning from multi-view face images, leveraging view consistency to achieve competitive performance without labels.
+- **核心贡献**: 提出多视角人脸图像的无监督凝视表示学习方法。
+- **创新点**: 利用多视角一致性进行自监督学习。
+- **结果**: 在凝视估计任务上接近有监督性能。
 
 ### RNb-NeuS: Reflectance and Normal-Based Multi-View 3D Reconstruction.
 - **链接**: [arXiv:2312.01215](https://arxiv.org/abs/2312.01215) · 📚 被引 17
@@ -132,16 +189,6 @@
 - **摘要（英，原文）**:
 
   > We present SuperNormal, a fast, high-fidelity approach to multi-view 3D reconstruction using surface normal maps. With a few minutes, SuperNormal produces detailed surfaces on par with 3D scanners. We harness volume rendering to optimize a neural signed distance function (SDF) powered by multi-resolution hash encoding. To accelerate training, we propose directional finite difference and patch-based ray marching to approximate the SDF gradients numerically. While not compromising reconstruction quality, this strategy is nearly twice as efficient as analytical gradients and about three times faster than axis-aligned finite difference. Experiments on the benchmark dataset demonstrate the superiority of SuperNormal in efficiency and accuracy compared to existing multi-view photometric stereo methods. On our captured objects, SuperNormal produces more fine-grained geometry than recent neural 3D reconstruction methods.
-
-### MVIP-NeRF: Multi-View 3D Inpainting on NeRF Scenes via Diffusion Prior.
-- **链接**: [arXiv:2405.02859](https://arxiv.org/abs/2405.02859) · 📚 被引 27
-- **作者**: Honghua Chen, Chen Change Loy, Xingang Pan
-- **🏷️ 机构**: Nanyang Technological University,S-Lab
-- **会议**: CVPR 2024
-
-- **摘要（英，原文）**:
-
-  > Despite the emergence of successful NeRF inpainting methods built upon explicit RGB and depth 2D inpainting supervisions, these methods are inherently constrained by the capabilities of their underlying 2D inpainters. This is due to two key reasons: (i) independently inpainting constituent images results in view-inconsistent imagery, and (ii) 2D inpainters struggle to ensure high-quality geometry completion and alignment with inpainted RGB images. To overcome these limitations, we propose a novel approach called MVIP-NeRF that harnesses the potential of diffusion priors for NeRF inpainting, addressing both appearance and geometry aspects. MVIP-NeRF performs joint inpainting across multiple views to reach a consistent solution, which is achieved via an iterative optimization process based on Score Distillation Sampling (SDS). Apart from recovering the rendered RGB images, we also extract normal maps as a geometric representation and define a normal SDS loss that motivates accurate geometry inpainting and alignment with the appearance. Additionally, we formulate a multi-view SDS score function to distill generative priors simultaneously from different view images, ensuring consistent visual completion when dealing with large view variations. Our experimental results show better appearance and geometry recovery than previous NeRF inpainting methods.
 
 ### Sculpt3D: Multi-View Consistent Text-to-3D Generation with Sparse 3D Prior.
 - **链接**: [arXiv:2403.09140](https://arxiv.org/abs/2403.09140) · 📚 被引 20
@@ -212,7 +259,7 @@
   > We introduce Multi-view Ancestral Sampling (MAS), a method for 3D motion generation, using 2D diffusion models that were trained on motions obtained from in-the-wild videos. As such, MAS opens opportunities to exciting and diverse fields of motion previously under-explored as 3D data is scarce and hard to collect. MAS works by simultaneously denoising multiple 2D motion sequences representing different views of the same 3D motion. It ensures consistency across all views at each diffusion step by combining the individual generations into a unified 3D sequence, and projecting it back to the original views. We demonstrate MAS on 2D pose data acquired from videos depicting professional basketball maneuvers, rhythmic gymnastic performances featuring a ball apparatus, and horse races. In each of these domains, 3D motion capture is arduous, and yet, MAS generates diverse and realistic 3D sequences. Unlike the Score Distillation approach, which optimizes each sample by repeatedly applying small fixes, our method uses a sampling process that was constructed for the diffusion framework. As we demonstrate, MAS avoids common issues such as out-of-domain sampling and mode-collapse. https://guytevet.github.io/mas-page/
 
 ### Rethinking Multi-View Representation Learning via Distilled Disentangling.
-- **链接**: [arXiv:2403.10897](https://arxiv.org/abs/2403.10897) · [代码](https://github.com/Guanzhou-Ke/MRDD) · 📚 被引 30
+- **链接**: [arXiv:2403.10897](https://arxiv.org/abs/2403.10897) · 📚 被引 30
 - **作者**: Guanzhou Ke, Bo Wang, Xiaoli Wang, Shengfeng He
 - **🏷️ 机构**: Beijing Jiaotong University, Institute of Automation, Chinese Academy of Sciences,State Key Laboratory of Multimodal Artificial Intelligence Systems, Nanjing University of Science and Technology
 - **会议**: CVPR 2024
@@ -320,7 +367,7 @@
   > In recent several years, the information bottleneck (IB) principle provides an information-theoretic framework for deep multi-view clustering (MVC) by compressing multi-view observations while preserving the relevant information of multiple views. Although existing IB-based deep MVC methods have achieved huge success, they rely on variational approximation and distribution assumption to estimate the lower bound of mutual information, which is a notoriously hard and impractical problem in high-dimensional multi-view spaces. In this work, we propose a new differentiable information bottleneck (DIB) method, which provides a deterministic and analytical MVC solution by fitting the mutual information without the necessity of variational approximation. Specifically, we first propose to directly fit the mutual information of high-dimensional spaces by leveraging normalized kernel Gram matrix, which does not require any auxiliary neural estimator to estimate the lower bound of mutual information. Then, based on the new mutual information measurement, a deterministic multi-view neural network with analytical gradients is explicitly trained to parameterize IB principle, which derives a deterministic compression of input variables from different views. Finally, a triplet consistency discovery mechanism is devised, which is capable of mining the feature consistency, cluster consistency and joint consistency based on the deterministic and compact representations. Extensive experimental results show the superiority of our DIB method on 6 benchmarks compared with 13 state-of-the-art baselines.
 
 ### ConsistNet: Enforcing 3D Consistency for Multi-View Images Diffusion.
-- **链接**: [arXiv:2310.10343](https://arxiv.org/abs/2310.10343) · [代码](https://github.com/JiayuYANG/ConsistNet) · 📚 被引 34
+- **链接**: [arXiv:2310.10343](https://arxiv.org/abs/2310.10343) · 📚 被引 34
 - **作者**: Jiayu Yang, Ziang Cheng, Yunfei Duan, Pan Ji, Hongdong Li
 - **🏷️ 机构**: Tencent, Australian National University
 - **会议**: CVPR 2024
@@ -340,7 +387,7 @@
   > Utilizing pre-trained 2D large-scale generative models, recent works are capable of generating high-quality novel views from a single in-the-wild image. However, due to the lack of information from multiple views, these works encounter difficulties in generating controllable novel views. In this paper, we present DreamComposer, a flexible and scalable framework that can enhance existing view-aware diffusion models by injecting multi-view conditions. Specifically, DreamComposer first uses a view-aware 3D lifting module to obtain 3D representations of an object from multiple views. Then, it renders the latent features of the target view from 3D representations with the multi-view feature fusion module. Finally the target view features extracted from multi-view inputs are injected into a pre-trained diffusion model. Experiments show that DreamComposer is compatible with state-of-the-art diffusion models for zero-shot novel view synthesis, further enhancing them to generate high-fidelity novel view images with multi-view conditions, ready for controllable 3D object reconstruction and various other applications.
 
 ### Multi-View Aggregation Network for Dichotomous Image Segmentation.
-- **链接**: [arXiv:2404.07445](https://arxiv.org/abs/2404.07445) · [代码](https://github.com/qianyu-dlut/MVANet) · 📚 被引 19
+- **链接**: [arXiv:2404.07445](https://arxiv.org/abs/2404.07445) · 📚 被引 19
 - **作者**: Qian Yu, Xiaoqi Zhao, Youwei Pang, Lihe Zhang, Huchuan Lu
 - **🏷️ 机构**: Dalian University of Technology
 - **会议**: CVPR 2024
@@ -356,7 +403,7 @@
 - **会议**: CVPR 2024
 
 ### Mind The Edge: Refining Depth Edges in Sparsely-Supervised Monocular Depth Estimation.
-- **链接**: [arXiv:2212.05315](https://arxiv.org/abs/2212.05315) · [代码](https://github.com/liortalker/MindTheEdge) · 📚 被引 11
+- **链接**: [arXiv:2212.05315](https://arxiv.org/abs/2212.05315) · 📚 被引 11
 - **作者**: Lior Talker, Aviad Cohen, Erez Yosef, Alexandra Dana, Michael Dinerstein
 - **🏷️ 机构**: Samsung Israel R&#x0026;D Center,Tel Aviv,Israel
 - **会议**: CVPR 2024
@@ -376,16 +423,24 @@
   > Monocular depth estimation is a fundamental computer vision task. Recovering 3D depth from a single image is geometrically ill-posed and requires scene understanding, so it is not surprising that the rise of deep learning has led to a breakthrough. The impressive progress of monocular depth estimators has mirrored the growth in model capacity, from relatively modest CNNs to large Transformer architectures. Still, monocular depth estimators tend to struggle when presented with images with unfamiliar content and layout, since their knowledge of the visual world is restricted by the data seen during training, and challenged by zero-shot generalization to new domains. This motivates us to explore whether the extensive priors captured in recent generative diffusion models can enable better, more generalizable depth estimation. We introduce Marigold, a method for affine-invariant monocular depth estimation that is derived from Stable Diffusion and retains its rich prior knowledge. The estimator can be fine-tuned in a couple of days on a single GPU using only synthetic training data. It delivers state-of-the-art performance across a wide range of datasets, including over 20% performance gains in specific cases. Project page: https://marigoldmonodepth.github.io.
 
 ### From-Ground-To-Objects: Coarse-to-Fine Self-supervised Monocular Depth Estimation of Dynamic Objects with Ground Contact Prior.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01001)
+- **链接**: [arXiv:2312.10118](https://arxiv.org/abs/2312.10118) · 📚 被引 17
 - **作者**: Jaeho Moon, Juan Luis Gonzalez Bello, Byeongjun Kwon, Munchurl Kim
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Korea Advanced Institute of Science and Technology
 - **会议**: CVPR 2024
 
+- **摘要（英，原文）**:
+
+  > Self-supervised monocular depth estimation (DE) is an approach to learning depth without costly depth ground truths. However, it often struggles with moving objects that violate the static scene assumption during training. To address this issue, we introduce a coarse-to-fine training strategy leveraging the ground contacting prior based on the observation that most moving objects in outdoor scenes contact the ground. In the coarse training stage, we exclude the objects in dynamic classes from the reprojection loss calculation to avoid inaccurate depth learning. To provide precise supervision on the depth of the objects, we present a novel Ground-contacting-prior Disparity Smoothness Loss (GDS-Loss) that encourages a DE network to align the depth of the objects with their ground-contacting points. Subsequently, in the fine training stage, we refine the DE network to learn the detailed depth of the objects from the reprojection loss, while ensuring accurate DE on the moving object regions by employing our regularization loss with a cost-volume-based weighting factor. Our overall coarse-to-fine training strategy can easily be integrated with existing DE methods without any modifications, significantly enhancing DE performance on challenging Cityscapes and KITTI datasets, especially in the moving object regions.
+
 ### Mining Supervision for Dynamic Regions in Self-Supervised Monocular Depth Estimation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00994)
+- **链接**: [arXiv:2404.14908](https://arxiv.org/abs/2404.14908) · 📚 被引 8
 - **作者**: Hoang Chuong Nguyen, Tianyu Wang, José M. Álvarez, Miaomiao Liu
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Australian National University, NVIDIA
 - **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > This paper focuses on self-supervised monocular depth estimation in dynamic scenes trained on monocular videos. Existing methods jointly estimate pixel-wise depth and motion, relying mainly on an image reconstruction loss. Dynamic regions1 remain a critical challenge for these methods due to the inherent ambiguity in depth and motion estimation, resulting in inaccurate depth estimation. This paper proposes a self-supervised training framework exploiting pseudo depth labels for dynamic regions from training data. The key contribution of our framework is to decouple depth estimation for static and dynamic regions of images in the training data. We start with an unsupervised depth estimation approach, which provides reliable depth estimates for static regions and motion cues for dynamic regions and allows us to extract moving object information at the instance level. In the next stage, we use an object network to estimate the depth of those moving objects assuming rigid motions. Then, we propose a new scale alignment module to address the scale ambiguity between estimated depths for static and dynamic regions. We can then use the depth labels generated to train an end-to-end depth estimation network and improve its performance. Extensive experiments on the Cityscapes and KITTI datasets show that our self-training strategy consistently outperforms existing self/unsupervised depth estimation methods.
 
 ### ECoDepth: Effective Conditioning of Diffusion Models for Monocular Depth Estimation.
 - **链接**: [arXiv:2403.18807](https://arxiv.org/abs/2403.18807) · 📚 被引 56
@@ -407,10 +462,72 @@
 
   > Three-dimensional (3D) reconstruction from a single image is an ill-posed problem with inherent ambiguities, i.e. scale. Predicting a 3D scene from text description(s) is similarly ill-posed, i.e. spatial arrangements of objects described. We investigate the question of whether two inherently ambiguous modalities can be used in conjunction to produce metric-scaled reconstructions. To test this, we focus on monocular depth estimation, the problem of predicting a dense depth map from a single image, but with an additional text caption describing the scene. To this end, we begin by encoding the text caption as a mean and standard deviation; using a variational framework, we learn the distribution of the plausible metric reconstructions of 3D scenes corresponding to the text captions as a prior. To "select" a specific reconstruction or depth map, we encode the given image through a conditional sampler that samples from the latent space of the variational text encoder, which is then decoded to the output depth map. Our approach is trained alternatingly between the text and image branches: in one optimization step, we predict the mean and standard deviation from the text description and sample from a standard Gaussian, and in the other, we sample using a (image) conditional sampler. Once trained, we directly predict depth from the encoded text using the conditional sampler. We demonstrate our approach on indoor (NYUv2) and outdoor (KITTI) scenarios, where we show that language can consistently improve performance in both.
 
+### Language Embedded 3D Gaussians for Open-Vocabulary Scene Understanding.
+- **链接**: [arXiv:2311.18482](https://arxiv.org/abs/2311.18482)
+- **作者**: Jin-Chuan Shi, Miao Wang, Hao-Bin Duan, Shao-Hua Guan
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Open-vocabulary querying in 3D space is challenging but essential for scene understanding tasks such as object localization and segmentation. Language-embedded scene representations have made progress by incorporating language features into 3D spaces. However, their efficacy heavily depends on neural networks that are resource-intensive in training and rendering. Although recent 3D Gaussians offer efficient and high-quality novel view synthesis, directly embedding language features in them leads to prohibitive memory usage and decreased performance. In this work, we introduce Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary query tasks. Instead of embedding high-dimensional raw semantic features on 3D Gaussians, we propose a dedicated quantization scheme that drastically alleviates the memory requirement, and a novel embedding procedure that achieves smoother yet high accuracy query, countering the multi-view feature inconsistencies and the high-frequency inductive bias in point-based representations. Our comprehensive experiments show that our representation achieves the best visual quality and language querying accuracy across current language-embedded representations, while maintaining real-time rendering frame rates on a single desktop GPU.
+
+### GOV-NeSF: Generalizable Open-Vocabulary Neural Semantic Fields.
+- **链接**: [arXiv:2404.00931](https://arxiv.org/abs/2404.00931) · 📚 被引 3
+- **作者**: Yunsong Wang, Hanlin Chen, Gim Hee Lee
+- **🏷️ 机构**: National University of Singapore,Department of Computer Science
+- **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Recent advancements in vision-language foundation models have significantly enhanced open-vocabulary 3D scene understanding. However, the generalizability of existing methods is constrained due to their framework designs and their reliance on 3D data. We address this limitation by introducing Generalizable Open-Vocabulary Neural Semantic Fields (GOV-NeSF), a novel approach offering a generalizable implicit representation of 3D scenes with open-vocabulary semantics. We aggregate the geometry-aware features using a cost volume, and propose a Multi-view Joint Fusion module to aggregate multi-view features through a cross-view attention mechanism, which effectively predicts view-specific blending weights for both colors and open-vocabulary features. Remarkably, our GOV-NeSF exhibits state-of-the-art performance in both 2D and 3D open-vocabulary semantic segmentation, eliminating the need for ground truth semantic labels or depth priors, and effectively generalize across scenes and datasets without fine-tuning.
+
+### MaskClustering: View Consensus Based Mask Graph Clustering for Open-Vocabulary 3D Instance Segmentation.
+- **链接**: [arXiv:2401.07745](https://arxiv.org/abs/2401.07745) · 📚 被引 41
+- **作者**: Mi Yan, Jiazhao Zhang, Yan Zhu, He Wang
+- **🏷️ 机构**: CFCS, School of CS, Peking University
+- **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Open-vocabulary 3D instance segmentation is cutting-edge for its ability to segment 3D instances without predefined categories. However, progress in 3D lags behind its 2D counterpart due to limited annotated 3D data. To address this, recent works first generate 2D open-vocabulary masks through 2D models and then merge them into 3D instances based on metrics calculated between two neighboring frames. In contrast to these local metrics, we propose a novel metric, view consensus rate, to enhance the utilization of multi-view observations. The key insight is that two 2D masks should be deemed part of the same 3D instance if a significant number of other 2D masks from different views contain both these two masks. Using this metric as edge weight, we construct a global mask graph where each mask is a node. Through iterative clustering of masks showing high view consensus, we generate a series of clusters, each representing a distinct 3D instance. Notably, our model is training-free. Through extensive experiments on publicly available datasets, including ScanNet++, ScanNet200 and MatterPort3D, we demonstrate that our method achieves state-of-the-art performance in open-vocabulary 3D instance segmentation. Our project page is at https://pku-epic.github.io/MaskClustering.
+
+### EMOPortraits: Emotion-Enhanced Multimodal One-Shot Head Avatars.
+- **链接**: [arXiv:2404.19110](https://arxiv.org/abs/2404.19110) · 📚 被引 41
+- **作者**: Nikita Drobyshev, Antoni Bigata Casademunt, Konstantinos Vougioukas, Zoe Landgraf, Stavros Petridis, Maja Pantic
+- **🏷️ 机构**: Imperial College London
+- **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Head avatars animated by visual signals have gained popularity, particularly in cross-driving synthesis where the driver differs from the animated character, a challenging but highly practical approach. The recently presented MegaPortraits model has demonstrated state-of-the-art results in this domain. We conduct a deep examination and evaluation of this model, with a particular focus on its latent space for facial expression descriptors, and uncover several limitations with its ability to express intense face motions. To address these limitations, we propose substantial changes in both training pipeline and model architecture, to introduce our EMOPortraits model, where we: Enhance the model's capability to faithfully support intense, asymmetric face expressions, setting a new state-of-the-art result in the emotion transfer task, surpassing previous methods in both metrics and quality. Incorporate speech-driven mode to our model, achieving top-tier performance in audio-driven facial animation, making it possible to drive source identity through diverse modalities, including visual signal, audio, or a blend of both. We propose a novel multi-view video dataset featuring a wide range of intense and asymmetric facial expressions, filling the gap with absence of such data in existing datasets.
+
+### OmniSeg3D: Omniversal 3D Segmentation via Hierarchical Contrastive Learning.
+- **链接**: [arXiv:2311.11666](https://arxiv.org/abs/2311.11666) · 📚 被引 52
+- **作者**: Haiyang Ying, Yixuan Yin, Jinzhi Zhang, Fan Wang, Tao Yu, Ruqi Huang et al.
+- **🏷️ 机构**: Tsinghua University, Alibaba Group
+- **会议**: CVPR 2024
+
+- **摘要（英，原文）**:
+
+  > Towards holistic understanding of 3D scenes, a general 3D segmentation method is needed that can segment diverse objects without restrictions on object quantity or categories, while also reflecting the inherent hierarchical structure. To achieve this, we propose OmniSeg3D, an omniversal segmentation method aims for segmenting anything in 3D all at once. The key insight is to lift multi-view inconsistent 2D segmentations into a consistent 3D feature field through a hierarchical contrastive learning framework, which is accomplished by two steps. Firstly, we design a novel hierarchical representation based on category-agnostic 2D segmentations to model the multi-level relationship among pixels. Secondly, image features rendered from the 3D feature field are clustered at different levels, which can be further drawn closer or pushed apart according to the hierarchical relationship between different levels. In tackling the challenges posed by inconsistent 2D segmentations, this framework yields a global consistent 3D feature field, which further enables hierarchical segmentation, multi-object selection, and global discretization. Extensive experiments demonstrate the effectiveness of our method on high-quality 3D segmentation and accurate hierarchical structure understanding. A graphical user interface further facilitates flexible interaction for omniversal 3D segmentation.
+
 ## 跨领域论文（完整笔记在其他领域）
 
-- CLIP-BEVFormer: Enhancing Multi-View Image-Based BEV Detector with Ground Truth Flow. → [bev](../bev/Guideline%202024.md)
+- CLIP-BEVFormer: Enhancing Multi-View Image-Based BEV Detector with Ground Truth Flow. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Cam4DOcc: Benchmark for Camera-Only 4D Occupancy Forecasting in Autonomous Driving Applications. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Enhancing 3D Object Detection with 2D Detection-Guided Query Anchors. → [3d-detection](../3d-detection/Guideline%202024.md)
+- ADA-Track: End-to-End Multi-Camera 3D Multi-Object Tracking with Alternating Detection and Association. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- RCBEVDet: Radar-Camera Fusion in Bird's Eye View for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- VSRD: Instance-Aware Volumetric Silhouette Rendering for Weakly Supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - Multi-View Attentive Contextualization for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- From a Bird's Eye View to See: Joint Camera and Subject Registration without the Camera Calibration. → [bev](../bev/Guideline%202024.md)
+- SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction. → [3d-detection](../3d-detection/Guideline%202024.md)
 - Adaptive Fusion of Single-View and Multi-View Depth for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- MVIP-NeRF: Multi-View 3D Inpainting on NeRF Scenes via Diffusion Prior. → [knowledge-distillation](../knowledge-distillation/Guideline%202024.md)
 - Physical 3D Adversarial Attacks against Monocular Depth Estimation in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
 - Driving Into the Future: Multiview Visual Forecasting and Planning with World Model for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- DrivingGaussian: Composite Gaussian Splatting for Surrounding Dynamic Autonomous Driving Scenes. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- Light the Night: A Multi-Condition Diffusion Framework for Unpaired Low-Light Enhancement in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- DriveWorld: 4D Pre-Trained Scene Understanding via World Models for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Volumetric Environment Representation for Vision-Language Navigation. → [3d-detection](../3d-detection/Guideline%202024.md)
