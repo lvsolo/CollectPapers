@@ -148,6 +148,7 @@ jobs:
     # 无论 collect 成败都跑：batches 在 git 里（已成功批次的数据完整），
     # LLM 摘要按 batch 增量补全，失败批次的摘要等该批次补跑成功后下一轮自然补上
     if: always() && needs.plan.result == 'success'
+    runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
