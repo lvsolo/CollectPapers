@@ -7,13 +7,17 @@ on:
   workflow_dispatch:
     inputs:
       conference:
-        description: "只跑某个会议（留空 = 全部，按窗口过滤）"
+        description: "只跑某个会议（留空 = 全部）"
         required: false
         default: ""
       year:
         description: "只跑某年（留空 = 全部年份）"
         required: false
         default: ""
+      force:
+        description: "强制重跑已成功批次（默认跳过 .cache/batches 里已有的）"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -43,13 +47,17 @@ jobs:
         run: |
           python3 - <<'EOF' > matrix.json
           import json, datetime as dt, sys, yaml
+          from pathlib import Path
           sys.path.insert(0, '.')
           cfg = yaml.safe_load(open('config.yaml'))
           conf_arg = '${{ github.event.inputs.conference }}'.strip()
           year_arg = '${{ github.event.inputs.year }}'.strip()
+          force_rerun = '${{ github.event.inputs.force }}'.strip() == 'true'
           start, end = cfg['start_year'], cfg['end_year']
           now = dt.date.today()
-          combos = []
+          # 已成功批次凭证：git 里存在的 batch 文件（含完整 enrich 数据即视为成功）
+          done = {p.stem for p in Path('.cache/batches').glob('*.json')} if Path('.cache/batches').exists() else set()
+          combos, skipped = [], []
           for c in cfg['conferences']:
               if conf_arg and c['name'].lower() != conf_arg.lower():
                   continue
@@ -61,12 +69,17 @@ jobs:
                       if c.get('odd_years_only') and y % 2 != 1: continue
                       am = c.get('announce_month')
                       if am and now.month < am: continue
+                  key = f"{c['dblp_venue']}-{y}"
+                  if key in done and not force_rerun:
+                      skipped.append(key)  # 已成功：不重跑（增量调度核心）
+                      continue
                   combos.append({'conference': c['dblp_venue'], 'year': y})
           print(json.dumps({'include': combos}))
+          print(f"PLANNED {len(combos)} | SKIPPED(done) {len(skipped)}: {', '.join(sorted(skipped))}", file=sys.stderr)
           EOF
           m=$(cat matrix.json | jq -c .)
           echo "matrix=$m" >> "$GITHUB_OUTPUT"
-          echo "planned: $m" | head -c 400
+          cat matrix.json | head -c 400
 
   # ------------------------------------------------------------------
   # 阶段 2: 每个组合一个独立 job（分批，互不影响）
