@@ -5,38 +5,26 @@
 
 > 同领域其他年份: 
 
-### L-SWAG: Layer-Sample Wise Activation with Gradients Information for Zero-Shot NAS on Vision Transformers.
-- **链接**: [arXiv:2505.07300](https://arxiv.org/abs/2505.07300) · 📚 被引 2
-- **作者**: Sofia Casarin, Sergio Escalera, Oswald Lanz
-- **🏷️ 机构**: Free University of Bozen-Bolzano,Bolzano,Italy, Computer Vision Center,Barcelona,Spain
-- **会议**: CVPR 2025
+### Loss Functions for Predictor-Based Neural Architecture Search.
+- **链接**: [arXiv:2506.05869](https://arxiv.org/abs/2506.05869) · 📚 被引 0
+- **作者**: Han Ji, Yuqi Feng, Jiahao Fan, Yanan Sun
+- **🏷️ 机构**: College of Computer Science, Sichuan University
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Training-free Neural Architecture Search (NAS) efficiently identifies high-performing neural networks using zero-cost (ZC) proxies. Unlike multi-shot and one-shot NAS approaches, ZC-NAS is both (i) time-efficient, eliminating the need for model training, and (ii) interpretable, with proxy designs often theoretically grounded. Despite rapid developments in the field, current SOTA ZC proxies are typically constrained to well-established convolutional search spaces. With the rise of Large Language Models shaping the future of deep learning, this work extends ZC proxy applicability to Vision Transformers (ViTs). We present a new benchmark using the Autoformer search space evaluated on 6 distinct tasks and propose Layer-Sample Wise Activation with Gradients information (L-SWAG), a novel, generalizable metric that characterizes both convolutional and transformer architectures across 14 tasks. Additionally, previous works highlighted how different proxies contain complementary information, motivating the need for a ML model to identify useful combinations. To further enhance ZC-NAS, we therefore introduce LIBRA-NAS (Low Information gain and Bias Re-Alignment), a method that strategically combines proxies to best represent a specific benchmark. Integrated into the NAS search, LIBRA-NAS outperforms evolution and gradient-based NAS techniques by identifying an architecture with a 17.0% test error on ImageNet1k in just 0.1 GPU days.
+> Evaluation is a critical but costly procedure in neural architecture search (NAS). Performance predictors have been widely adopted to reduce evaluation costs by directly estimating architecture performance. The effectiveness of predictors is heavily influenced by the choice of loss functions. While traditional predictors employ regression loss functions to evaluate the absolute accuracy of architectures, recent approaches have explored various ranking-based loss functions, such as pairwise and listwise ranking losses, to focus on the ranking of architecture performance. Despite their success in NAS, the effectiveness and characteristics of these loss functions have not been thoroughly investigated. In this paper, we conduct the first comprehensive study on loss functions in performance predictors, categorizing them into three main types: regression, ranking, and weighted loss functions. Specifically, we assess eight loss functions using a range of NAS-relevant metrics on 13 tasks across five search spaces. Our results reveal that specific categories of loss functions can be effectively combined to enhance predictor-based NAS. Furthermore, our findings could provide practical guidance for selecting appropriate loss functions for various tasks. We hope this work provides meaningful insights to guide the development of loss functions for predictor-based methods in the NAS community.
 
 </details>
 
-### Subnet-Aware Dynamic Supernet Training for Neural Architecture Search.
-- **链接**: [arXiv:2503.10740](https://arxiv.org/abs/2503.10740) · 📚 被引 6
-- **作者**: Jeimin Jeon, Youngmin Oh, Junghyup Lee, Donghyeon Baek, Dohyung Kim, Chanho Eom et al.
-- **🏷️ 机构**: Yonsei University, Samsung Research, Samsung Advanced Institute of Technology
-- **会议**: CVPR 2025
+### Neural Architecture Search Driven by Locally Guided Diffusion for Personalized Federated Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00402) · 📚 被引 0
+- **作者**: Peng Liao, Xilu Wang, Yaochu Jin, Wenli Du, Han Hu
+- **🏷️ 机构**: ECUST,Key Laboratory of Smart Manufacturing in Energy Chemical Process, Ministry of Education,Shanghai,China, Computer Science Research Centre, University of Surrey,Surrey,UK
+- **会议**: ICCV 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> N-shot neural architecture search (NAS) exploits a supernet containing all candidate subnets for a given search space. The subnets are typically trained with a static training strategy (e.g., using the same learning rate (LR) scheduler and optimizer for all subnets). This, however, does not consider that individual subnets have distinct characteristics, leading to two problems: (1) The supernet training is biased towards the low-complexity subnets (unfairness); (2) the momentum update in the supernet is noisy (noisy momentum). We present a dynamic supernet training technique to address these problems by adjusting the training strategy adaptive to the subnets. Specifically, we introduce a complexity-aware LR scheduler (CaLR) that controls the decay ratio of LR adaptive to the complexities of subnets, which alleviates the unfairness problem. We also present a momentum separation technique (MS). It groups the subnets with similar structural characteristics and uses a separate momentum for each group, avoiding the noisy momentum problem. Our approach can be applicable to various N-shot NAS methods with marginal cost, while improving the search performance drastically. We validate the effectiveness of our approach on various search spaces (e.g., NAS-Bench-201, Mobilenet spaces) and datasets (e.g., CIFAR-10/100, ImageNet).
-
-</details>
-
-### Training-free Neural Architecture Search through Variance of Knowledge of Deep Network Weights.
-- **链接**: [arXiv:2502.04975](https://arxiv.org/abs/2502.04975) · [代码](https://github.com/ondratybl/VKDNW) · 📚 被引 4
-- **作者**: Ondrej Týbl, Lukás Neumann
-- **🏷️ 机构**: Czech Technical University in Prague,CMP Visual Recognition Group, Faculty of Electrical Engineering
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Deep learning has revolutionized computer vision, but it achieved its tremendous success using deep network architectures which are mostly hand-crafted and therefore likely suboptimal. Neural Architecture Search (NAS) aims to bridge this gap by following a well-defined optimization paradigm which systematically looks for the best architecture, given objective criterion such as maximal classification accuracy. The main limitation of NAS is however its astronomical computational cost, as it typically requires training each candidate network architecture from scratch. In this paper, we aim to alleviate this limitation by proposing a novel training-free proxy for image classification accuracy based on Fisher Information. The proposed proxy has a strong theoretical background in statistics and it allows estimating expected image classification accuracy of a given deep network without training the network, thus significantly reducing computational cost of standard NAS algorithms. Our training-free proxy achieves state-of-the-art results on three public datasets and in two search spaces, both when evaluated using previously proposed metrics, as well as using a new metric that we propose which we demonstrate is more informative for practical NAS applications. The source code is publicly available at http://www.github.com/ondratybl/VKDNW
-
-</details>
+### TRNAS: A Training-Free Robust Neural Architecture Search.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00225) · 📚 被引 1
+- **作者**: Yeming Yang, Qingling Zhu, Jianping Luo, Ka-Chun Wong, Qiuzhen Lin, Jianqiang Li
+- **🏷️ 机构**: Shenzhen University, City University of Hong Kong
+- **会议**: ICCV 2025
