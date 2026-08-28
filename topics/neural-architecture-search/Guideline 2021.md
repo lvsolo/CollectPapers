@@ -1,154 +1,78 @@
 # Neural Architecture Search — 2021 Guideline
 
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
-> 论文数: 22 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### OPANAS: One-Shot Path Aggregation Network Architecture Search for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Liang_OPANAS_One-Shot_Path_Aggregation_Network_Architecture_Search_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 61
-- **作者**: Tingting Liang, Yongtao Wang, Zhi Tang, Guosheng Hu, Haibin Ling
+### HW-NAS-Bench: Hardware-Aware Neural Architecture Search Benchmark.
+- **链接**: [arXiv:2103.10584](https://arxiv.org/abs/2103.10584) · [代码](https://github.com/RICE-EIC/HW-NAS-Bench)
+- **作者**: Chaojian Li, Zhongzhi Yu, Yonggan Fu, Yongan Zhang, Yang Zhao, Haoran You et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### LightTrack: Finding Lightweight Neural Networks for Object Tracking via One-Shot Architecture Search.
-- **链接**: [arXiv:2104.14545](https://arxiv.org/abs/2104.14545) · [代码](https://github.com/researchmm/LightTrack) · 📚 被引 235
-- **作者**: Bin Yan, Houwen Peng, Kan Wu, Dong Wang, Jianlong Fu, Huchuan Lu
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Object tracking has achieved significant progress over the past few years. However, state-of-the-art trackers become increasingly heavy and expensive, which limits their deployments in resource-constrained applications. In this work, we present LightTrack, which uses neural architecture search (NAS) to design more lightweight and efficient object trackers. Comprehensive experiments show that our LightTrack is effective. It can find trackers that achieve superior performance compared to handcrafted SOTA trackers, such as SiamRPN++ and Ocean, while using much fewer model Flops and parameters. Moreover, when deployed on resource-constrained mobile chipsets, the discovered trackers run much faster. For example, on Snapdragon 845 Adreno GPU, LightTrack runs $12\times$ faster than Ocean, while using $13\times$ fewer parameters and $38\times$ fewer Flops. Such improvements might narrow the gap between academic models and industrial deployments in object tracking task. LightTrack is released at https://github.com/researchmm/LightTrack.
+> HardWare-aware Neural Architecture Search (HW-NAS) has recently gained tremendous attention by automating the design of DNNs deployed in more resource-constrained daily life devices. Despite its promising performance, developing optimal HW-NAS solutions can be prohibitively challenging as it requires cross-disciplinary knowledge in the algorithm, micro-architecture, and device-specific compilation. First, to determine the hardware-cost to be incorporated into the NAS process, existing works mostly adopt either pre-collected hardware-cost look-up tables or device-specific hardware-cost models. Both of them limit the development of HW-NAS innovations and impose a barrier-to-entry to non-hardware experts. Second, similar to generic NAS, it can be notoriously difficult to benchmark HW-NAS algorithms due to their significant required computational resources and the differences in adopted search spaces, hyperparameters, and hardware devices. To this end, we develop HW-NAS-Bench, the first public dataset for HW-NAS research which aims to democratize HW-NAS research to non-hardware experts and make HW-NAS research more reproducible and accessible. To design HW-NAS-Bench, we carefully collected the measured/estimated hardware performance of all the networks in the search spaces of both NAS-Bench-201 and FBNet, on six hardware devices that fall into three categories (i.e., commercial edge devices, FPGA, and ASIC). Furthermore, we provide a comprehensive analysis of the collected measurements in HW-NAS-Bench to provide insights for HW-NAS research. Finally, we demonstrate exemplary user cases to (1) show that HW-NAS-Bench allows non-hardware experts to perform HW-NAS by simply querying it and (2) verify that dedicated device-specific HW-NAS can indeed lead to optimal accuracy-cost trade-offs. The codes and all collected data are available at https://github.com/RICE-EIC/HW-NAS-Bench.
 
 </details>
 
-### One-Shot Neural Ensemble Architecture Search by Diversity-Guided Search Space Shrinking.
-- **链接**: [arXiv:2104.00597](https://arxiv.org/abs/2104.00597) · 📚 被引 26
-- **作者**: Minghao Chen, Jianlong Fu, Haibin Ling
+### Neural Architecture Search on ImageNet in Four GPU Hours: A Theoretically Inspired Perspective.
+- **链接**: [arXiv:2102.11535](https://arxiv.org/abs/2102.11535) · [代码](https://github.com/VITA-Group/TENAS)
+- **作者**: Wuyang Chen, Xinyu Gong, Zhangyang Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Contrastive Neural Architecture Search With Neural Architecture Comparators.
-- **链接**: [arXiv:2103.05471](https://arxiv.org/abs/2103.05471) · 📚 被引 66
-- **作者**: Yaofo Chen, Yong Guo, Qi Chen, Minli Li, Wei Zeng, Yaowei Wang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### NetAdaptV2: Efficient Neural Architecture Search With Fast Super-Network Training and Architecture Optimization.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yang_NetAdaptV2_Efficient_Neural_Architecture_Search_With_Fast_Super-Network_Training_and_CVPR_2021_paper.html) · 📚 被引 28
-- **作者**: Tien-Ju Yang, Yi-Lun Liao, Vivienne Sze
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Rethinking Graph Neural Architecture Search From Message-Passing.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Cai_Rethinking_Graph_Neural_Architecture_Search_From_Message-Passing_CVPR_2021_paper.html) · 📚 被引 45
-- **作者**: Shaofei Cai, Liang Li, Jincan Deng, Beichen Zhang, Zheng-Jun Zha, Li Su et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### HR-NAS: Searching Efficient High-Resolution Neural Architectures With Lightweight Transformers.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Ding_HR-NAS_Searching_Efficient_High-Resolution_Neural_Architectures_With_Lightweight_Transformers_CVPR_2021_paper.html) · 📚 被引 60
-- **作者**: Mingyu Ding, Xiaochen Lian, Linjie Yang, Peng Wang, Xiaojie Jin, Zhiwu Lu et al.
-- **🏷️ 机构**: The University of Hong Kong, Bytedance Inc., Renmin University of China,Gaoling School of Artificial Intelligence
-- **会议**: CVPR 2021
-
-### TransNAS-Bench-101: Improving Transferability and Generalizability of Cross-Task Neural Architecture Search.
-- **链接**: [arXiv:2105.11871](https://arxiv.org/abs/2105.11871) · 📚 被引 50
-- **作者**: Yawen Duan, Xin Chen, Hang Xu, Zewei Chen, Xiaodan Liang, Tong Zhang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### DOTS: Decoupling Operation and Topology in Differentiable Architecture Search.
-- **链接**: [arXiv:2010.00969](https://arxiv.org/abs/2010.00969) · 📚 被引 41
-- **作者**: Yuchao Gu, Lijuan Wang, Yun Liu, Yi Yang, Yu-Huan Wu, Shao-Ping Lu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Searching by Generating: Flexible and Efficient One-Shot NAS With Architecture Generator.
-- **链接**: [arXiv:2103.07289](https://arxiv.org/abs/2103.07289) · 📚 被引 17
-- **作者**: Sian-Yao Huang, Wei-Ta Chu
-- **🏷️ 机构**: National Cheng Kung University,Tainan,Taiwan
-- **会议**: CVPR 2021
-
-### Combined Depth Space Based Architecture Search for Person Re-Identification.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_Combined_Depth_Space_Based_Architecture_Search_for_Person_Re-Identification_CVPR_2021_paper.html) · 📚 被引 167
-- **作者**: Hanjun Li, Gaojie Wu, Wei-Shi Zheng
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Retinex-Inspired Unrolling With Cooperative Prior Architecture Search for Low-Light Image Enhancement.
-- **链接**: [arXiv:2012.05609](https://arxiv.org/abs/2012.05609) · 📚 被引 969
-- **作者**: Risheng Liu, Long Ma, Jiaao Zhang, Xin Fan, Zhongxuan Luo
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Low-light image enhancement plays very important roles in low-level vision field. Recent works have built a large variety of deep learning models to address this task. However, these approaches mostly rely on significant architecture engineering and suffer from high computational burden. In this paper, we propose a new method, named Retinex-inspired Unrolling with Architecture Search (RUAS), to construct lightweight yet effective enhancement network for low-light images in real-world scenario. Specifically, building upon Retinex rule, RUAS first establishes models to characterize the intrinsic underexposed structure of low-light images and unroll their optimization processes to construct our holistic propagation structure. Then by designing a cooperative reference-free learning strategy to discover low-light prior architectures from a compact search space, RUAS is able to obtain a top-performing image enhancement network, which is with fast speed and requires few computational resources. Extensive experiments verify the superiority of our RUAS framework against recently proposed state-of-the-art methods.
+> Neural Architecture Search (NAS) has been explosively studied to automate the discovery of top-performer neural networks. Current works require heavy training of supernet or intensive architecture evaluations, thus suffering from heavy resource consumption and often incurring search bias due to truncated training or approximations. Can we select the best neural architectures without involving any training and eliminate a drastic portion of the search cost? We provide an affirmative answer, by proposing a novel framework called training-free neural architecture search (TE-NAS). TE-NAS ranks architectures by analyzing the spectrum of the neural tangent kernel (NTK) and the number of linear regions in the input space. Both are motivated by recent theory advances in deep networks and can be computed without any training and any label. We show that: (1) these two measurements imply the trainability and expressivity of a neural network; (2) they strongly correlate with the network's test accuracy. Further on, we design a pruning-based NAS mechanism to achieve a more flexible and superior trade-off between the trainability and expressivity during the search. In NAS-Bench-201 and DARTS search spaces, TE-NAS completes high-quality search but only costs 0.5 and 4 GPU hours with one 1080Ti on CIFAR-10 and ImageNet, respectively. We hope our work inspires more attempts in bridging the theoretical findings of deep networks and practical impacts in real NAS applications. Code is available at: https://github.com/VITA-Group/TENAS.
 
 </details>
 
-### AttentiveNAS: Improving Neural Architecture Search via Attentive Sampling.
-- **链接**: [arXiv:2011.09011](https://arxiv.org/abs/2011.09011) · [代码](https://github.com/facebookresearch/AttentiveNAS) · 📚 被引 80
-- **作者**: Dilin Wang, Meng Li, Chengyue Gong, Vikas Chandra
+### DrNAS: Dirichlet Neural Architecture Search.
+- **链接**: [arXiv:2006.10355](https://arxiv.org/abs/2006.10355)
+- **作者**: Xiangning Chen, Ruochen Wang, Minhao Cheng, Xiaocheng Tang, Cho-Jui Hsieh
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Neural architecture search (NAS) has shown great promise in designing state-of-the-art (SOTA) models that are both accurate and efficient. Recently, two-stage NAS, e.g. BigNAS, decouples the model training and searching process and achieves remarkable search efficiency and accuracy. Two-stage NAS requires sampling from the search space during training, which directly impacts the accuracy of the final searched models. While uniform sampling has been widely used for its simplicity, it is agnostic of the model performance Pareto front, which is the main focus in the search process, and thus, misses opportunities to further improve the model accuracy. In this work, we propose AttentiveNAS that focuses on improving the sampling strategy to achieve better performance Pareto. We also propose algorithms to efficiently and effectively identify the networks on the Pareto during training. Without extra re-training or post-processing, we can simultaneously obtain a large number of networks across a wide range of FLOPs. Our discovered model family, AttentiveNAS models, achieves top-1 accuracy from 77.3% to 80.7% on ImageNet, and outperforms SOTA models, including BigNAS and Once-for-All networks. We also achieve ImageNet accuracy of 80.1% with only 491 MFLOPs. Our training code and pretrained models are available at https://github.com/facebookresearch/AttentiveNAS.
+> This paper proposes a novel differentiable architecture search method by formulating it into a distribution learning problem. We treat the continuously relaxed architecture mixing weight as random variables, modeled by Dirichlet distribution. With recently developed pathwise derivatives, the Dirichlet parameters can be easily optimized with gradient-based optimizer in an end-to-end manner. This formulation improves the generalization ability and induces stochasticity that naturally encourages exploration in the search space. Furthermore, to alleviate the large memory consumption of differentiable NAS, we propose a simple yet effective progressive learning scheme that enables searching directly on large-scale tasks, eliminating the gap between search and evaluation phases. Extensive experiments demonstrate the effectiveness of our method. Specifically, we obtain a test error of 2.46% for CIFAR-10, 23.7% for ImageNet under the mobile setting. On NAS-Bench-201, we also achieve state-of-the-art results on all three datasets and provide insights for the effective design of neural architecture search algorithms.
 
 </details>
 
-### ReNAS: Relativistic Evaluation of Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Xu_ReNAS_Relativistic_Evaluation_of_Neural_Architecture_Search_CVPR_2021_paper.html) · 📚 被引 76
-- **作者**: Yixing Xu, Yunhe Wang, Kai Han, Yehui Tang, Shangling Jui, Chunjing Xu et al.
-- **🏷️ 机构**: Huawei Technologies,Noah&#x2019;s Ark Lab, Huawei Technologies, The University of Sydney
-- **会议**: CVPR 2021
-
-### ViPNAS: Efficient Video Pose Estimation via Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Xu_ViPNAS_Efficient_Video_Pose_Estimation_via_Neural_Architecture_Search_CVPR_2021_paper.html) · 📚 被引 56
-- **作者**: Lumin Xu, Yingda Guan, Sheng Jin, Wentao Liu, Chen Qian, Ping Luo et al.
-- **🏷️ 机构**: CUHK / Shanghai AI Lab
-- **会议**: CVPR 2021
-
-### FP-NAS: Fast Probabilistic Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yan_FP-NAS_Fast_Probabilistic_Neural_Architecture_Search_CVPR_2021_paper.html) · 📚 被引 18
-- **作者**: Zhicheng Yan, Xiaoliang Dai, Peizhao Zhang, Yuandong Tian, Bichen Wu, Matt Feiszli
+### Rapid Neural Architecture Search by Learning to Generate Graphs from Datasets.
+- **链接**: [arXiv:2107.00860](https://arxiv.org/abs/2107.00860) · [代码](https://github.com/HayeonLee/MetaD2A)
+- **作者**: Hayeon Lee, Eunyoung Hyung, Sung Ju Hwang
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
-### HourNAS: Extremely Fast Neural Architecture Search Through an Hourglass Lens.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yang_HourNAS_Extremely_Fast_Neural_Architecture_Search_Through_an_Hourglass_Lens_CVPR_2021_paper.html) · 📚 被引 11
-- **作者**: Zhaohui Yang, Yunhe Wang, Xinghao Chen, Jianyuan Guo, Wei Zhang, Chao Xu et al.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Despite the success of recent Neural Architecture Search (NAS) methods on various tasks which have shown to output networks that largely outperform human-designed networks, conventional NAS methods have mostly tackled the optimization of searching for the network architecture for a single task (dataset), which does not generalize well across multiple tasks (datasets). Moreover, since such task-specific methods search for a neural architecture from scratch for every given task, they incur a large computational cost, which is problematic when the time and monetary budget are limited. In this paper, we propose an efficient NAS framework that is trained once on a database consisting of datasets and pretrained networks and can rapidly search for a neural architecture for a novel dataset. The proposed MetaD2A (Meta Dataset-to-Architecture) model can stochastically generate graphs (architectures) from a given set (dataset) via a cross-modal latent space learned with amortized meta-learning. Moreover, we also propose a meta-performance predictor to estimate and select the best architecture without direct training on target datasets. The experimental results demonstrate that our model meta-learned on subsets of ImageNet-1K and architectures from NAS-Bench 201 search space successfully generalizes to multiple unseen datasets including CIFAR-10 and CIFAR-100, with an average search time of 33 GPU seconds. Even under MobileNetV3 search space, MetaD2A is 5.5K times faster than NSGANetV2, a transferable NAS method, with comparable performance. We believe that the MetaD2A proposes a new research direction for rapid NAS as well as ways to utilize the knowledge from rich databases of datasets and architectures accumulated over the past years. Code is available at https://github.com/HayeonLee/MetaD2A.
+
+</details>
+
+### Geometry-Aware Gradient Algorithms for Neural Architecture Search.
+- **链接**: [arXiv:2004.07802](https://arxiv.org/abs/2004.07802)
+- **作者**: Liam Li, Mikhail Khodak, Nina Balcan, Ameet Talwalkar
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
-### Towards Improving the Consistency, Efficiency, and Flexibility of Differentiable Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yang_Towards_Improving_the_Consistency_Efficiency_and_Flexibility_of_Differentiable_Neural_CVPR_2021_paper.html) · 📚 被引 37
-- **作者**: Yibo Yang, Shan You, Hongyang Li, Fei Wang, Chen Qian, Zhouchen Lin
-- **🏷️ 机构**: Shanghai AI Lab, Peking University
-- **会议**: CVPR 2021
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Landmark Regularization: Ranking Guided Super-Net Training in Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yu_Landmark_Regularization_Ranking_Guided_Super-Net_Training_in_Neural_Architecture_Search_CVPR_2021_paper.html) · 📚 被引 13
-- **作者**: Kaicheng Yu, René Ranftl, Mathieu Salzmann
+> Recent state-of-the-art methods for neural architecture search (NAS) exploit gradient-based optimization by relaxing the problem into continuous optimization over architectures and shared-weights, a noisy process that remains poorly understood. We argue for the study of single-level empirical risk minimization to understand NAS with weight-sharing, reducing the design of NAS methods to devising optimizers and regularizers that can quickly obtain high-quality solutions to this problem. Invoking the theory of mirror descent, we present a geometry-aware framework that exploits the underlying structure of this optimization to return sparse architectural parameters, leading to simple yet novel algorithms that enjoy fast convergence guarantees and achieve state-of-the-art accuracy on the latest NAS benchmarks in computer vision. Notably, we exceed the best published results for both CIFAR and ImageNet on both the DARTS search space and NAS-Bench201; on the latter we achieve near-oracle-optimal performance on CIFAR-10 and CIFAR-100. Together, our theory and experiments demonstrate a principled way to co-design optimizers and continuous relaxations of discrete NAS search spaces.
+
+</details>
+
+### NAS-Bench-ASR: Reproducible Neural Architecture Search for Speech Recognition.
+- **链接**: [出版页](https://openreview.net/forum?id=CU0APx9LMaL)
+- **作者**: Abhinav Mehrotra, Alberto Gil C. P. Ramos, Sourav Bhattacharya, Lukasz Dudziak, Ravichander Vipperla, Thomas Chau et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
-### Neural Architecture Search With Random Labels.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_Neural_Architecture_Search_With_Random_Labels_CVPR_2021_paper.html) · 📚 被引 46
-- **作者**: Xuanyang Zhang, Pengfei Hou, Xiangyu Zhang, Jian Sun
-- **🏷️ 机构**: MEGVII
-- **会议**: CVPR 2021
-
-### DCNAS: Densely Connected Neural Architecture Search for Semantic Image Segmentation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_DCNAS_Densely_Connected_Neural_Architecture_Search_for_Semantic_Image_Segmentation_CVPR_2021_paper.html) · 📚 被引 92
-- **作者**: Xiong Zhang, Hongmin Xu, Hong Mo, Jianchao Tan, Cheng Yang, Lei Wang et al.
+### Interpretable Neural Architecture Search via Bayesian Optimisation with Weisfeiler-Lehman Kernels.
+- **链接**: [出版页](https://openreview.net/forum?id=j9Rv7qdXjd)
+- **作者**: Bin Xin Ru, Xingchen Wan, Xiaowen Dong, Michael A. Osborne
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-## 跨领域论文（完整笔记在其他领域）
-
-- NPAS: A Compiler-Aware Framework of Unified Network Pruning and Architecture Search for Beyond Real-Time Mobile Acceleration. → [network-pruning](../network-pruning/Guideline%202021.md)
+- **会议**: ICLR 2021

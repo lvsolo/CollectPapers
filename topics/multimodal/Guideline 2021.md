@@ -1,90 +1,54 @@
 # Multimodal — 2021 Guideline
 
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
-> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### There Is More Than Meets the Eye: Self-Supervised Multi-Object Detection and Tracking With Sound by Distilling Multimodal Knowledge.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Valverde_There_Is_More_Than_Meets_the_Eye_Self-Supervised_Multi-Object_Detection_CVPR_2021_paper.html) · 📚 被引 73
-- **作者**: Francisco Rivera Valverde, Juana Valeria Hurtado, Abhinav Valada
+### Parameter Efficient Multimodal Transformers for Video Representation Learning.
+- **链接**: [arXiv:2012.04124](https://arxiv.org/abs/2012.04124)
+- **作者**: Sangho Lee, Youngjae Yu, Gunhee Kim, Thomas M. Breuel, Jan Kautz, Yale Song
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Robust Multimodal Vehicle Detection in Foggy Weather Using Complementary Lidar and Radar Signals.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Qian_Robust_Multimodal_Vehicle_Detection_in_Foggy_Weather_Using_Complementary_Lidar_CVPR_2021_paper.html) · 📚 被引 183
-- **作者**: Kun Qian, Shilin Zhu, Xinyu Zhang, Li Erran Li
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### UC2: Universal Cross-Lingual Cross-Modal Vision-and-Language Pre-Training.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhou_UC2_Universal_Cross-Lingual_Cross-Modal_Vision-and-Language_Pre-Training_CVPR_2021_paper.html)
-- **作者**: Mingyang Zhou, Luowei Zhou, Shuohang Wang, Yu Cheng, Linjie Li, Zhou Yu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Progressive Modality Reinforcement for Human Multimodal Emotion Recognition From Unaligned Multimodal Sequences.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Progressive_Modality_Reinforcement_for_Human_Multimodal_Emotion_Recognition_From_Unaligned_CVPR_2021_paper.html) · 📚 被引 191
-- **作者**: Fengmao Lv, Xiang Chen, Yanyong Huang, Lixin Duan, Guosheng Lin
-- **🏷️ 机构**: Southwest Jiaotong University, Platform and Content Group,Tencent, Southwestern University of Finance and Economics,Center of Statistical Research
-- **会议**: CVPR 2021
-
-### Revamping Cross-Modal Recipe Retrieval With Hierarchical Transformers and Self-Supervised Learning.
-- **链接**: [arXiv:2103.13061](https://arxiv.org/abs/2103.13061) · 📚 被引 74
-- **作者**: Amaia Salvador, Erhan Gundogdu, Loris Bazzani, Michael Donoser
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Cross-modal recipe retrieval has recently gained substantial attention due to the importance of food in people's lives, as well as the availability of vast amounts of digital cooking recipes and food images to train machine learning models. In this work, we revisit existing approaches for cross-modal recipe retrieval and propose a simplified end-to-end model based on well established and high performing encoders for text and images. We introduce a hierarchical recipe Transformer which attentively encodes individual recipe components (titles, ingredients and instructions). Further, we propose a self-supervised loss function computed on top of pairs of individual recipe components, which is able to leverage semantic relationships within recipes, and enables training using both image-recipe and recipe-only samples. We conduct a thorough analysis and ablation studies to validate our design choices. As a result, our proposed method achieves state-of-the-art performance in the cross-modal recipe retrieval task on the Recipe1M dataset. We make code and models publicly available.
+> The recent success of Transformers in the language domain has motivated adapting it to a multimodal setting, where a new visual model is trained in tandem with an already pretrained language model. However, due to the excessive memory requirements from Transformers, existing work typically fixes the language model and train only the vision module, which limits its ability to learn cross-modal information in an end-to-end manner. In this work, we focus on reducing the parameters of multimodal Transformers in the context of audio-visual video representation learning. We alleviate the high memory requirement by sharing the parameters of Transformers across layers and modalities; we decompose the Transformer into modality-specific and modality-shared parts so that the model learns the dynamics of each modality both individually and together, and propose a novel parameter sharing scheme based on low-rank approximation. We show that our approach reduces parameters of the Transformers up to 97$\%$, allowing us to train our model end-to-end from scratch. We also propose a negative sampling approach based on an instance similarity measured on the CNN embedding space that our model learns together with the Transformers. To demonstrate our approach, we pretrain our model on 30-second clips (480 frames) from Kinetics-700 and transfer it to audio-visual classification tasks.
 
 </details>
 
-### Cross-Modal Contrastive Learning for Text-to-Image Generation.
-- **链接**: [arXiv:2101.04702](https://arxiv.org/abs/2101.04702) · 📚 被引 293
-- **作者**: Han Zhang, Jing Yu Koh, Jason Baldridge, Honglak Lee, Yinfei Yang
+### Relating by Contrasting: A Data-efficient Framework for Multimodal Generative Models.
+- **链接**: [arXiv:2007.01179](https://arxiv.org/abs/2007.01179)
+- **作者**: Yuge Shi, Brooks Paige, Philip H. S. Torr, N. Siddharth
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The output of text-to-image synthesis systems should be coherent, clear, photo-realistic scenes with high semantic fidelity to their conditioned text descriptions. Our Cross-Modal Contrastive Generative Adversarial Network (XMC-GAN) addresses this challenge by maximizing the mutual information between image and text. It does this via multiple contrastive losses which capture inter-modality and intra-modality correspondences. XMC-GAN uses an attentional self-modulation generator, which enforces strong text-image correspondence, and a contrastive discriminator, which acts as a critic as well as a feature encoder for contrastive learning. The quality of XMC-GAN's output is a major step up from previous models, as we show on three challenging datasets. On MS-COCO, not only does XMC-GAN improve state-of-the-art FID from 24.70 to 9.33, but--more importantly--people prefer XMC-GAN by 77.3 for image quality and 74.1 for image-text alignment, compared to three other recent models. XMC-GAN also generalizes to the challenging Localized Narratives dataset (which has longer, more detailed descriptions), improving state-of-the-art FID from 48.70 to 14.12. Lastly, we train and evaluate XMC-GAN on the challenging Open Images data, establishing a strong benchmark FID score of 26.91.
+> Multimodal learning for generative models often refers to the learning of abstract concepts from the commonality of information in multiple modalities, such as vision and language. While it has proven effective for learning generalisable representations, the training of such models often requires a large amount of "related" multimodal data that shares commonality, which can be expensive to come by. To mitigate this, we develop a novel contrastive framework for generative model learning, allowing us to train the model not just by the commonality between modalities, but by the distinction between "related" and "unrelated" multimodal data. We show in experiments that our method enables data-efficient multimodal learning on challenging datasets for various multimodal VAE models. We also show that under our proposed framework, the generative model can accurately identify related samples from unrelated ones, making it possible to make use of the plentiful unlabeled, unpaired multimodal data.
 
 </details>
 
-### Distilling Audio-Visual Knowledge by Compositional Contrastive Learning.
-- **链接**: [arXiv:2104.10955](https://arxiv.org/abs/2104.10955) · [代码](https://github.com/yanbeic/CCL) · 📚 被引 65
-- **作者**: Yanbei Chen, Yongqin Xian, A. Sophia Koepke, Ying Shan, Zeynep Akata
+### Generalized Multimodal ELBO.
+- **链接**: [arXiv:2105.02470](https://arxiv.org/abs/2105.02470)
+- **作者**: Thomas M. Sutter, Imant Daunhawer, Julia E. Vogt
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Having access to multi-modal cues (e.g. vision and audio) empowers some cognitive tasks to be done faster compared to learning from a single modality. In this work, we propose to transfer knowledge across heterogeneous modalities, even though these data modalities may not be semantically correlated. Rather than directly aligning the representations of different modalities, we compose audio, image, and video representations across modalities to uncover richer multi-modal knowledge. Our main idea is to learn a compositional embedding that closes the cross-modal semantic gap and captures the task-relevant semantics, which facilitates pulling together representations across modalities by compositional contrastive learning. We establish a new, comprehensive multi-modal distillation benchmark on three video datasets: UCF101, ActivityNet, and VGGSound. Moreover, we demonstrate that our model significantly outperforms a variety of existing knowledge distillation methods in transferring audio-visual knowledge to improve video representation learning. Code is released here: https://github.com/yanbeic/CCL.
+> Multiple data types naturally co-occur when describing real-world phenomena and learning from them is a long-standing goal in machine learning research. However, existing self-supervised generative models approximating an ELBO are not able to fulfill all desired requirements of multimodal models: their posterior approximation functions lead to a trade-off between the semantic coherence and the ability to learn the joint data distribution. We propose a new, generalized ELBO formulation for multimodal data that overcomes these limitations. The new objective encompasses two previous methods as special cases and combines their benefits without compromises. In extensive experiments, we demonstrate the advantage of the proposed method compared to state-of-the-art models in self-supervised, generative learning tasks.
 
 </details>
 
-### Multimodal Contrastive Training for Visual Representation Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yuan_Multimodal_Contrastive_Training_for_Visual_Representation_Learning_CVPR_2021_paper.html)
-- **作者**: Xin Yuan, Zhe Lin, Jason Kuen, Jianming Zhang, Yilin Wang, Michael Maire et al.
+### HalentNet: Multimodal Trajectory Forecasting with Hallucinative Intents.
+- **链接**: [出版页](https://openreview.net/forum?id=9GBZBPn0Jx)
+- **作者**: Deyao Zhu, Mohamed Zahran, Li Erran Li, Mohamed Elhoseiny
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICLR 2021
 
-### EvDistill: Asynchronous Events To End-Task Learning via Bidirectional Reconstruction-Guided Cross-Modal Knowledge Distillation.
-- **链接**: [arXiv:2111.12341](https://arxiv.org/abs/2111.12341) · 📚 被引 76
-- **作者**: Lin Wang, Yujeong Chae, Sung-Hoon Yoon, Tae-Kyun Kim, Kuk-Jin Yoon
+### Active Contrastive Learning of Audio-Visual Video Representations.
+- **链接**: [出版页](https://openreview.net/forum?id=OMizHuea_HB)
+- **作者**: Shuang Ma, Zhaoyang Zeng, Daniel McDuff, Yale Song
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Event cameras sense per-pixel intensity changes and produce asynchronous event streams with high dynamic range and less motion blur, showing advantages over conventional cameras. A hurdle of training event-based models is the lack of large qualitative labeled data. Prior works learning end-tasks mostly rely on labeled or pseudo-labeled datasets obtained from the active pixel sensor (APS) frames; however, such datasets' quality is far from rivaling those based on the canonical images. In this paper, we propose a novel approach, called \textbf{EvDistill}, to learn a student network on the unlabeled and unpaired event data (target modality) via knowledge distillation (KD) from a teacher network trained with large-scale, labeled image data (source modality). To enable KD across the unpaired modalities, we first propose a bidirectional modality reconstruction (BMR) module to bridge both modalities and simultaneously exploit them to distill knowledge via the crafted pairs, causing no extra computation in the inference. The BMR is improved by the end-tasks and KD losses in an end-to-end manner. Second, we leverage the structural similarities of both modalities and adapt the knowledge by matching their distributions. Moreover, as most prior feature KD methods are uni-modality and less applicable to our problem, we propose to leverage an affinity graph KD loss to boost the distillation. Our extensive experiments on semantic segmentation and object recognition demonstrate that EvDistill achieves significantly better results than the prior works and KD with only events and APS frames.
-
-</details>
-
-## 跨领域论文（完整笔记在其他领域）
-
-- PointAugmenting: Cross-Modal Augmentation for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Shared Cross-Modal Trajectory Prediction for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202021.md)
-- Multi-Modal Fusion Transformer for End-to-End Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202021.md)
+- **会议**: ICLR 2021
