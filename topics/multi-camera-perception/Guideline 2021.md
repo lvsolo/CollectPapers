@@ -1,144 +1,48 @@
 # Multi-camera Perception — 2021 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 17 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Multi-View Multi-Person 3D Pose Estimation With Plane Sweep Stereo.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Lin_Multi-View_Multi-Person_3D_Pose_Estimation_With_Plane_Sweep_Stereo_CVPR_2021_paper.html) · 📚 被引 69
-- **作者**: Jiahao Lin, Gim Hee Lee
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Multi-VAE: Learning Disentangled View-common and View-peculiar Visual Representations for Multi-view Clustering.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00910) · 📚 被引 130
+- **作者**: Jie Xu, Yazhou Ren, Huayi Tang, Xiaorong Pu, Xiaofeng Zhu, Ming Zeng et al.
+- **🏷️ 机构**: University of Electronic Science and Technology of China,School of Computer Science and Engineering,Chengdu,China,611731, Carnegie Mellon University,Department of Electrical Computer Engineering,PA,USA,15213, Lehigh Univerisity,Department of Computer Science and Engineering,PA,USA,18015
+- **会议**: ICCV 2021
 
-### Cross-View Cross-Scene Multi-View Crowd Counting.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_Cross-View_Cross-Scene_Multi-View_Crowd_Counting_CVPR_2021_paper.html) · 📚 被引 68
-- **作者**: Qi Zhang, Wei Lin, Antoni B. Chan
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Just a Few Points are All You Need for Multi-view Stereo: A Novel Semi-supervised Learning Method for Multi-view Stereo.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00612) · 📚 被引 9
+- **作者**: Taekyung Kim, Jaehoon Choi, Seokeon Choi, Dongki Jung, Changick Kim
+- **🏷️ 机构**: Korea Advanced Institute of Science and Technology, University of Maryland, NAVER LABS
+- **会议**: ICCV 2021
 
-### COMPLETER: Incomplete Multi-View Clustering via Contrastive Prediction.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Lin_COMPLETER_Incomplete_Multi-View_Clustering_via_Contrastive_Prediction_CVPR_2021_paper.html) · 📚 被引 404
-- **作者**: Yijie Lin, Yuanbiao Gou, Zitao Liu, Boyun Li, Jiancheng Lv, Xi Peng
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Image Manipulation Detection by Multi-View Multi-Scale Supervision.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01392) · 📚 被引 244
+- **作者**: Xinru Chen, Chengbo Dong, Jiaqi Ji, Juan Cao, Xirong Li
+- **🏷️ 机构**: Renmin University of China,MoE Key Lab of Data Engineering and Knowledge Engineering, Chinese Academy of Sciences,Institute of Computing Technology
+- **会议**: ICCV 2021
 
-### Multi-View 3D Reconstruction of a Texture-Less Smooth Surface of Unknown Generic Reflectance.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Cheng_Multi-View_3D_Reconstruction_of_a_Texture-Less_Smooth_Surface_of_Unknown_CVPR_2021_paper.html) · 📚 被引 22
-- **作者**: Ziang Cheng, Hongdong Li, Yuta Asano, Yinqiang Zheng, Imari Sato
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Shape-aware Multi-Person Pose Estimation from Multi-View Images.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01097) · 📚 被引 46
+- **作者**: Zijian Dong, Jie Song, Xu Chen, Chen Guo, Otmar Hilliges
+- **🏷️ 机构**: ETH Z&#x00FC;rich
+- **会议**: ICCV 2021
 
-### DeepVideoMVS: Multi-View Stereo on Video With Recurrent Spatio-Temporal Fusion.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Duzceker_DeepVideoMVS_Multi-View_Stereo_on_Video_With_Recurrent_Spatio-Temporal_Fusion_CVPR_2021_paper.html)
-- **作者**: Arda Düzçeker, Silvano Galliani, Christoph Vogel, Pablo Speciale, Mihai Dusmanu, Marc Pollefeys
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Graph-Based 3D Multi-Person Pose Estimation Using Multi-View Images.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01096) · 📚 被引 57
+- **作者**: Size Wu, Sheng Jin, Wentao Liu, Lei Bai, Chen Qian, Dong Liu et al.
+- **🏷️ 机构**: University of Science and Technology of China, The University of Hong Kong, SenseTime Research and Tetras.AI
+- **会议**: ICCV 2021
 
-### Recurrent Multi-View Alignment Network for Unsupervised Surface Registration.
-- **链接**: [arXiv:2011.12104](https://arxiv.org/abs/2011.12104) · [代码](https://github.com/WanquanF/RMA-Net) · 📚 被引 47
-- **作者**: Wanquan Feng, Juyong Zhang, Hongrui Cai, Haofei Xu, Junhui Hou, Hujun Bao
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Learning non-rigid registration in an end-to-end manner is challenging due to the inherent high degrees of freedom and the lack of labeled training data. In this paper, we resolve these two challenges simultaneously. First, we propose to represent the non-rigid transformation with a point-wise combination of several rigid transformations. This representation not only makes the solution space well-constrained but also enables our method to be solved iteratively with a recurrent framework, which greatly reduces the difficulty of learning. Second, we introduce a differentiable loss function that measures the 3D shape similarity on the projected multi-view 2D depth images so that our full framework can be trained end-to-end without ground truth supervision. Extensive experiments on several different datasets demonstrate that our proposed method outperforms the previous state-of-the-art by a large margin. The source codes are available at https://github.com/WanquanF/RMA-Net.
-
-</details>
-
-### Differentiable Diffusion for Dense Depth Estimation From Multi-View Images.
-- **链接**: [arXiv:2106.08917](https://arxiv.org/abs/2106.08917) · 📚 被引 17
-- **作者**: Numair Khan, Min H. Kim, James Tompkin
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Lightweight Multi-person Total Motion Capture Using Sparse Multi-view Cameras.
+- **链接**: [arXiv:2108.10378](https://arxiv.org/abs/2108.10378) · 📚 被引 49
+- **作者**: Yuxiang Zhang, Zhe Li, Liang An, Mengcheng Li, Tao Yu, Yebin Liu
+- **🏷️ 机构**: Tsinghua University,Department of Automation and BNRist
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We present a method to estimate dense depth by optimizing a sparse set of points such that their diffusion into a depth map minimizes a multi-view reprojection error from RGB supervision. We optimize point positions, depths, and weights with respect to the loss by differential splatting that models points as Gaussians with analytic transmittance. Further, we develop an efficient optimization routine that can simultaneously optimize the 50k+ points required for complex scene reconstruction. We validate our routine using ground truth data and show high reconstruction quality. Then, we apply this to light field and wider baseline images via self supervision, and show improvements in both average and outlier error for depth maps diffused from inaccurate sparse points. Finally, we compare qualitative and quantitative results to image processing and deep learning methods. http://visual.cs.brown.edu/diffdiffdepth
+> Multi-person total motion capture is extremely challenging when it comes to handle severe occlusions, different reconstruction granularities from body to face and hands, drastically changing observation scales and fast body movements. To overcome these challenges above, we contribute a lightweight total motion capture system for multi-person interactive scenarios using only sparse multi-view cameras. By contributing a novel hand and face bootstrapping algorithm, our method is capable of efficient localization and accurate association of the hands and faces even on severe occluded occasions. We leverage both pose regression and keypoints detection methods and further propose a unified two-stage parametric fitting method for achieving pixel-aligned accuracy. Moreover, for extremely self-occluded poses and close interactions, a novel feedback mechanism is proposed to propagate the pixel-aligned reconstructions into the next frame for more accurate association. Overall, we propose the first light-weight total capture system and achieves fast, robust and accurate multi-person total motion capture performance. The results and experiments show that our method achieves more accurate results than existing methods under sparse-view setups.
 
 </details>
-
-### Multi-view Depth Estimation using Epipolar Spatio-Temporal Networks.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Long_Multi-view_Depth_Estimation_using_Epipolar_Spatio-Temporal_Networks_CVPR_2021_paper.html) · 📚 被引 55
-- **作者**: Xiaoxiao Long, Lingjie Liu, Wei Li, Christian Theobalt, Wenping Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Reconsidering Representation Alignment for Multi-View Clustering.
-- **链接**: [arXiv:2103.07738](https://arxiv.org/abs/2103.07738) · 📚 被引 220
-- **作者**: Daniel J. Trosten, Sigurd Løkse, Robert Jenssen, Michael Kampffmeyer
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Aligning distributions of view representations is a core component of today's state of the art models for deep multi-view clustering. However, we identify several drawbacks with naïvely aligning representation distributions. We demonstrate that these drawbacks both lead to less separable clusters in the representation space, and inhibit the model's ability to prioritize views. Based on these observations, we develop a simple baseline model for deep multi-view clustering. Our baseline model avoids representation alignment altogether, while performing similar to, or better than, the current state of the art. We also expand our baseline model by adding a contrastive learning component. This introduces a selective alignment procedure that preserves the model's ability to prioritize views. Our experiments show that the contrastive learning component enhances the baseline model, improving on the current state of the art by a large margin on several datasets.
-
-</details>
-
-### PatchmatchNet: Learned Multi-View Patchmatch Stereo.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_PatchmatchNet_Learned_Multi-View_Patchmatch_Stereo_CVPR_2021_paper.html) · 📚 被引 380
-- **作者**: Fangjinhua Wang, Silvano Galliani, Christoph Vogel, Pablo Speciale, Marc Pollefeys
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### IBRNet: Learning Multi-View Image-Based Rendering.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_IBRNet_Learning_Multi-View_Image-Based_Rendering_CVPR_2021_paper.html) · 📚 被引 677
-- **作者**: Qianqian Wang, Zhicheng Wang, Kyle Genova, Pratul P. Srinivasan, Howard Zhou, Jonathan T. Barron et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Self-Supervised Learning of Depth Inference for Multi-View Stereo.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yang_Self-Supervised_Learning_of_Depth_Inference_for_Multi-View_Stereo_CVPR_2021_paper.html) · 📚 被引 55
-- **作者**: Jiayu Yang, José M. Álvarez, Miaomiao Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### DyGLIP: A Dynamic Graph Model With Link Prediction for Accurate Multi-Camera Multiple Object Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Quach_DyGLIP_A_Dynamic_Graph_Model_With_Link_Prediction_for_Accurate_CVPR_2021_paper.html)
-- **作者**: Kha Gia Quach, Pha A. Nguyen, Huu Le, Thanh-Dat Truong, Chi Nhan Duong, Minh-Triet Tran et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Wide-Baseline Multi-Camera Calibration Using Person Re-Identification.
-- **链接**: [arXiv:2104.08568](https://arxiv.org/abs/2104.08568) · 📚 被引 26
-- **作者**: Yan Xu, Yu-Jhe Li, Xinshuo Weng, Kris Kitani
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We address the problem of estimating the 3D pose of a network of cameras for large-environment wide-baseline scenarios, e.g., cameras for construction sites, sports stadiums, and public spaces. This task is challenging since detecting and matching the same 3D keypoint observed from two very different camera views is difficult, making standard structure-from-motion (SfM) pipelines inapplicable. In such circumstances, treating people in the scene as "keypoints" and associating them across different camera views can be an alternative method for obtaining correspondences. Based on this intuition, we propose a method that uses ideas from person re-identification (re-ID) for wide-baseline camera calibration. Our method first employs a re-ID method to associate human bounding boxes across cameras, then converts bounding box correspondences to point correspondences, and finally solves for camera pose using multi-view geometry and bundle adjustment. Since our method does not require specialized calibration targets except for visible people, it applies to situations where frequent calibration updates are required. We perform extensive experiments on datasets captured from scenes of different sizes, camera settings (indoor and outdoor), and human activities (walking, playing basketball, construction). Experiment results show that our method achieves similar performance to standard SfM methods relying on manually labeled point correspondences.
-
-</details>
-
-### Monocular Depth Estimation via Listwise Ranking Using the Plackett-Luce Model.
-- **链接**: [arXiv:2010.13118](https://arxiv.org/abs/2010.13118) · 📚 被引 12
-- **作者**: Julian Lienen, Eyke Hüllermeier, Ralph Ewerth, Nils Nommensen
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In many real-world applications, the relative depth of objects in an image is crucial for scene understanding. Recent approaches mainly tackle the problem of depth prediction in monocular images by treating the problem as a regression task. Yet, being interested in an order relation in the first place, ranking methods suggest themselves as a natural alternative to regression, and indeed, ranking approaches leveraging pairwise comparisons as training information ("object A is closer to the camera than B") have shown promising performance on this problem. In this paper, we elaborate on the use of so-called listwise ranking as a generalization of the pairwise approach. Our method is based on the Plackett-Luce (PL) model, a probability distribution on rankings, which we combine with a state-of-the-art neural network architecture and a simple sampling strategy to reduce training complexity. Moreover, taking advantage of the representation of PL as a random utility model, the proposed predictor offers a natural way to recover (shift-invariant) metric depth information from ranking-only data provided at training time. An empirical evaluation on several benchmark datasets in a "zero-shot" setting demonstrates the effectiveness of our approach compared to existing ranking and regression methods.
-
-</details>
-
-### Boosting Monocular Depth Estimation Models to High-Resolution via Content-Adaptive Multi-Resolution Merging.
-- **链接**: [arXiv:2105.14021](https://arxiv.org/abs/2105.14021) · 📚 被引 145
-- **作者**: S. Mahdi H. Miangoleh, Sebastian Dille, Long Mai, Sylvain Paris, Yagiz Aksoy
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Neural networks have shown great abilities in estimating depth from a single image. However, the inferred depth maps are well below one-megapixel resolution and often lack fine-grained details, which limits their practicality. Our method builds on our analysis on how the input resolution and the scene structure affects depth estimation performance. We demonstrate that there is a trade-off between a consistent scene structure and the high-frequency details, and merge low- and high-resolution estimations to take advantage of this duality using a simple depth merging network. We present a double estimation method that improves the whole-image depth estimation and a patch selection method that adds local details to the final result. We demonstrate that by merging estimations at different resolutions with changing context, we can generate multi-megapixel depth maps with a high level of detail using a pre-trained model.
-
-</details>
-
-### Three Ways To Improve Semantic Segmentation With Self-Supervised Depth Estimation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hoyer_Three_Ways_To_Improve_Semantic_Segmentation_With_Self-Supervised_Depth_Estimation_CVPR_2021_paper.html) · 📚 被引 76
-- **作者**: Lukas Hoyer, Dengxin Dai, Yuhua Chen, Adrian Köring, Suman Saha, Luc Van Gool
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
