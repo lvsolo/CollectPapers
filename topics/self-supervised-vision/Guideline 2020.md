@@ -1,37 +1,27 @@
 # Self-supervised Vision — 2020 Guideline
 
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
-> 论文数: 28 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 34 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Self-Supervised Few-Shot Learning on Point Clouds.
-- **链接**: [arXiv:2009.14168](https://arxiv.org/abs/2009.14168)
-- **作者**: Charu Sharma, Manohar Kaul
+### From Image Collections to Point Clouds With Self-Supervised Shape and Pose Networks.
+- **链接**: [arXiv:2005.01939](https://arxiv.org/abs/2005.01939) · 📚 被引 31
+- **作者**: Navaneet K. L., Ansu Mathew, Shashank Kashyap, Wei-Chih Hung, Varun Jampani, R. Venkatesh Babu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Self-Supervised Relational Reasoning for Representation Learning.
+- **链接**: [arXiv:2006.05849](https://arxiv.org/abs/2006.05849)
+- **作者**: Massimiliano Patacchiola, Amos J. Storkey
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The increased availability of massive point clouds coupled with their utility in a wide variety of applications such as robotics, shape synthesis, and self-driving cars has attracted increased attention from both industry and academia. Recently, deep neural networks operating on labeled point clouds have shown promising results on supervised learning tasks like classification and segmentation. However, supervised learning leads to the cumbersome task of annotating the point clouds. To combat this problem, we propose two novel self-supervised pre-training tasks that encode a hierarchical partitioning of the point clouds using a cover-tree, where point cloud subsets lie within balls of varying radii at each level of the cover-tree. Furthermore, our self-supervised learning network is restricted to pre-train on the support set (comprising of scarce training examples) used to train the downstream network in a few-shot learning (FSL) setting. Finally, the fully-trained self-supervised network's point embeddings are input to the downstream task's network. We present a comprehensive empirical evaluation of our method on both downstream classification and segmentation tasks and show that supervised methods pre-trained with our self-supervised learning method significantly improve the accuracy of state-of-the-art methods. Additionally, our method also outperforms previous unsupervised methods in downstream classification tasks.
+> In self-supervised learning, a system is tasked with achieving a surrogate objective by defining alternative targets on a set of unlabeled data. The aim is to build useful representations that can be used in downstream tasks, without costly manual annotation. In this work, we propose a novel self-supervised formulation of relational reasoning that allows a learner to bootstrap a signal from information implicit in unlabeled data. Training a relation head to discriminate how entities relate to themselves (intra-reasoning) and other entities (inter-reasoning), results in rich and descriptive representations in the underlying neural network backbone, which can be used in downstream tasks such as classification and image retrieval. We evaluate the proposed method following a rigorous experimental procedure, using standard datasets, protocols, and backbones. Self-supervised relational reasoning outperforms the best competitor in all conditions by an average 14% in accuracy, and the most recent state-of-the-art model by 3%. We link the effectiveness of the method to the maximization of a Bernoulli log-likelihood, which can be considered as a proxy for maximizing the mutual information, resulting in a more efficient objective with respect to the commonly used contrastive losses.
 
 </details>
-
-### Counterfactual Contrastive Learning for Weakly-Supervised Vision-Language Grounding.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/d27b95cac4c27feb850aaa4070cc4675-Abstract.html)
-- **作者**: Zhu Zhang, Zhou Zhao, Zhijie Lin, Jieming Zhu, Xiuqiang He
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
-
-### Big Self-Supervised Models are Strong Semi-Supervised Learners.
-- **链接**: [arXiv:2006.10029](https://arxiv.org/abs/2006.10029)
-- **作者**: Ting Chen, Simon Kornblith, Kevin Swersky, Mohammad Norouzi, Geoffrey E. Hinton
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> One paradigm for learning from few labeled examples while making best use of a large amount of unlabeled data is unsupervised pretraining followed by supervised fine-tuning. Although this paradigm uses unlabeled data in a task-agnostic way, in contrast to common approaches to semi-supervised learning for computer vision, we show that it is surprisingly effective for semi-supervised learning on ImageNet. A key ingredient of our approach is the use of big (deep and wide) networks during pretraining and fine-tuning. We find that, the fewer the labels, the more this approach (task-agnostic use of unlabeled data) benefits from a bigger network. After fine-tuning, the big network can be further improved and distilled into a much smaller one with little loss in classification accuracy by using the unlabeled examples for a second time, but in a task-specific way. The proposed semi-supervised learning algorithm can be summarized in three steps: unsupervised pretraining of a big ResNet model using SimCLRv2, supervised fine-tuning on a few labeled examples, and distillation with unlabeled examples for refining and transferring the task-specific knowledge. This procedure achieves 73.9% ImageNet top-1 accuracy with just 1% of the labels ($\le$13 labeled images per class) using ResNet-50, a $10\times$ improvement in label efficiency over the previous state-of-the-art. With 10% of labels, ResNet-50 trained with our method achieves 77.5% top-1 accuracy, outperforming standard supervised training with all of the labels.
 
 </details>
 
@@ -39,47 +29,67 @@
 - **链接**: [arXiv:2006.11477](https://arxiv.org/abs/2006.11477)
 - **作者**: Alexei Baevski, Yuhao Zhou, Abdelrahman Mohamed, Michael Auli
 - **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+### Self-Supervised Monocular Trained Depth Estimation Using Self-Attention and Discrete Disparity Volume.
+- **链接**: [arXiv:2003.13951](https://arxiv.org/abs/2003.13951) · 📚 被引 231
+- **作者**: Adrian Johnston, Gustavo Carneiro
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Monocular depth estimation has become one of the most studied applications in computer vision, where the most accurate approaches are based on fully supervised learning models. However, the acquisition of accurate and large ground truth data sets to model these fully supervised methods is a major challenge for the further development of the area. Self-supervised methods trained with monocular videos constitute one the most promising approaches to mitigate the challenge mentioned above due to the wide-spread availability of training data. Consequently, they have been intensively studied, where the main ideas explored consist of different types of model architectures, loss functions, and occlusion masks to address non-rigid motion. In this paper, we propose two new ideas to improve self-supervised monocular trained depth estimation: 1) self-attention, and 2) discrete disparity prediction. Compared with the usual localised convolution operation, self-attention can explore a more general contextual information that allows the inference of similar disparity values at non-contiguous regions of the image. Discrete disparity prediction has been shown by fully supervised methods to provide a more robust and sharper depth estimation than the more common continuous disparity prediction, besides enabling the estimation of depth uncertainty. We show that the extension of the state-of-the-art self-supervised monocular trained depth estimator Monodepth2 with these two ideas allows us to design a model that produces the best results in the field in KITTI 2015 and Make3D, closing the gap with respect self-supervised stereo training and fully supervised approaches.
+
+</details>
+
+### Self2Self With Dropout: Learning Self-Supervised Denoising From Single Image.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Quan_Self2Self_With_Dropout_Learning_Self-Supervised_Denoising_From_Single_Image_CVPR_2020_paper.html) · 📚 被引 381
+- **作者**: Yuhui Quan, Mingqin Chen, Tongyao Pang, Hui Ji
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Self-Supervised Equivariant Attention Mechanism for Weakly Supervised Semantic Segmentation.
+- **链接**: [arXiv:2004.04581](https://arxiv.org/abs/2004.04581) · 📚 被引 668
+- **作者**: Yude Wang, Jie Zhang, Meina Kan, Shiguang Shan, Xilin Chen
+- **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We show for the first time that learning powerful representations from speech audio alone followed by fine-tuning on transcribed speech can outperform the best semi-supervised methods while being conceptually simpler. wav2vec 2.0 masks the speech input in the latent space and solves a contrastive task defined over a quantization of the latent representations which are jointly learned. Experiments using all labeled data of Librispeech achieve 1.8/3.3 WER on the clean/other test sets. When lowering the amount of labeled data to one hour, wav2vec 2.0 outperforms the previous state of the art on the 100 hour subset while using 100 times less labeled data. Using just ten minutes of labeled data and pre-training on 53k hours of unlabeled data still achieves 4.8/8.2 WER. This demonstrates the feasibility of speech recognition with limited amounts of labeled data.
+> Image-level weakly supervised semantic segmentation is a challenging problem that has been deeply studied in recent years. Most of advanced solutions exploit class activation map (CAM). However, CAMs can hardly serve as the object mask due to the gap between full and weak supervisions. In this paper, we propose a self-supervised equivariant attention mechanism (SEAM) to discover additional supervision and narrow the gap. Our method is based on the observation that equivariance is an implicit constraint in fully supervised semantic segmentation, whose pixel-level labels take the same spatial transformation as the input images during data augmentation. However, this constraint is lost on the CAMs trained by image-level supervision. Therefore, we propose consistency regularization on predicted CAMs from various transformed images to provide self-supervision for network learning. Moreover, we propose a pixel correlation module (PCM), which exploits context appearance information and refines the prediction of current pixel by its similar neighbors, leading to further improvement on CAMs consistency. Extensive experiments on PASCAL VOC 2012 dataset demonstrate our method outperforms state-of-the-art methods using the same level of supervision. The code is released online.
 
 </details>
 
-### LoopReg: Self-supervised Learning of Implicit Surface Correspondences, Pose and Shape for 3D Human Mesh Registration.
-- **链接**: [arXiv:2010.12447](https://arxiv.org/abs/2010.12447)
-- **作者**: Bharat Lal Bhatnagar, Cristian Sminchisescu, Christian Theobalt, Gerard Pons-Moll
+</details>
+
+### Graph-based, Self-Supervised Program Repair from Diagnostic Feedback.
+- **链接**: [arXiv:2005.10636](https://arxiv.org/abs/2005.10636)
+- **作者**: Michihiro Yasunaga, Percy Liang
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We address the problem of fitting 3D human models to 3D scans of dressed humans. Classical methods optimize both the data-to-model correspondences and the human model parameters (pose and shape), but are reliable only when initialized close to the solution. Some methods initialize the optimization based on fully supervised correspondence predictors, which is not differentiable end-to-end, and can only process a single scan at a time. Our main contribution is LoopReg, an end-to-end learning framework to register a corpus of scans to a common 3D human model. The key idea is to create a self-supervised loop. A backward map, parameterized by a Neural Network, predicts the correspondence from every scan point to the surface of the human model. A forward map, parameterized by a human model, transforms the corresponding points back to the scan based on the model parameters (pose and shape), thus closing the loop. Formulating this closed loop is not straightforward because it is not trivial to force the output of the NN to be on the surface of the human model - outside this surface the human model is not even defined. To this end, we propose two key innovations. First, we define the canonical surface implicitly as the zero level set of a distance field in R3, which in contrast to morecommon UV parameterizations, does not require cutting the surface, does not have discontinuities, and does not induce distortion. Second, we diffuse the human model to the 3D domain R3. This allows to map the NN predictions forward,even when they slightly deviate from the zero level set. Results demonstrate that we can train LoopRegmainly self-supervised - following a supervised warm-start, the model becomes increasingly more accurate as additional unlabelled raw scans are processed. Our code and pre-trained models can be downloaded for research.
+> Pretrained models from self-supervision are prevalently used in fine-tuning downstream tasks faster or for better accuracy. However, gaining robustness from pretraining is left unexplored. We introduce adversarial training into self-supervision, to provide general-purpose robust pre-trained models for the first time. We find these robust pre-trained models can benefit the subsequent fine-tuning in two ways: i) boosting final model robustness; ii) saving the computation cost, if proceeding towards adversarial fine-tuning. We conduct extensive experiments to demonstrate that the proposed framework achieves large performance margins (eg, 3.83% on robust accuracy and 1.3% on standard accuracy, on the CIFAR-10 dataset), compared with the conventional end-to-end adversarial training baseline. Moreover, we find that different self-supervised pre-trained models have a diverse adversarial vulnerability. It inspires us to ensemble several pretraining tasks, which boosts robustness more. Our ensemble strategy contributes to a further improvement of 3.59% on robust accuracy, while maintaining a slightly higher standard accuracy on CIFAR-10. Our codes are available at https://github.com/TAMU-VITA/Adv-SS-Pretraining.
 
 </details>
 
-### Patch2Self: Denoising Diffusion MRI with Self-Supervised Learning​.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/bc047286b224b7bfa73d4cb02de1238d-Abstract.html)
-- **作者**: Shreyas Fadnavis, Joshua Batson, Eleftherios Garyfallidis
+### Action Segmentation With Joint Self-Supervised Temporal Domain Adaptation.
+- **链接**: [arXiv:2003.02824](https://arxiv.org/abs/2003.02824) · [代码](https://github.com/cmhungsteve/SSTDA) · 📚 被引 90
+- **作者**: Min-Hung Chen, Baopu Li, Yingze Bao, Ghassan AlRegib, Zsolt Kira
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
-### Bootstrap Your Own Latent - A New Approach to Self-Supervised Learning.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/f3ada80d5c4ee70142b17b8192b2958e-Abstract.html)
-- **作者**: Jean-Bastien Grill, Florian Strub, Florent Altché, Corentin Tallec, Pierre H. Richemond, Elena Buchatskaya et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Self-Supervised Relationship Probing.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/13f320e7b5ead1024ac95c3b208610db-Abstract.html)
-- **作者**: Jiuxiang Gu, Jason Kuen, Shafiq R. Joty, Jianfei Cai, Vlad I. Morariu, Handong Zhao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+> Despite the recent progress of fully-supervised action segmentation techniques, the performance is still not fully satisfactory. One main challenge is the problem of spatiotemporal variations (e.g. different people may perform the same activity in various ways). Therefore, we exploit unlabeled videos to address this problem by reformulating the action segmentation task as a cross-domain problem with domain discrepancy caused by spatio-temporal variations. To reduce the discrepancy, we propose Self-Supervised Temporal Domain Adaptation (SSTDA), which contains two self-supervised auxiliary tasks (binary and sequential domain prediction) to jointly align cross-domain feature spaces embedded with local and global temporal dynamics, achieving better performance than other Domain Adaptation (DA) approaches. On three challenging benchmark datasets (GTEA, 50Salads, and Breakfast), SSTDA outperforms the current state-of-the-art method by large margins (e.g. for the F1@25 score, from 59.6% to 69.1% on Breakfast, from 73.4% to 81.5% on 50Salads, and from 83.6% to 89.1% on GTEA), and requires only 65% of the labeled training data for comparable performance, demonstrating the usefulness of adapting to unlabeled target videos across variations. The source code is available at https://github.com/cmhungsteve/SSTDA.
 
-### Self-supervised Co-Training for Video Representation Learning.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/3def184ad8f4755ff269862ea77393dd-Abstract.html)
-- **作者**: Tengda Han, Weidi Xie, Andrew Zisserman
+</details>
+
+### SG-NN: Sparse Generative Neural Networks for Self-Supervised Scene Completion of RGB-D Scans.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Dai_SG-NN_Sparse_Generative_Neural_Networks_for_Self-Supervised_Scene_Completion_of_CVPR_2020_paper.html) · 📚 被引 122
+- **作者**: Angela Dai, Christian Diller, Matthias Nießner
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
@@ -91,7 +101,9 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Discriminatively localizing sounding objects in cocktail-party, i.e., mixed sound scenes, is commonplace for humans, but still challenging for machines. In this paper, we propose a two-stage learning framework to perform self-supervised class-aware sounding object localization. First, we propose to learn robust object representations by aggregating the candidate sound localization results in the single source scenes. Then, class-aware object localization maps are generated in the cocktail-party scenarios by referring the pre-learned object knowledge, and the sounding objects are accordingly selected by matching audio and visual object category distributions, where the audiovisual consistency is viewed as the self-supervised signal. Experimental results in both realistic and synthesized cocktail-party videos demonstrate that our model is superior in filtering out silent objects and pointing out the location of sounding objects of different classes. Code is available at https://github.com/DTaoo/Discriminative-Sounding-Objects-Localization.
+> Scene flow estimation has been receiving increasing attention for 3D environment perception. Monocular scene flow estimation -- obtaining 3D structure and 3D motion from two temporally consecutive images -- is a highly ill-posed problem, and practical solutions are lacking to date. We propose a novel monocular scene flow method that yields competitive accuracy and real-time performance. By taking an inverse problem view, we design a single convolutional neural network (CNN) that successfully estimates depth and 3D motion simultaneously from a classical optical flow cost volume. We adopt self-supervised learning with 3D loss functions and occlusion reasoning to leverage unlabeled data. We validate our design choices, including the proxy loss and augmentation setup. Our model achieves state-of-the-art accuracy among unsupervised/self-supervised learning approaches to monocular scene flow, and yields competitive results for the optical flow and monocular depth estimation sub-tasks. Semi-supervised fine-tuning further improves the accuracy and yields promising results in real-time.
+
+</details>
 
 </details>
 
@@ -113,45 +125,75 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
-### Cycle-Contrast for Self-Supervised Video Representation Learning.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/5c9452254bccd24b8ad0bb1ab4408ad1-Abstract.html)
-- **作者**: Quan Kong, Wenpeng Wei, Ziwei Deng, Tomoaki Yoshinaga, Tomokazu Murakami
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### CompRess: Self-Supervised Learning by Compressing Representations.
-- **链接**: [arXiv:2010.14713](https://arxiv.org/abs/2010.14713) · [代码](https://github.com/UMBCvision/CompRess)
-- **作者**: Soroush Abbasi Koohpayegani, Ajinkya Tejankar, Hamed Pirsiavash
+> We introduce a novel principle for self-supervised feature learning based on the discrimination of specific transformations of an image. We argue that the generalization capability of learned features depends on what image neighborhood size is sufficient to discriminate different image transformations: The larger the required neighborhood size and the more global the image statistics that the feature can describe. An accurate description of global image statistics allows to better represent the shape and configuration of objects and their context, which ultimately generalizes better to new tasks such as object classification and detection. This suggests a criterion to choose and design image transformations. Based on this criterion, we introduce a novel image transformation that we call limited context inpainting (LCI). This transformation inpaints an image patch conditioned only on a small rectangular pixel boundary (the limited context). Because of the limited boundary information, the inpainter can learn to match local pixel statistics, but is unlikely to match the global statistics of the image. We claim that the same principle can be used to justify the performance of transformations such as image rotations and warping. Indeed, we demonstrate experimentally that learning to discriminate transformations such as LCI, image warping and rotations, yields features with state of the art generalization capabilities on several datasets such as Pascal VOC, STL-10, CelebA, and ImageNet. Remarkably, our trained features achieve a performance on Places on par with features trained through supervised learning with ImageNet labels.
+
+</details>
+
+### Self-Supervised 3D Human Pose Estimation via Part Guided Novel Image Synthesis.
+- **链接**: [arXiv:2004.04400](https://arxiv.org/abs/2004.04400) · 📚 被引 66
+- **作者**: Jogendra Nath Kundu, Siddharth Seth, Varun Jampani, Mugalodi Rakesh, R. Venkatesh Babu, Anirban Chakraborty
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Self-supervised learning aims to learn good representations with unlabeled data. Recent works have shown that larger models benefit more from self-supervised learning than smaller models. As a result, the gap between supervised and self-supervised learning has been greatly reduced for larger models. In this work, instead of designing a new pseudo task for self-supervised learning, we develop a model compression method to compress an already learned, deep self-supervised model (teacher) to a smaller one (student). We train the student model so that it mimics the relative similarity between the data points in the teacher's embedding space. For AlexNet, our method outperforms all previous methods including the fully supervised model on ImageNet linear evaluation (59.0% compared to 56.5%) and on nearest neighbor evaluation (50.7% compared to 41.4%). To the best of our knowledge, this is the first time a self-supervised AlexNet has outperformed supervised one on ImageNet classification. Our code is available here: https://github.com/UMBCvision/CompRess
+> Camera captured human pose is an outcome of several sources of variation. Performance of supervised 3D pose estimation approaches comes at the cost of dispensing with variations, such as shape and appearance, that may be useful for solving other related tasks. As a result, the learned model not only inculcates task-bias but also dataset-bias because of its strong reliance on the annotated samples, which also holds true for weakly-supervised models. Acknowledging this, we propose a self-supervised learning framework to disentangle such variations from unlabeled video frames. We leverage the prior knowledge on human skeleton and poses in the form of a single part-based 2D puppet model, human pose articulation constraints, and a set of unpaired 3D poses. Our differentiable formalization, bridging the representation gap between the 3D pose and spatial part maps, not only facilitates discovery of interpretable pose disentanglement but also allows us to operate on videos with diverse camera movements. Qualitative results on unseen in-the-wild datasets establish our superior generalization across multiple tasks beyond the primary tasks of 3D pose estimation and part segmentation. Furthermore, we demonstrate state-of-the-art weakly-supervised 3D pose estimation performance on both Human3.6M and MPI-INF-3DHP datasets.
 
 </details>
 
-### Refactoring Policy for Compositional Generalizability using Self-Supervised Object Proposals.
-- **链接**: [arXiv:2011.00971](https://arxiv.org/abs/2011.00971)
-- **作者**: Tongzhou Mu, Jiayuan Gu, Zhiwei Jia, Hao Tang, Hao Su
+### From Image Collections to Point Clouds With Self-Supervised Shape and Pose Networks.
+- **链接**: [arXiv:2005.01939](https://arxiv.org/abs/2005.01939) · 📚 被引 31
+- **作者**: Navaneet K. L., Ansu Mathew, Shashank Kashyap, Wei-Chih Hung, Varun Jampani, R. Venkatesh Babu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Reconstructing 3D models from 2D images is one of the fundamental problems in computer vision. In this work, we propose a deep learning technique for 3D object reconstruction from a single image. Contrary to recent works that either use 3D supervision or multi-view supervision, we use only single view images with no pose information during training as well. This makes our approach more practical requiring only an image collection of an object category and the corresponding silhouettes. We learn both 3D point cloud reconstruction and pose estimation networks in a self-supervised manner, making use of differentiable point cloud renderer to train with 2D supervision. A key novelty of the proposed technique is to impose 3D geometric reasoning into predicted 3D point clouds by rotating them with randomly sampled poses and then enforcing cycle consistency on both 3D reconstructions and poses. In addition, using single-view supervision allows us to do test-time optimization on a given test image. Experiments on the synthetic ShapeNet and real-world Pix3D datasets demonstrate that our approach, despite using less supervision, can achieve competitive performance compared to pose-supervised and multi-view supervised approaches.
+
+</details>
+
+### MAST: A Memory-Augmented Self-Supervised Tracker.
+- **链接**: [arXiv:2002.07793](https://arxiv.org/abs/2002.07793) · 📚 被引 134
+- **作者**: Zihang Lai, Erika Lu, Weidi Xie
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We study how to learn a policy with compositional generalizability. We propose a two-stage framework, which refactorizes a high-reward teacher policy into a generalizable student policy with strong inductive bias. Particularly, we implement an object-centric GNN-based student policy, whose input objects are learned from images through self-supervised learning. Empirically, we evaluate our approach on four difficult tasks that require compositional generalizability, and achieve superior performance compared to baselines.
+> Self-supervised representation learning approaches have recently surpassed their supervised learning counterparts on downstream tasks like object detection and image classification. Somewhat mysteriously the recent gains in performance come from training instance classification models, treating each image and it's augmented versions as samples of a single class. In this work, we first present quantitative experiments to demystify these gains. We demonstrate that approaches like MOCO and PIRL learn occlusion-invariant representations. However, they fail to capture viewpoint and category instance invariance which are crucial components for object recognition. Second, we demonstrate that these approaches obtain further gains from access to a clean object-centric training dataset like Imagenet. Finally, we propose an approach to leverage unstructured videos to learn representations that possess higher viewpoint invariance. Our results show that the learned representations outperform MOCOv2 trained on the same data in terms of invariances encoded and the performance on downstream image classification and semantic segmentation tasks.
 
 </details>
 
-### Self-supervised learning through the eyes of a child.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/7183145a2a3e0ce2b68cd3735186b1d5-Abstract.html)
-- **作者**: A. Emin Orhan, Vaibhav V. Gupta, Brenden M. Lake
+### Self-Supervised Graph Transformer on Large-Scale Molecular Data.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/94aef38441efa3380a3bed3faf1f9d5d-Abstract.html)
+- **作者**: Yu Rong, Yatao Bian, Tingyang Xu, Weiyang Xie, Ying Wei, Wenbing Huang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
-### Self-Supervised Relational Reasoning for Representation Learning.
-- **链接**: [arXiv:2006.05849](https://arxiv.org/abs/2006.05849)
-- **作者**: Massimiliano Patacchiola, Amos J. Storkey
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Defining and reliably finding a canonical orientation for 3D surfaces is key to many Computer Vision and Robotics applications. This task is commonly addressed by handcrafted algorithms exploiting geometric cues deemed as distinctive and robust by the designer. Yet, one might conjecture that humans learn the notion of the inherent orientation of 3D objects from experience and that machines may do so alike. In this work, we show the feasibility of learning a robust canonical orientation for surfaces represented as point clouds. Based on the observation that the quintessential property of a canonical orientation is equivariance to 3D rotations, we propose to employ Spherical CNNs, a recently introduced machinery that can learn equivariant representations defined on the Special Orthogonal group SO(3). Specifically, spherical correlations compute feature maps whose elements define 3D rotations. Our method learns such feature maps from raw data by a self-supervised training procedure and robustly selects a rotation to transform the input point cloud into a learned canonical orientation. Thereby, we realize the first end-to-end learning approach to define and extract the canonical orientation of 3D shapes, which we aptly dub Compass. Experiments on several public datasets prove its effectiveness at orienting local surface patches as well as whole objects.
+
+</details>
+
+### 3D Self-Supervised Methods for Medical Imaging.
+- **链接**: [arXiv:2006.03829](https://arxiv.org/abs/2006.03829)
+- **作者**: Aiham Taleb, Winfried Loetzsch, Noel Danz, Julius Severin, Thomas Gärtner, Benjamin Bergner et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised learning methods have witnessed a recent surge of interest after proving successful in multiple application fields. In this work, we leverage these techniques, and we propose 3D versions for five different self-supervised methods, in the form of proxy tasks. Our methods facilitate neural network feature learning from unlabeled 3D images, aiming to reduce the required cost for expert annotation. The developed algorithms are 3D Contrastive Predictive Coding, 3D Rotation prediction, 3D Jigsaw puzzles, Relative 3D patch location, and 3D Exemplar networks. Our experiments show that pretraining models with our 3D tasks yields more powerful semantic representations, and enables solving downstream tasks more accurately and efficiently, compared to training the models from scratch and to pretraining them on 2D slices. We demonstrate the effectiveness of our methods on three downstream tasks from the medical imaging domain: i) Brain Tumor Segmentation from 3D MRI, ii) Pancreas Tumor Segmentation from 3D CT, and iii) Diabetic Retinopathy Detection from 2D Fundus images. In each task, we assess the gains in data-efficiency, performance, and speed of convergence. Interestingly, we also find gains when transferring the learned representations, by our methods, from a large unlabeled 3D corpus to a small downstream-specific dataset. We achieve results competitive to state-of-the-art solutions at a fraction of the computational expense. We publish our implementations for the developed algorithms (both 3D and 2D versions) as an open-source library, in an effort to allow other researchers to apply and extend our methods on their datasets.
+
+</details>
+
+### Cross-lingual Retrieval for Iterative Self-Supervised Training.
+- **链接**: [arXiv:2006.09526](https://arxiv.org/abs/2006.09526)
+- **作者**: Chau Tran, Yuqing Tang, Xian Li, Jiatao Gu
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
@@ -167,15 +209,9 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Self-supervised representation learning approaches have recently surpassed their supervised learning counterparts on downstream tasks like object detection and image classification. Somewhat mysteriously the recent gains in performance come from training instance classification models, treating each image and it's augmented versions as samples of a single class. In this work, we first present quantitative experiments to demystify these gains. We demonstrate that approaches like MOCO and PIRL learn occlusion-invariant representations. However, they fail to capture viewpoint and category instance invariance which are crucial components for object recognition. Second, we demonstrate that these approaches obtain further gains from access to a clean object-centric training dataset like Imagenet. Finally, we propose an approach to leverage unstructured videos to learn representations that possess higher viewpoint invariance. Our results show that the learned representations outperform MOCOv2 trained on the same data in terms of invariances encoded and the performance on downstream image classification and semantic segmentation tasks.
-
-</details>
-
-### Self-Supervised Graph Transformer on Large-Scale Molecular Data.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/94aef38441efa3380a3bed3faf1f9d5d-Abstract.html)
-- **作者**: Yu Rong, Yatao Bian, Tingyang Xu, Weiyang Xie, Ying Wei, Wenbing Huang et al.
+### Self-Supervised Learning of Pretext-Invariant Representations.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Misra_Self-Supervised_Learning_of_Pretext-Invariant_Representations_CVPR_2020_paper.html) · 📚 被引 935
+- **作者**: Ishan Misra, Laurens van der Maaten
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
@@ -215,6 +251,8 @@
 
 </details>
 
+</details>
+
 ### Noise2Same: Optimizing A Self-Supervised Bound for Image Denoising.
 - **链接**: [arXiv:2010.11971](https://arxiv.org/abs/2010.11971) · [代码](https://github.com/divelab/Noise2Same)
 - **作者**: Yaochen Xie, Zhengyang Wang, Shuiwang Ji
@@ -224,6 +262,8 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Self-supervised frameworks that learn denoising models with merely individual noisy images have shown strong capability and promising performance in various image denoising tasks. Existing self-supervised denoising frameworks are mostly built upon the same theoretical foundation, where the denoising models are required to be J-invariant. However, our analyses indicate that the current theory and the J-invariance may lead to denoising models with reduced performance. In this work, we introduce Noise2Same, a novel self-supervised denoising framework. In Noise2Same, a new self-supervised loss is proposed by deriving a self-supervised upper bound of the typical supervised loss. In particular, Noise2Same requires neither J-invariance nor extra information about the noise model and can be used in a wider range of denoising applications. We analyze our proposed Noise2Same both theoretically and experimentally. The experimental results show that our Noise2Same remarkably outperforms previous self-supervised denoising methods in terms of denoising performance and training efficiency. Our code is available at https://github.com/divelab/Noise2Same.
+
+</details>
 
 </details>
 
@@ -239,9 +279,110 @@
 
 </details>
 
+### Self-Supervised Human Depth Estimation From Monocular Videos.
+- **链接**: [arXiv:2005.03358](https://arxiv.org/abs/2005.03358) · 📚 被引 24
+- **作者**: Feitong Tan, Hao Zhu, Zhaopeng Cui, Siyu Zhu, Marc Pollefeys, Ping Tan
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Previous methods on estimating detailed human depth often require supervised training with `ground truth' depth data. This paper presents a self-supervised method that can be trained on YouTube videos without known depth, which makes training data collection simple and improves the generalization of the learned network. The self-supervised learning is achieved by minimizing a photo-consistency loss, which is evaluated between a video frame and its neighboring frames warped according to the estimated depth and the 3D non-rigid motion of the human body. To solve this non-rigid motion, we first estimate a rough SMPL model at each video frame and compute the non-rigid body motion accordingly, which enables self-supervised learning on estimating the shape details. Experiments demonstrate that our method enjoys better generalization and performs much better on data in the wild.
+
+</details>
+
+### Self-Supervised Learning of Video-Induced Visual Invariances.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Tschannen_Self-Supervised_Learning_of_Video-Induced_Visual_Invariances_CVPR_2020_paper.html) · 📚 被引 34
+- **作者**: Michael Tschannen, Josip Djolonga, Marvin Ritter, Aravindh Mahendran, Neil Houlsby, Sylvain Gelly et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Contrastive learning of global and local features for medical image segmentation with limited annotations.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/949686ecef4ee20a62d16b4a2d7ccca3-Abstract.html)
+- **作者**: Krishna Chaitanya, Ertunc Erdil, Neerav Karani, Ender Konukoglu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Debiased Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/63c3ddcc7b23daa1e42dc41f9a44a873-Abstract.html)
+- **作者**: Ching-Yao Chuang, Joshua Robinson, Yen-Chen Lin, Antonio Torralba, Stefanie Jegelka
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Self-paced Contrastive Learning with Hybrid Memory for Domain Adaptive Object Re-ID.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/821fa74b50ba3f7cba1e6c53e8fa6845-Abstract.html)
+- **作者**: Yixiao Ge, Feng Zhu, Dapeng Chen, Rui Zhao, Hongsheng Li
+- **🏷️ 机构**: CUHK
+- **会议**: NeurIPS 2020
+
+### Contrastive Learning with Adversarial Examples.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/c68c9c8258ea7d85472dd6fd0015f047-Abstract.html)
+- **作者**: Chih-Hui Ho, Nuno Vasconcelos
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Robust Pre-Training by Adversarial Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/ba7e36c43aff315c00ec2b8625e3b719-Abstract.html)
+- **作者**: Ziyu Jiang, Tianlong Chen, Ting Chen, Zhangyang Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Hard Negative Mixing for Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/f7cade80b7cc92b991cf4d2806d6bd78-Abstract.html)
+- **作者**: Yannis Kalantidis, Mert Bülent Sariyildiz, Noé Pion, Philippe Weinzaepfel, Diane Larlus
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### ContraGAN: Contrastive Learning for Conditional Image Generation.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/f490c742cd8318b8ee6dca10af2a163f-Abstract.html)
+- **作者**: Minguk Kang, Jaesik Park
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Supervised Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html)
+- **作者**: Prannay Khosla, Piotr Teterwak, Chen Wang, Aaron Sarna, Yonglong Tian, Phillip Isola et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Few-shot Visual Reasoning with Meta-Analogical Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/c39e1a03859f9ee215bc49131d0caf33-Abstract.html)
+- **作者**: Youngsung Kim, Jinwoo Shin, Eunho Yang, Sung Ju Hwang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/8965f76632d7672e7d3cf29c87ecaa0c-Abstract.html)
+- **作者**: Jihoon Tack, Sangwoo Mo, Jongheon Jeong, Jinwoo Shin
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Soft Contrastive Learning for Visual Localization.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/7f2cba89a7116c7c6b0a769572d5fad9-Abstract.html)
+- **作者**: Janine Thoma, Danda Pani Paudel, Luc Van Gool
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### What Makes for Good Views for Contrastive Learning?
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/4c2e5eaae9152079b9e95845750bb9ab-Abstract.html)
+- **作者**: Yonglong Tian, Chen Sun, Ben Poole, Dilip Krishnan, Cordelia Schmid, Phillip Isola
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Graph Contrastive Learning with Augmentations.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/3fe230348e9a12c13120749e3f9fa4cd-Abstract.html)
+- **作者**: Yuning You, Tianlong Chen, Yongduo Sui, Ting Chen, Zhangyang Wang, Yang Shen
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose DiscoFaceGAN, an approach for face image generation of virtual people with disentangled, precisely-controllable latent representations for identity of non-existing people, expression, pose, and illumination. We embed 3D priors into adversarial learning and train the network to imitate the image formation of an analytic 3D face deformation and rendering process. To deal with the generation freedom induced by the domain gap between real and rendered faces, we further introduce contrastive learning to promote disentanglement by comparing pairs of generated images. Experiments show that through our imitative-contrastive learning, the factor variations are very well disentangled and the properties of a generated face can be precisely controlled. We also analyze the learned latent space and present several meaningful properties supporting factor disentanglement. Our method can also be used to embed real images into the disentangled latent space. We hope our method could provide new understandings of the relationship between physical properties and deep image synthesis.
+
+</details>
+
 ## 跨领域论文（完整笔记在其他领域）
 
-- Forget About the LiDAR: Self-Supervised Depth Estimators with MED Probability Volumes. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
-- Self-Supervised MultiModal Versatile Networks. → [multimodal](../multimodal/Guideline%202020.md)
-- Self-Supervised Learning by Cross-Modal Audio-Video Clustering. → [multimodal](../multimodal/Guideline%202020.md)
-- Self-Supervised Generative Adversarial Compression. → [network-pruning](../network-pruning/Guideline%202020.md)
+- 3D Packing for Self-Supervised Monocular Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
+- Exploit Clues From Views: Self-Supervised and Regularized Learning for Multiview Object Recognition. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
+- On the Uncertainty of Self-Supervised Monocular Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)

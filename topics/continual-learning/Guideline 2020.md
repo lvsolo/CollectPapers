@@ -5,27 +5,39 @@
 
 > 同领域其他年份: 
 
-### Look-ahead Meta Learning for Continual Learning.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/85b9a5ac91cd629bd3afe396ec07270a-Abstract.html)
-- **作者**: Gunshi Gupta, Karmesh Yadav, Liam Paull
+### Conditional Channel Gated Networks for Task-Aware Continual Learning.
+- **链接**: [arXiv:2004.00070](https://arxiv.org/abs/2004.00070) · 📚 被引 140
+- **作者**: Davide Abati, Jakub M. Tomczak, Tijmen Blankevoort, Simone Calderara, Rita Cucchiara, Babak Ehteshami Bejnordi
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
-
-### Coresets via Bilevel Optimization for Continual Learning and Streaming.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/aa2a77371374094fe9e0bc1de3f94ed9-Abstract.html)
-- **作者**: Zalán Borsos, Mojmir Mutny, Andreas Krause
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
-
-### Dark Experience for General Continual Learning: a Strong, Simple Baseline.
-- **链接**: [arXiv:2004.07211](https://arxiv.org/abs/2004.07211)
-- **作者**: Pietro Buzzega, Matteo Boschini, Angelo Porrello, Davide Abati, Simone Calderara
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual Learning has inspired a plethora of approaches and evaluation settings; however, the majority of them overlooks the properties of a practical scenario, where the data stream cannot be shaped as a sequence of tasks and offline training is not viable. We work towards General Continual Learning (GCL), where task boundaries blur and the domain and class distributions shift either gradually or suddenly. We address it through mixing rehearsal with knowledge distillation and regularization; our simple baseline, Dark Experience Replay, matches the network's logits sampled throughout the optimization trajectory, thus promoting consistency with its past. By conducting an extensive analysis on both standard benchmarks and a novel GCL evaluation setting (MNIST-360), we show that such a seemingly simple baseline outperforms consolidated approaches and leverages limited resources. We further explore the generalization capabilities of our objective, showing its regularization being beneficial beyond mere performance.
+> Convolutional Neural Networks experience catastrophic forgetting when optimized on a sequence of learning problems: as they meet the objective of the current training examples, their performance on previous tasks drops drastically. In this work, we introduce a novel framework to tackle this problem with conditional computation. We equip each convolutional layer with task-specific gating modules, selecting which filters to apply on the given input. This way, we achieve two appealing properties. Firstly, the execution patterns of the gates allow to identify and protect important filters, ensuring no loss in the performance of the model for previously learned tasks. Secondly, by using a sparsity objective, we can promote the selection of a limited set of kernels, allowing to retain sufficient model capacity to digest new tasks.Existing solutions require, at test time, awareness of the task to which each example belongs to. This knowledge, however, may not be available in many practical scenarios. Therefore, we additionally introduce a task classifier that predicts the task label of each example, to deal with settings in which a task oracle is not available. We validate our proposal on four continual learning datasets. Results show that our model consistently outperforms existing methods both in the presence and the absence of a task oracle. Notably, on Split SVHN and Imagenet-50 datasets, our model yields up to 23.98% and 17.42% improvement in accuracy w.r.t. competing methods.
+
+</details>
+
+### Continual Learning With Extended Kronecker-Factored Approximate Curvature.
+- **链接**: [arXiv:2004.07507](https://arxiv.org/abs/2004.07507) · 📚 被引 44
+- **作者**: Janghyeon Lee, Hyeong Gwon Hong, Donggyu Joo, Junmo Kim
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+### GDumb: A Simple Approach that Questions Our Progress in Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58536-5_31) · 📚 被引 348
+- **作者**: Ameya Prabhu, Philip H. S. Torr, Puneet K. Dokania
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+### More Classifiers, Less Forgetting: A Generic Multi-classifier Paradigm for Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58574-7_42) · 📚 被引 65
+- **作者**: Yu Liu, Sarah Parisot, Gregory G. Slabaugh, Xu Jia, Ales Leonardis, Tinne Tuytelaars
+- **🏷️ 机构**: SenseTime
+- **会议**: ECCV 2020
+
+> In continual learning (CL), a learner is faced with a sequence of tasks, arriving one after the other, and the goal is to remember all the tasks once the continual learning experience is finished. The prior art in CL uses episodic memory, parameter regularization or extensible network structures to reduce interference among tasks, but in the end, all the approaches learn different tasks in a joint vector space. We believe this invariably leads to interference among different tasks. We propose to learn tasks in different (low-rank) vector subspaces that are kept orthogonal to each other in order to minimize interference. Further, to keep the gradients of different tasks coming from these subspaces orthogonal to each other, we learn isometric mappings by posing network training as an optimization problem over the Stiefel manifold. To the best of our understanding, we report, for the first time, strong results over experience-replay baseline with and without memory on standard classification benchmarks in continual learning. The code is made publicly available.
+
+</details>
 
 </details>
 
@@ -33,17 +45,37 @@
 - **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/c0a271bc0ecb776a094786474322cb82-Abstract.html)
 - **作者**: Massimo Caccia, Pau Rodríguez, Oleksiy Ostapenko, Fabrice Normandin, Min Lin, Lucas Page-Caccia et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **会议**: CVPR 2020
 
-### Continual Learning in Low-rank Orthogonal Subspaces.
-- **链接**: [arXiv:2010.11635](https://arxiv.org/abs/2010.11635)
-- **作者**: Arslan Chaudhry, Naeemullah Khan, Puneet K. Dokania, Philip H. S. Torr
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The ability to continuously learn and adapt itself to new tasks, without losing grasp of already acquired knowledge is a hallmark of biological learning systems, which current deep learning systems fall short of. In this work, we present a novel methodology for continual learning called MERLIN: Meta-Consolidation for Continual Learning. We assume that weights of a neural network $\boldsymbol ψ$, for solving task $\boldsymbol t$, come from a meta-distribution $p(\boldsymbol{ψ|t})$. This meta-distribution is learned and consolidated incrementally. We operate in the challenging online continual learning setting, where a data point is seen by the model only once. Our experiments with continual learning benchmarks of MNIST, CIFAR-10, CIFAR-100 and Mini-ImageNet datasets show consistent improvement over five baselines, including a recent state-of-the-art, corroborating the promise of MERLIN.
+
+</details>
+
+### Incremental Learning in Online Scenario.
+- **链接**: [arXiv:2003.13191](https://arxiv.org/abs/2003.13191) · 📚 被引 140
+- **作者**: Jiangpeng He, Runyu Mao, Zeman Shao, Fengqing Zhu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+### Topology-Preserving Class-Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_16)
+- **作者**: Xiaoyu Tao, Xinyuan Chang, Xiaopeng Hong, Xing Wei, Yihong Gong
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In continual learning (CL), a learner is faced with a sequence of tasks, arriving one after the other, and the goal is to remember all the tasks once the continual learning experience is finished. The prior art in CL uses episodic memory, parameter regularization or extensible network structures to reduce interference among tasks, but in the end, all the approaches learn different tasks in a joint vector space. We believe this invariably leads to interference among different tasks. We propose to learn tasks in different (low-rank) vector subspaces that are kept orthogonal to each other in order to minimize interference. Further, to keep the gradients of different tasks coming from these subspaces orthogonal to each other, we learn isometric mappings by posing network training as an optimization problem over the Stiefel manifold. To the best of our understanding, we report, for the first time, strong results over experience-replay baseline with and without memory on standard classification benchmarks in continual learning. The code is made publicly available.
+> Catastrophic forgetting affects the training of neural networks, limiting their ability to learn multiple tasks sequentially. From the perspective of the well established plasticity-stability dilemma, neural networks tend to be overly plastic, lacking the stability necessary to prevent the forgetting of previous knowledge, which means that as learning progresses, networks tend to forget previously seen tasks. This phenomenon coined in the continual learning literature, has attracted much attention lately, and several families of approaches have been proposed with different degrees of success. However, there has been limited prior work extensively analyzing the impact that different training regimes -- learning rate, batch size, regularization method-- can have on forgetting. In this work, we depart from the typical approach of altering the learning algorithm to improve stability. Instead, we hypothesize that the geometrical properties of the local minima found for each task play an important role in the overall degree of forgetting. In particular, we study the effect of dropout, learning rate decay, and batch size, on forming training regimes that widen the tasks' local minima and consequently, on helping it not to forget catastrophically. Our study provides practical insights to improve stability via simple yet effective techniques that outperform alternative baselines.
+
+</details>
+
+### Continual Learning of Control Primitives : Skill Discovery via Reset-Games.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/3472ab80b6dff70c54758fd6dfc800c2-Abstract.html)
+- **作者**: Kelvin Xu, Siddharth Verma, Chelsea Finn, Sergey Levine
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
 
 </details>
 
