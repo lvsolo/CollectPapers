@@ -1,27 +1,19 @@
 # Neural Architecture Search — 2023 Guideline
 
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
-> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### MDL-NAS: A Joint Multi-domain Learning Framework for Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01924) · 📚 被引 16
-- **作者**: Shiguang Wang, Tao Xie, Jian Cheng, Xingcheng Zhang, Haijun Liu
-- **🏷️ 机构**: University of Electronic Science and Technology of China, Harbin Institute of Technology, SenseTime Research
-- **会议**: CVPR 2023
+### ElasticViT: Conflict-aware Supernet Training for Deploying Fast Vision Transformer on Diverse Mobile Devices.
+- **链接**: [arXiv:2303.09730](https://arxiv.org/abs/2303.09730) · 📚 被引 18
+- **作者**: Chen Tang, Li Lyna Zhang, Huiqiang Jiang, Jiahang Xu, Ting Cao, Quanlu Zhang et al.
+- **🏷️ 机构**: Tsinghua University, Microsoft Research
+- **会议**: ICCV 2023
 
-### DisWOT: Student Architecture Search for Distillation WithOut Training.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01145) · 📚 被引 60
-- **作者**: Peijie Dong, Lujun Li, Zimian Wei
-- **🏷️ 机构**: National University of Defense Technology, Chinese Academy of Sciences
-- **会议**: CVPR 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Adversarially Robust Neural Architecture Search for Graph Neural Networks.
-- **链接**: [arXiv:2304.04168](https://arxiv.org/abs/2304.04168) · 📚 被引 21
-- **作者**: Beini Xie, Heng Chang, Ziwei Zhang, Xin Wang, Daixin Wang, Zhiqiang Zhang et al.
-- **🏷️ 机构**: Tsinghua University, Ant Group, Yale University
-- **会议**: CVPR 2023
+> Neural Architecture Search (NAS) has shown promising performance in the automatic design of vision transformers (ViT) exceeding 1G FLOPs. However, designing lightweight and low-latency ViT models for diverse mobile devices remains a big challenge. In this work, we propose ElasticViT, a two-stage NAS approach that trains a high-quality ViT supernet over a very large search space that supports a wide range of mobile devices, and then searches an optimal sub-network (subnet) for direct deployment. However, prior supernet training methods that rely on uniform sampling suffer from the gradient conflict issue: the sampled subnets can have vastly different model sizes (e.g., 50M vs. 2G FLOPs), leading to different optimization directions and inferior performance. To address this challenge, we propose two novel sampling techniques: complexity-aware sampling and performance-aware sampling. Complexity-aware sampling limits the FLOPs difference among the subnets sampled across adjacent training steps, while covering different-sized subnets in the search space. Performance-aware sampling further selects subnets that have good accuracy, which can reduce gradient conflicts and improve supernet quality. Our discovered models, ElasticViT models, achieve top-1 accuracy from 67.2% to 80.0% on ImageNet from 60M to 800M FLOPs without extra retraining, outperforming all prior CNNs and ViTs in terms of accuracy and latency. Our tiny and small models are also the first ViT models that surpass state-of-the-art CNNs with significantly lower latency on mobile devices. For instance, ElasticViT-S1 runs 2.62x faster than EfficientNet-B0 with 0.1% higher accuracy.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,17 +21,13 @@
 
 </details>
 
-### HOTNAS: Hierarchical Optimal Transport for Neural Architecture Search.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01154) · 📚 被引 15
-- **作者**: Jiechao Yang, Yong Liu, Hongteng Xu
-- **🏷️ 机构**: Gaoling School of Artificial Intelligence, Renmin University of China,Beijing,China
-- **会议**: CVPR 2023
+### MixPath: A Unified Approach for One-shot Neural Architecture Search.
+- **链接**: [arXiv:2001.05887](https://arxiv.org/abs/2001.05887) · 📚 被引 15
+- **作者**: Xiangxiang Chu, Shun Lu, Xudong Li, Bo Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
 
-### Differentiable Architecture Search with Random Features.
-- **链接**: [arXiv:2208.08835](https://arxiv.org/abs/2208.08835) · 📚 被引 18
-- **作者**: Xuanyang Zhang, Yonggang Li, Xiangyu Zhang, Yongtao Wang, Jian Sun
-- **🏷️ 机构**: MEGVII Technology, Peking University
-- **会议**: CVPR 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
