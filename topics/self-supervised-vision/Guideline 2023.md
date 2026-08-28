@@ -1,55 +1,741 @@
 # Self-supervised Vision — 2023 Guideline
 
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
-> 论文数: 62 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 98 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Self-Weighted Contrastive Learning among Multiple Views for Mitigating Representation Degeneration.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/03b13b0db740b95cb741e007178ef5e5-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Jie Xu, Shuo Chen, Yazhou Ren, Xiaoshuang Shi, Hengtao Shen, Gang Niu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Forecast-MAE: Self-supervised Pre-training for Motion Forecasting with Masked Autoencoders.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00797) · 📚 被引 104
+- **作者**: Jie Cheng, Xiaodong Mei, Ming Liu
+- **🏷️ 机构**: HKUST
+- **会议**: ICCV 2023
 
-### Masked Image Residual Learning for Scaling Deeper Vision Transformers.
-- **链接**: [arXiv:2309.14136](https://arxiv.org/abs/2309.14136) · 📚 被引 0
-- **作者**: Guoxi Huang, Hongtao Fu, Adrian G. Bors
+### Temporal DINO: A Self-supervised Video Strategy to Enhance Action Prediction.
+- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00352) · 📚 被引 3
+- **作者**: Izzeddin Teeti, Rongali Sai Bhargav, Vivek Singh, Andrew Bradley, Biplab Banerjee, Fabio Cuzzolin
+- **🏷️ 机构**: Oxford Brookes University,VAIL, Indian Institute of Technology,Bombay
+- **会议**: ICCV 2023
+
+### P2C: Self-Supervised Point Cloud Completion from Single Partial Clouds.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01320) · 📚 被引 43
+- **作者**: Ruikai Cui, Shi Qiu, Saeed Anwar, Jiawei Liu, Chaoyue Xing, Jing Zhang et al.
+- **🏷️ 机构**: Australian National University, King Fahd University of Petroleum and Minerals
+- **会议**: ICCV 2023
+
+### Point Contrastive Prediction with Semantic Clustering for Self-Supervised Learning on Point Cloud Videos.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01514) · 📚 被引 20
+- **作者**: Xiaoxiao Sheng, Zhiqiang Shen, Gang Xiao, Longguang Wang, Yulan Guo, Hehe Fan
+- **🏷️ 机构**: Shanghai Jiao Tong University, Aviation University of Air Force, Sun Yat-Sen University
+- **会议**: ICCV 2023
+
+### Masked Spatio-Temporal Structure Prediction for Self-supervised Learning on Point Cloud Videos.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01520) · 📚 被引 23
+- **作者**: Zhiqiang Shen, Xiaoxiao Sheng, Hehe Fan, Longguang Wang, Yulan Guo, Qiong Liu et al.
+- **🏷️ 机构**: Shanghai Jiao Tong University, Zhejiang University, Aviation University of Air Force
+- **会议**: ICCV 2023
+
+### GeoMAE: Masked Geometric Target Prediction for Self-supervised Point Cloud Pre-Training.
+- **链接**: [arXiv:2305.08808](https://arxiv.org/abs/2305.08808) · 📚 被引 45
+- **作者**: Xiaoyu Tian, Haoxi Ran, Yue Wang, Hang Zhao
+- **🏷️ 机构**: IIIS, Tsinghua University, CMU, NVIDIA
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper tries to address a fundamental question in point cloud self-supervised learning: what is a good signal we should leverage to learn features from point clouds without annotations? To answer that, we introduce a point cloud representation learning framework, based on geometric feature reconstruction. In contrast to recent papers that directly adopt masked autoencoder (MAE) and only predict original coordinates or occupancy from masked point clouds, our method revisits differences between images and point clouds and identifies three self-supervised learning objectives peculiar to point clouds, namely centroid prediction, normal estimation, and curvature prediction. Combined with occupancy prediction, these four objectives yield an nontrivial self-supervised learning task and mutually facilitate models to better reason fine-grained geometry of point clouds. Our pipeline is conceptually simple and it consists of two major steps: first, it randomly masks out groups of points, followed by a Transformer-based point cloud encoder; second, a lightweight Transformer decoder predicts centroid, normal, and curvature for points in each voxel. We transfer the pre-trained Transformer encoder to a downstream peception model. On the nuScene Datset, our model achieves 3.38 mAP improvment for object detection, 2.1 mIoU gain for segmentation, and 1.7 AMOTA gain for multi-object tracking. We also conduct experiments on the Waymo Open Dataset and achieve significant performance improvements over baselines as well.
+
+</details>
+
+### Spatiotemporal Self-Supervised Learning for Point Clouds in the Wild.
+- **链接**: [arXiv:2303.16235](https://arxiv.org/abs/2303.16235) · 📚 被引 26
+- **作者**: Yanhao Wu, Tong Zhang, Wei Ke, Sabine Süsstrunk, Mathieu Salzmann
+- **🏷️ 机构**: School of Software Engineering, Xi&#x0027;an Jiaotong University,China, School of Computer and Communication Sciences, EPFL,Switzerland
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised learning (SSL) has the potential to benefit many applications, particularly those where manually annotating data is cumbersome. One such situation is the semantic segmentation of point clouds. In this context, existing methods employ contrastive learning strategies and define positive pairs by performing various augmentation of point clusters in a single frame. As such, these methods do not exploit the temporal nature of LiDAR data. In this paper, we introduce an SSL strategy that leverages positive pairs in both the spatial and temporal domain. To this end, we design (i) a point-to-cluster learning strategy that aggregates spatial information to distinguish objects; and (ii) a cluster-to-cluster learning strategy based on unsupervised object tracking that exploits temporal correspondences. We demonstrate the benefits of our approach via extensive experiments performed by self-supervised training on two large-scale LiDAR datasets and transferring the resulting models to other point cloud segmentation benchmarks. Our results evidence that our method outperforms the state-of-the-art point cloud SSL methods.
+
+</details>
+
+### Complete-to-Partial 4D Distillation for Self-Supervised Point Cloud Sequence Representation Learning.
+- **链接**: [arXiv:2212.05330](https://arxiv.org/abs/2212.05330) · 📚 被引 23
+- **作者**: Zhuoyang Zhang, Yuhao Dong, Yunze Liu, Li Yi
+- **🏷️ 机构**: IIIS, Tsinghua University
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent work on 4D point cloud sequences has attracted a lot of attention. However, obtaining exhaustively labeled 4D datasets is often very expensive and laborious, so it is especially important to investigate how to utilize raw unlabeled data. However, most existing self-supervised point cloud representation learning methods only consider geometry from a static snapshot omitting the fact that sequential observations of dynamic scenes could reveal more comprehensive geometric details. And the video representation learning frameworks mostly model motion as image space flows, let alone being 3D-geometric-aware. To overcome such issues, this paper proposes a new 4D self-supervised pre-training method called Complete-to-Partial 4D Distillation. Our key idea is to formulate 4D self-supervised representation learning as a teacher-student knowledge distillation framework and let the student learn useful 4D representations with the guidance of the teacher. Experiments show that this approach significantly outperforms previous pre-training approaches on a wide range of 4D point cloud sequence understanding tasks including indoor and outdoor scenarios.
+
+</details>
+
+### SkyEye: Self-Supervised Bird's-Eye-View Semantic Mapping Using Monocular Frontal View Images.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01431) · 📚 被引 39
+- **作者**: Nikhil Gosala, Kürsat Petek, Paulo L. J. Drews-Jr, Wolfram Burgard, Abhinav Valada
+- **🏷️ 机构**: University of Freiburg, Federal University of Rio Grande
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We address the task of weakly-supervised few-shot image classification and segmentation, by leveraging a Vision Transformer (ViT) pretrained with self-supervision. Our proposed method takes token representations from the self-supervised ViT and leverages their correlations, via self-attention, to produce classification and segmentation predictions through separate task heads. Our model is able to effectively learn to perform classification and segmentation in the absence of pixel-level labels during training, using only image-level labels. To do this it uses attention maps, created from tokens generated by the self-supervised ViT backbone, as pixel-level pseudo-labels. We also explore a practical setup with ``mixed" supervision, where a small number of training images contains ground-truth pixel-level labels and the remaining images have only image-level labels. For this mixed setup, we propose to improve the pseudo-labels using a pseudo-label enhancer that was trained using the available ground-truth pixel-level labels. Experiments on Pascal-5i and COCO-20i demonstrate significant performance gains in a variety of supervision settings, and in particular when little-to-no pixel-level labels are available.
+
+</details>
+
+### MixMAE: Mixed and Masked Autoencoder for Efficient Pretraining of Hierarchical Vision Transformers.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00605) · 📚 被引 69
+- **作者**: Jihao Liu, Xin Huang, Jinliang Zheng, Yu Liu, Hongsheng Li
+- **🏷️ 机构**: CUHK MMLab, SenseTime Research
+- **会议**: CVPR 2023
+
+</details>
+
+### Randomized Quantization: A Generic Augmentation for Data Agnostic Self-supervised Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01494) · 📚 被引 10
+- **作者**: Huimin Wu, Chenyang Lei, Xiao Sun, Peng-Shuai Wang, Qifeng Chen, Kwang-Ting Cheng et al.
+- **🏷️ 机构**: HKUST, CAIR, HKISI CAS, Shanghai AI Lab
+- **会议**: ICCV 2023
+
+### Self-Supervised Burst Super-Resolution.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00973)
+- **作者**: Goutam Bhat, Michaël Gharbi, Jiawen Chen, Luc Van Gool, Zhihao Xia
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
+
+### Active Self-Supervised Learning: A Few Low-Cost Relationships Are All You Need.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01491) · 📚 被引 9
+- **作者**: Vivien Cabannes, Léon Bottou, Yann LeCun, Randall Balestriero
+- **🏷️ 机构**: Meta AI
+- **会议**: ICCV 2023
+
+### Contrastive Continuity on Augmentation Stability Rehearsal for Continual Self-Supervised Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00525) · 📚 被引 10
+- **作者**: Haoyang Cheng, Haitao Wen, Xiaoliang Zhang, Heqian Qiu, Lanxiao Wang, Hongliang Li
+- **🏷️ 机构**: University of Electronic Science and Technology of China,Chengdu,China
+- **会议**: ICCV 2023
+
+### Identity-Seeking Self-Supervised Representation Learning for Generalizable Person Re-identification.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01452) · 📚 被引 27
+- **作者**: Zhaopeng Dou, Zhongdao Wang, Yali Li, Shengjin Wang
+- **🏷️ 机构**: Tsinghua University,Department of Electronic Engineering,China
+- **会议**: ICCV 2023
+
+### SimFIR: A Simple Framework for Fisheye Image Rectification with Self-supervised Representation Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01141) · 📚 被引 27
+- **作者**: Hao Feng, Wendi Wang, Jiajun Deng, Wengang Zhou, Li Li, Houqiang Li
+- **🏷️ 机构**: University of Science and Technology of China,CAS Key Laboratory of Technology in GIPAS,EEIS Department, The University of Sydney
+- **会议**: ICCV 2023
+
+### TeD-SPAD: Temporal Distinctiveness for Self-supervised Privacy-preservation for video Anomaly Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01251)
+- **作者**: Joseph Fioresi, Ishan Rajendrakumar Dave, Mubarak Shah
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
+
+### Self-supervised Character-to-Character Distillation for Text Recognition.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01784) · 📚 被引 40
+- **作者**: Tongkun Guan, Wei Shen, Xue Yang, Qi Feng, Zekun Jiang, Xiaokang Yang
+- **🏷️ 机构**: Shanghai Jiao Tong University,MoE Key Lab of Artificial Intelligence, AI Institute, Shanghai Jiao Tong University,Department of Automation
+- **会议**: ICCV 2023
+
+### Pseudo Flow Consistency for Self-Supervised 6D Object Pose Estimation.
+- **链接**: [arXiv:2308.10016](https://arxiv.org/abs/2308.10016) · 📚 被引 17
+- **作者**: Yang Hai, Rui Song, Jiaojiao Li, David Ferstl, Yinlin Hu
+- **🏷️ 机构**: State Key Laboratory of ISN, Xidian University, MagicLeap
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Most self-supervised 6D object pose estimation methods can only work with additional depth information or rely on the accurate annotation of 2D segmentation masks, limiting their application range. In this paper, we propose a 6D object pose estimation method that can be trained with pure RGB images without any auxiliary information. We first obtain a rough pose initialization from networks trained on synthetic images rendered from the target's 3D mesh. Then, we introduce a refinement strategy leveraging the geometry constraint in synthetic-to-real image pairs from multiple different views. We formulate this geometry constraint as pixel-level flow consistency between the training images with dynamically generated pseudo labels. We evaluate our method on three challenging datasets and demonstrate that it outperforms state-of-the-art self-supervised methods significantly, with neither 2D annotations nor additional depth images.
+
+</details>
+
+### Self-supervised Image Denoising with Downsampled Invariance Loss and Conditional Blind-Spot Network.
+- **链接**: [arXiv:2304.09507](https://arxiv.org/abs/2304.09507) · 📚 被引 15
+- **作者**: Yeong Il Jang, Keuntek Lee, Gu Yong Park, Seyun Kim, Nam Ik Cho
+- **🏷️ 机构**: Seoul National University,INMC,Department of ECE,Seoul,Korea, Gauss Labs Inc.
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> There have been many image denoisers using deep neural networks, which outperform conventional model-based methods by large margins. Recently, self-supervised methods have attracted attention because constructing a large real noise dataset for supervised training is an enormous burden. The most representative self-supervised denoisers are based on blind-spot networks, which exclude the receptive field's center pixel. However, excluding any input pixel is abandoning some information, especially when the input pixel at the corresponding output position is excluded. In addition, a standard blind-spot network fails to reduce real camera noise due to the pixel-wise correlation of noise, though it successfully removes independently distributed synthetic noise. Hence, to realize a more practical denoiser, we propose a novel self-supervised training framework that can remove real noise. For this, we derive the theoretic upper bound of a supervised loss where the network is guided by the downsampled blinded output. Also, we design a conditional blind-spot network (C-BSN), which selectively controls the blindness of the network to use the center pixel information. Furthermore, we exploit a random subsampler to decorrelate noise spatially, making the C-BSN free of visual artifacts that were often seen in downsample-based methods. Extensive experiments show that the proposed C-BSN achieves state-of-the-art performance on real-world datasets as a self-supervised denoiser and shows qualitatively pleasing results without any post-processing or refinement.
+
+</details>
+
+### EMR-MSF: Self-Supervised Recurrent Monocular Scene Flow Exploiting Ego-Motion Rigidity.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00013) · 📚 被引 0
+- **作者**: Zijie Jiang, Masatoshi Okutomi
+- **🏷️ 机构**: Tokyo Institute of Technology
+- **会议**: ICCV 2023
+
+### Anatomical Invariance Modeling and Semantic Alignment for Self-supervised Learning in 3D Medical Image Analysis.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01453) · 📚 被引 27
+- **作者**: Yankai Jiang, Mingze Sun, Heng Guo, Xiaoyu Bai, Ke Yan, Le Lu et al.
+- **🏷️ 机构**: Alibaba Group,DAMO Academy
+- **会议**: ICCV 2023
+
+### An Embarrassingly Simple Backdoor Attack on Self-supervised Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00403) · 📚 被引 48
+- **作者**: Changjiang Li, Ren Pang, Zhaohan Xi, Tianyu Du, Shouling Ji, Yuan Yao et al.
+- **🏷️ 机构**: Pennsylvania State University, Zhejiang University, Nanjing University
+- **会议**: ICCV 2023
+
+### Self-supervised Pre-training for Mirror Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01123) · 📚 被引 7
+- **作者**: Jiaying Lin, Rynson W. H. Lau
+- **🏷️ 机构**: City University of Hong Kong
+- **会议**: ICCV 2023
+
+### Geometrized Transformer for Self-Supervised Homography Estimation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00876) · 📚 被引 33
+- **作者**: Jiazhen Liu, Xirong Li
+- **🏷️ 机构**: Renmin University of China,Key Lab of DEKE
+- **会议**: ICCV 2023
+
+### DDS2M: Self-Supervised Denoising Diffusion Spatio-Spectral Model for Hyperspectral Image Restoration.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01110) · 📚 被引 74
+- **作者**: Yuchun Miao, Lefei Zhang, Liangpei Zhang, Dacheng Tao
+- **🏷️ 机构**: Wuhan University,National Engineering Research Center for Multimedia Software, School of Computer Science, Wuhan University,State Key Lab. of Information Engineering in Surveying, Mapping and Remote Sensing, The University of Sydney,Sydney AI Centre, School of Computer Science
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Coordinate-based implicit neural networks, or neural fields, have emerged as useful representations of shape and appearance in 3D computer vision. Despite advances, however, it remains challenging to build neural fields for categories of objects without datasets like ShapeNet that provide "canonicalized" object instances that are consistently aligned for their 3D position and orientation (pose). We present Canonical Field Network (CaFi-Net), a self-supervised method to canonicalize the 3D pose of instances from an object category represented as neural fields, specifically neural radiance fields (NeRFs). CaFi-Net directly learns from continuous and noisy radiance fields using a Siamese network architecture that is designed to extract equivariant field features for category-level canonicalization. During inference, our method takes pre-trained neural radiance fields of novel object instances at arbitrary 3D pose and estimates a canonical field with consistent 3D pose across the entire category. Extensive experiments on a new dataset of 1300 NeRF models across 13 object categories show that our method matches or exceeds the performance of 3D point cloud-based methods.
+
+</details>
+
+### Look, Radiate, and Learn: Self-Supervised Localisation via Radio-Visual Correspondence.
+- **链接**: [arXiv:2206.06424](https://arxiv.org/abs/2206.06424) · 📚 被引 3
+- **作者**: Mohammed Alloulah, Maximilian Arnold
+- **🏷️ 机构**: Nokia Bell Labs
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Next generation cellular networks will implement radio sensing functions alongside customary communications, thereby enabling unprecedented worldwide sensing coverage outdoors. Deep learning has revolutionised computer vision but has had limited application to radio perception tasks, in part due to lack of systematic datasets and benchmarks dedicated to the study of the performance and promise of radio sensing. To address this gap, we present MaxRay: a synthetic radio-visual dataset and benchmark that facilitate precise target localisation in radio. We further propose to learn to localise targets in radio without supervision by extracting self-coordinates from radio-visual correspondence. We use such self-supervised coordinates to train a radio localiser network. We characterise our performance against a number of state-of-the-art baselines. Our results indicate that accurate radio target localisation can be automatically learned from paired radio-visual data without labels, which is important for empirical data. This opens the door for vast data scalability and may prove key to realising the promise of robust radio sensing atop a unified communication-perception cellular infrastructure. Dataset will be hosted on IEEE DataPort.
+
+</details>
+
+### Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture.
+- **链接**: [arXiv:2301.08243](https://arxiv.org/abs/2301.08243)
+- **作者**: Mahmoud Assran, Quentin Duval, Ishan Misra, Piotr Bojanowski, Pascal Vincent, Michael G. Rabbat et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Deeper Vision Transformers (ViTs) are more challenging to train. We expose a degradation problem in deeper layers of ViT when using masked image modeling (MIM) for pre-training. To ease the training of deeper ViTs, we introduce a self-supervised learning framework called Masked Image Residual Learning (MIRL), which significantly alleviates the degradation problem, making scaling ViT along depth a promising direction for performance upgrade. We reformulate the pre-training objective for deeper layers of ViT as learning to recover the residual of the masked image. We provide extensive empirical evidence showing that deeper ViTs can be effectively optimized using MIRL and easily gain accuracy from increased depth. With the same level of computational complexity as ViT-Base and ViT-Large, we instantiate 4.5$\times$ and 2$\times$ deeper ViTs, dubbed ViT-S-54 and ViT-B-48. The deeper ViT-S-54, costing 3$\times$ less than ViT-Large, achieves performance on par with ViT-Large. ViT-B-48 achieves 86.2% top-1 accuracy on ImageNet. On one hand, deeper ViTs pre-trained with MIRL exhibit excellent generalization capabilities on downstream tasks, such as object detection and semantic segmentation. On the other hand, MIRL demonstrates high pre-training efficiency. With less pre-training time, MIRL yields competitive performance compared to other approaches.
+> This paper demonstrates an approach for learning highly semantic image representations without relying on hand-crafted data-augmentations. We introduce the Image-based Joint-Embedding Predictive Architecture (I-JEPA), a non-generative approach for self-supervised learning from images. The idea behind I-JEPA is simple: from a single context block, predict the representations of various target blocks in the same image. A core design choice to guide I-JEPA towards producing semantic representations is the masking strategy; specifically, it is crucial to (a) sample target blocks with sufficiently large scale (semantic), and to (b) use a sufficiently informative (spatially distributed) context block. Empirically, when combined with Vision Transformers, we find I-JEPA to be highly scalable. For instance, we train a ViT-Huge/14 on ImageNet using 16 A100 GPUs in under 72 hours to achieve strong downstream performance across a wide range of tasks, from linear classification to object counting and depth prediction.
 
 </details>
 
-### Generalized Semi-Supervised Learning via Self-Supervised Feature Adaptation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/bf145010b30dc5f14fa87dc152074e4d-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Jiachen Liang, Ruibing Hou, Hong Chang, Bingpeng Ma, Shiguang Shan, Xilin Chen
+### Three Guidelines You Should Know for Universally Slimmable Self-Supervised Learning.
+- **链接**: [arXiv:2303.06870](https://arxiv.org/abs/2303.06870) · [代码](https://github.com/megvii-research/US3L-CVPR2023) · 📚 被引 6
+- **作者**: Yun-Hao Cao, Peiqin Sun, Shuchang Zhou
+- **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology, MEGVII Technology
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose universally slimmable self-supervised learning (dubbed as US3L) to achieve better accuracy-efficiency trade-offs for deploying self-supervised models across different devices. We observe that direct adaptation of self-supervised learning (SSL) to universally slimmable networks misbehaves as the training process frequently collapses. We then discover that temporal consistent guidance is the key to the success of SSL for universally slimmable networks, and we propose three guidelines for the loss design to ensure this temporal consistency from a unified gradient perspective. Moreover, we propose dynamic sampling and group regularization strategies to simultaneously improve training efficiency and accuracy. Our US3L method has been empirically validated on both convolutional neural networks and vision transformers. With only once training and one copy of weights, our method outperforms various state-of-the-art methods (individually trained or not) on benchmarks including recognition, object detection and instance segmentation. Our code is available at https://github.com/megvii-research/US3L-CVPR2023.
+
+</details>
+
+### Mixed Autoencoder for Self-Supervised Visual Representation Learning.
+- **链接**: [arXiv:2303.17152](https://arxiv.org/abs/2303.17152) · 📚 被引 35
+- **作者**: Kai Chen, Zhili Liu, Lanqing Hong, Hang Xu, Zhenguo Li, Dit-Yan Yeung
+- **🏷️ 机构**: Hong Kong University of Science and Technology, Huawei Noah&#x0027;s Ark Lab
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Masked Autoencoder (MAE) has demonstrated superior performance on various vision tasks via randomly masking image patches and reconstruction. However, effective data augmentation strategies for MAE still remain open questions, different from those in contrastive learning that serve as the most important part. This paper studies the prevailing mixing augmentation for MAE. We first demonstrate that naive mixing will in contrast degenerate model performance due to the increase of mutual information (MI). To address, we propose homologous recognition, an auxiliary pretext task, not only to alleviate the MI increasement by explicitly requiring each patch to recognize homologous patches, but also to perform object-aware self-supervised pre-training for better downstream dense perception performance. With extensive experiments, we demonstrate that our proposed Mixed Autoencoder (MixedAE) achieves the state-of-the-art transfer results among masked image modeling (MIM) augmentations on different downstream tasks with significant efficiency. Specifically, our MixedAE outperforms MAE by +0.3% accuracy, +1.7 mIoU and +0.9 AP on ImageNet-1K, ADE20K and COCO respectively with a standard ViT-Base. Moreover, MixedAE surpasses iBOT, a strong MIM method combined with instance discrimination, while accelerating training by 2x. To our best knowledge, this is the very first work to consider mixing for MIM from the perspective of pretext task design. Code will be made available.
+
+</details>
+
+### TexPose: Neural Texture Learning for Self-Supervised 6D Object Pose Estimation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00469) · 📚 被引 45
+- **作者**: Hanzhi Chen, Fabian Manhardt, Nassir Navab, Benjamin Busam
+- **🏷️ 机构**: Technical University of Munich, Google Inc.
+- **会议**: CVPR 2023
+
+### Beyond Appearance: A Semantic Controllable Self-Supervised Learning Framework for Human-Centric Visual Tasks.
+- **链接**: [arXiv:2303.17602](https://arxiv.org/abs/2303.17602) · [代码](https://github.com/tinyvision/SOLIDER) · 📚 被引 144
+- **作者**: Weihua Chen, Xianzhe Xu, Jian Jia, Hao Luo, Yaohua Wang, Fan Wang et al.
+- **🏷️ 机构**: Alibaba Group
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Human-centric visual tasks have attracted increasing research attention due to their widespread applications. In this paper, we aim to learn a general human representation from massive unlabeled human images which can benefit downstream human-centric tasks to the maximum extent. We call this method SOLIDER, a Semantic cOntrollable seLf-supervIseD lEaRning framework. Unlike the existing self-supervised learning methods, prior knowledge from human images is utilized in SOLIDER to build pseudo semantic labels and import more semantic information into the learned representation. Meanwhile, we note that different downstream tasks always require different ratios of semantic information and appearance information. For example, human parsing requires more semantic information, while person re-identification needs more appearance information for identification purpose. So a single learned representation cannot fit for all requirements. To solve this problem, SOLIDER introduces a conditional network with a semantic controller. After the model is trained, users can send values to the controller to produce representations with different ratios of semantic information, which can fit different needs of downstream tasks. Finally, SOLIDER is verified on six downstream human-centric visual tasks. It outperforms state of the arts and builds new baselines for these tasks. The code is released in https://github.com/tinyvision/SOLIDER.
+
+</details>
+
+### StepFormer: Self-Supervised Step Discovery and Localization in Instructional Videos.
+- **链接**: [arXiv:2304.13265](https://arxiv.org/abs/2304.13265) · 📚 被引 22
+- **作者**: Nikita Dvornik, Isma Hadji, Ran Zhang, Konstantinos G. Derpanis, Richard P. Wildes, Allan D. Jepson
+- **🏷️ 机构**: Samsung AI Centre Toronto
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Instructional videos are an important resource to learn procedural tasks from human demonstrations. However, the instruction steps in such videos are typically short and sparse, with most of the video being irrelevant to the procedure. This motivates the need to temporally localize the instruction steps in such videos, i.e. the task called key-step localization. Traditional methods for key-step localization require video-level human annotations and thus do not scale to large datasets. In this work, we tackle the problem with no human supervision and introduce StepFormer, a self-supervised model that discovers and localizes instruction steps in a video. StepFormer is a transformer decoder that attends to the video with learnable queries, and produces a sequence of slots capturing the key-steps in the video. We train our system on a large dataset of instructional videos, using their automatically-generated subtitles as the only source of supervision. In particular, we supervise our system with a sequence of text narrations using an order-aware loss function that filters out irrelevant phrases. We show that our model outperforms all previous unsupervised and weakly-supervised approaches on step detection and localization by a large margin on three challenging benchmarks. Moreover, our model demonstrates an emergent property to solve zero-shot multi-step localization and outperforms all relevant baselines at this task.
+
+</details>
+
+### Self-supervised Non-uniform Kernel Estimation with Flow-based Motion Prior for Blind Image Deblurring.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01736) · 📚 被引 60
+- **作者**: Zhenxuan Fang, Fangfang Wu, Weisheng Dong, Xin Li, Jinjian Wu, Guangming Shi
+- **🏷️ 机构**: Xidian University, West Virginia University
+- **会议**: CVPR 2023
+
+### MOST: Multiple Object localization with Self-supervised Transformers for object discovery.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01450) · 📚 被引 15
+- **作者**: Sai Saketh Rambhatla, Ishan Misra, Rama Chellappa, Abhinav Shrivastava
+- **🏷️ 机构**: Meta, Johns Hopkins University, University of Maryland,College Park
+- **会议**: ICCV 2023
+
+### Sempart: Self-supervised Multi-resolution Partitioning of Image Semantics.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00073) · 📚 被引 4
+- **作者**: Sriram Ravindran, Debraj Basu
+- **🏷️ 机构**: Adobe
+- **会议**: ICCV 2023
+
+### L-DAWA: Layer-wise Divergence Aware Weight Aggregation in Federated Self-Supervised Visual Representation Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01509) · 📚 被引 23
+- **作者**: Yasar Abbas Ur Rehman, Yan Gao, Pedro Porto Buarque de Gusmão, Mina Alibeigi, Jiajun Shen, Nicholas D. Lane
+- **🏷️ 机构**: TCL AI Lab,Hong Kong, University of Cambridge,United Kingdom
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present Vid2Avatar, a method to learn human avatars from monocular in-the-wild videos. Reconstructing humans that move naturally from monocular in-the-wild videos is difficult. Solving it requires accurately separating humans from arbitrary backgrounds. Moreover, it requires reconstructing detailed 3D surface from short video sequences, making it even more challenging. Despite these challenges, our method does not require any groundtruth supervision or priors extracted from large datasets of clothed human scans, nor do we rely on any external segmentation modules. Instead, it solves the tasks of scene decomposition and surface reconstruction directly in 3D by modeling both the human and the background in the scene jointly, parameterized via two separate neural fields. Specifically, we define a temporally consistent human representation in canonical space and formulate a global optimization over the background model, the canonical human shape and texture, and per-frame human pose parameters. A coarse-to-fine sampling strategy for volume rendering and novel objectives are introduced for a clean separation of dynamic human and static background, yielding detailed and robust 3D human geometry reconstructions. We evaluate our methods on publicly available datasets and show improvements over prior art.
+
+</details>
+
+### CLIP-S4: Language-Guided Self-Supervised Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01078)
+- **作者**: Wenbin He, Suphanut Jamonnak, Liang Gou, Liu Ren
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
 
-### DinoSR: Self-Distillation and Online Clustering for Self-supervised Speech Representation Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/b6404bf461c3c3186bdf5f55756af908-Abstract-Conference.html)
-- **作者**: Alexander H. Liu, Heng-Jui Chang, Michael Auli, Wei-Ning Hsu, James R. Glass
+### STEPs: Self-Supervised Key Step Extraction and Localization from Unlabeled Procedural Videos.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00952) · 📚 被引 11
+- **作者**: Anshul Shah, Benjamin Lundell, Harpreet Sawhney, Rama Chellappa
+- **🏷️ 机构**: Johns Hopkins University, Microsoft Mixed Reality
+- **会议**: ICCV 2023
+
+### Self-supervised Learning to Bring Dual Reversed Rolling Shutter Images Alive.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01203) · 📚 被引 9
+- **作者**: Wei Shang, Dongwei Ren, Chaoyu Feng, Xiaotao Wang, Lei Lei, Wangmeng Zuo
+- **🏷️ 机构**: Harbin Institute of Technology,School of Computer Science and Technology
+- **会议**: ICCV 2023
+
+### FreeCOS: Self-Supervised Learning from Fractals and Unlabeled Images for Curvilinear Object Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00087) · 📚 被引 18
+- **作者**: Tianyi Shi, Xiaohuan Ding, Liang Zhang, Xin Yang
+- **🏷️ 机构**: Huazhong University of Science &#x0026; Technology,School of EIC
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recently, AutoFlow has shown promising results on learning a training set for optical flow, but requires ground truth labels in the target domain to compute its search metric. Observing a strong correlation between the ground truth search metric and self-supervised losses, we introduce self-supervised AutoFlow to handle real-world videos without ground truth labels. Using self-supervised loss as the search metric, our self-supervised AutoFlow performs on par with AutoFlow on Sintel and KITTI where ground truth is available, and performs better on the real-world DAVIS dataset. We further explore using self-supervised AutoFlow in the (semi-)supervised setting and obtain competitive results against the state of the art.
+
+</details>
+
+### Self-Supervised Pre-Training with Masked Shape Prediction for 3D Scene Understanding.
+- **链接**: [arXiv:2305.05026](https://arxiv.org/abs/2305.05026) · 📚 被引 14
+- **作者**: Li Jiang, Zetong Yang, Shaoshuai Shi, Vladislav Golyanik, Dengxin Dai, Bernt Schiele
+- **🏷️ 机构**: Max Planck Institute for Informatics,Saarland Informatics Campus, CUHK
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Masked signal modeling has greatly advanced self-supervised pre-training for language and 2D images. However, it is still not fully explored in 3D scene understanding. Thus, this paper introduces Masked Shape Prediction (MSP), a new framework to conduct masked signal modeling in 3D scenes. MSP uses the essential 3D semantic cue, i.e., geometric shape, as the prediction target for masked points. The context-enhanced shape target consisting of explicit shape context and implicit deep shape feature is proposed to facilitate exploiting contextual cues in shape prediction. Meanwhile, the pre-training architecture in MSP is carefully designed to alleviate the masked shape leakage from point coordinates. Experiments on multiple 3D understanding tasks on both indoor and outdoor datasets demonstrate the effectiveness of MSP in learning good feature representations to consistently boost downstream performance.
+
+</details>
+
+### Self-Supervised Representation Learning for CAD.
+- **链接**: [arXiv:2210.10807](https://arxiv.org/abs/2210.10807)
+- **作者**: Benjamin T. Jones, Michael Hu, Milin Kodnongbua, Vladimir G. Kim, Adriana Schulz
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
 
-### Self-Supervised Reinforcement Learning that Transfers using Random Features.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/b048dd19ba6d85b9066aa93b4de9ad4a-Abstract-Conference.html)
-- **作者**: Boyuan Chen, Chuning Zhu, Pulkit Agrawal, Kaiqing Zhang, Abhishek Gupta
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The design of man-made objects is dominated by computer aided design (CAD) tools. Assisting design with data-driven machine learning methods is hampered by lack of labeled data in CAD's native format; the parametric boundary representation (B-Rep). Several data sets of mechanical parts in B-Rep format have recently been released for machine learning research. However, large scale databases are largely unlabeled, and labeled datasets are small. Additionally, task specific label sets are rare, and costly to annotate. This work proposes to leverage unlabeled CAD geometry on supervised learning tasks. We learn a novel, hybrid implicit/explicit surface representation for B-Rep geometry, and show that this pre-training significantly improves few-shot learning performance and also achieves state-of-the-art performance on several existing B-Rep benchmarks.
+
+</details>
+
+### Benchmarking Self-Supervised Learning on Diverse Pathology Datasets.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00326) · 📚 被引 174
+- **作者**: Mingu Kang, Heon Song, Seonwook Park, Donggeun Yoo, Sérgio Pereira
+- **🏷️ 机构**: Lunit Inc.
+- **会议**: CVPR 2023
+
+### Self-Supervised Geometry-Aware Encoder for Style-Based 3D GAN Inversion.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02006) · 📚 被引 27
+- **作者**: Yushi Lan, Xuyi Meng, Shuai Yang, Chen Change Loy, Bo Dai
+- **🏷️ 机构**: Nanyang Technological University,S-Lab,Singapore, Shanghai AI Laboratory
+- **会议**: CVPR 2023
+
+### SCOOP: Self-Supervised Correspondence and Optimization-Based Scene Flow.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00511) · 📚 被引 34
+- **作者**: Itai Lang, Dror Aiger, Forrester Cole, Shai Avidan, Michael Rubinstein
+- **🏷️ 机构**: Tel Aviv University, Google Research
+- **会议**: CVPR 2023
+
+### Correlational Image Modeling for Self-Supervised Visual Pre-Training.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01450) · 📚 被引 13
+- **作者**: Wei Li, Jiahao Xie, Chen Change Loy
+- **🏷️ 机构**: Nanyang Technological University,S-Lab
+- **会议**: CVPR 2023
+
+### Token Boosting for Robust Self-Supervised Visual Transformer Pre-training.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02301) · 📚 被引 6
+- **作者**: Tianjiao Li, Lin Geng Foo, Ping Hu, Xindi Shang, Hossein Rahmani, Zehuan Yuan et al.
+- **🏷️ 机构**: Singapore University of Technology and Design, Boston University, ByteDance
+- **会议**: CVPR 2023
+
+### SECAD-Net: Self-Supervised CAD Reconstruction by Learning Sketch-Extrude Operations.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01613) · 📚 被引 50
+- **作者**: Pu Li, Jianwei Guo, Xiaopeng Zhang, Dong-Ming Yan
+- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences,MAIS
+- **会议**: CVPR 2023
+
+### Spatial-then-Temporal Self-Supervised Learning for Video Correspondence.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00226) · 📚 被引 10
+- **作者**: Rui Li, Dong Liu
+- **🏷️ 机构**: University of Science and Technology of China,Hefei,China
+- **会议**: CVPR 2023
+
+### Self-Supervised Blind Motion Deblurring with Deep Expectation Maximization.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01344) · 📚 被引 15
+- **作者**: Ji Li, Weixi Wang, Yuesong Nan, Hui Ji
+- **🏷️ 机构**: National University of Singapore,Department of Mathematics,Singapore,119076
+- **会议**: CVPR 2023
+
+### Unified Mask Embedding and Correspondence Learning for Self-Supervised Video Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01794)
+- **作者**: Liulei Li, Wenguan Wang, Tianfei Zhou, Jianwu Li, Yi Yang
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
 
-### Self-supervised Object-Centric Learning for Videos.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/67b0e7c7c2a5780aeefe3b79caac106e-Abstract-Conference.html) · 📚 被引 3
-- **作者**: Görkay Aydemir, Weidi Xie, Fatma Güney
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Spatially Adaptive Self-Supervised Learning for Real-World Image Denoising.
+- **链接**: [arXiv:2303.14934](https://arxiv.org/abs/2303.14934) · [代码](https://github.com/nagejacob/SpatiallyAdaptiveSSID) · 📚 被引 58
+- **作者**: Junyi Li, Zhilu Zhang, Xiaoyu Liu, Chaoyu Feng, Xiaotao Wang, Lei Lei et al.
+- **🏷️ 机构**: School of Computer Science and Technology, Harbin Institute of Technology,China
+- **会议**: CVPR 2023
 
-### Relax, it doesn't matter how you get there: A new self-supervised approach for multi-timescale behavior analysis.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/5aad86aa2a3c00b70c71e19bc4780319-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Mehdi Azabou, Michael Mendelson, Nauman Ahad, Maks Sorokin, Shantanu Thakoor, Carolina Urzay et al.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Significant progress has been made in self-supervised image denoising (SSID) in the recent few years. However, most methods focus on dealing with spatially independent noise, and they have little practicality on real-world sRGB images with spatially correlated noise. Although pixel-shuffle downsampling has been suggested for breaking the noise correlation, it breaks the original information of images, which limits the denoising performance. In this paper, we propose a novel perspective to solve this problem, i.e., seeking for spatially adaptive supervision for real-world sRGB image denoising. Specifically, we take into account the respective characteristics of flat and textured regions in noisy images, and construct supervisions for them separately. For flat areas, the supervision can be safely derived from non-adjacent pixels, which are much far from the current pixel for excluding the influence of the noise-correlated ones. And we extend the blind-spot network to a blind-neighborhood network (BNN) for providing supervision on flat areas. For textured regions, the supervision has to be closely related to the content of adjacent pixels. And we present a locally aware network (LAN) to meet the requirement, while LAN itself is selectively supervised with the output of BNN. Combining these two supervisions, a denoising network (e.g., U-Net) can be well-trained. Extensive experiments show that our method performs favorably against state-of-the-art SSID methods on real-world sRGB photographs. The code is available at https://github.com/nagejacob/SpatiallyAdaptiveSSID.
+
+</details>
+
+### Pose-disentangled Contrastive Learning for Self-supervised Facial Representation.
+- **链接**: [arXiv:2211.13490](https://arxiv.org/abs/2211.13490) · [代码](https://github.com/DreamMr/PCL) · 📚 被引 29
+- **作者**: Yuanyuan Liu, Wenbin Wang, Yibing Zhan, Shaoze Feng, Kejun Liu, Zhe Chen
+- **🏷️ 机构**: School of Computer Science, China University of Geosciences,Wuhan,China, JD Explore Academy,China, The University of Sydney,Australia
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised facial representation has recently attracted increasing attention due to its ability to perform face understanding without relying on large-scale annotated datasets heavily. However, analytically, current contrastive-based self-supervised learning (SSL) still performs unsatisfactorily for learning facial representation. More specifically, existing contrastive learning (CL) tends to learn pose-invariant features that cannot depict the pose details of faces, compromising the learning performance. To conquer the above limitation of CL, we propose a novel Pose-disentangled Contrastive Learning (PCL) method for general self-supervised facial representation. Our PCL first devises a pose-disentangled decoder (PDD) with a delicately designed orthogonalizing regulation, which disentangles the pose-related features from the face-aware features; therefore, pose-related and other pose-unrelated facial information could be performed in individual subnetworks and do not affect each other's training. Furthermore, we introduce a pose-related contrastive learning scheme that learns pose-related information based on data augmentation of the same image, which would deliver more effective face-aware representation for various downstream tasks. We conducted linear evaluation on four challenging downstream facial understanding tasks, ie, facial expression recognition, face recognition, AU detection and head pose estimation. Experimental results demonstrate that our method significantly outperforms state-of-the-art SSL methods. Code is available at https://github.com/DreamMr/PCL}{https://github.com/DreamMr/PCL
+
+</details>
+
+### Multiple Instance Learning via Iterative Self-Paced Supervised Contrastive Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00327) · 📚 被引 34
+- **作者**: Kangning Liu, Weicheng Zhu, Yiqiu Shen, Sheng Liu, Narges Razavian, Krzysztof J. Geras et al.
+- **🏷️ 机构**: NYU Center for Data Science, NYU Grossman School of Medicine
+- **会议**: CVPR 2023
+
+### Markerless Camera-to-Robot Pose Estimation via Self-Supervised Sim-to-Real Transfer.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02040) · 📚 被引 29
+- **作者**: Jingpei Lu, Florian Richter, Michael C. Yip
+- **🏷️ 机构**: University of California,San Diego
+- **会议**: CVPR 2023
+
+### DrapeNet: Garment Generation and Self-Supervised Draping.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00146) · 📚 被引 51
+- **作者**: Luca De Luigi, Ren Li, Benoît Guillard, Mathieu Salzmann, Pascal Fua
+- **🏷️ 机构**: University of Bologna, EPFL,CVLab
+- **会议**: CVPR 2023
+
+### Self-Supervised Image-to-Point Distillation via Semantically Tolerant Contrastive Loss.
+- **链接**: [arXiv:2301.05709](https://arxiv.org/abs/2301.05709) · 📚 被引 29
+- **作者**: Anas Mahmoud, Jordan S. K. Hu, Tianshu Kuai, Ali Harakeh, Liam Paull, Steven L. Waslander
+- **🏷️ 机构**: University of Toronto Robotics Institute, Mila, Universit&#x00E9; de Montr&#x00E9;al
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> An effective framework for learning 3D representations for perception tasks is distilling rich self-supervised image features via contrastive learning. However, image-to point representation learning for autonomous driving datasets faces two main challenges: 1) the abundance of self-similarity, which results in the contrastive losses pushing away semantically similar point and image regions and thus disturbing the local semantic structure of the learned representations, and 2) severe class imbalance as pretraining gets dominated by over-represented classes. We propose to alleviate the self-similarity problem through a novel semantically tolerant image-to-point contrastive loss that takes into consideration the semantic distance between positive and negative image regions to minimize contrasting semantically similar point and image regions. Additionally, we address class imbalance by designing a class-agnostic balanced loss that approximates the degree of class imbalance through an aggregate sample-to-samples semantic similarity measure. We demonstrate that our semantically-tolerant contrastive loss with class balancing improves state-of-the art 2D-to-3D representation learning in all evaluation settings on 3D semantic segmentation. Our method consistently outperforms state-of-the-art 2D-to-3D representation learning frameworks across a wide range of 2D self-supervised pretrained models.
+
+</details>
+
+### HaLP: Hallucinating Latent Positives for Skeleton-based Self-Supervised Learning of Actions.
+- **链接**: [arXiv:2304.00387](https://arxiv.org/abs/2304.00387) · [代码](https://github.com/anshulbshah/HaLP) · 📚 被引 41
+- **作者**: Anshul Shah, Aniket Roy, Ketul Shah, Shlok Mishra, David Jacobs, Anoop Cherian et al.
+- **🏷️ 机构**: Johns Hopkins University, University of Maryland,College Park, MERL
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Supervised learning of skeleton sequence encoders for action recognition has received significant attention in recent times. However, learning such encoders without labels continues to be a challenging problem. While prior works have shown promising results by applying contrastive learning to pose sequences, the quality of the learned representations is often observed to be closely tied to data augmentations that are used to craft the positives. However, augmenting pose sequences is a difficult task as the geometric constraints among the skeleton joints need to be enforced to make the augmentations realistic for that action. In this work, we propose a new contrastive learning approach to train models for skeleton-based action recognition without labels. Our key contribution is a simple module, HaLP - to Hallucinate Latent Positives for contrastive learning. Specifically, HaLP explores the latent space of poses in suitable directions to generate new positives. To this end, we present a novel optimization formulation to solve for the synthetic positives with an explicit control on their hardness. We propose approximations to the objective, making them solvable in closed form with minimal overhead. We show via experiments that using these generated positives within a standard contrastive learning framework leads to consistent improvements across benchmarks such as NTU-60, NTU-120, and PKU-II on tasks like linear evaluation, transfer learning, and kNN evaluation. Our code will be made available at https://github.com/anshulbshah/HaLP.
+
+</details>
+
+### Self-Supervised 3D Scene Flow Estimation Guided by Superpoints.
+- **链接**: [arXiv:2305.02528](https://arxiv.org/abs/2305.02528) · 📚 被引 33
+- **作者**: Yaqi Shen, Le Hui, Jin Xie, Jian Yang
+- **🏷️ 机构**: Nanjing University of Science and Technology,PCA Lab,Nanjing,China
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 3D scene flow estimation aims to estimate point-wise motions between two consecutive frames of point clouds. Superpoints, i.e., points with similar geometric features, are usually employed to capture similar motions of local regions in 3D scenes for scene flow estimation. However, in existing methods, superpoints are generated with the offline clustering methods, which cannot characterize local regions with similar motions for complex 3D scenes well, leading to inaccurate scene flow estimation. To this end, we propose an iterative end-to-end superpoint based scene flow estimation framework, where the superpoints can be dynamically updated to guide the point-level flow prediction. Specifically, our framework consists of a flow guided superpoint generation module and a superpoint guided flow refinement module. In our superpoint generation module, we utilize the bidirectional flow information at the previous iteration to obtain the matching points of points and superpoint centers for soft point-to-superpoint association construction, in which the superpoints are generated for pairwise point clouds. With the generated superpoints, we first reconstruct the flow for each point by adaptively aggregating the superpoint-level flow, and then encode the consistency between the reconstructed flow of pairwise point clouds. Finally, we feed the consistency encoding along with the reconstructed flow into GRU to refine point-level flow. Extensive experiments on several different datasets show that our method can achieve promising performance.
+
+</details>
+
+### Learning Common Rationale to Improve Self-Supervised Representation for Fine-Grained Visual Recognition Problems.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01096) · 📚 被引 25
+- **作者**: Yangyang Shu, Anton van den Hengel, Lingqiao Liu
+- **🏷️ 机构**: School of Computer Science, The University of Adelaide
+- **会议**: CVPR 2023
+
+### Multi-Mode Online Knowledge Distillation for Self-Supervised Visual Representation Learning.
+- **链接**: [arXiv:2304.06461](https://arxiv.org/abs/2304.06461) · 📚 被引 38
+- **作者**: Kaiyou Song, Jin Xie, Shan Zhang, Zimeng Luo
+- **🏷️ 机构**: Megvii Technology
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised learning (SSL) has made remarkable progress in visual representation learning. Some studies combine SSL with knowledge distillation (SSL-KD) to boost the representation learning performance of small models. In this study, we propose a Multi-mode Online Knowledge Distillation method (MOKD) to boost self-supervised visual representation learning. Different from existing SSL-KD methods that transfer knowledge from a static pre-trained teacher to a student, in MOKD, two different models learn collaboratively in a self-supervised manner. Specifically, MOKD consists of two distillation modes: self-distillation and cross-distillation modes. Among them, self-distillation performs self-supervised learning for each model independently, while cross-distillation realizes knowledge interaction between different models. In cross-distillation, a cross-attention feature search strategy is proposed to enhance the semantic feature alignment between different models. As a result, the two models can absorb knowledge from each other to boost their representation learning performance. Extensive experimental results on different backbones and datasets demonstrate that two heterogeneous models can benefit from MOKD and outperform their independently trained baseline. In addition, MOKD also outperforms existing SSL-KD methods for both the student and teacher models.
+
+</details>
+
+### Masked Motion Encoding for Self-Supervised Video Representation Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00222)
+- **作者**: Xinyu Sun, Peihao Chen, Liangwei Chen, Changhao Li, Thomas H. Li, Mingkui Tan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
+
+### Scene Graph Contrastive Learning for Embodied Navigation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00999) · 📚 被引 21
+- **作者**: Kunal Pratap Singh, Jordi Salvador, Luca Weihs, Aniruddha Kembhavi
+- **🏷️ 机构**: Allen Institute for AI
+- **会议**: ICCV 2023
+
+### Siamese Image Modeling for Self-Supervised Vision Representation Learning.
+- **链接**: [arXiv:2206.01204](https://arxiv.org/abs/2206.01204) · [代码](https://github.com/fundamentalvision/Siamese-Image-Modeling) · 📚 被引 78
+- **作者**: Chenxin Tao, Xizhou Zhu, Weijie Su, Gao Huang, Bin Li, Jie Zhou et al.
+- **🏷️ 机构**: Tsinghua University, SenseTime Research, University of Science and Technology of China
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised learning (SSL) has delivered superior performance on a variety of downstream vision tasks. Two main-stream SSL frameworks have been proposed, i.e., Instance Discrimination (ID) and Masked Image Modeling (MIM). ID pulls together representations from different views of the same image, while avoiding feature collapse. It lacks spatial sensitivity, which requires modeling the local structure within each image. On the other hand, MIM reconstructs the original content given a masked image. It instead does not have good semantic alignment, which requires projecting semantically similar views into nearby representations. To address this dilemma, we observe that (1) semantic alignment can be achieved by matching different image views with strong augmentations; (2) spatial sensitivity can benefit from predicting dense representations with masked images. Driven by these analysis, we propose Siamese Image Modeling (SiameseIM), which predicts the dense representations of an augmented view, based on another masked view from the same image but with different augmentations. SiameseIM uses a Siamese network with two branches. The online branch encodes the first view, and predicts the second view's representation according to the relative positions between these two views. The target branch produces the target by encoding the second view. SiameseIM can surpass both ID and MIM on a wide range of downstream tasks, including ImageNet finetuning and linear probing, COCO and LVIS detection, and ADE20k semantic segmentation. The improvement is more significant in few-shot, long-tail and robustness-concerned scenarios. Code shall be released at https://github.com/fundamentalvision/Siamese-Image-Modeling.
+
+</details>
+
+### Defending Against Patch-based Backdoor Attacks on Self-Supervised Learning.
+- **链接**: [arXiv:2304.01482](https://arxiv.org/abs/2304.01482) · [代码](https://github.com/UCDvision/PatchSearch) · 📚 被引 23
+- **作者**: Ajinkya Tejankar, Maziar Sanjabi, Qifan Wang, Sinong Wang, Hamed Firooz, Hamed Pirsiavash et al.
+- **🏷️ 机构**: University of California,Davis, Meta AI
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recently, self-supervised learning (SSL) was shown to be vulnerable to patch-based data poisoning backdoor attacks. It was shown that an adversary can poison a small part of the unlabeled data so that when a victim trains an SSL model on it, the final model will have a backdoor that the adversary can exploit. This work aims to defend self-supervised learning against such attacks. We use a three-step defense pipeline, where we first train a model on the poisoned data. In the second step, our proposed defense algorithm (PatchSearch) uses the trained model to search the training data for poisoned samples and removes them from the training set. In the third step, a final model is trained on the cleaned-up training set. Our results show that PatchSearch is an effective defense. As an example, it improves a model's accuracy on images containing the trigger from 38.2% to 63.7% which is very close to the clean model's accuracy, 64.6%. Moreover, we show that PatchSearch outperforms baselines and state-of-the-art defense approaches including those using additional clean, trusted data. Our code is available at https://github.com/UCDvision/PatchSearch
+
+</details>
+
+### Learning with Noisy labels via Self-supervised Adversarial Noisy Masking.
+- **链接**: [arXiv:2302.06805](https://arxiv.org/abs/2302.06805) · 📚 被引 27
+- **作者**: Yuanpeng Tu, Boshen Zhang, Yuxi Li, Liang Liu, Jian Li, Jiangning Zhang et al.
+- **🏷️ 机构**: Tongji Univeristy,Dept. of Electronic and Information Engineering,Shanghai, Tencent,YouTu Lab,Shanghai
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Collecting large-scale datasets is crucial for training deep models, annotating the data, however, inevitably yields noisy labels, which poses challenges to deep learning algorithms. Previous efforts tend to mitigate this problem via identifying and removing noisy samples or correcting their labels according to the statistical properties (e.g., loss values) among training samples. In this paper, we aim to tackle this problem from a new perspective, delving into the deep feature maps, we empirically find that models trained with clean and mislabeled samples manifest distinguishable activation feature distributions. From this observation, a novel robust training approach termed adversarial noisy masking is proposed. The idea is to regularize deep features with a label quality guided masking scheme, which adaptively modulates the input data and label simultaneously, preventing the model to overfit noisy samples. Further, an auxiliary task is designed to reconstruct input data, it naturally provides noise-free self-supervised signals to reinforce the generalization ability of deep models. The proposed method is simple and flexible, it is tested on both synthetic and real-world noisy datasets, where significant improvements are achieved over previous state-of-the-art methods.
+
+</details>
+
+### PatchCraft Self-Supervised Training for Correlated Image Denoising.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00561) · 📚 被引 13
+- **作者**: Gregory Vaksman, Michael Elad
+- **🏷️ 机构**: CS Department - The Technion,Haifa,Israel
+- **会议**: CVPR 2023
+
+### Boosting Novel Category Discovery Over Domains with Soft Contrastive Learning and All in One Classifier.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01089) · 📚 被引 18
+- **作者**: Zelin Zang, Lei Shang, Senqiao Yang, Fei Wang, Baigui Sun, Xuansong Xie et al.
+- **🏷️ 机构**: Westlake University, Alibaba Group
+- **会议**: ICCV 2023
+
+### Weakly-Supervised Text-driven Contrastive Learning for Facial Behavior Understanding.
+- **链接**: [arXiv:2304.00058](https://arxiv.org/abs/2304.00058) · 📚 被引 23
+- **作者**: Xiang Zhang, Taoyue Wang, Xiaotian Li, Huiyuan Yang, Lijun Yin
+- **🏷️ 机构**: State University of New York,Binghamton, Rice University
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Contrastive learning has shown promising potential for learning robust representations by utilizing unlabeled data. However, constructing effective positive-negative pairs for contrastive learning on facial behavior datasets remains challenging. This is because such pairs inevitably encode the subject-ID information, and the randomly constructed pairs may push similar facial images away due to the limited number of subjects in facial behavior datasets. To address this issue, we propose to utilize activity descriptions, coarse-grained information provided in some datasets, which can provide high-level semantic information about the image sequences but is often neglected in previous studies. More specifically, we introduce a two-stage Contrastive Learning with Text-Embeded framework for Facial behavior understanding (CLEF). The first stage is a weakly-supervised contrastive learning method that learns representations from positive-negative pairs constructed using coarse-grained activity information. The second stage aims to train the recognition of facial expressions or facial action units by maximizing the similarity between image and the corresponding text label names. The proposed CLEF achieves state-of-the-art performance on three in-the-lab datasets for AU recognition and three in-the-wild datasets for facial expression recognition.
+
+</details>
+
+### Pre-training-free Image Manipulation Localization through Non-Mutually Exclusive Contrastive Learning.
+- **链接**: [arXiv:2309.14900](https://arxiv.org/abs/2309.14900) · [代码](https://github.com/Knightzjz/NCL-IML) · 📚 被引 49
+- **作者**: Jizhe Zhou, Xiaochen Ma, Xia Du, Ahmed Y. Al Hammadi, Wentao Feng
+- **🏷️ 机构**: Sichuan University,College of Computer Science, Xiamen University of Technology,School of Computer and Information Engineering, Mohamed Bin Zayed University for Humanities,Strategy Affairs Office
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deep Image Manipulation Localization (IML) models suffer from training data insufficiency and thus heavily rely on pre-training. We argue that contrastive learning is more suitable to tackle the data insufficiency problem for IML. Crafting mutually exclusive positives and negatives is the prerequisite for contrastive learning. However, when adopting contrastive learning in IML, we encounter three categories of image patches: tampered, authentic, and contour patches. Tampered and authentic patches are naturally mutually exclusive, but contour patches containing both tampered and authentic pixels are non-mutually exclusive to them. Simply abnegating these contour patches results in a drastic performance loss since contour patches are decisive to the learning outcomes. Hence, we propose the Non-mutually exclusive Contrastive Learning (NCL) framework to rescue conventional contrastive learning from the above dilemma. In NCL, to cope with the non-mutually exclusivity, we first establish a pivot structure with dual branches to constantly switch the role of contour patches between positives and negatives while training. Then, we devise a pivot-consistent loss to avoid spatial corruption caused by the role-switching process. In this manner, NCL both inherits the self-supervised merits to address the data insufficiency and retains a high manipulation localization accuracy. Extensive experiments verify that our NCL achieves state-of-the-art performance on all five benchmarks without any pre-training and is more robust on unseen real-life samples. The code is available at: https://github.com/Knightzjz/NCL-IML.
+
+</details>
+
+### Geometric Contrastive Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00028)
+- **作者**: Yeskendir Koishekenov, Sharvaree P. Vadgama, Riccardo Valperga, Erik J. Bekkers
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
+
+### LG-BPN: Local and Global Blind-Patch Network for Self-Supervised Real-World Denoising.
+- **链接**: [arXiv:2304.00534](https://arxiv.org/abs/2304.00534) · [代码](https://github.com/Wang-XIaoDingdd/LGBPN) · 📚 被引 74
+- **作者**: Zichun Wang, Ying Fu, Ji Liu, Yulun Zhang
+- **🏷️ 机构**: Beijing Institute of Technology, Baidu Inc.,Beijing,China, ETH Z&#x00FC;rich
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Despite the significant results on synthetic noise under simplified assumptions, most self-supervised denoising methods fail under real noise due to the strong spatial noise correlation, including the advanced self-supervised blind-spot networks (BSNs). For recent methods targeting real-world denoising, they either suffer from ignoring this spatial correlation, or are limited by the destruction of fine textures for under-considering the correlation. In this paper, we present a novel method called LG-BPN for self-supervised real-world denoising, which takes the spatial correlation statistic into our network design for local detail restoration, and also brings the long-range dependencies modeling ability to previously CNN-based BSN methods. First, based on the correlation statistic, we propose a densely-sampled patch-masked convolution module. By taking more neighbor pixels with low noise correlation into account, we enable a denser local receptive field, preserving more useful information for enhanced fine structure recovery. Second, we propose a dilated Transformer block to allow distant context exploitation in BSN. This global perception addresses the intrinsic deficiency of BSN, whose receptive field is constrained by the blind spot requirement, which can not be fully resolved by the previous CNN-based BSNs. These two designs enable LG-BPN to fully exploit both the detailed structure and the global interaction in a blind manner. Extensive results on real-world datasets demonstrate the superior performance of our method. https://github.com/Wang-XIaoDingdd/LGBPN
+
+</details>
+
+### DLBD: A Self-Supervised Direct-Learned Binary Descriptor.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01521) · 📚 被引 7
+- **作者**: Bin Xiao, Yang Hu, Bo Liu, Xiuli Bi, Weisheng Li, Xinbo Gao
+- **🏷️ 机构**: Chongqing University of Posts and Telecommunications,Chongqing,China
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We develop techniques for refining representations for fine-grained classification and segmentation tasks in a self-supervised manner. We find that fine-tuning methods based on instance-discriminative contrastive learning are not as effective, and posit that recognizing part-specific variations is crucial for fine-grained categorization. We present an iterative learning approach that incorporates part-centric equivariance and invariance objectives. First, pixel representations are clustered to discover parts. We analyze the representations from convolutional and vision transformer networks that are best suited for this task. Then, a part-centric learning step aggregates and contrasts representations of parts within an image. We show that this improves the performance on image classification and part segmentation tasks across datasets. For example, under a linear-evaluation scheme, the classification accuracy of a ResNet50 trained on ImageNet using DetCon, a self-supervised learning approach, improves from 35.4% to 42.0% on the Caltech-UCSD Birds, from 35.5% to 44.1% on the FGVC Aircraft, and from 29.7% to 37.4% on the Stanford Cars. We also observe significant gains in few-shot part segmentation tasks using the proposed technique, while instance-discriminative learning was not as effective. Smaller, yet consistent, improvements are also observed for stronger networks based on transformers.
+
+### CiCo: Domain-Aware Sign Language Retrieval via Cross-Lingual Contrastive Learning.
+- **链接**: [arXiv:2303.12793](https://arxiv.org/abs/2303.12793) · [代码](https://github.com/FangyunWei/SLRT) · 📚 被引 33
+- **作者**: Yiting Cheng, Fangyun Wei, Jianmin Bao, Dong Chen, Wenqiang Zhang
+- **🏷️ 机构**: School of Computer Science, Fudan University, Microsoft Research Asia
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This work focuses on sign language retrieval-a recently proposed task for sign language understanding. Sign language retrieval consists of two sub-tasks: text-to-sign-video (T2V) retrieval and sign-video-to-text (V2T) retrieval. Different from traditional video-text retrieval, sign language videos, not only contain visual signals but also carry abundant semantic meanings by themselves due to the fact that sign languages are also natural languages. Considering this character, we formulate sign language retrieval as a cross-lingual retrieval problem as well as a video-text retrieval task. Concretely, we take into account the linguistic properties of both sign languages and natural languages, and simultaneously identify the fine-grained cross-lingual (i.e., sign-to-word) mappings while contrasting the texts and the sign videos in a joint embedding space. This process is termed as cross-lingual contrastive learning. Another challenge is raised by the data scarcity issue-sign language datasets are orders of magnitude smaller in scale than that of speech recognition. We alleviate this issue by adopting a domain-agnostic sign encoder pre-trained on large-scale sign videos into the target domain via pseudo-labeling. Our framework, termed as domain-aware sign language retrieval via Cross-lingual Contrastive learning or CiCo for short, outperforms the pioneering method by large margins on various datasets, e.g., +22.4 T2V and +28.0 V2T R@1 improvements on How2Sign dataset, and +13.7 T2V and +17.1 V2T R@1 improvements on PHOENIX-2014T dataset. Code and models are available at: https://github.com/FangyunWei/SLRT.
+
+</details>
+
+### Dynamic Graph Enhanced Contrastive Learning for Chest X-Ray Report Generation.
+- **链接**: [arXiv:2303.10323](https://arxiv.org/abs/2303.10323) · 📚 被引 176
+- **作者**: Mingjie Li, Bingqian Lin, Zicong Chen, Haokun Lin, Xiaodan Liang, Xiaojun Chang
+- **🏷️ 机构**: AAII, University of Technology Sydney,ReLER, School of ISE, Sun Yat-Sen University, The University of Hong Kong
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Automatic radiology reporting has great clinical potential to relieve radiologists from heavy workloads and improve diagnosis interpretation. Recently, researchers have enhanced data-driven neural networks with medical knowledge graphs to eliminate the severe visual and textual bias in this task. The structures of such graphs are exploited by using the clinical dependencies formed by the disease topic tags via general knowledge and usually do not update during the training process. Consequently, the fixed graphs can not guarantee the most appropriate scope of knowledge and limit the effectiveness. To address the limitation, we propose a knowledge graph with Dynamic structure and nodes to facilitate medical report generation with Contrastive Learning, named DCL. In detail, the fundamental structure of our graph is pre-constructed from general knowledge. Then we explore specific knowledge extracted from the retrieved reports to add additional nodes or redefine their relations in a bottom-up manner. Each image feature is integrated with its very own updated graph before being fed into the decoder module for report generation. Finally, this paper introduces Image-Report Contrastive and Image-Report Matching losses to better represent visual features and textual information. Evaluated on IU-Xray and MIMIC-CXR datasets, our DCL outperforms previous state-of-the-art models on these two benchmarks.
+
+</details>
+
+### Promoting Semantic Connectivity: Dual Nearest Neighbors Contrastive Learning for Unsupervised Domain Generalization.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00342) · 📚 被引 12
+- **作者**: Yuchen Liu, Yaoming Wang, Yabo Chen, Wenrui Dai, Chenglin Li, Junni Zou et al.
+- **🏷️ 机构**: Shanghai Jiao Tong University,Department of Electronic Engineering,China, Shanghai Jiao Tong University,Department of Computer Science and Engineering,China
+- **会议**: CVPR 2023
+
+### Class Prototypes based Contrastive Learning for Classifying Multi-Label and Fine-Grained Educational Videos.
+- **链接**: [arXiv:2510.11204](https://arxiv.org/abs/2510.11204) · [代码](https://github.com/rohit-gupta/MMContrast) · 📚 被引 16
+- **作者**: Rohit Gupta, Anirban Roy, Claire Christensen, Sujeong Kim, Sarah Gerard, Madeline Cincebeaux et al.
+- **🏷️ 机构**: University of Central Florida,Center for Research in Computer Vision, SRI International
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The recent growth in the consumption of online media by children during early childhood necessitates data-driven tools enabling educators to filter out appropriate educational content for young learners. This paper presents an approach for detecting educational content in online videos. We focus on two widely used educational content classes: literacy and math. For each class, we choose prominent codes (sub-classes) based on the Common Core Standards. For example, literacy codes include `letter names', `letter sounds', and math codes include `counting', `sorting'. We pose this as a fine-grained multilabel classification problem as videos can contain multiple types of educational content and the content classes can get visually similar (e.g., `letter names' vs `letter sounds'). We propose a novel class prototypes based supervised contrastive learning approach that can handle fine-grained samples associated with multiple labels. We learn a class prototype for each class and a loss function is employed to minimize the distances between a class prototype and the samples from the class. Similarly, distances between a class prototype and the samples from other classes are maximized. As the alignment between visual and audio cues are crucial for effective comprehension, we consider a multimodal transformer network to capture the interaction between visual and audio cues in videos while learning the embedding for videos. For evaluation, we present a dataset, APPROVE, employing educational videos from YouTube labeled with fine-grained education classes by education researchers. APPROVE consists of 193 hours of expert-annotated videos with 19 classes. The proposed approach outperforms strong baselines on APPROVE and other benchmarks such as Youtube-8M, and COIN. The dataset is available at https://github.com/rohit-gupta/MMContrast/tree/main/APPROVE
+
+</details>
+
+### Pseudo-Label Guided Contrastive Learning for Semi-Supervised Medical Image Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01895) · 📚 被引 187
+- **作者**: Hritam Basak, Zhaozheng Yin
+- **🏷️ 机构**: Stony Brook University,NY,USA
+- **会议**: CVPR 2023
+
+### Weakly-Supervised Domain Adaptive Semantic Segmentation with Prototypical Contrastive Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01481) · 📚 被引 30
+- **作者**: Anurag Das, Yongqin Xian, Dengxin Dai, Bernt Schiele
+- **🏷️ 机构**: Saarland Informatics Campus,MPI for Informatics, ETH Zurich
+- **会议**: CVPR 2023
+
+### MaskCon: Masked Contrastive Learning for Coarse-Labelled Dataset.
+- **链接**: [arXiv:2303.12756](https://arxiv.org/abs/2303.12756) · [代码](https://github.com/MrChenFeng/MaskCon_CVPR2023) · 📚 被引 18
+- **作者**: Chen Feng, Ioannis Patras
+- **🏷️ 机构**: Queen Mary University of London,UK
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deep learning has achieved great success in recent years with the aid of advanced neural network structures and large-scale human-annotated datasets. However, it is often costly and difficult to accurately and efficiently annotate large-scale datasets, especially for some specialized domains where fine-grained labels are required. In this setting, coarse labels are much easier to acquire as they do not require expert knowledge. In this work, we propose a contrastive learning method, called $\textbf{Mask}$ed $\textbf{Con}$trastive learning~($\textbf{MaskCon}$) to address the under-explored problem setting, where we learn with a coarse-labelled dataset in order to address a finer labelling problem. More specifically, within the contrastive learning framework, for each sample our method generates soft-labels with the aid of coarse labels against other samples and another augmented view of the sample in question. By contrast to self-supervised contrastive learning where only the sample's augmentations are considered hard positives, and in supervised contrastive learning where only samples with the same coarse labels are considered hard positives, we propose soft labels based on sample distances, that are masked by the coarse labels. This allows us to utilize both inter-sample relations and coarse labels. We demonstrate that our method can obtain as special cases many existing state-of-the-art works and that it provides tighter bounds on the generalization error. Experimentally, our method achieves significant improvement over the current state-of-the-art in various datasets, including CIFAR10, CIFAR100, ImageNet-1K, Standford Online Products and Stanford Cars196 datasets. Code and annotations are available at https://github.com/MrChenFeng/MaskCon_CVPR2023.
+
+</details>
+
+### Hyperbolic Contrastive Learning for Visual Representations beyond Objects.
+- **链接**: [arXiv:2212.00653](https://arxiv.org/abs/2212.00653) · [代码](https://github.com/shlokk/HCL) · 📚 被引 50
+- **作者**: Songwei Ge, Shlok Mishra, Simon Kornblith, Chun-Liang Li, David Jacobs
+- **🏷️ 机构**: University of Maryland,College Park, Google Research
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Although self-/un-supervised methods have led to rapid progress in visual representation learning, these methods generally treat objects and scenes using the same lens. In this paper, we focus on learning representations for objects and scenes that preserve the structure among them. Motivated by the observation that visually similar objects are close in the representation space, we argue that the scenes and objects should instead follow a hierarchical structure based on their compositionality. To exploit such a structure, we propose a contrastive learning framework where a Euclidean loss is used to learn object representations and a hyperbolic loss is used to encourage representations of scenes to lie close to representations of their constituent objects in a hyperbolic space. This novel hyperbolic objective encourages the scene-object hypernymy among the representations by optimizing the magnitude of their norms. We show that when pretraining on the COCO and OpenImages datasets, the hyperbolic loss improves downstream performance of several baselines across multiple datasets and tasks, including image classification, object detection, and semantic segmentation. We also show that the properties of the learned representations allow us to solve various vision tasks that involve the interaction between scenes and objects in a zero-shot fashion. Our code can be found at \url{https://github.com/shlokk/HCL/tree/main/HCL}.
+
+</details>
+
+### Twin Contrastive Learning with Noisy Labels.
+- **链接**: [arXiv:2303.06930](https://arxiv.org/abs/2303.06930) · [代码](https://github.com/Hzzone/TCL) · 📚 被引 108
+- **作者**: Zhizhong Huang, Junping Zhang, Hongming Shan
+- **🏷️ 机构**: School of Computer Science, Fudan University,Shanghai Key Lab of Intelligent Information Processing,Shanghai,China,200433, Institute of Science and Technology for Brain-inspired Intelligence and MOE Frontiers Center for Brain Science, Fudan University,Shanghai,China,200433
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Learning from noisy data is a challenging task that significantly degenerates the model performance. In this paper, we present TCL, a novel twin contrastive learning model to learn robust representations and handle noisy labels for classification. Specifically, we construct a Gaussian mixture model (GMM) over the representations by injecting the supervised model predictions into GMM to link label-free latent variables in GMM with label-noisy annotations. Then, TCL detects the examples with wrong labels as the out-of-distribution examples by another two-component GMM, taking into account the data distribution. We further propose a cross-supervision with an entropy regularization loss that bootstraps the true targets from model predictions to handle the noisy labels. As a result, TCL can learn discriminative representations aligned with estimated labels through mixup and contrastive learning. Extensive experimental results on several standard benchmarks and real-world datasets demonstrate the superior performance of TCL. In particular, TCL achieves 7.5\% improvements on CIFAR-10 with 90\% noisy label -- an extremely noisy scenario. The source code is available at \url{https://github.com/Hzzone/TCL}.
+
+</details>
+
+### Actionlet-Dependent Contrastive Learning for Unsupervised Skeleton-Based Action Recognition.
+- **链接**: [arXiv:2303.10904](https://arxiv.org/abs/2303.10904) · 📚 被引 92
+- **作者**: Lilang Lin, Jiahang Zhang, Jiaying Liu
+- **🏷️ 机构**: Wangxuan Institute of Computer Technology, Peking University,Beijing,China
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The self-supervised pretraining paradigm has achieved great success in skeleton-based action recognition. However, these methods treat the motion and static parts equally, and lack an adaptive design for different parts, which has a negative impact on the accuracy of action recognition. To realize the adaptive action modeling of both parts, we propose an Actionlet-Dependent Contrastive Learning method (ActCLR). The actionlet, defined as the discriminative subset of the human skeleton, effectively decomposes motion regions for better action modeling. In detail, by contrasting with the static anchor without motion, we extract the motion region of the skeleton data, which serves as the actionlet, in an unsupervised manner. Then, centering on actionlet, a motion-adaptive data transformation method is built. Different data transformations are applied to actionlet and non-actionlet regions to introduce more diversity while maintaining their own characteristics. Meanwhile, we propose a semantic-aware feature pooling method to build feature representations among motion and static regions in a distinguished manner. Extensive experiments on NTU RGB+D and PKUMMD show that the proposed method achieves remarkable action recognition performance. More visualization and quantitative experiments demonstrate the effectiveness of our method. Our project website is available at https://langlandslin.github.io/projects/ActCLR/
+
+</details>
+
+### Spatio-Temporal Pixel-Level Contrastive Learning-based Source-Free Domain Adaptation for Video Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01015)
+- **作者**: Shao-Yuan Lo, Poojan Oza, Sumanth Chennupati, Alejandro Galindo, Vishal M. Patel
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
 
@@ -65,41 +751,99 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
 
-### On Separate Normalization in Self-supervised Transformers.
-- **链接**: [arXiv:2309.12931](https://arxiv.org/abs/2309.12931)
-- **作者**: Xiaohui Chen, Yinkai Wang, Yuanqi Du, Soha Hassoun, Liping Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Self-supervised training methods for transformers have demonstrated remarkable performance across various domains. Previous transformer-based models, such as masked autoencoders (MAE), typically utilize a single normalization layer for both the [CLS] symbol and the tokens. We propose in this paper a simple modification that employs separate normalization layers for the tokens and the [CLS] symbol to better capture their distinct characteristics and enhance downstream task performance. Our method aims to alleviate the potential negative effects of using the same normalization statistics for both token types, which may not be optimally aligned with their individual roles. We empirically show that by utilizing a separate normalization layer, the [CLS] embeddings can better encode the global contextual information and are distributed more uniformly in its anisotropic space. When replacing the conventional normalization layer with the two separate layers, we observe an average 2.7% performance improvement over the image, natural language, and graph domains.
+> This paper tackles the problem of semi-supervised video object segmentation on resource-constrained devices, such as mobile phones. We formulate this problem as a distillation task, whereby we demonstrate that small space-time-memory networks with finite memory can achieve competitive results with state of the art, but at a fraction of the computational cost (32 milliseconds per frame on a Samsung Galaxy S22). Specifically, we provide a theoretically grounded framework that unifies knowledge distillation with supervised contrastive representation learning. These models are able to jointly benefit from both pixel-wise contrastive learning and distillation from a pre-trained teacher. We validate this loss by achieving competitive J&F to state of the art on both the standard DAVIS and YouTube benchmarks, despite running up to 5x faster, and with 32x fewer parameters.
 
 </details>
 
-### CADet: Fully Self-Supervised Out-Of-Distribution Detection With Contrastive Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/1700ad4e6252e8f2955909f96367b34d-Abstract-Conference.html)
-- **作者**: Charles Guille-Escuret, Pau Rodríguez, David Vázquez, Ioannis Mitliagkas, João Monteiro
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### PUCA: Patch-Unshuffle and Channel Attention for Enhanced Self-Supervised Image Denoising.
-- **链接**: [arXiv:2310.10088](https://arxiv.org/abs/2310.10088)
-- **作者**: Hyemi Jang, Junsung Park, Dahuin Jung, Jaihyun Lew, Ho Bae, Sungroh Yoon
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Dynamic Conceptional Contrastive Learning for Generalized Category Discovery.
+- **链接**: [arXiv:2303.17393](https://arxiv.org/abs/2303.17393) · [代码](https://github.com/TPCD/DCCL) · 📚 被引 94
+- **作者**: Nan Pu, Zhun Zhong, Nicu Sebe
+- **🏷️ 机构**: University of Trento,The Department of Information Engineering and Computer Science,Trento,Italy
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Generalized category discovery (GCD) is a recently proposed open-world problem, which aims to automatically cluster partially labeled data. The main challenge is that the unlabeled data contain instances that are not only from known categories of the labeled data but also from novel categories. This leads traditional novel category discovery (NCD) methods to be incapacitated for GCD, due to their assumption of unlabeled data are only from novel categories. One effective way for GCD is applying self-supervised learning to learn discriminate representation for unlabeled data. However, this manner largely ignores underlying relationships between instances of the same concepts (e.g., class, super-class, and sub-class), which results in inferior representation learning. In this paper, we propose a Dynamic Conceptional Contrastive Learning (DCCL) framework, which can effectively improve clustering accuracy by alternately estimating underlying visual conceptions and learning conceptional representation. In addition, we design a dynamic conception generation and update mechanism, which is able to ensure consistent conception learning and thus further facilitate the optimization of DCCL. Extensive experiments show that DCCL achieves new state-of-the-art performances on six generic and fine-grained visual recognition datasets, especially on fine-grained ones. For example, our method significantly surpasses the best competitor by 16.2% on the new classes for the CUB-200 dataset. Code is available at https://github.com/TPCD/DCCL.
+
+</details>
+
+### TranSG: Transformer-Based Skeleton Graph Prototype Contrastive Learning with Structure-Trajectory Prompted Reconstruction for Person Re-Identification.
+- **链接**: [arXiv:2303.06819](https://arxiv.org/abs/2303.06819) · 📚 被引 51
+- **作者**: Haocong Rao, Chunyan Miao
+- **🏷️ 机构**: LILY Research Center, Nanyang Technological University, Singapore School of Computer Science and Engineering, Nanyang Technological University,Singapore
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Person re-identification (re-ID) via 3D skeleton data is an emerging topic with prominent advantages. Existing methods usually design skeleton descriptors with raw body joints or perform skeleton sequence representation learning. However, they typically cannot concurrently model different body-component relations, and rarely explore useful semantics from fine-grained representations of body joints. In this paper, we propose a generic Transformer-based Skeleton Graph prototype contrastive learning (TranSG) approach with structure-trajectory prompted reconstruction to fully capture skeletal relations and valuable spatial-temporal semantics from skeleton graphs for person re-ID. Specifically, we first devise the Skeleton Graph Transformer (SGT) to simultaneously learn body and motion relations within skeleton graphs, so as to aggregate key correlative node features into graph representations. Then, we propose the Graph Prototype Contrastive learning (GPC) to mine the most typical graph features (graph prototypes) of each identity, and contrast the inherent similarity between graph representations and different prototypes from both skeleton and sequence levels to learn discriminative graph representations. Last, a graph Structure-Trajectory Prompted Reconstruction (STPR) mechanism is proposed to exploit the spatial and temporal contexts of graph nodes to prompt skeleton graph reconstruction, which facilitates capturing more valuable patterns and graph semantics for person re-ID. Empirical evaluations demonstrate that TranSG significantly outperforms existing state-of-the-art methods. We further show its generality under different graph modeling, RGB-estimated skeletons, and unsupervised scenarios.
+
+</details>
+
+### Positive-Augmented Contrastive Learning for Image and Video Captioning Evaluation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00668) · 📚 被引 46
+- **作者**: Sara Sarto, Manuele Barraco, Marcella Cornia, Lorenzo Baraldi, Rita Cucchiara
+- **🏷️ 机构**: University of Modena and Reggio Emilia,Modena,Italy
+- **会议**: CVPR 2023
+
+### FEND: A Future Enhanced Distribution-Aware Contrastive Learning Framework for Long-Tail Trajectory Prediction.
+- **链接**: [arXiv:2303.16574](https://arxiv.org/abs/2303.16574) · 📚 被引 44
+- **作者**: Yuning Wang, Pu Zhang, Lei Bai, Jianru Xue
+- **🏷️ 机构**: Institute of Artificial Intelligence and Robotics, Xi&#x0027;an Jiaotong University,China, DiDi Chuxing,China, Shanghai AI Laboratory,China
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Predicting the future trajectories of the traffic agents is a gordian technique in autonomous driving. However, trajectory prediction suffers from data imbalance in the prevalent datasets, and the tailed data is often more complicated and safety-critical. In this paper, we focus on dealing with the long-tail phenomenon in trajectory prediction. Previous methods dealing with long-tail data did not take into account the variety of motion patterns in the tailed data. In this paper, we put forward a future enhanced contrastive learning framework to recognize tail trajectory patterns and form a feature space with separate pattern clusters. Furthermore, a distribution aware hyper predictor is brought up to better utilize the shaped feature space. Our method is a model-agnostic framework and can be plugged into many well-known baselines. Experimental results show that our framework outperforms the state-of-the-art long-tail prediction method on tailed samples by 9.5% on ADE and 8.5% on FDE, while maintaining or slightly improving the averaged performance. Our method also surpasses many long-tail techniques on trajectory prediction task.
+
+</details>
+
+### MoLo: Motion-Augmented Long-Short Contrastive Learning for Few-Shot Action Recognition.
+- **链接**: [arXiv:2304.00946](https://arxiv.org/abs/2304.00946) · [代码](https://github.com/alibaba-mmai-research/MoLo) · 📚 被引 92
+- **作者**: Xiang Wang, Shiwei Zhang, Zhiwu Qing, Changxin Gao, Yingya Zhang, Deli Zhao et al.
+- **🏷️ 机构**: School of Artificial Intelligence and Automation, Huazhong University of Science and Technology,Key Laboratory of Image Processing and Intelligent Control, Alibaba Group
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Current state-of-the-art approaches for few-shot action recognition achieve promising performance by conducting frame-level matching on learned visual features. However, they generally suffer from two limitations: i) the matching procedure between local frames tends to be inaccurate due to the lack of guidance to force long-range temporal perception; ii) explicit motion learning is usually ignored, leading to partial information loss. To address these issues, we develop a Motion-augmented Long-short Contrastive Learning (MoLo) method that contains two crucial components, including a long-short contrastive objective and a motion autodecoder. Specifically, the long-short contrastive objective is to endow local frame features with long-form temporal awareness by maximizing their agreement with the global token of videos belonging to the same class. The motion autodecoder is a lightweight architecture to reconstruct pixel motions from the differential features, which explicitly embeds the network with motion dynamics. By this means, MoLo can simultaneously learn long-range temporal context and motion cues for comprehensive few-shot matching. To demonstrate the effectiveness, we evaluate MoLo on five standard benchmarks, and the results show that MoLo favorably outperforms recent advanced methods. The source code is available at https://github.com/alibaba-mmai-research/MoLo.
+
+</details>
+
+### ContraNeRF: Generalizable Neural Radiance Fields for Synthetic-to-real Novel View Synthesis via Contrastive Learning.
+- **链接**: [arXiv:2303.11052](https://arxiv.org/abs/2303.11052) · 📚 被引 21
+- **作者**: Hao Yang, Lanqing Hong, Aoxue Li, Tianyang Hu, Zhenguo Li, Gim Hee Lee et al.
+- **🏷️ 机构**: Peking University,Center for Data Science, Huawei Noah&#x0027;s Ark Lab, School of Computing, National University of Singapore
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Although many recent works have investigated generalizable NeRF-based novel view synthesis for unseen scenes, they seldom consider the synthetic-to-real generalization, which is desired in many practical applications. In this work, we first investigate the effects of synthetic data in synthetic-to-real novel view synthesis and surprisingly observe that models trained with synthetic data tend to produce sharper but less accurate volume densities. For pixels where the volume densities are correct, fine-grained details will be obtained. Otherwise, severe artifacts will be produced. To maintain the advantages of using synthetic data while avoiding its negative effects, we propose to introduce geometry-aware contrastive learning to learn multi-view consistent features with geometric constraints. Meanwhile, we adopt cross-view attention to further enhance the geometry perception of features by querying features across input views. Experiments demonstrate that under the synthetic-to-real setting, our method can render images with higher quality and better fine-grained details, outperforming existing generalizable novel view synthesis methods in terms of PSNR, SSIM, and LPIPS. When trained on real data, our method also achieves state-of-the-art results.
+
+</details>
+
+### Explicit Boundary Guided Semi-Push-Pull Contrastive Learning for Supervised Anomaly Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02346) · 📚 被引 108
+- **作者**: Xincheng Yao, Ruoqi Li, Jing Zhang, Jun Sun, Chongyang Zhang
+- **🏷️ 机构**: School of Electronic Information and Electrical Engineering, Shanghai Jiao Tong University, Research Institute of Systems Engineering, Academy Military Science,Beijing,China
+- **会议**: CVPR 2023
 
 > Although supervised image denoising networks have shown remarkable performance on synthesized noisy images, they often fail in practice due to the difference between real and synthesized noise. Since clean-noisy image pairs from the real world are extremely costly to gather, self-supervised learning, which utilizes noisy input itself as a target, has been studied. To prevent a self-supervised denoising model from learning identical mapping, each output pixel should not be influenced by its corresponding input pixel; This requirement is known as J-invariance. Blind-spot networks (BSNs) have been a prevalent choice to ensure J-invariance in self-supervised image denoising. However, constructing variations of BSNs by injecting additional operations such as downsampling can expose blinded information, thereby violating J-invariance. Consequently, convolutions designed specifically for BSNs have been allowed only, limiting architectural flexibility. To overcome this limitation, we propose PUCA, a novel J-invariant U-Net architecture, for self-supervised denoising. PUCA leverages patch-unshuffle/shuffle to dramatically expand receptive fields while maintaining J-invariance and dilated attention blocks (DABs) for global context incorporation. Experimental results demonstrate that PUCA achieves state-of-the-art performance, outperforming existing methods in self-supervised image denoising.
 
 </details>
 
-### Modality-Agnostic Self-Supervised Learning with Meta-Learned Masked Auto-Encoder.
-- **链接**: [arXiv:2310.16318](https://arxiv.org/abs/2310.16318) · [代码](https://github.com/alinlab/MetaMAE) · 📚 被引 1
-- **作者**: Huiwon Jang, Jihoon Tack, Daewon Choi, Jongheon Jeong, Jinwoo Shin
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Contrastive language-image pre-training (CLIP) serves as a de-facto standard to align images and texts. Nonetheless, the loose correlation between images and texts of web-crawled data renders the contrastive objective data inefficient and craving for a large training batch size. In this work, we explore the validity of non-contrastive language-image pre-training (nCLIP), and study whether nice properties exhibited in visual self-supervised models can emerge. We empirically observe that the non-contrastive objective nourishes representation learning while sufficiently underperforming under zero-shot recognition. Based on the above study, we further introduce xCLIP, a multi-tasking framework combining CLIP and nCLIP, and show that nCLIP aids CLIP in enhancing feature semantics. The synergy between two objectives lets xCLIP enjoy the best of both worlds: superior performance in both zero-shot transfer and representation learning. Systematic evaluation is conducted spanning a wide variety of downstream tasks including zero-shot classification, out-of-domain classification, retrieval, visual representation learning, and textual representation learning, showcasing a consistent performance gain and validating the effectiveness of xCLIP.
+
+</details>
+
+### Masked Image Training for Generalizable Deep Image Denoising.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00169) · 📚 被引 106
+- **作者**: Haoyu Chen, Jinjin Gu, Yihao Liu, Salma Abdel Magid, Chao Dong, Qiong Wang et al.
+- **🏷️ 机构**: The Hong Kong University of Science and Technology (Guangzhou), Shanghai AI Lab, Harvard University
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -131,458 +875,33 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Self-supervised learning (SSL) has great potential for molecular representation learning given the complexity of molecular graphs, the large amounts of unlabelled data available, the considerable cost of obtaining labels experimentally, and the hence often only small training datasets. The importance of the topic is reflected in the variety of paradigms and architectures that have been investigated recently. Yet the differences in performance seem often minor and are barely understood to date. In this paper, we study SSL based on persistent homology (PH), a mathematical tool for modeling topological features of data that persist across multiple scales. It has several unique features which particularly suit SSL, naturally offering: different views of the data, stability in terms of distance preservation, and the opportunity to flexibly incorporate domain knowledge. We (1) investigate an autoencoder, which shows the general representational power of PH, and (2) propose a contrastive loss that complements existing approaches. We rigorously evaluate our approach for molecular property prediction and demonstrate its particular features in improving the embedding space: after SSL, the representations are better and offer considerably more predictive power than the baselines over different probing tasks; our loss increases baseline performance, sometimes largely; and we often obtain substantial improvements over very small datasets, a common scenario in practice.
-
-</details>
-
-### TopoSRL: Topology preserving self-supervised Simplicial Representation Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/caba69fbc9fa0b06241b98a44cab8b31-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Hiren Madhu, Sundeep Prabhakar Chepuri
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Do SSL Models Have Déjà Vu? A Case of Unintended Memorization in Self-supervised Learning.
-- **链接**: [arXiv:2304.13850](https://arxiv.org/abs/2304.13850) · [代码](https://github.com/facebookresearch/DejaVu) · 📚 被引 0
-- **作者**: Casey Meehan, Florian Bordes, Pascal Vincent, Kamalika Chaudhuri, Chuan Guo
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### PMatch: Paired Masked Image Modeling for Dense Geometric Matching.
+- **链接**: [arXiv:2303.17342](https://arxiv.org/abs/2303.17342) · [代码](https://github.com/ShngJZ/PMatch) · 📚 被引 43
+- **作者**: Shengjie Zhu, Xiaoming Liu
+- **🏷️ 机构**: Michigan State University,Department of Computer Science and Engineering,East Lansing,MI,48824
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Self-supervised learning (SSL) algorithms can produce useful image representations by learning to associate different parts of natural images with one another. However, when taken to the extreme, SSL models can unintendedly memorize specific parts in individual training samples rather than learning semantically meaningful associations. In this work, we perform a systematic study of the unintended memorization of image-specific information in SSL models -- which we refer to as déjà vu memorization. Concretely, we show that given the trained model and a crop of a training image containing only the background (e.g., water, sky, grass), it is possible to infer the foreground object with high accuracy or even visually reconstruct it. Furthermore, we show that déjà vu memorization is common to different SSL algorithms, is exacerbated by certain design choices, and cannot be detected by conventional techniques for evaluating representation quality. Our study of déjà vu memorization reveals previously unknown privacy risks in SSL models, as well as suggests potential practical mitigation strategies. Code is available at https://github.com/facebookresearch/DejaVu.
-
-</details>
-
-### Self-Supervised Learning with Lie Symmetries for Partial Differential Equations.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/5c46ae130105fa012da0446126c01d1d-Abstract-Conference.html)
-- **作者**: Grégoire Mialon, Quentin Garrido, Hannah Lawrence, Danyal Rehman, Yann LeCun, Bobak T. Kiani
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Neural Harmonics: Bridging Spectral Embedding and Matrix Completion in Self-Supervised Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/bede8c7d5ed2348494d2b0621d613592-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Marina Munkhoeva, Ivan V. Oseledets
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### LVM-Med: Learning Large-Scale Self-Supervised Vision Models for Medical Imaging via Second-order Graph Matching.
-- **链接**: [arXiv:2306.11925](https://arxiv.org/abs/2306.11925) · 📚 被引 10
-- **作者**: Duy M. H. Nguyen, Hoang Nguyen, Nghiem Tuong Diep, Tan Ngoc Pham, Tri Cao, Binh T. Nguyen et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Obtaining large pre-trained models that can be fine-tuned to new tasks with limited annotated samples has remained an open challenge for medical imaging data. While pre-trained deep networks on ImageNet and vision-language foundation models trained on web-scale data are prevailing approaches, their effectiveness on medical tasks is limited due to the significant domain shift between natural and medical images. To bridge this gap, we introduce LVM-Med, the first family of deep networks trained on large-scale medical datasets. We have collected approximately 1.3 million medical images from 55 publicly available datasets, covering a large number of organs and modalities such as CT, MRI, X-ray, and Ultrasound. We benchmark several state-of-the-art self-supervised algorithms on this dataset and propose a novel self-supervised contrastive learning algorithm using a graph-matching formulation. The proposed approach makes three contributions: (i) it integrates prior pair-wise image similarity metrics based on local and global information; (ii) it captures the structural constraints of feature embeddings through a loss function constructed via a combinatorial graph-matching objective; and (iii) it can be trained efficiently end-to-end using modern gradient-estimation techniques for black-box solvers. We thoroughly evaluate the proposed LVM-Med on 15 downstream medical tasks ranging from segmentation and classification to object detection, and both for the in and out-of-distribution settings. LVM-Med empirically outperforms a number of state-of-the-art supervised, self-supervised, and foundation models. For challenging tasks such as Brain Tumor Classification or Diabetic Retinopathy Grading, LVM-Med improves previous vision-language models trained on 1 billion masks by 6-7% while using only a ResNet-50.
-
-</details>
-
-### Self-Supervised Motion Magnification by Backpropagating Through Optical Flow.
-- **链接**: [arXiv:2311.17056](https://arxiv.org/abs/2311.17056) · 📚 被引 1
-- **作者**: Zhaoying Pan, Daniel Geng, Andrew Owens
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> This paper presents a simple, self-supervised method for magnifying subtle motions in video: given an input video and a magnification factor, we manipulate the video such that its new optical flow is scaled by the desired amount. To train our model, we propose a loss function that estimates the optical flow of the generated video and penalizes how far if deviates from the given magnification factor. Thus, training involves differentiating through a pretrained optical flow network. Since our model is self-supervised, we can further improve its performance through test-time adaptation, by finetuning it on the input video. It can also be easily extended to magnify the motions of only user-selected objects. Our approach avoids the need for synthetic magnification datasets that have been used to train prior learning-based approaches. Instead, it leverages the existing capabilities of off-the-shelf motion estimators. We demonstrate the effectiveness of our method through evaluations of both visual quality and quantitative metrics on a range of real-world and synthetic videos, and we show our method works for both supervised and unsupervised optical flow methods.
-
-</details>
-
-### Self-supervised video pretraining yields robust and more human-aligned visual representations.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/cf57022dff0929796f85ac99d7cefa86-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Nikhil Parthasarathy, S. M. Ali Eslami, João Carreira, Olivier J. Hénaff
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency.
-- **链接**: [arXiv:2306.02109](https://arxiv.org/abs/2306.02109)
-- **作者**: Owen Queen, Tom Hartvigsen, Teddy Koker, Huan He, Theodoros Tsiligkaridis, Marinka Zitnik
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Interpreting time series models is uniquely challenging because it requires identifying both the location of time series signals that drive model predictions and their matching to an interpretable temporal pattern. While explainers from other modalities can be applied to time series, their inductive biases do not transfer well to the inherently challenging interpretation of time series. We present TimeX, a time series consistency model for training explainers. TimeX trains an interpretable surrogate to mimic the behavior of a pretrained time series model. It addresses the issue of model faithfulness by introducing model behavior consistency, a novel formulation that preserves relations in the latent space induced by the pretrained model with relations in the latent space induced by TimeX. TimeX provides discrete attribution maps and, unlike existing interpretability methods, it learns a latent space of explanations that can be used in various ways, such as to provide landmarks to visually aggregate similar explanations and easily recognize temporal patterns. We evaluate TimeX on eight synthetic and real-world datasets and compare its performance against state-of-the-art interpretability methods. We also conduct case studies using physiological time series. Quantitative evaluations demonstrate that TimeX achieves the highest or second-highest performance in every metric compared to baselines across all datasets. Through case studies, we show that the novel components of TimeX show potential for training faithful, interpretable models that capture the behavior of pretrained time series models.
-
-</details>
-
-### Language-based Action Concept Spaces Improve Video Self-Supervised Learning.
-- **链接**: [arXiv:2307.10922](https://arxiv.org/abs/2307.10922) · 📚 被引 2
-- **作者**: Kanchana Ranasinghe, Michael S. Ryoo
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recent contrastive language image pre-training has led to learning highly transferable and robust image representations. However, adapting these models to video domains with minimal supervision remains an open problem. We explore a simple step in that direction, using language tied self-supervised learning to adapt an image CLIP model to the video domain. A backbone modified for temporal modeling is trained under self-distillation settings with train objectives operating in an action concept space. Feature vectors of various action concepts extracted from a language encoder using relevant textual prompts construct this space. We introduce two train objectives, concept distillation and concept alignment, that retain generality of original representations while enforcing relations between actions and their attributes. Our approach improves zero-shot and linear probing performance on three action recognition benchmarks.
-
-</details>
-
-### Uncovering the Hidden Dynamics of Video Self-supervised Learning under Distribution Shifts.
-- **链接**: [arXiv:2306.02014](https://arxiv.org/abs/2306.02014) · 📚 被引 1
-- **作者**: Pritam Sarkar, Ahmad Beirami, Ali Etemad
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Video self-supervised learning (VSSL) has made significant progress in recent years. However, the exact behavior and dynamics of these models under different forms of distribution shift are not yet known. In this paper, we comprehensively study the behavior of six popular self-supervised methods (v-SimCLR, v-MoCo, v-BYOL, v-SimSiam, v-DINO, v-MAE) in response to various forms of natural distribution shift, i.e., (i) context shift, (ii) viewpoint shift, (iii) actor shift, (iv) source shift, (v) generalizability to unknown classes (zero-shot), and (vi) open-set recognition. To perform this extensive study, we carefully craft a test bed consisting of 17 in-distribution and out-of-distribution benchmark pairs using available public datasets and a series of evaluation protocols to stress-test the different methods under the intended shifts. Our study uncovers a series of intriguing findings and interesting behaviors of VSSL methods. For instance, we observe that while video models generally struggle with context shifts, v-MAE and supervised learning exhibit more robustness. Moreover, our study shows that v-MAE is a strong temporal learner, whereas contrastive methods, v-SimCLR and v-MoCo, exhibit strong performances against viewpoint shifts. When studying the notion of open-set recognition, we notice a trade-off between closed-set and open-set recognition performance if the pretrained VSSL encoders are used without finetuning. We hope that our work will contribute to the development of robust video representation learning frameworks for various real-world scenarios. The project page and code are available at: https://pritamqu.github.io/OOD-VSSL.
-
-</details>
-
-### SNAP: Self-Supervised Neural Maps for Visual Positioning and Semantic Understanding.
-- **链接**: [arXiv:2306.05407](https://arxiv.org/abs/2306.05407) · 📚 被引 1
-- **作者**: Paul-Edouard Sarlin, Eduard Trulls, Marc Pollefeys, Jan Hosang, Simon Lynen
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Semantic 2D maps are commonly used by humans and machines for navigation purposes, whether it's walking or driving. However, these maps have limitations: they lack detail, often contain inaccuracies, and are difficult to create and maintain, especially in an automated fashion. Can we use raw imagery to automatically create better maps that can be easily interpreted by both humans and machines? We introduce SNAP, a deep network that learns rich neural 2D maps from ground-level and overhead images. We train our model to align neural maps estimated from different inputs, supervised only with camera poses over tens of millions of StreetView images. SNAP can resolve the location of challenging image queries beyond the reach of traditional methods, outperforming the state of the art in localization by a large margin. Moreover, our neural maps encode not only geometry and appearance but also high-level semantics, discovered without explicit supervision. This enables effective pre-training for data-efficient semantic scene understanding, with the potential to unlock cost-efficient creation of more detailed maps.
-
-</details>
-
-### Self-Supervised Learning of Representations for Space Generates Multi-Modular Grid Cells.
-- **链接**: [arXiv:2311.02316](https://arxiv.org/abs/2311.02316)
-- **作者**: Rylan Schaeffer, Mikail Khona, Tzuhsuan Ma, Cristóbal Eyzaguirre, Sanmi Koyejo, Ila Fiete
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> To solve the spatial problems of mapping, localization and navigation, the mammalian lineage has developed striking spatial representations. One important spatial representation is the Nobel-prize winning grid cells: neurons that represent self-location, a local and aperiodic quantity, with seemingly bizarre non-local and spatially periodic activity patterns of a few discrete periods. Why has the mammalian lineage learnt this peculiar grid representation? Mathematical analysis suggests that this multi-periodic representation has excellent properties as an algebraic code with high capacity and intrinsic error-correction, but to date, there is no satisfactory synthesis of core principles that lead to multi-modular grid cells in deep recurrent neural networks. In this work, we begin by identifying key insights from four families of approaches to answering the grid cell question: coding theory, dynamical systems, function optimization and supervised deep learning. We then leverage our insights to propose a new approach that combines the strengths of all four approaches. Our approach is a self-supervised learning (SSL) framework - including data, data augmentations, loss functions and a network architecture - motivated from a normative perspective, without access to supervised position information or engineering of particular readout representations as needed in previous approaches. We show that multiple grid cell modules can emerge in networks trained on our SSL framework and that the networks and emergent representations generalize well outside their training distribution. This work contains insights for neuroscientists interested in the origins of grid cells as well as machine learning researchers interested in novel SSL frameworks.
-
-</details>
-
-### Self-Supervised Visual Acoustic Matching.
-- **链接**: [arXiv:2307.15064](https://arxiv.org/abs/2307.15064)
-- **作者**: Arjun Somayazulu, Changan Chen, Kristen Grauman
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Acoustic matching aims to re-synthesize an audio clip to sound as if it were recorded in a target acoustic environment. Existing methods assume access to paired training data, where the audio is observed in both source and target environments, but this limits the diversity of training data or requires the use of simulated data or heuristics to create paired samples. We propose a self-supervised approach to visual acoustic matching where training samples include only the target scene image and audio -- without acoustically mismatched source audio for reference. Our approach jointly learns to disentangle room acoustics and re-synthesize audio into the target environment, via a conditional GAN framework and a novel metric that quantifies the level of residual acoustic information in the de-biased audio. Training with either in-the-wild web data or simulated data, we demonstrate it outperforms the state-of-the-art on multiple challenging datasets and a wide variety of real-world audio and environments.
-
-</details>
-
-### FLSL: Feature-level Self-supervised Learning.
-- **链接**: [arXiv:2306.06203](https://arxiv.org/abs/2306.06203) · [代码](https://github.com/ISL-CV/FLSL) · 📚 被引 0
-- **作者**: Qing Su, Anton Netchaev, Hai Li, Shihao Ji
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Current self-supervised learning (SSL) methods (e.g., SimCLR, DINO, VICReg,MOCOv3) target primarily on representations at instance level and do not generalize well to dense prediction tasks, such as object detection and segmentation.Towards aligning SSL with dense predictions, this paper demonstrates for the first time the underlying mean-shift clustering process of Vision Transformers (ViT), which aligns well with natural image semantics (e.g., a world of objects and stuffs). By employing transformer for joint embedding and clustering, we propose a two-level feature clustering SSL method, coined Feature-Level Self-supervised Learning (FLSL). We present the formal definition of the FLSL problem and construct the objectives from the mean-shift and k-means perspectives. We show that FLSL promotes remarkable semantic cluster representations and learns an embedding scheme amenable to intra-view and inter-view feature clustering. Experiments show that FLSL yields significant improvements in dense prediction tasks, achieving 44.9 (+2.8)% AP and 46.5% AP in object detection, as well as 40.8 (+2.3)% AP and 42.1% AP in instance segmentation on MS-COCO, using Mask R-CNN with ViT-S/16 and ViT-S/8 as backbone, respectively. FLSL consistently outperforms existing SSL methods across additional benchmarks, including UAV17 object detection on UAVDT, and video instance segmentation on DAVIS 2017.We conclude by presenting visualization and various ablation studies to better understand the success of FLSL. The source code is available at https://github.com/ISL-CV/FLSL.
-
-</details>
-
-### Evaluating Self-Supervised Learning for Molecular Graph Embeddings.
-- **链接**: [arXiv:2206.08005](https://arxiv.org/abs/2206.08005) · 📚 被引 1
-- **作者**: Hanchen Wang, Jean Kaddour, Shengchao Liu, Jian Tang, Joan Lasenby, Qi Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Graph Self-Supervised Learning (GSSL) provides a robust pathway for acquiring embeddings without expert labelling, a capability that carries profound implications for molecular graphs due to the staggering number of potential molecules and the high cost of obtaining labels. However, GSSL methods are designed not for optimisation within a specific domain but rather for transferability across a variety of downstream tasks. This broad applicability complicates their evaluation. Addressing this challenge, we present "Molecular Graph Representation Evaluation" (MOLGRAPHEVAL), generating detailed profiles of molecular graph embeddings with interpretable and diversified attributes. MOLGRAPHEVAL offers a suite of probing tasks grouped into three categories: (i) generic graph, (ii) molecular substructure, and (iii) embedding space properties. By leveraging MOLGRAPHEVAL to benchmark existing GSSL methods against both current downstream datasets and our suite of tasks, we uncover significant inconsistencies between inferences drawn solely from existing datasets and those derived from more nuanced probing. These findings suggest that current evaluation methodologies fail to capture the entirety of the landscape.
-
-</details>
-
-### Keypoint-Augmented Self-Supervised Learning for Medical Image Segmentation with Limited Annotation.
-- **链接**: [arXiv:2310.01680](https://arxiv.org/abs/2310.01680) · [代码](https://github.com/zshyang/kaf.git) · 📚 被引 4
-- **作者**: Zhangsihao Yang, Mengwei Ren, Kaize Ding, Guido Gerig, Yalin Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Pretraining CNN models (i.e., UNet) through self-supervision has become a powerful approach to facilitate medical image segmentation under low annotation regimes. Recent contrastive learning methods encourage similar global representations when the same image undergoes different transformations, or enforce invariance across different image/patch features that are intrinsically correlated. However, CNN-extracted global and local features are limited in capturing long-range spatial dependencies that are essential in biological anatomy. To this end, we present a keypoint-augmented fusion layer that extracts representations preserving both short- and long-range self-attention. In particular, we augment the CNN feature map at multiple scales by incorporating an additional input that learns long-range spatial self-attention among localized keypoint features. Further, we introduce both global and local self-supervised pretraining for the framework. At the global scale, we obtain global representations from both the bottleneck of the UNet, and by aggregating multiscale keypoint features. These global features are subsequently regularized through image-level contrastive objectives. At the local scale, we define a distance-based criterion to first establish correspondences among keypoints and encourage similarity between their features. Through extensive experiments on both MRI and CT segmentation tasks, we demonstrate the architectural advantages of our proposed method in comparison to both CNN and Transformer-based UNets, when all architectures are trained with randomly initialized weights. With our proposed pretraining strategy, our method further outperforms existing SSL methods by producing more robust self-attention and achieving state-of-the-art segmentation results. The code is available at https://github.com/zshyang/kaf.git.
-
-</details>
-
-### Self-supervised Graph Neural Networks via Low-Rank Decomposition.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/6c33e4ea4ddfb05a78541022ab5a1fb9-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Liang Yang, Runjie Shi, Qiuliang Zhang, Bingxin Niu, Zhen Wang, Xiaochun Cao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### AdaptSSR: Pre-training User Model with Augmentation-Adaptive Self-Supervised Ranking.
-- **链接**: [arXiv:2310.09706](https://arxiv.org/abs/2310.09706)
-- **作者**: Yang Yu, Qi Liu, Kai Zhang, Yuren Zhang, Chao Song, Min Hou et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> User modeling, which aims to capture users' characteristics or interests, heavily relies on task-specific labeled data and suffers from the data sparsity issue. Several recent studies tackled this problem by pre-training the user model on massive user behavior sequences with a contrastive learning task. Generally, these methods assume different views of the same behavior sequence constructed via data augmentation are semantically consistent, i.e., reflecting similar characteristics or interests of the user, and thus maximizing their agreement in the feature space. However, due to the diverse interests and heavy noise in user behaviors, existing augmentation methods tend to lose certain characteristics of the user or introduce noisy behaviors. Thus, forcing the user model to directly maximize the similarity between the augmented views may result in a negative transfer. To this end, we propose to replace the contrastive learning task with a new pretext task: Augmentation-Adaptive SelfSupervised Ranking (AdaptSSR), which alleviates the requirement of semantic consistency between the augmented views while pre-training a discriminative user model. Specifically, we adopt a multiple pairwise ranking loss which trains the user model to capture the similarity orders between the implicitly augmented view, the explicitly augmented view, and views from other users. We further employ an in-batch hard negative sampling strategy to facilitate model training. Moreover, considering the distinct impacts of data augmentation on different behavior sequences, we design an augmentation-adaptive fusion mechanism to automatically adjust the similarity order constraint applied to each sample based on the estimated similarity between the augmented views. Extensive experiments on both public and industrial datasets with six downstream tasks verify the effectiveness of AdaptSSR.
-
-</details>
-
-### Better Correlation and Robustness: A Distribution-Balanced Self-Supervised Learning Framework for Automatic Dialogue Evaluation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/a8b148559549ce33261e79b4400e0d77-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Peiwen Yuan, Xinglin Wang, Jiayi Shi, Bin Sun, Yiwei Li
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Discovering Hierarchical Achievements in Reinforcement Learning via Contrastive Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/c919a2b5ec1de69f2629f9119676e336-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Seungyong Moon, Junyoung Yeom, Bumsoo Park, Hyun Oh Song
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Graph Contrastive Learning with Stable and Scalable Spectral Encoding.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/8e9a6582caa59fda0302349702965171-Abstract-Conference.html) · 📚 被引 3
-- **作者**: Deyu Bo, Yuan Fang, Yang Liu, Chuan Shi
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Semi-Supervised Contrastive Learning for Deep Regression with Ordinal Rankings from Spectral Seriation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/b2d4051f03a7038a2771dfbbe5c7b54e-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Weihang Dai, Yao Du, Hanru Bai, Kwang-Ting Cheng, Xiaomeng Li
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Finding Order in Chaos: A Novel Data Augmentation Method for Time Series in Contrastive Learning.
-- **链接**: [arXiv:2309.13439](https://arxiv.org/abs/2309.13439) · [代码](https://github.com/eth-siplab/Finding_Order_in_Chaos) · 📚 被引 11
-- **作者**: Berken Utku Demirel, Christian Holz
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The success of contrastive learning is well known to be dependent on data augmentation. Although the degree of data augmentations has been well controlled by utilizing pre-defined techniques in some domains like vision, time-series data augmentation is less explored and remains a challenging problem due to the complexity of the data generation mechanism, such as the intricate mechanism involved in the cardiovascular system. Moreover, there is no widely recognized and general time-series augmentation method that can be applied across different tasks. In this paper, we propose a novel data augmentation method for quasi-periodic time-series tasks that aims to connect intra-class samples together, and thereby find order in the latent space. Our method builds upon the well-known mixup technique by incorporating a novel approach that accounts for the periodic nature of non-stationary time-series. Also, by controlling the degree of chaos created by data augmentation, our method leads to improved feature representations and performance on downstream tasks. We evaluate our proposed method on three time-series tasks, including heart rate estimation, human activity recognition, and cardiovascular disease detection. Extensive experiments against state-of-the-art methods show that the proposed approach outperforms prior works on optimal data generation and known data augmentation techniques in the three tasks, reflecting the effectiveness of the presented method. Source code: https://github.com/eth-siplab/Finding_Order_in_Chaos
-
-</details>
-
-### Complementary Benefits of Contrastive Learning and Self-Training Under Distribution Shift.
-- **链接**: [arXiv:2312.03318](https://arxiv.org/abs/2312.03318) · 📚 被引 0
-- **作者**: Saurabh Garg, Amrith Setlur, Zachary C. Lipton, Sivaraman Balakrishnan, Virginia Smith, Aditi Raghunathan
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Self-training and contrastive learning have emerged as leading techniques for incorporating unlabeled data, both under distribution shift (unsupervised domain adaptation) and when it is absent (semi-supervised learning). However, despite the popularity and compatibility of these techniques, their efficacy in combination remains unexplored. In this paper, we undertake a systematic empirical investigation of this combination, finding that (i) in domain adaptation settings, self-training and contrastive learning offer significant complementary gains; and (ii) in semi-supervised learning settings, surprisingly, the benefits are not synergistic. Across eight distribution shift datasets (e.g., BREEDs, WILDS), we demonstrate that the combined method obtains 3--8% higher accuracy than either approach independently. We then theoretically analyze these techniques in a simplified model of distribution shift, demonstrating scenarios under which the features produced by contrastive learning can yield a good initialization for self-training to further amplify gains and achieve optimal performance, even when either method alone would fail.
-
-</details>
-
-### Architecture Matters: Uncovering Implicit Mechanisms in Graph Contrastive Learning.
-- **链接**: [arXiv:2311.02687](https://arxiv.org/abs/2311.02687) · [代码](https://github.com/PKU-ML/ArchitectureMattersGCL) · 📚 被引 0
-- **作者**: Xiaojun Guo, Yifei Wang, Zeming Wei, Yisen Wang
-- **🏷️ 机构**: Peking University
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> With the prosperity of contrastive learning for visual representation learning (VCL), it is also adapted to the graph domain and yields promising performance. However, through a systematic study of various graph contrastive learning (GCL) methods, we observe that some common phenomena among existing GCL methods that are quite different from the original VCL methods, including 1) positive samples are not a must for GCL; 2) negative samples are not necessary for graph classification, neither for node classification when adopting specific normalization modules; 3) data augmentations have much less influence on GCL, as simple domain-agnostic augmentations (e.g., Gaussian noise) can also attain fairly good performance. By uncovering how the implicit inductive bias of GNNs works in contrastive learning, we theoretically provide insights into the above intriguing properties of GCL. Rather than directly porting existing VCL methods to GCL, we advocate for more attention toward the unique architecture of graph learning and consider its implicit influence when designing GCL methods. Code is available at https: //github.com/PKU-ML/ArchitectureMattersGCL.
-
-</details>
-
-### Three Towers: Flexible Contrastive Learning with Pretrained Image Models.
-- **链接**: [arXiv:2305.16999](https://arxiv.org/abs/2305.16999) · 📚 被引 1
-- **作者**: Jannik Kossen, Mark Collier, Basil Mustafa, Xiao Wang, Xiaohua Zhai, Lucas Beyer et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We introduce Three Towers (3T), a flexible method to improve the contrastive learning of vision-language models by incorporating pretrained image classifiers. While contrastive models are usually trained from scratch, LiT (Zhai et al., 2022) has recently shown performance gains from using pretrained classifier embeddings. However, LiT directly replaces the image tower with the frozen embeddings, excluding any potential benefits from training the image tower contrastively. With 3T, we propose a more flexible strategy that allows the image tower to benefit from both pretrained embeddings and contrastive training. To achieve this, we introduce a third tower that contains the frozen pretrained embeddings, and we encourage alignment between this third tower and the main image-text towers. Empirically, 3T consistently improves over LiT and the CLIP-style from-scratch baseline for retrieval tasks. For classification, 3T reliably improves over the from-scratch baseline, and while it underperforms relative to LiT for JFT-pretrained models, it outperforms LiT for ImageNet-21k and Places365 pretraining.
-
-</details>
-
-### Certifiably Robust Graph Contrastive Learning.
-- **链接**: [arXiv:2310.03312](https://arxiv.org/abs/2310.03312) · [代码](https://github.com/ventr1c/RES-GCL) · 📚 被引 2
-- **作者**: Minhua Lin, Teng Xiao, Enyan Dai, Xiang Zhang, Suhang Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Graph Contrastive Learning (GCL) has emerged as a popular unsupervised graph representation learning method. However, it has been shown that GCL is vulnerable to adversarial attacks on both the graph structure and node attributes. Although empirical approaches have been proposed to enhance the robustness of GCL, the certifiable robustness of GCL is still remain unexplored. In this paper, we develop the first certifiably robust framework in GCL. Specifically, we first propose a unified criteria to evaluate and certify the robustness of GCL. We then introduce a novel technique, RES (Randomized Edgedrop Smoothing), to ensure certifiable robustness for any GCL model, and this certified robustness can be provably preserved in downstream tasks. Furthermore, an effective training method is proposed for robust GCL. Extensive experiments on real-world datasets demonstrate the effectiveness of our proposed method in providing effective certifiable robustness and enhancing the robustness of any GCL model. The source code of RES is available at https://github.com/ventr1c/RES-GCL.
-
-</details>
-
-### Towards Semi-Structured Automatic ICD Coding via Tree-based Contrastive Learning.
-- **链接**: [arXiv:2310.09672](https://arxiv.org/abs/2310.09672) · 📚 被引 2
-- **作者**: Chang Lu, Chandan K. Reddy, Ping Wang, Yue Ning
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Automatic coding of International Classification of Diseases (ICD) is a multi-label text categorization task that involves extracting disease or procedure codes from clinical notes. Despite the application of state-of-the-art natural language processing (NLP) techniques, there are still challenges including limited availability of data due to privacy constraints and the high variability of clinical notes caused by different writing habits of medical professionals and various pathological features of patients. In this work, we investigate the semi-structured nature of clinical notes and propose an automatic algorithm to segment them into sections. To address the variability issues in existing ICD coding models with limited data, we introduce a contrastive pre-training approach on sections using a soft multi-label similarity metric based on tree edit distance. Additionally, we design a masked section training strategy to enable ICD coding models to locate sections related to ICD codes. Extensive experimental results demonstrate that our proposed training strategies effectively enhance the performance of existing ICD coding methods.
-
-</details>
-
-### Towards a Unified Framework of Contrastive Learning for Disentangled Representations.
-- **链接**: [arXiv:2311.04774](https://arxiv.org/abs/2311.04774) · 📚 被引 2
-- **作者**: Stefan Matthes, Zhiwei Han, Hao Shen
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Contrastive learning has recently emerged as a promising approach for learning data representations that discover and disentangle the explanatory factors of the data. Previous analyses of such approaches have largely focused on individual contrastive losses, such as noise-contrastive estimation (NCE) and InfoNCE, and rely on specific assumptions about the data generating process. This paper extends the theoretical guarantees for disentanglement to a broader family of contrastive methods, while also relaxing the assumptions about the data distribution. Specifically, we prove identifiability of the true latents for four contrastive losses studied in this paper, without imposing common independence assumptions. The theoretical findings are validated on several benchmark datasets. Finally, practical limitations of these methods are also investigated.
-
-</details>
-
-### Slimmed Asymmetrical Contrastive Learning and Cross Distillation for Lightweight Model Training.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/8393d955a00c463a982cefe77d0404e1-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Jian Meng, Li Yang, Kyungmin Lee, Jinwoo Shin, Deliang Fan, Jae-sun Seo
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Reconstructing the Mind's Eye: fMRI-to-Image with Contrastive Learning and Diffusion Priors.
-- **链接**: [arXiv:2305.18274](https://arxiv.org/abs/2305.18274) · 📚 被引 23
-- **作者**: Paul S. Scotti, Atmadeep Banerjee, Jimmie Goode, Stepan Shabalin, Alex Nguyen, Ethan Cohen et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We present MindEye, a novel fMRI-to-image approach to retrieve and reconstruct viewed images from brain activity. Our model comprises two parallel submodules that are specialized for retrieval (using contrastive learning) and reconstruction (using a diffusion prior). MindEye can map fMRI brain activity to any high dimensional multimodal latent space, like CLIP image space, enabling image reconstruction using generative models that accept embeddings from this latent space. We comprehensively compare our approach with other existing methods, using both qualitative side-by-side comparisons and quantitative evaluations, and show that MindEye achieves state-of-the-art performance in both reconstruction and retrieval tasks. In particular, MindEye can retrieve the exact original image even among highly similar candidates indicating that its brain embeddings retain fine-grained image-specific information. This allows us to accurately retrieve images even from large-scale databases like LAION-5B. We demonstrate through ablations that MindEye's performance improvements over previous methods result from specialized submodules for retrieval and reconstruction, improved training techniques, and training models with orders of magnitude more parameters. Furthermore, we show that MindEye can better preserve low-level image features in the reconstructions by using img2img, with outputs from a separate autoencoder. All code is available on GitHub.
-
-</details>
-
-### Feature Dropout: Revisiting the Role of Augmentations in Contrastive Learning.
-- **链接**: [arXiv:2212.08378](https://arxiv.org/abs/2212.08378) · 📚 被引 0
-- **作者**: Alex Tamkin, Margalit Glasgow, Xiluo He, Noah D. Goodman
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> What role do augmentations play in contrastive learning? Recent work suggests that good augmentations are label-preserving with respect to a specific downstream task. We complicate this picture by showing that label-destroying augmentations can be useful in the foundation model setting, where the goal is to learn diverse, general-purpose representations for multiple downstream tasks. We perform contrastive learning experiments on a range of image and audio datasets with multiple downstream tasks (e.g. for digits superimposed on photographs, predicting the class of one vs. the other). We find that Viewmaker Networks, a recently proposed model for learning augmentations for contrastive learning, produce label-destroying augmentations that stochastically destroy features needed for different downstream tasks. These augmentations are interpretable (e.g. altering shapes, digits, or letters added to images) and surprisingly often result in better performance compared to expert-designed augmentations, despite not preserving label information. To support our empirical results, we theoretically analyze a simple contrastive learning setting with a linear model. In this setting, label-destroying augmentations are crucial for preventing one set of features from suppressing the learning of features useful for another downstream task. Our results highlight the need for analyzing the interaction between multiple downstream tasks when trying to explain the success of foundation models.
-
-</details>
-
-### AI for Interpretable Chemistry: Predicting Radical Mechanistic Pathways via Contrastive Learning.
-- **链接**: [arXiv:2311.01118](https://arxiv.org/abs/2311.01118) · 📚 被引 2
-- **作者**: Mohammadamin Tavakoli, Pierre Baldi, Ann Marie Carlton, Yin Ting T. Chiu, Alexander Shmakov, David Van Vranken
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Deep learning-based reaction predictors have undergone significant architectural evolution. However, their reliance on reactions from the US Patent Office results in a lack of interpretable predictions and limited generalization capability to other chemistry domains, such as radical and atmospheric chemistry. To address these challenges, we introduce a new reaction predictor system, RMechRP, that leverages contrastive learning in conjunction with mechanistic pathways, the most interpretable representation of chemical reactions. Specifically designed for radical reactions, RMechRP provides different levels of interpretation of chemical reactions. We develop and train multiple deep-learning models using RMechDB, a public database of radical reactions, to establish the first benchmark for predicting radical reactions. Our results demonstrate the effectiveness of RMechRP in providing accurate and interpretable predictions of radical reactions, and its potential for various applications in atmospheric chemistry.
-
-</details>
-
-### Towards robust and generalizable representations of extracellular data using contrastive learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/83c637c3bc0ca88eda6cf4f5f45bdced-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Ankit Vishnubhotla, Charlotte Loh, Akash Srivastava, Liam Paninski, Cole L. Hurwitz
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Understanding Contrastive Learning via Distributionally Robust Optimization.
-- **链接**: [arXiv:2310.11048](https://arxiv.org/abs/2310.11048) · [代码](https://github.com/junkangwu/ADNCE) · 📚 被引 6
-- **作者**: Junkang Wu, Jiawei Chen, Jiancan Wu, Wentao Shi, Xiang Wang, Xiangnan He
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> This study reveals the inherent tolerance of contrastive learning (CL) towards sampling bias, wherein negative samples may encompass similar semantics (\eg labels). However, existing theories fall short in providing explanations for this phenomenon. We bridge this research gap by analyzing CL through the lens of distributionally robust optimization (DRO), yielding several key insights: (1) CL essentially conducts DRO over the negative sampling distribution, thus enabling robust performance across a variety of potential distributions and demonstrating robustness to sampling bias; (2) The design of the temperature $τ$ is not merely heuristic but acts as a Lagrange Coefficient, regulating the size of the potential distribution set; (3) A theoretical connection is established between DRO and mutual information, thus presenting fresh evidence for ``InfoNCE as an estimate of MI'' and a new estimation approach for $φ$-divergence-based generalized mutual information. We also identify CL's potential shortcomings, including over-conservatism and sensitivity to outliers, and introduce a novel Adjusted InfoNCE loss (ADNCE) to mitigate these issues. It refines potential distribution, improving performance and accelerating convergence. Extensive experiments on various domains (image, sentence, and graphs) validate the effectiveness of the proposal. The code is available at \url{https://github.com/junkangwu/ADNCE}.
-
-</details>
-
-### Simple and Asymmetric Graph Contrastive Learning without Augmentations.
-- **链接**: [arXiv:2310.18884](https://arxiv.org/abs/2310.18884) · [代码](https://github.com/tengxiao1/GraphACL) · 📚 被引 7
-- **作者**: Teng Xiao, Huaisheng Zhu, Zhengyu Chen, Suhang Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Graph Contrastive Learning (GCL) has shown superior performance in representation learning in graph-structured data. Despite their success, most existing GCL methods rely on prefabricated graph augmentation and homophily assumptions. Thus, they fail to generalize well to heterophilic graphs where connected nodes may have different class labels and dissimilar features. In this paper, we study the problem of conducting contrastive learning on homophilic and heterophilic graphs. We find that we can achieve promising performance simply by considering an asymmetric view of the neighboring nodes. The resulting simple algorithm, Asymmetric Contrastive Learning for Graphs (GraphACL), is easy to implement and does not rely on graph augmentations and homophily assumptions. We provide theoretical and empirical evidence that GraphACL can capture one-hop local neighborhood information and two-hop monophily similarity, which are both important for modeling heterophilic graphs. Experimental results show that the simple GraphACL significantly outperforms state-of-the-art graph contrastive learning and self-supervised learning methods on homophilic and heterophilic graphs. The code of GraphACL is available at https://github.com/tengxiao1/GraphACL.
-
-</details>
-
-### Spatially Resolved Gene Expression Prediction from Histology Images via Bi-modal Contrastive Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/df656d6ed77b565e8dcdfbf568aead0a-Abstract-Conference.html) · 📚 被引 21
-- **作者**: Ronald Xie, Kuan Pang, Sai Chung, Catia Perciani, Sonya MacParland, Bo Wang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Enhancing Adversarial Contrastive Learning via Adversarial Invariant Regularization.
-- **链接**: [arXiv:2305.00374](https://arxiv.org/abs/2305.00374) · [代码](https://github.com/GodXuxilie/Enhancing_ACL_via_AIR) · 📚 被引 2
-- **作者**: Xilie Xu, Jingfeng Zhang, Feng Liu, Masashi Sugiyama, Mohan S. Kankanhalli
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Adversarial contrastive learning (ACL) is a technique that enhances standard contrastive learning (SCL) by incorporating adversarial data to learn a robust representation that can withstand adversarial attacks and common corruptions without requiring costly annotations. To improve transferability, the existing work introduced the standard invariant regularization (SIR) to impose style-independence property to SCL, which can exempt the impact of nuisance style factors in the standard representation. However, it is unclear how the style-independence property benefits ACL-learned robust representations. In this paper, we leverage the technique of causal reasoning to interpret the ACL and propose adversarial invariant regularization (AIR) to enforce independence from style factors. We regulate the ACL using both SIR and AIR to output the robust representation. Theoretically, we show that AIR implicitly encourages the representational distance between different views of natural data and their adversarial variants to be independent of style factors. Empirically, our experimental results show that invariant regularization significantly improves the performance of state-of-the-art ACL methods in terms of both standard generalization and robustness on downstream tasks. To the best of our knowledge, we are the first to apply causal reasoning to interpret ACL and develop AIR for enhancing ACL-learned robust representations. Our source code is at https://github.com/GodXuxilie/Enhancing_ACL_via_AIR.
-
-</details>
-
-### Efficient Adversarial Contrastive Learning via Robustness-Aware Coreset Selection.
-- **链接**: [arXiv:2302.03857](https://arxiv.org/abs/2302.03857) · [代码](https://github.com/GodXuxilie/Efficient_ACL_via_RCS) · 📚 被引 1
-- **作者**: Xilie Xu, Jingfeng Zhang, Feng Liu, Masashi Sugiyama, Mohan S. Kankanhalli
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Adversarial contrastive learning (ACL) does not require expensive data annotations but outputs a robust representation that withstands adversarial attacks and also generalizes to a wide range of downstream tasks. However, ACL needs tremendous running time to generate the adversarial variants of all training data, which limits its scalability to large datasets. To speed up ACL, this paper proposes a robustness-aware coreset selection (RCS) method. RCS does not require label information and searches for an informative subset that minimizes a representational divergence, which is the distance of the representation between natural data and their virtual adversarial variants. The vanilla solution of RCS via traversing all possible subsets is computationally prohibitive. Therefore, we theoretically transform RCS into a surrogate problem of submodular maximization, of which the greedy search is an efficient solution with an optimality guarantee for the original problem. Empirically, our comprehensive results corroborate that RCS can speed up ACL by a large margin without significantly hurting the robustness transferability. Notably, to the best of our knowledge, we are the first to conduct ACL efficiently on the large-scale ImageNet-1K dataset to obtain an effective robust representation via RCS. Our source code is at https://github.com/GodXuxilie/Efficient_ACL_via_RCS.
-
-</details>
-
-### Provable Training for Graph Contrastive Learning.
-- **链接**: [arXiv:2309.13944](https://arxiv.org/abs/2309.13944) · 📚 被引 1
-- **作者**: Yue Yu, Xiao Wang, Mengmei Zhang, Nian Liu, Chuan Shi
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Graph Contrastive Learning (GCL) has emerged as a popular training approach for learning node embeddings from augmented graphs without labels. Despite the key principle that maximizing the similarity between positive node pairs while minimizing it between negative node pairs is well established, some fundamental problems are still unclear. Considering the complex graph structure, are some nodes consistently well-trained and following this principle even with different graph augmentations? Or are there some nodes more likely to be untrained across graph augmentations and violate the principle? How to distinguish these nodes and further guide the training of GCL? To answer these questions, we first present experimental evidence showing that the training of GCL is indeed imbalanced across all nodes. To address this problem, we propose the metric "node compactness", which is the lower bound of how a node follows the GCL principle related to the range of augmentations. We further derive the form of node compactness theoretically through bound propagation, which can be integrated into binary cross-entropy as a regularization. To this end, we propose the PrOvable Training (POT) for GCL, which regularizes the training of GCL to encode node embeddings that follows the GCL principle better. Through extensive experiments on various benchmarks, POT consistently improves the existing GCL approaches, serving as a friendly plugin.
-
-</details>
-
-### Identifiable Contrastive Learning with Automatic Feature Importance Discovery.
-- **链接**: [arXiv:2310.18904](https://arxiv.org/abs/2310.18904) · [代码](https://github.com/PKU-ML/Tri-factor-Contrastive-Learning) · 📚 被引 0
-- **作者**: Qi Zhang, Yifei Wang, Yisen Wang
-- **🏷️ 机构**: Peking University
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Existing contrastive learning methods rely on pairwise sample contrast $z_x^\top z_{x'}$ to learn data representations, but the learned features often lack clear interpretability from a human perspective. Theoretically, it lacks feature identifiability and different initialization may lead to totally different features. In this paper, we study a new method named tri-factor contrastive learning (triCL) that involves a 3-factor contrast in the form of $z_x^\top S z_{x'}$, where $S=\text{diag}(s_1,\dots,s_k)$ is a learnable diagonal matrix that automatically captures the importance of each feature. We show that by this simple extension, triCL can not only obtain identifiable features that eliminate randomness but also obtain more interpretable features that are ordered according to the importance matrix $S$. We show that features with high importance have nice interpretability by capturing common classwise features, and obtain superior performance when evaluated for image retrieval using a few features. The proposed triCL objective is general and can be applied to different contrastive learning methods like SimCLR and CLIP. We believe that it is a better alternative to existing 2-factor contrastive learning by improving its identifiability and interpretability with minimal overhead. Code is available at https://github.com/PKU-ML/Tri-factor-Contrastive-Learning.
-
-</details>
-
-### RevColV2: Exploring Disentangled Representations in Masked Image Modeling.
-- **链接**: [arXiv:2309.01005](https://arxiv.org/abs/2309.01005) · [代码](https://github.com/megvii-research/RevCol) · 📚 被引 1
-- **作者**: Qi Han, Yuxuan Cai, Xiangyu Zhang
-- **🏷️ 机构**: MEGVII
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Masked image modeling (MIM) has become a prevalent pre-training setup for vision foundation models and attains promising performance. Despite its success, existing MIM methods discard the decoder network during downstream applications, resulting in inconsistent representations between pre-training and fine-tuning and can hamper downstream task performance. In this paper, we propose a new architecture, RevColV2, which tackles this issue by keeping the entire autoencoder architecture during both pre-training and fine-tuning. The main body of RevColV2 contains bottom-up columns and top-down columns, between which information is reversibly propagated and gradually disentangled. Such design enables our architecture with the nice property: maintaining disentangled low-level and semantic information at the end of the network in MIM pre-training. Our experimental results suggest that a foundation model with decoupled features can achieve competitive performance across multiple downstream vision tasks such as image classification, semantic segmentation and object detection. For example, after intermediate fine-tuning on ImageNet-22K dataset, RevColV2-L attains 88.4% top-1 accuracy on ImageNet-1K classification and 58.6 mIoU on ADE20K semantic segmentation. With extra teacher and large scale dataset, RevColv2-L achieves 62.1 box AP on COCO detection and 60.4 mIoU on ADE20K semantic segmentation. Code and models are released at https://github.com/megvii-research/RevCol
-
-</details>
-
-### HAP: Structure-Aware Masked Image Modeling for Human-Centric Perception.
-- **链接**: [arXiv:2310.20695](https://arxiv.org/abs/2310.20695) · 📚 被引 1
-- **作者**: Junkun Yuan, Xinyu Zhang, Hao Zhou, Jian Wang, Zhongwei Qiu, Zhiyin Shao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Model pre-training is essential in human-centric perception. In this paper, we first introduce masked image modeling (MIM) as a pre-training approach for this task. Upon revisiting the MIM training strategy, we reveal that human structure priors offer significant potential. Motivated by this insight, we further incorporate an intuitive human structure prior - human parts - into pre-training. Specifically, we employ this prior to guide the mask sampling process. Image patches, corresponding to human part regions, have high priority to be masked out. This encourages the model to concentrate more on body structure information during pre-training, yielding substantial benefits across a range of human-centric perception tasks. To further capture human characteristics, we propose a structure-invariant alignment loss that enforces different masked views, guided by the human part prior, to be closely aligned for the same image. We term the entire method as HAP. HAP simply uses a plain ViT as the encoder yet establishes new state-of-the-art performance on 11 human-centric benchmarks, and on-par result on one dataset. For example, HAP achieves 78.1% mAP on MSMT17 for person re-identification, 86.54% mA on PA-100K for pedestrian attribute recognition, 78.2% AP on MS COCO for 2D pose estimation, and 56.0 PA-MPJPE on 3DPW for 3D pose and shape estimation.
+> Dense geometric matching determines the dense pixel-wise correspondence between a source and support image corresponding to the same 3D structure. Prior works employ an encoder of transformer blocks to correlate the two-frame features. However, existing monocular pretraining tasks, e.g., image classification, and masked image modeling (MIM), can not pretrain the cross-frame module, yielding less optimal performance. To resolve this, we reformulate the MIM from reconstructing a single masked image to reconstructing a pair of masked images, enabling the pretraining of transformer module. Additionally, we incorporate a decoder into pretraining for improved upsampling results. Further, to be robust to the textureless area, we propose a novel cross-frame global matching module (CFGM). Since the most textureless area is planar surfaces, we propose a homography loss to further regularize its learning. Combined together, we achieve the State-of-The-Art (SoTA) performance on geometric matching. Codes and models are available at https://github.com/ShngJZ/PMatch.
 
 </details>
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- HASSOD: Hierarchical Adaptive Self-Supervised Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
-- Factorized Contrastive Learning: Going Beyond Multi-view Redundancy. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
-- FOCAL: Contrastive Learning for Multimodal Time-Series Sensing Signals in Factorized Orthogonal Latent Space. → [multimodal](../multimodal/Guideline%202023.md)
+- Self-Supervised Object Detection from Egocentric Videos. → [object-detection](../object-detection/Guideline%202023.md)
+- Unleashing Vanilla Vision Transformer with Masked Image Modeling for Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
+- CleanCLIP: Mitigating Data Poisoning Attacks in Multimodal Contrastive Learning. → [multimodal](../multimodal/Guideline%202023.md)
+- Multimodal Contrastive Learning and Tabular Attention for Automated Alzheimer's Disease Prediction. → [multimodal](../multimodal/Guideline%202023.md)
+- SceneRF: Self-Supervised Monocular 3D Scene Reconstruction with Radiance Fields. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Multi-view Self-supervised Disentanglement for General Image Denoising. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- DeLiRa: Self-Supervised Depth, Light, and Radiance Fields. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- Self-Supervised Monocular Depth Estimation by Direction-aware Cumulative Convolution Network. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- Self-supervised Monocular Depth Estimation: Let's Talk About The Weather. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- 3D Distillation: Improving Self-Supervised Monocular Depth Estimation on Reflective Surfaces. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- GasMono: Geometry-Aided Self-Supervised Monocular Depth Estimation for Indoor Scenes. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- HaMuCo: Hand Pose Estimation via Multiview Collaborative Self-Supervised Learning. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- Two-in-One Depth: Bridging the Gap Between Monocular and Binocular Self-supervised Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- Margin Contrastive Learning with Learnable-Vector for Continual Learning. → [continual-learning](../continual-learning/Guideline%202023.md)
+- CL-MVSNet: Unsupervised Multi-view Stereo with Dual-level Contrastive Learning. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- GeoMIM: Towards Better 3D Knowledge Transfer via Masked Image Modeling for Multi-view 3D Understanding. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
