@@ -1,72 +1,54 @@
 # Network Pruning — 2021 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### NPAS: A Compiler-Aware Framework of Unified Network Pruning and Architecture Search for Beyond Real-Time Mobile Acceleration.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_NPAS_A_Compiler-Aware_Framework_of_Unified_Network_Pruning_and_Architecture_CVPR_2021_paper.html) · 📚 被引 25
-- **作者**: Zhengang Li, Geng Yuan, Wei Niu, Pu Zhao, Yanyu Li, Yuxuan Cai et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Self-Supervised Cryo-Electron Tomography Volumetric Image Restoration from Single Noisy Volume with Sparsity Constraint.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00402)
+- **作者**: Zhidong Yang, Fa Zhang, Renmin Han
+- **🏷️ 机构**: ICT, CAS,High Performance Computer Research Center, Shandong University,Research Center for Mathematics and Interdisciplinary Sciences
+- **会议**: ICCV 2021
 
-### Network Pruning via Performance Maximization.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Gao_Network_Pruning_via_Performance_Maximization_CVPR_2021_paper.html) · 📚 被引 110
-- **作者**: Shangqian Gao, Feihu Huang, Weidong Cai, Heng Huang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Achieving on-Mobile Real-Time Super-Resolution with Neural Architecture and Pruning Search.
+- **链接**: [arXiv:2108.08910](https://arxiv.org/abs/2108.08910) · 📚 被引 52
+- **作者**: Zheng Zhan, Yifan Gong, Pu Zhao, Geng Yuan, Wei Niu, Yushu Wu et al.
+- **🏷️ 机构**: Northeastern University, College of William &#x0026; Mary, Cleveland State University
+- **会议**: ICCV 2021
 
-### Learnable Motion Coherence for Correspondence Pruning.
-- **链接**: [arXiv:2011.14563](https://arxiv.org/abs/2011.14563) · 📚 被引 62
-- **作者**: Yuan Liu, Lingjie Liu, Cheng Lin, Zhen Dong, Wenping Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-- **摘要（英，原文）**:
+> Though recent years have witnessed remarkable progress in single image super-resolution (SISR) tasks with the prosperous development of deep neural networks (DNNs), the deep learning methods are confronted with the computation and memory consumption issues in practice, especially for resource-limited platforms such as mobile devices. To overcome the challenge and facilitate the real-time deployment of SISR tasks on mobile, we combine neural architecture search with pruning search and propose an automatic search framework that derives sparse super-resolution (SR) models with high image quality while satisfying the real-time inference requirement. To decrease the search cost, we leverage the weight sharing strategy by introducing a supernet and decouple the search problem into three stages, including supernet construction, compiler-aware architecture and pruning search, and compiler-aware pruning ratio search. With the proposed framework, we are the first to achieve real-time SR inference (with only tens of milliseconds per frame) for implementing 720p resolution with competitive image quality (in terms of PSNR and SSIM) on mobile platforms (Samsung Galaxy S20).
 
-  > Motion coherence is an important clue for distinguishing true correspondences from false ones. Modeling motion coherence on sparse putative correspondences is challenging due to their sparsity and uneven distributions. Existing works on motion coherence are sensitive to parameter settings and have difficulty in dealing with complex motion patterns. In this paper, we introduce a network called Laplacian Motion Coherence Network (LMCNet) to learn motion coherence property for correspondence pruning. We propose a novel formulation of fitting coherent motions with a smooth function on a graph of correspondences and show that this formulation allows a closed-form solution by graph Laplacian. This closed-form solution enables us to design a differentiable layer in a learning framework to capture global motion coherence from putative correspondences. The global motion coherence is further combined with local coherence extracted by another local layer to robustly detect inlier correspondences. Experiments demonstrate that LMCNet has superior performances to the state of the art in relative camera pose estimation and correspondences pruning of dynamic scenes.
+</details>
 
-### Manifold Regularized Dynamic Network Pruning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Tang_Manifold_Regularized_Dynamic_Network_Pruning_CVPR_2021_paper.html) · 📚 被引 87
-- **作者**: Yehui Tang, Yunhe Wang, Yixing Xu, Yiping Deng, Chao Xu, Dacheng Tao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### ResRep: Lossless CNN Pruning via Decoupling Remembering and Forgetting.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00447) · 📚 被引 165
+- **作者**: Xiaohan Ding, Tianxiang Hao, Jianchao Tan, Ji Liu, Jungong Han, Yuchen Guo et al.
+- **🏷️ 机构**: Beijing National Research Center for Information Science and Technology (BNRist), Kwai Inc,Seattle AI Lab, and FeDA Lab,AI Platform Department, Aberystwyth University,Computer Science Department,SY23 3FL,UK
+- **会议**: ICCV 2021
 
-### Convolutional Neural Network Pruning With Structural Redundancy Reduction.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Convolutional_Neural_Network_Pruning_With_Structural_Redundancy_Reduction_CVPR_2021_paper.html) · 📚 被引 175
-- **作者**: Zi Wang, Chengcheng Li, Xiangyang Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### GDP: Stabilized Neural Network Pruning via Gates with Differentiable Polarization.
+- **链接**: [arXiv:2109.02220](https://arxiv.org/abs/2109.02220) · 📚 被引 34
+- **作者**: Yi Guo, Huan Yuan, Jianchao Tan, Zhangyang Wang, Sen Yang, Ji Liu
+- **🏷️ 机构**: Kuaishou Technology, University of Texas at Austin
+- **会议**: ICCV 2021
 
-### Joint-DetNAS: Upgrade Your Detector With NAS, Pruning and Dynamic Distillation.
-- **链接**: [arXiv:2105.12971](https://arxiv.org/abs/2105.12971) · 📚 被引 25
-- **作者**: Lewei Yao, Renjie Pi, Hang Xu, Wei Zhang, Zhenguo Li, Tong Zhang
-- **🏷️ 机构**: Hong Kong University of Science and Technology, Huawei Noah&#x2019;s Ark Lab
-- **会议**: CVPR 2021
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-- **摘要（英，原文）**:
+> Model compression techniques are recently gaining explosive attention for obtaining efficient AI models for various real-time applications. Channel pruning is one important compression strategy and is widely used in slimming various DNNs. Previous gate-based or importance-based pruning methods aim to remove channels whose importance is smallest. However, it remains unclear what criteria the channel importance should be measured on, leading to various channel selection heuristics. Some other sampling-based pruning methods deploy sampling strategies to train sub-nets, which often causes the training instability and the compressed model's degraded performance. In view of the research gaps, we present a new module named Gates with Differentiable Polarization (GDP), inspired by principled optimization ideas. GDP can be plugged before convolutional layers without bells and whistles, to control the on-and-off of each channel or whole layer block. During the training process, the polarization effect will drive a subset of gates to smoothly decrease to exact zero, while other gates gradually stay away from zero by a large margin. When training terminates, those zero-gated channels can be painlessly removed, while other non-zero gates can be absorbed into the succeeding convolution kernel, causing completely no interruption to training nor damage to the trained model. Experiments conducted over CIFAR-10 and ImageNet datasets show that the proposed GDP algorithm achieves the state-of-the-art performance on various benchmark DNNs at a broad range of pruning ratios. We also apply GDP to DeepLabV3Plus-ResNet50 on the challenging Pascal VOC segmentation task, whose test performance sees no drop (even slightly improved) with over 60% FLOPs saving.
 
-  > We propose Joint-DetNAS, a unified NAS framework for object detection, which integrates 3 key components: Neural Architecture Search, pruning, and Knowledge Distillation. Instead of naively pipelining these techniques, our Joint-DetNAS optimizes them jointly. The algorithm consists of two core processes: student morphism optimizes the student's architecture and removes the redundant parameters, while dynamic distillation aims to find the optimal matching teacher. For student morphism, weight inheritance strategy is adopted, allowing the student to flexibly update its architecture while fully utilize the predecessor's weights, which considerably accelerates the search; To facilitate dynamic distillation, an elastic teacher pool is trained via integrated progressive shrinking strategy, from which teacher detectors can be sampled without additional cost in subsequent searches. Given a base detector as the input, our algorithm directly outputs the derived student detector with high performance without additional training. Experiments demonstrate that our Joint-DetNAS outperforms the naive pipelining approach by a great margin. Given a classic R101-FPN as the base detector, Joint-DetNAS is able to boost its mAP from 41.4 to 43.9 on MS COCO and reduce the latency by 47%, which is on par with the SOTA EfficientDet while requiring less search cost. We hope our proposed method can provide the community with a new way of jointly optimizing NAS, KD and pruning.
+</details>
 
-### Multi-Decoding Deraining Network and Quasi-Sparsity Based Training.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Multi-Decoding_Deraining_Network_and_Quasi-Sparsity_Based_Training_CVPR_2021_paper.html) · 📚 被引 33
-- **作者**: Yinglong Wang, Chao Ma, Bing Zeng
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Auto Graph Encoder-Decoder for Neural Network Pruning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00630) · 📚 被引 32
+- **作者**: Sixing Yu, Arya Mazaheri, Ali Jannesari
+- **🏷️ 机构**: Iowa State University, Technical University of Darmstadt
+- **会议**: ICCV 2021
 
-### Exploring Sparsity in Image Super-Resolution for Efficient Inference.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Exploring_Sparsity_in_Image_Super-Resolution_for_Efficient_Inference_CVPR_2021_paper.html) · 📚 被引 291
-- **作者**: Longguang Wang, Xiaoyu Dong, Yingqian Wang, Xinyi Ying, Zaiping Lin, Wei An et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Effective Sparsification of Neural Networks With Global Sparsity Constraint.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhou_Effective_Sparsification_of_Neural_Networks_With_Global_Sparsity_Constraint_CVPR_2021_paper.html) · 📚 被引 32
-- **作者**: Xiao Zhou, Weizhong Zhang, Hang Xu, Tong Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-## 跨领域论文（完整笔记在其他领域）
-
-- VoxelContext-Net: An Octree Based Framework for Point Cloud Compression. → [3d-detection](../3d-detection/Guideline%202021.md)
+### Progressive Correspondence Pruning by Consensus Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00640) · 📚 被引 90
+- **作者**: Chen Zhao, Yixiao Ge, Feng Zhu, Rui Zhao, Hongsheng Li, Mathieu Salzmann
+- **🏷️ 机构**: &#x00C9;cole Polytechnique F&#x00E9;d&#x00E9;rale de Lausanne (EPFL), The Chinese University of Hong Kong, SenseTime Research
+- **会议**: ICCV 2021
