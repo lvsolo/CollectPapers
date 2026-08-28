@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Tri-Perspective View for Vision-Based 3D Semantic Occupancy Prediction.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00890) · 📚 被引 326
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00890) · 📚 被引 327
 - **作者**: Yuanhui Huang, Wenzhao Zheng, Yunpeng Zhang, Jie Zhou, Jiwen Lu
 - **🏷️ 机构**: Beijing National Research Center for Information Science and Technology,China, Tsinghua University,Department of Automation,China
 - **会议**: CVPR 2023
