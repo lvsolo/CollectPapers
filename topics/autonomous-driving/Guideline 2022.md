@@ -1,49 +1,36 @@
 # Autonomous Driving — 2022 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 4 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Image-to-Lidar Self-Supervised Distillation for Autonomous Driving Data.
-- **链接**: [arXiv:2203.16258](https://arxiv.org/abs/2203.16258) · 📚 被引 112
-- **作者**: Corentin Sautier, Gilles Puy, Spyros Gidaris, Alexandre Boulch, Andrei Bursuc, Renaud Marlet
-- **🏷️ 机构**: valeo.ai,Paris,France
-- **会议**: CVPR 2022
+### K-Radar: 4D Radar Object Detection for Autonomous Driving in Various Weather Conditions.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/185fdf627eaae2abab36205dcd19b817-Abstract-Datasets_and_Benchmarks.html) · 📚 被引 33
+- **作者**: Dong-Hee Paek, Seung-Hyun Kong, Kevin Tirta Wijaya
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### Effective Adaptation in Multi-Task Co-Training for Unified Autonomous Driving.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/7c319b62e2257b34cb0e1040ced2e007-Abstract-Conference.html) · 📚 被引 4
+- **作者**: Xiwen Liang, Yangxin Wu, Jianhua Han, Hang Xu, Chunjing Xu, Xiaodan Liang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### Trajectory-guided Control Prediction for End-to-end Autonomous Driving: A Simple yet Strong Baseline.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/286a371d8a0a559281f682f8fbf89834-Abstract-Conference.html) · 📚 被引 45
+- **作者**: Penghao Wu, Xiaosong Jia, Li Chen, Junchi Yan, Hongyang Li, Yu Qiao
+- **🏷️ 机构**: Shanghai AI Lab
+- **会议**: NeurIPS 2022
+
+### Unsupervised Adaptation from Repeated Traversals for Autonomous Driving.
+- **链接**: [arXiv:2303.15286](https://arxiv.org/abs/2303.15286) · 📚 被引 0
+- **作者**: Yurong You, Cheng Perng Phoo, Katie Luo, Travis Zhang, Wei-Lun Chao, Bharath Hariharan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Segmenting or detecting objects in sparse Lidar point clouds are two important tasks in autonomous driving to allow a vehicle to act safely in its 3D environment. The best performing methods in 3D semantic segmentation or object detection rely on a large amount of annotated data. Yet annotating 3D Lidar data for these tasks is tedious and costly. In this context, we propose a self-supervised pre-training method for 3D perception models that is tailored to autonomous driving data. Specifically, we leverage the availability of synchronized and calibrated image and Lidar sensors in autonomous driving setups for distilling self-supervised pre-trained image representations into 3D models. Hence, our method does not require any point cloud nor image annotations. The key ingredient of our method is the use of superpixels which are used to pool 3D point features and 2D pixel features in visually similar regions. We then train a 3D network on the self-supervised task of matching these pooled point features with the corresponding pooled image pixel features. The advantages of contrasting regions obtained by superpixels are that: (1) grouping together pixels and points of visually coherent regions leads to a more meaningful contrastive task that produces features well adapted to 3D semantic segmentation and 3D object detection; (2) all the different regions have the same weight in the contrastive loss regardless of the number of 3D points sampled in these regions; (3) it mitigates the noise produced by incorrect matching of points and pixels due to occlusions between the different sensors. Extensive experiments on autonomous driving datasets demonstrate the ability of our image-to-Lidar distillation strategy to produce 3D representations that transfer well on semantic segmentation and object detection tasks.
+> For a self-driving car to operate reliably, its perceptual system must generalize to the end-user's environment -- ideally without additional annotation efforts. One potential solution is to leverage unlabeled data (e.g., unlabeled LiDAR point clouds) collected from the end-users' environments (i.e. target domain) to adapt the system to the difference between training and testing environments. While extensive research has been done on such an unsupervised domain adaptation problem, one fundamental problem lingers: there is no reliable signal in the target domain to supervise the adaptation process. To overcome this issue we observe that it is easy to collect unsupervised data from multiple traversals of repeated routes. While different from conventional unsupervised domain adaptation, this assumption is extremely realistic since many drivers share the same roads. We show that this simple additional assumption is sufficient to obtain a potent signal that allows us to perform iterative self-training of 3D object detectors on the target domain. Concretely, we generate pseudo-labels with the out-of-domain detector but reduce false positives by removing detections of supposedly mobile objects that are persistent across traversals. Further, we reduce false negatives by encouraging predictions in regions that are not persistent. We experiment with our approach on two large-scale driving datasets and show remarkable improvement in 3D object detection of cars, pedestrians, and cyclists, bringing us a step closer to generalizable autonomous driving.
 
 </details>
-
-### Exploiting Temporal Relations on Radar Perception for Autonomous Driving.
-- **链接**: [arXiv:2204.01184](https://arxiv.org/abs/2204.01184) · 📚 被引 56
-- **作者**: Peizhao Li, Pu Wang, Karl Berntorp, Hongfu Liu
-- **🏷️ 机构**: Brandeis University, Mitsubishi Electric Research Laboratories
-- **会议**: CVPR 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We consider the object recognition problem in autonomous driving using automotive radar sensors. Comparing to Lidar sensors, radar is cost-effective and robust in all-weather conditions for perception in autonomous driving. However, radar signals suffer from low angular resolution and precision in recognizing surrounding objects. To enhance the capacity of automotive radar, in this work, we exploit the temporal information from successive ego-centric bird-eye-view radar image frames for radar object recognition. We leverage the consistency of an object's existence and attributes (size, orientation, etc.), and propose a temporal relational layer to explicitly model the relations between objects within successive radar images. In both object detection and multiple object tracking, we show the superiority of our method compared to several baseline approaches.
-
-</details>
-
-### LTP: Lane-based Trajectory Prediction for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01662) · 📚 被引 83
-- **作者**: Jingke Wang, Tengju Ye, Ziqing Gu, Junbo Chen
-- **🏷️ 机构**: Alibaba Group
-- **会议**: CVPR 2022
-
-### Unifying Panoptic Segmentation for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02066) · 📚 被引 47
-- **作者**: Oliver Zendel, Matthias Schörghuber, Bernhard Rainer, Markus Murschitz, Csaba Beleznai
-- **🏷️ 机构**: AIT Austrian Institute of Technology
-- **会议**: CVPR 2022
-
-## 跨领域论文（完整笔记在其他领域）
-
-- Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
-- Investigating the Impact of Multi-LiDAR Placement on Object Detection for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
-- Time3D: End-to-End Joint Monocular 3D Object Detection and Tracking for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
-- Rope3D: The Roadside Perception Dataset for Autonomous Driving and Monocular 3D Object Detection Task. → [3d-detection](../3d-detection/Guideline%202022.md)
