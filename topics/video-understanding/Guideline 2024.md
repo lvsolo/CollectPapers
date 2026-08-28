@@ -16,6 +16,12 @@
 - **创新点**: 将视频异常理解从检测扩展到因果推理，并设计人类偏好对齐的评估指标。
 - **结果**: 提供了全面的标注基准和评估工具，但具体性能数据未在摘要中给出。
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Video anomaly understanding (VAU) aims to automatically comprehend unusual occurrences in videos, thereby enabling various applications such as traffic surveillance and industrial manufacturing. While existing VAU benchmarks primarily concentrate on anomaly detection and localization, our focus is on more practicality, prompting us to raise the following crucial questions: "what anomaly occurred?", "why did it happen?", and "how severe is this abnormal event?". In pursuit of these answers, we present a comprehensive benchmark for Causation Understanding of Video Anomaly (CUVA). Specifically, each instance of the proposed benchmark involves three sets of human annotations to indicate the "what", "why" and "how" of an anomaly, including 1) anomaly type, start and end times, and event descriptions, 2) natural language explanations for the cause of an anomaly, and 3) free text reflecting the effect of the abnormality. In addition, we also introduce MMEval, a novel evaluation metric designed to better align with human preferences for CUVA, facilitating the measurement of existing LLMs in comprehending the underlying cause and corresponding effect of video anomalies. Finally, we propose a novel prompt-based method that can serve as a baseline approach for the challenging CUVA. We conduct extensive experiments to show the superiority of our evaluation metric and the prompt-based approach. Our code and dataset are available at https://github.com/fesvhtr/CUVA.
+
+</details>
+
 ### A Unified Framework for Human-centric Point Cloud Video Understanding. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2403.20031](https://arxiv.org/abs/2403.20031) · 📚 被引 4
 - **作者**: Yiteng Xu, Kecheng Ye, Xiao Han, Yiming Ren, Xinge Zhu, Yuexin Ma
@@ -26,6 +32,12 @@
 - **核心贡献**: 提出了一个利用人体先验知识的统一框架，用于通用人类点云视频理解。
 - **创新点**: 结合人体结构语义和运动动态，实现跨任务的泛化能力。
 - **结果**: 在动作识别和3D姿态估计上达到最先进性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Human-centric Point Cloud Video Understanding (PVU) is an emerging field focused on extracting and interpreting human-related features from sequences of human point clouds, further advancing downstream human-centric tasks and applications. Previous works usually focus on tackling one specific task and rely on huge labeled data, which has poor generalization capability. Considering that human has specific characteristics, including the structural semantics of human body and the dynamics of human motions, we propose a unified framework to make full use of the prior knowledge and explore the inherent features in the data itself for generalized human-centric point cloud video understanding. Extensive experiments demonstrate that our method achieves state-of-the-art performance on various human-related tasks, including action recognition and 3D pose estimation. All datasets and code will be released soon.
+
+</details>
 
 ### Distilling Vision-Language Models on Millions of Videos. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2401.06129](https://arxiv.org/abs/2401.06129) · 📚 被引 10
@@ -38,6 +50,12 @@
 - **创新点**: 利用图像-语言模型迁移到视频领域，并通过自标注数据增强训练。
 - **结果**: 在多个基准上超越最先进方法，如NExT-QA提升2.8%，MSR-VTT检索提升6%。
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The recent advance in vision-language models is largely attributed to the abundance of image-text data. We aim to replicate this success for video-language models, but there simply is not enough human-curated video-text data available. We thus resort to fine-tuning a video-language model from a strong image-language baseline with synthesized instructional data. The resulting video model by video-instruction-tuning (VIIT) is then used to auto-label millions of videos to generate high-quality captions. We show the adapted video-language model performs well on a wide range of video-language benchmarks. For instance, it surpasses the best prior result on open-ended NExT-QA by 2.8%. Besides, our model generates detailed descriptions for previously unseen videos, which provide better textual supervision than existing methods. Experiments show that a video-language dual-encoder model contrastively trained on these auto-generated captions is 3.8% better than the strongest baseline that also leverages vision-language models. Our best model outperforms state-of-the-art methods on MSR-VTT zero-shot text-to-video retrieval by 6%. As a side product, we generate the largest video caption dataset to date.
+
+</details>
+
 ### HIG: Hierarchical Interlacement Graph Approach to Scene Graph Generation in Video Understanding. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2312.03050](https://arxiv.org/abs/2312.03050) · 📚 被引 14
 - **作者**: Trong-Thuan Nguyen, Pha A. Nguyen, Khoa Luu
@@ -48,6 +66,12 @@
 - **核心贡献**: 提出ASPIRe数据集和HIG方法，提升视频交互理解能力。
 - **创新点**: 层次交织图结构统一处理多种交互任务。
 - **结果**: 在多个场景任务上优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Visual interactivity understanding within visual scenes presents a significant challenge in computer vision. Existing methods focus on complex interactivities while leveraging a simple relationship model. These methods, however, struggle with a diversity of appearance, situation, position, interaction, and relation in videos. This limitation hinders the ability to fully comprehend the interplay within the complex visual dynamics of subjects. In this paper, we delve into interactivities understanding within visual content by deriving scene graph representations from dense interactivities among humans and objects. To achieve this goal, we first present a new dataset containing Appearance-Situation-Position-Interaction-Relation predicates, named ASPIRe, offering an extensive collection of videos marked by a wide range of interactivities. Then, we propose a new approach named Hierarchical Interlacement Graph (HIG), which leverages a unified layer and graph within a hierarchical structure to provide deep insights into scene changes across five distinct tasks. Our approach demonstrates superior performance to other methods through extensive experiments conducted in various scenarios.
+
+</details>
 
 ### A Backpack Full of Skills: Egocentric Video Understanding with Diverse Task Perspectives. **⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01730) · 📚 被引 4
@@ -71,6 +95,12 @@
 - **创新点**: 将认知记忆模型融入Transformer token机制，实现稀疏记忆管理。
 - **结果**: 在长视频理解上达到最先进性能，并提供新基准。
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recently, integrating video foundation models and large language models to build a video understanding system can overcome the limitations of specific pre-defined vision tasks. Yet, existing systems can only handle videos with very few frames. For long videos, the computation complexity, memory cost, and long-term temporal connection impose additional challenges. Taking advantage of the Atkinson-Shiffrin memory model, with tokens in Transformers being employed as the carriers of memory in combination with our specially designed memory mechanism, we propose the MovieChat to overcome these challenges. MovieChat achieves state-of-the-art performance in long video understanding, along with the released MovieChat-1K benchmark with 1K long video and 14K manual annotations for validation of the effectiveness of our method.
+
+</details>
+
 ### OmniViD: A Generative Framework for Universal Video Understanding. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2403.17935](https://arxiv.org/abs/2403.17935) · 📚 被引 22
 - **作者**: Junke Wang, Dongdong Chen, Chong Luo, Bo He, Lu Yuan, Zuxuan Wu et al.
@@ -81,6 +111,12 @@
 - **核心贡献**: 提出统一视频理解任务的生成式框架OmniViD。
 - **创新点**: 利用语言标签和时间/框token统一多种视频任务的输出空间。
 - **结果**: 实验验证了统一框架在多种视频任务上的有效性。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The core of video understanding tasks, such as recognition, captioning, and tracking, is to automatically detect objects or actions in a video and analyze their temporal evolution. Despite sharing a common goal, different tasks often rely on distinct model architectures and annotation formats. In contrast, natural language processing benefits from a unified output space, i.e., text sequences, which simplifies the training of powerful foundational language models, such as GPT-3, with extensive training corpora. Inspired by this, we seek to unify the output space of video understanding tasks by using languages as labels and additionally introducing time and box tokens. In this way, a variety of video tasks could be formulated as video-grounded token generation. This enables us to address various types of video tasks, including classification (such as action recognition), captioning (covering clip captioning, video question answering, and dense video captioning), and localization tasks (such as visual object tracking) within a fully shared encoder-decoder architecture, following a generative framework. Through comprehensive experiments, we demonstrate such a simple and straightforward idea is quite effective and can achieve state-of-the-art or competitive results on seven video benchmarks, providing a novel perspective for more universal video understanding. Code is available at https://github.com/wangjk666/OmniVid.
+
+</details>
 
 ### Compositional Video Understanding with Spatiotemporal Structure-based Transformers. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01774) · 📚 被引 6
@@ -104,6 +140,12 @@
 - **创新点**: 在适应前利用实体-区域对齐增强语义理解。
 - **结果**: 有助于提升对复杂动作和未见类别的识别能力。
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large-scale visual-language pre-trained models have achieved significant success in various video tasks. However, most existing methods follow an "adapt then align" paradigm, which adapts pre-trained image encoders to model video-level representations and utilizes one-hot or text embedding of the action labels for supervision. This paradigm overlooks the challenge of mapping from static images to complicated activity concepts. In this paper, we propose a novel "Align before Adapt" (ALT) paradigm. Prior to adapting to video representation learning, we exploit the entity-to-region alignments for each frame. The alignments are fulfilled by matching the region-aware image embeddings to an offline-constructed text corpus. With the aligned entities, we feed their text embeddings to a transformer-based video adapter as the queries, which can help extract the semantics of the most important entities from a video to a vector. This paradigm reuses the visual-language alignment of VLP during adaptation and tries to explain an action by the underlying entities. This helps understand actions by bridging the gap with complex activity semantics, particularly when facing unfamiliar or unseen categories. ALT demonstrates competitive performance while maintaining remarkably low computational costs. In fully supervised experiments, it achieves 88.1% top-1 accuracy on Kinetics-400 with only 4947 GFLOPs. Moreover, ALT outperforms the previous state-of-the-art methods in both zero-shot and few-shot experiments, emphasizing its superior generalizability across various learning scenarios.
+
+</details>
+
 ### Ranking Distillation for Open-Ended Video Question Answering with Insufficient Labels. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2403.14430](https://arxiv.org/abs/2403.14430) · 📚 被引 6
 - **作者**: Tianming Liang, Chaolei Tan, Beihao Xia, Wei-Shi Zheng, Jian-Fang Hu
@@ -114,6 +156,12 @@
 - **核心贡献**: 提出排名蒸馏框架RADI解决视频问答标签不足问题。
 - **创新点**: 利用教师模型排名知识并设计无参数鲁棒蒸馏方法。
 - **结果**: 缓解标签不足，提升模型泛化能力。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper focuses on open-ended video question answering, which aims to find the correct answers from a large answer set in response to a video-related question. This is essentially a multi-label classification task, since a question may have multiple answers. However, due to annotation costs, the labels in existing benchmarks are always extremely insufficient, typically one answer per question. As a result, existing works tend to directly treat all the unlabeled answers as negative labels, leading to limited ability for generalization. In this work, we introduce a simple yet effective ranking distillation framework (RADI) to mitigate this problem without additional manual annotation. RADI employs a teacher model trained with incomplete labels to generate rankings for potential answers, which contain rich knowledge about label priority as well as label-associated visual cues, thereby enriching the insufficient labeling information. To avoid overconfidence in the imperfect teacher model, we further present two robust and parameter-free ranking distillation approaches: a pairwise approach which introduces adaptive soft margins to dynamically refine the optimization constraints on various pairwise rankings, and a listwise approach which adopts sampling-based partial listwise learning to resist the bias in teacher ranking. Extensive experiments on five popular benchmarks consistently show that both our pairwise and listwise RADIs outperform state-of-the-art methods. Further analysis demonstrates the effectiveness of our methods on the insufficient labeling problem.
+
+</details>
 
 ### Language-aware Visual Semantic Distillation for Video Question Answering. **⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02560) · 📚 被引 6
