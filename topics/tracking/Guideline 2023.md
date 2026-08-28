@@ -13,9 +13,17 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> 3D single object tracking has been a crucial problem for decades with numerous applications such as autonomous driving. Despite its wide-ranging use, this task remains challenging due to the significant appearance variation caused by occlusion and size differences among tracked targets. To address these issues, we present MBPTrack, which adopts a Memory mechanism to utilize past information and formulates localization in a coarse-to-fine scheme using Box Priors given in the first frame. Specifically, past frames with targetness masks serve as an external memory, and a transformer-based module propagates tracked target cues from the memory to the current frame. To precisely localize objects of all sizes, MBPTrack first predicts the target center via Hough voting. By leveraging box priors given in the first frame, we adaptively sample reference points around the target center that roughly cover the target of different sizes. Then, we obtain dense feature maps by aggregating point features into the reference points, where localization can be performed more effectively. Extensive experiments demonstrate that MBPTrack achieves state-of-the-art performance on KITTI, nuScenes and Waymo Open Dataset, while running at 50 FPS on a single RTX3090 GPU.
+### Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00934) · 📚 被引 908
+- **作者**: Jinkun Cao, Jiangmiao Pang, Xinshuo Weng, Rawal Khirodkar, Kris Kitani
+- **🏷️ 机构**: Carnegie Mellon University, Shanghai AI Laboratory, Nvidia
+- **会议**: CVPR 2023
 
-</details>
+### MotionTrack: Learning Robust Short-Term and Long-Term Motions for Multi-Object Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01720) · 📚 被引 167
+- **作者**: Zheng Qin, Sanping Zhou, Le Wang, Jinghai Duan, Gang Hua, Wei Tang
+- **🏷️ 机构**: Institute of Artificial Intelligence and Robotics, Xi&#x0027;an Jiaotong University,National Key Laboratory of Human-Machine Hybrid Augmented Intelligence, National Engineering Research Center for Visual Information and Applications, School of Software Engineering, Xi&#x0027;an Jiaotong University, Wormpex AI Research
+- **会议**: CVPR 2023
 
 ### Exploring Lightweight Hierarchical Vision Transformers for Efficient Visual Tracking.
 - **链接**: [arXiv:2308.06904](https://arxiv.org/abs/2308.06904) · 📚 被引 127
@@ -25,7 +33,11 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Transformer-based visual trackers have demonstrated significant progress owing to their superior modeling capabilities. However, existing trackers are hampered by low speed, limiting their applicability on devices with limited computational power. To alleviate this problem, we propose HiT, a new family of efficient tracking models that can run at high speed on different devices while retaining high performance. The central idea of HiT is the Bridge Module, which bridges the gap between modern lightweight transformers and the tracking framework. The Bridge Module incorporates the high-level information of deep features into the shallow large-resolution features. In this way, it produces better features for the tracking head. We also propose a novel dual-image position encoding technique that simultaneously encodes the position information of both the search region and template images. The HiT model achieves promising speed with competitive performance. For instance, it runs at 61 frames per second (fps) on the Nvidia Jetson AGX edge device. Furthermore, HiT attains 64.6% AUC on the LaSOT benchmark, surpassing all previous efficient trackers.
+### UTM: A Unified Multiple Object Tracking Model with Identity-Aware Feature Enhancement.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02095) · 📚 被引 87
+- **作者**: Sisi You, Hantao Yao, Bing-Kun Bao, Changsheng Xu
+- **🏷️ 机构**: Nanjing University of Posts and Telecommunications, Institute of Automation, Chinese Academy of Sciences (CASIA),State Key Laboratory of Multimodal Artificial Intelligence Systems
+- **会议**: CVPR 2023
 
 </details>
 
@@ -37,6 +49,13 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Unsupervised learning is a challenging task due to the lack of labels. Multiple Object Tracking (MOT), which inevitably suffers from mutual object interference, occlusion, etc., is even more difficult without label supervision. In this paper, we explore the latent consistency of sample features across video frames and propose an Unsupervised Contrastive Similarity Learning method, named UCSL, including three contrast modules: self-contrast, cross-contrast, and ambiguity contrast. Specifically, i) self-contrast uses intra-frame direct and inter-frame indirect contrast to obtain discriminative representations by maximizing self-similarity. ii) Cross-contrast aligns cross- and continuous-frame matching results, mitigating the persistent negative effect caused by object occlusion. And iii) ambiguity contrast matches ambiguous objects with each other to further increase the certainty of subsequent object association through an implicit manner. On existing benchmarks, our method outperforms the existing unsupervised methods using only limited help from ReID head, and even provides higher accuracy than lots of fully supervised methods.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Garments are important to humans. A visual system that can estimate and track the complete garment pose can be useful for many downstream tasks and real-world applications. In this work, we present a complete package to address the category-level garment pose tracking task: (1) A recording system VR-Garment, with which users can manipulate virtual garment models in simulation through a VR interface. (2) A large-scale dataset VR-Folding, with complex garment pose configurations in manipulation like flattening and folding. (3) An end-to-end online tracking framework GarmentTracking, which predicts complete garment pose both in canonical space and task space given a point cloud sequence. Extensive experiments demonstrate that the proposed GarmentTracking achieves great performance even when the garment has large non-rigid deformation. It outperforms the baseline approach on both speed and accuracy. We hope our proposed solution can serve as a platform for future research. Codes and datasets are available in https://garment-tracking.robotflow.ai.
 
 </details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Standing Between Past and Future: Spatio-Temporal Modeling for Multi-Camera 3D Multi-Object Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- OVTrack: Open-Vocabulary Multiple Object Tracking. → [open-set-detection](../open-set-detection/Guideline%202023.md)
