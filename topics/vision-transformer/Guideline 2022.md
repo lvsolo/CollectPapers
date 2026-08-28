@@ -1,92 +1,163 @@
 # Vision Transformer — 2022 Guideline
 
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
-> 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 18 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Doubly-Fused ViT: Fuse Information from Vision Transformer Doubly with Local Representation.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20050-2_43) · 📚 被引 14
-- **作者**: Li Gao, Dong Nie, Bo Li, Xiaofeng Ren
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### A-ViT: Adaptive Tokens for Efficient Vision Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01054) · 📚 被引 315
+- **作者**: Hongxu Yin, Arash Vahdat, José M. Álvarez, Arun Mallya, Jan Kautz, Pavlo Molchanov
+- **🏷️ 机构**: NVIDIA
+- **会议**: CVPR 2022
 
-### UIA-ViT: Unsupervised Inconsistency-Aware Method Based on Vision Transformer for Face Forgery Detection.
-- **链接**: [arXiv:2210.12752](https://arxiv.org/abs/2210.12752) · 📚 被引 130
-- **作者**: Wanyi Zhuang, Qi Chu, Zhentao Tan, Qiankun Liu, Haojie Yuan, Changtao Miao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### CSWin Transformer: A General Vision Transformer Backbone with Cross-Shaped Windows.
+- **链接**: [arXiv:2107.00652](https://arxiv.org/abs/2107.00652) · [代码](https://github.com/microsoft/CSWin-Transformer) · 📚 被引 1161
+- **作者**: Xiaoyi Dong, Jianmin Bao, Dongdong Chen, Weiming Zhang, Nenghai Yu, Lu Yuan et al.
+- **🏷️ 机构**: University of Science and Technology of China, Microsoft Research Asia, Microsoft Cloud + AI
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Intra-frame inconsistency has been proved to be effective for the generalization of face forgery detection. However, learning to focus on these inconsistency requires extra pixel-level forged location annotations. Acquiring such annotations is non-trivial. Some existing methods generate large-scale synthesized data with location annotations, which is only composed of real images and cannot capture the properties of forgery regions. Others generate forgery location labels by subtracting paired real and fake images, yet such paired data is difficult to collected and the generated label is usually discontinuous. To overcome these limitations, we propose a novel Unsupervised Inconsistency-Aware method based on Vision Transformer, called UIA-ViT, which only makes use of video-level labels and can learn inconsistency-aware feature without pixel-level annotations. Due to the self-attention mechanism, the attention map among patch embeddings naturally represents the consistency relation, making the vision Transformer suitable for the consistency representation learning. Based on vision Transformer, we propose two key components: Unsupervised Patch Consistency Learning (UPCL) and Progressive Consistency Weighted Assemble (PCWA). UPCL is designed for learning the consistency-related representation with progressive optimized pseudo annotations. PCWA enhances the final classification embedding with previous patch embeddings optimized by UPCL to further improve the detection performance. Extensive experiments demonstrate the effectiveness of the proposed method.
+> We present CSWin Transformer, an efficient and effective Transformer-based backbone for general-purpose vision tasks. A challenging issue in Transformer design is that global self-attention is very expensive to compute whereas local self-attention often limits the field of interactions of each token. To address this issue, we develop the Cross-Shaped Window self-attention mechanism for computing self-attention in the horizontal and vertical stripes in parallel that form a cross-shaped window, with each stripe obtained by splitting the input feature into stripes of equal width. We provide a mathematical analysis of the effect of the stripe width and vary the stripe width for different layers of the Transformer network which achieves strong modeling capability while limiting the computation cost. We also introduce Locally-enhanced Positional Encoding (LePE), which handles the local positional information better than existing encoding schemes. LePE naturally supports arbitrary input resolutions, and is thus especially effective and friendly for downstream tasks. Incorporated with these designs and a hierarchical structure, CSWin Transformer demonstrates competitive performance on common vision tasks. Specifically, it achieves 85.4\% Top-1 accuracy on ImageNet-1K without any extra training data or label, 53.9 box AP and 46.4 mask AP on the COCO detection task, and 52.2 mIOU on the ADE20K semantic segmentation task, surpassing previous state-of-the-art Swin Transformer backbone by +1.2, +2.0, +1.4, and +2.0 respectively under the similar FLOPs setting. By further pretraining on the larger dataset ImageNet-21K, we achieve 87.5% Top-1 accuracy on ImageNet-1K and high segmentation performance on ADE20K with 55.7 mIoU. The code and models are available at https://github.com/microsoft/CSWin-Transformer.
 
 </details>
 
-### MaxViT: Multi-axis Vision Transformer.
-- **链接**: [arXiv:2204.01697](https://arxiv.org/abs/2204.01697) · [代码](https://github.com/google-research/maxvit)
-- **作者**: Zhengzhong Tu, Hossein Talebi, Han Zhang, Feng Yang, Peyman Milanfar, Alan C. Bovik et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### LAVT: Language-Aware Vision Transformer for Referring Image Segmentation.
+- **链接**: [arXiv:2112.02244](https://arxiv.org/abs/2112.02244) · 📚 被引 383
+- **作者**: Zhao Yang, Jiaqi Wang, Yansong Tang, Kai Chen, Hengshuang Zhao, Philip H. S. Torr
+- **🏷️ 机构**: University of Oxford, Shanghai AI Laboratory, Tsinghua-Berkeley Shenzhen Institute, Tsinghua University
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Transformers have recently gained significant attention in the computer vision community. However, the lack of scalability of self-attention mechanisms with respect to image size has limited their wide adoption in state-of-the-art vision backbones. In this paper we introduce an efficient and scalable attention model we call multi-axis attention, which consists of two aspects: blocked local and dilated global attention. These design choices allow global-local spatial interactions on arbitrary input resolutions with only linear complexity. We also present a new architectural element by effectively blending our proposed attention model with convolutions, and accordingly propose a simple hierarchical vision backbone, dubbed MaxViT, by simply repeating the basic building block over multiple stages. Notably, MaxViT is able to ''see'' globally throughout the entire network, even in earlier, high-resolution stages. We demonstrate the effectiveness of our model on a broad spectrum of vision tasks. On image classification, MaxViT achieves state-of-the-art performance under various settings: without extra data, MaxViT attains 86.5% ImageNet-1K top-1 accuracy; with ImageNet-21K pre-training, our model achieves 88.7% top-1 accuracy. For downstream tasks, MaxViT as a backbone delivers favorable performance on object detection as well as visual aesthetic assessment. We also show that our proposed model expresses strong generative modeling capability on ImageNet, demonstrating the superior potential of MaxViT blocks as a universal vision module. The source code and trained models will be available at https://github.com/google-research/maxvit.
+> Referring image segmentation is a fundamental vision-language task that aims to segment out an object referred to by a natural language expression from an image. One of the key challenges behind this task is leveraging the referring expression for highlighting relevant positions in the image. A paradigm for tackling this problem is to leverage a powerful vision-language ("cross-modal") decoder to fuse features independently extracted from a vision encoder and a language encoder. Recent methods have made remarkable advancements in this paradigm by exploiting Transformers as cross-modal decoders, concurrent to the Transformer's overwhelming success in many other vision-language tasks. Adopting a different approach in this work, we show that significantly better cross-modal alignments can be achieved through the early fusion of linguistic and visual features in intermediate layers of a vision Transformer encoder network. By conducting cross-modal feature fusion in the visual feature encoding stage, we can leverage the well-proven correlation modeling power of a Transformer encoder for excavating helpful multi-modal context. This way, accurate segmentation results are readily harvested with a light-weight mask predictor. Without bells and whistles, our method surpasses the previous state-of-the-art methods on RefCOCO, RefCOCO+, and G-Ref by large margins.
 
 </details>
 
-### Convolutional Embedding Makes Hierarchical Vision Transformer Stronger.
-- **链接**: [arXiv:2207.13317](https://arxiv.org/abs/2207.13317) · 📚 被引 25
-- **作者**: Cong Wang, Hongmin Xu, Xiong Zhang, Li Wang, Zhitong Zheng, Haifeng Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### NomMer: Nominate Synergistic Context in Vision Transformer for Visual Recognition.
+- **链接**: [arXiv:2111.12994](https://arxiv.org/abs/2111.12994) · [代码](https://github.com/TencentYoutuResearch/VisualRecognition-NomMer) · 📚 被引 16
+- **作者**: Hao Liu, Xinghua Jiang, Xin Li, Zhimin Bao, Deqiang Jiang, Bo Ren
+- **🏷️ 机构**: Tencent YouTu Lab
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Vision Transformers (ViTs) have recently dominated a range of computer vision tasks, yet it suffers from low training data efficiency and inferior local semantic representation capability without appropriate inductive bias. Convolutional neural networks (CNNs) inherently capture regional-aware semantics, inspiring researchers to introduce CNNs back into the architecture of the ViTs to provide desirable inductive bias for ViTs. However, is the locality achieved by the micro-level CNNs embedded in ViTs good enough? In this paper, we investigate the problem by profoundly exploring how the macro architecture of the hybrid CNNs/ViTs enhances the performances of hierarchical ViTs. Particularly, we study the role of token embedding layers, alias convolutional embedding (CE), and systemically reveal how CE injects desirable inductive bias in ViTs. Besides, we apply the optimal CE configuration to 4 recently released state-of-the-art ViTs, effectively boosting the corresponding performances. Finally, a family of efficient hybrid CNNs/ViTs, dubbed CETNets, are released, which may serve as generic vision backbones. Specifically, CETNets achieve 84.9% Top-1 accuracy on ImageNet-1K (training from scratch), 48.6% box mAP on the COCO benchmark, and 51.6% mIoU on the ADE20K, substantially improving the performances of the corresponding state-of-the-art baselines.
+> Recently, Vision Transformers (ViT), with the self-attention (SA) as the de facto ingredients, have demonstrated great potential in the computer vision community. For the sake of trade-off between efficiency and performance, a group of works merely perform SA operation within local patches, whereas the global contextual information is abandoned, which would be indispensable for visual recognition tasks. To solve the issue, the subsequent global-local ViTs take a stab at marrying local SA with global one in parallel or alternative way in the model. Nevertheless, the exhaustively combined local and global context may exist redundancy for various visual data, and the receptive field within each layer is fixed. Alternatively, a more graceful way is that global and local context can adaptively contribute per se to accommodate different visual data. To achieve this goal, we in this paper propose a novel ViT architecture, termed NomMer, which can dynamically Nominate the synergistic global-local context in vision transforMer. By investigating the working pattern of our proposed NomMer, we further explore what context information is focused. Beneficial from this "dynamic nomination" mechanism, without bells and whistles, the NomMer can not only achieve 84.5% Top-1 classification accuracy on ImageNet with only 73M parameters, but also show promising performance on dense prediction tasks, i.e., object detection and semantic segmentation. The code and models will be made publicly available at https://github.com/TencentYoutuResearch/VisualRecognition-NomMer
 
 </details>
 
-### CAViT: Contextual Alignment Vision Transformer for Video Object Re-identification.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19781-9_32) · 📚 被引 27
-- **作者**: Jinlin Wu, Lingxiao He, Wu Liu, Yang Yang, Zhen Lei, Tao Mei et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### Vision Transformer Slimming: Multi-Dimension Searching in Continuous Optimization Space.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00488) · 📚 被引 68
+- **作者**: Arnav Chavan, Zhiqiang Shen, Zhuang Liu, Zechun Liu, Kwang-Ting Cheng, Eric P. Xing
+- **🏷️ 机构**: IIT Dhanbad, CMU, UC Berkeley
+- **会议**: CVPR 2022
 
-### ScalableViT: Rethinking the Context-Oriented Generalization of Vision Transformer.
-- **链接**: [arXiv:2203.10790](https://arxiv.org/abs/2203.10790) · 📚 被引 50
-- **作者**: Rui Yang, Hailong Ma, Jie Wu, Yansong Tang, Xuefeng Xiao, Min Zheng et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### Towards Practical Certifiable Patch Defense with Vision Transformer.
+- **链接**: [arXiv:2203.08519](https://arxiv.org/abs/2203.08519) · 📚 被引 57
+- **作者**: Zhaoyu Chen, Bo Li, Jianghe Xu, Shuang Wu, Shouhong Ding, Wenqiang Zhang
+- **🏷️ 机构**: Academy for Engineering and Technology, Fudan University, Tencent Youtu Lab
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The vanilla self-attention mechanism inherently relies on pre-defined and steadfast computational dimensions. Such inflexibility restricts it from possessing context-oriented generalization that can bring more contextual cues and global representations. To mitigate this issue, we propose a Scalable Self-Attention (SSA) mechanism that leverages two scaling factors to release dimensions of query, key, and value matrices while unbinding them with the input. This scalability fetches context-oriented generalization and enhances object sensitivity, which pushes the whole network into a more effective trade-off state between accuracy and cost. Furthermore, we propose an Interactive Window-based Self-Attention (IWSA), which establishes interaction between non-overlapping regions by re-merging independent value tokens and aggregating spatial information from adjacent windows. By stacking the SSA and IWSA alternately, the Scalable Vision Transformer (ScalableViT) achieves state-of-the-art performance in general-purpose vision tasks. For example, ScalableViT-S outperforms Twins-SVT-S by 1.4% and Swin-T by 1.8% on ImageNet-1K classification.
+> Patch attacks, one of the most threatening forms of physical attack in adversarial examples, can lead networks to induce misclassification by modifying pixels arbitrarily in a continuous region. Certifiable patch defense can guarantee robustness that the classifier is not affected by patch attacks. Existing certifiable patch defenses sacrifice the clean accuracy of classifiers and only obtain a low certified accuracy on toy datasets. Furthermore, the clean and certified accuracy of these methods is still significantly lower than the accuracy of normal classification networks, which limits their application in practice. To move towards a practical certifiable patch defense, we introduce Vision Transformer (ViT) into the framework of Derandomized Smoothing (DS). Specifically, we propose a progressive smoothed image modeling task to train Vision Transformer, which can capture the more discriminable local context of an image while preserving the global semantic information. For efficient inference and deployment in the real world, we innovatively reconstruct the global self-attention structure of the original ViT into isolated band unit self-attention. On ImageNet, under 2% area patch attacks our method achieves 41.70% certified accuracy, a nearly 1-fold increase over the previous best method (26.00%). Simultaneously, our method achieves 78.58% clean accuracy, which is quite close to the normal ResNet-101 accuracy. Extensive experiments show that our method obtains state-of-the-art clean and certified accuracy with inferring efficiently on CIFAR-10 and ImageNet.
 
 </details>
 
-### Panoramic Vision Transformer for Saliency Detection in 360$\circ $ Videos.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19833-5_25) · 📚 被引 31
-- **作者**: Heeseung Yun, Sehun Lee, Gunhee Kim
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-
-### Self-slimmed Vision Transformer.
-- **链接**: [arXiv:2111.12624](https://arxiv.org/abs/2111.12624) · [代码](https://github.com/Sense-X/SiT)
-- **作者**: Zhuofan Zong, Kunchang Li, Guanglu Song, Yali Wang, Yu Qiao, Biao Leng et al.
-- **🏷️ 机构**: Shanghai AI Lab, SenseTime
-- **会议**: ECCV 2022
+### Multi-Scale High-Resolution Vision Transformer for Semantic Segmentation.
+- **链接**: [arXiv:2111.01236](https://arxiv.org/abs/2111.01236) · 📚 被引 238
+- **作者**: Jiaqi Gu, Hyoukjun Kwon, Dilin Wang, Wei Ye, Meng Li, Yu-Hsin Chen et al.
+- **🏷️ 机构**: University of Texas,Austin, Meta Platforms Inc.
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Vision transformers (ViTs) have become the popular structures and outperformed convolutional neural networks (CNNs) on various vision tasks. However, such powerful transformers bring a huge computation burden, because of the exhausting token-to-token comparison. The previous works focus on dropping insignificant tokens to reduce the computational cost of ViTs. But when the dropping ratio increases, this hard manner will inevitably discard the vital tokens, which limits its efficiency. To solve the issue, we propose a generic self-slimmed learning approach for vanilla ViTs, namely SiT. Specifically, we first design a novel Token Slimming Module (TSM), which can boost the inference efficiency of ViTs by dynamic token aggregation. As a general method of token hard dropping, our TSM softly integrates redundant tokens into fewer informative ones. It can dynamically zoom visual attention without cutting off discriminative token relations in the images, even with a high slimming ratio. Furthermore, we introduce a concise Feature Recalibration Distillation (FRD) framework, wherein we design a reverse version of TSM (RTSM) to recalibrate the unstructured token in a flexible auto-encoder manner. Due to the similar structure between teacher and student, our FRD can effectively leverage structure knowledge for better convergence. Finally, we conduct extensive experiments to evaluate our SiT. It demonstrates that our method can speed up ViTs by 1.7x with negligible accuracy drop, and even speed up ViTs by 3.6x while maintaining 97% of their performance. Surprisingly, by simply arming LV-ViT with our SiT, we achieve new state-of-the-art performance on ImageNet. Code is available at https://github.com/Sense-X/SiT.
+> Vision Transformers (ViTs) have emerged with superior performance on computer vision tasks compared to convolutional neural network (CNN)-based models. However, ViTs are mainly designed for image classification that generate single-scale low-resolution representations, which makes dense prediction tasks such as semantic segmentation challenging for ViTs. Therefore, we propose HRViT, which enhances ViTs to learn semantically-rich and spatially-precise multi-scale representations by integrating high-resolution multi-branch architectures with ViTs. We balance the model performance and efficiency of HRViT by various branch-block co-optimization techniques. Specifically, we explore heterogeneous branch designs, reduce the redundancy in linear layers, and augment the attention block with enhanced expressiveness. Those approaches enabled HRViT to push the Pareto frontier of performance and efficiency on semantic segmentation to a new level, as our evaluation results on ADE20K and Cityscapes show. HRViT achieves 50.20% mIoU on ADE20K and 83.16% mIoU on Cityscapes, surpassing state-of-the-art MiT and CSWin backbones with an average of +1.78 mIoU improvement, 28% parameter saving, and 21% FLOPs reduction, demonstrating the potential of HRViT as a strong vision backbone for semantic segmentation.
+
+</details>
+
+### Training Object Detectors from Scratch: An Empirical Study in the Era of Vision Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00462) · 📚 被引 13
+- **作者**: Weixiang Hong, Jiangwei Lao, Wang Ren, Jian Wang, Jingdong Chen, Wei Chu
+- **🏷️ 机构**: Ant Group
+- **会议**: CVPR 2022
+
+### MPViT: Multi-Path Vision Transformer for Dense Prediction.
+- **链接**: [arXiv:2112.11010](https://arxiv.org/abs/2112.11010) · 📚 被引 333
+- **作者**: Youngwan Lee, Jonghee Kim, Jeffrey Willette, Sung Ju Hwang
+- **🏷️ 机构**: Electronics and Telecommunications Research Institute (ETRI),South Korea, Korea Advanced Institute of Science and Technology (KAIST),South Korea
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Dense computer vision tasks such as object detection and segmentation require effective multi-scale feature representation for detecting or classifying objects or regions with varying sizes. While Convolutional Neural Networks (CNNs) have been the dominant architectures for such tasks, recently introduced Vision Transformers (ViTs) aim to replace them as a backbone. Similar to CNNs, ViTs build a simple multi-stage structure (i.e., fine-to-coarse) for multi-scale representation with single-scale patches. In this work, with a different perspective from existing Transformers, we explore multi-scale patch embedding and multi-path structure, constructing the Multi-Path Vision Transformer (MPViT). MPViT embeds features of the same size~(i.e., sequence length) with patches of different scales simultaneously by using overlapping convolutional patch embedding. Tokens of different scales are then independently fed into the Transformer encoders via multiple paths and the resulting features are aggregated, enabling both fine and coarse feature representations at the same feature level. Thanks to the diverse, multi-scale feature representations, our MPViTs scaling from tiny~(5M) to base~(73M) consistently achieve superior performance over state-of-the-art Vision Transformers on ImageNet classification, object detection, instance segmentation, and semantic segmentation. These extensive results demonstrate that MPViT can serve as a versatile backbone network for various vision tasks. Code will be made publicly available at \url{https://git.io/MPViT}.
+
+</details>
+
+### Towards Robust Vision Transformer.
+- **链接**: [arXiv:2105.07926](https://arxiv.org/abs/2105.07926) · [代码](https://github.com/alibaba/easyrobust)
+- **作者**: Xiaofeng Mao, Gege Qi, Yuefeng Chen, Xiaodan Li, Ranjie Duan, Shaokai Ye et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advances on Vision Transformer (ViT) and its improved variants have shown that self-attention-based networks surpass traditional Convolutional Neural Networks (CNNs) in most vision tasks. However, existing ViTs focus on the standard accuracy and computation cost, lacking the investigation of the intrinsic influence on model robustness and generalization. In this work, we conduct systematic evaluation on components of ViTs in terms of their impact on robustness to adversarial examples, common corruptions and distribution shifts. We find some components can be harmful to robustness. By using and combining robust components as building blocks of ViTs, we propose Robust Vision Transformer (RVT), which is a new vision transformer and has superior performance with strong robustness. We further propose two new plug-and-play techniques called position-aware attention scaling and patch-wise augmentation to augment our RVT, which we abbreviate as RVT*. The experimental results on ImageNet and six robustness benchmarks show the advanced robustness and generalization ability of RVT compared with previous ViTs and state-of-the-art CNNs. Furthermore, RVT-S* also achieves Top-1 rank on multiple robustness leaderboards including ImageNet-C and ImageNet-Sketch. The code will be available at \url{https://github.com/alibaba/easyrobust}.
+
+</details>
+
+### Affine Medical Image Registration with Coarse-to-Fine Vision Transformer.
+- **链接**: [arXiv:2203.15216](https://arxiv.org/abs/2203.15216) · [代码](https://github.com/cwmok/C2FViT) · 📚 被引 90
+- **作者**: Tony C. W. Mok, Albert C. S. Chung
+- **🏷️ 机构**: The Hong Kong University of Science and Technology,Department of Computer Science and Engineering
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Affine registration is indispensable in a comprehensive medical image registration pipeline. However, only a few studies focus on fast and robust affine registration algorithms. Most of these studies utilize convolutional neural networks (CNNs) to learn joint affine and non-parametric registration, while the standalone performance of the affine subnetwork is less explored. Moreover, existing CNN-based affine registration approaches focus either on the local misalignment or the global orientation and position of the input to predict the affine transformation matrix, which are sensitive to spatial initialization and exhibit limited generalizability apart from the training dataset. In this paper, we present a fast and robust learning-based algorithm, Coarse-to-Fine Vision Transformer (C2FViT), for 3D affine medical image registration. Our method naturally leverages the global connectivity and locality of the convolutional vision transformer and the multi-resolution strategy to learn the global affine registration. We evaluate our method on 3D brain atlas registration and template-matching normalization. Comprehensive results demonstrate that our method is superior to the existing CNNs-based affine registration methods in terms of registration accuracy, robustness and generalizability while preserving the runtime advantage of the learning-based methods. The source code is available at https://github.com/cwmok/C2FViT.
+
+</details>
+
+### Vision Transformer with Deformable Attention.
+- **链接**: [arXiv:2201.00520](https://arxiv.org/abs/2201.00520) · [代码](https://github.com/LeapLabTHU/DAT) · 📚 被引 887
+- **作者**: Zhuofan Xia, Xuran Pan, Shiji Song, Li Erran Li, Gao Huang
+- **🏷️ 机构**: BNRist, Tsinghua University,Department of Automation, Amazon,AWS AI
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Transformers have recently shown superior performances on various vision tasks. The large, sometimes even global, receptive field endows Transformer models with higher representation power over their CNN counterparts. Nevertheless, simply enlarging receptive field also gives rise to several concerns. On the one hand, using dense attention e.g., in ViT, leads to excessive memory and computational cost, and features can be influenced by irrelevant parts which are beyond the region of interests. On the other hand, the sparse attention adopted in PVT or Swin Transformer is data agnostic and may limit the ability to model long range relations. To mitigate these issues, we propose a novel deformable self-attention module, where the positions of key and value pairs in self-attention are selected in a data-dependent way. This flexible scheme enables the self-attention module to focus on relevant regions and capture more informative features. On this basis, we present Deformable Attention Transformer, a general backbone model with deformable attention for both image classification and dense prediction tasks. Extensive experiments show that our models achieve consistently improved results on comprehensive benchmarks. Code is available at https://github.com/LeapLabTHU/DAT.
+
+</details>
+
+### Lite Vision Transformer with Enhanced Self-Attention.
+- **链接**: [arXiv:2112.10809](https://arxiv.org/abs/2112.10809) · 📚 被引 145
+- **作者**: Chenglin Yang, Yilin Wang, Jianming Zhang, He Zhang, Zijun Wei, Zhe Lin et al.
+- **🏷️ 机构**: Johns Hopkins University, Adobe Inc.
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Despite the impressive representation capacity of vision transformer models, current light-weight vision transformer models still suffer from inconsistent and incorrect dense predictions at local regions. We suspect that the power of their self-attention mechanism is limited in shallower and thinner networks. We propose Lite Vision Transformer (LVT), a novel light-weight transformer network with two enhanced self-attention mechanisms to improve the model performances for mobile deployment. For the low-level features, we introduce Convolutional Self-Attention (CSA). Unlike previous approaches of merging convolution and self-attention, CSA introduces local self-attention into the convolution within a kernel of size 3x3 to enrich low-level features in the first stage of LVT. For the high-level features, we propose Recursive Atrous Self-Attention (RASA), which utilizes the multi-scale context when calculating the similarity map and a recursive mechanism to increase the representation capability with marginal extra parameter cost. The superiority of LVT is demonstrated on ImageNet recognition, ADE20K semantic segmentation, and COCO panoptic segmentation. The code is made publicly available.
+
+</details>
+
+### Temporally Efficient Vision Transformer for Video Instance Segmentation.
+- **链接**: [arXiv:2204.08412](https://arxiv.org/abs/2204.08412) · [代码](https://github.com/hustvl/TeViT) · 📚 被引 76
+- **作者**: Shusheng Yang, Xinggang Wang, Yu Li, Yuxin Fang, Jiemin Fang, Wenyu Liu et al.
+- **🏷️ 机构**: School of EIC, Huazhong University of Science &#x0026; Technology, International Digital Economy Academy (IDEA), Applied Research Center (ARC), Tencent PCG
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recently vision transformer has achieved tremendous success on image-level visual recognition tasks. To effectively and efficiently model the crucial temporal information within a video clip, we propose a Temporally Efficient Vision Transformer (TeViT) for video instance segmentation (VIS). Different from previous transformer-based VIS methods, TeViT is nearly convolution-free, which contains a transformer backbone and a query-based video instance segmentation head. In the backbone stage, we propose a nearly parameter-free messenger shift mechanism for early temporal context fusion. In the head stages, we propose a parameter-shared spatiotemporal query interaction mechanism to build the one-to-one correspondence between video instances and queries. Thus, TeViT fully utilizes both framelevel and instance-level temporal context information and obtains strong temporal modeling capacity with negligible extra computational cost. On three widely adopted VIS benchmarks, i.e., YouTube-VIS-2019, YouTube-VIS-2021, and OVIS, TeViT obtains state-of-the-art results and maintains high inference speed, e.g., 46.6 AP with 68.9 FPS on YouTube-VIS-2019. Code is available at https://github.com/hustvl/TeViT.
 
 </details>
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- V2X-ViT: Vehicle-to-Everything Cooperative Perception with Vision Transformer. → [autonomous-driving](../autonomous-driving/Guideline%202022.md)
-- A Simple Single-Scale Vision Transformer for Object Detection and Instance Segmentation. → [object-detection](../object-detection/Guideline%202022.md)
-- Exploring Plain Vision Transformer Backbones for Object Detection. → [object-detection](../object-detection/Guideline%202022.md)
-- ViTAS: Vision Transformer Architecture Search. → [neural-architecture-search](../neural-architecture-search/Guideline%202022.md)
-- Online Continual Learning with Contrastive Vision Transformer. → [continual-learning](../continual-learning/Guideline%202022.md)
+- Self-Supervised Pre-Training of Swin Transformers for 3D Medical Image Analysis. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+- Meta-attention for ViT-backed Continual Learning. → [continual-learning](../continual-learning/Guideline%202022.md)
+- Continual Learning with Lifelong Vision Transformer. → [continual-learning](../continual-learning/Guideline%202022.md)
+- MeMViT: Memory-Augmented Multiscale Vision Transformer for Efficient Long-Term Video Recognition. → [video-understanding](../video-understanding/Guideline%202022.md)

@@ -1,138 +1,108 @@
 # Network Pruning — 2022 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 17 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Point Cloud Compression with Sibling Context and Surface Priors.
-- **链接**: [arXiv:2205.00760](https://arxiv.org/abs/2205.00760)
-- **作者**: Zhili Chen, Zian Qian, Sukai Wang, Qifeng Chen
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### RIDDLE: Lidar Data Compression with Range Image Deep Delta Encoding.
+- **链接**: [arXiv:2206.01738](https://arxiv.org/abs/2206.01738) · 📚 被引 32
+- **作者**: Xuanyu Zhou, Charles R. Qi, Yin Zhou, Dragomir Anguelov
+- **🏷️ 机构**: Waymo LLC
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We present a novel octree-based multi-level framework for large-scale point cloud compression, which can organize sparse and unstructured point clouds in a memory-efficient way. In this framework, we propose a new entropy model that explores the hierarchical dependency in an octree using the context of siblings' children, ancestors, and neighbors to encode the occupancy information of each non-leaf octree node into a bitstream. Moreover, we locally fit quadratic surfaces with a voxel-based geometry-aware module to provide geometric priors in entropy encoding. These strong priors empower our entropy framework to encode the octree into a more compact bitstream. In the decoding stage, we apply a two-step heuristic strategy to restore point clouds with better reconstruction quality. The quantitative evaluation shows that our method outperforms state-of-the-art baselines with a bitrate improvement of 11-16% and 12-14% on the KITTI Odometry and nuScenes datasets, respectively.
+> Lidars are depth measuring sensors widely used in autonomous driving and augmented reality. However, the large volume of data produced by lidars can lead to high costs in data storage and transmission. While lidar data can be represented as two interchangeable representations: 3D point clouds and range images, most previous work focus on compressing the generic 3D point clouds. In this work, we show that directly compressing the range images can leverage the lidar scanning pattern, compared to compressing the unprojected point clouds. We propose a novel data-driven range image compression algorithm, named RIDDLE (Range Image Deep DeLta Encoding). At its core is a deep model that predicts the next pixel value in a raster scanning order, based on contextual laser shots from both the current and past scans (represented as a 4D point cloud of spherical coordinates and time). The deltas between predictions and original values can then be compressed by entropy encoding. Evaluated on the Waymo Open Dataset and KITTI, our method demonstrates significant improvement in the compression rate (under the same distortion) compared to widely used point cloud and range image compression algorithms as well as recent deep methods.
 
 </details>
 
-### SPViT: Enabling Faster Vision Transformers via Latency-Aware Soft Token Pruning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20083-0_37) · 📚 被引 160
-- **作者**: Zhenglun Kong, Peiyan Dong, Xiaolong Ma, Xin Meng, Wei Niu, Mengshu Sun et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-
-### SuperTickets: Drawing Task-Agnostic Lottery Tickets from Supernets via Jointly Architecture Searching and Parameter Pruning.
-- **链接**: [arXiv:2207.03677](https://arxiv.org/abs/2207.03677) · [代码](https://github.com/RICE-EIC/SuperTickets) · 📚 被引 8
-- **作者**: Haoran You, Baopu Li, Zhanyi Sun, Xu Ouyang, Yingyan Lin
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### 3DAC: Learning Attribute Compression for Point Clouds.
+- **链接**: [arXiv:2203.09931](https://arxiv.org/abs/2203.09931) · 📚 被引 51
+- **作者**: Guangchi Fang, Qingyong Hu, Hanyun Wang, Yiling Xu, Yulan Guo
+- **🏷️ 机构**: Sun Yat-sen University, University of Oxford, Information Engineering University
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Neural architecture search (NAS) has demonstrated amazing success in searching for efficient deep neural networks (DNNs) from a given supernet. In parallel, the lottery ticket hypothesis has shown that DNNs contain small subnetworks that can be trained from scratch to achieve a comparable or higher accuracy than original DNNs. As such, it is currently a common practice to develop efficient DNNs via a pipeline of first search and then prune. Nevertheless, doing so often requires a search-train-prune-retrain process and thus prohibitive computational cost. In this paper, we discover for the first time that both efficient DNNs and their lottery subnetworks (i.e., lottery tickets) can be directly identified from a supernet, which we term as SuperTickets, via a two-in-one training scheme with jointly architecture searching and parameter pruning. Moreover, we develop a progressive and unified SuperTickets identification strategy that allows the connectivity of subnetworks to change during supernet training, achieving better accuracy and efficiency trade-offs than conventional sparse training. Finally, we evaluate whether such identified SuperTickets drawn from one task can transfer well to other tasks, validating their potential of handling multiple tasks simultaneously. Extensive experiments and ablation studies on three tasks and four benchmark datasets validate that our proposed SuperTickets achieve boosted accuracy and efficiency trade-offs than both typical NAS and pruning pipelines, regardless of having retraining or not. Codes and pretrained models are available at https://github.com/RICE-EIC/SuperTickets.
+> We study the problem of attribute compression for large-scale unstructured 3D point clouds. Through an in-depth exploration of the relationships between different encoding steps and different attribute channels, we introduce a deep compression network, termed 3DAC, to explicitly compress the attributes of 3D point clouds and reduce storage usage in this paper. Specifically, the point cloud attributes such as color and reflectance are firstly converted to transform coefficients. We then propose a deep entropy model to model the probabilities of these coefficients by considering information hidden in attribute transforms and previous encoded attributes. Finally, the estimated probabilities are used to further compress these transform coefficients to a final attributes bitstream. Extensive experiments conducted on both indoor and outdoor large-scale open point cloud datasets, including ScanNet and SemanticKITTI, demonstrated the superior compression rates and reconstruction quality of the proposed 3DAC.
 
 </details>
 
-### Towards Ultra Low Latency Spiking Neural Networks for Vision and Sequential Tasks Using Temporal Pruning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20083-0_42) · 📚 被引 30
-- **作者**: Sayeed Shafayet Chowdhury, Nitin Rathi, Kaushik Roy
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-
-### Bayesian Optimization with Clustering and Rollback for CNN Auto Pruning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20050-2_29) · 📚 被引 0
-- **作者**: Hanwei Fan, Jiandong Mu, Wei Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-
-### Interpretations Steered Network Pruning via Amortized Inferred Saliency Maps.
-- **链接**: [arXiv:2209.02869](https://arxiv.org/abs/2209.02869) · [代码](https://github.com/Alii-Ganjj/InterpretationsSteeredPruning) · 📚 被引 13
-- **作者**: Alireza Ganjdanesh, Shangqian Gao, Heng Huang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### Density-preserving Deep Point Cloud Compression.
+- **链接**: [arXiv:2204.12684](https://arxiv.org/abs/2204.12684) · 📚 被引 80
+- **作者**: Yun He, Xinlin Ren, Danhang Tang, Yinda Zhang, Xiangyang Xue, Yanwei Fu
+- **🏷️ 机构**: Fudan University, Google
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Convolutional Neural Networks (CNNs) compression is crucial to deploying these models in edge devices with limited resources. Existing channel pruning algorithms for CNNs have achieved plenty of success on complex models. They approach the pruning problem from various perspectives and use different metrics to guide the pruning process. However, these metrics mainly focus on the model's `outputs' or `weights' and neglect its `interpretations' information. To fill in this gap, we propose to address the channel pruning problem from a novel perspective by leveraging the interpretations of a model to steer the pruning process, thereby utilizing information from both inputs and outputs of the model. However, existing interpretation methods cannot get deployed to achieve our goal as either they are inefficient for pruning or may predict non-coherent explanations. We tackle this challenge by introducing a selector model that predicts real-time smooth saliency masks for pruned models. We parameterize the distribution of explanatory masks by Radial Basis Function (RBF)-like functions to incorporate geometric prior of natural images in our selector model's inductive bias. Thus, we can obtain compact representations of explanations to reduce the computational costs of our pruning method. We leverage our selector model to steer the network pruning by maximizing the similarity of explanatory representations for the pruned and original models. Extensive experiments on CIFAR-10 and ImageNet benchmark datasets demonstrate the efficacy of our proposed method. Our implementations are available at \url{https://github.com/Alii-Ganjj/InterpretationsSteeredPruning}
+> Local density of point clouds is crucial for representing local details, but has been overlooked by existing point cloud compression methods. To address this, we propose a novel deep point cloud compression method that preserves local density information. Our method works in an auto-encoder fashion: the encoder downsamples the points and learns point-wise features, while the decoder upsamples the points using these features. Specifically, we propose to encode local geometry and density with three embeddings: density embedding, local position embedding and ancestor embedding. During the decoding, we explicitly predict the upsampling factor for each point, and the directions and scales of the upsampled points. To mitigate the clustered points issue in existing methods, we design a novel sub-point convolution layer, and an upsampling block with adaptive scale. Furthermore, our method can also compress point-wise attributes, such as normal. Extensive qualitative and quantitative results on SemanticKITTI and ShapeNet demonstrate that our method achieves the state-of-the-art rate-distortion trade-off.
 
 </details>
 
-### Disentangled Differentiable Network Pruning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20083-0_20) · 📚 被引 14
-- **作者**: Shangqian Gao, Feihu Huang, Yanfu Zhang, Heng Huang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-
-### Filter Pruning via Feature Discrimination in Deep Neural Networks.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19803-8_15)
-- **作者**: Zhiqiang He, Yaguan Qian, Yuqi Wang, Bin Wang, Xiaohui Guan, Zhaoquan Gu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-
-### Soft Masking for Cost-Constrained Channel Pruning.
-- **链接**: [arXiv:2211.02206](https://arxiv.org/abs/2211.02206) · 📚 被引 15
-- **作者**: Ryan Humble, Maying Shen, Jorge Albericio Latorre, Eric Darve, José M. Álvarez
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### Fire Together Wire Together: A Dynamic Pruning Approach with Self-Supervised Mask Prediction.
+- **链接**: [arXiv:2110.08232](https://arxiv.org/abs/2110.08232) · 📚 被引 43
+- **作者**: Sara Elkerdawy, Mostafa Elhoushi, Hong Zhang, Nilanjan Ray
+- **🏷️ 机构**: University of Alberta,Huawei, Toronto Heterogeneous Compilers Lab,Huawei
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Structured channel pruning has been shown to significantly accelerate inference time for convolution neural networks (CNNs) on modern hardware, with a relatively minor loss of network accuracy. Recent works permanently zero these channels during training, which we observe to significantly hamper final accuracy, particularly as the fraction of the network being pruned increases. We propose Soft Masking for cost-constrained Channel Pruning (SMCP) to allow pruned channels to adaptively return to the network while simultaneously pruning towards a target cost constraint. By adding a soft mask re-parameterization of the weights and channel pruning from the perspective of removing input channels, we allow gradient updates to previously pruned channels and the opportunity for the channels to later return to the network. We then formulate input channel pruning as a global resource allocation problem. Our method outperforms prior works on both the ImageNet classification and PASCAL VOC detection datasets.
+> Dynamic model pruning is a recent direction that allows for the inference of a different sub-network for each input sample during deployment. However, current dynamic methods rely on learning a continuous channel gating through regularization by inducing sparsity loss. This formulation introduces complexity in balancing different losses (e.g task loss, regularization loss). In addition, regularization based methods lack transparent tradeoff hyperparameter selection to realize a computational budget. Our contribution is two-fold: 1) decoupled task and pruning losses. 2) Simple hyperparameter selection that enables FLOPs reduction estimation before training. Inspired by the Hebbian theory in Neuroscience: "neurons that fire together wire together", we propose to predict a mask to process k filters in a layer based on the activation of its previous layer. We pose the problem as a self-supervised binary classification problem. Each mask predictor module is trained to predict if the log-likelihood for each filter in the current layer belongs to the top-k activated filters. The value k is dynamically estimated for each input based on a novel criterion using the mass of heatmaps. We show experiments on several neural architectures, such as VGG, ResNet and MobileNet on CIFAR and ImageNet datasets. On CIFAR, we reach similar accuracy to SOTA methods with 15% and 24% higher FLOPs reduction. Similarly in ImageNet, we achieve lower drop in accuracy with up to 13% improvement in FLOPs reduction.
 
 </details>
 
-### CPrune: Compiler-Informed Model Pruning for Efficient Target-Aware DNN Execution.
-- **链接**: [arXiv:2207.01260](https://arxiv.org/abs/2207.01260) · 📚 被引 5
-- **作者**: Taeho Kim, Yongin Kwon, Jemin Lee, Taeho Kim, Sangtae Ha
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### Revisiting Random Channel Pruning for Neural Network Compression.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00029) · 📚 被引 110
+- **作者**: Yawei Li, Kamil Adamczewski, Wen Li, Shuhang Gu, Radu Timofte, Luc Van Gool
+- **🏷️ 机构**: Computer Vision Lab, ETH Zurich, MPI-IS, UESTC
+- **会议**: CVPR 2022
+
+### When to Prune? A Policy towards Early Structural Pruning.
+- **链接**: [arXiv:2110.12007](https://arxiv.org/abs/2110.12007) · 📚 被引 49
+- **作者**: Maying Shen, Pavlo Molchanov, Hongxu Yin, José M. Álvarez
+- **🏷️ 机构**: NVIDIA
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Mobile devices run deep learning models for various purposes, such as image classification and speech recognition. Due to the resource constraints of mobile devices, researchers have focused on either making a lightweight deep neural network (DNN) model using model pruning or generating an efficient code using compiler optimization. Surprisingly, we found that the straightforward integration between model compression and compiler auto-tuning often does not produce the most efficient model for a target device. We propose CPrune, a compiler-informed model pruning for efficient target-aware DNN execution to support an application with a required target accuracy. CPrune makes a lightweight DNN model through informed pruning based on the structural information of subgraphs built during the compiler tuning process. Our experimental results show that CPrune increases the DNN execution speed up to 2.73x compared to the state-of-the-art TVM auto-tune while satisfying the accuracy requirement.
+> Pruning enables appealing reductions in network memory footprint and time complexity. Conventional post-training pruning techniques lean towards efficient inference while overlooking the heavy computation for training. Recent exploration of pre-training pruning at initialization hints on training cost reduction via pruning, but suffers noticeable performance degradation. We attempt to combine the benefits of both directions and propose a policy that prunes as early as possible during training without hurting performance. Instead of pruning at initialization, our method exploits initial dense training for few epochs to quickly guide the architecture, while constantly evaluating dominant sub-networks via neuron importance ranking. This unveils dominant sub-networks whose structures turn stable, allowing conventional pruning to be pushed earlier into the training. To do this early, we further introduce an Early Pruning Indicator (EPI) that relies on sub-network architectural similarity and quickly triggers pruning when the sub-network's architecture stabilizes. Through extensive experiments on ImageNet, we show that EPI empowers a quick tracking of early training epochs suitable for pruning, offering same efficacy as an otherwise ``oracle'' grid-search that scans through epochs and requires orders of magnitude more compute. Our method yields $1.4\%$ top-1 accuracy boost over state-of-the-art pruning counterparts, cuts down training cost on GPU by $2.4\times$, hence offers a new efficiency-accuracy boundary for network pruning during training.
 
 </details>
 
-### Ensemble Knowledge Guided Sub-network Search and Fine-Tuning for Filter Pruning.
-- **链接**: [arXiv:2203.02651](https://arxiv.org/abs/2203.02651) · [代码](https://github.com/sseung0703/EKG)
-- **作者**: Seunghyun Lee, Byung Cheol Song
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs.
+- **链接**: [arXiv:2203.07808](https://arxiv.org/abs/2203.07808) · 📚 被引 29
+- **作者**: Paul Wimmer, Jens Mehnert, Alexandru Condurache
+- **🏷️ 机构**: Automated Driving Research, Robert Bosch GmbH,Stuttgart,Germany,70469
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Conventional NAS-based pruning algorithms aim to find the sub-network with the best validation performance. However, validation performance does not successfully represent test performance, i.e., potential performance. Also, although fine-tuning the pruned network to restore the performance drop is an inevitable process, few studies have handled this issue. This paper provides a novel Ensemble Knowledge Guidance (EKG) to solve both problems at once. First, we experimentally prove that the fluctuation of loss landscape can be an effective metric to evaluate the potential performance. In order to search a sub-network with the smoothest loss landscape at a low cost, we employ EKG as a search reward. EKG utilized for the following search iteration is composed of the ensemble knowledge of interim sub-networks, i.e., the by-products of the sub-network evaluation. Next, we reuse EKG to provide a gentle and informative guidance to the pruned network while fine-tuning the pruned network. Since EKG is implemented as a memory bank in both phases, it requires a negligible cost. For example, when pruning and training ResNet-50, just 315 GPU hours are required to remove around 45.04% of FLOPS without any performance degradation, which can operate even on a low-spec workstation. the implemented code is available at https://github.com/sseung0703/EKG.
+> Unstructured pruning is well suited to reduce the memory footprint of convolutional neural networks (CNNs), both at training and inference time. CNNs contain parameters arranged in $K \times K$ filters. Standard unstructured pruning (SP) reduces the memory footprint of CNNs by setting filter elements to zero, thereby specifying a fixed subspace that constrains the filter. Especially if pruning is applied before or during training, this induces a strong bias. To overcome this, we introduce interspace pruning (IP), a general tool to improve existing pruning methods. It uses filters represented in a dynamic interspace by linear combinations of an underlying adaptive filter basis (FB). For IP, FB coefficients are set to zero while un-pruned coefficients and FBs are trained jointly. In this work, we provide mathematical evidence for IP's superior performance and demonstrate that IP outperforms SP on all tested state-of-the-art unstructured pruning methods. Especially in challenging situations, like pruning for ImageNet or pruning to high sparsity, IP greatly exceeds SP with equal runtime and parameter costs. Finally, we show that advances of IP are due to improved trainability and superior generalization ability.
 
 </details>
 
-### FairGRAPE: Fairness-Aware GRAdient Pruning mEthod for Face Attribute Classification.
-- **链接**: [arXiv:2207.10888](https://arxiv.org/abs/2207.10888) · [代码](https://github.com/Bernardo1998/FairGRAPE) · 📚 被引 29
-- **作者**: Xiaofeng Lin, Seungbae Kim, Jungseock Joo
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### Quarantine: Sparsity Can Uncover the Trojan Attack Trigger for Free.
+- **链接**: [arXiv:2205.11819](https://arxiv.org/abs/2205.11819) · [代码](https://github.com/VITA-Group/Backdoor-LTH) · 📚 被引 13
+- **作者**: Tianlong Chen, Zhenyu Zhang, Yihua Zhang, Shiyu Chang, Sijia Liu, Zhangyang Wang
+- **🏷️ 机构**: University of Texas at Austin, Michigan State University, University of California,Santa Barbara
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Existing pruning techniques preserve deep neural networks' overall ability to make correct predictions but may also amplify hidden biases during the compression process. We propose a novel pruning method, Fairness-aware GRAdient Pruning mEthod (FairGRAPE), that minimizes the disproportionate impacts of pruning on different sub-groups. Our method calculates the per-group importance of each model weight and selects a subset of weights that maintain the relative between-group total importance in pruning. The proposed method then prunes network edges with small importance values and repeats the procedure by updating importance values. We demonstrate the effectiveness of our method on four different datasets, FairFace, UTKFace, CelebA, and ImageNet, for the tasks of face attribute classification where our method reduces the disparity in performance degradation by up to 90% compared to the state-of-the-art pruning algorithms. Our method is substantially more effective in a setting with a high pruning rate (99%). The code and dataset used in the experiments are available at https://github.com/Bernardo1998/FairGRAPE
+> Trojan attacks threaten deep neural networks (DNNs) by poisoning them to behave normally on most samples, yet to produce manipulated results for inputs attached with a particular trigger. Several works attempt to detect whether a given DNN has been injected with a specific trigger during the training. In a parallel line of research, the lottery ticket hypothesis reveals the existence of sparse subnetworks which are capable of reaching competitive performance as the dense network after independent training. Connecting these two dots, we investigate the problem of Trojan DNN detection from the brand new lens of sparsity, even when no clean training data is available. Our crucial observation is that the Trojan features are significantly more stable to network pruning than benign features. Leveraging that, we propose a novel Trojan network detection regime: first locating a "winning Trojan lottery ticket" which preserves nearly full Trojan information yet only chance-level performance on clean inputs; then recovering the trigger embedded in this already isolated subnetwork. Extensive experiments on various datasets, i.e., CIFAR-10, CIFAR-100, and ImageNet, with different network architectures, i.e., VGG-16, ResNet-18, ResNet-20s, and DenseNet-100 demonstrate the effectiveness of our proposal. Codes are available at https://github.com/VITA-Group/Backdoor-LTH.
 
 </details>
 
-### Multi-granularity Pruning for Model Acceleration on Mobile Devices.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20083-0_29) · 📚 被引 5
-- **作者**: Tianli Zhao, Xi Sheryl Zhang, Wentao Zhu, Jiaxing Wang, Sen Yang, Ji Liu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+### Attentive Fine-Grained Structured Sparsity for Image Restoration.
+- **链接**: [arXiv:2204.12266](https://arxiv.org/abs/2204.12266) · [代码](https://github.com/JungHunOh/SLS_CVPR2022) · 📚 被引 12
+- **作者**: Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, Jonghyun Choi, Kyoung Mu Lee
+- **🏷️ 机构**: ASRI,Dept. of ECE, Yonsei University
+- **会议**: CVPR 2022
 
-### Learning Extremely Lightweight and Robust Model with Differentiable Constraints on Sparsity and Condition Number.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19772-7_40) · 📚 被引 1
-- **作者**: Xian Wei, Yangyu Xu, Yanhui Huang, Hairong Lv, Hai Lan, Mingsong Chen et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-## 跨领域论文（完整笔记在其他领域）
+> Image restoration tasks have witnessed great performance improvement in recent years by developing large deep models. Despite the outstanding performance, the heavy computation demanded by the deep models has restricted the application of image restoration. To lift the restriction, it is required to reduce the size of the networks while maintaining accuracy. Recently, N:M structured pruning has appeared as one of the effective and practical pruning approaches for making the model efficient with the accuracy constraint. However, it fails to account for different computational complexities and performance requirements for different layers of an image restoration network. To further optimize the trade-off between the efficiency and the restoration accuracy, we propose a novel pruning method that determines the pruning ratio for N:M structured sparsity at each layer. Extensive experimental results on super-resolution and deblurring tasks demonstrate the efficacy of our method which outperforms previous pruning methods significantly. PyTorch implementation for the proposed methods is available at https://github.com/JungHunOh/SLS_CVPR2022.
 
-- PPT: Token-Pruned Pose Transformer for Monocular and Multi-view Human Pose Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202022.md)
-- Point Cloud Compression with Range Image-Based Entropy Model for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202022.md)
-- FOSTER: Feature Boosting and Compression for Class-Incremental Learning. → [continual-learning](../continual-learning/Guideline%202022.md)
+</details>
