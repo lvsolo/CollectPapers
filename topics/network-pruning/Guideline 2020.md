@@ -1,88 +1,108 @@
 # Network Pruning — 2020 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### OctSqueeze: Octree-Structured Entropy Model for LiDAR Compression.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Huang_OctSqueeze_Octree-Structured_Entropy_Model_for_LiDAR_Compression_CVPR_2020_paper.html) · 📚 被引 200
-- **作者**: Lila Huang, Shenlong Wang, Kelvin Wong, Jerry Liu, Raquel Urtasun
-- **🏷️ 机构**: Waabi / University of Toronto
-- **会议**: CVPR 2020
-
-### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_APQ_Joint_Search_for_Network_Architecture_Pruning_and_Quantization_Policy_CVPR_2020_paper.html) · 📚 被引 159
-- **作者**: Tianzhe Wang, Kuan Wang, Han Cai, Ji Lin, Zhijian Liu, Hanrui Wang et al.
-- **🏷️ 机构**: Massachusetts Institute of Technology; Shanghai Jiao Tong University, Massachusetts Institute of Technology
-- **会议**: CVPR 2020
-
-### Multi-Dimensional Pruning: A Unified Framework for Model Compression.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Multi-Dimensional_Pruning_A_Unified_Framework_for_Model_Compression_CVPR_2020_paper.html) · 📚 被引 65
-- **作者**: Jinyang Guo, Wanli Ouyang, Dong Xu
+### Neural Epitome Search for Architecture-Agnostic Network Compression.
+- **链接**: [出版页](https://openreview.net/forum?id=HyxjOyrKvr)
+- **作者**: Daquan Zhou, Xiaojie Jin, Qibin Hou, Kaixin Wang, Jianchao Yang, Jiashi Feng
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: ICLR 2020
 
-### DMCP: Differentiable Markov Channel Pruning for Neural Networks.
-- **链接**: [arXiv:2005.03354](https://arxiv.org/abs/2005.03354) · [代码](https://github.com/zx55/dmcp) · 📚 被引 142
-- **作者**: Shaopeng Guo, Yujie Wang, Quanquan Li, Junjie Yan
+### A Signal Propagation Perspective for Pruning Neural Networks at Initialization.
+- **链接**: [arXiv:1906.06307](https://arxiv.org/abs/1906.06307)
+- **作者**: Namhoon Lee, Thalaiyasingam Ajanthan, Stephen Gould, Philip H. S. Torr
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: ICLR 2020
 
-- **摘要（英，原文）**:
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-  > Recent works imply that the channel pruning can be regarded as searching optimal sub-structure from unpruned networks. However, existing works based on this observation require training and evaluating a large number of structures, which limits their application. In this paper, we propose a novel differentiable method for channel pruning, named Differentiable Markov Channel Pruning (DMCP), to efficiently search the optimal sub-structure. Our method is differentiable and can be directly optimized by gradient descent with respect to standard task loss and budget regularization (e.g. FLOPs constraint). In DMCP, we model the channel pruning as a Markov process, in which each state represents for retaining the corresponding channel during pruning, and transitions between states denote the pruning process. In the end, our method is able to implicitly select the proper number of channels in each layer by the Markov process with optimized transitions. To validate the effectiveness of our method, we perform extensive experiments on Imagenet with ResNet and MobilenetV2. Results show our method can achieve consistent improvement than state-of-the-art pruning methods in various FLOPs settings. The code is available at https://github.com/zx55/dmcp
+> Network pruning is a promising avenue for compressing deep neural networks. A typical approach to pruning starts by training a model and then removing redundant parameters while minimizing the impact on what is learned. Alternatively, a recent approach shows that pruning can be done at initialization prior to training, based on a saliency criterion called connection sensitivity. However, it remains unclear exactly why pruning an untrained, randomly initialized neural network is effective. In this work, by noting connection sensitivity as a form of gradient, we formally characterize initialization conditions to ensure reliable connection sensitivity measurements, which in turn yields effective pruning results. Moreover, we analyze the signal propagation properties of the resulting pruned networks and introduce a simple, data-free method to improve their trainability. Our modifications to the existing pruning at initialization method lead to improved results on all tested network models for image classification tasks. Furthermore, we empirically study the effect of supervision for pruning and demonstrate that our signal propagation perspective, combined with unsupervised pruning, can be useful in various scenarios where pruning is applied to non-standard arbitrarily-designed architectures.
 
-### Learning Filter Pruning Criteria for Deep Convolutional Neural Networks Acceleration.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/He_Learning_Filter_Pruning_Criteria_for_Deep_Convolutional_Neural_Networks_Acceleration_CVPR_2020_paper.html) · 📚 被引 201
-- **作者**: Yang He, Yuhang Ding, Ping Liu, Linchao Zhu, Hanwang Zhang, Yi Yang
-- **🏷️ 机构**: NUS
-- **会议**: CVPR 2020
+</details>
 
-### Structured Compression by Weight Encryption for Unstructured Pruning and Quantization.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Kwon_Structured_Compression_by_Weight_Encryption_for_Unstructured_Pruning_and_Quantization_CVPR_2020_paper.html) · 📚 被引 41
-- **作者**: Se Jung Kwon, Dongsoo Lee, Byeongwook Kim, Parichay Kapoor, Baeseong Park, Gu-Yeon Wei
+### Provable Filter Pruning for Efficient Neural Networks.
+- **链接**: [arXiv:1911.07412](https://arxiv.org/abs/1911.07412)
+- **作者**: Lucas Liebenwein, Cenk Baykal, Harry Lang, Dan Feldman, Daniela Rus
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: ICLR 2020
 
-### Group Sparsity: The Hinge Between Filter Pruning and Decomposition for Network Compression.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_Group_Sparsity_The_Hinge_Between_Filter_Pruning_and_Decomposition_for_CVPR_2020_paper.html) · 📚 被引 170
-- **作者**: Yawei Li, Shuhang Gu, Christoph Mayer, Luc Van Gool, Radu Timofte
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### HRank: Filter Pruning Using High-Rank Feature Map.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Lin_HRank_Filter_Pruning_Using_High-Rank_Feature_Map_CVPR_2020_paper.html) · 📚 被引 737
-- **作者**: Mingbao Lin, Rongrong Ji, Yan Wang, Yichen Zhang, Baochang Zhang, Yonghong Tian et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+> We present a provable, sampling-based approach for generating compact Convolutional Neural Networks (CNNs) by identifying and removing redundant filters from an over-parameterized network. Our algorithm uses a small batch of input data points to assign a saliency score to each filter and constructs an importance sampling distribution where filters that highly affect the output are sampled with correspondingly high probability. In contrast to existing filter pruning approaches, our method is simultaneously data-informed, exhibits provable guarantees on the size and performance of the pruned network, and is widely applicable to varying network architectures and data sets. Our analytical bounds bridge the notions of compressibility and importance of network structures, which gives rise to a fully-automated procedure for identifying and preserving filters in layers that are essential to the network's performance. Our experimental evaluations on popular architectures and data sets show that our algorithm consistently generates sparser and more efficient models than those constructed by existing filter pruning approaches.
 
-### Neural Network Pruning With Residual-Connections and Limited-Data.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Luo_Neural_Network_Pruning_With_Residual-Connections_and_Limited-Data_CVPR_2020_paper.html) · 📚 被引 113
-- **作者**: Jian-Hao Luo, Jianxin Wu
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+</details>
 
-### Dynamic Convolutions: Exploiting Spatial Sparsity for Faster Inference.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Verelst_Dynamic_Convolutions_Exploiting_Spatial_Sparsity_for_Faster_Inference_CVPR_2020_paper.html) · 📚 被引 157
-- **作者**: Thomas Verelst, Tinne Tuytelaars
+### Dynamic Model Pruning with Feedback.
+- **链接**: [arXiv:2006.07253](https://arxiv.org/abs/2006.07253)
+- **作者**: Tao Lin, Sebastian U. Stich, Luis Barba, Daniil Dmitriev, Martin Jaggi
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: ICLR 2020
 
-### Efficient and Robust Shape Correspondence via Sparsity-Enforced Quadratic Assignment.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Xiang_Efficient_and_Robust_Shape_Correspondence_via_Sparsity-Enforced_Quadratic_Assignment_CVPR_2020_paper.html) · 📚 被引 7
-- **作者**: Rui Xiang, Rongjie Lai, Hongkai Zhao
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Automatic Neural Network Compression by Sparsity-Quantization Joint Learning: A Constrained Optimization-Based Approach.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yang_Automatic_Neural_Network_Compression_by_Sparsity-Quantization_Joint_Learning_A_Constrained_CVPR_2020_paper.html) · 📚 被引 63
-- **作者**: Haichuan Yang, Shupeng Gui, Yuhao Zhu, Ji Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+> Deep neural networks often have millions of parameters. This can hinder their deployment to low-end devices, not only due to high memory requirements but also because of increased latency at inference. We propose a novel model compression method that generates a sparse trained model without additional overhead: by allowing (i) dynamic allocation of the sparsity pattern and (ii) incorporating feedback signal to reactivate prematurely pruned weights we obtain a performant sparse model in one single training pass (retraining is not needed, but can further improve the performance). We evaluate our method on CIFAR-10 and ImageNet, and show that the obtained sparse models can reach the state-of-the-art performance of dense models. Moreover, their performance surpasses that of models generated by all previously proposed pruning schemes.
 
-### Few Sample Knowledge Distillation for Efficient Network Compression.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_Few_Sample_Knowledge_Distillation_for_Efficient_Network_Compression_CVPR_2020_paper.html) · 📚 被引 107
-- **作者**: Tianhong Li, Jianguo Li, Zhuang Liu, Changshui Zhang
+</details>
+
+### Data-Independent Neural Pruning via Coresets.
+- **链接**: [出版页](https://openreview.net/forum?id=H1gmHaEKwB)
+- **作者**: Ben Mussay, Margarita Osadchy, Vladimir Braverman, Samson Zhou, Dan Feldman
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: ICLR 2020
+
+### Lookahead: A Far-sighted Alternative of Magnitude-based Pruning.
+- **链接**: [arXiv:2002.04809](https://arxiv.org/abs/2002.04809) · [代码](https://github.com/alinlab/lookahead_pruning)
+- **作者**: Sejun Park, Jaeho Lee, Sangwoo Mo, Jinwoo Shin
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Magnitude-based pruning is one of the simplest methods for pruning neural networks. Despite its simplicity, magnitude-based pruning and its variants demonstrated remarkable performances for pruning modern architectures. Based on the observation that magnitude-based pruning indeed minimizes the Frobenius distortion of a linear operator corresponding to a single layer, we develop a simple pruning method, coined lookahead pruning, by extending the single layer optimization to a multi-layer optimization. Our experimental results demonstrate that the proposed method consistently outperforms magnitude-based pruning on various networks, including VGG and ResNet, particularly in the high-sparsity regime. See https://github.com/alinlab/lookahead_pruning for codes.
+
+</details>
+
+### Comparing Rewinding and Fine-tuning in Neural Network Pruning.
+- **链接**: [arXiv:2003.02389](https://arxiv.org/abs/2003.02389)
+- **作者**: Alex Renda, Jonathan Frankle, Michael Carbin
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Many neural network pruning algorithms proceed in three steps: train the network to completion, remove unwanted structure to compress the network, and retrain the remaining structure to recover lost accuracy. The standard retraining technique, fine-tuning, trains the unpruned weights from their final trained values using a small fixed learning rate. In this paper, we compare fine-tuning to alternative retraining techniques. Weight rewinding (as proposed by Frankle et al., (2019)), rewinds unpruned weights to their values from earlier in training and retrains them from there using the original training schedule. Learning rate rewinding (which we propose) trains the unpruned weights from their final values using the same learning rate schedule as weight rewinding. Both rewinding techniques outperform fine-tuning, forming the basis of a network-agnostic pruning algorithm that matches the accuracy and compression ratios of several more network-specific state-of-the-art techniques.
+
+</details>
+
+### One-Shot Pruning of Recurrent Neural Networks by Jacobian Spectrum Evaluation.
+- **链接**: [arXiv:1912.00120](https://arxiv.org/abs/1912.00120)
+- **作者**: Matthew Shunshi Zhang, Bradly C. Stadie
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advances in the sparse neural network literature have made it possible to prune many large feed forward and convolutional networks with only a small quantity of data. Yet, these same techniques often falter when applied to the problem of recovering sparse recurrent networks. These failures are quantitative: when pruned with recent techniques, RNNs typically obtain worse performance than they do under a simple random pruning scheme. The failures are also qualitative: the distribution of active weights in a pruned LSTM or GRU network tend to be concentrated in specific neurons and gates, and not well dispersed across the entire architecture. We seek to rectify both the quantitative and qualitative issues with recurrent network pruning by introducing a new recurrent pruning objective derived from the spectrum of the recurrent Jacobian. Our objective is data efficient (requiring only 64 data points to prune the network), easy to implement, and produces 95% sparse GRUs that significantly improve on existing baselines. We evaluate on sequential MNIST, Billion Words, and Wikitext.
+
+</details>
+
+### DeepHoyer: Learning Sparser Neural Network with Differentiable Scale-Invariant Sparsity Measures.
+- **链接**: [arXiv:1908.09979](https://arxiv.org/abs/1908.09979)
+- **作者**: Huanrui Yang, Wei Wen, Hai Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In seeking for sparse and efficient neural network models, many previous works investigated on enforcing L1 or L0 regularizers to encourage weight sparsity during training. The L0 regularizer measures the parameter sparsity directly and is invariant to the scaling of parameter values, but it cannot provide useful gradients, and therefore requires complex optimization techniques. The L1 regularizer is almost everywhere differentiable and can be easily optimized with gradient descent. Yet it is not scale-invariant, causing the same shrinking rate to all parameters, which is inefficient in increasing sparsity. Inspired by the Hoyer measure (the ratio between L1 and L2 norms) used in traditional compressed sensing problems, we present DeepHoyer, a set of sparsity-inducing regularizers that are both differentiable almost everywhere and scale-invariant. Our experiments show that enforcing DeepHoyer regularizers can produce even sparser neural network models than previous works, under the same accuracy level. We also show that DeepHoyer can be applied to both element-wise and structural pruning.
+
+</details>
+
+### Why Not to Use Zero Imputation? Correcting Sparsity Bias in Training Neural Networks.
+- **链接**: [出版页](https://openreview.net/forum?id=BylsKkHYvH)
+- **作者**: Joonyoung Yi, Juhyuk Lee, Kwang Joon Kim, Sung Ju Hwang, Eunho Yang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2020
