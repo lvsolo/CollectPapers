@@ -1,276 +1,281 @@
 # Network Pruning — 2024 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 26 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Sparsest Models Elude Pruning: An Exposé of Pruning's Current Capabilities.
-- **链接**: [arXiv:2407.04075](https://arxiv.org/abs/2407.04075)
-- **作者**: Stephen Zhang, Vardan Papyan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### Scene Adaptive Sparse Transformer for Event-based Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2404.01882](https://arxiv.org/abs/2404.01882) · 📚 被引 42
+- **作者**: Yansong Peng, Hebei Li, Yueyi Zhang, Xiaoyan Sun, Feng Wu
+- **🏷️ 机构**: University of Science and Technology of China
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对基于事件相机的高计算成本问题，现有Transformer方法在事件目标检测中缺乏稀疏性和适应性，无法平衡token级稀疏化与窗口Transformer的效率，且缺乏场景特定优化导致信息丢失和召回率降低。本文提出场景自适应稀疏Transformer（SAST），通过窗口-令牌协同稀疏化增强容错性并降低计算开销，利用创新的评分和选择模块以及掩码稀疏窗口自注意力，实现场景感知的自适应稀疏度优化。相比已有工作，SAST能动态调整稀疏级别，仅关注重要目标，在保持性能的同时显著降低计算成本。实验表明，SAST在事件目标检测任务上实现了高效性和高召回率的平衡。
+- **摘要（英）**: This paper addresses the high computational cost of Transformer-based event-based object detection by proposing a Scene Adaptive Sparse Transformer (SAST) that enables window-token co-sparsification and scene-aware sparsity optimization. SAST dynamically adjusts sparsity levels based on scene complexity, focusing on important objects while reducing overhead, achieving improved efficiency and recall compared to existing sparse Transformers.
+- **核心贡献**: 提出SAST框架，通过窗口-令牌协同稀疏化实现高效的事件目标检测。
+- **创新点**: 引入场景自适应稀疏度优化和掩码稀疏窗口自注意力机制。
+- **结果**: 在降低计算开销的同时，保持了高召回率和检测性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Pruning has emerged as a promising approach for compressing large-scale models, yet its effectiveness in recovering the sparsest of models has not yet been explored. We conducted an extensive series of 485,838 experiments, applying a range of state-of-the-art pruning algorithms to a synthetic dataset we created, named the Cubist Spiral. Our findings reveal a significant gap in performance compared to ideal sparse networks, which we identified through a novel combinatorial search algorithm. We attribute this performance gap to current pruning algorithms' poor behaviour under overparameterization, their tendency to induce disconnected paths throughout the network, and their propensity to get stuck at suboptimal solutions, even when given the optimal width and initialization. This gap is concerning, given the simplicity of the network architectures and datasets used in our study. We hope that our research encourages further investigation into new pruning techniques that strive for true network sparsity.
+> While recent Transformer-based approaches have shown impressive performances on event-based object detection tasks, their high computational costs still diminish the low power consumption advantage of event cameras. Image-based works attempt to reduce these costs by introducing sparse Transformers. However, they display inadequate sparsity and adaptability when applied to event-based object detection, since these approaches cannot balance the fine granularity of token-level sparsification and the efficiency of window-based Transformers, leading to reduced performance and efficiency. Furthermore, they lack scene-specific sparsity optimization, resulting in information loss and a lower recall rate. To overcome these limitations, we propose the Scene Adaptive Sparse Transformer (SAST). SAST enables window-token co-sparsification, significantly enhancing fault tolerance and reducing computational overhead. Leveraging the innovative scoring and selection modules, along with the Masked Sparse Window Self-Attention, SAST showcases remarkable scene-aware adaptability: It focuses only on important objects and dynamically optimizes sparsity level according to scene complexity, maintaining a remarkable balance between performance and computational cost. The evaluation results show that SAST outperforms all other dense and sparse networks in both performance and efficiency on two large-scale event-based object detection datasets (1Mpx and Gen1). Code: https://github.com/Peterande/SAST
 
 </details>
 
-### Junk DNA Hypothesis: Pruning Small Pre-Trained Weights Irreversibly and Monotonically Impairs "Difficult" Downstream Tasks in LLMs.
-- **链接**: [出版页](https://proceedings.mlr.press/v235/yin24b.html)
-- **作者**: Lu Yin, Ajay Kumar Jaiswal, Shiwei Liu, Souvik Kundu, Zhangyang Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-### Outlier Weighed Layerwise Sparsity (OWL): A Missing Secret Sauce for Pruning LLMs to High Sparsity.
-- **链接**: [出版页](https://proceedings.mlr.press/v235/yin24e.html)
-- **作者**: Lu Yin, You Wu, Zhenyu Zhang, Cheng-Yu Hsieh, Yaqing Wang, Yiling Jia et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-### BWS: Best Window Selection Based on Sample Scores for Data Pruning across Broad Ranges.
-- **链接**: [arXiv:2406.03057](https://arxiv.org/abs/2406.03057)
-- **作者**: Hoyong Choi, Nohyun Ki, Hye Won Chung
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### Transferable and Principled Efficiency for Open-Vocabulary Segmentation. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2404.07448](https://arxiv.org/abs/2404.07448) · 📚 被引 2
+- **作者**: Jingxuan Xu, Wuyang Chen, Yao Zhao, Yunchao Wei
+- **🏷️ 机构**: Beijing Jiaotong University, Simon Fraser University
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对开放词汇分割依赖大型视觉语言基础模型导致计算开销大、微调成本高的问题，该论文提出一种可迁移且原则性的效率优化方法，旨在使用更小的模型和更低的训练成本达到与大型模型相当甚至更好的性能。核心策略是使效率优化具有原则性，从而无需定制即可无缝迁移到不同OVS框架。实验在多个OVS基准上验证了该方法在分割精度和计算成本之间的优越权衡，但摘要未给出具体数据。
+- **摘要（英）**: This paper addresses the high computational and fine-tuning costs of open-vocabulary segmentation with large vision-language models by proposing a transferable and principled efficiency approach, enabling smaller models to achieve comparable or better performance. The strategy ensures seamless transferability across OVS frameworks without customization, demonstrating superior accuracy-efficiency trade-offs on diverse benchmarks, though specific metrics are not detailed.
+- **核心贡献**: 提出了一种可迁移且原则性的效率优化方法，用于降低开放词汇分割的计算和训练成本。
+- **创新点**: 通过原则性设计实现效率优化在不同OVS框架间的无缝迁移。
+- **结果**: 在多个基准上实现了精度与计算成本的优越权衡。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Data subset selection aims to find a smaller yet informative subset of a large dataset that can approximate the full-dataset training, addressing challenges associated with training neural networks on large-scale datasets. However, existing methods tend to specialize in either high or low selection ratio regimes, lacking a universal approach that consistently achieves competitive performance across a broad range of selection ratios. We introduce a universal and efficient data subset selection method, Best Window Selection (BWS), by proposing a method to choose the best window subset from samples ordered based on their difficulty scores. This approach offers flexibility by allowing the choice of window intervals that span from easy to difficult samples. Furthermore, we provide an efficient mechanism for selecting the best window subset by evaluating its quality using kernel ridge regression. Our experimental results demonstrate the superior performance of BWS compared to other baselines across a broad range of selection ratios over datasets, including CIFAR-10/100 and ImageNet, and the scenarios involving training from random initialization or fine-tuning of pre-trained models.
+> Recent success of pre-trained foundation vision-language models makes Open-Vocabulary Segmentation (OVS) possible. Despite the promising performance, this approach introduces heavy computational overheads for two challenges: 1) large model sizes of the backbone; 2) expensive costs during the fine-tuning. These challenges hinder this OVS strategy from being widely applicable and affordable in real-world scenarios. Although traditional methods such as model compression and efficient fine-tuning can address these challenges, they often rely on heuristics. This means that their solutions cannot be easily transferred and necessitate re-training on different models, which comes at a cost. In the context of efficient OVS, we target achieving performance that is comparable to or even better than prior OVS works based on large vision-language foundation models, by utilizing smaller models that incur lower training costs. The core strategy is to make our efficiency principled and thus seamlessly transferable from one OVS framework to others without further customization. Comprehensive experiments on diverse OVS benchmarks demonstrate our superior trade-off between segmentation accuracy and computation costs over previous works. Our code is available on https://github.com/Xujxyang/OpenTrans
 
 </details>
 
-### A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts.
-- **链接**: [arXiv:2405.16646](https://arxiv.org/abs/2405.16646)
-- **作者**: Mohammed Nowaz Rabbani Chowdhury, Meng Wang, Kaoutar El Maghraoui, Naigang Wang, Pin-Yu Chen, Christopher D. Carothers
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### One Prompt Word is Enough to Boost Adversarial Robustness for Pre-Trained Vision-Language Models. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2403.01849](https://arxiv.org/abs/2403.01849) · 📚 被引 33
+- **作者**: Lin Li, Haoyan Guan, Jianing Qiu, Michael W. Spratling
+- **🏷️ 机构**: King&#x0027;s College,London, Imperial College,London
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对预训练视觉语言模型（如CLIP）对对抗样本的脆弱性，本文从文本提示角度研究鲁棒性，而非模型权重。首先发现对抗攻击和防御的有效性对文本提示敏感，据此提出对抗提示调优（APT）方法，通过学习鲁棒文本提示提升模型抗攻击能力。APT在计算和数据效率上具有优势，在15个数据集和4种数据稀疏方案下进行了广泛实验，仅添加一个学习词即可显著提升准确率和鲁棒性，并展现出良好的分布偏移泛化能力。
+- **摘要（英）**: This paper studies adversarial robustness of VLMs from the text prompt perspective, proposing Adversarial Prompt Tuning (APT) to learn robust prompts. APT is computationally and data efficient, significantly boosting accuracy and robustness with just one learned word across 15 datasets and various data sparsity settings.
+- **核心贡献**: 提出对抗提示调优方法，通过学习鲁棒文本提示增强VLM的对抗鲁棒性。
+- **创新点**: 首次从文本提示角度而非模型权重角度提升鲁棒性。
+- **结果**: 在多个数据集上显著提升了准确率和鲁棒性，且仅需一个学习词。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The sparsely gated mixture of experts (MoE) architecture sends different inputs to different subnetworks, i.e., experts, through trainable routers. MoE reduces the training computation significantly for large models, but its deployment can be still memory or computation expensive for some downstream tasks. Model pruning is a popular approach to reduce inference computation, but its application in MoE architecture is largely unexplored. To the best of our knowledge, this paper provides the first provably efficient technique for pruning experts in finetuned MoE models. We theoretically prove that prioritizing the pruning of the experts with a smaller change of the routers l2 norm from the pretrained model guarantees the preservation of test accuracy, while significantly reducing the model size and the computational requirements. Although our theoretical analysis is centered on binary classification tasks on simplified MoE architecture, our expert pruning method is verified on large vision MoE models such as VMoE and E3MoE finetuned on benchmark datasets such as CIFAR10, CIFAR100, and ImageNet.
+> Large pre-trained Vision-Language Models (VLMs) like CLIP, despite having remarkable generalization ability, are highly vulnerable to adversarial examples. This work studies the adversarial robustness of VLMs from the novel perspective of the text prompt instead of the extensively studied model weights (frozen in this work). We first show that the effectiveness of both adversarial attack and defense are sensitive to the used text prompt. Inspired by this, we propose a method to improve resilience to adversarial attacks by learning a robust text prompt for VLMs. The proposed method, named Adversarial Prompt Tuning (APT), is effective while being both computationally and data efficient. Extensive experiments are conducted across 15 datasets and 4 data sparsity schemes (from 1-shot to full training data settings) to show APT's superiority over hand-engineered prompts and other state-of-the-art adaption methods. APT demonstrated excellent abilities in terms of the in-distribution performance and the generalization under input distribution shift and across datasets. Surprisingly, by simply adding one learned word to the prompts, APT can significantly boost the accuracy and robustness (epsilon=4/255) over the hand-engineered prompts by +13% and +8.5% on average respectively. The improvement further increases, in our most effective setting, to +26.4% for accuracy and +16.7% for robustness. Code is available at https://github.com/TreeLLi/APT.
 
 </details>
 
-### Pruner-Zero: Evolving Symbolic Pruning Metric From Scratch for Large Language Models.
-- **链接**: [arXiv:2406.02924](https://arxiv.org/abs/2406.02924) · [代码](https://github.com/pprp/Pruner-Zero)
-- **作者**: Peijie Dong, Lujun Li, Zhenheng Tang, Xiang Liu, Xinglin Pan, Qiang Wang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### MoPE-CLIP: Structured Pruning for Efficient Vision-Language Models with Module-Wise Pruning Error Metric. **⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02584) · 📚 被引 21
+- **作者**: Haokun Lin, Haoli Bai, Zhili Liu, Lu Hou, Muyi Sun, Linqi Song et al.
+- **🏷️ 机构**: School of Artificial Intelligence, University of Chinese Academy of Sciences, Huawei Noah&#x0027;s Ark Lab, Institute of Automation, Chinese Academy of Sciences,CRIPAC &#x0026; MAIS
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对视觉语言模型（VLM）的高计算成本，本文提出MoPE-CLIP结构化剪枝方法，引入模块级剪枝误差度量来指导剪枝过程。该方法通过评估每个模块的剪枝误差，实现更精确的剪枝决策，在保持模型性能的同时减少参数和计算量。相比现有剪枝方法，MoPE-CLIP考虑了模块间的差异，提高了剪枝的效率和效果。实验表明，该方法在VLM任务上实现了有效的模型压缩。
+- **摘要（英）**: This paper proposes MoPE-CLIP, a structured pruning method for vision-language models using a module-wise pruning error metric. It guides pruning decisions by evaluating per-module errors, improving efficiency and maintaining performance, achieving effective model compression.
+- **核心贡献**: 提出模块级剪枝误差度量，用于VLM的结构化剪枝。
+- **创新点**: 引入模块级误差评估，提升剪枝精度。
+- **结果**: 在保持性能的同时，有效减少了模型参数和计算量。
+
+### Once for Both: Single Stage of Importance and Sparsity Search for Vision Transformer Compression. **⭐⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00533) · 📚 被引 8
+- **作者**: Hancheng Ye, Chong Yu, Peng Ye, Renqiu Xia, Yansong Tang, Jiwen Lu et al.
+- **🏷️ 机构**: School of Information Science and Technology, Fudan University, Academy for Engineering and Technology, Fudan University, Shanghai Artificial Intelligence Laboratory
+- **会议**: CVPR 2024
+- **摘要（中）**: 该论文针对视觉Transformer压缩中重要性和稀疏性搜索分离导致效率低下的问题，提出了一种单阶段联合搜索方法，同时优化通道重要性和稀疏性。由于摘要缺失，具体方法细节和实验结果无法获取，但题目暗示该方法旨在简化压缩流程并提升性能。
+- **摘要（英）**: This paper addresses the inefficiency of separate importance and sparsity search in vision transformer compression by proposing a single-stage joint search method. Due to missing abstract, specific details and results are unavailable, but the title suggests a streamlined compression pipeline.
+- **核心贡献**: 提出单阶段联合搜索方法，同时优化ViT压缩中的重要性和稀疏性。
+- **创新点**: 将重要性搜索和稀疏性搜索合并为单阶段过程。
+- **结果**: 具体效果未知，因摘要缺失。
+
+### Dense Vision Transformer Compression with Few Samples. **⭐⭐⭐** (相关度: 45%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01498) · 📚 被引 7
+- **作者**: Hanxiao Zhang, Yifan Zhou, Guo-Hua Wang
+- **🏷️ 机构**: Nanjing University,National Key Laboratory for Novel Software Technology,China
+- **会议**: CVPR 2024
+- **摘要（中）**: 该论文针对少样本场景下的密集视觉Transformer压缩问题，旨在在有限数据下实现高效压缩。由于摘要缺失，具体方法和技术细节无法获取，但题目表明其关注少样本条件下的ViT压缩，可能涉及知识蒸馏或剪枝技术。
+- **摘要（英）**: This paper addresses dense vision transformer compression with few samples, aiming for efficient compression under limited data. Due to missing abstract, specific methods are unknown, but the topic focuses on few-shot ViT compression.
+- **核心贡献**: 研究少样本条件下的密集ViT压缩方法。
+- **创新点**: 针对少样本场景设计压缩策略。
+- **结果**: 具体效果未知，因摘要缺失。
+
+### Diversity-Aware Channel Pruning for StyleGAN Compression. **⭐⭐⭐⭐** (相关度: 55%)
+- **链接**: [arXiv:2403.13548](https://arxiv.org/abs/2403.13548) · 📚 被引 10
+- **作者**: Jiwoo Chung, Sangeek Hyun, Sang-Heon Shim, Jae-Pil Heo
+- **🏷️ 机构**: Sungkyunkwan University
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对StyleGAN压缩后样本多样性下降的问题，提出了一种基于通道对潜在向量敏感性的剪枝方法，通过评估通道对潜在向量扰动的敏感性来增强压缩模型的多样性。该方法仅关注剪枝阶段，可与现有训练方案互补且无额外训练成本。实验表明，该方法在多个数据集上显著提升样本多样性，FID分数大幅超越现有方法，且仅用一半训练迭代即可达到可比分数。
+- **摘要（英）**: This paper addresses the diversity degradation in compressed StyleGAN by proposing a channel pruning method that leverages channel sensitivities to latent vectors. It enhances sample diversity without extra training cost, achieving significantly better FID scores than state-of-the-art methods and comparable results with half training iterations.
+- **核心贡献**: 提出基于潜在向量敏感性的通道剪枝方法，提升StyleGAN压缩后的多样性。
+- **创新点**: 利用通道对潜在向量扰动的敏感性进行重要性评估。
+- **结果**: 在多个数据集上显著提升多样性，FID大幅优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Despite the remarkable capabilities, Large Language Models (LLMs) face deployment challenges due to their extensive size. Pruning methods drop a subset of weights to accelerate, but many of them require retraining, which is prohibitively expensive and computationally demanding. Recently, post-training pruning approaches introduced novel metrics, enabling the pruning of LLMs without retraining. However, these metrics require the involvement of human experts and tedious trial and error. To efficiently identify superior pruning metrics, we develop an automatic framework for searching symbolic pruning metrics using genetic programming. In particular, we devise an elaborate search space encompassing the existing pruning metrics to discover the potential symbolic pruning metric. We propose an opposing operation simplification strategy to increase the diversity of the population. In this way, Pruner-Zero allows auto-generation of symbolic pruning metrics. Based on the searched results, we explore the correlation between pruning metrics and performance after pruning and summarize some principles. Extensive experiments on LLaMA and LLaMA-2 on language modeling and zero-shot tasks demonstrate that our Pruner-Zero obtains superior performance than SOTA post-training pruning methods. Code at: \url{https://github.com/pprp/Pruner-Zero}.
+> StyleGAN has shown remarkable performance in unconditional image generation. However, its high computational cost poses a significant challenge for practical applications. Although recent efforts have been made to compress StyleGAN while preserving its performance, existing compressed models still lag behind the original model, particularly in terms of sample diversity. To overcome this, we propose a novel channel pruning method that leverages varying sensitivities of channels to latent vectors, which is a key factor in sample diversity. Specifically, by assessing channel importance based on their sensitivities to latent vector perturbations, our method enhances the diversity of samples in the compressed model. Since our method solely focuses on the channel pruning stage, it has complementary benefits with prior training schemes without additional training cost. Extensive experiments demonstrate that our method significantly enhances sample diversity across various datasets. Moreover, in terms of FID scores, our method not only surpasses state-of-the-art by a large margin but also achieves comparable scores with only half training iterations.
 
 </details>
 
-### A New Branch-and-Bound Pruning Framework for ℓ0-Regularized Problems.
-- **链接**: [arXiv:2406.03504](https://arxiv.org/abs/2406.03504)
-- **作者**: Théo Guyard, Cédric Herzet, Clément Elvira, Ayse-Nur Arslan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### Jointly Training and Pruning CNNs via Learnable Agent Guidance and Alignment. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2403.19490](https://arxiv.org/abs/2403.19490) · 📚 被引 21
+- **作者**: Alireza Ganjdanesh, Shangqian Gao, Heng Huang
+- **🏷️ 机构**: University of Maryland College Park,Department of Computer Science, University of Pittsburgh,Department of Electrical and Computer Engineering
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对传统结构化剪枝需要预训练模型、成本高的问题，提出联合训练与剪枝的方法。②使用强化学习智能体决定各层剪枝率，在训练过程中迭代更新模型权重和智能体策略，并通过正则化使权重与所选结构对齐。③针对动态奖励函数问题，设计了机制建模奖励函数变化并为其提供表示。④摘要未提供具体数据，但方法在概念上具有创新性。
+- **摘要（英）**: This paper addresses the high cost of pretraining in structural pruning by jointly training and pruning CNNs. An RL agent determines layer-wise pruning ratios, with weights regularized to align with the selected structure. It models the dynamic reward function for the agent, though no quantitative results are provided in the abstract.
+- **核心贡献**: 提出基于RL智能体引导的联合训练与剪枝框架。
+- **创新点**: 动态奖励函数建模机制。
+- **结果**: 摘要未给出具体效果数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We consider the resolution of learning problems involving $\ell_0$-regularization via Branch-and-Bound (BnB) algorithms. These methods explore regions of the feasible space of the problem and check whether they do not contain solutions through "pruning tests". In standard implementations, evaluating a pruning test requires to solve a convex optimization problem, which may result in computational bottlenecks. In this paper, we present an alternative to implement pruning tests for some generic family of $\ell_0$-regularized problems. Our proposed procedure allows the simultaneous assessment of several regions and can be embedded in standard BnB implementations with a negligible computational overhead. We show through numerical simulations that our pruning strategy can improve the solving time of BnB procedures by several orders of magnitude for typical problems encountered in machine-learning applications.
+> Structural model pruning is a prominent approach used for reducing the computational cost of Convolutional Neural Networks (CNNs) before their deployment on resource-constrained devices. Yet, the majority of proposed ideas require a pretrained model before pruning, which is costly to secure. In this paper, we propose a novel structural pruning approach to jointly learn the weights and structurally prune architectures of CNN models. The core element of our method is a Reinforcement Learning (RL) agent whose actions determine the pruning ratios of the CNN model's layers, and the resulting model's accuracy serves as its reward. We conduct the joint training and pruning by iteratively training the model's weights and the agent's policy, and we regularize the model's weights to align with the selected structure by the agent. The evolving model's weights result in a dynamic reward function for the agent, which prevents using prominent episodic RL methods with stationary environment assumption for our purpose. We address this challenge by designing a mechanism to model the complex changing dynamics of the reward function and provide a representation of it to the RL agent. To do so, we take a learnable embedding for each training epoch and employ a recurrent model to calculate a representation of the changing environment. We train the recurrent model and embeddings using a decoder model to reconstruct observed rewards. Such a design empowers our agent to effectively leverage episodic observations along with the environment representations to learn a proper policy to determine performant sub-networks of the CNN model. Our extensive experiments on CIFAR-10 and ImageNet using ResNets and MobileNets demonstrate the effectiveness of our method.
 
 </details>
 
-### PruNeRF: Segment-Centric Dataset Pruning via 3D Spatial Consistency.
-- **链接**: [arXiv:2406.00798](https://arxiv.org/abs/2406.00798)
-- **作者**: Yeonsung Jung, Heecheol Yun, Joonhyung Park, Jin-Hwa Kim, Eunho Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### Device-Wise Federated Network Pruning. **⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01173) · 📚 被引 8
+- **作者**: Shangqian Gao, Junyi Li, Zeyu Zhang, Yanfu Zhang, Weidong Cai, Heng Huang
+- **🏷️ 机构**: University of Pittsburgh,Electrical and Computer Engineering, University of Maryland College Park,Computer Science, University of Arizona,Information
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对联邦学习中的网络剪枝问题，提出设备级联邦剪枝方法。②摘要为空，无法获取具体方法细节。③无对比信息。④无效果数据。
+- **摘要（英）**: This paper focuses on device-wise federated network pruning, but the abstract is empty, providing no details on methodology or results.
+- **核心贡献**: 提出设备级联邦剪枝概念。
+- **创新点**: 联邦学习与剪枝结合。
+- **结果**: 无数据。
+
+### BilevelPruning: Unified Dynamic and Static Channel Pruning for Convolutional Neural Networks. **⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01523) · 📚 被引 14
+- **作者**: Shangqian Gao, Yanfu Zhang, Feihu Huang, Heng Huang
+- **🏷️ 机构**: University of Pittsburgh,Electrical and Computer Engineering, College of William and Mary,Computer Science, University of Maryland College Park,Computer Science
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对动态和静态通道剪枝的统一问题，提出BilevelPruning方法。②摘要为空，无法获取具体方法。③无对比。④无效果数据。
+- **摘要（英）**: This paper proposes BilevelPruning for unified dynamic and static channel pruning, but the abstract is empty, lacking methodological details and results.
+- **核心贡献**: 提出统一动态与静态剪枝的双层优化框架。
+- **创新点**: 双层优化策略。
+- **结果**: 无数据。
+
+### OrthCaps: An Orthogonal CapsNet with Sparse Attention Routing and Pruning. **⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00577) · 📚 被引 8
+- **作者**: Xinyu Geng, Jiaming Wang, Jiawei Gong, Yuerong Xue, Jun Xu, Fanglin Chen et al.
+- **🏷️ 机构**: Harbin Institute of Technology,Shenzhen, Shanghai Jiao Tong University
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对CapsNet的计算效率问题，提出正交CapsNet与稀疏注意力路由和剪枝。②摘要为空，无法获取具体方法。③无对比。④无效果数据。
+- **摘要（英）**: This paper introduces OrthCaps, an orthogonal CapsNet with sparse attention routing and pruning, but the abstract is empty, providing no details on methodology or results.
+- **核心贡献**: 提出正交CapsNet的剪枝方法。
+- **创新点**: 正交约束与稀疏注意力。
+- **结果**: 无数据。
+
+### FedMef: Towards Memory-Efficient Federated Dynamic Pruning. **⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02601) · 📚 被引 20
+- **作者**: Hong Huang, Weiming Zhuang, Chen Chen, Lingjuan Lyu
+- **🏷️ 机构**: City University of Hong Kong, Sony AI
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对联邦动态剪枝的内存效率问题，提出FedMef方法。②摘要为空，无法获取具体方法。③无对比。④无效果数据。
+- **摘要（英）**: This paper proposes FedMef for memory-efficient federated dynamic pruning, but the abstract is empty, lacking details on methodology and results.
+- **核心贡献**: 提出内存高效的联邦动态剪枝方法。
+- **创新点**: 联邦场景下的动态剪枝优化。
+- **结果**: 无数据。
+
+### Resource- Efficient Transformer Pruning for Finetuning of Large Models. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01534) · 📚 被引 15
+- **作者**: Fatih Ilhan, Gong Su, Selim Furkan Tekin, Tiansheng Huang, Sihao Hu, Ling Liu
+- **🏷️ 机构**: Georgia Institute of Technology,Atlanta,GA, IBM Research,Yorktown Heights,NY
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对大模型微调时的资源消耗问题，提出资源高效的Transformer剪枝方法。②摘要为空，无法获取具体方法细节。③无对比信息。④无效果数据。
+- **摘要（英）**: This paper addresses resource-efficient transformer pruning for finetuning large models, but the abstract is empty, providing no details on methodology or results.
+- **核心贡献**: 提出面向大模型微调的Transformer剪枝方法。
+- **创新点**: 资源高效剪枝策略。
+- **结果**: 无数据。
+
+### Finding Lottery Tickets in Vision Models via Data-Driven Spectral Foresight Pruning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01528) · 📚 被引 8
+- **作者**: Leonardo Iurada, Marco Ciccone, Tatiana Tommasi
+- **🏷️ 机构**: Politecnico di Torino,Italy
+- **会议**: CVPR 2024
+
+### HiPose: Hierarchical Binary Surface Encoding and Correspondence Pruning for RGB-D 6DoF Object Pose Estimation.
+- **链接**: [arXiv:2311.12588](https://arxiv.org/abs/2311.12588) · 📚 被引 23
+- **作者**: Yongliang Lin, Yongzhi Su, Praveen Nathan, Sandeep Inuganti, Yan Di, Martin Sundermeyer et al.
+- **🏷️ 机构**: Zhejiang University, German Research Center for Artificial Intelligence (DFKI), Technische Universit&#x00E4;t M&#x00FC;nchen
+- **会议**: CVPR 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Neural Radiance Fields (NeRF) have shown remarkable performance in learning 3D scenes. However, NeRF exhibits vulnerability when confronted with distractors in the training images -- unexpected objects are present only within specific views, such as moving entities like pedestrians or birds. Excluding distractors during dataset construction is a straightforward solution, but without prior knowledge of their types and quantities, it becomes prohibitively expensive. In this paper, we propose PruNeRF, a segment-centric dataset pruning framework via 3D spatial consistency, that effectively identifies and prunes the distractors. We first examine existing metrics for measuring pixel-wise distraction and introduce Influence Functions for more accurate measurements. Then, we assess 3D spatial consistency using a depth-based reprojection technique to obtain 3D-aware distraction. Furthermore, we incorporate segmentation for pixel-to-segment refinement, enabling more precise identification. Our experiments on benchmark datasets demonstrate that PruNeRF consistently outperforms state-of-the-art methods in robustness against distractors.
+> In this work, we present a novel dense-correspondence method for 6DoF object pose estimation from a single RGB-D image. While many existing data-driven methods achieve impressive performance, they tend to be time-consuming due to their reliance on rendering-based refinement approaches. To circumvent this limitation, we present HiPose, which establishes 3D-3D correspondences in a coarse-to-fine manner with a hierarchical binary surface encoding. Unlike previous dense-correspondence methods, we estimate the correspondence surface by employing point-to-surface matching and iteratively constricting the surface until it becomes a correspondence point while gradually removing outliers. Extensive experiments on public benchmarks LM-O, YCB-V, and T-Less demonstrate that our method surpasses all refinement-free methods and is even on par with expensive refinement-based approaches. Crucially, our approach is computationally efficient and enables real-time critical applications with high accuracy requirements.
 
 </details>
 
-### LayerMerge: Neural Network Depth Compression through Layer Pruning and Merging.
-- **链接**: [arXiv:2406.12837](https://arxiv.org/abs/2406.12837) · [代码](https://github.com/snu-mllab/LayerMerge)
-- **作者**: Jinuk Kim, Marwa El Halabi, Mingi Ji, Hyun Oh Song
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### MAP: MAsk-Pruning for Source-Free Model Intellectual Property Protection.
+- **链接**: [arXiv:2403.04149](https://arxiv.org/abs/2403.04149) · 📚 被引 7
+- **作者**: Boyang Peng, Sanqing Qu, Yong Wu, Tianpei Zou, Lianghua He, Alois Knoll et al.
+- **🏷️ 机构**: Tongji University, Technical University of Munich
+- **会议**: CVPR 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Recent works show that reducing the number of layers in a convolutional neural network can enhance efficiency while maintaining the performance of the network. Existing depth compression methods remove redundant non-linear activation functions and merge the consecutive convolution layers into a single layer. However, these methods suffer from a critical drawback; the kernel size of the merged layers becomes larger, significantly undermining the latency reduction gained from reducing the depth of the network. We show that this problem can be addressed by jointly pruning convolution layers and activation functions. To this end, we propose LayerMerge, a novel depth compression method that selects which activation layers and convolution layers to remove, to achieve a desired inference speed-up while minimizing performance loss. Since the corresponding selection problem involves an exponential search space, we formulate a novel surrogate optimization problem and efficiently solve it via dynamic programming. Empirical results demonstrate that our method consistently outperforms existing depth compression and layer pruning methods on various network architectures, both on image classification and generation tasks. We release the code at https://github.com/snu-mllab/LayerMerge.
+> Deep learning has achieved remarkable progress in various applications, heightening the importance of safeguarding the intellectual property (IP) of well-trained models. It entails not only authorizing usage but also ensuring the deployment of models in authorized data domains, i.e., making models exclusive to certain target domains. Previous methods necessitate concurrent access to source training data and target unauthorized data when performing IP protection, making them risky and inefficient for decentralized private data. In this paper, we target a practical setting where only a well-trained source model is available and investigate how we can realize IP protection. To achieve this, we propose a novel MAsk Pruning (MAP) framework. MAP stems from an intuitive hypothesis, i.e., there are target-related parameters in a well-trained model, locating and pruning them is the key to IP protection. Technically, MAP freezes the source model and learns a target-specific binary mask to prevent unauthorized data usage while minimizing performance degradation on authorized data. Moreover, we introduce a new metric aimed at achieving a better balance between source and target performance degradation. To verify the effectiveness and versatility, we have evaluated MAP in a variety of scenarios, including vanilla source-available, practical source-free, and challenging data-free. Extensive experiments indicate that MAP yields new state-of-the-art performance.
 
 </details>
 
-### No Free Prune: Information-Theoretic Barriers to Pruning at Initialization.
-- **链接**: [arXiv:2402.01089](https://arxiv.org/abs/2402.01089)
-- **作者**: Tanishq Kumar, Kevin Luo, Mark Sellke
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### Zero-TPrune: Zero-Shot Token Pruning Through Leveraging of the Attention Graph in Pre-Trained Transformers.
+- **链接**: [arXiv:2305.17328](https://arxiv.org/abs/2305.17328) · 📚 被引 42
+- **作者**: Hongjie Wang, Bhishma Dedhia, Niraj K. Jha
+- **🏷️ 机构**: Princeton University,Princeton,NJ,USA,08540
+- **会议**: CVPR 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The existence of "lottery tickets" arXiv:1803.03635 at or near initialization raises the tantalizing question of whether large models are necessary in deep learning, or whether sparse networks can be quickly identified and trained without ever training the dense models that contain them. However, efforts to find these sparse subnetworks without training the dense model ("pruning at initialization") have been broadly unsuccessful arXiv:2009.08576. We put forward a theoretical explanation for this, based on the model's effective parameter count, $p_\text{eff}$, given by the sum of the number of non-zero weights in the final network and the mutual information between the sparsity mask and the data. We show the Law of Robustness of arXiv:2105.12806 extends to sparse networks with the usual parameter count replaced by $p_\text{eff}$, meaning a sparse neural network which robustly interpolates noisy data requires a heavily data-dependent mask. We posit that pruning during and after training outputs masks with higher mutual information than those produced by pruning at initialization. Thus two networks may have the same sparsities, but differ in effective parameter count based on how they were trained. This suggests that pruning near initialization may be infeasible and explains why lottery tickets exist, but cannot be found fast (i.e. without training the full network). Experiments on neural networks confirm that information gained during training may indeed affect model capacity.
+> Deployment of Transformer models on edge devices is becoming increasingly challenging due to the exponentially growing inference cost that scales quadratically with the number of tokens in the input sequence. Token pruning is an emerging solution to address this challenge due to its ease of deployment on various Transformer backbones. However, most token pruning methods require computationally expensive fine-tuning, which is undesirable in many edge deployment cases. In this work, we propose Zero-TPrune, the first zero-shot method that considers both the importance and similarity of tokens in performing token pruning. It leverages the attention graph of pre-trained Transformer models to produce an importance distribution for tokens via our proposed Weighted Page Rank (WPR) algorithm. This distribution further guides token partitioning for efficient similarity-based pruning. Due to the elimination of the fine-tuning overhead, Zero-TPrune can prune large models at negligible computational cost, switch between different pruning configurations at no computational cost, and perform hyperparameter tuning efficiently. We evaluate the performance of Zero-TPrune on vision tasks by applying it to various vision Transformer backbones and testing them on ImageNet. Without any fine-tuning, Zero-TPrune reduces the FLOPs cost of DeiT-S by 34.7% and improves its throughput by 45.3% with only 0.4% accuracy loss. Compared with state-of-the-art pruning methods that require fine-tuning, Zero-TPrune not only eliminates the need for fine-tuning after pruning but also does so with only 0.1% accuracy loss. Compared with state-of-the-art fine-tuning-free pruning methods, Zero-TPrune reduces accuracy loss by up to 49% with similar FLOPs budgets. Project webpage: https://jha-lab.github.io/zerotprune.
 
 </details>
 
-### Towards efficient deep spiking neural networks construction with spiking activity based pruning.
-- **链接**: [arXiv:2406.01072](https://arxiv.org/abs/2406.01072)
-- **作者**: Yaxin Li, Qi Xu, Jiangrong Shen, Hongming Xu, Long Chen, Gang Pan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### Auto- Train-Once: Controller Network Guided Automatic Network Pruning from Scratch.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01530) · 📚 被引 13
+- **作者**: Xidong Wu, Shangqian Gao, Zeyu Zhang, Zhenzhen Li, Runxue Bao, Yanfu Zhang et al.
+- **🏷️ 机构**: University of Pittsburgh, University of Arizona, Bosch Center for AI
+- **会议**: CVPR 2024
+
+### Spanning Training Progress: Temporal Dual-Depth Scoring (TDDS) for Enhanced Dataset Pruning.
+- **链接**: [arXiv:2311.13613](https://arxiv.org/abs/2311.13613) · 📚 被引 20
+- **作者**: Xin Zhang, Jiawei Du, Yunsong Li, Weiying Xie, Joey Tianyi Zhou
+- **🏷️ 机构**: XiDian University,Xi&#x0027;an,China, Agency for Science, Technology and Research (A*STAR),Centre for Frontier AI Research (CFAR),Singapore
+- **会议**: CVPR 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The emergence of deep and large-scale spiking neural networks (SNNs) exhibiting high performance across diverse complex datasets has led to a need for compressing network models due to the presence of a significant number of redundant structural units, aiming to more effectively leverage their low-power consumption and biological interpretability advantages. Currently, most model compression techniques for SNNs are based on unstructured pruning of individual connections, which requires specific hardware support. Hence, we propose a structured pruning approach based on the activity levels of convolutional kernels named Spiking Channel Activity-based (SCA) network pruning framework. Inspired by synaptic plasticity mechanisms, our method dynamically adjusts the network's structure by pruning and regenerating convolutional kernels during training, enhancing the model's adaptation to the current target task. While maintaining model performance, this approach refines the network architecture, ultimately reducing computational load and accelerating the inference process. This indicates that structured dynamic sparse learning methods can better facilitate the application of deep SNNs in low-power and high-efficiency scenarios.
+> Dataset pruning aims to construct a coreset capable of achieving performance comparable to the original, full dataset. Most existing dataset pruning methods rely on snapshot-based criteria to identify representative samples, often resulting in poor generalization across various pruning and cross-architecture scenarios. Recent studies have addressed this issue by expanding the scope of training dynamics considered, including factors such as forgetting event and probability change, typically using an averaging approach. However, these works struggle to integrate a broader range of training dynamics without overlooking well-generalized samples, which may not be sufficiently highlighted in an averaging manner. In this study, we propose a novel dataset pruning method termed as Temporal Dual-Depth Scoring (TDDS), to tackle this problem. TDDS utilizes a dual-depth strategy to achieve a balance between incorporating extensive training dynamics and identifying representative samples for dataset pruning. In the first depth, we estimate the series of each sample's individual contributions spanning the training progress, ensuring comprehensive integration of training dynamics. In the second depth, we focus on the variability of the sample-wise contributions identified in the first depth to highlight well-generalized samples. Extensive experiments conducted on CIFAR and ImageNet datasets verify the superiority of TDDS over previous SOTA methods. Specifically on CIFAR-100, our method achieves 54.51% accuracy with only 10% training data, surpassing random selection by 7.83% and other comparison methods by at least 12.69%.
 
 </details>
 
-### COPAL: Continual Pruning in Large Language Generative Models.
-- **链接**: [arXiv:2405.02347](https://arxiv.org/abs/2405.02347)
-- **作者**: Srikanth Malla, Joon Hee Choi, Chiho Choi
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+### Masked Spatial Propagation Network for Sparsity-Adaptive Depth Refinement.
+- **链接**: [arXiv:2404.19294](https://arxiv.org/abs/2404.19294) · 📚 被引 6
+- **作者**: Jinyoung Jun, Jae-Han Lee, Chang-Su Kim
+- **🏷️ 机构**: Korea University, Gauss Labs Inc
+- **会议**: CVPR 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Adapting pre-trained large language models to different domains in natural language processing requires two key considerations: high computational demands and model's inability to continual adaptation. To simultaneously address both issues, this paper presents COPAL (COntinual Pruning in Adaptive Language settings), an algorithm developed for pruning large language generative models under a continual model adaptation setting. While avoiding resource-heavy finetuning or retraining, our pruning process is guided by the proposed sensitivity analysis. The sensitivity effectively measures model's ability to withstand perturbations introduced by the new dataset and finds model's weights that are relevant for all encountered datasets. As a result, COPAL allows seamless model adaptation to new domains while enhancing the resource efficiency. Our empirical evaluation on a various size of LLMs show that COPAL outperforms baseline models, demonstrating its efficacy in efficiency and adaptability.
+> The main function of depth completion is to compensate for an insufficient and unpredictable number of sparse depth measurements of hardware sensors. However, existing research on depth completion assumes that the sparsity -- the number of points or LiDAR lines -- is fixed for training and testing. Hence, the completion performance drops severely when the number of sparse depths changes significantly. To address this issue, we propose the sparsity-adaptive depth refinement (SDR) framework, which refines monocular depth estimates using sparse depth points. For SDR, we propose the masked spatial propagation network (MSPN) to perform SDR with a varying number of sparse depths effectively by gradually propagating sparse depth information throughout the entire depth map. Experimental results demonstrate that MPSN achieves state-of-the-art performance on both SDR and conventional depth completion scenarios.
 
 </details>
 
-### OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization.
-- **链接**: [arXiv:2403.12983](https://arxiv.org/abs/2403.12983)
-- **作者**: Xiang Meng, Shibal Ibrahim, Kayhan Behdin, Hussein Hazimeh, Natalia Ponomareva, Rahul Mazumder
+### Transferable Structural Sparse Adversarial Attack Via Exact Group Sparsity Training.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02332) · 📚 被引 9
+- **作者**: Di Ming, Peng Ren, Yunlong Wang, Xin Feng
+- **🏷️ 机构**: School of Computer Science and Engineering, Chongqing University of Technology,Chongqing,China
+- **会议**: CVPR 2024
+
+### MaxQ: Multi-Axis Query for N: m Sparsity Network.
+- **链接**: [arXiv:2312.07061](https://arxiv.org/abs/2312.07061)
+- **作者**: Jingyang Xiang, Siqi Li, Junhao Chen, Zhuangzhi Chen, Tianxin Huang, Linpeng Peng et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Structured pruning is a promising approach for reducing the inference costs of large vision and language models. By removing carefully chosen structures, e.g., neurons or attention heads, the improvements from this approach can be realized on standard deep learning hardware. In this work, we focus on structured pruning in the one-shot (post-training) setting, which does not require model retraining after pruning. We propose a novel combinatorial optimization framework for this problem, based on a layer-wise reconstruction objective and a careful reformulation that allows for scalable optimization. Moreover, we design a new local combinatorial optimization algorithm, which exploits low-rank updates for efficient local search. Our framework is time and memory-efficient and considerably improves upon state-of-the-art one-shot methods on vision models (e.g., ResNet50, MobileNet) and language models (e.g., OPT-1.3B -- OPT-30B). For language models, e.g., OPT-2.7B, OSSCAR can lead to $125\times$ lower test perplexity on WikiText with $2\times$ inference time speedup in comparison to the state-of-the-art ZipLM approach. Our framework is also $6\times$ -- $8\times$ faster. Notably, our work considers models with tens of billions of parameters, which is up to $100\times$ larger than what has been previously considered in the structured pruning literature.
+> N:M sparsity has received increasing attention due to its remarkable performance and latency trade-off compared with structured and unstructured sparsity. However, existing N:M sparsity methods do not differentiate the relative importance of weights among blocks and leave important weights underappreciated. Besides, they directly apply N:M sparsity to the whole network, which will cause severe information loss. Thus, they are still sub-optimal. In this paper, we propose an efficient and effective Multi-Axis Query methodology, dubbed as MaxQ, to rectify these problems. During the training, MaxQ employs a dynamic approach to generate soft N:M masks, considering the weight importance across multiple axes. This method enhances the weights with more importance and ensures more effective updates. Meanwhile, a sparsity strategy that gradually increases the percentage of N:M weight blocks is applied, which allows the network to heal from the pruning-induced damage progressively. During the runtime, the N:M soft masks can be precomputed as constants and folded into weights without causing any distortion to the sparse pattern and incurring additional computational overhead. Comprehensive experiments demonstrate that MaxQ achieves consistent improvements across diverse CNN architectures in various computer vision tasks, including image classification, object detection and instance segmentation. For ResNet50 with 1:16 sparse pattern, MaxQ can achieve 74.6\% top-1 accuracy on ImageNet and improve by over 2.8\% over the state-of-the-art. Codes and checkpoints are available at \url{https://github.com/JingyangXiang/MaxQ}.
 
 </details>
 
-### Ensemble Pruning for Out-of-distribution Generalization.
-- **链接**: [出版页](https://proceedings.mlr.press/v235/qiao24a.html)
-- **作者**: Fengchun Qiao, Xi Peng
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-### Exploring Intrinsic Dimension for Vision-Language Model Pruning.
-- **链接**: [出版页](https://proceedings.mlr.press/v235/wang24cp.html)
-- **作者**: Hanzhang Wang, Jiawen Zhang, Qingyuan Ma
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-### Assessing the Brittleness of Safety Alignment via Pruning and Low-Rank Modifications.
-- **链接**: [arXiv:2402.05162](https://arxiv.org/abs/2402.05162)
-- **作者**: Boyi Wei, Kaixuan Huang, Yangsibo Huang, Tinghao Xie, Xiangyu Qi, Mengzhou Xia et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+> Compressing a set of unordered points is far more challenging than compressing images/videos of regular sample grids, because of the difficulties in characterizing neighboring relations in an irregular layout of points. Many researchers resort to voxelization to introduce regularity, but this approach suffers from quantization loss. In this research, we use the KNN method to determine the neighborhoods of raw surface points. This gives us a means to determine the spatial context in which the latent features of 3D points are compressed by arithmetic coding. As such, the conditional probability model is adaptive to local geometry, leading to significant rate reduction. Additionally, we propose a dual-layer architecture where a non-learning base layer reconstructs the main structures of the point cloud at low complexity, while a learned refinement layer focuses on preserving fine details. This design leads to reductions in model complexity and coding latency by two orders of magnitude compared to SOTA methods. Moreover, we incorporate an implicit neural representation (INR) into the refinement layer, allowing the decoder to sample points on the underlying surface at arbitrary densities. This work is the first to effectively exploit content-aware local contexts for compressing irregular raw point clouds, achieving high rate-distortion performance, low complexity, and the ability to function as an arbitrary-scale upsampling network simultaneously.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Large language models (LLMs) show inherent brittleness in their safety mechanisms, as evidenced by their susceptibility to jailbreaking and even non-malicious fine-tuning. This study explores this brittleness of safety alignment by leveraging pruning and low-rank modifications. We develop methods to identify critical regions that are vital for safety guardrails, and that are disentangled from utility-relevant regions at both the neuron and rank levels. Surprisingly, the isolated regions we find are sparse, comprising about $3\%$ at the parameter level and $2.5\%$ at the rank level. Removing these regions compromises safety without significantly impacting utility, corroborating the inherent brittleness of the model's safety mechanisms. Moreover, we show that LLMs remain vulnerable to low-cost fine-tuning attacks even when modifications to the safety-critical regions are restricted. These findings underscore the urgent need for more robust safety strategies in LLMs.
+> Post-training Sparsity (PTS) is a recently emerged avenue that chases efficient network sparsity with limited data in need. Existing PTS methods, however, undergo significant performance degradation compared with traditional methods that retrain the sparse networks via the whole dataset, especially at high sparsity ratios. In this paper, we attempt to reconcile this disparity by transposing three cardinal factors that profoundly alter the performance of conventional sparsity into the context of PTS. Our endeavors particularly comprise (1) A base-decayed sparsity objective that promotes efficient knowledge transferring from dense network to the sparse counterpart. (2) A reducing-regrowing search algorithm designed to ascertain the optimal sparsity distribution while circumventing overfitting to the small calibration set in PTS. (3) The employment of dynamic sparse training predicated on the preceding aspects, aimed at comprehensively optimizing the sparsity structure while ensuring training stability. Our proposed framework, termed UniPTS, is validated to be much superior to existing PTS methods across extensive benchmarks. As an illustration, it amplifies the performance of POT, a recently proposed recipe, from 3.9% to 68.6% when pruning ResNet-50 at 90% sparsity ratio on ImageNet. We release the code of our paper at https://github.com/xjjxmu/UniPTS.
 
 </details>
 
-### Lightweight Image Super-Resolution via Flexible Meta Pruning.
-- **链接**: [出版页](https://proceedings.mlr.press/v235/zhang24cc.html)
-- **作者**: Yulun Zhang, Kai Zhang, Luc Van Gool, Martin Danelljan, Fisher Yu
-- **🏷️ 机构**: ETH Zurich
-- **会议**: ICML 2024
+> Modern neural networks are often massively overparameterized leading to high compute costs during training and at inference. One effective method to improve both the compute and energy efficiency of neural networks while maintaining good performance is structured pruning, where full network structures (e.g.~neurons or convolutional filters) that have limited impact on the model output are removed. In this work, we propose Bayesian Model Reduction for Structured pruning (BMRS), a fully end-to-end Bayesian method of structured pruning. BMRS is based on two recent methods: Bayesian structured pruning with multiplicative noise, and Bayesian model reduction (BMR), a method which allows efficient comparison of Bayesian models under a change in prior. We present two realizations of BMRS derived from different priors which yield different structured pruning characteristics: 1) BMRS_N with the truncated log-normal prior, which offers reliable compression rates and accuracy without the need for tuning any thresholds and 2) BMRS_U with the truncated log-uniform prior that can achieve more aggressive compression based on the boundaries of truncation. Overall, we find that BMRS offers a theoretically grounded approach to structured pruning of neural networks yielding both high compression rates and accuracy. Experiments on multiple datasets and neural networks of varying complexity showed that the two BMRS methods offer a competitive performance-efficiency trade-off compared to other pruning methods.
 
-### APT: Adaptive Pruning and Tuning Pretrained Language Models for Efficient Training and Inference.
-- **链接**: [arXiv:2401.12200](https://arxiv.org/abs/2401.12200)
-- **作者**: Bowen Zhao, Hannaneh Hajishirzi, Qingqing Cao
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Fine-tuning and inference with large Language Models (LM) are generally known to be expensive. Parameter-efficient fine-tuning over pretrained LMs reduces training memory by updating a small number of LM parameters but does not improve inference efficiency. Structured pruning improves LM inference efficiency by removing consistent parameter blocks, yet often increases training memory and time. To improve both training and inference efficiency, we introduce APT that adaptively prunes and tunes parameters for the LMs. At the early stage of fine-tuning, APT dynamically adds salient tuning parameters for fast and accurate convergence while discarding unimportant parameters for efficiency. Compared to baselines, our experiments show that APT maintains up to 98% task performance when pruning RoBERTa and T5 models with 40% parameters left while keeping 86.4% LLaMA models' performance with 70% parameters remained. Furthermore, APT speeds up LMs fine-tuning by up to 8x and reduces large LMs memory training footprint by up to 70%.
-
-</details>
-
-### Defense against Backdoor Attack on Pre-trained Language Models via Head Pruning and Attention Normalization.
-- **链接**: [出版页](https://proceedings.mlr.press/v235/zhao24r.html)
-- **作者**: Xingyi Zhao, Depeng Xu, Shuhan Yuan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-### Accelerating Transformer Pre-training with 2: 4 Sparsity.
-- **链接**: [arXiv:2404.01847](https://arxiv.org/abs/2404.01847) · [代码](https://github.com/huyz2023/2by4-pretrain)
-- **作者**: Yuezhou Hu, Kang Zhao, Weiyu Huang, Jianfei Chen, Jun Zhu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Training large transformers is slow, but recent innovations on GPU architecture give us an advantage. NVIDIA Ampere GPUs can execute a fine-grained 2:4 sparse matrix multiplication twice as fast as its dense equivalent. In the light of this property, we comprehensively investigate the feasibility of accelerating feed-forward networks (FFNs) of transformers in pre-training. First, we define a ``flip rate'' to monitor the stability of a 2:4 training process. Utilizing this metric, we propose three techniques to preserve accuracy: to modify the sparse-refined straight-through estimator by applying the masked decay term on gradients, to determine a feasible decay factor in warm-up stage, and to enhance the model's quality by a dense fine-tuning procedure near the end of pre-training. Besides, we devise two techniques to practically accelerate training: to calculate transposable 2:4 masks by convolution, and to accelerate gated activation functions by reducing GPU L2 cache miss. Experiments show that our 2:4 sparse training algorithm achieves similar convergence to dense training algorithms on several transformer pre-training tasks, while actual acceleration can be observed on different shapes of transformer block apparently. Our toolkit is available at https://github.com/huyz2023/2by4-pretrain.
-
-</details>
-
-### SPP: Sparsity-Preserved Parameter-Efficient Fine-Tuning for Large Language Models.
-- **链接**: [arXiv:2405.16057](https://arxiv.org/abs/2405.16057) · [代码](https://github.com/Lucky-Lance/SPP)
-- **作者**: Xudong Lu, Aojun Zhou, Yuhui Xu, Renrui Zhang, Peng Gao, Hongsheng Li
-- **🏷️ 机构**: CUHK
-- **会议**: ICML 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Large Language Models (LLMs) have become pivotal in advancing the field of artificial intelligence, yet their immense sizes pose significant challenges for both fine-tuning and deployment. Current post-training pruning methods, while reducing the sizes of LLMs, often fail to maintain their original performance. To address these challenges, this paper introduces SPP, a Sparsity-Preserved Parameter-efficient fine-tuning method. Different from existing post-training pruning approaches that struggle with performance retention, SPP proposes to employ lightweight learnable column and row matrices to optimize sparse LLM weights, keeping the structure and sparsity of pruned pre-trained models intact. By element-wise multiplication and residual addition, SPP ensures the consistency of model sparsity pattern and ratio during both training and weight-merging processes. We demonstrate the effectiveness of SPP by applying it to the LLaMA and LLaMA-2 model families with recent post-training pruning methods. Our results show that SPP significantly enhances the performance of models with different sparsity patterns (i.e. unstructured and N:M sparsity), especially for those with high sparsity ratios (e.g. 75%), making it a promising solution for the efficient fine-tuning of sparse LLMs. Code will be made available at https://github.com/Lucky-Lance/SPP.
-
-</details>
-
-### SPADE: Sparsity-Guided Debugging for Deep Neural Networks.
-- **链接**: [arXiv:2310.04519](https://arxiv.org/abs/2310.04519) · [代码](https://github.com/IST-DASLab/SPADE)
-- **作者**: Arshia Soltani Moakhar, Eugenia Iofinova, Elias Frantar, Dan Alistarh
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> It is known that sparsity can improve interpretability for deep neural networks. However, existing methods in the area either require networks that are pre-trained with sparsity constraints, or impose sparsity after the fact, altering the network's general behavior. In this paper, we demonstrate, for the first time, that sparsity can instead be incorporated into the interpretation process itself, as a sample-specific preprocessing step. Unlike previous work, this approach, which we call SPADE, does not place constraints on the trained model and does not affect its behavior during inference on the sample. Given a trained model and a target sample, SPADE uses sample-targeted pruning to provide a "trace" of the network's execution on the sample, reducing the network to the most important connections prior to computing an interpretation. We demonstrate that preprocessing with SPADE significantly increases the accuracy of image saliency maps across several interpretability methods. Additionally, SPADE improves the usefulness of neuron visualizations, aiding humans in reasoning about network behavior. Our code is available at https://github.com/IST-DASLab/SPADE.
-
-</details>
-
-### QUEST: Query-Aware Sparsity for Efficient Long-Context LLM Inference.
-- **链接**: [arXiv:2406.10774](https://arxiv.org/abs/2406.10774) · [代码](https://github.com/mit-han-lab/Quest)
-- **作者**: Jiaming Tang, Yilong Zhao, Kan Zhu, Guangxuan Xiao, Baris Kasikci, Song Han
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> As the demand for long-context large language models (LLMs) increases, models with context windows of up to 128K or 1M tokens are becoming increasingly prevalent. However, long-context LLM inference is challenging since the inference speed decreases significantly as the sequence length grows. This slowdown is primarily caused by loading a large KV cache during self-attention. Previous works have shown that a small portion of critical tokens will dominate the attention outcomes. However, we observe the criticality of a token highly depends on the query. To this end, we propose Quest, a query-aware KV cache selection algorithm. Quest keeps track of the minimal and maximal Key values in KV cache pages and estimates the criticality of a given page using Query vectors. By only loading the Top-K critical KV cache pages for attention, Quest significantly speeds up self-attention without sacrificing accuracy. We show that Quest can achieve up to 2.23x self-attention speedup, which reduces inference latency by 7.03x while performing well on tasks with long dependencies with negligible accuracy loss. Code is available at http://github.com/mit-han-lab/Quest .
-
-</details>
-
-### A Sparsity Principle for Partially Observable Causal Representation Learning.
-- **链接**: [arXiv:2403.08335](https://arxiv.org/abs/2403.08335)
-- **作者**: Danru Xu, Dingling Yao, Sébastien Lachapelle, Perouz Taslakian, Julius von Kügelgen, Francesco Locatello et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Causal representation learning aims at identifying high-level causal variables from perceptual data. Most methods assume that all latent causal variables are captured in the high-dimensional observations. We instead consider a partially observed setting, in which each measurement only provides information about a subset of the underlying causal state. Prior work has studied this setting with multiple domains or views, each depending on a fixed subset of latents. Here, we focus on learning from unpaired observations from a dataset with an instance-dependent partial observability pattern. Our main contribution is to establish two identifiability results for this setting: one for linear mixing functions without parametric assumptions on the underlying causal model, and one for piecewise linear mixing functions with Gaussian latent causal variables. Based on these insights, we propose two methods for estimating the underlying causal variables by enforcing sparsity in the inferred representation. Experiments on different simulated datasets and established benchmarks highlight the effectiveness of our approach in recovering the ground-truth latents.
-
-</details>
-
-### Smoothing Proximal Gradient Methods for Nonsmooth Sparsity Constrained Optimization: Optimality Conditions and Global Convergence.
-- **链接**: [出版页](https://proceedings.mlr.press/v235/yuan24a.html)
-- **作者**: Ganzhao Yuan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-### Exploring the Benefit of Activation Sparsity in Pre-training.
-- **链接**: [arXiv:2410.03440](https://arxiv.org/abs/2410.03440) · [代码](https://github.com/thunlp/moefication)
-- **作者**: Zhengyan Zhang, Chaojun Xiao, Qiujieli Qin, Yankai Lin, Zhiyuan Zeng, Xu Han et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Pre-trained Transformers inherently possess the characteristic of sparse activation, where only a small fraction of the neurons are activated for each token. While sparse activation has been explored through post-training methods, its potential in pre-training remains untapped. In this work, we first study how activation properties change during pre-training. Our examination reveals that Transformers exhibit sparse activation throughout the majority of the pre-training process while the activation correlation keeps evolving as training progresses. Leveraging this observation, we propose Switchable Sparse-Dense Learning (SSD). SSD adaptively switches between the Mixtures-of-Experts (MoE) based sparse training and the conventional dense training during the pre-training process, leveraging the efficiency of sparse training and avoiding the static activation correlation of sparse training. Compared to dense training, SSD achieves comparable performance with identical model size and reduces pre-training costs. Moreover, the models trained with SSD can be directly used as MoE models for sparse inference and achieve the same performance as dense models with up to $2\times$ faster inference speed. Codes are available at https://github.com/thunlp/moefication.
-
-</details>
+- Distill Gold from Massive Ores: Bi-level Data Pruning Towards Efficient Dataset Distillation. → [knowledge-distillation](../knowledge-distillation/Guideline%202024.md)
