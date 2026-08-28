@@ -5,23 +5,17 @@
 
 > 同领域其他年份: 
 
-### Frequency-Aware Token Reduction for Efficient Vision Transformer.
-- **链接**: [arXiv:2511.21477](https://arxiv.org/abs/2511.21477) · 📚 被引 0
-- **作者**: DongJae Lee, Jiwan Hur, Jaehyun Choi, Jaemyung Yu, Junmo Kim
-- **🏷️ 机构**: KAIST, Korea Advanced Institute of Science &amp; Technology, KAIST, Korea Advanced Institute of Science &amp; Technology
-- **会议**: NeurIPS 2025
+### APHQ-ViT: Post-Training Quantization with Average Perturbation Hessian Based Reconstruction for Vision Transformers.
+- **链接**: [arXiv:2504.02508](https://arxiv.org/abs/2504.02508) · [代码](https://github.com/GoatWu/APHQ-ViT) · 📚 被引 5
+- **作者**: Zhuguanyu Wu, Jiayi Zhang, Jiaxin Chen, Jinyang Guo, Di Huang, Yunhong Wang
+- **🏷️ 机构**: Beihang University,State Key Laboratory of Virtual Reality Technology and Systems,China, Beihang University,School of Artificial Intelligence,Beijing,China, Beihang University,School of Computer Science and Engineering,Beijing,China
+- **会议**: CVPR 2025
 
-### Linear Differential Vision Transformer: Learning Visual Contrasts via Pairwise Differentials.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/5820ad65b1c27411417ae8b59433e580-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Yifan Pu, Jixuan Ying, Qixiu Li, Tianzhu Ye, Dongchen Han, Xiaochen Wang et al.
-- **🏷️ 机构**: Tsinghua University, Tsinghua University, Microsoft, Microsoft
-- **会议**: NeurIPS 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### VITRIX-UniViTAR: Unified Vision Transformer with Native Resolution.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/b3bec3f5ad96055b7f60c93edc3606c8-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Limeng Qiao, Yiyang Gan, Bairui Wang, Jie Qin, Shuang Xu, Siqi Yang et al.
-- **🏷️ 机构**: Meituan, Tianjin University, Shandong University
-- **会议**: NeurIPS 2025
+> Vision Transformers (ViTs) have become one of the most commonly used backbones for vision tasks. Despite their remarkable performance, they often suffer significant accuracy drops when quantized for practical deployment, particularly by post-training quantization (PTQ) under ultra-low bits. Recently, reconstruction-based PTQ methods have shown promising performance in quantizing Convolutional Neural Networks (CNNs). However, they fail when applied to ViTs, primarily due to the inaccurate estimation of output importance and the substantial accuracy degradation in quantizing post-GELU activations. To address these issues, we propose \textbf{APHQ-ViT}, a novel PTQ approach based on importance estimation with Average Perturbation Hessian (APH). Specifically, we first thoroughly analyze the current approximation approaches with Hessian loss, and propose an improved average perturbation Hessian loss. To deal with the quantization of the post-GELU activations, we design an MLP Reconstruction (MR) method by replacing the GELU function in MLP with ReLU and reconstructing it by the APH loss on a small unlabeled calibration set. Extensive experiments demonstrate that APHQ-ViT using linear quantizers outperforms existing PTQ methods by substantial margins in 3-bit and 4-bit across different vision tasks. The source code is available at https://github.com/GoatWu/APHQ-ViT.
+
+</details>
 
 ### SHF: Symmetrical Hierarchical Forest with Pretrained Vision Transformer Encoder for High-Resolution Medical Segmentation.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/cc44bf651235b9cd61c4143ae3bbb0de-Abstract-Conference.html) · 📚 被引 0
@@ -29,14 +23,19 @@
 - **🏷️ 机构**: Hokkaido University, Institute of Physical and Chemical Research - RIKEN, Zhejiang University, Kuaishou- 快手科技
 - **会议**: NeurIPS 2025
 
-### Multi-Kernel Correlation-Attention Vision Transformer for Enhanced Contextual Understanding and Multi-Scale Integration.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/65e876f6a98c6799d0b3145966dd73e2-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Hongkang Zhang, Shao-Lun Huang, Ercan E. Kuruoglu, Yanlong Wang
-- **🏷️ 机构**: Tsinghua University, Tsinghua University, Tsinghua University, Tsinghua-Berkeley Shenzhen Institute
-- **会议**: NeurIPS 2025
+### BHViT: Binarized Hybrid Vision Transformer.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Gao_BHViT_Binarized_Hybrid_Vision_Transformer_CVPR_2025_paper.html) · 📚 被引 32
+- **作者**: Tian Gao, Yu Zhang, Zhiyuan Zhang, Huajun Liu, Kaijie Yin, Chengzhong Xu et al.
+- **🏷️ 机构**: Nanjing University of Science and Technology, Shanghai Jiaotong University, Singapore Management University
+- **会议**: CVPR 2025
 
-### Polyline Path Masked Attention for Vision Transformer.
-- **链接**: [arXiv:2506.15940](https://arxiv.org/abs/2506.15940) · 📚 被引 0
-- **作者**: Zhongchen Zhao, Chaodong Xiao, Hui Lin, Qi Xie, Lei Zhang, Deyu Meng
-- **🏷️ 机构**: Xi'an Jiao Tong University, Hong Kong Polytechnic University, Xi'an Jiaotong University
-- **会议**: NeurIPS 2025
+### LibraGrad: Balancing Gradient Flow for Universally Better Vision Transformer Attributions.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Mehri_LibraGrad_Balancing_Gradient_Flow_for_Universally_Better_Vision_Transformer_Attributions_CVPR_2025_paper.html) · 📚 被引 1
+- **作者**: Faridoun Mehri, Mahdieh Soleymani Baghshah, Mohammad Taher Pilehvar
+- **🏷️ 机构**: Sharif University of Technology,Iran, Cardiff University,UK
+- **会议**: CVPR 2025
+
+## 跨领域论文（完整笔记在其他领域）
+
+- When Pixel Difference Patterns Meet ViT: PiDiViT for Few-Shot Object Detection. → [object-detection](../object-detection/Guideline%202025.md)
+- Boosting Generative Adversarial Transferability with Self-Supervised Vision Transformer Features. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)

@@ -1,30 +1,26 @@
 # Occupancy — 2025 Guideline
 
 > 领域: 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）
-> 论文数: 4 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 2 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### ODG: Occupancy Prediction Using Dual Gaussians.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/2e14be0332c04c76742710e417cedb2a-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Yunxiao Shi, Yinhao Zhu, Herbert Cai, Shizhong Han, Jisoo Jeong, Amin Ansari et al.
-- **🏷️ 机构**: Qualcomm AI Research, Qualcomm, Qualcomm Technologies, Inc.
-- **会议**: NeurIPS 2025
+### MergeOcc: Bridge the Domain Gap between Different Lidars for Robust Occupancy Prediction.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02463) · 📚 被引 0
+- **作者**: Zikun Xu, Shaobing Xu
+- **🏷️ 机构**: Tsinghua University,China
+- **会议**: ICCV 2025
 
-### Dynamic Focused Masking for Autoregressive Embodied Occupancy Prediction.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/ec3d49763c653ad7c8d587f52220c129-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Yuan Sun, Julio Contreras, Jorge Ortiz
-- **🏷️ 机构**: Sichuan University, Rutgers University
-- **会议**: NeurIPS 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### See through the Dark: Learning Illumination-affined Representations for Nighttime Occupancy Prediction.
-- **链接**: [arXiv:2505.20641](https://arxiv.org/abs/2505.20641) · 📚 被引 1
-- **作者**: Yuan Wu, Zhiqiang Yan, Yigong Zhang, Xiang Li, Jian Yang
-- **🏷️ 机构**: Nanjing University of Science and Technology, National University of Singapore, Nankai University
-- **会议**: NeurIPS 2025
+> We present GDFusion, a temporal fusion method for vision-based 3D semantic occupancy prediction (VisionOcc). GDFusion opens up the underexplored aspects of temporal fusion within the VisionOcc framework, focusing on both temporal cues and fusion strategies. It systematically examines the entire VisionOcc pipeline, identifying three fundamental yet previously overlooked temporal cues: scene-level consistency, motion calibration, and geometric complementation. These cues capture diverse facets of temporal evolution and make distinct contributions across various modules in the VisionOcc framework. To effectively fuse temporal signals across heterogeneous representations, we propose a novel fusion strategy by reinterpreting the formulation of vanilla RNNs. This reinterpretation leverages gradient descent on features to unify the integration of diverse temporal information, seamlessly embedding the proposed temporal cues into the network. Extensive experiments on nuScenes demonstrate that GDFusion significantly outperforms established baselines. Notably, on Occ3D benchmark, it achieves 1.4\%-4.8\% mIoU improvements and reduces memory consumption by 27\%-72\%.
 
-### QuadricFormer: Scene as Superquadrics for 3D Semantic Occupancy Prediction.
-- **链接**: [arXiv:2506.10977](https://arxiv.org/abs/2506.10977) · 📚 被引 0
-- **作者**: Sicheng Zuo, Wenzhao Zheng, Xiaoyong Han, Longchao Yang, Yong Pan, Jiwen Lu
-- **🏷️ 机构**: Tsinghua University, University of California, Berkeley, Li Auto Inc.
-- **会议**: NeurIPS 2025
+</details>
+
+### GaussianFormer-2: Probabilistic Gaussian Superposition for Efficient 3D Occupancy Prediction.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Huang_GaussianFormer-2_Probabilistic_Gaussian_Superposition_for_Efficient_3D_Occupancy_Prediction_CVPR_2025_paper.html) · 📚 被引 18
+- **作者**: Yuanhui Huang, Amonnut Thammatadatrakoon, Wenzhao Zheng, Yunpeng Zhang, Dalong Du, Jiwen Lu
+- **🏷️ 机构**: Tsinghua University,Department of Automation, Phigent Robotics
+- **会议**: CVPR 2025
+
+</details>

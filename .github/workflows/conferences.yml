@@ -117,6 +117,9 @@ jobs:
         env:
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
         run: |
+          # Actions cache 快照可能复活已删除的嵌套 .gitignore（其 '*' 规则会挡住
+          # batches/*.json 入库）——每次运行前强制清除，根 .gitignore 是唯一权威
+          rm -f .cache/.gitignore
           python3 collect.py --conference ${{ matrix.conference }} --year ${{ matrix.year }} --no-llm
 
       - name: Commit this batch (regenerate-over strategy)
@@ -192,8 +195,7 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
         run: |
-          # 从缓存里恢复完整 bucket 太重；改为直接重算（DBLP 全走 HTTP 缓存，很快），
-          # 再跑 LLM。此阶段 DBLP 不产生新请求（72h 缓存），只花 LLM 的钱（增量缓存）。
+          rm -f .cache/.gitignore   # 防 Actions cache 复活嵌套 gitignore（同 collect）
           python3 collect.py --llm-only
 
       - name: Commit LLM summaries (regenerate-over)
