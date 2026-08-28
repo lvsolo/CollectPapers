@@ -1,43 +1,171 @@
 # 3D Detection — 2025 Guideline
 
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
-> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 17 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### MOS: Model Synergy for Test-Time Adaptation on LiDAR-Based 3D Object Detection.
-- **链接**: [arXiv:2406.14878](https://arxiv.org/abs/2406.14878) · [代码](https://github.com/zhuoxiao-chen/MOS)
-- **作者**: Zhuoxiao Chen, Junjie Meng, Mahsa Baktashmotlagh, Yonggang Zhang, Zi Huang, Yadan Luo
+### OV-SCAN: Semantically Consistent Alignment for Novel Object Discovery in Open-Vocabulary 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00749)
+- **作者**: Adrian Chow, Evelien Riddell, Yimu Wang, Sean Sedwards, Krzysztof Czarnecki
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> LiDAR-based 3D object detection is crucial for various applications but often experiences performance degradation in real-world deployments due to domain shifts. While most studies focus on cross-dataset shifts, such as changes in environments and object geometries, practical corruptions from sensor variations and weather conditions remain underexplored. In this work, we propose a novel online test-time adaptation framework for 3D detectors that effectively tackles these shifts, including a challenging cross-corruption scenario where cross-dataset shifts and corruptions co-occur. By leveraging long-term knowledge from previous test batches, our approach mitigates catastrophic forgetting and adapts effectively to diverse shifts. Specifically, we propose a Model Synergy (MOS) strategy that dynamically selects historical checkpoints with diverse knowledge and assembles them to best accommodate the current test batch. This assembly is directed by our proposed Synergy Weights (SW), which perform a weighted averaging of the selected checkpoints, minimizing redundancy in the composite model. The SWs are computed by evaluating the similarity of predicted bounding boxes on the test data and the independence of features between checkpoint pairs in the model bank. To maintain an efficient and informative model bank, we discard checkpoints with the lowest average SW scores, replacing them with newly updated models. Our method was rigorously tested against existing test-time adaptation strategies across three datasets and eight types of corruptions, demonstrating superior adaptability to dynamic scenes and conditions. Notably, it achieved a 67.3% improvement in a challenging cross-corruption scenario, offering a more comprehensive benchmark for adaptation. Source code: https://github.com/zhuoxiao-chen/MOS.
+> Recent advances in LiDAR 3D detection have demonstrated the effectiveness of Transformer-based frameworks in capturing the global dependencies from point cloud spaces, which serialize the 3D voxels into the flattened 1D sequence for iterative self-attention. However, the spatial structure of 3D voxels will be inevitably destroyed during the serialization process. Besides, due to the considerable number of 3D voxels and quadratic complexity of Transformers, multiple sequences are grouped before feeding to Transformers, leading to a limited receptive field. Inspired by the impressive performance of State Space Models (SSM) achieved in the field of 2D vision tasks, in this paper, we propose a novel Unified Mamba (UniMamba), which seamlessly integrates the merits of 3D convolution and SSM in a concise multi-head manner, aiming to perform "local and global" spatial context aggregation efficiently and simultaneously. Specifically, a UniMamba block is designed which mainly consists of spatial locality modeling, complementary Z-order serialization and local-global sequential aggregator. The spatial locality modeling module integrates 3D submanifold convolution to capture the dynamic spatial position embedding before serialization. Then the efficient Z-order curve is adopted for serialization both horizontally and vertically. Furthermore, the local-global sequential aggregator adopts the channel grouping strategy to efficiently encode both "local and global" spatial inter-dependencies using multi-head SSM. Additionally, an encoder-decoder architecture with stacked UniMamba blocks is formed to facilitate multi-scale spatial learning hierarchically. Extensive experiments are conducted on three popular datasets: nuScenes, Waymo and Argoverse 2. Particularly, our UniMamba achieves 70.2 mAP on the nuScenes dataset.
 
 </details>
 
-### Intent3D: 3D Object Detection in RGB-D Scans Based on Human Intention.
-- **链接**: [arXiv:2405.18295](https://arxiv.org/abs/2405.18295)
-- **作者**: Weitai Kang, Mengxue Qu, Jyoti Kini, Yunchao Wei, Mubarak Shah, Yan Yan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Robust 3D Object Detection Using Probabilistic Point Clouds From Single-Photon Lidars.
+- **链接**: [arXiv:2508.00169](https://arxiv.org/abs/2508.00169) · 📚 被引 0
+- **作者**: Bhavya Goyal, Felipe Gutierrez-Barragan, Wei Lin, Andreas Velten, Yin Li, Mohit Gupta
+- **🏷️ 机构**: University of Wisconsin-Madison
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In real-life scenarios, humans seek out objects in the 3D world to fulfill their daily needs or intentions. This inspires us to introduce 3D intention grounding, a new task in 3D object detection employing RGB-D, based on human intention, such as "I want something to support my back". Closely related, 3D visual grounding focuses on understanding human reference. To achieve detection based on human intention, it relies on humans to observe the scene, reason out the target that aligns with their intention ("pillow" in this case), and finally provide a reference to the AI system, such as "A pillow on the couch". Instead, 3D intention grounding challenges AI agents to automatically observe, reason and detect the desired target solely based on human intention. To tackle this challenge, we introduce the new Intent3D dataset, consisting of 44,990 intention texts associated with 209 fine-grained classes from 1,042 scenes of the ScanNet dataset. We also establish several baselines based on different language-based 3D object detection models on our benchmark. Finally, we propose IntentNet, our unique approach, designed to tackle this intention-based detection problem. It focuses on three key aspects: intention understanding, reasoning to identify object candidates, and cascaded adaptive learning that leverages the intrinsic priority logic of different losses for multiple objective optimization. Project Page: https://weitaikang.github.io/Intent3D-webpage/
+> LiDAR-based 3D sensors provide point clouds, a canonical 3D representation used in various scene understanding tasks. Modern LiDARs face key challenges in several real-world scenarios, such as long-distance or low-albedo objects, producing sparse or erroneous point clouds. These errors, which are rooted in the noisy raw LiDAR measurements, get propagated to downstream perception models, resulting in potentially severe loss of accuracy. This is because conventional 3D processing pipelines do not retain any uncertainty information from the raw measurements when constructing point clouds. We propose Probabilistic Point Clouds (PPC), a novel 3D scene representation where each point is augmented with a probability attribute that encapsulates the measurement uncertainty (or confidence) in the raw data. We further introduce inference approaches that leverage PPC for robust 3D object detection; these methods are versatile and can be used as computationally lightweight drop-in modules in 3D inference pipelines. We demonstrate, via both simulations and real captures, that PPC-based 3D inference methods outperform several baselines using LiDAR as well as camera-LiDAR fusion models, across challenging indoor and outdoor scenarios involving small, distant, and low-albedo objects, as well as strong ambient light. Our project webpage is at https://bhavyagoyal.github.io/ppc .
 
 </details>
 
-### State Space Model Meets Transformer: A New Paradigm for 3D Object Detection.
-- **链接**: [arXiv:2503.14493](https://arxiv.org/abs/2503.14493)
-- **作者**: Chuxin Wang, Wenfei Yang, Xiang Liu, Tianzhu Zhang
+### OpenM3D: Open Vocabulary Multi-View Indoor 3D Object Detection without Human Annotations.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00813)
+- **作者**: Peng-Hao Hsu, Ke Zhang, Fu-En Wang, Tao Tu, Ming-Feng Li, Yu-Lun Liu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: ICCV 2025
+
+### Adaptive Dual Uncertainty Optimization: Boosting Monocular 3D Object Detection under Test-Time Shifts.
+- **链接**: [arXiv:2508.20488](https://arxiv.org/abs/2508.20488) · 📚 被引 0
+- **作者**: Zixuan Hu, Dongxiao Li, Xinzhu Ma, Shixiang Tang, Xiaotong Li, Wenhan Yang et al.
+- **🏷️ 机构**: School of Computer Science, Peking University,Beijing,China, The Chinese University of Hong Kong,Hongkong,China, Peng Cheng Laboratory,Shenzhen,China
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> DETR-based methods, which use multi-layer transformer decoders to refine object queries iteratively, have shown promising performance in 3D indoor object detection. However, the scene point features in the transformer decoder remain fixed, leading to minimal contributions from later decoder layers, thereby limiting performance improvement. Recently, State Space Models (SSM) have shown efficient context modeling ability with linear complexity through iterative interactions between system states and inputs. Inspired by SSMs, we propose a new 3D object DEtection paradigm with an interactive STate space model (DEST). In the interactive SSM, we design a novel state-dependent SSM parameterization method that enables system states to effectively serve as queries in 3D indoor detection tasks. In addition, we introduce four key designs tailored to the characteristics of point cloud and SSM: The serialization and bidirectional scanning strategies enable bidirectional feature interaction among scene points within the SSM. The inter-state attention mechanism models the relationships between state points, while the gated feed-forward network enhances inter-channel correlations. To the best of our knowledge, this is the first method to model queries as system states and scene points as system inputs, which can simultaneously update scene point features and query features with linear complexity. Extensive experiments on two challenging datasets demonstrate the effectiveness of our DEST-based method. Our method improves the GroupFree baseline in terms of AP50 on ScanNet V2 (+5.3) and SUN RGB-D (+3.2) datasets. Based on the VDETR baseline, Our method sets a new SOTA on the ScanNetV2 and SUN RGB-D datasets.
+> Accurate monocular 3D object detection (M3OD) is pivotal for safety-critical applications like autonomous driving, yet its reliability deteriorates significantly under real-world domain shifts caused by environmental or sensor variations. To address these shifts, Test-Time Adaptation (TTA) methods have emerged, enabling models to adapt to target distributions during inference. While prior TTA approaches recognize the positive correlation between low uncertainty and high generalization ability, they fail to address the dual uncertainty inherent to M3OD: semantic uncertainty (ambiguous class predictions) and geometric uncertainty (unstable spatial localization). To bridge this gap, we propose Dual Uncertainty Optimization (DUO), the first TTA framework designed to jointly minimize both uncertainties for robust M3OD. Through a convex optimization lens, we introduce an innovative convex structure of the focal loss and further derive a novel unsupervised version, enabling label-agnostic uncertainty weighting and balanced learning for high-uncertainty objects. In parallel, we design a semantic-aware normal field constraint that preserves geometric coherence in regions with clear semantic cues, reducing uncertainty from the unstable 3D representation. This dual-branch mechanism forms a complementary loop: enhanced spatial perception improves semantic classification, and robust semantic predictions further refine spatial understanding. Extensive experiments demonstrate the superiority of DUO over existing methods across various datasets and domain shift types.
+
+</details>
+
+### GeoFormer: Geometry Point Encoder for 3D Object Detection with Graph-Based Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02495) · 📚 被引 1
+- **作者**: Xin Jin, Haisheng Su, Cong Ma, Kai Liu, Wei Wu, Fei Hui et al.
+- **🏷️ 机构**: Chang&#x0027; an University, Shanghai Jiao Tong University, SenseAuto Research
+- **会议**: ICCV 2025
+
+### Unleashing the Temporal Potential of Stereo Event Cameras for Continuous-Time 3D Object Detection.
+- **链接**: [arXiv:2508.02288](https://arxiv.org/abs/2508.02288) · [代码](https://github.com/mickeykang16/Ev-Stereo3D) · 📚 被引 2
+- **作者**: Jae-Young Kang, Hoonhee Cho, Kuk-Jin Yoon
+- **🏷️ 机构**: KAIST
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Detecting 3D objects in point clouds plays a crucial role in autonomous driving systems. Recently, advanced multi-modal methods incorporating camera information have achieved notable performance. For a safe and effective autonomous driving system, algorithms that excel not only in accuracy but also in speed and low latency are essential. However, existing algorithms fail to meet these requirements due to the latency and bandwidth limitations of fixed frame rate sensors, e.g., LiDAR and camera. To address this limitation, we introduce asynchronous event cameras into 3D object detection for the first time. We leverage their high temporal resolution and low bandwidth to enable high-speed 3D object detection. Our method enables detection even during inter-frame intervals when synchronized data is unavailable, by retrieving previous 3D information through the event camera. Furthermore, we introduce the first event-based 3D object detection dataset, DSEC-3DOD, which includes ground-truth 3D bounding boxes at 100 FPS, establishing the first benchmark for event-based 3D detectors. The code and dataset are available at https://github.com/mickeykang16/Ev3DOD.
+
+</details>
+
+### RaCFormer: Towards High-Quality 3D Object Detection via Query-based Radar-Camera Fusion.
+- **链接**: [arXiv:2412.12725](https://arxiv.org/abs/2412.12725) · [代码](https://github.com/cxmomo/RaCFormer) · 📚 被引 12
+- **作者**: Xiaomeng Chu, Jiajun Deng, Guoliang You, Yifan Duan, Houqiang Li, Yanyong Zhang
+- **🏷️ 机构**: University of Science and Technology of China, The University of Adelaide
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose Radar-Camera fusion transformer (RaCFormer) to boost the accuracy of 3D object detection by the following insight. The Radar-Camera fusion in outdoor 3D scene perception is capped by the image-to-BEV transformation--if the depth of pixels is not accurately estimated, the naive combination of BEV features actually integrates unaligned visual content. To avoid this problem, we propose a query-based framework that enables adaptive sampling of instance-relevant features from both the bird's-eye view (BEV) and the original image view. Furthermore, we enhance system performance by two key designs: optimizing query initialization and strengthening the representational capacity of BEV. For the former, we introduce an adaptive circular distribution in polar coordinates to refine the initialization of object queries, allowing for a distance-based adjustment of query density. For the latter, we initially incorporate a radar-guided depth head to refine the transformation from image view to BEV. Subsequently, we focus on leveraging the Doppler effect of radar and introduce an implicit dynamic catcher to capture the temporal elements within the BEV. Extensive experiments on nuScenes and View-of-Delft (VoD) datasets validate the merits of our design. Remarkably, our method achieves superior results of 64.9% mAP and 70.2% NDS on nuScenes. RaCFormer also secures the state-of-the-art performance on the VoD dataset. Code is available at https://github.com/cxmomo/RaCFormer.
+
+</details>
+
+### V2X-R: Cooperative LiDAR-4D Radar Fusion with Denoising Diffusion for 3D Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.html)
+- **作者**: Xun Huang, Jinlong Wang, Qiming Xia, Siheng Chen, Bisheng Yang, Xin Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### Cubify Anything: Scaling Indoor 3D Object Detection.
+- **链接**: [arXiv:2412.04458](https://arxiv.org/abs/2412.04458) · 📚 被引 10
+- **作者**: Justin Lazarow, David Griffiths, Gefen Kohavi, Francisco Crespo, Afshin Dehghan
+- **🏷️ 机构**: Apple
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We consider indoor 3D object detection with respect to a single RGB(-D) frame acquired from a commodity handheld device. We seek to significantly advance the status quo with respect to both data and modeling. First, we establish that existing datasets have significant limitations to scale, accuracy, and diversity of objects. As a result, we introduce the Cubify-Anything 1M (CA-1M) dataset, which exhaustively labels over 400K 3D objects on over 1K highly accurate laser-scanned scenes with near-perfect registration to over 3.5K handheld, egocentric captures. Next, we establish Cubify Transformer (CuTR), a fully Transformer 3D object detection baseline which rather than operating in 3D on point or voxel-based representations, predicts 3D boxes directly from 2D features derived from RGB(-D) inputs. While this approach lacks any 3D inductive biases, we show that paired with CA-1M, CuTR outperforms point-based methods - accurately recalling over 62% of objects in 3D, and is significantly more capable at handling noise and uncertainty present in commodity LiDAR-derived depth maps while also providing promising RGB only performance without architecture changes. Furthermore, by pre-training on CA-1M, CuTR can outperform point-based methods on a more diverse variant of SUN RGB-D - supporting the notion that while inductive biases in 3D are useful at the smaller sizes of existing datasets, they fail to scale to the data-rich regime of CA-1M. Overall, this dataset and baseline model provide strong evidence that we are moving towards models which can effectively Cubify Anything.
+
+</details>
+
+### FSHNet: Fully Sparse Hybrid Network for 3D Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_FSHNet_Fully_Sparse_Hybrid_Network_for_3D_Object_Detection_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Shuai Liu, Mingyue Cui, Boyang Li, Quanmin Liang, Tinghe Hong, Yunxiao Shan et al.
+- **🏷️ 机构**: Sun Yat-sen University,School of Computer Science and Engineering, Sun Yat-sen University,School of Artificial Intelligence
+- **会议**: CVPR 2025
+
+### MonoTAKD: Teaching Assistant Knowledge Distillation for Monocular 3D Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_MonoTAKD_Teaching_Assistant_Knowledge_Distillation_for_Monocular_3D_Object_Detection_CVPR_2025_paper.html) · 📚 被引 6
+- **作者**: Hou-I Liu, Christine Wu, Jen-Hao Cheng, Wenhao Chai, Shian-Yun Wang, Gaowen Liu et al.
+- **🏷️ 机构**: National Yang Ming Chiao Tung University, University of Washington, University of Southern California
+- **会议**: CVPR 2025
+
+### RICCARDO: Radar Hit Prediction and Convolution for Camera-Radar 3D Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Long_RICCARDO_Radar_Hit_Prediction_and_Convolution_for_Camera-Radar_3D_Object_CVPR_2025_paper.html) · 📚 被引 5
+- **作者**: Yunfei Long, Abhinav Kumar, Xiaoming Liu, Daniel D. Morris
+- **🏷️ 机构**: Michigan State University
+- **会议**: CVPR 2025
+
+### GBlobs: Explicit Local Structure via Gaussian Blobs for Improved Cross-Domain LiDAR-based 3D Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Malic_GBlobs_Explicit_Local_Structure_via_Gaussian_Blobs_for_Improved_Cross-Domain_CVPR_2025_paper.html) · 📚 被引 2
+- **作者**: Dusan Malic, Christian Fruhwirth-Reisinger, Samuel Schulter, Horst Possegger
+- **🏷️ 机构**: Christian Doppler Laboratory for Embedded Machine Learning, Amazon
+- **会议**: CVPR 2025
+
+### Leveraging Temporal Cues for Semi-Supervised Multi-View 3D Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Park_Leveraging_Temporal_Cues_for_Semi-Supervised_Multi-View_3D_Object_Detection_CVPR_2025_paper.html) · 📚 被引 2
+- **作者**: Jinhyung Park, Navyata Sanghvi, Hiroki Adachi, Yoshihisa Shibata, Shawn Hunt, Shinya Tanaka et al.
+- **🏷️ 机构**: Carnegie Mellon University, DENSO Corporation, DENSO International America, Inc.
+- **会议**: CVPR 2025
+
+### MonoDGP: Monocular 3D Object Detection with Decoupled-Query and Geometry-Error Priors.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Pu_MonoDGP_Monocular_3D_Object_Detection_with_Decoupled-Query_and_Geometry-Error_Priors_CVPR_2025_paper.html) · 📚 被引 25
+- **作者**: Fanqi Pu, Yifan Wang, Jiru Deng, Wenming Yang
+- **🏷️ 机构**: Tsinghua University,Shenzhen International Graduate School
+- **会议**: CVPR 2025
+
+### Uncertainty Meets Diversity: A Comprehensive Active Learning Framework for Indoor 3D Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Uncertainty_Meets_Diversity_A_Comprehensive_Active_Learning_Framework_for_Indoor_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Jiangyi Wang, Na Zhao
+- **🏷️ 机构**: Singapore University of Technology and Design (SUTD)
+- **会议**: CVPR 2025
+
+### CorrBEV: Multi-View 3D Object Detection by Correlation Learning with Multi-modal Prototypes.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xue_CorrBEV_Multi-View_3D_Object_Detection_by_Correlation_Learning_with_Multi-modal_CVPR_2025_paper.html)
+- **作者**: Ziteng Xue, Mingzhe Guo, Heng Fan, Shihui Zhang, Zhipeng Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### Perspective-Invariant 3D Object Detection.
+- **链接**: [arXiv:2507.17665](https://arxiv.org/abs/2507.17665) · 📚 被引 1
+- **作者**: Ao Liang, Lingdong Kong, Dongyue Lu, Youquan Liu, Jian Fang, Huaici Zhao et al.
+- **🏷️ 机构**: National University of Singapore, Fudan University, Shenyang Institute of Automation, Chinese Academy of Sciences
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> With the rise of robotics, LiDAR-based 3D object detection has garnered significant attention in both academia and industry. However, existing datasets and methods predominantly focus on vehicle-mounted platforms, leaving other autonomous platforms underexplored. To bridge this gap, we introduce Pi3DET, the first benchmark featuring LiDAR data and 3D bounding box annotations collected from multiple platforms: vehicle, quadruped, and drone, thereby facilitating research in 3D object detection for non-vehicle platforms as well as cross-platform 3D detection. Based on Pi3DET, we propose a novel cross-platform adaptation framework that transfers knowledge from the well-studied vehicle platform to other platforms. This framework achieves perspective-invariant 3D detection through robust alignment at both geometric and feature levels. Additionally, we establish a benchmark to evaluate the resilience and robustness of current 3D detectors in cross-platform scenarios, providing valuable insights for developing adaptive 3D perception systems. Extensive experiments validate the effectiveness of our approach on challenging cross-platform tasks, demonstrating substantial gains over existing adaptation methods. We hope this work paves the way for generalizable and unified 3D perception systems across diverse and complex environments. Our Pi3DET dataset, cross-platform benchmark suite, and annotation toolkit have been made publicly available.
+
+</details>
+
+### Towards Accurate and Efficient 3D Object Detection for Autonomous Driving: A Mixture of Experts Computing System on Edge.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02403)
+- **作者**: Linshen Liu, Boyan Su, Junyue Jiang, Guanlin Wu, Cong Guo, Ceyu Xu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### FreqPDE: Rethinking Positional Depth Embedding for Multi-View 3D Object Detection Transformers.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02613)
+- **作者**: Haisheng Su, Junjie Zhang, Feixiang Song, Sanping Zhou, Wei Wu, Junchi Yan et al.
+- **🏷️ 机构**: XJTU
+- **会议**: ICCV 2025
 
 </details>
 
@@ -45,16 +173,52 @@
 - **链接**: [arXiv:2410.01404](https://arxiv.org/abs/2410.01404)
 - **作者**: Hongru Yan, Yu Zheng, Yueqi Duan
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: ICCV 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Motal: Unsupervised 3D Object Detection by Modality and Task-Specific Knowledge Transfer.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00593) · 📚 被引 0
+- **作者**: Hai Wu, Hongwei Lin, Xusheng Guo, Xin Li, Mingming Wang, Cheng Wang et al.
+- **🏷️ 机构**: Xiamen University, Texas A&#x0026;M University, Tsinghua University
+- **会议**: ICCV 2025
 
-> Skins wrapping around our bodies, leathers covering over the sofa, sheet metal coating the car - it suggests that objects are enclosed by a series of continuous surfaces, which provides us with informative geometry prior for objectness deduction. In this paper, we propose Gaussian-Det which leverages Gaussian Splatting as surface representation for multi-view based 3D object detection. Unlike existing monocular or NeRF-based methods which depict the objects via discrete positional data, Gaussian-Det models the objects in a continuous manner by formulating the input Gaussians as feature descriptors on a mass of partial surfaces. Furthermore, to address the numerous outliers inherently introduced by Gaussian splatting, we accordingly devise a Closure Inferring Module (CIM) for the comprehensive surface-based objectness deduction. CIM firstly estimates the probabilistic feature residuals for partial surfaces given the underdetermined nature of Gaussian Splatting, which are then coalesced into a holistic representation on the overall surface closure of the object proposal. In this way, the surface information Gaussian-Det exploits serves as the prior on the quality and reliability of objectness and the information basis of proposal refinement. Experiments on both synthetic and real-world datasets demonstrate that Gaussian-Det outperforms various existing approaches, in terms of both average precision and recall.
+### Accelerate 3D Object Detection Models via Zero-Shot Attention Key Pruning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02143)
+- **作者**: Lizhen Xu, Xiuxiu Bai, Xiaojun Jia, Jianwu Fang, Shanmin Pang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
 
-</details>
+### Boosting Multi-View Indoor 3D Object Detection Via Adaptive 3D Volume Construction.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00565)
+- **作者**: Runmin Zhang, Zhu Yu, Si-Yuan Cao, Lingyu Zhu, Guangyi Zhang, Xiaokai Bai et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
 
-### RobuRCDet: Enhancing Robustness of Radar-Camera Fusion in Bird's Eye View for 3D Object Detection.
-- **链接**: [出版页](https://openreview.net/forum?id=9xHlhKLu1h)
-- **作者**: Jingtong Yue, Zhiwei Lin, Xin Lin, Xiaoyu Zhou, Xiangtai Li, Lu Qi et al.
-- **🏷️ 机构**: UC Merced
-- **会议**: ICLR 2025
+### Harnessing Uncertainty-Aware Bounding Boxes for Unsupervised 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00862) · 📚 被引 1
+- **作者**: Ruiyang Zhang, Hu Zhang, Zhedong Zheng
+- **🏷️ 机构**: FST and ICI, University of Macau,China, CSIRO Data61,Australia
+- **会议**: ICCV 2025
+
+### CVFusion: Cross-View Fusion of 4D Radar and Camera for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02617) · 📚 被引 4
+- **作者**: Hanzhi Zhong, Zhiyu Xiang, Ruoyu Xu, Jingyun Fu, Peng Xu, Shaohong Wang et al.
+- **🏷️ 机构**: Zhejiang University,China
+- **会议**: ICCV 2025
+
+### Doppler-Aware LiDAR-RADAR Fusion for Weather-Robust 3D Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02525) · 📚 被引 2
+- **作者**: Yujeong Chae, Heejun Park, Hyeonseong Kim, Kuk-Jin Yoon
+- **🏷️ 机构**: Korea Advanced Institute of Science and Technology
+- **会议**: ICCV 2025
+
+### VoxelKP: A Voxel-Based Network Architecture for Human Keypoint Estimation in LiDAR Data.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02626) · 📚 被引 0
+- **作者**: Jian Shi, Peter Wonka
+- **🏷️ 机构**: KAUST
+- **会议**: ICCV 2025
+
+### SDFormer: Vision-Based 3D Semantic Scene Completion via SAM-Assisted Dual-Channel Voxel Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02491) · 📚 被引 0
+- **作者**: Yujie Xue, Huilong Pi, Jiapeng Zhang, Yunchuan Qin, Zhuo Tang, Kenli Li et al.
+- **🏷️ 机构**: College of Computer Science and Electronic Engineering, Hunan University
+- **会议**: ICCV 2025
