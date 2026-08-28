@@ -1,7 +1,7 @@
 # 3D Detection — 2021 Guideline
 
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
-> 论文数: 21 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 20 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -188,11 +188,5 @@
 ### VoxelContext-Net: An Octree Based Framework for Point Cloud Compression.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Que_VoxelContext-Net_An_Octree_Based_Framework_for_Point_Cloud_Compression_CVPR_2021_paper.html)
 - **作者**: Zizheng Que, Guo Lu, Dong Xu
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### CanonPose: Self-Supervised Monocular 3D Human Pose Estimation in the Wild.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wandt_CanonPose_Self-Supervised_Monocular_3D_Human_Pose_Estimation_in_the_Wild_CVPR_2021_paper.html)
-- **作者**: Bastian Wandt, Marco Rudolph, Petrissa Zell, Helge Rhodin, Bodo Rosenhahn
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021

@@ -306,7 +306,7 @@
 - **会议**: CVPR 2021
 
 ### IQDet: Instance-Wise Quality Distribution Sampling for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Ma_IQDet_Instance-Wise_Quality_Distribution_Sampling_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 62
+- **链接**: [arXiv:2104.06936](https://arxiv.org/abs/2104.06936) · 📚 被引 62
 - **作者**: Yuchen Ma, Songtao Liu, Zeming Li, Jian Sun
 - **🏷️ 机构**: MEGVII
 - **会议**: CVPR 2021
@@ -336,7 +336,7 @@
 - **会议**: CVPR 2021
 
 ### Sparse R-CNN: End-to-End Object Detection With Learnable Proposals.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Sparse_R-CNN_End-to-End_Object_Detection_With_Learnable_Proposals_CVPR_2021_paper.html) · 📚 被引 1309
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Sparse_R-CNN_End-to-End_Object_Detection_With_Learnable_Proposals_CVPR_2021_paper.html) · 📚 被引 1310
 - **作者**: Peize Sun, Rufeng Zhang, Yi Jiang, Tao Kong, Chenfeng Xu, Wei Zhan et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
