@@ -5,23 +5,15 @@
 
 > 同领域其他年份: 
 
-### DeepCompress-ViT: Rethinking Model Compression to Enhance Efficiency of Vision Transformers at the Edge.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ahmed_DeepCompress-ViT_Rethinking_Model_Compression_to_Enhance_Efficiency_of_Vision_Transformers_CVPR_2025_paper.html)
-- **作者**: Sabbir Ahmed, Abdullah Al Arafat, Deniz Najafi, Akhlak Mahmood, Mamshad Nayeem Rizve, Mohaiminul Al Nahian et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+### General Compression Framework for Efficient Transformer Object Tracking.
+- **链接**: [arXiv:2409.17564](https://arxiv.org/abs/2409.17564) · [代码](https://github.com/LingyiHongfd/CompressTracker) · 📚 被引 3
+- **作者**: Lingyi Hong, Jinglun Li, Xinyu Zhou, Shilin Yan, Pinxue Guo, Kaixun Jiang et al.
+- **🏷️ 机构**: College of Computer Science and Artificial Intelligence, Fudan University,Shanghai Key Lab of Intelligent Information Processing,China, College of Intelligent Robotics and Advanced Manufacturing, Fudan University,China
+- **会议**: ICCV 2025
 
-### Efficient Test-time Adaptive Object Detection via Sensitivity-Guided Pruning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Efficient_Test-time_Adaptive_Object_Detection_via_Sensitivity-Guided_Pruning_CVPR_2025_paper.html) · 📚 被引 4
-- **作者**: Kunyu Wang, Xueyang Fu, Xin Lu, Chengjie Ge, Chengzhi Cao, Wei Zhai et al.
-- **🏷️ 机构**: University of Science and Technology of China,School of Information Science and Technology and MoE Key Laboratory of Brain-Inspired Intelligent Perception and Cognition,Hefei,China,230026
-- **会议**: CVPR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### RENO: Real-Time Neural Compression for 3D LiDAR Point Clouds.
-- **链接**: [arXiv:2503.12382](https://arxiv.org/abs/2503.12382) · [代码](https://github.com/NJUVISION/RENO) · 📚 被引 20
-- **作者**: Kang You, Tong Chen, Dandan Ding, M. Salman Asif, Zhan Ma
-- **🏷️ 机构**: Nanjing University, Hangzhou Normal University, University of California Riverside
-- **会议**: CVPR 2025
+> Previous works have attempted to improve tracking efficiency through lightweight architecture design or knowledge distillation from teacher models to compact student trackers. However, these solutions often sacrifice accuracy for speed to a great extent, and also have the problems of complex training process and structural limitations. Thus, we propose a general model compression framework for efficient transformer object tracking, named CompressTracker, to reduce model size while preserving tracking accuracy. Our approach features a novel stage division strategy that segments the transformer layers of the teacher model into distinct stages to break the limitation of model structure. Additionally, we also design a unique replacement training technique that randomly substitutes specific stages in the student model with those from the teacher model, as opposed to training the student model in isolation. Replacement training enhances the student model's ability to replicate the teacher model's behavior and simplifies the training process. To further forcing student model to emulate teacher model, we incorporate prediction guidance and stage-wise feature mimicking to provide additional supervision during the teacher model's compression process. CompressTracker is structurally agnostic, making it compatible with any transformer architecture. We conduct a series of experiment to verify the effectiveness and generalizability of our CompressTracker. Our CompressTracker-SUTrack, compressed from SUTrack, retains about 99 performance on LaSOT (72.2 AUC) while achieves 2.42x speed up. Code is available at https://github.com/LingyiHongfd/CompressTracker.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,11 +21,7 @@
 
 </details>
 
-### Generalized Gaussian Entropy Model for Point Cloud Attribute Compression with Dynamic Likelihood Intervals.
-- **链接**: [arXiv:2506.09510](https://arxiv.org/abs/2506.09510) · 📚 被引 0
-- **作者**: Changhao Peng
-- **🏷️ 机构**: Peking University
-- **会议**: CVPR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,17 +29,17 @@
 
 </details>
 
-### TopNet: Transformer-Efficient Occupancy Prediction Network for Octree-Structured Point Cloud Geometry Compression.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_TopNet_Transformer-Efficient_Occupancy_Prediction_Network_for_Octree-Structured_Point_Cloud_Geometry_CVPR_2025_paper.html)
-- **作者**: Xinjie Wang, Yifan Zhang, Ting Liu, Xinpu Liu, Ke Xu, Jianwei Wan et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+### Cross-Granularity Online Optimization with Masked Compensated Information for Learned Image Compression.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01533) · 📚 被引 1
+- **作者**: Haowei Kuang, Wenhan Yang, Zongming Guo, Jiaying Liu
+- **🏷️ 机构**: Wangxuan Institute of Computer Technology, Peking University,Beijing,China, Pengcheng Laboratory,Shenzhen,China
+- **会议**: ICCV 2025
 
-### PUP 3D-GS: Principled Uncertainty Pruning for 3D Gaussian Splatting.
-- **链接**: [arXiv:2406.10219](https://arxiv.org/abs/2406.10219) · 📚 被引 37
-- **作者**: Alex Hanson, Allen Tu, Vasu Singla, Mayuka Jayawardhana, Matthias Zwicker, Tom Goldstein
-- **🏷️ 机构**: University of Maryland,College Park
-- **会议**: CVPR 2025
+### LLaMaFlex: Many-in-one LLMs via Generalized Pruning and Weight Sharing.
+- **链接**: [出版页](https://openreview.net/forum?id=AyC4uxx2HW)
+- **作者**: Ruisi Cai, Saurav Muralidharan, Hongxu Yin, Zhangyang Wang, Jan Kautz, Pavlo Molchanov
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -59,11 +47,7 @@
 
 </details>
 
-### ATP: Adaptive Threshold Pruning for Efficient Data Encoding in Quantum Neural Networks.
-- **链接**: [arXiv:2503.21815](https://arxiv.org/abs/2503.21815) · 📚 被引 3
-- **作者**: Mohamed Afane, Gabrielle Ebbrecht, Ying Wang, Juntao Chen, Junaid Farooq
-- **🏷️ 机构**: Fordham University, Stevens Institute of Technology, University of Michigan-Dearborn
-- **会议**: CVPR 2025
+> While large-scale text-to-image diffusion models have demonstrated impressive image-generation capabilities, there are significant concerns about their potential misuse for generating unsafe content, violating copyright, and perpetuating societal biases. Recently, the text-to-image generation community has begun addressing these concerns by editing or unlearning undesired concepts from pre-trained models. However, these methods often involve data-intensive and inefficient fine-tuning or utilize various forms of token remapping, rendering them susceptible to adversarial jailbreaks. In this paper, we present a simple and effective training-free approach, ConceptPrune, wherein we first identify critical regions within pre-trained models responsible for generating undesirable concepts, thereby facilitating straightforward concept unlearning via weight pruning. Experiments across a range of concepts including artistic styles, nudity, object erasure, and gender debiasing demonstrate that target concepts can be efficiently erased by pruning a tiny fraction, approximately 0.12% of total weights, enabling multi-concept erasure and robustness against various white-box and black-box adversarial attacks.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -71,11 +55,7 @@
 
 </details>
 
-### PACT: Pruning and Clustering-Based Token Reduction for Faster Visual Language Models.
-- **链接**: [arXiv:2504.08966](https://arxiv.org/abs/2504.08966) · 📚 被引 2
-- **作者**: Mohamed Dhouib, Davide Buscaldi, Sonia Vanier, Aymen Shabou
-- **🏷️ 机构**: LIX, &#x00C9;cole Polytechnique, IP,Paris,France, LIPN, Universit&#x00E9; Sorbonne Paris Nord,France, DataLab Groupe, Cr&#x00E9;dit Agricole S.A,France
-- **会议**: CVPR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -83,23 +63,19 @@
 
 </details>
 
-### EfficientLLaVA: Generalizable Auto-Pruning for Large Vision-language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liang_EfficientLLaVA_Generalizable_Auto-Pruning_for_Large_Vision-language_Models_CVPR_2025_paper.html)
-- **作者**: Yinan Liang, Ziwei Wang, Xiuwei Xu, Jie Zhou, Jiwen Lu
+### LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/shen25j.html)
+- **作者**: Xiaoqian Shen, Yunyang Xiong, Changsheng Zhao, Lemeng Wu, Jun Chen, Chenchen Zhu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICML 2025
 
-### ICP: Immediate Compensation Pruning for Mid-to-high Sparsity.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Luo_ICP_Immediate_Compensation_Pruning_for_Mid-to-high_Sparsity_CVPR_2025_paper.html) · 📚 被引 4
-- **作者**: Xin Luo, Xueming Fu, Zihang Jiang, S. Kevin Zhou
-- **🏷️ 机构**: USTC,School of Biomedical Engineering, Division of Life Sciences and Medicine
-- **会议**: CVPR 2025
+### Training-Free Dataset Pruning for Instance Segmentation.
+- **链接**: [arXiv:2503.00828](https://arxiv.org/abs/2503.00828) · [代码](https://github.com/he-y/dataset-pruning-for-instance-segmentation)
+- **作者**: Yalun Dai, Lingao Xiao, Ivor W. Tsang, Yang He
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
-### Automatic Joint Structured Pruning and Quantization for Efficient Neural Network Training and Compression.
-- **链接**: [arXiv:2502.16638](https://arxiv.org/abs/2502.16638) · 📚 被引 21
-- **作者**: Xiaoyi Qu, David Aponte, Colby R. Banbury, Daniel P. Robinson, Tianyu Ding, Kazuhito Koishida et al.
-- **🏷️ 机构**: Lehigh University, Microsoft
-- **会议**: CVPR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -107,11 +83,11 @@
 
 </details>
 
-### MDP: Multidimensional Vision Model Pruning with Latency Constraint.
-- **链接**: [arXiv:2504.02168](https://arxiv.org/abs/2504.02168) · 📚 被引 3
-- **作者**: Xinglong Sun, Barath Lakshmanan, Maying Shen, Shiyi Lan, Jingde Chen, José M. Álvarez
-- **🏷️ 机构**: NVIDIA
-- **会议**: CVPR 2025
+### DARE the Extreme: Revisiting Delta-Parameter Pruning For Fine-Tuned Models.
+- **链接**: [arXiv:2410.09344](https://arxiv.org/abs/2410.09344)
+- **作者**: Wenlong Deng, Yize Zhao, Vala Vakilian, Minghui Chen, Xiaoxiao Li, Christos Thrampoulidis
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -129,19 +105,15 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ye_ATP-LLaVA_Adaptive_Token_Pruning_for_Large_Vision_Language_Models_CVPR_2025_paper.html)
 - **作者**: Xubing Ye, Yukang Gan, Yixiao Ge, Xiao-Ping Zhang, Yansong Tang
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICML 2025
 
-### Flexible Group Count Enables Hassle-Free Structured Pruning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Flexible_Group_Count_Enables_Hassle-Free_Structured_Pruning_CVPR_2025_paper.html) · 📚 被引 4
-- **作者**: Jiamu Zhang, Shaochen Zhong, Andrew Ye, Zirui Liu, Sebastian Zhao, Kaixiong Zhou et al.
-- **🏷️ 机构**: Rice University,USA, Stanford University,USA, University of Minnesota-Twin Cities,USA
-- **会议**: CVPR 2025
+</details>
 
-### SINR: Sparsity Driven Compressed Implicit Neural Representations.
-- **链接**: [arXiv:2503.19576](https://arxiv.org/abs/2503.19576) · 📚 被引 1
-- **作者**: Dhananjaya Jayasundara, Sudarshan Rajagopalan, Yasiru Ranasinghe, Trac D. Tran, Vishal M. Patel
-- **🏷️ 机构**: Johns Hopkins University
-- **会议**: CVPR 2025
+### Adaptive Pruning of Pretrained Transformer via Differential Inclusions.
+- **链接**: [arXiv:2501.03289](https://arxiv.org/abs/2501.03289)
+- **作者**: Yizhuo Ding, Ke Fan, Yikai Wang, Xinwei Sun, Yanwei Fu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -149,11 +121,7 @@
 
 </details>
 
-### SURGEON: Memory-Adaptive Fully Test-Time Adaptation via Dynamic Activation Sparsity.
-- **链接**: [arXiv:2503.20354](https://arxiv.org/abs/2503.20354) · 📚 被引 3
-- **作者**: Ke Ma, Jiaqi Tang, Bin Guo, Fan Dang, Sicong Liu, Zhui Zhu et al.
-- **🏷️ 机构**: Northwestern Polytechnical University, The Hong Kong University of Science and Technology, Beijing Jiaotong University
-- **会议**: CVPR 2025
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -161,13 +129,9 @@
 
 </details>
 
-### Random Conditioning for Diffusion Model Compression with Distillation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kim_Random_Conditioning_for_Diffusion_Model_Compression_with_Distillation_CVPR_2025_paper.html) · 📚 被引 0
-- **作者**: Dohyun Kim, Sehwan Park, Geonhee Han, Seung Wook Kim, Paul Hongsuck Seo
-- **🏷️ 机构**: Korea University,Dept. of CSE, NVIDIA
-- **会议**: CVPR 2025
+> Text-to-image (T2I) diffusion models have demonstrated impressive image generation capabilities. Still, their computational intensity prohibits resource-constrained organizations from deploying T2I models after fine-tuning them on their internal target data. While pruning techniques offer a potential solution to reduce the computational burden of T2I models, static pruning methods use the same pruned model for all input prompts, overlooking the varying capacity requirements of different prompts. Dynamic pruning addresses this issue by utilizing a separate sub-network for each prompt, but it prevents batch parallelism on GPUs. To overcome these limitations, we introduce Adaptive Prompt-Tailored Pruning (APTP), a novel prompt-based pruning method designed for T2I diffusion models. Central to our approach is a prompt router model, which learns to determine the required capacity for an input text prompt and routes it to an architecture code, given a total desired compute budget for prompts. Each architecture code represents a specialized model tailored to the prompts assigned to it, and the number of codes is a hyperparameter. We train the prompt router and architecture codes using contrastive learning, ensuring that similar prompts are mapped to nearby codes. Further, we employ optimal transport to prevent the codes from collapsing into a single one. We demonstrate APTP's effectiveness by pruning Stable Diffusion (SD) V2.1 using CC3M and COCO as target datasets. APTP outperforms the single-model pruning baselines in terms of FID, CLIP, and CMMD scores. Our analysis of the clusters learned by APTP reveals they are semantically meaningful. We also show that APTP can automatically discover previously empirically found challenging prompts for SD, e.g. prompts for generating text images, assigning them to higher capacity codes.
 
-## 跨领域论文（完整笔记在其他领域）
+</details>
 
 - DivPrune: Diversity-based Visual Token Pruning for Large Multimodal Models. → [multimodal](../multimodal/Guideline%202025.md)
 - CASP: Compression of Large Multimodal Models Based on Attention Sparsity. → [multimodal](../multimodal/Guideline%202025.md)

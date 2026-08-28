@@ -5,11 +5,11 @@
 
 > 同领域其他年份: 
 
-### MANTA: A Large-Scale Multi-View and Visual-Text Anomaly Detection Dataset for Tiny Objects.
-- **链接**: [arXiv:2412.04867](https://arxiv.org/abs/2412.04867) · 📚 被引 18
-- **作者**: Lei Fan, Dongdong Fan, Zhiguang Hu, Yiwen Ding, Donglin Di, Kai Yi et al.
-- **🏷️ 机构**: UNSW Sydney, Gaozhe Technology, SCAU
-- **会议**: CVPR 2025
+### HiPoNet: A Multi-View Simplicial Complex Network for High Dimensional Point-Cloud and Single-Cell data.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/b284aad9fb5c6d74b9535a30ece69e1c-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Siddharth Viswanath, Hiren Madhu, Dhananjay Bhaskar, Jake Kovalic, Dave Johnson, Christopher J. Tape et al.
+- **🏷️ 机构**: Yale University, Boise State University, University College London, University of London
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +17,11 @@
 
 </details>
 
-### Cross-Modal 3D Representation with Multi-View Images and Point Clouds.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_Cross-Modal_3D_Representation_with_Multi-View_Images_and_Point_Clouds_CVPR_2025_paper.html)
-- **作者**: Ziyang Zhou, Pinghui Wang, Zi Liang, Haitao Bai, Ruofei Zhang
+### SparseMVC: Probing Cross-view Sparsity Variations for Multi-view Clustering.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/e366fff693ee7cdbca8ed2764bc18a71-Abstract-Conference.html)
+- **作者**: Ruimeng Liu, Xin Zou, Chang Tang, Xiao Zheng, Xingchen Hu, Kun Sun et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICCV 2025
 
 ### PCDreamer: Point Cloud Completion Through Multi-view Diffusion Priors.
 - **链接**: [arXiv:2411.19036](https://arxiv.org/abs/2411.19036) · 📚 被引 8
@@ -41,71 +41,75 @@
 - **🏷️ 机构**: Technion - Israel Institute of Technology, Tel Aviv University
 - **会议**: CVPR 2025
 
-### Theory-Inspired Deep Multi-View Multi-Label Learning with Incomplete Views and Noisy Labels.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Li_Theory-Inspired_Deep_Multi-View_Multi-Label_Learning_with_Incomplete_Views_and_Noisy_CVPR_2025_paper.html) · 📚 被引 7
-- **作者**: Quanjiang Li, Tingjin Luo, Jiahui Liao
-- **🏷️ 机构**: National University of Defense Technology,China
-- **会议**: CVPR 2025
+> We introduce ForeSight, a novel joint detection and forecasting framework for vision-based 3D perception in autonomous vehicles. Traditional approaches treat detection and forecasting as separate sequential tasks, limiting their ability to leverage temporal cues. ForeSight addresses this limitation with a multi-task streaming and bidirectional learning approach, allowing detection and forecasting to share query memory and propagate information seamlessly. The forecast-aware detection transformer enhances spatial reasoning by integrating trajectory predictions from a multiple hypothesis forecast memory queue, while the streaming forecast transformer improves temporal consistency using past forecasts and refined detections. Unlike tracking-based methods, ForeSight eliminates the need for explicit object association, reducing error propagation with a tracking-free model that efficiently scales across multi-frame sequences. Experiments on the nuScenes dataset show that ForeSight achieves state-of-the-art performance, achieving an EPA of 54.9%, surpassing previous methods by 9.3%, while also attaining the best mAP and minADE among multi-view detection and forecasting models.
 
-### Which Viewpoint Shows it Best? Language for Weakly Supervising View Selection in Multi-view Instructional Videos.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Majumder_Which_Viewpoint_Shows_it_Best_Language_for_Weakly_Supervising_View_CVPR_2025_paper.html) · 📚 被引 4
-- **作者**: Sagnik Majumder, Tushar Nagarajan, Ziad Al-Halah, Reina Pradhan, Kristen Grauman
-- **🏷️ 机构**: UT Austin, FAIR, Meta, University of Utah
-- **会议**: CVPR 2025
+</details>
 
-### M3GYM: A Large-Scale Multimodal Multi-view Multi-person Pose Dataset for Fitness Activity Understanding in Real-world Settings.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xu_M3GYM_A_Large-Scale_Multimodal_Multi-view_Multi-person_Pose_Dataset_for_Fitness_CVPR_2025_paper.html)
-- **作者**: Qingzheng Xu, Ru Cao, Xin Shen, Heming Du, Sen Wang, Xin Yu
+### Multi-View 3D Point Tracking.
+- **链接**: [arXiv:2508.21060](https://arxiv.org/abs/2508.21060)
+- **作者**: Frano Rajic, Haofei Xu, Marko Mihajlovic, Siyuan Li, Irem Demir, Emircan Gündogdu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICCV 2025
 
-### Medusa: A Multi-Scale High-order Contrastive Dual-Diffusion Approach for Multi-View Clustering.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Medusa_A_Multi-Scale_High-order_Contrastive_Dual-Diffusion_Approach_for_Multi-View_Clustering_CVPR_2025_paper.html) · 📚 被引 1
-- **作者**: Liang Chen, Zhe Xue, Yawen Li, Meiyu Liang, Yan Wang, Anton van den Hengel et al.
-- **🏷️ 机构**: Beijing University of Posts and Telecommunications,China, Macquarie University,Australia, The University of Adelaide,Australia
-- **会议**: CVPR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### MVDoppler-Pose: Multi-Modal Multi-View mmWave Sensing for Long-Distance Self-Occluded Human Walking Pose Estimation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Choi_MVDoppler-Pose_Multi-Modal_Multi-View_mmWave_Sensing_for_Long-Distance_Self-Occluded_Human_Walking_CVPR_2025_paper.html)
-- **作者**: Jaeho Choi, Soheil Hor, Shubo Yang, Amin Arbabian
+> We introduce the first data-driven multi-view 3D point tracker, designed to track arbitrary points in dynamic scenes using multiple camera views. Unlike existing monocular trackers, which struggle with depth ambiguities and occlusion, or prior multi-camera methods that require over 20 cameras and tedious per-sequence optimization, our feed-forward model directly predicts 3D correspondences using a practical number of cameras (e.g., four), enabling robust and accurate online tracking. Given known camera poses and either sensor-based or estimated multi-view depth, our tracker fuses multi-view features into a unified point cloud and applies k-nearest-neighbors correlation alongside a transformer-based update to reliably estimate long-range 3D correspondences, even under occlusion. We train on 5K synthetic multi-view Kubric sequences and evaluate on two real-world benchmarks: Panoptic Studio and DexYCB, achieving median trajectory errors of 3.1 cm and 2.0 cm, respectively. Our method generalizes well to diverse camera setups of 1-8 views with varying vantage points and video lengths of 24-150 frames. By releasing our tracker alongside training and evaluation datasets, we aim to set a new standard for multi-view 3D tracking research and provide a practical tool for real-world applications. Project page available at https://ethz-vlg.github.io/mvtracker.
+
+</details>
+
+### MVTrajecter: Multi-View Pedestrian Tracking With Trajectory Motion Cost and Trajectory Appearance Cost.
+- **链接**: [arXiv:2509.01157](https://arxiv.org/abs/2509.01157) · 📚 被引 1
+- **作者**: Taiga Yamane, Ryo Masumura, Satoshi Suzuki, Shota Orihashi
+- **🏷️ 机构**: NTT Corporation,NTT Human Informatics Laboratries
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-View Pedestrian Tracking (MVPT) aims to track pedestrians in the form of a bird's eye view occupancy map from multi-view videos. End-to-end methods that detect and associate pedestrians within one model have shown great progress in MVPT. The motion and appearance information of pedestrians is important for the association, but previous end-to-end MVPT methods rely only on the current and its single adjacent past timestamp, discarding the past trajectories before that. This paper proposes a novel end-to-end MVPT method called Multi-View Trajectory Tracker (MVTrajecter) that utilizes information from multiple timestamps in past trajectories for robust association. MVTrajecter introduces trajectory motion cost and trajectory appearance cost to effectively incorporate motion and appearance information, respectively. These costs calculate which pedestrians at the current and each past timestamp are likely identical based on the information between those timestamps. Even if a current pedestrian could be associated with a false pedestrian at some past timestamp, these costs enable the model to associate that current pedestrian with the correct past trajectory based on other past timestamps. In addition, MVTrajecter effectively captures the relationships between multiple timestamps leveraging the attention mechanism. Extensive experiments demonstrate the effectiveness of each component in MVTrajecter and show that it outperforms the previous state-of-the-art methods.
+
+</details>
+
+### Point Cloud Self-Supervised Learning via 3D to Multi-View Masked Learner.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02564)
+- **作者**: Zhimin Chen, Xuewei Chen, Xiao Guo, Yingwei Li, Longlong Jing, Liang Yang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICCV 2025
 
-### Enhanced then Progressive Fusion with View Graph for Multi-View Clustering.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Dong_Enhanced_then_Progressive_Fusion_with_View_Graph_for_Multi-View_Clustering_CVPR_2025_paper.html) · 📚 被引 9
-- **作者**: Zhibin Dong, Meng Liu, Siwei Wang, Ke Liang, Yi Zhang, Suyuan Liu et al.
-- **🏷️ 机构**: National University of Defense Technology,Changsha,China, Intelligent Game and Decision Lab,Beijing,China
-- **会议**: CVPR 2025
+### AF-UMC: An Alignment-Free Fusion Framework for Unaligned Multi-View Clustering.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/965484d5b2b2624ba17295612a3ba7e8-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Bohang Sun, Yuena Lin, Tao Yang, Zhen Zhu, Zhen Yang, Gengyu Lyu
+- **🏷️ 机构**: Beijing University of Technology, Idealism Beijing Technology Co., Ltd, Zhejiang Sci-Tech University
+- **会议**: NeurIPS 2025
 
-### Zero-Shot Novel View and Depth Synthesis with Multi-View Geometric Diffusion.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Guizilini_Zero-Shot_Novel_View_and_Depth_Synthesis_with_Multi-View_Geometric_Diffusion_CVPR_2025_paper.html) · 📚 被引 1
-- **作者**: Vitor Guizilini, Muhammad Zubair Irshad, Dian Chen, Greg Shakhnarovich, Rares Ambrus
-- **🏷️ 机构**: Toyota Research Institute (TRI), Toyota Technological Institute at Chicago (TTIC)
-- **会议**: CVPR 2025
+### MIX: A Multi-view Time-Frequency Interactive Explanation Framework for Time Series Classification.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/46559eba5b7b86236675d7ea34f52f5c-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Viet-Hung Tran, Ngoc Phu Doan, Zichi Zhang, Tuan Dung Pham, Phi Hung Nguyen, Xuan Hoang Nguyen et al.
+- **🏷️ 机构**: The Queen's University Belfast, Queen's University Belfast, Aarhus University
+- **会议**: NeurIPS 2025
 
-### GeoAvatar: Geometrically-Consistent Multi-Person Avatar Reconstruction from Sparse Multi-View Videos.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Lee_GeoAvatar_Geometrically-Consistent_Multi-Person_Avatar_Reconstruction_from_Sparse_Multi-View_Videos_CVPR_2025_paper.html) · 📚 被引 2
-- **作者**: Soohyun Lee, Seoyeon Kim, HeeKyung Lee, Won-Sik Jeong, Joo Ho Lee
-- **🏷️ 机构**: Sogang University, Electronics and Telecommunications Research Institute
-- **会议**: CVPR 2025
+### A Data-Driven Prism: Multi-View Source Separation with Diffusion Model Priors.
+- **链接**: [arXiv:2510.05205](https://arxiv.org/abs/2510.05205) · 📚 被引 0
+- **作者**: Sebastian Wagner-Carena, Aizhan Akhmetzhanova, Sydney Erickson
+- **🏷️ 机构**: New York University / Simons Foundation, Harvard University, Stanford University
+- **会议**: NeurIPS 2025
 
-### EditSplat: Multi-View Fusion and Attention-Guided Optimization for View-Consistent 3D Scene Editing with 3D Gaussian Splatting.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Lee_EditSplat_Multi-View_Fusion_and_Attention-Guided_Optimization_for_View-Consistent_3D_Scene_CVPR_2025_paper.html) · 📚 被引 9
-- **作者**: Dong In Lee, Hyeongcheol Park, Jiyoung Seo, Eunbyung Park, Hyunje Park, Hadam Baek et al.
-- **🏷️ 机构**: Korea University, Yonsei University, Hanhwa Systems
-- **会议**: CVPR 2025
+### Where Graph Meets Heterogeneity: Multi-View Collaborative Graph Experts.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/7315c16422558ae81d65a812723d2cec-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Zhihao Wu, Jinyu Cai, Yunhe Zhang, Jielong Lu, Zhaoliang Chen, Shuman Zhuang et al.
+- **🏷️ 机构**: Zhejiang University, National University of Singapore, University of Macau
+- **会议**: NeurIPS 2025
 
-### AdaptCMVC: Robust Adaption to Incremental Views in Continual Multi-view Clustering.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_AdaptCMVC_Robust_Adaption_to_Incremental_Views_in_Continual_Multi-view_Clustering_CVPR_2025_paper.html) · 📚 被引 1
-- **作者**: Jing Wang, Songhe Feng, Kristoffer Knutsen Wickstrøm, Michael C. Kampffmeyer
-- **🏷️ 机构**: Beijing Jiaotong University,School of Computer Science &amp; Technology, UiT The Arctic University of Norway,Department of Physics and Technology
-- **会议**: CVPR 2025
+### LLM-DAMVC: A Large Language Model Assisted Dynamic Agent for Multi-View Clustering.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/ad48f017e6c3d474caf511208e600459-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Haiming Xu, Qianqian Wang
+- **🏷️ 机构**: ByteDance Inc., Xidian University
+- **会议**: NeurIPS 2025
 
-### FaceBench: A Multi-View Multi-Level Facial Attribute VQA Dataset for Benchmarking Face Perception MLLMs.
-- **链接**: [arXiv:2503.21457](https://arxiv.org/abs/2503.21457) · [代码](https://github.com/CVI-SZU/FaceBench) · 📚 被引 6
-- **作者**: Xiaoqin Wang, Xusen Ma, Xianxu Hou, Meidan Ding, Yudong Li, Junliang Chen et al.
-- **🏷️ 机构**: Shenzhen University,Computer Vision Institute, College of Computer Science and Software Engineering, Xi&#x2019;an Jiaotong-Liverpool University,AIAC, Tsinghua University
-- **会议**: CVPR 2025
+### Multi-View Oriented GPLVM: Expressiveness and Efficiency.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/5e50b663324972bb8cc7b5c06a059438-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Zi Yang, Ying Li, Zhidi Lin, Michael Minyi Zhang, Pablo M. Olmos
+- **🏷️ 机构**: Jiangnan University, University of Hong Kong
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -113,29 +117,29 @@
 
 </details>
 
-### Incomplete Multi-View Multi-label Learning via Disentangled Representation and Label Semantic Embedding.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yan_Incomplete_Multi-View_Multi-label_Learning_via_Disentangled_Representation_and_Label_Semantic_CVPR_2025_paper.html) · 📚 被引 4
-- **作者**: Xu Yan, Jun Yin, Jie Wen
-- **🏷️ 机构**: Shanghai Maritime University, Harbin Institute of Technology,Shenzhen
-- **会议**: CVPR 2025
+### MIHC: Multi-View Interpretable Hypergraph Neural Networks with Information Bottleneck for Chip Congestion Prediction.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/7fc54f90195097ed0ee6200f1dc274d3-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Zeyue Zhang, Heng Ping, Peiyu Zhang, Nikos Kanakaris, Xiaoling Lu, Paul Bogdan et al.
+- **🏷️ 机构**: Renmin University of China, University of Southern California, Amazon
+- **会议**: NeurIPS 2025
 
-### Large-scale Multi-view Tensor Clustering with Implicit Linear Kernels.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Large-scale_Multi-view_Tensor_Clustering_with_Implicit_Linear_Kernels_CVPR_2025_paper.html) · 📚 被引 7
-- **作者**: Jiyuan Liu, Xinwang Liu, Chuankun Li, Xinhang Wan, Hao Tan, Yi Zhang et al.
-- **🏷️ 机构**: National University of Defense Technology,Changsha,China,410072, North University of China,Taiyuan,China,030051
-- **会议**: CVPR 2025
+### MaterialRefGS: Reflective Gaussian Splatting with Multi-view Consistent Material Inference.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/819aaee144cb40e887a4aa9e781b1547-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Wenyuan Zhang, Jimin Tang, Weiqi Zhang, Yi Fang, Yu-Shen Liu, Zhizhong Han
+- **🏷️ 机构**: Software Engineering, Tsinghua University, Tsinghua University, Tsinghua University, Tsinghua University, Tsinghua University
+- **会议**: NeurIPS 2025
 
-### SeqMvRL: A Sequential Fusion Framework for Multi-view Representation Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_SeqMvRL_A_Sequential_Fusion_Framework_for_Multi-view_Representation_Learning_CVPR_2025_paper.html) · 📚 被引 4
-- **作者**: Ren Wang, Haoliang Sun, Yuxiu Lin, Chuanhui Zuo, Yongshun Gong, Yilong Yin et al.
-- **🏷️ 机构**: Shandong University,School of Software, Shandong University of Finance and Economics,School of Computing and Artificial Intelligence
-- **会议**: CVPR 2025
+### Stable Part Diffusion 4D: Multi-View RGB and Kinematic Parts Video Generation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/a61023ce36d21010f1423304f8ec49af-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Hao Zhang, Chun-Han Yao, Simon Donné, Narendra Ahuja, Varun Jampani
+- **🏷️ 机构**: Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Stability AI, University of Illinois at Urbana-Champaign
+- **会议**: NeurIPS 2025
 
-### Enhancing Testing-Time Robustness for Trusted Multi-View Classification in the Wild.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Enhancing_Testing-Time_Robustness_for_Trusted_Multi-View_Classification_in_the_Wild_CVPR_2025_paper.html) · 📚 被引 10
-- **作者**: Wei Liu, Yufei Chen, Xiaodong Yue
-- **🏷️ 机构**: Tongji University,School of Computer Science and Technology,Shanghai,China, Shanghai University,Artificial Intelligence Institute,Shanghai,China
-- **会议**: CVPR 2025
+### Gaussian Regression-Driven Tensorized Incomplete Multi-View Clustering with Dual Manifold Regularization.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/684c59d614fe6ae74a3be8c3ef07e061-Abstract-Conference.html) · 📚 被引 1
+- **作者**: Zhenhao Zhong, Zhibin Gu, Pengpeng Yang, Yaqian Zhou, Ruiqiang Guo
+- **🏷️ 机构**: Xi'an Jiaotong University, Hebei Normal University, University of Florence; China Three Gorges University
+- **会议**: NeurIPS 2025
 
 ### MET3R: Measuring Multi-View Consistency in Generated Images.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Asim_MET3R_Measuring_Multi-View_Consistency_in_Generated_Images_CVPR_2025_paper.html) · 📚 被引 17
@@ -143,35 +147,17 @@
 - **🏷️ 机构**: Max Planck Institute for Informatics, Saarland Informatics Campus
 - **会议**: CVPR 2025
 
-### HOT3D: Hand and Object Tracking in 3D from Egocentric Multi-View Videos.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Banerjee_HOT3D_Hand_and_Object_Tracking_in_3D_from_Egocentric_Multi-View_CVPR_2025_paper.html) · 📚 被引 34
-- **作者**: Prithviraj Banerjee, Sindi Shkodrani, Pierre Moulon, Shreyas Hampali, Shangchen Han, Fan Zhang et al.
-- **🏷️ 机构**: Meta Reality Labs
-- **会议**: CVPR 2025
+### SAINT: Sequence-Aware Integration for Spatial Transcriptomics Multi-View Clustering.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/a86441358d4b88afe485f160dc6a982f-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Zeyu Zhu, Ke Liang, Lingyuan Meng, Meng Liu, Suyuan Liu, Renxiang Guan et al.
+- **🏷️ 机构**: National University of Defense Technology, Shandong Jianzhu University, Changsha University
+- **会议**: NeurIPS 2025
 
-### MUSt3R: Multi-view Network for Stereo 3D Reconstruction.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Cabon_MUSt3R_Multi-view_Network_for_Stereo_3D_Reconstruction_CVPR_2025_paper.html) · 📚 被引 25
-- **作者**: Yohann Cabon, Lucas Stoffl, Leonid Antsfeld, Gabriela Csurka, Boris Chidlovskii, Jérôme Revaud et al.
-- **🏷️ 机构**: Naver Labs Europe, EPFL
-- **会议**: CVPR 2025
-
-### MVGenMaster: Scaling Multi-View Generation from Any Image via 3D Priors Enhanced Diffusion Model.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Cao_MVGenMaster_Scaling_Multi-View_Generation_from_Any_Image_via_3D_Priors_CVPR_2025_paper.html) · 📚 被引 8
-- **作者**: Chenjie Cao, Chaohui Yu, Shang Liu, Fan Wang, Xiangyang Xue, Yanwei Fu
-- **🏷️ 机构**: Fudan University, DAMO Academy, Alibaba Group
-- **会议**: CVPR 2025
-
-### PartGen: Part-level 3D Generation and Reconstruction with Multi-view Diffusion Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.html) · 📚 被引 14
-- **作者**: Minghao Chen, Roman Shapovalov, Iro Laina, Tom Monnier, Jianyuan Wang, David Novotný et al.
-- **🏷️ 机构**: University of Oxford,Visual Geometry Group, Meta AI
-- **会议**: CVPR 2025
-
-### Learning from Synchronization: Self-Supervised Uncalibrated Multi-View Person Association in Challenging Scenes.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Learning_from_Synchronization_Self-Supervised_Uncalibrated_Multi-View_Person_Association_in_Challenging_CVPR_2025_paper.html)
-- **作者**: Keqi Chen, Vinkle Srivastav, Didier Mutter, Nicolas Padoy
+### SynCL: A Synergistic Training Strategy with Instance-Aware Contrastive Learning for End-to-End Multi-Camera 3D Tracking.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/056932270665ac01253e5ef7c5dc32aa-Abstract-Conference.html)
+- **作者**: Shubo Lin, Yutong Kou, Zirui Wu, Shaoru Wang, Bing Li, Weiming Hu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: NeurIPS 2025
 
 ### MuTri: Multi-view Tri-alignment for OCT to OCTA 3D Image Translation.
 - **链接**: [arXiv:2504.01428](https://arxiv.org/abs/2504.01428) · 📚 被引 5
@@ -203,11 +189,11 @@
 - **🏷️ 机构**: Carnegie Mellon University, National University of Singapore
 - **会议**: CVPR 2025
 
-### Imputation-free and Alignment-free: Incomplete Multi-view Clustering Driven by Consensus Semantic Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Dai_Imputation-free_and_Alignment-free_Incomplete_Multi-view_Clustering_Driven_by_Consensus_Semantic_CVPR_2025_paper.html) · 📚 被引 6
-- **作者**: Yuzhuo Dai, Jiaqi Jin, Zhibin Dong, Siwei Wang, Xinwang Liu, En Zhu et al.
-- **🏷️ 机构**: National University of Defense Technology,Changsha,China, Intelligent Game and Decision Lab,Beijing,China
-- **会议**: CVPR 2025
+### QSCA: Quantization with Self-Compensating Auxiliary for Monocular Depth Estimation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/2d13e0a4097e44b9f167f2e67aa0214a-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Jincheol Yang, Jaemin Choi, Matti Zinke, Suk-Ju Kang
+- **🏷️ 机构**: Sogang University
+- **会议**: NeurIPS 2025
 
 ### CaMuViD: Calibration-Free Multi-View Detection.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Daryani_CaMuViD_Calibration-Free_Multi-View_Detection_CVPR_2025_paper.html) · 📚 被引 3
@@ -285,7 +271,7 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Enhanced_Contrastive_Learning_with_Multi-view_Longitudinal_Data_for_Chest_X-ray_CVPR_2025_paper.html)
 - **作者**: Kang Liu, Zhuoqi Ma, Xiaolu Kang, Yunan Li, Kun Xie, Zhicheng Jiao et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: NeurIPS 2025
 
 ### MVBoost: Boost 3D Reconstruction with Multi-View Refinement.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_MVBoost_Boost_3D_Reconstruction_with_Multi-View_Refinement_CVPR_2025_paper.html) · 📚 被引 1
@@ -505,6 +491,8 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- Leveraging Temporal Cues for Semi-Supervised Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202025.md)
-- CorrBEV: Multi-View 3D Object Detection by Correlation Learning with Multi-modal Prototypes. → [3d-detection](../3d-detection/Guideline%202025.md)
-- VisionPAD: A Vision-Centric Pre-training Paradigm for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
+- OcRFDet: Object-Centric Radiance Fields for Multi-View 3D Object Detection in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202025.md)
+- OpenM3D: Open Vocabulary Multi-View Indoor 3D Object Detection without Human Annotations. → [3d-detection](../3d-detection/Guideline%202025.md)
+- MemDistill: Distilling LiDAR Knowledge into Memory for Camera-Only 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202025.md)
+- FreqPDE: Rethinking Positional Depth Embedding for Multi-View 3D Object Detection Transformers. → [3d-detection](../3d-detection/Guideline%202025.md)
+- Boosting Multi-View Indoor 3D Object Detection Via Adaptive 3D Volume Construction. → [3d-detection](../3d-detection/Guideline%202025.md)

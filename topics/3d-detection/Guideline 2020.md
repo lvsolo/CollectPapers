@@ -1,7 +1,7 @@
 # 3D Detection — 2020 Guideline
 
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
-> 论文数: 21 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 19 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -21,9 +21,13 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Ahmed_Density-Based_Clustering_for_3D_Object_Detection_in_Point_Clouds_CVPR_2020_paper.html) · 📚 被引 30
 - **作者**: Syeda Mariam Ahmed, Chee-Meng Chew
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### DSGN: Deep Stereo Geometry Network for 3D Object Detection.
+- **链接**: [arXiv:2001.03398](https://arxiv.org/abs/2001.03398) · [代码](https://github.com/chenyilun95/DSGN) · 📚 被引 179
+- **作者**: Yilun Chen, Shu Liu, Xiaoyong Shen, Jiaya Jia
+- **🏷️ 机构**: CUHK / SmartMore
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -31,17 +35,17 @@
 
 </details>
 
-### Monocular Differentiable Rendering for Self-supervised 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58589-1_31)
-- **作者**: Deniz Beker, Hiroharu Kato, Mihai Morariu, Takahiro Ando, Toru Matsuoka, Wadim Kehl et al.
+### A Hierarchical Graph Network for 3D Object Detection on Point Clouds.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_A_Hierarchical_Graph_Network_for_3D_Object_Detection_on_Point_CVPR_2020_paper.html) · 📚 被引 143
+- **作者**: Jintai Chen, Biwen Lei, Qingyu Song, Haochao Ying, Danny Z. Chen, Jian Wu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Kinematic 3D Object Detection in Monocular Video.
-- **链接**: [arXiv:2007.09548](https://arxiv.org/abs/2007.09548)
-- **作者**: Garrick Brazil, Gerard Pons-Moll, Xiaoming Liu, Bernt Schiele
+### MonoPair: Monocular 3D Object Detection Using Pairwise Spatial Relationships.
+- **链接**: [arXiv:2003.00504](https://arxiv.org/abs/2003.00504) · 📚 被引 285
+- **作者**: Yongjian Chen, Lei Tai, Kai Sun, Mingyang Li
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -49,13 +53,11 @@
 
 </details>
 
-</details>
-
-### Improving 3D Object Detection Through Progressive Population Based Augmentation.
-- **链接**: [arXiv:2004.00831](https://arxiv.org/abs/2004.00831)
-- **作者**: Shuyang Cheng, Zhaoqi Leng, Ekin Dogus Cubuk, Barret Zoph, Chunyan Bai, Jiquan Ngiam et al.
+### Learning Depth-Guided Convolutions for Monocular 3D Object Detection.
+- **链接**: [arXiv:1912.04799](https://arxiv.org/abs/1912.04799) · [代码](https://github.com/dingmyu/D4LCN) · 📚 被引 210
+- **作者**: Mingyu Ding, Yuqi Huo, Hongwei Yi, Zhe Wang, Jianping Shi, Zhiwu Lu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -85,31 +87,13 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Peng_IDA-3D_Instance-Depth-Aware_3D_Object_Detection_From_Stereo_Vision_for_Autonomous_CVPR_2020_paper.html)
 - **作者**: Wanli Peng, Hao Pan, He Liu, Yi Sun
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Massive semantically labeled datasets are readily available for 2D images, however, are much harder to achieve for 3D scenes. Objects in 3D repositories like ShapeNet are labeled, but regrettably only in isolation, so without context. 3D scenes can be acquired by range scanners on city-level scale, but much fewer with semantic labels. Addressing this disparity, we introduce a new optimization procedure, which allows training for 3D detection with raw 3D scans while using as little as 5% of the object labels and still achieve comparable performance. Our optimization uses two networks. A scene network maps an entire 3D scene to a set of 3D object centers. As we assume the scene not to be labeled by centers, no classic loss, such as Chamfer can be used to train it. Instead, we use another network to emulate the loss. This loss network is trained on a small labeled subset and maps a non centered 3D object in the presence of distractions to its own center. This function is very similar - and hence can be used instead of - the gradient the supervised loss would provide. Our evaluation documents competitive fidelity at a much lower level of supervision, respectively higher quality at comparable supervision. Supplementary material can be found at: https://dgriffiths3.github.io.
-
-</details>
-
-### EPNet: Enhancing Point Features with Image Semantics for 3D Object Detection.
-- **链接**: [arXiv:2007.08856](https://arxiv.org/abs/2007.08856) · [代码](https://github.com/happinesslz/EPNet) · 📚 被引 437
-- **作者**: Tengteng Huang, Zhe Liu, Xiwu Chen, Xiang Bai
-- **🏷️ 机构**: HUAST
-- **会议**: ECCV 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this paper, we aim at addressing two critical issues in the 3D detection task, including the exploitation of multiple sensors~(namely LiDAR point cloud and camera image), as well as the inconsistency between the localization and classification confidence. To this end, we propose a novel fusion module to enhance the point features with semantic image features in a point-wise manner without any image annotations. Besides, a consistency enforcing loss is employed to explicitly encourage the consistency of both the localization and classification confidence. We design an end-to-end learnable framework named EPNet to integrate these two components. Extensive experiments on the KITTI and SUN-RGBD datasets demonstrate the superiority of EPNet over the state-of-the-art methods. Codes and models are available at: \url{https://github.com/happinesslz/EPNet}.
-
-</details>
-
-### An LSTM Approach to Temporal 3D Object Detection in LiDAR Point Clouds.
-- **链接**: [arXiv:2007.12392](https://arxiv.org/abs/2007.12392) · 📚 被引 74
-- **作者**: Rui Huang, Wanyue Zhang, Abhijit Kundu, Caroline Pantofaru, David A. Ross, Thomas A. Funkhouser et al.
+### ImVoteNet: Boosting 3D Object Detection in Point Clouds With Image Votes.
+- **链接**: [arXiv:2001.10692](https://arxiv.org/abs/2001.10692) · 📚 被引 258
+- **作者**: Charles R. Qi, Xinlei Chen, Or Litany, Leonidas J. Guibas
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -117,13 +101,11 @@
 
 </details>
 
-</details>
-
-### RTM3D: Real-Time Monocular 3D Detection from Object Keypoints for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58580-8_38)
-- **作者**: Peixuan Li, Huaici Zhao, Pengfei Liu, Feidao Cao
+### End-to-End Pseudo-LiDAR for Image-Based 3D Object Detection.
+- **链接**: [arXiv:2004.03080](https://arxiv.org/abs/2004.03080) · [代码](https://github.com/mileyan/pseudo-LiDAR_e2e) · 📚 被引 168
+- **作者**: Rui Qian, Divyansh Garg, Yan Wang, Yurong You, Serge J. Belongie, Bharath Hariharan et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -144,10 +126,10 @@
 </details>
 
 ### Point-GNN: Graph Neural Network for 3D Object Detection in a Point Cloud.
-- **链接**: [arXiv:2003.01251](https://arxiv.org/abs/2003.01251) · [代码](https://github.com/WeijingShi/Point-GNN) · 📚 被引 844
+- **链接**: [arXiv:2003.01251](https://arxiv.org/abs/2003.01251) · [代码](https://github.com/WeijingShi/Point-GNN) · 📚 被引 845
 - **作者**: Weijing Shi, Raj Rajkumar
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -159,7 +141,7 @@
 - **链接**: [arXiv:2004.03572](https://arxiv.org/abs/2004.03572) · 📚 被引 93
 - **作者**: Jiaming Sun, Linghao Chen, Yiming Xie, Siyu Zhang, Qinhong Jiang, Xiaowei Zhou et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -171,7 +153,7 @@
 - **链接**: [arXiv:1911.10150](https://arxiv.org/abs/1911.10150) · 📚 被引 1122
 - **作者**: Sourabh Vora, Alex H. Lang, Bassam Helou, Oscar Beijbom
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -183,7 +165,7 @@
 - **链接**: [arXiv:2003.00186](https://arxiv.org/abs/2003.00186) · 📚 被引 210
 - **作者**: Maosheng Ye, Shuangjie Xu, Tongyi Cao
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 ### SESS: Self-Ensembling Semi-Supervised 3D Object Detection.
 - **链接**: [arXiv:1912.11803](https://arxiv.org/abs/1912.11803) · [代码](https://github.com/Na-Z/sess) · 📚 被引 125
@@ -201,70 +183,10 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhou_Joint_3D_Instance_Segmentation_and_Object_Detection_for_Autonomous_Driving_CVPR_2020_paper.html)
 - **作者**: Dingfu Zhou, Jin Fang, Xibin Song, Liu Liu, Junbo Yin, Yuchao Dai et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Monocular 3D Object Detection via Feature Domain Adaptation.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58545-7_2) · 📚 被引 29
-- **作者**: Xiaoqing Ye, Liang Du, Yifeng Shi, Yingying Li, Xiao Tan, Jianfeng Feng et al.
+### 3DV: 3D Dynamic Voxel for Action Recognition in Depth Video.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_3DV_3D_Dynamic_Voxel_for_Action_Recognition_in_Depth_Video_CVPR_2020_paper.html)
+- **作者**: Yancheng Wang, Yang Xiao, Fu Xiong, Wenxiang Jiang, Zhiguo Cao, Joey Tianyi Zhou et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-### 3D-CVF: Generating Joint Camera and LiDAR Features Using Cross-view Spatial Feature Fusion for 3D Object Detection.
-- **链接**: [arXiv:2004.12636](https://arxiv.org/abs/2004.12636) · 📚 被引 425
-- **作者**: Jin Hyeok Yoo, Yecheol Kim, Ji Song Kim, Jun Won Choi
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this paper, we propose a new deep architecture for fusing camera and LiDAR sensors for 3D object detection. Because the camera and LiDAR sensor signals have different characteristics and distributions, fusing these two modalities is expected to improve both the accuracy and robustness of 3D object detection. One of the challenges presented by the fusion of cameras and LiDAR is that the spatial feature maps obtained from each modality are represented by significantly different views in the camera and world coordinates; hence, it is not an easy task to combine two heterogeneous feature maps without loss of information. To address this problem, we propose a method called 3D-CVF that combines the camera and LiDAR features using the cross-view spatial feature fusion strategy. First, the method employs auto-calibrated projection, to transform the 2D camera features to a smooth spatial feature map with the highest correspondence to the LiDAR features in the bird's eye view (BEV) domain. Then, a gated feature fusion network is applied to use the spatial attention maps to mix the camera and LiDAR features appropriately according to the region. Next, camera-LiDAR feature fusion is also achieved in the subsequent proposal refinement stage. The camera feature is used from the 2D camera-view domain via 3D RoI grid pooling and fused with the BEV feature for proposal refinement. Our evaluations, conducted on the KITTI and nuScenes 3D object detection datasets demonstrate that the camera-LiDAR fusion offers significant performance gain over single modality and that the proposed 3D-CVF achieves state-of-the-art performance in the KITTI benchmark.
-
-</details>
-
-### H3DNet: 3D Object Detection Using Hybrid Geometric Primitives.
-- **链接**: [arXiv:2006.05682](https://arxiv.org/abs/2006.05682) · 📚 被引 151
-- **作者**: Zaiwei Zhang, Bo Sun, Haitao Yang, Qixing Huang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We introduce H3DNet, which takes a colorless 3D point cloud as input and outputs a collection of oriented object bounding boxes (or BB) and their semantic labels. The critical idea of H3DNet is to predict a hybrid set of geometric primitives, i.e., BB centers, BB face centers, and BB edge centers. We show how to convert the predicted geometric primitives into object proposals by defining a distance function between an object and the geometric primitives. This distance function enables continuous optimization of object proposals, and its local minimums provide high-fidelity object proposals. H3DNet then utilizes a matching and refinement module to classify object proposals into detected objects and fine-tune the geometric parameters of the detected objects. The hybrid set of geometric primitives not only provides more accurate signals for object detection than using a single type of geometric primitives, but it also provides an overcomplete set of constraints on the resulting 3D layout. Therefore, H3DNet can tolerate outliers in predicted geometric primitives. Our model achieves state-of-the-art 3D detection results on two large datasets with real 3D scans, ScanNet and SUN RGB-D.
-
-</details>
-
-### Rotation-Robust Intersection over Union for 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58565-5_28)
-- **作者**: Yu Zheng, Danyang Zhang, Sinan Xie, Jiwen Lu, Jie Zhou
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-### Self-Supervised Monocular 3D Face Reconstruction by Occlusion-Aware Multi-view Geometry Consistency.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58555-6_4)
-- **作者**: Jiaxiang Shang, Tianwei Shen, Shiwei Li, Lei Zhou, Mingmin Zhen, Tian Fang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-### VoxelPose: Towards Multi-camera 3D Human Pose Estimation in Wild Environment.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58452-8_12)
-- **作者**: Hanyue Tu, Chunyu Wang, Wenjun Zeng
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-### Towards Part-Aware Monocular 3D Human Pose Estimation: An Architecture Search Approach.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58580-8_42)
-- **作者**: Zerui Chen, Yan Huang, Hongyuan Yu, Bin Xue, Ke Han, Yiru Guo et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-### Searching Efficient 3D Architectures with Sparse Point-Voxel Convolution.
-- **链接**: [arXiv:2007.16100](https://arxiv.org/abs/2007.16100) · 📚 被引 609
-- **作者**: Haotian Tang, Zhijian Liu, Shengyu Zhao, Yujun Lin, Ji Lin, Hanrui Wang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Self-driving cars need to understand 3D scenes efficiently and accurately in order to drive safely. Given the limited hardware resources, existing 3D perception models are not able to recognize small instances (e.g., pedestrians, cyclists) very well due to the low-resolution voxelization and aggressive downsampling. To this end, we propose Sparse Point-Voxel Convolution (SPVConv), a lightweight 3D module that equips the vanilla Sparse Convolution with the high-resolution point-based branch. With negligible overhead, this point-based branch is able to preserve the fine details even from large outdoor scenes. To explore the spectrum of efficient 3D models, we first define a flexible architecture design space based on SPVConv, and we then present 3D Neural Architecture Search (3D-NAS) to search the optimal network architecture over this diverse design space efficiently and effectively. Experimental results validate that the resulting SPVNAS model is fast and accurate: it outperforms the state-of-the-art MinkowskiNet by 3.3%, ranking 1st on the competitive SemanticKITTI leaderboard. It also achieves 8x computation reduction and 3x measured speedup over MinkowskiNet with higher accuracy. Finally, we transfer our method to 3D object detection, and it achieves consistent improvements over the one-stage detection baseline on KITTI.
-
-</details>
+- **会议**: CVPR 2020
