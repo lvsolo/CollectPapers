@@ -1,39 +1,42 @@
 # Occupancy — 2024 Guideline
 
 > 领域: 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）
-> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: [2022](Guideline%202022.md)
+> 同领域其他年份: 
 
-### Diffusion-FOF: Single-View Clothed Human Reconstruction via Diffusion-Based Fourier Occupancy Field. **⭐⭐** (相关度: 20%)
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00910) · 📚 被引 13
-- **作者**: Yuanzhen Li, Fei Luo, Chunxia Xiao
-- **🏷️ 机构**: School of Computer Science, Wuhan University,China
-- **会议**: CVPR 2024
-- **摘要（中）**: 该论文针对单视图 clothed human reconstruction问题，提出基于扩散的傅里叶占用场方法。由于摘要缺失，具体方法细节和实验效果无法评估。从标题看，该方法结合扩散模型和傅里叶占用场，可能用于生成高保真人体几何。但该主题与自动驾驶感知领域相关性较低。
-- **摘要（英）**: This paper addresses single-view clothed human reconstruction using a diffusion-based Fourier occupancy field. Due to missing abstract, details are unavailable. The topic is less relevant to autonomous driving perception.
-- **核心贡献**: 提出扩散傅里叶占用场用于单视图人体重建。
-- **创新点**: 结合扩散模型与傅里叶占用场表示。
-- **结果**: 未知。
+### RadarOcc: Robust 3D Occupancy Prediction with 4D Imaging Radar.
+- **链接**: [arXiv:2405.14014](https://arxiv.org/abs/2405.14014) · 📚 被引 25
+- **作者**: Fangqiang Ding, Xiangyu Wen, Yunzhou Zhu, Yiming Li, Chris Xiaoxuan Lu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
 
-### LowRankOcc: Tensor Decomposition and Low-Rank Recovery for Vision-Based 3D Semantic Occupancy Prediction. **⭐⭐⭐⭐** (相关度: 95%)
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00936) · 📚 被引 20
-- **作者**: Linqing Zhao, Xiuwei Xu, Ziwei Wang, Yunpeng Zhang, Borui Zhang, Wenzhao Zheng et al.
-- **🏷️ 机构**: Tsinghua University,Department of Automation,China, PhiGent Robotics
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对基于视觉的3D语义占用预测中计算复杂度和内存开销高的问题，提出LowRankOcc方法，利用张量分解和低秩恢复技术。该方法通过低秩近似压缩占用表示，减少冗余计算，同时保持预测精度。实验表明，该方法在效率和精度之间取得良好平衡，适用于自动驾驶场景。
-- **摘要（英）**: LowRankOcc addresses high computational and memory costs in vision-based 3D semantic occupancy prediction via tensor decomposition and low-rank recovery. It compresses occupancy representations to reduce redundancy while maintaining accuracy, achieving a good efficiency-accuracy trade-off for autonomous driving.
-- **核心贡献**: 提出基于张量分解和低秩恢复的3D语义占用预测方法。
-- **创新点**: 利用低秩结构压缩占用表示，降低计算开销。
-- **结果**: 在效率和精度间取得良好平衡。
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-## 跨领域论文（完整笔记在其他领域）
+> 3D occupancy-based perception pipeline has significantly advanced autonomous driving by capturing detailed scene descriptions and demonstrating strong generalizability across various object categories and shapes. Current methods predominantly rely on LiDAR or camera inputs for 3D occupancy prediction. These methods are susceptible to adverse weather conditions, limiting the all-weather deployment of self-driving cars. To improve perception robustness, we leverage the recent advances in automotive radars and introduce a novel approach that utilizes 4D imaging radar sensors for 3D occupancy prediction. Our method, RadarOcc, circumvents the limitations of sparse radar point clouds by directly processing the 4D radar tensor, thus preserving essential scene details. RadarOcc innovatively addresses the challenges associated with the voluminous and noisy 4D radar data by employing Doppler bins descriptors, sidelobe-aware spatial sparsification, and range-wise self-attention mechanisms. To minimize the interpolation errors associated with direct coordinate transformations, we also devise a spherical-based feature encoding followed by spherical-to-Cartesian feature aggregation. We benchmark various baseline methods based on distinct modalities on the public K-Radar dataset. The results demonstrate RadarOcc's state-of-the-art performance in radar-based 3D occupancy prediction and promising results even when compared with LiDAR- or camera-based methods. Additionally, we present qualitative evidence of the superior performance of 4D radar in adverse weather conditions and explore the impact of key pipeline components through ablation studies.
 
-- Learning Occupancy for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- COTR: Compact Occupancy TRansformer for Vision-Based 3D Occupancy Prediction. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- Collaborative Semantic Occupancy Prediction with Hybrid Feature Fusion in Connected Automated Vehicles. → [3d-detection](../3d-detection/Guideline%202024.md)
-- UnO: Unsupervised Occupancy Fields for Perception and Forecasting. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction. → [3d-detection](../3d-detection/Guideline%202024.md)
-- SparseOcc: Rethinking Sparse Latent Representation for Vision-Based Semantic Occupancy Prediction. → [3d-detection](../3d-detection/Guideline%202024.md)
-- DriveWorld: 4D Pre-Trained Scene Understanding via World Models for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Volumetric Environment Representation for Vision-Language Navigation. → [3d-detection](../3d-detection/Guideline%202024.md)
+</details>
+
+### OctreeOcc: Efficient and Multi-Granularity Occupancy Prediction Using Octree Queries.
+- **链接**: [arXiv:2312.03774](https://arxiv.org/abs/2312.03774) · 📚 被引 21
+- **作者**: Yuhang Lu, Xinge Zhu, Tai Wang, Yuexin Ma
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Occupancy prediction has increasingly garnered attention in recent years for its fine-grained understanding of 3D scenes. Traditional approaches typically rely on dense, regular grid representations, which often leads to excessive computational demands and a loss of spatial details for small objects. This paper introduces OctreeOcc, an innovative 3D occupancy prediction framework that leverages the octree representation to adaptively capture valuable information in 3D, offering variable granularity to accommodate object shapes and semantic regions of varying sizes and complexities. In particular, we incorporate image semantic information to improve the accuracy of initial octree structures and design an effective rectification mechanism to refine the octree structure iteratively. Our extensive evaluations show that OctreeOcc not only surpasses state-of-the-art methods in occupancy prediction, but also achieves a 15%-24% reduction in computational overhead compared to dense-grid-based methods.
+
+</details>
+
+### OPUS: Occupancy Prediction Using a Sparse Set.
+- **链接**: [arXiv:2409.09350](https://arxiv.org/abs/2409.09350) · 📚 被引 10
+- **作者**: Jiabao Wang, Zhaojiang Liu, Qiang Meng, Liujiang Yan, Ke Wang, Jie Yang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Occupancy prediction, aiming at predicting the occupancy status within voxelized 3D environment, is quickly gaining momentum within the autonomous driving community. Mainstream occupancy prediction works first discretize the 3D environment into voxels, then perform classification on such dense grids. However, inspection on sample data reveals that the vast majority of voxels is unoccupied. Performing classification on these empty voxels demands suboptimal computation resource allocation, and reducing such empty voxels necessitates complex algorithm designs. To this end, we present a novel perspective on the occupancy prediction task: formulating it as a streamlined set prediction paradigm without the need for explicit space modeling or complex sparsification procedures. Our proposed framework, called OPUS, utilizes a transformer encoder-decoder architecture to simultaneously predict occupied locations and classes using a set of learnable queries. Firstly, we employ the Chamfer distance loss to scale the set-to-set comparison problem to unprecedented magnitudes, making training such model end-to-end a reality. Subsequently, semantic classes are adaptively assigned using nearest neighbor search based on the learned locations. In addition, OPUS incorporates a suite of non-trivial strategies to enhance model performance, including coarse-to-fine learning, consistent point sampling, and adaptive re-weighting, etc. Finally, compared with current state-of-the-art methods, our lightest model achieves superior RayIoU on the Occ3D-nuScenes dataset at near 2x FPS, while our heaviest model surpasses previous best results by 6.1 RayIoU.
+
+</details>
