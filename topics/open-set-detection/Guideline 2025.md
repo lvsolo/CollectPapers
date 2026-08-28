@@ -5,11 +5,11 @@
 
 > 同领域其他年份: 
 
-### Any3DIS: Class-Agnostic 3D Instance Segmentation by 2D Mask Tracking.
-- **链接**: [arXiv:2411.16183](https://arxiv.org/abs/2411.16183) · 📚 被引 2
-- **作者**: Phuc Nguyen, Minh Luu, Anh Tuan Tran, Cuong Pham, Khoi Nguyen
-- **🏷️ 机构**: MovianAI, Qualcomm AI Research, Qualcomm Vietnam Company Limited
-- **会议**: CVPR 2025
+### OpenLex3D: A Tiered Benchmark for Open-Vocabulary 3D Scene Representations.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/05057404e0cab4fe58971dc3a7d6044c-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 0
+- **作者**: Christina Kassab, Sacha Morin, Martin Büchner, Matías Mattamala, Kumaraditya Gupta, Abhinav Valada et al.
+- **🏷️ 机构**: University of Oxford, Mila, Université de Montréal, Albert-Ludwigs-Universität Freiburg
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 

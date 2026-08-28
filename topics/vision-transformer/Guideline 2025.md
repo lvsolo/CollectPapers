@@ -1,7 +1,7 @@
 # Vision Transformer — 2025 Guideline
 
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
-> 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 4 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -17,11 +17,11 @@
 
 </details>
 
-### Similarity-Guided Layer-Adaptive Vision Transformer for UAV Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xue_Similarity-Guided_Layer-Adaptive_Vision_Transformer_for_UAV_Tracking_CVPR_2025_paper.html) · 📚 被引 54
-- **作者**: Chaocan Xue, Bineng Zhong, Qihua Liang, Yaozong Zheng, Ning Li, Yuanliang Xue et al.
-- **🏷️ 机构**: Guangxi Normal University,Key Laboratory of Education Blockchain and Intelligent Technology, Ministry of Education,Guilin,China,541004, Xi&#x2019;an Research Institute of High Technology,Xi&#x2019;an,China,710025
-- **会议**: CVPR 2025
+### SHF: Symmetrical Hierarchical Forest with Pretrained Vision Transformer Encoder for High-Resolution Medical Segmentation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/cc44bf651235b9cd61c4143ae3bbb0de-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Enzhi Zhang, Peng Chen, Rui Zhong, Du Wu, Jun Igarashi, Isaac Lyngaas et al.
+- **🏷️ 机构**: Hokkaido University, Institute of Physical and Chemical Research - RIKEN, Zhejiang University, Kuaishou- 快手科技
+- **会议**: NeurIPS 2025
 
 ### BHViT: Binarized Hybrid Vision Transformer.
 - **链接**: [arXiv:2503.02394](https://arxiv.org/abs/2503.02394) · 📚 被引 32
@@ -29,17 +29,11 @@
 - **🏷️ 机构**: Nanjing University of Science and Technology, Shanghai Jiaotong University, Singapore Management University
 - **会议**: CVPR 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Model binarization has made significant progress in enabling real-time and energy-efficient computation for convolutional neural networks (CNN), offering a potential solution to the deployment challenges faced by Vision Transformers (ViTs) on edge devices. However, due to the structural differences between CNN and Transformer architectures, simply applying binary CNN strategies to the ViT models will lead to a significant performance drop. To tackle this challenge, we propose BHViT, a binarization-friendly hybrid ViT architecture and its full binarization model with the guidance of three important observations. Initially, BHViT utilizes the local information interaction and hierarchical feature aggregation technique from coarse to fine levels to address redundant computations stemming from excessive tokens. Then, a novel module based on shift operations is proposed to enhance the performance of the binary Multilayer Perceptron (MLP) module without significantly increasing computational overhead. In addition, an innovative attention matrix binarization method based on quantization decomposition is proposed to evaluate the token's importance in the binarized attention matrix. Finally, we propose a regularization loss to address the inadequate optimization caused by the incompatibility between the weight oscillation in the binary layers and the Adam Optimizer. Extensive experimental results demonstrate that our proposed algorithm achieves SOTA performance among binary ViT methods.
-
-</details>
-
-### LibraGrad: Balancing Gradient Flow for Universally Better Vision Transformer Attributions.
-- **链接**: [arXiv:2411.16760](https://arxiv.org/abs/2411.16760) · 📚 被引 1
-- **作者**: Faridoun Mehri, Mahdieh Soleymani Baghshah, Mohammad Taher Pilehvar
-- **🏷️ 机构**: Sharif University of Technology,Iran, Cardiff University,UK
-- **会议**: CVPR 2025
+### Spiking Vision Transformer with Saccadic Attention.
+- **链接**: [出版页](https://openreview.net/forum?id=qzZsz6MuEq)
+- **作者**: Shuai Wang, Malu Zhang, Dehao Zhang, Ammar Belatreche, Yichen Xiao, Yu Liang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -49,5 +43,5 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- DeepCompress-ViT: Rethinking Model Compression to Enhance Efficiency of Vision Transformers at the Edge. → [network-pruning](../network-pruning/Guideline%202025.md)
-- BOE-ViT: Boosting Orientation Estimation with Equivariance in Self-Supervised 3D Subtomogram Alignment. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)
+- When Pixel Difference Patterns Meet ViT: PiDiViT for Few-Shot Object Detection. → [object-detection](../object-detection/Guideline%202025.md)
+- Boosting Generative Adversarial Transferability with Self-Supervised Vision Transformer Features. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)

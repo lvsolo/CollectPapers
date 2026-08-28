@@ -1,21 +1,21 @@
 # Continual Learning — 2025 Guideline
 
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
-> 论文数: 31 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 35 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### AVQACL: A Novel Benchmark for Audio-Visual Question Answering Continual Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_AVQACL_A_Novel_Benchmark_for_Audio-Visual_Question_Answering_Continual_Learning_CVPR_2025_paper.html)
-- **作者**: Kaixuan Wu, Xinde Li, Xinling Li, Chuanfei Hu, Guoliang Wu
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+### OVS Meets Continual Learning: Towards Sustainable Open-Vocabulary Segmentation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/184cfed554856b4812b19cd0235a0f6a-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Dongjun Hwang, Yejin Kim, Minyoung Lee, Seong Joon Oh, Junsuk Choe
+- **🏷️ 机构**: Sogang University, University of Tübingen
+- **会议**: NeurIPS 2025
 
-### Advancing Multiple Instance Learning with Continual Learning for Whole Slide Imaging.
-- **链接**: [arXiv:2505.10649](https://arxiv.org/abs/2505.10649) · 📚 被引 1
-- **作者**: Xianrui Li, Yufei Cui, Jun Li, Antoni B. Chan
-- **🏷️ 机构**: City University of Hong Kong,Dept. of Computer Science, Noah&#x2019;s Ark Lab, Huawei Canada,Montreal,Canada, Guangzhou Bingli Technology Co., Ltd.,Guangzhou
-- **会议**: CVPR 2025
+### Mitigating Intra- and Inter-modal Forgetting in Continual Learning of Unified Multimodal Models.
+- **链接**: [arXiv:2512.03125](https://arxiv.org/abs/2512.03125) · 📚 被引 0
+- **作者**: Xiwen Wei, Mustafa Munir, Radu Marculescu
+- **🏷️ 机构**: University of Texas at Austin, University of Texas, Austin
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -35,11 +35,11 @@
 
 </details>
 
-### Online Task-Free Continual Learning via Dynamic Expansionable Memory Distribution.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ye_Online_Task-Free_Continual_Learning_via_Dynamic_Expansionable_Memory_Distribution_CVPR_2025_paper.html) · 📚 被引 1
-- **作者**: Fei Ye, Adrian G. Bors
-- **🏷️ 机构**: University of Electronic Science and Technology of China,School of Information and Software Engineering,Chengdu, University of York,Department of Computer Science,York,UK,YO10 5GH
-- **会议**: CVPR 2025
+### Learning Expandable and Adaptable Representations for Continual Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/4c19a67a61b5700f90ccb815a255aaad-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Ruilong Yu, Mingyan Liu, Fei Ye, Adrian G. Bors, Rongyao Hu, Jingling Sun et al.
+- **🏷️ 机构**: University of Electronic Science and Technology of China, Harbin Institute of Technology, Shenzhen, University of York
+- **会议**: NeurIPS 2025
 
 ### Language Guided Concept Bottleneck Models for Interpretable Continual Learning.
 - **链接**: [arXiv:2503.23283](https://arxiv.org/abs/2503.23283) · 📚 被引 5
@@ -89,11 +89,11 @@
 
 </details>
 
-### LoRA Subtraction for Drift-Resistant Space in Exemplar-Free Continual Learning.
-- **链接**: [arXiv:2503.18985](https://arxiv.org/abs/2503.18985) · 📚 被引 8
-- **作者**: Xuan Liu, Xiaobin Chang
-- **🏷️ 机构**: School of Artificial Intelligence, Sun Yat-sen University,China
-- **会议**: CVPR 2025
+### Temporal-Difference Variational Continual Learning.
+- **链接**: [arXiv:2410.07812](https://arxiv.org/abs/2410.07812) · 📚 被引 0
+- **作者**: Luckeciano Carvalho Melo, Alessandro Abate, Yarin Gal
+- **🏷️ 机构**: University of Oxford
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -101,11 +101,11 @@
 
 </details>
 
-### Enhancing Online Continual Learning with Plug-and-Play State Space Model and Class-Conditional Mixture of Discretization.
-- **链接**: [arXiv:2412.18177](https://arxiv.org/abs/2412.18177) · 📚 被引 1
-- **作者**: Sihao Liu, Yibo Yang, Xiaojie Li, David A. Clifton, Bernard Ghanem
-- **🏷️ 机构**: Harbin Institute of Technology, King Abdullah University of Science and Technology, Harbin Institute of Technology (Shenzhen)
-- **会议**: CVPR 2025
+### Dual-Space Semantic Synergy Distillation for Continual Learning of Unlabeled Streams.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/1eaa5146756be028ad6fff1efcc8e6bd-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Donghao Sun, Xi Wang, Xu Yang, Kun Wei, Cheng Deng
+- **🏷️ 机构**: Xidian University, ETHZ - ETH Zurich, Microsoft
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -113,17 +113,17 @@
 
 </details>
 
-### Handling Spatial-Temporal Data Heterogeneity for Federated Continual Learning via Tail Anchor.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yu_Handling_Spatial-Temporal_Data_Heterogeneity_for_Federated_Continual_Learning_via_Tail_CVPR_2025_paper.html) · 📚 被引 5
-- **作者**: Hao Yu, Xin Yang, Le Zhang, Hanlin Gu, Tianrui Li, Lixin Fan et al.
-- **🏷️ 机构**: Southwestern University of Finance and Economics, University of Electronic Science and Technology of China, WeBank
-- **会议**: CVPR 2025
+### Hybrid Re-matching for Continual Learning with Parameter-Efficient Tuning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/a978bdfeb195e4a574c0def98806346a-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Weicheng Wang, Guoli Jia, Xialei Liu, Liang Lin, Jufeng Yang
+- **🏷️ 机构**: Nankai University, Tsinghua University, Sun Yat-Sen University
+- **会议**: NeurIPS 2025
 
-### Ferret: An Efficient Online Continual Learning Framework under Varying Memory Constraints.
-- **链接**: [arXiv:2503.12053](https://arxiv.org/abs/2503.12053) · 📚 被引 0
-- **作者**: Yuhao Zhou, Yuxin Tian, Jindi Lv, Mingjia Shi, Yuanxi Li, Qing Ye et al.
-- **🏷️ 机构**: Sichuan University, National University of Singapore, University of Illinois Urbana-Champaign
-- **会议**: CVPR 2025
+### Exploiting Task Relationships in Continual Learning via Transferability-Aware Task Embeddings.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/f3e644506dad33613919fa85af6665d0-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Yanru Wu, Jianning Wang, Xiangyu Chen, Aurora, Yang Tan, Hanbing Liu et al.
+- **🏷️ 机构**: Tsinghua University, Harbin Institute of Technology, Tsinghua University, Tsinghua University
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -131,41 +131,35 @@
 
 </details>
 
-### BiLoRA: Almost-Orthogonal Parameter Spaces for Continual Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_BiLoRA_Almost-Orthogonal_Parameter_Spaces_for_Continual_Learning_CVPR_2025_paper.html) · 📚 被引 6
-- **作者**: Hao Zhu, Yifei Zhang, Junhao Dong, Piotr Koniusz
-- **🏷️ 机构**: Data61&#x2665;CSIRO, Nanyang Technological University
-- **会议**: CVPR 2025
+### Dynamic Siamese Expansion Framework for Improving Robustness in Online Continual Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/6749b4364bbdff0dedfab1b0f27a10c2-Abstract-Conference.html) · 📚 被引 1
+- **作者**: Fei Ye, Yulong Zhao, Qihe Liu, Junlin Chen, Adrian G. Bors, Jingling Sun et al.
+- **🏷️ 机构**: University of Electronic Science and Technology of China, ByteDance Inc., University of York
+- **会议**: NeurIPS 2025
 
-### Learning Conditional Space-Time Prompt Distributions for Video Class-Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zou_Learning_Conditional_Space-Time_Prompt_Distributions_for_Video_Class-Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 1
-- **作者**: Xiaohan Zou, Wenchao Ma, Shu Zhao
-- **🏷️ 机构**: The Pennsylvania State University
-- **会议**: CVPR 2025
+### Federated Continual Learning via Orchestrating Multi-Scale Expertise.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/20de741d21f1a038093c6e3ee7c09481-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Xiaoyang Yi, Yang Liu, Binhan Yang, Jian Jun Zhang
+- **🏷️ 机构**: Nankai University, Nanyang Technology University, Singapore, Vivo
+- **会议**: NeurIPS 2025
 
-### Dual Consolidation for Pre-Trained Model-Based Domain-Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_Dual_Consolidation_for_Pre-Trained_Model-Based_Domain-Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 14
-- **作者**: Da-Wei Zhou, Zi-Wen Cai, Han-Jia Ye, Lijun Zhang, De-Chuan Zhan
-- **🏷️ 机构**: Nanjing University,School of Artificial Intelligence
-- **会议**: CVPR 2025
+### Online Functional Tensor Decomposition via Continual Learning for Streaming Data Completion.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/3ba5c2a601f5d35b8072116bd192d174-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Xi Zhang, Yanyi Li, Yisi Luo, Qi Xie, Deyu Meng
+- **🏷️ 机构**: Nanyang Technological University, Xi'an Jiaotong University
+- **会议**: NeurIPS 2025
 
-### Reducing Class-wise Confusion for Incremental Learning with Disentangled Manifolds.
-- **链接**: [arXiv:2503.17677](https://arxiv.org/abs/2503.17677) · 📚 被引 5
-- **作者**: Huitong Chen, Yu Wang, Yan Fan, Guosong Jiang, Qinghua Hu
-- **🏷️ 机构**: Tianjin University,Tianjin Key Lab of Machine Learning, College of Intelligence and Computing,China
-- **会议**: CVPR 2025
+### Policy Compatible Skill Incremental Learning via Lazy Learning Interface.
+- **链接**: [arXiv:2509.20612](https://arxiv.org/abs/2509.20612) · 📚 被引 0
+- **作者**: Daehee Lee, Dongsu Lee, TaeYoon Kwack, Wonje Choi, Honguk Woo
+- **🏷️ 机构**: SungKyunKwan University, University of Texas at Austin, Sungkyunkwan University
+- **会议**: NeurIPS 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Class incremental learning (CIL) aims to enable models to continuously learn new classes without catastrophically forgetting old ones. A promising direction is to learn and use prototypes of classes during incremental updates. Despite simplicity and intuition, we find that such methods suffer from inadequate representation capability and unsatisfied feature overlap. These two factors cause class-wise confusion and limited performance. In this paper, we develop a Confusion-REduced AuTo-Encoder classifier (CREATE) for CIL. Specifically, our method employs a lightweight auto-encoder module to learn compact manifold for each class in the latent subspace, constraining samples to be well reconstructed only on the semantically correct auto-encoder. Thus, the representation stability and capability of class distributions are enhanced, alleviating the potential class-wise confusion problem. To further distinguish the overlapped features, we propose a confusion-aware latent space separation loss that ensures samples are closely distributed in their corresponding low-dimensional manifold while keeping away from the distributions of features from other classes. Our method demonstrates stronger representational capacity and discrimination ability by learning disentangled manifolds and reduces class confusion. Extensive experiments on multiple datasets and settings show that CREATE outperforms other state-of-the-art methods up to 5.41%.
-
-</details>
-
-### Enhancing Few-Shot Class-Incremental Learning via Training-Free Bi-Level Modality Calibration.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Enhancing_Few-Shot_Class-Incremental_Learning_via_Training-Free_Bi-Level_Modality_Calibration_CVPR_2025_paper.html) · 📚 被引 5
-- **作者**: Yiyang Chen, Tianyu Ding, Lei Wang, Jing Huo, Yang Gao, Wenbin Li
-- **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology,China, Microsoft,Applied Sciences Group,USA, University of Wollongong,Australia
-- **会议**: CVPR 2025
+### Knowledge Graph Enhanced Generative Multi-modal Models for Class-Incremental Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/7b6d77bf723ab4fed4f88baf544683fb-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Xusheng Cao, Haori Lu, Linlan Huang, Fei Yang, Xialei Liu, Ming-Ming Cheng
+- **🏷️ 机构**: Nankai University, Adobe Systems
+- **会议**: NeurIPS 2025
 
 ### Adapter Merging with Centroid Prototype Mapping for Scalable Class-Incremental Learning.
 - **链接**: [arXiv:2412.18219](https://arxiv.org/abs/2412.18219) · 📚 被引 4
@@ -179,17 +173,17 @@
 
 </details>
 
-### Knowledge Memorization and Rumination for Pre-trained Model-based Class-Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Gao_Knowledge_Memorization_and_Rumination_for_Pre-trained_Model-based_Class-Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 8
-- **作者**: Zijian Gao, Wangwang Jia, Xingxing Zhang, Dulan Zhou, Kele Xu, Dawei Feng et al.
-- **🏷️ 机构**: National University of Defense Technology,College of Computer Science and Technology, Tsinghua University,School of Computer Science
-- **会议**: CVPR 2025
+### Mixture of Noise for Pre-Trained Model-Based Class-Incremental Learning.
+- **链接**: [arXiv:2509.16738](https://arxiv.org/abs/2509.16738) · 📚 被引 1
+- **作者**: Kai Jiang, Zhengyan Shi, Dell Zhang, Hongyuan Zhang, Xuelong Li
+- **🏷️ 机构**: Tsinghua University, Microsoft Research, Institute of Artificial Intelligence (TeleAI), China Telecom
+- **会议**: NeurIPS 2025
 
-### T-CIL: Temperature Scaling using Adversarial Perturbation for Calibration in Class-Incremental Learning.
-- **链接**: [arXiv:2503.22163](https://arxiv.org/abs/2503.22163) · 📚 被引 1
-- **作者**: Seonghyeon Hwang, Minsu Kim, Steven Euijong Whang
-- **🏷️ 机构**: KAIST
-- **会议**: CVPR 2025
+### Class-wise Balancing Data Replay for Federated Class-Incremental Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/d611d06e3207330555fbc10810e70163-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Zhuang Qi, Ying-Peng Tang, Lei Meng, Han Yu, Xiaoxiao Li, Xiangxu Meng
+- **🏷️ 机构**: Shandong University, Nanyang Technological University, Nanyang Technological University (NTU)
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -237,25 +231,17 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_SEC-PromptSEmantic_Complementary_Prompting_for_Few-Shot_Class-Incremental_Learning_CVPR_2025_paper.html)
 - **作者**: Ye Liu, Meng Yang
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICLR 2025
 
-### Low-Rank Adaptation in Multilinear Operator Networks for Security-Preserving Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ta_Low-Rank_Adaptation_in_Multilinear_Operator_Networks_for_Security-Preserving_Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 1
-- **作者**: Huu Binh Ta, Duc Nguyen, Quyen Tran, Toan Tran, Tung Pham
-- **🏷️ 机构**: Qualcomm AI Research
-- **会议**: CVPR 2025
+### Active Learning for Continual Learning: Keeping the Past Alive in the Present.
+- **链接**: [arXiv:2501.14278](https://arxiv.org/abs/2501.14278)
+- **作者**: Jaehyun Park, Dongmin Park, Jae-Gil Lee
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
-### Activating Sparse Part Concepts for 3D Class Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Tian_Activating_Sparse_Part_Concepts_for_3D_Class_Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 2
-- **作者**: Zhenya Tian, Jun Xiao, Lupeng Liu, Haiyong Jiang
-- **🏷️ 机构**: University of Chinese Academy of Sciences,School of Artificial Intelligence
-- **会议**: CVPR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Boosting Domain Incremental Learning: Selecting the Optimal Parameters is All You Need.
-- **链接**: [arXiv:2505.23744](https://arxiv.org/abs/2505.23744) · 📚 被引 10
-- **作者**: Qiang Wang, Xiang Song, Yuhang He, Jizhou Han, Chenhao Ding, Xinyuan Gao et al.
-- **🏷️ 机构**: Xi&#x2019;an Jiaotong University
-- **会议**: CVPR 2025
+> Continual learning (CL) enables deep neural networks to adapt to ever-changing data distributions. In practice, there may be scenarios where annotation is costly, leading to active continual learning (ACL), which performs active learning (AL) for the CL scenarios when reducing the labeling cost by selecting the most informative subset is preferable. However, conventional AL strategies are not suitable for ACL, as they focus solely on learning the new knowledge, leading to catastrophic forgetting of previously learned tasks. Therefore, ACL requires a new AL strategy that can balance the prevention of catastrophic forgetting and the ability to quickly learn new tasks. In this paper, we propose AccuACL, Accumulated informativeness-based Active Continual Learning, by the novel use of the Fisher information matrix as a criterion for sample selection, derived from a theoretical analysis of the Fisher-optimality preservation properties within the framework of ACL, while also addressing the scalability issue of Fisher information-based AL. Extensive experiments demonstrate that AccuACL significantly outperforms AL baselines across various CL algorithms, increasing the average accuracy and forgetting by 23.8% and 17.0%, respectively, on average.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -263,32 +249,14 @@
 
 </details>
 
-### pFedMxF: Personalized Federated Class-Incremental Learning with Mixture of Frequency Aggregation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_pFedMxF_Personalized_Federated_Class-Incremental_Learning_with_Mixture_of_Frequency_Aggregation_CVPR_2025_paper.html) · 📚 被引 3
-- **作者**: Yifei Zhang, Hao Zhu, Alysa Ziying Tan, Dianzhi Yu, Longtao Huang, Han Yu
-- **🏷️ 机构**: Nanyang Technological University,College of Computing and Data Science, Data61 &#x2665; CSRIO, The Chinese University of Hong Kong
-- **会议**: CVPR 2025
+### Theory on Mixture-of-Experts in Continual Learning.
+- **链接**: [arXiv:2406.16437](https://arxiv.org/abs/2406.16437)
+- **作者**: Hongbo Li, Sen Lin, Lingjie Duan, Yingbin Liang, Ness B. Shroff
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
 ### Attraction Diminishing and Distributing for Few-Shot Class-Incremental Learning.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhao_Attraction_Diminishing_and_Distributing_for_Few-Shot_Class-Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 1
 - **作者**: Li-Jun Zhao, Zhen-Duo Chen, Yongxin Wang, Xin Luo, Xin-Shun Xu
-- **🏷️ 机构**: Shandong University,School of Software,China, Shandong Jianzhu University,School of Computer Science and Technology,China
-- **会议**: CVPR 2025
-
-### Task-Agnostic Guided Feature Expansion for Class-Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zheng_Task-Agnostic_Guided_Feature_Expansion_for_Class-Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 16
-- **作者**: Bowen Zheng, Da-Wei Zhou, Han-Jia Ye, De-Chuan Zhan
-- **🏷️ 机构**: Nanjing University,National Key Laboratory for Novel Software Technology,China
-- **会议**: CVPR 2025
-
-### Multi-Granularity Class Prototype Topology Distillation for Class-Incremental Source-Free Unsupervised Domain Adaptation.
-- **链接**: [arXiv:2411.16064](https://arxiv.org/abs/2411.16064) · 📚 被引 7
-- **作者**: Peihua Deng, Jiehua Zhang, Xichun Sheng, Chenggang Yan, Yaoqi Sun, Ying Fu et al.
-- **🏷️ 机构**: Hangzhou Dianzi University, Xi&#x2019;an Jiaotong University, Macao Polytechnic University
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> This paper explores the Class-Incremental Source-Free Unsupervised Domain Adaptation (CI-SFUDA) problem, where the unlabeled target data come incrementally without access to labeled source instances. This problem poses two challenges, the interference of similar source-class knowledge in target-class representation learning and the shocks of new target knowledge to old ones. To address them, we propose the Multi-Granularity Class Prototype Topology Distillation (GROTO) algorithm, which effectively transfers the source knowledge to the class-incremental target domain. Concretely, we design the multi-granularity class prototype self-organization module and the prototype topology distillation module. First, we mine the positive classes by modeling accumulation distributions. Next, we introduce multi-granularity class prototypes to generate reliable pseudo-labels, and exploit them to promote the positive-class target feature self-organization. Second, the positive-class prototypes are leveraged to construct the topological structures of source and target feature spaces. Then, we perform the topology distillation to continually mitigate the shocks of new target knowledge to old ones. Extensive experiments demonstrate that our proposed method achieves state-of-the-art performance on three public datasets. Code is available at https://github.com/dengpeihua/GROTO.
-
-</details>
+- **🏷️ 机构**: Shandong University, MBZUAI
+- **会议**: NeurIPS 2025

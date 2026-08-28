@@ -33,7 +33,7 @@
 - **链接**: [arXiv:2503.16282](https://arxiv.org/abs/2503.16282) · [代码](https://github.com/ZhaochongAn/GFS-VL)
 - **作者**: Zhaochong An, Guolei Sun, Yun Liu, Runjia Li, Junlin Han, Ender Konukoglu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 

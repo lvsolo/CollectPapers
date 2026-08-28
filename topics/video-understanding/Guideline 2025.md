@@ -5,71 +5,47 @@
 
 > 同领域其他年份: 
 
-### Track Any Anomalous Object: A Granular Video Anomaly Detection Pipeline.
-- **链接**: [arXiv:2506.05175](https://arxiv.org/abs/2506.05175) · 📚 被引 5
-- **作者**: Yuzhi Huang, Chenxin Li, Haitao Zhang, Zixu Lin, Yunlong Lin, Hengyu Liu et al.
-- **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficien Computing, Ministry of Education of China, The Chinese University of Hong Kong
-- **会议**: CVPR 2025
+### LVBench: An Extreme Long Video Understanding Benchmark.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02131) · 📚 被引 14
+- **作者**: Weihan Wang, Zehai He, Wenyi Hong, Yean Cheng, Xiaohan Zhang, Ji Qi et al.
+- **🏷️ 机构**: Zhipu AI, Tsinghua University
+- **会议**: ICCV 2025
+
+### Streaming Videollms for Real-Time Procedural Video Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02097) · 📚 被引 1
+- **作者**: Dibyadip Chatterjee, Edoardo Remelli, Yale Song, Bugra Tekin, Abhay Mittal, Bharat Bhatnagar et al.
+- **🏷️ 机构**: Meta Reality Labs, FAIR, Meta
+- **会议**: ICCV 2025
+
+### VideoLLaMB: Long Streaming Video Understanding with Recurrent Memory Bridges.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02240) · 📚 被引 4
+- **作者**: Yuxuan Wang, Yiqi Song, Cihang Xie, Yang Liu, Zilong Zheng
+- **🏷️ 机构**: State Key Laboratory of General Artificial Intelligence, BIGAI,NLCo Lab, University of California,Computer Science and Engineering, Wangxuan Institute of Computer Technology, Peking University
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Video anomaly detection (VAD) is crucial in scenarios such as surveillance and autonomous driving, where timely detection of unexpected activities is essential. Although existing methods have primarily focused on detecting anomalous objects in videos -- either by identifying anomalous frames or objects -- they often neglect finer-grained analysis, such as anomalous pixels, which limits their ability to capture a broader range of anomalies. To address this challenge, we propose a new framework called Track Any Anomalous Object (TAO), which introduces a granular video anomaly detection pipeline that, for the first time, integrates the detection of multiple fine-grained anomalous objects into a unified framework. Unlike methods that assign anomaly scores to every pixel, our approach transforms the problem into pixel-level tracking of anomalous objects. By linking anomaly scores to downstream tasks such as segmentation and tracking, our method removes the need for threshold tuning and achieves more precise anomaly localization in long and complex video sequences. Experiments demonstrate that TAO sets new benchmarks in accuracy and robustness. Project page available online.
+> Human vision is dynamic and continuous. However, in video understanding with multimodal large language models (LLMs), existing methods primarily rely on static features extracted from images sampled at a fixed low frame rate of frame-per-second (FPS) $\leqslant$2, leading to critical visual information loss. In this paper, we introduce F-16, the first multimodal LLM designed for high-frame-rate video understanding. By increasing the frame rate to 16 FPS and compressing visual tokens within each 1-second clip, F-16 efficiently captures dynamic visual features while preserving key semantic information. Experimental results demonstrate that higher frame rates considerably enhance video understanding across multiple benchmarks, providing a new approach to improving video LLMs beyond scaling model size or training data. F-16 achieves state-of-the-art performance among 7-billion-parameter video LLMs on both general and fine-grained video understanding benchmarks, such as Video-MME and TemporalBench. Furthermore, F-16 excels in complex spatiotemporal tasks, including high-speed sports analysis (\textit{e.g.}, basketball, football, gymnastics, and diving), outperforming SOTA proprietary visual models like GPT-4o and Gemini-1.5-pro. Additionally, we introduce a novel decoding method for F-16 that enables highly efficient low-frame-rate inference without requiring model retraining. We will release the source code, model checkpoints, and data at \href{https://github.com/bytedance/F-16}{https://github.com/bytedance/F-16}.
 
 </details>
 
-### Mamba4D: Efficient 4D Point Cloud Video Understanding with Disentangled Spatial-Temporal State Space Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Mamba4D_Efficient_4D_Point_Cloud_Video_Understanding_with_Disentangled_Spatial-Temporal_CVPR_2025_paper.html) · 📚 被引 20
-- **作者**: Jiuming Liu, Jinru Han, Lihao Liu, Angelica I. Avilés-Rivero, Chaokang Jiang, Zhe Liu et al.
-- **🏷️ 机构**: Shanghai Jiao Tong University,Department of Automation, University of Cambridge, China University of Mining and Technology
-- **会议**: CVPR 2025
-
-### Adapting Pre-trained 3D Models for Point Cloud Video Understanding via Cross-frame Spatio-temporal Perception.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Lv_Adapting_Pre-trained_3D_Models_for_Point_Cloud_Video_Understanding_via_CVPR_2025_paper.html) · 📚 被引 2
-- **作者**: Baixuan Lv, Yaohua Zha, Tao Dai, Xue Yuerong, Ke Chen, Shu-Tao Xia
-- **🏷️ 机构**: Tsinghua University, Shenzhen University, Pengcheng Laboratory
-- **会议**: CVPR 2025
-
-### BOLT: Boost Large Vision-Language Model Without Training for Long-form Video Understanding.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BOLT_Boost_Large_Vision-Language_Model_Without_Training_for_Long-form_Video_CVPR_2025_paper.html)
-- **作者**: Shuming Liu, Chen Zhao, Tianqi Xu, Bernard Ghanem
+### Scaling Video-Language Models to 10K Frames via Hierarchical Differential Distillation.
+- **链接**: [arXiv:2504.02438](https://arxiv.org/abs/2504.02438) · [代码](https://github.com/steven-ccq/ViLAMP)
+- **作者**: Chuanqi Cheng, Jian Guan, Wei Wu, Rui Yan
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICLR 2025
 
-### Video-XL: Extra-Long Vision Language Model for Hour-Scale Video Understanding.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Shu_Video-XL_Extra-Long_Vision_Language_Model_for_Hour-Scale_Video_Understanding_CVPR_2025_paper.html)
-- **作者**: Yan Shu, Zheng Liu, Peitian Zhang, Minghao Qin, Junjie Zhou, Zhengyang Liang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+### VideoAds for Fast-Paced Video Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02025) · 📚 被引 2
+- **作者**: Zheyuan Zhang, Wanying Dou, Linkai Peng, Hongyi Pan, Ulas Bagci, Boqing Gong
+- **🏷️ 机构**: Northwestern University, Boston University
+- **会议**: ICCV 2025
 
-### VERA: Explainable Video Anomaly Detection via Verbalized Learning of Vision-Language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ye_VERA_Explainable_Video_Anomaly_Detection_via_Verbalized_Learning_of_Vision-Language_CVPR_2025_paper.html)
-- **作者**: Muchao Ye, Weiyang Liu, Pan He
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
-
-### Apollo: An Exploration of Video Understanding in Large Multimodal Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zohar_Apollo__An_Exploration_of_Video_Understanding_in_Large_Multimodal_CVPR_2025_paper.html)
-- **作者**: Orr Zohar, Xiaohan Wang, Yann Dubois, Nikhil Mehta, Tong Xiao, Philippe Hansen-Estruch et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
-
-### M-LLM Based Video Frame Selection for Efficient Video Understanding.
-- **链接**: [arXiv:2502.19680](https://arxiv.org/abs/2502.19680) · 📚 被引 16
-- **作者**: Kai Hu, Feng Gao, Xiaohan Nie, Peng Zhou, Son Tran, Tal Neiman et al.
-- **🏷️ 机构**: Carnegie Mellon University, Amazon, University of Central Florida
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recent advances in Multi-Modal Large Language Models (M-LLMs) show promising results in video reasoning. Popular Multi-Modal Large Language Model (M-LLM) frameworks usually apply naive uniform sampling to reduce the number of video frames that are fed into an M-LLM, particularly for long context videos. However, it could lose crucial context in certain periods of a video, so that the downstream M-LLM may not have sufficient visual information to answer a question. To attack this pain point, we propose a light-weight M-LLM -based frame selection method that adaptively select frames that are more relevant to users' queries. In order to train the proposed frame selector, we introduce two supervision signals (i) Spatial signal, where single frame importance score by prompting a M-LLM; (ii) Temporal signal, in which multiple frames selection by prompting Large Language Model (LLM) using the captions of all frame candidates. The selected frames are then digested by a frozen downstream video M-LLM for visual reasoning and question answering. Empirical results show that the proposed M-LLM video frame selector improves the performances various downstream video Large Language Model (video-LLM) across medium (ActivityNet, NExT-QA) and long (EgoSchema, LongVideoBench) context video question answering benchmarks.
-
-</details>
-
-### Online Video Understanding: OVBench and VideoChat-Online.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Huang_Online_Video_Understanding_OVBench_and_VideoChat-Online_CVPR_2025_paper.html) · 📚 被引 2
-- **作者**: Zhenpeng Huang, Xinhao Li, Jiaqi Li, Jing Wang, Xiangyu Zeng, Cheng Liang et al.
-- **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology, China Mobile Research Institute
-- **会议**: CVPR 2025
+### DynImg: Key Frames with Visual Prompts are Good Representation for Multi-Modal Video Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02198) · 📚 被引 0
+- **作者**: Xiaoyi Bao, Chenwei Xie, Hao Tang, Tingyu Weng, Xiaofeng Wang, Yun Zheng et al.
+- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences, Alibaba Group
+- **会议**: ICCV 2025
 
 ### VideoICL: Confidence-based Iterative In-context Learning for Out-of-Distribution Video Understanding.
 - **链接**: [arXiv:2412.02186](https://arxiv.org/abs/2412.02186) · [代码](https://github.com/KangsanKim07/VideoICL) · 📚 被引 2
@@ -113,11 +89,11 @@
 - **🏷️ 机构**: University of Waterloo, 01.AI
 - **会议**: CVPR 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Current large multimodal models (LMMs) face significant challenges in processing and comprehending long-duration or high-resolution videos, which is mainly due to the lack of high-quality datasets. To address this issue from a data-centric perspective, we propose VISTA, a simple yet effective Video Spatiotemporal Augmentation framework that synthesizes long-duration and high-resolution video instruction-following pairs from existing video-caption datasets. VISTA spatially and temporally combines videos to create new synthetic videos with extended durations and enhanced resolutions, and subsequently produces question-answer pairs pertaining to these newly synthesized videos. Based on this paradigm, we develop seven video augmentation methods and curate VISTA-400K, a video instruction-following dataset aimed at enhancing long-duration and high-resolution video understanding. Finetuning various video LMMs on our data resulted in an average improvement of 3.3% across four challenging benchmarks for long-video understanding. Furthermore, we introduce the first comprehensive high-resolution video understanding benchmark HRVideoBench, on which our finetuned models achieve a 6.5% performance gain. These results highlight the effectiveness of our framework.
-
-</details>
+### Video-XL: Extra-Long Vision Language Model for Hour-Scale Video Understanding.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Shu_Video-XL_Extra-Long_Vision_Language_Model_for_Hour-Scale_Video_Understanding_CVPR_2025_paper.html)
+- **作者**: Yan Shu, Zheng Liu, Peitian Zhang, Minghao Qin, Junjie Zhou, Zhengyang Liang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
 ### Video-3D LLM: Learning Position-Aware Video Representation for 3D Scene Understanding.
 - **链接**: [arXiv:2412.00493](https://arxiv.org/abs/2412.00493) · 📚 被引 18
@@ -131,11 +107,13 @@
 
 </details>
 
-### MMVU: Measuring Expert-Level Multi-Discipline Video Understanding.
-- **链接**: [arXiv:2501.12380](https://arxiv.org/abs/2501.12380) · 📚 被引 8
-- **作者**: Yilun Zhao, Haowei Zhang, Lujing Xie, Tongyan Hu, Guo Gan, Yitao Long et al.
-- **🏷️ 机构**: Yale NLP MMVU Team
+### BOLT: Boost Large Vision-Language Model Without Training for Long-form Video Understanding.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BOLT_Boost_Large_Vision-Language_Model_Without_Training_for_Long-form_Video_CVPR_2025_paper.html)
+- **作者**: Shuming Liu, Chen Zhao, Tianqi Xu, Bernard Ghanem
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
+
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -143,17 +121,17 @@
 
 </details>
 
-### MLVU: Benchmarking Multi-task Long Video Understanding.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_MLVU_Benchmarking_Multi-task_Long_Video_Understanding_CVPR_2025_paper.html) · 📚 被引 16
-- **作者**: Junjie Zhou, Yan Shu, Bo Zhao, Boya Wu, Zhengyang Liang, Shitao Xiao et al.
-- **🏷️ 机构**: Beijing University of Posts and Telecommunications,State Key Laboratory of Networking and Switching Technology, Beijing Academy of Artificial Intelligence, Shanghai Jiao Tong University,School of AI
-- **会议**: CVPR 2025
+### Flow4Agent: Long-form Video Understanding via Motion Prior from Optical Flow.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02211) · 📚 被引 0
+- **作者**: Ruyang Liu, Shangkun Sun, Haoran Tang, Wei Gao, Ge Li
+- **🏷️ 机构**: School of Electronic and Computer Engineering, Shenzhen Graduate School, Peking University
+- **会议**: ICCV 2025
 
-### ViCaS: A Dataset for Combining Holistic and Pixel-level Video Understanding using Captions with Grounded Segmentation.
-- **链接**: [arXiv:2412.09754](https://arxiv.org/abs/2412.09754) · 📚 被引 3
-- **作者**: Ali Athar, Xueqing Deng, Liang-Chieh Chen
-- **🏷️ 机构**: ByteDance Inc.
-- **会议**: CVPR 2025
+### AdsQA: Towards Advertisement Video Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02172) · 📚 被引 2
+- **作者**: Xinwei Long, Kai Tian, Peng Xu, Guoli Jia, Jingxuan Li, Sa Yang et al.
+- **🏷️ 机构**: Tsinghua University, Independent Researcher, Peking University
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -161,11 +139,11 @@
 
 </details>
 
-### HierarQ: Task-Aware Hierarchical Q-Former for Enhanced Video Understanding.
-- **链接**: [arXiv:2503.08585](https://arxiv.org/abs/2503.08585) · 📚 被引 7
-- **作者**: Shehreen Azad, Vibhav Vineet, Yogesh Singh Rawat
-- **🏷️ 机构**: University of Central Florida,Center for Research in Computer Vision, Microsoft Research
-- **会议**: CVPR 2025
+### Bringing RNNs Back to Efficient Open-Ended Video Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02177) · 📚 被引 0
+- **作者**: Weili Xu, Enxin Song, Wenhao Chai, Xuexiang Wen, Tian Ye, Gaoang Wang
+- **🏷️ 机构**: Zhejiang University, University of Washington, HKUST (GZ)
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
