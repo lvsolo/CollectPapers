@@ -1,90 +1,52 @@
 # Neural Architecture Search — 2020 Guideline
 
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
-> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 4 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Understanding Architectures Learnt by Cell-based Neural Architecture Search.
-- **链接**: [出版页](https://openreview.net/forum?id=BJxH22EKPS)
-- **作者**: Yao Shu, Wei Wang, Shaofeng Cai
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-### Evaluating The Search Phase of Neural Architecture Search.
-- **链接**: [arXiv:1902.08142](https://arxiv.org/abs/1902.08142)
-- **作者**: Kaicheng Yu, Christian Sciuto, Martin Jaggi, Claudiu Musat, Mathieu Salzmann
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+### Angle-Based Search Space Shrinking for Neural Architecture Search.
+- **链接**: [arXiv:2004.13431](https://arxiv.org/abs/2004.13431)
+- **作者**: Yiming Hu, Yuding Liang, Zichao Guo, Ruosi Wan, Xiangyu Zhang, Yichen Wei et al.
+- **🏷️ 机构**: MEGVII
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Neural Architecture Search (NAS) aims to facilitate the design of deep networks for new tasks. Existing techniques rely on two stages: searching over the architecture space and validating the best architecture. NAS algorithms are currently compared solely based on their results on the downstream task. While intuitive, this fails to explicitly evaluate the effectiveness of their search strategies. In this paper, we propose to evaluate the NAS search phase. To this end, we compare the quality of the solutions obtained by NAS search policies with that of random architecture selection. We find that: (i) On average, the state-of-the-art NAS algorithms perform similarly to the random policy; (ii) the widely-used weight sharing strategy degrades the ranking of the NAS candidates to the point of not reflecting their true performance, thus reducing the effectiveness of the search process. We believe that our evaluation framework will be key to designing NAS strategies that consistently discover architectures superior to random ones.
+> Neural Architecture Search (NAS) has achieved great success in image classification task. Some recent works have managed to explore the automatic design of efficient backbone or feature fusion layer for object detection. However, these methods focus on searching only one certain component of object detector while leaving others manually designed. We identify the inconsistency between searched component and manually designed ones would withhold the detector of stronger performance. To this end, we propose a hierarchical trinity search framework to simultaneously discover efficient architectures for all components (i.e. backbone, neck, and head) of object detector in an end-to-end manner. In addition, we empirically reveal that different parts of the detector prefer different operators. Motivated by this, we employ a novel scheme to automatically screen different sub search spaces for different components so as to perform the end-to-end search for each component on the corresponding sub search space efficiently. Without bells and whistles, our searched architecture, namely Hit-Detector, achieves 41.4\% mAP on COCO minival set with 27M parameters. Our implementation is available at https://github.com/ggjy/HitDet.pytorch.
 
 </details>
 
-### NAS-Bench-201: Extending the Scope of Reproducible Neural Architecture Search.
-- **链接**: [arXiv:2001.00326](https://arxiv.org/abs/2001.00326)
-- **作者**: Xuanyi Dong, Yi Yang
+### SP-NAS: Serial-to-Parallel Backbone Search for Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Jiang_SP-NAS_Serial-to-Parallel_Backbone_Search_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 56
+- **作者**: Chenhan Jiang, Hang Xu, Wei Zhang, Xiaodan Liang, Zhenguo Li
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Neural architecture search (NAS) has achieved breakthrough success in a great number of applications in the past few years. It could be time to take a step back and analyze the good and bad aspects in the field of NAS. A variety of algorithms search architectures under different search space. These searched architectures are trained using different setups, e.g., hyper-parameters, data augmentation, regularization. This raises a comparability problem when comparing the performance of various NAS algorithms. NAS-Bench-101 has shown success to alleviate this problem. In this work, we propose an extension to NAS-Bench-101: NAS-Bench-201 with a different search space, results on multiple datasets, and more diagnostic information. NAS-Bench-201 has a fixed search space and provides a unified benchmark for almost any up-to-date NAS algorithms. The design of our search space is inspired from the one used in the most popular cell-based searching algorithms, where a cell is represented as a DAG. Each edge here is associated with an operation selected from a predefined operation set. For it to be applicable for all NAS algorithms, the search space defined in NAS-Bench-201 includes all possible architectures generated by 4 nodes and 5 associated operation options, which results in 15,625 candidates in total. The training log and the performance for each architecture candidate are provided for three datasets. This allows researchers to avoid unnecessary repetitive training for selected candidate and focus solely on the search algorithm itself. The training time saved for every candidate also largely improves the efficiency of many methods. We provide additional diagnostic information such as fine-grained loss and accuracy, which can give inspirations to new designs of NAS algorithms. In further support, we have analyzed it from many aspects and benchmarked 10 recent NAS algorithms.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The success of deep neural networks relies on significant architecture engineering. Recently neural architecture search (NAS) has emerged as a promise to greatly reduce manual effort in network design by automatically searching for optimal architectures, although typically such algorithms need an excessive amount of computational resources, e.g., a few thousand GPU-days. To date, on challenging vision tasks such as object detection, NAS, especially fast versions of NAS, is less studied. Here we propose to search for the decoder structure of object detectors with search efficiency being taken into consideration. To be more specific, we aim to efficiently search for the feature pyramid network (FPN) as well as the prediction head of a simple anchor-free object detector, namely FCOS, using a tailored reinforcement learning paradigm. With carefully designed search space, search algorithms and strategies for evaluating network quality, we are able to efficiently search a top-performing detection architecture within 4 days using 8 V100 GPUs. The discovered architecture surpasses state-of-the-art object detection models (such as Faster R-CNN, RetinaNet and FCOS) by 1.5 to 3.5 points in AP on the COCO dataset, with comparable computation complexity and memory footprint, demonstrating the efficacy of the proposed NAS for object detection.
 
 </details>
 
-### Fast Neural Network Adaptation via Parameter Remapping and Architecture Search.
-- **链接**: [arXiv:2001.02525](https://arxiv.org/abs/2001.02525) · [代码](https://github.com/JaminFong/FNA) · 📚 被引 30
-- **作者**: Jiemin Fang, Yuzhu Sun, Kangjian Peng, Qian Zhang, Yuan Li, Wenyu Liu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+</details>
+
+### Are Labels Necessary for Neural Architecture Search?
+- **链接**: [arXiv:2003.12056](https://arxiv.org/abs/2003.12056)
+- **作者**: Chenxi Liu, Piotr Dollár, Kaiming He, Ross B. Girshick, Alan L. Yuille, Saining Xie
+- **🏷️ 机构**: Meta FAIR, MIT
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Deep neural networks achieve remarkable performance in many computer vision tasks. Most state-of-the-art (SOTA) semantic segmentation and object detection approaches reuse neural network architectures designed for image classification as the backbone, commonly pre-trained on ImageNet. However, performance gains can be achieved by designing network architectures specifically for detection and segmentation, as shown by recent neural architecture search (NAS) research for detection and segmentation. One major challenge though, is that ImageNet pre-training of the search space representation (a.k.a. super network) or the searched networks incurs huge computational cost. In this paper, we propose a Fast Neural Network Adaptation (FNA) method, which can adapt both the architecture and parameters of a seed network (e.g. a high performing manually designed backbone) to become a network with different depth, width, or kernels via a Parameter Remapping technique, making it possible to utilize NAS for detection/segmentation tasks a lot more efficiently. In our experiments, we conduct FNA on MobileNetV2 to obtain new networks for both segmentation and detection that clearly out-perform existing networks designed both manually and by NAS. The total computation cost of FNA is significantly less than SOTA segmentation/detection NAS approaches: 1737$\times$ less than DPC, 6.8$\times$ less than Auto-DeepLab and 7.4$\times$ less than DetNAS. The code is available at https://github.com/JaminFong/FNA.
+> Existing neural network architectures in computer vision -- whether designed by humans or by machines -- were typically found using both images and their associated labels. In this paper, we ask the question: can we find high-quality neural architectures using only images, but no human-annotated labels? To answer this question, we first define a new setup called Unsupervised Neural Architecture Search (UnNAS). We then conduct two sets of experiments. In sample-based experiments, we train a large number (500) of diverse architectures with either supervised or unsupervised objectives, and find that the architecture rankings produced with and without labels are highly correlated. In search-based experiments, we run a well-established NAS algorithm (DARTS) using various unsupervised objectives, and report that the architectures searched without labels can be competitive to their counterparts searched with labels. Together, these results reveal the potentially surprising finding that labels are not necessary, and the image statistics alone may be sufficient to identify good neural architectures.
 
 </details>
 
-### AtomNAS: Fine-Grained End-to-End Neural Architecture Search.
-- **链接**: [arXiv:1912.09640](https://arxiv.org/abs/1912.09640) · [代码](https://github.com/meijieru/AtomNAS)
-- **作者**: Jieru Mei, Yingwei Li, Xiaochen Lian, Xiaojie Jin, Linjie Yang, Alan L. Yuille et al.
+### NSGANetV2: Evolutionary Multi-objective Surrogate-Assisted Neural Architecture Search.
+- **链接**: [arXiv:2007.10396](https://arxiv.org/abs/2007.10396) · [代码](https://github.com/mikelzc1990/nsganetv2) · 📚 被引 140
+- **作者**: Zhichao Lu, Kalyanmoy Deb, Erik D. Goodman, Wolfgang Banzhaf, Vishnu Naresh Boddeti
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Search space design is very critical to neural architecture search (NAS) algorithms. We propose a fine-grained search space comprised of atomic blocks, a minimal search unit that is much smaller than the ones used in recent NAS algorithms. This search space allows a mix of operations by composing different types of atomic blocks, while the search space in previous methods only allows homogeneous operations. Based on this search space, we propose a resource-aware architecture search framework which automatically assigns the computational resources (e.g., output channel numbers) for each operation by jointly considering the performance and the computational cost. In addition, to accelerate the search process, we propose a dynamic network shrinkage technique which prunes the atomic blocks with negligible influence on outputs on the fly. Instead of a search-and-retrain two-stage paradigm, our method simultaneously searches and trains the target architecture. Our method achieves state-of-the-art performance under several FLOPs configurations on ImageNet with a small searching cost. We open our entire codebase at: https://github.com/meijieru/AtomNAS.
-
-</details>
-
-### PC-DARTS: Partial Channel Connections for Memory-Efficient Architecture Search.
-- **链接**: [出版页](https://openreview.net/forum?id=BJlS634tPr)
-- **作者**: Yuhui Xu, Lingxi Xie, Xiaopeng Zhang, Xin Chen, Guo-Jun Qi, Qi Tian et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-### Understanding and Robustifying Differentiable Architecture Search.
-- **链接**: [arXiv:1909.09656](https://arxiv.org/abs/1909.09656)
-- **作者**: Arber Zela, Thomas Elsken, Tonmoy Saikia, Yassine Marrakchi, Thomas Brox, Frank Hutter
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Differentiable Architecture Search (DARTS) has attracted a lot of attention due to its simplicity and small search costs achieved by a continuous relaxation and an approximation of the resulting bi-level optimization problem. However, DARTS does not work robustly for new problems: we identify a wide range of search spaces for which DARTS yields degenerate architectures with very poor test performance. We study this failure mode and show that, while DARTS successfully minimizes validation loss, the found solutions generalize poorly when they coincide with high validation loss curvature in the architecture space. We show that by adding one of various types of regularization we can robustify DARTS to find solutions with less curvature and better generalization properties. Based on these observations, we propose several simple variations of DARTS that perform substantially more robustly in practice. Our observations are robust across five search spaces on three image classification tasks and also hold for the very different domains of disparity estimation (a dense regression task) and language modelling.
-
-</details>
-
-### NAS-Bench-1Shot1: Benchmarking and Dissecting One-shot Neural Architecture Search.
-- **链接**: [arXiv:2001.10422](https://arxiv.org/abs/2001.10422)
-- **作者**: Arber Zela, Julien Siems, Frank Hutter
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> One-shot neural architecture search (NAS) has played a crucial role in making NAS methods computationally feasible in practice. Nevertheless, there is still a lack of understanding on how these weight-sharing algorithms exactly work due to the many factors controlling the dynamics of the process. In order to allow a scientific study of these components, we introduce a general framework for one-shot NAS that can be instantiated to many recently-introduced variants and introduce a general benchmarking framework that draws on the recent large-scale tabular benchmark NAS-Bench-101 for cheap anytime evaluations of one-shot NAS methods. To showcase the framework, we compare several state-of-the-art one-shot NAS methods, examine how sensitive they are to their hyperparameters and how they can be improved by tuning their hyperparameters, and compare their performance to that of blackbox optimizers for NAS-Bench-101.
-
-</details>
+- **会议**: CVPR 2020

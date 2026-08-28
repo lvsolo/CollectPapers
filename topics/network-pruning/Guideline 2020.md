@@ -1,108 +1,108 @@
 # Network Pruning — 2020 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Neural Epitome Search for Architecture-Agnostic Network Compression.
-- **链接**: [出版页](https://openreview.net/forum?id=HyxjOyrKvr)
-- **作者**: Daquan Zhou, Xiaojie Jin, Qibin Hou, Kaixin Wang, Jianchao Yang, Jiashi Feng
+### OctSqueeze: Octree-Structured Entropy Model for LiDAR Compression.
+- **链接**: [arXiv:2005.07178](https://arxiv.org/abs/2005.07178) · 📚 被引 200
+- **作者**: Lila Huang, Shenlong Wang, Kelvin Wong, Jerry Liu, Raquel Urtasun
+- **🏷️ 机构**: Waabi / University of Toronto
+- **会议**: NeurIPS 2020
+
+### Multi-Dimensional Pruning: A Unified Framework for Model Compression.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Multi-Dimensional_Pruning_A_Unified_Framework_for_Model_Compression_CVPR_2020_paper.html) · 📚 被引 65
+- **作者**: Jinyang Guo, Wanli Ouyang, Dong Xu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: ECCV 2020
 
-### A Signal Propagation Perspective for Pruning Neural Networks at Initialization.
-- **链接**: [arXiv:1906.06307](https://arxiv.org/abs/1906.06307)
-- **作者**: Namhoon Lee, Thalaiyasingam Ajanthan, Stephen Gould, Philip H. S. Torr
+### DMCP: Differentiable Markov Channel Pruning for Neural Networks.
+- **链接**: [arXiv:2005.03354](https://arxiv.org/abs/2005.03354) · 📚 被引 142
+- **作者**: Shaopeng Guo, Yujie Wang, Quanquan Li, Junjie Yan
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Network pruning is a promising avenue for compressing deep neural networks. A typical approach to pruning starts by training a model and then removing redundant parameters while minimizing the impact on what is learned. Alternatively, a recent approach shows that pruning can be done at initialization prior to training, based on a saliency criterion called connection sensitivity. However, it remains unclear exactly why pruning an untrained, randomly initialized neural network is effective. In this work, by noting connection sensitivity as a form of gradient, we formally characterize initialization conditions to ensure reliable connection sensitivity measurements, which in turn yields effective pruning results. Moreover, we analyze the signal propagation properties of the resulting pruned networks and introduce a simple, data-free method to improve their trainability. Our modifications to the existing pruning at initialization method lead to improved results on all tested network models for image classification tasks. Furthermore, we empirically study the effect of supervision for pruning and demonstrate that our signal propagation perspective, combined with unsupervised pruning, can be useful in various scenarios where pruning is applied to non-standard arbitrarily-designed architectures.
+- **会议**: ECCV 2020
 
 </details>
 
-### Provable Filter Pruning for Efficient Neural Networks.
-- **链接**: [arXiv:1911.07412](https://arxiv.org/abs/1911.07412)
-- **作者**: Lucas Liebenwein, Cenk Baykal, Harry Lang, Dan Feldman, Daniela Rus
+### EagleEye: Fast Sub-net Evaluation for Efficient Neural Network Pruning.
+- **链接**: [arXiv:2007.02491](https://arxiv.org/abs/2007.02491) · [代码](https://github.com/anonymous47823493/EagleEye) · 📚 被引 133
+- **作者**: Bailin Li, Bowen Wu, Jiang Su, Guangrun Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: ECCV 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Group Sparsity: The Hinge Between Filter Pruning and Decomposition for Network Compression.
+- **链接**: [arXiv:2003.08935](https://arxiv.org/abs/2003.08935) · 📚 被引 170
+- **作者**: Yawei Li, Shuhang Gu, Christoph Mayer, Luc Van Gool, Radu Timofte
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
 
-> We present a provable, sampling-based approach for generating compact Convolutional Neural Networks (CNNs) by identifying and removing redundant filters from an over-parameterized network. Our algorithm uses a small batch of input data points to assign a saliency score to each filter and constructs an importance sampling distribution where filters that highly affect the output are sampled with correspondingly high probability. In contrast to existing filter pruning approaches, our method is simultaneously data-informed, exhibits provable guarantees on the size and performance of the pruned network, and is widely applicable to varying network architectures and data sets. Our analytical bounds bridge the notions of compressibility and importance of network structures, which gives rise to a fully-automated procedure for identifying and preserving filters in layers that are essential to the network's performance. Our experimental evaluations on popular architectures and data sets show that our algorithm consistently generates sparser and more efficient models than those constructed by existing filter pruning approaches.
+> Finding out the computational redundant part of a trained Deep Neural Network (DNN) is the key question that pruning algorithms target on. Many algorithms try to predict model performance of the pruned sub-nets by introducing various evaluation methods. But they are either inaccurate or very complicated for general application. In this work, we present a pruning method called EagleEye, in which a simple yet efficient evaluation component based on adaptive batch normalization is applied to unveil a strong correlation between different pruned DNN structures and their final settled accuracy. This strong correlation allows us to fast spot the pruned candidates with highest potential accuracy without actually fine-tuning them. This module is also general to plug-in and improve some existing pruning algorithms. EagleEye achieves better pruning performance than all of the studied pruning algorithms in our experiments. Concretely, to prune MobileNet V1 and ResNet-50, EagleEye outperforms all compared methods by up to 3.8%. Even in the more challenging experiments of pruning the compact model of MobileNet V1, EagleEye achieves the highest accuracy of 70.9% with an overall 50% operations (FLOPs) pruned. All accuracy results are Top-1 ImageNet classification accuracy. Source code and models are accessible to open-source community https://github.com/anonymous47823493/EagleEye .
 
 </details>
+
+### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_APQ_Joint_Search_for_Network_Architecture_Pruning_and_Quantization_Policy_CVPR_2020_paper.html) · 📚 被引 159
+- **作者**: Tianzhe Wang, Kuan Wang, Han Cai, Ji Lin, Zhijian Liu, Hanrui Wang et al.
+- **🏷️ 机构**: Massachusetts Institute of Technology; Shanghai Jiao Tong University, Massachusetts Institute of Technology
+- **会议**: CVPR 2020
 
 ### Dynamic Model Pruning with Feedback.
 - **链接**: [arXiv:2006.07253](https://arxiv.org/abs/2006.07253)
 - **作者**: Tao Lin, Sebastian U. Stich, Luis Barba, Daniil Dmitriev, Martin Jaggi
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Deep neural networks often have millions of parameters. This can hinder their deployment to low-end devices, not only due to high memory requirements but also because of increased latency at inference. We propose a novel model compression method that generates a sparse trained model without additional overhead: by allowing (i) dynamic allocation of the sparsity pattern and (ii) incorporating feedback signal to reactivate prematurely pruned weights we obtain a performant sparse model in one single training pass (retraining is not needed, but can further improve the performance). We evaluate our method on CIFAR-10 and ImageNet, and show that the obtained sparse models can reach the state-of-the-art performance of dense models. Moreover, their performance surpasses that of models generated by all previously proposed pruning schemes.
+> Budgeted pruning is the problem of pruning under resource constraints. In budgeted pruning, how to distribute the resources across layers (i.e., sparsity allocation) is the key problem. Traditional methods solve it by discretely searching for the layer-wise pruning ratios, which lacks efficiency. In this paper, we propose Differentiable Sparsity Allocation (DSA), an efficient end-to-end budgeted pruning flow. Utilizing a novel differentiable pruning process, DSA finds the layer-wise pruning ratios with gradient-based optimization. It allocates sparsity in continuous space, which is more efficient than methods based on discrete evaluation and search. Furthermore, DSA could work in a pruning-from-scratch manner, whereas traditional budgeted pruning methods are applied to pre-trained models. Experimental results on CIFAR-10 and ImageNet show that DSA could achieve superior performance than current iterative budgeted pruning methods, and shorten the time cost of the overall pruning process by at least 1.5x in the meantime.
 
 </details>
 
-### Data-Independent Neural Pruning via Coresets.
-- **链接**: [出版页](https://openreview.net/forum?id=H1gmHaEKwB)
-- **作者**: Ben Mussay, Margarita Osadchy, Vladimir Braverman, Samson Zhou, Dan Feldman
+### Meta-learning with Network Pruning.
+- **链接**: [arXiv:2007.03219](https://arxiv.org/abs/2007.03219)
+- **作者**: Hongduan Tian, Bo Liu, Xiao-Tong Yuan, Qingshan Liu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-### Lookahead: A Far-sighted Alternative of Magnitude-based Pruning.
-- **链接**: [arXiv:2002.04809](https://arxiv.org/abs/2002.04809) · [代码](https://github.com/alinlab/lookahead_pruning)
-- **作者**: Sejun Park, Jaeho Lee, Sangwoo Mo, Jinwoo Shin
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Magnitude-based pruning is one of the simplest methods for pruning neural networks. Despite its simplicity, magnitude-based pruning and its variants demonstrated remarkable performances for pruning modern architectures. Based on the observation that magnitude-based pruning indeed minimizes the Frobenius distortion of a linear operator corresponding to a single layer, we develop a simple pruning method, coined lookahead pruning, by extending the single layer optimization to a multi-layer optimization. Our experimental results demonstrate that the proposed method consistently outperforms magnitude-based pruning on various networks, including VGG and ResNet, particularly in the high-sparsity regime. See https://github.com/alinlab/lookahead_pruning for codes.
+> Meta-learning is a powerful paradigm for few-shot learning. Although with remarkable success witnessed in many applications, the existing optimization based meta-learning models with over-parameterized neural networks have been evidenced to ovetfit on training tasks. To remedy this deficiency, we propose a network pruning based meta-learning approach for overfitting reduction via explicitly controlling the capacity of network. A uniform concentration analysis reveals the benefit of network capacity constraint for reducing generalization gap of the proposed meta-learner. We have implemented our approach on top of Reptile assembled with two network pruning routines: Dense-Sparse-Dense (DSD) and Iterative Hard Thresholding (IHT). Extensive experimental results on benchmark datasets with different over-parameterized deep networks demonstrate that our method not only effectively alleviates meta-overfitting but also in many cases improves the overall generalization performance when applied to few-shot classification tasks.
 
 </details>
 
-### Comparing Rewinding and Fine-tuning in Neural Network Pruning.
-- **链接**: [arXiv:2003.02389](https://arxiv.org/abs/2003.02389)
-- **作者**: Alex Renda, Jonathan Frankle, Michael Carbin
+### Differentiable Joint Pruning and Quantization for Hardware Efficiency.
+- **链接**: [arXiv:2007.10463](https://arxiv.org/abs/2007.10463) · 📚 被引 62
+- **作者**: Ying Wang, Yadong Lu, Tijmen Blankevoort
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Many neural network pruning algorithms proceed in three steps: train the network to completion, remove unwanted structure to compress the network, and retrain the remaining structure to recover lost accuracy. The standard retraining technique, fine-tuning, trains the unpruned weights from their final trained values using a small fixed learning rate. In this paper, we compare fine-tuning to alternative retraining techniques. Weight rewinding (as proposed by Frankle et al., (2019)), rewinds unpruned weights to their values from earlier in training and retrains them from there using the original training schedule. Learning rate rewinding (which we propose) trains the unpruned weights from their final values using the same learning rate schedule as weight rewinding. Both rewinding techniques outperform fine-tuning, forming the basis of a network-agnostic pruning algorithm that matches the accuracy and compression ratios of several more network-specific state-of-the-art techniques.
+> We present a differentiable joint pruning and quantization (DJPQ) scheme. We frame neural network compression as a joint gradient-based optimization problem, trading off between model pruning and quantization automatically for hardware efficiency. DJPQ incorporates variational information bottleneck based structured pruning and mixed-bit precision quantization into a single differentiable loss function. In contrast to previous works which consider pruning and quantization separately, our method enables users to find the optimal trade-off between both in a single training procedure. To utilize the method for more efficient hardware inference, we extend DJPQ to integrate structured pruning with power-of-two bit-restricted quantization. We show that DJPQ significantly reduces the number of Bit-Operations (BOPs) for several networks while maintaining the top-1 accuracy of original floating-point models (e.g., 53x BOPs reduction in ResNet18 on ImageNet, 43x in MobileNetV2). Compared to the conventional two-stage approach, which optimizes pruning and quantization independently, our scheme outperforms in terms of both accuracy and BOPs. Even when considering bit-restricted quantization, DJPQ achieves larger compression ratios and better accuracy than the two-stage approach.
 
 </details>
 
-### One-Shot Pruning of Recurrent Neural Networks by Jacobian Spectrum Evaluation.
-- **链接**: [arXiv:1912.00120](https://arxiv.org/abs/1912.00120)
-- **作者**: Matthew Shunshi Zhang, Bradly C. Stadie
+### Accelerating CNN Training by Pruning Activation Gradients.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58595-2_20) · 📚 被引 22
+- **作者**: Xucheng Ye, Pengcheng Dai, Junyu Luo, Xin Guo, Yingjie Qi, Jianlei Yang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: ECCV 2020
+
+### An Image Enhancing Pattern-Based Sparsity for Real-Time Inference on Mobile Devices.
+- **链接**: [arXiv:2001.07710](https://arxiv.org/abs/2001.07710) · 📚 被引 15
+- **作者**: Xiaolong Ma, Wei Niu, Tianyun Zhang, Sijia Liu, Sheng Lin, Hongjia Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Recent advances in the sparse neural network literature have made it possible to prune many large feed forward and convolutional networks with only a small quantity of data. Yet, these same techniques often falter when applied to the problem of recovering sparse recurrent networks. These failures are quantitative: when pruned with recent techniques, RNNs typically obtain worse performance than they do under a simple random pruning scheme. The failures are also qualitative: the distribution of active weights in a pruned LSTM or GRU network tend to be concentrated in specific neurons and gates, and not well dispersed across the entire architecture. We seek to rectify both the quantitative and qualitative issues with recurrent network pruning by introducing a new recurrent pruning objective derived from the spectrum of the recurrent Jacobian. Our objective is data efficient (requiring only 64 data points to prune the network), easy to implement, and produces 95% sparse GRUs that significantly improve on existing baselines. We evaluate on sequential MNIST, Billion Words, and Wikitext.
+> Weight pruning has been widely acknowledged as a straightforward and effective method to eliminate redundancy in Deep Neural Networks (DNN), thereby achieving acceleration on various platforms. However, most of the pruning techniques are essentially trade-offs between model accuracy and regularity which lead to impaired inference accuracy and limited on-device acceleration performance. To solve the problem, we introduce a new sparsity dimension, namely pattern-based sparsity that comprises pattern and connectivity sparsity, and becoming both highly accurate and hardware friendly. With carefully designed patterns, the proposed pruning unprecedentedly and consistently achieves accuracy enhancement and better feature extraction ability on different DNN structures and datasets, and our pattern-aware pruning framework also achieves pattern library extraction, pattern selection, pattern and connectivity pruning and weight training simultaneously. Our approach on the new pattern-based sparsity naturally fits into compiler optimization for highly efficient DNN execution on mobile platforms. To the best of our knowledge, it is the first time that mobile devices achieve real-time inference for the large-scale DNN models thanks to the unique spatial property of pattern-based sparsity and the help of the code generation capability of compilers.
 
 </details>
 
-### DeepHoyer: Learning Sparser Neural Network with Differentiable Scale-Invariant Sparsity Measures.
-- **链接**: [arXiv:1908.09979](https://arxiv.org/abs/1908.09979)
-- **作者**: Huanrui Yang, Wei Wen, Hai Li
+### Online Ensemble Model Compression Using Knowledge Distillation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_2) · 📚 被引 42
+- **作者**: Devesh Walawalkar, Zhiqiang Shen, Marios Savvides
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In seeking for sparse and efficient neural network models, many previous works investigated on enforcing L1 or L0 regularizers to encourage weight sparsity during training. The L0 regularizer measures the parameter sparsity directly and is invariant to the scaling of parameter values, but it cannot provide useful gradients, and therefore requires complex optimization techniques. The L1 regularizer is almost everywhere differentiable and can be easily optimized with gradient descent. Yet it is not scale-invariant, causing the same shrinking rate to all parameters, which is inefficient in increasing sparsity. Inspired by the Hoyer measure (the ratio between L1 and L2 norms) used in traditional compressed sensing problems, we present DeepHoyer, a set of sparsity-inducing regularizers that are both differentiable almost everywhere and scale-invariant. Our experiments show that enforcing DeepHoyer regularizers can produce even sparser neural network models than previous works, under the same accuracy level. We also show that DeepHoyer can be applied to both element-wise and structural pruning.
-
-</details>
-
-### Why Not to Use Zero Imputation? Correcting Sparsity Bias in Training Neural Networks.
-- **链接**: [出版页](https://openreview.net/forum?id=BylsKkHYvH)
-- **作者**: Joonyoung Yi, Juhyuk Lee, Kwang Joon Kim, Sung Ju Hwang, Eunho Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: ECCV 2020
