@@ -1,13 +1,31 @@
 # Multi-camera Perception — 2020 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 22 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 26 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### BlendedMVS: A Large-Scale Dataset for Generalized Multi-View Stereo Networks.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yao_BlendedMVS_A_Large-Scale_Dataset_for_Generalized_Multi-View_Stereo_Networks_CVPR_2020_paper.html) · 📚 被引 450
-- **作者**: Yao Yao, Zixin Luo, Shiwei Li, Jingyang Zhang, Yufan Ren, Lei Zhou et al.
+### GeoGraph: Graph-Based Multi-view Object Detection with Geometric Cues End-to-End.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58571-6_29) · 📚 被引 22
+- **作者**: Ahmed Samy Nassar, Stefano D'Aronco, Sébastien Lefèvre, Jan D. Wegner
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
+
+### LEMMA: A Multi-view Dataset for LEarning Multi-agent Multi-task Activities.
+- **链接**: [arXiv:2007.15781](https://arxiv.org/abs/2007.15781) · 📚 被引 29
+- **作者**: Baoxiong Jia, Yixin Chen, Siyuan Huang, Yixin Zhu, Song-Chun Zhu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Understanding and interpreting human actions is a long-standing challenge and a critical indicator of perception in artificial intelligence. However, a few imperative components of daily human activities are largely missed in prior literature, including the goal-directed actions, concurrent multi-tasks, and collaborations among multi-agents. We introduce the LEMMA dataset to provide a single home to address these missing dimensions with meticulously designed settings, wherein the number of tasks and agents varies to highlight different learning objectives. We densely annotate the atomic-actions with human-object interactions to provide ground-truths of the compositionality, scheduling, and assignment of daily activities. We further devise challenging compositional action recognition and action/task anticipation benchmarks with baseline models to measure the capability of compositional action understanding and temporal reasoning. We hope this effort would drive the machine vision community to examine goal-directed human activities and further study the task scheduling and assignment in the real world.
+
+</details>
+
+### Multi-person 3D Pose Estimation in Crowded Scenes Based on Multi-view Geometry.
+- **链接**: [arXiv:2007.10986](https://arxiv.org/abs/2007.10986) · 📚 被引 41
+- **作者**: He Chen, Pengfei Guo, Pengfei Li, Gim Hee Lee, Gregory S. Chirikjian
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
@@ -18,13 +36,13 @@
 </details>
 
 ### End-to-end Dynamic Matching Network for Multi-view Multi-person 3D Pose Estimation.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58604-1_29)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58604-1_29) · 📚 被引 24
 - **作者**: Congzhentao Huang, Shuai Jiang, Yang Li, Ziyue Zhang, Jason M. Traish, Chen Deng et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
 ### CosyPose: Consistent Multi-view Multi-object 6D Pose Estimation.
-- **链接**: [arXiv:2008.08465](https://arxiv.org/abs/2008.08465)
+- **链接**: [arXiv:2008.08465](https://arxiv.org/abs/2008.08465) · 📚 被引 364
 - **作者**: Yann Labbé, Justin Carpentier, Mathieu Aubry, Josef Sivic
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
@@ -53,27 +71,21 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
-### End-to-End Learning Local Multi-View Descriptors for 3D Point Clouds.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_End-to-End_Learning_Local_Multi-View_Descriptors_for_3D_Point_Clouds_CVPR_2020_paper.html) · 📚 被引 102
-- **作者**: Lei Li, Siyu Zhu, Hongbo Fu, Ping Tan, Chiew-Lan Tai
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
-
-### A Novel Recurrent Encoder-Decoder Structure for Large-Scale Multi-View Stereo Reconstruction From an Open Aerial Dataset.
-- **链接**: [arXiv:2003.00637](https://arxiv.org/abs/2003.00637) · 📚 被引 110
-- **作者**: Jin Liu, Shunping Ji
+### Pyramid Multi-view Stereo Net with Self-adaptive View Aggregation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58545-7_44) · 📚 被引 107
+- **作者**: Hongwei Yi, Zizhuang Wei, Mingyu Ding, Runze Zhang, Yisong Chen, Guoping Wang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
-### KeyPose: Multi-View 3D Labeling and Keypoint Estimation for Transparent Objects.
-- **链接**: [arXiv:1912.02805](https://arxiv.org/abs/1912.02805) · 📚 被引 112
-- **作者**: Xingyu Liu, Rico Jonschkowski, Anelia Angelova, Kurt Konolige
+### Multi-view Adaptive Graph Convolutions for Graph Classification.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58574-7_24) · 📚 被引 8
+- **作者**: Nikolas Adaloglou, Nicholas Vretos, Petros Daras
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
-### Attention-Aware Multi-View Stereo.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Luo_Attention-Aware_Multi-View_Stereo_CVPR_2020_paper.html)
-- **作者**: Keyang Luo, Tao Guan, Lili Ju, Yuesong Wang, Zhuo Chen, Yawei Luo
+### Deep Reflectance Volumes: Relightable Reconstructions from Multi-view Photometric Images.
+- **链接**: [arXiv:2007.09892](https://arxiv.org/abs/2007.09892) · 📚 被引 80
+- **作者**: Sai Bi, Zexiang Xu, Kalyan Sunkavalli, Milos Hasan, Yannick Hold-Geoffroy, David J. Kriegman et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
@@ -91,9 +103,7 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We present a lightweight solution to recover 3D pose from multi-view images captured with spatially calibrated cameras. Building upon recent advances in interpretable representation learning, we exploit 3D geometry to fuse input images into a unified latent representation of pose, which is disentangled from camera view-points. This allows us to reason effectively about 3D pose across different views without using compute-intensive volumetric grids. Our architecture then conditions the learned representation on camera projection operators to produce accurate per-view 2d detections, that can be simply lifted to 3D via a differentiable Direct Linear Transform (DLT) layer. In order to do it efficiently, we propose a novel implementation of DLT that is orders of magnitude faster on GPU architectures than standard SVD-based triangulation methods. We evaluate our approach on two large-scale human pose datasets (H36M and Total Capture): our method outperforms or performs comparably to the state-of-the-art volumetric methods, while, unlike them, yielding real-time performance.
-
-</details>
+> In this work, we address the problem of refining the geometry of local image features from multiple views without known scene or camera geometry. Current approaches to local feature detection are inherently limited in their keypoint localization accuracy because they only operate on a single view. This limitation has a negative impact on downstream tasks such as Structure-from-Motion, where inaccurate keypoints lead to large errors in triangulation and camera localization. Our proposed method naturally complements the traditional feature extraction and matching paradigm. We first estimate local geometric transformations between tentative matches and then optimize the keypoint locations over multiple views jointly according to a non-linear least squares formulation. Throughout a variety of experiments, we show that our method consistently improves the triangulation and camera localization performance for both hand-crafted and learned local features.
 
 </details>
 
@@ -110,7 +120,7 @@
 </details>
 
 ### Dense Hybrid Recurrent Multi-view Stereo Net with Dynamic Consistency Checking.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58548-8_39)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58548-8_39) · 📚 被引 166
 - **作者**: Jianfeng Yan, Zizhuang Wei, Hongwei Yi, Mingyu Ding, Runze Zhang, Yisong Chen et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
@@ -133,23 +143,15 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Almost all previous deep learning-based multi-view stereo (MVS) approaches focus on improving reconstruction quality. Besides quality, efficiency is also a desirable feature for MVS in real scenarios. Towards this end, this paper presents a Fast-MVSNet, a novel sparse-to-dense coarse-to-fine framework, for fast and accurate depth estimation in MVS. Specifically, in our Fast-MVSNet, we first construct a sparse cost volume for learning a sparse and high-resolution depth map. Then we leverage a small-scale convolutional neural network to encode the depth dependencies for pixels within a local region to densify the sparse high-resolution depth map. At last, a simple but efficient Gauss-Newton layer is proposed to further optimize the depth map. On one hand, the high-resolution depth map, the data-adaptive propagation method and the Gauss-Newton layer jointly guarantee the effectiveness of our method. On the other hand, all modules in our Fast-MVSNet are lightweight and thus guarantee the efficiency of our approach. Besides, our approach is also memory-friendly because of the sparse depth representation. Extensive experimental results show that our method is 5$\times$ and 14$\times$ faster than Point-MVSNet and R-MVSNet, respectively, while achieving comparable or even better results on the challenging Tanks and Temples dataset as well as the DTU dataset. Code is available at https://github.com/svip-lab/FastMVSNet.
-
-</details>
-
-### Fusing Wearable IMUs With Multi-View Images for Human Pose Estimation: A Geometric Approach.
-- **链接**: [arXiv:2003.11163](https://arxiv.org/abs/2003.11163) · [代码](https://github.com/CHUNYUWANG/imu-human-pose-pytorch) · 📚 被引 66
-- **作者**: Zhe Zhang, Chunyu Wang, Wenhu Qin, Wenjun Zeng
+### S3Net: Semantic-Aware Self-supervised Depth Estimation with Monocular Videos and Synthetic Data.
+- **链接**: [arXiv:2007.14511](https://arxiv.org/abs/2007.14511)
+- **作者**: Bin Cheng, Inderjot Singh Saggu, Raunak Shah, Gaurav Bansal, Dinesh Bharadia
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We propose to estimate 3D human pose from multi-view images and a few IMUs attached at person's limbs. It operates by firstly detecting 2D poses from the two signals, and then lifting them to the 3D space. We present a geometric approach to reinforce the visual features of each pair of joints based on the IMUs. This notably improves 2D pose estimation accuracy especially when one joint is occluded. We call this approach Orientation Regularized Network (ORN). Then we lift the multi-view 2D poses to the 3D space by an Orientation Regularized Pictorial Structure Model (ORPSM) which jointly minimizes the projection error between the 3D and 2D poses, along with the discrepancy between the 3D pose and IMU orientations. The simple two-step approach reduces the error of the state-of-the-art by a large margin on a public dataset. Our code will be released at https://github.com/CHUNYUWANG/imu-human-pose-pytorch.
-
-</details>
+> Solving depth estimation with monocular cameras enables the possibility of widespread use of cameras as low-cost depth estimation sensors in applications such as autonomous driving and robotics. However, learning such a scalable depth estimation model would require a lot of labeled data which is expensive to collect. There are two popular existing approaches which do not require annotated depth maps: (i) using labeled synthetic and unlabeled real data in an adversarial framework to predict more accurate depth, and (ii) unsupervised models which exploit geometric structure across space and time in monocular video frames. Ideally, we would like to leverage features provided by both approaches as they complement each other; however, existing methods do not adequately exploit these additive benefits. We present $S^3$Net, a self-supervised framework which combines these complementary features: we use synthetic and real-world images for training while exploiting geometric, temporal, as well as semantic constraints. Our novel consolidated architecture provides a new state-of-the-art in self-supervised depth estimation using monocular videos. We present a unique way to train this self-supervised framework, and achieve (i) more than $15\%$ improvement over previous synthetic supervised approaches that use domain adaptation and (ii) more than $10\%$ improvement over previous self-supervised approaches which exploit geometric constraints from the real data.
 
 </details>
 
@@ -183,8 +185,25 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
+### Unsupervised Monocular Depth Estimation for Night-Time Images Using Adversarial Domain Feature Adaptation.
+- **链接**: [arXiv:2010.01402](https://arxiv.org/abs/2010.01402) · 📚 被引 54
+- **作者**: Madhu Babu Vankadari, Sourav Garg, Anima Majumder, Swagat Kumar, Ardhendu Behera
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
+
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Current methods for depth map prediction from monocular images tend to predict smooth, poorly localized contours for the occlusion boundaries in the input image. This is unfortunate as occlusion boundaries are important cues to recognize objects, and as we show, may lead to a way to discover new objects from scene reconstruction. To improve predicted depth maps, recent methods rely on various forms of filtering or predict an additive residual depth map to refine a first estimate. We instead learn to predict, given a depth map predicted by some reconstruction method, a 2D displacement field able to re-sample pixels around the occlusion boundaries into sharper reconstructions. Our method can be applied to the output of any depth estimation method, in an end-to-end trainable fashion. For evaluation, we manually annotated the occlusion boundaries in all the images in the test split of popular NYUv2-Depth dataset. We show that our approach improves the localization of occlusion boundaries for all state-of-the-art monocular depth estimation methods that we could evaluate, without degrading the depth accuracy for the rest of the images.
+> In this paper, we look into the problem of estimating per-pixel depth maps from unconstrained RGB monocular night-time images which is a difficult task that has not been addressed adequately in the literature. The state-of-the-art day-time depth estimation methods fail miserably when tested with night-time images due to a large domain shift between them. The usual photo metric losses used for training these networks may not work for night-time images due to the absence of uniform lighting which is commonly present in day-time images, making it a difficult problem to solve. We propose to solve this problem by posing it as a domain adaptation problem where a network trained with day-time images is adapted to work for night-time images. Specifically, an encoder is trained to generate features from night-time images that are indistinguishable from those obtained from day-time images by using a PatchGAN-based adversarial discriminative learning method. Unlike the existing methods that directly adapt depth prediction (network output), we propose to adapt feature maps obtained from the encoder network so that a pre-trained day-time depth decoder can be directly used for predicting depth from these adapted features. Hence, the resulting method is termed as "Adversarial Domain Feature Adaptation (ADFA)" and its efficacy is demonstrated through experimentation on the challenging Oxford night driving dataset. Also, The modular encoder-decoder architecture for the proposed ADFA method allows us to use the encoder module as a feature extractor which can be used in many other applications. One such application is demonstrated where the features obtained from our adapted encoder network are shown to outperform other state-of-the-art methods in a visual place recognition problem, thereby, further establishing the usefulness and effectiveness of the proposed approach.
 
 </details>
+
+### CLIFFNet for Monocular Depth Estimation with Hierarchical Embedding Loss.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58558-7_19) · 📚 被引 42
+- **作者**: Lijun Wang, Jianming Zhang, Yifan Wang, Huchuan Lu, Xiang Ruan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Self-Supervised Monocular 3D Face Reconstruction by Occlusion-Aware Multi-view Geometry Consistency. → [3d-detection](../3d-detection/Guideline%202020.md)
+- VoxelPose: Towards Multi-camera 3D Human Pose Estimation in Wild Environment. → [3d-detection](../3d-detection/Guideline%202020.md)

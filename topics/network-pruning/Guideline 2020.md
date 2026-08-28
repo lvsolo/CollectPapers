@@ -5,29 +5,29 @@
 
 > 同领域其他年份: 
 
-### OctSqueeze: Octree-Structured Entropy Model for LiDAR Compression.
-- **链接**: [arXiv:2005.07178](https://arxiv.org/abs/2005.07178) · 📚 被引 200
-- **作者**: Lila Huang, Shenlong Wang, Kelvin Wong, Jerry Liu, Raquel Urtasun
-- **🏷️ 机构**: Waabi / University of Toronto
-- **会议**: CVPR 2020
-
-### Multi-Dimensional Pruning: A Unified Framework for Model Compression.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Multi-Dimensional_Pruning_A_Unified_Framework_for_Model_Compression_CVPR_2020_paper.html) · 📚 被引 65
-- **作者**: Jinyang Guo, Wanli Ouyang, Dong Xu
+### DA-NAS: Data Adapted Pruning for Efficient Neural Architecture Search.
+- **链接**: [arXiv:2003.12563](https://arxiv.org/abs/2003.12563) · 📚 被引 10
+- **作者**: Xiyang Dai, Dongdong Chen, Mengchen Liu, Yinpeng Chen, Lu Yuan
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
-### DMCP: Differentiable Markov Channel Pruning for Neural Networks.
-- **链接**: [arXiv:2005.03354](https://arxiv.org/abs/2005.03354) · 📚 被引 142
-- **作者**: Shaopeng Guo, Yujie Wang, Quanquan Li, Junjie Yan
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Efficient search is a core issue in Neural Architecture Search (NAS). It is difficult for conventional NAS algorithms to directly search the architectures on large-scale tasks like ImageNet. In general, the cost of GPU hours for NAS grows with regard to training dataset size and candidate set size. One common way is searching on a smaller proxy dataset (e.g., CIFAR-10) and then transferring to the target task (e.g., ImageNet). These architectures optimized on proxy data are not guaranteed to be optimal on the target task. Another common way is learning with a smaller candidate set, which may require expert knowledge and indeed betrays the essence of NAS. In this paper, we present DA-NAS that can directly search the architecture for large-scale target tasks while allowing a large candidate set in a more efficient manner. Our method is based on an interesting observation that the learning speed for blocks in deep neural networks is related to the difficulty of recognizing distinct categories. We carefully design a progressive data adapted pruning strategy for efficient architecture search. It will quickly trim low performed blocks on a subset of target dataset (e.g., easy classes), and then gradually find the best blocks on the whole target dataset. At this time, the original candidate set becomes as compact as possible, providing a faster search in the target task. Experiments on ImageNet verify the effectiveness of our approach. It is 2x faster than previous methods while the accuracy is currently state-of-the-art, at 76.2% under small FLOPs constraint. It supports an argument search space (i.e., more candidate blocks) to efficiently search the best-performing architecture.
+
+</details>
+
+### DHP: Differentiable Meta Pruning via HyperNetworks.
+- **链接**: [arXiv:2003.13683](https://arxiv.org/abs/2003.13683) · 📚 被引 91
+- **作者**: Yawei Li, Shuhang Gu, Kai Zhang, Luc Van Gool, Radu Timofte
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
-### Learning Filter Pruning Criteria for Deep Convolutional Neural Networks Acceleration.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/He_Learning_Filter_Pruning_Criteria_for_Deep_Convolutional_Neural_Networks_Acceleration_CVPR_2020_paper.html) · 📚 被引 201
-- **作者**: Yang He, Yuhang Ding, Ping Liu, Linchao Zhu, Hanwang Zhang, Yi Yang
-- **🏷️ 机构**: NUS
-- **会议**: CVPR 2020
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Network pruning has been the driving force for the acceleration of neural networks and the alleviation of model storage/transmission burden. With the advent of AutoML and neural architecture search (NAS), pruning has become topical with automatic mechanism and searching based architecture optimization. Yet, current automatic designs rely on either reinforcement learning or evolutionary algorithm. Due to the non-differentiability of those algorithms, the pruning algorithm needs a long searching stage before reaching the convergence. To circumvent this problem, this paper introduces a differentiable pruning method via hypernetworks for automatic network pruning. The specifically designed hypernetworks take latent vectors as input and generate the weight parameters of the backbone network. The latent vectors control the output channels of the convolutional layers in the backbone network and act as a handle for the pruning of the layers. By enforcing $\ell_1$ sparsity regularization to the latent vectors and utilizing proximal gradient solver, sparse latent vectors can be obtained. Passing the sparsified latent vectors through the hypernetworks, the corresponding slices of the generated weight parameters can be removed, achieving the effect of network pruning. The latent vectors of all the layers are pruned together, resulting in an automatic layer configuration. Extensive experiments are conducted on various networks for image classification, single image super-resolution, and denoising. And the experimental results validate the proposed method.
+
+</details>
 
 ### EagleEye: Fast Sub-net Evaluation for Efficient Neural Network Pruning.
 - **链接**: [arXiv:2007.02491](https://arxiv.org/abs/2007.02491) · [代码](https://github.com/anonymous47823493/EagleEye) · 📚 被引 133
@@ -35,25 +35,15 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
-### Group Sparsity: The Hinge Between Filter Pruning and Decomposition for Network Compression.
-- **链接**: [arXiv:2003.08935](https://arxiv.org/abs/2003.08935) · 📚 被引 170
-- **作者**: Yawei Li, Shuhang Gu, Christoph Mayer, Luc Van Gool, Radu Timofte
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Finding out the computational redundant part of a trained Deep Neural Network (DNN) is the key question that pruning algorithms target on. Many algorithms try to predict model performance of the pruned sub-nets by introducing various evaluation methods. But they are either inaccurate or very complicated for general application. In this work, we present a pruning method called EagleEye, in which a simple yet efficient evaluation component based on adaptive batch normalization is applied to unveil a strong correlation between different pruned DNN structures and their final settled accuracy. This strong correlation allows us to fast spot the pruned candidates with highest potential accuracy without actually fine-tuning them. This module is also general to plug-in and improve some existing pruning algorithms. EagleEye achieves better pruning performance than all of the studied pruning algorithms in our experiments. Concretely, to prune MobileNet V1 and ResNet-50, EagleEye outperforms all compared methods by up to 3.8%. Even in the more challenging experiments of pruning the compact model of MobileNet V1, EagleEye achieves the highest accuracy of 70.9% with an overall 50% operations (FLOPs) pruned. All accuracy results are Top-1 ImageNet classification accuracy. Source code and models are accessible to open-source community https://github.com/anonymous47823493/EagleEye .
 
 </details>
 
-### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_APQ_Joint_Search_for_Network_Architecture_Pruning_and_Quantization_Policy_CVPR_2020_paper.html) · 📚 被引 159
-- **作者**: Tianzhe Wang, Kuan Wang, Han Cai, Ji Lin, Zhijian Liu, Hanrui Wang et al.
-- **🏷️ 机构**: Massachusetts Institute of Technology; Shanghai Jiao Tong University, Massachusetts Institute of Technology
-- **会议**: CVPR 2020
-
-### Dynamic Convolutions: Exploiting Spatial Sparsity for Faster Inference.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Verelst_Dynamic_Convolutions_Exploiting_Spatial_Sparsity_for_Faster_Inference_CVPR_2020_paper.html) · 📚 被引 157
-- **作者**: Thomas Verelst, Tinne Tuytelaars
+### DSA: More Efficient Budgeted Pruning via Differentiable Sparsity Allocation.
+- **链接**: [arXiv:2004.02164](https://arxiv.org/abs/2004.02164) · 📚 被引 69
+- **作者**: Xuefei Ning, Tianchen Zhao, Wenshuo Li, Peng Lei, Yu Wang, Huazhong Yang
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
