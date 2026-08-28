@@ -1,15 +1,15 @@
 # Video Understanding — 2021 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Spatiotemporal Contrastive Video Representation Learning.
-- **链接**: [arXiv:2008.03800](https://arxiv.org/abs/2008.03800) · [代码](https://github.com/tensorflow/models)
-- **作者**: Rui Qian, Tianjian Meng, Boqing Gong, Ming-Hsuan Yang, Huisheng Wang, Serge J. Belongie et al.
-- **🏷️ 机构**: UC Merced
-- **会议**: CVPR 2021
+### Env-QA: A Video Question Answering Benchmark for Comprehensive Understanding of Dynamic Environments.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00170) · 📚 被引 21
+- **作者**: Difei Gao, Ruiping Wang, Ziyi Bai, Xilin Chen
+- **🏷️ 机构**: Institute of Computing Technology, CAS,Key Laboratory of Intelligent Information Processing of Chinese Academy of Sciences (CAS),Beijing,China,100190
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +17,11 @@
 
 </details>
 
-### Visual Semantic Role Labeling for Video Understanding.
-- **链接**: [arXiv:2104.00990](https://arxiv.org/abs/2104.00990) · 📚 被引 44
-- **作者**: Arka Sadhu, Tanmay Gupta, Mark Yatskar, Ram Nevatia, Aniruddha Kembhavi
-- **🏷️ 机构**: University of Southern California, PRIOR @ Allen Institute for AI, University of Pennsylvania
-- **会议**: CVPR 2021
+### Motion-Focused Contrastive Learning of Video Representations*.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00211) · 📚 被引 30
+- **作者**: Rui Li, Yiheng Zhang, Zhaofan Qiu, Ting Yao, Dong Liu, Tao Mei
+- **🏷️ 机构**: University of Science and Technology of China,Hefei,China, JD AI Research,Beijing,China
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,11 +29,7 @@
 
 </details>
 
-### Towards Long-Form Video Understanding.
-- **链接**: [arXiv:2106.11310](https://arxiv.org/abs/2106.11310) · 📚 被引 120
-- **作者**: Chao-Yuan Wu, Philipp Krähenbühl
-- **🏷️ 机构**: UT Austin
-- **会议**: CVPR 2021
+> Accurate video understanding involves reasoning about the relationships between actors, objects and their environment, often over long temporal intervals. In this paper, we propose a message passing graph neural network that explicitly models these spatio-temporal relations and can use explicit representations of objects, when supervision is available, and implicit representations otherwise. Our formulation generalises previous structured models for video understanding, and allows us to study how different design choices in graph structure and representation affect the model's performance. We demonstrate our method on two different tasks requiring relational reasoning in videos -- spatio-temporal action detection on AVA and UCF101-24, and video scene graph classification on the recent Action Genome dataset -- and achieve state-of-the-art results on all three datasets. Furthermore, we show quantitatively and qualitatively how our method is able to more effectively model relationships between relevant entities in the scene.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,11 +37,7 @@
 
 </details>
 
-### Temporal Query Networks for Fine-Grained Video Understanding.
-- **链接**: [arXiv:2104.09496](https://arxiv.org/abs/2104.09496) · 📚 被引 88
-- **作者**: Chuhan Zhang, Ankush Gupta, Andrew Zisserman
-- **🏷️ 机构**: University of Oxford, DeepMind,London
-- **会议**: CVPR 2021
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -53,11 +45,11 @@
 
 </details>
 
-### No Frame Left Behind: Full Video Action Recognition.
-- **链接**: [arXiv:2103.15395](https://arxiv.org/abs/2103.15395) · 📚 被引 41
-- **作者**: Xin Liu, Silvia L. Pintea, Fatemeh Karimi Nejadasl, Olaf Booij, Jan C. van Gemert
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Learning Self-Similarity in Space and Time as Generalized Motion for Video Action Recognition.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01282)
+- **作者**: Heeseung Kwon, Manjin Kim, Suha Kwak, Minsu Cho
+- **🏷️ 机构**: Pohang University of Science and Technology (POSTECH),South Korea
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -65,9 +57,10 @@
 
 </details>
 
-## 跨领域论文（完整笔记在其他领域）
+</details>
 
-- DeepVideoMVS: Multi-View Stereo on Video With Recurrent Spatio-Temporal Fusion. → [multi-camera-perception](../multi-camera-perception/Guideline%202021.md)
-- Self-Supervised Video Representation Learning by Context and Motion Decoupling. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
-- Removing the Background by Adding the Background: Towards Background Robust Self-Supervised Video Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
-- VideoMoCo: Contrastive Video Representation Learning With Temporally Adversarial Examples. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+- ASCNet: Self-supervised Video Representation Learning with Appearance-Speed Consistency. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+- Self-Supervised Video Representation Learning with Meta-Contrastive Network. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+- Enhancing Self-supervised Video Representation Learning via Multi-level Feature Optimization. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+- CrossCLR: Cross-modal Contrastive Learning For Multi-modal Video Representations. → [multimodal](../multimodal/Guideline%202021.md)
+- Multi-Modal Multi-Action Video Recognition. → [multimodal](../multimodal/Guideline%202021.md)
