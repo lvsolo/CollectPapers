@@ -5,8 +5,8 @@
 
 > 同领域其他年份: 
 
-### A Good Learner can Teach Better: Teacher-Student Collaborative Knowledge Distillation.
-- **链接**: [出版页](https://openreview.net/forum?id=Ixi4j6LtdX)
-- **作者**: Ayan Sengupta, Shantanu Dixit, Md. Shad Akhtar, Tanmoy Chakraborty
+### Distill Gold from Massive Ores: Bi-level Data Pruning Towards Efficient Dataset Distillation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72661-3_14) · 📚 被引 6
+- **作者**: Yue Xu, Yong-Lu Li, Kaitong Cui, Ziyu Wang, Cewu Lu, Yu-Wing Tai et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: ECCV 2024

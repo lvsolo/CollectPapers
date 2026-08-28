@@ -1,60 +1,174 @@
 # Autonomous Driving — 2024 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 25 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### UC-NERF: Neural Radiance Field for Under-Calibrated Multi-View Cameras in Autonomous Driving.
-- **链接**: [arXiv:2311.16945](https://arxiv.org/abs/2311.16945)
-- **作者**: Kai Cheng, Xiaoxiao Long, Wei Yin, Jin Wang, Zhiqiang Wu, Yuexin Ma et al.
+### Image-to-Lidar Relational Distillation for Autonomous Driving Data.
+- **链接**: [arXiv:2409.00845](https://arxiv.org/abs/2409.00845) · 📚 被引 5
+- **作者**: Anas Mahmoud, Ali Harakeh, Steven L. Waslander
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Multi-camera setups find widespread use across various applications, such as autonomous driving, as they greatly expand sensing capabilities. Despite the fast development of Neural radiance field (NeRF) techniques and their wide applications in both indoor and outdoor scenes, applying NeRF to multi-camera systems remains very challenging. This is primarily due to the inherent under-calibration issues in multi-camera setup, including inconsistent imaging effects stemming from separately calibrated image signal processing units in diverse cameras, and system errors arising from mechanical vibrations during driving that affect relative camera poses. In this paper, we present UC-NeRF, a novel method tailored for novel view synthesis in under-calibrated multi-view camera systems. Firstly, we propose a layer-based color correction to rectify the color inconsistency in different image regions. Second, we propose virtual warping to generate more viewpoint-diverse but color-consistent virtual views for color correction and 3D recovery. Finally, a spatiotemporally constrained pose refinement is designed for more robust and accurate pose calibration in multi-camera systems. Our method not only achieves state-of-the-art performance of novel view synthesis in multi-camera setups, but also effectively facilitates depth estimation in large-scale outdoor scenes with the synthesized novel views.
+> Pre-trained on extensive and diverse multi-modal datasets, 2D foundation models excel at addressing 2D tasks with little or no downstream supervision, owing to their robust representations. The emergence of 2D-to-3D distillation frameworks has extended these capabilities to 3D models. However, distilling 3D representations for autonomous driving datasets presents challenges like self-similarity, class imbalance, and point cloud sparsity, hindering the effectiveness of contrastive distillation, especially in zero-shot learning contexts. Whereas other methodologies, such as similarity-based distillation, enhance zero-shot performance, they tend to yield less discriminative representations, diminishing few-shot performance. We investigate the gap in structure between the 2D and the 3D representations that result from state-of-the-art distillation frameworks and reveal a significant mismatch between the two. Additionally, we demonstrate that the observed structural gap is negatively correlated with the efficacy of the distilled representations on zero-shot and few-shot 3D semantic segmentation. To bridge this gap, we propose a relational distillation framework enforcing intra-modal and cross-modal constraints, resulting in distilled 3D representations that closely capture the structure of the 2D representation. This alignment significantly enhances 3D representation performance over those learned through contrastive distillation in zero-shot segmentation tasks. Furthermore, our relational loss consistently improves the quality of 3D representations in both in-distribution and out-of-distribution few-shot segmentation tasks, outperforming approaches that rely on the similarity loss.
 
 </details>
 
-### ReSimAD: Zero-Shot 3D Domain Transfer for Autonomous Driving with Source Reconstruction and Target Simulation.
-- **链接**: [arXiv:2309.05527](https://arxiv.org/abs/2309.05527)
-- **作者**: Bo Zhang, Xinyu Cai, Jiakang Yuan, Donglin Yang, Jianfei Guo, Xiangchao Yan et al.
+### TCLC-GS: Tightly Coupled LiDAR-Camera Gaussian Splatting for Autonomous Driving: Supplementary Materials.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73036-8_6) · 📚 被引 9
+- **作者**: Cheng Zhao, Su Sun, Ruoyu Wang, Yuliang Guo, Jun-Jun Wan, Zhou Huang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: ECCV 2024
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Domain shifts such as sensor type changes and geographical situation variations are prevalent in Autonomous Driving (AD), which poses a challenge since AD model relying on the previous domain knowledge can be hardly directly deployed to a new domain without additional costs. In this paper, we provide a new perspective and approach of alleviating the domain shifts, by proposing a Reconstruction-Simulation-Perception (ReSimAD) scheme. Specifically, the implicit reconstruction process is based on the knowledge from the previous old domain, aiming to convert the domain-related knowledge into domain-invariant representations, e.g., 3D scene-level meshes. Besides, the point clouds simulation process of multiple new domains is conditioned on the above reconstructed 3D meshes, where the target-domain-like simulation samples can be obtained, thus reducing the cost of collecting and annotating new-domain data for the subsequent perception process. For experiments, we consider different cross-domain situations such as Waymo-to-KITTI, Waymo-to-nuScenes, Waymo-to-ONCE, etc, to verify the zero-shot target-domain perception using ReSimAD. Results demonstrate that our method is beneficial to boost the domain generalization ability, even promising for 3D pre-training.
-
-</details>
-
-### LaneSegNet: Map Learning with Lane Segment Perception for Autonomous Driving.
-- **链接**: [arXiv:2312.16108](https://arxiv.org/abs/2312.16108) · [代码](https://github.com/OpenDriveLab/LaneSegNet)
-- **作者**: Tianyu Li, Peijin Jia, Bangjun Wang, Li Chen, Kun Jiang, Junchi Yan et al.
-- **🏷️ 机构**: Shanghai AI Lab
-- **会议**: ICLR 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> A map, as crucial information for downstream applications of an autonomous driving system, is usually represented in lanelines or centerlines. However, existing literature on map learning primarily focuses on either detecting geometry-based lanelines or perceiving topology relationships of centerlines. Both of these methods ignore the intrinsic relationship of lanelines and centerlines, that lanelines bind centerlines. While simply predicting both types of lane in one model is mutually excluded in learning objective, we advocate lane segment as a new representation that seamlessly incorporates both geometry and topology information. Thus, we introduce LaneSegNet, the first end-to-end mapping network generating lane segments to obtain a complete representation of the road structure. Our algorithm features two key modifications. One is a lane attention module to capture pivotal region details within the long-range feature space. Another is an identical initialization strategy for reference points, which enhances the learning of positional priors for lane attention. On the OpenLane-V2 dataset, LaneSegNet outperforms previous counterparts by a substantial gain across three tasks, \textit{i.e.}, map element detection (+4.8 mAP), centerline perception (+6.9 DET$_l$), and the newly defined one, lane segment perception (+5.6 mAP). Furthermore, it obtains a real-time inference speed of 14.7 FPS. Code is accessible at https://github.com/OpenDriveLab/LaneSegNet.
-
-</details>
-
-### DiLu: A Knowledge-Driven Approach to Autonomous Driving with Large Language Models.
-- **链接**: [arXiv:2309.16292](https://arxiv.org/abs/2309.16292)
-- **作者**: Licheng Wen, Daocheng Fu, Xin Li, Xinyu Cai, Tao Ma, Pinlong Cai et al.
+### H-V2X: A Large Scale Highway Dataset for BEV Perception.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73232-4_8) · 📚 被引 6
+- **作者**: Chang Liu, Mingxu Zhu, Cong Ma
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: ECCV 2024
+
+### OccGen: Generative Multi-modal 3D Occupancy Prediction for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72661-3_6)
+- **作者**: Guoqing Wang, Zhongdao Wang, Pin Tang, Jilai Zheng, Xiangxuan Ren, Bailan Feng et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72624-8_4)
+- **作者**: Wenzhao Zheng, Weiliang Chen, Yuanhui Huang, Borui Zhang, Yueqi Duan, Jiwen Lu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### DrivingDiffusion: Layout-Guided Multi-view Driving Scenarios Video Generation with Latent Diffusion Model.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73229-4_27) · 📚 被引 49
+- **作者**: Xiaofan Li, Yifu Zhang, Xiaoqing Ye
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Asynchronous Large Language Model Enhanced Planner for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72764-1_2) · 📚 被引 24
+- **作者**: Yuan Chen, Zi-han Ding, Ziqin Wang, Yan Wang, Lijun Zhang, Si Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### PPAD: Iterative Interactions of Prediction and Planning for End-to-End Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72761-0_14) · 📚 被引 16
+- **作者**: Zhili Chen, Maosheng Ye, Shuangjie Xu, Tongyi Cao, Qifeng Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Risk-Aware Self-consistent Imitation Learning for Trajectory Planning in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72624-8_16) · 📚 被引 1
+- **作者**: Yixuan Fan, Yali Li, Shengjin Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### FipTR: A Simple yet Effective Transformer Framework for Future Instance Prediction in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73021-4_2) · 📚 被引 3
+- **作者**: Xingtai Gui, Tengteng Huang, Haonan Shao, Haotian Yao, Chi Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Neural Volumetric World Models for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72643-9_12) · 📚 被引 3
+- **作者**: Zanming Huang, Jimuyang Zhang, Eshed Ohn-Bar
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Think2Drive: Efficient Reinforcement Learning by Thinking with Latent World Model for Autonomous Driving (in CARLA-V2).
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72995-9_9) · 📚 被引 37
+- **作者**: Qifeng Li, Xiaosong Jia, Shaobo Wang, Junchi Yan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Event-Aided Time-to-Collision Estimation for Autonomous Driving.
+- **链接**: [arXiv:2407.07324](https://arxiv.org/abs/2407.07324) · 📚 被引 6
+- **作者**: Jinghang Li, Bangyan Liao, Xiuyuan Lu, Peidong Liu, Shaojie Shen, Yi Zhou
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Recent advancements in autonomous driving have relied on data-driven approaches, which are widely adopted but face challenges including dataset bias, overfitting, and uninterpretability. Drawing inspiration from the knowledge-driven nature of human driving, we explore the question of how to instill similar capabilities into autonomous driving systems and summarize a paradigm that integrates an interactive environment, a driver agent, as well as a memory component to address this question. Leveraging large language models (LLMs) with emergent abilities, we propose the DiLu framework, which combines a Reasoning and a Reflection module to enable the system to perform decision-making based on common-sense knowledge and evolve continuously. Extensive experiments prove DiLu's capability to accumulate experience and demonstrate a significant advantage in generalization ability over reinforcement learning-based methods. Moreover, DiLu is able to directly acquire experiences from real-world datasets which highlights its potential to be deployed on practical autonomous driving systems. To the best of our knowledge, we are the first to leverage knowledge-driven capability in decision-making for autonomous vehicles. Through the proposed DiLu framework, LLM is strengthened to apply knowledge and to reason causally in the autonomous driving domain. Project page: https://pjlab-adg.github.io/DiLu/
+> Predicting a potential collision with leading vehicles is an essential functionality of any autonomous/assisted driving system. One bottleneck of existing vision-based solutions is that their updating rate is limited to the frame rate of standard cameras used. In this paper, we present a novel method that estimates the time to collision using a neuromorphic event-based camera, a biologically inspired visual sensor that can sense at exactly the same rate as scene dynamics. The core of the proposed algorithm consists of a two-step approach for efficient and accurate geometric model fitting on event data in a coarse-to-fine manner. The first step is a robust linear solver based on a novel geometric measurement that overcomes the partial observability of event-based normal flow. The second step further refines the resulting model via a spatio-temporal registration process formulated as a nonlinear optimization problem. Experiments on both synthetic and real data demonstrate the effectiveness of the proposed method, outperforming other alternative methods in terms of efficiency and accuracy.
 
 </details>
 
-### Copilot4D: Learning Unsupervised World Models for Autonomous Driving via Discrete Diffusion.
-- **链接**: [出版页](https://openreview.net/forum?id=Psl75UCoZM)
-- **作者**: Lunjun Zhang, Yuwen Xiong, Ze Yang, Sergio Casas, Rui Hu, Raquel Urtasun
-- **🏷️ 机构**: Waabi / University of Toronto
-- **会议**: ICLR 2024
+### VQA-Diff: Exploiting VQA and Diffusion for Zero-Shot Image-to-3D Vehicle Asset Generation in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72848-8_19) · 📚 被引 9
+- **作者**: Yibo Liu, Zheyuan Yang, Guile Wu, Yuan Ren, Kejian Lin, Bingbing Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### NeuroNCAP: Photorealistic Closed-Loop Safety Testing for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73404-5_10) · 📚 被引 17
+- **作者**: William Ljungbergh, Adam Tonderski, Joakim Johnander, Holger Caesar, Kalle Åström, Michael Felsberg et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### LingoQA: Visual Question Answering for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72980-5_15)
+- **作者**: Ana-Maria Marcu, Long Chen, Jan Hünermann, Alice Karnsund, Benoît Hanotte, Prajwal Chidananda et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Reason2Drive: Towards Interpretable and Chain-Based Reasoning for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73347-5_17) · 📚 被引 47
+- **作者**: Ming Nie, Renyuan Peng, Chunwei Wang, Xinyue Cai, Jianhua Han, Hang Xu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Improving Agent Behaviors with RL Fine-Tuning for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72698-9_10) · 📚 被引 11
+- **作者**: Zhenghao Peng, Wenjie Luo, Yiren Lu, Tianyi Shen, Cole Gulino, Ari Seff et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Modelling Competitive Behaviors in Autonomous Driving Under Generative World Model.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72761-0_2) · 📚 被引 4
+- **作者**: Guanren Qiao, Guorui Quan, Rongxiao Qu, Guiliang Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### DriveDreamer: Towards Real-World-Drive World Models for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73195-2_4) · 📚 被引 129
+- **作者**: Xiaofeng Wang, Zheng Zhu, Guan Huang, Xinze Chen, Jiagang Zhu, Jiwen Lu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### SeFlow: A Self-supervised Scene Flow Method in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73232-4_20) · 📚 被引 21
+- **作者**: Qingwen Zhang, Yi Yang, Peizheng Li, Olov Andersson, Patric Jensfelt
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### GenAD: Generative End-to-End Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73650-6_6) · 📚 被引 88
+- **作者**: Wenzhao Zheng, Ruiqi Song, Xianda Guo, Chenming Zhang, Long Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### UniM2AE: Multi-modal Masked Autoencoders with Unified 3D Representation for 3D Perception in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72670-5_17) · 📚 被引 9
+- **作者**: Jian Zou, Tianyu Huang, Guanglei Yang, Zhenhua Guo, Tao Luo, Chun-Mei Feng et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### CarFormer: Self-driving with Learned Object-Centric Representations.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72652-1_11) · 📚 被引 4
+- **作者**: Shadi Hamdan, Fatma Güney
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Embodied Understanding of Driving Scenarios.
+- **链接**: [arXiv:2403.04593](https://arxiv.org/abs/2403.04593)
+- **作者**: Yunsong Zhou, Linyan Huang, Qingwen Bu, Jia Zeng, Tianyu Li, Hang Qiu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Embodied scene understanding serves as the cornerstone for autonomous agents to perceive, interpret, and respond to open driving scenarios. Such understanding is typically founded upon Vision-Language Models (VLMs). Nevertheless, existing VLMs are restricted to the 2D domain, devoid of spatial awareness and long-horizon extrapolation proficiencies. We revisit the key aspects of autonomous driving and formulate appropriate rubrics. Hereby, we introduce the Embodied Language Model (ELM), a comprehensive framework tailored for agents' understanding of driving scenes with large spatial and temporal spans. ELM incorporates space-aware pre-training to endow the agent with robust spatial localization capabilities. Besides, the model employs time-aware token selection to accurately inquire about temporal cues. We instantiate ELM on the reformulated multi-faced benchmark, and it surpasses previous state-of-the-art approaches in all aspects. All code, data, and models will be publicly shared.
+
+</details>
