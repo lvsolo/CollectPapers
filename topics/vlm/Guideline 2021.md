@@ -17,16 +17,12 @@
 
 </details>
 
+</details>
+
 ### 3DVG-Transformer: Relation Modeling for Visual Grounding on Point Clouds.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00292) · 📚 被引 137
 - **作者**: Lichen Zhao, Daigang Cai, Lu Sheng, Dong Xu
 - **🏷️ 机构**: Beihang University,College of Software,China, The University of Sydney,Australia
-- **会议**: ICCV 2021
-
-### Vision-Language Navigation with Random Environmental Mixup.
-- **链接**: [arXiv:2106.07876](https://arxiv.org/abs/2106.07876) · [代码](https://github.com/LCFractal/VLNREM) · 📚 被引 65
-- **作者**: Chong Liu, Fengda Zhu, Xiaojun Chang, Xiaodan Liang, Zongyuan Ge, Yi-Dong Shen
-- **🏷️ 机构**: Chinese Academy of Sciences,State Key Laboratory of Computer Science, Institute of Software,China, Monash University,Melbourne,Australia, RMIT University,Melbourne,Australia
 - **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
