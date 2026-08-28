@@ -1,90 +1,130 @@
 # Multimodal — 2021 Guideline
 
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
-> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### There Is More Than Meets the Eye: Self-Supervised Multi-Object Detection and Tracking With Sound by Distilling Multimodal Knowledge.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Valverde_There_Is_More_Than_Meets_the_Eye_Self-Supervised_Multi-Object_Detection_CVPR_2021_paper.html) · 📚 被引 73
-- **作者**: Francisco Rivera Valverde, Juana Valeria Hurtado, Abhinav Valada
+### WebQA: A Multimodal Multihop NeurIPS Challenge.
+- **链接**: [出版页](https://proceedings.mlr.press/v176/chang22a.html)
+- **作者**: Yingshan Chang, Yonatan Bisk
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: NeurIPS 2021
 
-### Robust Multimodal Vehicle Detection in Foggy Weather Using Complementary Lidar and Radar Signals.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Qian_Robust_Multimodal_Vehicle_Detection_in_Foggy_Weather_Using_Complementary_Lidar_CVPR_2021_paper.html) · 📚 被引 183
-- **作者**: Kun Qian, Shilin Zhu, Xinyu Zhang, Li Erran Li
+### Multimodal single cell data integration challenge: Results and lessons learned.
+- **链接**: [出版页](https://proceedings.mlr.press/v176/lance22a.html) · 📚 被引 64
+- **作者**: Christopher Lance, Malte D. Lücken, Daniel B. Burkhardt, Robrecht Cannoodt, Pia Rautenstrauch, Anna Laddach et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: NeurIPS 2021
 
-### UC2: Universal Cross-Lingual Cross-Modal Vision-and-Language Pre-Training.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhou_UC2_Universal_Cross-Lingual_Cross-Modal_Vision-and-Language_Pre-Training_CVPR_2021_paper.html)
-- **作者**: Mingyang Zhou, Luowei Zhou, Shuohang Wang, Yu Cheng, Linjie Li, Zhou Yu et al.
+### History Aware Multimodal Transformer for Vision-and-Language Navigation.
+- **链接**: [arXiv:2110.13309](https://arxiv.org/abs/2110.13309)
+- **作者**: Shizhe Chen, Pierre-Louis Guhur, Cordelia Schmid, Ivan Laptev
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### Progressive Modality Reinforcement for Human Multimodal Emotion Recognition From Unaligned Multimodal Sequences.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Progressive_Modality_Reinforcement_for_Human_Multimodal_Emotion_Recognition_From_Unaligned_CVPR_2021_paper.html) · 📚 被引 191
-- **作者**: Fengmao Lv, Xiang Chen, Yanyong Huang, Lixin Duan, Guosheng Lin
-- **🏷️ 机构**: Southwest Jiaotong University, Platform and Content Group,Tencent, Southwestern University of Finance and Economics,Center of Statistical Research
-- **会议**: CVPR 2021
-
-### Revamping Cross-Modal Recipe Retrieval With Hierarchical Transformers and Self-Supervised Learning.
-- **链接**: [arXiv:2103.13061](https://arxiv.org/abs/2103.13061) · 📚 被引 74
-- **作者**: Amaia Salvador, Erhan Gundogdu, Loris Bazzani, Michael Donoser
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: NeurIPS 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Cross-modal recipe retrieval has recently gained substantial attention due to the importance of food in people's lives, as well as the availability of vast amounts of digital cooking recipes and food images to train machine learning models. In this work, we revisit existing approaches for cross-modal recipe retrieval and propose a simplified end-to-end model based on well established and high performing encoders for text and images. We introduce a hierarchical recipe Transformer which attentively encodes individual recipe components (titles, ingredients and instructions). Further, we propose a self-supervised loss function computed on top of pairs of individual recipe components, which is able to leverage semantic relationships within recipes, and enables training using both image-recipe and recipe-only samples. We conduct a thorough analysis and ablation studies to validate our design choices. As a result, our proposed method achieves state-of-the-art performance in the cross-modal recipe retrieval task on the Recipe1M dataset. We make code and models publicly available.
+> Vision-and-language navigation (VLN) aims to build autonomous visual agents that follow instructions and navigate in real scenes. To remember previously visited locations and actions taken, most approaches to VLN implement memory using recurrent states. Instead, we introduce a History Aware Multimodal Transformer (HAMT) to incorporate a long-horizon history into multimodal decision making. HAMT efficiently encodes all the past panoramic observations via a hierarchical vision transformer (ViT), which first encodes individual images with ViT, then models spatial relation between images in a panoramic observation and finally takes into account temporal relation between panoramas in the history. It, then, jointly combines text, history and current observation to predict the next action. We first train HAMT end-to-end using several proxy tasks including single step action prediction and spatial relation prediction, and then use reinforcement learning to further improve the navigation policy. HAMT achieves new state of the art on a broad range of VLN tasks, including VLN with fine-grained instructions (R2R, RxR), high-level instructions (R2R-Last, REVERIE), dialogs (CVDN) as well as long-horizon VLN (R4R, R2R-Back). We demonstrate HAMT to be particularly effective for navigation tasks with longer trajectories.
 
 </details>
 
-### Cross-Modal Contrastive Learning for Text-to-Image Generation.
-- **链接**: [arXiv:2101.04702](https://arxiv.org/abs/2101.04702) · 📚 被引 293
-- **作者**: Han Zhang, Jing Yu Koh, Jason Baldridge, Honglak Lee, Yinfei Yang
+### Explainable Semantic Space by Grounding Language to Vision with Cross-Modal Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/9a1335ef5ffebb0de9d089c4182e4868-Abstract.html)
+- **作者**: Yizhen Zhang, Minkyu Choi, Kuan Han, Zhongming Liu
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: NeurIPS 2021
+
+### Revisit Multimodal Meta-Learning through the Lens of Multi-Task Learning.
+- **链接**: [arXiv:2110.14202](https://arxiv.org/abs/2110.14202)
+- **作者**: Milad Abdollahzadeh, Touba Malekzadeh, Ngai-Man Cheung
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The output of text-to-image synthesis systems should be coherent, clear, photo-realistic scenes with high semantic fidelity to their conditioned text descriptions. Our Cross-Modal Contrastive Generative Adversarial Network (XMC-GAN) addresses this challenge by maximizing the mutual information between image and text. It does this via multiple contrastive losses which capture inter-modality and intra-modality correspondences. XMC-GAN uses an attentional self-modulation generator, which enforces strong text-image correspondence, and a contrastive discriminator, which acts as a critic as well as a feature encoder for contrastive learning. The quality of XMC-GAN's output is a major step up from previous models, as we show on three challenging datasets. On MS-COCO, not only does XMC-GAN improve state-of-the-art FID from 24.70 to 9.33, but--more importantly--people prefer XMC-GAN by 77.3 for image quality and 74.1 for image-text alignment, compared to three other recent models. XMC-GAN also generalizes to the challenging Localized Narratives dataset (which has longer, more detailed descriptions), improving state-of-the-art FID from 48.70 to 14.12. Lastly, we train and evaluate XMC-GAN on the challenging Open Images data, establishing a strong benchmark FID score of 26.91.
+> Multimodal meta-learning is a recent problem that extends conventional few-shot meta-learning by generalizing its setup to diverse multimodal task distributions. This setup makes a step towards mimicking how humans make use of a diverse set of prior skills to learn new skills. Previous work has achieved encouraging performance. In particular, in spite of the diversity of the multimodal tasks, previous work claims that a single meta-learner trained on a multimodal distribution can sometimes outperform multiple specialized meta-learners trained on individual unimodal distributions. The improvement is attributed to knowledge transfer between different modes of task distributions. However, there is no deep investigation to verify and understand the knowledge transfer between multimodal tasks. Our work makes two contributions to multimodal meta-learning. First, we propose a method to quantify knowledge transfer between tasks of different modes at a micro-level. Our quantitative, task-level analysis is inspired by the recent transference idea from multi-task learning. Second, inspired by hard parameter sharing in multi-task learning and a new interpretation of related work, we propose a new multimodal meta-learner that outperforms existing work by considerable margins. While the major focus is on multimodal meta-learning, our work also attempts to shed light on task interaction in conventional meta-learning. The code for this project is available at https://miladabd.github.io/KML.
 
 </details>
 
-### Distilling Audio-Visual Knowledge by Compositional Contrastive Learning.
-- **链接**: [arXiv:2104.10955](https://arxiv.org/abs/2104.10955) · [代码](https://github.com/yanbeic/CCL) · 📚 被引 65
-- **作者**: Yanbei Chen, Yongqin Xian, A. Sophia Koepke, Ying Shan, Zeynep Akata
+### VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text.
+- **链接**: [arXiv:2104.11178](https://arxiv.org/abs/2104.11178)
+- **作者**: Hassan Akbari, Liangzhe Yuan, Rui Qian, Wei-Hong Chuang, Shih-Fu Chang, Yin Cui et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: NeurIPS 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Having access to multi-modal cues (e.g. vision and audio) empowers some cognitive tasks to be done faster compared to learning from a single modality. In this work, we propose to transfer knowledge across heterogeneous modalities, even though these data modalities may not be semantically correlated. Rather than directly aligning the representations of different modalities, we compose audio, image, and video representations across modalities to uncover richer multi-modal knowledge. Our main idea is to learn a compositional embedding that closes the cross-modal semantic gap and captures the task-relevant semantics, which facilitates pulling together representations across modalities by compositional contrastive learning. We establish a new, comprehensive multi-modal distillation benchmark on three video datasets: UCF101, ActivityNet, and VGGSound. Moreover, we demonstrate that our model significantly outperforms a variety of existing knowledge distillation methods in transferring audio-visual knowledge to improve video representation learning. Code is released here: https://github.com/yanbeic/CCL.
+> We present a framework for learning multimodal representations from unlabeled data using convolution-free Transformer architectures. Specifically, our Video-Audio-Text Transformer (VATT) takes raw signals as inputs and extracts multimodal representations that are rich enough to benefit a variety of downstream tasks. We train VATT end-to-end from scratch using multimodal contrastive losses and evaluate its performance by the downstream tasks of video action recognition, audio event classification, image classification, and text-to-video retrieval. Furthermore, we study a modality-agnostic, single-backbone Transformer by sharing weights among the three modalities. We show that the convolution-free VATT outperforms state-of-the-art ConvNet-based architectures in the downstream tasks. Especially, VATT's vision Transformer achieves the top-1 accuracy of 82.1% on Kinetics-400, 83.6% on Kinetics-600, 72.7% on Kinetics-700, and 41.1% on Moments in Time, new records while avoiding supervised pre-training. Transferring to image classification leads to 78.7% top-1 accuracy on ImageNet compared to 64.7% by training the same Transformer from scratch, showing the generalizability of our model despite the domain gap between videos and images. VATT's audio Transformer also sets a new record on waveform-based audio event recognition by achieving the mAP of 39.4% on AudioSet without any supervised pre-training. VATT's source code is publicly available.
 
 </details>
 
-### Multimodal Contrastive Training for Visual Representation Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yuan_Multimodal_Contrastive_Training_for_Visual_Representation_Learning_CVPR_2021_paper.html)
-- **作者**: Xin Yuan, Zhe Lin, Jason Kuen, Jianming Zhang, Yilin Wang, Michael Maire et al.
+### Evidential Softmax for Sparse Multimodal Distributions in Deep Generative Models.
+- **链接**: [arXiv:2110.14182](https://arxiv.org/abs/2110.14182)
+- **作者**: Phil Chen, Masha Itkina, Ransalu Senanayake, Mykel J. Kochenderfer
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### EvDistill: Asynchronous Events To End-Task Learning via Bidirectional Reconstruction-Guided Cross-Modal Knowledge Distillation.
-- **链接**: [arXiv:2111.12341](https://arxiv.org/abs/2111.12341) · 📚 被引 76
-- **作者**: Lin Wang, Yujeong Chae, Sung-Hoon Yoon, Tae-Kyun Kim, Kuk-Jin Yoon
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: NeurIPS 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Event cameras sense per-pixel intensity changes and produce asynchronous event streams with high dynamic range and less motion blur, showing advantages over conventional cameras. A hurdle of training event-based models is the lack of large qualitative labeled data. Prior works learning end-tasks mostly rely on labeled or pseudo-labeled datasets obtained from the active pixel sensor (APS) frames; however, such datasets' quality is far from rivaling those based on the canonical images. In this paper, we propose a novel approach, called \textbf{EvDistill}, to learn a student network on the unlabeled and unpaired event data (target modality) via knowledge distillation (KD) from a teacher network trained with large-scale, labeled image data (source modality). To enable KD across the unpaired modalities, we first propose a bidirectional modality reconstruction (BMR) module to bridge both modalities and simultaneously exploit them to distill knowledge via the crafted pairs, causing no extra computation in the inference. The BMR is improved by the end-tasks and KD losses in an end-to-end manner. Second, we leverage the structural similarities of both modalities and adapt the knowledge by matching their distributions. Moreover, as most prior feature KD methods are uni-modality and less applicable to our problem, we propose to leverage an affinity graph KD loss to boost the distillation. Our extensive experiments on semantic segmentation and object recognition demonstrate that EvDistill achieves significantly better results than the prior works and KD with only events and APS frames.
+> Many applications of generative models rely on the marginalization of their high-dimensional output probability distributions. Normalization functions that yield sparse probability distributions can make exact marginalization more computationally tractable. However, sparse normalization functions usually require alternative loss functions for training since the log-likelihood is undefined for sparse probability distributions. Furthermore, many sparse normalization functions often collapse the multimodality of distributions. In this work, we present $\textit{ev-softmax}$, a sparse normalization function that preserves the multimodality of probability distributions. We derive its properties, including its gradient in closed-form, and introduce a continuous family of approximations to $\textit{ev-softmax}$ that have full support and can be trained with probabilistic loss functions such as negative log-likelihood and Kullback-Leibler divergence. We evaluate our method on a variety of generative models, including variational autoencoders and auto-regressive architectures. Our method outperforms existing dense and sparse normalization techniques in distributional accuracy. We demonstrate that $\textit{ev-softmax}$ successfully reduces the dimensionality of probability distributions while maintaining multimodality.
+
+</details>
+
+### Multimodal and Multilingual Embeddings for Large-Scale Speech Mining.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/8466f9ace6a9acbe71f75762ffc890f1-Abstract.html)
+- **作者**: Paul-Ambroise Duquenne, Hongyu Gong, Holger Schwenk
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+### Trustworthy Multimodal Regression with Mixture of Normal-inverse Gamma Distributions.
+- **链接**: [arXiv:2111.08456](https://arxiv.org/abs/2111.08456)
+- **作者**: Huan Ma, Zongbo Han, Changqing Zhang, Huazhu Fu, Joey Tianyi Zhou, Qinghua Hu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal regression is a fundamental task, which integrates the information from different sources to improve the performance of follow-up applications. However, existing methods mainly focus on improving the performance and often ignore the confidence of prediction for diverse situations. In this study, we are devoted to trustworthy multimodal regression which is critical in cost-sensitive domains. To this end, we introduce a novel Mixture of Normal-Inverse Gamma distributions (MoNIG) algorithm, which efficiently estimates uncertainty in principle for adaptive integration of different modalities and produces a trustworthy regression result. Our model can be dynamically aware of uncertainty for each modality, and also robust for corrupted modalities. Furthermore, the proposed MoNIG ensures explicitly representation of (modality-specific/global) epistemic and aleatoric uncertainties, respectively. Experimental results on both synthetic and different real-world data demonstrate the effectiveness and trustworthiness of our method on various multimodal regression tasks (e.g., temperature prediction for superconductivity, relative location prediction for CT slices, and multimodal sentiment analysis).
+
+</details>
+
+### Attention Bottlenecks for Multimodal Fusion.
+- **链接**: [arXiv:2107.00135](https://arxiv.org/abs/2107.00135)
+- **作者**: Arsha Nagrani, Shan Yang, Anurag Arnab, Aren Jansen, Cordelia Schmid, Chen Sun
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Humans perceive the world by concurrently processing and fusing high-dimensional inputs from multiple modalities such as vision and audio. Machine perception models, in stark contrast, are typically modality-specific and optimised for unimodal benchmarks, and hence late-stage fusion of final representations or predictions from each modality (`late-fusion') is still a dominant paradigm for multimodal video classification. Instead, we introduce a novel transformer based architecture that uses `fusion bottlenecks' for modality fusion at multiple layers. Compared to traditional pairwise self-attention, our model forces information between different modalities to pass through a small number of bottleneck latents, requiring the model to collate and condense the most relevant information in each modality and only share what is necessary. We find that such a strategy improves fusion performance, at the same time reducing computational cost. We conduct thorough ablation studies, and achieve state-of-the-art results on multiple audio-visual classification benchmarks including Audioset, Epic-Kitchens and VGGSound. All code and models will be released.
+
+</details>
+
+### Multimodal Few-Shot Learning with Frozen Language Models.
+- **链接**: [arXiv:2106.13884](https://arxiv.org/abs/2106.13884)
+- **作者**: Maria Tsimpoukelli, Jacob Menick, Serkan Cabi, S. M. Ali Eslami, Oriol Vinyals, Felix Hill
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> When trained at sufficient scale, auto-regressive language models exhibit the notable ability to learn a new language task after being prompted with just a few examples. Here, we present a simple, yet effective, approach for transferring this few-shot learning ability to a multimodal setting (vision and language). Using aligned image and caption data, we train a vision encoder to represent each image as a sequence of continuous embeddings, such that a pre-trained, frozen language model prompted with this prefix generates the appropriate caption. The resulting system is a multimodal few-shot learner, with the surprising ability to learn a variety of new tasks when conditioned on examples, represented as a sequence of multiple interleaved image and text embeddings. We demonstrate that it can rapidly learn words for new objects and novel visual categories, do visual question-answering with only a handful of examples, and make use of outside knowledge, by measuring a single model on a variety of established and new benchmarks.
+
+</details>
+
+### MERLOT: Multimodal Neural Script Knowledge Models.
+- **链接**: [arXiv:2106.02636](https://arxiv.org/abs/2106.02636)
+- **作者**: Rowan Zellers, Ximing Lu, Jack Hessel, Youngjae Yu, Jae Sung Park, Jize Cao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> As humans, we understand events in the visual world contextually, performing multimodal reasoning across time to make inferences about the past, present, and future. We introduce MERLOT, a model that learns multimodal script knowledge by watching millions of YouTube videos with transcribed speech -- in an entirely label-free, self-supervised manner. By pretraining with a mix of both frame-level (spatial) and video-level (temporal) objectives, our model not only learns to match images to temporally corresponding words, but also to contextualize what is happening globally over time. As a result, MERLOT exhibits strong out-of-the-box representations of temporal commonsense, and achieves state-of-the-art performance on 12 different video QA datasets when finetuned. It also transfers well to the world of static images, allowing models to reason about the dynamic context behind visual scenes. On Visual Commonsense Reasoning, MERLOT answers questions correctly with 80.6% accuracy, outperforming state-of-the-art models of similar size by over 3%, even those that make heavy use of auxiliary supervised data (like object bounding boxes). Ablation analyses demonstrate the complementary importance of: 1) training on videos versus static images; 2) scaling the magnitude and diversity of the pretraining video corpus; and 3) using diverse objectives that encourage full-stack multimodal reasoning, from the recognition to cognition level.
 
 </details>
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- PointAugmenting: Cross-Modal Augmentation for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
-- Shared Cross-Modal Trajectory Prediction for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202021.md)
-- Multi-Modal Fusion Transformer for End-to-End Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202021.md)
+- Multimodal Virtual Point 3D Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
