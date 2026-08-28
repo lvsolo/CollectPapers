@@ -1,15 +1,15 @@
 # Vision Transformer — 2023 Guideline
 
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
-> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 23 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### PaCa-ViT: Learning Patch-to-Cluster Attention in Vision Transformers.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01781) · 📚 被引 34
-- **作者**: Ryan Grainger, Thomas Paniagua, Xi Song, Naresh P. Cuntoor, Mun Wai Lee, Tianfu Wu
-- **🏷️ 机构**: NC State,Department of ECE, An Independent Researcher, BlueHalo
-- **会议**: CVPR 2023
+### Video OWL-ViT: Temporally-consistent open-world localization in video.
+- **链接**: [arXiv:2308.11093](https://arxiv.org/abs/2308.11093) · 📚 被引 11
+- **作者**: Georg Heigold, Daniel Keysers, Matthias Minderer, Mario Lucic, Alexey A. Gritsenko, Fisher Yu et al.
+- **🏷️ 机构**: Google DeepMind, ETH Zurich
+- **会议**: ICCV 2023
 
 ### Castling-ViT: Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01387) · 📚 被引 57
@@ -47,11 +47,7 @@
 - **🏷️ 机构**: Zhejiang University, Ritsumeikan University, Tencent Jarvis Lab
 - **会议**: CVPR 2023
 
-### DropKey for Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02174) · 📚 被引 74
-- **作者**: Bonan Li, Yinhan Hu, Xuecheng Nie, Congying Han, Xiangjian Jiang, Tiande Guo et al.
-- **🏷️ 机构**: University of Chinese Academy of Sciences, MT Lab, Meitu Inc., University of Cambridge
-- **会议**: CVPR 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 ### EfficientViT: Memory Efficient Vision Transformer with Cascaded Group Attention.
 - **链接**: [arXiv:2305.07027](https://arxiv.org/abs/2305.07027) · [代码](https://github.com/microsoft/Cream) · 📚 被引 828
@@ -71,9 +67,11 @@
 - **🏷️ 机构**: City University of Hong Kong, SenseTime Research
 - **会议**: CVPR 2023
 
-## 跨领域论文（完整笔记在其他领域）
+> The advent of high-capacity pre-trained models has revolutionized problem-solving in computer vision, shifting the focus from training task-specific models to adapting pre-trained models. Consequently, effectively adapting large pre-trained models to downstream tasks in an efficient manner has become a prominent research area. Existing solutions primarily concentrate on designing lightweight adapters and their interaction with pre-trained models, with the goal of minimizing the number of parameters requiring updates. In this study, we propose a novel Adapter Re-Composing (ARC) strategy that addresses efficient pre-trained model adaptation from a fresh perspective. Our approach considers the reusability of adaptation parameters and introduces a parameter-sharing scheme. Specifically, we leverage symmetric down-/up-projections to construct bottleneck operations, which are shared across layers. By learning low-dimensional re-scaling coefficients, we can effectively re-compose layer-adaptive adapters. This parameter-sharing strategy in adapter design allows us to significantly reduce the number of new parameters while maintaining satisfactory performance, thereby offering a promising approach to compress the adaptation cost. We conduct experiments on 24 downstream image classification tasks using various Vision Transformer variants to evaluate our method. The results demonstrate that our approach achieves compelling transfer learning performance with a reduced parameter count. Our code is available at \href{https://github.com/DavidYanAnDe/ARC}{https://github.com/DavidYanAnDe/ARC}.
 
-- SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer. → [network-pruning](../network-pruning/Guideline%202023.md)
-- MDL-NAS: A Joint Multi-domain Learning Framework for Vision Transformer. → [neural-architecture-search](../neural-architecture-search/Guideline%202023.md)
-- Global Vision Transformer Pruning with Hessian-Aware Saliency. → [network-pruning](../network-pruning/Guideline%202023.md)
-- Boost Vision Transformer with GPU-Friendly Sparsity and Quantization. → [network-pruning](../network-pruning/Guideline%202023.md)
+- T-FFTRadNet: Object Detection with Swin Vision Transformers from Raw ADC Radar Signals. → [object-detection](../object-detection/Guideline%202023.md)
+- MMST-ViT: Climate Change-aware Crop Yield Prediction via Multi-Modal Spatial-Temporal Vision Transformer. → [multimodal](../multimodal/Guideline%202023.md)
+- Unleashing Vanilla Vision Transformer with Masked Image Modeling for Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
+- A Simple Vision Transformer for Weakly Semi-supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Contrastive Feature Masking Open-Vocabulary Vision Transformer. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- ElasticViT: Conflict-aware Supernet Training for Deploying Fast Vision Transformer on Diverse Mobile Devices. → [neural-architecture-search](../neural-architecture-search/Guideline%202023.md)
