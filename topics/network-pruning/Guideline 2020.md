@@ -1,96 +1,108 @@
 # Network Pruning — 2020 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Efficient Robustness Certificates for Discrete Data: Sparsity-Aware Randomized Smoothing for Graphs, Images and More.
-- **链接**: [arXiv:2008.12952](https://arxiv.org/abs/2008.12952)
-- **作者**: Aleksandar Bojchevski, Johannes Klicpera, Stephan Günnemann
+### OctSqueeze: Octree-Structured Entropy Model for LiDAR Compression.
+- **链接**: [arXiv:2005.07178](https://arxiv.org/abs/2005.07178) · 📚 被引 200
+- **作者**: Lila Huang, Shenlong Wang, Kelvin Wong, Jerry Liu, Raquel Urtasun
+- **🏷️ 机构**: Waabi / University of Toronto
+- **会议**: NeurIPS 2020
+
+### Multi-Dimensional Pruning: A Unified Framework for Model Compression.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Multi-Dimensional_Pruning_A_Unified_Framework_for_Model_Compression_CVPR_2020_paper.html) · 📚 被引 65
+- **作者**: Jinyang Guo, Wanli Ouyang, Dong Xu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2020
+- **会议**: ECCV 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Existing techniques for certifying the robustness of models for discrete data either work only for a small class of models or are general at the expense of efficiency or tightness. Moreover, they do not account for sparsity in the input which, as our findings show, is often essential for obtaining non-trivial guarantees. We propose a model-agnostic certificate based on the randomized smoothing framework which subsumes earlier work and is tight, efficient, and sparsity-aware. Its computational complexity does not depend on the number of discrete categories or the dimension of the input (e.g. the graph size), making it highly scalable. We show the effectiveness of our approach on a wide variety of models, datasets, and tasks -- specifically highlighting its use for Graph Neural Networks. So far, obtaining provable guarantees for GNNs has been difficult due to the discrete and non-i.i.d. nature of graph data. Our method can certify any GNN and handles perturbations to both the graph structure and the node attributes.
+### DMCP: Differentiable Markov Channel Pruning for Neural Networks.
+- **链接**: [arXiv:2005.03354](https://arxiv.org/abs/2005.03354) · 📚 被引 142
+- **作者**: Shaopeng Guo, Yujie Wang, Quanquan Li, Junjie Yan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
 
 </details>
 
-### Schatten Norms in Matrix Streams: Hello Sparsity, Goodbye Dimension.
-- **链接**: [arXiv:1907.05457](https://arxiv.org/abs/1907.05457)
-- **作者**: Vladimir Braverman, Robert Krauthgamer, Aditya Krishnan, Roi Sinoff
+### EagleEye: Fast Sub-net Evaluation for Efficient Neural Network Pruning.
+- **链接**: [arXiv:2007.02491](https://arxiv.org/abs/2007.02491) · [代码](https://github.com/anonymous47823493/EagleEye) · 📚 被引 133
+- **作者**: Bailin Li, Bowen Wu, Jiang Su, Guangrun Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2020
+- **会议**: ECCV 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Group Sparsity: The Hinge Between Filter Pruning and Decomposition for Network Compression.
+- **链接**: [arXiv:2003.08935](https://arxiv.org/abs/2003.08935) · 📚 被引 170
+- **作者**: Yawei Li, Shuhang Gu, Christoph Mayer, Luc Van Gool, Radu Timofte
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
 
-> Spectral functions of large matrices contains important structural information about the underlying data, and is thus becoming increasingly important. Many times, large matrices representing real-world data are \emph{sparse} or \emph{doubly sparse} (i.e., sparse in both rows and columns), and are accessed as a \emph{stream} of updates, typically organized in \emph{row-order}. In this setting, where space (memory) is the limiting resource, all known algorithms require space that is polynomial in the dimension of the matrix, even for sparse matrices. We address this challenge by providing the first algorithms whose space requirement is \emph{independent of the matrix dimension}, assuming the matrix is doubly-sparse and presented in row-order. Our algorithms approximate the Schatten $p$-norms, which we use in turn to approximate other spectral functions, such as logarithm of the determinant, trace of matrix inverse, and Estrada index. We validate these theoretical performance bounds by numerical experiments on real-world matrices representing social networks. We further prove that multiple passes are unavoidable in this setting, and show extensions of our primary technique, including a trade-off between space requirements and number of passes.
+> Finding out the computational redundant part of a trained Deep Neural Network (DNN) is the key question that pruning algorithms target on. Many algorithms try to predict model performance of the pruned sub-nets by introducing various evaluation methods. But they are either inaccurate or very complicated for general application. In this work, we present a pruning method called EagleEye, in which a simple yet efficient evaluation component based on adaptive batch normalization is applied to unveil a strong correlation between different pruned DNN structures and their final settled accuracy. This strong correlation allows us to fast spot the pruned candidates with highest potential accuracy without actually fine-tuning them. This module is also general to plug-in and improve some existing pruning algorithms. EagleEye achieves better pruning performance than all of the studied pruning algorithms in our experiments. Concretely, to prune MobileNet V1 and ResNet-50, EagleEye outperforms all compared methods by up to 3.8%. Even in the more challenging experiments of pruning the compact model of MobileNet V1, EagleEye achieves the highest accuracy of 70.9% with an overall 50% operations (FLOPs) pruned. All accuracy results are Top-1 ImageNet classification accuracy. Source code and models are accessible to open-source community https://github.com/anonymous47823493/EagleEye .
 
 </details>
 
-### DessiLBI: Exploring Structural Sparsity of Deep Networks via Differential Inclusion Paths.
-- **链接**: [arXiv:2007.02010](https://arxiv.org/abs/2007.02010)
-- **作者**: Yanwei Fu, Chen Liu, Donghao Li, Xinwei Sun, Jinshan Zeng, Yuan Yao
+### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_APQ_Joint_Search_for_Network_Architecture_Pruning_and_Quantization_Policy_CVPR_2020_paper.html) · 📚 被引 159
+- **作者**: Tianzhe Wang, Kuan Wang, Han Cai, Ji Lin, Zhijian Liu, Hanrui Wang et al.
+- **🏷️ 机构**: Massachusetts Institute of Technology; Shanghai Jiao Tong University, Massachusetts Institute of Technology
+- **会议**: CVPR 2020
+
+### Dynamic Model Pruning with Feedback.
+- **链接**: [arXiv:2006.07253](https://arxiv.org/abs/2006.07253)
+- **作者**: Tao Lin, Sebastian U. Stich, Luis Barba, Daniil Dmitriev, Martin Jaggi
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2020
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Over-parameterization is ubiquitous nowadays in training neural networks to benefit both optimization in seeking global optima and generalization in reducing prediction error. However, compressive networks are desired in many real world applications and direct training of small networks may be trapped in local optima. In this paper, instead of pruning or distilling over-parameterized models to compressive ones, we propose a new approach based on differential inclusions of inverse scale spaces. Specifically, it generates a family of models from simple to complex ones that couples a pair of parameters to simultaneously train over-parameterized deep models and structural sparsity on weights of fully connected and convolutional layers. Such a differential inclusion scheme has a simple discretization, proposed as Deep structurally splitting Linearized Bregman Iteration (DessiLBI), whose global convergence analysis in deep learning is established that from any initializations, algorithmic iterations converge to a critical point of empirical risks. Experimental evidence shows that DessiLBI achieve comparable and even better performance than the competitive optimizers in exploring the structural sparsity of several widely used backbones on the benchmark datasets. Remarkably, with early stopping, DessiLBI unveils "winning tickets" in early epochs: the effective sparse structure with comparable test accuracy to fully trained over-parameterized models.
+> Budgeted pruning is the problem of pruning under resource constraints. In budgeted pruning, how to distribute the resources across layers (i.e., sparsity allocation) is the key problem. Traditional methods solve it by discretely searching for the layer-wise pruning ratios, which lacks efficiency. In this paper, we propose Differentiable Sparsity Allocation (DSA), an efficient end-to-end budgeted pruning flow. Utilizing a novel differentiable pruning process, DSA finds the layer-wise pruning ratios with gradient-based optimization. It allocates sparsity in continuous space, which is more efficient than methods based on discrete evaluation and search. Furthermore, DSA could work in a pruning-from-scratch manner, whereas traditional budgeted pruning methods are applied to pre-trained models. Experimental results on CIFAR-10 and ImageNet show that DSA could achieve superior performance than current iterative budgeted pruning methods, and shorten the time cost of the overall pruning process by at least 1.5x in the meantime.
 
 </details>
 
-### Inducing and Exploiting Activation Sparsity for Fast Inference on Deep Neural Networks.
-- **链接**: [出版页](http://proceedings.mlr.press/v119/kurtz20a.html)
-- **作者**: Mark Kurtz, Justin Kopinsky, Rati Gelashvili, Alexander Matveev, John Carr, Michael Goin et al.
+### Meta-learning with Network Pruning.
+- **链接**: [arXiv:2007.03219](https://arxiv.org/abs/2007.03219)
+- **作者**: Hongduan Tian, Bo Liu, Xiao-Tong Yuan, Qingshan Liu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2020
-
-### Soft Threshold Weight Reparameterization for Learnable Sparsity.
-- **链接**: [arXiv:2002.03231](https://arxiv.org/abs/2002.03231) · [代码](https://github.com/RAIVNLab/STR)
-- **作者**: Aditya Kusupati, Vivek Ramanujan, Raghav Somani, Mitchell Wortsman, Prateek Jain, Sham M. Kakade et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2020
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Sparsity in Deep Neural Networks (DNNs) is studied extensively with the focus of maximizing prediction accuracy given an overall parameter budget. Existing methods rely on uniform or heuristic non-uniform sparsity budgets which have sub-optimal layer-wise parameter allocation resulting in a) lower prediction accuracy or b) higher inference cost (FLOPs). This work proposes Soft Threshold Reparameterization (STR), a novel use of the soft-threshold operator on DNN weights. STR smoothly induces sparsity while learning pruning thresholds thereby obtaining a non-uniform sparsity budget. Our method achieves state-of-the-art accuracy for unstructured sparsity in CNNs (ResNet50 and MobileNetV1 on ImageNet-1K), and, additionally, learns non-uniform budgets that empirically reduce the FLOPs by up to 50%. Notably, STR boosts the accuracy over existing results by up to 10% in the ultra sparse (99%) regime and can also be used to induce low-rank (structured sparsity) in RNNs. In short, STR is a simple mechanism which learns effective sparsity budgets that contrast with popular heuristics. Code, pretrained models and sparsity budgets are at https://github.com/RAIVNLab/STR.
+> Meta-learning is a powerful paradigm for few-shot learning. Although with remarkable success witnessed in many applications, the existing optimization based meta-learning models with over-parameterized neural networks have been evidenced to ovetfit on training tasks. To remedy this deficiency, we propose a network pruning based meta-learning approach for overfitting reduction via explicitly controlling the capacity of network. A uniform concentration analysis reveals the benefit of network capacity constraint for reducing generalization gap of the proposed meta-learner. We have implemented our approach on top of Reptile assembled with two network pruning routines: Dense-Sparse-Dense (DSD) and Iterative Hard Thresholding (IHT). Extensive experimental results on benchmark datasets with different over-parameterized deep networks demonstrate that our method not only effectively alleviates meta-overfitting but also in many cases improves the overall generalization performance when applied to few-shot classification tasks.
 
 </details>
 
-### Input-Sparsity Low Rank Approximation in Schatten Norm.
-- **链接**: [arXiv:2004.12646](https://arxiv.org/abs/2004.12646)
-- **作者**: Yi Li, David P. Woodruff
+### Differentiable Joint Pruning and Quantization for Hardware Efficiency.
+- **链接**: [arXiv:2007.10463](https://arxiv.org/abs/2007.10463) · 📚 被引 62
+- **作者**: Ying Wang, Yadong Lu, Tijmen Blankevoort
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2020
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We give the first input-sparsity time algorithms for the rank-$k$ low rank approximation problem in every Schatten norm. Specifically, for a given $n\times n$ matrix $A$, our algorithm computes $Y,Z\in \mathbb{R}^{n\times k}$, which, with high probability, satisfy $\|A-YZ^T\|_p \leq (1+ε)\|A-A_k\|_p$, where $\|M\|_p = \left (\sum_{i=1}^n σ_i(M)^p \right )^{1/p}$ is the Schatten $p$-norm of a matrix $M$ with singular values $σ_1(M), \ldots, σ_n(M)$, and where $A_k$ is the best rank-$k$ approximation to $A$. Our algorithm runs in time $\tilde{O}(\operatorname{nnz}(A) + mn^{α_p}\operatorname{poly}(k/ε))$, where $α_p = 0$ for $p\in [1,2)$ and $α_p = (ω-1)(1-2/p)$ for $p>2$ and $ω\approx 2.374$ is the exponent of matrix multiplication. For the important case of $p = 1$, which corresponds to the more "robust" nuclear norm, we obtain $\tilde{O}(\operatorname{nnz}(A) + m \cdot \operatorname{poly}(k/ε))$ time, which was previously only known for the Frobenius norm ($p = 2$). Moreover, since $α_p < ω- 1$ for every $p$, our algorithm has a better dependence on $n$ than that in the singular value decomposition for every $p$. Crucial to our analysis is the use of dimensionality reduction for Ky-Fan $p$-norms.
+> We present a differentiable joint pruning and quantization (DJPQ) scheme. We frame neural network compression as a joint gradient-based optimization problem, trading off between model pruning and quantization automatically for hardware efficiency. DJPQ incorporates variational information bottleneck based structured pruning and mixed-bit precision quantization into a single differentiable loss function. In contrast to previous works which consider pruning and quantization separately, our method enables users to find the optimal trade-off between both in a single training procedure. To utilize the method for more efficient hardware inference, we extend DJPQ to integrate structured pruning with power-of-two bit-restricted quantization. We show that DJPQ significantly reduces the number of Bit-Operations (BOPs) for several networks while maintaining the top-1 accuracy of original floating-point models (e.g., 53x BOPs reduction in ResNet18 on ImageNet, 43x in MobileNetV2). Compared to the conventional two-stage approach, which optimizes pruning and quantization independently, our scheme outperforms in terms of both accuracy and BOPs. Even when considering bit-restricted quantization, DJPQ achieves larger compression ratios and better accuracy than the two-stage approach.
 
 </details>
 
-### Fiedler Regularization: Learning Neural Networks with Graph Sparsity.
-- **链接**: [arXiv:2003.00992](https://arxiv.org/abs/2003.00992)
-- **作者**: Edric Tam, David B. Dunson
+### Accelerating CNN Training by Pruning Activation Gradients.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58595-2_20) · 📚 被引 22
+- **作者**: Xucheng Ye, Pengcheng Dai, Junyu Luo, Xin Guo, Yingjie Qi, Jianlei Yang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2020
+- **会议**: ECCV 2020
+
+### An Image Enhancing Pattern-Based Sparsity for Real-Time Inference on Mobile Devices.
+- **链接**: [arXiv:2001.07710](https://arxiv.org/abs/2001.07710) · 📚 被引 15
+- **作者**: Xiaolong Ma, Wei Niu, Tianyun Zhang, Sijia Liu, Sheng Lin, Hongjia Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We introduce a novel regularization approach for deep learning that incorporates and respects the underlying graphical structure of the neural network. Existing regularization methods often focus on dropping/penalizing weights in a global manner that ignores the connectivity structure of the neural network. We propose to use the Fiedler value of the neural network's underlying graph as a tool for regularization. We provide theoretical support for this approach via spectral graph theory. We list several useful properties of the Fiedler value that makes it suitable in regularization. We provide an approximate, variational approach for fast computation in practical training of neural networks. We provide bounds on such approximations. We provide an alternative but equivalent formulation of this framework in the form of a structurally weighted L1 penalty, thus linking our approach to sparsity induction. We performed experiments on datasets that compare Fiedler regularization with traditional regularization methods such as dropout and weight decay. Results demonstrate the efficacy of Fiedler regularization.
+> Weight pruning has been widely acknowledged as a straightforward and effective method to eliminate redundancy in Deep Neural Networks (DNN), thereby achieving acceleration on various platforms. However, most of the pruning techniques are essentially trade-offs between model accuracy and regularity which lead to impaired inference accuracy and limited on-device acceleration performance. To solve the problem, we introduce a new sparsity dimension, namely pattern-based sparsity that comprises pattern and connectivity sparsity, and becoming both highly accurate and hardware friendly. With carefully designed patterns, the proposed pruning unprecedentedly and consistently achieves accuracy enhancement and better feature extraction ability on different DNN structures and datasets, and our pattern-aware pruning framework also achieves pattern library extraction, pattern selection, pattern and connectivity pruning and weight training simultaneously. Our approach on the new pattern-based sparsity naturally fits into compiler optimization for highly efficient DNN execution on mobile platforms. To the best of our knowledge, it is the first time that mobile devices achieve real-time inference for the large-scale DNN models thanks to the unique spatial property of pattern-based sparsity and the help of the code generation capability of compilers.
 
 </details>
 
-### Near Input Sparsity Time Kernel Embeddings via Adaptive Sampling.
-- **链接**: [arXiv:2007.03927](https://arxiv.org/abs/2007.03927)
-- **作者**: David P. Woodruff, Amir Zandieh
+### Online Ensemble Model Compression Using Knowledge Distillation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_2) · 📚 被引 42
+- **作者**: Devesh Walawalkar, Zhiqiang Shen, Marios Savvides
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> To accelerate kernel methods, we propose a near input sparsity time algorithm for sampling the high-dimensional feature space implicitly defined by a kernel transformation. Our main contribution is an importance sampling method for subsampling the feature space of a degree $q$ tensoring of data points in almost input sparsity time, improving the recent oblivious sketching method of (Ahle et al., 2020) by a factor of $q^{5/2}/ε^2$. This leads to a subspace embedding for the polynomial kernel, as well as the Gaussian kernel, with a target dimension that is only linearly dependent on the statistical dimension of the kernel and in time which is only linearly dependent on the sparsity of the input dataset. We show how our subspace embedding bounds imply new statistical guarantees for kernel ridge regression. Furthermore, we empirically show that in large-scale regression tasks, our algorithm outperforms state-of-the-art kernel approximation methods.
-
-</details>
+- **会议**: ECCV 2020
