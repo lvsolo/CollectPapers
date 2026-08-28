@@ -18,7 +18,7 @@
 - **会议**: CVPR 2025
 
 ### Omnidirectional Multi-Object Tracking.
-- **链接**: [arXiv:2503.04565](https://arxiv.org/abs/2503.04565) · [代码](https://github.com/xifen523/OmniTrack)
+- **链接**: [arXiv:2503.04565](https://arxiv.org/abs/2503.04565)
 - **作者**: Kai Luo, Hao Shi, Sheng Wu, Fei Teng, Mengfei Duan, Chang Huang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
@@ -30,7 +30,7 @@
 </details>
 
 ### MUST: The First Dataset and Unified Framework for Multispectral UAV Single Object Tracking.
-- **链接**: [arXiv:2503.17699](https://arxiv.org/abs/2503.17699) · [代码](https://github.com/q2479036243/MUST-Multispectral-UAV-Single-Object-Tracking) · 📚 被引 12
+- **链接**: [arXiv:2503.17699](https://arxiv.org/abs/2503.17699) · 📚 被引 12
 - **作者**: Haolin Qin, Tingfa Xu, Tianhao Li, Zhenxiang Chen, Tao Feng, Jianan Li
 - **🏷️ 机构**: Beijing Institute of Technology
 - **会议**: CVPR 2025
@@ -48,10 +48,16 @@
 - **会议**: CVPR 2025
 
 ### SPMTrack: Spatio-Temporal Parameter-Efficient Fine-Tuning with Mixture of Experts for Scalable Visual Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Cai_SPMTrack_Spatio-Temporal_Parameter-Efficient_Fine-Tuning_with_Mixture_of_Experts_for_Scalable_CVPR_2025_paper.html) · 📚 被引 13
+- **链接**: [arXiv:2503.18338](https://arxiv.org/abs/2503.18338) · 📚 被引 13
 - **作者**: Wenrui Cai, Qingjie Liu, Yunhong Wang
 - **🏷️ 机构**: Beihang University,State Key Laboratory of Virtual Reality Technology and Systems,Beijing,China
 - **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Most state-of-the-art trackers adopt one-stream paradigm, using a single Vision Transformer for joint feature extraction and relation modeling of template and search region images. However, relation modeling between different image patches exhibits significant variations. For instance, background regions dominated by target-irrelevant information require reduced attention allocation, while foreground, particularly boundary areas, need to be be emphasized. A single model may not effectively handle all kinds of relation modeling simultaneously. In this paper, we propose a novel tracker called SPMTrack based on mixture-of-experts tailored for visual tracking task (TMoE), combining the capability of multiple experts to handle diverse relation modeling more flexibly. Benefiting from TMoE, we extend relation modeling from image pairs to spatio-temporal context, further improving tracking accuracy with minimal increase in model parameters. Moreover, we employ TMoE as a parameter-efficient fine-tuning method, substantially reducing trainable parameters, which enables us to train SPMTrack of varying scales efficiently and preserve the generalization ability of pretrained models to achieve superior performance. We conduct experiments on seven datasets, and experimental results demonstrate that our method significantly outperforms current state-of-the-art trackers. The source code is available at https://github.com/WenRuiCai/SPMTrack.
+
+</details>
 
 ### Autoregressive Sequential Pretraining for Visual Tracking.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liang_Autoregressive_Sequential_Pretraining_for_Visual_Tracking_CVPR_2025_paper.html) · 📚 被引 8

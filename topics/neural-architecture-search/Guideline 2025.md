@@ -30,7 +30,7 @@
 </details>
 
 ### Training-free Neural Architecture Search through Variance of Knowledge of Deep Network Weights.
-- **链接**: [arXiv:2502.04975](https://arxiv.org/abs/2502.04975) · [代码](https://github.com/ondratybl/VKDNW) · 📚 被引 4
+- **链接**: [arXiv:2502.04975](https://arxiv.org/abs/2502.04975) · 📚 被引 4
 - **作者**: Ondrej Týbl, Lukás Neumann
 - **🏷️ 机构**: Czech Technical University in Prague,CMP Visual Recognition Group, Faculty of Electrical Engineering
 - **会议**: CVPR 2025
