@@ -1,60 +1,67 @@
 # BEV — 2024 Guideline
 
 > 领域: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
-> 论文数: 21 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: [2022](Guideline%202022.md)
+> 同领域其他年份: 
 
-### From a Bird's Eye View to See: Joint Camera and Subject Registration without the Camera Calibration. **⭐⭐⭐⭐** (相关度: 80%)
-- **链接**: [arXiv:2212.09298](https://arxiv.org/abs/2212.09298) · 📚 被引 10
-- **作者**: Zekun Qian, Ruize Han, Wei Feng, Song Wang
-- **🏷️ 机构**: College of Intelligence and Computing, Tianjin University, Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, University of South Carolina
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对无相机标定情况下多视角相机和主体在鸟瞰图中的联合注册问题，该论文提出了一种端到端框架。它通过视图变换主体检测模块将第一视角转换为虚拟BEV，利用几何变换估计相机位置和方向，并结合空间和外观信息聚合主体。在合成数据集上验证了方法的有效性，为无标定BEV感知提供了新思路。
-- **摘要（英）**: This paper tackles the challenging problem of joint camera and subject registration in BEV without pre-given calibration, by proposing an end-to-end framework with a view-transform detection module, geometric-based camera registration, and spatial-appearance aggregation. Experiments on a synthetic dataset demonstrate remarkable effectiveness, offering a novel approach for uncalibrated BEV perception.
-- **核心贡献**: 提出无相机标定的BEV联合注册框架。
-- **创新点**: 结合视图变换和几何估计实现相机与主体注册。
-- **结果**: 在合成数据集上验证了方法的有效性。
+### Navigation Instruction Generation with BEV Perception and Large Language Models.
+- **链接**: [arXiv:2407.15087](https://arxiv.org/abs/2407.15087) · 📚 被引 13
+- **作者**: Sheng Fan, Rui Liu, Wenguan Wang, Yi Yang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
-### SG-BEV: Satellite-Guided BEV Fusion for Cross-View Semantic Segmentation. **⭐⭐⭐⭐** (相关度: 90%)
-- **链接**: [arXiv:2404.02638](https://arxiv.org/abs/2404.02638) · 📚 被引 26
-- **作者**: Junyan Ye, Qiyan Luo, Jinhua Yu, Huaping Zhong, Zhimeng Zheng, Conghui He et al.
-- **🏷️ 机构**: Sun Yat-Sen University, SenseTime Research, Shanghai AI Laboratory
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对跨视角（卫星与街景）语义分割中视角差异大、建筑立面特征捕获不完整的问题，提出SG-BEV方法，创新性地引入BEV建立街景特征的空间显式映射，并设计卫星引导的重投影模块以优化传统BEV方法的特征分布不均问题。在纽约、旧金山、波士顿等四个跨视角数据集上，平均mIOU相比最先进的卫星基和跨视角方法分别提升10.13%和5.21%。
-- **摘要（英）**: This paper introduces SG-BEV for cross-view semantic segmentation, using BEV to map street-view features and a satellite-guided reprojection module to address feature distribution issues. It achieves average mIOU improvements of 10.13% and 5.21% over state-of-the-art satellite-based and cross-view methods on four datasets.
-- **核心贡献**: 提出了卫星引导的BEV融合框架，解决了跨视角分割中的特征映射和分布不均问题。
-- **创新点**: 创新性地将BEV与卫星引导重投影结合，优化了多视角特征融合。
-- **结果**: 在多个城市数据集上mIOU显著提升，优于现有方法。
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### BerfScene: Bev-conditioned Equivariant Radiance Fields for Infinite 3D Scene Generation. **⭐⭐⭐** (相关度: 70%)
-- **链接**: [arXiv:2312.02136](https://arxiv.org/abs/2312.02136) · 📚 被引 1
-- **作者**: Qihang Zhang, Yinghao Xu, Yujun Shen, Bo Dai, Bolei Zhou, Ceyuan Yang
-- **🏷️ 机构**: CUHK, Stanford, Ant Group
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对大规模3D场景生成中复杂空间配置和多尺度物体的问题，提出BerfScene，结合BEV地图引导的等变辐射场。通过BEV地图控制物体操作，并利用位置编码和低通滤波器实现等变性，支持生成无限规模的3D场景。实验在多个3D场景数据集上验证了有效性。
-- **摘要（英）**: BerfScene introduces a BEV-conditioned equivariant radiance field for large-scale 3D scene generation, enabling object manipulation via BEV maps and infinite scene synthesis through equivariance. Experiments on 3D scene datasets demonstrate effectiveness.
-- **核心贡献**: 提出了BEV条件等变辐射场，支持大规模和无限3D场景生成。
-- **创新点**: 创新性地利用BEV地图引导辐射场，实现场景的等变生成和拼接。
-- **结果**: 在3D场景数据集上验证了生成效果和可控性。
+> Navigation instruction generation, which requires embodied agents to describe the navigation routes, has been of great interest in robotics and human-computer interaction. Existing studies directly map the sequence of 2D perspective observations to route descriptions. Though straightforward, they overlook the geometric information and object semantics of the 3D environment. To address these challenges, we propose BEVInstructor, which incorporates Bird's Eye View (BEV) features into Multi-Modal Large Language Models (MLLMs) for instruction generation. Specifically, BEVInstructor constructs a PerspectiveBEVVisual Encoder for the comprehension of 3D environments through fusing BEV and perspective features. To leverage the powerful language capabilities of MLLMs, the fused representations are used as visual prompts for MLLMs, and perspective-BEV prompt tuning is proposed for parameter-efficient updating. Based on the perspective-BEV prompts, BEVInstructor further adopts an instance-guided iterative refinement pipeline, which improves the instructions in a progressive manner. BEVInstructor achieves impressive performance across diverse datasets (i.e., R2R, REVERIE, and UrbanWalk).
+
+</details>
+
+### LetsMap: Unsupervised Representation Learning for Label-Efficient Semantic BEV Mapping.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73636-0_7) · 📚 被引 5
+- **作者**: Nikhil Gosala, Kürsat Petek, B. Ravi Kiran, Senthil Kumar Yogamani, Paulo L. J. Drews-Jr, Wolfram Burgard et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Accelerating Online Mapping and Behavior Prediction via Direct BEV Feature Attention.
+- **链接**: [arXiv:2407.06683](https://arxiv.org/abs/2407.06683) · 📚 被引 8
+- **作者**: Xunjiang Gu, Guanyu Song, Igor Gilitschenski, Marco Pavone, Boris Ivanovic
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Understanding road geometry is a critical component of the autonomous vehicle (AV) stack. While high-definition (HD) maps can readily provide such information, they suffer from high labeling and maintenance costs. Accordingly, many recent works have proposed methods for estimating HD maps online from sensor data. The vast majority of recent approaches encode multi-camera observations into an intermediate representation, e.g., a bird's eye view (BEV) grid, and produce vector map elements via a decoder. While this architecture is performant, it decimates much of the information encoded in the intermediate representation, preventing downstream tasks (e.g., behavior prediction) from leveraging them. In this work, we propose exposing the rich internal features of online map estimation methods and show how they enable more tightly integrating online mapping with trajectory forecasting. In doing so, we find that directly accessing internal BEV features yields up to 73% faster inference speeds and up to 29% more accurate predictions on the real-world nuScenes dataset.
+
+</details>
+
+### DA-BEV: Unsupervised Domain Adaptation for Bird's Eye View Perception.
+- **链接**: [arXiv:2401.08687](https://arxiv.org/abs/2401.08687) · 📚 被引 2
+- **作者**: Kai Jiang, Jiaxing Huang, Weiying Xie, Jie Lei, Yunsong Li, Ling Shao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Camera-only Bird's Eye View (BEV) has demonstrated great potential in environment perception in a 3D space. However, most existing studies were conducted under a supervised setup which cannot scale well while handling various new data. Unsupervised domain adaptive BEV, which effective learning from various unlabelled target data, is far under-explored. In this work, we design DA-BEV, the first domain adaptive camera-only BEV framework that addresses domain adaptive BEV challenges by exploiting the complementary nature of image-view features and BEV features. DA-BEV introduces the idea of query into the domain adaptation framework to derive useful information from image-view and BEV features. It consists of two query-based designs, namely, query-based adversarial learning (QAL) and query-based self-training (QST), which exploits image-view features or BEV features to regularize the adaptation of the other. Extensive experiments show that DA-BEV achieves superior domain adaptive BEV perception performance consistently across multiple datasets and tasks such as 3D object detection and 3D scene segmentation.
+
+</details>
+
+### Cross-View Image Geo-Localization with Panorama-BEV Co-retrieval Network.
+- **链接**: [arXiv:2408.05475](https://arxiv.org/abs/2408.05475) · [代码](https://github.com/yejy53/EP-BEV) · 📚 被引 28
+- **作者**: Junyan Ye, Zhutao Lv, Weijia Li, Jinhua Yu, Haote Yang, Huaping Zhong et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Cross-view geolocalization identifies the geographic location of street view images by matching them with a georeferenced satellite database. Significant challenges arise due to the drastic appearance and geometry differences between views. In this paper, we propose a new approach for cross-view image geo-localization, i.e., the Panorama-BEV Co-Retrieval Network. Specifically, by utilizing the ground plane assumption and geometric relations, we convert street view panorama images into the BEV view, reducing the gap between street panoramas and satellite imagery. In the existing retrieval of street view panorama images and satellite images, we introduce BEV and satellite image retrieval branches for collaborative retrieval. By retaining the original street view retrieval branch, we overcome the limited perception range issue of BEV representation. Our network enables comprehensive perception of both the global layout and local details around the street view capture locations. Additionally, we introduce CVGlobal, a global cross-view dataset that is closer to real-world scenarios. This dataset adopts a more realistic setup, with street view directions not aligned with satellite images. CVGlobal also includes cross-regional, cross-temporal, and street view to map retrieval tests, enabling a comprehensive evaluation of algorithm performance. Our method excels in multiple tests on common cross-view datasets such as CVUSA, CVACT, VIGOR, and our newly introduced CVGlobal, surpassing the current state-of-the-art approaches. The code and datasets can be found at \url{https://github.com/yejy53/EP-BEV}.
+
+</details>
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- CLIP-BEVFormer: Enhancing Multi-View Image-Based BEV Detector with Ground Truth Flow. → [3d-detection](../3d-detection/Guideline%202024.md)
-- SeaBird: Segmentation in Bird's View with Dice Loss Improves Monocular 3D Detection of Large Objects. → [3d-detection](../3d-detection/Guideline%202024.md)
-- GAFusion: Adaptive Fusing LiDAR and Camera with Multiple Guidance for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- BEVNeXt: Reviving Dense BEV Frameworks for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- UniMODE: Unified Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- RCBEVDet: Radar-Camera Fusion in Bird's Eye View for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- BEVSpread: Spread Voxel Pooling for Bird's-Eye-View Representation in Vision-Based Roadside 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- IS-Fusion: Instance-Scene Collaborative Fusion for Multimodal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Decoupled Pseudo-Labeling for Semi-Supervised Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- CRKD: Enhanced Camera-Radar Object Detection with Cross-Modality Knowledge Distillation. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Improving Bird's Eye View Semantic Segmentation by Task Decomposition. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- PointBeV: A Sparse Approach to BeV Predictions. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- UnO: Unsupervised Occupancy Fields for Perception and Forecasting. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction. → [3d-detection](../3d-detection/Guideline%202024.md)
-- SparseOcc: Rethinking Sparse Latent Representation for Vision-Based Semantic Occupancy Prediction. → [3d-detection](../3d-detection/Guideline%202024.md)
-- DrivingGaussian: Composite Gaussian Splatting for Surrounding Dynamic Autonomous Driving Scenes. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- Is Ego Status All You Need for Open-Loop End-to-End Autonomous Driving? → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- Multiagent Multitraversal Multimodal Self-Driving: Open MARS Dataset. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Diffusion Model for Robust Multi-sensor Fusion in 3D Object Detection and BEV Segmentation. → [3d-detection](../3d-detection/Guideline%202024.md)
+- GraphBEV: Towards Robust BEV Feature Alignment for Multi-modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- H-V2X: A Large Scale Highway Dataset for BEV Perception. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
