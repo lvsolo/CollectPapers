@@ -5,8 +5,14 @@
 
 > 同领域其他年份: 
 
-### Don't Even Look Once: Synthesizing Features for Zero-Shot Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhu_Dont_Even_Look_Once_Synthesizing_Features_for_Zero-Shot_Detection_CVPR_2020_paper.html) · 📚 被引 60
-- **作者**: Pengkai Zhu, Hanxiao Wang, Venkatesh Saligrama
+### A Latent Morphology Model for Open-Vocabulary Neural Machine Translation.
+- **链接**: [arXiv:1910.13890](https://arxiv.org/abs/1910.13890)
+- **作者**: Duygu Ataman, Wilker Aziz, Alexandra Birch
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: ICLR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Translation into morphologically-rich languages challenges neural machine translation (NMT) models with extremely sparse vocabularies where atomic treatment of surface forms is unrealistic. This problem is typically addressed by either pre-processing words into subword units or performing translation directly at the level of characters. The former is based on word segmentation algorithms optimized using corpus-level statistics with no regard to the translation task. The latter learns directly from translation data but requires rather deep architectures. In this paper, we propose to translate words by modeling word formation through a hierarchical latent variable model which mimics the process of morphological inflection. Our model generates words one character at a time by composing two latent representations: a continuous one, aimed at capturing the lexical semantics, and a set of (approximately) discrete features, aimed at capturing the morphosyntactic function, which are shared among different surface forms. Our model achieves better accuracy in translation into three morphologically-rich languages than conventional open-vocabulary NMT methods, while also demonstrating a better generalization capacity under low to mid-resource settings.
+
+</details>
