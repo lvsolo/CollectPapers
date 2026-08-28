@@ -12,7 +12,7 @@
 - **会议**: NeurIPS 2025
 
 ### Mitigating Intra- and Inter-modal Forgetting in Continual Learning of Unified Multimodal Models.
-- **链接**: [arXiv:2512.03125](https://arxiv.org/abs/2512.03125) · [代码](https://github.com/Christina200/MoDE-official.git) · 📚 被引 0
+- **链接**: [arXiv:2512.03125](https://arxiv.org/abs/2512.03125) · 📚 被引 0
 - **作者**: Xiwen Wei, Mustafa Munir, Radu Marculescu
 - **🏷️ 机构**: University of Texas at Austin, University of Texas, Austin
 - **会议**: NeurIPS 2025
@@ -23,17 +23,11 @@
 
 </details>
 
-### Confusion-Driven Self-Supervised Progressively Weighted Ensemble Learning for Non-Exemplar Class Incremental Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/6e1a97dfd2ce57ee4c006657ace4b9b6-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Kai Hu, Yu Zhang, Yuan Zhang, Zhineng Chen, Xieping Gao
-- **🏷️ 机构**: Xiangtan University, Communication University of China, Fudan University
-- **会议**: NeurIPS 2025
-
-### AnaCP: Toward Upper-Bound Continual Learning via Analytic Contrastive Projection.
-- **链接**: [arXiv:2511.13880](https://arxiv.org/abs/2511.13880) · 📚 被引 0
-- **作者**: Saleh Momeni, Changnan Xiao, Bing Liu
-- **🏷️ 机构**: University of Illinois at Chicago, MiHoYo
-- **会议**: NeurIPS 2025
+### Self-Expansion of Pre-trained Models with Mixture of Adapters for Continual Learning.
+- **链接**: [arXiv:2403.18886](https://arxiv.org/abs/2403.18886) · 📚 被引 15
+- **作者**: Huiyi Wang, Haodong Lu, Lina Yao, Dong Gong
+- **🏷️ 机构**: University of New South Wales, CSIRO&#x2019;s Data61
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,11 +35,17 @@
 
 </details>
 
-### Contrastive Consolidation of Top-Down Modulations Achieves Sparsely Supervised Continual Learning.
-- **链接**: [arXiv:2505.14125](https://arxiv.org/abs/2505.14125) · 📚 被引 0
-- **作者**: Viet Anh Khoa Tran, Emre Neftci, Willem Wybo
-- **🏷️ 机构**: Forschungszentrum Jülich
+### Learning Expandable and Adaptable Representations for Continual Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/4c19a67a61b5700f90ccb815a255aaad-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Ruilong Yu, Mingyan Liu, Fei Ye, Adrian G. Bors, Rongyao Hu, Jingling Sun et al.
+- **🏷️ 机构**: University of Electronic Science and Technology of China, Harbin Institute of Technology, Shenzhen, University of York
 - **会议**: NeurIPS 2025
+
+### Language Guided Concept Bottleneck Models for Interpretable Continual Learning.
+- **链接**: [arXiv:2503.23283](https://arxiv.org/abs/2503.23283) · 📚 被引 5
+- **作者**: Lu Yu, Haoyu Han, Zhe Tao, Hantao Yao, Changsheng Xu
+- **🏷️ 机构**: Tianjin University of Technology,School of Computer Science and Engineering, University of Science and Technology of China,School of Information Science and Technology, Institute of Automation, University of Chinese Academy of Sciences,State Key Laboratory of Multimodal Artificial Intelligence Systems
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -65,65 +65,29 @@
 
 </details>
 
-### Learning Multi-Source and Robust Representations for Continual Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/fff5dac3713ad2d1cf7c9e3c95cc361f-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Fei Ye, YongCheng Zhong, Qihe Liu, Adrian G. Bors, Jingling Sun, Rongyao Hu et al.
-- **🏷️ 机构**: University of Electronic Science and Technology of China, University of York
-- **会议**: NeurIPS 2025
+### KAC: Kolmogorov-Arnold Classifier for Continual Learning.
+- **链接**: [arXiv:2503.21076](https://arxiv.org/abs/2503.21076) · 📚 被引 5
+- **作者**: Yusong Hu, Zichen Liang, Fei Yang, Qibin Hou, Xialei Liu, Ming-Ming Cheng
+- **🏷️ 机构**: Nankai University,VCIP, CS
+- **会议**: CVPR 2025
 
-### Learning Expandable and Adaptable Representations for Continual Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/4c19a67a61b5700f90ccb815a255aaad-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Ruilong Yu, Mingyan Liu, Fei Ye, Adrian G. Bors, Rongyao Hu, Jingling Sun et al.
-- **🏷️ 机构**: University of Electronic Science and Technology of China, Harbin Institute of Technology, Shenzhen, University of York
-- **会议**: NeurIPS 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Continuous Subspace Optimization for Continual Learning.
-- **链接**: [arXiv:2505.11816](https://arxiv.org/abs/2505.11816) · 📚 被引 0
-- **作者**: Quan Cheng, Yuanyu Wan, Lingyu Wu, Chenping Hou, Lijun Zhang
-- **🏷️ 机构**: Nanjing University, Zhejiang University, National University of Defense Technology
-- **会议**: NeurIPS 2025
+> Continual learning requires models to train continuously across consecutive tasks without forgetting. Most existing methods utilize linear classifiers, which struggle to maintain a stable classification space while learning new tasks. Inspired by the success of Kolmogorov-Arnold Networks (KAN) in preserving learning stability during simple continual regression tasks, we set out to explore their potential in more complex continual learning scenarios. In this paper, we introduce the Kolmogorov-Arnold Classifier (KAC), a novel classifier developed for continual learning based on the KAN structure. We delve into the impact of KAN's spline functions and introduce Radial Basis Functions (RBF) for improved compatibility with continual learning. We replace linear classifiers with KAC in several recent approaches and conduct experiments across various continual learning benchmarks, all of which demonstrate performance improvements, highlighting the effectiveness and robustness of KAC in continual learning. The code is available at https://github.com/Ethanhuhuhu/KAC.
+
+</details>
+
+### Do Your Best and Get Enough Rest for Continual Learning.
+- **链接**: [arXiv:2503.18371](https://arxiv.org/abs/2503.18371) · 📚 被引 1
+- **作者**: Hankyul Kang, Gregor Seifer, Donghyun Lee, Jongbin Ryu
+- **🏷️ 机构**: Ajou University, KAIST
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Continual learning aims to learn multiple tasks sequentially while preserving prior knowledge, but faces the challenge of catastrophic forgetting when adapting to new tasks. Recently, approaches leveraging pre-trained models have gained increasing popularity in mitigating this issue, due to the strong generalization ability of foundation models. To adjust pre-trained models for new tasks, existing methods usually employ low-rank adaptation, which restricts parameter updates to a fixed low-rank subspace. However, constraining the optimization space inherently compromises the model's learning capacity, resulting in inferior performance. To address this limitation, we propose Continuous Subspace Optimization for Continual Learning (CoSO) to fine-tune the model in a series of subspaces rather than a single one. These sequential subspaces are dynamically determined through the singular value decomposition of the gradients. CoSO updates the model by projecting gradients onto these subspaces, ensuring memory-efficient optimization. To mitigate forgetting, the optimization subspace of each task is constrained to be orthogonal to the historical task subspace. During task learning, CoSO maintains a task-specific component that captures the critical update directions for the current task. Upon completing a task, this component is used to update the historical task subspace, laying the groundwork for subsequent learning. Extensive experiments on multiple datasets demonstrate that CoSO significantly outperforms state-of-the-art methods, especially in challenging scenarios with long task sequences.
 
 </details>
-
-### REP: Resource-Efficient Prompting for Rehearsal-Free Continual Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/59ea33ae3d096f3bcd5026b479710cf8-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Sungho Jeon, Xinyue Ma, Kwang In Kim, Myeongjae Jeon
-- **🏷️ 机构**: POSTECH, Ulsan National Institute of Science and Technology, Pohang University of Science and Technology
-- **会议**: NeurIPS 2025
-
-### Gradient-Guided Epsilon Constraint Method for Online Continual Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/b3c2854d9e94282a373d8fa58b567b27-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Song Lai, Changyi Ma, Fei Zhu, Zhe Zhao, Xi Lin, Gaofeng Meng et al.
-- **🏷️ 机构**: City University of Hong Kong, The Chinese University of Hong Kong, Centre for Artificial Intelligence and Robotics Hong Kong Institute of Science &amp; Innovation, Chinese Academy of Sciences
-- **会议**: NeurIPS 2025
-
-### Resource-Constrained Federated Continual Learning: What Does Matter?
-- **链接**: [arXiv:2501.08737](https://arxiv.org/abs/2501.08737) · 📚 被引 0
-- **作者**: Yichen Li, Yuying Wang, Jiahua Dong, Haozhao Wang, Yining Qi, Rui Zhang et al.
-- **🏷️ 机构**: Huazhong University of Science and Technology, Suzhou University, Mohamed bin Zayed University of Artificial Intelligence
-- **会议**: NeurIPS 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Federated Continual Learning (FCL) aims to enable sequentially privacy-preserving model training on streams of incoming data that vary in edge devices by preserving previous knowledge while adapting to new data. Current FCL literature focuses on restricted data privacy and access to previously seen data while imposing no constraints on the training overhead. This is unreasonable for FCL applications in real-world scenarios, where edge devices are primarily constrained by resources such as storage, computational budget, and label rate. We revisit this problem with a large-scale benchmark and analyze the performance of state-of-the-art FCL approaches under different resource-constrained settings. Various typical FCL techniques and six datasets in two incremental learning scenarios (Class-IL and Domain-IL) are involved in our experiments. Through extensive experiments amounting to a total of over 1,000+ GPU hours, we find that, under limited resource-constrained settings, existing FCL approaches, with no exception, fail to achieve the expected performance. Our conclusions are consistent in the sensitivity analysis. This suggests that most existing FCL methods are particularly too resource-dependent for real-world deployment. Moreover, we study the performance of typical FCL techniques with resource constraints and shed light on future research directions in FCL.
-
-</details>
-
-### Turning the Tables: Enabling Backward Transfer via Causal-Aware LoRA in Continual Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/7c22f3719c9699c0ea4fe47fb536ff82-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Chaoyang Li, Runze Ye, Jianyang Qin, Jinhao Cui, Lingzhi Wang, Ning Hu et al.
-- **🏷️ 机构**: Harbin Institute of Technology (Shenzhen), Harbin Institute of Technology, Harbin Institute of Technology, Shenzhen
-- **会议**: NeurIPS 2025
-
-### Gated Integration of Low-Rank Adaptation for Continual Learning of Large Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/63692d8d567db671c700df5df912204a-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Yan-Shuo Liang, Jia-Rui Chen, Wu-Jun Li
-- **🏷️ 机构**: Nanjing University
-- **会议**: NeurIPS 2025
 
 ### Temporal-Difference Variational Continual Learning.
 - **链接**: [arXiv:2410.07812](https://arxiv.org/abs/2410.07812) · 📚 被引 0
@@ -133,27 +97,9 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Machine Learning models in real-world applications must continuously learn new tasks to adapt to shifts in the data-generating distribution. Yet, for Continual Learning (CL), models often struggle to balance learning new tasks (plasticity) with retaining previous knowledge (memory stability). Consequently, they are susceptible to Catastrophic Forgetting, which degrades performance and undermines the reliability of deployed systems. In the Bayesian CL literature, variational methods tackle this challenge by employing a learning objective that recursively updates the posterior distribution while constraining it to stay close to its previous estimate. Nonetheless, we argue that these methods may be ineffective due to compounding approximation errors over successive recursions. To mitigate this, we propose new learning objectives that integrate the regularization effects of multiple previous posterior estimations, preventing individual errors from dominating future posterior updates and compounding over time. We reveal insightful connections between these objectives and Temporal-Difference methods, a popular learning mechanism in Reinforcement Learning and Neuroscience. Experiments on challenging CL benchmarks show that our approach effectively mitigates Catastrophic Forgetting, outperforming strong Variational CL methods.
+> Federated Continual Learning (FCL) aims to enable sequentially privacy-preserving model training on streams of incoming data that vary in edge devices by preserving previous knowledge while adapting to new data. Current FCL literature focuses on restricted data privacy and access to previously seen data while imposing no constraints on the training overhead. This is unreasonable for FCL applications in real-world scenarios, where edge devices are primarily constrained by resources such as storage, computational budget, and label rate. We revisit this problem with a large-scale benchmark and analyze the performance of state-of-the-art FCL approaches under different resource-constrained settings. Various typical FCL techniques and six datasets in two incremental learning scenarios (Class-IL and Domain-IL) are involved in our experiments. Through extensive experiments amounting to a total of over 1,000+ GPU hours, we find that, under limited resource-constrained settings, existing FCL approaches, with no exception, fail to achieve the expected performance. Our conclusions are consistent in the sensitivity analysis. This suggests that most existing FCL methods are particularly too resource-dependent for real-world deployment. Moreover, we study the performance of typical FCL techniques with resource constraints and shed light on future research directions in FCL.
 
 </details>
-
-### Train with Perturbation, Infer after Merging: A Two-Stage Framework for Continual Learning.
-- **链接**: [arXiv:2505.22389](https://arxiv.org/abs/2505.22389) · 📚 被引 0
-- **作者**: Haomiao Qiu, Miao Zhang, Ziyue Qiao, Liqiang Nie
-- **🏷️ 机构**: Harbin Institute of Technology, Shenzhen, Aalborg University, Great Bay University
-- **会议**: NeurIPS 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Continual Learning (CL) aims to enable models to continuously acquire new knowledge from a sequence of tasks with avoiding the forgetting of learned information. However, existing CL methods only rely on the parameters of the most recent task for inference, which makes them susceptible to catastrophic forgetting. Inspired by the recent success of model merging techniques, we propose \textbf{Perturb-and-Merge (P\&M)}, a novel continual learning framework that integrates model merging into the CL paradigm to mitigate forgetting. Specifically, after training on each task, P\&M constructs a new model by forming a convex combination of the previous model and the newly trained task-specific model. Through theoretical analysis, We minimize the total loss increase across all tasks and derive a closed-form solution for the merging coefficient under mild assumptions. To further improve the performance of the merged model, we observe that the degradation introduced during merging can be alleviated by a regularization term composed of the task vector and the Hessian matrix of the loss function. Interestingly, we show that this term can be efficiently approximated using second-order symmetric finite differences, and a stochastic perturbation strategy along the task vector direction is accordingly devised which incurs no additional forward or backward passes while providing an effective approximation of the regularization term. Finally, we combine P\&M with LoRA, a parameter-efficient fine-tuning method, to reduce memory overhead. Our proposed approach achieves state-of-the-art performance on several continual learning benchmark datasets. The code is available at https://github.com/qhmiao/P-M-for-Continual-Learning.
-
-</details>
-
-### Separating the 'what' and 'how' of compositional computation to enable reuse and continual learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/82d07a9f247048b85f78786ac80e6fbf-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Haozhe Shan, Minni Sun, Lea Duncker
-- **🏷️ 机构**: Columbia University
-- **会议**: NeurIPS 2025
 
 ### Dual-Space Semantic Synergy Distillation for Continual Learning of Unlabeled Streams.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/1eaa5146756be028ad6fff1efcc8e6bd-Abstract-Conference.html) · 📚 被引 0
@@ -161,23 +107,11 @@
 - **🏷️ 机构**: Xidian University, ETHZ - ETH Zurich, Microsoft
 - **会议**: NeurIPS 2025
 
-### Model Inversion with Layer-Specific Modeling and Alignment for Data-Free Continual Learning.
-- **链接**: [arXiv:2510.26311](https://arxiv.org/abs/2510.26311) · 📚 被引 0
-- **作者**: Ruilin Tong, Haodong Lu, Yuhang Liu, Dong Gong
-- **🏷️ 机构**: University of New South Wales, The University of Adelaide, The University of New South Wales (UNSW)
-- **会议**: NeurIPS 2025
-
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual learning (CL) aims to incrementally train a model on a sequence of tasks while retaining performance on prior ones. However, storing and replaying data is often infeasible due to privacy or security constraints and impractical for arbitrary pre-trained models. Data-free CL seeks to update models without access to previous data. Beyond regularization, we employ model inversion to synthesize data from the trained model, enabling replay without storing samples. Yet, model inversion in predictive models faces two challenges: (1) generating inputs solely from compressed output labels causes drift between synthetic and real data, and replaying such data can erode prior knowledge; (2) inversion is computationally expensive since each step backpropagates through the full model. These issues are amplified in large pre-trained models such as CLIP. To improve efficiency, we propose Per-layer Model Inversion (PMI), inspired by faster convergence in single-layer optimization. PMI provides strong initialization for full-model inversion, substantially reducing iterations. To mitigate feature shift, we model class-wise features via Gaussian distributions and contrastive model, ensuring alignment between synthetic and real features. Combining PMI and feature modeling, our approach enables continual learning of new classes by generating pseudo-images from semantic-aware projected features, achieving strong effectiveness and compatibility across multiple CL settings.
+> Machine Learning models in real-world applications must continuously learn new tasks to adapt to shifts in the data-generating distribution. Yet, for Continual Learning (CL), models often struggle to balance learning new tasks (plasticity) with retaining previous knowledge (memory stability). Consequently, they are susceptible to Catastrophic Forgetting, which degrades performance and undermines the reliability of deployed systems. In the Bayesian CL literature, variational methods tackle this challenge by employing a learning objective that recursively updates the posterior distribution while constraining it to stay close to its previous estimate. Nonetheless, we argue that these methods may be ineffective due to compounding approximation errors over successive recursions. To mitigate this, we propose new learning objectives that integrate the regularization effects of multiple previous posterior estimations, preventing individual errors from dominating future posterior updates and compounding over time. We reveal insightful connections between these objectives and Temporal-Difference methods, a popular learning mechanism in Reinforcement Learning and Neuroscience. Experiments on challenging CL benchmarks show that our approach effectively mitigates Catastrophic Forgetting, outperforming strong Variational CL methods.
 
 </details>
-
-### The Dual Nature of Plasticity Loss in Deep Continual Learning: Dissection and Mitigation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/6489f2c6ac6420124fcef2a489615a97-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Haoyu Wang, Wei Dai, Jiawei Zhang, Jialun Ma, Mingyi Huang, Yuguo Yu
-- **🏷️ 机构**: Tianjin University, Fudan University
-- **会议**: NeurIPS 2025
 
 ### Hybrid Re-matching for Continual Learning with Parameter-Efficient Tuning.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/a978bdfeb195e4a574c0def98806346a-Abstract-Conference.html) · 📚 被引 0
@@ -191,27 +125,9 @@
 - **🏷️ 机构**: Tsinghua University, Harbin Institute of Technology, Tsinghua University, Tsinghua University
 - **会议**: NeurIPS 2025
 
-### C2Prompt: Class-aware Client Knowledge Interaction for Federated Continual Learning.
-- **链接**: [arXiv:2509.19674](https://arxiv.org/abs/2509.19674) · 📚 被引 0
-- **作者**: Kunlun Xu, Yibo Feng, Jiangmeng Li, Yongsheng Qi, Jiahuan Zhou
-- **🏷️ 机构**: Peking University, University of Electronic Science and Technology of China, Institute of Software Chinese Academy of Sciences
-- **会议**: NeurIPS 2025
-
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Federated continual learning (FCL) tackles scenarios of learning from continuously emerging task data across distributed clients, where the key challenge lies in addressing both temporal forgetting over time and spatial forgetting simultaneously. Recently, prompt-based FCL methods have shown advanced performance through task-wise prompt communication.In this study, we underscore that the existing prompt-based FCL methods are prone to class-wise knowledge coherence between prompts across clients. The class-wise knowledge coherence includes two aspects: (1) intra-class distribution gap across clients, which degrades the learned semantics across prompts, (2) inter-prompt class-wise relevance, which highlights cross-class knowledge confusion. During prompt communication, insufficient class-wise coherence exacerbates knowledge conflicts among new prompts and induces interference with old prompts, intensifying both spatial and temporal forgetting. To address these issues, we propose a novel Class-aware Client Knowledge Interaction (C${}^2$Prompt) method that explicitly enhances class-wise knowledge coherence during prompt communication. Specifically, a local class distribution compensation mechanism (LCDC) is introduced to reduce intra-class distribution disparities across clients, thereby reinforcing intra-class knowledge consistency. Additionally, a class-aware prompt aggregation scheme (CPA) is designed to alleviate inter-class knowledge confusion by selectively strengthening class-relevant knowledge aggregation. Extensive experiments on multiple FCL benchmarks demonstrate that C${}^2$Prompt achieves state-of-the-art performance. Our source code is available at https://github.com/zhoujiahuan1991/NeurIPS2025-C2Prompt
-
-</details>
-
-### Decentralized Dynamic Cooperation of Personalized Models for Federated Continual Learning.
-- **链接**: [arXiv:2509.23683](https://arxiv.org/abs/2509.23683) · 📚 被引 0
-- **作者**: Danni Yang, Zhikang Chen, Sen Cui, Mengyue Yang, Ding Li, Abudukelimu Wuerkaixi et al.
-- **🏷️ 机构**: Tsinghua University, Tsinghua University, Tsinghua University, University College London / University of Bristol
-- **会议**: NeurIPS 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Federated continual learning (FCL) has garnered increasing attention for its ability to support distributed computation in environments with evolving data distributions. However, the emergence of new tasks introduces both temporal and cross-client shifts, making catastrophic forgetting a critical challenge. Most existing works aggregate knowledge from clients into a global model, which may not enhance client performance since irrelevant knowledge could introduce interference, especially in heterogeneous scenarios. Additionally, directly applying decentralized approaches to FCL suffers from ineffective group formation caused by task changes. To address these challenges, we propose a decentralized dynamic cooperation framework for FCL, where clients establish dynamic cooperative learning coalitions to balance the acquisition of new knowledge and the retention of prior learning, thereby obtaining personalized models. To maximize model performance, each client engages in selective cooperation, dynamically allying with others who offer meaningful performance gains. This results in non-overlapping, variable coalitions at each stage of the task. Moreover, we use coalitional affinity game to simulate coalition relationships between clients. By assessing both client gradient coherence and model similarity, we quantify the client benefits derived from cooperation. We also propose a merge-blocking algorithm and a dynamic cooperative evolution algorithm to achieve cooperative and dynamic equilibrium. Comprehensive experiments demonstrate the superiority of our method compared to various baselines. Code is available at: https://github.com/ydn3229/DCFCL.
+> Continual Learning (CL) aims to enable models to continuously acquire new knowledge from a sequence of tasks with avoiding the forgetting of learned information. However, existing CL methods only rely on the parameters of the most recent task for inference, which makes them susceptible to catastrophic forgetting. Inspired by the recent success of model merging techniques, we propose \textbf{Perturb-and-Merge (P\&M)}, a novel continual learning framework that integrates model merging into the CL paradigm to mitigate forgetting. Specifically, after training on each task, P\&M constructs a new model by forming a convex combination of the previous model and the newly trained task-specific model. Through theoretical analysis, We minimize the total loss increase across all tasks and derive a closed-form solution for the merging coefficient under mild assumptions. To further improve the performance of the merged model, we observe that the degradation introduced during merging can be alleviated by a regularization term composed of the task vector and the Hessian matrix of the loss function. Interestingly, we show that this term can be efficiently approximated using second-order symmetric finite differences, and a stochastic perturbation strategy along the task vector direction is accordingly devised which incurs no additional forward or backward passes while providing an effective approximation of the regularization term. Finally, we combine P\&M with LoRA, a parameter-efficient fine-tuning method, to reduce memory overhead. Our proposed approach achieves state-of-the-art performance on several continual learning benchmark datasets. The code is available at https://github.com/qhmiao/P-M-for-Continual-Learning.
 
 </details>
 
@@ -220,6 +136,124 @@
 - **作者**: Fei Ye, Yulong Zhao, Qihe Liu, Junlin Chen, Adrian G. Bors, Jingling Sun et al.
 - **🏷️ 机构**: University of Electronic Science and Technology of China, ByteDance Inc., University of York
 - **会议**: NeurIPS 2025
+
+### Federated Continual Learning via Orchestrating Multi-Scale Expertise.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/20de741d21f1a038093c6e3ee7c09481-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Xiaoyang Yi, Yang Liu, Binhan Yang, Jian Jun Zhang
+- **🏷️ 机构**: Nankai University, Nanyang Technology University, Singapore, Vivo
+- **会议**: NeurIPS 2025
+
+### Online Functional Tensor Decomposition via Continual Learning for Streaming Data Completion.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/3ba5c2a601f5d35b8072116bd192d174-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Xi Zhang, Yanyi Li, Yisi Luo, Qi Xie, Deyu Meng
+- **🏷️ 机构**: Nanyang Technological University, Xi'an Jiaotong University
+- **会议**: NeurIPS 2025
+
+### Policy Compatible Skill Incremental Learning via Lazy Learning Interface.
+- **链接**: [arXiv:2509.20612](https://arxiv.org/abs/2509.20612) · 📚 被引 0
+- **作者**: Daehee Lee, Dongsu Lee, TaeYoon Kwack, Wonje Choi, Honguk Woo
+- **🏷️ 机构**: SungKyunKwan University, University of Texas at Austin, Sungkyunkwan University
+- **会议**: NeurIPS 2025
+
+### Knowledge Graph Enhanced Generative Multi-modal Models for Class-Incremental Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/7b6d77bf723ab4fed4f88baf544683fb-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Xusheng Cao, Haori Lu, Linlan Huang, Fei Yang, Xialei Liu, Ming-Ming Cheng
+- **🏷️ 机构**: Nankai University, Adobe Systems
+- **会议**: NeurIPS 2025
+
+### Adapter Merging with Centroid Prototype Mapping for Scalable Class-Incremental Learning.
+- **链接**: [arXiv:2412.18219](https://arxiv.org/abs/2412.18219) · 📚 被引 4
+- **作者**: Takuma Fukuda, Hiroshi Kera, Kazuhiko Kawamoto
+- **🏷️ 机构**: Chiba University, Chiba University Zuse Institute Berlin
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning (CL) aims to incrementally train a model on a sequence of tasks while retaining performance on prior ones. However, storing and replaying data is often infeasible due to privacy or security constraints and impractical for arbitrary pre-trained models. Data-free CL seeks to update models without access to previous data. Beyond regularization, we employ model inversion to synthesize data from the trained model, enabling replay without storing samples. Yet, model inversion in predictive models faces two challenges: (1) generating inputs solely from compressed output labels causes drift between synthetic and real data, and replaying such data can erode prior knowledge; (2) inversion is computationally expensive since each step backpropagates through the full model. These issues are amplified in large pre-trained models such as CLIP. To improve efficiency, we propose Per-layer Model Inversion (PMI), inspired by faster convergence in single-layer optimization. PMI provides strong initialization for full-model inversion, substantially reducing iterations. To mitigate feature shift, we model class-wise features via Gaussian distributions and contrastive model, ensuring alignment between synthetic and real features. Combining PMI and feature modeling, our approach enables continual learning of new classes by generating pseudo-images from semantic-aware projected features, achieving strong effectiveness and compatibility across multiple CL settings.
+
+</details>
+
+### Mixture of Noise for Pre-Trained Model-Based Class-Incremental Learning.
+- **链接**: [arXiv:2509.16738](https://arxiv.org/abs/2509.16738) · 📚 被引 1
+- **作者**: Kai Jiang, Zhengyan Shi, Dell Zhang, Hongyuan Zhang, Xuelong Li
+- **🏷️ 机构**: Tsinghua University, Microsoft Research, Institute of Artificial Intelligence (TeleAI), China Telecom
+- **会议**: NeurIPS 2025
+
+### Class-wise Balancing Data Replay for Federated Class-Incremental Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/d611d06e3207330555fbc10810e70163-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Zhuang Qi, Ying-Peng Tang, Lei Meng, Han Yu, Xiaoxiao Li, Xiangxu Meng
+- **🏷️ 机构**: Shandong University, Nanyang Technological University, Nanyang Technological University (NTU)
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Federated continual learning (FCL) tackles scenarios of learning from continuously emerging task data across distributed clients, where the key challenge lies in addressing both temporal forgetting over time and spatial forgetting simultaneously. Recently, prompt-based FCL methods have shown advanced performance through task-wise prompt communication.In this study, we underscore that the existing prompt-based FCL methods are prone to class-wise knowledge coherence between prompts across clients. The class-wise knowledge coherence includes two aspects: (1) intra-class distribution gap across clients, which degrades the learned semantics across prompts, (2) inter-prompt class-wise relevance, which highlights cross-class knowledge confusion. During prompt communication, insufficient class-wise coherence exacerbates knowledge conflicts among new prompts and induces interference with old prompts, intensifying both spatial and temporal forgetting. To address these issues, we propose a novel Class-aware Client Knowledge Interaction (C${}^2$Prompt) method that explicitly enhances class-wise knowledge coherence during prompt communication. Specifically, a local class distribution compensation mechanism (LCDC) is introduced to reduce intra-class distribution disparities across clients, thereby reinforcing intra-class knowledge consistency. Additionally, a class-aware prompt aggregation scheme (CPA) is designed to alleviate inter-class knowledge confusion by selectively strengthening class-relevant knowledge aggregation. Extensive experiments on multiple FCL benchmarks demonstrate that C${}^2$Prompt achieves state-of-the-art performance. Our source code is available at https://github.com/zhoujiahuan1991/NeurIPS2025-C2Prompt
+
+</details>
+
+### Order-Robust Class Incremental Learning: Graph-Driven Dynamic Similarity Grouping.
+- **链接**: [arXiv:2502.20032](https://arxiv.org/abs/2502.20032) · 📚 被引 4
+- **作者**: Guannan Lai, Yujie Li, Xiangkun Wang, Junbo Zhang, Tianrui Li, Xin Yang
+- **🏷️ 机构**: Southwestern University of Finance and Economics,School of Computing and Artificial Intelligence, JD Intelligent Cities Research, Southwest Jiaotong University
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Class Incremental Learning (CIL) aims to enable models to learn new classes sequentially while retaining knowledge of previous ones. Although current methods have alleviated catastrophic forgetting (CF), recent studies highlight that the performance of CIL models is highly sensitive to the order of class arrival, particularly when sequentially introduced classes exhibit high inter-class similarity. To address this critical yet understudied challenge of class order sensitivity, we first extend existing CIL frameworks through theoretical analysis, proving that grouping classes with lower pairwise similarity during incremental phases significantly improves model robustness to order variations. Building on this insight, we propose Graph-Driven Dynamic Similarity Grouping (GDDSG), a novel method that employs graph coloring algorithms to dynamically partition classes into similarity-constrained groups. Each group trains an isolated CIL sub-model and constructs meta-features for class group identification. Experimental results demonstrate that our method effectively addresses the issue of class order sensitivity while achieving optimal performance in both model accuracy and anti-forgetting capability. Our code is available at https://github.com/AIGNLAI/GDDSG.
+
+</details>
+
+### Tripartite Weight-Space Ensemble for Few-Shot Class-Incremental Learning.
+- **链接**: [arXiv:2506.15720](https://arxiv.org/abs/2506.15720) · 📚 被引 0
+- **作者**: Juntae Lee, Munawar Hayat, Sungrack Yun
+- **🏷️ 机构**: Qualcomm AI Research
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Few-shot class incremental learning (FSCIL) enables the continual learning of new concepts with only a few training examples. In FSCIL, the model undergoes substantial updates, making it prone to forgetting previous concepts and overfitting to the limited new examples. Most recent trend is typically to disentangle the learning of the representation from the classification head of the model. A well-generalized feature extractor on the base classes (many examples and many classes) is learned, and then fixed during incremental learning. Arguing that the fixed feature extractor restricts the model's adaptability to new classes, we introduce a novel FSCIL method to effectively address catastrophic forgetting and overfitting issues. Our method enables to seamlessly update the entire model with a few examples. We mainly propose a tripartite weight-space ensemble (Tri-WE). Tri-WE interpolates the base, immediately previous, and current models in weight-space, especially for the classification heads of the models. Then, it collaboratively maintains knowledge from the base and previous models. In addition, we recognize the challenges of distilling generalized representations from the previous model from scarce data. Hence, we suggest a regularization loss term using amplified data knowledge distillation. Simply intermixing the few-shot data, we can produce richer data enabling the distillation of critical knowledge from the previous model. Consequently, we attain state-of-the-art results on the miniImageNet, CUB200, and CIFAR100 datasets.
+
+</details>
+
+### Dynamic Integration of Task-Specific Adapters for Class Incremental Learning.
+- **链接**: [arXiv:2409.14983](https://arxiv.org/abs/2409.14983) · 📚 被引 4
+- **作者**: Jiashuo Li, Shaokun Wang, Bo Qian, Yuhang He, Xing Wei, Qiang Wang et al.
+- **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Software Engineering, Xi&#x2019;an Jiaotong University,College of Artificial Intelligence
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Non-exemplar class Incremental Learning (NECIL) enables models to continuously acquire new classes without retraining from scratch and storing old task exemplars, addressing privacy and storage issues. However, the absence of data from earlier tasks exacerbates the challenge of catastrophic forgetting in NECIL. In this paper, we propose a novel framework called Dynamic Integration of task-specific Adapters (DIA), which comprises two key components: Task-Specific Adapter Integration (TSAI) and Patch-Level Model Alignment. TSAI boosts compositionality through a patch-level adapter integration strategy, which provides a more flexible compositional solution while maintaining low computation costs. Patch-Level Model Alignment maintains feature consistency and accurate decision boundaries via two specialized mechanisms: Patch-Level Distillation Loss (PDL) and Patch-Level Feature Reconstruction method (PFR). Specifically, the PDL preserves feature-level consistency between successive models by implementing a distillation loss based on the contributions of patch tokens to new class learning. The PFR facilitates accurate classifier alignment by reconstructing old class features from previous tasks that adapt to new task knowledge. Extensive experiments validate the effectiveness of our DIA, revealing significant improvements on benchmark datasets in the NECIL setting, maintaining an optimal balance between computational complexity and accuracy.
+
+</details>
+
+### SEC-Prompt: SEmantic Complementary Prompting for Few-Shot Class-Incremental Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_SEC-PromptSEmantic_Complementary_Prompting_for_Few-Shot_Class-Incremental_Learning_CVPR_2025_paper.html)
+- **作者**: Ye Liu, Meng Yang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+### Active Learning for Continual Learning: Keeping the Past Alive in the Present.
+- **链接**: [arXiv:2501.14278](https://arxiv.org/abs/2501.14278)
+- **作者**: Jaehyun Park, Dongmin Park, Jae-Gil Lee
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning (CL) enables deep neural networks to adapt to ever-changing data distributions. In practice, there may be scenarios where annotation is costly, leading to active continual learning (ACL), which performs active learning (AL) for the CL scenarios when reducing the labeling cost by selecting the most informative subset is preferable. However, conventional AL strategies are not suitable for ACL, as they focus solely on learning the new knowledge, leading to catastrophic forgetting of previously learned tasks. Therefore, ACL requires a new AL strategy that can balance the prevention of catastrophic forgetting and the ability to quickly learn new tasks. In this paper, we propose AccuACL, Accumulated informativeness-based Active Continual Learning, by the novel use of the Fisher information matrix as a criterion for sample selection, derived from a theoretical analysis of the Fisher-optimality preservation properties within the framework of ACL, while also addressing the scalability issue of Fisher information-based AL. Extensive experiments demonstrate that AccuACL significantly outperforms AL baselines across various CL algorithms, increasing the average accuracy and forgetting by 23.8% and 17.0%, respectively, on average.
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Federated continual learning (FCL) has garnered increasing attention for its ability to support distributed computation in environments with evolving data distributions. However, the emergence of new tasks introduces both temporal and cross-client shifts, making catastrophic forgetting a critical challenge. Most existing works aggregate knowledge from clients into a global model, which may not enhance client performance since irrelevant knowledge could introduce interference, especially in heterogeneous scenarios. Additionally, directly applying decentralized approaches to FCL suffers from ineffective group formation caused by task changes. To address these challenges, we propose a decentralized dynamic cooperation framework for FCL, where clients establish dynamic cooperative learning coalitions to balance the acquisition of new knowledge and the retention of prior learning, thereby obtaining personalized models. To maximize model performance, each client engages in selective cooperation, dynamically allying with others who offer meaningful performance gains. This results in non-overlapping, variable coalitions at each stage of the task. Moreover, we use coalitional affinity game to simulate coalition relationships between clients. By assessing both client gradient coherence and model similarity, we quantify the client benefits derived from cooperation. We also propose a merge-blocking algorithm and a dynamic cooperative evolution algorithm to achieve cooperative and dynamic equilibrium. Comprehensive experiments demonstrate the superiority of our method compared to various baselines. Code is available at: https://github.com/ydn3229/DCFCL.
+
+</details>
+
+### Theory on Mixture-of-Experts in Continual Learning.
+- **链接**: [arXiv:2406.16437](https://arxiv.org/abs/2406.16437)
+- **作者**: Hongbo Li, Sen Lin, Lingjie Duan, Yingbin Liang, Ness B. Shroff
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
 ### Federated Continual Learning via Orchestrating Multi-Scale Expertise.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/20de741d21f1a038093c6e3ee7c09481-Abstract-Conference.html) · 📚 被引 0
