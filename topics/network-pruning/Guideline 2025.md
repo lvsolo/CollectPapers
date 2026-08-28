@@ -1,45 +1,67 @@
 # Network Pruning — 2025 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 44 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 25 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Efficient LiDAR Reflectance Compression via Scanning Serialization.
-- **链接**: [arXiv:2505.09433](https://arxiv.org/abs/2505.09433)
-- **作者**: Jiahao Zhu, Kang You, Dandan Ding, Zhan Ma
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+### General Compression Framework for Efficient Transformer Object Tracking.
+- **链接**: [arXiv:2409.17564](https://arxiv.org/abs/2409.17564) · [代码](https://github.com/LingyiHongfd/CompressTracker) · 📚 被引 3
+- **作者**: Lingyi Hong, Jinglun Li, Xinyu Zhou, Shilin Yan, Pinxue Guo, Kaixun Jiang et al.
+- **🏷️ 机构**: College of Computer Science and Artificial Intelligence, Fudan University,Shanghai Key Lab of Intelligent Information Processing,China, College of Intelligent Robotics and Advanced Manufacturing, Fudan University,China
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Reflectance attributes in LiDAR point clouds provide essential information for downstream tasks but remain underexplored in neural compression methods. To address this, we introduce SerLiC, a serialization-based neural compression framework to fully exploit the intrinsic characteristics of LiDAR reflectance. SerLiC first transforms 3D LiDAR point clouds into 1D sequences via scan-order serialization, offering a device-centric perspective for reflectance analysis. Each point is then tokenized into a contextual representation comprising its sensor scanning index, radial distance, and prior reflectance, for effective dependencies exploration. For efficient sequential modeling, Mamba is incorporated with a dual parallelization scheme, enabling simultaneous autoregressive dependency capture and fast processing. Extensive experiments demonstrate that SerLiC attains over 2x volume reduction against the original reflectance data, outperforming the state-of-the-art method by up to 22% reduction of compressed bits while using only 2% of its parameters. Moreover, a lightweight version of SerLiC achieves > 10 fps (frames per second) with just 111K parameters, which is attractive for real-world applications.
+> Previous works have attempted to improve tracking efficiency through lightweight architecture design or knowledge distillation from teacher models to compact student trackers. However, these solutions often sacrifice accuracy for speed to a great extent, and also have the problems of complex training process and structural limitations. Thus, we propose a general model compression framework for efficient transformer object tracking, named CompressTracker, to reduce model size while preserving tracking accuracy. Our approach features a novel stage division strategy that segments the transformer layers of the teacher model into distinct stages to break the limitation of model structure. Additionally, we also design a unique replacement training technique that randomly substitutes specific stages in the student model with those from the teacher model, as opposed to training the student model in isolation. Replacement training enhances the student model's ability to replicate the teacher model's behavior and simplifies the training process. To further forcing student model to emulate teacher model, we incorporate prediction guidance and stage-wise feature mimicking to provide additional supervision during the teacher model's compression process. CompressTracker is structurally agnostic, making it compatible with any transformer architecture. We conduct a series of experiment to verify the effectiveness and generalizability of our CompressTracker. Our CompressTracker-SUTrack, compressed from SUTrack, retains about 99 performance on LaSOT (72.2 AUC) while achieves 2.42x speed up. Code is available at https://github.com/LingyiHongfd/CompressTracker.
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing AI-based point cloud compression methods struggle with dependence on specific training data distributions, which limits their real-world deployment. Implicit Neural Representation (INR) methods solve the above problem by encoding overfitted network parameters to the bitstream, resulting in more distribution-agnostic results. However, due to the limitation of encoding time and decoder size, current INR based methods only consider lossy geometry compression. In this paper, we propose the first INR based lossless point cloud geometry compression method called Lossless Implicit Neural Representations for Point Cloud Geometry Compression (LINR-PCGC). To accelerate encoding speed, we design a group of point clouds level coding framework with an effective network initialization strategy, which can reduce around 60% encoding time. A lightweight coding network based on multiscale SparseConv, consisting of scale context extraction, child node prediction, and model compression modules, is proposed to realize fast inference and compact decoder size. Experimental results show that our method consistently outperforms traditional and AI-based methods: for example, with the convergence time in the MVUB dataset, our method reduces the bitstream by approximately 21.21% compared to G-PCC TMC13v23 and 21.95% compared to SparsePCGC. Our project can be seen on https://huangwenjie2023.github.io/LINR-PCGC/.
 
 </details>
 
-### HybridGS: High-Efficiency Gaussian Splatting Data Compression using Dual-Channel Sparse Representation and Point Cloud Encoder.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/yang25ar.html)
-- **作者**: Qi Yang, Le Yang, Geert Van der Auwera, Zhu Li
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Privacy-Shielded Image Compression: Defending Against Exploitation from Vision-Language Pretrained Models.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/shen25k.html)
-- **作者**: Xuelin Shen, Jiayin Xu, Kangsheng Yin, Wenhan Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### CoreMatching: A Co-adaptive Sparse Inference Framework with Token and Neuron Pruning for Comprehensive Acceleration of Vision-Language Models.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/wang25eb.html)
-- **作者**: Qinsi Wang, Hancheng Ye, Ming-Yu Chung, Yudong Liu, Yueqian Lin, Martin Kuo et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+> Previous works have attempted to improve tracking efficiency through lightweight architecture design or knowledge distillation from teacher models to compact student trackers. However, these solutions often sacrifice accuracy for speed to a great extent, and also have the problems of complex training process and structural limitations. Thus, we propose a general model compression framework for efficient transformer object tracking, named CompressTracker, to reduce model size while preserving tracking accuracy. Our approach features a novel stage division strategy that segments the transformer layers of the teacher model into distinct stages to break the limitation of model structure. Additionally, we also design a unique replacement training technique that randomly substitutes specific stages in the student model with those from the teacher model, as opposed to training the student model in isolation. Replacement training enhances the student model's ability to replicate the teacher model's behavior and simplifies the training process. To further forcing student model to emulate teacher model, we incorporate prediction guidance and stage-wise feature mimicking to provide additional supervision during the teacher model's compression process. CompressTracker is structurally agnostic, making it compatible with any transformer architecture. We conduct a series of experiment to verify the effectiveness and generalizability of our CompressTracker. Our CompressTracker-SUTrack, compressed from SUTrack, retains about 99 performance on LaSOT (72.2 AUC) while achieves 2.42x speed up. Code is available at https://github.com/LingyiHongfd/CompressTracker.
 
-### Contradiction Retrieval via Contrastive Learning with Sparsity.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/xu25s.html)
-- **作者**: Haike Xu, Zongyu Lin, Kai-Wei Chang, Yizhou Sun, Piotr Indyk
+</details>
+
+### Cross-Granularity Online Optimization with Masked Compensated Information for Learned Image Compression.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01533) · 📚 被引 1
+- **作者**: Haowei Kuang, Wenhan Yang, Zongming Guo, Jiaying Liu
+- **🏷️ 机构**: Wangxuan Institute of Computer Technology, Peking University,Beijing,China, Pengcheng Laboratory,Shenzhen,China
+- **会议**: ICCV 2025
+
+### LLaMaFlex: Many-in-one LLMs via Generalized Pruning and Weight Sharing.
+- **链接**: [出版页](https://openreview.net/forum?id=AyC4uxx2HW)
+- **作者**: Ruisi Cai, Saurav Muralidharan, Hongxu Yin, Zhangyang Wang, Jan Kautz, Pavlo Molchanov
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper, we propose MixA-Q, a mixed-precision activation quantization framework that leverages intra-layer activation sparsity (a concept widely explored in activation pruning methods) for efficient inference of quantized window-based vision transformers. For a given uniform-bit quantization configuration, MixA-Q separates the batched window computations within Swin blocks and assigns a lower bit width to the activations of less important windows, improving the trade-off between model performance and efficiency. We introduce a Two-Branch Swin Block that processes activations separately in high- and low-bit precision, enabling seamless integration of our method with most quantization-aware training (QAT) and post-training quantization (PTQ) methods, or with simple modifications. Our experimental evaluations over the COCO dataset demonstrate that MixA-Q achieves a training-free 1.35x computational speedup without accuracy loss in PTQ configuration. With QAT, MixA-Q achieves a lossless 1.25x speedup and a 1.53x speedup with only a 1% mAP drop by incorporating activation pruning. Notably, by reducing the quantization error in important regions, our sparsity-aware quantization adaptation improves the mAP of the quantized W4A4 model (with both weights and activations in 4-bit precision) by 0.7%, reducing quantization degradation by 24%.
+
+</details>
+
+> While large-scale text-to-image diffusion models have demonstrated impressive image-generation capabilities, there are significant concerns about their potential misuse for generating unsafe content, violating copyright, and perpetuating societal biases. Recently, the text-to-image generation community has begun addressing these concerns by editing or unlearning undesired concepts from pre-trained models. However, these methods often involve data-intensive and inefficient fine-tuning or utilize various forms of token remapping, rendering them susceptible to adversarial jailbreaks. In this paper, we present a simple and effective training-free approach, ConceptPrune, wherein we first identify critical regions within pre-trained models responsible for generating undesirable concepts, thereby facilitating straightforward concept unlearning via weight pruning. Experiments across a range of concepts including artistic styles, nudity, object erasure, and gender debiasing demonstrate that target concepts can be efficiently erased by pruning a tiny fraction, approximately 0.12% of total weights, enabling multi-concept erasure and robustness against various white-box and black-box adversarial attacks.
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We introduce DC-AR, a novel masked autoregressive (AR) text-to-image generation framework that delivers superior image generation quality with exceptional computational efficiency. Due to the tokenizers' limitations, prior masked AR models have lagged behind diffusion models in terms of quality or efficiency. We overcome this limitation by introducing DC-HT - a deep compression hybrid tokenizer for AR models that achieves a 32x spatial compression ratio while maintaining high reconstruction fidelity and cross-resolution generalization ability. Building upon DC-HT, we extend MaskGIT and create a new hybrid masked autoregressive image generation framework that first produces the structural elements through discrete tokens and then applies refinements via residual tokens. DC-AR achieves state-of-the-art results with a gFID of 5.49 on MJHQ-30K and an overall score of 0.69 on GenEval, while offering 1.5-7.9x higher throughput and 2.0-3.5x lower latency compared to prior leading diffusion and autoregressive models.
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Increasingly expensive training of ever larger models such as Vision Transfomers motivate reusing the vast library of already trained state-of-the-art networks. However, their latency, high computational costs and memory demands pose significant challenges for deployment, especially on resource-constrained hardware. While structured pruning methods can reduce these factors, they often require costly retraining, sometimes for up to hundreds of epochs, or even training from scratch to recover the lost accuracy resulting from the structural modifications. Maintaining the provided performance of trained models after structured pruning and thereby avoiding extensive retraining remains a challenge. To solve this, we introduce Variance-Based Pruning, a simple and structured one-shot pruning technique for efficiently compressing networks, with minimal finetuning. Our approach first gathers activation statistics, which are used to select neurons for pruning. Simultaneously the mean activations are integrated back into the model to preserve a high degree of performance. On ImageNet-1k recognition tasks, we demonstrate that directly after pruning DeiT-Base retains over 70% of its original performance and requires only 10 epochs of fine-tuning to regain 99% of the original accuracy while simultaneously reducing MACs by 35% and model size by 36%, thus speeding up the model by 1.44x. The code is available at: https://github.com/boschresearch/variance-based-pruning
+
+</details>
 
 ### LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding.
 - **链接**: [出版页](https://proceedings.mlr.press/v267/shen25j.html)
@@ -47,283 +69,72 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICML 2025
 
-### DLP: Dynamic Layerwise Pruning in Large Language Models.
-- **链接**: [arXiv:2505.23807](https://arxiv.org/abs/2505.23807) · [代码](https://github.com/ironartisan/DLP)
-- **作者**: Yuli Chen, Bo Cheng, Jiale Han, Yingying Zhang, Yingting Li, Shuhao Zhang
+### Training-Free Dataset Pruning for Instance Segmentation.
+- **链接**: [arXiv:2503.00828](https://arxiv.org/abs/2503.00828) · [代码](https://github.com/he-y/dataset-pruning-for-instance-segmentation)
+- **作者**: Yalun Dai, Lingao Xiao, Ivor W. Tsang, Yang He
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+- **会议**: ICLR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Pruning has recently been widely adopted to reduce the parameter scale and improve the inference efficiency of Large Language Models (LLMs). Mainstream pruning techniques often rely on uniform layerwise pruning strategies, which can lead to severe performance degradation at high sparsity levels. Recognizing the varying contributions of different layers in LLMs, recent studies have shifted their focus toward non-uniform layerwise pruning. However, these approaches often rely on pre-defined values, which can result in suboptimal performance. To overcome these limitations, we propose a novel method called Dynamic Layerwise Pruning (DLP). This approach adaptively determines the relative importance of each layer by integrating model weights with input activation information, assigning pruning rates accordingly. Experimental results show that DLP effectively preserves model performance at high sparsity levels across multiple LLMs. Specifically, at 70% sparsity, DLP reduces the perplexity of LLaMA2-7B by 7.79 and improves the average accuracy by 2.7% compared to state-of-the-art methods. Moreover, DLP is compatible with various existing LLM compression techniques and can be seamlessly integrated into Parameter-Efficient Fine-Tuning (PEFT). We release the code at https://github.com/ironartisan/DLP to facilitate future research.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Visual Autoregressive (VAR) modeling has gained popularity for its shift towards next-scale prediction. However, existing VAR paradigms process the entire token map at each scale step, leading to the complexity and runtime scaling dramatically with image resolution. To address this challenge, we propose FastVAR, a post-training acceleration method for efficient resolution scaling with VARs. Our key finding is that the majority of latency arises from the large-scale step where most tokens have already converged. Leveraging this observation, we develop the cached token pruning strategy that only forwards pivotal tokens for scale-specific modeling while using cached tokens from previous scale steps to restore the pruned slots. This significantly reduces the number of forwarded tokens and improves the efficiency at larger resolutions. Experiments show the proposed FastVAR can further speedup FlashAttention-accelerated VAR by 2.7$\times$ with negligible performance drop of <1%. We further extend FastVAR to zero-shot generation of higher resolution images. In particular, FastVAR can generate one 2K image with 15GB memory footprints in 1.5s on a single NVIDIA 3090 GPU. Code is available at https://github.com/csguoh/FastVAR.
 
 </details>
 
-### Distilling the Knowledge in Data Pruning.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/ben-baruch25a.html)
-- **作者**: Emanuel Ben Baruch, Adam Botach, Igor Kviatkovsky, Manoj Aggarwal, Gérard G. Medioni
+### DARE the Extreme: Revisiting Delta-Parameter Pruning For Fine-Tuned Models.
+- **链接**: [arXiv:2410.09344](https://arxiv.org/abs/2410.09344)
+- **作者**: Wenlong Deng, Yize Zhao, Vala Vakilian, Minghui Chen, Xiaoxiao Li, Christos Thrampoulidis
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### A Dynamical Systems-Inspired Pruning Strategy for Addressing Oversmoothing in Graph Attention Networks.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/chakraborty25a.html)
-- **作者**: Biswadeep Chakraborty, Harshit Kumar, Saibal Mukhopadhyay
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Lightweight Dataset Pruning without Full Training via Example Difficulty and Prediction Uncertainty.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/cho25e.html)
-- **作者**: Yeseul Cho, Baekrok Shin, Changmin Kang, Chulhee Yun
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Compressing tree ensembles through Level-wise Optimization and Pruning.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/devos25a.html)
-- **作者**: Laurens Devos, Timo Martens, Deniz Can Oruc, Wannes Meert, Hendrik Blockeel, Jesse Davis
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### SlimLLM: Accurate Structured Pruning for Large Language Models.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/guo25a.html)
-- **作者**: Jialong Guo, Xinghao Chen, Yehui Tang, Yunhe Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Optimal Decision Tree Pruning Revisited: Algorithms and Complexity.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/harviainen25a.html)
-- **作者**: Juha Harviainen, Frank Sommer, Manuel Sorge, Stefan Szeider
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Olica: Efficient Structured Pruning of Large Language Models without Retraining.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/he25m.html)
-- **作者**: Jiujun He, Huazhen Lin
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Instruction-Following Pruning for Large Language Models.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/hou25b.html)
-- **作者**: Bairu Hou, Qibin Chen, Jianyu Wang, Guoli Yin, Chong Wang, Nan Du et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### SAFE: Finding Sparse and Flat Minima to Improve Pruning.
-- **链接**: [arXiv:2506.06866](https://arxiv.org/abs/2506.06866)
-- **作者**: Dongyeop Lee, Kwanhee Lee, Jinseok Chung, Namhoon Lee
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+- **会议**: ICLR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Sparsifying neural networks often suffers from seemingly inevitable performance degradation, and it remains challenging to restore the original performance despite much recent progress. Motivated by recent studies in robust optimization, we aim to tackle this problem by finding subnetworks that are both sparse and flat at the same time. Specifically, we formulate pruning as a sparsity-constrained optimization problem where flatness is encouraged as an objective. We solve it explicitly via an augmented Lagrange dual approach and extend it further by proposing a generalized projection operation, resulting in novel pruning methods called SAFE and its extension, SAFE$^+$. Extensive evaluations on standard image classification and language modeling tasks reveal that SAFE consistently yields sparse networks with improved generalization performance, which compares competitively to well-established baselines. In addition, SAFE demonstrates resilience to noisy data, making it well-suited for real-world conditions.
+> Diffusion models are renowned for their generative capabilities, yet their pretraining processes exhibit distinct phases of learning speed that have been entirely overlooked in prior post-training acceleration efforts in the community. In this study, we introduce a novel framework called MosaicDiff that aligns diffusion pretraining dynamics with post-training sampling acceleration via trajectory-aware structural pruning. Our approach leverages the observation that the middle, fast-learning stage of diffusion pretraining requires more conservative pruning to preserve critical model features, while the early and later, slow-learning stages benefit from a more aggressive pruning strategy. This adaptive pruning mechanism is the first to explicitly mirror the inherent learning speed variations of diffusion pretraining, thereby harmonizing the model's inner training dynamics with its accelerated sampling process. Extensive experiments on DiT and SDXL demonstrate that our method achieves significant speed-ups in sampling without compromising output quality, outperforming previous state-of-the-art methods by large margins, also providing a new viewpoint for more efficient and robust training-free diffusion acceleration.
 
 </details>
 
-### BaWA: Automatic Optimizing Pruning Metric for Large Language Models with Balanced Weight and Activation.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/liu25cs.html)
-- **作者**: Lian Liu, Xiandong Zhao, Guanchen Li, Dong Li, Mengdi Wang, Yinhe Han et al.
+### Libra-Merging: Importance-redundancy and Pruning-merging Trade-off for Acceleration Plug-in in Large Vision-Language Model.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yang_Libra-Merging_Importance-redundancy_and_Pruning-merging_Trade-off_for_Acceleration_Plug-in_in_Large_CVPR_2025_paper.html)
+- **作者**: Longrong Yang, Dong Shen, Chaoxiang Cai, Kaibing Chen, Fan Yang, Tingting Gao et al.
+- **🏷️ 机构**: ZJU
+- **会议**: CVPR 2025
+
+### ATP-LLaVA: Adaptive Token Pruning for Large Vision Language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ye_ATP-LLaVA_Adaptive_Token_Pruning_for_Large_Vision_Language_Models_CVPR_2025_paper.html)
+- **作者**: Xubing Ye, Yukang Gan, Yixiao Ge, Xiao-Ping Zhang, Yansong Tang
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICML 2025
 
-### Pruning for GNNs: Lower Complexity with Comparable Expressiveness.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/ma25e.html)
-- **作者**: Dun Ma, Jianguo Chen, Wenguo Yang, Suixiang Gao, Shengminjie Chen
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+</details>
 
-### CLOVER: Cross-Layer Orthogonal Vectors Pruning.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/meng25d.html)
-- **作者**: Fanxu Meng, Pingzhi Tang, Fan Jiang, Muhan Zhang
+### Adaptive Pruning of Pretrained Transformer via Differential Inclusions.
+- **链接**: [arXiv:2501.03289](https://arxiv.org/abs/2501.03289)
+- **作者**: Yizhuo Ding, Ke Fan, Yikai Wang, Xinwei Sun, Yanwei Fu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### On the Dynamic Regret of Following the Regularized Leader: Optimism with History Pruning.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/mhaisen25a.html)
-- **作者**: Naram Mhaisen, George Iosifidis
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Earley-Driven Dynamic Pruning for Efficient Structured Decoding.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/sun25v.html)
-- **作者**: Xintong Sun, Chi Wei, Minghao Tian, Shiwen Ni
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Prompt-based Depth Pruning of Large Language Models.
-- **链接**: [arXiv:2502.04348](https://arxiv.org/abs/2502.04348)
-- **作者**: Juyun Wee, Minjae Park, Jaeho Lee
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+- **会议**: ICLR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Depth pruning aims to reduce the inference cost of a large language model without any hardware-specific complications, by simply removing several less important transformer blocks. However, our empirical findings suggest that the importance of a transformer block may be highly task-dependent -- a block that is crucial for a task can be removed without degrading the accuracy on another task. Based on this observation, we develop a dynamic depth pruning algorithm, coined PuDDing (Prompt-routed Dynamic Depth Pruning), which determines which blocks to omit from the model based on the input prompt. PuDDing operates by training a lightweight router to predict the best omission set among a set of options, where this option set has also been constructed in a data-driven manner. Empirical results on commonsense reasoning benchmarks demonstrate that PuDDing effectively accelerates the inference language models, and achieves better on-task performance than static depth pruning baselines.
+> Vision language models (VLMs) demonstrate strong capabilities in jointly processing visual and textual data. However, they often incur substantial computational overhead due to redundant visual information, particularly in long-form video scenarios. Existing approaches predominantly focus on either vision token pruning, which may overlook spatio-temporal dependencies, or keyframe selection, which identifies informative frames but discards others, thus disrupting contextual continuity. In this work, we propose KVTP (Keyframe-oriented Vision Token Pruning), a novel framework that overcomes the drawbacks of token pruning and keyframe selection. By adaptively assigning pruning rates based on frame relevance to the query, KVTP effectively retains essential contextual information while significantly reducing redundant computation. To thoroughly evaluate the long-form video understanding capacities of VLMs, we curated and reorganized subsets from VideoMME, EgoSchema, and NextQA into a unified benchmark named SparseKV-QA that highlights real-world scenarios with sparse but crucial events. Our experiments with VLMs of various scales show that KVTP can reduce token usage by 80% without compromising spatiotemporal and contextual consistency, significantly cutting computation while maintaining the performance. These results demonstrate our approach's effectiveness in efficient long-video processing, facilitating more scalable VLM deployment.
 
 </details>
 
-### Discrepancy Minimization in Input-Sparsity Time.
-- **链接**: [arXiv:2210.12468](https://arxiv.org/abs/2210.12468)
-- **作者**: Yichuan Deng, Xiaoyu Li, Zhao Song, Omri Weinstein
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> A recent work by [Larsen, SODA 2023] introduced a faster combinatorial alternative to Bansal's SDP algorithm for finding a coloring $x \in \{-1, 1\}^n$ that approximately minimizes the discrepancy $\mathrm{disc}(A, x) := | A x |_{\infty}$ of a real-valued $m \times n$ matrix $A$. Larsen's algorithm runs in $\widetilde{O}(mn^2)$ time compared to Bansal's $\widetilde{O}(mn^{4.5})$-time algorithm, with a slightly weaker logarithmic approximation ratio in terms of the hereditary discrepancy of $A$ [Bansal, FOCS 2010]. We present a combinatorial $\widetilde{O}(\mathrm{nnz}(A) + n^3)$-time algorithm with the same approximation guarantee as Larsen's, optimal for tall matrices where $m = \mathrm{poly}(n)$. Using a more intricate analysis and fast matrix multiplication, we further achieve a runtime of $\widetilde{O}(\mathrm{nnz}(A) + n^{2.53})$, breaking the cubic barrier for square matrices and surpassing the limitations of linear-programming approaches [Eldan and Singh, RS&A 2018]. Our algorithm relies on two key ideas: (i) a new sketching technique for finding a projection matrix with a short $\ell_2$-basis using implicit leverage-score sampling, and (ii) a data structure for efficiently implementing the iterative Edge-Walk partial-coloring algorithm [Lovett and Meka, SICOMP 2015], and using an alternative analysis to enable ''lazy'' batch updates with low-rank corrections. Our results nearly close the computational gap between real-valued and binary matrices, for which input-sparsity time coloring was recently obtained by [Jain, Sah and Sawhney, SODA 2023].
+> Vision encoders serve as the cornerstone of multimodal understanding. Single-encoder architectures like CLIP exhibit inherent constraints in generalizing across diverse multimodal tasks, while recent multi-encoder fusion methods introduce prohibitive computational overhead to achieve superior performance using complementary visual representations from multiple vision encoders. To address this, we propose a progressive pruning framework, namely Multi-Encoder collaboraTivE tOken pRuning (METEOR), that eliminates redundant visual tokens across the encoding, fusion, and decoding stages for multi-encoder MLLMs. For multi-vision encoding, we discard redundant tokens within each encoder via a rank guided collaborative token assignment strategy. Subsequently, for multi-vision fusion, we combine the visual features from different encoders while reducing cross-encoder redundancy with cooperative pruning. Finally, we propose an adaptive token pruning method in the LLM decoding stage to further discard irrelevant tokens based on the text prompts with dynamically adjusting pruning ratios for specific task demands. To our best knowledge, this is the first successful attempt that achieves an efficient multi-encoder based vision language model with multi-stage pruning strategies. Extensive experiments on 11 benchmarks demonstrate the effectiveness of our proposed approach. Compared with EAGLE, a typical multi-encoder MLLMs, METEOR reduces 76% visual tokens with only 0.3% performance drop in average. The code is available at https://github.com/YuchenLiu98/METEOR.
 
 </details>
 
-### Pivoting Factorization: A Compact Meta Low-Rank Representation of Sparsity for Efficient Inference in Large Language Models.
-- **链接**: [arXiv:2501.19090](https://arxiv.org/abs/2501.19090) · [代码](https://github.com/biomedical-cybernetics/pivoting-factorization)
-- **作者**: Jialin Zhao, Yingtao Zhang, Carlo Vittorio Cannistraci
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The rapid growth of Large Language Models has driven demand for effective model compression techniques to reduce memory and computation costs. Low-rank pruning has gained attention for its GPU compatibility across all densities. However, low-rank pruning struggles to match the performance of semi-structured pruning, often doubling perplexity at similar densities. In this paper, we propose Pivoting Factorization (PIFA), a novel lossless meta low-rank representation that unsupervisedly learns a compact form of any low-rank representation, effectively eliminating redundant information. PIFA identifies pivot rows (linearly independent rows) and expresses non-pivot rows as linear combinations, achieving 24.2% additional memory savings and 24.6% faster inference over low-rank layers at rank = 50% of dimension. To mitigate the performance degradation caused by low-rank pruning, we introduce a novel, retraining-free reconstruction method that minimizes error accumulation (M). MPIFA, combining M and PIFA into an end-to-end framework, significantly outperforms existing low-rank pruning methods, and achieves performance comparable to semi-structured pruning, while surpassing it in GPU efficiency and compatibility. Our code is available at https://github.com/biomedical-cybernetics/pivoting-factorization.
+> Text-to-image (T2I) diffusion models have demonstrated impressive image generation capabilities. Still, their computational intensity prohibits resource-constrained organizations from deploying T2I models after fine-tuning them on their internal target data. While pruning techniques offer a potential solution to reduce the computational burden of T2I models, static pruning methods use the same pruned model for all input prompts, overlooking the varying capacity requirements of different prompts. Dynamic pruning addresses this issue by utilizing a separate sub-network for each prompt, but it prevents batch parallelism on GPUs. To overcome these limitations, we introduce Adaptive Prompt-Tailored Pruning (APTP), a novel prompt-based pruning method designed for T2I diffusion models. Central to our approach is a prompt router model, which learns to determine the required capacity for an input text prompt and routes it to an architecture code, given a total desired compute budget for prompts. Each architecture code represents a specialized model tailored to the prompts assigned to it, and the number of codes is a hyperparameter. We train the prompt router and architecture codes using contrastive learning, ensuring that similar prompts are mapped to nearby codes. Further, we employ optimal transport to prevent the codes from collapsing into a single one. We demonstrate APTP's effectiveness by pruning Stable Diffusion (SD) V2.1 using CC3M and COCO as target datasets. APTP outperforms the single-model pruning baselines in terms of FID, CLIP, and CMMD scores. Our analysis of the clusters learned by APTP reveals they are semantically meaningful. We also show that APTP can automatically discover previously empirically found challenging prompts for SD, e.g. prompts for generating text images, assigning them to higher capacity codes.
 
 </details>
 
-### Parameters vs FLOPs: Scaling Laws for Optimal Sparsity for Mixture-of-Experts Language Models.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/abnar25a.html)
-- **作者**: Samira Abnar, Harshay Shah, Dan Busbridge, Alaaeldin El-Nouby, Joshua M. Susskind, Vimal Thilak
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Position: A Theory of Deep Learning Must Include Compositional Sparsity.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/danhofer25a.html)
-- **作者**: David A. Danhofer, Davide D'Ascenzo, Rafael Dubach, Tomaso A. Poggio
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### HashAttention: Semantic Sparsity for Faster Inference.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/desai25a.html)
-- **作者**: Aditya Desai, Shuo Yang, Alejandro Cuadron, Matei Zaharia, Joseph E. Gonzalez, Ion Stoica
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### SHIELD: Multi-task Multi-distribution Vehicle Routing Solver with Sparsity and Hierarchy.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/goh25a.html)
-- **作者**: Yong Liang Goh, Zhiguang Cao, Yining Ma, Jianan Zhou, Mohammed Haroon Dupty, Wee Sun Lee
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### The Role of Sparsity for Length Generalization in LLMs.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/golowich25a.html)
-- **作者**: Noah Golowich, Samy Jelassi, David Brandfonbrener, Sham M. Kakade, Eran Malach
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Determining Layer-wise Sparsity for Large Language Models Through a Theoretical Perspective.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/huang25ax.html)
-- **作者**: Weizhong Huang, Yuxin Zhang, Xiawu Zheng, Fei Chao, Rongrong Ji
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### SparseLoRA: Accelerating LLM Fine-Tuning with Contextual Sparsity.
-- **链接**: [arXiv:2506.16500](https://arxiv.org/abs/2506.16500)
-- **作者**: Samir Khaki, Xiuyu Li, Junxian Guo, Ligeng Zhu, Konstantinos N. Plataniotis, Amir Yazdanbakhsh et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Fine-tuning LLMs is both computationally and memory-intensive. While parameter-efficient fine-tuning methods, such as QLoRA and DoRA, reduce the number of trainable parameters and lower memory usage, they do not decrease computational cost. In some cases, they may even slow down fine-tuning. In this paper, we introduce SparseLoRA, a method that accelerates LLM fine-tuning through contextual sparsity. We propose a lightweight, training-free SVD sparsity estimator that dynamically selects a sparse subset of weights for loss and gradient computation. Also, we systematically analyze and address sensitivity across layers, tokens, and training steps. Our experimental results show that SparseLoRA reduces computational cost by up to 2.2 times and a measured speedup of up to 1.6 times while maintaining accuracy across various downstream tasks, including commonsense and arithmetic reasoning, code generation, and instruction following.
-
-</details>
-
-### FlashTP: Fused, Sparsity-Aware Tensor Product for Machine Learning Interatomic Potentials.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/lee25l.html)
-- **作者**: Seung Yul Lee, Hojoon Kim, Yutack Park, Dawoon Jeong, Seungwu Han, Yeonhong Park et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Proxsparse: Regularized Learning of Semi-Structured Sparsity masks for Pretrained LLMS.
-- **链接**: [arXiv:2502.00258](https://arxiv.org/abs/2502.00258)
-- **作者**: Hongyi Liu, Rajarshi Saha, Zhen Jia, Youngsuk Park, Jiaji Huang, Shoham Sabach et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Large Language Models (LLMs) have demonstrated exceptional performance in natural language processing tasks, yet their massive size makes serving them inefficient and costly. Semi-structured pruning has emerged as an effective method for model acceleration, but existing approaches are suboptimal because they focus on local, layer-wise optimizations using heuristic rules, failing to leverage global feedback. We present ProxSparse, a learning-based framework for mask selection enabled by regularized optimization. ProxSparse transforms the rigid, non-differentiable mask selection process into a smoother optimization procedure, allowing gradual mask exploration with flexibility. ProxSparse does not involve additional weight updates once the mask is determined. Our extensive evaluations on 7 widely used models show that ProxSparse consistently outperforms previously proposed semi-structured mask selection methods with significant improvement, demonstrating the effectiveness of our learned approach towards semi-structured pruning.
-
-</details>
-
-### Sparsing Law: Towards Large Language Models with Greater Activation Sparsity.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/luo25i.html)
-- **作者**: Yuqi Luo, Chenyang Song, Xu Han, Yingfa Chen, Chaojun Xiao, Xiaojun Meng et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Efficient and Scalable Density Functional Theory Hamiltonian Prediction through Adaptive Sparsity.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/luo25l.html)
-- **作者**: Erpai Luo, Xinran Wei, Lin Huang, Yunyang Li, Han Yang, Zaishuo Xia et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Network Sparsity Unlocks the Scaling Potential of Deep Reinforcement Learning.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/ma25l.html)
-- **作者**: Guozheng Ma, Lu Li, Zilin Wang, Li Shen, Pierre-Luc Bacon, Dacheng Tao
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### SecEmb: Sparsity-Aware Secure Federated Learning of On-Device Recommender System with Large Embedding.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/mai25a.html)
-- **作者**: Peihua Mai, Youlong Ding, Ziyan Lyu, Minxin Du, Yan Pang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### SLiM: One-shot Quantization and Sparsity with Low-rank Approximation for LLM Weight Compression.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/mozaffari25a.html)
-- **作者**: Mohammad Mozaffari, Amir Yazdanbakhsh, Maryam Mehri Dehnavi
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Beyond Minimax Rates in Group Distributionally Robust Optimization via a Novel Notion of Sparsity.
-- **链接**: [arXiv:2410.00690](https://arxiv.org/abs/2410.00690)
-- **作者**: Quan M. Nguyen, Nishant A. Mehta, Cristóbal Guzmán
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The minimax sample complexity of group distributionally robust optimization (GDRO) has been determined up to a $\log(K)$ factor, where $K$ is the number of groups. In this work, we venture beyond the minimax perspective via a novel notion of sparsity that we dub $(λ, β)$-sparsity. In short, this condition means that at any parameter $θ$, there is a set of at most $β$ groups whose risks at $θ$ all are at least $λ$ larger than the risks of the other groups. To find an $ε$-optimal $θ$, we show via a novel algorithm and analysis that the $ε$-dependent term in the sample complexity can swap a linear dependence on $K$ for a linear dependence on the potentially much smaller $β$. This improvement leverages recent progress in sleeping bandits, showing a fundamental connection between the two-player zero-sum game optimization framework for GDRO and per-action regret bounds in sleeping bandits. We next show an adaptive algorithm which, up to log factors, gets a sample complexity bound that adapts to the best $(λ, β)$-sparsity condition that holds. We also show how to get a dimension-free semi-adaptive sample complexity bound with a computationally efficient method. Finally, we demonstrate the practicality of the $(λ, β)$-sparsity condition and the improved sample efficiency of our algorithms on both synthetic and real-life datasets.
-
-</details>
-
-### Accelerating Linear Recurrent Neural Networks for the Edge with Unstructured Sparsity.
-- **链接**: [arXiv:2502.01330](https://arxiv.org/abs/2502.01330)
-- **作者**: Alessandro Pierro, Steven Abreu, Jonathan Timcheck, Philipp Stratmann, Andreas Wild, Sumit Bam Shrestha
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Linear recurrent neural networks enable powerful long-range sequence modeling with constant memory usage and time-per-token during inference. These architectures hold promise for streaming applications at the edge, but deployment in resource-constrained environments requires hardware-aware optimizations to minimize latency and energy consumption. Unstructured sparsity offers a compelling solution, enabling substantial reductions in compute and memory requirements--when accelerated by compatible hardware platforms. In this paper, we conduct a scaling study to investigate the Pareto front of performance and efficiency across inference compute budgets. We find that highly sparse linear RNNs consistently achieve better efficiency-performance trade-offs than dense baselines, with 2x less compute and 36% less memory at iso-accuracy. Our models achieve state-of-the-art results on a real-time streaming task for audio denoising. By quantizing our sparse models to fixed-point arithmetic and deploying them on the Intel Loihi 2 neuromorphic chip for real-time processing, we translate model compression into tangible gains of 42x lower latency and 149x lower energy consumption compared to a dense model on an edge GPU. Our findings showcase the transformative potential of unstructured sparsity, paving the way for highly efficient recurrent neural networks in real-world, resource-constrained environments.
-
-</details>
-
-### Sparse Video-Gen: Accelerating Video Diffusion Transformers with Spatial-Temporal Sparsity.
-- **链接**: [出版页](https://proceedings.mlr.press/v267/xi25c.html)
-- **作者**: Haocheng Xi, Shuo Yang, Yilong Zhao, Chenfeng Xu, Muyang Li, Xiuyu Li et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-### Leveraging Sparsity for Sample-Efficient Preference Learning: A Theoretical Perspective.
-- **链接**: [arXiv:2501.18282](https://arxiv.org/abs/2501.18282)
-- **作者**: Yunzhen Yao, Lie He, Michael Gastpar
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> This paper considers the sample-efficiency of preference learning, which models and predicts human choices based on comparative judgments. The minimax optimal estimation error rate $Θ(d/n)$ in classical estimation theory requires that the number of samples $n$ scales linearly with the dimensionality of the feature space $d$. However, the high dimensionality of the feature space and the high cost of collecting human-annotated data challenge the efficiency of traditional estimation methods. To remedy this, we leverage sparsity in the preference model and establish sharp error rates. We show that under the sparse random utility model, where the parameter of the reward function is $k$-sparse, the minimax optimal rate can be reduced to $Θ(k/n \log(d/k))$. Furthermore, we analyze the $\ell_{1}$-regularized estimator and show that it achieves near-optimal rate under mild assumptions on the Gram matrix. Experiments on synthetic data and LLM alignment data validate our theoretical findings, showing that sparsity-aware methods significantly reduce sample complexity and improve prediction accuracy.
-
-</details>
-
-## 跨领域论文（完整笔记在其他领域）
-
-- 3D-LMVIC: Learning-based Multi-View Image Compression with 3D Gaussian Geometric Priors. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
-- Compression via Pre-trained Transformers: A Study on Byte-Level Multimodal Data. → [multimodal](../multimodal/Guideline%202025.md)
+- TopV: Compatible Token Pruning with Inference Time Optimization for Fast and Low-Memory Multimodal Vision Language Model. → [multimodal](../multimodal/Guideline%202025.md)
+- DivPrune: Diversity-based Visual Token Pruning for Large Multimodal Models. → [multimodal](../multimodal/Guideline%202025.md)
+- CASP: Compression of Large Multimodal Models Based on Attention Sparsity. → [multimodal](../multimodal/Guideline%202025.md)
+- FlashSloth : Lightning Multimodal Large Language Models via Embedded Visual Compression. → [multimodal](../multimodal/Guideline%202025.md)
+- Text-guided Sparse Voxel Pruning for Efficient 3D Visual Grounding. → [3d-detection](../3d-detection/Guideline%202025.md)
