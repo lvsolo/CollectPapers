@@ -5,17 +5,17 @@
 
 > 同领域其他年份: 
 
-### Geometry and Uncertainty-Aware 3D Point Cloud Class-Incremental Semantic Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02084) · 📚 被引 29
-- **作者**: Yuwei Yang, Munawar Hayat, Zhao Jin, Chao Ren, Yinjie Lei
-- **🏷️ 机构**: Sichuan University, Monash University
-- **会议**: CVPR 2023
+### Alleviating Catastrophic Forgetting of Incremental Object Detection via Within-Class and Between-Class Knowledge Distillation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01732) · 📚 被引 18
+- **作者**: Mengxue Kang, Jinpeng Zhang, Jinming Zhang, Xiashuang Wang, Yang Chen, Zhe Ma et al.
+- **🏷️ 机构**: Intelligent Science &amp; Technology Academy of CASIC,Beijing,China,100043, Xinjiang University,Xinjiang,China,830046, The Second Academy of China Aerospace Science and Industry Corporation,Beijing,China,100854
+- **会议**: ICCV 2023
 
-### Learning with Fantasy: Semantic-Aware Virtual Contrastive Constraint for Few-Shot Class-Incremental Learning.
-- **链接**: [arXiv:2304.00426](https://arxiv.org/abs/2304.00426) · [代码](https://github.com/zysong0113/SAVC) · 📚 被引 119
-- **作者**: Zeyin Song, Yifan Zhao, Yujun Shi, Peixi Peng, Li Yuan, Yonghong Tian
-- **🏷️ 机构**: School of Electronic and Computer Engineering, Peking University, School of Computer Science, Peking University, National University of Singapore
-- **会议**: CVPR 2023
+### Label-Efficient Online Continual Object Detection in Streaming Video.
+- **链接**: [arXiv:2206.00309](https://arxiv.org/abs/2206.00309) · [代码](https://github.com/showlab/Efficient-CLS) · 📚 被引 15
+- **作者**: Jay Zhangjie Wu, David Junhao Zhang, Wynne Hsu, Mengmi Zhang, Mike Zheng Shou
+- **🏷️ 机构**: Show Lab, National University of Singapore, Nanyang Technological University,School of Computer Science and Engineering,Singapore
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -23,11 +23,7 @@
 
 </details>
 
-### PCR: Proxy-Based Contrastive Replay for Online Class-Incremental Continual Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02322) · 📚 被引 74
-- **作者**: Huiwei Lin, Baoquan Zhang, Shanshan Feng, Xutao Li, Yunming Ye
-- **🏷️ 机构**: Harbin Institute of Technology,Shenzhen
-- **会议**: CVPR 2023
+</details>
 
 ### CODA-Prompt: COntinual Decomposed Attention-Based Prompting for Rehearsal-Free Continual Learning.
 - **链接**: [arXiv:2211.13218](https://arxiv.org/abs/2211.13218) · [代码](https://github.com/GT-RIPL/CODA-Prompt) · 📚 被引 320
@@ -123,61 +119,29 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01534)
 - **作者**: Divyam Madaan, Hongxu Yin, Wonmin Byeon, Jan Kautz, Pavlo Molchanov
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
+- **会议**: ICCV 2023
 
-### Bilateral Memory Consolidation for Continual Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01538) · 📚 被引 16
-- **作者**: Xing Nie, Shixiong Xu, Xiyan Liu, Gaofeng Meng, Chunlei Huo, Shiming Xiang
-- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences,State Key Laboratory of Multimodal Artificial Intelligence Systems, Baidu Inc.,China
-- **会议**: CVPR 2023
-
-### Computationally Budgeted Continual Learning: What Does Matter?
-- **链接**: [arXiv:2303.11165](https://arxiv.org/abs/2303.11165) · [代码](https://github.com/drimpossible/BudgetCL) · 📚 被引 33
-- **作者**: Ameya Prabhu, Hasan Abed Al Kader Hammoud, Puneet K. Dokania, Philip H. S. Torr, Ser-Nam Lim, Bernard Ghanem et al.
-- **🏷️ 机构**: University of Oxford, King Abdullah University of Science and Technology (KAUST), Meta AI
-- **会议**: CVPR 2023
+### Multimodal Parameter-Efficient Few-Shot Class Incremental Learning.
+- **链接**: [arXiv:2303.04751](https://arxiv.org/abs/2303.04751) · 📚 被引 37
+- **作者**: Marco D'Alessandro, Alberto Alonso, Enrique Calabrés, Mikel Galar
+- **🏷️ 机构**: Neuraptic AI, Public University of Navarra
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual Learning (CL) aims to sequentially train models on streams of incoming data that vary in distribution by preserving previous knowledge while adapting to new data. Current CL literature focuses on restricted access to previously seen data, while imposing no constraints on the computational budget for training. This is unreasonable for applications in-the-wild, where systems are primarily constrained by computational and time budgets, not storage. We revisit this problem with a large-scale benchmark and analyze the performance of traditional CL approaches in a compute-constrained setting, where effective memory samples used in training can be implicitly restricted as a consequence of limited computation. We conduct experiments evaluating various CL sampling strategies, distillation losses, and partial fine-tuning on two large-scale datasets, namely ImageNet2K and Continual Google Landmarks V2 in data incremental, class incremental, and time incremental settings. Through extensive experiments amounting to a total of over 1500 GPU-hours, we find that, under compute-constrained setting, traditional CL approaches, with no exception, fail to outperform a simple minimal baseline that samples uniformly from memory. Our conclusions are consistent in a different number of stream time steps, e.g., 20 to 200, and under several computational budgets. This suggests that most existing CL methods are particularly too computationally expensive for realistic budgeted deployment. Code for this project is available at: https://github.com/drimpossible/BudgetCL.
+> Few-Shot Class Incremental Learning (FSCIL) is a challenging continual learning task, where limited training examples are available during several learning sessions. To succeed in this task, it is necessary to avoid over-fitting new classes caused by biased distributions in the few-shot training sets. The general approach to address this issue involves enhancing the representational capability of a pre-defined backbone architecture by adding special modules for backward compatibility with older classes. However, this approach has not yet solved the dilemma of ensuring high classification accuracy over time while reducing the gap between the performance obtained on larger training sets and the smaller ones. In this work, we propose an alternative approach called Continual Parameter-Efficient CLIP (CPE-CLIP) to reduce the loss of information between different learning sessions. Instead of adapting additional modules to address information loss, we leverage the vast knowledge acquired by CLIP in large-scale pre-training and its effectiveness in generalizing to new concepts. Our approach is multimodal and parameter-efficient, relying on learnable prompts for both the language and vision encoders to enable transfer learning across sessions. We also introduce prompt regularization to improve performance and prevent forgetting. Our experimental results demonstrate that CPE-CLIP significantly improves FSCIL performance compared to state-of-the-art proposals while also drastically reducing the number of learnable parameters and training costs.
 
 </details>
 
-### PIVOT: Prompting for Video Continual Learning.
-- **链接**: [arXiv:2212.04842](https://arxiv.org/abs/2212.04842) · 📚 被引 44
-- **作者**: Andrés Villa, Juan León Alcázar, Motasem Alfarra, Kumail Alhamoud, Julio Hurtado, Fabian Caba Heilbron et al.
-- **🏷️ 机构**: Pontificia Universidad Cat&#x00F3;lica de Chile, King Abdullah University of Science and Technology (KAUST), University of Pisa
-- **会议**: CVPR 2023
+### On the Effectiveness of LayerNorm Tuning for Continual Learning in Vision Transformers.
+- **链接**: [arXiv:2308.09610](https://arxiv.org/abs/2308.09610) · 📚 被引 9
+- **作者**: Thomas De Min, Massimiliano Mancini, Karteek Alahari, Xavier Alameda-Pineda, Elisa Ricci
+- **🏷️ 机构**: University of Trento, Inria, Univ. Grenoble Alpes,CNRS, Grenoble INP, LJK,Grenoble,France,38000
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Modern machine learning pipelines are limited due to data availability, storage quotas, privacy regulations, and expensive annotation processes. These constraints make it difficult or impossible to train and update large-scale models on such dynamic annotated sets. Continual learning directly approaches this problem, with the ultimate goal of devising methods where a deep neural network effectively learns relevant patterns for new (unseen) classes, without significantly altering its performance on previously learned ones. In this paper, we address the problem of continual learning for video data. We introduce PIVOT, a novel method that leverages extensive knowledge in pre-trained models from the image domain, thereby reducing the number of trainable parameters and the associated forgetting. Unlike previous methods, ours is the first approach that effectively uses prompting mechanisms for continual learning without any in-domain pre-training. Our experiments show that PIVOT improves state-of-the-art methods by a significant 27% on the 20-task ActivityNet setup.
-
-</details>
-
-### MetaMix: Towards Corruption-Robust Continual Learning with Temporally Self-Adaptive Data Transformation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02349) · 📚 被引 6
-- **作者**: Zhenyi Wang, Li Shen, Donglin Zhan, Qiuling Suo, Yanjun Zhu, Tiehang Duan et al.
-- **🏷️ 机构**: State University of New York at Buffalo,USA, JD Explore Academy,China, Columbia University,USA
-- **会议**: CVPR 2023
-
-### VQACL: A Novel Visual Question Answering Continual Learning Setting.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01831) · 📚 被引 31
-- **作者**: Xi Zhang, Feifei Zhang, Changsheng Xu
-- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences,State Key Laboratory of Multimodal Artificial Intelligence Systems, School of Computer Science and Engineering, Tianjin University of Technology
-- **会议**: CVPR 2023
-
-### Rethinking Gradient Projection Continual Learning: Stability/Plasticity Feature Space Decoupling.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00362) · 📚 被引 24
-- **作者**: Zhen Zhao, Zhizhong Zhang, Xin Tan, Jun Liu, Yanyun Qu, Yuan Xie et al.
-- **🏷️ 机构**: School of Computer Science and Technology, East China Normal University,Shanghai,China, Tencent Youtu Lab, School of Informatics, Xiamen University,Fujian,China
-- **会议**: CVPR 2023
-
-### Class-Incremental Exemplar Compression for Class-Incremental Learning.
-- **链接**: [arXiv:2303.14042](https://arxiv.org/abs/2303.14042) · [代码](https://github.com/xfflzl/CIM-CIL) · 📚 被引 71
-- **作者**: Zilin Luo, Yaoyao Liu, Bernt Schiele, Qianru Sun
-- **🏷️ 机构**: Singapore Management University, Saarland Informatics Campus,Max Planck Institute for Informatics
-- **会议**: CVPR 2023
+> State-of-the-art rehearsal-free continual learning methods exploit the peculiarities of Vision Transformers to learn task-specific prompts, drastically reducing catastrophic forgetting. However, there is a tradeoff between the number of learned parameters and the performance, making such models computationally expensive. In this work, we aim to reduce this cost while maintaining competitive performance. We achieve this by revisiting and extending a simple transfer learning idea: learning task-specific normalization layers. Specifically, we tune the scale and bias parameters of LayerNorm for each continual learning task, selecting them at inference time based on the similarity between task-specific keys and the output of the pre-trained model. To make the classifier robust to incorrect selection of parameters during inference, we introduce a two-stage training procedure, where we first optimize the task-specific parameters and then train the classifier with the same selection procedure of the inference time. Experiments on ImageNet-R and CIFAR-100 show that our method achieves results that are either superior or on par with {the state of the art} while being computationally cheaper.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -185,23 +149,19 @@
 
 </details>
 
-### Decoupling Learning and Remembering: a Bilevel Memory Framework with Knowledge Projection for Task-Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01933) · 📚 被引 11
-- **作者**: Wenju Sun, Qingyong Li, Jing Zhang, Wen Wang, Yangli-ao Geng
-- **🏷️ 机构**: Beijing Jiaotong University,Beijing Key Lab of Traffic Data Analysis and Mining
-- **会议**: CVPR 2023
+### FedRCIL: Federated Knowledge Distillation for Representation based Contrastive Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00371) · 📚 被引 9
+- **作者**: Athanasios Psaltis, Christos Chatzikonstantinou, Charalampos Z. Patrikakis, Petros Daras
+- **🏷️ 机构**: Centre for Research and Technology Hellas,Thessaloniki,Greece, University of West Attica,Dept. of Electrical and Electronics Engineering,Athens,Greece
+- **会议**: ICCV 2023
 
-### Rebalancing Batch Normalization for Exemplar-Based Class-Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01927) · 📚 被引 21
-- **作者**: Sungmin Cha, Sungjun Cho, Dasol Hwang, Sunwon Hong, Moontae Lee, Taesup Moon
-- **🏷️ 机构**: Seoul National University,Department of ECE, LG AI Research
-- **会议**: CVPR 2023
+### Online Prototype Learning for Online Continual Learning.
+- **链接**: [arXiv:2308.00301](https://arxiv.org/abs/2308.00301) · [代码](https://github.com/weilllllls/OnPro) · 📚 被引 64
+- **作者**: Yujie Wei, Jiaxin Ye, Zhizhong Huang, Junping Zhang, Hongming Shan
+- **🏷️ 机构**: Fudan University,Institute of Science and Technology for Brain-Inspired Intelligence, School of Computer Science Fudan University,Shanghai Key Lab of Intelligent Information Processing
+- **会议**: ICCV 2023
 
-### DKT: Diverse Knowledge Transfer Transformer for Class Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02321) · 📚 被引 21
-- **作者**: Xinyuan Gao, Yuhang He, Songlin Dong, Jie Cheng, Xing Wei, Yihong Gong
-- **🏷️ 机构**: School of Software Engineering, Xi&#x0027;an Jiaotong University, Institute of Artificial Intelligence and Robotics, Xi&#x0027;an Jiaotong University, Huawei Technologies,ACS Lab,Shenzhen,China
-- **会议**: CVPR 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 ### Dense Network Expansion for Class Incremental Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01141) · 📚 被引 68
@@ -209,23 +169,15 @@
 - **🏷️ 机构**: UC San Diego, Microsoft Cloud &#x002B; AI, Qualcomm AI Research
 - **会议**: CVPR 2023
 
-### On the Stability-Plasticity Dilemma of Class-Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01934) · 📚 被引 59
-- **作者**: Dongwan Kim, Bohyung Han
-- **🏷️ 机构**: Seoul National University,Computer Vision Laboratory, ECE
-- **会议**: CVPR 2023
+</details>
 
-### CafeBoost: Causal Feature Boost to Eliminate Task-Induced Bias for Class Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01537) · 📚 被引 8
-- **作者**: Benliu Qiu, Hongliang Li, Haitao Wen, Heqian Qiu, Lanxiao Wang, Fanman Meng et al.
-- **🏷️ 机构**: University of Electronic Science and Technology of China,Chengdu,China
-- **会议**: CVPR 2023
+### CBA: Improving Online Continual Learning via Continual Bias Adaptor.
+- **链接**: [arXiv:2308.06925](https://arxiv.org/abs/2308.06925) · 📚 被引 23
+- **作者**: Quanziang Wang, Renzhen Wang, Yichen Wu, Xixi Jia, Deyu Meng
+- **🏷️ 机构**: Xi&#x2019;an Jiaotong University, City University of Hong Kong, Xidian University
+- **会议**: ICCV 2023
 
-### Foundation Model Drives Weakly Incremental Learning for Semantic Segmentation.
-- **链接**: [arXiv:2302.14250](https://arxiv.org/abs/2302.14250) · 📚 被引 21
-- **作者**: Chaohui Yu, Qiang Zhou, Jingliang Li, Jianlong Yuan, Zhibin Wang, Fan Wang
-- **🏷️ 机构**: Alibaba Group, University of the Chinese Academy of Sciences
-- **会议**: CVPR 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
