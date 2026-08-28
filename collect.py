@@ -325,10 +325,17 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
                 f"[{y}]({'Guideline%20' + str(y) + '.md'})"
                 for y in sorted(bucket[slug].keys(), reverse=True) if y != year))
             md.append("")
+            # 主领域归属必须确定性：同一论文在【命中它的所有领域里 slug 字母序最小】的领域展开。
+            # （此前按遍历顺序"先到先得"，不同批次轮次间会漂移，论文会在领域间搬家）
             for p in papers:
                 norm = p["title"].lower().rstrip(". ")
-                if norm in primary_owner and primary_owner[norm] != slug:
-                    p["_cross_from"] = primary_owner[norm]
+                # 收集该论文命中的所有 slug（本 bucket 内）
+                owners = sorted({s for s in bucket
+                                 for pp in bucket[s].get(year, [])
+                                 if pp["title"].lower().rstrip(". ") == norm} | {slug})
+                owner = owners[0]
+                if owner != slug:
+                    p["_cross_from"] = owner
                 else:
                     primary_owner[norm] = slug
             full = [p for p in papers if "_cross_from" not in p]
@@ -539,6 +546,28 @@ def main():
                         count += 1
                 log(f"  [{slug} {year}] {len(results)}/{len(top)} evaluated")
         log(f"LLM evaluated {count} papers in total")
+    else:
+        # --no-llm 批次阶段：从磁盘缓存恢复已评估论文的摘要（LLM 不激活也能带上），
+        # 防止批次重渲染时把 llm-eval 阶段已写入的摘要冲掉
+        eval_cache_path = common.CACHE_DIR / "llm_evals.json"
+        eval_cache = {}
+        if eval_cache_path.exists():
+            try:
+                eval_cache = json.loads(eval_cache_path.read_text())
+            except json.JSONDecodeError:
+                pass
+        v = common.EVAL_PROMPT_VERSION
+        restored = 0
+        for slug in bucket:
+            for year in bucket[slug]:
+                for p in bucket[slug][year]:
+                    for key in (p.get("arxiv_id"), p["title"]):
+                        if key and eval_cache.get(f"{key}|{v}"):
+                            p["llm"] = eval_cache[f"{key}|{v}"]
+                            restored += 1
+                            break
+        if restored:
+            log(f"restored {restored} LLM summaries from cache (batch-mode render)")
 
     written = generate_guidelines(bucket, ROOT / "topics")
     log(f"wrote {len(written)} guideline files:")
