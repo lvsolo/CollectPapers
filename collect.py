@@ -325,10 +325,46 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
                 f"[{y}]({'Guideline%20' + str(y) + '.md'})"
                 for y in sorted(bucket[slug].keys(), reverse=True) if y != year))
             md.append("")
+            # 主领域归属（确定性 + 专精度）：
+            #   1. 命中的领域里，若存在亲缘（config parent 声明），子领域优先于父领域
+            #      —— BEVFormer 命中 bev/3d-detection/autonomous-driving，bev 是
+            #         3d-detection 的子领域 → 归 bev（更精确，用户要求）
+            #   2. 无亲缘关系的领域间，用分类得分决胜（cls_score 高者为主）
+            #   3. 得分也相同 → slug 字母序（保底确定性，防漂移）
+            topic_cfg = {t["slug"]: t for t in CONFIG["topics"]}
+
+            def is_parent(parent_slug: str, child_slug: str) -> bool:
+                """parent_slug 是否是 child_slug 的父领域（含传递）"""
+                cfg = topic_cfg.get(child_slug) or {}
+                for p in cfg.get("parent", []):
+                    if p == parent_slug or is_parent(p, parent_slug):
+                        return True
+                return False
+
+            # 预索引：norm_title -> {slug: cls_score}
+            norm_scores: dict[str, dict[str, float]] = {}
+            for s in bucket:
+                for pp in bucket[s].get(year, []):
+                    n = pp["title"].lower().rstrip(". ")
+                    norm_scores.setdefault(n, {})[s] = pp.get("cls_score", 0)
+
+            def primary_slug_for(norm: str) -> str:
+                hits = norm_scores.get(norm, {})
+                if len(hits) <= 1:
+                    return next(iter(hits), slug)
+                # 1) 子领域优先：剔除被其他命中领域"管辖"的父领域
+                candidates = [s for s in hits
+                              if not any(is_parent(s, other) for other in hits if other != s)]
+                if not candidates:
+                    candidates = list(hits)
+                # 2) 分类得分 → 3) 字母序（保底）
+                return max(sorted(candidates), key=lambda s: hits.get(s, 0))
+
             for p in papers:
                 norm = p["title"].lower().rstrip(". ")
-                if norm in primary_owner and primary_owner[norm] != slug:
-                    p["_cross_from"] = primary_owner[norm]
+                owner = primary_slug_for(norm)
+                if owner != slug:
+                    p["_cross_from"] = owner
                 else:
                     primary_owner[norm] = slug
             full = [p for p in papers if "_cross_from" not in p]
@@ -539,6 +575,28 @@ def main():
                         count += 1
                 log(f"  [{slug} {year}] {len(results)}/{len(top)} evaluated")
         log(f"LLM evaluated {count} papers in total")
+    else:
+        # --no-llm 批次阶段：从磁盘缓存恢复已评估论文的摘要（LLM 不激活也能带上），
+        # 防止批次重渲染时把 llm-eval 阶段已写入的摘要冲掉
+        eval_cache_path = common.CACHE_DIR / "llm_evals.json"
+        eval_cache = {}
+        if eval_cache_path.exists():
+            try:
+                eval_cache = json.loads(eval_cache_path.read_text())
+            except json.JSONDecodeError:
+                pass
+        v = common.EVAL_PROMPT_VERSION
+        restored = 0
+        for slug in bucket:
+            for year in bucket[slug]:
+                for p in bucket[slug][year]:
+                    for key in (p.get("arxiv_id"), p["title"]):
+                        if key and eval_cache.get(f"{key}|{v}"):
+                            p["llm"] = eval_cache[f"{key}|{v}"]
+                            restored += 1
+                            break
+        if restored:
+            log(f"restored {restored} LLM summaries from cache (batch-mode render)")
 
     written = generate_guidelines(bucket, ROOT / "topics")
     log(f"wrote {len(written)} guideline files:")
