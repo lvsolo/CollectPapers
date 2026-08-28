@@ -1,61 +1,54 @@
 # Vision Transformer — 2023 Guideline
 
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
-> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### PaCa-ViT: Learning Patch-to-Cluster Attention in Vision Transformers.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01781) · 📚 被引 34
-- **作者**: Ryan Grainger, Thomas Paniagua, Xi Song, Naresh P. Cuntoor, Mun Wai Lee, Tianfu Wu
-- **🏷️ 机构**: NC State,Department of ECE, An Independent Researcher, BlueHalo
-- **会议**: CVPR 2023
+### HiViT: A Simpler and More Efficient Design of Hierarchical Vision Transformer.
+- **链接**: [出版页](https://openreview.net/forum?id=3F6I-0-57SC)
+- **作者**: Xiaosong Zhang, Yunjie Tian, Lingxi Xie, Wei Huang, Qi Dai, Qixiang Ye et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
 
-### Castling-ViT: Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01387) · 📚 被引 56
-- **作者**: Haoran You, Yunyang Xiong, Xiaoliang Dai, Bichen Wu, Peizhao Zhang, Haoqi Fan et al.
-- **🏷️ 机构**: Georgia Institute of Technology, Meta Research
-- **会议**: CVPR 2023
+### Vision Transformer Adapter for Dense Predictions.
+- **链接**: [arXiv:2205.08534](https://arxiv.org/abs/2205.08534) · [代码](https://github.com/czczup/ViT-Adapter)
+- **作者**: Zhe Chen, Yuchen Duan, Wenhai Wang, Junjun He, Tong Lu, Jifeng Dai et al.
+- **🏷️ 机构**: Shanghai AI Lab, Tsinghua / Shanghai AI Lab
+- **会议**: ICLR 2023
 
-### ViPLO: Vision Transformer Based Pose-Conditioned Self-Loop Graph for Human-Object Interaction Detection.
-- **链接**: [arXiv:2304.08114](https://arxiv.org/abs/2304.08114) · 📚 被引 75
-- **作者**: Jeeseung Park, Jin-Woo Park, Jong-Seok Lee
-- **🏷️ 机构**: mAy-I Inc.,Seoul,Korea, Yonsei University,Korea
-- **会议**: CVPR 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Slide-Transformer: Hierarchical Vision Transformer with Local Self-Attention.
-- **链接**: [arXiv:2304.04237](https://arxiv.org/abs/2304.04237) · 📚 被引 103
-- **作者**: Xuran Pan, Tianzhu Ye, Zhuofan Xia, Shiji Song, Gao Huang
-- **🏷️ 机构**: BNRist, Tsinghua University,Department of Automation
-- **会议**: CVPR 2023
+> This work investigates a simple yet powerful dense prediction task adapter for Vision Transformer (ViT). Unlike recently advanced variants that incorporate vision-specific inductive biases into their architectures, the plain ViT suffers inferior performance on dense predictions due to weak prior assumptions. To address this issue, we propose the ViT-Adapter, which allows plain ViT to achieve comparable performance to vision-specific transformers. Specifically, the backbone in our framework is a plain ViT that can learn powerful representations from large-scale multi-modal data. When transferring to downstream tasks, a pre-training-free adapter is used to introduce the image-related inductive biases into the model, making it suitable for these tasks. We verify ViT-Adapter on multiple dense prediction tasks, including object detection, instance segmentation, and semantic segmentation. Notably, without using extra detection data, our ViT-Adapter-L yields state-of-the-art 60.9 box AP and 53.0 mask AP on COCO test-dev. We hope that the ViT-Adapter could serve as an alternative for vision-specific transformers and facilitate future research. The code and models will be released at https://github.com/czczup/ViT-Adapter.
 
-### SemiCVT: Semi-Supervised Convolutional Vision Transformer for Semantic Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01091) · 📚 被引 39
-- **作者**: Huimin Huang, Shiao Xie, Lanfen Lin, Ruofeng Tong, Yen-Wei Chen, Yuexiang Li et al.
-- **🏷️ 机构**: Zhejiang University, Ritsumeikan University, Tencent Jarvis Lab
-- **会议**: CVPR 2023
+</details>
 
-### DropKey for Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02174) · 📚 被引 74
-- **作者**: Bonan Li, Yinhan Hu, Xuecheng Nie, Congying Han, Xiangjian Jiang, Tiande Guo et al.
-- **🏷️ 机构**: University of Chinese Academy of Sciences, MT Lab, Meitu Inc., University of Cambridge
-- **会议**: CVPR 2023
+### Budgeted Training for Vision Transformer.
+- **链接**: [出版页](https://openreview.net/forum?id=sVzBN-DlJRi)
+- **作者**: Zhuofan Xia, Xuran Pan, Xuan Jin, Yuan He, Hui Xue, Shiji Song et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
 
-### EfficientViT: Memory Efficient Vision Transformer with Cascaded Group Attention.
-- **链接**: [arXiv:2305.07027](https://arxiv.org/abs/2305.07027) · 📚 被引 823
-- **作者**: Xinyu Liu, Houwen Peng, Ningxin Zheng, Yuqing Yang, Han Hu, Yixuan Yuan
-- **🏷️ 机构**: The Chinese University of Hong Kong, Microsoft Research
-- **会议**: CVPR 2023
+### GPViT: A High Resolution Non-Hierarchical Vision Transformer with Group Propagation.
+- **链接**: [arXiv:2212.06795](https://arxiv.org/abs/2212.06795)
+- **作者**: Chenhongyi Yang, Jiarui Xu, Shalini De Mello, Elliot J. Crowley, Xiaolong Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
 
-### BiFormer: Vision Transformer with Bi-Level Routing Attention.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00995) · 📚 被引 1068
-- **作者**: Lei Zhu, Xinjiang Wang, Zhanghan Ke, Wayne Zhang, Rynson W. H. Lau
-- **🏷️ 机构**: City University of Hong Kong, SenseTime Research
-- **会议**: CVPR 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-## 跨领域论文（完整笔记在其他领域）
+> We present the Group Propagation Vision Transformer (GPViT): a novel nonhierarchical (i.e. non-pyramidal) transformer model designed for general visual recognition with high-resolution features. High-resolution features (or tokens) are a natural fit for tasks that involve perceiving fine-grained details such as detection and segmentation, but exchanging global information between these features is expensive in memory and computation because of the way self-attention scales. We provide a highly efficient alternative Group Propagation Block (GP Block) to exchange global information. In each GP Block, features are first grouped together by a fixed number of learnable group tokens; we then perform Group Propagation where global information is exchanged between the grouped features; finally, global information in the updated grouped features is returned back to the image features through a transformer decoder. We evaluate GPViT on a variety of visual recognition tasks including image classification, semantic segmentation, object detection, and instance segmentation. Our method achieves significant performance gains over previous works across all tasks, especially on tasks that require highresolution outputs, for example, our GPViT-L3 outperforms Swin Transformer-B by 2.0 mIoU on ADE20K semantic segmentation with only half as many parameters. Project page: chenhongyiyang.com/projects/GPViT/GPViT
 
-- SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer. → [network-pruning](../network-pruning/Guideline%202023.md)
-- MDL-NAS: A Joint Multi-domain Learning Framework for Vision Transformer. → [neural-architecture-search](../neural-architecture-search/Guideline%202023.md)
-- Global Vision Transformer Pruning with Hessian-Aware Saliency. → [network-pruning](../network-pruning/Guideline%202023.md)
-- Boost Vision Transformer with GPU-Friendly Sparsity and Quantization. → [network-pruning](../network-pruning/Guideline%202023.md)
+</details>
+
+### MixPro: Data Augmentation with MaskMix and Progressive Attention Labeling for Vision Transformer.
+- **链接**: [arXiv:2304.12043](https://arxiv.org/abs/2304.12043) · [代码](https://github.com/fistyee/MixPro)
+- **作者**: Qihao Zhao, Yangyu Huang, Wei Hu, Fan Zhang, Jun Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The recently proposed data augmentation TransMix employs attention labels to help visual transformers (ViT) achieve better robustness and performance. However, TransMix is deficient in two aspects: 1) The image cropping method of TransMix may not be suitable for ViTs. 2) At the early stage of training, the model produces unreliable attention maps. TransMix uses unreliable attention maps to compute mixed attention labels that can affect the model. To address the aforementioned issues, we propose MaskMix and Progressive Attention Labeling (PAL) in image and label space, respectively. In detail, from the perspective of image space, we design MaskMix, which mixes two images based on a patch-like grid mask. In particular, the size of each mask patch is adjustable and is a multiple of the image patch size, which ensures each image patch comes from only one image and contains more global contents. From the perspective of label space, we design PAL, which utilizes a progressive factor to dynamically re-weight the attention weights of the mixed attention label. Finally, we combine MaskMix and Progressive Attention Labeling as our new data augmentation method, named MixPro. The experimental results show that our method can improve various ViT-based models at scales on ImageNet classification (73.8\% top-1 accuracy based on DeiT-T for 300 epochs). After being pre-trained with MixPro on ImageNet, the ViT-based models also demonstrate better transferability to semantic segmentation, object detection, and instance segmentation. Furthermore, compared to TransMix, MixPro also shows stronger robustness on several benchmarks. The code is available at https://github.com/fistyee/MixPro.
+
+</details>
