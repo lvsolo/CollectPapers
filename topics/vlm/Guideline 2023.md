@@ -1,69 +1,81 @@
 # VLM — 2023 Guideline
 
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
-> 论文数: 26 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### CLIP2: Contrastive Language-Image-Point Pretraining from Real-World Point Cloud Data.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01463) · 📚 被引 83
-- **作者**: Yihan Zeng, Chenhan Jiang, Jiageng Mao, Jianhua Han, Chaoqiang Ye, Qingqiu Huang et al.
-- **🏷️ 机构**: Huawei Noah&#x0027;s Ark Lab, Hong Kong University of Science and Technology, The Chinese University of Hong Kong
-- **会议**: CVPR 2023
+### CLIP2Point: Transfer CLIP to Point Cloud Classification with Image-Depth Pre-Training.
+- **链接**: [arXiv:2210.01055](https://arxiv.org/abs/2210.01055) · 📚 被引 140
+- **作者**: Tianyu Huang, Bowen Dong, Yunhan Yang, Xiaoshui Huang, Rynson W. H. Lau, Wanli Ouyang et al.
+- **🏷️ 机构**: Harbin Institute of Technology, Shanghai AI Laboratory, City University of Hong Kong
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Contrastive Language-Image Pre-training, benefiting from large-scale unlabeled text-image pairs, has demonstrated great performance in open-world vision understanding tasks. However, due to the limited Text-3D data pairs, adapting the success of 2D Vision-Language Models (VLM) to the 3D space remains an open problem. Existing works that leverage VLM for 3D understanding generally resort to constructing intermediate 2D representations for the 3D data, but at the cost of losing 3D geometry information. To take a step toward open-world 3D vision understanding, we propose Contrastive Language-Image-Point Cloud Pretraining (CLIP$^2$) to directly learn the transferable 3D point cloud representation in realistic scenarios with a novel proxy alignment mechanism. Specifically, we exploit naturally-existed correspondences in 2D and 3D scenarios, and build well-aligned and instance-based text-image-point proxies from those complex scenarios. On top of that, we propose a cross-modal contrastive objective to learn semantic and instance-level aligned point cloud representation. Experimental results on both indoor and outdoor scenarios show that our learned 3D representation has great transfer ability in downstream tasks, including zero-shot and few-shot 3D recognition, which boosts the state-of-the-art methods by large margins. Furthermore, we provide analyses of the capability of different representations in real scenarios and present the optional ensemble scheme.
+
+</details>
 
 ### Joint Visual Grounding and Tracking with Natural Language Specification.
-- **链接**: [arXiv:2303.12027](https://arxiv.org/abs/2303.12027) · [代码](https://github.com/lizhou-cs/JointNLT) · 📚 被引 138
+- **链接**: [arXiv:2303.12027](https://arxiv.org/abs/2303.12027) · [代码](https://github.com/lizhou-cs/JointNLT) · 📚 被引 139
 - **作者**: Li Zhou, Zikun Zhou, Kaige Mao, Zhenyu He
 - **🏷️ 机构**: Harbin Institute of Technology,Shenzhen, Peng Cheng Laboratory
 - **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Tracking by natural language specification aims to locate the referred target in a sequence based on the natural language description. Existing algorithms solve this issue in two steps, visual grounding and tracking, and accordingly deploy the separated grounding model and tracking model to implement these two steps, respectively. Such a separated framework overlooks the link between visual grounding and tracking, which is that the natural language descriptions provide global semantic cues for localizing the target for both two steps. Besides, the separated framework can hardly be trained end-to-end. To handle these issues, we propose a joint visual grounding and tracking framework, which reformulates grounding and tracking as a unified task: localizing the referred target based on the given visual-language references. Specifically, we propose a multi-source relation modeling module to effectively build the relation between the visual-language references and the test image. In addition, we design a temporal modeling module to provide a temporal clue with the guidance of the global semantic information for our model, which effectively improves the adaptability to the appearance variations of the target. Extensive experimental results on TNL2K, LaSOT, OTB99, and RefCOCOg demonstrate that our method performs favorably against state-of-the-art algorithms for both tracking and grounding. Code is available at https://github.com/lizhou-cs/JointNLT.
+> Pre-training across 3D vision and language remains under development because of limited training data. Recent works attempt to transfer vision-language pre-training models to 3D vision. PointCLIP converts point cloud data to multi-view depth maps, adopting CLIP for shape classification. However, its performance is restricted by the domain gap between rendered depth maps and images, as well as the diversity of depth distributions. To address this issue, we propose CLIP2Point, an image-depth pre-training method by contrastive learning to transfer CLIP to the 3D domain, and adapt it to point cloud classification. We introduce a new depth rendering setting that forms a better visual effect, and then render 52,460 pairs of images and depth maps from ShapeNet for pre-training. The pre-training scheme of CLIP2Point combines cross-modality learning to enforce the depth features for capturing expressive visual and textual features and intra-modality learning to enhance the invariance of depth aggregation. Additionally, we propose a novel Dual-Path Adapter (DPA) module, i.e., a dual-path structure with simplified adapters for few-shot learning. The dual-path structure allows the joint use of CLIP and CLIP2Point, and the simplified adapter can well fit few-shot tasks without post-search. Experimental results show that CLIP2Point is effective in transferring CLIP knowledge to 3D vision. Our CLIP2Point outperforms PointCLIP and other self-supervised 3D networks, achieving state-of-the-art results on zero-shot and few-shot classification.
 
 </details>
 
-### Learning to Generate Text-Grounded Mask for Open-World Semantic Segmentation from Only Image-Text Pairs.
-- **链接**: [arXiv:2212.00785](https://arxiv.org/abs/2212.00785) · [代码](https://github.com/kakaobrain/tcl) · 📚 被引 99
-- **作者**: Junbum Cha, Jonghwan Mun, Byungseok Roh
-- **🏷️ 机构**: Kakao Brain
-- **会议**: CVPR 2023
+### Bird's-Eye-View Scene Graph for Vision-Language Navigation.
+- **链接**: [arXiv:2308.04758](https://arxiv.org/abs/2308.04758)
+- **作者**: Rui Liu, Xiaohan Wang, Wenguan Wang, Yi Yang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We tackle open-world semantic segmentation, which aims at learning to segment arbitrary visual concepts in images, by using only image-text pairs without dense annotations. Existing open-world segmentation methods have shown impressive advances by employing contrastive learning (CL) to learn diverse visual concepts and transferring the learned image-level understanding to the segmentation task. However, these CL-based methods suffer from a train-test discrepancy, since it only considers image-text alignment during training, whereas segmentation requires region-text alignment during testing. In this paper, we proposed a novel Text-grounded Contrastive Learning (TCL) framework that enables a model to directly learn region-text alignment. Our method generates a segmentation mask for a given text, extracts text-grounded image embedding from the masked region, and aligns it with text embedding via TCL. By learning region-text alignment directly, our framework encourages a model to directly improve the quality of generated segmentation masks. In addition, for a rigorous and fair comparison, we present a unified evaluation protocol with widely used 8 semantic segmentation datasets. TCL achieves state-of-the-art zero-shot segmentation performances with large margins in all datasets. Code is available at https://github.com/kakaobrain/tcl.
+> Vision-language navigation (VLN), which entails an agent to navigate 3D environments following human instructions, has shown great advances. However, current agents are built upon panoramic observations, which hinders their ability to perceive 3D scene geometry and easily leads to ambiguous selection of panoramic view. To address these limitations, we present a BEV Scene Graph (BSG), which leverages multi-step BEV representations to encode scene layouts and geometric cues of indoor environment under the supervision of 3D detection. During navigation, BSG builds a local BEV representation at each step and maintains a BEV-based global scene map, which stores and organizes all the online collected local BEV representations according to their topological relations. Based on BSG, the agent predicts a local BEV grid-level decision score and a global graph-level decision score, combined with a sub-view selection score on panoramic views, for more accurate action prediction. Our approach significantly outperforms state-of-the-art methods on REVERIE, R2R, and R4R, showing the potential of BEV perception in VLN.
 
 </details>
 
-### Accelerating Vision-Language Pretraining with Free Language Modeling.
-- **链接**: [arXiv:2303.14038](https://arxiv.org/abs/2303.14038) · [代码](https://github.com/TencentARC/FLM) · 📚 被引 8
-- **作者**: Teng Wang, Yixiao Ge, Feng Zheng, Ran Cheng, Ying Shan, Xiaohu Qie et al.
-- **🏷️ 机构**: Southern University of Science and Technology, ARC Lab, Tencent PCG
-- **会议**: CVPR 2023
+### PointCLIP V2: Prompting CLIP and GPT for Powerful 3D Open-world Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00249) · 📚 被引 181
+- **作者**: Xiangyang Zhu, Renrui Zhang, Bowei He, Ziyu Guo, Ziyao Zeng, Zipeng Qin et al.
+- **🏷️ 机构**: City University of Hong Kong, The Chinese University of Hong Kong, Yale University
+- **会议**: ICCV 2023
+
+### CLIP-FO3D: Learning Free Open-world 3D Scene Representations from 2D Dense CLIP.
+- **链接**: [arXiv:2303.04748](https://arxiv.org/abs/2303.04748) · 📚 被引 66
+- **作者**: Junbo Zhang, Runpei Dong, Kaisheng Ma
+- **🏷️ 机构**: Tsinghua University, Xi&#x2019;an Jiaotong University
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The state of the arts in vision-language pretraining (VLP) achieves exemplary performance but suffers from high training costs resulting from slow convergence and long training time, especially on large-scale web datasets. An essential obstacle to training efficiency lies in the entangled prediction rate (percentage of tokens for reconstruction) and corruption rate (percentage of corrupted tokens) in masked language modeling (MLM), that is, a proper corruption rate is achieved at the cost of a large portion of output tokens being excluded from prediction loss. To accelerate the convergence of VLP, we propose a new pretraining task, namely, free language modeling (FLM), that enables a 100% prediction rate with arbitrary corruption rates. FLM successfully frees the prediction rate from the tie-up with the corruption rate while allowing the corruption spans to be customized for each token to be predicted. FLM-trained models are encouraged to learn better and faster given the same GPU time by exploiting bidirectional contexts more flexibly. Extensive experiments show FLM could achieve an impressive 2.5x pretraining time reduction in comparison to the MLM-based methods, while keeping competitive performance on both vision-language understanding and generation tasks. Code will be public at https://github.com/TencentARC/FLM.
+> Training a 3D scene understanding model requires complicated human annotations, which are laborious to collect and result in a model only encoding close-set object semantics. In contrast, vision-language pre-training models (e.g., CLIP) have shown remarkable open-world reasoning properties. To this end, we propose directly transferring CLIP's feature space to 3D scene understanding model without any form of supervision. We first modify CLIP's input and forwarding process so that it can be adapted to extract dense pixel features for 3D scene contents. We then project multi-view image features to the point cloud and train a 3D scene understanding model with feature distillation. Without any annotations or additional training, our model achieves promising annotation-free semantic segmentation results on open-vocabulary semantics and long-tailed concepts. Besides, serving as a cross-modal pre-training framework, our method can be used to improve data efficiency during fine-tuning. Our model outperforms previous SOTA methods in various zero-shot and data-efficient learning benchmarks. Most importantly, our model successfully inherits CLIP's rich-structured knowledge, allowing 3D scene understanding models to recognize not only object concepts but also open-world semantics.
 
 </details>
 
-### Q: How to Specialize Large Vision-Language Models to Data-Scarce VQA Tasks? A: Self-Train on Unlabeled Images!
-- **链接**: [arXiv:2306.03932](https://arxiv.org/abs/2306.03932) · [代码](https://github.com/codezakh/SelTDA) · 📚 被引 13
-- **作者**: Zaid Khan, B. G. Vijay Kumar, Samuel Schulter, Xiang Yu, Yun Fu, Manmohan Chandraker
-- **🏷️ 机构**: Northeastern University, NEC Labs America, Amazon
-- **会议**: CVPR 2023
+### CLIPN for Zero-Shot OOD Detection: Teaching CLIP to Say No.
+- **链接**: [arXiv:2308.12213](https://arxiv.org/abs/2308.12213) · [代码](https://github.com/xmed-lab/CLIPN) · 📚 被引 105
+- **作者**: Hualiang Wang, Yi Li, Huifeng Yao, Xiaomeng Li
+- **🏷️ 机构**: The Hong Kong University of Science and Technology,Department of Electronic and Computer Engineering
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Finetuning a large vision language model (VLM) on a target dataset after large scale pretraining is a dominant paradigm in visual question answering (VQA). Datasets for specialized tasks such as knowledge-based VQA or VQA in non natural-image domains are orders of magnitude smaller than those for general-purpose VQA. While collecting additional labels for specialized tasks or domains can be challenging, unlabeled images are often available. We introduce SelTDA (Self-Taught Data Augmentation), a strategy for finetuning large VLMs on small-scale VQA datasets. SelTDA uses the VLM and target dataset to build a teacher model that can generate question-answer pseudolabels directly conditioned on an image alone, allowing us to pseudolabel unlabeled images. SelTDA then finetunes the initial VLM on the original dataset augmented with freshly pseudolabeled images. We describe a series of experiments showing that our self-taught data augmentation increases robustness to adversarially searched questions, counterfactual examples and rephrasings, improves domain generalization, and results in greater retention of numerical reasoning skills. The proposed strategy requires no additional annotations or architectural modifications, and is compatible with any modern encoder-decoder multimodal transformer. Code available at https://github.com/codezakh/SelTDA.
+> Out-of-distribution (OOD) detection refers to training the model on an in-distribution (ID) dataset to classify whether the input images come from unknown classes. Considerable effort has been invested in designing various OOD detection methods based on either convolutional neural networks or transformers. However, zero-shot OOD detection methods driven by CLIP, which only require class names for ID, have received less attention. This paper presents a novel method, namely CLIP saying no (CLIPN), which empowers the logic of saying no within CLIP. Our key motivation is to equip CLIP with the capability of distinguishing OOD and ID samples using positive-semantic prompts and negation-semantic prompts. Specifically, we design a novel learnable no prompt and a no text encoder to capture negation semantics within images. Subsequently, we introduce two loss functions: the image-text binary-opposite loss and the text semantic-opposite loss, which we use to teach CLIPN to associate images with no prompts, thereby enabling it to identify unknown samples. Furthermore, we propose two threshold-free inference algorithms to perform OOD detection by utilizing negation semantics from no prompts and the text encoder. Experimental results on 9 benchmark datasets (3 ID datasets and 6 OOD datasets) for the OOD detection task demonstrate that CLIPN, based on ViT-B-16, outperforms 7 well-used algorithms by at least 2.34% and 11.64% in terms of AUROC and FPR95 for zero-shot OOD detection on ImageNet-1K. Our CLIPN can serve as a solid foundation for effectively leveraging CLIP in downstream OOD tasks. The code is available on https://github.com/xmed-lab/CLIPN.
 
 </details>
 
-### Task Residual for Tuning Vision-Language Models.
-- **链接**: [arXiv:2211.10277](https://arxiv.org/abs/2211.10277) · [代码](https://github.com/geekyutao/TaskRes) · 📚 被引 117
-- **作者**: Tao Yu, Zhihe Lu, Xin Jin, Zhibo Chen, Xinchao Wang
-- **🏷️ 机构**: National University of Singapore, University of Science and Technology of China
-- **会议**: CVPR 2023
+### TinyCLIP: CLIP Distillation via Affinity Mimicking and Weight Inheritance.
+- **链接**: [arXiv:2309.12314](https://arxiv.org/abs/2309.12314) · 📚 被引 73
+- **作者**: Kan Wu, Houwen Peng, Zhenghong Zhou, Bin Xiao, Mengchen Liu, Lu Yuan et al.
+- **🏷️ 机构**: Sun Yat-sen University, Microsoft, Huazhong University of Science &amp; Technology
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -156,28 +168,26 @@
 </details>
 
 ### Improving Commonsense in Vision-Language Models via Knowledge Graph Riddles.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00259) · 📚 被引 7
+- **链接**: [arXiv:2211.16504](https://arxiv.org/abs/2211.16504) · [代码](https://github.com/pleaseconnectwifi/DANCE) · 📚 被引 7
 - **作者**: Shuquan Ye, Yujia Xie, Dongdong Chen, Yichong Xu, Lu Yuan, Chenguang Zhu et al.
 - **🏷️ 机构**: City University of Hong Kong, Microsoft
 - **会议**: CVPR 2023
 
-### Meta-Personalizing Vision-Language Models to Find Named Instances in Video.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01833) · 📚 被引 13
-- **作者**: Chun-Hsiao Yeh, Bryan C. Russell, Josef Sivic, Fabian Caba Heilbron, Simon Jenni
-- **🏷️ 机构**: University of California,Berkeley, Adobe Research, Czech Institute of Informatics, Robotics and Cybernetics at the Czech Technical University in Prague (CIIRC CTU)
-- **会议**: CVPR 2023
+> Out-of-distribution (OOD) detection refers to training the model on an in-distribution (ID) dataset to classify whether the input images come from unknown classes. Considerable effort has been invested in designing various OOD detection methods based on either convolutional neural networks or transformers. However, zero-shot OOD detection methods driven by CLIP, which only require class names for ID, have received less attention. This paper presents a novel method, namely CLIP saying no (CLIPN), which empowers the logic of saying no within CLIP. Our key motivation is to equip CLIP with the capability of distinguishing OOD and ID samples using positive-semantic prompts and negation-semantic prompts. Specifically, we design a novel learnable no prompt and a no text encoder to capture negation semantics within images. Subsequently, we introduce two loss functions: the image-text binary-opposite loss and the text semantic-opposite loss, which we use to teach CLIPN to associate images with no prompts, thereby enabling it to identify unknown samples. Furthermore, we propose two threshold-free inference algorithms to perform OOD detection by utilizing negation semantics from no prompts and the text encoder. Experimental results on 9 benchmark datasets (3 ID datasets and 6 OOD datasets) for the OOD detection task demonstrate that CLIPN, based on ViT-B-16, outperforms 7 well-used algorithms by at least 2.34% and 11.64% in terms of AUROC and FPR95 for zero-shot OOD detection on ImageNet-1K. Our CLIPN can serve as a solid foundation for effectively leveraging CLIP in downstream OOD tasks. The code is available on https://github.com/xmed-lab/CLIPN.
 
-### GIVL: Improving Geographical Inclusivity of Vision-Language Models with Pre-Training Methods.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01054) · 📚 被引 13
-- **作者**: Da Yin, Feng Gao, Govind Thattai, Michael Johnston, Kai-Wei Chang
-- **🏷️ 机构**: University of California,Los Angeles, Amazon Alexa AI
-- **会议**: CVPR 2023
+</details>
 
-### IFSeg: Image-free Semantic Segmentation via Vision-Language Model.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00290) · 📚 被引 17
-- **作者**: Sukmin Yun, Seong Hyeon Park, Paul Hongsuck Seo, Jinwoo Shin
-- **🏷️ 机构**: Korea Advanced Institute of Science and Technology (KAIST), Google Research
-- **会议**: CVPR 2023
+### VL-Match: Enhancing Vision-Language Pretraining with Token-Level and Instance-Level Matching.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00244) · 📚 被引 4
+- **作者**: Junyu Bi, Daixuan Cheng, Ping Yao, Bochen Pang, Yuefeng Zhan, Chuanguang Yang et al.
+- **🏷️ 机构**: Institute of Computing Technology,Chinese Academy of Sciences,Beijing,China, Microsoft Corporation
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vision-language (VL) pre-training has recently gained much attention for its transferability and flexibility in novel concepts (e.g., cross-modality transfer) across various visual tasks. However, VL-driven segmentation has been under-explored, and the existing approaches still have the burden of acquiring additional training images or even segmentation annotations to adapt a VL model to downstream segmentation tasks. In this paper, we introduce a novel image-free segmentation task where the goal is to perform semantic segmentation given only a set of the target semantic categories, but without any task-specific images and annotations. To tackle this challenging task, our proposed method, coined IFSeg, generates VL-driven artificial image-segmentation pairs and updates a pre-trained VL model to a segmentation task. We construct this artificial training data by creating a 2D map of random semantic categories and another map of their corresponding word tokens. Given that a pre-trained VL model projects visual and text tokens into a common space where tokens that share the semantics are located closely, this artificially generated word map can replace the real image inputs for such a VL model. Through an extensive set of experiments, our model not only establishes an effective baseline for this novel task but also demonstrates strong performances compared to existing methods that rely on stronger supervision, such as task-specific images and segmentation masks. Code is available at https://github.com/alinlab/ifseg.
+
+</details>
 
 ### Reproducible Scaling Laws for Contrastive Language-Image Learning.
 - **链接**: [arXiv:2212.07143](https://arxiv.org/abs/2212.07143) · [代码](https://github.com/LAION-AI/scaling-laws-openclip) · 📚 被引 620
@@ -203,11 +213,23 @@
 
 </details>
 
+### Local 3D Editing via 3D Distillation of CLIP Knowledge.
+- **链接**: [arXiv:2306.12570](https://arxiv.org/abs/2306.12570) · 📚 被引 20
+- **作者**: Junha Hyung, Sungwon Hwang, Daejin Kim, Hyunji Lee, Jaegul Choo
+- **🏷️ 机构**: KAIST AI, Scatter Lab
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 3D content manipulation is an important computer vision task with many real-world applications (e.g., product design, cartoon generation, and 3D Avatar editing). Recently proposed 3D GANs can generate diverse photorealistic 3D-aware contents using Neural Radiance fields (NeRF). However, manipulation of NeRF still remains a challenging problem since the visual quality tends to degrade after manipulation and suboptimal control handles such as 2D semantic maps are used for manipulations. While text-guided manipulations have shown potential in 3D editing, such approaches often lack locality. To overcome these problems, we propose Local Editing NeRF (LENeRF), which only requires text inputs for fine-grained and localized manipulation. Specifically, we present three add-on modules of LENeRF, the Latent Residual Mapper, the Attention Field Network, and the Deformation Network, which are jointly used for local manipulations of 3D features by estimating a 3D attention field. The 3D attention field is learned in an unsupervised way, by distilling the zero-shot mask generation capability of CLIP to the 3D space with multi-view guidance. We conduct diverse experiments and thorough evaluations both quantitatively and qualitatively.
+
+</details>
+
 ## 跨领域论文（完整笔记在其他领域）
 
-- CLIP the Gap: A Single Domain Generalization Approach for Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
-- Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP. → [open-set-detection](../open-set-detection/Guideline%202023.md)
-- CORA: Adapting CLIP for Open-Vocabulary Detection with Region Prompting and Anchor Pre-Matching. → [open-set-detection](../open-set-detection/Guideline%202023.md)
-- Bidirectional Cross-Modal Knowledge Exploration for Video Recognition with Pre-trained Vision-Language Models. → [multimodal](../multimodal/Guideline%202023.md)
-- Vita-CLIP: Video and text adaptive CLIP via Multimodal Prompting. → [multimodal](../multimodal/Guideline%202023.md)
-- CLIP-S4: Language-Guided Self-Supervised Semantic Segmentation. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
+- Task-Oriented Multi-Modal Mutual Learning for Vision-Language Models. → [multimodal](../multimodal/Guideline%202023.md)
+- Preventing Zero-Shot Transfer Degradation in Continual Learning of Vision-Language Models. → [continual-learning](../continual-learning/Guideline%202023.md)
+- CleanCLIP: Mitigating Data Poisoning Attacks in Multimodal Contrastive Learning. → [multimodal](../multimodal/Guideline%202023.md)
+- CLIPTrans: Transferring Visual Knowledge with Pre-trained Models for Multimodal Machine Translation. → [multimodal](../multimodal/Guideline%202023.md)
+- CLIP-Decoder : ZeroShot Multilabel Classification using Multimodal CLIP Aligned Representations. → [multimodal](../multimodal/Guideline%202023.md)
+- Exploring Open-Vocabulary Semantic Segmentation from CLIP Vision Encoder Distillation Only. → [open-set-detection](../open-set-detection/Guideline%202023.md)
