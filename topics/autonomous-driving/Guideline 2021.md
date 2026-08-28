@@ -1,7 +1,7 @@
 # Autonomous Driving — 2021 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -26,8 +26,8 @@
 ### Self-Supervised Pillar Motion Learning for Autonomous Driving.
 - **链接**: [arXiv:2104.08683](https://arxiv.org/abs/2104.08683) · 📚 被引 61
 - **作者**: Chenxu Luo, Xiaodong Yang, Alan L. Yuille
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **🏷️ 机构**: QCraft, Johns Hopkins University
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -39,11 +39,13 @@
 - **链接**: [arXiv:2104.09224](https://arxiv.org/abs/2104.09224) · 📚 被引 548
 - **作者**: Aditya Prakash, Kashyap Chitta, Andreas Geiger
 - **🏷️ 机构**: Max Planck Institute for Intelligent Systems,T&#x00FC;bingen
-- **会议**: CVPR 2021
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > How should representations from complementary sensors be integrated for autonomous driving? Geometry-based sensor fusion has shown great promise for perception tasks such as object detection and motion forecasting. However, for the actual driving task, the global context of the 3D scene is key, e.g. a change in traffic light state can affect the behavior of a vehicle geometrically distant from that traffic light. Geometry alone may therefore be insufficient for effectively fusing representations in end-to-end driving models. In this work, we demonstrate that imitation learning policies based on existing sensor fusion methods under-perform in the presence of a high density of dynamic agents and complex scenarios, which require global contextual reasoning, such as handling traffic oncoming from multiple directions at uncontrolled intersections. Therefore, we propose TransFuser, a novel Multi-Modal Fusion Transformer, to integrate image and LiDAR representations using attention. We experimentally validate the efficacy of our approach in urban settings involving complex scenarios using the CARLA urban driving simulator. Our approach achieves state-of-the-art driving performance while reducing collisions by 76% compared to geometry-based fusion.
+
+</details>
 
 </details>
 

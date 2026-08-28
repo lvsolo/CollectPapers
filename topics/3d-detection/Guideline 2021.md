@@ -1,7 +1,7 @@
 # 3D Detection — 2021 Guideline
 
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
-> 论文数: 20 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -17,11 +17,37 @@
 
 </details>
 
-### GrooMeD-NMS: Grouped Mathematically Differentiable NMS for Monocular 3D Object Detection.
-- **链接**: [arXiv:2103.17202](https://arxiv.org/abs/2103.17202) · [代码](https://github.com/abhi1kumar/groomed_nms) · 📚 被引 88
-- **作者**: Abhinav Kumar, Garrick Brazil, Xiaoming Liu
+</details>
+
+### Fog Simulation on Real LiDAR Point Clouds for 3D Object Detection in Adverse Weather.
+- **链接**: [arXiv:2108.05249](https://arxiv.org/abs/2108.05249)
+- **作者**: Martin Hahner, Christos Sakaridis, Dengxin Dai, Luc Van Gool
+- **🏷️ 机构**: ETH Z&#x00FC;rich
+- **会议**: ICCV 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This work addresses the challenging task of LiDAR-based 3D object detection in foggy weather. Collecting and annotating data in such a scenario is very time, labor and cost intensive. In this paper, we tackle this problem by simulating physically accurate fog into clear-weather scenes, so that the abundant existing real datasets captured in clear weather can be repurposed for our task. Our contributions are twofold: 1) We develop a physically valid fog simulation method that is applicable to any LiDAR dataset. This unleashes the acquisition of large-scale foggy training data at no extra cost. These partially synthetic data can be used to improve the robustness of several perception methods, such as 3D object detection and tracking or simultaneous localization and mapping, on real foggy data. 2) Through extensive experiments with several state-of-the-art detection approaches, we show that our fog simulation can be leveraged to significantly improve the performance for 3D object detection in the presence of fog. Thus, we are the first to provide strong 3D object detection baselines on the Seeing Through Fog dataset. Our code is available at www.trace.ethz.ch/lidar_fog_simulation.
+
+</details>
+
+### Gated3D: Monocular 3D Object Detection From Temporal Illumination Cues.
+- **链接**: [arXiv:2102.03602](https://arxiv.org/abs/2102.03602) · 📚 被引 10
+- **作者**: Frank D. Julca-Aguilar, Jason Taylor, Mario Bijelic, Fahim Mannan, Ethan Tseng, Felix Heide
+- **🏷️ 机构**: Algolux, Mercedes-Benz AG, Princeton University
+- **会议**: ICCV 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Today's state-of-the-art methods for 3D object detection are based on lidar, stereo, or monocular cameras. Lidar-based methods achieve the best accuracy, but have a large footprint, high cost, and mechanically-limited angular sampling rates, resulting in low spatial resolution at long ranges. Recent approaches based on low-cost monocular or stereo cameras promise to overcome these limitations but struggle in low-light or low-contrast regions as they rely on passive CMOS sensors. In this work, we propose a novel 3D object detection modality that exploits temporal illumination cues from a low-cost monocular gated imager. We propose a novel deep detector architecture, Gated3D, that is tailored to temporal illumination cues from three gated images. Gated images allow us to exploit mature 2D object feature extractors that guide the 3D predictions through a frustum segment estimation. We assess the proposed method on a novel 3D detection dataset that includes gated imagery captured in over 10,000 km of driving data. We validate that our method outperforms state-of-the-art monocular and stereo approaches at long distances. We will release our code and dataset, opening up a new sensor modality as an avenue to replace lidar in autonomous driving.
+
+</details>
+
+### Exploring Geometry-aware Contrast and Clustering Harmonization for Self-supervised 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00328)
+- **作者**: Hanxue Liang, Chenhan Jiang, Dapeng Feng, Xin Chen, Hang Xu, Xiaodan Liang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,11 +55,27 @@
 
 </details>
 
-### 3DIoUMatch: Leveraging IoU Prediction for Semi-Supervised 3D Object Detection.
-- **链接**: [arXiv:2012.04355](https://arxiv.org/abs/2012.04355) · 📚 被引 121
-- **作者**: He Wang, Yezhen Cong, Or Litany, Yue Gao, Leonidas J. Guibas
+> Recently, directly detecting 3D objects from 3D point clouds has received increasing attention. To extract object representation from an irregular point cloud, existing methods usually take a point grouping step to assign the points to an object candidate so that a PointNet-like network could be used to derive object features from the grouped points. However, the inaccurate point assignments caused by the hand-crafted grouping scheme decrease the performance of 3D object detection. In this paper, we present a simple yet effective method for directly detecting 3D objects from the 3D point cloud. Instead of grouping local points to each object candidate, our method computes the feature of an object from all the points in the point cloud with the help of an attention mechanism in the Transformers \cite{vaswani2017attention}, where the contribution of each point is automatically learned in the network training. With an improved attention stacking scheme, our method fuses object features in different stages and generates more accurate object detection results. With few bells and whistles, the proposed method achieves state-of-the-art 3D object detection performance on two widely used benchmarks, ScanNet V2 and SUN RGB-D. The code and models are publicly available at \url{https://github.com/zeliu98/Group-Free-3D}
+
+</details>
+
+### AutoShape: Real-Time Shape-Aware Monocular 3D Object Detection.
+- **链接**: [arXiv:2108.11127](https://arxiv.org/abs/2108.11127) · [代码](https://github.com/zongdai/AutoShape) · 📚 被引 140
+- **作者**: Zongdai Liu, Dingfu Zhou, Feixiang Lu, Jin Fang, Liangjun Zhang
+- **🏷️ 机构**: National Engineering Laboratory of Deep Learning Technology and Application,Robotics and Autonomous Driving Laboratory, Baidu Research,China
+- **会议**: ICCV 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing deep learning-based approaches for monocular 3D object detection in autonomous driving often model the object as a rotated 3D cuboid while the object's geometric shape has been ignored. In this work, we propose an approach for incorporating the shape-aware 2D/3D constraints into the 3D detection framework. Specifically, we employ the deep neural network to learn distinguished 2D keypoints in the 2D image domain and regress their corresponding 3D coordinates in the local 3D object coordinate first. Then the 2D/3D geometric constraints are built by these correspondences for each object to boost the detection performance. For generating the ground truth of 2D/3D keypoints, an automatic model-fitting approach has been proposed by fitting the deformed 3D object model and the object mask in the 2D image. The proposed framework has been verified on the public KITTI dataset and the experimental results demonstrate that by using additional geometrical constraints the detection performance has been significantly improved as compared to the baseline method. More importantly, the proposed framework achieves state-of-the-art performance with real time. Data and code will be available at https://github.com/zongdai/AutoShape
+
+</details>
+
+### Geometry Uncertainty Projection Network for Monocular 3D Object Detection.
+- **链接**: [arXiv:2107.13774](https://arxiv.org/abs/2107.13774)
+- **作者**: Yan Lu, Xinzhu Ma, Lei Yang, Tianzhu Zhang, Yating Liu, Qi Chu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,11 +83,7 @@
 
 </details>
 
-### To the Point: Efficient 3D Object Detection in the Range Image With Graph Convolution Kernels.
-- **链接**: [arXiv:2106.13381](https://arxiv.org/abs/2106.13381) · 📚 被引 68
-- **作者**: Yuning Chai, Pei Sun, Jiquan Ngiam, Weiyue Wang, Benjamin Caine, Vijay Vasudevan et al.
-- **🏷️ 机构**: Waymo
-- **会议**: CVPR 2021
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -53,11 +91,21 @@
 
 </details>
 
-### MonoRUn: Monocular 3D Object Detection by Reconstruction and Uncertainty Propagation.
-- **链接**: [arXiv:2103.12605](https://arxiv.org/abs/2103.12605) · 📚 被引 131
-- **作者**: Hansheng Chen, Yuyao Huang, Wei Tian, Zhong Gao, Lu Xiong
+> LiDAR sensors can be used to obtain a wide range of measurement signals other than a simple 3D point cloud, and those signals can be leveraged to improve perception tasks like 3D object detection. A single laser pulse can be partially reflected by multiple objects along its path, resulting in multiple measurements called echoes. Multi-echo measurement can provide information about object contours and semi-transparent surfaces which can be used to better identify and locate objects. LiDAR can also measure surface reflectance (intensity of laser pulse return), as well as ambient light of the scene (sunlight reflected by objects). These signals are already available in commercial LiDAR devices but have not been used in most LiDAR-based detection models. We present a 3D object detection model which leverages the full spectrum of measurement signals provided by LiDAR. First, we propose a multi-signal fusion (MSF) module to combine (1) the reflectance and ambient features extracted with a 2D CNN, and (2) point cloud features extracted using a 3D graph neural network (GNN). Second, we propose a multi-echo aggregation (MEA) module to combine the information encoded in different set of echo points. Compared with traditional single echo point cloud methods, our proposed Multi-Signal LiDAR Detector (MSLiD) extracts richer context information from a wider range of sensing measurements and achieves more accurate 3D object detection. Experiments show that by incorporating the multi-modality of LiDAR, our method outperforms the state-of-the-art by up to 9.1%.
+
+</details>
+
+### Pyramid R-CNN: Towards Better Performance and Adaptability for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00272) · 📚 被引 172
+- **作者**: Jiageng Mao, Minzhe Niu, Haoyue Bai, Xiaodan Liang, Hang Xu, Chunjing Xu
+- **🏷️ 机构**: The Chinese University of Hong Kong, Huawei Noah&#x2019;s Ark Lab, HKUST
+- **会议**: ICCV 2021
+
+### Voxel Transformer for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00315)
+- **作者**: Jiageng Mao, Yujing Xue, Minzhe Niu, Haoyue Bai, Jiashi Feng, Xiaodan Liang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -65,11 +113,7 @@
 
 </details>
 
-### Back-Tracing Representative Points for Voting-Based 3D Object Detection in Point Clouds.
-- **链接**: [arXiv:2104.06114](https://arxiv.org/abs/2104.06114) · [代码](https://github.com/cheng052/BRNet) · 📚 被引 114
-- **作者**: Bowen Cheng, Lu Sheng, Shaoshuai Shi, Ming Yang, Dong Xu
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -77,35 +121,35 @@
 
 </details>
 
-### LiDAR-Aug: A General Rendering-Based Augmentation Framework for 3D Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Fang_LiDAR-Aug_A_General_Rendering-Based_Augmentation_Framework_for_3D_Object_Detection_CVPR_2021_paper.html) · 📚 被引 52
-- **作者**: Jin Fang, Xinxin Zuo, Dingfu Zhou, Shengze Jin, Sen Wang, Liangjun Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### RandomRooms: Unsupervised Pre-training from Synthetic Shapes and Randomized Layouts for 3D Object Detection.
+- **链接**: [arXiv:2108.07794](https://arxiv.org/abs/2108.07794)
+- **作者**: Yongming Rao, Benlin Liu, Yi Wei, Jiwen Lu, Cho-Jui Hsieh, Jie Zhou
+- **🏷️ 机构**: Tsinghua University, UCLA
+- **会议**: ICCV 2021
 
-### Delving Into Localization Errors for Monocular 3D Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Ma_Delving_Into_Localization_Errors_for_Monocular_3D_Object_Detection_CVPR_2021_paper.html) · 📚 被引 242
-- **作者**: Xinzhu Ma, Yinmin Zhang, Dan Xu, Dongzhan Zhou, Shuai Yi, Haojie Li et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Improving 3D Object Detection with Channel-wise Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00274) · 📚 被引 278
+- **作者**: Hualian Sheng, Sijia Cai, Yuan Liu, Bing Deng, Jianqiang Huang, Xian-Sheng Hua et al.
+- **🏷️ 机构**: Zhejiang University,College of Information Science and Electronic Engineering, Alibaba Group,DAMO Academy
+- **会议**: ICCV 2021
 
-### HVPR: Hybrid Voxel-Point Representation for Single-Stage 3D Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Noh_HVPR_Hybrid_Voxel-Point_Representation_for_Single-Stage_3D_Object_Detection_CVPR_2021_paper.html) · 📚 被引 153
-- **作者**: Jongyoun Noh, Sanghoon Lee, Bumsub Ham
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Geometry-based Distance Decomposition for Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01489) · 📚 被引 147
+- **作者**: Xuepeng Shi, Qi Ye, Xiaozhi Chen, Chuangrong Chen, Zhixiang Chen, Tae-Kyun Kim
+- **🏷️ 机构**: Imperial College London, Zhejiang University, DJI
+- **会议**: ICCV 2021
 
-### 3D Object Detection With Pointformer.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Pan_3D_Object_Detection_With_Pointformer_CVPR_2021_paper.html)
-- **作者**: Xuran Pan, Zhuofan Xia, Shiji Song, Li Erran Li, Gao Huang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Are we Missing Confidence in Pseudo-LiDAR Methods for Monocular 3D Object Detection?
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00321) · 📚 被引 35
+- **作者**: Andrea Simonelli, Samuel Rota Bulò, Lorenzo Porzi, Peter Kontschieder, Elisa Ricci
+- **🏷️ 机构**: University of Trento,Fondazione Bruno Kessler, Facebook Reality Labs
+- **会议**: ICCV 2021
 
-### Offboard 3D Object Detection From Point Cloud Sequences.
-- **链接**: [arXiv:2103.05073](https://arxiv.org/abs/2103.05073) · 📚 被引 161
-- **作者**: Charles R. Qi, Yin Zhou, Mahyar Najibi, Pei Sun, Khoa Vo, Boyang Deng et al.
-- **🏷️ 机构**: Waymo LLC
-- **会议**: CVPR 2021
+### You Don't Only Look Once: Constructing Spatial-Temporal Memory for Integrated 3D Object Detection and Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00317)
+- **作者**: Jiaming Sun, Yiming Xie, Siyu Zhang, Linghao Chen, Guofeng Zhang, Hujun Bao et al.
+- **🏷️ 机构**: Zhejiang University, SenseTime Research
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -125,23 +169,15 @@
 
 </details>
 
-### RSN: Range Sparse Net for Efficient, Accurate LiDAR 3D Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_RSN_Range_Sparse_Net_for_Efficient_Accurate_LiDAR_3D_Object_CVPR_2021_paper.html) · 📚 被引 155
-- **作者**: Pei Sun, Weiyue Wang, Yuning Chai, Gamaleldin Elsayed, Alex Bewley, Xiao Zhang et al.
-- **🏷️ 机构**: Waymo LLC, Google
-- **会议**: CVPR 2021
+### The Devil is in the Task: Exploiting Reciprocal Appearance-Localization Features for Monocular 3D Object Detection.
+- **链接**: [arXiv:2112.14023](https://arxiv.org/abs/2112.14023) · 📚 被引 52
+- **作者**: Zhikang Zou, Xiaoqing Ye, Liang Du, Xianhui Cheng, Xiao Tan, Li Zhang et al.
+- **🏷️ 机构**: Baidu Inc.,China, Fudan University, MOE Key Laboratory of Computational Neuroscience and Brain-Inspired Intelligence, Fudan University,Institute of Science and Technology for Brain-Inspired Intelligence, Fudan University,School of Computer Science
+- **会议**: ICCV 2021
 
-### PointAugmenting: Cross-Modal Augmentation for 3D Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_PointAugmenting_Cross-Modal_Augmentation_for_3D_Object_Detection_CVPR_2021_paper.html)
-- **作者**: Chunwei Wang, Chao Ma, Ming Zhu, Xiaokang Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Depth-Conditioned Dynamic Message Propagation for Monocular 3D Object Detection.
-- **链接**: [arXiv:2103.16470](https://arxiv.org/abs/2103.16470) · [代码](https://github.com/fudan-zvg/DDMP) · 📚 被引 137
-- **作者**: Li Wang, Liang Du, Xiaoqing Ye, Yanwei Fu, Guodong Guo, Xiangyang Xue et al.
-- **🏷️ 机构**: Fudan University,School of Computer Science, Fudan University,Institute of Science and Technology for Brain-Inspired Intelligence, Baidu Inc.
-- **会议**: CVPR 2021
+> Low-cost monocular 3D object detection plays a fundamental role in autonomous driving, whereas its accuracy is still far from satisfactory. In this paper, we dig into the 3D object detection task and reformulate it as the sub-tasks of object localization and appearance perception, which benefits to a deep excavation of reciprocal information underlying the entire task. We introduce a Dynamic Feature Reflecting Network, named DFR-Net, which contains two novel standalone modules: (i) the Appearance-Localization Feature Reflecting module (ALFR) that first separates taskspecific features and then self-mutually reflects the reciprocal features; (ii) the Dynamic Intra-Trading module (DIT) that adaptively realigns the training processes of various sub-tasks via a self-learning manner. Extensive experiments on the challenging KITTI dataset demonstrate the effectiveness and generalization of DFR-Net. We rank 1st among all the monocular 3D object detectors in the KITTI test set (till March 16th, 2021). The proposed method is also easy to be plug-and-play in many cutting-edge 3D detection frameworks at negligible cost to boost performance. The code will be made publicly available.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 

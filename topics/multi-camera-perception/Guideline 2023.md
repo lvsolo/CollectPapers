@@ -1,21 +1,21 @@
 # Multi-camera Perception — 2023 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 58 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 22 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Are We Ready for Vision-Centric Driving Streaming Perception? The ASAP Benchmark.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00926) · 📚 被引 21
-- **作者**: Xiaofeng Wang, Zheng Zhu, Yunpeng Zhang, Guan Huang, Yun Ye, Wenbo Xu et al.
-- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences, PhiGent Robotics, Southeast University
-- **会议**: CVPR 2023
+### UniFusion: Unified Multi-view Fusion Transformer for Spatial-Temporal Representation in Bird's-Eye-View.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00798) · 📚 被引 50
+- **作者**: Zequn Qin, Jingyu Chen, Chao Chen, Xiaozhi Chen, Xi Li
+- **🏷️ 机构**: Zhejiang University,College of Computer Science &amp; Technology, DJI
+- **会议**: ICCV 2023
 
-### Multi-view Adversarial Discriminator: Mine the Non-causal Factors for Object Detection in Unseen Domains.
-- **链接**: [arXiv:2304.02950](https://arxiv.org/abs/2304.02950) · 📚 被引 56
-- **作者**: Mingjun Xu, Lingyun Qin, Weijie Chen, Shiliang Pu, Lei Zhang
-- **🏷️ 机构**: School of Microelectronics and Communication Engineering, Chongqing University, China Hikvision Research Institute,Hangzhou,China
-- **会议**: CVPR 2023
+### AIDE: A Vision-Driven Multi-View, Multi-Modal, Multi-Tasking Dataset for Assistive Driving Perception.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01871) · 📚 被引 67
+- **作者**: Dingkang Yang, Shuai Huang, Zhi Xu, Zhenpeng Li, Shunli Wang, Mingcheng Li et al.
+- **🏷️ 机构**: Academy for Engineering and Technology, Fudan University
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -201,7 +201,7 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00869)
 - **作者**: Jennifer J. Sun, Lili Karashchuk, Amil Dravid, Serim Ryou, Sonia Fereidooni, John C. Tuthill et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
+- **会议**: ICCV 2023
 
 ### Sample-level Multi-view Graph Clustering.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02295) · 📚 被引 48
@@ -209,11 +209,7 @@
 - **🏷️ 机构**: Sichuan University
 - **会议**: CVPR 2023
 
-### On the Effects of Self-supervision and Contrastive Alignment in Deep Multi-view Clustering.
-- **链接**: [arXiv:2303.09877](https://arxiv.org/abs/2303.09877) · 📚 被引 57
-- **作者**: Daniel J. Trosten, Sigurd Løkse, Robert Jenssen, Michael C. Kampffmeyer
-- **🏷️ 机构**: UiT The Arctic University of Norway,Department of Physics and Technology
-- **会议**: CVPR 2023
+> The mechanisms behind the success of multi-view self-supervised learning (MVSSL) are not yet fully understood. Contrastive MVSSL methods have been studied through the lens of InfoNCE, a lower bound of the Mutual Information (MI). However, the relation between other MVSSL methods and MI remains unclear. We consider a different lower bound on the MI consisting of an entropy and a reconstruction term (ER), and analyze the main MVSSL families through its lens. Through this ER bound, we show that clustering-based methods such as DeepCluster and SwAV maximize the MI. We also re-interpret the mechanisms of distillation-based approaches such as BYOL and DINO, showing that they explicitly maximize the reconstruction term and implicitly encourage a stable entropy, and we confirm this empirically. We show that replacing the objectives of common MVSSL methods with this ER bound achieves competitive performance, while making them stable when training with smaller batch sizes or smaller exponential moving average (EMA) coefficients. Github repo: https://github.com/apple/ml-entropy-reconstruction.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -339,51 +335,65 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01719)
 - **作者**: Ziqi Pang, Jie Li, Pavel Tokmakov, Dian Chen, Sergey Zagoruyko, Yu-Xiong Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
+- **会议**: ICCV 2023
 
-### Trap Attention: Monocular Depth Estimation with Manual Traps.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00487) · 📚 被引 21
-- **作者**: Chao Ning, Hongping Gan
-- **🏷️ 机构**: Northwestern Polytechnical University,Xi&#x0027;an,China,710072
-- **会议**: CVPR 2023
-
-### iDisc: Internal Discretization for Monocular Depth Estimation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02057) · 📚 被引 119
-- **作者**: Luigi Piccinelli, Christos Sakaridis, Fisher Yu
-- **🏷️ 机构**: ETH Z&#x00FC;rich,Computer Vision Lab
-- **会议**: CVPR 2023
-
-### Lite-Mono: A Lightweight CNN and Transformer Architecture for Self-Supervised Monocular Depth Estimation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01778)
-- **作者**: Ning Zhang, Francesco Nex, George Vosselman, Norman Kerle
+### Self-Supervised Monocular Depth Estimation by Direction-aware Cumulative Convolution Network.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00791)
+- **作者**: Wencheng Han, Junbo Yin, Jianbing Shen
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
+- **会议**: ICCV 2023
 
-### PlaneDepth: Self-Supervised Depth Estimation via Orthogonal Planes.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02052)
-- **作者**: Ruoyu Wang, Zehao Yu, Shenghua Gao
+### Self-supervised Monocular Depth Estimation: Let's Talk About The Weather.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00818)
+- **作者**: Kieran Saunders, George Vogiatzis, Luis J. Manso
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
+- **会议**: ICCV 2023
 
-### DualRefine: Self-Supervised Depth and Pose Estimation Through Iterative Epipolar Sampling and Refinement Toward Equilibrium.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00077)
-- **作者**: Antyanta Bangunharcana, Ahmed Magd, Kyung-Soo Kim
+### 3D Distillation: Improving Self-Supervised Monocular Depth Estimation on Reflective Surfaces.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00838)
+- **作者**: Xuepeng Shi, Georgi Dikov, Gerhard Reitmayr, Tae-Kyun Kim, Mohsen Ghafoorian
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
+- **会议**: ICCV 2023
 
-### Fully Self-Supervised Depth Estimation from Defocus Clue.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00882)
-- **作者**: Haozhe Si, Bin Zhao, Dong Wang, Yunpeng Gao, Mulin Chen, Zhigang Wang et al.
+### GasMono: Geometry-Aided Self-Supervised Monocular Depth Estimation for Indoor Scenes.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01485)
+- **作者**: Chaoqiang Zhao, Matteo Poggi, Fabio Tosi, Lei Zhou, Qiyu Sun, Yang Tang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
+- **会议**: ICCV 2023
+
+### HaMuCo: Hand Pose Estimation via Multiview Collaborative Self-Supervised Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01898)
+- **作者**: Xiaozheng Zheng, Chao Wen, Zhou Xue, Pengfei Ren, Jingyu Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
+
+### Two-in-One Depth: Bridging the Gap Between Monocular and Binocular Self-supervised Depth Estimation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00863)
+- **作者**: Zhengming Zhou, Qiulei Dong
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
+
+### CL-MVSNet: Unsupervised Multi-view Stereo with Dual-level Contrastive Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00349)
+- **作者**: Kaiqiang Xiong, Rui Peng, Zhe Zhang, Tianxing Feng, Jianbo Jiao, Feng Gao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
+
+### GeoMIM: Towards Better 3D Knowledge Transfer via Masked Image Modeling for Multi-view 3D Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01635)
+- **作者**: Jihao Liu, Tai Wang, Boxiao Liu, Qihang Zhang, Yu Liu, Hongsheng Li
+- **🏷️ 机构**: SenseTime, CUHK
+- **会议**: ICCV 2023
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- Viewpoint Equivariance for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- AeDet: Azimuth-Invariant Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- X3KD: Knowledge Distillation Across Modalities, Tasks and Stages for Multi-Camera 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- Weakly Supervised Monocular 3D Object Detection Using Multi-View Projection and Direction Consistency. → [3d-detection](../3d-detection/Guideline%202023.md)
-- Towards Domain Generalization for Multi-view 3D Object Detection in Bird-Eye-View. → [3d-detection](../3d-detection/Guideline%202023.md)
-- CAPE: Camera View Position Embedding for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- TBP-Former: Learning Temporal Bird's-Eye-View Pyramid for Joint Perception and Prediction in Vision-Centric Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)
-- FrustumFormer: Adaptive Instance-aware Resampling for Multi-view 3D Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Exploring Object-Centric Temporal Modeling for Efficient Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- DistillBEV: Boosting Multi-Camera 3D Object Detection with Cross-Modal Knowledge Distillation. → [3d-detection](../3d-detection/Guideline%202023.md)
+- SparseBEV: High-Performance Sparse 3D Object Detection from Multi-Camera Videos. → [3d-detection](../3d-detection/Guideline%202023.md)
+- 3DPPE: 3D Point Positional Encoding for Transformer-based Multi-Camera 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- ImGeoNet: Image-induced Geometry-aware Voxel Representation for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Pixel-Aligned Recurrent Queries for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- NeRF-Det: Learning Geometry-Aware Volumetric Representation for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- QD-BEV : Quantization-aware View-guided Distillation for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- SA-BEV: Generating Semantic-Aware Bird's-Eye-View Feature for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- SurroundOcc: Multi-Camera 3D Occupancy Prediction for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)
