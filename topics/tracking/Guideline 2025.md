@@ -1,76 +1,47 @@
 # Tracking — 2025 Guideline
 
 > 领域: 目标跟踪（MOT / 3D 跟踪 / 多目标多相机跟踪）
-> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Multiple Object Tracking as ID Prediction.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Gao_Multiple_Object_Tracking_as_ID_Prediction_CVPR_2025_paper.html) · 📚 被引 52
-- **作者**: Ruopeng Gao, Ji Qi, Limin Wang
-- **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology, China Mobile (Suzhou) Software Technology Co., Ltd.
-- **会议**: CVPR 2025
-
-### GRAE-3DMOT: Geometry Relation-Aware Encoder for Online 3D Multi-Object Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kim_GRAE-3DMOT_Geometry_Relation-Aware_Encoder_for_Online_3D_Multi-Object_Tracking_CVPR_2025_paper.html) · 📚 被引 0
-- **作者**: Hyunseop Kim, Hyo-Jun Lee, Yonguk Lee, Jinu Lee, Hanul Kim, Yeong Jun Koh
-- **🏷️ 机构**: Chungnam National University, Kangwon National University, 42Dot Inc.
-- **会议**: CVPR 2025
-
-### Omnidirectional Multi-Object Tracking.
-- **链接**: [arXiv:2503.04565](https://arxiv.org/abs/2503.04565) · [代码](https://github.com/xifen523/OmniTrack)
-- **作者**: Kai Luo, Hao Shi, Sheng Wu, Fei Teng, Mengfei Duan, Chang Huang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+### MMOT: The First Challenging Benchmark for Drone-based Multispectral Multi-Object Tracking.
+- **链接**: [arXiv:2510.12565](https://arxiv.org/abs/2510.12565) · 📚 被引 1
+- **作者**: Tianhao Li, Tingfa Xu, Ying Wang, Haolin Qin, Xu Lin, Jianan Li
+- **🏷️ 机构**: Beijing Institute of Technology, Beijing Institute of Technology, Tsinghua University
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Panoramic imagery, with its 360° field of view, offers comprehensive information to support Multi-Object Tracking (MOT) in capturing spatial and temporal relationships of surrounding objects. However, most MOT algorithms are tailored for pinhole images with limited views, impairing their effectiveness in panoramic settings. Additionally, panoramic image distortions, such as resolution loss, geometric deformation, and uneven lighting, hinder direct adaptation of existing MOT methods, leading to significant performance degradation. To address these challenges, we propose OmniTrack, an omnidirectional MOT framework that incorporates Tracklet Management to introduce temporal cues, FlexiTrack Instances for object localization and association, and the CircularStatE Module to alleviate image and geometric distortions. This integration enables tracking in panoramic field-of-view scenarios, even under rapid sensor motion. To mitigate the lack of panoramic MOT datasets, we introduce the QuadTrack dataset--a comprehensive panoramic dataset collected by a quadruped robot, featuring diverse challenges such as panoramic fields of view, intense motion, and complex environments. Extensive experiments on the public JRDB dataset and the newly introduced QuadTrack benchmark demonstrate the state-of-the-art performance of the proposed framework. OmniTrack achieves a HOTA score of 26.92% on JRDB, representing an improvement of 3.43%, and further achieves 23.45% on QuadTrack, surpassing the baseline by 6.81%. The established dataset and source code are available at https://github.com/xifen523/OmniTrack.
+> Drone-based multi-object tracking is essential yet highly challenging due to small targets, severe occlusions, and cluttered backgrounds. Existing RGB-based tracking algorithms heavily depend on spatial appearance cues such as color and texture, which often degrade in aerial views, compromising reliability. Multispectral imagery, capturing pixel-level spectral reflectance, provides crucial cues that enhance object discriminability under degraded spatial conditions. However, the lack of dedicated multispectral UAV datasets has hindered progress in this domain. To bridge this gap, we introduce MMOT, the first challenging benchmark for drone-based multispectral multi-object tracking. It features three key characteristics: (i) Large Scale - 125 video sequences with over 488.8K annotations across eight categories; (ii) Comprehensive Challenges - covering diverse conditions such as extreme small targets, high-density scenarios, severe occlusions, and complex motion; and (iii) Precise Oriented Annotations - enabling accurate localization and reduced ambiguity under aerial perspectives. To better extract spectral features and leverage oriented annotations, we further present a multispectral and orientation-aware MOT scheme adapting existing methods, featuring: (i) a lightweight Spectral 3D-Stem integrating spectral features while preserving compatibility with RGB pretraining; (ii) an orientation-aware Kalman filter for precise state estimation; and (iii) an end-to-end orientation-adaptive transformer. Extensive experiments across representative trackers consistently show that multispectral input markedly improves tracking performance over RGB baselines, particularly for small and densely packed objects. We believe our work will advance drone-based multispectral multi-object tracking research. Our MMOT, code, and benchmarks are publicly available at https://github.com/Annzstbl/MMOT.
 
 </details>
 
-### MUST: The First Dataset and Unified Framework for Multispectral UAV Single Object Tracking.
-- **链接**: [arXiv:2503.17699](https://arxiv.org/abs/2503.17699) · [代码](https://github.com/q2479036243/MUST-Multispectral-UAV-Single-Object-Tracking) · 📚 被引 12
-- **作者**: Haolin Qin, Tingfa Xu, Tianhao Li, Zhenxiang Chen, Tao Feng, Jianan Li
-- **🏷️ 机构**: Beijing Institute of Technology
-- **会议**: CVPR 2025
+### STAR: Spatial-Temporal Tracklet Matching for Multi-Object Tracking.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/62c599c5c2b365ba464a26ebad05b690-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Xuewei Bai, Yongcai Wang, Deying Li, Haodi Ping, Chunxu Li
+- **🏷️ 机构**: Renmin University of China, Beijing University of Technology
+- **会议**: NeurIPS 2025
+
+### Dual-Path Temporal Decoder for End-to-End Multi-Object Tracking.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/07054a34f24ac3ef64c5f2fdf571b8c0-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Hyunseop Kim, Juheon Jeong, Hanul Kim, Yeong Jun Koh
+- **🏷️ 机构**: Chungnam National University, Seoul National University of Science and Technology
+- **会议**: NeurIPS 2025
+
+### HO-Cap: A Capture System and Dataset for 3D Reconstruction and Pose Tracking of Hand-Object Interaction.
+- **链接**: [arXiv:2406.06843](https://arxiv.org/abs/2406.06843) · 📚 被引 0
+- **作者**: Jikai Wang, Qifan Zhang, Yu-Wei Chao, Bowen Wen, Xiaohu Guo, Yu Xiang
+- **🏷️ 机构**: University of Texas at Dallas, NVIDIA, University of Texas, Dallas
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> UAV tracking faces significant challenges in real-world scenarios, such as small-size targets and occlusions, which limit the performance of RGB-based trackers. Multispectral images (MSI), which capture additional spectral information, offer a promising solution to these challenges. However, progress in this field has been hindered by the lack of relevant datasets. To address this gap, we introduce the first large-scale Multispectral UAV Single Object Tracking dataset (MUST), which includes 250 video sequences spanning diverse environments and challenges, providing a comprehensive data foundation for multispectral UAV tracking. We also propose a novel tracking framework, UNTrack, which encodes unified spectral, spatial, and temporal features from spectrum prompts, initial templates, and sequential searches. UNTrack employs an asymmetric transformer with a spectral background eliminate mechanism for optimal relationship modeling and an encoder that continuously updates the spectrum prompt to refine tracking, improving both accuracy and efficiency. Extensive experiments show that our proposed UNTrack outperforms state-of-the-art UAV trackers. We believe our dataset and framework will drive future research in this area. The dataset is available on https://github.com/q2479036243/MUST-Multispectral-UAV-Single-Object-Tracking.
+> We introduce a data capture system and a new dataset, HO-Cap, for 3D reconstruction and pose tracking of hands and objects in videos. The system leverages multiple RGBD cameras and a HoloLens headset for data collection, avoiding the use of expensive 3D scanners or mocap systems. We propose a semi-automatic method for annotating the shape and pose of hands and objects in the collected videos, significantly reducing the annotation time compared to manual labeling. With this system, we captured a video dataset of humans interacting with objects to perform various tasks, including simple pick-and-place actions, handovers between hands, and using objects according to their affordance, which can serve as human demonstrations for research in embodied AI and robot manipulation. Our data capture setup and annotation framework will be available for the community to use in reconstructing 3D shapes of objects and human hands and tracking their poses in videos.
 
 </details>
-
-### Focusing on Tracks for Online Multi-Object Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Shim_Focusing_on_Tracks_for_Online_Multi-Object_Tracking_CVPR_2025_paper.html) · 📚 被引 20
-- **作者**: Kyujin Shim, Kangwook Ko, Yujin Yang, Changick Kim
-- **🏷️ 机构**: Korea Advanced Institute of Science and Technology (KAIST)
-- **会议**: CVPR 2025
-
-### SPMTrack: Spatio-Temporal Parameter-Efficient Fine-Tuning with Mixture of Experts for Scalable Visual Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Cai_SPMTrack_Spatio-Temporal_Parameter-Efficient_Fine-Tuning_with_Mixture_of_Experts_for_Scalable_CVPR_2025_paper.html) · 📚 被引 13
-- **作者**: Wenrui Cai, Qingjie Liu, Yunhong Wang
-- **🏷️ 机构**: Beihang University,State Key Laboratory of Virtual Reality Technology and Systems,Beijing,China
-- **会议**: CVPR 2025
-
-### Autoregressive Sequential Pretraining for Visual Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liang_Autoregressive_Sequential_Pretraining_for_Visual_Tracking_CVPR_2025_paper.html) · 📚 被引 8
-- **作者**: Shiyi Liang, Yifan Bai, Yihong Gong, Xing Wei
-- **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Software Engineering
-- **会议**: CVPR 2025
-
-### Exploring Historical Information for RGBE Visual Tracking with Mamba.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Sun_Exploring_Historical_Information_for_RGBE_Visual_Tracking_with_Mamba_CVPR_2025_paper.html) · 📚 被引 7
-- **作者**: Chuanyu Sun, Jiqing Zhang, Yang Wang, Huilin Ge, Qianchen Xia, Baocai Yin et al.
-- **🏷️ 机构**: Dalian University of Technology,Key Laboratory of Social Computing and Cognitive Intelligence, Dalian Maritime University, Jiangsu University of Science and Technology
-- **会议**: CVPR 2025
-
-### GaPT-DAR: Category-level Garments Pose Tracking via Integrated 2D Deformation and 3D Reconstruction.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_GaPT-DAR_Category-level_Garments_Pose_Tracking_via_Integrated_2D_Deformation_and_CVPR_2025_paper.html) · 📚 被引 3
-- **作者**: Li Zhang, Mingliang Xu, Jianan Wang, Qiaojun Yu, Lixin Yang, Yonglu Li et al.
-- **🏷️ 机构**: University of Science and Technology of China,Hefei,China, Astribot,Shenzhen,China, Shanghai Jiao Tong University,Shanghai,China
-- **会议**: CVPR 2025
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- All-Day Multi-Camera Multi-Target Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
+- SynCL: A Synergistic Training Strategy with Instance-Aware Contrastive Learning for End-to-End Multi-Camera 3D Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
+- TrackingWorld: World-centric Monocular 3D Tracking of Almost All Pixels. → [3d-detection](../3d-detection/Guideline%202025.md)
