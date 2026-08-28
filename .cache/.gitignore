@@ -1,4 +1,0 @@
-# 本目录整体不入库，仅 daily_seen.json 例外（workflow 跨运行去重用）
-*
-!daily_seen.json
-!.gitignore
