@@ -16,6 +16,12 @@
 - **创新点**: 结合迭代细化与伪标签策略，提升生成图像质量和旧类知识保留。
 - **结果**: 在COCO 2017上显著超越现有算法，达到多种CIOD场景下的最先进性能。
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In the field of class incremental learning (CIL), generative replay has become increasingly prominent as a method to mitigate the catastrophic forgetting, alongside the continuous improvements in generative models. However, its application in class incremental object detection (CIOD) has been significantly limited, primarily due to the complexities of scenes involving multiple labels. In this paper, we propose a novel approach called stable diffusion deep generative replay (SDDGR) for CIOD. Our method utilizes a diffusion-based generative model with pre-trained text-to-diffusion networks to generate realistic and diverse synthetic images. SDDGR incorporates an iterative refinement strategy to produce high-quality images encompassing old classes. Additionally, we adopt an L2 knowledge distillation technique to improve the retention of prior knowledge in synthetic images. Furthermore, our approach includes pseudo-labeling for old objects within new task images, preventing misclassification as background elements. Extensive experiments on the COCO 2017 dataset demonstrate that SDDGR significantly outperforms existing algorithms, achieving a new state-of-the-art in various CIOD scenarios. The source code will be made available to the public.
+
+</details>
+
 ### Boosting Continual Learning of Vision-Language Models via Mixture-of-Experts Adapters. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2403.11549](https://arxiv.org/abs/2403.11549) · 📚 被引 115
 - **作者**: Jiazuo Yu, Yunzhi Zhuge, Lu Zhang, Ping Hu, Dong Wang, Huchuan Lu et al.
@@ -27,6 +33,12 @@
 - **创新点**: 动态扩展MoE适配器并引入自动选择器，兼顾新任务适应与旧知识保留。
 - **结果**: 在多种设置下超越先前方法，并减少60%的参数训练负担。
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning can empower vision-language models to continuously acquire new knowledge, without the need for access to the entire historical dataset. However, mitigating the performance degradation in large-scale models is non-trivial due to (i) parameter shifts throughout lifelong learning and (ii) significant computational burdens associated with full-model tuning. In this work, we present a parameter-efficient continual learning framework to alleviate long-term forgetting in incremental learning with vision-language models. Our approach involves the dynamic expansion of a pre-trained CLIP model, through the integration of Mixture-of-Experts (MoE) adapters in response to new tasks. To preserve the zero-shot recognition capability of vision-language models, we further introduce a Distribution Discriminative Auto-Selector (DDAS) that automatically routes in-distribution and out-of-distribution inputs to the MoE Adapter and the original CLIP, respectively. Through extensive experiments across various settings, our proposed method consistently outperforms previous state-of-the-art approaches while concurrently reducing parameter training burdens by 60%. Our code locates at https://github.com/JiazuoYu/MoE-Adapters4CL
+
+</details>
+
 ### Continual Self-Supervised Learning: Towards Universal Multi-Modal Medical Data Representation Learning. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2311.17597](https://arxiv.org/abs/2311.17597) · 📚 被引 38
 - **作者**: Yiwen Ye, Yutong Xie, Jianpeng Zhang, Ziyang Chen, Qi Wu, Yong Xia
@@ -37,6 +49,12 @@
 - **核心贡献**: 提出MedCoSS多阶段持续自监督学习框架，缓解多模态医学数据预训练中的冲突与遗忘。
 - **创新点**: 利用k-means采样策略进行排练，实现模态间知识平衡。
 - **结果**: 实验显示在多模态医学数据表示学习上取得有效提升。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised learning is an efficient pre-training method for medical image analysis. However, current research is mostly confined to specific-modality data pre-training, consuming considerable time and resources without achieving universality across different modalities. A straightforward solution is combining all modality data for joint self-supervised pre-training, which poses practical challenges. Firstly, our experiments reveal conflicts in representation learning as the number of modalities increases. Secondly, multi-modal data collected in advance cannot cover all real-world scenarios. In this paper, we reconsider versatile self-supervised learning from the perspective of continual learning and propose MedCoSS, a continuous self-supervised learning approach for multi-modal medical data. Unlike joint self-supervised learning, MedCoSS assigns different modality data to different training stages, forming a multi-stage pre-training process. To balance modal conflicts and prevent catastrophic forgetting, we propose a rehearsal-based continual learning method. We introduce the k-means sampling strategy to retain data from previous modalities and rehearse it when learning new modalities. Instead of executing the pretext task on buffer data, a feature distillation strategy and an intra-modal mixup strategy are applied to these data for knowledge retention. We conduct continuous self-supervised pre-training on a large-scale multi-modal unlabeled dataset, including clinical reports, X-rays, CT scans, MRI scans, and pathological images. Experimental results demonstrate MedCoSS's exceptional generalization ability across nine downstream datasets and its significant scalability in integrating new modality data. Code and pre-trained weight are available at https://github.com/yeerwen/MedCoSS.
+
+</details>
 
 ### Continual Learning for Motion Prediction Model via Meta-Representation Learning and Optimal Memory Buffer Retention Strategy. **⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01462) · 📚 被引 9
@@ -137,6 +155,12 @@
 - **创新点**: 通过子空间正交设计消除新旧任务参数干扰。
 - **结果**: 在多个基准上显著优于现有PEFT方法。
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning requires the model to learn multiple tasks sequentially. In continual learning, the model should possess the ability to maintain its performance on old tasks (stability) and the ability to adapt to new tasks continuously (plasticity). Recently, parameter-efficient fine-tuning (PEFT), which involves freezing a pre-trained model and injecting a small number of learnable parameters to adapt to downstream tasks, has gained increasing popularity in continual learning. Although existing continual learning methods based on PEFT have demonstrated superior performance compared to those not based on PEFT, most of them do not consider how to eliminate the interference of the new task on the old tasks, which inhibits the model from making a good trade-off between stability and plasticity. In this work, we propose a new PEFT method, called interference-free low-rank adaptation (InfLoRA), for continual learning. InfLoRA injects a small number of parameters to reparameterize the pre-trained weights and shows that fine-tuning these injected parameters is equivalent to fine-tuning the pre-trained weights within a subspace. Furthermore, InfLoRA designs this subspace to eliminate the interference of the new task on the old tasks, making a good trade-off between stability and plasticity. Experimental results show that InfLoRA outperforms existing state-of-the-art continual learning methods on multiple datasets.
+
+</details>
+
 ### Enhancing Visual Continual Learning with Language-Guided Supervision. **⭐⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2403.16124](https://arxiv.org/abs/2403.16124) · 📚 被引 15
 - **作者**: Bolin Ni, Hongbo Zhao, Chenghao Zhang, Ke Hu, Gaofeng Meng, Zhaoxiang Zhang et al.
@@ -148,6 +172,12 @@
 - **创新点**: 将PLM生成的语义目标作为冻结监督信号。
 - **结果**: 在多个基准上显著提升性能，尤其在小样本和长序列任务中。
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning (CL) aims to empower models to learn new tasks without forgetting previously acquired knowledge. Most prior works concentrate on the techniques of architectures, replay data, regularization, \etc. However, the category name of each class is largely neglected. Existing methods commonly utilize the one-hot labels and randomly initialize the classifier head. We argue that the scarce semantic information conveyed by the one-hot labels hampers the effective knowledge transfer across tasks. In this paper, we revisit the role of the classifier head within the CL paradigm and replace the classifier with semantic knowledge from pretrained language models (PLMs). Specifically, we use PLMs to generate semantic targets for each class, which are frozen and serve as supervision signals during training. Such targets fully consider the semantic correlation between all classes across tasks. Empirical studies show that our approach mitigates forgetting by alleviating representation drifting and facilitating knowledge transfer across tasks. The proposed method is simple to implement and can seamlessly be plugged into existing methods with negligible adjustments. Extensive experiments based on eleven mainstream baselines demonstrate the effectiveness and generalizability of our approach to various protocols. For example, under the class-incremental learning setting on ImageNet-100, our method significantly improves the Top-1 accuracy by 3.2\% to 6.1\% while reducing the forgetting rate by 2.6\% to 13.1\%.
+
+</details>
+
 ### Adaptive VIO: Deep Visual-Inertial Odometry with Online Continual Learning. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2405.16754](https://arxiv.org/abs/2405.16754) · 📚 被引 24
 - **作者**: Youqi Pan, Wugen Zhou, Yingdian Cao, Hongbin Zha
@@ -158,6 +188,12 @@
 - **核心贡献**: 提出一种结合在线持续学习与优化的自适应VIO框架。
 - **创新点**: 通过反馈机制实现网络自监督在线更新，增强环境适应性。
 - **结果**: 在公开数据集上超越学习型VIO，性能接近优化型方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Visual-inertial odometry (VIO) has demonstrated remarkable success due to its low-cost and complementary sensors. However, existing VIO methods lack the generalization ability to adjust to different environments and sensor attributes. In this paper, we propose Adaptive VIO, a new monocular visual-inertial odometry that combines online continual learning with traditional nonlinear optimization. Adaptive VIO comprises two networks to predict visual correspondence and IMU bias. Unlike end-to-end approaches that use networks to fuse the features from two modalities (camera and IMU) and predict poses directly, we combine neural networks with visual-inertial bundle adjustment in our VIO system. The optimized estimates will be fed back to the visual and IMU bias networks, refining the networks in a self-supervised manner. Such a learning-optimization-combined framework and feedback mechanism enable the system to perform online continual learning. Experiments demonstrate that our Adaptive VIO manifests adaptive capability on EuRoC and TUM-VI datasets. The overall performance exceeds the currently known learning-based VIO methods and is comparable to the state-of-the-art optimization-based methods.
+
+</details>
 
 ### Interactive Continual Learning: Fast and Slow Thinking. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01224) · 📚 被引 23

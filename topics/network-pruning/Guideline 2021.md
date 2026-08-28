@@ -5,12 +5,12 @@
 
 > 同领域其他年份: 
 
-### NPAS: A Compiler-Aware Framework of Unified Network Pruning and Architecture Search for Beyond Real-Time Mobile Acceleration.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_NPAS_A_Compiler-Aware_Framework_of_Unified_Network_Pruning_and_Architecture_CVPR_2021_paper.html) · 📚 被引 25
-- **作者**: Zhengang Li, Geng Yuan, Wei Niu, Pu Zhao, Yanyu Li, Yuxuan Cai et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Self-Supervised Cryo-Electron Tomography Volumetric Image Restoration from Single Noisy Volume with Sparsity Constraint.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00402)
+- **作者**: Zhidong Yang, Fa Zhang, Renmin Han
+- **🏷️ 机构**: ICT, CAS,High Performance Computer Research Center, Shandong University,Research Center for Mathematics and Interdisciplinary Sciences
+- **会议**: ICCV 2021
 
-## 跨领域论文（完整笔记在其他领域）
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-- VoxelContext-Net: An Octree Based Framework for Point Cloud Compression. → [3d-detection](../3d-detection/Guideline%202021.md)
+- Learning where to learn: Gradient sparsity in meta and continual learning. → [continual-learning](../continual-learning/Guideline%202021.md)

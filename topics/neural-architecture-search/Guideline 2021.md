@@ -5,17 +5,23 @@
 
 > 同领域其他年份: 
 
-### OPANAS: One-Shot Path Aggregation Network Architecture Search for Object Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Liang_OPANAS_One-Shot_Path_Aggregation_Network_Architecture_Search_for_Object_Detection_CVPR_2021_paper.html) · 📚 被引 61
-- **作者**: Tingting Liang, Yongtao Wang, Zhi Tang, Guosheng Hu, Haibin Ling
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### iNAS: Integral NAS for Device-Aware Salient Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00489) · 📚 被引 11
+- **作者**: Yuchao Gu, Shang-Hua Gao, Xu-Sheng Cao, Peng Du, Shao-Ping Lu, Ming-Ming Cheng
+- **🏷️ 机构**: Nankai University,TKLNDST, CS, Huawei Technologies
+- **会议**: ICCV 2021
 
-### LightTrack: Finding Lightweight Neural Networks for Object Tracking via One-Shot Architecture Search.
-- **链接**: [arXiv:2104.14545](https://arxiv.org/abs/2104.14545) · [代码](https://github.com/researchmm/LightTrack) · 📚 被引 235
-- **作者**: Bin Yan, Houwen Peng, Kan Wu, Dong Wang, Jianlong Fu, Huchuan Lu
+### BossNAS: Exploring Hybrid CNN-transformers with Block-wisely Self-supervised Neural Architecture Search.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01206)
+- **作者**: Changlin Li, Tao Tang, Guangrun Wang, Jiefeng Peng, Bing Wang, Xiaodan Liang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **会议**: ICCV 2021
+
+### Evolving Search Space for Neural Architecture Search.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00659)
+- **作者**: Yuanzheng Ci, Chen Lin, Ming Sun, Boyu Chen, Hongwen Zhang, Wanli Ouyang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -23,35 +29,19 @@
 
 </details>
 
-### One-Shot Neural Ensemble Architecture Search by Diversity-Guided Search Space Shrinking.
-- **链接**: [arXiv:2104.00597](https://arxiv.org/abs/2104.00597) · 📚 被引 26
-- **作者**: Minghao Chen, Jianlong Fu, Haibin Ling
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Contrastive Neural Architecture Search With Neural Architecture Comparators.
-- **链接**: [arXiv:2103.05471](https://arxiv.org/abs/2103.05471) · 📚 被引 66
-- **作者**: Yaofo Chen, Yong Guo, Qi Chen, Minli Li, Wei Zeng, Yaowei Wang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+> We present BN-NAS, neural architecture search with Batch Normalization (BN-NAS), to accelerate neural architecture search (NAS). BN-NAS can significantly reduce the time required by model training and evaluation in NAS. Specifically, for fast evaluation, we propose a BN-based indicator for predicting subnet performance at a very early training stage. The BN-based indicator further facilitates us to improve the training efficiency by only training the BN parameters during the supernet training. This is based on our observation that training the whole supernet is not necessary while training only BN parameters accelerates network convergence for network architecture search. Extensive experiments show that our method can significantly shorten the time of training supernet by more than 10 times and shorten the time of evaluating subnets by more than 600,000 times without losing accuracy.
 
-### NetAdaptV2: Efficient Neural Architecture Search With Fast Super-Network Training and Architecture Optimization.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yang_NetAdaptV2_Efficient_Neural_Architecture_Search_With_Fast_Super-Network_Training_and_CVPR_2021_paper.html) · 📚 被引 28
-- **作者**: Tien-Ju Yang, Yi-Lun Liao, Vivienne Sze
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+</details>
 
-### Rethinking Graph Neural Architecture Search From Message-Passing.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Cai_Rethinking_Graph_Neural_Architecture_Search_From_Message-Passing_CVPR_2021_paper.html) · 📚 被引 45
-- **作者**: Shaofei Cai, Liang Li, Jincan Deng, Beichen Zhang, Zheng-Jun Zha, Li Su et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### GLiT: Neural Architecture Search for Global and Local Image Transformer.
+- **链接**: [arXiv:2107.02960](https://arxiv.org/abs/2107.02960)
+- **作者**: Boyu Chen, Peixia Li, Chuming Li, Baopu Li, Lei Bai, Chen Lin et al.
+- **🏷️ 机构**: The University of Sydney, BAIDU USA LLC, University of Oxford
+- **会议**: ICCV 2021
 
-### HR-NAS: Searching Efficient High-Resolution Neural Architectures With Lightweight Transformers.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Ding_HR-NAS_Searching_Efficient_High-Resolution_Neural_Architectures_With_Lightweight_Transformers_CVPR_2021_paper.html) · 📚 被引 60
-- **作者**: Mingyu Ding, Xiaochen Lian, Linjie Yang, Peng Wang, Xiaojie Jin, Zhiwu Lu et al.
-- **🏷️ 机构**: The University of Hong Kong, Bytedance Inc., Renmin University of China,Gaoling School of Artificial Intelligence
-- **会议**: CVPR 2021
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 ### TransNAS-Bench-101: Improving Transferability and Generalizability of Cross-Task Neural Architecture Search.
 - **链接**: [arXiv:2105.11871](https://arxiv.org/abs/2105.11871) · 📚 被引 50
@@ -89,11 +79,11 @@
 
 </details>
 
-### AttentiveNAS: Improving Neural Architecture Search via Attentive Sampling.
-- **链接**: [arXiv:2011.09011](https://arxiv.org/abs/2011.09011) · [代码](https://github.com/facebookresearch/AttentiveNAS) · 📚 被引 80
-- **作者**: Dilin Wang, Meng Li, Chengyue Gong, Vikas Chandra
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+### Once Quantization-Aware Training: High Performance Extremely Low-bit Architecture Search.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00529) · 📚 被引 35
+- **作者**: Mingzhu Shen, Feng Liang, Ruihao Gong, Yuhang Li, Chuming Li, Chen Lin et al.
+- **🏷️ 机构**: Sensetime Research, University of Oxford
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -101,17 +91,17 @@
 
 </details>
 
-### ReNAS: Relativistic Evaluation of Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Xu_ReNAS_Relativistic_Evaluation_of_Neural_Architecture_Search_CVPR_2021_paper.html) · 📚 被引 76
-- **作者**: Yixing Xu, Yunhe Wang, Kai Han, Yehui Tang, Shangling Jui, Chunjing Xu et al.
-- **🏷️ 机构**: Huawei Technologies,Noah&#x2019;s Ark Lab, Huawei Technologies, The University of Sydney
-- **会议**: CVPR 2021
+### IDARTS: Interactive Differentiable Architecture Search.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00120) · 📚 被引 11
+- **作者**: Song Xue, Runqi Wang, Baochang Zhang, Tian Wang, Guodong Guo, David S. Doermann
+- **🏷️ 机构**: Beihang University,Beijing,China, Institute of Deep Learning, Baidu Research,National Engineering Laboratory for Deep Learning Technology and Application,Beijing,China, University at Buffalo,USA
+- **会议**: ICCV 2021
 
-### ViPNAS: Efficient Video Pose Estimation via Neural Architecture Search.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Xu_ViPNAS_Efficient_Video_Pose_Estimation_via_Neural_Architecture_Search_CVPR_2021_paper.html) · 📚 被引 56
-- **作者**: Lumin Xu, Yingda Guan, Sheng Jin, Wentao Liu, Chen Qian, Ping Luo et al.
-- **🏷️ 机构**: CUHK / Shanghai AI Lab
-- **会议**: CVPR 2021
+### Neural Architecture Search for Joint Human Parsing and Pose Estimation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01119) · 📚 被引 30
+- **作者**: Dan Zeng, Yuhang Huang, Qian Bao, Junjie Zhang, Chi Su, Wu Liu
+- **🏷️ 机构**: Shanghai University, AI Research of JD.com, Kingsoft Cloud
+- **会议**: ICCV 2021
 
 ### FP-NAS: Fast Probabilistic Neural Architecture Search.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yan_FP-NAS_Fast_Probabilistic_Neural_Architecture_Search_CVPR_2021_paper.html) · 📚 被引 18

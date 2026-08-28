@@ -5,11 +5,11 @@
 
 > 同领域其他年份: 
 
-### CLIP2: Contrastive Language-Image-Point Pretraining from Real-World Point Cloud Data.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01463) · 📚 被引 83
-- **作者**: Yihan Zeng, Chenhan Jiang, Jiageng Mao, Jianhua Han, Chaoqiang Ye, Qingqiu Huang et al.
-- **🏷️ 机构**: Huawei Noah&#x0027;s Ark Lab, Hong Kong University of Science and Technology, The Chinese University of Hong Kong
-- **会议**: CVPR 2023
+### CLIP2Point: Transfer CLIP to Point Cloud Classification with Image-Depth Pre-Training.
+- **链接**: [arXiv:2210.01055](https://arxiv.org/abs/2210.01055) · 📚 被引 140
+- **作者**: Tianyu Huang, Bowen Dong, Yunhan Yang, Xiaoshui Huang, Rynson W. H. Lau, Wanli Ouyang et al.
+- **🏷️ 机构**: Harbin Institute of Technology, Shanghai AI Laboratory, City University of Hong Kong
+- **会议**: ICCV 2023
 
 ### Joint Visual Grounding and Tracking with Natural Language Specification.
 - **链接**: [arXiv:2303.12027](https://arxiv.org/abs/2303.12027) · [代码](https://github.com/lizhou-cs/JointNLT) · 📚 被引 138
@@ -161,23 +161,15 @@
 - **🏷️ 机构**: City University of Hong Kong, Microsoft
 - **会议**: CVPR 2023
 
-### Meta-Personalizing Vision-Language Models to Find Named Instances in Video.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01833) · 📚 被引 13
-- **作者**: Chun-Hsiao Yeh, Bryan C. Russell, Josef Sivic, Fabian Caba Heilbron, Simon Jenni
-- **🏷️ 机构**: University of California,Berkeley, Adobe Research, Czech Institute of Informatics, Robotics and Cybernetics at the Czech Technical University in Prague (CIIRC CTU)
-- **会议**: CVPR 2023
+> Out-of-distribution (OOD) detection refers to training the model on an in-distribution (ID) dataset to classify whether the input images come from unknown classes. Considerable effort has been invested in designing various OOD detection methods based on either convolutional neural networks or transformers. However, zero-shot OOD detection methods driven by CLIP, which only require class names for ID, have received less attention. This paper presents a novel method, namely CLIP saying no (CLIPN), which empowers the logic of saying no within CLIP. Our key motivation is to equip CLIP with the capability of distinguishing OOD and ID samples using positive-semantic prompts and negation-semantic prompts. Specifically, we design a novel learnable no prompt and a no text encoder to capture negation semantics within images. Subsequently, we introduce two loss functions: the image-text binary-opposite loss and the text semantic-opposite loss, which we use to teach CLIPN to associate images with no prompts, thereby enabling it to identify unknown samples. Furthermore, we propose two threshold-free inference algorithms to perform OOD detection by utilizing negation semantics from no prompts and the text encoder. Experimental results on 9 benchmark datasets (3 ID datasets and 6 OOD datasets) for the OOD detection task demonstrate that CLIPN, based on ViT-B-16, outperforms 7 well-used algorithms by at least 2.34% and 11.64% in terms of AUROC and FPR95 for zero-shot OOD detection on ImageNet-1K. Our CLIPN can serve as a solid foundation for effectively leveraging CLIP in downstream OOD tasks. The code is available on https://github.com/xmed-lab/CLIPN.
 
-### GIVL: Improving Geographical Inclusivity of Vision-Language Models with Pre-Training Methods.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01054) · 📚 被引 13
-- **作者**: Da Yin, Feng Gao, Govind Thattai, Michael Johnston, Kai-Wei Chang
-- **🏷️ 机构**: University of California,Los Angeles, Amazon Alexa AI
-- **会议**: CVPR 2023
+</details>
 
-### IFSeg: Image-free Semantic Segmentation via Vision-Language Model.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00290) · 📚 被引 17
-- **作者**: Sukmin Yun, Seong Hyeon Park, Paul Hongsuck Seo, Jinwoo Shin
-- **🏷️ 机构**: Korea Advanced Institute of Science and Technology (KAIST), Google Research
-- **会议**: CVPR 2023
+### VL-Match: Enhancing Vision-Language Pretraining with Token-Level and Instance-Level Matching.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00244) · 📚 被引 4
+- **作者**: Junyu Bi, Daixuan Cheng, Ping Yao, Bochen Pang, Yuefeng Zhan, Chuanguang Yang et al.
+- **🏷️ 机构**: Institute of Computing Technology,Chinese Academy of Sciences,Beijing,China, Microsoft Corporation
+- **会议**: ICCV 2023
 
 ### Reproducible Scaling Laws for Contrastive Language-Image Learning.
 - **链接**: [arXiv:2212.07143](https://arxiv.org/abs/2212.07143) · [代码](https://github.com/LAION-AI/scaling-laws-openclip) · 📚 被引 620
@@ -205,9 +197,9 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- CLIP the Gap: A Single Domain Generalization Approach for Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
-- Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP. → [open-set-detection](../open-set-detection/Guideline%202023.md)
-- CORA: Adapting CLIP for Open-Vocabulary Detection with Region Prompting and Anchor Pre-Matching. → [open-set-detection](../open-set-detection/Guideline%202023.md)
-- Bidirectional Cross-Modal Knowledge Exploration for Video Recognition with Pre-trained Vision-Language Models. → [multimodal](../multimodal/Guideline%202023.md)
-- Vita-CLIP: Video and text adaptive CLIP via Multimodal Prompting. → [multimodal](../multimodal/Guideline%202023.md)
-- CLIP-S4: Language-Guided Self-Supervised Semantic Segmentation. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
+- Task-Oriented Multi-Modal Mutual Learning for Vision-Language Models. → [multimodal](../multimodal/Guideline%202023.md)
+- Preventing Zero-Shot Transfer Degradation in Continual Learning of Vision-Language Models. → [continual-learning](../continual-learning/Guideline%202023.md)
+- CleanCLIP: Mitigating Data Poisoning Attacks in Multimodal Contrastive Learning. → [multimodal](../multimodal/Guideline%202023.md)
+- CLIPTrans: Transferring Visual Knowledge with Pre-trained Models for Multimodal Machine Translation. → [multimodal](../multimodal/Guideline%202023.md)
+- CLIP-Decoder : ZeroShot Multilabel Classification using Multimodal CLIP Aligned Representations. → [multimodal](../multimodal/Guideline%202023.md)
+- Exploring Open-Vocabulary Semantic Segmentation from CLIP Vision Encoder Distillation Only. → [open-set-detection](../open-set-detection/Guideline%202023.md)

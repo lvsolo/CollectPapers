@@ -1,7 +1,7 @@
 # Object Detection — 2020 Guideline
 
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
-> 论文数: 60 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -71,9 +71,13 @@
 
 </details>
 
-### SLV: Spatial Likelihood Voting for Weakly Supervised Object Detection.
-- **链接**: [arXiv:2006.12884](https://arxiv.org/abs/2006.12884) · 📚 被引 72
-- **作者**: Ze Chen, Zhihang Fu, Rongxin Jiang, Yaowu Chen, Xian-Sheng Hua
+> The Feature Pyramid Network (FPN) presents a remarkable approach to alleviate the scale variance in object representation by performing instance-level assignments. Nevertheless, this strategy ignores the distinct characteristics of different sub-regions in an instance. To this end, we propose a fine-grained dynamic head to conditionally select a pixel-level combination of FPN features from different scales for each instance, which further releases the ability of multi-scale feature representation. Moreover, we design a spatial gate with the new activation function to reduce computational complexity dramatically through spatially sparse convolutions. Extensive experiments demonstrate the effectiveness and efficiency of the proposed method on several state-of-the-art detection benchmarks. Code is available at https://github.com/StevenGrove/DynamicHead.
+
+</details>
+
+### Restoring Negative Information in Few-Shot Object Detection.
+- **链接**: [arXiv:2010.11714](https://arxiv.org/abs/2010.11714) · [代码](https://github.com/yang-yk/NP-RepMet)
+- **作者**: Yukuan Yang, Fangyun Wei, Miaojing Shi, Guoqi Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
@@ -83,9 +87,11 @@
 
 </details>
 
-### MnasFPN: Learning Latency-Aware Pyramid Architecture for Object Detection on Mobile Devices.
-- **链接**: [arXiv:1912.01106](https://arxiv.org/abs/1912.01106) · 📚 被引 40
-- **作者**: Bo Chen, Golnaz Ghiasi, Hanxiao Liu, Tsung-Yi Lin, Dmitry Kalenichenko, Hartwig Adam et al.
+</details>
+
+### CoADNet: Collaborative Aggregation-and-Distribution Networks for Co-Salient Object Detection.
+- **链接**: [arXiv:2011.04887](https://arxiv.org/abs/2011.04887)
+- **作者**: Qijian Zhang, Runmin Cong, Junhui Hou, Chongyi Li, Yao Zhao
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
@@ -95,11 +101,7 @@
 
 </details>
 
-### CentripetalNet: Pursuing High-Quality Keypoint Pairs for Object Detection.
-- **链接**: [arXiv:2003.09119](https://arxiv.org/abs/2003.09119) · [代码](https://github.com/KiveeDong/CentripetalNet) · 📚 被引 163
-- **作者**: Zhiwei Dong, Guoxuan Li, Yue Liao, Fei Wang, Pengju Ren, Chen Qian
-- **🏷️ 机构**: Institute of Artificial Intelligence and Robotics\, Xi&#x2019;an Jiaotong University; SenseTime Research, University of Chinese Academy of Sciences, Beihang University
-- **会议**: CVPR 2020
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 

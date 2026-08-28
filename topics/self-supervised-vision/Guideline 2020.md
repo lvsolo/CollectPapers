@@ -17,9 +17,11 @@
 
 </details>
 
-### Vision-Language Navigation With Self-Supervised Auxiliary Reasoning Tasks.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhu_Vision-Language_Navigation_With_Self-Supervised_Auxiliary_Reasoning_Tasks_CVPR_2020_paper.html)
-- **作者**: Fengda Zhu, Yi Zhu, Xiaojun Chang, Xiaodan Liang
+</details>
+
+### wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations.
+- **链接**: [arXiv:2006.11477](https://arxiv.org/abs/2006.11477)
+- **作者**: Alexei Baevski, Yuhao Zhou, Abdelrahman Mohamed, Michael Auli
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
@@ -39,13 +41,13 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Quan_Self2Self_With_Dropout_Learning_Self-Supervised_Denoising_From_Single_Image_CVPR_2020_paper.html) · 📚 被引 381
 - **作者**: Yuhui Quan, Mingqin Chen, Tongyao Pang, Hui Ji
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 ### Self-Supervised Equivariant Attention Mechanism for Weakly Supervised Semantic Segmentation.
 - **链接**: [arXiv:2004.04581](https://arxiv.org/abs/2004.04581) · 📚 被引 668
 - **作者**: Yude Wang, Jie Zhang, Meina Kan, Shiguang Shan, Xilin Chen
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -53,11 +55,13 @@
 
 </details>
 
-### Adversarial Robustness: From Self-Supervised Pre-Training to Fine-Tuning.
-- **链接**: [arXiv:2003.12862](https://arxiv.org/abs/2003.12862) · [代码](https://github.com/TAMU-VITA/Adv-SS-Pretraining) · 📚 被引 132
-- **作者**: Tianlong Chen, Sijia Liu, Shiyu Chang, Yu Cheng, Lisa Amini, Zhangyang Wang
+</details>
+
+### Graph-based, Self-Supervised Program Repair from Diagnostic Feedback.
+- **链接**: [arXiv:2005.10636](https://arxiv.org/abs/2005.10636)
+- **作者**: Michihiro Yasunaga, Percy Liang
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -69,7 +73,7 @@
 - **链接**: [arXiv:2003.02824](https://arxiv.org/abs/2003.02824) · [代码](https://github.com/cmhungsteve/SSTDA) · 📚 被引 90
 - **作者**: Min-Hung Chen, Baopu Li, Yingze Bao, Ghassan AlRegib, Zsolt Kira
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -81,13 +85,13 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Dai_SG-NN_Sparse_Generative_Neural_Networks_for_Self-Supervised_Scene_Completion_of_CVPR_2020_paper.html) · 📚 被引 122
 - **作者**: Angela Dai, Christian Diller, Matthias Nießner
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
-### Self-Supervised Monocular Scene Flow Estimation.
-- **链接**: [arXiv:2004.04143](https://arxiv.org/abs/2004.04143) · 📚 被引 99
-- **作者**: Junhwa Hur, Stefan Roth
+### Discriminative Sounding Objects Localization via Self-supervised Audiovisual Matching.
+- **链接**: [arXiv:2010.05466](https://arxiv.org/abs/2010.05466) · [代码](https://github.com/DTaoo/Discriminative-Sounding-Objects-Localization)
+- **作者**: Di Hu, Rui Qian, Minyue Jiang, Xiao Tan, Shilei Wen, Errui Ding et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -95,17 +99,25 @@
 
 </details>
 
-### Self-Supervised Learning of Interpretable Keypoints From Unlabelled Videos.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Jakab_Self-Supervised_Learning_of_Interpretable_Keypoints_From_Unlabelled_Videos_CVPR_2020_paper.html) · 📚 被引 57
-- **作者**: Tomas Jakab, Ankush Gupta, Hakan Bilen, Andrea Vedaldi
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+</details>
 
-### Steering Self-Supervised Feature Learning Beyond Local Pixel Statistics.
-- **链接**: [arXiv:2004.02331](https://arxiv.org/abs/2004.02331) · 📚 被引 33
-- **作者**: Simon Jenni, Hailin Jin, Paolo Favaro
+### Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs.
+- **链接**: [arXiv:2007.08294](https://arxiv.org/abs/2007.08294)
+- **作者**: Dasol Hwang, Jinyoung Park, Sunyoung Kwon, Kyung-Min Kim, Jung-Woo Ha, Hyunwoo J. Kim
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Graph neural networks have shown superior performance in a wide range of applications providing a powerful representation of graph-structured data. Recent works show that the representation can be further improved by auxiliary tasks. However, the auxiliary tasks for heterogeneous graphs, which contain rich semantic information with various types of nodes and edges, have less explored in the literature. In this paper, to learn graph neural networks on heterogeneous graphs we propose a novel self-supervised auxiliary learning method using meta-paths, which are composite relations of multiple edge types. Our proposed method is learning to learn a primary task by predicting meta-paths as auxiliary tasks. This can be viewed as a type of meta-learning. The proposed method can identify an effective combination of auxiliary tasks and automatically balance them to improve the primary task. Our methods can be applied to any graph neural networks in a plug-in manner without manual labeling or additional data. The experiments demonstrate that the proposed method consistently improves the performance of link prediction and node classification on heterogeneous graphs.
+
+</details>
+
+### Adversarial Self-Supervised Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/1f1baa5b8edac74eb4eaa329f14a0361-Abstract.html)
+- **作者**: Minseon Kim, Jihoon Tack, Sung Ju Hwang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -117,7 +129,7 @@
 - **链接**: [arXiv:2004.04400](https://arxiv.org/abs/2004.04400) · 📚 被引 66
 - **作者**: Jogendra Nath Kundu, Siddharth Seth, Varun Jampani, Mugalodi Rakesh, R. Venkatesh Babu, Anirban Chakraborty
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -125,11 +137,23 @@
 
 </details>
 
+### From Image Collections to Point Clouds With Self-Supervised Shape and Pose Networks.
+- **链接**: [arXiv:2005.01939](https://arxiv.org/abs/2005.01939) · 📚 被引 31
+- **作者**: Navaneet K. L., Ansu Mathew, Shashank Kashyap, Wei-Chih Hung, Varun Jampani, R. Venkatesh Babu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Reconstructing 3D models from 2D images is one of the fundamental problems in computer vision. In this work, we propose a deep learning technique for 3D object reconstruction from a single image. Contrary to recent works that either use 3D supervision or multi-view supervision, we use only single view images with no pose information during training as well. This makes our approach more practical requiring only an image collection of an object category and the corresponding silhouettes. We learn both 3D point cloud reconstruction and pose estimation networks in a self-supervised manner, making use of differentiable point cloud renderer to train with 2D supervision. A key novelty of the proposed technique is to impose 3D geometric reasoning into predicted 3D point clouds by rotating them with randomly sampled poses and then enforcing cycle consistency on both 3D reconstructions and poses. In addition, using single-view supervision allows us to do test-time optimization on a given test image. Experiments on the synthetic ShapeNet and real-world Pix3D datasets demonstrate that our approach, despite using less supervision, can achieve competitive performance compared to pose-supervised and multi-view supervised approaches.
+
+</details>
+
 ### MAST: A Memory-Augmented Self-Supervised Tracker.
 - **链接**: [arXiv:2002.07793](https://arxiv.org/abs/2002.07793) · 📚 被引 134
 - **作者**: Zihang Lai, Erika Lu, Weidi Xie
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -141,7 +165,7 @@
 - **链接**: [arXiv:2005.06136](https://arxiv.org/abs/2005.06136) · 📚 被引 64
 - **作者**: Shunkai Li, Xin Wang, Yingdian Cao, Fei Xue, Zike Yan, Hongbin Zha
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -153,7 +177,7 @@
 - **链接**: [arXiv:2005.09159](https://arxiv.org/abs/2005.09159) · 📚 被引 57
 - **作者**: Hangyu Lin, Yanwei Fu, Xiangyang Xue, Yu-Gang Jiang
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -165,37 +189,55 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Liu_Flow2Stereo_Effective_Self-Supervised_Learning_of_Optical_Flow_and_Stereo_Matching_CVPR_2020_paper.html) · 📚 被引 60
 - **作者**: Pengpeng Liu, Irwin King, Michael R. Lyu, Jia Xu
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
-### PULSE: Self-Supervised Photo Upsampling via Latent Space Exploration of Generative Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Menon_PULSE_Self-Supervised_Photo_Upsampling_via_Latent_Space_Exploration_of_Generative_CVPR_2020_paper.html) · 📚 被引 406
-- **作者**: Sachit Menon, Alexandru Damian, Shijia Hu, Nikhil Ravi, Cynthia Rudin
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In self-supervised learning, a system is tasked with achieving a surrogate objective by defining alternative targets on a set of unlabeled data. The aim is to build useful representations that can be used in downstream tasks, without costly manual annotation. In this work, we propose a novel self-supervised formulation of relational reasoning that allows a learner to bootstrap a signal from information implicit in unlabeled data. Training a relation head to discriminate how entities relate to themselves (intra-reasoning) and other entities (inter-reasoning), results in rich and descriptive representations in the underlying neural network backbone, which can be used in downstream tasks such as classification and image retrieval. We evaluate the proposed method following a rigorous experimental procedure, using standard datasets, protocols, and backbones. Self-supervised relational reasoning outperforms the best competitor in all conditions by an average 14% in accuracy, and the most recent state-of-the-art model by 3%. We link the effectiveness of the method to the maximization of a Bernoulli log-likelihood, which can be considered as a proxy for maximizing the mutual information, resulting in a more efficient objective with respect to the commonly used contrastive losses.
+
+</details>
+
+### Demystifying Contrastive Self-Supervised Learning: Invariances, Augmentations and Dataset Biases.
+- **链接**: [arXiv:2007.13916](https://arxiv.org/abs/2007.13916)
+- **作者**: Senthil Purushwalkam, Abhinav Gupta
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 ### Self-Supervised Learning of Pretext-Invariant Representations.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Misra_Self-Supervised_Learning_of_Pretext-Invariant_Representations_CVPR_2020_paper.html) · 📚 被引 935
 - **作者**: Ishan Misra, Laurens van der Maaten
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
-### Just Go With the Flow: Self-Supervised Scene Flow Estimation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Mittal_Just_Go_With_the_Flow_Self-Supervised_Scene_Flow_Estimation_CVPR_2020_paper.html) · 📚 被引 122
-- **作者**: Himangi Mittal, Brian Okorn, David Held
+### Learning to Orient Surfaces by Self-supervised Spherical CNNs.
+- **链接**: [arXiv:2011.03298](https://arxiv.org/abs/2011.03298)
+- **作者**: Riccardo Spezialetti, Federico Stella, Marlon Marcon, Luciano Silva, Samuele Salti, Luigi Di Stefano
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
-### Self-Supervised Viewpoint Learning From Image Collections.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Mustikovela_Self-Supervised_Viewpoint_Learning_From_Image_Collections_CVPR_2020_paper.html) · 📚 被引 26
-- **作者**: Siva Karthik Mustikovela, Varun Jampani, Shalini De Mello, Sifei Liu, Umar Iqbal, Carsten Rother et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### A Self-supervised Approach for Adversarial Robustness.
-- **链接**: [arXiv:2006.04924](https://arxiv.org/abs/2006.04924) · [代码](https://github.com/Muzammal-Naseer/NRP) · 📚 被引 260
-- **作者**: Muzammal Naseer, Salman H. Khan, Munawar Hayat, Fahad Shahbaz Khan, Fatih Porikli
+> Defining and reliably finding a canonical orientation for 3D surfaces is key to many Computer Vision and Robotics applications. This task is commonly addressed by handcrafted algorithms exploiting geometric cues deemed as distinctive and robust by the designer. Yet, one might conjecture that humans learn the notion of the inherent orientation of 3D objects from experience and that machines may do so alike. In this work, we show the feasibility of learning a robust canonical orientation for surfaces represented as point clouds. Based on the observation that the quintessential property of a canonical orientation is equivariance to 3D rotations, we propose to employ Spherical CNNs, a recently introduced machinery that can learn equivariant representations defined on the Special Orthogonal group SO(3). Specifically, spherical correlations compute feature maps whose elements define 3D rotations. Our method learns such feature maps from raw data by a self-supervised training procedure and robustly selects a rotation to transform the input point cloud into a learned canonical orientation. Thereby, we realize the first end-to-end learning approach to define and extract the canonical orientation of 3D shapes, which we aptly dub Compass. Experiments on several public datasets prove its effectiveness at orienting local surface patches as well as whole objects.
+
+</details>
+
+### 3D Self-Supervised Methods for Medical Imaging.
+- **链接**: [arXiv:2006.03829](https://arxiv.org/abs/2006.03829)
+- **作者**: Aiham Taleb, Winfried Loetzsch, Noel Danz, Julius Severin, Thomas Gärtner, Benjamin Bergner et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised learning methods have witnessed a recent surge of interest after proving successful in multiple application fields. In this work, we leverage these techniques, and we propose 3D versions for five different self-supervised methods, in the form of proxy tasks. Our methods facilitate neural network feature learning from unlabeled 3D images, aiming to reduce the required cost for expert annotation. The developed algorithms are 3D Contrastive Predictive Coding, 3D Rotation prediction, 3D Jigsaw puzzles, Relative 3D patch location, and 3D Exemplar networks. Our experiments show that pretraining models with our 3D tasks yields more powerful semantic representations, and enables solving downstream tasks more accurately and efficiently, compared to training the models from scratch and to pretraining them on 2D slices. We demonstrate the effectiveness of our methods on three downstream tasks from the medical imaging domain: i) Brain Tumor Segmentation from 3D MRI, ii) Pancreas Tumor Segmentation from 3D CT, and iii) Diabetic Retinopathy Detection from 2D Fundus images. In each task, we assess the gains in data-efficiency, performance, and speed of convergence. Interestingly, we also find gains when transferring the learned representations, by our methods, from a large unlabeled 3D corpus to a small downstream-specific dataset. We achieve results competitive to state-of-the-art solutions at a fraction of the computational expense. We publish our implementations for the developed algorithms (both 3D and 2D versions) as an open-source library, in an effort to allow other researchers to apply and extend our methods on their datasets.
+
+</details>
+
+### Cross-lingual Retrieval for Iterative Self-Supervised Training.
+- **链接**: [arXiv:2006.09526](https://arxiv.org/abs/2006.09526)
+- **作者**: Chau Tran, Yuqing Tang, Xian Li, Jiatao Gu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -203,11 +245,13 @@
 
 </details>
 
-### How Useful Is Self-Supervised Pretraining for Visual Tasks?
-- **链接**: [arXiv:2003.14323](https://arxiv.org/abs/2003.14323) · [代码](https://github.com/princeton-vl/selfstudy) · 📚 被引 82
-- **作者**: Alejandro Newell, Jia Deng
+</details>
+
+### Noise2Same: Optimizing A Self-Supervised Bound for Image Denoising.
+- **链接**: [arXiv:2010.11971](https://arxiv.org/abs/2010.11971) · [代码](https://github.com/divelab/Noise2Same)
+- **作者**: Yaochen Xie, Zhengyang Wang, Shuiwang Ji
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -215,11 +259,13 @@
 
 </details>
 
-### Fast(er) Reconstruction of Shredded Text Documents via Self-Supervised Deep Asymmetric Metric Learning.
-- **链接**: [arXiv:2003.10063](https://arxiv.org/abs/2003.10063) · 📚 被引 7
-- **作者**: Thiago M. Paixão, Rodrigo Ferreira Berriel, Maria C. S. Boeres, Alessandro L. Koerich, Claudine Badue, Alberto F. De Souza et al.
+</details>
+
+### Self-Supervised Visual Representation Learning from Hierarchical Grouping.
+- **链接**: [arXiv:2012.03044](https://arxiv.org/abs/2012.03044)
+- **作者**: Xiao Zhang, Michael Maire
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -243,49 +289,85 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Tschannen_Self-Supervised_Learning_of_Video-Induced_Visual_Invariances_CVPR_2020_paper.html) · 📚 被引 34
 - **作者**: Michael Tschannen, Josip Djolonga, Marvin Ritter, Aravindh Mahendran, Neil Houlsby, Sylvain Gelly et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
-### Self-Supervised Domain-Aware Generative Network for Generalized Zero-Shot Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wu_Self-Supervised_Domain-Aware_Generative_Network_for_Generalized_Zero-Shot_Learning_CVPR_2020_paper.html) · 📚 被引 54
-- **作者**: Jiamin Wu, Tianzhu Zhang, Zheng-Jun Zha, Jiebo Luo, Yongdong Zhang, Feng Wu
+### Contrastive learning of global and local features for medical image segmentation with limited annotations.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/949686ecef4ee20a62d16b4a2d7ccca3-Abstract.html)
+- **作者**: Krishna Chaitanya, Ertunc Erdil, Neerav Karani, Ender Konukoglu
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
-### Video Playback Rate Perception for Self-Supervised Spatio-Temporal Representation Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yao_Video_Playback_Rate_Perception_for_Self-Supervised_Spatio-Temporal_Representation_Learning_CVPR_2020_paper.html)
-- **作者**: Yuan Yao, Chang Liu, Dezhao Luo, Yu Zhou, Qixiang Ye
+### Debiased Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/63c3ddcc7b23daa1e42dc41f9a44a873-Abstract.html)
+- **作者**: Ching-Yao Chuang, Joshua Robinson, Yen-Chen Lin, Antonio Torralba, Stefanie Jegelka
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
-### Self-Supervised Scene De-Occlusion.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhan_Self-Supervised_Scene_De-Occlusion_CVPR_2020_paper.html)
-- **作者**: Xiaohang Zhan, Xingang Pan, Bo Dai, Ziwei Liu, Dahua Lin, Chen Change Loy
-- **🏷️ 机构**: Shanghai AI Lab, CUHK
-- **会议**: CVPR 2020
+### Self-paced Contrastive Learning with Hybrid Memory for Domain Adaptive Object Re-ID.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/821fa74b50ba3f7cba1e6c53e8fa6845-Abstract.html)
+- **作者**: Yixiao Ge, Feng Zhu, Dapeng Chen, Rui Zhao, Hongsheng Li
+- **🏷️ 机构**: CUHK
+- **会议**: NeurIPS 2020
 
-### Look-Into-Object: Self-Supervised Structure Modeling for Object Recognition.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhou_Look-Into-Object_Self-Supervised_Structure_Modeling_for_Object_Recognition_CVPR_2020_paper.html) · 📚 被引 73
-- **作者**: Mohan Zhou, Yalong Bai, Wei Zhang, Tiejun Zhao, Tao Mei
+### Contrastive Learning with Adversarial Examples.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/c68c9c8258ea7d85472dd6fd0015f047-Abstract.html)
+- **作者**: Chih-Hui Ho, Nuno Vasconcelos
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
-### S3VAE: Self-Supervised Sequential VAE for Representation Disentanglement and Data Generation.
-- **链接**: [arXiv:2005.11437](https://arxiv.org/abs/2005.11437) · 📚 被引 59
-- **作者**: Yizhe Zhu, Martin Renqiang Min, Asim Kadav, Hans Peter Graf
+### Robust Pre-Training by Adversarial Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/ba7e36c43aff315c00ec2b8625e3b719-Abstract.html)
+- **作者**: Ziyu Jiang, Tianlong Chen, Ting Chen, Zhangyang Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We propose a sequential variational autoencoder to learn disentangled representations of sequential data (e.g., videos and audios) under self-supervision. Specifically, we exploit the benefits of some readily accessible supervisory signals from input data itself or some off-the-shelf functional models and accordingly design auxiliary tasks for our model to utilize these signals. With the supervision of the signals, our model can easily disentangle the representation of an input sequence into static factors and dynamic factors (i.e., time-invariant and time-varying parts). Comprehensive experiments across videos and audios verify the effectiveness of our model on representation disentanglement and generation of sequential data, and demonstrate that, our model with self-supervision performs comparable to, if not better than, the fully-supervised model with ground truth labels, and outperforms state-of-the-art unsupervised models by a large margin.
-
-</details>
-
-### Disentangled and Controllable Face Image Generation via 3D Imitative-Contrastive Learning.
-- **链接**: [arXiv:2004.11660](https://arxiv.org/abs/2004.11660) · 📚 被引 287
-- **作者**: Yu Deng, Jiaolong Yang, Dong Chen, Fang Wen, Xin Tong
+### Hard Negative Mixing for Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/f7cade80b7cc92b991cf4d2806d6bd78-Abstract.html)
+- **作者**: Yannis Kalantidis, Mert Bülent Sariyildiz, Noé Pion, Philippe Weinzaepfel, Diane Larlus
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: NeurIPS 2020
+
+### ContraGAN: Contrastive Learning for Conditional Image Generation.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/f490c742cd8318b8ee6dca10af2a163f-Abstract.html)
+- **作者**: Minguk Kang, Jaesik Park
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Supervised Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/d89a66c7c80a29b1bdbab0f2a1a94af8-Abstract.html)
+- **作者**: Prannay Khosla, Piotr Teterwak, Chen Wang, Aaron Sarna, Yonglong Tian, Phillip Isola et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Few-shot Visual Reasoning with Meta-Analogical Contrastive Learning.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/c39e1a03859f9ee215bc49131d0caf33-Abstract.html)
+- **作者**: Youngsung Kim, Jinwoo Shin, Eunho Yang, Sung Ju Hwang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/8965f76632d7672e7d3cf29c87ecaa0c-Abstract.html)
+- **作者**: Jihoon Tack, Sangwoo Mo, Jongheon Jeong, Jinwoo Shin
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Soft Contrastive Learning for Visual Localization.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/7f2cba89a7116c7c6b0a769572d5fad9-Abstract.html)
+- **作者**: Janine Thoma, Danda Pani Paudel, Luc Van Gool
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### What Makes for Good Views for Contrastive Learning?
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/4c2e5eaae9152079b9e95845750bb9ab-Abstract.html)
+- **作者**: Yonglong Tian, Chen Sun, Ben Poole, Dilip Krishnan, Cordelia Schmid, Phillip Isola
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Graph Contrastive Learning with Augmentations.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/3fe230348e9a12c13120749e3f9fa4cd-Abstract.html)
+- **作者**: Yuning You, Tianlong Chen, Yongduo Sui, Ting Chen, Zhangyang Wang, Yang Shen
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 

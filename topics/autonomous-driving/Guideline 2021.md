@@ -1,7 +1,7 @@
 # Autonomous Driving — 2021 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -20,8 +20,8 @@
 ### Self-Supervised Pillar Motion Learning for Autonomous Driving.
 - **链接**: [arXiv:2104.08683](https://arxiv.org/abs/2104.08683) · 📚 被引 61
 - **作者**: Chenxu Luo, Xiaodong Yang, Alan L. Yuille
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **🏷️ 机构**: QCraft, Johns Hopkins University
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -33,7 +33,7 @@
 - **链接**: [arXiv:2104.09224](https://arxiv.org/abs/2104.09224) · 📚 被引 548
 - **作者**: Aditya Prakash, Kashyap Chitta, Andreas Geiger
 - **🏷️ 机构**: Max Planck Institute for Intelligent Systems,T&#x00FC;bingen
-- **会议**: CVPR 2021
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,11 +41,7 @@
 
 </details>
 
-### GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_GeoSim_Realistic_Video_Simulation_via_Geometry-Aware_Composition_for_Self-Driving_CVPR_2021_paper.html) · 📚 被引 89
-- **作者**: Yun Chen, Frieda Rong, Shivam Duggal, Shenlong Wang, Xinchen Yan, Sivabalan Manivasagam et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+</details>
 
 ### AdvSim: Generating Safety-Critical Scenarios for Self-Driving Vehicles.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_AdvSim_Generating_Safety-Critical_Scenarios_for_Self-Driving_Vehicles_CVPR_2021_paper.html) · 📚 被引 177
