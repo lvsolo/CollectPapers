@@ -1,21 +1,27 @@
 # Object Detection — 2022 Guideline
 
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
-> 论文数: 54 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 96 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### OW-DETR: Open-world Detection Transformer.
-- **链接**: [arXiv:2112.01513](https://arxiv.org/abs/2112.01513) · [代码](https://github.com/akshitac8/OW-DETR) · 📚 被引 215
-- **作者**: Akshita Gupta, Sanath Narayan, K. J. Joseph, Salman Khan, Fahad Shahbaz Khan, Mubarak Shah
-- **🏷️ 机构**: Inception Institute of Artificial Intelligence, IIT Hyderabad, Mohamed Bin Zayed University of Artificial Intelligence
+### Target-aware Dual Adversarial Learning and a Multi-scenario Multi-Modality Benchmark to Fuse Infrared and Visible for Object Detection.
+- **链接**: [arXiv:2203.16220](https://arxiv.org/abs/2203.16220) · 📚 被引 1108
+- **作者**: Jinyuan Liu, Xin Fan, Zhanbo Huang, Guanyao Wu, Risheng Liu, Wei Zhong et al.
+- **🏷️ 机构**: School of Software Technology, Dalian University of Technology, DUT-RU International School of Information Science &#x0026; Engineering, Dalian University of Technology
 - **会议**: CVPR 2022
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Omni-DETR: Omni-Supervised Object Detection with Transformers.
+- **链接**: [arXiv:2203.16089](https://arxiv.org/abs/2203.16089) · 📚 被引 39
+- **作者**: Pei Wang, Zhaowei Cai, Hao Yang, Gurumurthy Swaminathan, Nuno Vasconcelos, Bernt Schiele et al.
+- **🏷️ 机构**: UC San Diego, AWS AI Labs
+- **会议**: CVPR 2022
 
-> Open-world object detection (OWOD) is a challenging computer vision problem, where the task is to detect a known set of object categories while simultaneously identifying unknown objects. Additionally, the model must incrementally learn new classes that become known in the next training episodes. Distinct from standard object detection, the OWOD setting poses significant challenges for generating quality candidate proposals on potentially unknown objects, separating the unknown objects from the background and detecting diverse unknown objects. Here, we introduce a novel end-to-end transformer-based framework, OW-DETR, for open-world object detection. The proposed OW-DETR comprises three dedicated components namely, attention-driven pseudo-labeling, novelty classification and objectness scoring to explicitly address the aforementioned OWOD challenges. Our OW-DETR explicitly encodes multi-scale contextual information, possesses less inductive bias, enables knowledge transfer from known classes to the unknown class and can better discriminate between unknown objects and background. Comprehensive experiments are performed on two benchmarks: MS-COCO and PASCAL VOC. The extensive ablations reveal the merits of our proposed contributions. Further, our model outperforms the recently introduced OWOD approach, ORE, with absolute gains ranging from 1.8% to 3.3% in terms of unknown recall on MS-COCO. In the case of incremental object detection, OW-DETR outperforms the state-of-the-art for all settings on PASCAL VOC. Our code is available at https://github.com/akshitac8/OW-DETR.
-
-</details>
+### Explore Spatio-temporal Aggregation for Insubstantial Object Detection: Benchmark Dataset and Baseline.
+- **链接**: [arXiv:2206.11459](https://arxiv.org/abs/2206.11459) · 📚 被引 25
+- **作者**: Kailai Zhou, Yibo Wang, Tao Lv, Yunqian Li, Linsen Chen, Qiu Shen et al.
+- **🏷️ 机构**: Nanjing University,Nanjing,China
+- **会议**: CVPR 2022
 
 ### Point-Level Region Contrast for Object Detection Pre-Training.
 - **链接**: [arXiv:2202.04639](https://arxiv.org/abs/2202.04639) · 📚 被引 39
@@ -156,7 +162,7 @@
 - **会议**: CVPR 2022
 
 ### Cross Domain Object Detection by Target-Perceived Dual Branch Distillation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00935) · 📚 被引 94
+- **链接**: [arXiv:2205.01291](https://arxiv.org/abs/2205.01291) · 📚 被引 94
 - **作者**: Mengzhe He, Yali Wang, Jiaxi Wu, Yiru Wang, Hanqing Li, Bo Li et al.
 - **🏷️ 机构**: Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences,ShenZhen Key Lab of Computer Vision and Pattern Recognition, Beihang University, SenseTime Research
 - **会议**: CVPR 2022
@@ -246,15 +252,117 @@
 - **会议**: CVPR 2022
 
 ### A Dual Weighting Label Assignment Scheme for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00917) · 📚 被引 117
+- **链接**: [arXiv:2203.09730](https://arxiv.org/abs/2203.09730) · 📚 被引 117
 - **作者**: Shuai Li, Chenhang He, Ruihuang Li, Lei Zhang
 - **🏷️ 机构**: The Hong Kong Polytechnic University
 - **会议**: CVPR 2022
 
+### SIGMA: Semantic-complete Graph Matching for Domain Adaptive Object Detection.
+- **链接**: [arXiv:2203.06398](https://arxiv.org/abs/2203.06398) · 📚 被引 227
+- **作者**: Wuyang Li, Xinyu Liu, Yixuan Yuan
+- **🏷️ 机构**: City University of Hong Kong
+- **会议**: CVPR 2022
+
+### SIOD: Single Instance Annotated Per Category Per Image for Object Detection.
+- **链接**: [arXiv:2203.15353](https://arxiv.org/abs/2203.15353) · 📚 被引 20
+- **作者**: Hanjun Li, Xingjia Pan, Ke Yan, Fan Tang, Wei-Shi Zheng
+- **🏷️ 机构**: School of Computer Science and Engineering, Sun Yat-sen University, Tencent,Youtu Lab, Jilin University
+- **会议**: CVPR 2022
+
+### R(Det)2: Randomized Decision Routing for Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00478) · 📚 被引 9
+- **作者**: Yali Li, Shengjin Wang
+- **🏷️ 机构**: Tsinghua University and BNRist,Department of Electronic Engineering,Beijing,China
+- **会议**: CVPR 2022
+
+### Semi-Supervised Object Detection via Multi-instance Alignment with Global Class Prototypes.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00958) · 📚 被引 14
+- **作者**: Aoxue Li, Peng Yuan, Zhenguo Li
+- **🏷️ 机构**: Huawei Noah&#x0027;s Ark Lab,China
+- **会议**: CVPR 2022
+
+### Equalized Focal Loss for Dense Long-Tailed Object Detection.
+- **链接**: [arXiv:2201.02593](https://arxiv.org/abs/2201.02593) · 📚 被引 132
+- **作者**: Bo Li, Yongqiang Yao, Jingru Tan, Gang Zhang, Fengwei Yu, Jianwei Lu et al.
+- **🏷️ 机构**: Tongji University, Sense Time Research, Tsinghua University
+- **会议**: CVPR 2022
+
+### Segment and Complete: Defending Object Detectors against Adversarial Patch Attacks with Robust Patch Detection.
+- **链接**: [arXiv:2112.04532](https://arxiv.org/abs/2112.04532) · 📚 被引 110
+- **作者**: Jiang Liu, Alexander Levine, Chun Pong Lau, Rama Chellappa, Soheil Feizi
+- **🏷️ 机构**: Johns Hopkins University, University of Maryland, College Park
+- **会议**: CVPR 2022
+
+### Towards Robust Adaptive Object Detection under Noisy Annotations.
+- **链接**: [arXiv:2204.02620](https://arxiv.org/abs/2204.02620) · 📚 被引 42
+- **作者**: Xinyu Liu, Wuyang Li, Qiushi Yang, Baopu Li, Yixuan Yuan
+- **🏷️ 机构**: City University of Hong Kong, Baidu USA LLC
+- **会议**: CVPR 2022
+
+### Unbiased Teacher v2: Semi-supervised Object Detection for Anchor-free and Anchor-based Detectors.
+- **链接**: [arXiv:2206.09500](https://arxiv.org/abs/2206.09500) · 📚 被引 131
+- **作者**: Yen-Cheng Liu, Chih-Yao Ma, Zsolt Kira
+- **🏷️ 机构**: Georgia Institute of Technology, Meta
+- **会议**: CVPR 2022
+
+### OSKDet: Orientation-sensitive Keypoint Localization for Rotated Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00125) · 📚 被引 25
+- **作者**: Dongchen Lu, Dongmei Li, Yali Li, Shengjin Wang
+- **🏷️ 机构**: Tsinghua University,Department of Electronic Engineering
+- **会议**: CVPR 2022
+
+### Active Teacher for Semi-Supervised Object Detection.
+- **链接**: [arXiv:2303.08348](https://arxiv.org/abs/2303.08348)
+- **作者**: Peng Mi, Jianghang Lin, Yiyi Zhou, Yunhang Shen, Gen Luo, Xiaoshuai Sun et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
+
+### Optimal Correction Cost for Object Detection Evaluation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02043) · 📚 被引 21
+- **作者**: Mayu Otani, Riku Togashi, Yuta Nakashima, Esa Rahtu, Janne Heikkilä, Shin'ichi Satoh
+- **🏷️ 机构**: CyberAgent, Inc., Osaka University, Tampere University
+- **会议**: CVPR 2022
+
+### Zoom In and Out: A Mixed-scale Triplet Network for Camouflaged Object Detection.
+- **链接**: [arXiv:2203.02688](https://arxiv.org/abs/2203.02688) · 📚 被引 443
+- **作者**: Youwei Pang, Xiaoqi Zhao, Tian-Zhu Xiang, Lihe Zhang, Huchuan Lu
+- **🏷️ 机构**: Dalian University of Technology,China, Inception Institute of Artificial Intelligence,UAE
+- **会议**: CVPR 2022
+
 ### Forecasting from LiDAR via Future Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01669) · 📚 被引 34
+- **链接**: [arXiv:2203.16297](https://arxiv.org/abs/2203.16297) · 📚 被引 34
 - **作者**: Neehar Peri, Jonathon Luiten, Mengtian Li, Aljosa Osep, Laura Leal-Taixé, Deva Ramanan
 - **🏷️ 机构**: Carnegie Mellon University, TUM Munich
+- **会议**: CVPR 2022
+
+### Salvage of Supervision in Weakly Supervised Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01383) · 📚 被引 21
+- **作者**: Lin Sui, Chen-Lin Zhang, Jianxin Wu
+- **🏷️ 机构**: State Key Laboratory for Novel Software Technology, Nanjing University,China
+- **会议**: CVPR 2022
+
+### Proper Reuse of Image Classification Features Improves Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01326) · 📚 被引 23
+- **作者**: Cristina Nader Vasconcelos, Vighnesh Birodkar, Vincent Dumoulin
+- **🏷️ 机构**: Google Research, Brain Team
+- **会议**: CVPR 2022
+
+### C2AM Loss: Chasing a Better Decision Boundary for Long-Tail Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00685) · 📚 被引 26
+- **作者**: Tong Wang, Yousong Zhu, Yingying Chen, Chaoyang Zhao, Bin Yu, Jinqiao Wang et al.
+- **🏷️ 机构**: National Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences,Beijing,China
+- **会议**: CVPR 2022
+
+### Entropy-based Active Learning for Object Detection with Progressive Diversity Constraint.
+- **链接**: [arXiv:2204.07965](https://arxiv.org/abs/2204.07965) · 📚 被引 90
+- **作者**: Jiaxi Wu, Jiaxin Chen, Di Huang
+- **🏷️ 机构**: Beihang University,State Key Laboratory of Software Development Environment,Beijing,China, School of Computer Science and Engineering, Beihang University,Beijing,China
+- **会议**: CVPR 2022
+
+### Target-Relevant Knowledge Preservation for Multi-Source Domain Adaptive Object Detection.
+- **链接**: [arXiv:2204.07964](https://arxiv.org/abs/2204.07964) · 📚 被引 31
+- **作者**: Jiaxi Wu, Jiaxin Chen, Mengzhe He, Yiru Wang, Bo Li, Bingqi Ma et al.
+- **🏷️ 机构**: State Key Laboratory of Software Development Environment, Beihang University,Beijing,China, School of Computer Science and Engineering, Beihang University,Beijing,China, Shenzhen Institutes of Advanced Technology, Chinese Academy of Science
 - **会议**: CVPR 2022
 
 ### Single-Domain Generalized Object Detection in Urban Scene via Cyclic-Disentangled Self-Distillation.
@@ -263,10 +371,100 @@
 - **🏷️ 机构**: School of Electronic Engineering, Xidian University,Xi&#x0027;an,China
 - **会议**: CVPR 2022
 
+### Revisiting AP Loss for Dense Object Detection: Adaptive Ranking Pair Selection.
+- **链接**: [arXiv:2207.12042](https://arxiv.org/abs/2207.12042) · 📚 被引 9
+- **作者**: Dongli Xu, Jinhong Deng, Wen Li
+- **🏷️ 机构**: School of Computer Science and Engineering &#x0026; Shenzhen Institute for Advanced Study University of Electronic Science and Technology of China
+- **会议**: CVPR 2022
+
+### Smartadapt: Multi-branch Object Detection Framework for Videos on Mobiles.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00256) · 📚 被引 16
+- **作者**: Ran Xu, Fangzhou Mu, Jayoung Lee, Preeti Mukherjee, Somali Chaterji, Saurabh Bagchi et al.
+- **🏷️ 机构**: Purdue University, University of Wisconsin-Madison
+- **会议**: CVPR 2022
+
+### H2FA R-CNN: Holistic and Hierarchical Feature Alignment for Cross-domain Weakly Supervised Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01393) · 📚 被引 49
+- **作者**: Yunqiu Xu, Yifan Sun, Zongxin Yang, Jiaxu Miao, Yi Yang
+- **🏷️ 机构**: Baidu Research, Zhejiang University,CCAI
+- **会议**: CVPR 2022
+
+### Balanced and Hierarchical Relation Learning for One-shot Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00744) · 📚 被引 26
+- **作者**: Hanqing Yang, Sijia Cai, Hualian Sheng, Bing Deng, Jianqiang Huang, Xian-Sheng Hua et al.
+- **🏷️ 机构**: State Key Laboratory of Industrial Control Technology, College of Control Science and Engineering, Zhejiang University, DAMO Academy, Alibaba Group, Shudao Investment Group Co., Ltd
+- **会议**: CVPR 2022
+
+### Continual Object Detection via Prototypical Task Correlation Guided Gating Mechanism.
+- **链接**: [arXiv:2205.03055](https://arxiv.org/abs/2205.03055) · 📚 被引 38
+- **作者**: Binbin Yang, Xinchi Deng, Han Shi, Changlin Li, Gengwei Zhang, Hang Xu et al.
+- **🏷️ 机构**: Sun Yat-sen University, The Hong Kong University of Science and Technology, ReLER, AAII, UTS
+- **会议**: CVPR 2022
+
+### QueryDet: Cascaded Sparse Query for Accelerating High-Resolution Small Object Detection.
+- **链接**: [arXiv:2103.09136](https://arxiv.org/abs/2103.09136) · 📚 被引 524
+- **作者**: Chenhongyi Yang, Zehao Huang, Naiyan Wang
+- **🏷️ 机构**: University of Edinburgh, TuSimple
+- **会议**: CVPR 2022
+
+### Real-time Object Detection for Streaming Perception.
+- **链接**: [arXiv:2203.12338](https://arxiv.org/abs/2203.12338) · 📚 被引 58
+- **作者**: Jinrong Yang, Songtao Liu, Zeming Li, Xiaoping Li, Jian Sun
+- **🏷️ 机构**: Huazhong University of Science and Technology, Megvii Technology
+- **会议**: CVPR 2022
+
+### Sylph: A Hypernetwork Framework for Incremental Few-shot Object Detection.
+- **链接**: [arXiv:2203.13903](https://arxiv.org/abs/2203.13903) · 📚 被引 47
+- **作者**: Li Yin, Juan M. Perez-Rua, Kevin J. Liang
+- **🏷️ 机构**: Meta AI
+- **会议**: CVPR 2022
+
+### Democracy Does Matter: Comprehensive Feature Mining for Co-Salient Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00105) · 📚 被引 77
+- **作者**: Siyue Yu, Jimin Xiao, Bingfeng Zhang, Eng Gee Lim
+- **🏷️ 机构**: XJTLU
+- **会议**: CVPR 2022
+
+### Kernelized Few-shot Object Detection with Efficient Integral Aggregation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01861) · 📚 被引 64
+- **作者**: Shan Zhang, Lei Wang, Naila Murray, Piotr Koniusz
+- **🏷️ 机构**: Australian National University, University of Wollongong, Meta AI Research
+- **会议**: CVPR 2022
+
+### Group R-CNN for Weakly Semi-supervised Object Detection with Points.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00920) · 📚 被引 52
+- **作者**: Shilong Zhang, Zhuoran Yu, Liyang Liu, Xinjiang Wang, Aojun Zhou, Kai Chen
+- **🏷️ 机构**: Shanghai AI Laboratory, Georgia Institute of Technology, Tencent AI Platform Department,China
+- **会议**: CVPR 2022
+
+### Task-specific Inconsistency Alignment for Domain Adaptive Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01382) · 📚 被引 122
+- **作者**: Liang Zhao, Limin Wang
+- **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology,China
+- **会议**: CVPR 2022
+
+### Semantic-aligned Fusion Transformer for One-shot Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00745) · 📚 被引 30
+- **作者**: Yizhou Zhao, Xun Guo, Yan Lu
+- **🏷️ 机构**: Carnegie Mellon University, Microsoft Research Asia
+- **会议**: CVPR 2022
+
 ### Localization Distillation for Dense Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00919) · 📚 被引 197
 - **作者**: Zhaohui Zheng, Rongguang Ye, Ping Wang, Dongwei Ren, Wangmeng Zuo, Qibin Hou et al.
 - **🏷️ 机构**: Nankai University,TMCC, CS, School of Mathematics, Tianjin University, School of Computer Science and Technology, Harbin Institute of Technology
+- **会议**: CVPR 2022
+
+### Progressive End-to-End Object Detection in Crowded Scenes.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00093) · 📚 被引 73
+- **作者**: Anlin Zheng, Yuang Zhang, Xiangyu Zhang, Xiaojuan Qi, Jian Sun
+- **🏷️ 机构**: MEGVII Technology, Shanghai Jiao Tong University, University of Hong Kong
+- **会议**: CVPR 2022
+
+### Multi-Granularity Alignment Domain Adaptation for Object Detection.
+- **链接**: [arXiv:2203.16897](https://arxiv.org/abs/2203.16897) · 📚 被引 111
+- **作者**: Wenzhang Zhou, Dawei Du, Libo Zhang, Tiejian Luo, Yanjun Wu
+- **🏷️ 机构**: University of Chinese Academy of Sciences,Beijing,China, Kitware, Inc.,NY,USA, Institute of Software, Chinese Academy of Sciences,Beijing,China
 - **会议**: CVPR 2022
 
 ## 跨领域论文（完整笔记在其他领域）
@@ -287,10 +485,18 @@
 - MonoDTR: Monocular 3D Object Detection with Depth-Aware Transformer. → [3d-detection](../3d-detection/Guideline%202022.md)
 - 3D-VField: Adversarial Augmentation of Point Clouds for Domain Generalization in 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Time3D: End-to-End Joint Monocular 3D Object Detection and Tracking for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
-- DeepFusion: Lidar-Camera Deep Fusion for Multi-Modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
-- LIFT: Learning 4D LiDAR Image Fusion Transformer for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
-- SS3D: Sparsely-Supervised 3D Object Detection from Point Cloud. → [3d-detection](../3d-detection/Guideline%202022.md)
-- Boosting 3D Object Detection by Simulating Multimodality on Point Clouds. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Voxel Field Fusion for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Diversity Matters: Fully Exploiting Depth Clues for Reliable Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- DeepFusion: Lidar-Camera Deep Fusion for Multi-Modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- MonoJSG: Joint Semantic and Geometric Cost Volume for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Exploring Geometric Consistency for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- SS3D: Sparsely-Supervised 3D Object Detection from Point Cloud. → [3d-detection](../3d-detection/Guideline%202022.md)
+- RBGNet: Ray-based Grouping for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Back to Reality: Weakly-supervised 3D Object Detection with Shape-guided Label Enhancement. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Rope3D: The Roadside Perception Dataset for Autonomous Driving and Monocular 3D Object Detection Task. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Rotationally Equivariant 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- LIFT: Learning 4D LiDAR Image Fusion Transformer for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
 - CAT-Det: Contrastively Augmented Transformer for Multimodal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Dimension Embeddings for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Boosting 3D Object Detection by Simulating Multimodality on Point Clouds. → [3d-detection](../3d-detection/Guideline%202022.md)

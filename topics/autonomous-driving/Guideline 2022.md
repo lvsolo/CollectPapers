@@ -1,7 +1,7 @@
 # Autonomous Driving — 2022 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -17,33 +17,10 @@
 
 </details>
 
-### Exploiting Temporal Relations on Radar Perception for Autonomous Driving.
-- **链接**: [arXiv:2204.01184](https://arxiv.org/abs/2204.01184) · 📚 被引 56
-- **作者**: Peizhao Li, Pu Wang, Karl Berntorp, Hongfu Liu
-- **🏷️ 机构**: Brandeis University, Mitsubishi Electric Research Laboratories
-- **会议**: CVPR 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We consider the object recognition problem in autonomous driving using automotive radar sensors. Comparing to Lidar sensors, radar is cost-effective and robust in all-weather conditions for perception in autonomous driving. However, radar signals suffer from low angular resolution and precision in recognizing surrounding objects. To enhance the capacity of automotive radar, in this work, we exploit the temporal information from successive ego-centric bird-eye-view radar image frames for radar object recognition. We leverage the consistency of an object's existence and attributes (size, orientation, etc.), and propose a temporal relational layer to explicitly model the relations between objects within successive radar images. In both object detection and multiple object tracking, we show the superiority of our method compared to several baseline approaches.
-
-</details>
-
-### LTP: Lane-based Trajectory Prediction for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01662) · 📚 被引 83
-- **作者**: Jingke Wang, Tengju Ye, Ziqing Gu, Junbo Chen
-- **🏷️ 机构**: Alibaba Group
-- **会议**: CVPR 2022
-
-### Unifying Panoptic Segmentation for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02066) · 📚 被引 47
-- **作者**: Oliver Zendel, Matthias Schörghuber, Bernhard Rainer, Markus Murschitz, Csaba Beleznai
-- **🏷️ 机构**: AIT Austrian Institute of Technology
-- **会议**: CVPR 2022
-
 ## 跨领域论文（完整笔记在其他领域）
 
 - Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Investigating the Impact of Multi-LiDAR Placement on Object Detection for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Time3D: End-to-End Joint Monocular 3D Object Detection and Tracking for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Rope3D: The Roadside Perception Dataset for Autonomous Driving and Monocular 3D Object Detection Task. → [3d-detection](../3d-detection/Guideline%202022.md)
+- DAIR-V2X: A Large-Scale Dataset for Vehicle-Infrastructure Cooperative 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)

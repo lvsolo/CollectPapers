@@ -35,12 +35,6 @@
 
 </details>
 
-### Continual Learning with Lifelong Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00027)
-- **作者**: Zhen Wang, Liu Liu, Yiqun Duan, Yajing Kong, Dacheng Tao
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2022
-
 ### Learning to Prompt for Continual Learning.
 - **链接**: [arXiv:2112.08654](https://arxiv.org/abs/2112.08654) · [代码](https://github.com/google-research/l2p)
 - **作者**: Zifeng Wang, Zizhao Zhang, Chen-Yu Lee, Han Zhang, Ruoxi Sun, Xiaoqi Ren et al.
@@ -64,6 +58,12 @@
 > Continual Learning (CL) methods aim to enable machine learning models to learn new tasks without catastrophic forgetting of those that have been previously mastered. Existing CL approaches often keep a buffer of previously-seen samples, perform knowledge distillation, or use regularization techniques towards this goal. Despite their performance, they still suffer from interference across tasks which leads to catastrophic forgetting. To ameliorate this problem, we propose to only activate and select sparse neurons for learning current and past tasks at any stage. More parameters space and model capacity can thus be reserved for the future tasks. This minimizes the interference between parameters for different tasks. To do so, we propose a Sparse neural Network for Continual Learning (SNCL), which employs variational Bayesian sparsity priors on the activations of the neurons in all layers. Full Experience Replay (FER) provides effective supervision in learning the sparse activations of the neurons in different layers. A loss-aware reservoir-sampling strategy is developed to maintain the memory buffer. The proposed method is agnostic as to the network structures and the task boundaries. Experiments on different datasets show that our approach achieves state-of-the-art performance for mitigating forgetting.
 
 </details>
+
+### Continual Learning with Lifelong Vision Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00027)
+- **作者**: Zhen Wang, Liu Liu, Yiqun Duan, Yajing Kong, Dacheng Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2022
 
 ### Online Continual Learning on a Contaminated Data Stream with Blurry Task Boundaries.
 - **链接**: [arXiv:2203.15355](https://arxiv.org/abs/2203.15355) · [代码](https://github.com/clovaai/puridiver) · 📚 被引 23
