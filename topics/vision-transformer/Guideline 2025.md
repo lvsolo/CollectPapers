@@ -5,23 +5,37 @@
 
 > 同领域其他年份: 
 
-### PADRe: A Unifying Polynomial Attention Drop-in Replacement for Efficient Vision Transformer.
-- **链接**: [arXiv:2407.11306](https://arxiv.org/abs/2407.11306)
-- **作者**: Pierre-David Letourneau, Manish Kumar Singh, Hsin-Pai Cheng, Shizhong Han, Yunxiao Shi, Dalton Jones et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### APHQ-ViT: Post-Training Quantization with Average Perturbation Hessian Based Reconstruction for Vision Transformers.
+- **链接**: [arXiv:2504.02508](https://arxiv.org/abs/2504.02508) · 📚 被引 5
+- **作者**: Zhuguanyu Wu, Jiayi Zhang, Jiaxin Chen, Jinyang Guo, Di Huang, Yunhong Wang
+- **🏷️ 机构**: Beihang University,State Key Laboratory of Virtual Reality Technology and Systems,China, Beihang University,School of Artificial Intelligence,Beijing,China, Beihang University,School of Computer Science and Engineering,Beijing,China
+- **会议**: CVPR 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### EA-Vit: Efficient Adaptation for Elastic Vision Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00104) · 📚 被引 1
+- **作者**: Chen Zhu, Wangbo Zhao, Huiwen Zhang, Yuhao Zhou, Weidong Tang, Shuo Wang et al.
+- **🏷️ 机构**: National University of Singapore, Xidian University, Houmo AI
+- **会议**: ICCV 2025
 
-> We present Polynomial Attention Drop-in Replacement (PADRe), a novel and unifying framework designed to replace the conventional self-attention mechanism in transformer models. Notably, several recent alternative attention mechanisms, including Hyena, Mamba, SimA, Conv2Former, and Castling-ViT, can be viewed as specific instances of our PADRe framework. PADRe leverages polynomial functions and draws upon established results from approximation theory, enhancing computational efficiency without compromising accuracy. PADRe's key components include multiplicative nonlinearities, which we implement using straightforward, hardware-friendly operations such as Hadamard products, incurring only linear computational and memory costs. PADRe further avoids the need for using complex functions such as Softmax, yet it maintains comparable or superior accuracy compared to traditional self-attention. We assess the effectiveness of PADRe as a drop-in replacement for self-attention across diverse computer vision tasks. These tasks include image classification, image-based 2D object detection, and 3D point cloud object detection. Empirical results demonstrate that PADRe runs significantly faster than the conventional self-attention (11x ~ 43x faster on server GPU and mobile NPU) while maintaining similar accuracy when substituting self-attention in the transformer models.
+### Efficient Adaptation of Pre-Trained Vision Transformer Underpinned by Approximately Orthogonal Fine-Tuning Strategy.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00464) · 📚 被引 0
+- **作者**: Yiting Yang, Hao Luo, Yuan Sun, Qingsen Yan, Haokui Zhang, Wei Dong et al.
+- **🏷️ 机构**: Xi&#x0027;an University of Architecture and Technology, University of Electronic Science and Technology of China, Northwestern Polytechnical University
+- **会议**: ICCV 2025
 
 </details>
 
-### CViT: Continuous Vision Transformer for Operator Learning.
-- **链接**: [出版页](https://openreview.net/forum?id=cRnCcuLvyr)
-- **作者**: Sifan Wang, Jacob H. Seidman, Shyam Sankaran, Hanwen Wang, George J. Pappas, Paris Perdikaris
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### SHF: Symmetrical Hierarchical Forest with Pretrained Vision Transformer Encoder for High-Resolution Medical Segmentation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/cc44bf651235b9cd61c4143ae3bbb0de-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Enzhi Zhang, Peng Chen, Rui Zhong, Du Wu, Jun Igarashi, Isaac Lyngaas et al.
+- **🏷️ 机构**: Hokkaido University, Institute of Physical and Chemical Research - RIKEN, Zhejiang University, Kuaishou- 快手科技
+- **会议**: NeurIPS 2025
+
+### BHViT: Binarized Hybrid Vision Transformer.
+- **链接**: [arXiv:2503.02394](https://arxiv.org/abs/2503.02394) · 📚 被引 32
+- **作者**: Tian Gao, Yu Zhang, Zhiyuan Zhang, Huajun Liu, Kaijie Yin, Chengzhong Xu et al.
+- **🏷️ 机构**: Nanjing University of Science and Technology, Shanghai Jiaotong University, Singapore Management University
+- **会议**: CVPR 2025
 
 ### Spiking Vision Transformer with Saccadic Attention.
 - **链接**: [出版页](https://openreview.net/forum?id=qzZsz6MuEq)
@@ -29,8 +43,17 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2025
 
-### Asymmetric Factorized Bilinear Operation for Vision Transformer.
-- **链接**: [出版页](https://openreview.net/forum?id=MJyqwBVgMs)
-- **作者**: Junjie Wu, Qilong Wang, Jiangtao Xie, Pengfei Zhu, Qinghua Hu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Why do gradient-based explanations struggle with Transformers, and how can we improve them? We identify gradient flow imbalances in Transformers that violate FullGrad-completeness, a critical property for attribution faithfulness that CNNs naturally possess. To address this issue, we introduce LibraGrad -- a theoretically grounded post-hoc approach that corrects gradient imbalances through pruning and scaling of backward paths, without changing the forward pass or adding computational overhead. We evaluate LibraGrad using three metric families: Faithfulness, which quantifies prediction changes under perturbations of the most and least relevant features; Completeness Error, which measures attribution conservation relative to model outputs; and Segmentation AP, which assesses alignment with human perception. Extensive experiments across 8 architectures, 4 model sizes, and 4 datasets show that LibraGrad universally enhances gradient-based methods, outperforming existing white-box methods -- including Transformer-specific approaches -- across all metrics. We demonstrate superior qualitative results through two complementary evaluations: precise text-prompted region highlighting on CLIP models and accurate class discrimination between co-occurring animals on ImageNet-finetuned models -- two settings on which existing methods often struggle. LibraGrad is effective even on the attention-free MLP-Mixer architecture, indicating potential for extension to other modern architectures. Our code is freely available at https://github.com/NightMachinery/LibraGrad.
+
+</details>
+
+### Multi-Kernel Correlation-Attention Vision Transformer for Enhanced Contextual Understanding and Multi-Scale Integration.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/65e876f6a98c6799d0b3145966dd73e2-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Hongkang Zhang, Shao-Lun Huang, Ercan E. Kuruoglu, Yanlong Wang
+- **🏷️ 机构**: Tsinghua University, Tsinghua University, Tsinghua University, Tsinghua-Berkeley Shenzhen Institute
+- **会议**: NeurIPS 2025
+
+- When Pixel Difference Patterns Meet ViT: PiDiViT for Few-Shot Object Detection. → [object-detection](../object-detection/Guideline%202025.md)
+- Boosting Generative Adversarial Transferability with Self-Supervised Vision Transformer Features. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)
