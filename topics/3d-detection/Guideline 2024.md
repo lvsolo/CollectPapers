@@ -1,156 +1,222 @@
 # 3D Detection — 2024 Guideline
 
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
-> 论文数: 15 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 28 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Towards Flexible 3D Perception: Object-Centric Occupancy Completion Augments 3D Object Detection.
-- **链接**: [arXiv:2412.05154](https://arxiv.org/abs/2412.05154) · 📚 被引 1
-- **作者**: Chaoda Zheng, Feng Wang, Naiyan Wang, Shuguang Cui, Zhen Li
+### OPEN: Object-Wise Position Embedding for Multi-view 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73347-5_9)
+- **作者**: Jinghua Hou, Tong Wang, Xiaoqing Ye, Zhe Liu, Shi Gong, Xiao Tan et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+### LISO: Lidar-Only Self-supervised 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73016-0_15)
+- **作者**: Stefan Andreas Baur, Frank Moosmann, Andreas Geiger
+- **🏷️ 机构**: University of Tübingen
+- **会议**: ECCV 2024
+
+### LiDAR-Based All-Weather 3D Object Detection via Prompting and Distilling 4D Radar.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72992-8_21) · 📚 被引 8
+- **作者**: Yujeong Chae, Hyeonseong Kim, Changgyoon Oh, Minseok Kim, Kuk-Jin Yoon
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Learning High-Resolution Vector Representation from Multi-camera Images for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72761-0_22)
+- **作者**: Zhili Chen, Shuangjie Xu, Maosheng Ye, Zian Qian, Xiaoyi Zou, Dit-Yan Yeung et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Diff3DETR: Agent-Based Diffusion Model for Semi-supervised 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72754-2_4) · 📚 被引 11
+- **作者**: Jiacheng Deng, Jiahao Lu, Tianzhu Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### CMD: A Cross Mechanism Domain Adaptation Dataset for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72998-0_13) · 📚 被引 8
+- **作者**: Jinhao Deng, Wei Ye, Hai Wu, Xun Huang, Qiming Xia, Xin Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Find n' Propagate: Open-Vocabulary 3D Object Detection in Urban Environments.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73661-2_8) · 📚 被引 3
+- **作者**: Djamahl Etchegaray, Zi Huang, Tatsuya Harada, Yadan Luo
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Weakly Supervised 3D Object Detection via Multi-level Visual Guidance.
+- **链接**: [arXiv:2312.07530](https://arxiv.org/abs/2312.07530) · [代码](https://github.com/kuanchihhuang/VG-W3D) · 📚 被引 6
+- **作者**: Kuan-Chih Huang, Yi-Hsuan Tsai, Ming-Hsuan Yang
+- **🏷️ 机构**: UC Merced
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> While 3D object bounding box (bbox) representation has been widely used in autonomous driving perception, it lacks the ability to capture the precise details of an object's intrinsic geometry. Recently, occupancy has emerged as a promising alternative for 3D scene perception. However, constructing a high-resolution occupancy map remains infeasible for large scenes due to computational constraints. Recognizing that foreground objects only occupy a small portion of the scene, we introduce object-centric occupancy as a supplement to object bboxes. This representation not only provides intricate details for detected objects but also enables higher voxel resolution in practical applications. We advance the development of object-centric occupancy perception from both data and algorithm perspectives. On the data side, we construct the first object-centric occupancy dataset from scratch using an automated pipeline. From the algorithmic standpoint, we introduce a novel object-centric occupancy completion network equipped with an implicit shape decoder that manages dynamic-size occupancy generation. This network accurately predicts the complete object-centric occupancy volume for inaccurate object proposals by leveraging temporal information from long sequences. Our method demonstrates robust performance in completing object shapes under noisy detection and tracking conditions. Additionally, we show that our occupancy features significantly enhance the detection results of state-of-the-art 3D object detectors, especially for incomplete or distant objects in the Waymo Open Dataset.
+> Weakly supervised 3D object detection aims to learn a 3D detector with lower annotation cost, e.g., 2D labels. Unlike prior work which still relies on few accurate 3D annotations, we propose a framework to study how to leverage constraints between 2D and 3D domains without requiring any 3D labels. Specifically, we employ visual data from three perspectives to establish connections between 2D and 3D domains. First, we design a feature-level constraint to align LiDAR and image features based on object-aware regions. Second, the output-level constraint is developed to enforce the overlap between 2D and projected 3D box estimations. Finally, the training-level constraint is utilized by producing accurate and consistent 3D pseudo-labels that align with the visual data. We conduct extensive experiments on the KITTI dataset to validate the effectiveness of the proposed three constraints. Without using any 3D labels, our method achieves favorable performance against state-of-the-art approaches and is competitive with the method that uses 500-frame 3D annotations. Code will be made publicly available at https://github.com/kuanchihhuang/VG-W3D.
 
 </details>
 
-### UNION: Unsupervised 3D Object Detection using Object Appearance-based Pseudo-Classes.
-- **链接**: [arXiv:2405.15688](https://arxiv.org/abs/2405.15688) · [代码](https://github.com/TedLentsch/UNION) · 📚 被引 2
-- **作者**: Ted de Vries Lentsch, Holger Caesar, Dariu Gavrila
+### Detecting as Labeling: Rethinking LiDAR-Camera Fusion in 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72670-5_25) · 📚 被引 36
+- **作者**: Junjie Huang, Yun Ye, Zhujin Liang, Yi Shan, Dalong Du
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+### FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73242-3_7)
+- **作者**: Zheng Jiang, Jinqing Zhang, Yanan Zhang, Qingjie Liu, Zhenghui Hu, Baohui Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Unlocking Textual and Visual Wisdom: Open-Vocabulary 3D Object Detection Enhanced by Comprehensive Guidance from Text and Image.
+- **链接**: [arXiv:2407.05256](https://arxiv.org/abs/2407.05256) · 📚 被引 7
+- **作者**: Pengkun Jiao, Na Zhao, Jingjing Chen, Yu-Gang Jiang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Unsupervised 3D object detection methods have emerged to leverage vast amounts of data without requiring manual labels for training. Recent approaches rely on dynamic objects for learning to detect mobile objects but penalize the detections of static instances during training. Multiple rounds of self-training are used to add detected static instances to the set of training targets; this procedure to improve performance is computationally expensive. To address this, we propose the method UNION. We use spatial clustering and self-supervised scene flow to obtain a set of static and dynamic object proposals from LiDAR. Subsequently, object proposals' visual appearances are encoded to distinguish static objects in the foreground and background by selecting static instances that are visually similar to dynamic objects. As a result, static and dynamic mobile objects are obtained together, and existing detectors can be trained with a single training. In addition, we extend 3D object discovery to detection by using object appearance-based cluster labels as pseudo-class labels for training object classification. We conduct extensive experiments on the nuScenes dataset and increase the state-of-the-art performance for unsupervised 3D object discovery, i.e. UNION more than doubles the average precision to 39.5. The code is available at github.com/TedLentsch/UNION.
+> Open-vocabulary 3D object detection (OV-3DDet) aims to localize and recognize both seen and previously unseen object categories within any new 3D scene. While language and vision foundation models have achieved success in handling various open-vocabulary tasks with abundant training data, OV-3DDet faces a significant challenge due to the limited availability of training data. Although some pioneering efforts have integrated vision-language models (VLM) knowledge into OV-3DDet learning, the full potential of these foundational models has yet to be fully exploited. In this paper, we unlock the textual and visual wisdom to tackle the open-vocabulary 3D detection task by leveraging the language and vision foundation models. We leverage a vision foundation model to provide image-wise guidance for discovering novel classes in 3D scenes. Specifically, we utilize a object detection vision foundation model to enable the zero-shot discovery of objects in images, which serves as the initial seeds and filtering guidance to identify novel 3D objects. Additionally, to align the 3D space with the powerful vision-language space, we introduce a hierarchical alignment approach, where the 3D feature space is aligned with the vision-language feature space using a pre-trained VLM at the instance, category, and scene levels. Through extensive experimentation, we demonstrate significant improvements in accuracy and generalization, highlighting the potential of foundation models in advancing open-vocabulary 3D object detection in real-world scenarios.
 
 </details>
 
-### LION: Linear Group RNN for 3D Object Detection in Point Clouds.
-- **链接**: [arXiv:2407.18232](https://arxiv.org/abs/2407.18232) · 📚 被引 29
-- **作者**: Zhe Liu, Jinghua Hou, Xinyu Wang, Xiaoqing Ye, Jingdong Wang, Hengshuang Zhao et al.
-- **🏷️ 机构**: HUAST
-- **会议**: NeurIPS 2024
+### LabelDistill: Label-Guided Cross-Modal Knowledge Distillation for Camera-Based 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72992-8_2)
+- **作者**: Sanmin Kim, Youngseok Kim, Sihwan Hwang, Hyeonjun Jeong, Dongsuk Kum
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Diffusion Model for Robust Multi-sensor Fusion in 3D Object Detection and BEV Segmentation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73113-6_14)
+- **作者**: Duy-Tho Le, Hengcan Shi, Jianfei Cai, Hamid Rezatofighi
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Domain Generalization of 3D Object Detection by Density-Resampling.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73039-9_26)
+- **作者**: Shuangzhi Li, Lei Ma, Xingyu Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### MonoTTA: Fully Test-Time Adaptation for Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72784-9_6) · 📚 被引 11
+- **作者**: Hongbin Lin, Yifan Zhang, Shuaicheng Niu, Shuguang Cui, Zhen Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Ray Denoising: Depth-Aware Hard Negative Sampling for Multi-view 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72967-6_12)
+- **作者**: Feng Liu, Tengteng Huang, Qianjing Zhang, Haotian Yao, Chi Zhang, Fang Wan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### MonoWAD: Weather-Adaptive Diffusion Model for Robust Monocular 3D Object Detection.
+- **链接**: [arXiv:2407.16448](https://arxiv.org/abs/2407.16448) · [代码](https://github.com/VisualAIKHU/MonoWAD) · 📚 被引 9
+- **作者**: Youngmin Oh, Hyung-Il Kim, Seong Tae Kim, Jung Uk Kim
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The benefit of transformers in large-scale 3D point cloud perception tasks, such as 3D object detection, is limited by their quadratic computation cost when modeling long-range relationships. In contrast, linear RNNs have low computational complexity and are suitable for long-range modeling. Toward this goal, we propose a simple and effective window-based framework built on LInear grOup RNN (i.e., perform linear RNN for grouped features) for accurate 3D object detection, called LION. The key property is to allow sufficient feature interaction in a much larger group than transformer-based methods. However, effectively applying linear group RNN to 3D object detection in highly sparse point clouds is not trivial due to its limitation in handling spatial modeling. To tackle this problem, we simply introduce a 3D spatial feature descriptor and integrate it into the linear group RNN operators to enhance their spatial features rather than blindly increasing the number of scanning orders for voxel features. To further address the challenge in highly sparse point clouds, we propose a 3D voxel generation strategy to densify foreground features thanks to linear group RNN as a natural property of auto-regressive models. Extensive experiments verify the effectiveness of the proposed components and the generalization of our LION on different linear group RNN operators including Mamba, RWKV, and RetNet. Furthermore, it is worth mentioning that our LION-Mamba achieves state-of-the-art on Waymo, nuScenes, Argoverse V2, and ONCE dataset. Last but not least, our method supports kinds of advanced linear RNN operators (e.g., RetNet, RWKV, Mamba, xLSTM and TTT) on small but popular KITTI dataset for a quick experience with our linear RNN-based framework.
+> Monocular 3D object detection is an important challenging task in autonomous driving. Existing methods mainly focus on performing 3D detection in ideal weather conditions, characterized by scenarios with clear and optimal visibility. However, the challenge of autonomous driving requires the ability to handle changes in weather conditions, such as foggy weather, not just clear weather. We introduce MonoWAD, a novel weather-robust monocular 3D object detector with a weather-adaptive diffusion model. It contains two components: (1) the weather codebook to memorize the knowledge of the clear weather and generate a weather-reference feature for any input, and (2) the weather-adaptive diffusion model to enhance the feature representation of the input feature by incorporating a weather-reference feature. This serves an attention role in indicating how much improvement is needed for the input feature according to the weather conditions. To achieve this goal, we introduce a weather-adaptive enhancement loss to enhance the feature representation under both clear and foggy weather conditions. Extensive experiments under various weather conditions demonstrate that MonoWAD achieves weather-robust monocular 3D object detection. The code and dataset are released at https://github.com/VisualAIKHU/MonoWAD.
 
 </details>
 
-### Unified Domain Generalization and Adaptation for Multi-View 3D Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/6b7e1e96243c9edc378f85e7d232e415-Abstract-Conference.html)
-- **作者**: Gyusam Chang, Jiwon Lee, Donghyun Kim, Jinkyu Kim, Dongwook Lee, Daehyun Ji et al.
+### SAMFusion: Sensor-Adaptive Multimodal Fusion for 3D Object Detection in Adverse Weather.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73030-6_27)
+- **作者**: Edoardo Palladin, Roland Dietze, Praveen Narayanan, Mario Bijelic, Felix Heide
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
-### DiffuBox: Refining 3D Object Detection with Point Diffusion.
-- **链接**: [arXiv:2405.16034](https://arxiv.org/abs/2405.16034) · [代码](https://github.com/cxy1997/DiffuBox)
-- **作者**: Xiangyu Chen, Zhenzhen Liu, Katie Luo, Siddhartha Datta, Adhitya Polavaram, Yan Wang et al.
+### GraphBEV: Towards Robust BEV Feature Alignment for Multi-modal 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73347-5_20)
+- **作者**: Ziying Song, Lei Yang, Shaoqing Xu, Lin Liu, Dongyang Xu, Caiyan Jia et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+### SimPB: A Single Model for 2D and 3D Object Detection from Multiple Cameras.
+- **链接**: [arXiv:2403.10353](https://arxiv.org/abs/2403.10353) · [代码](https://github.com/nullmax-vision/SimPB) · 📚 被引 5
+- **作者**: Yingqi Tang, Zhaotie Meng, Guoliang Chen, Erkang Cheng
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Ensuring robust 3D object detection and localization is crucial for many applications in robotics and autonomous driving. Recent models, however, face difficulties in maintaining high performance when applied to domains with differing sensor setups or geographic locations, often resulting in poor localization accuracy due to domain shift. To overcome this challenge, we introduce a novel diffusion-based box refinement approach. This method employs a domain-agnostic diffusion model, conditioned on the LiDAR points surrounding a coarse bounding box, to simultaneously refine the box's location, size, and orientation. We evaluate this approach under various domain adaptation settings, and our results reveal significant improvements across different datasets, object classes and detectors. Our PyTorch implementation is available at \href{https://github.com/cxy1997/DiffuBox}{https://github.com/cxy1997/DiffuBox}.
+> The field of autonomous driving has attracted considerable interest in approaches that directly infer 3D objects in the Bird's Eye View (BEV) from multiple cameras. Some attempts have also explored utilizing 2D detectors from single images to enhance the performance of 3D detection. However, these approaches rely on a two-stage process with separate detectors, where the 2D detection results are utilized only once for token selection or query initialization. In this paper, we present a single model termed SimPB, which simultaneously detects 2D objects in the perspective view and 3D objects in the BEV space from multiple cameras. To achieve this, we introduce a hybrid decoder consisting of several multi-view 2D decoder layers and several 3D decoder layers, specifically designed for their respective detection tasks. A Dynamic Query Allocation module and an Adaptive Query Aggregation module are proposed to continuously update and refine the interaction between 2D and 3D results, in a cyclic 3D-2D-3D manner. Additionally, Query-group Attention is utilized to strengthen the interaction among 2D queries within each camera group. In the experiments, we evaluate our method on the nuScenes dataset and demonstrate promising results for both 2D and 3D detection tasks. Our code is available at: https://github.com/nullmax-vision/SimPB.
 
 </details>
 
-### CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection.
-- **链接**: [arXiv:2411.03013](https://arxiv.org/abs/2411.03013) · 📚 被引 4
-- **作者**: Jisong Kim, Minjae Seong, Jun Won Choi
+### OV-Uni3DETR: Towards Unified Open-Vocabulary 3D Object Detection via Cycle-Modality Propagation.
+- **链接**: [arXiv:2403.19580](https://arxiv.org/abs/2403.19580) · 📚 被引 10
+- **作者**: Zhenyu Wang, Yali Li, Taichi Liu, Hengshuang Zhao, Shengjin Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Accurate and robust 3D object detection is a critical component in autonomous vehicles and robotics. While recent radar-camera fusion methods have made significant progress by fusing information in the bird's-eye view (BEV) representation, they often struggle to effectively capture the motion of dynamic objects, leading to limited performance in real-world scenarios. In this paper, we introduce CRT-Fusion, a novel framework that integrates temporal information into radar-camera fusion to address this challenge. Our approach comprises three key modules: Multi-View Fusion (MVF), Motion Feature Estimator (MFE), and Motion Guided Temporal Fusion (MGTF). The MVF module fuses radar and image features within both the camera view and bird's-eye view, thereby generating a more precise unified BEV representation. The MFE module conducts two simultaneous tasks: estimation of pixel-wise velocity information and BEV segmentation. Based on the velocity and the occupancy score map obtained from the MFE module, the MGTF module aligns and fuses feature maps across multiple timestamps in a recurrent manner. By considering the motion of dynamic objects, CRT-Fusion can produce robust BEV feature maps, thereby improving detection accuracy and robustness. Extensive evaluations on the challenging nuScenes dataset demonstrate that CRT-Fusion achieves state-of-the-art performance for radar-camera-based 3D object detection. Our approach outperforms the previous best method in terms of NDS by +1.7%, while also surpassing the leading approach in mAP by +1.4%. These significant improvements in both metrics showcase the effectiveness of our proposed fusion strategy in enhancing the reliability and accuracy of 3D object detection.
+> In the current state of 3D object detection research, the severe scarcity of annotated 3D data, substantial disparities across different data modalities, and the absence of a unified architecture, have impeded the progress towards the goal of universality. In this paper, we propose \textbf{OV-Uni3DETR}, a unified open-vocabulary 3D detector via cycle-modality propagation. Compared with existing 3D detectors, OV-Uni3DETR offers distinct advantages: 1) Open-vocabulary 3D detection: During training, it leverages various accessible data, especially extensive 2D detection images, to boost training diversity. During inference, it can detect both seen and unseen classes. 2) Modality unifying: It seamlessly accommodates input data from any given modality, effectively addressing scenarios involving disparate modalities or missing sensor information, thereby supporting test-time modality switching. 3) Scene unifying: It provides a unified multi-modal model architecture for diverse scenes collected by distinct sensors. Specifically, we propose the cycle-modality propagation, aimed at propagating knowledge bridging 2D and 3D modalities, to support the aforementioned functionalities. 2D semantic knowledge from large-vocabulary learning guides novel class discovery in the 3D domain, and 3D geometric knowledge provides localization supervision for 2D detection images. OV-Uni3DETR achieves the state-of-the-art performance on various scenarios, surpassing existing methods by more than 6\% on average. Its performance using only RGB images is on par with or even surpasses that of previous point cloud based methods. Code and pre-trained models will be released later.
 
 </details>
 
-### Real-time Stereo-based 3D Object Detection for Streaming Perception.
-- **链接**: [arXiv:2410.12394](https://arxiv.org/abs/2410.12394) · [代码](https://github.com/weiyangdaren/streamDSGN-pytorch) · 📚 被引 0
-- **作者**: Changcai Li, Zonghua Gu, Gang Chen, Libo Huang, Wei Zhang, Huihui Zhou
+### Towards Stable 3D Object Detection.
+- **链接**: [arXiv:2407.04305](https://arxiv.org/abs/2407.04305)
+- **作者**: Jiabao Wang, Qiang Meng, Guochao Liu, Liujiang Yan, Ke Wang, Ming-Ming Cheng et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The ability to promptly respond to environmental changes is crucial for the perception system of autonomous driving. Recently, a new task called streaming perception was proposed. It jointly evaluate the latency and accuracy into a single metric for video online perception. In this work, we introduce StreamDSGN, the first real-time stereo-based 3D object detection framework designed for streaming perception. StreamDSGN is an end-to-end framework that directly predicts the 3D properties of objects in the next moment by leveraging historical information, thereby alleviating the accuracy degradation of streaming perception. Further, StreamDSGN applies three strategies to enhance the perception accuracy: (1) A feature-flow-based fusion method, which generates a pseudo-next feature at the current moment to address the misalignment issue between feature and ground truth. (2) An extra regression loss for explicit supervision of object motion consistency in consecutive frames. (3) A large kernel backbone with a large receptive field for effectively capturing long-range spatial contextual features caused by changes in object positions. Experiments on the KITTI Tracking dataset show that, compared with the strong baseline, StreamDSGN significantly improves the streaming average precision by up to 4.33%. Our code is available at https://github.com/weiyangdaren/streamDSGN-pytorch.
+> In autonomous driving, the temporal stability of 3D object detection greatly impacts the driving safety. However, the detection stability cannot be accessed by existing metrics such as mAP and MOTA, and consequently is less explored by the community. To bridge this gap, this work proposes Stability Index (SI), a new metric that can comprehensively evaluate the stability of 3D detectors in terms of confidence, box localization, extent, and heading. By benchmarking state-of-the-art object detectors on the Waymo Open Dataset, SI reveals interesting properties of object stability that have not been previously discovered by other metrics. To help models improve their stability, we further introduce a general and effective training strategy, called Prediction Consistency Learning (PCL). PCL essentially encourages the prediction consistency of the same objects under different timestamps and augmentations, leading to enhanced detection stability. Furthermore, we examine the effectiveness of PCL with the widely-used CenterPoint, and achieve a remarkable SI of 86.00 for vehicle class, surpassing the baseline by 5.48. We hope our work could serve as a reliable baseline and draw the community's attention to this crucial issue in 3D object detection. Codes will be made publicly available.
 
 </details>
 
-### 3DET-Mamba: Causal Sequence Modelling for End-to-End 3D Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/547108084f0c2af39b956f8eadb75d1b-Abstract-Conference.html) · 📚 被引 3
-- **作者**: Mingsheng Li, Jiakang Yuan, Sijin Chen, Lin Zhang, Anyu Zhu, Xin Chen et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+### Reg-TTA3D: Better Regression Makes Better Test-Time Adaptive 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72775-7_12) · 📚 被引 2
+- **作者**: Jiakang Yuan, Bo Zhang, Kaixiong Gong, Xiangyu Yue, Botian Shi, Yu Qiao et al.
+- **🏷️ 机构**: Shanghai AI Lab
+- **会议**: ECCV 2024
 
-### STONE: A Submodular Optimization Framework for Active 3D Object Detection.
-- **链接**: [arXiv:2410.03918](https://arxiv.org/abs/2410.03918) · [代码](https://github.com/RuiyuM/STONE) · 📚 被引 0
-- **作者**: Ruiyu Mao, Sarthak Kumar Maharana, Rishabh K. Iyer, Yunhui Guo
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> 3D object detection is fundamentally important for various emerging applications, including autonomous driving and robotics. A key requirement for training an accurate 3D object detector is the availability of a large amount of LiDAR-based point cloud data. Unfortunately, labeling point cloud data is extremely challenging, as accurate 3D bounding boxes and semantic labels are required for each potential object. This paper proposes a unified active 3D object detection framework, for greatly reducing the labeling cost of training 3D object detectors. Our framework is based on a novel formulation of submodular optimization, specifically tailored to the problem of active 3D object detection. In particular, we address two fundamental challenges associated with active 3D object detection: data imbalance and the need to cover the distribution of the data, including LiDAR-based point cloud data of varying difficulty levels. Extensive experiments demonstrate that our method achieves state-of-the-art performance with high computational efficiency compared to existing active learning methods. The code is available at https://github.com/RuiyuM/STONE.
-
-</details>
-
-### One for All: Multi-Domain Joint Training for Point Cloud Based 3D Object Detection.
-- **链接**: [arXiv:2411.01584](https://arxiv.org/abs/2411.01584) · 📚 被引 3
-- **作者**: Zhenyu Wang, Yali Li, Hengshuang Zhao, Shengjin Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The current trend in computer vision is to utilize one universal model to address all various tasks. Achieving such a universal model inevitably requires incorporating multi-domain data for joint training to learn across multiple problem scenarios. In point cloud based 3D object detection, however, such multi-domain joint training is highly challenging, because large domain gaps among point clouds from different datasets lead to the severe domain-interference problem. In this paper, we propose \textbf{OneDet3D}, a universal one-for-all model that addresses 3D detection across different domains, including diverse indoor and outdoor scenes, within the \emph{same} framework and only \emph{one} set of parameters. We propose the domain-aware partitioning in scatter and context, guided by a routing mechanism, to address the data interference issue, and further incorporate the text modality for a language-guided classification to unify the multi-dataset label spaces and mitigate the category interference issue. The fully sparse structure and anchor-free head further accommodate point clouds with significant scale disparities. Extensive experiments demonstrate the strong universal ability of OneDet3D to utilize only one trained model for addressing almost all 3D object detection tasks.
-
-</details>
-
-### MVSDet: Multi-View Indoor 3D Object Detection via Efficient Plane Sweeps.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/ef8080f246b4b2c7a2b26daee6e6f22a-Abstract-Conference.html)
-- **作者**: Yating Xu, Chen Li, Gim Hee Lee
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### ImOV3D: Learning Open Vocabulary Point Clouds 3D Object Detection from Only 2D Images.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/ff9783ec29688387d44779d67d06ef66-Abstract-Conference.html)
-- **作者**: Timing Yang, Yuanliang Ju, Li Yi
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Voxel Mamba: Group-Free State Space Models for Point Cloud based 3D Object Detection.
-- **链接**: [arXiv:2406.10700](https://arxiv.org/abs/2406.10700) · 📚 被引 29
-- **作者**: Guowen Zhang, Lue Fan, Chenhang He, Zhen Lei, Zhaoxiang Zhang, Lei Zhang
+### General Geometry-Aware Weakly Supervised 3D Object Detection.
+- **链接**: [arXiv:2407.13748](https://arxiv.org/abs/2407.13748) · [代码](https://github.com/gwenzhang/GGA)
+- **作者**: Guowen Zhang, Junsong Fan, Liyi Chen, Zhaoxiang Zhang, Zhen Lei, Lei Zhang
 - **🏷️ 机构**: PolyU / OPPO
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Serialization-based methods, which serialize the 3D voxels and group them into multiple sequences before inputting to Transformers, have demonstrated their effectiveness in 3D object detection. However, serializing 3D voxels into 1D sequences will inevitably sacrifice the voxel spatial proximity. Such an issue is hard to be addressed by enlarging the group size with existing serialization-based methods due to the quadratic complexity of Transformers with feature sizes. Inspired by the recent advances of state space models (SSMs), we present a Voxel SSM, termed as Voxel Mamba, which employs a group-free strategy to serialize the whole space of voxels into a single sequence. The linear complexity of SSMs encourages our group-free design, alleviating the loss of spatial proximity of voxels. To further enhance the spatial proximity, we propose a Dual-scale SSM Block to establish a hierarchical structure, enabling a larger receptive field in the 1D serialization curve, as well as more complete local regions in 3D space. Moreover, we implicitly apply window partition under the group-free framework by positional encoding, which further enhances spatial proximity by encoding voxel positional information. Our experiments on Waymo Open Dataset and nuScenes dataset show that Voxel Mamba not only achieves higher accuracy than state-of-the-art methods, but also demonstrates significant advantages in computational efficiency.
+> 3D object detection is an indispensable component for scene understanding. However, the annotation of large-scale 3D datasets requires significant human effort. To tackle this problem, many methods adopt weakly supervised 3D object detection that estimates 3D boxes by leveraging 2D boxes and scene/class-specific priors. However, these approaches generally depend on sophisticated manual priors, which is hard to generalize to novel categories and scenes. In this paper, we are motivated to propose a general approach, which can be easily adapted to new scenes and/or classes. A unified framework is developed for learning 3D object detectors from RGB images and associated 2D boxes. In specific, we propose three general components: prior injection module to obtain general object geometric priors from LLM model, 2D space projection constraint to minimize the discrepancy between the boundaries of projected 3D boxes and their corresponding 2D boxes on the image plane, and 3D space geometry constraint to build a Point-to-Box alignment loss to further refine the pose of estimated 3D boxes. Experiments on KITTI and SUN-RGBD datasets demonstrate that our method yields surprisingly high-quality 3D bounding boxes with only 2D annotation. The source code is available at https://github.com/gwenzhang/GGA.
 
 </details>
 
-### MonoMAE: Enhancing Monocular 3D Detection through Depth-Aware Masked Autoencoders.
-- **链接**: [arXiv:2405.07696](https://arxiv.org/abs/2405.07696) · 📚 被引 11
-- **作者**: Xueying Jiang, Sheng Jin, Xiaoqin Zhang, Ling Shao, Shijian Lu
+### Interactive 3D Object Detection with Prompts.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72643-9_9)
+- **作者**: Rui Zhang, Xiangru Lin, Wei Zhang, Jincheng Lu, Xuekuan Wang, Xiao Tan et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+### SparseLIF: High-Performance Sparse LiDAR-Camera Fusion for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72761-0_7) · 📚 被引 24
+- **作者**: Hongcheng Zhang, Liu Liang, Pengxin Zeng, Xiao Song, Zhe Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Approaching Outside: Scaling Unsupervised 3D Object Detection from 2D Scene.
+- **链接**: [arXiv:2407.08569](https://arxiv.org/abs/2407.08569) · 📚 被引 9
+- **作者**: Ruiyang Zhang, Hu Zhang, Hang Yu, Zhedong Zheng
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Monocular 3D object detection aims for precise 3D localization and identification of objects from a single-view image. Despite its recent progress, it often struggles while handling pervasive object occlusions that tend to complicate and degrade the prediction of object dimensions, depths, and orientations. We design MonoMAE, a monocular 3D detector inspired by Masked Autoencoders that addresses the object occlusion issue by masking and reconstructing objects in the feature space. MonoMAE consists of two novel designs. The first is depth-aware masking that selectively masks certain parts of non-occluded object queries in the feature space for simulating occluded object queries for network training. It masks non-occluded object queries by balancing the masked and preserved query portions adaptively according to the depth information. The second is lightweight query completion that works with the depth-aware masking to learn to reconstruct and complete the masked object queries. With the proposed object occlusion and completion, MonoMAE learns enriched 3D representations that achieve superior monocular 3D detection performance qualitatively and quantitatively for both occluded and non-occluded objects. Additionally, MonoMAE learns generalizable representations that can work well in new domains.
+> The unsupervised 3D object detection is to accurately detect objects in unstructured environments with no explicit supervisory signals. This task, given sparse LiDAR point clouds, often results in compromised performance for detecting distant or small objects due to the inherent sparsity and limited spatial resolution. In this paper, we are among the early attempts to integrate LiDAR data with 2D images for unsupervised 3D detection and introduce a new method, dubbed LiDAR-2D Self-paced Learning (LiSe). We argue that RGB images serve as a valuable complement to LiDAR data, offering precise 2D localization cues, particularly when scarce LiDAR points are available for certain objects. Considering the unique characteristics of both modalities, our framework devises a self-paced learning pipeline that incorporates adaptive sampling and weak model aggregation strategies. The adaptive sampling strategy dynamically tunes the distribution of pseudo labels during training, countering the tendency of models to overfit easily detected samples, such as nearby and large-sized objects. By doing so, it ensures a balanced learning trajectory across varying object scales and distances. The weak model aggregation component consolidates the strengths of models trained under different pseudo label distributions, culminating in a robust and powerful final model. Experimental evaluations validate the efficacy of our proposed LiSe method, manifesting significant improvements of +7.1% AP$_{BEV}$ and +3.4% AP$_{3D}$ on nuScenes, and +8.3% AP$_{BEV}$ and +7.4% AP$_{3D}$ on Lyft compared to existing techniques.
 
 </details>
 
-### Training an Open-Vocabulary Monocular 3D Detection Model without 3D Data.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/8492211e9176b8abdaeb1f7aa4c223ea-Abstract-Conference.html)
-- **作者**: Rui Huang, Henry Zheng, Yan Wang, Zhuofan Xia, Marco Pavone, Gao Huang
+### RecurrentBEV: A Long-Term Temporal Fusion Framework for Multi-view 3D Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73220-1_8)
+- **作者**: Ming Chang, Xishan Zhang, Rui Zhang, Zhipeng Zhao, Guanhua He, Shaoli Liu
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024

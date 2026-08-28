@@ -1,90 +1,174 @@
 # Autonomous Driving — 2024 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 25 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### ZOPP: A Framework of Zero-shot Offboard Panoptic Perception for Autonomous Driving.
-- **链接**: [arXiv:2411.05311](https://arxiv.org/abs/2411.05311) · 📚 被引 0
-- **作者**: Tao Ma, Hongbin Zhou, Qiusheng Huang, Xuemeng Yang, Jianfei Guo, Bo Zhang et al.
-- **🏷️ 机构**: Shanghai AI Lab
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Offboard perception aims to automatically generate high-quality 3D labels for autonomous driving (AD) scenes. Existing offboard methods focus on 3D object detection with closed-set taxonomy and fail to match human-level recognition capability on the rapidly evolving perception tasks. Due to heavy reliance on human labels and the prevalence of data imbalance and sparsity, a unified framework for offboard auto-labeling various elements in AD scenes that meets the distinct needs of perception tasks is not being fully explored. In this paper, we propose a novel multi-modal Zero-shot Offboard Panoptic Perception (ZOPP) framework for autonomous driving scenes. ZOPP integrates the powerful zero-shot recognition capabilities of vision foundation models and 3D representations derived from point clouds. To the best of our knowledge, ZOPP represents a pioneering effort in the domain of multi-modal panoptic perception and auto labeling for autonomous driving scenes. We conduct comprehensive empirical studies and evaluations on Waymo open dataset to validate the proposed ZOPP on various perception tasks. To further explore the usability and extensibility of our proposed ZOPP, we also conduct experiments in downstream applications. The results further demonstrate the great potential of our ZOPP for real-world scenarios.
-
-</details>
-
-### Autonomous Driving with Spiking Neural Networks.
-- **链接**: [arXiv:2405.19687](https://arxiv.org/abs/2405.19687) · [代码](https://github.com/ridgerchu/SAD) · 📚 被引 5
-- **作者**: Ruijie Zhu, Ziqing Wang, Leilani Gilpin, Jason Eshraghian
+### Image-to-Lidar Relational Distillation for Autonomous Driving Data.
+- **链接**: [arXiv:2409.00845](https://arxiv.org/abs/2409.00845) · 📚 被引 5
+- **作者**: Anas Mahmoud, Ali Harakeh, Steven L. Waslander
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Autonomous driving demands an integrated approach that encompasses perception, prediction, and planning, all while operating under strict energy constraints to enhance scalability and environmental sustainability. We present Spiking Autonomous Driving (SAD), the first unified Spiking Neural Network (SNN) to address the energy challenges faced by autonomous driving systems through its event-driven and energy-efficient nature. SAD is trained end-to-end and consists of three main modules: perception, which processes inputs from multi-view cameras to construct a spatiotemporal bird's eye view; prediction, which utilizes a novel dual-pathway with spiking neurons to forecast future states; and planning, which generates safe trajectories considering predicted occupancy, traffic rules, and ride comfort. Evaluated on the nuScenes dataset, SAD achieves competitive performance in perception, prediction, and planning tasks, while drawing upon the energy efficiency of SNNs. This work highlights the potential of neuromorphic computing to be applied to energy-efficient autonomous driving, a critical step toward sustainable and safety-critical automotive technology. Our code is available at \url{https://github.com/ridgerchu/SAD}.
+> Pre-trained on extensive and diverse multi-modal datasets, 2D foundation models excel at addressing 2D tasks with little or no downstream supervision, owing to their robust representations. The emergence of 2D-to-3D distillation frameworks has extended these capabilities to 3D models. However, distilling 3D representations for autonomous driving datasets presents challenges like self-similarity, class imbalance, and point cloud sparsity, hindering the effectiveness of contrastive distillation, especially in zero-shot learning contexts. Whereas other methodologies, such as similarity-based distillation, enhance zero-shot performance, they tend to yield less discriminative representations, diminishing few-shot performance. We investigate the gap in structure between the 2D and the 3D representations that result from state-of-the-art distillation frameworks and reveal a significant mismatch between the two. Additionally, we demonstrate that the observed structural gap is negatively correlated with the efficacy of the distilled representations on zero-shot and few-shot 3D semantic segmentation. To bridge this gap, we propose a relational distillation framework enforcing intra-modal and cross-modal constraints, resulting in distilled 3D representations that closely capture the structure of the 2D representation. This alignment significantly enhances 3D representation performance over those learned through contrastive distillation in zero-shot segmentation tasks. Furthermore, our relational loss consistently improves the quality of 3D representations in both in-distribution and out-of-distribution few-shot segmentation tasks, outperforming approaches that rely on the similarity loss.
 
 </details>
 
-### Bench2Drive: Towards Multi-Ability Benchmarking of Closed-Loop End-To-End Autonomous Driving.
-- **链接**: [arXiv:2406.03877](https://arxiv.org/abs/2406.03877) · 📚 被引 74
-- **作者**: Xiaosong Jia, Zhenjie Yang, Qifeng Li, Zhiyuan Zhang, Junchi Yan
+### TCLC-GS: Tightly Coupled LiDAR-Camera Gaussian Splatting for Autonomous Driving: Supplementary Materials.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73036-8_6) · 📚 被引 9
+- **作者**: Cheng Zhao, Su Sun, Ruoyu Wang, Yuliang Guo, Jun-Jun Wan, Zhou Huang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In an era marked by the rapid scaling of foundation models, autonomous driving technologies are approaching a transformative threshold where end-to-end autonomous driving (E2E-AD) emerges due to its potential of scaling up in the data-driven manner. However, existing E2E-AD methods are mostly evaluated under the open-loop log-replay manner with L2 errors and collision rate as metrics (e.g., in nuScenes), which could not fully reflect the driving performance of algorithms as recently acknowledged in the community. For those E2E-AD methods evaluated under the closed-loop protocol, they are tested in fixed routes (e.g., Town05Long and Longest6 in CARLA) with the driving score as metrics, which is known for high variance due to the unsmoothed metric function and large randomness in the long route. Besides, these methods usually collect their own data for training, which makes algorithm-level fair comparison infeasible. To fulfill the paramount need of comprehensive, realistic, and fair testing environments for Full Self-Driving (FSD), we present Bench2Drive, the first benchmark for evaluating E2E-AD systems' multiple abilities in a closed-loop manner. Bench2Drive's official training data consists of 2 million fully annotated frames, collected from 13638 short clips uniformly distributed under 44 interactive scenarios (cut-in, overtaking, detour, etc), 23 weathers (sunny, foggy, rainy, etc), and 12 towns (urban, village, university, etc) in CARLA v2. Its evaluation protocol requires E2E-AD models to pass 44 interactive scenarios under different locations and weathers which sums up to 220 routes and thus provides a comprehensive and disentangled assessment about their driving capability under different situations. We implement state-of-the-art E2E-AD models and evaluate them in Bench2Drive, providing insights regarding current status and future directions.
-
-</details>
-
-### Reasoning Multi-Agent Behavioral Topology for Interactive Autonomous Driving.
-- **链接**: [arXiv:2409.18031](https://arxiv.org/abs/2409.18031) · 📚 被引 11
-- **作者**: Haochen Liu, Li Chen, Yu Qiao, Chen Lv, Hongyang Li
-- **🏷️ 机构**: Shanghai AI Lab
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Autonomous driving system aims for safe and social-consistent driving through the behavioral integration among interactive agents. However, challenges remain due to multi-agent scene uncertainty and heterogeneous interaction. Current dense and sparse behavioral representations struggle with inefficiency and inconsistency in multi-agent modeling, leading to instability of collective behavioral patterns when integrating prediction and planning (IPP). To address this, we initiate a topological formation that serves as a compliant behavioral foreground to guide downstream trajectory generations. Specifically, we introduce Behavioral Topology (BeTop), a pivotal topological formulation that explicitly represents the consensual behavioral pattern among multi-agent future. BeTop is derived from braid theory to distill compliant interactive topology from multi-agent future trajectories. A synergistic learning framework (BeTopNet) supervised by BeTop facilitates the consistency of behavior prediction and planning within the predicted topology priors. Through imitative contingency learning, BeTop also effectively manages behavioral uncertainty for prediction and planning. Extensive verification on large-scale real-world datasets, including nuPlan and WOMD, demonstrates that BeTop achieves state-of-the-art performance in both prediction and planning tasks. Further validations on the proposed interactive scenario benchmark showcase planning compliance in interactive cases.
-
-</details>
-
-### Continuously Learning, Adapting, and Improving: A Dual-Process Approach to Autonomous Driving.
-- **链接**: [arXiv:2405.15324](https://arxiv.org/abs/2405.15324) · 📚 被引 11
-- **作者**: Jianbiao Mei, Yukai Ma, Xuemeng Yang, Licheng Wen, Xinyu Cai, Xin Li et al.
+### H-V2X: A Large Scale Highway Dataset for BEV Perception.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73232-4_8) · 📚 被引 6
+- **作者**: Chang Liu, Mingxu Zhu, Cong Ma
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+### OccGen: Generative Multi-modal 3D Occupancy Prediction for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72661-3_6)
+- **作者**: Guoqing Wang, Zhongdao Wang, Pin Tang, Jilai Zheng, Xiangxuan Ren, Bailan Feng et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72624-8_4)
+- **作者**: Wenzhao Zheng, Weiliang Chen, Yuanhui Huang, Borui Zhang, Yueqi Duan, Jiwen Lu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### DrivingDiffusion: Layout-Guided Multi-view Driving Scenarios Video Generation with Latent Diffusion Model.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73229-4_27) · 📚 被引 49
+- **作者**: Xiaofan Li, Yifu Zhang, Xiaoqing Ye
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Asynchronous Large Language Model Enhanced Planner for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72764-1_2) · 📚 被引 24
+- **作者**: Yuan Chen, Zi-han Ding, Ziqin Wang, Yan Wang, Lijun Zhang, Si Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### PPAD: Iterative Interactions of Prediction and Planning for End-to-End Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72761-0_14) · 📚 被引 16
+- **作者**: Zhili Chen, Maosheng Ye, Shuangjie Xu, Tongyi Cao, Qifeng Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Risk-Aware Self-consistent Imitation Learning for Trajectory Planning in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72624-8_16) · 📚 被引 1
+- **作者**: Yixuan Fan, Yali Li, Shengjin Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### FipTR: A Simple yet Effective Transformer Framework for Future Instance Prediction in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73021-4_2) · 📚 被引 3
+- **作者**: Xingtai Gui, Tengteng Huang, Haonan Shao, Haotian Yao, Chi Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Neural Volumetric World Models for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72643-9_12) · 📚 被引 3
+- **作者**: Zanming Huang, Jimuyang Zhang, Eshed Ohn-Bar
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Think2Drive: Efficient Reinforcement Learning by Thinking with Latent World Model for Autonomous Driving (in CARLA-V2).
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72995-9_9) · 📚 被引 37
+- **作者**: Qifeng Li, Xiaosong Jia, Shaobo Wang, Junchi Yan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Event-Aided Time-to-Collision Estimation for Autonomous Driving.
+- **链接**: [arXiv:2407.07324](https://arxiv.org/abs/2407.07324) · 📚 被引 6
+- **作者**: Jinghang Li, Bangyan Liao, Xiuyuan Lu, Peidong Liu, Shaojie Shen, Yi Zhou
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Autonomous driving has advanced significantly due to sensors, machine learning, and artificial intelligence improvements. However, prevailing methods struggle with intricate scenarios and causal relationships, hindering adaptability and interpretability in varied environments. To address the above problems, we introduce LeapAD, a novel paradigm for autonomous driving inspired by the human cognitive process. Specifically, LeapAD emulates human attention by selecting critical objects relevant to driving decisions, simplifying environmental interpretation, and mitigating decision-making complexities. Additionally, LeapAD incorporates an innovative dual-process decision-making module, which consists of an Analytic Process (System-II) for thorough analysis and reasoning, along with a Heuristic Process (System-I) for swift and empirical processing. The Analytic Process leverages its logical reasoning to accumulate linguistic driving experience, which is then transferred to the Heuristic Process by supervised fine-tuning. Through reflection mechanisms and a growing memory bank, LeapAD continuously improves itself from past mistakes in a closed-loop environment. Closed-loop testing in CARLA shows that LeapAD outperforms all methods relying solely on camera input, requiring 1-2 orders of magnitude less labeled data. Experiments also demonstrate that as the memory bank expands, the Heuristic Process with only 1.8B parameters can inherit the knowledge from a GPT-4 powered Analytic Process and achieve continuous performance improvement. Project page: https://pjlab-adg.github.io/LeapAD.
+> Predicting a potential collision with leading vehicles is an essential functionality of any autonomous/assisted driving system. One bottleneck of existing vision-based solutions is that their updating rate is limited to the frame rate of standard cameras used. In this paper, we present a novel method that estimates the time to collision using a neuromorphic event-based camera, a biologically inspired visual sensor that can sense at exactly the same rate as scene dynamics. The core of the proposed algorithm consists of a two-step approach for efficient and accurate geometric model fitting on event data in a coarse-to-fine manner. The first step is a robust linear solver based on a novel geometric measurement that overcomes the partial observability of event-based normal flow. The second step further refines the resulting model via a spatio-temporal registration process formulated as a nonlinear optimization problem. Experiments on both synthetic and real data demonstrate the effectiveness of the proposed method, outperforming other alternative methods in terms of efficiency and accuracy.
 
 </details>
 
-### BehaviorGPT: Smart Agent Simulation for Autonomous Driving with Next-Patch Prediction.
-- **链接**: [arXiv:2405.17372](https://arxiv.org/abs/2405.17372) · 📚 被引 8
-- **作者**: Zikang Zhou, Haibo Hu, Xinhong Chen, Jianping Wang, Nan Guan, Kui Wu et al.
+### VQA-Diff: Exploiting VQA and Diffusion for Zero-Shot Image-to-3D Vehicle Asset Generation in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72848-8_19) · 📚 被引 9
+- **作者**: Yibo Liu, Zheyuan Yang, Guile Wu, Yuan Ren, Kejian Lin, Bingbing Liu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+### NeuroNCAP: Photorealistic Closed-Loop Safety Testing for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73404-5_10) · 📚 被引 17
+- **作者**: William Ljungbergh, Adam Tonderski, Joakim Johnander, Holger Caesar, Kalle Åström, Michael Felsberg et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### LingoQA: Visual Question Answering for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72980-5_15)
+- **作者**: Ana-Maria Marcu, Long Chen, Jan Hünermann, Alice Karnsund, Benoît Hanotte, Prajwal Chidananda et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Reason2Drive: Towards Interpretable and Chain-Based Reasoning for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73347-5_17) · 📚 被引 47
+- **作者**: Ming Nie, Renyuan Peng, Chunwei Wang, Xinyue Cai, Jianhua Han, Hang Xu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Improving Agent Behaviors with RL Fine-Tuning for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72698-9_10) · 📚 被引 11
+- **作者**: Zhenghao Peng, Wenjie Luo, Yiren Lu, Tianyi Shen, Cole Gulino, Ari Seff et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Modelling Competitive Behaviors in Autonomous Driving Under Generative World Model.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72761-0_2) · 📚 被引 4
+- **作者**: Guanren Qiao, Guorui Quan, Rongxiao Qu, Guiliang Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### DriveDreamer: Towards Real-World-Drive World Models for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73195-2_4) · 📚 被引 129
+- **作者**: Xiaofeng Wang, Zheng Zhu, Guan Huang, Xinze Chen, Jiagang Zhu, Jiwen Lu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### SeFlow: A Self-supervised Scene Flow Method in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73232-4_20) · 📚 被引 21
+- **作者**: Qingwen Zhang, Yi Yang, Peizheng Li, Olov Andersson, Patric Jensfelt
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### GenAD: Generative End-to-End Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73650-6_6) · 📚 被引 88
+- **作者**: Wenzhao Zheng, Ruiqi Song, Xianda Guo, Chenming Zhang, Long Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### UniM2AE: Multi-modal Masked Autoencoders with Unified 3D Representation for 3D Perception in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72670-5_17) · 📚 被引 9
+- **作者**: Jian Zou, Tianyu Huang, Guanglei Yang, Zhenhua Guo, Tao Luo, Chun-Mei Feng et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### CarFormer: Self-driving with Learned Object-Centric Representations.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72652-1_11) · 📚 被引 4
+- **作者**: Shadi Hamdan, Fatma Güney
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Embodied Understanding of Driving Scenarios.
+- **链接**: [arXiv:2403.04593](https://arxiv.org/abs/2403.04593)
+- **作者**: Yunsong Zhou, Linyan Huang, Qingwen Bu, Jia Zeng, Tianyu Li, Hang Qiu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Simulating realistic behaviors of traffic agents is pivotal for efficiently validating the safety of autonomous driving systems. Existing data-driven simulators primarily use an encoder-decoder architecture to encode the historical trajectories before decoding the future. However, the heterogeneity between encoders and decoders complicates the models, and the manual separation of historical and future trajectories leads to low data utilization. Given these limitations, we propose BehaviorGPT, a homogeneous and fully autoregressive Transformer designed to simulate the sequential behavior of multiple agents. Crucially, our approach discards the traditional separation between "history" and "future" by modeling each time step as the "current" one for motion generation, leading to a simpler, more parameter- and data-efficient agent simulator. We further introduce the Next-Patch Prediction Paradigm (NP3) to mitigate the negative effects of autoregressive modeling, in which models are trained to reason at the patch level of trajectories and capture long-range spatial-temporal interactions. Despite having merely 3M model parameters, BehaviorGPT won first place in the 2024 Waymo Open Sim Agents Challenge with a realism score of 0.7473 and a minADE score of 1.4147, demonstrating its exceptional performance in traffic agent simulation.
-
-</details>
-
-### Expert-level protocol translation for self-driving labs.
-- **链接**: [arXiv:2411.00444](https://arxiv.org/abs/2411.00444) · 📚 被引 1
-- **作者**: Yu-Zhe Shi, Fanxu Meng, Haofei Hou, Zhangqian Bi, Qiao Xu, Lecheng Ruan et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recent development in Artificial Intelligence (AI) models has propelled their application in scientific discovery, but the validation and exploration of these discoveries require subsequent empirical experimentation. The concept of self-driving laboratories promises to automate and thus boost the experimental process following AI-driven discoveries. However, the transition of experimental protocols, originally crafted for human comprehension, into formats interpretable by machines presents significant challenges, which, within the context of specific expert domain, encompass the necessity for structured as opposed to natural language, the imperative for explicit rather than tacit knowledge, and the preservation of causality and consistency throughout protocol steps. Presently, the task of protocol translation predominantly requires the manual and labor-intensive involvement of domain experts and information technology specialists, rendering the process time-intensive. To address these issues, we propose a framework that automates the protocol translation process through a three-stage workflow, which incrementally constructs Protocol Dependence Graphs (PDGs) that approach structured on the syntax level, completed on the semantics level, and linked on the execution level. Quantitative and qualitative evaluations have demonstrated its performance at par with that of human experts, underscoring its potential to significantly expedite and democratize the process of scientific discovery by elevating the automation capabilities within self-driving laboratories.
+> Embodied scene understanding serves as the cornerstone for autonomous agents to perceive, interpret, and respond to open driving scenarios. Such understanding is typically founded upon Vision-Language Models (VLMs). Nevertheless, existing VLMs are restricted to the 2D domain, devoid of spatial awareness and long-horizon extrapolation proficiencies. We revisit the key aspects of autonomous driving and formulate appropriate rubrics. Hereby, we introduce the Embodied Language Model (ELM), a comprehensive framework tailored for agents' understanding of driving scenes with large spatial and temporal spans. ELM incorporates space-aware pre-training to endow the agent with robust spatial localization capabilities. Besides, the model employs time-aware token selection to accurately inquire about temporal cues. We instantiate ELM on the reformulated multi-faced benchmark, and it surpasses previous state-of-the-art approaches in all aspects. All code, data, and models will be publicly shared.
 
 </details>

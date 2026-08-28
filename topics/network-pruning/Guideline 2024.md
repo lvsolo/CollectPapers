@@ -1,45 +1,111 @@
 # Network Pruning — 2024 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 35 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### AlterMOMA: Fusion Redundancy Pruning for Camera-LiDAR Fusion Models with Alternative Modality Masking.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/52edb6eb7ddf239839e6e28874a842bb-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Shiqi Sun, Yantao Lu, Ning Liu, Bo Jiang, Jinchao Chen, Ying Zhang
+### DSPDet3D: 3D Small Object Detection with Dynamic Spatial Pruning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73390-1_21) · 📚 被引 10
+- **作者**: Xiuwei Xu, Zhihao Sun, Ziwei Wang, Hongmin Liu, Jie Zhou, Jiwen Lu
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
-### BMRS: Bayesian Model Reduction for Structured Pruning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/7538e7a7a589a267f49527fe6fbc640e-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Dustin Wright, Christian Igel, Raghavendra Selvan
+### LPViT: Low-Power Semi-structured Pruning for Vision Transformers.
+- **链接**: [arXiv:2407.02068](https://arxiv.org/abs/2407.02068) · [代码](https://github.com/Akimoto-Cris/LPViT) · 📚 被引 7
+- **作者**: Kaixin Xu, Zhe Wang, Chunyun Chen, Xue Geng, Jie Lin, Xulei Yang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
-### Exploring Token Pruning in Vision State Space Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/5af741d487c5f0b08bfe56e11d1883e4-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Zheng Zhan, Zhenglun Kong, Yifan Gong, Yushu Wu, Zichong Meng, Hangyu Zheng et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### SequentialAttention++ for Block Sparsification: Differentiable Pruning Meets Combinatorial Optimization.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/8735e0793cfd43327eceaacf39466a01-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Taisuke Yasuda, Kyriakos Axiotis, Gang Fu, Mohammad Hossein Bateni, Vahab Mirrokni
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+> Vision transformers have emerged as a promising alternative to convolutional neural networks for various image analysis tasks, offering comparable or superior performance. However, one significant drawback of ViTs is their resource-intensive nature, leading to increased memory footprint, computation complexity, and power consumption. To democratize this high-performance technology and make it more environmentally friendly, it is essential to compress ViT models, reducing their resource requirements while maintaining high performance. In this paper, we introduce a new block-structured pruning to address the resource-intensive issue for ViTs, offering a balanced trade-off between accuracy and hardware acceleration. Unlike unstructured pruning or channel-wise structured pruning, block pruning leverages the block-wise structure of linear layers, resulting in more efficient matrix multiplications. To optimize this pruning scheme, our paper proposes a novel hardware-aware learning objective that simultaneously maximizes speedup and minimizes power consumption during inference, tailored to the block sparsity structure. This objective eliminates the need for empirical look-up tables and focuses solely on reducing parametrized layer connections. Moreover, our paper provides a lightweight algorithm to achieve post-training pruning for ViTs, utilizing second-order Taylor approximation and empirical optimization to solve the proposed hardware-aware objective. Extensive experiments on ImageNet are conducted across various ViT architectures, including DeiT-B and DeiT-S, demonstrating competitive performance with other pruning methods and achieving a remarkable balance between accuracy preservation and power savings. Especially, we achieve 3.93x speedup on dedicated hardware and GPUs respectively for DeiT-B, and a power reduction by 1.4x on GPUs. Code released to https://github.com/Akimoto-Cris/LPViT.
 
-### S2HPruner: Soft-to-Hard Distillation Bridges the Discretization Gap in Pruning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/d368aba36f74776cc7a1079332a31973-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Weihao Lin, Shengji Tang, Chong Yu, Peng Ye, Tao Chen
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+</details>
 
-### SparseLLM: Towards Global Pruning of Pre-trained Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/522134ee1c52c7a2b929bc87cfe1781c-Abstract-Conference.html) · 📚 被引 13
-- **作者**: Guangji Bai, Yijiang Li, Chen Ling, Kibaek Kim, Liang Zhao
+### Non-transferable Pruning.
+- **链接**: [arXiv:2410.08015](https://arxiv.org/abs/2410.08015)
+- **作者**: Ruyi Ding, Lili Su, Aidong Adam Ding, Yunsi Fei
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Pretrained Deep Neural Networks (DNNs), developed from extensive datasets to integrate multifaceted knowledge, are increasingly recognized as valuable intellectual property (IP). To safeguard these models against IP infringement, strategies for ownership verification and usage authorization have emerged. Unlike most existing IP protection strategies that concentrate on restricting direct access to the model, our study addresses an extended DNN IP issue: applicability authorization, aiming to prevent the misuse of learned knowledge, particularly in unauthorized transfer learning scenarios. We propose Non-Transferable Pruning (NTP), a novel IP protection method that leverages model pruning to control a pretrained DNN's transferability to unauthorized data domains. Selective pruning can deliberately diminish a model's suitability on unauthorized domains, even with full fine-tuning. Specifically, our framework employs the alternating direction method of multipliers (ADMM) for optimizing both the model sparsity and an innovative non-transferable learning loss, augmented with Fisher space discriminative regularization, to constrain the model's generalizability to the target dataset. We also propose a novel effective metric to measure the model non-transferability: Area Under the Sample-wise Learning Curve (SLC-AUC). This metric facilitates consideration of full fine-tuning across various sample sizes. Experimental results demonstrate that NTP significantly surpasses the state-of-the-art non-transferable learning methods, with an average SLC-AUC at $-0.54$ across diverse pairs of source and target domains, indicating that models trained with NTP do not suit for transfer learning to unauthorized target domains. The efficacy of NTP is validated in both supervised and self-supervised learning contexts, confirming its applicability in real-world scenarios.
+
+</details>
+
+### Isomorphic Pruning for Vision Models.
+- **链接**: [arXiv:2407.04616](https://arxiv.org/abs/2407.04616) · [代码](https://github.com/VainF/Isomorphic-Pruning) · 📚 被引 19
+- **作者**: Gongfan Fang, Xinyin Ma, Michael Bi Mi, Xinchao Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Structured pruning reduces the computational overhead of deep neural networks by removing redundant sub-structures. However, assessing the relative importance of different sub-structures remains a significant challenge, particularly in advanced vision models featuring novel mechanisms and architectures like self-attention, depth-wise convolutions, or residual connections. These heterogeneous substructures usually exhibit diverged parameter scales, weight distributions, and computational topology, introducing considerable difficulty to importance comparison. To overcome this, we present Isomorphic Pruning, a simple approach that demonstrates effectiveness across a range of network architectures such as Vision Transformers and CNNs, and delivers competitive performance across different model sizes. Isomorphic Pruning originates from an observation that, when evaluated under a pre-defined importance criterion, heterogeneous sub-structures demonstrate significant divergence in their importance distribution, as opposed to isomorphic structures that present similar importance patterns. This inspires us to perform isolated ranking and comparison on different types of sub-structures for more reliable pruning. Our empirical results on ImageNet-1K demonstrate that Isomorphic Pruning surpasses several pruning baselines dedicatedly designed for Transformers or CNNs. For instance, we improve the accuracy of DeiT-Tiny from 74.52% to 77.50% by pruning an off-the-shelf DeiT-Base model. And for ConvNext-Tiny, we enhanced performance from 82.06% to 82.18%, while reducing the number of parameters and memory usage. Code is available at \url{https://github.com/VainF/Isomorphic-Pruning}.
+
+</details>
+
+### Straightforward Layer-Wise Pruning for More Efficient Visual Adaptation.
+- **链接**: [arXiv:2407.14330](https://arxiv.org/abs/2407.14330) · 📚 被引 4
+- **作者**: Ruizi Han, Jinglei Tang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Parameter-efficient transfer learning (PETL) aims to adapt large pre-trained models using limited parameters. While most PETL approaches update the added parameters and freeze pre-trained weights during training, the minimal impact of task-specific deep layers on cross-domain data poses a challenge as PETL cannot modify them, resulting in redundant model structures. Structural pruning effectively reduces model redundancy; however, common pruning methods often lead to an excessive increase in stored parameters due to varying pruning structures based on pruning rates and data. Recognizing the storage parameter volume issue, we propose a Straightforward layer-wise pruning method, called SLS, for pruning PETL-transferred models. By evaluating parameters from a feature perspective of each layer and utilizing clustering metrics to assess current parameters based on clustering phenomena in low-dimensional space obtained through t-SNE, SLS facilitates informed pruning decisions. Our study reveals that layer-wise pruning, with a focus on storing pruning indices, addresses storage volume concerns. Notably, mainstream Layer-wise pruning methods may not be suitable for assessing layer importance in PETL-transferred models, where the majority of parameters are pre-trained and have limited relevance to downstream datasets. Comparative analysis against state-of-the-art PETL methods demonstrates that the pruned model achieved a notable balance between model throughput and accuracy. Moreover, SLS effectively reduces storage overhead arising from varying pruned structures while enhancing the accuracy and speed of pruned models compared to conventional pruning methods.
+
+</details>
+
+### IVTP: Instruction-Guided Visual Token Pruning for Large Vision-Language Models.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72643-9_13) · 📚 被引 8
+- **作者**: Kai Huang, Hao Zou, Ye Xi, Bochen Wang, Zhen Xie, Liang Yu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### PaPr: Training-Free One-Step Patch Pruning with Lightweight ConvNets for Faster Inference.
+- **链接**: [arXiv:2403.16020](https://arxiv.org/abs/2403.16020) · [代码](https://github.com/tanvir-utexas/PaPr) · 📚 被引 4
+- **作者**: Tanvir Mahmud, Burhaneddin Yaman, Chun-Hao Liu, Diana Marculescu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> As deep neural networks evolve from convolutional neural networks (ConvNets) to advanced vision transformers (ViTs), there is an increased need to eliminate redundant data for faster processing without compromising accuracy. Previous methods are often architecture-specific or necessitate re-training, restricting their applicability with frequent model updates. To solve this, we first introduce a novel property of lightweight ConvNets: their ability to identify key discriminative patch regions in images, irrespective of model's final accuracy or size. We demonstrate that fully-connected layers are the primary bottleneck for ConvNets performance, and their suppression with simple weight recalibration markedly enhances discriminative patch localization performance. Using this insight, we introduce PaPr, a method for substantially pruning redundant patches with minimal accuracy loss using lightweight ConvNets across a variety of deep learning architectures, including ViTs, ConvNets, and hybrid transformers, without any re-training. Moreover, the simple early-stage one-step patch pruning with PaPr enhances existing patch reduction methods. Through extensive testing on diverse architectures, PaPr achieves significantly higher accuracy over state-of-the-art patch reduction methods with similar FLOP count reduction. More specifically, PaPr reduces about 70% of redundant patches in videos with less than 0.8% drop in accuracy, and up to 3.7x FLOPs reduction, which is a 15% more reduction with 2.5% higher accuracy. Code is released at https://github.com/tanvir-utexas/PaPr.
+
+</details>
+
+### SNP: Structured Neuron-Level Pruning to Preserve Attention Scores.
+- **链接**: [arXiv:2404.11630](https://arxiv.org/abs/2404.11630) · 📚 被引 3
+- **作者**: Kyunghwan Shim, Jaewoong Yun, Shinkook Choi
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-head self-attention (MSA) is a key component of Vision Transformers (ViTs), which have achieved great success in various vision tasks. However, their high computational cost and memory footprint hinder their deployment on resource-constrained devices. Conventional pruning approaches can only compress and accelerate the MSA module using head pruning, although the head is not an atomic unit. To address this issue, we propose a novel graph-aware neuron-level pruning method, Structured Neuron-level Pruning (SNP). SNP prunes neurons with less informative attention scores and eliminates redundancy among heads. Specifically, it prunes graphically connected query and key layers having the least informative attention scores while preserving the overall attention scores. Value layers, which can be pruned independently, are pruned to eliminate inter-head redundancy. Our proposed method effectively compresses and accelerates Transformer-based models for both edge devices and server processors. For instance, the DeiT-Small with SNP runs 3.1$\times$ faster than the original model and achieves performance that is 21.94\% faster and 1.12\% higher than the DeiT-Tiny. Additionally, SNP combine successfully with conventional head or block pruning approaches. SNP with head pruning could compress the DeiT-Base by 80\% of the parameters and computational costs and achieve 3.85$\times$ faster inference speed on RTX3090 and 4.93$\times$ on Jetson Nano.
+
+</details>
+
+### GTPT: Group-Based Token Pruning Transformer for Efficient Human Pose Estimation.
+- **链接**: [arXiv:2407.10756](https://arxiv.org/abs/2407.10756) · 📚 被引 6
+- **作者**: Haonan Wang, Jie Liu, Jie Tang, Gangshan Wu, Bo Xu, Yanbing Chou et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In recent years, 2D human pose estimation has made significant progress on public benchmarks. However, many of these approaches face challenges of less applicability in the industrial community due to the large number of parametric quantities and computational overhead. Efficient human pose estimation remains a hurdle, especially for whole-body pose estimation with numerous keypoints. While most current methods for efficient human pose estimation primarily rely on CNNs, we propose the Group-based Token Pruning Transformer (GTPT) that fully harnesses the advantages of the Transformer. GTPT alleviates the computational burden by gradually introducing keypoints in a coarse-to-fine manner. It minimizes the computation overhead while ensuring high performance. Besides, GTPT groups keypoint tokens and prunes visual tokens to improve model performance while reducing redundancy. We propose the Multi-Head Group Attention (MHGA) between different groups to achieve global interaction with little computational overhead. We conducted experiments on COCO and COCO-WholeBody. Compared to other methods, the experimental results show that GTPT can achieve higher performance with less computation, especially in whole-body with numerous keypoints.
+
+</details>
+
+### ELSE: Efficient Deep Neural Network Inference Through Line-Based Sparsity Exploration.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73247-8_24) · 📚 被引 0
+- **作者**: Zeqi Zhu, Alberto García-Ortiz, Luc Waeijen, Egor Bondarev, Arash Pourtaherian, Orlando Moreira
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 ### Finding Transformer Circuits With Edge Pruning.
 - **链接**: [arXiv:2406.16778](https://arxiv.org/abs/2406.16778) · 📚 被引 6
@@ -47,248 +113,5 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The path to interpreting a language model often proceeds via analysis of circuits -- sparse computational subgraphs of the model that capture specific aspects of its behavior. Recent work has automated the task of discovering circuits. Yet, these methods have practical limitations, as they rely either on inefficient search algorithms or inaccurate approximations. In this paper, we frame automated circuit discovery as an optimization problem and propose *Edge Pruning* as an effective and scalable solution. Edge Pruning leverages gradient-based pruning techniques, but instead of removing neurons or components, it prunes the \emph{edges} between components. Our method finds circuits in GPT-2 that use less than half the number of edges compared to circuits found by previous methods while being equally faithful to the full model predictions on standard circuit-finding tasks. Edge Pruning is efficient even with as many as 100K examples, outperforming previous methods in speed and producing substantially better circuits. It also perfectly recovers the ground-truth circuits in two models compiled with Tracr. Thanks to its efficiency, we scale Edge Pruning to CodeLlama-13B, a model over 100x the scale that prior methods operate on. We use this setting for a case study comparing the mechanisms behind instruction prompting and in-context learning. We find two circuits with more than 99.96% sparsity that match the performance of the full model and reveal that the mechanisms in the two settings overlap substantially. Our case study shows that Edge Pruning is a practical and scalable tool for interpretability and sheds light on behaviors that only emerge in large models.
-
-</details>
-
-### Beyond Efficiency: Molecular Data Pruning for Enhanced Generalization.
-- **链接**: [arXiv:2409.01081](https://arxiv.org/abs/2409.01081)
-- **作者**: Dingshuo Chen, Zhixun Li, Yuyan Ni, Guibin Zhang, Ding Wang, Qiang Liu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> With the emergence of various molecular tasks and massive datasets, how to perform efficient training has become an urgent yet under-explored issue in the area. Data pruning (DP), as an oft-stated approach to saving training burdens, filters out less influential samples to form a coreset for training. However, the increasing reliance on pretrained models for molecular tasks renders traditional in-domain DP methods incompatible. Therefore, we propose a Molecular data Pruning framework for enhanced Generalization (MolPeg), which focuses on the source-free data pruning scenario, where data pruning is applied with pretrained models. By maintaining two models with different updating paces during training, we introduce a novel scoring function to measure the informativeness of samples based on the loss discrepancy. As a plug-and-play framework, MolPeg realizes the perception of both source and target domain and consistently outperforms existing DP methods across four downstream tasks. Remarkably, it can surpass the performance obtained from full-dataset training, even when pruning up to 60-70% of the data on HIV and PCBA dataset. Our work suggests that the discovery of effective data-pruning metrics could provide a viable path to both enhanced efficiency and superior generalization in transfer learning.
-
-</details>
-
-### DISP-LLM: Dimension-Independent Structural Pruning for Large Language Models.
-- **链接**: [arXiv:2410.11988](https://arxiv.org/abs/2410.11988) · 📚 被引 14
-- **作者**: Shangqian Gao, Chi-Heng Lin, Ting Hua, Zheng Tang, Yilin Shen, Hongxia Jin et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Large Language Models (LLMs) have achieved remarkable success in various natural language processing tasks, including language modeling, understanding, and generation. However, the increased memory and computational costs associated with these models pose significant challenges for deployment on resource-limited devices. Structural pruning has emerged as a promising solution to reduce the costs of LLMs without requiring post-processing steps. Prior structural pruning methods either follow the dependence of structures at the cost of limiting flexibility, or introduce non-trivial additional parameters by incorporating different projection matrices. In this work, we propose a novel approach that relaxes the constraint imposed by regular structural pruning methods and eliminates the structural dependence along the embedding dimension. Our dimension-independent structural pruning method offers several benefits. Firstly, our method enables different blocks to utilize different subsets of the feature maps. Secondly, by removing structural dependence, we facilitate each block to possess varying widths along its input and output dimensions, thereby significantly enhancing the flexibility of structural pruning. We evaluate our method on various LLMs, including OPT, LLaMA, LLaMA-2, Phi-1.5, and Phi-2. Experimental results demonstrate that our approach outperforms other state-of-the-art methods, showing for the first time that structural pruning can achieve an accuracy similar to semi-structural pruning.
-
-</details>
-
-### Layer-Adaptive State Pruning for Deep State Space Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/14730e0dd6ac1c4a5765310909fd51b1-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Minseon Gwak, Seongrok Moon, Joohwan Ko, PooGyeon Park
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Pruning neural network models for gene regulatory dynamics using data and domain knowledge.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/d52d2281babd36913643392a09a56832-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Intekhab Hossain, Jonas Fischer, Rebekka Burkholz, John Quackenbush
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### S-STE: Continuous Pruning Function for Efficient 2: 4 Sparse Pre-training.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/3b576711b12ab036b45130fc8eb78504-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Yuezhou Hu, Jun Zhu, Jianfei Chen
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Fast Iterative Hard Thresholding Methods with Pruning Gradient Computations.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/5eaa54503005d9125ad6aa3044e912d8-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Yasutoshi Ida, Sekitoshi Kanai, Atsutoshi Kumagai, Tomoharu Iwata, Yasuhiro Fujiwara
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Spectral Graph Pruning Against Over-Squashing and Over-Smoothing.
-- **链接**: [arXiv:2404.04612](https://arxiv.org/abs/2404.04612)
-- **作者**: Adarsh Jamadandi, Celia Rubio-Madrigal, Rebekka Burkholz
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Message Passing Graph Neural Networks are known to suffer from two problems that are sometimes believed to be diametrically opposed: over-squashing and over-smoothing. The former results from topological bottlenecks that hamper the information flow from distant nodes and are mitigated by spectral gap maximization, primarily, by means of edge additions. However, such additions often promote over-smoothing that renders nodes of different classes less distinguishable. Inspired by the Braess phenomenon, we argue that deleting edges can address over-squashing and over-smoothing simultaneously. This insight explains how edge deletions can improve generalization, thus connecting spectral gap optimization to a seemingly disconnected objective of reducing computational resources by pruning graphs for lottery tickets. To this end, we propose a more effective spectral gap optimization framework to add or delete edges and demonstrate its effectiveness on large heterophilic datasets.
-
-</details>
-
-### DapperFL: Domain Adaptive Federated Learning with Model Fusion Pruning for Edge Devices.
-- **链接**: [arXiv:2412.05823](https://arxiv.org/abs/2412.05823) · [代码](https://github.com/jyzgh/DapperFL) · 📚 被引 5
-- **作者**: Yongzhe Jia, Xuyun Zhang, Hongsheng Hu, Kim-Kwang Raymond Choo, Lianyong Qi, Xiaolong Xu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Federated learning (FL) has emerged as a prominent machine learning paradigm in edge computing environments, enabling edge devices to collaboratively optimize a global model without sharing their private data. However, existing FL frameworks suffer from efficacy deterioration due to the system heterogeneity inherent in edge computing, especially in the presence of domain shifts across local data. In this paper, we propose a heterogeneous FL framework DapperFL, to enhance model performance across multiple domains. In DapperFL, we introduce a dedicated Model Fusion Pruning (MFP) module to produce personalized compact local models for clients to address the system heterogeneity challenges. The MFP module prunes local models with fused knowledge obtained from both local and remaining domains, ensuring robustness to domain shifts. Additionally, we design a Domain Adaptive Regularization (DAR) module to further improve the overall performance of DapperFL. The DAR module employs regularization generated by the pruned model, aiming to learn robust representations across domains. Furthermore, we introduce a specific aggregation algorithm for aggregating heterogeneous local models with tailored architectures and weights. We implement DapperFL on a realworld FL platform with heterogeneous clients. Experimental results on benchmark datasets with multiple domains demonstrate that DapperFL outperforms several state-of-the-art FL frameworks by up to 2.28%, while significantly achieving model volume reductions ranging from 20% to 80%. Our code is available at: https://github.com/jyzgh/DapperFL.
-
-</details>
-
-### Discovering Sparsity Allocation for Layer-wise Pruning of Large Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/ff997469ac66cf893c4183efeb22212a-Abstract-Conference.html)
-- **作者**: Lujun Li, Peijie Dong, Zhenheng Tang, Xiang Liu, Qiang Wang, Wenhan Luo et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### SlimGPT: Layer-wise Structured Pruning for Large Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/c1c44e46358e0fb94dc94ec495a7fb1a-Abstract-Conference.html) · 📚 被引 12
-- **作者**: Gui Ling, Ziyang Wang, Yuliang Yan, Qingwen Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models.
-- **链接**: [arXiv:2410.10912](https://arxiv.org/abs/2410.10912) · [代码](https://github.com/haiquanlu/AlphaPruning) · 📚 被引 8
-- **作者**: Haiquan Lu, Yefan Zhou, Shiwei Liu, Zhangyang Wang, Michael W. Mahoney, Yaoqing Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recent work on pruning large language models (LLMs) has shown that one can eliminate a large number of parameters without compromising performance, making pruning a promising strategy to reduce LLM model size. Existing LLM pruning strategies typically assign uniform pruning ratios across layers, limiting overall pruning ability; and recent work on layerwise pruning of LLMs is often based on heuristics that can easily lead to suboptimal performance. In this paper, we leverage Heavy-Tailed Self-Regularization (HT-SR) Theory, in particular the shape of empirical spectral densities (ESDs) of weight matrices, to design improved layerwise pruning ratios for LLMs. Our analysis reveals a wide variability in how well-trained, and thus relatedly how prunable, different layers of an LLM are. Based on this, we propose AlphaPruning, which uses shape metrics to allocate layerwise sparsity ratios in a more theoretically principled manner. AlphaPruning can be used in conjunction with multiple existing LLM pruning methods. Our empirical results show that AlphaPruning prunes LLaMA-7B to 80% sparsity while maintaining reasonable perplexity, marking a first in the literature on LLMs. We have open-sourced our code at https://github.com/haiquanlu/AlphaPruning.
-
-</details>
-
-### ALPS: Improved Optimization for Highly Sparse One-Shot Pruning for Large Language Models.
-- **链接**: [arXiv:2406.07831](https://arxiv.org/abs/2406.07831) · 📚 被引 0
-- **作者**: Xiang Meng, Kayhan Behdin, Haoyue Wang, Rahul Mazumder
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The impressive performance of Large Language Models (LLMs) across various natural language processing tasks comes at the cost of vast computational resources and storage requirements. One-shot pruning techniques offer a way to alleviate these burdens by removing redundant weights without the need for retraining. Yet, the massive scale of LLMs often forces current pruning approaches to rely on heuristics instead of optimization-based techniques, potentially resulting in suboptimal compression. In this paper, we introduce ALPS, an optimization-based framework that tackles the pruning problem using the operator splitting technique and a preconditioned conjugate gradient-based post-processing step. Our approach incorporates novel techniques to accelerate and theoretically guarantee convergence while leveraging vectorization and GPU parallelism for efficiency. ALPS substantially outperforms state-of-the-art methods in terms of the pruning objective and perplexity reduction, particularly for highly sparse models. On the OPT-30B model with 70% sparsity, ALPS achieves a 13% reduction in test perplexity on the WikiText dataset and a 19% improvement in zero-shot benchmark performance compared to existing methods.
-
-</details>
-
-### Compact Language Models via Pruning and Knowledge Distillation.
-- **链接**: [arXiv:2407.14679](https://arxiv.org/abs/2407.14679) · 📚 被引 21
-- **作者**: Saurav Muralidharan, Sharath Turuvekere Sreenivas, Raviraj Joshi, Marcin Chochowski, Mostofa Patwary, Mohammad Shoeybi et al.
-- **🏷️ 机构**: NVIDIA
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Large language models (LLMs) targeting different deployment scales and sizes are currently produced by training each variant from scratch; this is extremely compute-intensive. In this paper, we investigate if pruning an existing LLM and then re-training it with a fraction (<3%) of the original training data can be a suitable alternative to repeated, full retraining. To this end, we develop a set of practical and effective compression best practices for LLMs that combine depth, width, attention and MLP pruning with knowledge distillation-based retraining; we arrive at these best practices through a detailed empirical exploration of pruning strategies for each axis, methods to combine axes, distillation strategies, and search techniques for arriving at optimal compressed architectures. We use this guide to compress the Nemotron-4 family of LLMs by a factor of 2-4x, and compare their performance to similarly-sized models on a variety of language modeling tasks. Deriving 8B and 4B models from an already pretrained 15B model using our approach requires up to 40x fewer training tokens per model compared to training from scratch; this results in compute cost savings of 1.8x for training the full model family (15B, 8B, and 4B). Minitron models exhibit up to a 16% improvement in MMLU scores compared to training from scratch, perform comparably to other community models such as Mistral 7B, Gemma 7B and Llama-3 8B, and outperform state-of-the-art compression techniques from the literature. We have open-sourced Minitron model weights on Huggingface, with corresponding supplementary material including example code available on GitHub.
-
-</details>
-
-### DEPrune: Depth-wise Separable Convolution Pruning for Maximizing GPU Parallelism.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/c16a99558b0b4f6b10966ca9bdb98ade-Abstract-Conference.html) · 📚 被引 5
-- **作者**: Cheonjun Park, Mincheol Park, Hyunchan Moon, Myung Kuk Yoon, Seokjin Go, Suhyun Kim et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Faster Differentially Private Top-k Selection: A Joint Exponential Mechanism with Pruning.
-- **链接**: [arXiv:2411.09552](https://arxiv.org/abs/2411.09552) · 📚 被引 1
-- **作者**: Hao Wu, Hanwen Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We study the differentially private top-$k$ selection problem, aiming to identify a sequence of $k$ items with approximately the highest scores from $d$ items. Recent work by Gillenwater et al. (ICML '22) employs a direct sampling approach from the vast collection of $d^{\,Θ(k)}$ possible length-$k$ sequences, showing superior empirical accuracy compared to previous pure or approximate differentially private methods. Their algorithm has a time and space complexity of $\tilde{O}(dk)$. In this paper, we present an improved algorithm with time and space complexity $O(d + k^2 / ε\cdot \ln d)$, where $ε$ denotes the privacy parameter. Experimental results show that our algorithm runs orders of magnitude faster than their approach, while achieving similar empirical accuracy.
-
-</details>
-
-### Enhancing In-Context Learning Performance with just SVD-Based Weight Pruning: A Theoretical Perspective.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/448444518637da106d978ae7409d9789-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Xinhao Yao, Xiaolin Hu, Shenzhi Yang, Yong Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### 3D Gaussian Rendering Can Be Sparser: Efficient Rendering via Learned Fragment Pruning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/0b2de71212384ffcaf80ad9fd1a21fe3-Abstract-Conference.html) · 📚 被引 5
-- **作者**: Zhifan Ye, Chenxi Wan, Chaojian Li, Jihoon Hong, Sixu Li, Leshu Li et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### GDeR: Safeguarding Efficiency, Balancing, and Robustness via Prototypical Graph Pruning.
-- **链接**: [arXiv:2410.13761](https://arxiv.org/abs/2410.13761) · 📚 被引 0
-- **作者**: Guibin Zhang, Haonan Dong, Yuchen Zhang, Zhixun Li, Dingshuo Chen, Kai Wang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Training high-quality deep models necessitates vast amounts of data, resulting in overwhelming computational and memory demands. Recently, data pruning, distillation, and coreset selection have been developed to streamline data volume by retaining, synthesizing, or selecting a small yet informative subset from the full set. Among these methods, data pruning incurs the least additional training cost and offers the most practical acceleration benefits. However, it is the most vulnerable, often suffering significant performance degradation with imbalanced or biased data schema, thus raising concerns about its accuracy and reliability in on-device deployment. Therefore, there is a looming need for a new data pruning paradigm that maintains the efficiency of previous practices while ensuring balance and robustness. Unlike the fields of computer vision and natural language processing, where mature solutions have been developed to address these issues, graph neural networks (GNNs) continue to struggle with increasingly large-scale, imbalanced, and noisy datasets, lacking a unified dataset pruning solution. To achieve this, we introduce a novel dynamic soft-pruning method, GDeR, designed to update the training ``basket'' during the process using trainable prototypes. GDeR first constructs a well-modeled graph embedding hypersphere and then samples \textit{representative, balanced, and unbiased subsets} from this embedding space, which achieves the goal we called Graph Training Debugging. Extensive experiments on five datasets across three GNN backbones, demonstrate that GDeR (I) achieves or surpasses the performance of the full dataset with 30%~50% fewer training samples, (II) attains up to a 2.81x lossless training speedup, and (III) outperforms state-of-the-art pruning methods in imbalanced training and noisy training scenarios by 0.3%~4.3% and 3.6%~7.8%, respectively.
-
-</details>
-
-### HEPrune: Fast Private Training of Deep Neural Networks With Encrypted Data Pruning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/5b26b9e634ba10f6c51c6db7365c4c28-Abstract-Conference.html) · 📚 被引 3
-- **作者**: Yancheng Zhang, Mengxin Zheng, Yuzhang Shang, Xun Chen, Qian Lou
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### MaskLLM: Learnable Semi-Structured Sparsity for Large Language Models.
-- **链接**: [arXiv:2409.17481](https://arxiv.org/abs/2409.17481) · [代码](https://github.com/NVlabs/MaskLLM) · 📚 被引 13
-- **作者**: Gongfan Fang, Hongxu Yin, Saurav Muralidharan, Greg Heinrich, Jeff Pool, Jan Kautz et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Large Language Models (LLMs) are distinguished by their massive parameter counts, which typically result in significant redundancy. This work introduces MaskLLM, a learnable pruning method that establishes Semi-structured (or ``N:M'') Sparsity in LLMs, aimed at reducing computational overhead during inference. Instead of developing a new importance criterion, MaskLLM explicitly models N:M patterns as a learnable distribution through Gumbel Softmax sampling. This approach facilitates end-to-end training on large-scale datasets and offers two notable advantages: 1) High-quality Masks - our method effectively scales to large datasets and learns accurate masks; 2) Transferability - the probabilistic modeling of mask distribution enables the transfer learning of sparsity across domains or tasks. We assessed MaskLLM using 2:4 sparsity on various LLMs, including LLaMA-2, Nemotron-4, and GPT-3, with sizes ranging from 843M to 15B parameters, and our empirical results show substantial improvements over state-of-the-art methods. For instance, leading approaches achieve a perplexity (PPL) of 10 or greater on Wikitext compared to the dense model's 5.12 PPL, but MaskLLM achieves a significantly lower 6.72 PPL solely by learning the masks with frozen weights. Furthermore, MaskLLM's learnable nature allows customized masks for lossless application of 2:4 sparsity to downstream tasks or domains. Code is available at https://github.com/NVlabs/MaskLLM.
-
-</details>
-
-### Sparsity-Agnostic Linear Bandits with Adaptive Adversaries.
-- **链接**: [arXiv:2406.01192](https://arxiv.org/abs/2406.01192) · 📚 被引 0
-- **作者**: Tianyuan Jin, Kyoungseok Jang, Nicolò Cesa-Bianchi
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We study stochastic linear bandits where, in each round, the learner receives a set of actions (i.e., feature vectors), from which it chooses an element and obtains a stochastic reward. The expected reward is a fixed but unknown linear function of the chosen action. We study sparse regret bounds, that depend on the number $S$ of non-zero coefficients in the linear reward function. Previous works focused on the case where $S$ is known, or the action sets satisfy additional assumptions. In this work, we obtain the first sparse regret bounds that hold when $S$ is unknown and the action sets are adversarially generated. Our techniques combine online to confidence set conversions with a novel randomized model selection approach over a hierarchy of nested confidence sets. When $S$ is known, our analysis recovers state-of-the-art bounds for adversarial action sets. We also show that a variant of our approach, using Exp3 to dynamically select the confidence sets, can be used to improve the empirical performance of stochastic linear bandits while enjoying a regret bound with optimal dependence on the time horizon.
-
-</details>
-
-### Adaptive Layer Sparsity for Large Language Models via Activation Correlation Assessment.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/c573258c38d0a3919d8c1364053c45df-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Wei Li, Lujun Li, Mark G. Lee, Shengjie Sun
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Navigating Extremes: Dynamic Sparsity in Large Output Spaces.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/d4bdeed749a437de2cbe2e2c7e5a6a8a-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Nasibullah Nasibullah, Erik Schultheis, Mike Lasby, Yani Ioannou, Rohit Babbar
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### On the Sparsity of the Strong Lottery Ticket Hypothesis.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/47908cab4e5b696d7af5c7de69f3b7d2-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Emanuele Natale, Davide Ferré, Giordano Giambartolomei, Frédéric Giroire, Frederik Mallmann-Trenn
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Improving Decision Sparsity.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/2e5060adc71166792bc6e5251240eba4-Abstract-Conference.html)
-- **作者**: Yiyang Sun, Tong Wang, Cynthia Rudin
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Exploiting Activation Sparsity with Dense to Dynamic-k Mixture-of-Experts Conversion.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/4c2092ec0b1370cce3fb5965ab255fae-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Filip Szatkowski, Bartosz Wójcik, Mikolaj Piórczynski, Simone Scardapane
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/6e3b9fb0c0c56cf6e1ee61e6a068fca4-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Xinyu Yang, Jixuan Leng, Geyang Guo, Jiawei Zhao, Ryumei Nakada, Linjun Zhang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Learn To be Efficient: Build Structured Sparsity in Large Language Models.
-- **链接**: [arXiv:2402.06126](https://arxiv.org/abs/2402.06126) · 📚 被引 3
-- **作者**: Haizhong Zheng, Xiaoyan Bai, Xueshen Liu, Zhuoqing Morley Mao, Beidi Chen, Fan Lai et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Large Language Models (LLMs) have achieved remarkable success with their billion-level parameters, yet they incur high inference overheads. The emergence of activation sparsity in LLMs provides a natural approach to reduce this cost by involving only parts of the parameters for inference. However, existing methods only focus on utilizing this naturally formed activation sparsity in a post-training setting, overlooking the potential for further amplifying this inherent sparsity. In this paper, we hypothesize that LLMs can learn to be efficient by achieving more structured activation sparsity. To achieve this, we introduce a novel training algorithm, Learn-To-be-Efficient (LTE), designed to train efficiency-aware LLMs to learn to activate fewer neurons and achieve a better trade-off between sparsity and performance. Furthermore, unlike SOTA MoEfication methods, which mainly focus on ReLU-based models, LTE can also be applied to LLMs like LLaMA using non-ReLU activations. Extensive evaluation on language understanding, language generation, and instruction tuning tasks show that LTE consistently outperforms SOTA baselines. Along with our hardware-aware custom kernel implementation, LTE reduces LLaMA2-7B inference latency by 25% at 50% sparsity.
-
-</details>
+- Make Your ViT-Based Multi-view 3D Detectors Faster via Token Compression. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
+- Distill Gold from Massive Ores: Bi-level Data Pruning Towards Efficient Dataset Distillation. → [knowledge-distillation](../knowledge-distillation/Guideline%202024.md)

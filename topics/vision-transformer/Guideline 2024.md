@@ -1,58 +1,77 @@
 # Vision Transformer — 2024 Guideline
 
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
-> 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 11 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Efficient Adaptation of Pre-trained Vision Transformer via Householder Transformation.
-- **链接**: [arXiv:2410.22952](https://arxiv.org/abs/2410.22952) · 📚 被引 2
-- **作者**: Wei Dong, Yuan Sun, Yiting Yang, Xing Zhang, Zhijun Lin, Qingsen Yan et al.
+### CLAMP-ViT: Contrastive Data-Free Learning for Adaptive Post-training Quantization of ViTs.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72855-6_18) · 📚 被引 11
+- **作者**: Akshat Ramachandran, Souvik Kundu, Tushar Krishna
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+### Rotary Position Embedding for Vision Transformer.
+- **链接**: [arXiv:2403.13298](https://arxiv.org/abs/2403.13298) · [代码](https://github.com/naver-ai/rope-vit) · 📚 被引 58
+- **作者**: Byeongho Heo, Song Park, Dongyoon Han, Sangdoo Yun
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> A common strategy for Parameter-Efficient Fine-Tuning (PEFT) of pre-trained Vision Transformers (ViTs) involves adapting the model to downstream tasks by learning a low-rank adaptation matrix. This matrix is decomposed into a product of down-projection and up-projection matrices, with the bottleneck dimensionality being crucial for reducing the number of learnable parameters, as exemplified by prevalent methods like LoRA and Adapter. However, these low-rank strategies typically employ a fixed bottleneck dimensionality, which limits their flexibility in handling layer-wise variations. To address this limitation, we propose a novel PEFT approach inspired by Singular Value Decomposition (SVD) for representing the adaptation matrix. SVD decomposes a matrix into the product of a left unitary matrix, a diagonal matrix of scaling values, and a right unitary matrix. We utilize Householder transformations to construct orthogonal matrices that efficiently mimic the unitary matrices, requiring only a vector. The diagonal values are learned in a layer-wise manner, allowing them to flexibly capture the unique properties of each layer. This approach enables the generation of adaptation matrices with varying ranks across different layers, providing greater flexibility in adapting pre-trained models. Experiments on standard downstream vision tasks demonstrate that our method achieves promising fine-tuning performance.
+> Rotary Position Embedding (RoPE) performs remarkably on language models, especially for length extrapolation of Transformers. However, the impacts of RoPE on computer vision domains have been underexplored, even though RoPE appears capable of enhancing Vision Transformer (ViT) performance in a way similar to the language domain. This study provides a comprehensive analysis of RoPE when applied to ViTs, utilizing practical implementations of RoPE for 2D vision data. The analysis reveals that RoPE demonstrates impressive extrapolation performance, i.e., maintaining precision while increasing image resolution at inference. It eventually leads to performance improvement for ImageNet-1k, COCO detection, and ADE-20k segmentation. We believe this study provides thorough guidelines to apply RoPE into ViT, promising improved backbone performance with minimal extra computational overhead. Our code and pre-trained models are available at https://github.com/naver-ai/rope-vit
 
 </details>
 
-### Boosting the Transferability of Adversarial Attack on Vision Transformer with Adaptive Token Tuning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/24f8dd1b8f154f1ee0d7a59e368eccf3-Abstract-Conference.html) · 📚 被引 8
-- **作者**: Di Ming, Peng Ren, Yunlong Wang, Xin Feng
+### SpecFormer: Guarding Vision Transformer Robustness via Maximum Singular Value Penalization.
+- **链接**: [arXiv:2402.03317](https://arxiv.org/abs/2402.03317) · [代码](https://github.com/microsoft/robustlearn) · 📚 被引 1
+- **作者**: Xixu Hu, Runkai Zheng, Jindong Wang, Cheuk Hang Leung, Qi Wu, Xing Xie
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### AdanCA: Neural Cellular Automata As Adaptors For More Robust Vision Transformer.
-- **链接**: [arXiv:2406.08298](https://arxiv.org/abs/2406.08298) · 📚 被引 1
-- **作者**: Yitao Xu, Tong Zhang, Sabine Süsstrunk
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Vision Transformers (ViTs) demonstrate remarkable performance in image classification through visual-token interaction learning, particularly when equipped with local information via region attention or convolutions. Although such architectures improve the feature aggregation from different granularities, they often fail to contribute to the robustness of the networks. Neural Cellular Automata (NCA) enables the modeling of global visual-token representations through local interactions, with its training strategies and architecture design conferring strong generalization ability and robustness against noisy input. In this paper, we propose Adaptor Neural Cellular Automata (AdaNCA) for Vision Transformers that uses NCA as plug-and-play adaptors between ViT layers, thus enhancing ViT's performance and robustness against adversarial samples as well as out-of-distribution inputs. To overcome the large computational overhead of standard NCAs, we propose Dynamic Interaction for more efficient interaction learning. Using our analysis of AdaNCA placement and robustness improvement, we also develop an algorithm for identifying the most effective insertion points for AdaNCA. With less than a 3% increase in parameters, AdaNCA contributes to more than 10% absolute improvement in accuracy under adversarial attacks on the ImageNet1K benchmark. Moreover, we demonstrate with extensive evaluations across eight robustness benchmarks and four ViT architectures that AdaNCA, as a plug-and-play module, consistently improves the robustness of ViTs.
+> Vision Transformers (ViTs) are increasingly used in computer vision due to their high performance, but their vulnerability to adversarial attacks is a concern. Existing methods lack a solid theoretical basis, focusing mainly on empirical training adjustments. This study introduces SpecFormer, tailored to fortify ViTs against adversarial attacks, with theoretical underpinnings. We establish local Lipschitz bounds for the self-attention layer and propose the Maximum Singular Value Penalization (MSVP) to precisely manage these bounds By incorporating MSVP into ViTs' attention layers, we enhance the model's robustness without compromising training efficiency. SpecFormer, the resulting model, outperforms other state-of-the-art models in defending against adversarial attacks, as proven by experiments on CIFAR and ImageNet datasets. Code is released at https://github.com/microsoft/robustlearn.
 
 </details>
 
-### Slicing Vision Transformer for Flexible Inference.
-- **链接**: [arXiv:2412.04786](https://arxiv.org/abs/2412.04786) · 📚 被引 0
-- **作者**: Yitian Zhang, Huseyin Coskun, Xu Ma, Huan Wang, Ke Ma, Xi Stephen Chen et al.
+### Token Compensator: Altering Inference Cost of Vision Transformer Without Re-tuning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72640-8_5) · 📚 被引 4
+- **作者**: Shibo Jie, Yehui Tang, Jianyuan Guo, Zhi-Hong Deng, Kai Han, Yunhe Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Vision Transformers (ViT) is known for its scalability. In this work, we target to scale down a ViT to fit in an environment with dynamic-changing resource constraints. We observe that smaller ViTs are intrinsically the sub-networks of a larger ViT with different widths. Thus, we propose a general framework, named Scala, to enable a single network to represent multiple smaller ViTs with flexible inference capability, which aligns with the inherent design of ViT to vary from widths. Concretely, Scala activates several subnets during training, introduces Isolated Activation to disentangle the smallest sub-network from other subnets, and leverages Scale Coordination to ensure each sub-network receives simplified, steady, and accurate learning objectives. Comprehensive empirical validations on different tasks demonstrate that with only one-shot training, Scala learns slimmable representation without modifying the original ViT structure and matches the performance of Separate Training. Compared with the prior art, Scala achieves an average improvement of 1.6% on ImageNet-1K with fewer parameters.
-
-</details>
-
-### Transforming Vision Transformer: Towards Efficient Multi-Task Asynchronous Learner.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/93fab021315170101c92e8330a56fbdb-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Hanwen Zhong, Jiaxin Chen, Yutong Zhang, Di Huang, Yunhong Wang
+### Fairness-Aware Vision Transformer via Debiased Self-Attention.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72913-3_20) · 📚 被引 4
+- **作者**: Yao Qiang, Chengyin Li, Prashant Khanduri, Dongxiao Zhu
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+### Removing Rows and Columns of Tokens in Vision Transformer Enables Faster Dense Prediction Without Retraining.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73220-1_19) · 📚 被引 1
+- **作者**: Diwei Su, Cheng Fei, Jianxu Luo
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### FairViT: Fair Vision Transformer via Adaptive Masking.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73650-6_26) · 📚 被引 5
+- **作者**: Bowei Tian, Ruijie Du, Yanning Shen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### GiT: Towards Generalist Vision Transformer Through Universal Language Interface.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73397-0_4) · 📚 被引 6
+- **作者**: Haiyang Wang, Hao Tang, Li Jiang, Shaoshuai Shi, Muhammad Ferjad Naeem, Hongsheng Li et al.
+- **🏷️ 机构**: CUHK
+- **会议**: ECCV 2024
+
+### Parameter-Efficient and Memory-Efficient Tuning for Vision Transformer: A Disentangled Approach.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72995-9_20)
+- **作者**: Taolin Zhang, Jiawang Bai, Zhihe Lu, Dongze Lian, Genping Wang, Xinchao Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- Vision Transformer Neural Architecture Search for Out-of-Distribution Generalization: Benchmark and Insights. → [neural-architecture-search](../neural-architecture-search/Guideline%202024.md)
+- Make Your ViT-Based Multi-view 3D Detectors Faster via Token Compression. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
+- Scene-Graph ViT: End-to-End Open-Vocabulary Visual Relationship Detection. → [open-set-detection](../open-set-detection/Guideline%202024.md)
