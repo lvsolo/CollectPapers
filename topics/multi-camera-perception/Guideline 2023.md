@@ -1,15 +1,21 @@
 # Multi-camera Perception — 2023 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 58 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 55 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
 ### Are We Ready for Vision-Centric Driving Streaming Perception? The ASAP Benchmark.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00926) · 📚 被引 21
+- **链接**: [arXiv:2212.08914](https://arxiv.org/abs/2212.08914) · [代码](https://github.com/JeffWang987/ASAP) · 📚 被引 21
 - **作者**: Xiaofeng Wang, Zheng Zhu, Yunpeng Zhang, Guan Huang, Yun Ye, Wenbo Xu et al.
 - **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences, PhiGent Robotics, Southeast University
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In recent years, vision-centric perception has flourished in various autonomous driving tasks, including 3D detection, semantic map construction, motion forecasting, and depth estimation. Nevertheless, the latency of vision-centric approaches is too high for practical deployment (e.g., most camera-based 3D detectors have a runtime greater than 300ms). To bridge the gap between ideal research and real-world applications, it is necessary to quantify the trade-off between performance and efficiency. Traditionally, autonomous-driving perception benchmarks perform the offline evaluation, neglecting the inference time delay. To mitigate the problem, we propose the Autonomous-driving StreAming Perception (ASAP) benchmark, which is the first benchmark to evaluate the online performance of vision-centric perception in autonomous driving. On the basis of the 2Hz annotated nuScenes dataset, we first propose an annotation-extending pipeline to generate high-frame-rate labels for the 12Hz raw images. Referring to the practical deployment, the Streaming Perception Under constRained-computation (SPUR) evaluation protocol is further constructed, where the 12Hz inputs are utilized for streaming evaluation under the constraints of different computational resources. In the ASAP benchmark, comprehensive experiment results reveal that the model rank alters under different constraints, suggesting that the model latency and computation budget should be considered as design choices to optimize the practical deployment. To facilitate further research, we establish baselines for camera-based streaming 3D detection, which consistently enhance the streaming performance across various hardware. ASAP project page: https://github.com/JeffWang987/ASAP.
+
+</details>
 
 ### Multi-view Adversarial Discriminator: Mine the Non-causal Factors for Object Detection in Unseen Domains.
 - **链接**: [arXiv:2304.02950](https://arxiv.org/abs/2304.02950) · 📚 被引 56
@@ -60,22 +66,40 @@
 </details>
 
 ### OmniCity: Omnipotent City Understanding with Multi-Level and Multi-View Images.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01669) · 📚 被引 30
+- **链接**: [arXiv:2208.00928](https://arxiv.org/abs/2208.00928) · 📚 被引 30
 - **作者**: Weijia Li, Yawen Lai, Linning Xu, Yuanbo Xiangli, Jinhua Yu, Conghui He et al.
 - **🏷️ 机构**: Sun Yat-Sen University, SenseTime Research, The Chinese University of Hong Kong
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents OmniCity, a new dataset for omnipotent city understanding from multi-level and multi-view images. More precisely, the OmniCity contains multi-view satellite images as well as street-level panorama and mono-view images, constituting over 100K pixel-wise annotated images that are well-aligned and collected from 25K geo-locations in New York City. To alleviate the substantial pixel-wise annotation efforts, we propose an efficient street-view image annotation pipeline that leverages the existing label maps of satellite view and the transformation relations between different views (satellite, panorama, and mono-view). With the new OmniCity dataset, we provide benchmarks for a variety of tasks including building footprint extraction, height estimation, and building plane/instance/fine-grained segmentation. Compared with the existing multi-level and multi-view benchmarks, OmniCity contains a larger number of images with richer annotation types and more views, provides more benchmark results of state-of-the-art models, and introduces a novel task for fine-grained building instance segmentation on street-level panorama images. Moreover, OmniCity provides new problem settings for existing tasks, such as cross-view image matching, synthesis, segmentation, detection, etc., and facilitates the developing of new methods for large-scale city understanding, reconstruction, and simulation. The OmniCity dataset as well as the benchmarks will be available at https://city-super.github.io/omnicity.
+
+</details>
+
 ### Multi-Sensor Large-Scale Dataset for Multi-View 3D Reconstruction.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02049) · 📚 被引 14
+- **链接**: [arXiv:2203.06111](https://arxiv.org/abs/2203.06111) · 📚 被引 14
 - **作者**: Oleg Voynov, Gleb Bobrovskikh, Pavel A. Karpyshev, Saveliy Galochkin, Andrei-Timotei Ardelean, Arseniy Bozhenko et al.
 - **🏷️ 机构**: Skolkovo Institute of Science and Technology
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present a new multi-sensor dataset for multi-view 3D surface reconstruction. It includes registered RGB and depth data from sensors of different resolutions and modalities: smartphones, Intel RealSense, Microsoft Kinect, industrial cameras, and structured-light scanner. The scenes are selected to emphasize a diverse set of material properties challenging for existing algorithms. We provide around 1.4 million images of 107 different scenes acquired from 100 viewing directions under 14 lighting conditions. We expect our dataset will be useful for evaluation and training of 3D reconstruction algorithms and for related tasks. The dataset is available at skoltech3d.appliedai.tech.
+
+</details>
+
 ### GCFAgg: Global and Cross-View Feature Aggregation for Multi-View Clustering.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01902) · 📚 被引 186
+- **链接**: [arXiv:2305.06799](https://arxiv.org/abs/2305.06799) · 📚 被引 186
 - **作者**: Weiqing Yan, Yuanyang Zhang, Chenlei Lv, Chang Tang, Guanghui Yue, Liang Liao et al.
 - **🏷️ 机构**: School of Computer and Control Engineering, Yantai University,Yantai,China,264005, College of Computer Science and Software Engineering, Shenzhen University,Shenzhen,China,518060, School of Computer, China University of Geosciences,Wuhan,China,430074
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-view clustering can partition data samples into their categories by learning a consensus representation in unsupervised way and has received more and more attention in recent years. However, most existing deep clustering methods learn consensus representation or view-specific representations from multiple views via view-wise aggregation way, where they ignore structure relationship of all samples. In this paper, we propose a novel multi-view clustering network to address these problems, called Global and Cross-view Feature Aggregation for Multi-View Clustering (GCFAggMVC). Specifically, the consensus data presentation from multiple views is obtained via cross-sample and cross-view feature aggregation, which fully explores the complementary ofsimilar samples. Moreover, we align the consensus representation and the view-specific representation by the structure-guided contrastive learning module, which makes the view-specific representations from different samples with high structure relationship similar. The proposed module is a flexible multi-view data representation module, which can be also embedded to the incomplete multi-view data clustering task via plugging our module into other frameworks. Extensive experiments show that the proposed method achieves excellent performance in both complete multi-view data clustering tasks and incomplete multi-view data clustering tasks.
+
+</details>
 
 ### Cross-Guided Optimization of Radiance Fields with Multi-View Image Super-Resolution for High-Resolution Novel View Synthesis.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01196) · 📚 被引 14
@@ -84,10 +108,16 @@
 - **会议**: CVPR 2023
 
 ### POEM: Reconstructing Hand in a Point Embedded Multi-view Stereo.
-- **链接**: [arXiv:2304.04038](https://arxiv.org/abs/2304.04038) · 📚 被引 14
+- **链接**: [arXiv:2304.04038](https://arxiv.org/abs/2304.04038) · [代码](https://github.com/lixiny/POEM) · 📚 被引 14
 - **作者**: Lixin Yang, Jian Xu, Licheng Zhong, Xinyu Zhan, Zhicheng Wang, Kejian Wu et al.
 - **🏷️ 机构**: Shanghai Jiao Tong University, Nreal
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Enable neural networks to capture 3D geometrical-aware features is essential in multi-view based vision tasks. Previous methods usually encode the 3D information of multi-view stereo into the 2D features. In contrast, we present a novel method, named POEM, that directly operates on the 3D POints Embedded in the Multi-view stereo for reconstructing hand mesh in it. Point is a natural form of 3D information and an ideal medium for fusing features across views, as it has different projections on different views. Our method is thus in light of a simple yet effective idea, that a complex 3D hand mesh can be represented by a set of 3D points that 1) are embedded in the multi-view stereo, 2) carry features from the multi-view images, and 3) encircle the hand. To leverage the power of points, we design two operations: point-based feature fusion and cross-set point attention mechanism. Evaluation on three challenging multi-view datasets shows that POEM outperforms the state-of-the-art in hand mesh reconstruction. Code and models are available for research at https://github.com/lixiny/POEM.
+
+</details>
 
 ### Adaptive Patch Deformation for Textureless-Resilient Multi-View Stereo.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00162) · 📚 被引 35
@@ -125,11 +155,23 @@
 - **🏷️ 机构**: MPI for Intelligent Systems,T&#x00FC;bingen, University of Southern California
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing methods for capturing datasets of 3D heads in dense semantic correspondence are slow, and commonly address the problem in two separate steps; multi-view stereo (MVS) reconstruction followed by non-rigid registration. To simplify this process, we introduce TEMPEH (Towards Estimation of 3D Meshes from Performances of Expressive Heads) to directly infer 3D heads in dense correspondence from calibrated multi-view images. Registering datasets of 3D scans typically requires manual parameter tuning to find the right balance between accurately fitting the scans surfaces and being robust to scanning noise and outliers. Instead, we propose to jointly register a 3D head dataset while training TEMPEH. Specifically, during training we minimize a geometric loss commonly used for surface registration, effectively leveraging TEMPEH as a regularizer. Our multi-view head inference builds on a volumetric feature representation that samples and fuses features from each view using camera calibration information. To account for partial occlusions and a large capture volume that enables head movements, we use view- and surface-aware feature fusion, and a spatial transformer-based head localization module, respectively. We use raw MVS scans as supervision during training, but, once trained, TEMPEH directly predicts 3D heads in dense correspondence without requiring scans. Predicting one head takes about 0.3 seconds with a median reconstruction error of 0.26 mm, 64% lower than the current state-of-the-art. This enables the efficient capture of large datasets containing multiple people and diverse facial motions. Code, model, and data are publicly available at https://tempeh.is.tue.mpg.de.
+
+</details>
+
 ### RIAV-MVS: Recurrent-Indexing an Asymmetric Volume for Multi-View Stereo.
-- **链接**: [arXiv:2205.14320](https://arxiv.org/abs/2205.14320) · 📚 被引 12
+- **链接**: [arXiv:2205.14320](https://arxiv.org/abs/2205.14320) · [代码](https://github.com/oppo-us-research/riav-mvs) · 📚 被引 12
 - **作者**: Changjiang Cai, Pan Ji, Qingan Yan, Yi Xu
 - **🏷️ 机构**: OPPO US Research Center, InnoPeak Technology, Inc.
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents a learning-based method for multi-view depth estimation from posed images. Our core idea is a "learning-to-optimize" paradigm that iteratively indexes a plane-sweeping cost volume and regresses the depth map via a convolutional Gated Recurrent Unit (GRU). Since the cost volume plays a paramount role in encoding the multi-view geometry, we aim to improve its construction both at pixel- and frame- levels. At the pixel level, we propose to break the symmetry of the Siamese network (which is typically used in MVS to extract image features) by introducing a transformer block to the reference image (but not to the source images). Such an asymmetric volume allows the network to extract global features from the reference image to predict its depth map. Given potential inaccuracies in the poses between reference and source images, we propose to incorporate a residual pose network to correct the relative poses. This essentially rectifies the cost volume at the frame level. We conduct extensive experiments on real-world MVS datasets and show that our method achieves state-of-the-art performance in terms of both within-dataset evaluation and cross-dataset generalization. Code available: https://github.com/oppo-us-research/riav-mvs.
+
+</details>
 
 ### Multi-View Azimuth Stereo via Tangent Space Consistency.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00086) · 📚 被引 14
@@ -348,32 +390,20 @@
 - **会议**: CVPR 2023
 
 ### iDisc: Internal Discretization for Monocular Depth Estimation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02057) · 📚 被引 119
+- **链接**: [arXiv:2304.06334](https://arxiv.org/abs/2304.06334) · 📚 被引 120
 - **作者**: Luigi Piccinelli, Christos Sakaridis, Fisher Yu
 - **🏷️ 机构**: ETH Z&#x00FC;rich,Computer Vision Lab
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Monocular depth estimation is fundamental for 3D scene understanding and downstream applications. However, even under the supervised setup, it is still challenging and ill-posed due to the lack of full geometric constraints. Although a scene can consist of millions of pixels, there are fewer high-level patterns. We propose iDisc to learn those patterns with internal discretized representations. The method implicitly partitions the scene into a set of high-level patterns. In particular, our new module, Internal Discretization (ID), implements a continuous-discrete-continuous bottleneck to learn those concepts without supervision. In contrast to state-of-the-art methods, the proposed model does not enforce any explicit constraints or priors on the depth output. The whole network with the ID module can be trained end-to-end, thanks to the bottleneck module based on attention. Our method sets the new state of the art with significant improvements on NYU-Depth v2 and KITTI, outperforming all published methods on the official KITTI benchmark. iDisc can also achieve state-of-the-art results on surface normal estimation. Further, we explore the model generalization capability via zero-shot testing. We observe the compelling need to promote diversification in the outdoor scenario. Hence, we introduce splits of two autonomous driving datasets, DDAD and Argoverse. Code is available at http://vis.xyz/pub/idisc .
+
+</details>
+
 ### Lite-Mono: A Lightweight CNN and Transformer Architecture for Self-Supervised Monocular Depth Estimation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01778)
 - **作者**: Ning Zhang, Francesco Nex, George Vosselman, Norman Kerle
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
-
-### PlaneDepth: Self-Supervised Depth Estimation via Orthogonal Planes.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02052)
-- **作者**: Ruoyu Wang, Zehao Yu, Shenghua Gao
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
-
-### DualRefine: Self-Supervised Depth and Pose Estimation Through Iterative Epipolar Sampling and Refinement Toward Equilibrium.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00077)
-- **作者**: Antyanta Bangunharcana, Ahmed Magd, Kyung-Soo Kim
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
-
-### Fully Self-Supervised Depth Estimation from Defocus Clue.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00882)
-- **作者**: Haozhe Si, Bin Zhao, Dong Wang, Yunpeng Gao, Mulin Chen, Zhigang Wang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 

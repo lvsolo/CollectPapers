@@ -30,10 +30,16 @@
 - **会议**: CVPR 2023
 
 ### Multimodality Helps Unimodality: Cross-Modal Few-Shot Learning with Multimodal Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01852) · 📚 被引 118
+- **链接**: [arXiv:2301.06267](https://arxiv.org/abs/2301.06267) · 📚 被引 118
 - **作者**: Zhiqiu Lin, Samuel Yu, Zhiyi Kuang, Deepak Pathak, Deva Ramanan
 - **🏷️ 机构**: Carnegie Mellon University
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The ability to quickly learn a new task with minimal instruction - known as few-shot learning - is a central aspect of intelligent agents. Classical few-shot benchmarks make use of few-shot samples from a single modality, but such samples may not be sufficient to characterize an entire concept class. In contrast, humans use cross-modal information to learn new concepts efficiently. In this work, we demonstrate that one can indeed build a better ${\bf visual}$ dog classifier by ${\bf read}$ing about dogs and ${\bf listen}$ing to them bark. To do so, we exploit the fact that recent multimodal foundation models such as CLIP learn cross-modal encoders that map different modalities to the same representation space. Specifically, we propose a simple strategy for ${\bf cross-modal}$ ${\bf adaptation}$: we treat examples from different modalities as additional few-shot examples. For example, by simply repurposing class names as an additional training sample, we trivially turn any n-shot learning problem into a (n+1)-shot problem. This allows us to produce SOTA results with embarrassingly simple linear classifiers. We show that our approach can be combined with existing methods such as prefix tuning, adapters, and classifier ensembling. Finally, to explore other modalities beyond vision and language, we construct the first (to our knowledge) audiovisual few-shot benchmark and use cross-modal training to improve the performance of both image and audio classification.
+
+</details>
 
 ### Revisiting Multimodal Representation in Contrastive Learning: From Patch and Token Embeddings to Finite Discrete Tokens.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01449) · 📚 被引 41
@@ -42,16 +48,28 @@
 - **会议**: CVPR 2023
 
 ### Align and Attend: Multimodal Summarization with Dual Contrastive Losses.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01428) · 📚 被引 99
+- **链接**: [arXiv:2303.07284](https://arxiv.org/abs/2303.07284) · 📚 被引 99
 - **作者**: Bo He, Jun Wang, Jielin Qiu, Trung Bui, Abhinav Shrivastava, Zhaowen Wang
 - **🏷️ 机构**: University of Maryland,College Park, Carnegie Mellon University, Adobe Research
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The goal of multimodal summarization is to extract the most important information from different modalities to form output summaries. Unlike the unimodal summarization, the multimodal summarization task explicitly leverages cross-modal information to help generate more reliable and high-quality summaries. However, existing methods fail to leverage the temporal correspondence between different modalities and ignore the intrinsic correlation between different samples. To address this issue, we introduce Align and Attend Multimodal Summarization (A2Summ), a unified multimodal transformer-based model which can effectively align and attend the multimodal input. In addition, we propose two novel contrastive losses to model both inter-sample and intra-sample correlations. Extensive experiments on two standard video summarization datasets (TVSum and SumMe) and two multimodal summarization datasets (Daily Mail and CNN) demonstrate the superiority of A2Summ, achieving state-of-the-art performances on all datasets. Moreover, we collected a large-scale multimodal summarization dataset BLiSS, which contains livestream videos and transcribed texts with annotated summaries. Our code and dataset are publicly available at ~\url{https://boheumd.github.io/A2Summ/}.
+
+</details>
+
 ### Multimodal Industrial Anomaly Detection via Hybrid Fusion.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00776) · 📚 被引 200
+- **链接**: [arXiv:2303.00601](https://arxiv.org/abs/2303.00601) · [代码](https://github.com/nomewang/M3DM) · 📚 被引 200
 - **作者**: Yue Wang, Jinlong Peng, Jiangning Zhang, Ran Yi, Yabiao Wang, Chengjie Wang
 - **🏷️ 机构**: Shanghai Jiao Tong University,Shanghai,China, Tencent,Youtu Lab
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 2D-based Industrial Anomaly Detection has been widely discussed, however, multimodal industrial anomaly detection based on 3D point clouds and RGB images still has many untouched fields. Existing multimodal industrial anomaly detection methods directly concatenate the multimodal features, which leads to a strong disturbance between features and harms the detection performance. In this paper, we propose Multi-3D-Memory (M3DM), a novel multimodal anomaly detection method with hybrid fusion scheme: firstly, we design an unsupervised feature fusion with patch-wise contrastive learning to encourage the interaction of different modal features; secondly, we use a decision layer fusion with multiple memory banks to avoid loss of information and additional novelty classifiers to make the final decision. We further propose a point feature alignment operation to better align the point cloud and RGB features. Extensive experiments show that our multimodal industrial anomaly detection model outperforms the state-of-the-art (SOTA) methods on both detection and segmentation precision on MVTec-3D AD dataset. Code is available at https://github.com/nomewang/M3DM.
+
+</details>
 
 ### Self-Supervised Learning for Multimodal Non-Rigid 3D Shape Matching.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01701) · 📚 被引 29
@@ -72,10 +90,16 @@
 - **会议**: CVPR 2023
 
 ### Enhanced Multimodal Representation Learning with Cross-modal KD.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01132) · 📚 被引 13
+- **链接**: [arXiv:2306.07646](https://arxiv.org/abs/2306.07646) · 📚 被引 13
 - **作者**: Mengxi Chen, Linyu Xing, Yu Wang, Ya Zhang
 - **🏷️ 机构**: Shanghai Jiao Tong University
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper explores the tasks of leveraging auxiliary modalities which are only available at training to enhance multimodal representation learning through cross-modal Knowledge Distillation (KD). The widely adopted mutual information maximization-based objective leads to a short-cut solution of the weak teacher, i.e., achieving the maximum mutual information by simply making the teacher model as weak as the student model. To prevent such a weak solution, we introduce an additional objective term, i.e., the mutual information between the teacher and the auxiliary modality model. Besides, to narrow down the information gap between the student and teacher, we further propose to minimize the conditional entropy of the teacher given the student. Novel training schemes based on contrastive learning and adversarial learning are designed to optimize the mutual information and the conditional entropy, respectively. Experimental results on three popular multimodal benchmark datasets have shown that the proposed method outperforms a range of state-of-the-art approaches for video recognition, video retrieval and emotion classification.
+
+</details>
 
 ### SDFusion: Multimodal 3D Shape Completion, Reconstruction, and Generation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00433) · 📚 被引 218
@@ -233,18 +257,6 @@
 
 </details>
 
-### Self-Supervised Video Forensics by Audio-Visual Anomaly Detection.
-- **链接**: [arXiv:2301.01767](https://arxiv.org/abs/2301.01767) · 📚 被引 92
-- **作者**: Chao Feng, Ziyang Chen, Andrew Owens
-- **🏷️ 机构**: University of Michigan
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Manipulated videos often contain subtle inconsistencies between their visual and audio signals. We propose a video forensics method, based on anomaly detection, that can identify these inconsistencies, and that can be trained solely using real, unlabeled data. We train an autoregressive model to generate sequences of audio-visual features, using feature sets that capture the temporal synchronization between video frames and sound. At test time, we then flag videos that the model assigns low probability. Despite being trained entirely on real videos, our model obtains strong performance on the task of detecting manipulated speech videos. Project site: https://cfeng16.github.io/audio-visual-forensics
-
-</details>
-
 ### Learning Audio-Visual Source Localization via False Negative Aware Contrastive Learning.
 - **链接**: [arXiv:2303.11302](https://arxiv.org/abs/2303.11302) · [代码](https://github.com/OpenNLPLab/FNAC_AVL) · 📚 被引 51
 - **作者**: Weixuan Sun, Jiayi Zhang, Jianyuan Wang, Zheyuan Liu, Yiran Zhong, Tianpeng Feng et al.
@@ -266,6 +278,18 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > In this paper, we study a novel problem in egocentric action recognition, which we term as "Multimodal Generalization" (MMG). MMG aims to study how systems can generalize when data from certain modalities is limited or even completely missing. We thoroughly investigate MMG in the context of standard supervised action recognition and the more challenging few-shot setting for learning new action categories. MMG consists of two novel scenarios, designed to support security, and efficiency considerations in real-world applications: (1) missing modality generalization where some modalities that were present during the train time are missing during the inference time, and (2) cross-modal zero-shot generalization, where the modalities present during the inference time and the training time are disjoint. To enable this investigation, we construct a new dataset MMG-Ego4D containing data points with video, audio, and inertial motion sensor (IMU) modalities. Our dataset is derived from Ego4D dataset, but processed and thoroughly re-annotated by human experts to facilitate research in the MMG problem. We evaluate a diverse array of models on MMG-Ego4D and propose new methods with improved generalization ability. In particular, we introduce a new fusion module with modality dropout training, contrastive-based alignment training, and a novel cross-modal prototypical loss for better few-shot performance. We hope this study will serve as a benchmark and guide future research in multimodal generalization problems. The benchmark and code will be available at https://github.com/facebookresearch/MMG_Ego4D.
+
+</details>
+
+### Decomposed Cross-Modal Distillation for RGB-based Temporal Action Detection.
+- **链接**: [arXiv:2303.17285](https://arxiv.org/abs/2303.17285) · 📚 被引 21
+- **作者**: Pilhyeon Lee, Taeoh Kim, Minho Shim, Dongyoon Wee, Hyeran Byun
+- **🏷️ 机构**: Yonsei University, Naver Cloud, AI Tech.
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Temporal action detection aims to predict the time intervals and the classes of action instances in the video. Despite the promising performance, existing two-stream models exhibit slow inference speed due to their reliance on computationally expensive optical flow. In this paper, we introduce a decomposed cross-modal distillation framework to build a strong RGB-based detector by transferring knowledge of the motion modality. Specifically, instead of direct distillation, we propose to separately learn RGB and motion representations, which are in turn combined to perform action localization. The dual-branch design and the asymmetric training objectives enable effective motion knowledge transfer while preserving RGB information intact. In addition, we introduce a local attentive fusion to better exploit the multimodal complementarity. It is designed to preserve the local discriminability of the features that is important for action localization. Extensive experiments on the benchmarks verify the effectiveness of the proposed method in enhancing RGB-based action detectors. Notably, our framework is agnostic to backbones and detection heads, bringing consistent gains across different model combinations.
 
 </details>
 

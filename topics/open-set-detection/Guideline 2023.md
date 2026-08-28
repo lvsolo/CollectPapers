@@ -1,7 +1,7 @@
 # Open-set Detection — 2023 Guideline
 
 > 领域: 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）
-> 论文数: 29 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 28 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -28,6 +28,12 @@
 - **作者**: Bowen Wen, Jonathan Tremblay, Valts Blukis, Stephen Tyree, Thomas Müller, Alex Evans et al.
 - **🏷️ 机构**: NVIDIA
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present a near real-time method for 6-DoF tracking of an unknown object from a monocular RGBD video sequence, while simultaneously performing neural 3D reconstruction of the object. Our method works for arbitrary rigid objects, even when visual texture is largely absent. The object is assumed to be segmented in the first frame only. No additional information is required, and no assumption is made about the interaction agent. Key to our method is a Neural Object Field that is learned concurrently with a pose graph optimization process in order to robustly accumulate information into a consistent 3D representation capturing both geometry and appearance. A dynamic pool of posed memory frames is automatically maintained to facilitate communication between these threads. Our approach handles challenging sequences with large pose changes, partial and full occlusion, untextured surfaces, and specular highlights. We show results on HO3D, YCBInEOAT, and BEHAVE datasets, demonstrating that our method significantly outperforms existing approaches. Project page: https://bundlesdf.github.io
+
+</details>
 
 ### Learning to Generate Language-Supervised and Open-Vocabulary Scene Graph Using Pre-Trained Visual-Semantic Space.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00285) · 📚 被引 41
@@ -123,12 +129,6 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01857) · 📚 被引 26
 - **作者**: Shijie Wang, Jianlong Chang, Haojie Li, Zhihui Wang, Wanli Ouyang, Qi Tian
 - **🏷️ 机构**: International School of Information Science &#x0026; Engineering, Dalian University of Technology,China, Huawei Cloud &#x0026; AI,China, The University of Sydney,Sense Time Computer Vision Research Group,Australia
-- **会议**: CVPR 2023
-
-### Coreset Sampling from Open-Set for Fine-Grained Self-Supervised Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00728)
-- **作者**: Sungnyun Kim, Sangmin Bae, Se-Young Yun
-- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
 ### Enlarging Instance-specific and Class-specific Information for Open-set Action Recognition.

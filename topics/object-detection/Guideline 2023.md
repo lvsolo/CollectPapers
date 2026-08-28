@@ -114,40 +114,76 @@
 </details>
 
 ### PROB: Probabilistic Objectness for Open World Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01101) · 📚 被引 110
+- **链接**: [arXiv:2212.01424](https://arxiv.org/abs/2212.01424) · [代码](https://github.com/orrzohar/PROB) · 📚 被引 110
 - **作者**: Orr Zohar, Kuan-Chieh Wang, Serena Yeung
 - **🏷️ 机构**: Stanford University
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open World Object Detection (OWOD) is a new and challenging computer vision task that bridges the gap between classic object detection (OD) benchmarks and object detection in the real world. In addition to detecting and classifying seen/labeled objects, OWOD algorithms are expected to detect novel/unknown objects - which can be classified and incrementally learned. In standard OD, object proposals not overlapping with a labeled object are automatically classified as background. Therefore, simply applying OD methods to OWOD fails as unknown objects would be predicted as background. The challenge of detecting unknown objects stems from the lack of supervision in distinguishing unknown objects and background object proposals. Previous OWOD methods have attempted to overcome this issue by generating supervision using pseudo-labeling - however, unknown object detection has remained low. Probabilistic/generative models may provide a solution for this challenge. Herein, we introduce a novel probabilistic framework for objectness estimation, where we alternate between probability distribution estimation and objectness likelihood maximization of known objects in the embedded feature space - ultimately allowing us to estimate the objectness probability of different proposals. The resulting Probabilistic Objectness transformer-based open-world detector, PROB, integrates our framework into traditional object detection models, adapting them for the open-world setting. Comprehensive experiments on OWOD benchmarks show that PROB outperforms all existing OWOD methods in both unknown object detection ($\sim 2\times$ unknown recall) and known object detection ($\sim 10\%$ mAP). Our code will be made available upon publication at https://github.com/orrzohar/PROB.
+
+</details>
+
 ### Detecting Everything in the Open World: Towards Universal Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01100) · 📚 被引 96
+- **链接**: [arXiv:2303.11749](https://arxiv.org/abs/2303.11749) · 📚 被引 96
 - **作者**: Zhenyu Wang, Yali Li, Xi Chen, Ser-Nam Lim, Antonio Torralba, Hengshuang Zhao et al.
 - **🏷️ 机构**: Tsinghua University,Department of Electronic Engineering, The University of Hong Kong, Meta AI
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper, we formally address universal object detection, which aims to detect every scene and predict every category. The dependence on human annotations, the limited visual information, and the novel categories in the open world severely restrict the universality of traditional detectors. We propose UniDetector, a universal object detector that has the ability to recognize enormous categories in the open world. The critical points for the universality of UniDetector are: 1) it leverages images of multiple sources and heterogeneous label spaces for training through the alignment of image and text spaces, which guarantees sufficient information for universal representations. 2) it generalizes to the open world easily while keeping the balance between seen and unseen classes, thanks to abundant information from both vision and language modalities. 3) it further promotes the generalization ability to novel categories through our proposed decoupling training manner and probability calibration. These contributions allow UniDetector to detect over 7k categories, the largest measurable category size so far, with only about 500 classes participating in training. Our UniDetector behaves the strong zero-shot generalization ability on large-vocabulary datasets like LVIS, ImageNetBoxes, and VisualGenome - it surpasses the traditional supervised baselines by more than 4\% on average without seeing any corresponding images. On 13 public detection datasets with various scenes, UniDetector also achieves state-of-the-art performance with only a 3\% amount of training data.
+
+</details>
+
 ### Bi-LRFusion: Bi-Directional LiDAR-Radar Fusion for 3D Dynamic Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01287) · 📚 被引 48
+- **链接**: [arXiv:2306.01438](https://arxiv.org/abs/2306.01438) · [代码](https://github.com/JessieW0806/BiLRFusion) · 📚 被引 48
 - **作者**: Yingjie Wang, Jiajun Deng, Yao Li, Jinshui Hu, Cong Liu, Yu Zhang et al.
 - **🏷️ 机构**: University of Science and Technology of China, University of Sydney, iFLYTEK
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> LiDAR and Radar are two complementary sensing approaches in that LiDAR specializes in capturing an object's 3D shape while Radar provides longer detection ranges as well as velocity hints. Though seemingly natural, how to efficiently combine them for improved feature representation is still unclear. The main challenge arises from that Radar data are extremely sparse and lack height information. Therefore, directly integrating Radar features into LiDAR-centric detection networks is not optimal. In this work, we introduce a bi-directional LiDAR-Radar fusion framework, termed Bi-LRFusion, to tackle the challenges and improve 3D detection for dynamic objects. Technically, Bi-LRFusion involves two steps: first, it enriches Radar's local features by learning important details from the LiDAR branch to alleviate the problems caused by the absence of height information and extreme sparsity; second, it combines LiDAR features with the enhanced Radar features in a unified bird's-eye-view representation. We conduct extensive experiments on nuScenes and ORR datasets, and show that our Bi-LRFusion achieves state-of-the-art performance for detecting dynamic objects. Notably, Radar data in these two datasets have different formats, which demonstrates the generalizability of our method. Codes are available at https://github.com/JessieW0806/BiLRFusion.
+
+</details>
+
 ### Normalizing Flow based Feature Synthesis for Outlier-Aware Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00499) · 📚 被引 14
+- **链接**: [arXiv:2302.07106](https://arxiv.org/abs/2302.07106) · [代码](https://github.com/nish03/FFS) · 📚 被引 14
 - **作者**: Nishant Kumar, Sinisa Segvic, Abouzar Eslami, Stefan Gumhold
 - **🏷️ 机构**: TU Dresden, University of Zagreb - FER, Carl Zeiss Meditec AG
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Real-world deployment of reliable object detectors is crucial for applications such as autonomous driving. However, general-purpose object detectors like Faster R-CNN are prone to providing overconfident predictions for outlier objects. Recent outlier-aware object detection approaches estimate the density of instance-wide features with class-conditional Gaussians and train on synthesized outlier features from their low-likelihood regions. However, this strategy does not guarantee that the synthesized outlier features will have a low likelihood according to the other class-conditional Gaussians. We propose a novel outlier-aware object detection framework that distinguishes outliers from inlier objects by learning the joint data distribution of all inlier classes with an invertible normalizing flow. The appropriate sampling of the flow model ensures that the synthesized outliers have a lower likelihood than inliers of all object classes, thereby modeling a better decision boundary between inlier and outlier objects. Our approach significantly outperforms the state-of-the-art for outlier-aware object detection on both image and video datasets. Code available at https://github.com/nish03/FFS
+
+</details>
+
 ### Cut and Learn for Unsupervised Object Detection and Instance Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00305) · 📚 被引 182
+- **链接**: [arXiv:2301.11320](https://arxiv.org/abs/2301.11320) · 📚 被引 182
 - **作者**: Xudong Wang, Rohit Girdhar, Stella X. Yu, Ishan Misra
 - **🏷️ 机构**: FAIR, Meta AI, UC Berkeley / ICSI
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose Cut-and-LEaRn (CutLER), a simple approach for training unsupervised object detection and segmentation models. We leverage the property of self-supervised models to 'discover' objects without supervision and amplify it to train a state-of-the-art localization model without any human labels. CutLER first uses our proposed MaskCut approach to generate coarse masks for multiple objects in an image and then learns a detector on these masks using our robust loss function. We further improve the performance by self-training the model on its predictions. Compared to prior work, CutLER is simpler, compatible with different detection architectures, and detects multiple objects. CutLER is also a zero-shot unsupervised detector and improves detection performance AP50 by over 2.7 times on 11 benchmarks across domains like video frames, paintings, sketches, etc. With finetuning, CutLER serves as a low-shot detector surpassing MoCo-v2 by 7.3% APbox and 6.6% APmask on COCO when training with 5% labels.
+
+</details>
+
 ### Phase-Shifting Coder: Predicting Accurate Orientation in Oriented Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01283) · 📚 被引 173
+- **链接**: [arXiv:2211.06368](https://arxiv.org/abs/2211.06368) · [代码](https://github.com/open-mmlab/mmrotate) · 📚 被引 173
 - **作者**: Yi Yu, Feipeng Da
 - **🏷️ 机构**: School of Automation, Southeast University,Nanjing,China
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> With the vigorous development of computer vision, oriented object detection has gradually been featured. In this paper, a novel differentiable angle coder named phase-shifting coder (PSC) is proposed to accurately predict the orientation of objects, along with a dual-frequency version (PSCD). By mapping the rotational periodicity of different cycles into the phase of different frequencies, we provide a unified framework for various periodic fuzzy problems caused by rotational symmetry in oriented object detection. Upon such a framework, common problems in oriented object detection such as boundary discontinuity and square-like problems are elegantly solved in a unified form. Visual analysis and experiments on three datasets prove the effectiveness and the potentiality of our approach. When facing scenarios requiring high-quality bounding boxes, the proposed methods are expected to give a competitive performance. The codes are publicly available at https://github.com/open-mmlab/mmrotate.
+
+</details>
 
 ### Enhanced Training of Query-Based Object Detection via Selective Query Recollection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02275) · 📚 被引 64
@@ -198,10 +234,16 @@
 - **会议**: CVPR 2023
 
 ### Adaptive Sparse Convolutional Networks with Global Context Enhancement for Faster Object Detection on Drone Images.
-- **链接**: [arXiv:2303.14488](https://arxiv.org/abs/2303.14488) · 📚 被引 238
+- **链接**: [arXiv:2303.14488](https://arxiv.org/abs/2303.14488) · [代码](https://github.com/Cuogeihong/CEASC) · 📚 被引 238
 - **作者**: Bowei Du, Yecheng Huang, Jiaxin Chen, Di Huang
 - **🏷️ 机构**: Beihang University,State Key Laboratory of Software Development Environment,Beijing,China, School of Computer Science and Engineering, Beihang University,Beijing,China
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Object detection on drone images with low-latency is an important but challenging task on the resource-constrained unmanned aerial vehicle (UAV) platform. This paper investigates optimizing the detection head based on the sparse convolution, which proves effective in balancing the accuracy and efficiency. Nevertheless, it suffers from inadequate integration of contextual information of tiny objects as well as clumsy control of the mask ratio in the presence of foreground with varying scales. To address the issues above, we propose a novel global context-enhanced adaptive sparse convolutional network (CEASC). It first develops a context-enhanced group normalization (CE-GN) layer, by replacing the statistics based on sparsely sampled features with the global contextual ones, and then designs an adaptive multi-layer masking strategy to generate optimal mask ratios at distinct scales for compact foreground coverage, promoting both the accuracy and efficiency. Extensive experimental results on two major benchmarks, i.e. VisDrone and UAVDT, demonstrate that CEASC remarkably reduces the GFLOPs and accelerates the inference procedure when plugging into the typical state-of-the-art detection frameworks (e.g. RetinaNet and GFL V1) with competitive performance. Code is available at https://github.com/Cuogeihong/CEASC.
+
+</details>
 
 ### Weak-shot Object Detection through Mutual Knowledge Transfer.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01884) · 📚 被引 1
@@ -330,16 +372,28 @@
 - **会议**: CVPR 2023
 
 ### Ambiguity-Resistant Semi-Supervised Learning for Dense Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01495) · 📚 被引 67
+- **链接**: [arXiv:2303.14960](https://arxiv.org/abs/2303.14960) · [代码](https://github.com/PaddlePaddle/PaddleDetection) · 📚 被引 67
 - **作者**: Chang Liu, Weiming Zhang, Xiangru Lin, Wei Zhang, Xiao Tan, Junyu Han et al.
 - **🏷️ 机构**: Shanghai University, Baidu Inc
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> With basic Semi-Supervised Object Detection (SSOD) techniques, one-stage detectors generally obtain limited promotions compared with two-stage clusters. We experimentally find that the root lies in two kinds of ambiguities: (1) Selection ambiguity that selected pseudo labels are less accurate, since classification scores cannot properly represent the localization quality. (2) Assignment ambiguity that samples are matched with improper labels in pseudo-label assignment, as the strategy is misguided by missed objects and inaccurate pseudo boxes. To tackle these problems, we propose a Ambiguity-Resistant Semi-supervised Learning (ARSL) for one-stage detectors. Specifically, to alleviate the selection ambiguity, Joint-Confidence Estimation (JCE) is proposed to jointly quantifies the classification and localization quality of pseudo labels. As for the assignment ambiguity, Task-Separation Assignment (TSA) is introduced to assign labels based on pixel-level predictions rather than unreliable pseudo boxes. It employs a "divide-and-conquer" strategy and separately exploits positives for the classification and localization task, which is more robust to the assignment ambiguity. Comprehensive experiments demonstrate that ARSL effectively mitigates the ambiguities and achieves state-of-the-art SSOD performance on MS COCO and PASCAL VOC. Codes can be found at https://github.com/PaddlePaddle/PaddleDetection.
+
+</details>
+
 ### MixTeacher: Mining Promising Labels with Mixed Scale Teacher for Semi-Supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00712) · 📚 被引 58
+- **链接**: [arXiv:2303.09061](https://arxiv.org/abs/2303.09061) · [代码](https://github.com/lliuz/MixTeacher) · 📚 被引 58
 - **作者**: Liang Liu, Boshen Zhang, Jiangning Zhang, Wuhao Zhang, Zhenye Gan, Guanzhong Tian et al.
 - **🏷️ 机构**: Youtu Lab,Tencent, Ningbo Research Institute, Zhejiang University, Rongcheer Co., Ltd
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Scale variation across object instances remains a key challenge in object detection task. Despite the remarkable progress made by modern detection models, this challenge is particularly evident in the semi-supervised case. While existing semi-supervised object detection methods rely on strict conditions to filter high-quality pseudo labels from network predictions, we observe that objects with extreme scale tend to have low confidence, resulting in a lack of positive supervision for these objects. In this paper, we propose a novel framework that addresses the scale variation problem by introducing a mixed scale teacher to improve pseudo label generation and scale-invariant learning. Additionally, we propose mining pseudo labels using score promotion of predictions across scales, which benefits from better predictions from mixed scale features. Our extensive experiments on MS COCO and PASCAL VOC benchmarks under various semi-supervised settings demonstrate that our method achieves new state-of-the-art performance. The code and models are available at \url{https://github.com/lliuz/MixTeacher}.
+
+</details>
 
 ### Open-Vocabulary Point-Cloud Object Detection without 3D Annotation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00121)
@@ -366,16 +420,28 @@
 </details>
 
 ### Bridging Precision and Confidence: A Train-Time Loss for Calibrating Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01104) · 📚 被引 18
+- **链接**: [arXiv:2303.14404](https://arxiv.org/abs/2303.14404) · [代码](https://github.com/akhtarvision/bpc_calibration) · 📚 被引 18
 - **作者**: Muhammad Akhtar Munir, Muhammad Haris Khan, Salman H. Khan, Fahad Shahbaz Khan
 - **🏷️ 机构**: Mohamed bin Zayed University of AI
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deep neural networks (DNNs) have enabled astounding progress in several vision-based problems. Despite showing high predictive accuracy, recently, several works have revealed that they tend to provide overconfident predictions and thus are poorly calibrated. The majority of the works addressing the miscalibration of DNNs fall under the scope of classification and consider only in-domain predictions. However, there is little to no progress in studying the calibration of DNN-based object detection models, which are central to many vision-based safety-critical applications. In this paper, inspired by the train-time calibration methods, we propose a novel auxiliary loss formulation that explicitly aims to align the class confidence of bounding boxes with the accurateness of predictions (i.e. precision). Since the original formulation of our loss depends on the counts of true positives and false positives in a minibatch, we develop a differentiable proxy of our loss that can be used during training with other application-specific loss functions. We perform extensive experiments on challenging in-domain and out-domain scenarios with six benchmark datasets including MS-COCO, Cityscapes, Sim10k, and BDD100k. Our results reveal that our train-time loss surpasses strong calibration baselines in reducing calibration error for both in and out-domain scenarios. Our source code and pre-trained models are available at https://github.com/akhtarvision/bpc_calibration
+
+</details>
+
 ### Multiclass Confidence and Localization Calibration for Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01890) · 📚 被引 25
+- **链接**: [arXiv:2306.08271](https://arxiv.org/abs/2306.08271) · [代码](https://github.com/bimsarapathiraja/MCCL) · 📚 被引 25
 - **作者**: Bimsara Pathiraja, Malitha Gunawardhana, Muhammad Haris Khan
 - **🏷️ 机构**: Mohamed bin Zayed University of Artificial Intelligence,UAE
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Albeit achieving high predictive accuracy across many challenging computer vision problems, recent studies suggest that deep neural networks (DNNs) tend to make overconfident predictions, rendering them poorly calibrated. Most of the existing attempts for improving DNN calibration are limited to classification tasks and restricted to calibrating in-domain predictions. Surprisingly, very little to no attempts have been made in studying the calibration of object detection methods, which occupy a pivotal space in vision-based security-sensitive, and safety-critical applications. In this paper, we propose a new train-time technique for calibrating modern object detection methods. It is capable of jointly calibrating multiclass confidence and box localization by leveraging their predictive uncertainties. We perform extensive experiments on several in-domain and out-of-domain detection benchmarks. Results demonstrate that our proposed train-time calibration method consistently outperforms several baselines in reducing calibration error for both in-domain and out-of-domain predictions. Our code and models are available at https://github.com/bimsarapathiraja/MCCL.
+
+</details>
 
 ### Unbalanced Optimal Transport: A Unified Framework for Object Detection.
 - **链接**: [arXiv:2307.02402](https://arxiv.org/abs/2307.02402) · 📚 被引 12
@@ -400,6 +466,12 @@
 - **作者**: Vibashan VS, Poojan Oza, Vishal M. Patel
 - **🏷️ 机构**: Johns Hopkins University,Baltimore,MD,USA
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Unsupervised Domain Adaptation (UDA) is an effective approach to tackle the issue of domain shift. Specifically, UDA methods try to align the source and target representations to improve the generalization on the target domain. Further, UDA methods work under the assumption that the source data is accessible during the adaptation process. However, in real-world scenarios, the labelled source data is often restricted due to privacy regulations, data transmission constraints, or proprietary data concerns. The Source-Free Domain Adaptation (SFDA) setting aims to alleviate these concerns by adapting a source-trained model for the target domain without requiring access to the source data. In this paper, we explore the SFDA setting for the task of adaptive object detection. To this end, we propose a novel training strategy for adapting a source-trained object detector to the target domain without source data. More precisely, we design a novel contrastive loss to enhance the target representations by exploiting the objects relations for a given target domain input. These object instance relations are modelled using an Instance Relation Graph (IRG) network, which are then used to guide the contrastive representation learning. In addition, we utilize a student-teacher based knowledge distillation strategy to avoid overfitting to the noisy pseudo-labels generated by the source-trained model. Extensive experiments on multiple object detection benchmark datasets show that the proposed approach is able to efficiently adapt source-trained object detectors to the target domain, outperforming previous state-of-the-art domain adaptive detection methods. Code and models are provided in \href{https://viudomain.github.io/irg-sfda-web/}{https://viudomain.github.io/irg-sfda-web/}.
+
+</details>
 
 ### Test Time Adaptation with Regularized Loss for Weakly Supervised Salient Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00711) · 📚 被引 16
@@ -462,10 +534,16 @@
 - **会议**: CVPR 2023
 
 ### Dynamic Coarse-to-Fine Learning for Oriented Tiny Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00707) · 📚 被引 166
+- **链接**: [arXiv:2304.08876](https://arxiv.org/abs/2304.08876) · [代码](https://github.com/Chasel-Tsui/mmrotate-dcfl) · 📚 被引 166
 - **作者**: Chang Xu, Jian Ding, Jinwang Wang, Wen Yang, Huai Yu, Lei Yu et al.
 - **🏷️ 机构**: School of Electronic Information, Wuhan University, School of Computer Science, Wuhan University
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Detecting arbitrarily oriented tiny objects poses intense challenges to existing detectors, especially for label assignment. Despite the exploration of adaptive label assignment in recent oriented object detectors, the extreme geometry shape and limited feature of oriented tiny objects still induce severe mismatch and imbalance issues. Specifically, the position prior, positive sample feature, and instance are mismatched, and the learning of extreme-shaped objects is biased and unbalanced due to little proper feature supervision. To tackle these issues, we propose a dynamic prior along with the coarse-to-fine assigner, dubbed DCFL. For one thing, we model the prior, label assignment, and object representation all in a dynamic manner to alleviate the mismatch issue. For another, we leverage the coarse prior matching and finer posterior constraint to dynamically assign labels, providing appropriate and relatively balanced supervision for diverse instances. Extensive experiments on six datasets show substantial improvements to the baseline. Notably, we obtain the state-of-the-art performance for one-stage detectors on the DOTA-v1.5, DOTA-v2.0, and DIOR-R datasets under single-scale training and testing. Codes are available at https://github.com/Chasel-Tsui/mmrotate-dcfl.
+
+</details>
 
 ### Gaussian Label Distribution Learning for Spherical Image Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00106) · 📚 被引 10
@@ -498,16 +576,28 @@
 - **会议**: CVPR 2023
 
 ### Dense Distinct Query for End-to-End Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00708) · 📚 被引 311
+- **链接**: [arXiv:2303.12776](https://arxiv.org/abs/2303.12776) · [代码](https://github.com/jshilong/DDQ) · 📚 被引 311
 - **作者**: Shilong Zhang, Xinjiang Wang, Jiaqi Wang, Jiangmiao Pang, Chengqi Lyu, Wenwei Zhang et al.
 - **🏷️ 机构**: Shanghai AI Laboratory, SenseTime Research, The University of Hong Kong
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> One-to-one label assignment in object detection has successfully obviated the need for non-maximum suppression (NMS) as postprocessing and makes the pipeline end-to-end. However, it triggers a new dilemma as the widely used sparse queries cannot guarantee a high recall, while dense queries inevitably bring more similar queries and encounter optimization difficulties. As both sparse and dense queries are problematic, then what are the expected queries in end-to-end object detection? This paper shows that the solution should be Dense Distinct Queries (DDQ). Concretely, we first lay dense queries like traditional detectors and then select distinct ones for one-to-one assignments. DDQ blends the advantages of traditional and recent end-to-end detectors and significantly improves the performance of various detectors including FCN, R-CNN, and DETRs. Most impressively, DDQ-DETR achieves 52.1 AP on MS-COCO dataset within 12 epochs using a ResNet-50 backbone, outperforming all existing detectors in the same setting. DDQ also shares the benefit of end-to-end detectors in crowded scenes and achieves 93.8 AP on CrowdHuman. We hope DDQ can inspire researchers to consider the complementarity between traditional methods and end-to-end detectors. The source code can be found at \url{https://github.com/jshilong/DDQ}.
+
+</details>
+
 ### Towards Unsupervised Object Detection from LiDAR Point Clouds.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00899) · 📚 被引 39
+- **链接**: [arXiv:2311.02007](https://arxiv.org/abs/2311.02007) · 📚 被引 39
 - **作者**: Lunjun Zhang, Anqi Joyce Yang, Yuwen Xiong, Sergio Casas, Bin Yang, Mengye Ren et al.
 - **🏷️ 机构**: Waabi, University of Toronto
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper, we study the problem of unsupervised object detection from 3D point clouds in self-driving scenes. We present a simple yet effective method that exploits (i) point clustering in near-range areas where the point clouds are dense, (ii) temporal consistency to filter out noisy unsupervised detections, (iii) translation equivariance of CNNs to extend the auto-labels to long range, and (iv) self-supervision for improving on its own. Our approach, OYSTER (Object Discovery via Spatio-Temporal Refinement), does not impose constraints on data collection (such as repeated traversals of the same location), is able to detect objects in a zero-shot manner without supervised finetuning (even in sparse, distant regions), and continues to self-improve given more rounds of iterative self-training. To better measure model performance in self-driving scenarios, we propose a new planning-centric perception metric based on distance-to-collision. We demonstrate that our unsupervised object detector significantly outperforms unsupervised baselines on PandaSet and Argoverse 2 Sensor dataset, showing promise that self-supervision combined with object priors can enable object discovery in the wild. For more information, visit the project website: https://waabi.ai/research/oyster
+
+</details>
 
 ### MetaFusion: Infrared and Visible Image Fusion via Meta-Feature Embedding from Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01341) · 📚 被引 241

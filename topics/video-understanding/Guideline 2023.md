@@ -1,7 +1,7 @@
 # Video Understanding — 2023 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 17 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 15 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -48,7 +48,7 @@
 </details>
 
 ### Procedure-Aware Pretraining for Instructional Video Understanding.
-- **链接**: [arXiv:2303.18230](https://arxiv.org/abs/2303.18230) · 📚 被引 38
+- **链接**: [arXiv:2303.18230](https://arxiv.org/abs/2303.18230) · [代码](https://github.com/salesforce/paprika) · 📚 被引 38
 - **作者**: Honglu Zhou, Roberto Martín-Martín, Mubbasir Kapadia, Silvio Savarese, Juan Carlos Niebles
 - **🏷️ 机构**: Salesforce Research, Rutgers University
 - **会议**: CVPR 2023
@@ -60,7 +60,7 @@
 </details>
 
 ### TimeBalance: Temporally-Invariant and Temporally-Distinctive Video Representations for Semi-Supervised Action Recognition.
-- **链接**: [arXiv:2303.16268](https://arxiv.org/abs/2303.16268) · 📚 被引 17
+- **链接**: [arXiv:2303.16268](https://arxiv.org/abs/2303.16268) · [代码](https://github.com/DAVEISHAN/TimeBalance) · 📚 被引 17
 - **作者**: Ishan Rajendrakumar Dave, Mamshad Nayeem Rizve, Chen Chen, Mubarak Shah
 - **🏷️ 机构**: Center for Research in Computer Vision, University of Central Florida,Orlando,USA
 - **会议**: CVPR 2023
@@ -93,8 +93,6 @@
 
 - Bidirectional Cross-Modal Knowledge Exploration for Video Recognition with Pre-trained Vision-Language Models. → [multimodal](../multimodal/Guideline%202023.md)
 - Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering. → [multimodal](../multimodal/Guideline%202023.md)
-- Unified Mask Embedding and Correspondence Learning for Self-Supervised Video Segmentation. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
-- Masked Motion Encoding for Self-Supervised Video Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
-- Masked Video Distillation: Rethinking Masked Feature Modeling for Self-supervised Video Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
 - Spatio-Temporal Pixel-Level Contrastive Learning-based Source-Free Domain Adaptation for Video Semantic Segmentation. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
 - Ultrahigh Resolution Image/Video Matting with Spatio-Temporal Sparsity. → [network-pruning](../network-pruning/Guideline%202023.md)
+- Masked Video Distillation: Rethinking Masked Feature Modeling for Self-supervised Video Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)

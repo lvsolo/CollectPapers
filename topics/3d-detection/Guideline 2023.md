@@ -1,7 +1,7 @@
 # 3D Detection — 2023 Guideline
 
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
-> 论文数: 35 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 36 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -216,10 +216,16 @@
 - **会议**: CVPR 2023
 
 ### Uni3D: A Unified Baseline for Multi-Dataset 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00893) · 📚 被引 43
+- **链接**: [arXiv:2303.06880](https://arxiv.org/abs/2303.06880) · 📚 被引 43
 - **作者**: Bo Zhang, Jiakang Yuan, Botian Shi, Tao Chen, Yikang Li, Yu Qiao
 - **🏷️ 机构**: Shanghai AI Laboratory, School of Information Science and Technology, Fudan University
 - **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Current 3D object detection models follow a single dataset-specific training and testing paradigm, which often faces a serious detection accuracy drop when they are directly deployed in another dataset. In this paper, we study the task of training a unified 3D detector from multiple datasets. We observe that this appears to be a challenging task, which is mainly due to that these datasets present substantial data-level differences and taxonomy-level variations caused by different LiDAR types and data acquisition standards. Inspired by such observation, we present a Uni3D which leverages a simple data-level correction operation and a designed semantic-level coupling-and-recoupling module to alleviate the unavoidable data-level and taxonomy-level differences, respectively. Our method is simple and easily combined with many 3D object detection baselines such as PV-RCNN and Voxel-RCNN, enabling them to effectively learn from multiple off-the-shelf 3D datasets to obtain more discriminative and generalizable representations. Experiments are conducted on many dataset consolidation settings including Waymo-nuScenes, nuScenes-KITTI, Waymo-KITTI, and Waymo-nuScenes-KITTI consolidations. Their results demonstrate that Uni3D exceeds a series of individual detectors trained on a single dataset, with a 1.04x parameter increase over a selected baseline detector. We expect this work will inspire the research of 3D generalization since it will push the limits of perceptual performance.
+
+</details>
 
 ### OcTr: Octree-Based Transformer for 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00500) · 📚 被引 79
@@ -279,4 +285,10 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00493)
 - **作者**: Yuqi Wang, Yuntao Chen, Zhaoxiang Zhang
 - **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2023
+
+### PointDistiller: Structured Knowledge Distillation Towards Efficient and Compact 3D Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02087) · 📚 被引 59
+- **作者**: Linfeng Zhang, Runpei Dong, Hung-Shuo Tai, Kaisheng Ma
+- **🏷️ 机构**: Tsinghua University, Xi&#x0027;an Jiaotong University, DIDI
 - **会议**: CVPR 2023

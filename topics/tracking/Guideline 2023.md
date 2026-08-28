@@ -12,13 +12,13 @@
 - **会议**: CVPR 2023
 
 ### MOTRv2: Bootstrapping End-to-End Multi-Object Tracking by Pretrained Object Detectors.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02112) · 📚 被引 244
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02112) · 📚 被引 246
 - **作者**: Yuang Zhang, Tiancai Wang, Xiangyu Zhang
 - **🏷️ 机构**: Shanghai Jiao Tong University, MEGVII Technology
 - **会议**: CVPR 2023
 
 ### Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00934) · 📚 被引 908
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00934) · 📚 被引 910
 - **作者**: Jinkun Cao, Jiangmiao Pang, Xinshuo Weng, Rawal Khirodkar, Kris Kitani
 - **🏷️ 机构**: Carnegie Mellon University, Shanghai AI Laboratory, Nvidia
 - **会议**: CVPR 2023
