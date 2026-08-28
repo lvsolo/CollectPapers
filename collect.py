@@ -325,15 +325,44 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
                 f"[{y}]({'Guideline%20' + str(y) + '.md'})"
                 for y in sorted(bucket[slug].keys(), reverse=True) if y != year))
             md.append("")
-            # 主领域归属必须确定性：同一论文在【命中它的所有领域里 slug 字母序最小】的领域展开。
-            # （此前按遍历顺序"先到先得"，不同批次轮次间会漂移，论文会在领域间搬家）
+            # 主领域归属（确定性 + 专精度）：
+            #   1. 命中的领域里，若存在亲缘（config parent 声明），子领域优先于父领域
+            #      —— BEVFormer 命中 bev/3d-detection/autonomous-driving，bev 是
+            #         3d-detection 的子领域 → 归 bev（更精确，用户要求）
+            #   2. 无亲缘关系的领域间，用分类得分决胜（cls_score 高者为主）
+            #   3. 得分也相同 → slug 字母序（保底确定性，防漂移）
+            topic_cfg = {t["slug"]: t for t in CONFIG["topics"]}
+
+            def is_parent(parent_slug: str, child_slug: str) -> bool:
+                """parent_slug 是否是 child_slug 的父领域（含传递）"""
+                cfg = topic_cfg.get(child_slug) or {}
+                for p in cfg.get("parent", []):
+                    if p == parent_slug or is_parent(p, parent_slug):
+                        return True
+                return False
+
+            # 预索引：norm_title -> {slug: cls_score}
+            norm_scores: dict[str, dict[str, float]] = {}
+            for s in bucket:
+                for pp in bucket[s].get(year, []):
+                    n = pp["title"].lower().rstrip(". ")
+                    norm_scores.setdefault(n, {})[s] = pp.get("cls_score", 0)
+
+            def primary_slug_for(norm: str) -> str:
+                hits = norm_scores.get(norm, {})
+                if len(hits) <= 1:
+                    return next(iter(hits), slug)
+                # 1) 子领域优先：剔除被其他命中领域"管辖"的父领域
+                candidates = [s for s in hits
+                              if not any(is_parent(s, other) for other in hits if other != s)]
+                if not candidates:
+                    candidates = list(hits)
+                # 2) 分类得分 → 3) 字母序（保底）
+                return max(sorted(candidates), key=lambda s: hits.get(s, 0))
+
             for p in papers:
                 norm = p["title"].lower().rstrip(". ")
-                # 收集该论文命中的所有 slug（本 bucket 内）
-                owners = sorted({s for s in bucket
-                                 for pp in bucket[s].get(year, [])
-                                 if pp["title"].lower().rstrip(". ") == norm} | {slug})
-                owner = owners[0]
+                owner = primary_slug_for(norm)
                 if owner != slug:
                     p["_cross_from"] = owner
                 else:
