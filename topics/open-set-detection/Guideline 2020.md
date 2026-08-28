@@ -5,8 +5,8 @@
 
 > 同领域其他年份: 
 
-### Don't Even Look Once: Synthesizing Features for Zero-Shot Detection.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhu_Dont_Even_Look_Once_Synthesizing_Features_for_Zero-Shot_Detection_CVPR_2020_paper.html) · 📚 被引 60
-- **作者**: Pengkai Zhu, Hanxiao Wang, Venkatesh Saligrama
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+### Open-Edit: Open-Domain Image Manipulation with Open-Vocabulary Instructions.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58621-8_6) · 📚 被引 25
+- **作者**: Xihui Liu, Zhe Lin, Jianming Zhang, Handong Zhao, Quan Tran, Xiaogang Wang et al.
+- **🏷️ 机构**: CUHK / Shanghai AI Lab, CUHK
+- **会议**: ECCV 2020
