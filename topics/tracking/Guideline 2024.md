@@ -1,58 +1,70 @@
 # Tracking — 2024 Guideline
 
 > 领域: 目标跟踪（MOT / 3D 跟踪 / 多目标多相机跟踪）
-> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: [2022](Guideline%202022.md)
+> 同领域其他年份: 
 
-### DeconfuseTrack: Dealing with Confusion for Multi-Object Tracking. **⭐⭐⭐⭐** (相关度: 70%)
-- **链接**: [arXiv:2403.02767](https://arxiv.org/abs/2403.02767) · 📚 被引 25
-- **作者**: Cheng Huang, Shoudong Han, Mengyu He, Wenbo Zheng, Yuhao Wei
-- **🏷️ 机构**: School of Artificial Intelligence and Automation, Huazhong University of Science and Technology,National Key Laboratory of Multispectral Information Intelligent Processing Technology
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对多目标跟踪中数据关联因轨迹多样性和运动/外观线索的模糊性导致的ID切换和分配错误问题，提出了一种分解式数据关联方法DDA，将传统关联问题分解为多个子问题，并利用非学习模块和针对性新线索分别处理每个子问题的混淆。同时引入遮挡感知非极大值抑制ONMS保留更多遮挡检测，增加关联机会。基于DDA和ONMS设计的DeconfuseTrack在多个基准上显著减少了混淆，提升了跟踪性能。
-- **摘要（英）**: To address confusion in multi-object tracking data association caused by trajectory diversity and ambiguous motion/appearance cues, this paper proposes Decomposed Data Association (DDA), which splits association into sub-problems and handles each with targeted non-learning modules and new cues. An occlusion-aware NMS retains occluded detections, and the resulting DeconfuseTrack reduces ID switches and assignment errors, achieving strong performance on benchmarks.
-- **核心贡献**: 提出DDA和ONMS，构建了专门解决关联混淆的DeconfuseTrack跟踪器。
-- **创新点**: 将全局数据关联分解为多个子问题并针对性消解混淆，结合遮挡感知NMS。
-- **结果**: 在多个MOT基准上减少了ID切换和分配错误，提升了跟踪精度。
+### JDT3D: Addressing the Gaps in LiDAR-Based Tracking-by-Attention.
+- **链接**: [arXiv:2407.04926](https://arxiv.org/abs/2407.04926) · [代码](https://github.com/TRAILab/JDT3D) · 📚 被引 4
+- **作者**: Brian Cheong, Jiachen Zhou, Steven Lake Waslander
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
-### Towards Generalizable Multi-Object Tracking. **⭐⭐⭐⭐** (相关度: 80%)
-- **链接**: [arXiv:2406.00429](https://arxiv.org/abs/2406.00429) · 📚 被引 37
-- **作者**: Zheng Qin, Le Wang, Sanping Zhou, Panpan Fu, Gang Hua, Wei Tang
-- **🏷️ 机构**: Institute of Artificial Intelligence and Robotics, Xi&#x0027;an Jiaotong University,National Key Laboratory of Human-Machine Hybrid Augmented Intelligence, National Engineering Research Center for Visual Information and Applications, School of Software Engineering, Xi&#x0027;an Jiaotong University, Wormpex AI Research
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对现有多目标跟踪器在不同场景下泛化能力差、需针对特定场景定制运动或外观关联的问题，研究了影响泛化的因素并将其具体化为跟踪场景属性，指导设计更通用的跟踪器。提出了点级到实例级的关系框架GeneralTrack，无需平衡运动和外观线索即可跨场景泛化。在多个基准上达到最先进性能，并展示了领域泛化潜力。
-- **摘要（英）**: To improve tracker generalization across diverse tracking scenarios, this paper identifies scenario attributes influencing generalization and proposes GeneralTrack, a point-wise to instance-wise relation framework that avoids balancing motion and appearance. It achieves state-of-the-art performance on multiple benchmarks and demonstrates domain generalization potential.
-- **核心贡献**: 提出场景属性分析和GeneralTrack框架，实现跨场景通用多目标跟踪。
-- **创新点**: 点级到实例级关系建模，消除运动与外观线索的平衡需求。
-- **结果**: 在多个基准上取得最先进性能，并验证领域泛化能力。
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### HIPTrack: Visual Tracking with Historical Prompts. **⭐⭐** (相关度: 60%)
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01822) · 📚 被引 107
-- **作者**: Wenrui Cai, Qingjie Liu, Yunhong Wang
-- **🏷️ 机构**: State Key Laboratory of Virtual Reality Technology and Systems, Beihang University,Beijing,China
-- **会议**: CVPR 2024
-- **摘要（中）**: 该论文摘要为空，无法获取具体研究问题、方法、改进点和效果信息。标题暗示提出一种利用历史提示的视觉跟踪方法，但缺乏细节支持评估。
-- **摘要（英）**: The abstract is empty, providing no details on the problem, method, improvements, or results. The title suggests a visual tracking approach using historical prompts, but insufficient information prevents meaningful evaluation.
-- **核心贡献**: 未知，因摘要缺失。
-- **创新点**: 未知，因摘要缺失。
-- **结果**: 未知，因摘要缺失。
+> Tracking-by-detection (TBD) methods achieve state-of-the-art performance on 3D tracking benchmarks for autonomous driving. On the other hand, tracking-by-attention (TBA) methods have the potential to outperform TBD methods, particularly for long occlusions and challenging detection settings. This work investigates why TBA methods continue to lag in performance behind TBD methods using a LiDAR-based joint detector and tracker called JDT3D. Based on this analysis, we propose two generalizable methods to bridge the gap between TBD and TBA methods: track sampling augmentation and confidence-based query propagation. JDT3D is trained and evaluated on the nuScenes dataset, achieving 0.574 on the AMOTA metric on the nuScenes test set, outperforming all existing LiDAR-based TBA approaches by over 6%. Based on our results, we further discuss some potential challenges with the existing TBA model formulation to explain the continued gap in performance with TBD methods. The implementation of JDT3D can be found at the following link: https://github.com/TRAILab/JDT3D.
 
-### MS-MANO: Enabling Hand Pose Tracking with Biomechanical Constraints. **⭐⭐⭐** (相关度: 40%)
-- **链接**: [arXiv:2404.10227](https://arxiv.org/abs/2404.10227) · 📚 被引 9
-- **作者**: Pengfei Xie, Wenqiang Xu, Tutian Tang, Zhenjun Yu, Cewu Lu
-- **🏷️ 机构**: Southeast University, Shanghai Jiao Tong University
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对现有手部姿态跟踪模型因简化关节驱动系统而产生不自然运动的问题，将肌肉骨骼系统与可学习参数化手模型MANO集成，提出MS-MANO模型，模拟肌肉和肌腱动力学驱动骨骼系统，并对扭矩轨迹施加生理约束。进一步提出仿真在环姿态细化框架BioPR，通过MLP网络细化初始姿态。实验分别与MyoSuite和两个大型公开数据集及最新方法对比，结果表明该方法在定量和定性上均持续提升基线。
-- **摘要（英）**: To address unnatural motions in hand pose tracking from simplified joint-actuated models, this paper integrates a musculoskeletal system with MANO to create MS-MANO, imposing physiological constraints on torque trajectories. A simulation-in-the-loop refinement framework BioPR further refines poses, consistently improving baselines quantitatively and qualitatively on public datasets.
-- **核心贡献**: 提出MS-MANO模型和BioPR细化框架，实现符合生理约束的手部姿态跟踪。
-- **创新点**: 融合肌肉骨骼动力学与参数化手模型，并采用仿真在环细化。
-- **结果**: 在多个数据集上优于现有方法，提升姿态估计精度和自然度。
+</details>
+
+### VETRA: A Dataset for Vehicle Tracking in Aerial Imagery - New Challenges for Multi-Object Tracking.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73013-9_4) · 📚 被引 6
+- **作者**: Jens Hellekes, Manuel Muehlhaus, Reza Bahmanyar, Seyed Majid Azimi, Franz Kurz
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Beyond MOT: Semantic Multi-object Tracking.
+- **链接**: [arXiv:2403.05021](https://arxiv.org/abs/2403.05021) · [代码](https://github.com/Nathan-Li123/SMOTer)
+- **作者**: Yunhao Li, Qin Li, Hao Wang, Xue Ma, Jiali Yao, Shaohua Dong et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Current multi-object tracking (MOT) aims to predict trajectories of targets (i.e., ''where'') in videos. Yet, knowing merely ''where'' is insufficient in many crucial applications. In comparison, semantic understanding such as fine-grained behaviors, interactions, and overall summarized captions (i.e., ''what'') from videos, associated with ''where'', is highly-desired for comprehensive video analysis. Thus motivated, we introduce Semantic Multi-Object Tracking (SMOT), that aims to estimate object trajectories and meanwhile understand semantic details of associated trajectories including instance captions, instance interactions, and overall video captions, integrating ''where'' and ''what'' for tracking. In order to foster the exploration of SMOT, we propose BenSMOT, a large-scale Benchmark for Semantic MOT. Specifically, BenSMOT comprises 3,292 videos with 151K frames, covering various scenarios for semantic tracking of humans. BenSMOT provides annotations for the trajectories of targets, along with associated instance captions in natural language, instance interactions, and overall caption for each video sequence. To our best knowledge, BenSMOT is the first publicly available benchmark for SMOT. Besides, to encourage future research, we present a novel tracker named SMOTer, which is specially designed and end-to-end trained for SMOT, showing promising performance. By releasing BenSMOT, we expect to go beyond conventional MOT by predicting ''where'' and ''what'' for SMOT, opening up a new direction in tracking for video understanding. We will release BenSMOT and SMOTer at https://github.com/Nathan-Li123/SMOTer.
+
+</details>
+
+### PapMOT: Exploring Adversarial Patch Attack Against Multiple Object Tracking.
+- **链接**: [arXiv:2504.09361](https://arxiv.org/abs/2504.09361) · 📚 被引 4
+- **作者**: Jiahuan Long, Tingsong Jiang, Wen Yao, Shuai Jia, Weijia Zhang, Weien Zhou et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Tracking multiple objects in a continuous video stream is crucial for many computer vision tasks. It involves detecting and associating objects with their respective identities across successive frames. Despite significant progress made in multiple object tracking (MOT), recent studies have revealed the vulnerability of existing MOT methods to adversarial attacks. Nevertheless, all of these attacks belong to digital attacks that inject pixel-level noise into input images, and are therefore ineffective in physical scenarios. To fill this gap, we propose PapMOT, which can generate physical adversarial patches against MOT for both digital and physical scenarios. Besides attacking the detection mechanism, PapMOT also optimizes a printable patch that can be detected as new targets to mislead the identity association process. Moreover, we introduce a patch enhancement strategy to further degrade the temporal consistency of tracking results across video frames, resulting in more aggressive attacks. We further develop new evaluation metrics to assess the robustness of MOT against such attacks. Extensive evaluations on multiple datasets demonstrate that our PapMOT can successfully attack various architectures of MOT trackers in digital scenarios. We also validate the effectiveness of PapMOT for physical attacks by deploying printed adversarial patches in the real world.
+
+</details>
+
+### Lost and Found: Overcoming Detector Failures in Online Multi-object Tracking.
+- **链接**: [arXiv:2407.10151](https://arxiv.org/abs/2407.10151) · [代码](https://github.com/lorenzovaquero/BUSCA) · 📚 被引 20
+- **作者**: Lorenzo Vaquero, Yihong Xu, Xavier Alameda-Pineda, Víctor M. Brea, Manuel Mucientes
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-object tracking (MOT) endeavors to precisely estimate the positions and identities of multiple objects over time. The prevailing approach, tracking-by-detection (TbD), first detects objects and then links detections, resulting in a simple yet effective method. However, contemporary detectors may occasionally miss some objects in certain frames, causing trackers to cease tracking prematurely. To tackle this issue, we propose BUSCA, meaning `to search', a versatile framework compatible with any online TbD system, enhancing its ability to persistently track those objects missed by the detector, primarily due to occlusions. Remarkably, this is accomplished without modifying past tracking results or accessing future frames, i.e., in a fully online manner. BUSCA generates proposals based on neighboring tracks, motion, and learned tokens. Utilizing a decision Transformer that integrates multimodal visual and spatiotemporal information, it addresses the object-proposal association as a multi-choice question-answering task. BUSCA is trained independently of the underlying tracker, solely on synthetic data, without requiring fine-tuning. Through BUSCA, we showcase consistent performance enhancements across five different trackers and establish a new state-of-the-art baseline across three different benchmarks. Code available at: https://github.com/lorenzovaquero/BUSCA.
+
+</details>
+
+### Boosting 3D Single Object Tracking with 2D Matching Distillation and 3D Pre-training.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73254-6_16) · 📚 被引 12
+- **作者**: Qiangqiang Wu, Yan Xia, Jia Wan, Antoni B. Chan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- MTMMC: A Large-Scale Real-World Multi-Modal Camera Tracking Benchmark. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
-- ADA-Track: End-to-End Multi-Camera 3D Multi-Object Tracking with Alternating Detection and Association. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- Self-Supervised Multi-Object Tracking with Path Consistency. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
-- Multi-Object Tracking in the Dark. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- DriveWorld: 4D Pre-Trained Scene Understanding via World Models for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Walker: Self-supervised Multiple Object Tracking by Walking on Temporal Appearance Graphs. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
