@@ -1,33 +1,19 @@
 # Self-supervised Vision — 2020 Guideline
 
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
-> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 34 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Self-Supervised Monocular Trained Depth Estimation Using Self-Attention and Discrete Disparity Volume.
-- **链接**: [arXiv:2003.13951](https://arxiv.org/abs/2003.13951) · 📚 被引 231
-- **作者**: Adrian Johnston, Gustavo Carneiro
+### From Image Collections to Point Clouds With Self-Supervised Shape and Pose Networks.
+- **链接**: [arXiv:2005.01939](https://arxiv.org/abs/2005.01939) · 📚 被引 31
+- **作者**: Navaneet K. L., Ansu Mathew, Shashank Kashyap, Wei-Chih Hung, Varun Jampani, R. Venkatesh Babu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Monocular depth estimation has become one of the most studied applications in computer vision, where the most accurate approaches are based on fully supervised learning models. However, the acquisition of accurate and large ground truth data sets to model these fully supervised methods is a major challenge for the further development of the area. Self-supervised methods trained with monocular videos constitute one the most promising approaches to mitigate the challenge mentioned above due to the wide-spread availability of training data. Consequently, they have been intensively studied, where the main ideas explored consist of different types of model architectures, loss functions, and occlusion masks to address non-rigid motion. In this paper, we propose two new ideas to improve self-supervised monocular trained depth estimation: 1) self-attention, and 2) discrete disparity prediction. Compared with the usual localised convolution operation, self-attention can explore a more general contextual information that allows the inference of similar disparity values at non-contiguous regions of the image. Discrete disparity prediction has been shown by fully supervised methods to provide a more robust and sharper depth estimation than the more common continuous disparity prediction, besides enabling the estimation of depth uncertainty. We show that the extension of the state-of-the-art self-supervised monocular trained depth estimator Monodepth2 with these two ideas allows us to design a model that produces the best results in the field in KITTI 2015 and Make3D, closing the gap with respect self-supervised stereo training and fully supervised approaches.
-
-</details>
-
-</details>
-
-### Contrastive Learning for Weakly Supervised Phrase Grounding.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58580-8_44)
-- **作者**: Tanmay Gupta, Arash Vahdat, Gal Chechik, Xiaodong Yang, Jan Kautz, Derek Hoiem
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Previous methods on estimating detailed human depth often require supervised training with `ground truth' depth data. This paper presents a self-supervised method that can be trained on YouTube videos without known depth, which makes training data collection simple and improves the generalization of the learned network. The self-supervised learning is achieved by minimizing a photo-consistency loss, which is evaluated between a video frame and its neighboring frames warped according to the estimated depth and the 3D non-rigid motion of the human body. To solve this non-rigid motion, we first estimate a rough SMPL model at each video frame and compute the non-rigid body motion accordingly, which enables self-supervised learning on estimating the shape details. Experiments demonstrate that our method enjoys better generalization and performs much better on data in the wild.
+> Reconstructing 3D models from 2D images is one of the fundamental problems in computer vision. In this work, we propose a deep learning technique for 3D object reconstruction from a single image. Contrary to recent works that either use 3D supervision or multi-view supervision, we use only single view images with no pose information during training as well. This makes our approach more practical requiring only an image collection of an object category and the corresponding silhouettes. We learn both 3D point cloud reconstruction and pose estimation networks in a self-supervised manner, making use of differentiable point cloud renderer to train with 2D supervision. A key novelty of the proposed technique is to impose 3D geometric reasoning into predicted 3D point clouds by rotating them with randomly sampled poses and then enforcing cycle consistency on both 3D reconstructions and poses. In addition, using single-view supervision allows us to do test-time optimization on a given test image. Experiments on the synthetic ShapeNet and real-world Pix3D datasets demonstrate that our approach, despite using less supervision, can achieve competitive performance compared to pose-supervised and multi-view supervised approaches.
 
 </details>
 
@@ -35,7 +21,19 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhu_Vision-Language_Navigation_With_Self-Supervised_Auxiliary_Reasoning_Tasks_CVPR_2020_paper.html)
 - **作者**: Fengda Zhu, Yi Zhu, Xiaojun Chang, Xiaodan Liang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
+
+### Self-Supervised Monocular Trained Depth Estimation Using Self-Attention and Discrete Disparity Volume.
+- **链接**: [arXiv:2003.13951](https://arxiv.org/abs/2003.13951) · 📚 被引 231
+- **作者**: Adrian Johnston, Gustavo Carneiro
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Monocular depth estimation has become one of the most studied applications in computer vision, where the most accurate approaches are based on fully supervised learning models. However, the acquisition of accurate and large ground truth data sets to model these fully supervised methods is a major challenge for the further development of the area. Self-supervised methods trained with monocular videos constitute one the most promising approaches to mitigate the challenge mentioned above due to the wide-spread availability of training data. Consequently, they have been intensively studied, where the main ideas explored consist of different types of model architectures, loss functions, and occlusion masks to address non-rigid motion. In this paper, we propose two new ideas to improve self-supervised monocular trained depth estimation: 1) self-attention, and 2) discrete disparity prediction. Compared with the usual localised convolution operation, self-attention can explore a more general contextual information that allows the inference of similar disparity values at non-contiguous regions of the image. Discrete disparity prediction has been shown by fully supervised methods to provide a more robust and sharper depth estimation than the more common continuous disparity prediction, besides enabling the estimation of depth uncertainty. We show that the extension of the state-of-the-art self-supervised monocular trained depth estimator Monodepth2 with these two ideas allows us to design a model that produces the best results in the field in KITTI 2015 and Make3D, closing the gap with respect self-supervised stereo training and fully supervised approaches.
+
+</details>
 
 ### Self2Self With Dropout: Learning Self-Supervised Denoising From Single Image.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Quan_Self2Self_With_Dropout_Learning_Self-Supervised_Denoising_From_Single_Image_CVPR_2020_paper.html) · 📚 被引 381
@@ -86,7 +84,7 @@
 - **会议**: CVPR 2020
 
 ### Self-Supervised Monocular Scene Flow Estimation.
-- **链接**: [arXiv:2004.04143](https://arxiv.org/abs/2004.04143) · 📚 被引 98
+- **链接**: [arXiv:2004.04143](https://arxiv.org/abs/2004.04143) · 📚 被引 99
 - **作者**: Junhwa Hur, Stefan Roth
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
@@ -124,18 +122,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Camera captured human pose is an outcome of several sources of variation. Performance of supervised 3D pose estimation approaches comes at the cost of dispensing with variations, such as shape and appearance, that may be useful for solving other related tasks. As a result, the learned model not only inculcates task-bias but also dataset-bias because of its strong reliance on the annotated samples, which also holds true for weakly-supervised models. Acknowledging this, we propose a self-supervised learning framework to disentangle such variations from unlabeled video frames. We leverage the prior knowledge on human skeleton and poses in the form of a single part-based 2D puppet model, human pose articulation constraints, and a set of unpaired 3D poses. Our differentiable formalization, bridging the representation gap between the 3D pose and spatial part maps, not only facilitates discovery of interpretable pose disentanglement but also allows us to operate on videos with diverse camera movements. Qualitative results on unseen in-the-wild datasets establish our superior generalization across multiple tasks beyond the primary tasks of 3D pose estimation and part segmentation. Furthermore, we demonstrate state-of-the-art weakly-supervised 3D pose estimation performance on both Human3.6M and MPI-INF-3DHP datasets.
-
-</details>
-
-### From Image Collections to Point Clouds With Self-Supervised Shape and Pose Networks.
-- **链接**: [arXiv:2005.01939](https://arxiv.org/abs/2005.01939) · 📚 被引 31
-- **作者**: Navaneet K. L., Ansu Mathew, Shashank Kashyap, Wei-Chih Hung, Varun Jampani, R. Venkatesh Babu
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Reconstructing 3D models from 2D images is one of the fundamental problems in computer vision. In this work, we propose a deep learning technique for 3D object reconstruction from a single image. Contrary to recent works that either use 3D supervision or multi-view supervision, we use only single view images with no pose information during training as well. This makes our approach more practical requiring only an image collection of an object category and the corresponding silhouettes. We learn both 3D point cloud reconstruction and pose estimation networks in a self-supervised manner, making use of differentiable point cloud renderer to train with 2D supervision. A key novelty of the proposed technique is to impose 3D geometric reasoning into predicted 3D point clouds by rotating them with randomly sampled poses and then enforcing cycle consistency on both 3D reconstructions and poses. In addition, using single-view supervision allows us to do test-time optimization on a given test image. Experiments on the synthetic ShapeNet and real-world Pix3D datasets demonstrate that our approach, despite using less supervision, can achieve competitive performance compared to pose-supervised and multi-view supervised approaches.
 
 </details>
 
@@ -241,6 +227,18 @@
 
 </details>
 
+### Self-Supervised Human Depth Estimation From Monocular Videos.
+- **链接**: [arXiv:2005.03358](https://arxiv.org/abs/2005.03358) · 📚 被引 24
+- **作者**: Feitong Tan, Hao Zhu, Zhaopeng Cui, Siyu Zhu, Marc Pollefeys, Ping Tan
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Previous methods on estimating detailed human depth often require supervised training with `ground truth' depth data. This paper presents a self-supervised method that can be trained on YouTube videos without known depth, which makes training data collection simple and improves the generalization of the learned network. The self-supervised learning is achieved by minimizing a photo-consistency loss, which is evaluated between a video frame and its neighboring frames warped according to the estimated depth and the 3D non-rigid motion of the human body. To solve this non-rigid motion, we first estimate a rough SMPL model at each video frame and compute the non-rigid body motion accordingly, which enables self-supervised learning on estimating the shape details. Experiments demonstrate that our method enjoys better generalization and performs much better on data in the wild.
+
+</details>
+
 ### Self-Supervised Learning of Video-Induced Visual Invariances.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Tschannen_Self-Supervised_Learning_of_Video-Induced_Visual_Invariances_CVPR_2020_paper.html) · 📚 被引 34
 - **作者**: Michael Tschannen, Josip Djolonga, Marvin Ritter, Aravindh Mahendran, Neil Houlsby, Sylvain Gelly et al.
@@ -272,21 +270,31 @@
 - **会议**: CVPR 2020
 
 ### S3VAE: Self-Supervised Sequential VAE for Representation Disentanglement and Data Generation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhu_S3VAE_Self-Supervised_Sequential_VAE_for_Representation_Disentanglement_and_Data_Generation_CVPR_2020_paper.html) · 📚 被引 59
+- **链接**: [arXiv:2005.11437](https://arxiv.org/abs/2005.11437) · 📚 被引 59
 - **作者**: Yizhe Zhu, Martin Renqiang Min, Asim Kadav, Hans Peter Graf
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose a sequential variational autoencoder to learn disentangled representations of sequential data (e.g., videos and audios) under self-supervision. Specifically, we exploit the benefits of some readily accessible supervisory signals from input data itself or some off-the-shelf functional models and accordingly design auxiliary tasks for our model to utilize these signals. With the supervision of the signals, our model can easily disentangle the representation of an input sequence into static factors and dynamic factors (i.e., time-invariant and time-varying parts). Comprehensive experiments across videos and audios verify the effectiveness of our model on representation disentanglement and generation of sequential data, and demonstrate that, our model with self-supervision performs comparable to, if not better than, the fully-supervised model with ground truth labels, and outperforms state-of-the-art unsupervised models by a large margin.
+
+</details>
+
 ### Disentangled and Controllable Face Image Generation via 3D Imitative-Contrastive Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Deng_Disentangled_and_Controllable_Face_Image_Generation_via_3D_Imitative-Contrastive_Learning_CVPR_2020_paper.html) · 📚 被引 287
+- **链接**: [arXiv:2004.11660](https://arxiv.org/abs/2004.11660) · 📚 被引 287
 - **作者**: Yu Deng, Jiaolong Yang, Dong Chen, Fang Wen, Xin Tong
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose DiscoFaceGAN, an approach for face image generation of virtual people with disentangled, precisely-controllable latent representations for identity of non-existing people, expression, pose, and illumination. We embed 3D priors into adversarial learning and train the network to imitate the image formation of an analytic 3D face deformation and rendering process. To deal with the generation freedom induced by the domain gap between real and rendered faces, we further introduce contrastive learning to promote disentanglement by comparing pairs of generated images. Experiments show that through our imitative-contrastive learning, the factor variations are very well disentangled and the properties of a generated face can be precisely controlled. We also analyze the learned latent space and present several meaningful properties supporting factor disentanglement. Our method can also be used to embed real images into the disentangled latent space. We hope our method could provide new understandings of the relationship between physical properties and deep image synthesis.
+
+</details>
+
 ## 跨领域论文（完整笔记在其他领域）
 
-- Monocular Differentiable Rendering for Self-supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Improving Object Detection with Selective Self-supervised Self-training. → [object-detection](../object-detection/Guideline%202020.md)
-- Self-Supervised Monocular 3D Face Reconstruction by Occlusion-Aware Multi-view Geometry Consistency. → [3d-detection](../3d-detection/Guideline%202020.md)
-- S3Net: Semantic-Aware Self-supervised Depth Estimation with Monocular Videos and Synthetic Data. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
-- Self-supervised Monocular Depth Estimation: Solving the Dynamic Object Problem by Semantic Guidance. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
+- 3D Packing for Self-Supervised Monocular Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
+- Exploit Clues From Views: Self-Supervised and Regularized Learning for Multiview Object Recognition. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
+- On the Uncertainty of Self-Supervised Monocular Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)

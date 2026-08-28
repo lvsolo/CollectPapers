@@ -5,11 +5,11 @@
 
 > 同领域其他年份: 
 
-### Generative Sparse Detection Networks for 3D Single-Shot Object Detection.
-- **链接**: [arXiv:2006.12356](https://arxiv.org/abs/2006.12356) · 📚 被引 107
-- **作者**: JunYoung Gwak, Christopher B. Choy, Silvio Savarese
+### Cross-Domain Document Object Detection: Benchmark Suite and Method.
+- **链接**: [arXiv:2003.13197](https://arxiv.org/abs/2003.13197) · [代码](https://github.com/kailigo/cddod) · 📚 被引 41
+- **作者**: Kai Li, Curtis Wigington, Chris Tensmeyer, Handong Zhao, Nikolaos Barmpalios, Vlad I. Morariu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -21,25 +21,19 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wu_Rethinking_Classification_and_Localization_for_Object_Detection_CVPR_2020_paper.html) · 📚 被引 625
 - **作者**: Yue Wu, Yinpeng Chen, Lu Yuan, Zicheng Liu, Lijuan Wang, Hongzhi Li et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Many-Shot from Low-Shot: Learning to Annotate Using Mixed Supervision for Object Detection.
-- **链接**: [arXiv:2008.09694](https://arxiv.org/abs/2008.09694) · 📚 被引 13
-- **作者**: Carlo Biffi, Steven McDonagh, Philip H. S. Torr, Ales Leonardis, Sarah Parisot
+### Context R-CNN: Long Term Temporal Context for Per-Camera Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Beery_Context_R-CNN_Long_Term_Temporal_Context_for_Per-Camera_Object_Detection_CVPR_2020_paper.html) · 📚 被引 113
+- **作者**: Sara Beery, Guanhang Wu, Vivek Rathod, Ronny Votel, Jonathan Huang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Object detection has witnessed significant progress by relying on large, manually annotated datasets. Annotating such datasets is highly time consuming and expensive, which motivates the development of weakly supervised and few-shot object detection methods. However, these methods largely underperform with respect to their strongly supervised counterpart, as weak training signals \emph{often} result in partial or oversized detections. Towards solving this problem we introduce, for the first time, an online annotation module (OAM) that learns to generate a many-shot set of \emph{reliable} annotations from a larger volume of weakly labelled images. Our OAM can be jointly trained with any fully supervised two-stage object detection method, providing additional training annotations on the fly. This results in a fully end-to-end strategy that only requires a low-shot set of fully annotated images. The integration of the OAM with Fast(er) R-CNN improves their performance by $17\%$ mAP, $9\%$ AP50 on PASCAL VOC 2007 and MS-COCO benchmarks, and significantly outperforms competing methods using mixed supervision.
-
-</details>
-
-### TIDE: A General Toolbox for Identifying Object Detection Errors.
-- **链接**: [arXiv:2008.08115](https://arxiv.org/abs/2008.08115)
-- **作者**: Daniel Bolya, Sean Foley, James Hays, Judy Hoffman
+### Learning a Unified Sample Weighting Network for Object Detection.
+- **链接**: [arXiv:2006.06568](https://arxiv.org/abs/2006.06568) · [代码](https://github.com/caiqi/sample-weighting-network) · 📚 被引 36
+- **作者**: Qi Cai, Yingwei Pan, Yu Wang, Jingen Liu, Ting Yao, Tao Mei
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -51,7 +45,7 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Cao_D2Det_Towards_High_Quality_Object_Detection_and_Instance_Segmentation_CVPR_2020_paper.html) · 📚 被引 179
 - **作者**: Jiale Cao, Hisham Cholakkal, Rao Muhammad Anwer, Fahad Shahbaz Khan, Yanwei Pang, Ling Shao
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 ### Prime Sample Attention in Object Detection.
 - **链接**: [arXiv:1904.04821](https://arxiv.org/abs/1904.04821) · 📚 被引 187
@@ -65,11 +59,11 @@
 
 </details>
 
-### End-to-End Object Detection with Transformers.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58452-8_13)
-- **作者**: Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, Sergey Zagoruyko
+### Memory Enhanced Global-Local Aggregation for Video Object Detection.
+- **链接**: [arXiv:2003.12063](https://arxiv.org/abs/2003.12063) · [代码](https://github.com/Scalsol/mega.pytorch) · 📚 被引 316
+- **作者**: Yihong Chen, Yue Cao, Han Hu, Liwei Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -81,7 +75,7 @@
 - **链接**: [arXiv:2006.12884](https://arxiv.org/abs/2006.12884) · 📚 被引 72
 - **作者**: Ze Chen, Zhihang Fu, Rongxin Jiang, Yaowu Chen, Xian-Sheng Hua
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -93,7 +87,7 @@
 - **链接**: [arXiv:1912.01106](https://arxiv.org/abs/1912.01106) · 📚 被引 40
 - **作者**: Bo Chen, Golnaz Ghiasi, Hanxiao Liu, Tsung-Yi Lin, Dmitry Kalenichenko, Hartwig Adam et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -117,7 +111,7 @@
 - **链接**: [arXiv:2006.04356](https://arxiv.org/abs/2006.04356) · 📚 被引 86
 - **作者**: Liang Du, Xiaoqing Ye, Xiao Tan, Jianfeng Feng, Zhenbo Xu, Errui Ding et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -129,7 +123,7 @@
 - **链接**: [arXiv:1908.01998](https://arxiv.org/abs/1908.01998) · [代码](https://github.com/fanq15/Few-Shot-Object-Detection-Dataset) · 📚 被引 522
 - **作者**: Qi Fan, Wei Zhuo, Chi-Keung Tang, Yu-Wing Tai
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -141,31 +135,19 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Fan_Camouflaged_Object_Detection_CVPR_2020_paper.html)
 - **作者**: Deng-Ping Fan, Ge-Peng Ji, Guolei Sun, Ming-Ming Cheng, Jianbing Shen, Ling Shao
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Corner Proposal Network for Anchor-Free, Two-Stage Object Detection.
-- **链接**: [arXiv:2007.13816](https://arxiv.org/abs/2007.13816) · [代码](https://github.com/Duankaiwen/CPNDet) · 📚 被引 93
-- **作者**: Kaiwen Duan, Lingxi Xie, Honggang Qi, Song Bai, Qingming Huang, Qi Tian
-- **🏷️ 机构**: USTC
-- **会议**: ECCV 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The goal of object detection is to determine the class and location of objects in an image. This paper proposes a novel anchor-free, two-stage framework which first extracts a number of object proposals by finding potential corner keypoint combinations and then assigns a class label to each proposal by a standalone classification stage. We demonstrate that these two stages are effective solutions for improving recall and precision, respectively, and they can be integrated into an end-to-end network. Our approach, dubbed Corner Proposal Network (CPN), enjoys the ability to detect objects of various scales and also avoids being confused by a large number of false-positive proposals. On the MS-COCO dataset, CPN achieves an AP of 49.2% which is competitive among state-of-the-art object detection methods. CPN also fits the scenario of computational efficiency, which achieves an AP of 41.6%/39.7% at 26.2/43.3 FPS, surpassing most competitors with the same inference speed. Code is available at https://github.com/Duankaiwen/CPNDet
-
-</details>
-
-### Dual Refinement Underwater Object Detection Network.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58565-5_17)
-- **作者**: Baojie Fan, Wei Chen, Yang Cong, Jiandong Tian
+### Taking a Deeper Look at Co-Salient Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Fan_Taking_a_Deeper_Look_at_Co-Salient_Object_Detection_CVPR_2020_paper.html) · 📚 被引 77
+- **作者**: Deng-Ping Fan, Zheng Lin, Ge-Peng Ji, Dingwen Zhang, Huazhu Fu, Ming-Ming Cheng
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### BBS-Net: RGB-D Salient Object Detection with a Bifurcated Backbone Strategy Network.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58610-2_17) · 📚 被引 294
-- **作者**: Deng-Ping Fan, Yingjie Zhai, Ali Borji, Jufeng Yang, Ling Shao
+### JL-DCF: Joint Learning and Densely-Cooperative Fusion Framework for RGB-D Salient Object Detection.
+- **链接**: [arXiv:2004.08515](https://arxiv.org/abs/2004.08515) · [代码](https://github.com/kerenfu/JLDCF) · 📚 被引 308
+- **作者**: Keren Fu, Deng-Ping Fan, Ge-Peng Ji, Qijun Zhao
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -177,7 +159,7 @@
 - **链接**: [arXiv:1912.05384](https://arxiv.org/abs/1912.05384) · 📚 被引 515
 - **作者**: Chaoxu Guo, Bin Fan, Qian Zhang, Shiming Xiang, Chunhong Pan
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -185,19 +167,11 @@
 
 </details>
 
-</details>
-
-### Mining Inter-Video Proposal Relations for Video Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58589-1_26) · 📚 被引 67
-- **作者**: Mingfei Han, Yali Wang, Xiaojun Chang, Yu Qiao
-- **🏷️ 机构**: Shanghai AI Lab
-- **会议**: ECCV 2020
-
-### Streaming Object Detection for 3-D Point Clouds.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58523-5_25)
-- **作者**: Wei Han, Zhengdong Zhang, Benjamin Caine, Brandon Yang, Christoph Sprunk, Ouais Alsharif et al.
+### Cylindrical Convolutional Networks for Joint Object Detection and Viewpoint Estimation.
+- **链接**: [arXiv:2003.11303](https://arxiv.org/abs/2003.11303) · 📚 被引 14
+- **作者**: Sunghun Joung, Seungryong Kim, Hanjae Kim, Minsu Kim, Ig-Jae Kim, Junghyun Cho et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -205,17 +179,11 @@
 
 </details>
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Conventional object detection models inevitably encounter a performance drop as the domain disparity exists. Unsupervised domain adaptive object detection is proposed recently to reduce the disparity between domains, where the source domain is label-rich while the target domain is label-agnostic. The existing models follow a parameter shared siamese structure for adversarial domain alignment, which, however, easily leads to the collapse and out-of-control risk of the source domain and brings negative impact to feature adaption. The main reason is that the labeling unfairness (asymmetry) between source and target makes the parameter sharing mechanism unable to adapt. Therefore, in order to avoid the source domain collapse risk caused by parameter sharing, we propose an asymmetric tri-way Faster-RCNN (ATF) for domain adaptive object detection. Our ATF model has two distinct merits: 1) A ancillary net supervised by source label is deployed to learn ancillary target features and simultaneously preserve the discrimination of source domain, which enhances the structural discrimination (object classification vs. bounding box regression) of domain alignment. 2) The asymmetric structure consisting of a chief net and an independent ancillary net essentially overcomes the parameter sharing aroused source risk collapse. The adaption safety of the proposed ATF detector is guaranteed. Extensive experiments on a number of datasets, including Cityscapes, Foggy-cityscapes, KITTI, Sim10k, Pascal VOC, Clipart and Watercolor, demonstrate the SOTA performance of our method.
-
-</details>
-
-### Accurate RGB-D Salient Object Detection via Collaborative Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58523-5_4)
-- **作者**: Wei Ji, Jingjing Li, Miao Zhang, Yongri Piao, Huchuan Lu
+### Multiple Anchor Learning for Visual Object Detection.
+- **链接**: [arXiv:1912.02252](https://arxiv.org/abs/1912.02252) · 📚 被引 82
+- **作者**: Wei Ke, Tianliang Zhang, Zeyi Huang, Qixiang Ye, Jianzhuang Liu, Dong Huang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -227,7 +195,7 @@
 - **链接**: [arXiv:2001.06690](https://arxiv.org/abs/2001.06690) · 📚 被引 36
 - **作者**: Yazhao Li, Yanwei Pang, Jianbing Shen, Jiale Cao, Ling Shao
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -235,25 +203,11 @@
 
 </details>
 
-</details>
-
-### RGB-D Salient Object Detection with Cross-Modality Modulation and Selection.
-- **链接**: [arXiv:2007.07051](https://arxiv.org/abs/2007.07051)
-- **作者**: Chongyi Li, Runmin Cong, Yongri Piao, Qianqian Xu, Chen Change Loy
-- **🏷️ 机构**: NTU S-Lab
-- **会议**: ECCV 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We present an effective method to progressively integrate and refine the cross-modality complementarities for RGB-D salient object detection (SOD). The proposed network mainly solves two challenging issues: 1) how to effectively integrate the complementary information from RGB image and its corresponding depth map, and 2) how to adaptively select more saliency-related features. First, we propose a cross-modality feature modulation (cmFM) module to enhance feature representations by taking the depth features as prior, which models the complementary relations of RGB-D data. Second, we propose an adaptive feature selection (AFS) module to select saliency-related features and suppress the inferior ones. The AFS module exploits multi-modality spatial feature fusion with the self-modality and cross-modality interdependencies of channel features are considered. Third, we employ a saliency-guided position-edge attention (sg-PEA) module to encourage our network to focus more on saliency-related regions. The above modules as a whole, called cmMS block, facilitates the refinement of saliency features in a coarse-to-fine fashion. Coupled with a bottom-up inference, the refined saliency features enable accurate and edge-preserving SOD. Extensive experiments demonstrate that our network outperforms state-of-the-art saliency detectors on six popular RGB-D SOD benchmarks.
-
-</details>
-
-### Quantum-Soft QUBO Suppression for Accurate Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58526-6_10) · 📚 被引 24
-- **作者**: Junde Li, Swaroop Ghosh
+### Overcoming Classifier Imbalance for Long-Tail Object Detection With Balanced Group Softmax.
+- **链接**: [arXiv:2006.10408](https://arxiv.org/abs/2006.10408) · [代码](https://github.com/FishYuLi/BalancedGroupSoftmax) · 📚 被引 231
+- **作者**: Yu Li, Tao Wang, Bingyi Kang, Sheng Tang, Chunfeng Wang, Jintao Li et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -265,7 +219,7 @@
 - **链接**: [arXiv:1912.05086](https://arxiv.org/abs/1912.05086) · 📚 被引 86
 - **作者**: Hengduo Li, Zuxuan Wu, Chen Zhu, Caiming Xiong, Richard Socher, Larry S. Davis
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -277,7 +231,7 @@
 - **链接**: [arXiv:2005.09973](https://arxiv.org/abs/2005.09973) · [代码](https://github.com/Anymake/DRN_CVPR2020) · 📚 被引 382
 - **作者**: Xingjia Pan, Yuqiang Ren, Kekai Sheng, Weiming Dong, Haolei Yuan, Xiaowei Guo et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -289,13 +243,13 @@
 - **链接**: [arXiv:2007.09062](https://arxiv.org/abs/2007.09062) · 📚 被引 751
 - **作者**: Youwei Pang, Xiaoqi Zhao, Lihe Zhang, Huchuan Lu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### AABO: Adaptive Anchor Box Optimization for Object Detection via Bayesian Sub-sampling.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58558-7_33) · 📚 被引 15
-- **作者**: Wenshuo Ma, Tingzhong Tian, Hang Xu, Yimin Huang, Zhenguo Li
+### Large-Scale Object Detection in the Wild From Imbalanced Multi-Labels.
+- **链接**: [arXiv:2005.08455](https://arxiv.org/abs/2005.08455) · 📚 被引 54
+- **作者**: Junran Peng, Xingyuan Bu, Ming Sun, Zhaoxiang Zhang, Tieniu Tan, Junjie Yan
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -307,19 +261,19 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Perez-Rua_Incremental_Few-Shot_Object_Detection_CVPR_2020_paper.html)
 - **作者**: Juan-Manuel Pérez-Rúa, Xiatian Zhu, Timothy M. Hospedales, Tao Xiang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Hierarchical Dynamic Filtering Network for RGB-D Salient Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58595-2_15) · 📚 被引 191
-- **作者**: Youwei Pang, Lihe Zhang, Xiaoqi Zhao, Huchuan Lu
+### A2dele: Adaptive and Attentive Depth Distiller for Efficient RGB-D Salient Object Detection.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Piao_A2dele_Adaptive_and_Attentive_Depth_Distiller_for_Efficient_RGB-D_Salient_CVPR_2020_paper.html) · 📚 被引 236
+- **作者**: Yongri Piao, Zhengkun Rong, Miao Zhang, Weisong Ren, Huchuan Lu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Chained-Tracker: Chaining Paired Attentive Regression Results for End-to-End Joint Multiple-Object Detection and Tracking.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58548-8_9) · 📚 被引 298
-- **作者**: Jinlong Peng, Changan Wang, Fangbin Wan, Yang Wu, Yabiao Wang, Ying Tai et al.
+### DR Loss: Improving Object Detection by Distributional Ranking.
+- **链接**: [arXiv:1907.10156](https://arxiv.org/abs/1907.10156) · [代码](https://github.com/idstcv/DR_loss) · 📚 被引 60
+- **作者**: Qi Qian, Lei Chen, Hao Li, Rong Jin
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -331,13 +285,13 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Qiu_Offset_Bin_Classification_Network_for_Accurate_Object_Detection_CVPR_2020_paper.html) · 📚 被引 34
 - **作者**: Heqian Qiu, Hongliang Li, Qingbo Wu, Hengcan Shi
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### UFO2: A Unified Framework Towards Omni-supervised Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_18) · 📚 被引 39
-- **作者**: Zhongzheng Ren, Zhiding Yu, Xiaodong Yang, Ming-Yu Liu, Alexander G. Schwing, Jan Kautz
+### Instance-Aware, Context-Focused, and Memory-Efficient Weakly Supervised Object Detection.
+- **链接**: [arXiv:2004.04725](https://arxiv.org/abs/2004.04725) · [代码](https://github.com/NVlabs/wetectron) · 📚 被引 183
+- **作者**: Zhongzheng Ren, Zhiding Yu, Xiaodong Yang, Ming-Yu Liu, Yong Jae Lee, Alexander G. Schwing et al.
 - **🏷️ 机构**: NVIDIA
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -349,13 +303,13 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Noise-Aware_Fully_Webly_Supervised_Object_Detection_CVPR_2020_paper.html) · 📚 被引 30
 - **作者**: Yunhang Shen, Rongrong Ji, Zhiwei Chen, Xiaopeng Hong, Feng Zheng, Jianzhuang Liu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 ### EfficientDet: Scalable and Efficient Object Detection.
-- **链接**: [arXiv:1911.09070](https://arxiv.org/abs/1911.09070) · [代码](https://github.com/google/automl) · 📚 被引 7865
+- **链接**: [arXiv:1911.09070](https://arxiv.org/abs/1911.09070) · [代码](https://github.com/google/automl) · 📚 被引 7871
 - **作者**: Mingxing Tan, Ruoming Pang, Quoc V. Le
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -379,7 +333,7 @@
 - **链接**: [arXiv:1912.00821](https://arxiv.org/abs/1912.00821) · 📚 被引 41
 - **作者**: Ali Varamesh, Tinne Tuytelaars
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -387,15 +341,11 @@
 
 </details>
 
-> Current object detection frameworks mainly rely on bounding box regression to localize objects. Despite the remarkable progress in recent years, the precision of bounding box regression remains unsatisfactory, hence limiting performance in object detection. We observe that precise localization requires careful placement of each side of the bounding box. However, the mainstream approach, which focuses on predicting centers and sizes, is not the most effective way to accomplish this task, especially when there exists displacements with large variance between the anchors and the targets. In this paper, we propose an alternative approach, named as Side-Aware Boundary Localization (SABL), where each side of the bounding box is respectively localized with a dedicated network branch. To tackle the difficulty of precise localization in the presence of displacements with large variance, we further propose a two-step localization scheme, which first predicts a range of movement through bucket prediction and then pinpoints the precise position within the predicted bucket. We test the proposed method on both two-stage and single-stage detection frameworks. Replacing the standard bounding box regression branch with the proposed design leads to significant improvements on Faster R-CNN, RetinaNet, and Cascade R-CNN, by 3.0%, 1.7%, and 0.9%, respectively. Code is available at https://github.com/open-mmlab/mmdetection.
-
-</details>
-
-### Large Batch Optimization for Object Detection: Training COCO in 12 minutes.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58589-1_29) · 📚 被引 9
-- **作者**: Tong Wang, Yousong Zhu, Chaoyang Zhao, Wei Zeng, Yaowei Wang, Jinqiao Wang et al.
+### Robust Object Detection Under Occlusion With Context-Aware CompositionalNets.
+- **链接**: [arXiv:2005.11643](https://arxiv.org/abs/2005.11643) · 📚 被引 120
+- **作者**: Angtian Wang, Yihong Sun, Adam Kortylewski, Alan L. Yuille
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -403,7 +353,11 @@
 
 </details>
 
-> A recent approach for object detection and human pose estimation is to regress bounding boxes or human keypoints from a central point on the object or person. While this center-point regression is simple and efficient, we argue that the image features extracted at a central point contain limited information for predicting distant keypoints or bounding box boundaries, due to object deformation and scale/orientation variation. To facilitate inference, we propose to instead perform regression from a set of points placed at more advantageous positions. This point set is arranged to reflect a good initialization for the given task, such as modes in the training data for pose estimation, which lie closer to the ground truth than the central point and provide more informative features for regression. As the utility of a point set depends on how well its scale, aspect ratio and rotation matches the target, we adopt the anchor box technique of sampling these transformations to generate additional point-set candidates. We apply this proposed framework, called Point-Set Anchors, to object detection, instance segmentation, and human pose estimation. Our results show that this general-purpose approach can achieve performance competitive with state-of-the-art methods for each of these tasks. Code is available at \url{https://github.com/FangyunWei/PointSetAnchor}
+### Scale-Equalizing Pyramid Convolution for Object Detection.
+- **链接**: [arXiv:2005.03101](https://arxiv.org/abs/2005.03101) · [代码](https://github.com/jshilong/SEPC) · 📚 被引 119
+- **作者**: Xinjiang Wang, Shilong Zhang, Zhuoran Yu, Litong Feng, Wayne Zhang
+- **🏷️ 机构**: CUHK / SenseTime
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -415,7 +369,7 @@
 - **链接**: [arXiv:2008.11048](https://arxiv.org/abs/2008.11048) · 📚 被引 317
 - **作者**: Jun Wei, Shuhui Wang, Zhe Wu, Chi Su, Qingming Huang, Qi Tian
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -423,11 +377,9 @@
 
 </details>
 
-</details>
-
-### CenterNet Heatmap Propagation for Real-Time Video Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58595-2_14)
-- **作者**: Zhujun Xu, Emir Hrustic, Damien Vivet
+### Exploring Bottom-Up and Top-Down Cues With Attentive Learning for Webly Supervised Object Detection.
+- **链接**: [arXiv:2003.09790](https://arxiv.org/abs/2003.09790) · 📚 被引 10
+- **作者**: Zhonghua Wu, Qingyi Tao, Guosheng Lin, Jianfei Cai
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
@@ -469,19 +421,23 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- Object as Hotspots: An Anchor-Free 3D Object Detection Approach via Firing of Hotspots. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Monocular Differentiable Rendering for Self-supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Kinematic 3D Object Detection in Monocular Video. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Improving 3D Object Detection Through Progressive Population Based Augmentation. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Finding Your (3D) Center: 3D Object Detection Using a Learned Loss. → [3d-detection](../3d-detection/Guideline%202020.md)
-- EPNet: Enhancing Point Features with Image Semantics for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
-- An LSTM Approach to Temporal 3D Object Detection in LiDAR Point Clouds. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Cross-Modal Weighting Network for RGB-D Salient Object Detection. → [multimodal](../multimodal/Guideline%202020.md)
-- Reinforced Axial Refinement Network for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Weakly Supervised 3D Object Detection from Lidar Point Cloud. → [3d-detection](../3d-detection/Guideline%202020.md)
-- GeoGraph: Graph-Based Multi-view Object Detection with Geometric Cues End-to-End. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
-- Distance-Normalized Unified Representation for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Towards Generalization Across Depth for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Pillar-Based Object Detection for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202020.md)
-- InfoFocus: 3D Object Detection for Autonomous Driving with Dynamic Information Modeling. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Monocular 3D Object Detection via Feature Domain Adaptation. → [3d-detection](../3d-detection/Guideline%202020.md)
+- MLCVNet: Multi-Level Context VoteNet for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
+- Density-Based Clustering for 3D Object Detection in Point Clouds. → [3d-detection](../3d-detection/Guideline%202020.md)
+- DSGN: Deep Stereo Geometry Network for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
+- A Hierarchical Graph Network for 3D Object Detection on Point Clouds. → [3d-detection](../3d-detection/Guideline%202020.md)
+- MonoPair: Monocular 3D Object Detection Using Pairwise Spatial Relationships. → [3d-detection](../3d-detection/Guideline%202020.md)
+- Learning Depth-Guided Convolutions for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
+- Hit-Detector: Hierarchical Trinity Architecture Search for Object Detection. → [neural-architecture-search](../neural-architecture-search/Guideline%202020.md)
+- Structure Aware Single-Stage 3D Object Detection From Point Cloud. → [3d-detection](../3d-detection/Guideline%202020.md)
+- What You See is What You Get: Exploiting Visibility for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
+- SP-NAS: Serial-to-Parallel Backbone Search for Object Detection. → [neural-architecture-search](../neural-architecture-search/Guideline%202020.md)
+- IDA-3D: Instance-Depth-Aware 3D Object Detection From Stereo Vision for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202020.md)
+- ImVoteNet: Boosting 3D Object Detection in Point Clouds With Image Votes. → [3d-detection](../3d-detection/Guideline%202020.md)
+- End-to-End Pseudo-LiDAR for Image-Based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
+- PV-RCNN: Point-Voxel Feature Set Abstraction for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
+- Point-GNN: Graph Neural Network for 3D Object Detection in a Point Cloud. → [3d-detection](../3d-detection/Guideline%202020.md)
+- Disp R-CNN: Stereo 3D Object Detection via Shape Prior Guided Instance Disparity Estimation. → [3d-detection](../3d-detection/Guideline%202020.md)
+- PointPainting: Sequential Fusion for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
+- NAS-FCOS: Fast Neural Architecture Search for Object Detection. → [neural-architecture-search](../neural-architecture-search/Guideline%202020.md)
+- HVNet: Hybrid Voxel Network for LiDAR Based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
+- SESS: Self-Ensembling Semi-Supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)

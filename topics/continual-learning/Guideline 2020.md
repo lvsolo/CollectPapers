@@ -5,23 +5,23 @@
 
 > 同领域其他年份: 
 
-### Adversarial Continual Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58621-8_23)
-- **作者**: Sayna Ebrahimi, Franziska Meier, Roberto Calandra, Trevor Darrell, Marcus Rohrbach
-- **🏷️ 机构**: UC Berkeley
-- **会议**: ECCV 2020
-
-### Online Continual Learning Under Extreme Memory Constraints.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58604-1_43) · 📚 被引 37
-- **作者**: Enrico Fini, Stéphane Lathuilière, Enver Sangineto, Moin Nabi, Elisa Ricci
+### Conditional Channel Gated Networks for Task-Aware Continual Learning.
+- **链接**: [arXiv:2004.00070](https://arxiv.org/abs/2004.00070) · 📚 被引 140
+- **作者**: Davide Abati, Jakub M. Tomczak, Tijmen Blankevoort, Simone Calderara, Rita Cucchiara, Babak Ehteshami Bejnordi
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
-### Imbalanced Continual Learning with Partitioning Reservoir Sampling.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58601-0_25) · 📚 被引 72
-- **作者**: Chris Dongjoo Kim, Jinseo Jeong, Gunhee Kim
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Convolutional Neural Networks experience catastrophic forgetting when optimized on a sequence of learning problems: as they meet the objective of the current training examples, their performance on previous tasks drops drastically. In this work, we introduce a novel framework to tackle this problem with conditional computation. We equip each convolutional layer with task-specific gating modules, selecting which filters to apply on the given input. This way, we achieve two appealing properties. Firstly, the execution patterns of the gates allow to identify and protect important filters, ensuring no loss in the performance of the model for previously learned tasks. Secondly, by using a sparsity objective, we can promote the selection of a limited set of kernels, allowing to retain sufficient model capacity to digest new tasks.Existing solutions require, at test time, awareness of the task to which each example belongs to. This knowledge, however, may not be available in many practical scenarios. Therefore, we additionally introduce a task classifier that predicts the task label of each example, to deal with settings in which a task oracle is not available. We validate our proposal on four continual learning datasets. Results show that our model consistently outperforms existing methods both in the presence and the absence of a task oracle. Notably, on Split SVHN and Imagenet-50 datasets, our model yields up to 23.98% and 17.42% improvement in accuracy w.r.t. competing methods.
+
+</details>
+
+### Continual Learning With Extended Kronecker-Factored Approximate Curvature.
+- **链接**: [arXiv:2004.07507](https://arxiv.org/abs/2004.07507) · 📚 被引 44
+- **作者**: Janghyeon Lee, Hyeong Gwon Hong, Donggyu Joo, Junmo Kim
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -33,7 +33,7 @@
 - **链接**: [arXiv:2004.00440](https://arxiv.org/abs/2004.00440) · 📚 被引 268
 - **作者**: Lu Yu, Bartlomiej Twardowski, Xialei Liu, Luis Herranz, Kai Wang, Yongmei Cheng et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -42,10 +42,10 @@
 </details>
 
 ### Modeling the Background for Incremental Learning in Semantic Segmentation.
-- **链接**: [arXiv:2002.00718](https://arxiv.org/abs/2002.00718) · 📚 被引 308
+- **链接**: [arXiv:2002.00718](https://arxiv.org/abs/2002.00718) · 📚 被引 309
 - **作者**: Fabio Cermelli, Massimiliano Mancini, Samuel Rota Bulò, Elisa Ricci, Barbara Caputo
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -54,10 +54,10 @@
 </details>
 
 ### Incremental Learning in Online Scenario.
-- **链接**: [arXiv:2003.13191](https://arxiv.org/abs/2003.13191) · 📚 被引 139
+- **链接**: [arXiv:2003.13191](https://arxiv.org/abs/2003.13191) · 📚 被引 140
 - **作者**: Jiangpeng He, Runyu Mao, Zeman Shao, Fengqing Zhu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -84,7 +84,13 @@
 - **会议**: CVPR 2020
 
 ### Maintaining Discrimination and Fairness in Class Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhao_Maintaining_Discrimination_and_Fairness_in_Class_Incremental_Learning_CVPR_2020_paper.html) · 📚 被引 430
+- **链接**: [arXiv:1911.07053](https://arxiv.org/abs/1911.07053) · 📚 被引 430
 - **作者**: Bowen Zhao, Xi Xiao, Guojun Gan, Bin Zhang, Shu-Tao Xia
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deep neural networks (DNNs) have been applied in class incremental learning, which aims to solve common real-world problems of learning new classes continually. One drawback of standard DNNs is that they are prone to catastrophic forgetting. Knowledge distillation (KD) is a commonly used technique to alleviate this problem. In this paper, we demonstrate it can indeed help the model to output more discriminative results within old classes. However, it cannot alleviate the problem that the model tends to classify objects into new classes, causing the positive effect of KD to be hidden and limited. We observed that an important factor causing catastrophic forgetting is that the weights in the last fully connected (FC) layer are highly biased in class incremental learning. In this paper, we propose a simple and effective solution motivated by the aforementioned observations to address catastrophic forgetting. Firstly, we utilize KD to maintain the discrimination within old classes. Then, to further maintain the fairness between old classes and new classes, we propose Weight Aligning (WA) that corrects the biased weights in the FC layer after normal training process. Unlike previous work, WA does not require any extra parameters or a validation set in advance, as it utilizes the information provided by the biased weights themselves. The proposed method is evaluated on ImageNet-1000, ImageNet-100, and CIFAR-100 under various settings. Experimental results show that the proposed method can effectively alleviate catastrophic forgetting and significantly outperform state-of-the-art methods.
+
+</details>
