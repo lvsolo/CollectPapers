@@ -1,7 +1,7 @@
 # Video Understanding — 2023 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 14 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -10,6 +10,8 @@
 - **作者**: Soumya Jahagirdar, Minesh Mathew, Dimosthenis Karatzas, C. V. Jawahar
 - **🏷️ 机构**: IIIT Hyderabad,CVIT,India, Wadhwani AI, UAB,Computer Vision Center,Spain
 - **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -31,6 +33,8 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
 > Understanding verbs is crucial to modelling how people and objects interact with each other and the environment through space and time. Recently, state-of-the-art video-language models based on CLIP have been shown to have limited verb understanding and to rely extensively on nouns, restricting their performance in real-world video applications that require action and temporal understanding. In this work, we improve verb understanding for CLIP-based video-language models by proposing a new Verb-Focused Contrastive (VFC) framework. This consists of two main components: (1) leveraging pretrained large language models (LLMs) to create hard negatives for cross-modal contrastive learning, together with a calibration strategy to balance the occurrence of concepts in positive and negative pairs; and (2) enforcing a fine-grained, verb phrase alignment loss. Our method achieves state-of-the-art results for zero-shot performance on three downstream tasks that focus on verb understanding: video-text matching, video question-answering and video classification. To the best of our knowledge, this is the first work which proposes a method to alleviate the verb understanding problem, and does not simply highlight it.
 
 </details>
@@ -47,13 +51,13 @@
 
 </details>
 
-### Are current long-term video understanding datasets long-term?
-- **链接**: [arXiv:2308.11244](https://arxiv.org/abs/2308.11244) · 📚 被引 2
-- **作者**: Ombretta Strafforello, Klamer Schutte, Jan C. van Gemert
-- **🏷️ 机构**: TU Delft, TNO, TNO, TU Delft
-- **会议**: ICCV 2023
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Many real-world applications, from sport analysis to surveillance, benefit from automatic long-term action recognition. In the current deep learning paradigm for automatic action recognition, it is imperative that models are trained and tested on datasets and tasks that evaluate if such models actually learn and reason over long-term information. In this work, we propose a method to evaluate how suitable a video dataset is to evaluate models for long-term action recognition. To this end, we define a long-term action as excluding all the videos that can be correctly recognized using solely short-term information. We test this definition on existing long-term classification tasks on three popular real-world datasets, namely Breakfast, CrossTask and LVU, to determine if these datasets are truly evaluating long-term recognition. Our study reveals that these datasets can be effectively solved using shortcuts based on short-term information. Following this finding, we encourage long-term action recognition researchers to make use of datasets that need long-term information to be solved.
+
+</details>
 
 > Many real-world applications, from sport analysis to surveillance, benefit from automatic long-term action recognition. In the current deep learning paradigm for automatic action recognition, it is imperative that models are trained and tested on datasets and tasks that evaluate if such models actually learn and reason over long-term information. In this work, we propose a method to evaluate how suitable a video dataset is to evaluate models for long-term action recognition. To this end, we define a long-term action as excluding all the videos that can be correctly recognized using solely short-term information. We test this definition on existing long-term classification tasks on three popular real-world datasets, namely Breakfast, CrossTask and LVU, to determine if these datasets are truly evaluating long-term recognition. Our study reveals that these datasets can be effectively solved using shortcuts based on short-term information. Following this finding, we encourage long-term action recognition researchers to make use of datasets that need long-term information to be solved.
 
@@ -119,7 +123,8 @@
 - **🏷️ 机构**: Zhejiang Gongshang University, Peking University, Huazhong University of Science and Technology
 - **会议**: ICCV 2023
 
-## 跨领域论文（完整笔记在其他领域）
+</details>
 
-- TeD-SPAD: Temporal Distinctiveness for Self-supervised Privacy-preservation for video Anomaly Detection. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
+- Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection. → [multimodal](../multimodal/Guideline%202023.md)
 - MEGA: Multimodal Alignment Aggregation and Distillation For Cinematic Video Segmentation. → [multimodal](../multimodal/Guideline%202023.md)
+- TeD-SPAD: Temporal Distinctiveness for Self-supervised Privacy-preservation for video Anomaly Detection. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)

@@ -1,7 +1,7 @@
 # BEV — 2023 Guideline
 
 > 领域: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
-> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -18,6 +18,10 @@
 - **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Place recognition is a key module for long-term SLAM systems. Current LiDAR-based place recognition methods usually use representations of point clouds such as unordered points or range images. These methods achieve high recall rates of retrieval, but their performance may degrade in the case of view variation or scene changes. In this work, we explore the potential of a different representation in place recognition, i.e. bird's eye view (BEV) images. We observe that the structural contents of BEV images are less influenced by rotations and translations of point clouds. We validate that, without any delicate design, a simple VGGNet trained on BEV images achieves comparable performance with the state-of-the-art place recognition methods in scenes of slight viewpoint changes. For more robust place recognition, we design a rotation-invariant network called BEVPlace. We use group convolution to extract rotation-equivariant local features from the images and NetVLAD for global feature aggregation. In addition, we observe that the distance between BEV features is correlated with the geometry distance of point clouds. Based on the observation, we develop a method to estimate the position of the query cloud, extending the usage of place recognition. The experiments conducted on large-scale public datasets show that our method 1) achieves state-of-the-art performance in terms of recall rates, 2) is robust to view changes, 3) shows strong generalization ability, and 4) can estimate the positions of query point clouds. Source codes are publicly available at https://github.com/zjuluolun/BEVPlace.
+
+</details>
 
 > Place recognition is a key module for long-term SLAM systems. Current LiDAR-based place recognition methods usually use representations of point clouds such as unordered points or range images. These methods achieve high recall rates of retrieval, but their performance may degrade in the case of view variation or scene changes. In this work, we explore the potential of a different representation in place recognition, i.e. bird's eye view (BEV) images. We observe that the structural contents of BEV images are less influenced by rotations and translations of point clouds. We validate that, without any delicate design, a simple VGGNet trained on BEV images achieves comparable performance with the state-of-the-art place recognition methods in scenes of slight viewpoint changes. For more robust place recognition, we design a rotation-invariant network called BEVPlace. We use group convolution to extract rotation-equivariant local features from the images and NetVLAD for global feature aggregation. In addition, we observe that the distance between BEV features is correlated with the geometry distance of point clouds. Based on the observation, we develop a method to estimate the position of the query cloud, extending the usage of place recognition. The experiments conducted on large-scale public datasets show that our method 1) achieves state-of-the-art performance in terms of recall rates, 2) is robust to view changes, 3) shows strong generalization ability, and 4) can estimate the positions of query point clouds. Source codes are publicly available at https://github.com/zjuluolun/BEVPlace.
 
@@ -52,24 +56,6 @@
 - **作者**: Miaoyu Li, Yachao Zhang, Xu Ma, Yanyun Qu, Yun Fu
 - **🏷️ 机构**: Xiamen University,School of Informatics, Tsinghua University,Tsinghua Shenzhen International Graduate School, Northeastern University,Department of ECE
 - **会议**: ICCV 2023
-
-### FB-BEV: BEV Representation from Forward-Backward View Transformations.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00637) · 📚 被引 139
-- **作者**: Zhiqi Li, Zhiding Yu, Wenhai Wang, Anima Anandkumar, Tong Lu, José M. Álvarez
-- **🏷️ 机构**: Nanjing University,National Key Lab for Novel Software Technology, NVIDIA, The Chinese University of Hong Kong
-- **会议**: ICCV 2023
-
-### MatrixVT: Efficient Multi-Camera to BEV Transformation for 3D Perception.
-- **链接**: [arXiv:2211.10593](https://arxiv.org/abs/2211.10593) · 📚 被引 46
-- **作者**: Hongyu Zhou, Zheng Ge, Zeming Li, Xiangyu Zhang
-- **🏷️ 机构**: MEGVII Technology
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> This paper proposes an efficient multi-camera to Bird's-Eye-View (BEV) view transformation method for 3D perception, dubbed MatrixVT. Existing view transformers either suffer from poor transformation efficiency or rely on device-specific operators, hindering the broad application of BEV models. In contrast, our method generates BEV features efficiently with only convolutions and matrix multiplications (MatMul). Specifically, we propose describing the BEV feature as the MatMul of image feature and a sparse Feature Transporting Matrix (FTM). A Prime Extraction module is then introduced to compress the dimension of image features and reduce FTM's sparsity. Moreover, we propose the Ring \& Ray Decomposition to replace the FTM with two matrices and reformulate our pipeline to reduce calculation further. Compared to existing methods, MatrixVT enjoys a faster speed and less memory footprint while remaining deploy-friendly. Extensive experiments on the nuScenes benchmark demonstrate that our method is highly efficient but obtains results on par with the SOTA method in object detection and map segmentation tasks
-
-</details>
 
 ## 跨领域论文（完整笔记在其他领域）
 

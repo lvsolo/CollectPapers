@@ -13,6 +13,44 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
+### Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00934) · 📚 被引 910
+- **作者**: Jinkun Cao, Jiangmiao Pang, Xinshuo Weng, Rawal Khirodkar, Kris Kitani
+- **🏷️ 机构**: Carnegie Mellon University, Shanghai AI Laboratory, Nvidia
+- **会议**: CVPR 2023
+
+### MotionTrack: Learning Robust Short-Term and Long-Term Motions for Multi-Object Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01720) · 📚 被引 167
+- **作者**: Zheng Qin, Sanping Zhou, Le Wang, Jinghai Duan, Gang Hua, Wei Tang
+- **🏷️ 机构**: Institute of Artificial Intelligence and Robotics, Xi&#x0027;an Jiaotong University,National Key Laboratory of Human-Machine Hybrid Augmented Intelligence, National Engineering Research Center for Visual Information and Applications, School of Software Engineering, Xi&#x0027;an Jiaotong University, Wormpex AI Research
+- **会议**: CVPR 2023
+
+### Exploring Lightweight Hierarchical Vision Transformers for Efficient Visual Tracking.
+- **链接**: [arXiv:2308.06904](https://arxiv.org/abs/2308.06904) · 📚 被引 127
+- **作者**: Ben Kang, Xin Chen, Dong Wang, Houwen Peng, Huchuan Lu
+- **🏷️ 机构**: Dalian University of Technology,School of Information and Communication Engineering, Microsoft Research
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+### UTM: A Unified Multiple Object Tracking Model with Identity-Aware Feature Enhancement.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02095) · 📚 被引 87
+- **作者**: Sisi You, Hantao Yao, Bing-Kun Bao, Changsheng Xu
+- **🏷️ 机构**: Nanjing University of Posts and Telecommunications, Institute of Automation, Chinese Academy of Sciences (CASIA),State Key Laboratory of Multimodal Artificial Intelligence Systems
+- **会议**: CVPR 2023
+
+</details>
+
+### Tracking without Label: Unsupervised Multiple Object Tracking via Contrastive Similarity Learning.
+- **链接**: [arXiv:2309.00942](https://arxiv.org/abs/2309.00942) · 📚 被引 14
+- **作者**: Sha Meng, Dian Shao, Jiacheng Guo, Shan Gao
+- **🏷️ 机构**: Northwestern Polytechnical University,Xi&#x2019;an,China
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
 > 3D single object tracking has been a crucial problem for decades with numerous applications such as autonomous driving. Despite its wide-ranging use, this task remains challenging due to the significant appearance variation caused by occlusion and size differences among tracked targets. To address these issues, we present MBPTrack, which adopts a Memory mechanism to utilize past information and formulates localization in a coarse-to-fine scheme using Box Priors given in the first frame. Specifically, past frames with targetness masks serve as an external memory, and a transformer-based module propagates tracked target cues from the memory to the current frame. To precisely localize objects of all sizes, MBPTrack first predicts the target center via Hough voting. By leveraging box priors given in the first frame, we adaptively sample reference points around the target center that roughly cover the target of different sizes. Then, we obtain dense feature maps by aggregating point features into the reference points, where localization can be performed more effectively. Extensive experiments demonstrate that MBPTrack achieves state-of-the-art performance on KITTI, nuScenes and Waymo Open Dataset, while running at 50 FPS on a single RTX3090 GPU.
 
 </details>

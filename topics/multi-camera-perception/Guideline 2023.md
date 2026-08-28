@@ -1,20 +1,20 @@
 # Multi-camera Perception — 2023 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 45 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 22 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
-
-### MUVA: A New Large-Scale Benchmark for Multi-view Amodal Instance Segmentation in the Shopping Scenario.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.02148) · 📚 被引 14
-- **作者**: Zhixuan Li, Weining Ye, Juan R. Terven, Zachary Bennett, Ying Zheng, Tingting Jiang et al.
-- **🏷️ 机构**: Peking University,National Engineering Research Center of Visual Technology, National Key Laboratory for Multimedia Information Processing, School of Computer Science,Beijing,China,100871, AiFi Inc.,California,United States,94010
-- **会议**: ICCV 2023
 
 ### UniFusion: Unified Multi-view Fusion Transformer for Spatial-Temporal Representation in Bird's-Eye-View.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00798) · 📚 被引 50
 - **作者**: Zequn Qin, Jingyu Chen, Chao Chen, Xiaozhi Chen, Xi Li
 - **🏷️ 机构**: Zhejiang University,College of Computer Science &amp; Technology, DJI
+- **会议**: ICCV 2023
+
+### AIDE: A Vision-Driven Multi-View, Multi-Modal, Multi-Tasking Dataset for Assistive Driving Perception.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01871) · 📚 被引 67
+- **作者**: Dingkang Yang, Shuai Huang, Zhi Xu, Zhenpeng Li, Shunli Wang, Mingcheng Li et al.
+- **🏷️ 机构**: Academy for Engineering and Technology, Fudan University
 - **会议**: ICCV 2023
 
 ### AIDE: A Vision-Driven Multi-View, Multi-Modal, Multi-Tasking Dataset for Assistive Driving Perception.
@@ -29,9 +29,221 @@
 - **🏷️ 机构**: National University of Defense Technology,School of Computer,Changsha,China, Intelligent Game and Decision Lab,Beijing,China
 - **会议**: ICCV 2023
 
-### ViewRefer: Grasp the Multi-view Knowledge for 3D Visual Grounding.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01410)
-- **作者**: Zoey Guo, Yiwen Tang, Ray Zhang, Dong Wang, Zhigang Wang, Bin Zhao et al.
+</details>
+
+### Robust Multiview Point Cloud Registration with Reliable Pose Graph Initialization and History Reweighting.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00917) · 📚 被引 45
+- **作者**: Haiping Wang, Yuan Liu, Zhen Dong, Yulan Guo, Yu-Shen Liu, Wenping Wang et al.
+- **🏷️ 机构**: Wuhan University, The University of Hong Kong, Sun Yat-sen University
+- **会议**: CVPR 2023
+
+### Neural Pixel Composition for 3D-4D View Synthesis from Multi-Views.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00036) · 📚 被引 8
+- **作者**: Aayush Bansal, Michael Zollhöfer
+- **🏷️ 机构**: Reality Labs Research,Pittsburgh,USA
+- **会议**: CVPR 2023
+
+### Deep Incomplete Multi-View Clustering with Cross-View Partial Sample and Prototype Alignment.
+- **链接**: [arXiv:2303.15689](https://arxiv.org/abs/2303.15689) · 📚 被引 102
+- **作者**: Jiaqi Jin, Siwei Wang, Zhibin Dong, Xinwang Liu, En Zhu
+- **🏷️ 机构**: School of Computer, National University of Defense Technology,Changsha,China
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The success of existing multi-view clustering relies on the assumption of sample integrity across multiple views. However, in real-world scenarios, samples of multi-view are partially available due to data corruption or sensor failure, which leads to incomplete multi-view clustering study (IMVC). Although several attempts have been proposed to address IMVC, they suffer from the following drawbacks: i) Existing methods mainly adopt cross-view contrastive learning forcing the representations of each sample across views to be exactly the same, which might ignore view discrepancy and flexibility in representations; ii) Due to the absence of non-observed samples across multiple views, the obtained prototypes of clusters might be unaligned and biased, leading to incorrect fusion. To address the above issues, we propose a Cross-view Partial Sample and Prototype Alignment Network (CPSPAN) for Deep Incomplete Multi-view Clustering. Firstly, unlike existing contrastive-based methods, we adopt pair-observed data alignment as 'proxy supervised signals' to guide instance-to-instance correspondence construction among views. Then, regarding of the shifted prototypes in IMVC, we further propose a prototype alignment module to achieve incomplete distribution calibration across views. Extensive experimental results showcase the effectiveness of our proposed modules, attaining noteworthy performance improvements when compared to existing IMVC competitors on benchmark datasets.
+
+</details>
+
+### Learning to Fuse Monocular and Multi-view Cues for Multi-frame Depth Estimation in Dynamic Scenes.
+- **链接**: [arXiv:2304.08993](https://arxiv.org/abs/2304.08993) · 📚 被引 41
+- **作者**: Rui Li, Dong Gong, Wei Yin, Hao Chen, Yu Zhu, Kaixuan Wang et al.
+- **🏷️ 机构**: Northwestern Polytechnical University, The University of New South Wales, DJI
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-frame depth estimation generally achieves high accuracy relying on the multi-view geometric consistency. When applied in dynamic scenes, e.g., autonomous driving, this consistency is usually violated in the dynamic areas, leading to corrupted estimations. Many multi-frame methods handle dynamic areas by identifying them with explicit masks and compensating the multi-view cues with monocular cues represented as local monocular depth or features. The improvements are limited due to the uncontrolled quality of the masks and the underutilized benefits of the fusion of the two types of cues. In this paper, we propose a novel method to learn to fuse the multi-view and monocular cues encoded as volumes without needing the heuristically crafted masks. As unveiled in our analyses, the multi-view cues capture more accurate geometric information in static areas, and the monocular cues capture more useful contexts in dynamic areas. To let the geometric perception learned from multi-view cues in static areas propagate to the monocular representation in dynamic areas and let monocular cues enhance the representation of multi-view cost volume, we propose a cross-cue fusion (CCF) module, which includes the cross-cue attention (CCA) to encode the spatially non-local relative intra-relations from each source to enhance the representation of the other. Experiments on real-world datasets prove the significant effectiveness and generalization ability of the proposed method.
+
+</details>
+
+### OmniCity: Omnipotent City Understanding with Multi-Level and Multi-View Images.
+- **链接**: [arXiv:2208.00928](https://arxiv.org/abs/2208.00928) · 📚 被引 30
+- **作者**: Weijia Li, Yawen Lai, Linning Xu, Yuanbo Xiangli, Jinhua Yu, Conghui He et al.
+- **🏷️ 机构**: Sun Yat-Sen University, SenseTime Research, The Chinese University of Hong Kong
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents OmniCity, a new dataset for omnipotent city understanding from multi-level and multi-view images. More precisely, the OmniCity contains multi-view satellite images as well as street-level panorama and mono-view images, constituting over 100K pixel-wise annotated images that are well-aligned and collected from 25K geo-locations in New York City. To alleviate the substantial pixel-wise annotation efforts, we propose an efficient street-view image annotation pipeline that leverages the existing label maps of satellite view and the transformation relations between different views (satellite, panorama, and mono-view). With the new OmniCity dataset, we provide benchmarks for a variety of tasks including building footprint extraction, height estimation, and building plane/instance/fine-grained segmentation. Compared with the existing multi-level and multi-view benchmarks, OmniCity contains a larger number of images with richer annotation types and more views, provides more benchmark results of state-of-the-art models, and introduces a novel task for fine-grained building instance segmentation on street-level panorama images. Moreover, OmniCity provides new problem settings for existing tasks, such as cross-view image matching, synthesis, segmentation, detection, etc., and facilitates the developing of new methods for large-scale city understanding, reconstruction, and simulation. The OmniCity dataset as well as the benchmarks will be available at https://city-super.github.io/omnicity.
+
+</details>
+
+### Multi-Sensor Large-Scale Dataset for Multi-View 3D Reconstruction.
+- **链接**: [arXiv:2203.06111](https://arxiv.org/abs/2203.06111) · 📚 被引 14
+- **作者**: Oleg Voynov, Gleb Bobrovskikh, Pavel A. Karpyshev, Saveliy Galochkin, Andrei-Timotei Ardelean, Arseniy Bozhenko et al.
+- **🏷️ 机构**: Skolkovo Institute of Science and Technology
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present a new multi-sensor dataset for multi-view 3D surface reconstruction. It includes registered RGB and depth data from sensors of different resolutions and modalities: smartphones, Intel RealSense, Microsoft Kinect, industrial cameras, and structured-light scanner. The scenes are selected to emphasize a diverse set of material properties challenging for existing algorithms. We provide around 1.4 million images of 107 different scenes acquired from 100 viewing directions under 14 lighting conditions. We expect our dataset will be useful for evaluation and training of 3D reconstruction algorithms and for related tasks. The dataset is available at skoltech3d.appliedai.tech.
+
+</details>
+
+### GCFAgg: Global and Cross-View Feature Aggregation for Multi-View Clustering.
+- **链接**: [arXiv:2305.06799](https://arxiv.org/abs/2305.06799) · 📚 被引 186
+- **作者**: Weiqing Yan, Yuanyang Zhang, Chenlei Lv, Chang Tang, Guanghui Yue, Liang Liao et al.
+- **🏷️ 机构**: School of Computer and Control Engineering, Yantai University,Yantai,China,264005, College of Computer Science and Software Engineering, Shenzhen University,Shenzhen,China,518060, School of Computer, China University of Geosciences,Wuhan,China,430074
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-view clustering can partition data samples into their categories by learning a consensus representation in unsupervised way and has received more and more attention in recent years. However, most existing deep clustering methods learn consensus representation or view-specific representations from multiple views via view-wise aggregation way, where they ignore structure relationship of all samples. In this paper, we propose a novel multi-view clustering network to address these problems, called Global and Cross-view Feature Aggregation for Multi-View Clustering (GCFAggMVC). Specifically, the consensus data presentation from multiple views is obtained via cross-sample and cross-view feature aggregation, which fully explores the complementary ofsimilar samples. Moreover, we align the consensus representation and the view-specific representation by the structure-guided contrastive learning module, which makes the view-specific representations from different samples with high structure relationship similar. The proposed module is a flexible multi-view data representation module, which can be also embedded to the incomplete multi-view data clustering task via plugging our module into other frameworks. Extensive experiments show that the proposed method achieves excellent performance in both complete multi-view data clustering tasks and incomplete multi-view data clustering tasks.
+
+</details>
+
+### Cross-Guided Optimization of Radiance Fields with Multi-View Image Super-Resolution for High-Resolution Novel View Synthesis.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01196) · 📚 被引 14
+- **作者**: Youngho Yoon, Kuk-Jin Yoon
+- **🏷️ 机构**: Visual Intelligence Lab., KAIST,Korea
+- **会议**: CVPR 2023
+
+### POEM: Reconstructing Hand in a Point Embedded Multi-view Stereo.
+- **链接**: [arXiv:2304.04038](https://arxiv.org/abs/2304.04038) · [代码](https://github.com/lixiny/POEM) · 📚 被引 14
+- **作者**: Lixin Yang, Jian Xu, Licheng Zhong, Xinyu Zhan, Zhicheng Wang, Kejian Wu et al.
+- **🏷️ 机构**: Shanghai Jiao Tong University, Nreal
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Enable neural networks to capture 3D geometrical-aware features is essential in multi-view based vision tasks. Previous methods usually encode the 3D information of multi-view stereo into the 2D features. In contrast, we present a novel method, named POEM, that directly operates on the 3D POints Embedded in the Multi-view stereo for reconstructing hand mesh in it. Point is a natural form of 3D information and an ideal medium for fusing features across views, as it has different projections on different views. Our method is thus in light of a simple yet effective idea, that a complex 3D hand mesh can be represented by a set of 3D points that 1) are embedded in the multi-view stereo, 2) carry features from the multi-view images, and 3) encircle the hand. To leverage the power of points, we design two operations: point-based feature fusion and cross-set point attention mechanism. Evaluation on three challenging multi-view datasets shows that POEM outperforms the state-of-the-art in hand mesh reconstruction. Code and models are available for research at https://github.com/lixiny/POEM.
+
+</details>
+
+### Adaptive Patch Deformation for Textureless-Resilient Multi-View Stereo.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00162) · 📚 被引 35
+- **作者**: Yuesong Wang, Zhaojie Zeng, Tao Guan, Wei Yang, Zhuo Chen, Wenkai Liu et al.
+- **🏷️ 机构**: School of Computer Science &#x0026; Technology, Huazhong University of Science &#x0026; Technology, School of Computer Science &#x0026; Technology, Zhejiang University
+- **会议**: CVPR 2023
+
+### MetaViewer: Towards A Unified Multi-View Representation.
+- **链接**: [arXiv:2303.06329](https://arxiv.org/abs/2303.06329) · 📚 被引 14
+- **作者**: Ren Wang, Haoliang Sun, Yuling Ma, Xiaoming Xi, Yilong Yin
+- **🏷️ 机构**: Shandong University, Shandong Jianzhu University
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing multi-view representation learning methods typically follow a specific-to-uniform pipeline, extracting latent features from each view and then fusing or aligning them to obtain the unified object representation. However, the manually pre-specify fusion functions and view-private redundant information mixed in features potentially degrade the quality of the derived representation. To overcome them, we propose a novel bi-level-optimization-based multi-view learning framework, where the representation is learned in a uniform-to-specific manner. Specifically, we train a meta-learner, namely MetaViewer, to learn fusion and model the view-shared meta representation in outer-level optimization. Start with this meta representation, view-specific base-learners are then required to rapidly reconstruct the corresponding view in inner-level. MetaViewer eventually updates by observing reconstruction processes from uniform to specific over all views, and learns an optimal fusion scheme that separates and filters out view-private information. Extensive experimental results in downstream tasks such as classification and clustering demonstrate the effectiveness of our method.
+
+</details>
+
+### A Light Touch Approach to Teaching Transformers Multi-view Geometry.
+- **链接**: [arXiv:2211.15107](https://arxiv.org/abs/2211.15107) · 📚 被引 10
+- **作者**: Yash Bhalgat, João F. Henriques, Andrew Zisserman
+- **🏷️ 机构**: University of Oxford,Visual Geometry Group
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Transformers are powerful visual learners, in large part due to their conspicuous lack of manually-specified priors. This flexibility can be problematic in tasks that involve multiple-view geometry, due to the near-infinite possible variations in 3D shapes and viewpoints (requiring flexibility), and the precise nature of projective geometry (obeying rigid laws). To resolve this conundrum, we propose a "light touch" approach, guiding visual Transformers to learn multiple-view geometry but allowing them to break free when needed. We achieve this by using epipolar lines to guide the Transformer's cross-attention maps, penalizing attention values outside the epipolar lines and encouraging higher attention along these lines since they contain geometrically plausible matches. Unlike previous methods, our proposal does not require any camera pose information at test-time. We focus on pose-invariant object instance retrieval, where standard Transformer networks struggle, due to the large differences in viewpoint between query and retrieved images. Experimentally, our method outperforms state-of-the-art approaches at object retrieval, without needing pose information at test-time.
+
+</details>
+
+### Instant Multi-View Head Capture through Learnable Registration.
+- **链接**: [arXiv:2306.07437](https://arxiv.org/abs/2306.07437) · 📚 被引 25
+- **作者**: Timo Bolkart, Tianye Li, Michael J. Black
+- **🏷️ 机构**: MPI for Intelligent Systems,T&#x00FC;bingen, University of Southern California
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing methods for capturing datasets of 3D heads in dense semantic correspondence are slow, and commonly address the problem in two separate steps; multi-view stereo (MVS) reconstruction followed by non-rigid registration. To simplify this process, we introduce TEMPEH (Towards Estimation of 3D Meshes from Performances of Expressive Heads) to directly infer 3D heads in dense correspondence from calibrated multi-view images. Registering datasets of 3D scans typically requires manual parameter tuning to find the right balance between accurately fitting the scans surfaces and being robust to scanning noise and outliers. Instead, we propose to jointly register a 3D head dataset while training TEMPEH. Specifically, during training we minimize a geometric loss commonly used for surface registration, effectively leveraging TEMPEH as a regularizer. Our multi-view head inference builds on a volumetric feature representation that samples and fuses features from each view using camera calibration information. To account for partial occlusions and a large capture volume that enables head movements, we use view- and surface-aware feature fusion, and a spatial transformer-based head localization module, respectively. We use raw MVS scans as supervision during training, but, once trained, TEMPEH directly predicts 3D heads in dense correspondence without requiring scans. Predicting one head takes about 0.3 seconds with a median reconstruction error of 0.26 mm, 64% lower than the current state-of-the-art. This enables the efficient capture of large datasets containing multiple people and diverse facial motions. Code, model, and data are publicly available at https://tempeh.is.tue.mpg.de.
+
+</details>
+
+### RIAV-MVS: Recurrent-Indexing an Asymmetric Volume for Multi-View Stereo.
+- **链接**: [arXiv:2205.14320](https://arxiv.org/abs/2205.14320) · [代码](https://github.com/oppo-us-research/riav-mvs) · 📚 被引 12
+- **作者**: Changjiang Cai, Pan Ji, Qingan Yan, Yi Xu
+- **🏷️ 机构**: OPPO US Research Center, InnoPeak Technology, Inc.
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents a learning-based method for multi-view depth estimation from posed images. Our core idea is a "learning-to-optimize" paradigm that iteratively indexes a plane-sweeping cost volume and regresses the depth map via a convolutional Gated Recurrent Unit (GRU). Since the cost volume plays a paramount role in encoding the multi-view geometry, we aim to improve its construction both at pixel- and frame- levels. At the pixel level, we propose to break the symmetry of the Siamese network (which is typically used in MVS to extract image features) by introducing a transformer block to the reference image (but not to the source images). Such an asymmetric volume allows the network to extract global features from the reference image to predict its depth map. Given potential inaccuracies in the poses between reference and source images, we propose to incorporate a residual pose network to correct the relative poses. This essentially rectifies the cost volume at the frame level. We conduct extensive experiments on real-world MVS datasets and show that our method achieves state-of-the-art performance in terms of both within-dataset evaluation and cross-dataset generalization. Code available: https://github.com/oppo-us-research/riav-mvs.
+
+</details>
+
+### Multi-View Azimuth Stereo via Tangent Space Consistency.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00086) · 📚 被引 14
+- **作者**: Xu Cao, Hiroaki Santo, Fumio Okura, Yasuyuki Matsushita
+- **🏷️ 机构**: Osaka University
+- **会议**: CVPR 2023
+
+### GM-NeRF: Learning Generalizable Model-Based Neural Radiance Fields from Multi-View Images.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01978) · 📚 被引 33
+- **作者**: Jianchuan Chen, Wentao Yi, Liqian Ma, Xu Jia, Huchuan Lu
+- **🏷️ 机构**: Dalian University of Technology,China, ZMO AI Inc.
+- **会议**: CVPR 2023
+
+### MAIR: Multi-View Attention Inverse Rendering with 3D Spatially-Varying Lighting Estimation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00811) · 📚 被引 12
+- **作者**: Junyong Choi, SeokYeong Lee, Haesol Park, Seung-Won Jung, Ig-Jae Kim, Junghyun Cho
+- **🏷️ 机构**: Korea Institute of Science and Technology(KIST), Korea University
+- **会议**: CVPR 2023
+
+### 3D Concept Learning and Reasoning from Multi-View Images.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00888) · 📚 被引 42
+- **作者**: Yining Hong, Chunru Lin, Yilun Du, Zhenfang Chen, Joshua B. Tenenbaum, Chuang Gan
+- **🏷️ 机构**: UCLA, Shanghai Jiaotong University, MIT CSAIL
+- **会议**: CVPR 2023
+
+### StyleGAN Salon: Multi-View Latent Optimization for Pose-Invariant Hairstyle Transfer.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00832) · 📚 被引 10
+- **作者**: Sasikarn Khwanmuang, Pakkapon Phongthawee, Patsorn Sangkloy, Supasorn Suwajanakorn
+- **🏷️ 机构**: VISTEC,Thailand, Phranakhon Rajabhat University,Thailand
+- **会议**: CVPR 2023
+
+### Multi-view Inverse Rendering for Large-scale Real-world Indoor Scenes.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01203) · 📚 被引 25
+- **作者**: Zhen Li, Lingli Wang, Mofang Cheng, Cihui Pan, Jiaqi Yang
+- **🏷️ 机构**: Realsee, Northwestern Polytechnical University
+- **会议**: CVPR 2023
+
+### NeuralUDF: Learning Unsigned Distance Fields for Multi-View Reconstruction of Surfaces with Arbitrary Topologies.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01996) · 📚 被引 67
+- **作者**: Xiaoxiao Long, Cheng Lin, Lingjie Liu, Yuan Liu, Peng Wang, Christian Theobalt et al.
+- **🏷️ 机构**: The University of Hong Kong, Tencent Games, Max Planck Institute for Informatics
+- **会议**: CVPR 2023
+
+### NeAT: Learning Neural Implicit Surfaces with Arbitrary Topologies from Multi-View Images.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00032) · 📚 被引 42
+- **作者**: Xiaoxu Meng, Weikai Chen, Bo Yang
+- **🏷️ 机构**: Digital Content Technology Center, Tencent Games
+- **会议**: CVPR 2023
+
+### I2MVFormer: Large Language Model Generated Multi-View Document Supervision for Zero-Shot Image Classification.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01456) · 📚 被引 77
+- **作者**: Muhammad Ferjad Naeem, Muhammad Gul Zain Ali Khan, Yongqin Xian, Muhammad Zeshan Afzal, Didier Stricker, Luc Van Gool et al.
+- **🏷️ 机构**: ETH Z&#x00FC;rich, TUKL, Google
+- **会议**: CVPR 2023
+
+### VolRecon: Volume Rendering of Signed Ray Distance Functions for Generalizable Multi-View Reconstruction.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01601) · 📚 被引 52
+- **作者**: Yufan Ren, Fangjinhua Wang, Tong Zhang, Marc Pollefeys, Sabine Süsstrunk
+- **🏷️ 机构**: IVRL IC EPFL, ETH Zurich,Department of Computer Science
+- **会议**: CVPR 2023
+
+### PermutoSDF: Fast Multi-View Reconstruction with Implicit Surfaces Using Permutohedral Lattices.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00818) · 📚 被引 72
+- **作者**: Radu Alexandru Rosu, Sven Behnke
+- **🏷️ 机构**: University of Bonn,Germany
+- **会议**: CVPR 2023
+
+### BKinD-3D: Self-Supervised 3D Keypoint Discovery from Multi-View Videos.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00869)
+- **作者**: Jennifer J. Sun, Lili Karashchuk, Amil Dravid, Serim Ryou, Sonia Fereidooni, John C. Tuthill et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2023
 
@@ -41,11 +253,7 @@
 - **🏷️ 机构**: Meta
 - **会议**: ICCV 2023
 
-### Ray Conditioning: Trading Photo-consistency for Photo-realism in Multi-view Image Generation.
-- **链接**: [arXiv:2304.13681](https://arxiv.org/abs/2304.13681) · 📚 被引 7
-- **作者**: Eric Ming Chen, Sidhanth Holalkere, Ruyu Yan, Kai Zhang, Abe Davis
-- **🏷️ 机构**: Cornell University, Adobe Research
-- **会议**: ICCV 2023
+> The mechanisms behind the success of multi-view self-supervised learning (MVSSL) are not yet fully understood. Contrastive MVSSL methods have been studied through the lens of InfoNCE, a lower bound of the Mutual Information (MI). However, the relation between other MVSSL methods and MI remains unclear. We consider a different lower bound on the MI consisting of an entropy and a reconstruction term (ER), and analyze the main MVSSL families through its lens. Through this ER bound, we show that clustering-based methods such as DeepCluster and SwAV maximize the MI. We also re-interpret the mechanisms of distillation-based approaches such as BYOL and DINO, showing that they explicitly maximize the reconstruction term and implicitly encourage a stable entropy, and we confirm this empirically. We show that replacing the objectives of common MVSSL methods with this ER bound achieves competitive performance, while making them stable when training with smaller batch sizes or smaller exponential moving average (EMA) coefficients. Github repo: https://github.com/apple/ml-entropy-reconstruction.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -56,156 +264,6 @@
 ### Multi-view Self-supervised Disentanglement for General Image Denoising.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01128)
 - **作者**: Hao Chen, Chenyuan Qu, Yu Zhang, Chen Chen, Jianbo Jiao
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
-
-### TEMPO: Efficient Multi-View Pose Estimation, Tracking, and Forecasting.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01355) · 📚 被引 27
-- **作者**: Rohan Choudhury, Kris M. Kitani, László A. Jeni
-- **🏷️ 机构**: Carnegie Mellon University,Robotics Institute
-- **会议**: ICCV 2023
-
-### Multi-View Active Fine-Grained Visual Recognition.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00151) · 📚 被引 13
-- **作者**: Ruoyi Du, Wenqing Yu, Heqing Wang, Ting-En Lin, Dongliang Chang, Zhanyu Ma
-- **🏷️ 机构**: Beijing University of Posts and Telecommunications,China
-- **会议**: ICCV 2023
-
-### Ref-NeuS: Ambiguity-Reduced Neural Implicit Surface Learning for Multi-View Reconstruction with Reflection.
-- **链接**: [arXiv:2303.10840](https://arxiv.org/abs/2303.10840) · 📚 被引 54
-- **作者**: Wenhang Ge, Tao Hu, Haoyu Zhao, Shu Liu, Ying-Cong Chen
-- **🏷️ 机构**: HKUST(GZ), CUHK, SmartMore
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Neural implicit surface learning has shown significant progress in multi-view 3D reconstruction, where an object is represented by multilayer perceptrons that provide continuous implicit surface representation and view-dependent radiance. However, current methods often fail to accurately reconstruct reflective surfaces, leading to severe ambiguity. To overcome this issue, we propose Ref-NeuS, which aims to reduce ambiguity by attenuating the effect of reflective surfaces. Specifically, we utilize an anomaly detector to estimate an explicit reflection score with the guidance of multi-view context to localize reflective surfaces. Afterward, we design a reflection-aware photometric loss that adaptively reduces ambiguity by modeling rendered color as a Gaussian distribution, with the reflection score representing the variance. We show that together with a reflection direction-dependent radiance, our model achieves high-quality surface reconstruction on reflective surfaces and outperforms the state-of-the-arts by a large margin. Besides, our model is also comparable on general surfaces.
-
-</details>
-
-### Anchor Structure Regularization Induced Multi-view Subspace Clustering via Enhanced Tensor Rank Minimization.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01772) · 📚 被引 37
-- **作者**: Jintian Ji, Songhe Feng
-- **🏷️ 机构**: Beijing Jiaotong University,Key Laboratory of Big Data &amp; Artificial Intelligence in Transportation, Ministry of Education,Beijing,China,100044
-- **会议**: ICCV 2023
-
-### Coordinate Quantized Neural Implicit Representations for Multi-view Reconstruction.
-- **链接**: [arXiv:2308.11025](https://arxiv.org/abs/2308.11025) · [代码](https://github.com/MachinePerceptionLab/CQ-NIR) · 📚 被引 4
-- **作者**: Sijia Jiang, Jing Hua, Zhizhong Han
-- **🏷️ 机构**: Wayne State University,Department of Computer Science,Detroit,USA
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In recent years, huge progress has been made on learning neural implicit representations from multi-view images for 3D reconstruction. As an additional input complementing coordinates, using sinusoidal functions as positional encodings plays a key role in revealing high frequency details with coordinate-based neural networks. However, high frequency positional encodings make the optimization unstable, which results in noisy reconstructions and artifacts in empty space. To resolve this issue in a general sense, we introduce to learn neural implicit representations with quantized coordinates, which reduces the uncertainty and ambiguity in the field during optimization. Instead of continuous coordinates, we discretize continuous coordinates into discrete coordinates using nearest interpolation among quantized coordinates which are obtained by discretizing the field in an extremely high resolution. We use discrete coordinates and their positional encodings to learn implicit functions through volume rendering. This significantly reduces the variations in the sample space, and triggers more multi-view consistency constraints on intersections of rays from different views, which enables to infer implicit function in a more effective way. Our quantized coordinates do not bring any computational burden, and can seamlessly work upon the latest methods. Our evaluations under the widely used benchmarks show our superiority over the state-of-the-art. Our code is available at https://github.com/MachinePerceptionLab/CQ-NIR.
-
-</details>
-
-### Probabilistic Triangulation for Uncalibrated Multi-View 3D Human Pose Estimation.
-- **链接**: [arXiv:2309.04756](https://arxiv.org/abs/2309.04756) · [代码](https://github.com/bymaths/probabilistic_triangulation) · 📚 被引 21
-- **作者**: Boyuan Jiang, Lei Hu, Shihong Xia
-- **🏷️ 机构**: Chinese Academy of Sciences,Institute of Computing Technology
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> 3D human pose estimation has been a long-standing challenge in computer vision and graphics, where multi-view methods have significantly progressed but are limited by the tedious calibration processes. Existing multi-view methods are restricted to fixed camera pose and therefore lack generalization ability. This paper presents a novel Probabilistic Triangulation module that can be embedded in a calibrated 3D human pose estimation method, generalizing it to uncalibration scenes. The key idea is to use a probability distribution to model the camera pose and iteratively update the distribution from 2D features instead of using camera pose. Specifically, We maintain a camera pose distribution and then iteratively update this distribution by computing the posterior probability of the camera pose through Monte Carlo sampling. This way, the gradients can be directly back-propagated from the 3D pose estimation to the 2D heatmap, enabling end-to-end training. Extensive experiments on Human3.6M and CMU Panoptic demonstrate that our method outperforms other uncalibration methods and achieves comparable results with state-of-the-art calibration methods. Thus, our method achieves a trade-off between estimation accuracy and generalizability. Our code is in https://github.com/bymaths/probabilistic_triangulation
-
-</details>
-
-### MHCN: A Hyperbolic Neural Network Model for Multi-view Hierarchical Clustering.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01515) · 📚 被引 12
-- **作者**: Fangfei Lin, Bing Bai, Yiwen Guo, Hao Chen, Yazhou Ren, Zenglin Xu
-- **🏷️ 机构**: University of Electronic Science and Technology of China,China, Tencent Security Big Data Lab,China, Independent Researcher
-- **会议**: ICCV 2023
-
-### GeoMIM: Towards Better 3D Knowledge Transfer via Masked Image Modeling for Multi-view 3D Understanding.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01635)
-- **作者**: Jihao Liu, Tai Wang, Boxiao Liu, Qihang Zhang, Yu Liu, Hongsheng Li
-- **🏷️ 机构**: SenseTime, CUHK
-- **会议**: ICCV 2023
-
-### When Epipolar Constraint Meets Non-local Operators in Multi-View Stereo.
-- **链接**: [arXiv:2309.17218](https://arxiv.org/abs/2309.17218) · [代码](https://github.com/TQTQliu/ET-MVSNet) · 📚 被引 54
-- **作者**: Tianqi Liu, Xinyi Ye, Weiyue Zhao, Zhiyu Pan, Min Shi, Zhiguo Cao
-- **🏷️ 机构**: Huazhong University of Science and Technology,Key Laboratory of Image Processing and Intelligent Control,Ministry of Education; School of Artificial Intelligence and Automation,Wuhan,China,430074
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Learning-based multi-view stereo (MVS) method heavily relies on feature matching, which requires distinctive and descriptive representations. An effective solution is to apply non-local feature aggregation, e.g., Transformer. Albeit useful, these techniques introduce heavy computation overheads for MVS. Each pixel densely attends to the whole image. In contrast, we propose to constrain non-local feature augmentation within a pair of lines: each point only attends the corresponding pair of epipolar lines. Our idea takes inspiration from the classic epipolar geometry, which shows that one point with different depth hypotheses will be projected to the epipolar line on the other view. This constraint reduces the 2D search space into the epipolar line in stereo matching. Similarly, this suggests that the matching of MVS is to distinguish a series of points lying on the same line. Inspired by this point-to-line search, we devise a line-to-point non-local augmentation strategy. We first devise an optimized searching algorithm to split the 2D feature maps into epipolar line pairs. Then, an Epipolar Transformer (ET) performs non-local feature augmentation among epipolar line pairs. We incorporate the ET into a learning-based MVS baseline, named ET-MVSNet. ET-MVSNet achieves state-of-the-art reconstruction performance on both the DTU and Tanks-and-Temples benchmark with high efficiency. Code is available at https://github.com/TQTQliu/ET-MVSNet.
-
-</details>
-
-### Multi-view Spectral Polarization Propagation for Video Glass Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.02122) · 📚 被引 7
-- **作者**: Yu Qiao, Bo Dong, Ao Jin, Yu Fu, Seung-Hwan Baek, Felix Heide et al.
-- **🏷️ 机构**: Shanghai AI Lab
-- **会议**: ICCV 2023
-
-### Hierarchical Prior Mining for Non-local Multi-View Stereo.
-- **链接**: [arXiv:2303.09758](https://arxiv.org/abs/2303.09758)
-- **作者**: Chunlin Ren, Qingshan Xu, Shikun Zhang, Jiaqi Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> As a fundamental problem in computer vision, multi-view stereo (MVS) aims at recovering the 3D geometry of a target from a set of 2D images. Recent advances in MVS have shown that it is important to perceive non-local structured information for recovering geometry in low-textured areas. In this work, we propose a Hierarchical Prior Mining for Non-local Multi-View Stereo (HPM-MVS). The key characteristics are the following techniques that exploit non-local information to assist MVS: 1) A Non-local Extensible Sampling Pattern (NESP), which is able to adaptively change the size of sampled areas without becoming snared in locally optimal solutions. 2) A new approach to leverage non-local reliable points and construct a planar prior model based on K-Nearest Neighbor (KNN), to obtain potential hypotheses for the regions where prior construction is challenging. 3) A Hierarchical Prior Mining (HPM) framework, which is used to mine extensive non-local prior information at different scales to assist 3D model recovery, this strategy can achieve a considerable balance between the reconstruction of details and low-textured areas. Experimental results on the ETH3D and Tanks \& Temples have verified the superior performance and strong generalization capability of our method. Our code will be released.
-
-</details>
-
-### End2End Multi-View Feature Matching with Differentiable Pose Optimization.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00050) · 📚 被引 23
-- **作者**: Barbara Roessle, Matthias Nießner
-- **🏷️ 机构**: Technical University of Munich
-- **会议**: ICCV 2023
-
-### Spectral Graphormer: Spectral Graph-based Transformer for Egocentric Two-Hand Reconstruction using Multi-View Color Images.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01348) · 📚 被引 6
-- **作者**: Tze Ho Elden Tse, Franziska Mueller, Zhengyang Shen, Danhang Tang, Thabo Beeler, Mingsong Dou et al.
-- **🏷️ 机构**: Google
-- **会议**: ICCV 2023
-
-### NeuS2: Fast Learning of Neural Implicit Surfaces for Multi-view Reconstruction.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00305) · 📚 被引 291
-- **作者**: Yiming Wang, Qin Han, Marc Habermann, Kostas Daniilidis, Christian Theobalt, Lingjie Liu
-- **🏷️ 机构**: University of Pennsylvania, Peking University, Peking University, Max Planck Institute for Informatics
-- **会议**: ICCV 2023
-
-### Mixed Neural Voxels for Fast Multi-view Video Synthesis.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01805) · 📚 被引 87
-- **作者**: Feng Wang, Sinan Tan, Xinghang Li, Zeyue Tian, Yafei Song, Huaping Liu
-- **🏷️ 机构**: Tsinghua University,Beijing National Research Center for Information Science and Technology(BNRist),Department of Computer Science and Technology, Hong Kong University of Science and Technology, Alibaba Group,XR Lab, DAMO Academy
-- **会议**: ICCV 2023
-
-### S-VolSDF: Sparse Multi-View Stereo Regularization of Neural Implicit Surfaces.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00329) · 📚 被引 18
-- **作者**: Haoyu Wu, Alexandros Graikos, Dimitris Samaras
-- **🏷️ 机构**: Stony Brook University
-- **会议**: ICCV 2023
-
-### MV-Map: Offboard HD Map Generation with Multi-view Consistency.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00795) · 📚 被引 25
-- **作者**: Ziyang Xie, Ziqi Pang, Yu-Xiong Wang
-- **🏷️ 机构**: University of Illinois Urbana-Champaign
-- **会议**: ICCV 2023
-
-### CL-MVSNet: Unsupervised Multi-view Stereo with Dual-level Contrastive Learning.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00349)
-- **作者**: Kaiqiang Xiong, Rui Peng, Zhe Zhang, Tianxing Feng, Jianbo Jiao, Feng Gao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
-
-### Long-Range Grouping Transformer for Multi-View 3D Reconstruction.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01674) · 📚 被引 20
-- **作者**: Liying Yang, Zhenwei Zhu, Xuxin Lin, Jian Nong, Yanyan Liang
-- **🏷️ 机构**: Macau University of Science and Technology
-- **会议**: ICCV 2023
-
-### DeLiRa: Self-Supervised Depth, Light, and Radiance Fields.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01644)
-- **作者**: Vitor Guizilini, Igor Vasiljevic, Jiading Fang, Rares Ambrus, Sergey Zakharov, Vincent Sitzmann et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2023
 
@@ -245,6 +303,18 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2023
 
+### CL-MVSNet: Unsupervised Multi-view Stereo with Dual-level Contrastive Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00349)
+- **作者**: Kaiqiang Xiong, Rui Peng, Zhe Zhang, Tianxing Feng, Jianbo Jiao, Feng Gao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
+
+### GeoMIM: Towards Better 3D Knowledge Transfer via Masked Image Modeling for Multi-view 3D Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01635)
+- **作者**: Jihao Liu, Tai Wang, Boxiao Liu, Qihang Zhang, Yu Liu, Hongsheng Li
+- **🏷️ 机构**: SenseTime, CUHK
+- **会议**: ICCV 2023
+
 ## 跨领域论文（完整笔记在其他领域）
 
 - Exploring Object-Centric Temporal Modeling for Efficient Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
@@ -256,5 +326,4 @@
 - NeRF-Det: Learning Geometry-Aware Volumetric Representation for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
 - QD-BEV : Quantization-aware View-guided Distillation for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
 - SA-BEV: Generating Semantic-Aware Bird's-Eye-View Feature for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- MatrixVT: Efficient Multi-Camera to BEV Transformation for 3D Perception. → [bev](../bev/Guideline%202023.md)
 - SurroundOcc: Multi-Camera 3D Occupancy Prediction for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)

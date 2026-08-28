@@ -5,11 +5,11 @@
 
 > 同领域其他年份: 
 
-### Transformer-Based Sensor Fusion for Autonomous Driving: A Survey.
-- **链接**: [arXiv:2302.11481](https://arxiv.org/abs/2302.11481) · [代码](https://github.com/ApoorvRoboticist/Transformers-Sensor-Fusion) · 📚 被引 34
-- **作者**: Apoorv Singh
-- **🏷️ 机构**: Motional Carnegie Mellon University
-- **会议**: ICCV 2023
+### Temporal Consistent 3D LiDAR Representation Learning for Semantic Perception in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00505) · 📚 被引 43
+- **作者**: Lucas Nunes, Louis Wiesmann, Rodrigo Marcuzzi, Xieyuanli Chen, Jens Behley, Cyrill Stachniss
+- **🏷️ 机构**: University of Bonn
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +17,13 @@
 
 </details>
 
-### Optimizing the Placement of Roadside LiDARs for Autonomous Driving.
-- **链接**: [arXiv:2310.07247](https://arxiv.org/abs/2310.07247) · 📚 被引 19
-- **作者**: Wentao Jiang, Hao Xiang, Xinyu Cai, Runsheng Xu, Jiaqi Ma, Yikang Li et al.
-- **🏷️ 机构**: Beihang University, UCLA, Shanghai AI Laboratory
-- **会议**: ICCV 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Sensor fusion is an essential topic in many perception systems, such as autonomous driving and robotics. Transformers-based detection head and CNN-based feature encoder to extract features from raw sensor-data has emerged as one of the best performing sensor-fusion 3D-detection-framework, according to the dataset leaderboards. In this work we provide an in-depth literature survey of transformer based 3D-object detection task in the recent past, primarily focusing on the sensor fusion. We also briefly go through the Vision transformers (ViT) basics, so that readers can easily follow through the paper. Moreover, we also briefly go through few of the non-transformer based less-dominant methods for sensor fusion for autonomous driving. In conclusion we summarize with sensor-fusion trends to follow and provoke future research. More updated summary can be found at: https://github.com/ApoorvRoboticist/Transformers-Sensor-Fusion
+
+</details>
+
+> Multi-agent cooperative perception is an increasingly popular topic in the field of autonomous driving, where roadside LiDARs play an essential role. However, how to optimize the placement of roadside LiDARs is a crucial but often overlooked problem. This paper proposes an approach to optimize the placement of roadside LiDARs by selecting optimized positions within the scene for better perception performance. To efficiently obtain the best combination of locations, a greedy algorithm based on perceptual gain is proposed, which selects the location that can maximize the perceptual gain sequentially. We define perceptual gain as the increased perceptual capability when a new LiDAR is placed. To obtain the perception capability, we propose a perception predictor that learns to evaluate LiDAR placement using only a single point cloud frame. A dataset named Roadside-Opt is created using the CARLA simulator to facilitate research on the roadside LiDAR placement problem.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,23 +31,13 @@
 
 </details>
 
-### MV-DeepSDF: Implicit Modeling with Multi-Sweep Point Clouds for 3D Vehicle Reconstruction in Autonomous Driving.
-- **链接**: [arXiv:2309.16715](https://arxiv.org/abs/2309.16715) · 📚 被引 15
-- **作者**: Yibo Liu, Kelly Zhu, Guile Wu, Yuan Ren, Bingbing Liu, Yang Liu et al.
-- **🏷️ 机构**: Huawei Noah&#x2019;s Ark Lab, York University
-- **会议**: ICCV 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Reconstructing 3D vehicles from noisy and sparse partial point clouds is of great significance to autonomous driving. Most existing 3D reconstruction methods cannot be directly applied to this problem because they are elaborately designed to deal with dense inputs with trivial noise. In this work, we propose a novel framework, dubbed MV-DeepSDF, which estimates the optimal Signed Distance Function (SDF) shape representation from multi-sweep point clouds to reconstruct vehicles in the wild. Although there have been some SDF-based implicit modeling methods, they only focus on single-view-based reconstruction, resulting in low fidelity. In contrast, we first analyze multi-sweep consistency and complementarity in the latent feature space and propose to transform the implicit space shape estimation problem into an element-to-set feature extraction problem. Then, we devise a new architecture to extract individual element-level representations and aggregate them to generate a set-level predicted latent code. This set-level latent code is an expression of the optimal 3D shape in the implicit space, and can be subsequently decoded to a continuous SDF of the vehicle. In this way, our approach learns consistent and complementary information among multi-sweeps for 3D vehicle reconstruction. We conduct thorough experiments on two real-world autonomous driving datasets (Waymo and KITTI) to demonstrate the superiority of our approach over state-of-the-art alternative methods both qualitatively and quantitatively.
 
 </details>
-
-### SurroundOcc: Multi-Camera 3D Occupancy Prediction for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01986)
-- **作者**: Yi Wei, Linqing Zhao, Wenzhao Zheng, Zheng Zhu, Jie Zhou, Jiwen Lu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
 
 ### Zenseact Open Dataset: A large-scale and diverse multimodal dataset for autonomous driving.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01846) · 📚 被引 70
@@ -143,6 +135,12 @@
 - **🏷️ 机构**: NVIDIA, The Chinese University of Hong Kong
 - **会议**: ICCV 2023
 
+### SurroundOcc: Multi-Camera 3D Occupancy Prediction for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01986)
+- **作者**: Yi Wei, Linqing Zhao, Wenzhao Zheng, Zheng Zhu, Jie Zhou, Jiwen Lu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
+
 ### SemARFlow: Injecting Semantics into Unsupervised Optical Flow Estimation for Autonomous Driving.
 - **链接**: [arXiv:2303.06209](https://arxiv.org/abs/2303.06209) · [代码](https://github.com/duke-vision/semantic-unsup-flow-release) · 📚 被引 8
 - **作者**: Shuai Yuan, Shuzhi Yu, Hannah Kim, Carlo Tomasi
@@ -209,7 +207,11 @@
 
 </details>
 
-## 跨领域论文（完整笔记在其他领域）
+### Online Map Vectorization for Autonomous Driving: A Rasterization Perspective.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/654f61ecd998c9095d30d42c03b832aa-Abstract-Conference.html)
+- **作者**: Gongjie Zhang, Jiahao Lin, Shuang Wu, Yilin Song, Zhipeng Luo, Yang Xue et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
 
 - Surround-View Vision-based 3D Detection for Autonomous Driving: A Survey. → [3d-detection](../3d-detection/Guideline%202023.md)
 - On Offline Evaluation of 3D Object Detection for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202023.md)

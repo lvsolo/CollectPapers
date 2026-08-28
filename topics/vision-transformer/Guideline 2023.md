@@ -11,6 +11,18 @@
 - **🏷️ 机构**: Google DeepMind, ETH Zurich
 - **会议**: ICCV 2023
 
+### Castling-ViT: Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01387) · 📚 被引 57
+- **作者**: Haoran You, Yunyang Xiong, Xiaoliang Dai, Bichen Wu, Peizhao Zhang, Haoqi Fan et al.
+- **🏷️ 机构**: Georgia Institute of Technology, Meta Research
+- **会议**: CVPR 2023
+
+### ViPLO: Vision Transformer Based Pose-Conditioned Self-Loop Graph for Human-Object Interaction Detection.
+- **链接**: [arXiv:2304.08114](https://arxiv.org/abs/2304.08114) · [代码](https://github.com/Jeeseung-Park/ViPLO) · 📚 被引 75
+- **作者**: Jeeseung Park, Jin-Woo Park, Jong-Seok Lee
+- **🏷️ 机构**: mAy-I Inc.,Seoul,Korea, Yonsei University,Korea
+- **会议**: CVPR 2023
+
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > We present an architecture and a training recipe that adapts pre-trained open-world image models to localization in videos. Understanding the open visual world (without being constrained by fixed label spaces) is crucial for many real-world vision tasks. Contrastive pre-training on large image-text datasets has recently led to significant improvements for image-level tasks. For more structured tasks involving object localization applying pre-trained models is more challenging. This is particularly true for video tasks, where task-specific data is limited. We show successful transfer of open-world models by building on the OWL-ViT open-vocabulary detection model and adapting it to video by adding a transformer decoder. The decoder propagates object representations recurrently through time by using the output tokens for one frame as the object queries for the next. Our model is end-to-end trainable on video data and enjoys improved temporal consistency compared to tracking-by-detection baselines, while retaining the open-world capabilities of the backbone detector. We evaluate our model on the challenging TAO-OW benchmark and demonstrate that open-world capabilities, learned from large-scale image-text pre-training, can be transferred successfully to open-world localization across diverse videos.
@@ -29,11 +41,19 @@
 
 </details>
 
-### RepQ-ViT: Scale Reparameterization for Post-Training Quantization of Vision Transformers.
-- **链接**: [arXiv:2212.08254](https://arxiv.org/abs/2212.08254) · [代码](https://github.com/zkkli/RepQ-ViT) · 📚 被引 113
-- **作者**: Zhikai Li, Junrui Xiao, Lianwei Yang, Qingyi Gu
-- **🏷️ 机构**: Chinese Academy of Sciences,Institute of Automation
-- **会议**: ICCV 2023
+### SemiCVT: Semi-Supervised Convolutional Vision Transformer for Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01091) · 📚 被引 39
+- **作者**: Huimin Huang, Shiao Xie, Lanfen Lin, Ruofeng Tong, Yen-Wei Chen, Yuexiang Li et al.
+- **🏷️ 机构**: Zhejiang University, Ritsumeikan University, Tencent Jarvis Lab
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+### EfficientViT: Memory Efficient Vision Transformer with Cascaded Group Attention.
+- **链接**: [arXiv:2305.07027](https://arxiv.org/abs/2305.07027) · [代码](https://github.com/microsoft/Cream) · 📚 被引 828
+- **作者**: Xinyu Liu, Houwen Peng, Ningxin Zheng, Yuqing Yang, Han Hu, Yixuan Yuan
+- **🏷️ 机构**: The Chinese University of Hong Kong, Microsoft Research
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -161,7 +181,7 @@
 - **🏷️ 机构**: University of Electronic Science and Technology of China,Chengdu,China, Academy of Military Sciences,Defense Innovation Institute,Beijing,China
 - **会议**: ICCV 2023
 
-## 跨领域论文（完整笔记在其他领域）
+> The advent of high-capacity pre-trained models has revolutionized problem-solving in computer vision, shifting the focus from training task-specific models to adapting pre-trained models. Consequently, effectively adapting large pre-trained models to downstream tasks in an efficient manner has become a prominent research area. Existing solutions primarily concentrate on designing lightweight adapters and their interaction with pre-trained models, with the goal of minimizing the number of parameters requiring updates. In this study, we propose a novel Adapter Re-Composing (ARC) strategy that addresses efficient pre-trained model adaptation from a fresh perspective. Our approach considers the reusability of adaptation parameters and introduces a parameter-sharing scheme. Specifically, we leverage symmetric down-/up-projections to construct bottleneck operations, which are shared across layers. By learning low-dimensional re-scaling coefficients, we can effectively re-compose layer-adaptive adapters. This parameter-sharing strategy in adapter design allows us to significantly reduce the number of new parameters while maintaining satisfactory performance, thereby offering a promising approach to compress the adaptation cost. We conduct experiments on 24 downstream image classification tasks using various Vision Transformer variants to evaluate our method. The results demonstrate that our approach achieves compelling transfer learning performance with a reduced parameter count. Our code is available at \href{https://github.com/DavidYanAnDe/ARC}{https://github.com/DavidYanAnDe/ARC}.
 
 - T-FFTRadNet: Object Detection with Swin Vision Transformers from Raw ADC Radar Signals. → [object-detection](../object-detection/Guideline%202023.md)
 - MMST-ViT: Climate Change-aware Crop Yield Prediction via Multi-Modal Spatial-Temporal Vision Transformer. → [multimodal](../multimodal/Guideline%202023.md)
