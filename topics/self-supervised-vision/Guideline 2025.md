@@ -1,21 +1,33 @@
 # Self-supervised Vision — 2025 Guideline
 
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
-> 论文数: 45 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 54 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### BOE-ViT: Boosting Orientation Estimation with Equivariance in Self-Supervised 3D Subtomogram Alignment.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jiang_BOE-ViT_Boosting_Orientation_Estimation_with_Equivariance_in_Self-Supervised_3D_Subtomogram_CVPR_2025_paper.html)
-- **作者**: Runmin Jiang, Jackson Daggett, Shriya Pingulkar, Yizhou Zhao, Priyanshu Dhingra, Daniel Brown et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+### Temporal Overlapping Prediction: A Self-Supervised Pre-Training Method for LiDAR Moving Object Segmentation.
+- **链接**: [arXiv:2503.07167](https://arxiv.org/abs/2503.07167) · 📚 被引 1
+- **作者**: Ziliang Miao, Runjian Chen, Yixi Cai, Buwei He, Wenquan Zhao, Wenqi Shao et al.
+- **🏷️ 机构**: The University of Hong Kong, KTH Royal Institute of Technology, Southern University of Science and Technology
+- **会议**: ICCV 2025
 
-### Multi-Scale Neighborhood Occupancy Masked Autoencoder for Self-Supervised Learning in LiDAR Point Clouds.
-- **链接**: [arXiv:2502.20316](https://arxiv.org/abs/2502.20316) · 📚 被引 5
-- **作者**: Mohamed Abdelsamad, Michael Ulrich, Claudius Gläser, Abhinav Valada
-- **🏷️ 机构**: Bosch Center for AI, University of Freiburg
-- **会议**: CVPR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Moving object segmentation (MOS) on LiDAR point clouds is crucial for autonomous systems like self-driving vehicles. Previous supervised approaches rely heavily on costly manual annotations, while LiDAR sequences naturally capture temporal motion cues that can be leveraged for self-supervised learning. In this paper, we propose Temporal Overlapping Prediction (TOP), a self-supervised pre-training method that alleviate the labeling burden for MOS. TOP explores the temporal overlapping points that commonly observed by current and adjacent scans, and learns spatiotemporal representations by predicting the occupancy states of temporal overlapping points. Moreover, we utilize current occupancy reconstruction as an auxiliary pre-training objective, which enhances the current structural awareness of the model. We conduct extensive experiments and observe that the conventional metric Intersection-over-Union (IoU) shows strong bias to objects with more scanned points, which might neglect small or distant objects. To compensate for this bias, we introduce an additional metric called mIoU_obj to evaluate object-level performance. Experiments on nuScenes and SemanticKITTI show that TOPoutperforms both supervised training-from-scratch baseline and other self-supervised pre-training baselines by up to 28.77% relative improvement, demonstrating strong transferability across LiDAR setups and generalization to other tasks. Code and pre-trained models will be publicly available upon publication.
+
+</details>
+
+### ASCENT: Annotation-Free Self-Supervised Contrastive Embeddings for 3D Neuron Tracking in Fluorescence Microscopy.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01362) · 📚 被引 1
+- **作者**: Haejun Han, Hang Lu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### T-REGS: Minimum Spanning Tree Regularization for Self-Supervised Learning.
+- **链接**: [arXiv:2510.23484](https://arxiv.org/abs/2510.23484) · 📚 被引 0
+- **作者**: Julie Mordacq, David Loiseaux, Vicky Kalogeiton, Steve Oudot
+- **🏷️ 机构**: Inria Saclay, Ecole Polytechnique, Lawrence Berkeley National Lab, Ecole polytechnique, IP Paris
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -23,11 +35,11 @@
 
 </details>
 
-### PSA-SSL: Pose and Size-aware Self-Supervised Learning on LiDAR Point Clouds.
-- **链接**: [arXiv:2503.13914](https://arxiv.org/abs/2503.13914) · [代码](https://github.com/TRAILab/PSA-SSL) · 📚 被引 4
-- **作者**: Barza Nisar, Steven L. Waslander
-- **🏷️ 机构**: University of Toronto Robotics Institute
-- **会议**: CVPR 2025
+### ShapeEmbed: a self-supervised learning framework for 2D contour quantification.
+- **链接**: [arXiv:2507.01009](https://arxiv.org/abs/2507.01009) · 📚 被引 0
+- **作者**: Anna Foix Romero, Craig Russell, Alexander Krull, Virginie Uhlmann
+- **🏷️ 机构**: EMBL's European Bioinformatics Institute, European Bioinformatics Institute - EMBL, Birmingham University
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -35,17 +47,17 @@
 
 </details>
 
-### A Unified Approach to Interpreting Self-supervised Pre-training Methods for 3D Point Clouds via Interactions.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Li_A_Unified_Approach_to_Interpreting_Self-supervised_Pre-training_Methods_for_3D_CVPR_2025_paper.html) · 📚 被引 1
-- **作者**: Qiang Li, Jian Ruan, Fanghao Wu, Yuchi Chen, Zhihua Wei, Wen Shen
-- **🏷️ 机构**: Tongji University,Shanghai,China
-- **会议**: CVPR 2025
+### Not All Data are Good Labels: On the Self-supervised Labeling for Time Series Forecasting.
+- **链接**: [arXiv:2502.14704](https://arxiv.org/abs/2502.14704) · 📚 被引 0
+- **作者**: Yuxuan Yang, Dalin Zhang, Yuxuan Liang, Hua Lu, Gang Chen, Huan Li
+- **🏷️ 机构**: Zhejiang University, Hangzhou Dianzi University, The Hong Kong University of Science and Technology (Guangzhou)
+- **会议**: NeurIPS 2025
 
-### Self-Supervised Large Scale Point Cloud Completion for Archaeological Site Restoration.
-- **链接**: [arXiv:2503.04030](https://arxiv.org/abs/2503.04030) · 📚 被引 2
-- **作者**: Aocheng Li, James Zimmer-Dauphinee, Rajesh Kalyanam, Ian Lindsay, Parker VanValkenburgh, Steven A. Wernke et al.
-- **🏷️ 机构**: Purdue University, Vanderbilt University, Brown University
-- **会议**: CVPR 2025
+### Self-Supervised Discovery of Neural Circuits in Spatially Patterned Neural Responses with Graph Neural Networks.
+- **链接**: [arXiv:2509.17174](https://arxiv.org/abs/2509.17174) · 📚 被引 0
+- **作者**: Kijung Yoon
+- **🏷️ 机构**: Hanyang University
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -54,22 +66,18 @@
 </details>
 
 ### On-Device Self-Supervised Learning of Low-Latency Monocular Depth from Only Events.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Hagenaars_On-Device_Self-Supervised_Learning_of_Low-Latency_Monocular_Depth_from_Only_Events_CVPR_2025_paper.html) · 📚 被引 1
+- **链接**: [arXiv:2412.06359](https://arxiv.org/abs/2412.06359) · 📚 被引 1
 - **作者**: Jesse J. Hagenaars, Yilun Wu, Federico Paredes-Vallés, Stein Stroobants, Guido C. H. E. de Croon
 - **🏷️ 机构**: MAVLab, TU Delft, EUISPC, Sony Semiconductor Solutions Europe, Sony Europe B.V
 - **会议**: CVPR 2025
 
-### Improved Monocular Depth Prediction Using Distance Transform Over Pre-semantic Contours with Self-supervised Neural Networks.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Hariat_Improved_Monocular_Depth_Prediction_Using_Distance_Transform_Over_Pre-semantic_Contours_CVPR_2025_paper.html) · 📚 被引 2
-- **作者**: Marwane Hariat, Antoine Manzanera, David Filliat
-- **🏷️ 机构**: Institut Polytechnique de Paris,U2IS, ENSTA,Palaiseau,France
-- **会议**: CVPR 2025
+### CellCLIP - Learning Perturbation Effects in Cell Painting via Text-Guided Contrastive Learning.
+- **链接**: [arXiv:2506.06290](https://arxiv.org/abs/2506.06290) · 📚 被引 0
+- **作者**: Mingyu Lu, Ethan Weinberger, Chanwoo Kim, Su-In Lee
+- **🏷️ 机构**: University of Washington
+- **会议**: NeurIPS 2025
 
-### Masked Scene Modeling: Narrowing the Gap Between Supervised and Self-Supervised Learning in 3D Scene Understanding.
-- **链接**: [arXiv:2504.06719](https://arxiv.org/abs/2504.06719) · [代码](https://github.com/phermosilla/msm) · 📚 被引 0
-- **作者**: Pedro Hermosilla, Christian Stippel, Leon Sick
-- **🏷️ 机构**: TU Wien, Ulm University
-- **会议**: CVPR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -108,10 +116,16 @@
 </details>
 
 ### Positive2Negative: Breaking the Information-Lossy Barrier in Self-Supervised Single Image Denoising.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Li_Positive2Negative_Breaking_the_Information-Lossy_Barrier_in_Self-Supervised_Single_Image_Denoising_CVPR_2025_paper.html) · 📚 被引 5
+- **链接**: [arXiv:2412.16460](https://arxiv.org/abs/2412.16460) · [代码](https://github.com/Li-Tong-621/P2N) · 📚 被引 5
 - **作者**: Tong Li, Lizhi Wang, Zhiyuan Xu, Lin Zhu, Wanxuan Lu, Hua Huang
 - **🏷️ 机构**: Beijing Institute of Technology,School of Computer Science and Technology, Beijing Normal University,School of Artificial Intelligence, Chinese Academy of Sciences,Aerospace Information Research Institute
 - **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Image denoising enhances image quality, serving as a foundational technique across various computational photography applications. The obstacle to clean image acquisition in real scenarios necessitates the development of self-supervised image denoising methods only depending on noisy images, especially a single noisy image. Existing self-supervised image denoising paradigms (Noise2Noise and Noise2Void) rely heavily on information-lossy operations, such as downsampling and masking, culminating in low quality denoising performance. In this paper, we propose a novel self-supervised single image denoising paradigm, Positive2Negative, to break the information-lossy barrier. Our paradigm involves two key steps: Renoised Data Construction (RDC) and Denoised Consistency Supervision (DCS). RDC renoises the predicted denoised image by the predicted noise to construct multiple noisy images, preserving all the information of the original image. DCS ensures consistency across the multiple denoised images, supervising the network to learn robust denoising. Our Positive2Negative paradigm achieves state-of-the-art performance in self-supervised single image denoising with significant speed improvements. The code is released to the public at https://github.com/Li-Tong-621/P2N.
+
+</details>
 
 ### Self-Supervised Cross-View Correspondence with Predictive Cycle Consistency.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Baade_Self-Supervised_Cross-View_Correspondence_with_Predictive_Cycle_Consistency_CVPR_2025_paper.html) · 📚 被引 1
@@ -209,12 +223,6 @@
 - **🏷️ 机构**: University of Chinese Academy of Sciences,School of Computer Science and Technology, Institute of Computing Technology,Chinese Academy of Sciences, Institute of Information Engineering,Chinese Academy of Sciences
 - **会议**: CVPR 2025
 
-### Stealthy Backdoor Attack in Self-Supervised Learning Vision Encoders for Large Vision Language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Stealthy_Backdoor_Attack_in_Self-Supervised_Learning_Vision_Encoders_for_Large_CVPR_2025_paper.html)
-- **作者**: Zhaoyi Liu, Huan Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
-
 ### Shading Meets Motion: Self-supervised Indoor 3D Reconstruction Via Simultaneous Shape-from-Shading and Structure-from-Motion.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Lu_Shading_Meets_Motion_Self-supervised_Indoor_3D_Reconstruction_Via_Simultaneous_Shape-from-Shading_CVPR_2025_paper.html) · 📚 被引 2
 - **作者**: Guoyu Lu
@@ -309,31 +317,35 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yang_ImagineFSL_Self-Supervised_Pretraining_Matters_on_Imagined_Base_Set_for_VLM-based_CVPR_2025_paper.html)
 - **作者**: Haoyuan Yang, Xiaoou Li, Jiaming Lv, Xianjun Cheng, Qilong Wang, Peihua Li
 - **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised pre-trained audio networks have seen widespread adoption in real-world systems, particularly in multi-modal large language models. These networks are often employed in a frozen state, under the assumption that the SSL pre-training has sufficiently equipped them to handle real-world audio. However, a critical question remains: how well do these models actually perform in real-world conditions, where audio is typically polyphonic and complex, involving multiple overlapping sound sources? Current audio SSL methods are often benchmarked on datasets predominantly featuring monophonic audio, such as environmental sounds, and speech. As a result, the ability of SSL models to generalize to polyphonic audio, a common characteristic in natural scenarios, remains underexplored. This limitation raises concerns about the practical robustness of SSL models in more realistic audio settings. To address this gap, we introduce Self-Supervised Learning from Audio Mixtures (SSLAM), a novel direction in audio SSL research, designed to improve, designed to improve the model's ability to learn from polyphonic data while maintaining strong performance on monophonic data. We thoroughly evaluate SSLAM on standard audio SSL benchmark datasets which are predominantly monophonic and conduct a comprehensive comparative analysis against SOTA methods using a range of high-quality, publicly available polyphonic datasets. SSLAM not only improves model performance on polyphonic audio, but also maintains or exceeds performance on standard audio SSL benchmarks. Notably, it achieves up to a 3.9\% improvement on the AudioSet-2M (AS-2M), reaching a mean average precision (mAP) of 50.2. For polyphonic datasets, SSLAM sets new SOTA in both linear evaluation and fine-tuning regimes with performance improvements of up to 9.1\% (mAP).
+
+### DyCON: Dynamic Uncertainty-aware Consistency and Contrastive Learning for Semi-supervised Medical Image Segmentation.
+- **链接**: [arXiv:2504.04566](https://arxiv.org/abs/2504.04566) · 📚 被引 25
+- **作者**: Maregu Assefa, Muzammal Naseer, Iyyakutti Iyappan Ganapathi, Syed Sadaf Ali, Mohamed L. Seghier, Naoufel Werghi
+- **🏷️ 机构**: C2PS - Khalifa University of Science and Technology,Abu Dhabi,UAE
 - **会议**: CVPR 2025
 
-### TAGA: Self-supervised Learning for Template-free Animatable Gaussian Articulated Model.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhai_TAGA_Self-supervised_Learning_for_Template-free_Animatable_Gaussian_Articulated_Model_CVPR_2025_paper.html) · 📚 被引 4
-- **作者**: Zhichao Zhai, Guikun Chen, Wenguan Wang, Dong Zheng, Jun Xiao
-- **🏷️ 机构**: Zhejiang University
-- **会议**: CVPR 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Invisible Backdoor Attack against Self-supervised Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Invisible_Backdoor_Attack_against_Self-supervised_Learning_CVPR_2025_paper.html) · 📚 被引 5
-- **作者**: Hanrong Zhang, Zhenting Wang, Boheng Li, Fulin Lin, Tingxu Han, Mingyu Jin et al.
-- **🏷️ 机构**: Zhejiang University, Rutgers University, Nanyang Technological University
-- **会议**: CVPR 2025
+> Semi-supervised learning in medical image segmentation leverages unlabeled data to reduce annotation burdens through consistency learning. However, current methods struggle with class imbalance and high uncertainty from pathology variations, leading to inaccurate segmentation in 3D medical images. To address these challenges, we present DyCON, a Dynamic Uncertainty-aware Consistency and Contrastive Learning framework that enhances the generalization of consistency methods with two complementary losses: Uncertainty-aware Consistency Loss (UnCL) and Focal Entropy-aware Contrastive Loss (FeCL). UnCL enforces global consistency by dynamically weighting the contribution of each voxel to the consistency loss based on its uncertainty, preserving high-uncertainty regions instead of filtering them out. Initially, UnCL prioritizes learning from uncertain voxels with lower penalties, encouraging the model to explore challenging regions. As training progress, the penalty shift towards confident voxels to refine predictions and ensure global consistency. Meanwhile, FeCL enhances local feature discrimination in imbalanced regions by introducing dual focal mechanisms and adaptive confidence adjustments into the contrastive principle. These mechanisms jointly prioritizes hard positives and negatives while focusing on uncertain sample pairs, effectively capturing subtle lesion variations under class imbalance. Extensive evaluations on four diverse medical image segmentation datasets (ISLES'22, BraTS'19, LA, Pancreas) show DyCON's superior performance against SOTA methods.
 
-### Anyattack: Towards Large-scale Self-supervised Adversarial Attacks on Vision-language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Anyattack_Towards_Large-scale_Self-supervised_Adversarial_Attacks_on_Vision-language_Models_CVPR_2025_paper.html)
-- **作者**: Jiaming Zhang, Junhong Ye, Xingjun Ma, Yige Li, Yunfan Yang, Yunhao Chen et al.
+</details>
+
+### Instruct-CLIP: Improving Instruction-Guided Image Editing with Automated Data Refinement Using Contrastive Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Instruct-CLIP_Improving_Instruction-Guided_Image_Editing_with_Automated_Data_Refinement_Using_CVPR_2025_paper.html)
+- **作者**: Sherry X. Chen, Misha Sra, Pradeep Sen
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICLR 2025
 
-### From Prototypes to General Distributions: An Efficient Curriculum for Masked Image Modeling.
-- **链接**: [arXiv:2411.10685](https://arxiv.org/abs/2411.10685) · 📚 被引 3
-- **作者**: Jinhong Lin, Cheng-En Wu, Huanran Li, Jifan Zhang, Yu Hen Hu, Pedro Morgado
-- **🏷️ 机构**: University of Wisconsin&#x2013;Madison
-- **会议**: CVPR 2025
+### Collapse-Proof Non-Contrastive Self-Supervised Learning.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/sansone25a.html)
+- **作者**: Emanuele Sansone, Tim Lebailly, Tinne Tuytelaars
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -343,10 +355,10 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- AVF-MAE++: Scaling Affective Video Facial Masked Autoencoders via Efficient Audio-Visual Self-Supervised Learning. → [multimodal](../multimodal/Guideline%202025.md)
-- Large Self-Supervised Models Bridge the Gap in Domain Adaptive Object Detection. → [object-detection](../object-detection/Guideline%202025.md)
-- Learning from Synchronization: Self-Supervised Uncalibrated Multi-View Person Association in Challenging Scenes. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
-- Enhanced Contrastive Learning with Multi-view Longitudinal Data for Chest X-ray Report Generation. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
-- GeoDepth: From Point-to-Depth to Plane-to-Depth Modeling for Self-Supervised Monocular Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
-- SplatFlow: Self-Supervised Dynamic Gaussian Splatting in Neural Motion Flow Field for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
-- S4-Driver: Scalable Self-Supervised Driving Multimodal Large Language Model with Spatio-Temporal Visual Representation. → [multimodal](../multimodal/Guideline%202025.md)
+- Dynamic-DINO: Fine-Grained Mixture of Experts Tuning for Real-Time Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202025.md)
+- Talking to DINO: Bridging Self-Supervised Vision Backbones with Language for Open-Vocabulary Segmentation. → [open-set-detection](../open-set-detection/Guideline%202025.md)
+- Differential-Informed Sample Selection Accelerates Multimodal Contrastive Learning. → [multimodal](../multimodal/Guideline%202025.md)
+- Point Cloud Self-Supervised Learning via 3D to Multi-View Masked Learner. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
+- GaussianOcc: Fully Self-Supervised and Efficient 3D Occupancy Estimation with Gaussian Splatting. → [occupancy](../occupancy/Guideline%202025.md)
+- AD-GS: Object-Aware B-Spline Gaussian Splatting for Self-Supervised Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
+- Hybrid-Grained Feature Aggregation with Coarse-to-Fine Language Guidance for Self-Supervised Monocular Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)

@@ -133,6 +133,7 @@ topics:
   - name: BEV
     slug: bev
     description: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
+    parent: [3d-detection, autonomous-driving, multi-camera-perception]   # BEV 是这些领域的子领域：命中时子领域优先归属
     weight: 1.2
     keywords:
       - bird's eye view
@@ -153,6 +154,7 @@ topics:
   - name: Occupancy
     slug: occupancy
     description: 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）
+    parent: [3d-detection, bev, autonomous-driving]   # occupancy 是 3D 感知/BEV 的子方向
     weight: 1.1
     keywords:
       - occupancy prediction
@@ -169,6 +171,7 @@ topics:
   - name: Multi-camera Perception
     slug: multi-camera-perception
     description: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
+    parent: [autonomous-driving, 3d-detection]   # 环视感知是自动驾驶感知的子方向
     weight: 1.0
     keywords:
       - multi-camera
@@ -213,6 +216,7 @@ topics:
   - name: Open-set Detection
     slug: open-set-detection
     description: 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）
+    parent: [object-detection]   # 开放类是检测的子范式
     weight: 1.1
     keywords:
       # 开放词表
@@ -255,6 +259,7 @@ topics:
   - name: FOD Detection
     slug: fod-detection
     description: 自动驾驶路面异物/异常物体检测（Road Anomaly / 小物体检测 / 可碾压性判断）
+    parent: [object-detection, autonomous-driving]   # FOD 是检测/自动驾驶的细分场景
     weight: 1.2
     keywords:
       # 路面异常/异物检测主线
