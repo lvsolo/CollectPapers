@@ -1,182 +1,156 @@
 # Continual Learning — 2022 Guideline
 
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
-> 论文数: 16 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 18 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: [2024](Guideline%202024.md)
+> 同领域其他年份: 
 
-### Few-Shot Class-Incremental Learning for 3D Point Cloud Objects. **⭐⭐⭐** (相关度: 70%)
-- **链接**: [arXiv:2205.15225](https://arxiv.org/abs/2205.15225)
-- **作者**: Townim F. Chowdhury, Ali Cheraghian, Sameera Ramasinghe, Sahar Ahmadi, Morteza Saberi, Shafin Rahman
+### CLiMB: A Continual Learning Benchmark for Vision-and-Language Tasks.
+- **链接**: [arXiv:2206.09059](https://arxiv.org/abs/2206.09059)
+- **作者**: Tejas Srinivasan, Ting-Yun Chang, Leticia Leonor Pinto Alva, Georgios Chochlakis, Mohammad Rostami, Jesse Thomason
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: 针对3D点云上的少样本类增量学习问题，该论文指出在真实场景中基类多为合成数据而新类仅有少量真实扫描样本，导致合成到真实的数据分布差异加剧灾难性遗忘和过拟合。方法提出Microshapes，即用预定义的正交基向量规则描述任意3D对象，以支持少样本增量训练并减小合成到真实的数据变化。实验表明该方法在后续增量步骤中能缓解性能下降，但摘要未提供具体数值。
-- **摘要（英）**: This paper addresses few-shot class-incremental learning for 3D point clouds, focusing on the synthetic-to-real domain gap between base and novel classes. It proposes Microshapes, orthogonal basis vectors that describe 3D objects via predefined rules, to enable incremental training with few examples while mitigating distribution shift. The method reduces performance degradation in later incremental steps, though no quantitative results are reported in the abstract.
-- **核心贡献**: 提出Microshapes方法解决3D点云少样本类增量学习中的合成到真实分布差异问题。
-- **创新点**: 利用正交基向量规则描述3D对象，实现少样本增量训练并减小域差异。
-- **结果**: 在后续增量步骤中缓解性能下降，但未提供具体数据。
+- **会议**: NeurIPS 2022
 
-### Generative Negative Text Replay for Continual Vision-Language Pretraining. **⭐⭐⭐⭐** (相关度: 80%)
-- **链接**: [arXiv:2210.17322](https://arxiv.org/abs/2210.17322)
-- **作者**: Shipeng Yan, Lanqing Hong, Hang Xu, Jianhua Han, Tinne Tuytelaars, Zhenguo Li et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: ①针对视觉-语言预训练（VLP）在流式数据下遭遇灾难性遗忘的问题。②提出生成式负文本回放（GNTR）方法，利用记忆中的图像生成硬负样本文本，增强对比学习的负样本多样性；同时提出多模态知识蒸馏，对齐新旧模型的实例级预测。③相比传统回放，生成式负样本更有效保留旧知识，且蒸馏损失提升跨模态一致性。④在Conceptual Caption数据集上的实例和类增量分割上评估，结果显示优于现有持续学习方法，但摘要未给出具体数值。
-- **摘要（英）**: This paper addresses catastrophic forgetting in continual vision-language pretraining by proposing generative negative text replay (GNTR), which synthesizes hard negative texts from memory images, and multi-modal knowledge distillation to align predictions. This improves negative sample diversity and preserves learned knowledge. Experiments on Conceptual Caption splits show superior performance over existing methods, though specific numbers are not provided.
-- **核心贡献**: 提出生成式负文本回放和知识蒸馏的持续视觉-语言预训练方法。
-- **创新点**: 利用生成硬负样本增强回放效果。
-- **结果**: 在持续学习基准上优于现有方法。
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Online Continual Learning with Contrastive Vision Transformer. **⭐⭐⭐⭐** (相关度: 70%)
-- **链接**: [arXiv:2207.13516](https://arxiv.org/abs/2207.13516) · 📚 被引 30
-- **作者**: Zhen Wang, Liu Liu, Yajing Kong, Jiaxian Guo, Dacheng Tao
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: 针对在线持续学习（online CL）中灾难性遗忘与稳定性-可塑性平衡问题，提出基于对比视觉Transformer（CVT）的框架。方法包括：设计外部注意力机制隐式捕获先前任务信息，为每个类别引入可学习的焦点（focuses）以累积类别知识，并基于此设计焦点对比损失（focal contrastive loss）来重平衡新旧类别的对比学习，同时采用双分类器结构解耦当前类别学习与所有已见类别平衡。实验表明，该方法在在线CL基准上以更少参数达到最先进性能，有效缓解遗忘。
-- **摘要（英）**: This paper addresses catastrophic forgetting and stability-plasticity trade-off in online continual learning by proposing a Contrastive Vision Transformer (CVT) framework. It introduces an external attention mechanism for implicit past-task information capture, learnable class-wise focuses for knowledge accumulation, a focal contrastive loss to rebalance new and past classes, and a dual-classifier structure for decoupling current and balanced learning. Extensive experiments show state-of-the-art performance with fewer parameters on online CL benchmarks.
-- **核心贡献**: 提出CVT框架，通过焦点对比学习与外部注意力机制提升在线持续学习性能。
-- **创新点**: 设计可学习类别焦点与焦点对比损失，实现新旧类别知识的动态平衡。
-- **结果**: 在在线CL基准上以更少参数取得最先进性能。
+> Current state-of-the-art vision-and-language models are evaluated on tasks either individually or in a multi-task setting, overlooking the challenges of continually learning (CL) tasks as they arrive. Existing CL benchmarks have facilitated research on task adaptation and mitigating "catastrophic forgetting", but are limited to vision-only and language-only tasks. We present CLiMB, a benchmark to study the challenge of learning multimodal tasks in a CL setting, and to systematically evaluate how upstream continual learning can rapidly generalize to new multimodal and unimodal tasks. CLiMB includes implementations of several CL algorithms and a modified Vision-Language Transformer (ViLT) model that can be deployed on both multimodal and unimodal tasks. We find that common CL methods can help mitigate forgetting during multimodal task learning, but do not enable cross-task knowledge transfer. We envision that CLiMB will facilitate research on a new class of CL algorithms for this challenging multimodal setting.
 
-### S3C: Self-Supervised Stochastic Classifiers for Few-Shot Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 65%)
-- **链接**: [arXiv:2307.02246](https://arxiv.org/abs/2307.02246) · 📚 被引 45
-- **作者**: Jayateja Kalla, Soma Biswas
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: 针对小样本类增量学习（FSCIL）中因数据稀缺导致的新类过拟合和旧类灾难性遗忘问题，提出自监督随机分类器（S3C）框架。方法通过引入分类器权重（类原型）的随机性，缓解新类样本不足和旧类样本缺失的负面影响，并利用自监督组件学习基类中可泛化到未来未见类的特征，从而减少遗忘。在三个基准数据集上的多指标评估验证了有效性，并额外测试了两种现实场景。
-- **摘要（英）**: This paper tackles over-fitting on new classes and catastrophic forgetting in few-shot class-incremental learning (FSCIL) by proposing a self-supervised stochastic classifier (S3C). The stochasticity of classifier weights mitigates data scarcity effects, while self-supervision learns generalizable features from base classes to reduce forgetting. Extensive evaluation on three benchmarks and two realistic scenarios demonstrates effectiveness.
-- **核心贡献**: 提出S3C框架，利用随机分类器权重和自监督学习应对FSCIL中的双重挑战。
-- **创新点**: 将分类器权重的随机性引入FSCIL，以缓解数据稀缺和样本缺失问题。
-- **结果**: 在三个基准数据集上验证了有效性，并扩展至现实场景。
+</details>
 
-### DualPrompt: Complementary Prompting for Rehearsal-Free Continual Learning. **⭐⭐⭐⭐⭐** (相关度: 75%)
-- **链接**: [arXiv:2204.04799](https://arxiv.org/abs/2204.04799) · 📚 被引 421
-- **作者**: Zifeng Wang, Zizhao Zhang, Sayna Ebrahimi, Ruoxi Sun, Han Zhang, Chen-Yu Lee et al.
+### Task-Free Continual Learning via Online Discrepancy Distance Learning.
+- **链接**: [arXiv:2210.06579](https://arxiv.org/abs/2210.06579) · 📚 被引 6
+- **作者**: Fei Ye, Adrian G. Bors
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: 针对无回放持续学习中因隐私和内存限制无法存储旧样本的问题，提出DualPrompt框架，通过学习一组极小的提示参数（prompts）来指导预训练模型顺序学习任务，无需缓冲过去样本。方法将互补提示附加到预训练骨干网络，并将目标形式化为学习任务不变和任务特定的“指令”。在类增量设置下持续取得最先进性能，尤其优于使用较大缓冲区的先进方法，并引入更具挑战性的Split ImageNet-R基准。
-- **摘要（英）**: This paper addresses rehearsal-free continual learning by proposing DualPrompt, which learns tiny prompt parameters to instruct a pre-trained model on sequential tasks without buffering past examples. It attaches complementary prompts to the backbone and formulates the objective as learning task-invariant and task-specific instructions. Extensive validation shows state-of-the-art performance in class-incremental settings, outperforming methods with larger buffers, and introduces the Split ImageNet-R benchmark.
-- **核心贡献**: 提出DualPrompt框架，通过互补提示实现无回放持续学习，并引入新基准。
-- **创新点**: 利用任务不变和任务特定提示的互补设计，高效指导预训练模型。
-- **结果**: 在类增量设置下超越带大缓冲区的方法，取得最先进性能。
+- **会议**: NeurIPS 2022
 
-### Theoretical Understanding of the Information Flow on Continual Learning Performance. **⭐⭐⭐** (相关度: 60%)
-- **链接**: [arXiv:2204.12010](https://arxiv.org/abs/2204.12010) · 📚 被引 4
-- **作者**: Joshua Andle, Salimeh Yasaei Sekeh
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: 针对持续学习中缺乏对神经网络学习新任务时行为理论理解的问题，建立概率框架分析任务序列中网络层间信息流及其对学习性能的影响。目标是优化学习新任务时层间信息保留，以管理任务特定知识传递并保持旧任务性能。该工作从理论角度研究CL性能退化，弥补了经验研究之外的不足。
-- **摘要（英）**: This paper addresses the lack of theoretical understanding in continual learning by establishing a probabilistic framework to analyze information flow through layers for task sequences. It aims to optimize information preservation between layers while learning new tasks to manage task-specific knowledge and maintain previous task performance. This work provides theoretical insights into CL performance degradation.
-- **核心贡献**: 建立概率框架分析持续学习中的信息流，优化层间信息保留。
-- **创新点**: 从理论角度建模信息流与CL性能的关系。
-- **结果**: 提供了理论分析，但未报告具体实验数据。
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Helpful or Harmful: Inter-task Association in Continual Learning. **⭐⭐** (相关度: 50%)
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20083-0_31) · 📚 被引 18
-- **作者**: Hyundong Jin, Eunwoo Kim
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: 该论文摘要为空，无法获取具体内容。根据标题推测，可能研究持续学习中任务间关联（inter-task association）对学习的影响，但缺乏详细信息。
-- **摘要（英）**: The abstract is empty, so no specific content is available. Based on the title, it likely investigates the impact of inter-task association in continual learning, but details are missing.
-- **核心贡献**: 未知，因摘要缺失。
-- **创新点**: 未知，因摘要缺失。
-- **结果**: 未知，因摘要缺失。
+> Learning from non-stationary data streams, also called Task-Free Continual Learning (TFCL) remains challenging due to the absence of explicit task information. Although recently some methods have been proposed for TFCL, they lack theoretical guarantees. Moreover, forgetting analysis during TFCL was not studied theoretically before. This paper develops a new theoretical analysis framework which provides generalization bounds based on the discrepancy distance between the visited samples and the entire information made available for training the model. This analysis gives new insights into the forgetting behaviour in classification tasks. Inspired by this theoretical model, we propose a new approach enabled by the dynamic component expansion mechanism for a mixture model, namely the Online Discrepancy Distance Learning (ODDL). ODDL estimates the discrepancy between the probabilistic representation of the current memory buffer and the already accumulated knowledge and uses it as the expansion signal to ensure a compact network architecture with optimal performance. We then propose a new sample selection approach that selectively stores the most relevant samples into the memory buffer through the discrepancy-based measure, further improving the performance. We perform several TFCL experiments with the proposed methodology, which demonstrate that the proposed approach achieves the state of the art performance.
 
-### Balancing Stability and Plasticity Through Advanced Null Space in Continual Learning. **⭐⭐⭐** (相关度: 55%)
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19809-0_13) · 📚 被引 25
-- **作者**: Yajing Kong, Liu Liu, Zhen Wang, Dacheng Tao
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: 针对持续学习中稳定性与可塑性平衡问题，提出基于高级零空间（Advanced Null Space）的方法。该方法可能通过投影或约束机制，在保留旧任务知识的同时学习新任务，但摘要未提供具体细节。
-- **摘要（英）**: This paper addresses the stability-plasticity dilemma in continual learning by proposing an advanced null space-based method. It likely uses projection or constraint mechanisms to preserve old task knowledge while learning new tasks, but details are not provided in the abstract.
-- **核心贡献**: 提出基于高级零空间的持续学习方法，以平衡稳定性与可塑性。
-- **创新点**: 利用零空间理论实现任务知识保留。
-- **结果**: 未报告具体结果。
+</details>
 
-### Online Task-free Continual Learning with Dynamic Sparse Distributed Memory. **⭐⭐⭐** (相关度: 60%)
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19806-9_42) · 📚 被引 12
-- **作者**: Julien Pourcel, Ngoc-Son Vu, Robert M. French
+### SparCL: Sparse Continual Learning on the Edge.
+- **链接**: [arXiv:2209.09476](https://arxiv.org/abs/2209.09476) · 📚 被引 6
+- **作者**: Zifeng Wang, Zheng Zhan, Yifan Gong, Geng Yuan, Wei Niu, Tong Jian et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: ①针对在线无任务持续学习中的灾难性遗忘问题。②提出动态稀疏分布式记忆（DSDM）机制，结合稀疏编码和记忆重放来存储和检索旧知识。③相比传统重放方法，DSDM 更高效且无需任务边界信息。④实验表明在多个基准上有效缓解遗忘，但摘要未提供具体数据。
-- **摘要（英）**: This paper addresses catastrophic forgetting in online task-free continual learning by proposing a Dynamic Sparse Distributed Memory (DSDM) that combines sparse coding and memory replay. It improves efficiency over traditional replay methods without requiring task boundaries. Experiments show reduced forgetting on benchmarks, though specific metrics are not detailed in the abstract.
-- **核心贡献**: 提出动态稀疏分布式记忆机制用于在线无任务持续学习。
-- **创新点**: 将稀疏分布式记忆与动态更新策略结合，实现无需任务边界的知识存储与回放。
-- **结果**: 在多个基准上有效缓解遗忘，但未提供具体数值。
+- **会议**: NeurIPS 2022
 
-### DLCFT: Deep Linear Continual Fine-Tuning for General Incremental Learning. **⭐⭐⭐⭐** (相关度: 70%)
-- **链接**: [arXiv:2208.08112](https://arxiv.org/abs/2208.08112) · 📚 被引 15
-- **作者**: Hyounguk Shon, Janghyeon Lee, Seung Hwan Kim, Junmo Kim
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: ①针对预训练模型在持续微调中的灾难性遗忘问题。②提出深度线性持续微调（DLCFT）方法，利用预训练网络的线性化技术设计线性模型，并采用二次参数正则化作为最优策略。③相比传统 EWC 等方法，DLCFT 能应用于类增量场景，并从理论上解释了 EWC 在交叉熵损失下失效的原因。④实验表明在图像分类任务上能有效防止遗忘并保持高性能。
-- **摘要（英）**: This paper tackles catastrophic forgetting in continual fine-tuning of pre-trained models by proposing Deep Linear Continual Fine-Tuning (DLCFT), which linearizes the pre-trained network and applies quadratic parameter regularization as an optimal policy. It extends regularization methods to class-incremental learning and provides theoretical insights into EWC's underperformance. Experiments on image classification demonstrate reduced forgetting and high performance.
-- **核心贡献**: 提出基于线性化预训练网络的持续微调框架，并理论解释现有正则化方法的局限。
-- **创新点**: 利用网络线性化技术将参数正则化方法适配到类增量学习。
-- **结果**: 在图像分类任务上有效防止遗忘并保持高性能。
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### R-DFCIL: Relation-Guided Representation Learning for Data-Free Class Incremental Learning. **⭐⭐⭐⭐** (相关度: 65%)
-- **链接**: [arXiv:2203.13104](https://arxiv.org/abs/2203.13104)
-- **作者**: Qiankun Gao, Chen Zhao, Bernard Ghanem, Jian Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: ①针对无数据类增量学习（DFCIL）中合成数据与真实数据域差距导致的遗忘问题。②提出关系引导表示学习（RRL），通过关系知识蒸馏传递新数据的结构关系，并采用局部分类损失避免表示与分类器学习的干扰。③相比现有 DFCIL 方法，RRL 能更好地兼容新旧类表示，减少遗忘并提升可塑性。④实验表明在多个基准上显著降低遗忘，但摘要未给出具体数值。
-- **摘要（英）**: This paper addresses the domain gap between synthetic and real data in data-free class-incremental learning (DFCIL) by proposing relation-guided representation learning (RRL), which uses relational knowledge distillation to transfer structural relations and local classification loss to avoid interference. It improves compatibility between old and new class representations, reducing forgetting and enhancing plasticity. Experiments show significant forgetting reduction on benchmarks.
-- **核心贡献**: 提出关系引导表示学习框架，缓解无数据类增量学习中的域差距问题。
-- **创新点**: 引入关系知识蒸馏和局部分类损失，优化表示学习与分类器训练的平衡。
-- **结果**: 在多个基准上显著降低遗忘并提升新类学习能力。
+> Existing work in continual learning (CL) focuses on mitigating catastrophic forgetting, i.e., model performance deterioration on past tasks when learning a new task. However, the training efficiency of a CL system is under-investigated, which limits the real-world application of CL systems under resource-limited scenarios. In this work, we propose a novel framework called Sparse Continual Learning(SparCL), which is the first study that leverages sparsity to enable cost-effective continual learning on edge devices. SparCL achieves both training acceleration and accuracy preservation through the synergy of three aspects: weight sparsity, data efficiency, and gradient sparsity. Specifically, we propose task-aware dynamic masking (TDM) to learn a sparse network throughout the entire CL process, dynamic data removal (DDR) to remove less informative training data, and dynamic gradient masking (DGM) to sparsify the gradient updates. Each of them not only improves efficiency, but also further mitigates catastrophic forgetting. SparCL consistently improves the training efficiency of existing state-of-the-art (SOTA) CL methods by at most 23X less training FLOPs, and, surprisingly, further improves the SOTA accuracy by at most 1.7%. SparCL also outperforms competitive baselines obtained from adapting SOTA sparse training methods to the CL setting in both efficiency and accuracy. We also evaluate the effectiveness of SparCL on a real mobile phone, further indicating the practical potential of our method.
 
-### Class-Incremental Learning with Cross-Space Clustering and Controlled Transfer. **⭐⭐⭐⭐** (相关度: 65%)
-- **链接**: [arXiv:2208.03767](https://arxiv.org/abs/2208.03767) · 📚 被引 31
-- **作者**: Arjun Ashok, K. J. Joseph, Vineeth N. Balasubramanian
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: ①针对类增量学习中保持旧类表示和适应新类之间的平衡问题。②提出跨空间聚类（CSC）和受控迁移（CT）两个蒸馏目标，利用特征空间结构指导优化方向，促进类内聚类和类间分离。③相比传统蒸馏方法，CSC 通过群体免疫效应增强旧类抗遗忘能力，CT 控制新类学习迁移。④实验表明在多个基准上提升准确率，但摘要未提供具体数据。
-- **摘要（英）**: This paper addresses the balance between preserving old class representations and adapting to new classes in class-incremental learning by proposing cross-space clustering (CSC) and controlled transfer (CT) distillation objectives. CSC leverages feature space structure to guide optimization directions, promoting intra-class clustering and herd immunity, while CT controls transfer for new classes. Experiments show accuracy improvements on benchmarks.
-- **核心贡献**: 提出跨空间聚类和受控迁移的蒸馏方法，增强类增量学习的稳定性与可塑性。
-- **创新点**: 利用特征空间结构定义优化方向，实现群体免疫式抗遗忘。
-- **结果**: 在多个基准上提升类增量学习准确率。
+</details>
 
-### Few-Shot Class-Incremental Learning via Entropy-Regularized Data-Free Replay. **⭐⭐⭐⭐** (相关度: 60%)
-- **链接**: [arXiv:2207.11213](https://arxiv.org/abs/2207.11213)
-- **作者**: Huan Liu, Li Gu, Zhixiang Chi, Yang Wang, Yuanhao Yu, Jun Chen et al.
+### On the Effectiveness of Lipschitz-Driven Rehearsal in Continual Learning.
+- **链接**: [arXiv:2210.06443](https://arxiv.org/abs/2210.06443) · [代码](https://github.com/aimagelab/LiDER) · 📚 被引 6
+- **作者**: Lorenzo Bonicelli, Matteo Boschini, Angelo Porrello, Concetto Spampinato, Simone Calderara
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: ①针对少样本类增量学习（FSCIL）中数据重放的有效性和隐私问题。②提出熵正则化数据自由重放方法，通过生成器合成数据，并施加熵正则化鼓励生成不确定样本，同时采用 one-hot 标签重标记以简化损失函数。③相比传统知识蒸馏方法，该方法避免了多目标平衡问题，并解决了隐私顾虑。④实验表明数据重放在 FSCIL 中有效，且方法在多个基准上表现优异，但摘要未给出具体数值。
-- **摘要（英）**: This paper addresses the effectiveness and privacy concerns of data replay in few-shot class-incremental learning (FSCIL) by proposing entropy-regularized data-free replay, which synthesizes data with a generator and encourages uncertain samples via entropy regularization, using one-hot-like labels to simplify training. It mitigates multi-objective balancing issues and privacy risks. Experiments show replay is effective and the method performs well on benchmarks.
-- **核心贡献**: 提出熵正则化数据自由重放方法，验证重放在 FSCIL 中的有效性并解决隐私问题。
-- **创新点**: 通过熵正则化生成不确定样本和 one-hot 重标记，简化训练目标。
-- **结果**: 在多个基准上表现优异，但未提供具体数值。
+- **会议**: NeurIPS 2022
 
-### Long-Tailed Class Incremental Learning. **⭐⭐** (相关度: 50%)
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19827-4_29)
-- **作者**: Xialei Liu, Yusong Hu, Xu-Sheng Cao, Andrew D. Bagdanov, Ke Li, Ming-Ming Cheng
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: ①该论文标题为长尾类增量学习，但摘要为空，无法获取具体问题、方法、改进和效果信息。②可能针对长尾分布下的类增量学习挑战，但缺乏细节。③无法评估与现有工作的差异。④无实验数据。
-- **摘要（英）**: This paper is titled 'Long-Tailed Class Incremental Learning' but the abstract is empty, so no details on problem, method, improvements, or results are available. It likely addresses challenges of class-incremental learning under long-tailed distributions, but cannot be assessed.
-- **核心贡献**: 未知，因摘要为空。
-- **创新点**: 未知，因摘要为空。
-- **结果**: 未知，因摘要为空。
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Few-Shot Class-Incremental Learning from an Open-Set Perspective. **⭐⭐⭐** (相关度: 75%)
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19806-9_22)
-- **作者**: Can Peng, Kun Zhao, Tianren Wang, Meng Li, Brian C. Lovell
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: ①针对小样本类增量学习中，新类样本有限且存在未知类干扰的问题，从开放集视角重新审视。②方法可能通过引入开放集识别机制，区分已知类和新类，并处理增量学习中的漂移。③相比传统类增量方法，更关注未知类的影响，提升鲁棒性。④摘要未提供具体数据，但预期在标准基准上改善小样本增量性能。
-- **摘要（英）**: This paper rethinks few-shot class-incremental learning from an open-set perspective, addressing limited new-class samples and unknown-class interference. It likely introduces open-set recognition to distinguish known and novel classes, mitigating drift. Specific results are not provided, but improvements on benchmarks are expected.
-- **核心贡献**: 将开放集视角引入小样本类增量学习，增强未知类处理能力。
-- **创新点**: 结合开放集识别与增量学习，提升小样本场景鲁棒性。
-- **结果**: 预期改善小样本增量性能，但具体数据未给出。
+> Rehearsal approaches enjoy immense popularity with Continual Learning (CL) practitioners. These methods collect samples from previously encountered data distributions in a small memory buffer; subsequently, they repeatedly optimize on the latter to prevent catastrophic forgetting. This work draws attention to a hidden pitfall of this widespread practice: repeated optimization on a small pool of data inevitably leads to tight and unstable decision boundaries, which are a major hindrance to generalization. To address this issue, we propose Lipschitz-DrivEn Rehearsal (LiDER), a surrogate objective that induces smoothness in the backbone network by constraining its layer-wise Lipschitz constants w.r.t. replay examples. By means of extensive experiments, we show that applying LiDER delivers a stable performance gain to several state-of-the-art rehearsal CL methods across multiple datasets, both in the presence and absence of pre-training. Through additional ablative experiments, we highlight peculiar aspects of buffer overfitting in CL and better characterize the effect produced by LiDER. Code is available at https://github.com/aimagelab/LiDER
 
-### FOSTER: Feature Boosting and Compression for Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 50%)
-- **链接**: [arXiv:2204.04662](https://arxiv.org/abs/2204.04662) · 📚 被引 294
-- **作者**: Fu-Yun Wang, Da-Wei Zhou, Han-Jia Ye, De-Chuan Zhan
+</details>
+
+### Memory Efficient Continual Learning with Transformers.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/4522de4178bddb36b49aa26efad537cf-Abstract-Conference.html) · 📚 被引 2
+- **作者**: Beyza Ermis, Giovanni Zappella, Martin Wistuba, Aditya Rawal, Cédric Archambeau
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2022
-- **摘要（中）**: 针对深度神经网络在学习新类别时遭受灾难性遗忘的问题，提出了FOSTER两阶段学习范式。该方法受梯度提升算法启发，首先动态扩展新模块以拟合目标与原始模型输出之间的残差，然后通过有效的蒸馏策略移除冗余参数和特征维度，以维持单骨干网络。在CIFAR-100和ImageNet-100/1000上的实验表明，该方法在不同设置下均达到最先进性能。
-- **摘要（英）**: To address catastrophic forgetting in continual learning, this paper proposes FOSTER, a two-stage paradigm inspired by gradient boosting. It first expands new modules to fit residuals between target and original model output, then removes redundant parameters via distillation to maintain a single backbone. Experiments on CIFAR-100 and ImageNet show state-of-the-art performance.
-- **核心贡献**: 提出基于梯度提升的两阶段类增量学习方法，显著缓解灾难性遗忘。
-- **创新点**: 动态扩展与压缩结合，实现自适应学习新类别并保持模型紧凑。
-- **结果**: 在多个基准数据集上达到最先进性能。
+- **会议**: NeurIPS 2022
+
+### A Theoretical Study on Solving Continual Learning.
+- **链接**: [arXiv:2211.02633](https://arxiv.org/abs/2211.02633) · 📚 被引 8
+- **作者**: Gyuhak Kim, Changnan Xiao, Tatsuya Konishi, Zixuan Ke, Bing Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning (CL) learns a sequence of tasks incrementally. There are two popular CL settings, class incremental learning (CIL) and task incremental learning (TIL). A major challenge of CL is catastrophic forgetting (CF). While a number of techniques are already available to effectively overcome CF for TIL, CIL remains to be highly challenging. So far, little theoretical study has been done to provide a principled guidance on how to solve the CIL problem. This paper performs such a study. It first shows that probabilistically, the CIL problem can be decomposed into two sub-problems: Within-task Prediction (WP) and Task-id Prediction (TP). It further proves that TP is correlated with out-of-distribution (OOD) detection, which connects CIL and OOD detection. The key conclusion of this study is that regardless of whether WP and TP or OOD detection are defined explicitly or implicitly by a CIL algorithm, good WP and good TP or OOD detection are necessary and sufficient for good CIL performances. Additionally, TIL is simply WP. Based on the theoretical result, new CIL methods are also designed, which outperform strong baselines in both CIL and TIL settings by a large margin.
+
+</details>
+
+### Retrospective Adversarial Replay for Continual Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/b6ffbbacbe2e56f2ec9a0da907382b4a-Abstract-Conference.html) · 📚 被引 5
+- **作者**: Lilly Kumari, Shengjie Wang, Tianyi Zhou, Jeff A. Bilmes
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### Continual Learning with Evolving Class Ontologies.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/3255a7554605a88800f4e120b3a929e1-Abstract-Conference.html) · 📚 被引 2
+- **作者**: Zhiqiu Lin, Deepak Pathak, Yu-Xiong Wang, Deva Ramanan, Shu Kong
+- **🏷️ 机构**: CMU
+- **会议**: NeurIPS 2022
+
+### Beyond Not-Forgetting: Continual Learning with Backward Knowledge Transfer.
+- **链接**: [arXiv:2211.00789](https://arxiv.org/abs/2211.00789) · 📚 被引 4
+- **作者**: Sen Lin, Li Yang, Deliang Fan, Junshan Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> By learning a sequence of tasks continually, an agent in continual learning (CL) can improve the learning performance of both a new task and `old' tasks by leveraging the forward knowledge transfer and the backward knowledge transfer, respectively. However, most existing CL methods focus on addressing catastrophic forgetting in neural networks by minimizing the modification of the learnt model for old tasks. This inevitably limits the backward knowledge transfer from the new task to the old tasks, because judicious model updates could possibly improve the learning performance of the old tasks as well. To tackle this problem, we first theoretically analyze the conditions under which updating the learnt model of old tasks could be beneficial for CL and also lead to backward knowledge transfer, based on the gradient projection onto the input subspaces of old tasks. Building on the theoretical analysis, we next develop a ContinUal learning method with Backward knowlEdge tRansfer (CUBER), for a fixed capacity neural network without data replay. In particular, CUBER first characterizes the task correlation to identify the positively correlated old tasks in a layer-wise manner, and then selectively modifies the learnt model of the old tasks when learning the new task. Experimental studies show that CUBER can even achieve positive backward knowledge transfer on several existing CL benchmarks for the first time without data replay, where the related baselines still suffer from catastrophic forgetting (negative backward knowledge transfer). The superior performance of CUBER on the backward knowledge transfer also leads to higher accuracy accordingly.
+
+</details>
+
+### Navigating Memory Construction by Global Pseudo-Task Simulation for Continual Learning.
+- **链接**: [arXiv:2210.08442](https://arxiv.org/abs/2210.08442) · 📚 被引 0
+- **作者**: Yejia Liu, Wang Zhu, Shaolei Ren
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning faces a crucial challenge of catastrophic forgetting. To address this challenge, experience replay (ER) that maintains a tiny subset of samples from previous tasks has been commonly used. Existing ER works usually focus on refining the learning objective for each task with a static memory construction policy. In this paper, we formulate the dynamic memory construction in ER as a combinatorial optimization problem, which aims at directly minimizing the global loss across all experienced tasks. We first apply three tactics to solve the problem in the offline setting as a starting point. To provide an approximate solution to this problem in the online continual learning setting, we further propose the Global Pseudo-task Simulation (GPS), which mimics future catastrophic forgetting of the current task by permutation. Our empirical results and analyses suggest that the GPS consistently improves accuracy across four commonly used vision benchmarks. We have also shown that our GPS can serve as the unified framework for integrating various memory construction policies in existing ER works.
+
+</details>
+
+### Continual learning: a feature extraction formalization, an efficient algorithm, and fundamental obstructions.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/b63a24a1832bd14fa945c71f535c0095-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Binghui Peng, Andrej Risteski
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### Continual Learning In Environments With Polynomial Mixing Times.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/89c61fce5a8b73871d1c4073f486b134-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Matthew Riemer, Sharath Chandra Raparthy, Ignacio Cases, Gopeshh Subbaraj, Maximilian Puelma Touzel, Irina Rish
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### Exploring Example Influence in Continual Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/ad2fa437f7c23e4e9875599c6065d18a-Abstract-Conference.html) · 📚 被引 4
+- **作者**: Qing Sun, Fan Lyu, Fanhua Shang, Wei Feng, Liang Wan
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### A simple but strong baseline for online continual learning: Repeated Augmented Rehearsal.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/5ebbbac62b968254093023f1c95015d3-Abstract-Conference.html) · 📚 被引 5
+- **作者**: Yaqian Zhang, Bernhard Pfahringer, Eibe Frank, Albert Bifet, Nick Jin Sean Lim, Yunzhe Jia
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### Learning a Condensed Frame for Memory-Efficient Video Class-Incremental Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/c8ac22c0d4b263618f2a4f4657948912-Abstract-Conference.html) · 📚 被引 1
+- **作者**: Yixuan Pei, Zhiwu Qing, Jun Cen, Xiang Wang, Shiwei Zhang, Yaxiong Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### S-Prompts Learning with Pre-trained Transformers: An Occam's Razor for Domain Incremental Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/25886d7a7cf4e33fd44072a0cd81bf30-Abstract-Conference.html) · 📚 被引 34
+- **作者**: Yabin Wang, Zhiwu Huang, Xiaopeng Hong
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### ACIL: Analytic Class-Incremental Learning with Absolute Memorization and Privacy Protection.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/4b74a42fc81fc7ee252f6bcb6e26c8be-Abstract-Conference.html) · 📚 被引 12
+- **作者**: Huiping Zhuang, Zhenyu Weng, Hongxin Wei, Renchunzi Xie, Kar-Ann Toh, Zhiping Lin
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### Margin-Based Few-Shot Class-Incremental Learning with Class-Level Overfitting Mitigation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/ae817e85f71ef86d5c9566598e185b89-Abstract-Conference.html) · 📚 被引 4
+- **作者**: Yixiong Zou, Shanghang Zhang, Yuhua Li, Ruixuan Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
