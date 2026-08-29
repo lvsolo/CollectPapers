@@ -5,182 +5,164 @@
 
 > 同领域其他年份: 
 
-### UPop: Unified and Progressive Pruning for Compressing Vision-Language Transformers.
-- **链接**: [arXiv:2301.13741](https://arxiv.org/abs/2301.13741) · [代码](https://github.com/sdc17/UPop)
-- **作者**: Dachuan Shi, Chaofan Tao, Ying Jin, Zhendong Yang, Chun Yuan, Jiaqi Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
+### Efficient Hierarchical Entropy Model for Learned Point Cloud Compression.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01381) · 📚 被引 76
+- **作者**: Rui Song, Chunyang Fu, Shan Liu, Ge Li
+- **🏷️ 机构**: School of Electronic and Computer Engineering, Shenzhen Graduate Scool, Peking University, Tencent America
+- **会议**: CVPR 2023
+
+### SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer.
+- **链接**: [arXiv:2303.17605](https://arxiv.org/abs/2303.17605) · 📚 被引 63
+- **作者**: Xuanyao Chen, Zhijian Liu, Haotian Tang, Li Yi, Hang Zhao, Song Han
+- **🏷️ 机构**: Shanghai Qi Zhi Institute, MIT
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Real-world data contains a vast amount of multimodal information, among which vision and language are the two most representative modalities. Moreover, increasingly heavier models, \textit{e}.\textit{g}., Transformers, have attracted the attention of researchers to model compression. However, how to compress multimodal models, especially vison-language Transformers, is still under-explored. This paper proposes the \textbf{U}nified and \textbf{P}r\textbf{o}gressive \textbf{P}runing (\textbf{\emph{UPop}}) as a universal vison-language Transformer compression framework, which incorporates 1) unifiedly searching multimodal subnets in a continuous optimization space from the original model, which enables automatic assignment of pruning ratios among compressible modalities and structures; 2) progressively searching and retraining the subnet, which maintains convergence between the search and retrain to attain higher compression ratios. Experiments on various tasks, datasets, and model architectures demonstrate the effectiveness and versatility of the proposed UPop framework. The code is available at https://github.com/sdc17/UPop.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> High-resolution images enable neural networks to learn richer visual representations. However, this improved performance comes at the cost of growing computational complexity, hindering their usage in latency-sensitive applications. As not all pixels are equal, skipping computations for less-important regions offers a simple and effective measure to reduce the computation. This, however, is hard to be translated into actual speedup for CNNs since it breaks the regularity of the dense convolution workload. In this paper, we introduce SparseViT that revisits activation sparsity for recent window-based vision transformers (ViTs). As window attentions are naturally batched over blocks, actual speedup with window activation pruning becomes possible: i.e., ~50% latency reduction with 60% sparsity. Different layers should be assigned with different pruning ratios due to their diverse sensitivities and computational costs. We introduce sparsity-aware adaptation and apply the evolutionary search to efficiently find the optimal layerwise sparsity configuration within the vast search space. SparseViT achieves speedups of 1.5x, 1.4x, and 1.3x compared to its dense counterpart in monocular 3D object detection, 2D instance segmentation, and 2D semantic segmentation, respectively, with negligible to no loss of accuracy.
 
 </details>
 
-### Fast as CHITA: Neural Network Pruning with Combinatorial Optimization.
-- **链接**: [arXiv:2302.14623](https://arxiv.org/abs/2302.14623)
-- **作者**: Riade Benbaki, Wenyu Chen, Xiang Meng, Hussein Hazimeh, Natalia Ponomareva, Zhe Zhao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
+### Joint Token Pruning and Squeezing Towards More Aggressive Compression of Vision Transformers.
+- **链接**: [arXiv:2304.10716](https://arxiv.org/abs/2304.10716) · [代码](https://github.com/megvii-research/TPS-CVPR2023) · 📚 被引 75
+- **作者**: Siyuan Wei, Tianzhu Ye, Shen Zhang, Yao Tang, Jiajun Liang
+- **🏷️ 机构**: MEGVII Technology, Tsinghua University
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The sheer size of modern neural networks makes model serving a serious computational challenge. A popular class of compression techniques overcomes this challenge by pruning or sparsifying the weights of pretrained networks. While useful, these techniques often face serious tradeoffs between computational requirements and compression quality. In this work, we propose a novel optimization-based pruning framework that considers the combined effect of pruning (and updating) multiple weights subject to a sparsity constraint. Our approach, CHITA, extends the classical Optimal Brain Surgeon framework and results in significant improvements in speed, memory, and performance over existing optimization-based approaches for network pruning. CHITA's main workhorse performs combinatorial optimization updates on a memory-friendly representation of local quadratic approximation(s) of the loss function. On a standard benchmark of pretrained models and datasets, CHITA leads to significantly better sparsity-accuracy tradeoffs than competing methods. For example, for MLPNet with only 2% of the weights retained, our approach improves the accuracy by 63% relative to the state of the art. Furthermore, when used in conjunction with fine-tuning SGD steps, our method achieves significant accuracy gains over the state-of-the-art approaches.
+> Vision transformers have achieved leading performance on various visual tasks yet still suffer from high computational complexity. The situation deteriorates in dense prediction tasks like semantic segmentation, as high-resolution inputs and outputs usually imply more tokens involved in computations. Directly removing the less attentive tokens has been discussed for the image classification task but can not be extended to semantic segmentation since a dense prediction is required for every patch. To this end, this work introduces a Dynamic Token Pruning (DToP) method based on the early exit of tokens for semantic segmentation. Motivated by the coarse-to-fine segmentation process by humans, we naturally split the widely adopted auxiliary-loss-based network architecture into several stages, where each auxiliary block grades every token's difficulty level. We can finalize the prediction of easy tokens in advance without completing the entire forward pass. Moreover, we keep $k$ highest confidence tokens for each semantic category to uphold the representative context information. Thus, computational complexity will change with the difficulty of the input, akin to the way humans do segmentation. Experiments suggest that the proposed DToP architecture reduces on average $20\% - 35\%$ of computational cost for current semantic segmentation methods based on plain vision transformers without accuracy degradation.
 
 </details>
 
-### Why Random Pruning Is All We Need to Start Sparse.
-- **链接**: [出版页](https://proceedings.mlr.press/v202/gadhikar23a.html)
-- **作者**: Advait Harshal Gadhikar, Sohom Mukherjee, Rebekka Burkholz
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
-
-### Instant Soup: Cheap Pruning Ensembles in A Single Pass Can Draw Lottery Tickets from Large Models.
-- **链接**: [arXiv:2306.10460](https://arxiv.org/abs/2306.10460) · [代码](https://github.com/VITA-Group/instant_soup)
-- **作者**: Ajay Kumar Jaiswal, Shiwei Liu, Tianlong Chen, Ying Ding, Zhangyang Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
+### DiffRate : Differentiable Compression Rate for Efficient Vision Transformers.
+- **链接**: [arXiv:2305.17997](https://arxiv.org/abs/2305.17997) · [代码](https://github.com/OpenGVLab/DiffRate) · 📚 被引 38
+- **作者**: Mengzhao Chen, Wenqi Shao, Peng Xu, Mingbao Lin, Kaipeng Zhang, Fei Chao et al.
+- **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China, School of Informatics, Shanghai AI Laboratory,OpenGVLab, Tencent Holdings Ltd
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Large pre-trained transformers have been receiving explosive attention in the past few years, due to their wide adaptability for numerous downstream applications via fine-tuning, but their exponentially increasing parameter counts are becoming a primary hurdle to even just fine-tune them without industry-standard hardware. Recently, Lottery Ticket Hypothesis (LTH) and its variants, have been exploited to prune these large pre-trained models generating subnetworks that can achieve similar performance as their dense counterparts, but LTH pragmatism is enormously inhibited by repetitive full training and pruning routine of iterative magnitude pruning (IMP) which worsens with increasing model size. Motivated by the recent observations of model soups, which suggest that fine-tuned weights of multiple models can be merged to a better minima, we propose Instant Soup Pruning (ISP) to generate lottery ticket quality subnetworks, using a fraction of the original IMP cost by replacing the expensive intermediate pruning stages of IMP with computationally efficient weak mask generation and aggregation routine. More specifically, during the mask generation stage, ISP takes a small handful of iterations using varying training protocols and data subsets to generate many weak and noisy subnetworks, and superpose them to average out the noise creating a high-quality denoised subnetwork. Our extensive experiments and ablation on two popular large-scale pre-trained models: CLIP (unexplored in pruning till date) and BERT across multiple benchmark vision and language datasets validate the effectiveness of ISP compared to several state-of-the-art pruning methods. Codes are available at: \url{https://github.com/VITA-Group/instant_soup}
+> Token compression aims to speed up large-scale vision transformers (e.g. ViTs) by pruning (dropping) or merging tokens. It is an important but challenging task. Although recent advanced approaches achieved great success, they need to carefully handcraft a compression rate (i.e. number of tokens to remove), which is tedious and leads to sub-optimal performance. To tackle this problem, we propose Differentiable Compression Rate (DiffRate), a novel token compression method that has several appealing properties prior arts do not have. First, DiffRate enables propagating the loss function's gradient onto the compression ratio, which is considered as a non-differentiable hyperparameter in previous work. In this case, different layers can automatically learn different compression rates layer-wisely without extra overhead. Second, token pruning and merging can be naturally performed simultaneously in DiffRate, while they were isolated in previous works. Third, extensive experiments demonstrate that DiffRate achieves state-of-the-art performance. For example, by applying the learned layer-wise compression rates to an off-the-shelf ViT-H (MAE) model, we achieve a 40% FLOPs reduction and a 1.5x throughput improvement, with a minor accuracy drop of 0.16% on ImageNet without fine-tuning, even outperforming previous methods with fine-tuning. Codes and models are available at https://github.com/OpenGVLab/DiffRate.
 
 </details>
 
-### Reconstructive Neuron Pruning for Backdoor Defense.
-- **链接**: [arXiv:2305.14876](https://arxiv.org/abs/2305.14876) · [代码](https://github.com/bboylyg/RNP)
-- **作者**: Yige Li, Xixiang Lyu, Xingjun Ma, Nodens Koren, Lingjuan Lyu, Bo Li et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
+### Single-Shot Pruning for Pre-trained Models: Rethinking the Importance of Magnitude Pruning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00155) · 📚 被引 13
+- **作者**: Hirokazu Kohama, Hiroaki Minoura, Tsubasa Hirakawa, Takayoshi Yamashita, Hironobu Fujiyoshi
+- **🏷️ 机构**: Chubu University
+- **会议**: ICCV 2023
+
+### Automatic Network Pruning via Hilbert-Schmidt Independence Criterion Lasso under Information Bottleneck Principle.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01601) · 📚 被引 22
+- **作者**: Song Guo, Lei Zhang, Xiawu Zheng, Yan Wang, Yuchao Li, Fei Chao et al.
+- **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China,Department of Artificial Intelligence, School of Informatics, Samsara Inc, Alibaba Group
+- **会议**: ICCV 2023
+
+### Unified Data-Free Compression: Pruning and Quantization without Fine-Tuning.
+- **链接**: [arXiv:2308.07209](https://arxiv.org/abs/2308.07209) · 📚 被引 22
+- **作者**: Shipeng Bai, Jun Chen, Xintian Shen, Yixuan Qian, Yong Liu
+- **🏷️ 机构**: Zhejiang University,College of Control Science and Engineering
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Deep neural networks (DNNs) have been found to be vulnerable to backdoor attacks, raising security concerns about their deployment in mission-critical applications. While existing defense methods have demonstrated promising results, it is still not clear how to effectively remove backdoor-associated neurons in backdoored DNNs. In this paper, we propose a novel defense called \emph{Reconstructive Neuron Pruning} (RNP) to expose and prune backdoor neurons via an unlearning and then recovering process. Specifically, RNP first unlearns the neurons by maximizing the model's error on a small subset of clean samples and then recovers the neurons by minimizing the model's error on the same data. In RNP, unlearning is operated at the neuron level while recovering is operated at the filter level, forming an asymmetric reconstructive learning procedure. We show that such an asymmetric process on only a few clean samples can effectively expose and prune the backdoor neurons implanted by a wide range of attacks, achieving a new state-of-the-art defense performance. Moreover, the unlearned model at the intermediate step of our RNP can be directly used to improve other backdoor defense tasks including backdoor removal, trigger recovery, backdoor label detection, and backdoor sample detection. Code is available at \url{https://github.com/bboylyg/RNP}.
+> Structured pruning and quantization are promising approaches for reducing the inference time and memory footprint of neural networks. However, most existing methods require the original training dataset to fine-tune the model. This not only brings heavy resource consumption but also is not possible for applications with sensitive or proprietary data due to privacy and security concerns. Therefore, a few data-free methods are proposed to address this problem, but they perform data-free pruning and quantization separately, which does not explore the complementarity of pruning and quantization. In this paper, we propose a novel framework named Unified Data-Free Compression(UDFC), which performs pruning and quantization simultaneously without any data and fine-tuning process. Specifically, UDFC starts with the assumption that the partial information of a damaged(e.g., pruned or quantized) channel can be preserved by a linear combination of other channels, and then derives the reconstruction form from the assumption to restore the information loss due to compression. Finally, we formulate the reconstruction error between the original network and its compressed network, and theoretically deduce the closed-form solution. We evaluate the UDFC on the large-scale image classification task and obtain significant improvements over various network architectures and compression methods. For example, we achieve a 20.54% accuracy improvement on ImageNet dataset compared to SOTA method with 30% pruning ratio and 6-bit quantization on ResNet-34.
 
 </details>
 
-### Pruning via Sparsity-indexed ODE: a Continuous Sparsity Viewpoint.
-- **链接**: [出版页](https://proceedings.mlr.press/v202/mo23c.html)
-- **作者**: Zhanfeng Mo, Haosen Shi, Sinno Jialin Pan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
+### Hunting Sparsity: Density-Guided Contrastive Learning for Semi-Supervised Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00304) · 📚 被引 56
+- **作者**: Xiaoyang Wang, Bingfeng Zhang, Limin Yu, Jimin Xiao
+- **🏷️ 机构**: XJTLU, China University of Petroleum (East China)
+- **会议**: CVPR 2023
 
-### Gradient-Free Structured Pruning with Unlabeled Data.
-- **链接**: [arXiv:2303.04185](https://arxiv.org/abs/2303.04185)
-- **作者**: Azade Nova, Hanjun Dai, Dale Schuurmans
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
+### DepGraph: Towards Any Structural Pruning.
+- **链接**: [arXiv:2301.12900](https://arxiv.org/abs/2301.12900) · 📚 被引 451
+- **作者**: Gongfan Fang, Xinyin Ma, Mingli Song, Michael Bi Mi, Xinchao Wang
+- **🏷️ 机构**: National University of Singapore, Zhejiang University, Huawei Technologies Ltd.
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Large Language Models (LLMs) have achieved great success in solving difficult tasks across many domains, but such success comes with a high computation cost, and inference latency. As developers and third parties customize these models, the need to provide efficient inference has increased. Many efforts have attempted to reduce inference cost through model compression techniques such as pruning and distillation. However, these techniques either require labeled data, or are time-consuming as they require the compressed model to be retrained to regain accuracy. In this paper, we propose a gradient-free structured pruning framework that uses only unlabeled data. An evaluation on the GLUE and SQuAD benchmarks using BERT$_{BASE}$ and DistilBERT illustrates the effectiveness of the proposed approach. By only using the weights of the pre-trained model and unlabeled data, in a matter of a few minutes on a single GPU, up to 40% of the original FLOP count can be reduced with less than a 4% accuracy loss across all tasks considered.
+> Structural pruning enables model acceleration by removing structurally-grouped parameters from neural networks. However, the parameter-grouping patterns vary widely across different models, making architecture-specific pruners, which rely on manually-designed grouping schemes, non-generalizable to new architectures. In this work, we study a highly-challenging yet barely-explored task, any structural pruning, to tackle general structural pruning of arbitrary architecture like CNNs, RNNs, GNNs and Transformers. The most prominent obstacle towards this goal lies in the structural coupling, which not only forces different layers to be pruned simultaneously, but also expects all removed parameters to be consistently unimportant, thereby avoiding structural issues and significant performance degradation after pruning. To address this problem, we propose a general and {fully automatic} method, \emph{Dependency Graph} (DepGraph), to explicitly model the dependency between layers and comprehensively group coupled parameters for pruning. In this work, we extensively evaluate our method on several architectures and tasks, including ResNe(X)t, DenseNet, MobileNet and Vision transformer for images, GAT for graph, DGCNN for 3D point cloud, alongside LSTM for language, and demonstrate that, even with a simple norm-based criterion, the proposed method consistently yields gratifying performances.
 
 </details>
 
-### UPSCALE: Unconstrained Channel Pruning.
-- **链接**: [arXiv:2307.08771](https://arxiv.org/abs/2307.08771)
-- **作者**: Alvin Wan, Hanxiang Hao, Kaushik Patnaik, Yueyang Xu, Omer Hadad, David Güera et al.
+### CP3: Channel Pruning Plug-in for Point-Based Networks.
+- **链接**: [arXiv:2303.13097](https://arxiv.org/abs/2303.13097)
+- **作者**: Yaomin Huang, Ning Liu, Zhengping Che, Zhiyuan Xu, Chaomin Shen, Yaxin Peng et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
+- **会议**: CVPR 2023
+
+### Structural Alignment for Network Pruning through Partial Regularization.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01596) · 📚 被引 23
+- **作者**: Shangqian Gao, Zeyu Zhang, Yanfu Zhang, Feihu Huang, Heng Huang
+- **🏷️ 机构**: University of Pittsburgh,Department of Electrical and Computer Engineering, University of Arizona,School of Information, University of Maryland at College Park,Department of Computer Science
+- **会议**: ICCV 2023
+
+### Differentiable Transportation Pruning.
+- **链接**: [arXiv:2307.08483](https://arxiv.org/abs/2307.08483)
+- **作者**: Yunqiang Li, Jan C. van Gemert, Torsten Hoefler, Bert Moons, Evangelos Eleftheriou, Bram-Ernst Verhoef
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> As neural networks grow in size and complexity, inference speeds decline. To combat this, one of the most effective compression techniques -- channel pruning -- removes channels from weights. However, for multi-branch segments of a model, channel removal can introduce inference-time memory copies. In turn, these copies increase inference latency -- so much so that the pruned model can be slower than the unpruned model. As a workaround, pruners conventionally constrain certain channels to be pruned together. This fully eliminates memory copies but, as we show, significantly impairs accuracy. We now have a dilemma: Remove constraints but increase latency, or add constraints and impair accuracy. In response, our insight is to reorder channels at export time, (1) reducing latency by reducing memory copies and (2) improving accuracy by removing constraints. Using this insight, we design a generic algorithm UPSCALE to prune models with any pruning pattern. By removing constraints from existing pruners, we improve ImageNet accuracy for post-training pruned models by 2.1 points on average -- benefiting DenseNet (+16.9), EfficientNetV2 (+7.9), and ResNet (+6.2). Furthermore, by reordering channels, UPSCALE improves inference speeds by up to 2x over a baseline export.
+> Deep learning algorithms are increasingly employed at the edge. However, edge devices are resource constrained and thus require efficient deployment of deep neural networks. Pruning methods are a key tool for edge deployment as they can improve storage, compute, memory bandwidth, and energy usage. In this paper we propose a novel accurate pruning technique that allows precise control over the output network size. Our method uses an efficient optimal transportation scheme which we make end-to-end differentiable and which automatically tunes the exploration-exploitation behavior of the algorithm to find accurate sparse sub-networks. We show that our method achieves state-of-the-art performance compared to previous pruning methods on 3 different datasets, using 5 different models, across a wide range of pruning ratios, and with two types of sparsity budgets and pruning granularities.
 
 </details>
 
-### A Three-regime Model of Network Pruning.
-- **链接**: [arXiv:2305.18383](https://arxiv.org/abs/2305.18383)
-- **作者**: Yefan Zhou, Yaoqing Yang, Arin Chang, Michael W. Mahoney
+### Progressive Neighbor Consistency Mining for Correspondence Pruning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00919) · 📚 被引 33
+- **作者**: Xin Liu, Jufeng Yang
+- **🏷️ 机构**: College of Computer Science, Nankai University,TMCC,China
+- **会议**: CVPR 2023
+
+### Training Debiased Subnetworks with Contrastive Weight Pruning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00766) · 📚 被引 12
+- **作者**: Geon Yeong Park, Sangmin Lee, Sang Wan Lee, Jong Chul Ye
+- **🏷️ 机构**: Bio and Brain Engineering, Mathematical Sciences
+- **会议**: CVPR 2023
+
+### Out-of-Distributed Semantic Pruning for Robust Semi-Supervised Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02284) · 📚 被引 10
+- **作者**: Yu Wang, Pengchong Qiao, Chang Liu, Guoli Song, Xiawu Zheng, Jie Chen
+- **🏷️ 机构**: School of Electronic and Computer Engineering, Peking University,Shenzhen,China, Tsinghua University,Department of Automation and BNRist,Beijing,China, Peng Cheng Laboratory,Shenzhen,China
+- **会议**: CVPR 2023
+
+### Pruning Parameterization with Bi-level Optimization for Efficient Semantic Segmentation on the Edge.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01478) · 📚 被引 22
+- **作者**: Changdi Yang, Pu Zhao, Yanyu Li, Wei Niu, Jiexiong Guan, Hao Tang et al.
+- **🏷️ 机构**: Northeastern University, College of William &#x0026; Mary, ETH Zurich,CVL
+- **会议**: CVPR 2023
+
+### Ultrahigh Resolution Image/Video Matting with Spatio-Temporal Sparsity.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01356)
+- **作者**: Yanan Sun, Chi-Keung Tang, Yu-Wing Tai
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
+- **会议**: CVPR 2023
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Adaptive Channel Sparsity for Federated Learning under System Heterogeneity.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01957) · 📚 被引 12
+- **作者**: Dongping Liao, Xitong Gao, Yiren Zhao, Chengzhong Xu
+- **🏷️ 机构**: University of Macau,State Key Lab of IoTSC,CIS Dept,Macau SAR,China, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences,Shenzhen,China, Imperial College London,London,UK
+- **会议**: CVPR 2023
 
-> Recent work has highlighted the complex influence training hyperparameters, e.g., the number of training epochs, can have on the prunability of machine learning models. Perhaps surprisingly, a systematic approach to predict precisely how adjusting a specific hyperparameter will affect prunability remains elusive. To address this gap, we introduce a phenomenological model grounded in the statistical mechanics of learning. Our approach uses temperature-like and load-like parameters to model the impact of neural network (NN) training hyperparameters on pruning performance. A key empirical result we identify is a sharp transition phenomenon: depending on the value of a load-like parameter in the pruned model, increasing the value of a temperature-like parameter in the pre-pruned model may either enhance or impair subsequent pruning performance. Based on this transition, we build a three-regime model by taxonomizing the global structure of the pruned NN loss landscape. Our model reveals that the dichotomous effect of high temperature is associated with transitions between distinct types of global structures in the post-pruned model. Based on our results, we present three case-studies: 1) determining whether to increase or decrease a hyperparameter for improved pruning; 2) selecting the best model to prune from a family of models; and 3) tuning the hyperparameter of the Sharpness Aware Minimization method for better pruning performance.
+### Structured Sparsity Learning for Efficient Video Super-Resolution.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02168) · 📚 被引 30
+- **作者**: Bin Xia, Jingwen He, Yulun Zhang, Yitong Wang, Yapeng Tian, Wenming Yang et al.
+- **🏷️ 机构**: Tsinghua University, Shanghai AI Laboratory, ETH Z&#x000FC;rich
+- **会议**: CVPR 2023
 
-</details>
+### Discriminator-Cooperated Feature Map Distillation for GAN Compression.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01949) · 📚 被引 19
+- **作者**: Tie Hu, Mingbao Lin, Lizhou You, Fei Chao, Rongrong Ji
+- **🏷️ 机构**: School of Informatics, Xiamen University,MAC Lab, Tencent Youtu Lab
+- **会议**: CVPR 2023
 
-### Does Sparsity Help in Learning Misspecified Linear Bandits?
-- **链接**: [arXiv:2303.16998](https://arxiv.org/abs/2303.16998)
-- **作者**: Jialin Dong, Lin Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
+## 跨领域论文（完整笔记在其他领域）
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recently, the study of linear misspecified bandits has generated intriguing implications of the hardness of learning in bandits and reinforcement learning (RL). In particular, Du et al. (2020) show that even if a learner is given linear features in $\mathbb{R}^d$ that approximate the rewards in a bandit or RL with a uniform error of $\varepsilon$, searching for an $O(\varepsilon)$-optimal action requires pulling at least $Ω(\exp(d))$ queries. Furthermore, Lattimore et al. (2020) show that a degraded $O(\varepsilon\sqrt{d})$-optimal solution can be learned within $\operatorname{poly}(d/\varepsilon)$ queries. Yet it is unknown whether a structural assumption on the ground-truth parameter, such as sparsity, could break the $\varepsilon\sqrt{d}$ barrier. In this paper, we address this question by showing that algorithms can obtain $O(\varepsilon)$-optimal actions by querying $O(\varepsilon^{-s}d^s)$ actions, where $s$ is the sparsity parameter, removing the $\exp(d)$-dependence. We then establish information-theoretical lower bounds, i.e., $Ω(\exp(s))$, to show that our upper bound on sample complexity is nearly tight if one demands an error $ O(s^δ\varepsilon)$ for $0<δ<1$. For $δ\geq 1$, we further show that $\operatorname{poly}(s/\varepsilon)$ queries are possible when the linear features are "good" and even in general settings. These results provide a nearly complete picture of how sparsity can help in misspecified bandit learning and provide a deeper understanding of when linear features are "useful" for bandit and reinforcement learning with misspecification.
-
-</details>
-
-### Synergies between Disentanglement and Sparsity: Generalization and Identifiability in Multi-Task Learning.
-- **链接**: [出版页](https://proceedings.mlr.press/v202/lachapelle23a.html)
-- **作者**: Sébastien Lachapelle, Tristan Deleu, Divyat Mahajan, Ioannis Mitliagkas, Yoshua Bengio, Simon Lacoste-Julien et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
-
-### Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time.
-- **链接**: [arXiv:2310.17157](https://arxiv.org/abs/2310.17157) · [代码](https://github.com/FMInference/DejaVu)
-- **作者**: Zichang Liu, Jue Wang, Tri Dao, Tianyi Zhou, Binhang Yuan, Zhao Song et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Large language models (LLMs) with hundreds of billions of parameters have sparked a new wave of exciting AI applications. However, they are computationally expensive at inference time. Sparsity is a natural approach to reduce this cost, but existing methods either require costly retraining, have to forgo LLM's in-context learning ability, or do not yield wall-clock time speedup on modern hardware. We hypothesize that contextual sparsity, which are small, input-dependent sets of attention heads and MLP parameters that yield approximately the same output as the dense model for a given input, can address these issues. We show that contextual sparsity exists, that it can be accurately predicted, and that we can exploit it to speed up LLM inference in wall-clock time without compromising LLM's quality or in-context learning ability. Based on these insights, we propose DejaVu, a system that uses a low-cost algorithm to predict contextual sparsity on the fly given inputs to each layer, along with an asynchronous and hardware-aware implementation that speeds up LLM inference. We validate that DejaVu can reduce the inference latency of OPT-175B by over 2X compared to the state-of-the-art FasterTransformer, and over 6X compared to the widely used Hugging Face implementation, without compromising model quality. The code is available at https://github.com/FMInference/DejaVu.
-
-</details>
-
-### STEP: Learning N: M Structured Sparsity Masks from Scratch with Precondition.
-- **链接**: [arXiv:2302.01172](https://arxiv.org/abs/2302.01172)
-- **作者**: Yucheng Lu, Shivani Agrawal, Suvinay Subramanian, Oleg Rybakov, Christopher De Sa, Amir Yazdanbakhsh
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recent innovations on hardware (e.g. Nvidia A100) have motivated learning N:M structured sparsity masks from scratch for fast model inference. However, state-of-the-art learning recipes in this regime (e.g. SR-STE) are proposed for non-adaptive optimizers like momentum SGD, while incurring non-trivial accuracy drop for Adam-trained models like attention-based LLMs. In this paper, we first demonstrate such gap origins from poorly estimated second moment (i.e. variance) in Adam states given by the masked weights. We conjecture that learning N:M masks with Adam should take the critical regime of variance estimation into account. In light of this, we propose STEP, an Adam-aware recipe that learns N:M masks with two phases: first, STEP calculates a reliable variance estimate (precondition phase) and subsequently, the variance remains fixed and is used as a precondition to learn N:M masks (mask-learning phase). STEP automatically identifies the switching point of two phases by dynamically sampling variance changes over the training trajectory and testing the sample concentration. Empirically, we evaluate STEP and other baselines such as ASP and SR-STE on multiple tasks including CIFAR classification, machine translation and LLM fine-tuning (BERT-Base, GPT-2). We show STEP mitigates the accuracy drop of baseline recipes and is robust to aggressive structured sparsity ratios.
-
-</details>
-
-### SpENCNN: Orchestrating Encoding and Sparsity for Fast Homomorphically Encrypted Neural Network Inference.
-- **链接**: [出版页](https://proceedings.mlr.press/v202/ran23b.html)
-- **作者**: Ran Ran, Xinwei Luo, Wei Wang, Tao Liu, Gang Quan, Xiaolin Xu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
-
-### Context Consistency Regularization for Label Sparsity in Time Series.
-- **链接**: [出版页](https://proceedings.mlr.press/v202/shin23e.html)
-- **作者**: Yooju Shin, Susik Yoon, Hwanjun Song, Dongmin Park, Byunghyun Kim, Jae-Gil Lee et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
-
-### Extending Kernel PCA through Dualization: Sparsity, Robustness and Fast Algorithms.
-- **链接**: [arXiv:2306.05815](https://arxiv.org/abs/2306.05815)
-- **作者**: Francesco Tonin, Alex Lambert, Panagiotis Patrinos, Johan A. K. Suykens
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The goal of this paper is to revisit Kernel Principal Component Analysis (KPCA) through dualization of a difference of convex functions. This allows to naturally extend KPCA to multiple objective functions and leads to efficient gradient-based algorithms avoiding the expensive SVD of the Gram matrix. Particularly, we consider objective functions that can be written as Moreau envelopes, demonstrating how to promote robustness and sparsity within the same framework. The proposed method is evaluated on synthetic and real-world benchmarks, showing significant speedup in KPCA training time as well as highlighting the benefits in terms of robustness and sparsity.
-
-</details>
-
-### When Sparsity Meets Contrastive Models: Less Graph Data Can Bring Better Class-Balanced Representations.
-- **链接**: [出版页](https://proceedings.mlr.press/v202/zhang23o.html)
-- **作者**: Chunhui Zhang, Chao Huang, Yijun Tian, Qianlong Wen, Zhongyu Ouyang, Youhuan Li et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
-
-### Less is More: Task-aware Layer-wise Distillation for Language Model Compression.
-- **链接**: [arXiv:2210.01351](https://arxiv.org/abs/2210.01351) · [代码](https://github.com/cliang1453/task-aware-distillation)
-- **作者**: Chen Liang, Simiao Zuo, Qingru Zhang, Pengcheng He, Weizhu Chen, Tuo Zhao
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Layer-wise distillation is a powerful tool to compress large models (i.e. teacher models) into small ones (i.e., student models). The student distills knowledge from the teacher by mimicking the hidden representations of the teacher at every intermediate layer. However, layer-wise distillation is difficult. Since the student has a smaller model capacity than the teacher, it is often under-fitted. Furthermore, the hidden representations of the teacher contain redundant information that the student does not necessarily need for the target task's learning. To address these challenges, we propose a novel Task-aware layEr-wise Distillation (TED). TED designs task-aware filters to align the hidden representations of the student and the teacher at each layer. The filters select the knowledge that is useful for the target task from the hidden representations. As such, TED reduces the knowledge gap between the two models and helps the student to fit better on the target task. We evaluate TED in two scenarios: continual pre-training and fine-tuning. TED demonstrates significant and consistent improvements over existing distillation methods in both scenarios. Code is available at https://github.com/cliang1453/task-aware-distillation.
-
-</details>
+- Class-Incremental Exemplar Compression for Class-Incremental Learning. → [continual-learning](../continual-learning/Guideline%202023.md)
