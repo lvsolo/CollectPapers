@@ -93,8 +93,11 @@ def clean_text(s: str) -> str:
 # 领域分类
 # ----------------------------------------------------------------------
 class Classifier:
-    def __init__(self, topics: list[dict]):
+    def __init__(self, topics: list[dict], global_exclude: list[str] | None = None):
         self.topics = topics
+        # 全局排除：用户明确不感兴趣的专业化领域（医学/农业/遥感等），
+        # 优先级高于一切 topic 关键词，命中即整篇拒收
+        self._global_exclude = [re.compile(re.escape(k), re.I) for k in (global_exclude or [])]
         self._compiled = []
         for t in topics:
             kws = [k.lower() for k in t.get("keywords", [])]
@@ -106,6 +109,9 @@ class Classifier:
         """返回 [(topic_dict, score)]，score = 摘要命中数*2 + 标题命中数*3。"""
         text = f"{title}\n{abstract}".lower()
         title_l = title.lower()
+        # 全局排除：标题命中医农遥等关键词 → 整篇拒收（标题级判断，避免误杀仅提及相关词的论文）
+        if any(e.search(title_l) for e in self._global_exclude):
+            return []
         out = []
         for t, kws, must, excs in self._compiled:
             if must and not (must.search(title) or must.search(text)):
@@ -119,7 +125,7 @@ class Classifier:
 
 
 def get_classifier() -> Classifier:
-    return Classifier(CONFIG["topics"])
+    return Classifier(CONFIG["topics"], CONFIG.get("global_exclude"))
 
 
 # ----------------------------------------------------------------------

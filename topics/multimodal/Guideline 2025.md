@@ -1,127 +1,819 @@
 # Multimodal — 2025 Guideline
 
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
-> 论文数: 103 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 120 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models.
-- **链接**: [出版页](https://openreview.net/forum?id=HnhNRrLPwm)
-- **作者**: Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Mosaic of Modalities: A Comprehensive Benchmark for Multimodal Graph Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_Mosaic_of_Modalities_A_Comprehensive_Benchmark_for_Multimodal_Graph_Learning_CVPR_2025_paper.html) · 📚 被引 7
+- **作者**: Jing Zhu, Yuhang Zhou, Shengyi Qian, Zhongmou He, Tong Zhao, Neil Shah et al.
+- **🏷️ 机构**: University of Michigan, University of Maryland, Snap Inc.
+- **会议**: CVPR 2025
 
-### MMKE-Bench: A Multimodal Editing Benchmark for Diverse Visual Knowledge.
-- **链接**: [arXiv:2502.19870](https://arxiv.org/abs/2502.19870)
-- **作者**: Yuntao Du, Kailin Jiang, Zhi Gao, Chenrui Shi, Zilong Zheng, Siyuan Qi et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### MicroVQA: A Multimodal Reasoning Benchmark for Microscopy-Based Scientific Research.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Burgess_MicroVQA_A_Multimodal_Reasoning_Benchmark_for_Microscopy-Based_Scientific_Research_CVPR_2025_paper.html) · 📚 被引 5
+- **作者**: James Burgess, Jeffrey J. Nirschl, Laura Bravo-Sánchez, Alejandro Lozano, Sanket Rajan Gupte, Jesus G. Galaz-Montoya et al.
+- **🏷️ 机构**: Stanford University, Tsinghua University
+- **会议**: CVPR 2025
+
+### EEE-Bench: A Comprehensive Multimodal Electrical And Electronics Engineering Benchmark.
+- **链接**: [arXiv:2411.01492](https://arxiv.org/abs/2411.01492) · 📚 被引 10
+- **作者**: Ming Li, Jike Zhong, Tianle Chen, Yuxiang Lai, Konstantinos Psounis
+- **🏷️ 机构**: University of Tokyo, University of Southern California, Boston University
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Knowledge editing techniques have emerged as essential tools for updating the factual knowledge of large language models (LLMs) and multimodal models (LMMs), allowing them to correct outdated or inaccurate information without retraining from scratch. However, existing benchmarks for multimodal knowledge editing primarily focus on entity-level knowledge represented as simple triplets, which fail to capture the complexity of real-world multimodal information. To address this issue, we introduce MMKE-Bench, a comprehensive MultiModal Knowledge Editing Benchmark, designed to evaluate the ability of LMMs to edit diverse visual knowledge in real-world scenarios. MMKE-Bench addresses these limitations by incorporating three types of editing tasks: visual entity editing, visual semantic editing, and user-specific editing. Besides, MMKE-Bench uses free-form natural language to represent and edit knowledge, offering a more flexible and effective format. The benchmark consists of 2,940 pieces of knowledge and 8,363 images across 33 broad categories, with evaluation questions automatically generated and human-verified. We assess five state-of-the-art knowledge editing methods on three prominent LMMs, revealing that no method excels across all criteria, and that visual and user-specific edits are particularly challenging. MMKE-Bench sets a new standard for evaluating the robustness of multimodal knowledge editing techniques, driving progress in this rapidly evolving field.
+> Unmanned aerial vehicles (UAV)-based object detection with visible (RGB) and infrared (IR) images facilitates robust around-the-clock detection, driven by advancements in deep learning techniques and the availability of high-quality dataset. However, the existing dataset struggles to fully capture real-world complexity for limited imaging conditions. To this end, we introduce a high-diversity dataset ATR-UMOD covering varying scenarios, spanning altitudes from 80m to 300m, angles from 0° to 75°, and all-day, all-year time variations in rich weather and illumination conditions. Moreover, each RGB-IR image pair is annotated with 6 condition attributes, offering valuable high-level contextual information. To meet the challenge raised by such diverse conditions, we propose a novel prompt-guided condition-aware dynamic fusion (PCDF) to adaptively reassign multimodal contributions by leveraging annotated condition cues. By encoding imaging conditions as text prompts, PCDF effectively models the relationship between conditions and multimodal contributions through a task-specific soft-gating transformation. A prompt-guided condition-decoupling module further ensures the availability in practice without condition annotations. Experiments on ATR-UMOD dataset reveal the effectiveness of PCDF.
 
 </details>
 
-### MME-RealWorld: Could Your Multimodal LLM Challenge High-Resolution Real-World Scenarios that are Difficult for Humans?
-- **链接**: [出版页](https://openreview.net/forum?id=k5VHHgsRbi)
-- **作者**: Yifan Zhang, Huanyu Zhang, Haochen Tian, Chaoyou Fu, Shuangqing Zhang, Junfei Wu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### MA-CIR: A Multimodal Arithmetic Benchmark for Composed Image Retrieval.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01982) · 📚 被引 0
+- **作者**: Jaeseok Byun, Young Kyun Jang, Seokhyeon Jeong, Donghyun Kim, Taesup Moon
+- **🏷️ 机构**: Seoul National University,Department of ECE, Google Deepmind, Korea University,Department of AI
+- **会议**: ICCV 2025
 
-### MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection.
-- **链接**: [出版页](https://openreview.net/forum?id=JDiER86r8v)
-- **作者**: Xi Jiang, Jian Li, Hanqiu Deng, Yong Liu, Bin-Bin Gao, Yifeng Zhou et al.
+### ROD-MLLM: Towards More Reliable Object Detection in Multimodal Large Language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yin_ROD-MLLM_Towards_More_Reliable_Object_Detection_in_Multimodal_Large_Language_CVPR_2025_paper.html)
+- **作者**: Heng Yin, Yuqiang Ren, Ke Yan, Shouhong Ding, Yongtao Hao
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
 
-### CertainlyUncertain: A Benchmark and Metric for Multimodal Epistemic and Aleatoric Awareness.
-- **链接**: [出版页](https://openreview.net/forum?id=cQ25MQQSNI)
-- **作者**: Khyathi Raghavi Chandu, Linjie Li, Anas Awadalla, Ximing Lu, Jae Sung Park, Jack Hessel et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### GUI-World: A Video Benchmark and Dataset for Multimodal GUI-oriented Understanding.
-- **链接**: [出版页](https://openreview.net/forum?id=QarKTT5brZ)
-- **作者**: Dongping Chen, Yue Huang, Siyuan Wu, Jingyu Tang, Huichi Zhou, Qihui Zhang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs.
-- **链接**: [出版页](https://openreview.net/forum?id=D6zn6ozJs7)
-- **作者**: Xuannan Liu, Zekun Li, Pei-Pei Li, Huaibo Huang, Shuhan Xia, Xing Cui et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### SPORTU: A Comprehensive Sports Understanding Benchmark for Multimodal Large Language Models.
-- **链接**: [出版页](https://openreview.net/forum?id=x1yOHtFfDh)
-- **作者**: Haotian Xia, Zhengbang Yang, Junbo Zou, Rhys Tracy, Yuqing Wang, Chi Lu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models.
-- **链接**: [arXiv:2410.09732](https://arxiv.org/abs/2410.09732)
-- **作者**: Junyan Ye, Baichuan Zhou, Zilong Huang, Junan Zhang, Tianyi Bai, Hengrui Kang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### UniPre3D: Unified Pre-training of 3D Point Cloud Models with Cross-Modal Gaussian Splatting.
+- **链接**: [arXiv:2506.09952](https://arxiv.org/abs/2506.09952) · [代码](https://github.com/wangzy22/UniPre3D) · 📚 被引 4
+- **作者**: Ziyi Wang, Yanran Zhang, Jie Zhou, Jiwen Lu
+- **🏷️ 机构**: Tsinghua University,Department of Automation,China
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> With the rapid development of AI-generated content, the future internet may be inundated with synthetic data, making the discrimination of authentic and credible multimodal data increasingly challenging. Synthetic data detection has thus garnered widespread attention, and the performance of large multimodal models (LMMs) in this task has attracted significant interest. LMMs can provide natural language explanations for their authenticity judgments, enhancing the explainability of synthetic content detection. Simultaneously, the task of distinguishing between real and synthetic data effectively tests the perception, knowledge, and reasoning capabilities of LMMs. In response, we introduce LOKI, a novel benchmark designed to evaluate the ability of LMMs to detect synthetic data across multiple modalities. LOKI encompasses video, image, 3D, text, and audio modalities, comprising 18K carefully curated questions across 26 subcategories with clear difficulty levels. The benchmark includes coarse-grained judgment and multiple-choice questions, as well as fine-grained anomaly selection and explanation tasks, allowing for a comprehensive analysis of LMMs. We evaluated 22 open-source LMMs and 6 closed-source models on LOKI, highlighting their potential as synthetic data detectors and also revealing some limitations in the development of LMM capabilities. More information about LOKI can be found at https://opendatalab.github.io/LOKI/
+> Large multimodal models (LMMs) have exhibited proficiencies across many visual tasks. Although numerous well-known benchmarks exist to evaluate model performance, they increasingly have insufficient headroom. As such, there is a pressing need for a new generation of benchmarks challenging enough for the next generation of LMMs. One area that LMMs show potential is graph analysis, specifically, the tasks an analyst might typically perform when interpreting figures such as estimating the mean, intercepts or correlations of functions and data series. In this work, we introduce GRAB, a graph analysis benchmark, fit for current and future frontier LMMs. Our benchmark is predominantly synthetic, ensuring high-quality, noise-free questions. GRAB is comprised of 3284 questions, covering five tasks and 23 graph properties. We evaluate 20 LMMs on GRAB, finding it to be a challenging benchmark, with the highest performing model attaining a score of just 21.0%. Finally, we conduct various ablations to investigate where the models succeed and struggle. We release GRAB and a lightweight GRAB-Lite to encourage progress in this important, growing domain.
 
 </details>
 
-### Re-Imagining Multimodal Instruction Tuning: A Representation View.
-- **链接**: [arXiv:2503.00723](https://arxiv.org/abs/2503.00723)
-- **作者**: Yiyang Liu, James Chenhao Liang, Ruixiang Tang, Yugyung Lee, Majid Rabbani, Sohail A. Dianat et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Multi-Modal Aerial-Ground Cross-View Place Recognition with Neural ODEs.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Multi-Modal_Aerial-Ground_Cross-View_Place_Recognition_with_Neural_ODEs_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Sijie Wang, Rui She, Qiyu Kang, Siqi Li, Disheng Li, Tianyu Geng et al.
+- **🏷️ 机构**: Nanyang Technological University, Beihang University, University of Science and Technology of China
+- **会议**: CVPR 2025
+
+### DreamTrack: Dreaming the Future for Multimodal Visual Object Tracking.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Guo_DreamTrack_Dreaming_the_Future_for_Multimodal_Visual_Object_Tracking_CVPR_2025_paper.html) · 📚 被引 8
+- **作者**: Mingzhe Guo, Weiping Tan, Wenyu Ran, Liping Jing, Zhipeng Zhang
+- **🏷️ 机构**: Beijing Jiaotong University, Shanghai Jiaotong University
+- **会议**: CVPR 2025
+
+### MambaVLT: Time-Evolving Multimodal State Space Model for Vision-Language Tracking.
+- **链接**: [arXiv:2411.15459](https://arxiv.org/abs/2411.15459) · 📚 被引 12
+- **作者**: Xinqi Liu, Li Zhou, Zikun Zhou, Jianqiu Chen, Zhenyu He
+- **🏷️ 机构**: Harbin Institute of Technology,Shenzhen, Pengcheng Laboratory
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Multimodal instruction tuning has proven to be an effective strategy for achieving zero-shot generalization by fine-tuning pre-trained Large Multimodal Models (LMMs) with instruction-following data. However, as the scale of LMMs continues to grow, fully fine-tuning these models has become highly parameter-intensive. Although Parameter-Efficient Fine-Tuning (PEFT) methods have been introduced to reduce the number of tunable parameters, a significant performance gap remains compared to full fine-tuning. Furthermore, existing PEFT approaches are often highly parameterized, making them difficult to interpret and control. In light of this, we introduce Multimodal Representation Tuning (MRT), a novel approach that focuses on directly editing semantically rich multimodal representations to achieve strong performance and provide intuitive control over LMMs. Empirical results show that our method surpasses current state-of-the-art baselines with significant performance gains (e.g., 1580.40 MME score) while requiring substantially fewer tunable parameters (e.g., 0.03% parameters). Additionally, we conduct experiments on editing instrumental tokens within multimodal representations, demonstrating that direct manipulation of these representations enables simple yet effective control over network behavior.
+> Large multimodal models (LMMs) have garnered wide-spread attention and interest within the artificial intelligence research and industrial communities, owing to their remarkable capability in multimodal understanding, reasoning, and in-context learning, among others. While LMMs have demonstrated promising results in tackling multimodal tasks like image captioning, visual question answering, and visual grounding, the object detection capabilities of LMMs exhibit a significant gap compared to specialist detectors. To bridge the gap, we depart from the conventional methods of integrating heavy detectors with LMMs and propose LMM-Det, a simple yet effective approach that leverages a Large Multimodal Model for vanilla object Detection without relying on specialized detection modules. Specifically, we conduct a comprehensive exploratory analysis when a large multimodal model meets with object detection, revealing that the recall rate degrades significantly compared with specialist detection models. To mitigate this, we propose to increase the recall rate by introducing data distribution adjustment and inference optimization tailored for object detection. We re-organize the instruction conversations to enhance the object detection capabilities of large multimodal models. We claim that a large multimodal model possesses detection capability without any extra detection modules. Extensive experiments support our claim and show the effectiveness of the versatile LMM-Det. The datasets, models, and codes are available at https://github.com/360CVGroup/LMM-Det.
 
 </details>
 
-### Leveraging Driver Field-of-View for Multimodal Ego-Trajectory Prediction.
-- **链接**: [出版页](https://openreview.net/forum?id=LLWj8on4Rv)
-- **作者**: M. Eren Akbiyik, Nedko Savov, Danda Pani Paudel, Nikola Popovic, Christian Vater, Otmar Hilliges et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Dynamic-LLaVA: Efficient Multimodal Large Language Models via Dynamic Vision-language Context Sparsification.
-- **链接**: [出版页](https://openreview.net/forum?id=hzVpZDrW73)
-- **作者**: Wenxuan Huang, Zijie Zhai, Yunhang Shen, Shaosheng Cao, Fei Zhao, Xiangfeng Xu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### MMed-RAG: Versatile Multimodal RAG System for Medical Vision Language Models.
-- **链接**: [出版页](https://openreview.net/forum?id=s5epFPdIW6)
-- **作者**: Peng Xia, Kangyu Zhu, Haoran Li, Tianze Wang, Weijia Shi, Sheng Wang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### VLM2Vec: Training Vision-Language Models for Massive Multimodal Embedding Tasks.
-- **链接**: [出版页](https://openreview.net/forum?id=TE0KOzWYAF)
-- **作者**: Ziyan Jiang, Rui Meng, Xinyi Yang, Semih Yavuz, Yingbo Zhou, Wenhu Chen
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### MMIU: Multimodal Multi-image Understanding for Evaluating Large Vision-Language Models.
-- **链接**: [出版页](https://openreview.net/forum?id=WsgEWL8i0K)
-- **作者**: Fanqing Meng, Jin Wang, Chuanhao Li, Quanfeng Lu, Hao Tian, Tianshuo Yang et al.
-- **🏷️ 机构**: Tsinghua / Shanghai AI Lab
-- **会议**: ICLR 2025
-
-### Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain).
-- **链接**: [arXiv:2505.20029](https://arxiv.org/abs/2505.20029)
-- **作者**: Subba Reddy Oota, Akshett Rai Jindal, Ishani Mondal, Khushbu Pahwa, Satya Sai Srinath Namburi GNVV, Manish Shrivastava et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Cross-Modal and Uncertainty-Aware Agglomeration for Open-Vocabulary 3D Scene Understanding.
+- **链接**: [arXiv:2503.16707](https://arxiv.org/abs/2503.16707) · [代码](https://github.com/TyroneLi/CUA_O3D) · 📚 被引 4
+- **作者**: Jinlong Li, Cristiano Saltori, Fabio Poiesi, Nicu Sebe
+- **🏷️ 机构**: University of Trento, Fondazione Bruno Kessler
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Transformer-based language models, though not explicitly trained to mimic brain recordings, have demonstrated surprising alignment with brain activity. Progress in these models-through increased size, instruction-tuning, and multimodality-has led to better representational alignment with neural data. Recently, a new class of instruction-tuned multimodal LLMs (MLLMs) have emerged, showing remarkable zero-shot capabilities in open-ended multimodal vision tasks. However, it is unknown whether MLLMs, when prompted with natural instructions, lead to better brain alignment and effectively capture instruction-specific representations. To address this, we first investigate brain alignment, i.e., measuring the degree of predictivity of neural visual activity using text output response embeddings from MLLMs as participants engage in watching natural scenes. Experiments with 10 different instructions show that MLLMs exhibit significantly better brain alignment than vision-only models and perform comparably to non-instruction-tuned multimodal models like CLIP. We also find that while these MLLMs are effective at generating high-quality responses suitable to the task-specific instructions, not all instructions are relevant for brain alignment. Further, by varying instructions, we make the MLLMs encode instruction-specific visual concepts related to the input image. This analysis shows that MLLMs effectively capture count-related and recognition-related concepts, demonstrating strong alignment with brain activity. Notably, the majority of the explained variance of the brain encoding models is shared between MLLM embeddings of image captioning and other instructions. These results suggest that enhancing MLLMs' ability to capture task-specific information could lead to better differentiation between various types of instructions, and thereby improving their precision in predicting brain responses.
+> The lack of a large-scale 3D-text corpus has led recent works to distill open-vocabulary knowledge from vision-language models (VLMs). However, these methods typically rely on a single VLM to align the feature spaces of 3D models within a common language space, which limits the potential of 3D models to leverage the diverse spatial and semantic capabilities encapsulated in various foundation models. In this paper, we propose Cross-modal and Uncertainty-aware Agglomeration for Open-vocabulary 3D Scene Understanding dubbed CUA-O3D, the first model to integrate multiple foundation models-such as CLIP, DINOv2, and Stable Diffusion-into 3D scene understanding. We further introduce a deterministic uncertainty estimation to adaptively distill and harmonize the heterogeneous 2D feature embeddings from these models. Our method addresses two key challenges: (1) incorporating semantic priors from VLMs alongside the geometric knowledge of spatially-aware vision foundation models, and (2) using a novel deterministic uncertainty estimation to capture model-specific uncertainties across diverse semantic and geometric sensitivities, helping to reconcile heterogeneous representations during training. Extensive experiments on ScanNetV2 and Matterport3D demonstrate that our method not only advances open-vocabulary segmentation but also achieves robust cross-domain alignment and competitive spatial perception capabilities. The code will be available at: https://github.com/TyroneLi/CUA_O3D.
+
+</details>
+
+### Towards Open-Vocabulary Audio-Visual Event Localization.
+- **链接**: [arXiv:2411.11278](https://arxiv.org/abs/2411.11278)
+- **作者**: Jinxing Zhou, Dan Guo, Ruohao Guo, Yuxin Mao, Jingjing Hu, Yiran Zhong et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal data is known to be helpful for visual tracking by improving robustness to appearance variations. However, sensor synchronization challenges often compromise data availability, particularly in video settings where shortages can be temporal. Despite its importance, this area remains underexplored. In this paper, we present the first comprehensive study on tracker performance with temporally incomplete multimodal data. Unsurprisingly, under such a circumstance, existing trackers exhibit significant performance degradation, as their rigid architectures lack the adaptability needed to effectively handle missing modalities. To address these limitations, we propose a flexible framework for robust multimodal tracking. We venture that a tracker should dynamically activate computational units based on missing data rates. This is achieved through a novel Heterogeneous Mixture-of-Experts fusion mechanism with adaptive complexity, coupled with a video-level masking strategy that ensures both temporal consistency and spatial completeness which is critical for effective video tracking. Surprisingly, our model not only adapts to varying missing rates but also adjusts to scene complexity. Extensive experiments show that our model achieves SOTA performance across 9 benchmarks, excelling in both conventional complete and missing modality settings. The code and benchmark will be publicly available at https://github.com/supertyd/FlexTrack/tree/main.
+
+</details>
+
+### Towards Zero-Shot Anomaly Detection and Reasoning with Multimodal Large Language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xu_Towards_Zero-Shot_Anomaly_Detection_and_Reasoning_with_Multimodal_Large_Language_CVPR_2025_paper.html)
+- **作者**: Jiacong Xu, Shao-Yuan Lo, Bardia Safaei, Vishal M. Patel, Isht Dwivedi
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### S4-Driver: Scalable Self-Supervised Driving Multimodal Large Language Model with Spatio-Temporal Visual Representation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xie_S4-Driver_Scalable_Self-Supervised_Driving_Multimodal_Large_Language_Model_with_Spatio-Temporal_CVPR_2025_paper.html)
+- **作者**: Yichen Xie, Runsheng Xu, Tong He, Jyh-Jing Hwang, Katie Luo, Jingwei Ji et al.
+- **🏷️ 机构**: Fudan / Shanghai AI Lab
+- **会议**: CVPR 2025
+
+### MMTL-UniAD: A Unified Framework for Multimodal and Multi-Task Learning in Assistive Driving Perception.
+- **链接**: [arXiv:2504.02264](https://arxiv.org/abs/2504.02264) · [代码](https://github.com/Wenzhuo-Liu/MMTL-UniAD) · 📚 被引 13
+- **作者**: Wenzhuo Liu, Wenshuo Wang, Yicheng Qiao, Qiannan Guo, Jiayin Zhu, Pengfei Li et al.
+- **🏷️ 机构**: Beijing Institute of Technology,Zhuhai, Tsinghua University, HKUST(GZ)
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Advanced driver assistance systems require a comprehensive understanding of the driver's mental/physical state and traffic context but existing works often neglect the potential benefits of joint learning between these tasks. This paper proposes MMTL-UniAD, a unified multi-modal multi-task learning framework that simultaneously recognizes driver behavior (e.g., looking around, talking), driver emotion (e.g., anxiety, happiness), vehicle behavior (e.g., parking, turning), and traffic context (e.g., traffic jam, traffic smooth). A key challenge is avoiding negative transfer between tasks, which can impair learning performance. To address this, we introduce two key components into the framework: one is the multi-axis region attention network to extract global context-sensitive features, and the other is the dual-branch multimodal embedding to learn multimodal embeddings from both task-shared and task-specific features. The former uses a multi-attention mechanism to extract task-relevant features, mitigating negative transfer caused by task-unrelated features. The latter employs a dual-branch structure to adaptively adjust task-shared and task-specific parameters, enhancing cross-task knowledge transfer while reducing task conflicts. We assess MMTL-UniAD on the AIDE dataset, using a series of ablation studies, and show that it outperforms state-of-the-art methods across all four tasks. The code is available on https://github.com/Wenzhuo-Liu/MMTL-UniAD.
+
+</details>
+
+### Generating Multimodal Driving Scenes via Next-Scene Prediction.
+- **链接**: [arXiv:2503.14945](https://arxiv.org/abs/2503.14945) · 📚 被引 1
+- **作者**: Yanhao Wu, Haoyang Zhang, Tianwei Lin, Lichao Huang, Shujie Luo, Rui Wu et al.
+- **🏷️ 机构**: XJTU,School of Software Engineering, Horizon Robotics
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Traditional image classification requires a predefined list of semantic categories. In contrast, Large Multimodal Models (LMMs) can sidestep this requirement by classifying images directly using natural language (e.g., answering the prompt "What is the main object in the image?"). Despite this remarkable capability, most existing studies on LMM classification performance are surprisingly limited in scope, often assuming a closed-world setting with a predefined set of categories. In this work, we address this gap by thoroughly evaluating LMM classification performance in a truly open-world setting. We first formalize the task and introduce an evaluation protocol, defining various metrics to assess the alignment between predicted and ground truth classes. We then evaluate 13 models across 10 benchmarks, encompassing prototypical, non-prototypical, fine-grained, and very fine-grained classes, demonstrating the challenges LMMs face in this task. Further analyses based on the proposed metrics reveal the types of errors LMMs make, highlighting challenges related to granularity and fine-grained capabilities, showing how tailored prompting and reasoning can alleviate them.
+
+</details>
+
+> Building general-purpose models that can effectively perceive the world through multimodal signals has been a long-standing goal. Current approaches involve integrating separately pre-trained components, such as connecting vision encoders to LLMs and continuing multimodal training. While such approaches exhibit remarkable sample efficiency, it remains an open question whether such late-fusion architectures are inherently superior. In this work, we revisit the architectural design of native multimodal models (NMMs)-those trained from the ground up on all modalities-and conduct an extensive scaling laws study, spanning 457 trained models with different architectures and training mixtures. Our investigation reveals no inherent advantage to late-fusion architectures over early-fusion ones, which do not rely on image encoders or tokenizers. On the contrary, early-fusion exhibits stronger performance at lower parameter counts, is more efficient to train, and is easier to deploy. Motivated by the strong performance of the early-fusion architectures, we show that incorporating Mixture of Experts (MoEs) allows models to learn modality-specific weights, significantly benefiting performance.
+
+### Hyperdimensional Uncertainty Quantification for Multimodal Uncertainty Fusion in Autonomous Vehicles Perception.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Hyperdimensional_Uncertainty_Quantification_for_Multimodal_Uncertainty_Fusion_in_Autonomous_Vehicles_CVPR_2025_paper.html) · 📚 被引 7
+- **作者**: Luke Chen, Junyao Wang, Trier Mortlock, Pramod P. Khargonekar, Mohammad Abdullah Al Faruque
+- **🏷️ 机构**: University of California,Irvine
+- **会议**: CVPR 2025
+
+### CoMM: A Coherent Interleaved Image-Text Dataset for Multimodal Understanding and Generation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_CoMM_A_Coherent_Interleaved_Image-Text_Dataset_for_Multimodal_Understanding_and_CVPR_2025_paper.html)
+- **作者**: Wei Chen, Lin Li, Yongqi Yang, Bin Wen, Fan Yang, Tingting Gao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### Video-Guided Foley Sound Generation with Multimodal Controls.
+- **链接**: [arXiv:2411.17698](https://arxiv.org/abs/2411.17698) · 📚 被引 21
+- **作者**: Ziyang Chen, Prem Seetharaman, Bryan C. Russell, Oriol Nieto, David Bourgin, Andrew Owens et al.
+- **🏷️ 机构**: University of Michigan, Adobe Research
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Generating sound effects for videos often requires creating artistic sound effects that diverge significantly from real-life sources and flexible control in the sound design. To address this problem, we introduce MultiFoley, a model designed for video-guided sound generation that supports multimodal conditioning through text, audio, and video. Given a silent video and a text prompt, MultiFoley allows users to create clean sounds (e.g., skateboard wheels spinning without wind noise) or more whimsical sounds (e.g., making a lion's roar sound like a cat's meow). MultiFoley also allows users to choose reference audio from sound effects (SFX) libraries or partial videos for conditioning. A key novelty of our model lies in its joint training on both internet video datasets with low-quality audio and professional SFX recordings, enabling high-quality, full-bandwidth (48kHz) audio generation. Through automated evaluations and human studies, we demonstrate that MultiFoley successfully generates synchronized high-quality sounds across varied conditional inputs and outperforms existing methods. Please see our project page for video results: https://ificl.github.io/MultiFoley/
+
+</details>
+
+### MMAudio: Taming Multimodal Joint Training for High-Quality Video-to-Audio Synthesis.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Cheng_MMAudio_Taming_Multimodal_Joint_Training_for_High-Quality_Video-to-Audio_Synthesis_CVPR_2025_paper.html) · 📚 被引 36
+- **作者**: Ho Kei Cheng, Masato Ishii, Akio Hayakawa, Takashi Shibuya, Alexander G. Schwing, Yuki Mitsufuji
+- **🏷️ 机构**: University of Illinois Urbana-Champaign, Sony AI
+- **会议**: CVPR 2025
+
+### HOP: Heterogeneous Topology-based Multimodal Entanglement for Co-Speech Gesture Generation.
+- **链接**: [arXiv:2503.01175](https://arxiv.org/abs/2503.01175) · 📚 被引 5
+- **作者**: Hongye Cheng, Tianyu Wang, Guangsi Shi, Zexing Zhao, Yanwei Fu
+- **🏷️ 机构**: Northwest A&#x0026;F University,College of Mechanical and Electronic Engineering, Institute of Science and Technology for Brain-Inspired Intelligence, Fudan University, Faculty of Engineering, Monash University,Department of Chemical and Biological Engineering
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Co-speech gestures are crucial non-verbal cues that enhance speech clarity and expressiveness in human communication, which have attracted increasing attention in multimodal research. While the existing methods have made strides in gesture accuracy, challenges remain in generating diverse and coherent gestures, as most approaches assume independence among multimodal inputs and lack explicit modeling of their interactions. In this work, we propose a novel multimodal learning method named HOP for co-speech gesture generation that captures the heterogeneous entanglement between gesture motion, audio rhythm, and text semantics, enabling the generation of coordinated gestures. By leveraging spatiotemporal graph modeling, we achieve the alignment of audio and action. Moreover, to enhance modality coherence, we build the audio-text semantic representation based on a reprogramming module, which is beneficial for cross-modality adaptation. Our approach enables the trimodal system to learn each other's features and represent them in the form of topological entanglement. Extensive experiments demonstrate that HOP achieves state-of-the-art performance, offering more natural and expressive co-speech gesture generation. More information, codes, and demos are available here: https://star-uu-wang.github.io/HOP/
+
+</details>
+
+### Augmenting Multimodal LLMs with Self-Reflective Tokens for Knowledge-based Visual Question Answering.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Cocchi_Augmenting_Multimodal_LLMs_with_Self-Reflective_Tokens_for_Knowledge-based_Visual_Question_CVPR_2025_paper.html)
+- **作者**: Federico Cocchi, Nicholas Moratelli, Marcella Cornia, Lorenzo Baraldi, Rita Cucchiara
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### VLOGGER: Multimodal Diffusion for Embodied Avatar Synthesis.
+- **链接**: [arXiv:2403.08764](https://arxiv.org/abs/2403.08764) · 📚 被引 15
+- **作者**: Enric Corona, Andrei Zanfir, Eduard Gabriel Bazavan, Nikos Kolotouros, Thiemo Alldieck, Cristian Sminchisescu
+- **🏷️ 机构**: Google DeepMind
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose VLOGGER, a method for audio-driven human video generation from a single input image of a person, which builds on the success of recent generative diffusion models. Our method consists of 1) a stochastic human-to-3d-motion diffusion model, and 2) a novel diffusion-based architecture that augments text-to-image models with both spatial and temporal controls. This supports the generation of high quality video of variable length, easily controllable through high-level representations of human faces and bodies. In contrast to previous work, our method does not require training for each person, does not rely on face detection and cropping, generates the complete image (not just the face or the lips), and considers a broad spectrum of scenarios (e.g. visible torso or diverse subject identities) that are critical to correctly synthesize humans who communicate. We also curate MENTOR, a new and diverse dataset with 3d pose and expression annotations, one order of magnitude larger than previous ones (800,000 identities) and with dynamic gestures, on which we train and ablate our main technical contributions. VLOGGER outperforms state-of-the-art methods in three public benchmarks, considering image quality, identity preservation and temporal consistency while also generating upper-body gestures. We analyze the performance of VLOGGER with respect to multiple diversity metrics, showing that our architectural choices and the use of MENTOR benefit training a fair and unbiased model at scale. Finally we show applications in video editing and personalization.
+
+</details>
+
+### Incorporating Dense Knowledge Alignment into Unified Multimodal Representation Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Cui_Incorporating_Dense_Knowledge_Alignment_into_Unified_Multimodal_Representation_Models_CVPR_2025_paper.html) · 📚 被引 0
+- **作者**: Yuhao Cui, Xinxing Zu, Wenhua Zhang, Zhongzhou Zhao, Jinyang Gao
+- **🏷️ 机构**: Alibaba Cloud Computing,China, Tongyi Lab,China
+- **会议**: CVPR 2025
+
+### Insight-V: Exploring Long-Chain Visual Reasoning with Multimodal Large Language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Dong_Insight-V_Exploring_Long-Chain_Visual_Reasoning_with_Multimodal_Large_Language_Models_CVPR_2025_paper.html)
+- **作者**: Yuhao Dong, Zuyan Liu, Hai-Long Sun, Jingkang Yang, Winston Hu, Yongming Rao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### STiL: Semi-supervised Tabular-Image Learning for Comprehensive Task-Relevant Information Exploration in Multimodal Classification.
+- **链接**: [arXiv:2503.06277](https://arxiv.org/abs/2503.06277) · [代码](https://github.com/siyi-wind/STiL) · 📚 被引 3
+- **作者**: Siyi Du, Xinzhe Luo, Declan P. O'Regan, Chen Qin
+- **🏷️ 机构**: Imperial College London,Department of Electrical and Electronic Engineering &amp; I-X,London,UK, Imperial College London,MRC Laboratory of Medical Science,London,UK
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Ensuring precise multimodal alignment between diffusion-generated images and input prompts has been a long-standing challenge. Earlier works finetune diffusion weight using high-quality preference data, which tends to be limited and difficult to scale up. Recent editing-based methods further refine local regions of generated images but may compromise overall image quality. In this work, we propose Implicit Multimodal Guidance (IMG), a novel re-generation-based multimodal alignment framework that requires no extra data or editing operations. Specifically, given a generated image and its prompt, IMG a) utilizes a multimodal large language model (MLLM) to identify misalignments; b) introduces an Implicit Aligner that manipulates diffusion conditioning features to reduce misalignments and enable re-generation; and c) formulates the re-alignment goal into a trainable objective, namely Iteratively Updated Preference Objective. Extensive qualitative and quantitative evaluations on SDXL, SDXL-DPO, and FLUX show that IMG outperforms existing alignment methods. Furthermore, IMG acts as a flexible plug-and-play adapter, seamlessly enhancing prior finetuning-based alignment methods. Our code will be available at https://github.com/SHI-Labs/IMG-Multimodal-Diffusion-Alignment.
+
+</details>
+
+### AdaMMS: Model Merging for Heterogeneous Multimodal Large Language Models with Unsupervised Coefficient Optimization.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Du_AdaMMS_Model_Merging_for_Heterogeneous_Multimodal_Large_Language_Models_with_CVPR_2025_paper.html)
+- **作者**: Yiyang Du, Xiaochen Wang, Chi Chen, Jiabo Ye, Yiru Wang, Peng Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### Fuzzy Multimodal Learning for Trusted Cross-modal Retrieval.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Duan_Fuzzy_Multimodal_Learning_for_Trusted_Cross-modal_Retrieval_CVPR_2025_paper.html) · 📚 被引 8
+- **作者**: Siyuan Duan, Yuan Sun, Dezhong Peng, Zheng Liu, Xiaomin Song, Peng Hu
+- **🏷️ 机构**: Sichuan University,College of Computer Science,Chengdu,China,610095, Sichuan National Innovation New Vision UHD Video Technology Co., Ltd,Chengdu,China,610041
+- **会议**: CVPR 2025
+
+### Docopilot: Improving Multimodal Models for Document-Level Understanding.
+- **链接**: [arXiv:2507.14675](https://arxiv.org/abs/2507.14675) · [代码](https://github.com/OpenGVLab/Docopilot) · 📚 被引 6
+- **作者**: Yuchen Duan, Zhe Chen, Yusong Hu, Weiyun Wang, Shenglong Ye, Botian Shi et al.
+- **🏷️ 机构**: Shanghai AI Laboratory, Nanjing University, Nankai University
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper extends Cross Modal Generalization (CMG) to open-set environments by proposing the more challenging Open-set Cross Modal Generalization (OSCMG) task. This task evaluates multimodal unified representations in open-set conditions, addressing the limitations of prior closed-set cross-modal evaluations. OSCMG requires not only cross-modal knowledge transfer but also robust generalization to unseen classes within new modalities, a scenario frequently encountered in real-world applications. Existing multimodal unified representation work lacks consideration for open-set environments. To tackle this, we propose MICU, comprising two key components: Fine-Coarse Masked multimodal InfoNCE (FCMI) and Cross modal Unified Jigsaw Puzzles (CUJP). FCMI enhances multimodal alignment by applying contrastive learning at both holistic semantic and temporal levels, incorporating masking to enhance generalization. CUJP enhances feature diversity and model uncertainty by integrating modality-agnostic feature selection with self-supervised learning, thereby strengthening the model's ability to handle unknown categories in open-set tasks. Extensive experiments on CMG and the newly proposed OSCMG validate the effectiveness of our approach. The code is available at https://github.com/haihuangcode/CMG.
+
+</details>
+
+### Bridging Domain Generalization to Multimodal Domain Generalization via Unified Representations.
+- **链接**: [arXiv:2507.03304](https://arxiv.org/abs/2507.03304) · 📚 被引 2
+- **作者**: Hai Huang, Yan Xia, Sashuai Zhou, Hanting Wang, Shulei Wang, Zhou Zhao
+- **🏷️ 机构**: Zhejiang University
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Domain Generalization (DG) aims to enhance model robustness in unseen or distributionally shifted target domains through training exclusively on source domains. Although existing DG techniques, such as data manipulation, learning strategies, and representation learning, have shown significant progress, they predominantly address single-modal data. With the emergence of numerous multi-modal datasets and increasing demand for multi-modal tasks, a key challenge in Multi-modal Domain Generalization (MMDG) has emerged: enabling models trained on multi-modal sources to generalize to unseen target distributions within the same modality set. Due to the inherent differences between modalities, directly transferring methods from single-modal DG to MMDG typically yields sub-optimal results. These methods often exhibit randomness during generalization due to the invisibility of target domains and fail to consider inter-modal consistency. Applying these methods independently to each modality in the MMDG setting before combining them can lead to divergent generalization directions across different modalities, resulting in degraded generalization capabilities. To address these challenges, we propose a novel approach that leverages Unified Representations to map different paired modalities together, effectively adapting DG methods to MMDG by enabling synchronized multi-modal improvements within the unified space. Additionally, we introduce a supervised disentanglement framework that separates modal-general and modal-specific information, further enhancing the alignment of unified representations. Extensive experiments on benchmark datasets, including EPIC-Kitchens and Human-Animal-Cartoon, demonstrate the effectiveness and superiority of our method in enhancing multi-modal domain generalization.
+
+</details>
+
+### MMGeo: Multimodal Compositional Geo-Localization for UAVs.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02334) · 📚 被引 4
+- **作者**: Yuxiang Ji, Boyong He, Zhuoyue Tan, Liaoni Wu
+- **🏷️ 机构**: Institute of Artificial Intelligence, Xiamen University
+- **会议**: ICCV 2025
+
+### Multimodal LLM Guided Exploration and Active Mapping Using Fisher Information.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00512)
+- **作者**: Wen Jiang, Boshu Lei, Katrina Ashton, Kostas Daniilidis
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+### Towards Better Dental AI: A Multimodal Benchmark and Instruction Dataset for Panoramic X-ray Analysis.
+- **链接**: [arXiv:2509.09254](https://arxiv.org/abs/2509.09254) · [代码](https://github.com/isbrycee/OralGPT) · 📚 被引 0
+- **作者**: Jing Hao, Yuxuan Fan, Yanpeng Sun, Kaixin Guo, Lizhuo Lin, Jinrong Yang et al.
+- **🏷️ 机构**: University of Hong Kong, The Hong Kong University of Science and Technology, Nanjing University of Science and Technology
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advances in large vision-language models (LVLMs) have demonstrated strong performance on general-purpose medical tasks. However, their effectiveness in specialized domains such as dentistry remains underexplored. In particular, panoramic X-rays, a widely used imaging modality in oral radiology, pose interpretative challenges due to dense anatomical structures and subtle pathological cues, which are not captured by existing medical benchmarks or instruction datasets. To this end, we introduce MMOral, the first large-scale multimodal instruction dataset and benchmark tailored for panoramic X-ray interpretation. MMOral consists of 20,563 annotated images paired with 1.3 million instruction-following instances across diverse task types, including attribute extraction, report generation, visual question answering, and image-grounded dialogue. In addition, we present MMOral-Bench, a comprehensive evaluation suite covering five key diagnostic dimensions in dentistry. We evaluate 64 LVLMs on MMOral-Bench and find that even the best-performing model, i.e., GPT-4o, only achieves 41.45% accuracy, revealing significant limitations of current models in this domain. To promote the progress of this specific domain, we also propose OralGPT, which conducts supervised fine-tuning (SFT) upon Qwen2.5-VL-7B with our meticulously curated MMOral instruction dataset. Remarkably, a single epoch of SFT yields substantial performance enhancements for LVLMs, e.g., OralGPT demonstrates a 24.73% improvement. Both MMOral and OralGPT hold significant potential as a critical foundation for intelligent dentistry and enable more clinically impactful multimodal AI systems in the dental field. The dataset, model, benchmark, and evaluation suite are available at https://github.com/isbrycee/OralGPT.
+
+</details>
+
+### A Multimodal Benchmark for Framing of Oil & Gas Advertising and Potential Greenwashing Detection.
+- **链接**: [arXiv:2510.21679](https://arxiv.org/abs/2510.21679) · 📚 被引 0
+- **作者**: Gaku Morio, Harri Rowlands, Dominik Stammbach, Christopher D. Manning, Peter Henderson
+- **🏷️ 机构**: Hitachi, CAST, Princeton University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Companies spend large amounts of money on public relations campaigns to project a positive brand image. However, sometimes there is a mismatch between what they say and what they do. Oil & gas companies, for example, are accused of "greenwashing" with imagery of climate-friendly initiatives. Understanding the framing, and changes in framing, at scale can help better understand the goals and nature of public relations campaigns. To address this, we introduce a benchmark dataset of expert-annotated video ads obtained from Facebook and YouTube. The dataset provides annotations for 13 framing types for more than 50 companies or advocacy groups across 20 countries. Our dataset is especially designed for the evaluation of vision-language models (VLMs), distinguishing it from past text-only framing datasets. Baseline experiments show some promising results, while leaving room for improvement for future work: GPT-4.1 can detect environmental messages with 79% F1 score, while our best model only achieves 46% F1 score on identifying framing around green innovation. We also identify challenges that VLMs must address, such as implicit framing, handling videos of various lengths, or implicit cultural backgrounds. Our dataset contributes to research in multimodal analysis of strategic communication in the energy sector.
+
+</details>
+
+### SMMILE: An expert-driven benchmark for multimodal medical in-context learning.
+- **链接**: [arXiv:2506.21355](https://arxiv.org/abs/2506.21355) · 📚 被引 0
+- **作者**: Melanie Rieff, Maya Varma, Ossian Rabow, Subathra Adithan, Julie Kim, Ken Chang et al.
+- **🏷️ 机构**: ETHZ - ETH Zurich, Stanford University, Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal in-context learning (ICL) remains underexplored despite significant potential for domains such as medicine. Clinicians routinely encounter diverse, specialized tasks requiring adaptation from limited examples, such as drawing insights from a few relevant prior cases or considering a constrained set of differential diagnoses. While multimodal large language models (MLLMs) have shown advances in medical visual question answering (VQA), their ability to learn multimodal tasks from context is largely unknown. We introduce SMMILE, the first expert-driven multimodal ICL benchmark for medical tasks. Eleven medical experts curated problems, each including a multimodal query and multimodal in-context examples as task demonstrations. SMMILE encompasses 111 problems (517 question-image-answer triplets) covering 6 medical specialties and 13 imaging modalities. We further introduce SMMILE++, an augmented variant with 1038 permuted problems. A comprehensive evaluation of 15 MLLMs demonstrates that most models exhibit moderate to poor multimodal ICL ability in medical tasks. In open-ended evaluations, ICL contributes only an 8% average improvement over zero-shot on SMMILE and 9.4% on SMMILE++. We observe a susceptibility for irrelevant in-context examples: even a single noisy or irrelevant example can degrade performance by up to 9.5%. Moreover, we observe that MLLMs are affected by a recency bias, where placing the most relevant example last can lead to substantial performance improvements of up to 71%. Our findings highlight critical limitations and biases in current MLLMs when learning multimodal medical tasks from context. SMMILE is available at https://smmile-benchmark.github.io.
+
+</details>
+
+### Hyperphantasia: A Benchmark for Evaluating the Mental Visualization Capabilities of Multimodal LLMs.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/05a7ad45d75a3082d7a3a70de8743140-Abstract-Datasets_and_Benchmarks_Track.html)
+- **作者**: Mohammad Shahab Sepehri, Berk Tinaz, Zalan Fabian, Mahdi Soltanolkotabi
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+### MTBBench: A Multimodal Sequential Clinical Decision-Making Benchmark in Oncology.
+- **链接**: [arXiv:2511.20490](https://arxiv.org/abs/2511.20490) · 📚 被引 0
+- **作者**: Kiril Vasilev, Alexandre Misrahi, Eeshaan Jain, Phil F. Cheng, Petros Liakopoulos, Olivier Michielin et al.
+- **🏷️ 机构**: ETHZ - ETH Zurich, EPFL - EPF Lausanne, EPFL
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal Large Language Models (LLMs) hold promise for biomedical reasoning, but current benchmarks fail to capture the complexity of real-world clinical workflows. Existing evaluations primarily assess unimodal, decontextualized question-answering, overlooking multi-agent decision-making environments such as Molecular Tumor Boards (MTBs). MTBs bring together diverse experts in oncology, where diagnostic and prognostic tasks require integrating heterogeneous data and evolving insights over time. Current benchmarks lack this longitudinal and multimodal complexity. We introduce MTBBench, an agentic benchmark simulating MTB-style decision-making through clinically challenging, multimodal, and longitudinal oncology questions. Ground truth annotations are validated by clinicians via a co-developed app, ensuring clinical relevance. We benchmark multiple open and closed-source LLMs and show that, even at scale, they lack reliability -- frequently hallucinating, struggling with reasoning from time-resolved data, and failing to reconcile conflicting evidence or different modalities. To address these limitations, MTBBench goes beyond benchmarking by providing an agentic framework with foundation model-based tools that enhance multi-modal and longitudinal reasoning, leading to task-level performance gains of up to 9.0% and 11.2%, respectively. Overall, MTBBench offers a challenging and realistic testbed for advancing multimodal LLM reasoning, reliability, and tool-use with a focus on MTB environments in precision oncology.
+
+</details>
+
+### InfoChartQA: A Benchmark for Multimodal Question Answering on Infographic Charts.
+- **链接**: [arXiv:2505.19028](https://arxiv.org/abs/2505.19028) · [代码](https://github.com/CoolDawnAnt/InfoChartQA) · 📚 被引 0
+- **作者**: Tianchi Xie, Minzhi Lin, Mengchen Liu, Yilin Ye, Changjian Chen, Shixia Liu
+- **🏷️ 机构**: Tsinghua University, Tsinghua University, Hong Kong University of Science and Technology, Hunan University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Understanding infographic charts with design-driven visual elements (e.g., pictograms, icons) requires both visual recognition and reasoning, posing challenges for multimodal large language models (MLLMs). However, existing visual-question answering benchmarks fall short in evaluating these capabilities of MLLMs due to the lack of paired plain charts and visual-element-based questions. To bridge this gap, we introduce InfoChartQA, a benchmark for evaluating MLLMs on infographic chart understanding. It includes 5,642 pairs of infographic and plain charts, each sharing the same underlying data but differing in visual presentations. We further design visual-element-based questions to capture their unique visual designs and communicative intent. Evaluation of 20 MLLMs reveals a substantial performance decline on infographic charts, particularly for visual-element-based questions related to metaphors. The paired infographic and plain charts enable fine-grained error analysis and ablation studies, which highlight new opportunities for advancing MLLMs in infographic chart understanding. We release InfoChartQA at https://github.com/CoolDawnAnt/InfoChartQA.
+
+</details>
+
+### TCM-Ladder: A Benchmark for Multimodal Question Answering on Traditional Chinese Medicine.
+- **链接**: [arXiv:2505.24063](https://arxiv.org/abs/2505.24063) · 📚 被引 0
+- **作者**: Jiacheng Xie, Yang Yu, Ziyang Zhang, Shuai Zeng, Jiaxuan He, Ayush Vasireddy et al.
+- **🏷️ 机构**: University of Missouri, Nanjing University, Northwestern University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Traditional Chinese Medicine (TCM), as an effective alternative medicine, has been receiving increasing attention. In recent years, the rapid development of large language models (LLMs) tailored for TCM has highlighted the urgent need for an objective and comprehensive evaluation framework to assess their performance on real-world tasks. However, existing evaluation datasets are limited in scope and primarily text-based, lacking a unified and standardized multimodal question-answering (QA) benchmark. To address this issue, we introduce TCM-Ladder, the first comprehensive multimodal QA dataset specifically designed for evaluating large TCM language models. The dataset covers multiple core disciplines of TCM, including fundamental theory, diagnostics, herbal formulas, internal medicine, surgery, pharmacognosy, and pediatrics. In addition to textual content, TCM-Ladder incorporates various modalities such as images and videos. The dataset was constructed using a combination of automated and manual filtering processes and comprises over 52,000 questions. These questions include single-choice, multiple-choice, fill-in-the-blank, diagnostic dialogue, and visual comprehension tasks. We trained a reasoning model on TCM-Ladder and conducted comparative experiments against nine state-of-the-art general domain and five leading TCM-specific LLMs to evaluate their performance on the dataset. Moreover, we propose Ladder-Score, an evaluation method specifically designed for TCM question answering that effectively assesses answer quality in terms of terminology usage and semantic expression. To the best of our knowledge, this is the first work to systematically evaluate mainstream general domain and TCM-specific LLMs on a unified multimodal benchmark. The datasets and leaderboard are publicly available at https://tcmladder.com and will be continuously updated.
+
+</details>
+
+### Can Large Language Models Help Multimodal Language Analysis? MMLA: A Comprehensive Benchmark.
+- **链接**: [arXiv:2504.16427](https://arxiv.org/abs/2504.16427) · [代码](https://github.com/thuiar/MMLA) · 📚 被引 0
+- **作者**: Hanlei Zhang, Zhuohang Li, Hua Xu, Yeshuang Zhu, Peiwu Wang, Haige Zhu et al.
+- **🏷️ 机构**: Tsinghua University, Tencent Inc., Hebei University of Science and Technology
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal language analysis is a rapidly evolving field that leverages multiple modalities to enhance the understanding of high-level semantics underlying human conversational utterances. Despite its significance, little research has investigated the capability of multimodal large language models (MLLMs) to comprehend cognitive-level semantics. In this paper, we introduce MMLA, a comprehensive benchmark specifically designed to address this gap. MMLA comprises over 61K multimodal utterances drawn from both staged and real-world scenarios, covering six core dimensions of multimodal semantics: intent, emotion, dialogue act, sentiment, speaking style, and communication behavior. We evaluate eight mainstream branches of LLMs and MLLMs using three methods: zero-shot inference, supervised fine-tuning, and instruction tuning. Extensive experiments reveal that even fine-tuned models achieve only about 60%~70% accuracy, underscoring the limitations of current MLLMs in understanding complex human language. We believe that MMLA will serve as a solid foundation for exploring the potential of large language models in multimodal language analysis and provide valuable resources to advance this field. The datasets and code are open-sourced at https://github.com/thuiar/MMLA.
+
+</details>
+
+### Multimodal Causal Reasoning for UAV Object Detection.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/f5a24b8fa97f7073aff5e8baadf583f1-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Nianxin Li, Mao Ye, Lihua Zhou, Shuaifeng Li, Song Tang, Luping Ji et al.
+- **🏷️ 机构**: University of Electronic Science and Technology of China, School of Computer Science and Engineering, University of Electronic Science and Technology of China, University of Shanghai for Science and Technology
+- **会议**: NeurIPS 2025
+
+### InstructHOI: Context-Aware Instruction for Multi-Modal Reasoning in Human-Object Interaction Detection.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/d1d7398c1444928ada8940f369665ad5-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Jinguo Luo, Weihong Ren, Quanlong Zheng, Yanhao Zhang, Zhenlong Yuan, Zhiyong Wang et al.
+- **🏷️ 机构**: Harbin Institute of Technology, Shenzhen, Guangdong OPPO Mobile Telecommunications Corp.,Ltd., Oppo AI center
+- **会议**: NeurIPS 2025
+
+### Multimodal LiDAR-Camera Novel View Synthesis with Unified Pose-free Neural Fields.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/70915b08a205ea5522528690d93518f6-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Weiyi Xue, Fan Lu, Yunwei Zhu, Zehan Zheng, Sanqing Qu, Jiangtong Li et al.
+- **🏷️ 机构**: Tongji University, Johns Hopkins University, CNNC
+- **会议**: NeurIPS 2025
+
+### PointMapPolicy: Structured Point Cloud Processing for Multi-Modal Imitation Learning.
+- **链接**: [arXiv:2510.20406](https://arxiv.org/abs/2510.20406) · 📚 被引 0
+- **作者**: Xiaogang Jia, Qian Wang, Anrui Wang, Han A. Wang, Balázs Gyenes, Emiliyan Gospodinov et al.
+- **🏷️ 机构**: Karlsruhe Institute of Technology, Karlsruher Institut für Technologie, Zhejiang University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Robotic manipulation systems benefit from complementary sensing modalities, where each provides unique environmental information. Point clouds capture detailed geometric structure, while RGB images provide rich semantic context. Current point cloud methods struggle to capture fine-grained detail, especially for complex tasks, which RGB methods lack geometric awareness, which hinders their precision and generalization. We introduce PointMapPolicy, a novel approach that conditions diffusion policies on structured grids of points without downsampling. The resulting data type makes it easier to extract shape and spatial relationships from observations, and can be transformed between reference frames. Yet due to their structure in a regular grid, we enable the use of established computer vision techniques directly to 3D data. Using xLSTM as a backbone, our model efficiently fuses the point maps with RGB data for enhanced multi-modal perception. Through extensive experiments on the RoboCasa and CALVIN benchmarks and real robot evaluations, we demonstrate that our method achieves state-of-the-art performance across diverse manipulation tasks. The overview and demos are available on our project page: https://point-map.github.io/Point-Map/
+
+</details>
+
+### Multi-Modal View Enhanced Large Vision Models for Long-Term Time Series Forecasting.
+- **链接**: [arXiv:2505.24003](https://arxiv.org/abs/2505.24003) · [代码](https://github.com/D2I-Group/dmmv) · 📚 被引 1
+- **作者**: ChengAo Shen, Wenchao Yu, Ziming Zhao, Dongjin Song, Wei Cheng, Haifeng Chen et al.
+- **🏷️ 机构**: University of Houston, NEC Laboratories America, University of Connecticut
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Time series, typically represented as numerical sequences, can also be transformed into images and texts, offering multi-modal views (MMVs) of the same underlying signal. These MMVs can reveal complementary patterns and enable the use of powerful pre-trained large models, such as large vision models (LVMs), for long-term time series forecasting (LTSF). However, as we identified in this work, the state-of-the-art (SOTA) LVM-based forecaster poses an inductive bias towards "forecasting periods". To harness this bias, we propose DMMV, a novel decomposition-based multi-modal view framework that leverages trend-seasonal decomposition and a novel backcast-residual based adaptive decomposition to integrate MMVs for LTSF. Comparative evaluations against 14 SOTA models across diverse datasets show that DMMV outperforms single-view and existing multi-modal baselines, achieving the best mean squared error (MSE) on 6 out of 8 benchmark datasets. The code for this paper is available at: https://github.com/D2I-Group/dmmv.
+
+</details>
+
+### Collaborating Vision, Depth, and Thermal Signals for Multi-Modal Tracking: Dataset and Algorithm.
+- **链接**: [arXiv:2509.24741](https://arxiv.org/abs/2509.24741) · 📚 被引 0
+- **作者**: Xuefeng Zhu, Tianyang Xu, Yifan Pan, Jinjie Gu, Xi Li, Jiwen Lu et al.
+- **🏷️ 机构**: Jiangnan University, Zhejiang University, Tsinghua University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing multi-modal object tracking approaches primarily focus on dual-modal paradigms, such as RGB-Depth or RGB-Thermal, yet remain challenged in complex scenarios due to limited input modalities. To address this gap, this work introduces a novel multi-modal tracking task that leverages three complementary modalities, including visible RGB, Depth (D), and Thermal Infrared (TIR), aiming to enhance robustness in complex scenarios. To support this task, we construct a new multi-modal tracking dataset, coined RGBDT500, which consists of 500 videos with synchronised frames across the three modalities. Each frame provides spatially aligned RGB, depth, and thermal infrared images with precise object bounding box annotations. Furthermore, we propose a novel multi-modal tracker, dubbed RDTTrack. RDTTrack integrates tri-modal information for robust tracking by leveraging a pretrained RGB-only tracking model and prompt learning techniques. In specific, RDTTrack fuses thermal infrared and depth modalities under a proposed orthogonal projection constraint, then integrates them with RGB signals as prompts for the pre-trained foundation tracking model, effectively harmonising tri-modal complementary cues. The experimental results demonstrate the effectiveness and advantages of the proposed method, showing significant improvements over existing dual-modal approaches in terms of tracking accuracy and robustness in complex scenarios. The dataset and source code are publicly available at https://xuefeng-zhu5.github.io/RGBDT500.
+
+</details>
+
+### OpenHOI: Open-World Hand-Object Interaction Synthesis with Multimodal Large Language Model.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/f376f5dff6f6ec6364aea7a46ab49574-Abstract-Conference.html)
+- **作者**: Zhenhao Zhang, Ye Shi, Lingxiao Yang, Suting Ni, Qi Ye, Jingya Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+### OWMM-Agent: Open World Mobile Manipulation With Multi-modal Agentic Data Synthesis.
+- **链接**: [arXiv:2506.04217](https://arxiv.org/abs/2506.04217) · [代码](https://github.com/HHYHRHY/OWMM-Agent) · 📚 被引 0
+- **作者**: Junting Chen, Haotian Liang, Lingxiao Du, Weiyun Wang, Mengkang Hu, Yao Mu et al.
+- **🏷️ 机构**: School of Computer Science,            National University of Singapore, University of Science and Technology of China, Fudan University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The rapid progress of navigation, manipulation, and vision models has made mobile manipulators capable in many specialized tasks. However, the open-world mobile manipulation (OWMM) task remains a challenge due to the need for generalization to open-ended instructions and environments, as well as the systematic complexity to integrate high-level decision making with low-level robot control based on both global scene understanding and current agent state. To address this complexity, we propose a novel multi-modal agent architecture that maintains multi-view scene frames and agent states for decision-making and controls the robot by function calling. A second challenge is the hallucination from domain shift. To enhance the agent performance, we further introduce an agentic data synthesis pipeline for the OWMM task to adapt the VLM model to our task domain with instruction fine-tuning. We highlight our fine-tuned OWMM-VLM as the first dedicated foundation model for mobile manipulators with global scene understanding, robot state tracking, and multi-modal action generation in a unified model. Through experiments, we demonstrate that our model achieves SOTA performance compared to other foundation models including GPT-4o and strong zero-shot generalization in real world. The project page is at https://github.com/HHYHRHY/OWMM-Agent
+
+</details>
+
+### Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency.
+- **链接**: [arXiv:2506.07497](https://arxiv.org/abs/2506.07497) · 📚 被引 0
+- **作者**: Xiangyu Guo, Zhanqian Wu, Kaixin Xiong, Ziyang Xu, Lijun Zhou, Gangwei Xu et al.
+- **🏷️ 机构**: Huazhong University of Science and Technology, University of Pennsylvania, Xiaomi Corporation
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present Genesis, a unified framework for joint generation of multi-view driving videos and LiDAR sequences with spatio-temporal and cross-modal consistency. Genesis employs a two-stage architecture that integrates a DiT-based video diffusion model with 3D-VAE encoding, and a BEV-aware LiDAR generator with NeRF-based rendering and adaptive sampling. Both modalities are directly coupled through a shared latent space, enabling coherent evolution across visual and geometric domains. To guide the generation with structured semantics, we introduce DataCrafter, a captioning module built on vision-language models that provides scene-level and instance-level supervision. Extensive experiments on the nuScenes benchmark demonstrate that Genesis achieves state-of-the-art performance across video and LiDAR metrics (FVD 16.95, FID 4.24, Chamfer 0.611), and benefits downstream tasks including segmentation and 3D detection, validating the semantic fidelity and practical utility of the generated data.
+
+</details>
+
+### VaMP: Variational Multi-Modal Prompt Learning for Vision-Language Models.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/812e3f4ff9877b318689a22d81172cf3-Abstract-Conference.html)
+- **作者**: Silin Cheng, Kai Han
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+### Analyzing Fine-Grained Alignment and Enhancing Vision Understanding in Multimodal Language Models.
+- **链接**: [arXiv:2505.17316](https://arxiv.org/abs/2505.17316) · 📚 被引 0
+- **作者**: Jiachen Jiang, Jinxin Zhou, Bo Peng, Xia Ning, Zhihui Zhu
+- **🏷️ 机构**: Ohio State University, Columbus, Shanghai Jiaotong University, The Ohio State University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Achieving better alignment between vision embeddings and Large Language Models (LLMs) is crucial for enhancing the abilities of Multimodal LLMs (MLLMs), particularly for recent models that rely on powerful pretrained vision encoders and LLMs. A common approach to connect the pretrained vision encoder and LLM is through a projector applied after the vision encoder. However, the projector is often trained to enable the LLM to generate captions, and hence the mechanism by which LLMs understand each vision token remains unclear. In this work, we first investigate the role of the projector in compressing vision embeddings and aligning them with word embeddings. We show that the projector significantly compresses visual information, removing redundant details while preserving essential elements necessary for the LLM to understand visual content. We then examine patch-level alignment -- the alignment between each vision patch and its corresponding semantic words -- and propose a *multi-semantic alignment hypothesis*. Our analysis indicates that the projector trained by caption loss improves patch-level alignment but only to a limited extent, resulting in weak and coarse alignment. To address this issue, we propose *patch-aligned training* to efficiently enhance patch-level alignment. Our experiments show that patch-aligned training (1) achieves stronger compression capability and improved patch-level alignment, enabling the MLLM to generate higher-quality captions, (2) improves the MLLM's performance by 16% on referring expression grounding tasks, 4% on question-answering tasks, and 3% on modern instruction-following benchmarks when using the same supervised fine-tuning (SFT) setting. The proposed method can be easily extended to other multimodal models.
+
+</details>
+
+### Cross-modal Associations in Vision and Language Models: Revisiting the Bouba-Kiki Effect.
+- **链接**: [arXiv:2507.10013](https://arxiv.org/abs/2507.10013) · 📚 被引 0
+- **作者**: Tom Kouwenhoven, Kiana Shahrasbi, Tessa Verhoef
+- **🏷️ 机构**: Leiden University, Leiden Institute of Advanced Computer Science, Leiden University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advances in multimodal models have raised questions about whether vision-and-language models (VLMs) integrate cross-modal information in ways that reflect human cognition. One well-studied test case in this domain is the bouba-kiki effect, where humans reliably associate pseudowords like `bouba' with round shapes and `kiki' with jagged ones. Given the mixed evidence found in prior studies for this effect in VLMs, we present a comprehensive re-evaluation focused on two variants of CLIP, ResNet and Vision Transformer (ViT), given their centrality in many state-of-the-art VLMs. We apply two complementary methods closely modelled after human experiments: a prompt-based evaluation that uses probabilities as a measure of model preference, and we use Grad-CAM as a novel approach to interpret visual attention in shape-word matching tasks. Our findings show that these model variants do not consistently exhibit the bouba-kiki effect. While ResNet shows a preference for round shapes, overall performance across both model variants lacks the expected associations. Moreover, direct comparison with prior human data on the same task shows that the models' responses fall markedly short of the robust, modality-integrated behaviour characteristic of human cognition. These results contribute to the ongoing debate about the extent to which VLMs truly understand cross-modal concepts, highlighting limitations in their internal representations and alignment with human intuitions.
+
+</details>
+
+### DetectiumFire: A Comprehensive Multi-modal Dataset Bridging Vision and Language for Fire Understanding.
+- **链接**: [arXiv:2511.02495](https://arxiv.org/abs/2511.02495) · 📚 被引 0
+- **作者**: Zixuan Liu, Siavash H. Khajavi, Guangkai Jiang
+- **🏷️ 机构**: Tulane University, Aalto University, University of Helsinki
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advances in multi-modal models have demonstrated strong performance in tasks such as image generation and reasoning. However, applying these models to the fire domain remains challenging due to the lack of publicly available datasets with high-quality fire domain annotations. To address this gap, we introduce DetectiumFire, a large-scale, multi-modal dataset comprising of 22.5k high-resolution fire-related images and 2.5k real-world fire-related videos covering a wide range of fire types, environments, and risk levels. The data are annotated with both traditional computer vision labels (e.g., bounding boxes) and detailed textual prompts describing the scene, enabling applications such as synthetic data generation and fire risk reasoning. DetectiumFire offers clear advantages over existing benchmarks in scale, diversity, and data quality, significantly reducing redundancy and enhancing coverage of real-world scenarios. We validate the utility of DetectiumFire across multiple tasks, including object detection, diffusion-based image generation, and vision-language reasoning. Our results highlight the potential of this dataset to advance fire-related research and support the development of intelligent safety systems. We release DetectiumFire to promote broader exploration of fire understanding in the AI community. The dataset is available at https://kaggle.com/datasets/38b79c344bdfc55d1eed3d22fbaa9c31fad45e27edbbe9e3c529d6e5c4f93890
+
+</details>
+
+### AlignVLM: Bridging Vision and Language Latent Spaces for Multimodal Document Understanding.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/d695f1d2b37df1310f3b9d2bbc7e0a2f-Abstract-Conference.html)
+- **作者**: Ahmed Masry, Juan A. Rodríguez, Tianyu Zhang, Suyuchen Wang, Chao Wang, Aarash Feizi et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+### Toward a Vision-Language Foundation Model for Medical Data: Multimodal Dataset and Benchmarks for Vietnamese PET/CT Report Generation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/a9f5ebadfbf7b6b10d685c385713b35a-Abstract-Datasets_and_Benchmarks_Track.html)
+- **作者**: Huu Tien Nguyen, Dac Thai Nguyen, The Minh Duc Nguyen, Trung Thanh Nguyen, Truong Thao Nguyen, Hieu H. Pham et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+### ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/87726969ce38e9a676ca1fd4459ba77d-Abstract-Conference.html)
+- **作者**: Zedong Liu, Shenggan Cheng, Guangming Tan, Yang You, Dingwen Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+### MIP against Agent: Malicious Image Patches Hijacking Multimodal OS Agents.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/1add4b4f8373c64504cfe4a3054700a1-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Lukas Aichberger, Alasdair Paren, Guohao Li, Philip H. S. Torr, Yarin Gal, Adel Bibi
+- **🏷️ 机构**: ELLIS / University Linz / University of Oxford, University of Oxford, Eigent.AI / CAMEL-AI.org
+- **会议**: NeurIPS 2025
+
+### Learning to Route: Per-Sample Adaptive Routing for Multimodal Multitask Prediction.
+- **链接**: [arXiv:2509.12227](https://arxiv.org/abs/2509.12227) · 📚 被引 1
+- **作者**: Marzieh Ajirak, Oded Bein, Ellen Rose Bowen, Dora Kanellopoulos, Avital Falk, Faith M. Gunning et al.
+- **🏷️ 机构**: Cornell University, Weill Cornell, University of Michigan Medical School
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose a unified framework for adaptive routing in multitask, multimodal prediction settings where data heterogeneity and task interactions vary across samples. Motivated by applications in psychotherapy where structured assessments and unstructured clinician notes coexist with partially missing data and correlated outcomes, we introduce a routing-based architecture that dynamically selects modality processing pathways and task-sharing strategies on a per-sample basis. Our model defines multiple modality paths, including raw and fused representations of text and numeric features and learns to route each input through the most informative expert combination. Task-specific predictions are produced by shared or independent heads depending on the routing decision, and the entire system is trained end-to-end. We evaluate the model on both synthetic data and real-world psychotherapy notes predicting depression and anxiety outcomes. Our experiments show that our method consistently outperforms fixed multitask or single-task baselines, and that the learned routing policy provides interpretable insights into modality relevance and task structure. This addresses critical challenges in personalized healthcare by enabling per-subject adaptive information processing that accounts for data heterogeneity and task correlations. Applied to psychotherapy, this framework could improve mental health outcomes, enhance treatment assignment precision, and increase clinical cost-effectiveness through personalized intervention strategies.
+
+</details>
+
+### Recursive Inference Scaling: A Winning Path to Scalable Inference in Language and Multimodal Systems.
+- **链接**: [arXiv:2502.07503](https://arxiv.org/abs/2502.07503) · 📚 被引 0
+- **作者**: Ibrahim Alabdulmohsin, Xiaohua Zhai
+- **🏷️ 机构**: Google Deepmind, Google DeepMind
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Inspired by recent findings on the fractal geometry of language, we introduce Recursive INference Scaling (RINS) as a complementary, plug-in recipe for scaling inference time in language and multimodal systems. RINS is a particular form of recursive depth that significantly outperforms +55 other variants, including the recent "repeat-all-over" (RAO) strategy in Mobile LLM (Liu et al., 2024) and latent recurrent thinking (Geiping et al., 2025). Unlike prior works, we carry out our comparisons on a compute-matched regime, and demonstrate that for a fixed model size and training compute budget, RINS substantially improves language modeling performance. It also generalizes beyond pure language tasks, delivering gains in multimodal systems, including a +2% improvement in 0-shot ImageNet accuracy for SigLIP-B/16. Additionally, by deriving data scaling laws, we show that RINS improves both the asymptotic performance limits and the scaling exponents. More importantly, with light-weight (linear) adapters (comprising <1% of model parameters) and stochastic dropout, RINS offers a no-regret strategy, meaning that RINS-enabled pretraining improves performance in language modeling even when recursive depth is not applied at inference time. This corresponds to improving performance on a training compute-, parameter-, and inference-matched regime, suggesting its potential as a viable component of LLM pretraining!
+
+</details>
+
+### Boosting Knowledge Utilization in Multimodal Large Language Models via Adaptive Logits Fusion and Attention Reallocation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/34e1dbe95d34d7ebaf99b9bcaeb5b2be-Abstract-Conference.html)
+- **作者**: Wenbin An, Jiahao Nie, Feng Tian, Haonan Lin, Mingxiang Cai, Yaqiang Wu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+### Corvid: Improving Multimodal Large Language Models Towards Chain-of-Thought Reasoning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00291)
+- **作者**: Jingjing Jiang, Chao Ma, Xurui Song, Hanwang Zhang, Jun Luo
+- **🏷️ 机构**: NUS
+- **会议**: ICCV 2025
+
+### FullDiT: Video Generative Foundation Models with Multimodal Control via Full Attention.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01460) · 📚 被引 0
+- **作者**: Xuan Ju, Weicai Ye, Quande Liu, Qiulin Wang, Xintao Wang, Pengfei Wan et al.
+- **🏷️ 机构**: Kling Team, Kuaishou Technology
+- **会议**: ICCV 2025
+
+### Analyzing Fine-Tuning Representation Shift for Multimodal LLMs Steering.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00213)
+- **作者**: Pegah Khayatan, Mustafa Shukor, Jayneel Parekh, Arnaud Dapogny, Matthieu Cord
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+### CapeLLM: Support-Free Category-Agnostic Pose Estimation with Multimodal Large Language Models.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02125)
+- **作者**: Junho Kim, Hyungjin Chung, Byung-Hoon Kim
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+### EgoM2P: Egocentric Multimodal Multitask Pretraining.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01008) · 📚 被引 1
+- **作者**: Gen Li, Yutong Chen, Yiqian Wu, Kaifeng Zhao, Marc Pollefeys, Siyu Tang
+- **🏷️ 机构**: ETH Z&#x00FC;rich
+- **会议**: ICCV 2025
+
+### InfoBridge: Balanced Multimodal Integration through Conditional Dependency Modeling.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00044) · 📚 被引 1
+- **作者**: Chenxin Li, Yifan Liu, Panwang Pan, Hengyu Liu, Xinyu Liu, Wuyang Li et al.
+- **🏷️ 机构**: The Chinese University of Hong Kong, ByteDance Inc.
+- **会议**: ICCV 2025
+
+### OpenVision: A Fully-Open, Cost-Effective Family of Advanced Vision Encoders for Multimodal Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00379) · 📚 被引 0
+- **作者**: Xianhang Li, Yanqing Liu, Haoqin Tu, Cihang Xie
+- **🏷️ 机构**: University of California,Santa Cruz
+- **会议**: ICCV 2025
+
+### MultiModal Action Conditioned Video Simulation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01315) · 📚 被引 0
+- **作者**: Yichen Li, Antonio Torralba
+- **🏷️ 机构**: MIT CSAIL
+- **会议**: ICCV 2025
+
+### Token Activation Map to Visually Explain Multimodal LLMs.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00012)
+- **作者**: Yi Li, Hualiang Wang, Xinpeng Ding, Haonan Wang, Xiaomeng Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### WSI-LLaVA: A Multimodal Large Language Model for Whole Slide Image.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02109)
+- **作者**: Yuci Liang, Xinheng Lyu, Wenting Chen, Meidan Ding, Jipeng Zhang, Xiangjian He et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### Multimodal Latent Diffusion Model for Complex Sewing Pattern Generation.
+- **链接**: [arXiv:2412.14453](https://arxiv.org/abs/2412.14453) · 📚 被引 2
+- **作者**: Shengqi Liu, Yuhao Cheng, Zhuo Chen, Xingyu Ren, Wenhan Zhu, Lincheng Li et al.
+- **🏷️ 机构**: AI Institute, Shanghai Jiao Tong University,MoE Key Lab of Artificial Intelligence,China, Xueshen AI,China, NetEase Fuxi AI Lab,China
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Generating sewing patterns in garment design is receiving increasing attention due to its CG-friendly and flexible-editing nature. Previous sewing pattern generation methods have been able to produce exquisite clothing, but struggle to design complex garments with detailed control. To address these issues, we propose SewingLDM, a multi-modal generative model that generates sewing patterns controlled by text prompts, body shapes, and garment sketches. Initially, we extend the original vector of sewing patterns into a more comprehensive representation to cover more intricate details and then compress them into a compact latent space. To learn the sewing pattern distribution in the latent space, we design a two-step training strategy to inject the multi-modal conditions, \ie, body shapes, text prompts, and garment sketches, into a diffusion model, ensuring the generated garments are body-suited and detail-controlled. Comprehensive qualitative and quantitative experiments show the effectiveness of our proposed method, significantly surpassing previous approaches in terms of complex garment design and various body adaptability. Our project page: https://shengqiliu1.github.io/SewingLDM.
+
+</details>
+
+### Aligning Vision to Language: Annotation-Free Multimodal Knowledge Graph Construction for Enhanced LLMs Reasoning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00099) · 📚 被引 5
+- **作者**: Junming Liu, Siyuan Meng, Yanting Gao, Song Mao, Pinlong Cai, Guohang Yan et al.
+- **🏷️ 机构**: Tongji University, Shanghai Artificial Intelligence Laboratory, New York University
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We introduce a novel method for pre-training of large-scale vision encoders. Building on recent advancements in autoregressive pre-training of vision models, we extend this framework to a multimodal setting, i.e., images and text. In this paper, we present AIMV2, a family of generalist vision encoders characterized by a straightforward pre-training process, scalability, and remarkable performance across a range of downstream tasks. This is achieved by pairing the vision encoder with a multimodal decoder that autoregressively generates raw image patches and text tokens. Our encoders excel not only in multimodal evaluations but also in vision benchmarks such as localization, grounding, and classification. Notably, our AIMV2-3B encoder achieves 89.5% accuracy on ImageNet-1k with a frozen trunk. Furthermore, AIMV2 consistently outperforms state-of-the-art contrastive models (e.g., CLIP, SigLIP) in multimodal image understanding across diverse settings.
+
+</details>
+
+### CASP: Compression of Large Multimodal Models Based on Attention Sparsity.
+- **链接**: [arXiv:2503.05936](https://arxiv.org/abs/2503.05936) · 📚 被引 2
+- **作者**: Mohsen Gholami, Mohammad Akbari, Kevin Cannons, Yong Zhang
+- **🏷️ 机构**: Huawei Technologies Canada Co., Ltd.
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advancements in Multimodal Large Language Models (MLLMs) have enabled their deployment on mobile devices. However, challenges persist in maintaining strong language capabilities and ensuring hardware compatibility, both of which are crucial for user experience and practical deployment efficiency. In our deployment process, we observe that existing MLLMs often face performance degradation on pure language tasks, and the current NPU platforms on smartphones do not support the MoE architecture, which is commonly used to preserve pure language capabilities during multimodal training. To address these issues, we systematically analyze methods to maintain pure language capabilities during the training of MLLMs, focusing on both training data and model architecture aspects. Based on these analyses, we propose GenieBlue, an efficient MLLM structural design that integrates both linguistic and multimodal capabilities for LLMs on mobile devices. GenieBlue freezes the original LLM parameters during MLLM training to maintain pure language capabilities. It acquires multimodal capabilities by duplicating specific transformer blocks for full fine-tuning and integrating lightweight LoRA modules. This approach preserves language capabilities while achieving comparable multimodal performance through extensive training. Deployed on smartphone NPUs, GenieBlue demonstrates efficiency and practicality for applications on mobile devices.
+
+</details>
+
+### GroundingFace: Fine-grained Face Understanding via Pixel Grounding Multimodal Large Language Model.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Han_GroundingFace_Fine-grained_Face_Understanding_via_Pixel_Grounding_Multimodal_Large_Language_CVPR_2025_paper.html)
+- **作者**: Yue Han, Jiangning Zhang, Junwei Zhu, Runze Hou, Xiaozhong Ji, Chuming Lin et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### GEM: A Generalizable Ego-Vision Multimodal World Model for Fine-Grained Ego-Motion, Object Dynamics, and Scene Composition Control.
+- **链接**: [arXiv:2412.11198](https://arxiv.org/abs/2412.11198) · 📚 被引 7
+- **作者**: Mariam Hassan, Sebastian Stapf, Ahmad Rahimi, Pedro M. B. Rezende, Yasaman Haghighi, David Brüggemann et al.
+- **🏷️ 机构**: &#x00C9;cole Polytechnique F&#x00E9;d&#x00E9;rale de Lausanne (EPFL), University of Bern, Swiss Data Science Center
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present GEM, a Generalizable Ego-vision Multimodal world model that predicts future frames using a reference frame, sparse features, human poses, and ego-trajectories. Hence, our model has precise control over object dynamics, ego-agent motion and human poses. GEM generates paired RGB and depth outputs for richer spatial understanding. We introduce autoregressive noise schedules to enable stable long-horizon generations. Our dataset is comprised of 4000+ hours of multimodal data across domains like autonomous driving, egocentric human activities, and drone flights. Pseudo-labels are used to get depth maps, ego-trajectories, and human poses. We use a comprehensive evaluation framework, including a new Control of Object Manipulation (COM) metric, to assess controllability. Experiments show GEM excels at generating diverse, controllable scenarios and temporal consistency over long generations. Code, models, and datasets are fully open-sourced.
+
+</details>
+
+### CL-MoE: Enhancing Multimodal Large Language Model with Dual Momentum Mixture-of-Experts for Continual Visual Question Answering.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Huai_CL-MoE_Enhancing_Multimodal_Large_Language_Model_with_Dual_Momentum_Mixture-of-Experts_CVPR_2025_paper.html)
+- **作者**: Tianyu Huai, Jie Zhou, Xingjiao Wu, Qin Chen, Qingchun Bai, Ze Zhou et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### SIDA: Social Media Image Deepfake Detection, Localization and Explanation with Large Multimodal Model.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Huang_SIDA_Social_Media_Image_Deepfake_Detection_Localization_and_Explanation_with_CVPR_2025_paper.html) · 📚 被引 53
+- **作者**: Zhenglin Huang, Jinwei Hu, Xiangtai Li, Yiwei He, Xingyu Zhao, Bei Peng et al.
+- **🏷️ 机构**: University of Liverpool,UK, Nanyang Technological University,SG, University of Warwick,WMG
+- **会议**: CVPR 2025
+
+### Harmonizing Visual Representations for Unified Multimodal Understanding and Generation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01648) · 📚 被引 0
+- **作者**: Size Wu, Wenwei Zhang, Lumin Xu, Sheng Jin, Zhonghua Wu, Qingyi Tao et al.
+- **🏷️ 机构**: Nanyang Technological University,S-Lab, Shanghai AI Laboratory Research, The Chinese University of Hong Kong
+- **会议**: ICCV 2025
+
+### Playing the Fool: Jailbreaking LLMs and Multimodal LLMs with Out-of-Distribution Strategy.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jeong_Playing_the_Fool_Jailbreaking_LLMs_and_Multimodal_LLMs_with_Out-of-Distribution_CVPR_2025_paper.html)
+- **作者**: Joonhyun Jeong, Seyun Bae, Yeonsung Jung, Jaeryong Hwang, Eunho Yang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### SymDPO: Boosting In-Context Learning of Large Multimodal Models with Symbol Demonstration Direct Preference Optimization.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jia_SymDPO_Boosting_In-Context_Learning_of_Large_Multimodal_Models_with_Symbol_CVPR_2025_paper.html) · 📚 被引 1
+- **作者**: Hongrui Jia, Chaoya Jiang, Haiyang Xu, Wei Ye, Mengfan Dong, Ming Yan et al.
+- **🏷️ 机构**: Peking University,National Engineering Research Center for Software Engineering, Alibaba Group
+- **会议**: CVPR 2025
+
+### Mimic In-Context Learning for Multimodal Tasks.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jiang_Mimic_In-Context_Learning_for_Multimodal_Tasks_CVPR_2025_paper.html) · 📚 被引 6
+- **作者**: Yuchu Jiang, Jiale Fu, Chenduo Hao, Xinting Hu, Yingzhe Peng, Xin Geng et al.
+- **🏷️ 机构**: Southeast University, Nanyang Technological University
+- **会议**: CVPR 2025
+
+### Img-Diff: Contrastive Data Synthesis for Multimodal Large Language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jiao_Img-Diff_Contrastive_Data_Synthesis_for_Multimodal_Large_Language_Models_CVPR_2025_paper.html)
+- **作者**: Qirui Jiao, Daoyuan Chen, Yilun Huang, Bolin Ding, Yaliang Li, Ying Shen
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### Is 'Right' Right? Enhancing Object Orientation Understanding in Multimodal Large Language Models through Egocentric Instruction Tuning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jung_Is_Right_Right_Enhancing_Object_Orientation_Understanding_in_Multimodal_Large_CVPR_2025_paper.html)
+- **作者**: Ji Hyeok Jung, Eun Tae Kim, Seo Yeon Kim, Joo Ho Lee, Bumsoo Kim, Buru Chang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### Advancing Semantic Future Prediction through Multimodal Visual Sequence Transformers.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Karypidis_Advancing_Semantic_Future_Prediction_through_Multimodal_Visual_Sequence_Transformers_CVPR_2025_paper.html) · 📚 被引 1
+- **作者**: Efstathios Karypidis, Ioannis Kakogeorgiou, Spyros Gidaris, Nikos Komodakis
+- **🏷️ 机构**: Archimedes, Athena Research Center,Greece, valeo.ai
+- **会议**: CVPR 2025
+
+### Sketchtopia: A Dataset and Foundational Agents for Benchmarking Asynchronous Multimodal Communication with Iconic Feedback.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Khan_Sketchtopia_A_Dataset_and_Foundational_Agents_for_Benchmarking_Asynchronous_Multimodal_CVPR_2025_paper.html) · 📚 被引 2
+- **作者**: Mohd Hozaifa Khan, Ravi Kiran Sarvadevabhatla
+- **🏷️ 机构**: IIIT Hyderabad,Centre for Visual Information Technology (CVIT),India
+- **会议**: CVPR 2025
+
+### GENIUS: A Generative Framework for Universal Multimodal Search.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kim_GENIUS_A_Generative_Framework_for_Universal_Multimodal_Search_CVPR_2025_paper.html) · 📚 被引 2
+- **作者**: Sungyeon Kim, Xinliang Zhu, Xiaofan Lin, Muhammet Bastan, Douglas Gray, Suha Kwak
+- **🏷️ 机构**: Amazon, POSTECH
+- **会议**: CVPR 2025
+
+### Multimodal Tabular Reasoning with Privileged Structured Information.
+- **链接**: [arXiv:2506.04088](https://arxiv.org/abs/2506.04088) · 📚 被引 0
+- **作者**: Jun-Peng Jiang, Yu Xia, Hai-Long Sun, Shiyin Lu, Qingguo Chen, Weihua Luo et al.
+- **🏷️ 机构**: NanJing University, Alibaba Group, Nanjing University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal Diffusion Transformers (MM-DiTs) have achieved remarkable progress in text-driven visual generation. However, even state-of-the-art MM-DiT models like FLUX struggle with achieving precise alignment between text prompts and generated content. We identify two key issues in the attention mechanism of MM-DiT, namely 1) the suppression of cross-modal attention due to token imbalance between visual and textual modalities and 2) the lack of timestep-aware attention weighting, which hinder the alignment. To address these issues, we propose \textbf{Temperature-Adjusted Cross-modal Attention (TACA)}, a parameter-efficient method that dynamically rebalances multimodal interactions through temperature scaling and timestep-dependent adjustment. When combined with LoRA fine-tuning, TACA significantly enhances text-image alignment on the T2I-CompBench benchmark with minimal computational overhead. We tested TACA on state-of-the-art models like FLUX and SD3.5, demonstrating its ability to improve image-text alignment in terms of object appearance, attribute binding, and spatial relationships. Our findings highlight the importance of balancing cross-modal attention in improving semantic fidelity in text-to-image diffusion models. Our codes are publicly available at \href{https://github.com/Vchitect/TACA}
+
+</details>
+
+### Structure-Aware Fusion with Progressive Injection for Multimodal Molecular Representation Learning.
+- **链接**: [arXiv:2510.23640](https://arxiv.org/abs/2510.23640) · [代码](https://github.com/selmiss/MuMo) · 📚 被引 0
+- **作者**: Zihao Jing, Yan Sun, Yan Yi Li, Sugitha Janarthanan, Alana Deng, Pingzhao Hu
+- **🏷️ 机构**: University of Western Ontario, Western University, University of Toronto
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal molecular models often suffer from 3D conformer unreliability and modality collapse, limiting their robustness and generalization. We propose MuMo, a structured multimodal fusion framework that addresses these challenges in molecular representation through two key strategies. To reduce the instability of conformer-dependent fusion, we design a Structured Fusion Pipeline (SFP) that combines 2D topology and 3D geometry into a unified and stable structural prior. To mitigate modality collapse caused by naive fusion, we introduce a Progressive Injection (PI) mechanism that asymmetrically integrates this prior into the sequence stream, preserving modality-specific modeling while enabling cross-modal enrichment. Built on a state space backbone, MuMo supports long-range dependency modeling and robust information propagation. Across 29 benchmark tasks from Therapeutics Data Commons (TDC) and MoleculeNet, MuMo achieves an average improvement of 2.7% over the best-performing baseline on each task, ranking first on 22 of them, including a 27% improvement on the LD50 task. These results validate its robustness to 3D conformer noise and the effectiveness of multimodal fusion in molecular representation. The code is available at: github.com/selmiss/MuMo.
+
+</details>
+
+### Flex-Judge: Text-Only Reasoning Unleashes Zero-Shot Multimodal Evaluators.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/9c7eeda2dc98e61baa9a5884afd231bc-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Jongwoo Ko, Sungnyun Kim, Sungwoo Cho, Se-Young Yun
+- **🏷️ 机构**: Microsoft, KAIST
+- **会议**: NeurIPS 2025
+
+### Balancing Multimodal Training Through Game-Theoretic Regularization.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/f5784de266e45bd09333721b0a602b61-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Konstantinos Kontras, Thomas Strypsteen, Christos Chatzichristos, Paul Pu Liang, Matthew B. Blaschko, Maarten De Vos
+- **🏷️ 机构**: KU Leuven, Katholieke Universiteit Leuven, MIT
+- **会议**: NeurIPS 2025
+
+### CovMatch: Cross-Covariance Guided Multimodal Dataset Distillation with Trainable Text Encoder.
+- **链接**: [arXiv:2510.18583](https://arxiv.org/abs/2510.18583) · 📚 被引 0
+- **作者**: Yongmin Lee, Hye Won Chung
+- **🏷️ 机构**: Korea Advanced Institute of Science and Technology, KAIST
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal dataset distillation aims to synthesize a small set of image-text pairs that enables efficient training of large-scale vision-language models. While dataset distillation has shown promise in unimodal tasks, extending it to multimodal contrastive learning presents key challenges: learning cross-modal alignment and managing the high computational cost of large encoders. Prior approaches address scalability by freezing the text encoder and update only the image encoder and text projection layer. However, we find this severely limits semantic alignment and becomes a bottleneck for performance scaling. We propose CovMatch, a scalable dataset distillation framework that aligns the cross-covariance of real and synthetic features while regularizing feature distributions within each modality. Unlike prior approaches, CovMatch enables joint optimization of both encoders, leading to stronger cross-modal alignment and improved performance. Evaluated on Flickr30K and COCO, CovMatch outperforms state-of-the-art multimodal distillation methods and achieves up to 6.8% absolute gains in retrieval accuracy using only 500 synthetic pairs.
+
+</details>
+
+### Generalized Contrastive Learning for Universal Multimodal Retrieval.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/4e23bee2df5fc72018d9d74d875d7cf3-Abstract-Conference.html)
+- **作者**: Jungsoo Lee, Janghoon Cho, Hyojin Park, Durga Malladi, Kyuwoong Hwang, Fatih Porikli et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection.
+- **链接**: [arXiv:2411.08227](https://arxiv.org/abs/2411.08227) · 📚 被引 8
+- **作者**: Shawn Li, Huixian Gong, Hao Dong, Tiankai Yang, Zhengzhong Tu, Yue Zhao
+- **🏷️ 机构**: University of Southern California, ETH Z&#x00FC;rich, Texas A&amp;M University
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Prompt learning has been widely adopted to efficiently adapt vision-language models (VLMs) like CLIP for various downstream tasks. Despite their success, current VLM-based facial expression recognition (FER) methods struggle to capture fine-grained textual-visual relationships, which are essential for distinguishing subtle differences between facial expressions. To address this challenge, we propose a multimodal prompt alignment framework for FER, called MPA-FER, that provides fine-grained semantic guidance to the learning process of prompted visual features, resulting in more precise and interpretable representations. Specifically, we introduce a multi-granularity hard prompt generation strategy that utilizes a large language model (LLM) like ChatGPT to generate detailed descriptions for each facial expression. The LLM-based external knowledge is injected into the soft prompts by minimizing the feature discrepancy between the soft prompts and the hard prompts. To preserve the generalization abilities of the pretrained CLIP model, our approach incorporates prototype-guided visual feature alignment, ensuring that the prompted visual features from the frozen image encoder align closely with class-specific prototypes. Additionally, we propose a cross-modal global-local alignment module that focuses on expression-relevant facial features, further improving the alignment between textual and visual features. Extensive experiments demonstrate our framework outperforms state-of-the-art methods on three FER benchmark datasets, while retaining the benefits of the pretrained model and minimizing computational costs.
+
+</details>
+
+### X2i: Seamless Integration of Multimodal Understanding Into Diffusion Transformer Via Attention Distillation.
+- **链接**: [arXiv:2503.06134](https://arxiv.org/abs/2503.06134) · [代码](https://github.com/OPPO-Mente-Lab/X2I) · 📚 被引 0
+- **作者**: Jian Ma, Qirong Peng, Xu Guo, Chen Chen, Haonan Lu, Zhenyu Yang
+- **🏷️ 机构**: OPPO AI Center, Tsinghua University
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Text-to-image (T2I) models are well known for their ability to produce highly realistic images, while multimodal large language models (MLLMs) are renowned for their proficiency in understanding and integrating multiple modalities. However, currently there is no straightforward and efficient framework to transfer the multimodal comprehension abilities of MLLMs to T2I models to enable them to understand multimodal inputs. In this paper, we propose the X2I framework, which endows Diffusion Transformer (DiT) models with the capability to comprehend various modalities, including multilingual text, screenshot documents, images, videos, and audio. X2I is trained using merely 100K English corpus with 160 GPU hours. Building on the DiT teacher model, we adopt an innovative distillation method to extract the inference capabilities of the teacher model and design a lightweight AlignNet structure to serve as an intermediate bridge. Compared to the teacher model, X2I shows a decrease in performance degradation of less than 1\% while gaining various multimodal understanding abilities, including multilingual to image, image to image, image-text to image, video to image, audio to image, and utilizing creative fusion to enhance imagery. Furthermore, it is applicable for LoRA training in the context of image-text to image generation, filling a void in the industry in this area. We further design a simple LightControl to enhance the fidelity of instructional image editing. Finally, extensive experiments demonstrate the effectiveness, efficiency, multifunctionality, and transferability of our X2I. The open-source code and checkpoints for X2I can be found at the following link: https://github.com/OPPO-Mente-Lab/X2I.
+
+</details>
+
+### Controlling Multimodal Llms Via Reward-Guided Decoding.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00137)
+- **作者**: Oscar Mañas, Pierluca D'Oro, Koustuv Sinha, Adriana Romero-Soriano, Michal Drozdzal, Aishwarya Agrawal
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### Optimus-2: Multimodal Minecraft Agent with Goal-Observation-Action Conditioned Policy.
+- **链接**: [arXiv:2502.19902](https://arxiv.org/abs/2502.19902)
+- **作者**: Zaijing Li, Yuquan Xie, Rui Shao, Gongwei Chen, Dongmei Jiang, Liqiang Nie
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Building an agent that can mimic human behavior patterns to accomplish various open-world tasks is a long-term goal. To enable agents to effectively learn behavioral patterns across diverse tasks, a key challenge lies in modeling the intricate relationships among observations, actions, and language. To this end, we propose Optimus-2, a novel Minecraft agent that incorporates a Multimodal Large Language Model (MLLM) for high-level planning, alongside a Goal-Observation-Action Conditioned Policy (GOAP) for low-level control. GOAP contains (1) an Action-guided Behavior Encoder that models causal relationships between observations and actions at each timestep, then dynamically interacts with the historical observation-action sequence, consolidating it into fixed-length behavior tokens, and (2) an MLLM that aligns behavior tokens with open-ended language instructions to predict actions auto-regressively. Moreover, we introduce a high-quality Minecraft Goal-Observation-Action (MGOA)} dataset, which contains 25,000 videos across 8 atomic tasks, providing about 30M goal-observation-action pairs. The automated construction method, along with the MGOA dataset, can contribute to the community's efforts to train Minecraft agents. Extensive experimental results demonstrate that Optimus-2 exhibits superior performance across atomic tasks, long-horizon tasks, and open-ended instruction tasks in Minecraft. Please see the project page at https://cybertronagent.github.io/Optimus-2.github.io/.
 
 </details>
 
@@ -129,59 +821,47 @@
 - **链接**: [出版页](https://openreview.net/forum?id=45rvZkJbuX)
 - **作者**: Shicheng Xu, Liang Pang, Yunchang Zhu, Huawei Shen, Xueqi Cheng
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: NeurIPS 2025
 
-### Dynamic Multimodal Evaluation with Flexible Complexity by Vision-Language Bootstrapping.
-- **链接**: [arXiv:2410.08695](https://arxiv.org/abs/2410.08695)
-- **作者**: Yue Yang, Shuibo Zhang, Kaipeng Zhang, Yi Bin, Yu Wang, Ping Luo et al.
+### From Pose to Muscle: Multimodal Learning for Piano Hand Muscle Electromyography.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/a7d80c990c77ae2570087243ec802314-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Ruofan Liu, Yichen Peng, Takanori Oku, Chen-Chieh Liao, Erwin Wu, Shinichi Furuya et al.
+- **🏷️ 机构**: Institute of Science Tokyo, Japan Advanced Institute of Science and Technology, Tokyo Institute of Technology, Shibaura Institute of Technology
+- **会议**: NeurIPS 2025
+
+### Hierarchical Information Aggregation for Incomplete Multimodal Alzheimer's Disease Diagnosis.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/4da4dd613cc9e63932d643b9c6e8f86f-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Chengliang Liu, Yuanxi Que, Qihao Xu, Yabo Liu, Jie Wen, Jinghua Wang et al.
+- **🏷️ 机构**: Shenzhen University, Harbin Institute of Technology, Harbin Institute of Technology, Shenzhen
+- **会议**: NeurIPS 2025
+
+### FALCON: Resolving Visual Redundancy and Fragmentation in High-Resolution Multimodal Large Language Models via Visual Registers.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02184)
+- **作者**: Renshan Zhang, Rui Shao, Gongwei Chen, Miao Zhang, Kaiwen Zhou, Weili Guan et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: ICCV 2025
+
+### 2.5 Years in Class: A Multimodal Textbook for Vision-Language Pretraining.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00442)
+- **作者**: Wenqi Zhang, Hang Zhang, Xin Li, Jiashuo Sun, Yongliang Shen, Weiming Lu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### Jailbreaking Multimodal Large Language Models via Shuffle Inconsistency.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00198)
+- **作者**: Shiji Zhao, Ranjie Duan, Fengxiang Wang, Chi Chen, Caixin Kang, Shouwei Ruan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### PS3: A Multimodal Transformer Integrating Pathology Reports with Histology Images and Biological Pathways for Cancer Survival Prediction.
+- **链接**: [arXiv:2509.20022](https://arxiv.org/abs/2509.20022) · [代码](https://github.com/manahilr/PS3) · 📚 被引 2
+- **作者**: Manahil Raza, Ayesha Azam, Talha Qaiser, Nasir M. Rajpoot
+- **🏷️ 机构**: University of Warwick,UK
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Large Vision-Language Models (LVLMs) have demonstrated remarkable capabilities across multimodal tasks such as visual perception and reasoning, leading to good performance on various multimodal evaluation benchmarks. However, these benchmarks keep a static nature and overlap with the pre-training data, resulting in fixed complexity constraints and data contamination issues. This raises the concern regarding the validity of the evaluation. To address these two challenges, we introduce a dynamic multimodal evaluation protocol called Vision-Language Bootstrapping (VLB). VLB provides a robust and comprehensive assessment for LVLMs with reduced data contamination and flexible complexity. To this end, VLB dynamically generates new visual question-answering samples through a multimodal bootstrapping module that modifies both images and language, while ensuring that newly generated samples remain consistent with the original ones by a judge module. By composing various bootstrapping strategies, VLB offers dynamic variants of existing benchmarks with diverse complexities, enabling the evaluation to co-evolve with the ever-evolving capabilities of LVLMs. Extensive experimental results across multiple benchmarks, including SEEDBench, MMBench, and MME, show that VLB significantly reduces data contamination and exposes performance limitations of LVLMs.
-
-</details>
-
-### Mm-Embed: Universal Multimodal Retrieval with Multimodal LLMS.
-- **链接**: [出版页](https://openreview.net/forum?id=i45NQb2iKO)
-- **作者**: Sheng-Chieh Lin, Chankyu Lee, Mohammad Shoeybi, Jimmy Lin, Bryan Catanzaro, Wei Ping
-- **🏷️ 机构**: NVIDIA
-- **会议**: ICLR 2025
-
-### SleepSMC: Ubiquitous Sleep Staging via Supervised Multimodal Coordination.
-- **链接**: [出版页](https://openreview.net/forum?id=B5VEi5d3p2)
-- **作者**: Shuo Ma, Yingwei Zhang, Yiqiang Chen, Hualei Wang, Yuan Jin, Wei Zhang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### OmniBind: Large-scale Omni Multimodal Representation via Binding Spaces.
-- **链接**: [arXiv:2407.11895](https://arxiv.org/abs/2407.11895)
-- **作者**: Zehan Wang, Ziang Zhang, Minjie Hong, Hang Zhang, Luping Liu, Rongjie Huang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recently, human-computer interaction with various modalities has shown promising applications, like GPT-4o and Gemini. Given the foundational role of multimodal joint representation in understanding and generation pipelines, high-quality omni joint representations would be a step toward co-processing more diverse multimodal information. In this work, we present OmniBind, large-scale multimodal joint representation models ranging in scale from 7 billion to 30 billion parameters, which support 3D, audio, image, and language inputs. Due to the scarcity of data pairs across all modalities, instead of training large models from scratch, we propose remapping and binding the spaces of various pre-trained specialist models together. This approach enables "scaling up" by indirectly increasing the model parameters and the amount of seen data. To effectively integrate various spaces, we dynamically assign weights to different spaces by learning routers with two objectives: cross-modal overall alignment and language representation decoupling. Notably, since binding and routing spaces both only require lightweight networks, OmniBind is extremely training-efficient. Learning the largest 30B model requires merely unpaired unimodal data and approximately 3 days on a single 8-4090 node. Extensive experiments demonstrate the versatility and superiority of OmniBind as an omni representation model, highlighting its great potential for diverse applications, such as any-query and composable multimodal understanding.
-
-</details>
-
-### MLLMs Know Where to Look: Training-free Perception of Small Visual Details with Multimodal LLMs.
-- **链接**: [出版页](https://openreview.net/forum?id=DgaY5mDdmT)
-- **作者**: Jiarui Zhang, Mahyar Khayatkhoei, Prateek Chhikara, Filip Ilievski
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Intrinsic Dimension Correlation: uncovering nonlinear connections in multimodal representations.
-- **链接**: [arXiv:2406.15812](https://arxiv.org/abs/2406.15812)
-- **作者**: Lorenzo Basile, Santiago Acevedo, Luca Bortolussi, Fabio Anselmi, Alex Rodriguez
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> To gain insight into the mechanisms behind machine learning methods, it is crucial to establish connections among the features describing data points. However, these correlations often exhibit a high-dimensional and strongly nonlinear nature, which makes them challenging to detect using standard methods. This paper exploits the entanglement between intrinsic dimensionality and correlation to propose a metric that quantifies the (potentially nonlinear) correlation between high-dimensional manifolds. We first validate our method on synthetic data in controlled environments, showcasing its advantages and drawbacks compared to existing techniques. Subsequently, we extend our analysis to large-scale applications in neural network representations. Specifically, we focus on latent representations of multimodal data, uncovering clear correlations between paired visual and textual embeddings, whereas existing methods struggle significantly in detecting similarity. Our results indicate the presence of highly nonlinear correlation patterns between latent manifolds.
+> Current multimodal fusion approaches in computational oncology primarily focus on integrating multi-gigapixel histology whole slide images (WSIs) with genomic or transcriptomic data, demonstrating improved survival prediction. We hypothesize that incorporating pathology reports can further enhance prognostic performance. Pathology reports, as essential components of clinical workflows, offer readily available complementary information by summarizing histopathological findings and integrating expert interpretations and clinical context. However, fusing these modalities poses challenges due to their heterogeneous nature. WSIs are high-dimensional, each containing several billion pixels, whereas pathology reports consist of concise text summaries of varying lengths, leading to potential modality imbalance. To address this, we propose a prototype-based approach to generate balanced representations, which are then integrated using a Transformer-based fusion model for survival prediction that we term PS3 (Predicting Survival from Three Modalities). Specifically, we present: (1) Diagnostic prototypes from pathology reports, leveraging self-attention to extract diagnostically relevant sections and standardize text representation; (2) Histological prototypes to compactly represent key morphological patterns in WSIs; and (3) Biological pathway prototypes to encode transcriptomic expressions, accurately capturing cellular functions. PS3, the three-modal transformer model, processes the resulting prototype-based multimodal tokens and models intra-modal and cross-modal interactions across pathology reports, WSIs and transcriptomic data. The proposed model outperforms state-of-the-art methods when evaluated against clinical, unimodal and multimodal baselines on six datasets from The Cancer Genome Atlas (TCGA). The code is available at: https://github.com/manahilr/PS3.
 
 </details>
 
@@ -189,7 +869,7 @@
 - **链接**: [出版页](https://openreview.net/forum?id=S9GyQUXzee)
 - **作者**: Shaofei Cai, Bowei Zhang, Zihao Wang, Haowei Lin, Xiaojian Ma, Anji Liu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
 
 ### Matryoshka Multimodal Models.
 - **链接**: [arXiv:2405.17430](https://arxiv.org/abs/2405.17430)
@@ -199,181 +879,283 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Large Multimodal Models (LMMs) such as LLaVA have shown strong performance in visual-linguistic reasoning. These models first embed images into a fixed large number of visual tokens and then feed them into a Large Language Model (LLM). However, this design causes an excessive number of tokens for dense visual scenarios such as high-resolution images and videos, leading to great inefficiency. While token pruning/merging methods do exist, they produce a single length output for each image and do not afford flexibility in trading off information density v.s. efficiency. Inspired by the concept of Matryoshka Dolls, we propose M3: Matryoshka Multimodal Models, which learns to represent visual content as nested sets of visual tokens that capture information across multiple coarse-to-fine granularities. Our approach offers several unique benefits for LMMs: (1) One can explicitly control the visual granularity per test instance during inference, e.g. , adjusting the number of tokens used to represent an image based on the anticipated complexity or simplicity of the content; (2) M3 provides a framework for analyzing the granularity needed for existing datasets, where we find that COCO-style benchmarks only need around ~9 visual tokens to obtain accuracy similar to that of using all 576 tokens; (3) Our approach provides a foundation to explore the best trade-off between performance and visual token length at sample level, where our investigation reveals that a large gap exists between the oracle upper bound and current fixed-scale representations.
+> How would the sound in a studio change with a carpeted floor and acoustic tiles on the walls? We introduce the task of material-controlled acoustic profile generation, where, given an indoor scene with specific audio-visual characteristics, the goal is to generate a target acoustic profile based on a user-defined material configuration at inference time. We address this task with a novel encoder-decoder approach that encodes the scene's key properties from an audio-visual observation and generates the target Room Impulse Response (RIR) conditioned on the material specifications provided by the user. Our model enables the generation of diverse RIRs based on various material configurations defined dynamically at inference time. To support this task, we create a new benchmark, the Acoustic Wonderland Dataset, designed for developing and evaluating material-aware RIR prediction methods under diverse and challenging settings. Our results demonstrate that the proposed model effectively encodes material information and generates high-fidelity RIRs, outperforming several baselines and state-of-the-art methods.
 
 </details>
 
-### PerturboLLaVA: Reducing Multimodal Hallucinations with Perturbative Visual Training.
-- **链接**: [出版页](https://openreview.net/forum?id=j4LITBSUjs)
-- **作者**: Cong Chen, Mingyu Liu, Chenchen Jing, Yizhou Zhou, Fengyun Rao, Hao Chen et al.
-- **🏷️ 机构**: ZJU
-- **会议**: ICLR 2025
-
-### MEGA-Bench: Scaling Multimodal Evaluation to over 500 Real-World Tasks.
-- **链接**: [arXiv:2410.10563](https://arxiv.org/abs/2410.10563)
-- **作者**: Jiacheng Chen, Tianhao Liang, Sherman Siu, Zhengqing Wang, Kai Wang, Yubo Wang et al.
+### Open CaptchaWorld: A Comprehensive Web-based Platform for Testing and Benchmarking Multimodal LLM Agents.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/8196be81e68289d7a9ece21ed7f5750a-Abstract-Datasets_and_Benchmarks_Track.html)
+- **作者**: Yaxin Luo, Zhaoyi Li, Jiacheng Liu, Jiacheng Cui, Xiaohan Zhao, Zhiqiang Shen
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: NeurIPS 2025
+
+### OpenOmni: Advancing Open-Source Omnimodal Large Language Models with Progressive Multimodal Alignment and Real-time Emotional Speech Synthesis.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/e92381dba235a8309f08ce46376189a9-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Run Luo, Ting-En Lin, Haonan Zhang, Yuchuan Wu, Xiong Liu, Yongbin Li et al.
+- **🏷️ 机构**: Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Chinese Academy of Sciences, Alibaba Group, University of Electronic Science and Technology of China
+- **会议**: NeurIPS 2025
+
+### OmniResponse: Online Multimodal Conversational Response Generation in Dyadic Interactions.
+- **链接**: [arXiv:2505.21724](https://arxiv.org/abs/2505.21724) · 📚 被引 0
+- **作者**: Cheng Luo, Jianghui Wang, Bing Li, Siyang Song, Bernard Ghanem
+- **🏷️ 机构**: King Abdullah University of Science and Technology, Beijing Institute for General Artificial Intelligence, KAUST
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We present MEGA-Bench, an evaluation suite that scales multimodal evaluation to over 500 real-world tasks, to address the highly heterogeneous daily use cases of end users. Our objective is to optimize for a set of high-quality data samples that cover a highly diverse and rich set of multimodal tasks, while enabling cost-effective and accurate model evaluation. In particular, we collected 505 realistic tasks encompassing over 8,000 samples from 16 expert annotators to extensively cover the multimodal task space. Instead of unifying these problems into standard multi-choice questions (like MMMU, MMBench, and MMT-Bench), we embrace a wide range of output formats like numbers, phrases, code, \LaTeX, coordinates, JSON, free-form, etc. To accommodate these formats, we developed over 40 metrics to evaluate these tasks. Unlike existing benchmarks, MEGA-Bench offers a fine-grained capability report across multiple dimensions (e.g., application, input type, output format, skill), allowing users to interact with and visualize model capabilities in depth. We evaluate a wide variety of frontier vision-language models on MEGA-Bench to understand their capabilities across these dimensions.
+> In this paper, we introduce Online Multimodal Conversational Response Generation (OMCRG), a novel task designed to produce synchronized verbal and non-verbal listener feedback online, based on the speaker's multimodal inputs. OMCRG captures natural dyadic interactions and introduces new challenges in aligning generated audio with listeners' facial responses. To tackle these challenges, we incorporate text as an intermediate modality to connect audio and facial responses. We propose OmniResponse, a Multimodal Large Language Model (MLLM) that autoregressively generates accurate multimodal listener responses. OmniResponse leverages a pretrained LLM enhanced with two core components: Chrono-Text Markup, which precisely timestamps generated text tokens, and TempoVoice, a controllable online text-to-speech (TTS) module that outputs speech synchronized with facial responses. To advance OMCRG research, we offer ResponseNet, a dataset of 696 detailed dyadic interactions featuring synchronized split-screen videos, multichannel audio, transcripts, and annotated facial behaviors. Comprehensive evaluations on ResponseNet demonstrate that OmniResponse outperforms baseline models in terms of semantic speech content, audio-visual synchronization, and generation quality. Our dataset, code, and models are publicly available.
 
 </details>
 
-### Neural Multi-Objective Combinatorial Optimization via Graph-Image Multimodal Fusion.
-- **链接**: [出版页](https://openreview.net/forum?id=4sJ2FYE65U)
-- **作者**: Jinbiao Chen, Jiahai Wang, Zhiguang Cao, Yaoxin Wu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Unlocking Multimodal Mathematical Reasoning via Process Reward Model.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/4757e472d97ca980c24a487622f7ff00-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Ruilin Luo, Zhuofan Zheng, Lei Wang, Yifan Wang, Xinzhe Ni, Zicheng Lin et al.
+- **🏷️ 机构**: Tsinghua University, ByteDance Inc., Griffith University
+- **会议**: NeurIPS 2025
 
-### X-Fi: A Modality-Invariant Foundation Model for Multimodal Human Sensing.
-- **链接**: [arXiv:2410.10167](https://arxiv.org/abs/2410.10167)
-- **作者**: Xinyan Chen, Jianfei Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### IRRISIGHT: A Large-Scale Multimodal Dataset and Scalable Pipeline to Address Irrigation and Water Management in Agriculture.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/0821a1413339bf79ba01876783d95c53-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 0
+- **作者**: Nibir Chandra Mandal, Oishee Bintey Hoque, Mandy L. Wilson, Samarth Swarup, Sayjro Kossi Nouwakpo, Abhijin Adiga et al.
+- **🏷️ 机构**: University of Virginia, Charlottesville, University of Virginia, US Department of Agriculture
+- **会议**: NeurIPS 2025
+
+### JanusFlow: Harmonizing Autoregression and Rectified Flow for Unified Multimodal Understanding and Generation.
+- **链接**: [arXiv:2411.07975](https://arxiv.org/abs/2411.07975) · 📚 被引 14
+- **作者**: Yiyang Ma, Xingchao Liu, Xiaokang Chen, Wen Liu, Chengyue Wu, Zhiyu Wu et al.
+- **🏷️ 机构**: DeepSeek-Ai
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Human sensing, which employs various sensors and advanced deep learning technologies to accurately capture and interpret human body information, has significantly impacted fields like public security and robotics. However, current human sensing primarily depends on modalities such as cameras and LiDAR, each of which has its own strengths and limitations. Furthermore, existing multi-modal fusion solutions are typically designed for fixed modality combinations, requiring extensive retraining when modalities are added or removed for diverse scenarios. In this paper, we propose a modality-invariant foundation model for all modalities, X-Fi, to address this issue. X-Fi enables the independent or combinatory use of sensor modalities without additional training by utilizing a transformer structure to accommodate variable input sizes and incorporating a novel "X-fusion" mechanism to preserve modality-specific features during multimodal integration. This approach not only enhances adaptability but also facilitates the learning of complementary features across modalities. Extensive experiments conducted on the MM-Fi and XRF55 datasets, employing six distinct modalities, demonstrate that X-Fi achieves state-of-the-art performance in human pose estimation (HPE) and human activity recognition (HAR) tasks. The findings indicate that our proposed model can efficiently support a wide range of human sensing applications, ultimately contributing to the evolution of scalable, multimodal sensing technologies.
+> We present JanusFlow, a powerful framework that unifies image understanding and generation in a single model. JanusFlow introduces a minimalist architecture that integrates autoregressive language models with rectified flow, a state-of-the-art method in generative modeling. Our key finding demonstrates that rectified flow can be straightforwardly trained within the large language model framework, eliminating the need for complex architectural modifications. To further improve the performance of our unified model, we adopt two key strategies: (i) decoupling the understanding and generation encoders, and (ii) aligning their representations during unified training. Extensive experiments show that JanusFlow achieves comparable or superior performance to specialized models in their respective domains, while significantly outperforming existing unified approaches across standard benchmarks. This work represents a step toward more efficient and versatile vision-language models.
 
 </details>
 
-### Cafe-Talk: Generating 3D Talking Face Animation with Multimodal Coarse- and Fine-grained Control.
-- **链接**: [arXiv:2503.14517](https://arxiv.org/abs/2503.14517)
-- **作者**: Hejia Chen, Haoxian Zhang, Shoulong Zhang, Xiaoqiang Liu, Sisi Zhuang, Yuan Zhang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### SpatialLLM: A Compound 3D-Informed Design towards Spatially-Intelligent Large Multimodal Models.
+- **链接**: [arXiv:2505.00788](https://arxiv.org/abs/2505.00788) · 📚 被引 1
+- **作者**: Wufei Ma, Luoxin Ye, Celso M. de Melo, Alan L. Yuille, Jieneng Chen
+- **🏷️ 机构**: Johns Hopkins University, DEVCOM Army Research Laboratory
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Speech-driven 3D talking face method should offer both accurate lip synchronization and controllable expressions. Previous methods solely adopt discrete emotion labels to globally control expressions throughout sequences while limiting flexible fine-grained facial control within the spatiotemporal domain. We propose a diffusion-transformer-based 3D talking face generation model, Cafe-Talk, which simultaneously incorporates coarse- and fine-grained multimodal control conditions. Nevertheless, the entanglement of multiple conditions challenges achieving satisfying performance. To disentangle speech audio and fine-grained conditions, we employ a two-stage training pipeline. Specifically, Cafe-Talk is initially trained using only speech audio and coarse-grained conditions. Then, a proposed fine-grained control adapter gradually adds fine-grained instructions represented by action units (AUs), preventing unfavorable speech-lip synchronization. To disentangle coarse- and fine-grained conditions, we design a swap-label training mechanism, which enables the dominance of the fine-grained conditions. We also devise a mask-based CFG technique to regulate the occurrence and intensity of fine-grained control. In addition, a text-based detector is introduced with text-AU alignment to enable natural language user input and further support multimodal control. Extensive experimental results prove that Cafe-Talk achieves state-of-the-art lip synchronization and expressiveness performance and receives wide acceptance in fine-grained control in user studies. Project page: https://harryxd2018.github.io/cafe-talk/
+> Humans naturally understand 3D spatial relationships, enabling complex reasoning like predicting collisions of vehicles from different directions. Current large multimodal models (LMMs), however, lack of this capability of 3D spatial reasoning. This limitation stems from the scarcity of 3D training data and the bias in current model designs toward 2D data. In this paper, we systematically study the impact of 3D-informed data, architecture, and training setups, introducing SpatialLLM, a large multi-modal model with advanced 3D spatial reasoning abilities. To address data limitations, we develop two types of 3D-informed training datasets: (1) 3D-informed probing data focused on object's 3D location and orientation, and (2) 3D-informed conversation data for complex spatial relationships. Notably, we are the first to curate VQA data that incorporate 3D orientation relationships on real images. Furthermore, we systematically integrate these two types of training data with the architectural and training designs of LMMs, providing a roadmap for optimal design aimed at achieving superior 3D reasoning capabilities. Our SpatialLLM advances machines toward highly capable 3D-informed reasoning, surpassing GPT-4o performance by 8.7%. Our systematic empirical design and the resulting findings offer valuable insights for future research in this direction. Our project page is available at: https://3d-spatial-reasoning.github.io/spatial-llm/
 
 </details>
 
-### Do You Keep an Eye on What I Ask? Mitigating Multimodal Hallucination via Attention-Guided Ensemble Decoding.
-- **链接**: [arXiv:2505.17529](https://arxiv.org/abs/2505.17529)
-- **作者**: Yeongjae Cho, Keonwoo Kim, Taebaek Hwang, Sungzoon Cho
+### Harnessing Frozen Unimodal Encoders for Flexible Multimodal Alignment.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Maniparambil_Harnessing_Frozen_Unimodal_Encoders_for_Flexible_Multimodal_Alignment_CVPR_2025_paper.html) · 📚 被引 2
+- **作者**: Mayug Maniparambil, Raiymbek Akshulakov, Yasser Abdelaziz Dahou Djilali, Sanath Narayan, Ankit Singh, Noel E. O'Connor
+- **🏷️ 机构**: Dublin City University,ML Labs, University of California Berkeley, Technological Innovation Institute
+- **会议**: CVPR 2025
+
+### VideoGLaMM : A Large Multimodal Model for Pixel-Level Visual Grounding in Videos.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Munasinghe_VideoGLaMM__A_Large_Multimodal_Model_for_Pixel-Level_Visual_Grounding_CVPR_2025_paper.html)
+- **作者**: Shehan Munasinghe, Hanan Gani, Wenqi Zhu, Jiale Cao, Eric P. Xing, Fahad Shahbaz Khan et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
+
+### AIpparel: A Multimodal Foundation Model for Digital Garments.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Nakayama_AIpparel_A_Multimodal_Foundation_Model_for_Digital_Garments_CVPR_2025_paper.html) · 📚 被引 10
+- **作者**: Kiyohiro Nakayama, Jan Ackermann, Timur Levent Kesdogan, Yang Zheng, Maria Korosteleva, Olga Sorkine-Hornung et al.
+- **🏷️ 机构**: Stanford University, ETH Z&#x00FC;rich
+- **会议**: CVPR 2025
+
+### MM-OR: A Large Multimodal Operating Room Dataset for Semantic Understanding of High-Intensity Surgical Environments.
+- **链接**: [arXiv:2503.02579](https://arxiv.org/abs/2503.02579) · [代码](https://github.com/egeozsoy/MM-OR) · 📚 被引 18
+- **作者**: Ege Özsoy, Chantal Pellegrini, Tobias Czempiel, Felix Tristram, Kun Yuan, David Bani-Harouni et al.
+- **🏷️ 机构**: Technical University of Munich
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Recent advancements in Large Vision-Language Models (LVLMs) have significantly expanded their utility in tasks like image captioning and visual question answering. However, they still struggle with object hallucination, where models generate descriptions that inaccurately reflect the visual content by including nonexistent objects or misrepresenting existing ones. While previous methods, such as data augmentation and training-free approaches, strive to tackle this issue, they still encounter scalability challenges and often depend on additional external modules. In this work, we propose Ensemble Decoding (ED), a novel strategy that splits the input image into sub-images and combines logit distributions by assigning weights through the attention map. Furthermore, we introduce ED adaptive plausibility constraint to calibrate logit distribution and FastED, a variant designed for speed-critical applications. Extensive experiments across hallucination benchmarks demonstrate that our proposed method achieves state-of-the-art performance, validating the effectiveness of our approach.
+> Operating rooms (ORs) are complex, high-stakes environments requiring precise understanding of interactions among medical staff, tools, and equipment for enhancing surgical assistance, situational awareness, and patient safety. Current datasets fall short in scale, realism and do not capture the multimodal nature of OR scenes, limiting progress in OR modeling. To this end, we introduce MM-OR, a realistic and large-scale multimodal spatiotemporal OR dataset, and the first dataset to enable multimodal scene graph generation. MM-OR captures comprehensive OR scenes containing RGB-D data, detail views, audio, speech transcripts, robotic logs, and tracking data and is annotated with panoptic segmentations, semantic scene graphs, and downstream task labels. Further, we propose MM2SG, the first multimodal large vision-language model for scene graph generation, and through extensive experiments, demonstrate its ability to effectively leverage multimodal inputs. Together, MM-OR and MM2SG establish a new benchmark for holistic OR understanding, and open the path towards multimodal scene analysis in complex, high-stakes environments. Our code, and data is available at https://github.com/egeozsoy/MM-OR.
 
 </details>
 
-### Gramian Multimodal Representation Learning and Alignment.
-- **链接**: [arXiv:2412.11959](https://arxiv.org/abs/2412.11959)
-- **作者**: Giordano Cicchetti, Eleonora Grassucci, Luigi Sigillo, Danilo Comminiello
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens.
+- **链接**: [arXiv:2504.14666](https://arxiv.org/abs/2504.14666) · 📚 被引 5
+- **作者**: Kaihang Pan, Wang Lin, Zhongqi Yue, Tenglong Ao, Liyu Jia, Wei Zhao et al.
+- **🏷️ 机构**: Zhejiang University, Nanyang Technological University, Peking University
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Human perception integrates multiple modalities, such as vision, hearing, and language, into a unified understanding of the surrounding reality. While recent multimodal models have achieved significant progress by aligning pairs of modalities via contrastive learning, their solutions are unsuitable when scaling to multiple modalities. These models typically align each modality to a designated anchor without ensuring the alignment of all modalities with each other, leading to suboptimal performance in tasks requiring a joint understanding of multiple modalities. In this paper, we structurally rethink the pairwise conventional approach to multimodal learning and we present the novel Gramian Representation Alignment Measure (GRAM), which overcomes the above-mentioned limitations. GRAM learns and then aligns $n$ modalities directly in the higher-dimensional space in which modality embeddings lie by minimizing the Gramian volume of the $k$-dimensional parallelotope spanned by the modality vectors, ensuring the geometric alignment of all modalities simultaneously. GRAM can replace cosine similarity in any downstream method, holding for 2 to $n$ modalities and providing more meaningful alignment with respect to previous similarity measures. The novel GRAM-based contrastive loss function enhances the alignment of multimodal models in the higher-dimensional embedding space, leading to new state-of-the-art performance in downstream tasks such as video-audio-text retrieval and audio-video classification. The project page, the code, and the pretrained models are available at https://ispamm.github.io/GRAM/.
+> Recent endeavors in Multimodal Large Language Models (MLLMs) aim to unify visual comprehension and generation by combining LLM and diffusion models, the state-of-the-art in each task, respectively. Existing approaches rely on spatial visual tokens, where image patches are encoded and arranged according to a spatial order (e.g., raster scan). However, we show that spatial tokens lack the recursive structure inherent to languages, hence form an impossible language for LLM to master. In this paper, we build a proper visual language by leveraging diffusion timesteps to learn discrete, recursive visual tokens. Our proposed tokens recursively compensate for the progressive attribute loss in noisy images as timesteps increase, enabling the diffusion model to reconstruct the original image at any timestep. This approach allows us to effectively integrate the strengths of LLMs in autoregressive reasoning and diffusion models in precise image generation, achieving seamless multimodal comprehension and generation within a unified framework. Extensive experiments show that we achieve superior performance for multimodal comprehension and generation simultaneously compared with other MLLMs. Project Page: https://DDT-LLaMA.github.io/.
 
 </details>
 
-### SIM: Surface-based fMRI Analysis for Inter-Subject Multimodal Decoding from Movie-Watching Experiments.
-- **链接**: [arXiv:2501.16471](https://arxiv.org/abs/2501.16471) · [代码](https://github.com/metrics-lab/sim)
-- **作者**: Simon Dahan, Gabriel Bénédict, Logan Zane John Williams, Yourong Guo, Daniel Rueckert, Robert Leech et al.
+### The Photographer's Eye: Teaching Multimodal Large Language Models to See, and Critique Like Photographers.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Qi_The_Photographers_Eye_Teaching_Multimodal_Large_Language_Models_to_See_CVPR_2025_paper.html)
+- **作者**: Daiqing Qi, Handong Zhao, Jing Shi, Simon Jenni, Yifei Fan, Franck Dernoncourt et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
+
+### Exploring Multimodal Diffusion Transformers for Enhanced Prompt-Based Image Editing.
+- **链接**: [arXiv:2508.07519](https://arxiv.org/abs/2508.07519) · 📚 被引 2
+- **作者**: Joonghyuk Shin, Alchan Hwang, Yujin Kim, Daneul Kim, Jaesik Park
+- **🏷️ 机构**: Seoul National University
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Current AI frameworks for brain decoding and encoding, typically train and test models within the same datasets. This limits their utility for brain computer interfaces (BCI) or neurofeedback, for which it would be useful to pool experiences across individuals to better simulate stimuli not sampled during training. A key obstacle to model generalisation is the degree of variability of inter-subject cortical organisation, which makes it difficult to align or compare cortical signals across participants. In this paper we address this through the use of surface vision transformers, which build a generalisable model of cortical functional dynamics, through encoding the topography of cortical networks and their interactions as a moving image across a surface. This is then combined with tri-modal self-supervised contrastive (CLIP) alignment of audio, video, and fMRI modalities to enable the retrieval of visual and auditory stimuli from patterns of cortical activity (and vice-versa). We validate our approach on 7T task-fMRI data from 174 healthy participants engaged in the movie-watching experiment from the Human Connectome Project (HCP). Results show that it is possible to detect which movie clips an individual is watching purely from their brain activity, even for individuals and movies not seen during training. Further analysis of attention maps reveals that our model captures individual patterns of brain activity that reflect semantic and visual systems. This opens the door to future personalised simulations of brain function. Code & pre-trained models will be made available at https://github.com/metrics-lab/sim, processed data for training will be available upon request at https://gin.g-node.org/Sdahan30/sim.
+> Transformer-based diffusion models have recently superseded traditional U-Net architectures, with multimodal diffusion transformers (MM-DiT) emerging as the dominant approach in state-of-the-art models like Stable Diffusion 3 and Flux.1. Previous approaches have relied on unidirectional cross-attention mechanisms, with information flowing from text embeddings to image latents. In contrast, MMDiT introduces a unified attention mechanism that concatenates input projections from both modalities and performs a single full attention operation, allowing bidirectional information flow between text and image branches. This architectural shift presents significant challenges for existing editing techniques. In this paper, we systematically analyze MM-DiT's attention mechanism by decomposing attention matrices into four distinct blocks, revealing their inherent characteristics. Through these analyses, we propose a robust, prompt-based image editing method for MM-DiT that supports global to local edits across various MM-DiT variants, including few-step models. We believe our findings bridge the gap between existing U-Net-based methods and emerging architectures, offering deeper insights into MMDiT's behavioral patterns.
 
 </details>
 
-### MMRole: A Comprehensive Framework for Developing and Evaluating Multimodal Role-Playing Agents.
-- **链接**: [出版页](https://openreview.net/forum?id=FGSgsefE0Y)
-- **作者**: Yanqi Dai, Huanran Hu, Lei Wang, Shengjie Jin, Xu Chen, Zhiwu Lu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Towards Robust Multimodal Open-set Test-time Adaptation via Adaptive Entropy-aware Optimization.
-- **链接**: [arXiv:2501.13924](https://arxiv.org/abs/2501.13924) · [代码](https://github.com/donghao51/AEO)
-- **作者**: Hao Dong, Eleni N. Chatzi, Olga Fink
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### Scaling Laws for Native Multimodal Models.
+- **链接**: [arXiv:2504.07951](https://arxiv.org/abs/2504.07951) · 📚 被引 6
+- **作者**: Mustafa Shukor, Enrico Fini, Victor Guilherme Turrisi da Costa, Matthieu Cord, Joshua M. Susskind, Alaaeldin El-Nouby
+- **🏷️ 机构**: Sorbonne University, Apple
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Test-time adaptation (TTA) has demonstrated significant potential in addressing distribution shifts between training and testing data. Open-set test-time adaptation (OSTTA) aims to adapt a source pre-trained model online to an unlabeled target domain that contains unknown classes. This task becomes more challenging when multiple modalities are involved. Existing methods have primarily focused on unimodal OSTTA, often filtering out low-confidence samples without addressing the complexities of multimodal data. In this work, we present Adaptive Entropy-aware Optimization (AEO), a novel framework specifically designed to tackle Multimodal Open-set Test-time Adaptation (MM-OSTTA) for the first time. Our analysis shows that the entropy difference between known and unknown samples in the target domain strongly correlates with MM-OSTTA performance. To leverage this, we propose two key components: Unknown-aware Adaptive Entropy Optimization (UAE) and Adaptive Modality Prediction Discrepancy Optimization (AMP). These components enhance the ability of model to distinguish unknown class samples during online adaptation by amplifying the entropy difference between known and unknown samples. To thoroughly evaluate our proposed methods in the MM-OSTTA setting, we establish a new benchmark derived from existing datasets. This benchmark includes two downstream tasks and incorporates five modalities. Extensive experiments across various domain shift situations demonstrate the efficacy and versatility of the AEO framework. Additionally, we highlight the strong performance of AEO in long-term and continual MM-OSTTA settings, both of which are challenging and highly relevant to real-world applications. Our source code is available at https://github.com/donghao51/AEO.
+> Building general-purpose models that can effectively perceive the world through multimodal signals has been a long-standing goal. Current approaches involve integrating separately pre-trained components, such as connecting vision encoders to LLMs and continuing multimodal training. While such approaches exhibit remarkable sample efficiency, it remains an open question whether such late-fusion architectures are inherently superior. In this work, we revisit the architectural design of native multimodal models (NMMs)-those trained from the ground up on all modalities-and conduct an extensive scaling laws study, spanning 457 trained models with different architectures and training mixtures. Our investigation reveals no inherent advantage to late-fusion architectures over early-fusion ones, which do not rely on image encoders or tokenizers. On the contrary, early-fusion exhibits stronger performance at lower parameter counts, is more efficient to train, and is easier to deploy. Motivated by the strong performance of the early-fusion architectures, we show that incorporating Mixture of Experts (MoEs) allows models to learn modality-specific weights, significantly benefiting performance.
 
 </details>
 
-### What to align in multimodal contrastive learning?
-- **链接**: [出版页](https://openreview.net/forum?id=Pe3AxLq6Wf)
-- **作者**: Benoit Dufumier, Javiera Castillo Navarro, Devis Tuia, Jean-Philippe Thiran
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### TSAM: Temporal SAM Augmented with Multimodal Prompts for Referring Audio-Visual Segmentation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Radman_TSAM_Temporal_SAM_Augmented_with_Multimodal_Prompts_for_Referring_Audio-Visual_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Abduljalil Radman, Jorma Laaksonen
+- **🏷️ 机构**: Aalto University,Department of Computer Science,Finland
+- **会议**: CVPR 2025
 
-### CircuitFusion: Multimodal Circuit Representation Learning for Agile Chip Design.
-- **链接**: [arXiv:2505.02168](https://arxiv.org/abs/2505.02168)
-- **作者**: Wenji Fang, Shang Liu, Jing Wang, Zhiyao Xie
+### Context-Aware Multimodal Pretraining.
+- **链接**: [arXiv:2411.15099](https://arxiv.org/abs/2411.15099)
+- **作者**: Karsten Roth, Zeynep Akata, Dima Damen, Ivana Balazevic, Olivier J. Hénaff
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The rapid advancements of AI rely on the support of ICs. However, the growing complexity of digital ICs makes the traditional IC design process costly and time-consuming. In recent years, AI-assisted IC design methods have demonstrated great potential, but most methods are task-specific or focus solely on the circuit structure in graph format, overlooking other circuit modalities with rich functional information. In this paper, we introduce CircuitFusion, the first multimodal and implementation-aware circuit encoder. It encodes circuits into general representations that support different downstream circuit design tasks. To learn from circuits, we propose to fuse three circuit modalities: hardware code, structural graph, and functionality summary. More importantly, we identify four unique properties of circuits: parallel execution, functional equivalent transformation, multiple design stages, and circuit reusability. Based on these properties, we propose new strategies for both the development and application of CircuitFusion: 1) During circuit preprocessing, utilizing the parallel nature of circuits, we split each circuit into multiple sub-circuits based on sequential-element boundaries, each sub-circuit in three modalities. 2) During CircuitFusion pre-training, we introduce three self-supervised tasks that utilize equivalent transformations both within and across modalities. 3) When applying CircuitFusion to downstream tasks, we propose a new retrieval-augmented inference method, which retrieves similar known circuits as a reference for predictions. It improves fine-tuning performance and even enables zero-shot inference. Evaluated on five different circuit design tasks, CircuitFusion consistently outperforms the SOTA supervised method specifically developed for every single task, demonstrating its generalizability and ability to learn circuits' inherent properties.
+> Large-scale multimodal representation learning successfully optimizes for zero-shot transfer at test time. Yet the standard pretraining paradigm (contrastive learning on large amounts of image-text data) does not explicitly encourage representations to support few-shot adaptation. In this work, we propose a simple, but carefully designed extension to multimodal pretraining which enables representations to accommodate additional context. Using this objective, we show that vision-language models can be trained to exhibit significantly increased few-shot adaptation: across 21 downstream tasks, we find up to four-fold improvements in test-time sample efficiency, and average few-shot adaptation gains of over 5%, while retaining zero-shot generalization performance across model scales and training durations. In particular, equipped with simple, training-free, metric-based adaptation mechanisms, our representations easily surpass more complex and expensive optimization-based schemes, vastly simplifying generalization to new domains.
 
 </details>
 
-### CarbonSense: A Multimodal Dataset and Baseline for Carbon Flux Modelling.
-- **链接**: [arXiv:2406.04940](https://arxiv.org/abs/2406.04940)
-- **作者**: Matthew Fortier, Mats Leon Richter, Oliver Sonnentag, Christopher Pal
+### From Multimodal LLMs to Generalist Embodied Agents: Methods and Lessons.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Szot_From_Multimodal_LLMs_to_Generalist_Embodied_Agents_Methods_and_Lessons_CVPR_2025_paper.html)
+- **作者**: Andrew Szot, Bogdan Mazoure, Omar Attia, Aleksei Timofeev, Harsh Agrawal, R. Devon Hjelm et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### DTOS: Dynamic Time Object Sensing with Large Multimodal Model.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Tian_DTOS_Dynamic_Time_Object_Sensing_with_Large_Multimodal_Model_CVPR_2025_paper.html) · 📚 被引 1
+- **作者**: Jirui Tian, Jinrong Zhang, Shenglan Liu, Luhao Xu, Zhixiong Huang, Gao Huang
+- **🏷️ 机构**: Dalian University of Technology, Tsinghua University
+- **会议**: CVPR 2025
+
+### FlashSloth : Lightning Multimodal Large Language Models via Embedded Visual Compression.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Tong_FlashSloth__Lightning_Multimodal_Large_Language_Models_via_Embedded_Visual_CVPR_2025_paper.html)
+- **作者**: Bo Tong, Bokai Lai, Yiyi Zhou, Gen Luo, Yunhang Shen, Ke Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### ODE: Open-Set Evaluation of Hallucinations in Multimodal Large Language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Tu_ODE_Open-Set_Evaluation_of_Hallucinations_in_Multimodal_Large_Language_Models_CVPR_2025_paper.html)
+- **作者**: Yahan Tu, Rui Hu, Jitao Sang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### Active Data Curation Effectively Distills Large-Scale Multimodal Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Udandarao_Active_Data_Curation_Effectively_Distills_Large-Scale_Multimodal_Models_CVPR_2025_paper.html) · 📚 被引 4
+- **作者**: Vishaal Udandarao, Nikhil Parthasarathy, Muhammad Ferjad Naeem, Talfan Evans, Samuel Albanie, Federico Tombari et al.
+- **🏷️ 机构**: University of T&#x00FC;bingen,T&#x00FC;bingen AI Center, Google DeepMind, Google
+- **会议**: CVPR 2025
+
+### MV-MATH: Evaluating Multimodal Math Reasoning in Multi-Visual Contexts.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_MV-MATH_Evaluating_Multimodal_Math_Reasoning_in_Multi-Visual_Contexts_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Peijie Wang, Zhong-Zhi Li, Fei Yin, Dekang Ran, Cheng-Lin Liu
+- **🏷️ 机构**: MAIS, Institute of Automation of Chinese Academy of Sciences
+- **会议**: CVPR 2025
+
+### Contextual AD Narration with Interleaved Multimodal Sequence.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Contextual_AD_Narration_with_Interleaved_Multimodal_Sequence_CVPR_2025_paper.html) · 📚 被引 4
+- **作者**: Hanlin Wang, Zhan Tong, Kecheng Zheng, Yujun Shen, Limin Wang
+- **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology, KU Leuven,ESAT, Ant Group
+- **会议**: CVPR 2025
+
+### F-LMM: Grounding Frozen Large Multimodal Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_F-LMM_Grounding_Frozen_Large_Multimodal_Models_CVPR_2025_paper.html) · 📚 被引 6
+- **作者**: Size Wu, Sheng Jin, Wenwei Zhang, Lumin Xu, Wentao Liu, Wei Li et al.
+- **🏷️ 机构**: Nanyang Technological University,S-Lab, SenseTime Research and Tetras.AI, Shanghai AI Laboratory
+- **会议**: CVPR 2025
+
+### Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Janus_Decoupling_Visual_Encoding_for_Unified_Multimodal_Understanding_and_Generation_CVPR_2025_paper.html) · 📚 被引 39
+- **作者**: Chengyue Wu, Xiaokang Chen, Zhiyu Wu, Yiyang Ma, Xingchao Liu, Zizheng Pan et al.
+- **🏷️ 机构**: DeepSeek-Ai
+- **会议**: CVPR 2025
+
+### LLaVA-Critic: Learning to Evaluate Multimodal Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xiong_LLaVA-Critic_Learning_to_Evaluate_Multimodal_Models_CVPR_2025_paper.html)
+- **作者**: Tianyi Xiong, Xiyao Wang, Dong Guo, Qinghao Ye, Haoqi Fan, Quanquan Gu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2025
+
+### MPBR: Multimodal Progressive Bidirectional Reasoning for Open-Set Fine-Grained Recognition.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00127) · 📚 被引 1
+- **作者**: Junfu Tan, Peiguang Jing, Yu Zhu, Yu Liu
+- **🏷️ 机构**: Tianjin University, Fudan University
+- **会议**: ICCV 2025
+
+### XTrack: Multimodal Training Boosts RGB-X Video Object Trackers.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00543) · 📚 被引 8
+- **作者**: Yuedong Tan, Zongwei Wu, Yuqian Fu, Zhuyun Zhou, Guolei Sun, Eduard Zamfir et al.
+- **🏷️ 机构**: University of Wurzburg,Computer Vision Lab, CAIDAS &#x0026; IFI, Sofia University,INSAIT, CVL, ETH Zurich
+- **会议**: ICCV 2025
+
+### $\mathcal{F}_{M}$ FinMMR: Make Financial Numerical Reasoning More Multimodal, Comprehensive, and Challenging.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00311) · 📚 被引 1
+- **作者**: Zichen Tang, Haihong E, Jiacheng Liu, Zhongjun Yang, Rongjin Li, Zihua Rong et al.
+- **🏷️ 机构**: Beijing University of Posts and Telecommunications
+- **会议**: ICCV 2025
+
+### BASIC: Boosting Visual Alignment with Intrinsic Refined Embeddings in Multimodal Large Language Models.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01914)
+- **作者**: Jianting Tang, Yubo Wang, Haoyu Cao, Linli Xu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### G2SF: Geometry-Guided Score Fusion for Multimodal Industrial Anomaly Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01911)
+- **作者**: Chengyu Tao, Xuanming Cao, Juan Du
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+### MetaMorph: Multimodal Understanding and Generation via Instruction Tuning.
+- **链接**: [arXiv:2412.14164](https://arxiv.org/abs/2412.14164) · 📚 被引 1
+- **作者**: Shengbang Tong, David Fan, Jiachen Zhu, Yunyang Xiong, Xinlei Chen, Koustuv Sinha et al.
+- **🏷️ 机构**: FAIR, Meta, Meta Reality Labs
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Terrestrial carbon fluxes provide vital information about our biosphere's health and its capacity to absorb anthropogenic CO$_2$ emissions. The importance of predicting carbon fluxes has led to the emerging field of data-driven carbon flux modelling (DDCFM), which uses statistical techniques to predict carbon fluxes from biophysical data. However, the field lacks a standardized dataset to promote comparisons between models. To address this gap, we present CarbonSense, the first machine learning-ready dataset for DDCFM. CarbonSense integrates measured carbon fluxes, meteorological predictors, and satellite imagery from 385 locations across the globe, offering comprehensive coverage and facilitating robust model training. Additionally, we provide a baseline model using a current state-of-the-art DDCFM approach and a novel transformer based model. Our experiments illustrate the potential gains that multimodal deep learning techniques can bring to this domain. By providing these resources, we aim to lower the barrier to entry for other deep learning researchers to develop new models and drive new advances in carbon flux modelling.
+> In this work, we propose Visual-Predictive Instruction Tuning (VPiT) - a simple and effective extension to visual instruction tuning that enables a pretrained LLM to quickly morph into an unified autoregressive model capable of generating both text and visual tokens. VPiT teaches an LLM to predict discrete text tokens and continuous visual tokens from any input sequence of image and text data curated in an instruction-following format. Our empirical investigation reveals several intriguing properties of VPiT: (1) visual generation ability emerges as a natural byproduct of improved visual understanding, and can be unlocked efficiently with a small amount of generation data; (2) while we find understanding and generation to be mutually beneficial, understanding data contributes to both capabilities more effectively than generation data. Building upon these findings, we train our MetaMorph model and achieve competitive performance on both visual understanding and generation. In visual generation, MetaMorph can leverage the world knowledge and reasoning abilities gained from LLM pretraining, and overcome common failure modes exhibited by other generation models. Our results suggest that LLMs may have strong "prior" vision capabilities that can be efficiently adapted to both visual understanding and generation with a relatively simple instruction tuning process.
 
 </details>
 
-### CHiP: Cross-modal Hierarchical Direct Preference Optimization for Multimodal LLMs.
-- **链接**: [出版页](https://openreview.net/forum?id=7lpDn2MhM2)
-- **作者**: Jinlan Fu, Shenzhen Huangfu, Hao Fei, Xiaoyu Shen, Bryan Hooi, Xipeng Qiu et al.
+### Distraction is All You Need for Multimodal Large Language Model Jailbreaking.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yang_Distraction_is_All_You_Need_for_Multimodal_Large_Language_Model_CVPR_2025_paper.html)
+- **作者**: Zuopeng Yang, Jiluan Fan, Anli Yan, Erdun Gao, Xin Lin, Tao Li et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+- **会议**: CVPR 2025
 
-### Smoothing the Shift: Towards Stable Test-Time Adaptation under Complex Multimodal Noises.
-- **链接**: [arXiv:2503.02616](https://arxiv.org/abs/2503.02616) · [代码](https://github.com/zrguo/SuMi)
-- **作者**: Zirun Guo, Tao Jin
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
+### CMT: A Cascade MAR with Topology Predictor for Multimodal Conditional CAD Generation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00659) · 📚 被引 2
+- **作者**: Jianyu Wu, Yizhou Wang, Xiangyu Yue, Xinzhu Ma, Jinyang Guo, Dongzhan Zhou et al.
+- **🏷️ 机构**: Shanghai Artificial Intelligence Laboratory, The Chinese University of Hong Kong, Beihang University
+- **会议**: ICCV 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### A TRIANGLE Enables Multimodal Alignment Beyond Cosine Similarity.
+- **链接**: [arXiv:2509.24734](https://arxiv.org/abs/2509.24734) · 📚 被引 0
+- **作者**: Giordano Cicchetti, Eleonora Grassucci, Danilo Comminiello
+- **🏷️ 机构**: University of Rome &quot;La Sapienza&quot;, Sapienza University of Rome
+- **会议**: NeurIPS 2025
 
-> Test-Time Adaptation (TTA) aims to tackle distribution shifts using unlabeled test data without access to the source data. In the context of multimodal data, there are more complex noise patterns than unimodal data such as simultaneous corruptions for multiple modalities and missing modalities. Besides, in real-world applications, corruptions from different distribution shifts are always mixed. Existing TTA methods always fail in such multimodal scenario because the abrupt distribution shifts will destroy the prior knowledge from the source model, thus leading to performance degradation. To this end, we reveal a new challenge named multimodal wild TTA. To address this challenging problem, we propose two novel strategies: sample identification with interquartile range Smoothing and unimodal assistance, and Mutual information sharing (SuMi). SuMi smooths the adaptation process by interquartile range which avoids the abrupt distribution shifts. Then, SuMi fully utilizes the unimodal features to select low-entropy samples with rich multimodal information for optimization. Furthermore, mutual information sharing is introduced to align the information, reduce the discrepancies and enhance the information utilization across different modalities. Extensive experiments on two public datasets show the effectiveness and superiority over existing methods under the complex noise patterns in multimodal data. Code is available at https://github.com/zrguo/SuMi.
-
-</details>
-
-### Multimodal Lego: Model Merging and Fine-Tuning Across Topologies and Modalities in Biomedicine.
-- **链接**: [出版页](https://openreview.net/forum?id=pH543jrbe8)
-- **作者**: Konstantin Hemker, Nikola Simidjievski, Mateja Jamnik
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### VideoWebArena: Evaluating Long Context Multimodal Agents with Video Understanding Web Tasks.
-- **链接**: [arXiv:2410.19100](https://arxiv.org/abs/2410.19100)
-- **作者**: Lawrence Keunho Jang, Yinheng Li, Dan Zhao, Charles Ding, Justin Lin, Paul Pu Liang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Videos are often used to learn or extract the necessary information to complete tasks in ways different than what text and static imagery alone can provide. However, many existing agent benchmarks neglect long-context video understanding, instead focusing on text or static image inputs. To bridge this gap, we introduce VideoWebArena (VideoWA), a benchmark for evaluating the capabilities of long-context multimodal agents for video understanding. VideoWA consists of 2,021 web agent tasks based on manually crafted video tutorials, which total almost four hours of content. For our benchmark, we define a taxonomy of long-context video-based agent tasks with two main areas of focus: skill retention and factual retention. While skill retention tasks evaluate whether an agent can use a given human demonstration to complete a task efficiently, the factual retention task evaluates whether an agent can retrieve instruction-relevant information from a video to complete a task. We find that the best model achieves 13.3% success on factual retention tasks and 45.8% on factual retention QA pairs, far below human performance at 73.9% and 79.3%, respectively. On skill retention tasks, long-context models perform worse with tutorials than without, exhibiting a 5% performance decrease in WebArena tasks and a 10.3% decrease in VisualWebArena tasks. Our work highlights the need to improve the agentic abilities of long-context multimodal models and provides a testbed for future development with long-context video agents.
-
-</details>
-
-### See What You Are Told: Visual Attention Sink in Large Multimodal Models.
-- **链接**: [arXiv:2503.03321](https://arxiv.org/abs/2503.03321)
-- **作者**: Seil Kang, Jinyeong Kim, Junhyeok Kim, Seong Jae Hwang
+### Learning to Inference Adaptively for Multimodal Large Language Models.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00339)
+- **作者**: Zhuoyan Xu, Khoi Duc Nguyen, Preeti Mukherjee, Saurabh Bagchi, Somali Chaterji, Yingyu Liang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2025
 
@@ -859,5 +1641,12 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- C-CLIP: Multimodal Continual Learning for Vision-Language Model. → [continual-learning](../continual-learning/Guideline%202025.md)
-- MRAG-Bench: Vision-Centric Evaluation for Retrieval-Augmented Multimodal Models. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
+- AVQACL: A Novel Benchmark for Audio-Visual Question Answering Continual Learning. → [continual-learning](../continual-learning/Guideline%202025.md)
+- CorrBEV: Multi-View 3D Object Detection by Correlation Learning with Multi-modal Prototypes. → [3d-detection](../3d-detection/Guideline%202025.md)
+- SP3D: Boosting Sparsely-Supervised 3D Object Detection via Accurate Cross-Modal Semantic Prompts. → [3d-detection](../3d-detection/Guideline%202025.md)
+- Cross-Modal 3D Representation with Multi-View Images and Point Clouds. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
+- SDGOCC: Semantic and Depth-Guided Bird's-Eye View Transformation for 3D Multimodal Occupancy Prediction. → [bev](../bev/Guideline%202025.md)
+- M3GYM: A Large-Scale Multimodal Multi-view Multi-person Pose Dataset for Fitness Activity Understanding in Real-world Settings. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
+- MVDoppler-Pose: Multi-Modal Multi-View mmWave Sensing for Long-Distance Self-Occluded Human Walking Pose Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
+- Distilling Multi-modal Large Language Models for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
+- GoalFlow: Goal-Driven Flow Matching for Multimodal Trajectories Generation in End-to-End Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
