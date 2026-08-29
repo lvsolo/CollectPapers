@@ -325,15 +325,44 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
                 f"[{y}]({'Guideline%20' + str(y) + '.md'})"
                 for y in sorted(bucket[slug].keys(), reverse=True) if y != year))
             md.append("")
-            # 主领域归属必须确定性：同一论文在【命中它的所有领域里 slug 字母序最小】的领域展开。
-            # （此前按遍历顺序"先到先得"，不同批次轮次间会漂移，论文会在领域间搬家）
+            # 主领域归属（确定性 + 专精度）：
+            #   1. 命中的领域里，若存在亲缘（config parent 声明），子领域优先于父领域
+            #      —— BEVFormer 命中 bev/3d-detection/autonomous-driving，bev 是
+            #         3d-detection 的子领域 → 归 bev（更精确，用户要求）
+            #   2. 无亲缘关系的领域间，用分类得分决胜（cls_score 高者为主）
+            #   3. 得分也相同 → slug 字母序（保底确定性，防漂移）
+            topic_cfg = {t["slug"]: t for t in CONFIG["topics"]}
+
+            def is_parent(parent_slug: str, child_slug: str) -> bool:
+                """parent_slug 是否是 child_slug 的父领域（含传递）"""
+                cfg = topic_cfg.get(child_slug) or {}
+                for p in cfg.get("parent", []):
+                    if p == parent_slug or is_parent(p, parent_slug):
+                        return True
+                return False
+
+            # 预索引：norm_title -> {slug: cls_score}
+            norm_scores: dict[str, dict[str, float]] = {}
+            for s in bucket:
+                for pp in bucket[s].get(year, []):
+                    n = pp["title"].lower().rstrip(". ")
+                    norm_scores.setdefault(n, {})[s] = pp.get("cls_score", 0)
+
+            def primary_slug_for(norm: str) -> str:
+                hits = norm_scores.get(norm, {})
+                if len(hits) <= 1:
+                    return next(iter(hits), slug)
+                # 1) 子领域优先：剔除被其他命中领域"管辖"的父领域
+                candidates = [s for s in hits
+                              if not any(is_parent(s, other) for other in hits if other != s)]
+                if not candidates:
+                    candidates = list(hits)
+                # 2) 分类得分 → 3) 字母序（保底）
+                return max(sorted(candidates), key=lambda s: hits.get(s, 0))
+
             for p in papers:
                 norm = p["title"].lower().rstrip(". ")
-                # 收集该论文命中的所有 slug（本 bucket 内）
-                owners = sorted({s for s in bucket
-                                 for pp in bucket[s].get(year, [])
-                                 if pp["title"].lower().rstrip(". ") == norm} | {slug})
-                owner = owners[0]
+                owner = primary_slug_for(norm)
                 if owner != slug:
                     p["_cross_from"] = owner
                 else:
@@ -352,7 +381,50 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
                 md.append("")
             out = out_dir / slug / f"Guideline {year}.md"
             out.parent.mkdir(parents=True, exist_ok=True)
-            out.write_text("\n".join(md), encoding="utf-8")
+            # ── 完成印章（用户核心要求）────────────────────────────────────
+            # 已完整的 Guideline 文件（带完成标记 + 论文数不减少）绝不重写。
+            # 新数据到来时只做【增量合并】：新论文条目追加，已有条目原样保留
+            # （包括 LLM 摘要/机构/引用等一切已生成内容）。
+            STAMP = "<!-- COMPLETE v1 papers=N -->"
+            new_text = "\n".join(md)
+            if out.exists():
+                old = out.read_text(encoding="utf-8")
+                m = re.search(r"<!-- COMPLETE v1 papers=(\d+) -->", old)
+                old_n = int(m.group(1)) if m else old.count("\n### ")
+                new_n = len(papers)
+                if m and new_n <= old_n:
+                    log(f"  [keep] {out.name}: 已完整({old_n}篇) ≥ 新数据({new_n}篇)，跳过重写")
+                    written.append(out)
+                    continue
+                if new_n > 0:
+                    # 增量合并：从新渲染中提取老文件里没有的论文条目追加到尾部
+                    def _title_of(block: str) -> str:
+                        first = block.strip().splitlines()[0] if block.strip() else ""
+                        t = re.sub(r"^### (?:\d+\. )?", "", first).strip()
+                        return re.split(r"\*\*", t)[0].strip()
+                    old_titles = {_title_of(b) for b in re.split(r"(?=^### )", old, flags=re.M)
+                                  if b.strip().startswith("### ")}
+                    add_blocks = [b.rstrip() for b in re.split(r"(?=^### )", new_text, flags=re.M)
+                                  if b.strip().startswith("### ") and _title_of(b)
+                                  and _title_of(b) not in old_titles]
+                    if add_blocks:
+                        merged = old.rstrip() + "\n\n## 🆕 增量新增\n\n" + "\n\n".join(add_blocks) + "\n"
+                        stamp = f"<!-- COMPLETE v1 papers={old_n + len(add_blocks)} -->"
+                        merged = re.sub(r"<!-- COMPLETE v1 papers=\d+ -->", "", merged).rstrip() + f"\n{stamp}\n"
+                        out.write_text(merged, encoding="utf-8")
+                        log(f"  [merge] {out.name}: 追加 {len(add_blocks)} 篇（原 {old_n} 篇保留不动）")
+                    else:
+                        # 无新论文：只补盖印章（不改内容）
+                        if not m:
+                            out.write_text(old.rstrip() + f"\n{STAMP.replace('papers=N', f'papers={old_n}')}\n",
+                                           encoding="utf-8")
+                        log(f"  [keep] {out.name}: 无新论文，原样保留")
+                    written.append(out)
+                    continue
+            if new_text.count("\n### ") > 0 or len(papers) > 0:
+                n = len(papers)
+                out.write_text(new_text.rstrip() + f"\n{STAMP.replace('papers=N', f'papers={n}')}\n",
+                               encoding="utf-8")
             written.append(out)
     return written
 

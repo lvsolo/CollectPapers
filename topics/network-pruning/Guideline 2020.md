@@ -1,102 +1,112 @@
 # Network Pruning — 2020 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### DA-NAS: Data Adapted Pruning for Efficient Neural Architecture Search.
-- **链接**: [arXiv:2003.12563](https://arxiv.org/abs/2003.12563) · 📚 被引 10
-- **作者**: Xiyang Dai, Dongdong Chen, Mengchen Liu, Yinpeng Chen, Lu Yuan
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+### MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models.
+- **链接**: [arXiv:2011.07590](https://arxiv.org/abs/2011.07590)
+- **作者**: Sourav Biswas, Jerry Liu, Kelvin Wong, Shenlong Wang, Raquel Urtasun
+- **🏷️ 机构**: Waabi / University of Toronto
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Efficient search is a core issue in Neural Architecture Search (NAS). It is difficult for conventional NAS algorithms to directly search the architectures on large-scale tasks like ImageNet. In general, the cost of GPU hours for NAS grows with regard to training dataset size and candidate set size. One common way is searching on a smaller proxy dataset (e.g., CIFAR-10) and then transferring to the target task (e.g., ImageNet). These architectures optimized on proxy data are not guaranteed to be optimal on the target task. Another common way is learning with a smaller candidate set, which may require expert knowledge and indeed betrays the essence of NAS. In this paper, we present DA-NAS that can directly search the architecture for large-scale target tasks while allowing a large candidate set in a more efficient manner. Our method is based on an interesting observation that the learning speed for blocks in deep neural networks is related to the difficulty of recognizing distinct categories. We carefully design a progressive data adapted pruning strategy for efficient architecture search. It will quickly trim low performed blocks on a subset of target dataset (e.g., easy classes), and then gradually find the best blocks on the whole target dataset. At this time, the original candidate set becomes as compact as possible, providing a faster search in the target task. Experiments on ImageNet verify the effectiveness of our approach. It is 2x faster than previous methods while the accuracy is currently state-of-the-art, at 76.2% under small FLOPs constraint. It supports an argument search space (i.e., more candidate blocks) to efficiently search the best-performing architecture.
+> We present a novel deep compression algorithm to reduce the memory footprint of LiDAR point clouds. Our method exploits the sparsity and structural redundancy between points to reduce the bitrate. Towards this goal, we first encode the LiDAR points into an octree, a data-efficient structure suitable for sparse point clouds. We then design a tree-structured conditional entropy model that models the probabilities of the octree symbols to encode the octree into a compact bitstream. We validate the effectiveness of our method over two large-scale datasets. The results demonstrate that our approach reduces the bitrate by 10-20% at the same reconstruction quality, compared to the previous state-of-the-art. Importantly, we also show that for the same bitrate, our approach outperforms other compression algorithms when performing downstream 3D segmentation and detection tasks using compressed representations. Our algorithm can be used to reduce the onboard and offboard storage of LiDAR points for applications such as self-driving cars, where a single vehicle captures 84 billion points per day
 
 </details>
 
-### DHP: Differentiable Meta Pruning via HyperNetworks.
-- **链接**: [arXiv:2003.13683](https://arxiv.org/abs/2003.13683) · 📚 被引 91
-- **作者**: Yawei Li, Shuhang Gu, Kai Zhang, Luc Van Gool, Radu Timofte
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy.
+- **链接**: [arXiv:2006.08509](https://arxiv.org/abs/2006.08509) · 📚 被引 159
+- **作者**: Tianzhe Wang, Kuan Wang, Han Cai, Ji Lin, Zhijian Liu, Hanrui Wang et al.
+- **🏷️ 机构**: Massachusetts Institute of Technology; Shanghai Jiao Tong University, Massachusetts Institute of Technology
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Network pruning has been the driving force for the acceleration of neural networks and the alleviation of model storage/transmission burden. With the advent of AutoML and neural architecture search (NAS), pruning has become topical with automatic mechanism and searching based architecture optimization. Yet, current automatic designs rely on either reinforcement learning or evolutionary algorithm. Due to the non-differentiability of those algorithms, the pruning algorithm needs a long searching stage before reaching the convergence. To circumvent this problem, this paper introduces a differentiable pruning method via hypernetworks for automatic network pruning. The specifically designed hypernetworks take latent vectors as input and generate the weight parameters of the backbone network. The latent vectors control the output channels of the convolutional layers in the backbone network and act as a handle for the pruning of the layers. By enforcing $\ell_1$ sparsity regularization to the latent vectors and utilizing proximal gradient solver, sparse latent vectors can be obtained. Passing the sparsified latent vectors through the hypernetworks, the corresponding slices of the generated weight parameters can be removed, achieving the effect of network pruning. The latent vectors of all the layers are pruned together, resulting in an automatic layer configuration. Extensive experiments are conducted on various networks for image classification, single image super-resolution, and denoising. And the experimental results validate the proposed method.
+> We present APQ for efficient deep learning inference on resource-constrained hardware. Unlike previous methods that separately search the neural architecture, pruning policy, and quantization policy, we optimize them in a joint manner. To deal with the larger design space it brings, a promising approach is to train a quantization-aware accuracy predictor to quickly get the accuracy of the quantized model and feed it to the search engine to select the best fit. However, training this quantization-aware accuracy predictor requires collecting a large number of quantized <model, accuracy> pairs, which involves quantization-aware finetuning and thus is highly time-consuming. To tackle this challenge, we propose to transfer the knowledge from a full-precision (i.e., fp32) accuracy predictor to the quantization-aware (i.e., int8) accuracy predictor, which greatly improves the sample efficiency. Besides, collecting the dataset for the fp32 accuracy predictor only requires to evaluate neural networks without any training cost by sampling from a pretrained once-for-all network, which is highly efficient. Extensive experiments on ImageNet demonstrate the benefits of our joint optimization approach. With the same accuracy, APQ reduces the latency/energy by 2x/1.3x over MobileNetV2+HAQ. Compared to the separate optimization approach (ProxylessNAS+AMC+HAQ), APQ achieves 2.3% higher ImageNet accuracy while reducing orders of magnitude GPU hours and CO2 emission, pushing the frontier for green AI that is environmental-friendly. The code and video are publicly available.
 
 </details>
-
-### EagleEye: Fast Sub-net Evaluation for Efficient Neural Network Pruning.
-- **链接**: [arXiv:2007.02491](https://arxiv.org/abs/2007.02491) · [代码](https://github.com/anonymous47823493/EagleEye) · 📚 被引 133
-- **作者**: Bailin Li, Bowen Wu, Jiang Su, Guangrun Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Finding out the computational redundant part of a trained Deep Neural Network (DNN) is the key question that pruning algorithms target on. Many algorithms try to predict model performance of the pruned sub-nets by introducing various evaluation methods. But they are either inaccurate or very complicated for general application. In this work, we present a pruning method called EagleEye, in which a simple yet efficient evaluation component based on adaptive batch normalization is applied to unveil a strong correlation between different pruned DNN structures and their final settled accuracy. This strong correlation allows us to fast spot the pruned candidates with highest potential accuracy without actually fine-tuning them. This module is also general to plug-in and improve some existing pruning algorithms. EagleEye achieves better pruning performance than all of the studied pruning algorithms in our experiments. Concretely, to prune MobileNet V1 and ResNet-50, EagleEye outperforms all compared methods by up to 3.8%. Even in the more challenging experiments of pruning the compact model of MobileNet V1, EagleEye achieves the highest accuracy of 70.9% with an overall 50% operations (FLOPs) pruned. All accuracy results are Top-1 ImageNet classification accuracy. Source code and models are accessible to open-source community https://github.com/anonymous47823493/EagleEye .
+> We present a novel deep compression algorithm to reduce the memory footprint of LiDAR point clouds. Our method exploits the sparsity and structural redundancy between points to reduce the bitrate. Towards this goal, we first encode the LiDAR points into an octree, a data-efficient structure suitable for sparse point clouds. We then design a tree-structured conditional entropy model that models the probabilities of the octree symbols to encode the octree into a compact bitstream. We validate the effectiveness of our method over two large-scale datasets. The results demonstrate that our approach reduces the bitrate by 10-20% at the same reconstruction quality, compared to the previous state-of-the-art. Importantly, we also show that for the same bitrate, our approach outperforms other compression algorithms when performing downstream 3D segmentation and detection tasks using compressed representations. Our algorithm can be used to reduce the onboard and offboard storage of LiDAR points for applications such as self-driving cars, where a single vehicle captures 84 billion points per day
 
 </details>
 
-### DSA: More Efficient Budgeted Pruning via Differentiable Sparsity Allocation.
-- **链接**: [arXiv:2004.02164](https://arxiv.org/abs/2004.02164) · 📚 被引 69
-- **作者**: Xuefei Ning, Tianchen Zhao, Wenshuo Li, Peng Lei, Yu Wang, Huazhong Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy.
+- **链接**: [arXiv:2006.08509](https://arxiv.org/abs/2006.08509) · 📚 被引 159
+- **作者**: Tianzhe Wang, Kuan Wang, Han Cai, Ji Lin, Zhijian Liu, Hanrui Wang et al.
+- **🏷️ 机构**: Massachusetts Institute of Technology; Shanghai Jiao Tong University, Massachusetts Institute of Technology
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Budgeted pruning is the problem of pruning under resource constraints. In budgeted pruning, how to distribute the resources across layers (i.e., sparsity allocation) is the key problem. Traditional methods solve it by discretely searching for the layer-wise pruning ratios, which lacks efficiency. In this paper, we propose Differentiable Sparsity Allocation (DSA), an efficient end-to-end budgeted pruning flow. Utilizing a novel differentiable pruning process, DSA finds the layer-wise pruning ratios with gradient-based optimization. It allocates sparsity in continuous space, which is more efficient than methods based on discrete evaluation and search. Furthermore, DSA could work in a pruning-from-scratch manner, whereas traditional budgeted pruning methods are applied to pre-trained models. Experimental results on CIFAR-10 and ImageNet show that DSA could achieve superior performance than current iterative budgeted pruning methods, and shorten the time cost of the overall pruning process by at least 1.5x in the meantime.
+> We present APQ for efficient deep learning inference on resource-constrained hardware. Unlike previous methods that separately search the neural architecture, pruning policy, and quantization policy, we optimize them in a joint manner. To deal with the larger design space it brings, a promising approach is to train a quantization-aware accuracy predictor to quickly get the accuracy of the quantized model and feed it to the search engine to select the best fit. However, training this quantization-aware accuracy predictor requires collecting a large number of quantized <model, accuracy> pairs, which involves quantization-aware finetuning and thus is highly time-consuming. To tackle this challenge, we propose to transfer the knowledge from a full-precision (i.e., fp32) accuracy predictor to the quantization-aware (i.e., int8) accuracy predictor, which greatly improves the sample efficiency. Besides, collecting the dataset for the fp32 accuracy predictor only requires to evaluate neural networks without any training cost by sampling from a pretrained once-for-all network, which is highly efficient. Extensive experiments on ImageNet demonstrate the benefits of our joint optimization approach. With the same accuracy, APQ reduces the latency/energy by 2x/1.3x over MobileNetV2+HAQ. Compared to the separate optimization approach (ProxylessNAS+AMC+HAQ), APQ achieves 2.3% higher ImageNet accuracy while reducing orders of magnitude GPU hours and CO2 emission, pushing the frontier for green AI that is environmental-friendly. The code and video are publicly available.
 
 </details>
 
-### Meta-learning with Network Pruning.
-- **链接**: [arXiv:2007.03219](https://arxiv.org/abs/2007.03219)
-- **作者**: Hongduan Tian, Bo Liu, Xiao-Tong Yuan, Qingshan Liu
+### Multi-Dimensional Pruning: A Unified Framework for Model Compression.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Multi-Dimensional_Pruning_A_Unified_Framework_for_Model_Compression_CVPR_2020_paper.html) · 📚 被引 65
+- **作者**: Jinyang Guo, Wanli Ouyang, Dong Xu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
+
+### DMCP: Differentiable Markov Channel Pruning for Neural Networks.
+- **链接**: [arXiv:2005.03354](https://arxiv.org/abs/2005.03354) · [代码](https://github.com/zx55/dmcp) · 📚 被引 142
+- **作者**: Shaopeng Guo, Yujie Wang, Quanquan Li, Junjie Yan
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Meta-learning is a powerful paradigm for few-shot learning. Although with remarkable success witnessed in many applications, the existing optimization based meta-learning models with over-parameterized neural networks have been evidenced to ovetfit on training tasks. To remedy this deficiency, we propose a network pruning based meta-learning approach for overfitting reduction via explicitly controlling the capacity of network. A uniform concentration analysis reveals the benefit of network capacity constraint for reducing generalization gap of the proposed meta-learner. We have implemented our approach on top of Reptile assembled with two network pruning routines: Dense-Sparse-Dense (DSD) and Iterative Hard Thresholding (IHT). Extensive experimental results on benchmark datasets with different over-parameterized deep networks demonstrate that our method not only effectively alleviates meta-overfitting but also in many cases improves the overall generalization performance when applied to few-shot classification tasks.
+> Recent works imply that the channel pruning can be regarded as searching optimal sub-structure from unpruned networks. However, existing works based on this observation require training and evaluating a large number of structures, which limits their application. In this paper, we propose a novel differentiable method for channel pruning, named Differentiable Markov Channel Pruning (DMCP), to efficiently search the optimal sub-structure. Our method is differentiable and can be directly optimized by gradient descent with respect to standard task loss and budget regularization (e.g. FLOPs constraint). In DMCP, we model the channel pruning as a Markov process, in which each state represents for retaining the corresponding channel during pruning, and transitions between states denote the pruning process. In the end, our method is able to implicitly select the proper number of channels in each layer by the Markov process with optimized transitions. To validate the effectiveness of our method, we perform extensive experiments on Imagenet with ResNet and MobilenetV2. Results show our method can achieve consistent improvement than state-of-the-art pruning methods in various FLOPs settings. The code is available at https://github.com/zx55/dmcp
 
 </details>
 
-### Differentiable Joint Pruning and Quantization for Hardware Efficiency.
-- **链接**: [arXiv:2007.10463](https://arxiv.org/abs/2007.10463) · 📚 被引 62
-- **作者**: Ying Wang, Yadong Lu, Tijmen Blankevoort
+</details>
+
+### Structured Compression by Weight Encryption for Unstructured Pruning and Quantization.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Kwon_Structured_Compression_by_Weight_Encryption_for_Unstructured_Pruning_and_Quantization_CVPR_2020_paper.html) · 📚 被引 41
+- **作者**: Se Jung Kwon, Dongsoo Lee, Byeongwook Kim, Parichay Kapoor, Baeseong Park, Gu-Yeon Wei
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We present a differentiable joint pruning and quantization (DJPQ) scheme. We frame neural network compression as a joint gradient-based optimization problem, trading off between model pruning and quantization automatically for hardware efficiency. DJPQ incorporates variational information bottleneck based structured pruning and mixed-bit precision quantization into a single differentiable loss function. In contrast to previous works which consider pruning and quantization separately, our method enables users to find the optimal trade-off between both in a single training procedure. To utilize the method for more efficient hardware inference, we extend DJPQ to integrate structured pruning with power-of-two bit-restricted quantization. We show that DJPQ significantly reduces the number of Bit-Operations (BOPs) for several networks while maintaining the top-1 accuracy of original floating-point models (e.g., 53x BOPs reduction in ResNet18 on ImageNet, 43x in MobileNetV2). Compared to the conventional two-stage approach, which optimizes pruning and quantization independently, our scheme outperforms in terms of both accuracy and BOPs. Even when considering bit-restricted quantization, DJPQ achieves larger compression ratios and better accuracy than the two-stage approach.
-
-</details>
-
-### Accelerating CNN Training by Pruning Activation Gradients.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58595-2_20) · 📚 被引 22
-- **作者**: Xucheng Ye, Pengcheng Dai, Junyu Luo, Xin Guo, Yingjie Qi, Jianlei Yang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
-### An Image Enhancing Pattern-Based Sparsity for Real-Time Inference on Mobile Devices.
-- **链接**: [arXiv:2001.07710](https://arxiv.org/abs/2001.07710) · 📚 被引 15
-- **作者**: Xiaolong Ma, Wei Niu, Tianyun Zhang, Sijia Liu, Sheng Lin, Hongjia Li et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
-
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Weight pruning has been widely acknowledged as a straightforward and effective method to eliminate redundancy in Deep Neural Networks (DNN), thereby achieving acceleration on various platforms. However, most of the pruning techniques are essentially trade-offs between model accuracy and regularity which lead to impaired inference accuracy and limited on-device acceleration performance. To solve the problem, we introduce a new sparsity dimension, namely pattern-based sparsity that comprises pattern and connectivity sparsity, and becoming both highly accurate and hardware friendly. With carefully designed patterns, the proposed pruning unprecedentedly and consistently achieves accuracy enhancement and better feature extraction ability on different DNN structures and datasets, and our pattern-aware pruning framework also achieves pattern library extraction, pattern selection, pattern and connectivity pruning and weight training simultaneously. Our approach on the new pattern-based sparsity naturally fits into compiler optimization for highly efficient DNN execution on mobile platforms. To the best of our knowledge, it is the first time that mobile devices achieve real-time inference for the large-scale DNN models thanks to the unique spatial property of pattern-based sparsity and the help of the code generation capability of compilers.
+> In this paper, we analyze two popular network compression techniques, i.e. filter pruning and low-rank decomposition, in a unified sense. By simply changing the way the sparsity regularization is enforced, filter pruning and low-rank decomposition can be derived accordingly. This provides another flexible choice for network compression because the techniques complement each other. For example, in popular network architectures with shortcut connections (e.g. ResNet), filter pruning cannot deal with the last convolutional layer in a ResBlock while the low-rank decomposition methods can. In addition, we propose to compress the whole network jointly instead of in a layer-wise manner. Our approach proves its potential as it compares favorably to the state-of-the-art on several benchmarks.
 
 </details>
 
-### Online Ensemble Model Compression Using Knowledge Distillation.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_2) · 📚 被引 42
-- **作者**: Devesh Walawalkar, Zhiqiang Shen, Marios Savvides
+### HRank: Filter Pruning Using High-Rank Feature Map.
+- **链接**: [arXiv:2002.10179](https://arxiv.org/abs/2002.10179) · [代码](https://github.com/lmbxmu/HRank) · 📚 被引 737
+- **作者**: Mingbao Lin, Rongrong Ji, Yan Wang, Yichen Zhang, Baochang Zhang, Yonghong Tian et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: CVPR 2020
+
+### Dynamic Model Pruning with Feedback.
+- **链接**: [arXiv:2006.07253](https://arxiv.org/abs/2006.07253)
+- **作者**: Tao Lin, Sebastian U. Stich, Luis Barba, Daniil Dmitriev, Martin Jaggi
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+### Efficient and Robust Shape Correspondence via Sparsity-Enforced Quadratic Assignment.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Xiang_Efficient_and_Robust_Shape_Correspondence_via_Sparsity-Enforced_Quadratic_Assignment_CVPR_2020_paper.html) · 📚 被引 7
+- **作者**: Rui Xiang, Rongjie Lai, Hongkai Zhao
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+### Automatic Neural Network Compression by Sparsity-Quantization Joint Learning: A Constrained Optimization-Based Approach.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yang_Automatic_Neural_Network_Compression_by_Sparsity-Quantization_Joint_Learning_A_Constrained_CVPR_2020_paper.html) · 📚 被引 63
+- **作者**: Haichuan Yang, Shupeng Gui, Yuhao Zhu, Ji Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+### Few Sample Knowledge Distillation for Efficient Network Compression.
+- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_Few_Sample_Knowledge_Distillation_for_Efficient_Network_Compression_CVPR_2020_paper.html) · 📚 被引 107
+- **作者**: Tianhong Li, Jianguo Li, Zhuang Liu, Changshui Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
