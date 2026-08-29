@@ -23,38 +23,26 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Current popular online multi-object tracking (MOT) solutions apply single object trackers (SOTs) to capture object motions, while often requiring an extra affinity network to associate objects, especially for the occluded ones. This brings extra computational overhead due to repetitive feature extraction for SOT and affinity computation. Meanwhile, the model size of the sophisticated affinity network is usually non-trivial. In this paper, we propose a novel MOT framework that unifies object motion and affinity model into a single network, named UMA, in order to learn a compact feature that is discriminative for both object motion and affinity measure. In particular, UMA integrates single object tracking and metric learning into a unified triplet network by means of multi-task learning. Such design brings advantages of improved computation efficiency, low memory requirement and simplified training procedure. In addition, we equip our model with a task-specific attention module, which is used to boost task-aware feature learning. The proposed UMA can be easily trained end-to-end, and is elegant - requiring only one training stage. Experimental results show that it achieves promising performance on several MOT Challenge benchmarks.
-
-</details>
-
-### Learning a Neural Solver for Multiple Object Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Braso_Learning_a_Neural_Solver_for_Multiple_Object_Tracking_CVPR_2020_paper.html) · 📚 被引 410
-- **作者**: Guillem Brasó, Laura Leal-Taixé
+### Segment as Points for Efficient Online Multi-Object Tracking and Segmentation.
+- **链接**: [arXiv:2007.01550](https://arxiv.org/abs/2007.01550) · [代码](https://github.com/detectRecog/PointTrack)
+- **作者**: Zhenbo Xu, Wei Zhang, Xiao Tan, Wei Yang, Huan Huang, Shilei Wen et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Current multi-object tracking and segmentation (MOTS) methods follow the tracking-by-detection paradigm and adopt convolutions for feature extraction. However, as affected by the inherent receptive field, convolution based feature extraction inevitably mixes up the foreground features and the background features, resulting in ambiguities in the subsequent instance association. In this paper, we propose a highly effective method for learning instance embeddings based on segments by converting the compact image representation to un-ordered 2D point cloud representation. Our method generates a new tracking-by-points paradigm where discriminative instance embeddings are learned from randomly selected points rather than images. Furthermore, multiple informative data modalities are converted into point-wise representations to enrich point-wise features. The resulting online MOTS framework, named PointTrack, surpasses all the state-of-the-art methods including 3D tracking methods by large margins (5.4% higher MOTSA and 18 times faster over MOTSFusion) with the near real-time speed (22 FPS). Evaluations across three datasets demonstrate both the effectiveness and efficiency of our method. Moreover, based on the observation that current MOTS datasets lack crowded scenes, we build a more challenging MOTS dataset named APOLLO MOTS with higher instance density. Both APOLLO MOTS and our codes are publicly available at https://github.com/detectRecog/PointTrack.
+
+</details>
+
 ### SPARK: Spatial-Aware Online Incremental Attack Against Visual Tracking.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58595-2_13) · 📚 被引 61
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58595-2_13) · 📚 被引 62
 - **作者**: Qing Guo, Xiaofei Xie, Felix Juefei-Xu, Lei Ma, Zhongguo Li, Wanli Xue et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We present a novel self quality evaluation metric SQE for parameters optimization in the challenging yet critical multi-object tracking task. Current evaluation metrics all require annotated ground truth, thus will fail in the test environment and realistic circumstances prohibiting further optimization after training. By contrast, our metric reflects the internal characteristics of trajectory hypotheses and measures tracking performance without ground truth. We demonstrate that trajectories with different qualities exhibit different single or multiple peaks over feature distance distribution, inspiring us to design a simple yet effective method to assess the quality of trajectories using a two-class Gaussian mixture model. Experiments mainly on MOT16 Challenge data sets verify the effectiveness of our method in both correlating with existing metrics and enabling parameters self-optimization to achieve better performance. We believe that our conclusions and method are inspiring for future multi-object tracking in practice.
-
-</details>
-
-### Learning Multi-Object Tracking and Segmentation From Automatic Annotations.
-- **链接**: [arXiv:1912.02096](https://arxiv.org/abs/1912.02096) · 📚 被引 59
-- **作者**: Lorenzo Porzi, Markus Hofinger, Idoia Ruiz, Joan Serrat, Samuel Rota Bulò, Peter Kontschieder
+### PG-Net: Pixel to Global Matching Network for Visual Tracking.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58542-6_26) · 📚 被引 73
+- **作者**: Bingyan Liao, Chenye Wang, Yayun Wang, Yaonong Wang, Jun Yin
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this work we contribute a novel pipeline to automatically generate training data, and to improve over state-of-the-art multi-object tracking and segmentation (MOTS) methods. Our proposed track mining algorithm turns raw street-level videos into high-fidelity MOTS training data, is scalable and overcomes the need of expensive and time-consuming manual annotation approaches. We leverage state-of-the-art instance segmentation results in combination with optical flow predictions, also trained on automatically harvested training data. Our second major contribution is MOTSNet - a deep learning, tracking-by-detection architecture for MOTS - deploying a novel mask-pooling layer for improved object association over time. Training MOTSNet with our automatically extracted data leads to significantly improved sMOTSA scores on the novel KITTI MOTS dataset (+1.9%/+7.5% on cars/pedestrians), and MOTSNet improves by +4.1% over previously best methods on the MOTSChallenge dataset. Our most impressive finding is that we can improve over previous best-performing works, even in complete absence of manually annotated MOTS training data.
-
-</details>
+- **会议**: ECCV 2020
