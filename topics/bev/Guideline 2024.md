@@ -1,7 +1,7 @@
 # BEV — 2024 Guideline
 
 > 领域: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
-> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -76,4 +76,3 @@
 - FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - Diffusion Model for Robust Multi-sensor Fusion in 3D Object Detection and BEV Segmentation. → [3d-detection](../3d-detection/Guideline%202024.md)
 - GraphBEV: Towards Robust BEV Feature Alignment for Multi-modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- H-V2X: A Large Scale Highway Dataset for BEV Perception. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)

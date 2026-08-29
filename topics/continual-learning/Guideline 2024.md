@@ -1,15 +1,15 @@
 # Continual Learning — 2024 Guideline
 
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
-> 论文数: 32 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 30 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Mind the Interference: Retaining Pre-trained Knowledge in Parameter Efficient Continual Learning of Vision-Language Models.
-- **链接**: [arXiv:2407.05342](https://arxiv.org/abs/2407.05342) · [代码](https://github.com/lloongx/DIKI) · 📚 被引 12
-- **作者**: Longxiang Tang, Zhuotao Tian, Kai Li, Chunming He, Hantao Zhou, Hengshuang Zhao et al.
-- **🏷️ 机构**: CUHK / SmartMore
-- **会议**: ECCV 2024
+### Hebbian Learning based Orthogonal Projection for Continual Learning of Spiking Neural Networks.
+- **链接**: [arXiv:2402.11984](https://arxiv.org/abs/2402.11984)
+- **作者**: Mingqing Xiao, Qingyan Meng, Zongpeng Zhang, Di He, Zhouchen Lin
+- **🏷️ 机构**: Peking University
+- **会议**: ICLR 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -20,18 +20,6 @@
 ### Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models.
 - **链接**: [arXiv:2403.09296](https://arxiv.org/abs/2403.09296) · 📚 被引 7
 - **作者**: Yu-Chu Yu, Chi-Pin Huang, Jr-Jen Chen, Kai-Po Chang, Yung-Hsuan Lai, Fu-En Yang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Large-scale vision-language models (VLMs) have shown a strong zero-shot generalization capability on unseen-domain data. However, adapting pre-trained VLMs to a sequence of downstream tasks often leads to the forgetting of previously learned knowledge and a reduction in zero-shot classification performance. To tackle this problem, we propose a unique Selective Dual-Teacher Knowledge Transfer framework that leverages the most recent fine-tuned and the original pre-trained VLMs as dual teachers to preserve the previously learned knowledge and zero-shot capabilities, respectively. With only access to an unlabeled reference dataset, our proposed framework performs a selective knowledge distillation mechanism by measuring the feature discrepancy from the dual-teacher VLMs. Consequently, our selective dual-teacher knowledge distillation mitigates catastrophic forgetting of previously learned knowledge while preserving the zero-shot capabilities of pre-trained VLMs. Extensive experiments on benchmark datasets demonstrate that our framework is favorable against state-of-the-art continual learning approaches for preventing catastrophic forgetting and zero-shot degradation. Project page: https://chuyu.org/research/snd
-
-</details>
-
-### Beyond Prompt Learning: Continual Adapter for Efficient Rehearsal-Free Continual Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73013-9_6) · 📚 被引 13
-- **作者**: Xinyuan Gao, Songlin Dong, Yuhang He, Qiang Wang, Yihong Gong
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
@@ -125,11 +113,35 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
+### Mind the Interference: Retaining Pre-trained Knowledge in Parameter Efficient Continual Learning of Vision-Language Models.
+- **链接**: [arXiv:2407.05342](https://arxiv.org/abs/2407.05342) · [代码](https://github.com/lloongx/DIKI) · 📚 被引 12
+- **作者**: Longxiang Tang, Zhuotao Tian, Kai Li, Chunming He, Hantao Zhou, Hengshuang Zhao et al.
+- **🏷️ 机构**: CUHK / SmartMore
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This study addresses the Domain-Class Incremental Learning problem, a realistic but challenging continual learning scenario where both the domain distribution and target classes vary across tasks. To handle these diverse tasks, pre-trained Vision-Language Models (VLMs) are introduced for their strong generalizability. However, this incurs a new problem: the knowledge encoded in the pre-trained VLMs may be disturbed when adapting to new tasks, compromising their inherent zero-shot ability. Existing methods tackle it by tuning VLMs with knowledge distillation on extra datasets, which demands heavy computation overhead. To address this problem efficiently, we propose the Distribution-aware Interference-free Knowledge Integration (DIKI) framework, retaining pre-trained knowledge of VLMs from a perspective of avoiding information interference. Specifically, we design a fully residual mechanism to infuse newly learned knowledge into a frozen backbone, while introducing minimal adverse impacts on pre-trained knowledge. Besides, this residual property enables our distribution-aware integration calibration scheme, explicitly controlling the information implantation process for test data from unseen distributions. Experiments demonstrate that our DIKI surpasses the current state-of-the-art approach using only 0.86% of the trained parameters and requiring substantially less training time. Code is available at: https://github.com/lloongx/DIKI .
+
+</details>
+
 ### Pick-a-Back: Selective Device-to-Device Knowledge Transfer in Federated Continual Learning.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73030-6_10) · 📚 被引 4
 - **作者**: JinYi Yoon, HyungJune Lee
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+
+### Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models.
+- **链接**: [arXiv:2403.09296](https://arxiv.org/abs/2403.09296) · 📚 被引 7
+- **作者**: Yu-Chu Yu, Chi-Pin Huang, Jr-Jen Chen, Kai-Po Chang, Yung-Hsuan Lai, Fu-En Yang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large-scale vision-language models (VLMs) have shown a strong zero-shot generalization capability on unseen-domain data. However, adapting pre-trained VLMs to a sequence of downstream tasks often leads to the forgetting of previously learned knowledge and a reduction in zero-shot classification performance. To tackle this problem, we propose a unique Selective Dual-Teacher Knowledge Transfer framework that leverages the most recent fine-tuned and the original pre-trained VLMs as dual teachers to preserve the previously learned knowledge and zero-shot capabilities, respectively. With only access to an unlabeled reference dataset, our proposed framework performs a selective knowledge distillation mechanism by measuring the feature discrepancy from the dual-teacher VLMs. Consequently, our selective dual-teacher knowledge distillation mitigates catastrophic forgetting of previously learned knowledge while preserving the zero-shot capabilities of pre-trained VLMs. Extensive experiments on benchmark datasets demonstrate that our framework is favorable against state-of-the-art continual learning approaches for preventing catastrophic forgetting and zero-shot degradation. Project page: https://chuyu.org/research/snd
+
+</details>
 
 ### Anytime Continual Learning for Open Vocabulary Classification.
 - **链接**: [arXiv:2409.08518](https://arxiv.org/abs/2409.08518) · [代码](https://github.com/jessemelpolio/AnytimeCL) · 📚 被引 4

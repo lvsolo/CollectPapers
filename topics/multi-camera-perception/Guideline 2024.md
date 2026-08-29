@@ -1,7 +1,7 @@
 # Multi-camera Perception — 2024 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 52 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 11 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -17,27 +17,9 @@
 
 </details>
 
-### Make Your ViT-Based Multi-view 3D Detectors Faster via Token Compression.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72970-6_4)
-- **作者**: Dingyuan Zhang, Dingkang Liang, Zichang Tan, Xiaoqing Ye, Cheng Zhang, Jingdong Wang et al.
-- **🏷️ 机构**: HUAST
-- **会议**: ECCV 2024
-
-### AEDNet: Adaptive Embedding and Multiview-Aware Disentanglement for Point Cloud Completion.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73247-8_8) · 📚 被引 4
-- **作者**: Zhiheng Fu, Longguang Wang, Lian Xu, Zhiyong Wang, Hamid Laga, Yulan Guo et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### ViewFormer: Exploring Spatiotemporal Modeling for Multi-view 3D Occupancy Perception via View-Guided Transformers.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72775-7_6)
-- **作者**: Jinke Li, Xiao He, Chonghua Zhou, Xiaoqiang Cheng, Yang Wen, Dan Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### Mahalanobis Distance-Based Multi-view Optimal Transport for Multi-view Crowd Localization.
-- **链接**: [arXiv:2409.01726](https://arxiv.org/abs/2409.01726) · 📚 被引 8
-- **作者**: Qi Zhang, Kaiyi Zhang, Antoni B. Chan, Hui Huang
+### FroSSL: Frobenius Norm Minimization for Efficient Multiview Self-supervised Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73024-5_5)
+- **作者**: Oscar Skean, Aayush Dhakal, Nathan Jacobs, Luis Gonzalo Sánchez Giraldo
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
@@ -47,11 +29,11 @@
 
 </details>
 
-### PanoFree: Tuning-Free Holistic Multi-view Image Generation with Cross-View Self-guidance.
-- **链接**: [arXiv:2408.02157](https://arxiv.org/abs/2408.02157) · 📚 被引 5
-- **作者**: Aoming Liu, Zhong Li, Zhang Chen, Nannan Li, Yi Xu, Bryan A. Plummer
+### CAT3D: Create Anything in 3D with Multi-View Diffusion Models.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/89e4433fec4b99f1d859db57af1e0a0f-Abstract-Conference.html) · 📚 被引 31
+- **作者**: Ruiqi Gao, Aleksander Holynski, Philipp Henzler, Arthur Brussee, Ricardo Martin-Brualla, Pratul P. Srinivasan et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+- **会议**: NeurIPS 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -59,53 +41,11 @@
 
 </details>
 
-### MetaCap: Meta-learning Priors from Multi-view Imagery for Sparse-View Human Performance Capture and Rendering.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72952-2_20) · 📚 被引 7
-- **作者**: Guoxing Sun, Rishabh Dabral, Pascal Fua, Christian Theobalt, Marc Habermann
+### EgoSim: An Egocentric Multi-view Simulator and Real Dataset for Body-worn Cameras during Motion and Activity.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/c1017d0a006d31dfbfd4cf1e9189d747-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 2
+- **作者**: Dominik Hollidt, Paul Streli, Jiaxi Jiang, Yasaman Haghighi, Changlin Qian, Xintong Liu et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### MVDiffusion++: A Dense High-Resolution Multi-view Diffusion Model for Single or Sparse-View 3D Object Reconstruction.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72640-8_10) · 📚 被引 41
-- **作者**: Shitao Tang, Jiacheng Chen, Dilin Wang, Chengzhou Tang, Fuyang Zhang, Yuchen Fan et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### HENet: Hybrid Encoding for End-to-End Multi-task 3D Perception from Multi-view Cameras.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72973-7_22) · 📚 被引 11
-- **作者**: Zhongyu Xia, Zhiwei Lin, Xinhao Wang, Yongtao Wang, Yun Xing, Shengxiang Qi et al.
-- **🏷️ 机构**: UC Merced
-- **会议**: ECCV 2024
-
-### MVPGS: Excavating Multi-view Priors for Gaussian Splatting from Sparse Input Views.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72970-6_12) · 📚 被引 27
-- **作者**: Wangze Xu, Huachen Gao, Shihe Shen, Rui Peng, Jianbo Jiao, Ronggang Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### PolyOculus: Simultaneous Multi-view Image-Based Novel View Synthesis.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73036-8_25) · 📚 被引 4
-- **作者**: Jason J. Yu, Tristan Aumentado-Armstrong, Fereshteh Forghani, Konstantinos G. Derpanis, Marcus A. Brubaker
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### Resolving Scale Ambiguity in Multi-view 3D Reconstruction Using Dual-Pixel Sensors.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72973-7_10) · 📚 被引 3
-- **作者**: Kohei Ashida, Hiroaki Santo, Fumio Okura, Yasuyuki Matsushita
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### MARs: Multi-view Attention Regularizations for Patch-Based Feature Recognition of Space Terrain.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73039-9_13) · 📚 被引 4
-- **作者**: Timothy Chase Jr., Karthik Dantu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### DGE: Direct Gaussian 3D Editing by Consistent Multi-view Editing.
-- **链接**: [arXiv:2404.18929](https://arxiv.org/abs/2404.18929) · 📚 被引 42
-- **作者**: Minghao Chen, Iro Laina, Andrea Vedaldi
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+- **会议**: NeurIPS 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -113,17 +53,7 @@
 
 </details>
 
-### 3DSA: Multi-view 3D Human Pose Estimation With 3D Space Attention Mechanisms.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73383-3_19) · 📚 被引 1
-- **作者**: Bo-Han Chen, Chia-Chi Tsai
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### MVSplat: Efficient 3D Gaussian Splatting from Sparse Multi-view Images.
-- **链接**: [arXiv:2403.14627](https://arxiv.org/abs/2403.14627) · 📚 被引 238
-- **作者**: Yuedong Chen, Haofei Xu, Chuanxia Zheng, Bohan Zhuang, Marc Pollefeys, Andreas Geiger et al.
-- **🏷️ 机构**: University of Tübingen
-- **会议**: ECCV 2024
+> We present MV2Cyl, a novel method for reconstructing 3D from 2D multi-view images, not merely as a field or raw geometry but as a sketch-extrude CAD model. Extracting extrusion cylinders from raw 3D geometry has been extensively researched in computer vision, while the processing of 3D data through neural networks has remained a bottleneck. Since 3D scans are generally accompanied by multi-view images, leveraging 2D convolutional neural networks allows these images to be exploited as a rich source for extracting extrusion cylinder information. However, we observe that extracting only the surface information of the extrudes and utilizing it results in suboptimal outcomes due to the challenges in the occlusion and surface segmentation. By synergizing with the extracted base curve information, we achieve the optimal reconstruction result with the best accuracy in 2D sketch and extrude parameter estimation. Our experiments, comparing our method with previous work that takes a raw 3D point cloud as input, demonstrate the effectiveness of our approach by taking advantage of multi-view images. Our project page can be found at http://mv2cyl.github.io .
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -371,5 +301,3 @@
 - Learning High-Resolution Vector Representation from Multi-camera Images for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - Ray Denoising: Depth-Aware Hard Negative Sampling for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- RecurrentBEV: A Long-Term Temporal Fusion Framework for Multi-view 3D Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- DrivingDiffusion: Layout-Guided Multi-view Driving Scenarios Video Generation with Latent Diffusion Model. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)

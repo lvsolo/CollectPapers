@@ -1,7 +1,7 @@
 # Self-supervised Vision — 2024 Guideline
 
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
-> 论文数: 67 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 64 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -11,17 +11,11 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
-### ViC-MAE: Self-supervised Representation Learning from Images and Video with Contrastive Masked Autoencoders.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73235-5_25) · 📚 被引 10
-- **作者**: Jefferson Hernandez, Ruben Villegas, Vicente Ordonez
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### NeRF-MAE: Masked AutoEncoders for Self-supervised 3D Representation Learning for Neural Radiance Fields.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73223-2_24) · 📚 被引 12
-- **作者**: Muhammad Zubair Irshad, Sergey Zakharov, Vitor Guizilini, Adrien Gaidon, Zsolt Kira, Rares Ambrus
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+> Object detection is a pivotal task in computer vision that has received significant attention in previous years. Nonetheless, the capability of a detector to localise objects out of the training distribution remains unexplored. Whilst recent approaches in object-level out-of-distribution (OoD) detection heavily rely on class labels, such approaches contradict truly open-world scenarios where the class distribution is often unknown. In this context, anomaly detection focuses on detecting unseen instances rather than classifying detections as OoD. This work aims to bridge this gap by leveraging an open-world object detector and an OoD detector via virtual outlier synthesis. This is achieved by using the detector backbone features to first learn object pseudo-classes via self-supervision. These pseudo-classes serve as the basis for class-conditional virtual outlier sampling of anomalous features that are classified by an OoD head. Our approach empowers our overall object detector architecture to learn anomaly-aware feature representations without relying on class labels, hence enabling truly open-world object anomaly detection. Empirical validation of our approach demonstrates its effectiveness across diverse datasets encompassing various imaging modalities (visible, infrared, and X-ray). Moreover, our method establishes state-of-the-art performance on object-level anomaly detection, achieving an average recall score improvement of over 5.4% for natural images and 23.5% for a security X-ray dataset compared to the current approaches. In addition, our method detects anomalies in datasets where current approaches fail. Code available at https://github.com/KostadinovShalon/oln-ssos.
+
+</details>
 
 ### DINO-Tracker: Taming DINO for Self-supervised Point Tracking in a Single Video.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73347-5_21) · 📚 被引 34
@@ -29,27 +23,9 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
-### Ex2Eg-MAE: A Framework for Adaptation of Exocentric Video Masked Autoencoders for Egocentric Social Role Understanding.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72989-8_1) · 📚 被引 3
-- **作者**: Minh Tran, Yelin Kim, Che-Chun Su, Cheng-Hao Kuo, Min Sun, Mohammad Soleymani
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
 ### Towards Open-World Object-Based Anomaly Detection via Self-Supervised Outlier Synthesis.
-- **链接**: [arXiv:2407.15763](https://arxiv.org/abs/2407.15763) · [代码](https://github.com/KostadinovShalon/oln-ssos) · 📚 被引 6
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73209-6_12) · 📚 被引 6
 - **作者**: Brian K. S. Isaac-Medina, Yona Falinie A. Gaus, Neelanjan Bhowmik, Toby P. Breckon
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Object detection is a pivotal task in computer vision that has received significant attention in previous years. Nonetheless, the capability of a detector to localise objects out of the training distribution remains unexplored. Whilst recent approaches in object-level out-of-distribution (OoD) detection heavily rely on class labels, such approaches contradict truly open-world scenarios where the class distribution is often unknown. In this context, anomaly detection focuses on detecting unseen instances rather than classifying detections as OoD. This work aims to bridge this gap by leveraging an open-world object detector and an OoD detector via virtual outlier synthesis. This is achieved by using the detector backbone features to first learn object pseudo-classes via self-supervision. These pseudo-classes serve as the basis for class-conditional virtual outlier sampling of anomalous features that are classified by an OoD head. Our approach empowers our overall object detector architecture to learn anomaly-aware feature representations without relying on class labels, hence enabling truly open-world object anomaly detection. Empirical validation of our approach demonstrates its effectiveness across diverse datasets encompassing various imaging modalities (visible, infrared, and X-ray). Moreover, our method establishes state-of-the-art performance on object-level anomaly detection, achieving an average recall score improvement of over 5.4% for natural images and 23.5% for a security X-ray dataset compared to the current approaches. In addition, our method detects anomalies in datasets where current approaches fail. Code available at https://github.com/KostadinovShalon/oln-ssos.
-
-</details>
-
-### SelfSwapper: Self-supervised Face Swapping via Shape Agnostic Masked AutoEncoder.
-- **链接**: [arXiv:2402.07370](https://arxiv.org/abs/2402.07370) · 📚 被引 3
-- **作者**: Jaeseong Lee, Junha Hyung, Sohyun Jung, Jaegul Choo
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
@@ -59,11 +35,7 @@
 
 </details>
 
-### Exploiting Supervised Poison Vulnerability to Strengthen Self-supervised Defense.
-- **链接**: [arXiv:2409.08509](https://arxiv.org/abs/2409.08509) · 📚 被引 0
-- **作者**: Jeremy Styborski, Mingzhi Lyu, Yi Huang, Adams Wai-Kin Kong
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -83,17 +55,13 @@
 
 </details>
 
+</details>
+
 ### OmniSat: Self-supervised Modality Fusion for Earth Observation.
-- **链接**: [arXiv:2404.08351](https://arxiv.org/abs/2404.08351) · [代码](https://github.com/gastruc/OmniSat) · 📚 被引 42
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73390-1_24) · 📚 被引 42
 - **作者**: Guillaume Astruc, Nicolas Gonthier, Clément Mallet, Loïc Landrieu
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The diversity and complementarity of sensors available for Earth Observations (EO) calls for developing bespoke self-supervised multimodal learning approaches. However, current multimodal EO datasets and models typically focus on a single data type, either mono-date images or time series, which limits their impact. To address this issue, we introduce OmniSat, a novel architecture able to merge diverse EO modalities into expressive features without labels by exploiting their alignment. To demonstrate the advantages of our approach, we create two new multimodal datasets by augmenting existing ones with new modalities. As demonstrated for three downstream tasks -- forestry, land cover classification, and crop mapping -- OmniSat can learn rich representations without supervision, leading to state-of-the-art performances in semi- and fully supervised settings. Furthermore, our multimodal pretraining scheme improves performance even when only one modality is available for inference. The code and dataset are available at https://github.com/gastruc/OmniSat.
-
-</details>
 
 ### Self-supervised Visual Learning from Interactions with Objects.
 - **链接**: [arXiv:2407.06704](https://arxiv.org/abs/2407.06704)
@@ -108,16 +76,10 @@
 </details>
 
 ### GroCo: Ground Constraint for Metric Self-supervised Monocular Depth.
-- **链接**: [arXiv:2409.14850](https://arxiv.org/abs/2409.14850) · 📚 被引 6
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73021-4_4) · 📚 被引 6
 - **作者**: Aurélien Cecille, Stefan Duffner, Franck Davoine, Thibault Neveu, Rémi Agier
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Monocular depth estimation has greatly improved in the recent years but models predicting metric depth still struggle to generalize across diverse camera poses and datasets. While recent supervised methods mitigate this issue by leveraging ground prior information at inference, their adaptability to self-supervised settings is limited due to the additional challenge of scale recovery. Addressing this gap, we propose in this paper a novel constraint on ground areas designed specifically for the self-supervised paradigm. This mechanism not only allows to accurately recover the scale but also ensures coherence between the depth prediction and the ground prior. Experimental results show that our method surpasses existing scale recovery techniques on the KITTI benchmark and significantly enhances model generalization capabilities. This improvement can be observed by its more robust performance across diverse camera rotations and its adaptability in zero-shot conditions with previously unseen driving datasets such as DDAD.
-
-</details>
 
 ### OP-Align: Object-Level and Part-Level Alignment for Self-supervised Category-Level Articulated Object Pose Estimation.
 - **链接**: [arXiv:2408.16547](https://arxiv.org/abs/2408.16547) · 📚 被引 2
@@ -144,40 +106,22 @@
 </details>
 
 ### Learning Where to Look: Self-supervised Viewpoint Selection for Active Localization Using Geometrical Information.
-- **链接**: [arXiv:2407.15593](https://arxiv.org/abs/2407.15593) · 📚 被引 1
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73016-0_12) · 📚 被引 1
 - **作者**: Luca Di Giammarino, Boyang Sun, Giorgio Grisetti, Marc Pollefeys, Hermann Blum, Daniel Barath
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Accurate localization in diverse environments is a fundamental challenge in computer vision and robotics. The task involves determining a sensor's precise position and orientation, typically a camera, within a given space. Traditional localization methods often rely on passive sensing, which may struggle in scenarios with limited features or dynamic environments. In response, this paper explores the domain of active localization, emphasizing the importance of viewpoint selection to enhance localization accuracy. Our contributions involve using a data-driven approach with a simple architecture designed for real-time operation, a self-supervised data training method, and the capability to consistently integrate our map into a planning framework tailored for real-world robotics applications. Our results demonstrate that our method performs better than the existing one, targeting similar problems and generalizing on synthetic and real data. We also release an open-source implementation to benefit the community.
-
-</details>
-
 ### TreeSBA: Tree-Transformer for Self-supervised Sequential Brick Assembly.
-- **链接**: [arXiv:2407.15648](https://arxiv.org/abs/2407.15648) · 📚 被引 0
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73016-0_3) · 📚 被引 0
 - **作者**: Mengqi Guo, Chen Li, Yuyang Zhao, Gim Hee Lee
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Inferring step-wise actions to assemble 3D objects with primitive bricks from images is a challenging task due to complex constraints and the vast number of possible combinations. Recent studies have demonstrated promising results on sequential LEGO brick assembly through the utilization of LEGO-Graph modeling to predict sequential actions. However, existing approaches are class-specific and require significant computational and 3D annotation resources. In this work, we first propose a computationally efficient breadth-first search (BFS) LEGO-Tree structure to model the sequential assembly actions by considering connections between consecutive layers. Based on the LEGO-Tree structure, we then design a class-agnostic tree-transformer framework to predict the sequential assembly actions from the input multi-view images. A major challenge of the sequential brick assembly task is that the step-wise action labels are costly and tedious to obtain in practice. We mitigate this problem by leveraging synthetic-to-real transfer learning. Specifically, our model is first pre-trained on synthetic data with full supervision from the available action labels. We then circumvent the requirement for action labels in the real data by proposing an action-to-silhouette projection that replaces action labels with input image silhouettes for self-supervision. Without any annotation on the real data, our model outperforms existing methods with 3D supervision by 7.8% and 11.3% in mIoU on the MNIST and ModelNet Construction datasets, respectively.
-
-</details>
-
 ### On Pretraining Data Diversity for Self-Supervised Learning.
-- **链接**: [arXiv:2403.13808](https://arxiv.org/abs/2403.13808) · [代码](https://github.com/hammoudhasan/DiversitySSL)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72992-8_4)
 - **作者**: Hasan Abed Al Kader Hammoud, Tuhin Das, Fabio Pizzati, Philip H. S. Torr, Adel Bibi, Bernard Ghanem
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We explore the impact of training with more diverse datasets, characterized by the number of unique samples, on the performance of self-supervised learning (SSL) under a fixed computational budget. Our findings consistently demonstrate that increasing pretraining data diversity enhances SSL performance, albeit only when the distribution distance to the downstream data is minimal. Notably, even with an exceptionally large pretraining data diversity achieved through methods like web crawling or diffusion-generated data, among other ways, the distribution shift remains a challenge. Our experiments are comprehensive with seven SSL methods using large-scale datasets such as ImageNet and YFCC100M amounting to over 200 GPU days. Code and trained models are available at https://github.com/hammoudhasan/DiversitySSL
-
-</details>
 
 ### Self-supervised Representation Learning for Adversarial Attack Detection.
 - **链接**: [arXiv:2407.04382](https://arxiv.org/abs/2407.04382) · 📚 被引 12
@@ -491,30 +435,11 @@
 
 </details>
 
-### TTT-MIM: Test-Time Training with Masked Image Modeling for Denoising Distribution Shifts.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73254-6_20) · 📚 被引 9
-- **作者**: Youssef Mansour, Xuyang Zhong, Serdar I. Caglar, Reinhard Heckel
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### Leveraging Text Localization for Scene Text Removal via Text-Aware Masked Image Modeling.
-- **链接**: [arXiv:2409.13431](https://arxiv.org/abs/2409.13431) · [代码](https://github.com/wzx99/TMIM) · 📚 被引 2
-- **作者**: Zixiao Wang, Hongtao Xie, Yuxin Wang, Yadong Qu, Fengjun Guo, Pengwei Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Existing scene text removal (STR) task suffers from insufficient training data due to the expensive pixel-level labeling. In this paper, we aim to address this issue by introducing a Text-aware Masked Image Modeling algorithm (TMIM), which can pretrain STR models with low-cost text detection labels (e.g., text bounding box). Different from previous pretraining methods that use indirect auxiliary tasks only to enhance the implicit feature extraction ability, our TMIM first enables the STR task to be directly trained in a weakly supervised manner, which explores the STR knowledge explicitly and efficiently. In TMIM, first, a Background Modeling stream is built to learn background generation rules by recovering the masked non-text region. Meanwhile, it provides pseudo STR labels on the masked text region. Second, a Text Erasing stream is proposed to learn from the pseudo labels and equip the model with end-to-end STR ability. Benefiting from the two collaborative streams, our STR model can achieve impressive performance only with the public text detection datasets, which greatly alleviates the limitation of the high-cost STR labels. Experiments demonstrate that our method outperforms other pretrain methods and achieves state-of-the-art performance (37.35 PSNR on SCUT-EnsText). Code will be available at https://github.com/wzx99/TMIM.
-
-</details>
-
 ## 跨领域论文（完整笔记在其他领域）
 
 - Grounding DINO: Marrying DINO with Grounded Pre-training for Open-Set Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
 - LISO: Lidar-Only Self-supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - Self-supervised Co-salient Object Detection via Feature Correspondences at Multiple Scales. → [object-detection](../object-detection/Guideline%202024.md)
-- SeFlow: A Self-supervised Scene Flow Method in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
 - Decoupling Common and Unique Representations for Multimodal Self-supervised Learning. → [multimodal](../multimodal/Guideline%202024.md)
 - High-Precision Self-supervised Monocular Depth Estimation with Rich-Resource Prior. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - Self-Supervised Audio-Visual Soundscape Stylization. → [multimodal](../multimodal/Guideline%202024.md)
@@ -522,6 +447,7 @@
 - FroSSL: Frobenius Norm Minimization for Efficient Multiview Self-supervised Learning. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - Improving Domain Generalization in Self-supervised Monocular Depth Estimation via Stabilized Adversarial Training. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - SCPNet: Unsupervised Cross-Modal Homography Estimation via Intra-modal Self-supervised Learning. → [multimodal](../multimodal/Guideline%202024.md)
+- SeFlow: A Self-supervised Scene Flow Method in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
 - Revisit Self-supervised Depth Estimation with Local Structure-from-Motion. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - M2Depth: Self-supervised Two-Frame Multi-camera Metric Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - Improving Medical Multi-modal Contrastive Learning with Expert Annotations. → [multimodal](../multimodal/Guideline%202024.md)

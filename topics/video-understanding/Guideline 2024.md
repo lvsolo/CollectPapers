@@ -1,13 +1,13 @@
 # Video Understanding — 2024 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 16 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### AutoEval-Video: An Automatic Benchmark for Assessing Large Vision Language Models in Open-Ended Video Question Answering.
-- **链接**: [arXiv:2311.14906](https://arxiv.org/abs/2311.14906) · [代码](https://github.com/Xiuyuan-Chen/AutoEval-Video) · 📚 被引 18
-- **作者**: Xiuyuan Chen, Yuan Lin, Yuchen Zhang, Weiran Huang
+### Meta-optimized Angular Margin Contrastive Framework for Video-Language Representation Learning.
+- **链接**: [arXiv:2407.03788](https://arxiv.org/abs/2407.03788) · 📚 被引 0
+- **作者**: Thong Nguyen, Yi Bin, Xiaobao Wu, Xinshuai Dong, Zhiyuan Hu, Khoi Le et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
@@ -17,11 +17,7 @@
 
 </details>
 
-### Meta-optimized Angular Margin Contrastive Framework for Video-Language Representation Learning.
-- **链接**: [arXiv:2407.03788](https://arxiv.org/abs/2407.03788) · 📚 被引 0
-- **作者**: Thong Nguyen, Yi Bin, Xiaobao Wu, Xinshuai Dong, Zhiyuan Hu, Khoi Le et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -59,11 +55,7 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
-### Text-Conditioned Resampler For Long Form Video Understanding.
-- **链接**: [arXiv:2312.11897](https://arxiv.org/abs/2312.11897) · 📚 被引 12
-- **作者**: Bruno Korbar, Yongqin Xian, Alessio Tonioni, Andrew Zisserman, Federico Tombari
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -71,11 +63,7 @@
 
 </details>
 
-### VITATECS: A Diagnostic Dataset for Temporal Concept Understanding of Video-Language Models.
-- **链接**: [arXiv:2311.17404](https://arxiv.org/abs/2311.17404) · 📚 被引 14
-- **作者**: Shicheng Li, Lei Li, Yi Liu, Shuhuai Ren, Yuanxin Liu, Rundong Gao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+> The advent of large vision-language models (LVLMs) has spurred research into their applications in multi-modal contexts, particularly in video understanding. Traditional VideoQA benchmarks, despite providing quantitative metrics, often fail to encompass the full spectrum of video content and inadequately assess models' temporal comprehension. To address these limitations, we introduce MMBench-Video, a quantitative benchmark designed to rigorously evaluate LVLMs' proficiency in video understanding. MMBench-Video incorporates lengthy videos from YouTube and employs free-form questions, mirroring practical use cases. The benchmark is meticulously crafted to probe the models' temporal reasoning skills, with all questions human-annotated according to a carefully constructed ability taxonomy. We employ GPT-4 for automated assessment, demonstrating superior accuracy and robustness over earlier LLM-based evaluations. Utilizing MMBench-Video, we have conducted comprehensive evaluations that include both proprietary and open-source LVLMs for images and videos. MMBench-Video stands as a valuable resource for the research community, facilitating improved evaluation of LVLMs and catalyzing progress in the field of video understanding. The evalutation code of MMBench-Video will be integrated into VLMEvalKit: https://github.com/open-compass/VLMEvalKit.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -83,9 +71,20 @@
 
 </details>
 
-### Vamos: Versatile Action Models for Video Understanding.
-- **链接**: [arXiv:2311.13627](https://arxiv.org/abs/2311.13627) · 📚 被引 15
-- **作者**: Shijie Wang, Qi Zhao, Minh Quan Do, Nakul Agarwal, Kwonjoon Lee, Chen Sun
+### Compositional Video Understanding with Spatiotemporal Structure-based Transformers. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01774) · 📚 被引 6
+- **作者**: Hoyeoung Yun, Jinwoo Ahn, Minseo Kim, Eun-Sol Kim
+- **🏷️ 机构**: Hanyang University,Department of Computer Science, Hanyang University,Department of Artificial Intelligence Application
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对视频理解中时空结构建模不足的问题，提出基于时空结构的Transformer方法，通过显式建模视频中的组合性时空关系来提升理解能力。该方法利用Transformer架构捕捉帧间和区域间的复杂交互。相比传统方法，增强了模型对视频动态结构的表征。摘要未提供具体实验数据，效果待验证。
+- **摘要（英）**: Addressing insufficient spatiotemporal structure modeling in video understanding, this work proposes a spatiotemporal structure-based Transformer to explicitly capture compositional relationships. It leverages Transformer architecture to model complex interactions across frames and regions. The approach enhances representation of dynamic video structures, though specific results are not detailed in the abstract.
+- **核心贡献**: 提出基于时空结构的Transformer用于组合性视频理解。
+- **创新点**: 显式建模视频中的组合性时空结构。
+- **结果**: 未提供具体数据，效果待验证。
+
+### Referring Atomic Video Action Recognition.
+- **链接**: [arXiv:2407.01872](https://arxiv.org/abs/2407.01872) · [代码](https://github.com/KPeng9510/RAVAR) · 📚 被引 16
+- **作者**: Kunyu Peng, Jia Fu, Kailun Yang, Di Wen, Yufan Chen, Ruiping Liu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
@@ -95,17 +94,7 @@
 
 </details>
 
-### LongVLM: Efficient Long Video Understanding via Large Language Models.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73414-4_26) · 📚 被引 59
-- **作者**: Yuetian Weng, Mingfei Han, Haoyu He, Xiaojun Chang, Bohan Zhuang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### Leveraging Temporal Contextualization for Video Action Recognition.
-- **链接**: [arXiv:2404.09490](https://arxiv.org/abs/2404.09490) · [代码](https://github.com/naver-ai/tc-clip) · 📚 被引 11
-- **作者**: Minji Kim, Dongyoon Han, Taekyung Kim, Bohyung Han
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
