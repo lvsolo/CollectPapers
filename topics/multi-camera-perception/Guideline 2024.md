@@ -1,106 +1,303 @@
 # Multi-camera Perception — 2024 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 11 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Multi-View Representation is What You Need for Point-Cloud Pre-Training.
-- **链接**: [出版页](https://openreview.net/forum?id=imZcqOrbig)
-- **作者**: Siming Yan, Chen Song, Youkang Kong, Qixing Huang
+### MMVR: Millimeter-Wave Multi-view Radar Dataset and Benchmark for Indoor Perception.
+- **链接**: [arXiv:2406.10708](https://arxiv.org/abs/2406.10708) · 📚 被引 11
+- **作者**: Mohammad Mahbubur Rahman, Ryoma Yataka, Sorachi Kato, Pu Wang, Peizhao Li, Adriano Cardace et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
-
-### MVSFormer++: Revealing the Devil in Transformer's Details for Multi-View Stereo.
-- **链接**: [arXiv:2401.11673](https://arxiv.org/abs/2401.11673)
-- **作者**: Chenjie Cao, Xinlin Ren, Yanwei Fu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Recent advancements in learning-based Multi-View Stereo (MVS) methods have prominently featured transformer-based models with attention mechanisms. However, existing approaches have not thoroughly investigated the profound influence of transformers on different MVS modules, resulting in limited depth estimation capabilities. In this paper, we introduce MVSFormer++, a method that prudently maximizes the inherent characteristics of attention to enhance various components of the MVS pipeline. Formally, our approach involves infusing cross-view information into the pre-trained DINOv2 model to facilitate MVS learning. Furthermore, we employ different attention mechanisms for the feature encoder and cost volume regularization, focusing on feature and spatial aggregations respectively. Additionally, we uncover that some design details would substantially impact the performance of transformer modules in MVS, including normalized 3D positional encoding, adaptive attention scaling, and the position of layer normalization. Comprehensive experiments on DTU, Tanks-and-Temples, BlendedMVS, and ETH3D validate the effectiveness of the proposed method. Notably, MVSFormer++ achieves state-of-the-art performance on the challenging DTU and Tanks-and-Temples benchmarks.
+> Compared with an extensive list of automotive radar datasets that support autonomous driving, indoor radar datasets are scarce at a smaller scale in the format of low-resolution radar point clouds and usually under an open-space single-room setting. In this paper, we scale up indoor radar data collection using multi-view high-resolution radar heatmap in a multi-day, multi-room, and multi-subject setting, with an emphasis on the diversity of environment and subjects. Referred to as the millimeter-wave multi-view radar (MMVR) dataset, it consists of $345$K multi-view radar frames collected from $25$ human subjects over $6$ different rooms, $446$K annotated bounding boxes/segmentation instances, and $7.59$ million annotated keypoints to support three major perception tasks of object detection, pose estimation, and instance segmentation, respectively. For each task, we report performance benchmarks under two protocols: a single subject in an open space and multiple subjects in several cluttered rooms with two data splits: random split and cross-environment split over $395$ 1-min data segments. We anticipate that MMVR facilitates indoor radar perception development for indoor vehicle (robot/humanoid) navigation, building energy management, and elderly care for better efficiency, user experience, and safety. The MMVR dataset is available at https://doi.org/10.5281/zenodo.12611978.
 
 </details>
 
-### Performance Gaps in Multi-view Clustering under the Nested Matrix-Tensor Model.
-- **链接**: [arXiv:2402.10677](https://arxiv.org/abs/2402.10677)
-- **作者**: Hugo Lebeau, Mohamed El Amine Seddik, José Henrique de Morais Goulart
+### FroSSL: Frobenius Norm Minimization for Efficient Multiview Self-supervised Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73024-5_5)
+- **作者**: Oscar Skean, Aayush Dhakal, Nathan Jacobs, Luis Gonzalo Sánchez Giraldo
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We study the estimation of a planted signal hidden in a recently introduced nested matrix-tensor model, which is an extension of the classical spiked rank-one tensor model, motivated by multi-view clustering. Prior work has theoretically examined the performance of a tensor-based approach, which relies on finding a best rank-one approximation, a problem known to be computationally hard. A tractable alternative approach consists in computing instead the best rank-one (matrix) approximation of an unfolding of the observed tensor data, but its performance was hitherto unknown. We quantify here the performance gap between these two approaches, in particular by deriving the precise algorithmic threshold of the unfolding approach and demonstrating that it exhibits a BBP-type transition behavior. This work is therefore in line with recent contributions which deepen our understanding of why tensor-based methods surpass matrix-based methods in handling structured tensor data.
+> Multi-view crowd localization predicts the ground locations of all people in the scene. Typical methods usually estimate the crowd density maps on the ground plane first, and then obtain the crowd locations. However, the performance of existing methods is limited by the ambiguity of the density maps in crowded areas, where local peaks can be smoothed away. To mitigate the weakness of density map supervision, optimal transport-based point supervision methods have been proposed in the single-image crowd localization tasks, but have not been explored for multi-view crowd localization yet. Thus, in this paper, we propose a novel Mahalanobis distance-based multi-view optimal transport (M-MVOT) loss specifically designed for multi-view crowd localization. First, we replace the Euclidean-based transport cost with the Mahalanobis distance, which defines elliptical iso-contours in the cost function whose long-axis and short-axis directions are guided by the view ray direction. Second, the object-to-camera distance in each view is used to adjust the optimal transport cost of each location further, where the wrong predictions far away from the camera are more heavily penalized. Finally, we propose a strategy to consider all the input camera views in the model loss (M-MVOT) by computing the optimal transport cost for each ground-truth point based on its closest camera. Experiments demonstrate the advantage of the proposed method over density map-based or common Euclidean distance-based optimal transport loss on several multi-view crowd localization datasets. Project page: https://vcc.tech/research/2024/MVOT.
 
 </details>
 
-### SyncDreamer: Generating Multiview-consistent Images from a Single-view Image.
-- **链接**: [arXiv:2309.03453](https://arxiv.org/abs/2309.03453)
-- **作者**: Yuan Liu, Cheng Lin, Zijiao Zeng, Xiaoxiao Long, Lingjie Liu, Taku Komura et al.
+### CAT3D: Create Anything in 3D with Multi-View Diffusion Models.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/89e4433fec4b99f1d859db57af1e0a0f-Abstract-Conference.html) · 📚 被引 31
+- **作者**: Ruiqi Gao, Aleksander Holynski, Philipp Henzler, Arthur Brussee, Ricardo Martin-Brualla, Pratul P. Srinivasan et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: NeurIPS 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In this paper, we present a novel diffusion model called that generates multiview-consistent images from a single-view image. Using pretrained large-scale 2D diffusion models, recent work Zero123 demonstrates the ability to generate plausible novel views from a single-view image of an object. However, maintaining consistency in geometry and colors for the generated images remains a challenge. To address this issue, we propose a synchronized multiview diffusion model that models the joint probability distribution of multiview images, enabling the generation of multiview-consistent images in a single reverse process. SyncDreamer synchronizes the intermediate states of all the generated images at every step of the reverse process through a 3D-aware feature attention mechanism that correlates the corresponding features across different views. Experiments show that SyncDreamer generates images with high consistency across different views, thus making it well-suited for various 3D generation tasks such as novel-view-synthesis, text-to-3D, and image-to-3D.
+> Immersive scene generation, notably panorama creation, benefits significantly from the adaptation of large pre-trained text-to-image (T2I) models for multi-view image generation. Due to the high cost of acquiring multi-view images, tuning-free generation is preferred. However, existing methods are either limited to simple correspondences or require extensive fine-tuning to capture complex ones. We present PanoFree, a novel method for tuning-free multi-view image generation that supports an extensive array of correspondences. PanoFree sequentially generates multi-view images using iterative warping and inpainting, addressing the key issues of inconsistency and artifacts from error accumulation without the need for fine-tuning. It improves error accumulation by enhancing cross-view awareness and refines the warping and inpainting processes via cross-view guidance, risky area estimation and erasing, and symmetric bidirectional guided generation for loop closure, alongside guidance-based semantic and density control for scene structure preservation. In experiments on Planar, 360°, and Full Spherical Panoramas, PanoFree demonstrates significant error reduction, improves global consistency, and boosts image quality without extra fine-tuning. Compared to existing methods, PanoFree is up to 5x more efficient in time and 3x more efficient in GPU memory usage, and maintains superior diversity of results (2x better in our user study). PanoFree offers a viable alternative to costly fine-tuning or the use of additional pre-trained models. Project website at https://panofree.github.io/.
 
 </details>
 
-### GTA: A Geometry-Aware Attention Mechanism for Multi-View Transformers.
-- **链接**: [arXiv:2310.10375](https://arxiv.org/abs/2310.10375)
-- **作者**: Takeru Miyato, Bernhard Jaeger, Max Welling, Andreas Geiger
-- **🏷️ 机构**: University of Tübingen
-- **会议**: ICLR 2024
+### EgoSim: An Egocentric Multi-view Simulator and Real Dataset for Body-worn Cameras during Motion and Activity.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/c1017d0a006d31dfbfd4cf1e9189d747-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 2
+- **作者**: Dominik Hollidt, Paul Streli, Jiaxi Jiang, Yasaman Haghighi, Changlin Qian, Xintong Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> As transformers are equivariant to the permutation of input tokens, encoding the positional information of tokens is necessary for many tasks. However, since existing positional encoding schemes have been initially designed for NLP tasks, their suitability for vision tasks, which typically exhibit different structural properties in their data, is questionable. We argue that existing positional encoding schemes are suboptimal for 3D vision tasks, as they do not respect their underlying 3D geometric structure. Based on this hypothesis, we propose a geometry-aware attention mechanism that encodes the geometric structure of tokens as relative transformation determined by the geometric relationship between queries and key-value pairs. By evaluating on multiple novel view synthesis (NVS) datasets in the sparse wide-baseline multi-view setting, we show that our attention, called Geometric Transform Attention (GTA), improves learning efficiency and performance of state-of-the-art transformer-based NVS models without any additional learned parameters and only minor computational overhead.
+> We consider the problem of editing 3D objects and scenes based on open-ended language instructions. A common approach to this problem is to use a 2D image generator or editor to guide the 3D editing process, obviating the need for 3D data. However, this process is often inefficient due to the need for iterative updates of costly 3D representations, such as neural radiance fields, either through individual view edits or score distillation sampling. A major disadvantage of this approach is the slow convergence caused by aggregating inconsistent information across views, as the guidance from 2D models is not multi-view consistent. We thus introduce the Direct Gaussian Editor (DGE), a method that addresses these issues in two stages. First, we modify a given high-quality image editor like InstructPix2Pix to be multi-view consistent. To do so, we propose a training-free approach that integrates cues from the 3D geometry of the underlying scene. Second, given a multi-view consistent edited sequence of images, we directly and efficiently optimize the 3D representation, which is based on 3D Gaussian Splatting. Because it avoids incremental and iterative edits, DGE is significantly more accurate and efficient than existing approaches and offers additional benefits, such as enabling selective editing of parts of the scene.
 
 </details>
 
-### MVDream: Multi-view Diffusion for 3D Generation.
-- **链接**: [arXiv:2308.16512](https://arxiv.org/abs/2308.16512)
-- **作者**: Yichun Shi, Peng Wang, Jianglong Ye, Long Mai, Kejie Li, Xiao Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+> We present MV2Cyl, a novel method for reconstructing 3D from 2D multi-view images, not merely as a field or raw geometry but as a sketch-extrude CAD model. Extracting extrusion cylinders from raw 3D geometry has been extensively researched in computer vision, while the processing of 3D data through neural networks has remained a bottleneck. Since 3D scans are generally accompanied by multi-view images, leveraging 2D convolutional neural networks allows these images to be exploited as a rich source for extracting extrusion cylinder information. However, we observe that extracting only the surface information of the extrudes and utilizing it results in suboptimal outcomes due to the challenges in the occlusion and surface segmentation. By synergizing with the extracted base curve information, we achieve the optimal reconstruction result with the best accuracy in 2D sketch and extrude parameter estimation. Our experiments, comparing our method with previous work that takes a raw 3D point cloud as input, demonstrate the effectiveness of our approach by taking advantage of multi-view images. Our project page can be found at http://mv2cyl.github.io .
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We introduce MVDream, a diffusion model that is able to generate consistent multi-view images from a given text prompt. Learning from both 2D and 3D data, a multi-view diffusion model can achieve the generalizability of 2D diffusion models and the consistency of 3D renderings. We demonstrate that such a multi-view diffusion model is implicitly a generalizable 3D prior agnostic to 3D representations. It can be applied to 3D generation via Score Distillation Sampling, significantly enhancing the consistency and stability of existing 2D-lifting methods. It can also learn new concepts from a few 2D examples, akin to DreamBooth, but for 3D generation.
+> We introduce MVSplat, an efficient model that, given sparse multi-view images as input, predicts clean feed-forward 3D Gaussians. To accurately localize the Gaussian centers, we build a cost volume representation via plane sweeping, where the cross-view feature similarities stored in the cost volume can provide valuable geometry cues to the estimation of depth. We also learn other Gaussian primitives' parameters jointly with the Gaussian centers while only relying on photometric supervision. We demonstrate the importance of the cost volume representation in learning feed-forward Gaussians via extensive experimental evaluations. On the large-scale RealEstate10K and ACID benchmarks, MVSplat achieves state-of-the-art performance with the fastest feed-forward inference speed (22~fps). More impressively, compared to the latest state-of-the-art method pixelSplat, MVSplat uses $10\times$ fewer parameters and infers more than $2\times$ faster while providing higher appearance and geometry quality as well as better cross-dataset generalization.
 
 </details>
 
-### DMV3D: Denoising Multi-view Diffusion Using 3D Large Reconstruction Model.
-- **链接**: [arXiv:2311.09217](https://arxiv.org/abs/2311.09217)
-- **作者**: Yinghao Xu, Hao Tan, Fujun Luan, Sai Bi, Peng Wang, Jiahao Li et al.
+### MeshAvatar: Learning High-Quality Triangular Human Avatars from Multi-view Videos.
+- **链接**: [arXiv:2407.08414](https://arxiv.org/abs/2407.08414) · 📚 被引 21
+- **作者**: Yushuo Chen, Zerong Zheng, Zhe Li, Chao Xu, Yebin Liu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We propose \textbf{DMV3D}, a novel 3D generation approach that uses a transformer-based 3D large reconstruction model to denoise multi-view diffusion. Our reconstruction model incorporates a triplane NeRF representation and can denoise noisy multi-view images via NeRF reconstruction and rendering, achieving single-stage 3D generation in $\sim$30s on single A100 GPU. We train \textbf{DMV3D} on large-scale multi-view image datasets of highly diverse objects using only image reconstruction losses, without accessing 3D assets. We demonstrate state-of-the-art results for the single-image reconstruction problem where probabilistic modeling of unseen object parts is required for generating diverse reconstructions with sharp textures. We also show high-quality text-to-3D generation results outperforming previous 3D diffusion models. Our project website is at: https://justimyhxu.github.io/projects/dmv3d/ .
+> We present a novel pipeline for learning high-quality triangular human avatars from multi-view videos. Recent methods for avatar learning are typically based on neural radiance fields (NeRF), which is not compatible with traditional graphics pipeline and poses great challenges for operations like editing or synthesizing under different environments. To overcome these limitations, our method represents the avatar with an explicit triangular mesh extracted from an implicit SDF field, complemented by an implicit material field conditioned on given poses. Leveraging this triangular avatar representation, we incorporate physics-based rendering to accurately decompose geometry and texture. To enhance both the geometric and appearance details, we further employ a 2D UNet as the network backbone and introduce pseudo normal ground-truth as additional supervision. Experiments show that our method can learn triangular avatars with high-quality geometry reconstruction and plausible material decomposition, inherently supporting editing, manipulation or relighting operations.
 
 </details>
 
-### Multi-View Causal Representation Learning with Partial Observability.
-- **链接**: [arXiv:2311.04056](https://arxiv.org/abs/2311.04056)
-- **作者**: Dingling Yao, Danru Xu, Sébastien Lachapelle, Sara Magliacane, Perouz Taslakian, Georg Martius et al.
+### Portrait4D-V2: Pseudo Multi-view Data Creates Better 4D Head Synthesizer.
+- **链接**: [arXiv:2403.13570](https://arxiv.org/abs/2403.13570) · 📚 被引 28
+- **作者**: Yu Deng, Duomin Wang, Baoyuan Wang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We present a unified framework for studying the identifiability of representations learned from simultaneously observed views, such as different data modalities. We allow a partially observed setting in which each view constitutes a nonlinear mixture of a subset of underlying latent variables, which can be causally related. We prove that the information shared across all subsets of any number of views can be learned up to a smooth bijection using contrastive learning and a single encoder per view. We also provide graphical criteria indicating which latent variables can be identified through a simple set of rules, which we refer to as identifiability algebra. Our general framework and theoretical results unify and extend several previous works on multi-view nonlinear ICA, disentanglement, and causal representation learning. We experimentally validate our claims on numerical, image, and multi-modal data sets. Further, we demonstrate that the performance of prior methods is recovered in different special cases of our setup. Overall, we find that access to multiple partial views enables us to identify a more fine-grained representation, under the generally milder assumption of partial observability.
+> In this paper, we propose a novel learning approach for feed-forward one-shot 4D head avatar synthesis. Different from existing methods that often learn from reconstructing monocular videos guided by 3DMM, we employ pseudo multi-view videos to learn a 4D head synthesizer in a data-driven manner, avoiding reliance on inaccurate 3DMM reconstruction that could be detrimental to the synthesis performance. The key idea is to first learn a 3D head synthesizer using synthetic multi-view images to convert monocular real videos into multi-view ones, and then utilize the pseudo multi-view videos to learn a 4D head synthesizer via cross-view self-reenactment. By leveraging a simple vision transformer backbone with motion-aware cross-attentions, our method exhibits superior performance compared to previous methods in terms of reconstruction fidelity, geometry consistency, and motion control accuracy. We hope our method offers novel insights into integrating 3D priors with 2D supervisions for improved 4D head avatar creation.
 
 </details>
 
-### Unconstrained Stochastic CCA: Unifying Multiview and Self-Supervised Learning.
-- **链接**: [出版页](https://openreview.net/forum?id=PHLVmV88Zy)
-- **作者**: James Chapman, Lennie Wells, Ana Lawry Aguila
+### Sur2f: A Hybrid Representation for High-Quality and Efficient Surface Reconstruction from Multi-view Images.
+- **链接**: [arXiv:2401.03704](https://arxiv.org/abs/2401.03704) · 📚 被引 7
+- **作者**: Zhangjin Huang, Zhihao Liang, Kui Jia
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2024
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-view surface reconstruction is an ill-posed, inverse problem in 3D vision research. It involves modeling the geometry and appearance with appropriate surface representations. Most of the existing methods rely either on explicit meshes, using surface rendering of meshes for reconstruction, or on implicit field functions, using volume rendering of the fields for reconstruction. The two types of representations in fact have their respective merits. In this work, we propose a new hybrid representation, termed Sur2f, aiming to better benefit from both representations in a complementary manner. Technically, we learn two parallel streams of an implicit signed distance field and an explicit surrogate surface Sur2f mesh, and unify volume rendering of the implicit signed distance function (SDF) and surface rendering of the surrogate mesh with a shared, neural shader; the unified shading promotes their convergence to the same, underlying surface. We synchronize learning of the surrogate mesh by driving its deformation with functions induced from the implicit SDF. In addition, the synchronized surrogate mesh enables surface-guided volume sampling, which greatly improves the sampling efficiency per ray in volume rendering. We conduct thorough experiments showing that Sur$^2$f outperforms existing reconstruction methods and surface representations, including hybrid ones, in terms of both recovery quality and recovery efficiency.
+
+</details>
+
+### TexGen: Text-Guided 3D Texture Generation with Multi-view Sampling and Resampling.
+- **链接**: [arXiv:2408.01291](https://arxiv.org/abs/2408.01291) · 📚 被引 10
+- **作者**: Dong Huo, Zixin Guo, Xinxin Zuo, Zhihao Shi, Juwei Lu, Peng Dai et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Given a 3D mesh, we aim to synthesize 3D textures that correspond to arbitrary textual descriptions. Current methods for generating and assembling textures from sampled views often result in prominent seams or excessive smoothing. To tackle these issues, we present TexGen, a novel multi-view sampling and resampling framework for texture generation leveraging a pre-trained text-to-image diffusion model. For view consistent sampling, first of all we maintain a texture map in RGB space that is parameterized by the denoising step and updated after each sampling step of the diffusion model to progressively reduce the view discrepancy. An attention-guided multi-view sampling strategy is exploited to broadcast the appearance information across views. To preserve texture details, we develop a noise resampling technique that aids in the estimation of noise, generating inputs for subsequent denoising steps, as directed by the text prompt and current texture map. Through an extensive amount of qualitative and quantitative evaluations, we demonstrate that our proposed method produces significantly better texture quality for diverse 3D objects with a high degree of view consistency and rich appearance details, outperforming current state-of-the-art methods. Furthermore, our proposed texture generation technique can also be applied to texture editing while preserving the original identity. More experimental results are available at https://dong-huo.github.io/TexGen/
+
+</details>
+
+### GRAPE: Generalizable and Robust Multi-view Facial Capture.
+- **链接**: [arXiv:2407.10193](https://arxiv.org/abs/2407.10193) · 📚 被引 1
+- **作者**: Jing Li, Di Kang, Zhenyu He
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deep learning-based multi-view facial capture methods have shown impressive accuracy while being several orders of magnitude faster than a traditional mesh registration pipeline. However, the existing systems (e.g. TEMPEH) are strictly restricted to inference on the data captured by the same camera array used to capture their training data. In this study, we aim to improve the generalization ability so that a trained model can be readily used for inference (i.e. capture new data) on a different camera array. To this end, we propose a more generalizable initialization module to extract the camera array-agnostic 3D feature, including a visual hull-based head localization and a visibility-aware 3D feature aggregation module enabled by the visual hull. In addition, we propose an ``update-by-disagreement'' learning strategy to better handle data noise (e.g. inaccurate registration, scan noise) by discarding potentially inaccurate supervision signals during training. The resultant generalizable and robust topologically consistent multi-view facial capture system (GRAPE) can be readily used to capture data on a different camera array, reducing great effort on data collection and processing. Experiments on the FaMoS and FaceScape datasets demonstrate the effectiveness of the proposed method.
+
+</details>
+
+### Not Just Change the Labels, Learn the Features: Watermarking Deep Neural Networks with Multi-view Data.
+- **链接**: [arXiv:2403.10663](https://arxiv.org/abs/2403.10663) · [代码](https://github.com/liyuxuan-github/MAT) · 📚 被引 3
+- **作者**: Yuxuan Li, Sarthak Kumar Maharana, Yunhui Guo
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> With the increasing prevalence of Machine Learning as a Service (MLaaS) platforms, there is a growing focus on deep neural network (DNN) watermarking techniques. These methods are used to facilitate the verification of ownership for a target DNN model to protect intellectual property. One of the most widely employed watermarking techniques involves embedding a trigger set into the source model. Unfortunately, existing methodologies based on trigger sets are still susceptible to functionality-stealing attacks, potentially enabling adversaries to steal the functionality of the source model without a reliable means of verifying ownership. In this paper, we first introduce a novel perspective on trigger set-based watermarking methods from a feature learning perspective. Specifically, we demonstrate that by selecting data exhibiting multiple features, also referred to as \emph{multi-view data}, it becomes feasible to effectively defend functionality stealing attacks. Based on this perspective, we introduce a novel watermarking technique based on Multi-view dATa, called MAT, for efficiently embedding watermarks within DNNs. This approach involves constructing a trigger set with multi-view data and incorporating a simple feature-based regularization method for training the source model. We validate our method across various benchmarks and demonstrate its efficacy in defending against model extraction attacks, surpassing relevant baselines by a significant margin. The code is available at: \href{https://github.com/liyuxuan-github/MAT}{https://github.com/liyuxuan-github/MAT}.
+
+</details>
+
+### Learning Diffusion Models for Multi-view Anomaly Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73414-4_19)
+- **作者**: Chieh Liu, Yu-Min Chu, Ting-I Hsieh, Hwann-Tzong Chen, Tyng-Luh Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### MVSGaussian: Fast Generalizable Gaussian Splatting Reconstruction from Multi-View Stereo.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72649-1_3) · 📚 被引 85
+- **作者**: Tianqi Liu, Guangcong Wang, Shoukang Hu, Liao Shen, Xinyi Ye, Yuhang Zang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### AvatarPose: Avatar-Guided 3D Pose Estimation of Close Human Interaction from Sparse Multi-view Videos.
+- **链接**: [arXiv:2408.02110](https://arxiv.org/abs/2408.02110) · 📚 被引 6
+- **作者**: Feichi Lu, Zijian Dong, Jie Song, Otmar Hilliges
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Despite progress in human motion capture, existing multi-view methods often face challenges in estimating the 3D pose and shape of multiple closely interacting people. This difficulty arises from reliance on accurate 2D joint estimations, which are hard to obtain due to occlusions and body contact when people are in close interaction. To address this, we propose a novel method leveraging the personalized implicit neural avatar of each individual as a prior, which significantly improves the robustness and precision of this challenging pose estimation task. Concretely, the avatars are efficiently reconstructed via layered volume rendering from sparse multi-view videos. The reconstructed avatar prior allows for the direct optimization of 3D poses based on color and silhouette rendering loss, bypassing the issues associated with noisy 2D detections. To handle interpenetration, we propose a collision loss on the overlapping shape regions of avatars to add penetration constraints. Moreover, both 3D poses and avatars are optimized in an alternating manner. Our experimental results demonstrate state-of-the-art performance on several public datasets.
+
+</details>
+
+### CountFormer: Multi-view Crowd Counting Transformer.
+- **链接**: [arXiv:2407.02047](https://arxiv.org/abs/2407.02047) · 📚 被引 10
+- **作者**: Hong Mo, Xiong Zhang, Jianchao Tan, Cheng Yang, Qiong Gu, Bo Hang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-view counting (MVC) methods have shown their superiority over single-view counterparts, particularly in situations characterized by heavy occlusion and severe perspective distortions. However, hand-crafted heuristic features and identical camera layout requirements in conventional MVC methods limit their applicability and scalability in real-world scenarios.In this work, we propose a concise 3D MVC framework called \textbf{CountFormer}to elevate multi-view image-level features to a scene-level volume representation and estimate the 3D density map based on the volume features. By incorporating a camera encoding strategy, CountFormer successfully embeds camera parameters into the volume query and image-level features, enabling it to handle various camera layouts with significant differences.Furthermore, we introduce a feature lifting module capitalized on the attention mechanism to transform image-level features into a 3D volume representation for each camera view. Subsequently, the multi-view volume aggregation module attentively aggregates various multi-view volumes to create a comprehensive scene-level volume representation, allowing CountFormer to handle images captured by arbitrary dynamic camera layouts. The proposed method performs favorably against the state-of-the-art approaches across various widely used datasets, demonstrating its greater suitability for real-world deployment compared to conventional MVC frameworks.
+
+</details>
+
+### Improving Neural Surface Reconstruction with Feature Priors from Multi-view Images.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73636-0_26) · 📚 被引 2
+- **作者**: Xinlin Ren, Chenjie Cao, Yanwei Fu, Xiangyang Xue
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Differentiable Convex Polyhedra Optimization from Multi-view Images.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72673-6_14) · 📚 被引 1
+- **作者**: Daxuan Ren, Haiyi Mei, Hezi Shi, Jianmin Zheng, Jianfei Cai, Lei Yang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Smoothness, Synthesis, and Sampling: Re-thinking Unsupervised Multi-view Stereo with DIV Loss.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73036-8_22) · 📚 被引 4
+- **作者**: Alexander Rich, Noah Stier, Pradeep Sen, Tobias Höllerer
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### LGM: Large Multi-view Gaussian Model for High-Resolution 3D Content Creation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73235-5_1) · 📚 被引 267
+- **作者**: Jiaxiang Tang, Zhaoxi Chen, Xiaokang Chen, Tengfei Wang, Gang Zeng, Ziwei Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### SV3D: Novel Multi-view Synthesis and 3D Generation from a Single Image Using Latent Video Diffusion.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73232-4_25) · 📚 被引 154
+- **作者**: Vikram Voleti, Chun-Han Yao, Mark Boss, Adam Letts, David Pankratz, Dmitry Tochilkin et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### CrossScore: Towards Multi-View Image Evaluation and Scoring.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72673-6_27) · 📚 被引 2
+- **作者**: Zirui Wang, Wenjing Bian, Victor Adrian Prisacariu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### MVDD: Multi-view Depth Diffusion Models.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72624-8_14) · 📚 被引 6
+- **作者**: Zhen Wang, Qiangeng Xu, Feitong Tan, Menglei Chai, Shichen Liu, Rohit Pandey et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### GaussCtrl: Multi-view Consistent Text-Driven 3D Gaussian Splatting Editing.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72630-9_4) · 📚 被引 52
+- **作者**: Jing Wu, Jia-Wang Bian, Xinghui Li, Guangrun Wang, Ian D. Reid, Philip Torr et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### MLPHand: Real Time Multi-view 3D Hand Reconstruction via MLP Modeling.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72904-1_24) · 📚 被引 0
+- **作者**: Jian Yang, Jiakun Li, Guoming Li, Huai-Yu Wu, Zhen Shen, Zhaoxin Fan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Learning Unsigned Distance Functions from Multi-view Images with Volume Rendering Priors.
+- **链接**: [arXiv:2407.16396](https://arxiv.org/abs/2407.16396)
+- **作者**: Wenyuan Zhang, Kanle Shi, Yu-Shen Liu, Zhizhong Han
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Unsigned distance functions (UDFs) have been a vital representation for open surfaces. With different differentiable renderers, current methods are able to train neural networks to infer a UDF by minimizing the rendering errors with the UDF to the multi-view ground truth. However, these differentiable renderers are mainly handcrafted, which makes them either biased on ray-surface intersections, or sensitive to unsigned distance outliers, or not scalable to large scenes. To resolve these issues, we present a novel differentiable renderer to infer UDFs more accurately. Instead of using handcrafted equations, our differentiable renderer is a neural network which is pre-trained in a data-driven manner. It learns how to render unsigned distances into depth images, leading to a prior knowledge, dubbed volume rendering priors. To infer a UDF for an unseen scene from multiple RGB images, we generalize the learned volume rendering priors to map inferred unsigned distances in alpha blending for RGB image rendering. To reduce the bias of sampling in UDF inference, we utilize an auxiliary point sampling prior as an indicator of ray-surface intersection, and propose novel schemes towards more accurate and uniform sampling near the zero-level sets. We also propose a new strategy that leverages our pretrained volume rendering prior to serve as a general surface refiner, which can be integrated with various Gaussian reconstruction methods to optimize the Gaussian distributions and refine geometric details. Our results show that the learned volume rendering prior is unbiased, robust, scalable, 3D aware, and more importantly, easy to learn. Further experiments show that the volume rendering prior is also a general strategy to enhance other neural implicit representations such as signed distance function and occupancy.
+
+</details>
+
+### CONDENSE: Consistent 2D/3D Pre-training for Dense and Sparse Features from Multi-View Images.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72949-2_2) · 📚 被引 6
+- **作者**: Xiaoshuai Zhang, Zhicheng Wang, Howard Zhou, Soham Ghosh, Danushen Gnanapragasam, Varun Jampani et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### An Optimization Framework to Enforce Multi-view Consistency for Texturing 3D Meshes.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72764-1_9) · 📚 被引 2
+- **作者**: Zhengyi Zhao, Chen Song, Xiaodong Gu, Yuan Dong, Qi Zuo, Weihao Yuan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### RoScenes: A Large-Scale Multi-view 3D Dataset for Roadside Perception.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72940-9_19) · 📚 被引 8
+- **作者**: Xiaosu Zhu, Hualian Sheng, Sijia Cai, Bing Deng, Shaopeng Yang, Qiao Liang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### WoVoGen: World Volume-Aware Diffusion for Controllable Multi-camera Driving Scene Generation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72989-8_19) · 📚 被引 25
+- **作者**: Jiachen Lu, Ze Huang, Zeyu Yang, Jiahui Zhang, Li Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### High-Precision Self-supervised Monocular Depth Estimation with Rich-Resource Prior.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72751-1_9)
+- **作者**: Wencheng Han, Jianbing Shen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Mono-ViFI: A Unified Learning Framework for Self-supervised Single and Multi-frame Monocular Depth Estimation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72995-9_6)
+- **作者**: Jinfeng Liu, Lingtong Kong, Bo Li, Zerong Wang, Hong Gu, Jinwei Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### FroSSL: Frobenius Norm Minimization for Efficient Multiview Self-supervised Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73024-5_5)
+- **作者**: Oscar Skean, Aayush Dhakal, Nathan Jacobs, Luis Gonzalo Sánchez Giraldo
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Improving Domain Generalization in Self-supervised Monocular Depth Estimation via Stabilized Adversarial Training.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72691-0_11)
+- **作者**: Yuanqi Yao, Gang Wu, Kui Jiang, Siao Liu, Jian Kuai, Xianming Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Revisit Self-supervised Depth Estimation with Local Structure-from-Motion.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73007-8_3)
+- **作者**: Shengjie Zhu, Xiaoming Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### M2Depth: Self-supervised Two-Frame Multi-camera Metric Depth Estimation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72952-2_16)
+- **作者**: Yingshuang Zou, Yikang Ding, Xi Qiu, Haoqian Wang, Haotian Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- UC-NERF: Neural Radiance Field for Under-Calibrated Multi-View Cameras in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- OPEN: Object-Wise Position Embedding for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Learning High-Resolution Vector Representation from Multi-camera Images for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Ray Denoising: Depth-Aware Hard Negative Sampling for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
