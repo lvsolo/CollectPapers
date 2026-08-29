@@ -1,58 +1,18 @@
 # Multimodal — 2020 Guideline
 
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
-> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 1 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Cross-Modal Weighting Network for RGB-D Salient Object Detection.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58520-4_39)
-- **作者**: Gongyang Li, Zhi Liu, Linwei Ye, Yang Wang, Haibin Ling
+### Interpretable, Multidimensional, Multimodal Anomaly Detection with Negative Sampling for Detection of Device Failure.
+- **链接**: [arXiv:2007.10088](https://arxiv.org/abs/2007.10088)
+- **作者**: John Sipple
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2020
+- **会议**: ICML 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In this paper, we investigate the problem of anticipating future dynamics, particularly the future location of other vehicles and pedestrians, in the view of a moving vehicle. We approach two fundamental challenges: (1) the partial visibility due to the egocentric view with a single RGB camera and considerable field-of-view change due to the egomotion of the vehicle; (2) the multimodality of the distribution of future states. In contrast to many previous works, we do not assume structural knowledge from maps. We rather estimate a reachability prior for certain classes of objects from the semantic map of the present image and propagate it into the future using the planned egomotion. Experiments show that the reachability prior combined with multi-hypotheses learning improves multimodal prediction of the future location of tracked objects and, for the first time, the emergence of new objects. We also demonstrate promising zero-shot transfer to unseen datasets. Source code is available at $\href{https://github.com/lmb-freiburg/FLN-EPN-RPN}{\text{this https URL.}}$
+> Complex devices are connected daily and eagerly generate vast streams of multidimensional state measurements. These devices often operate in distinct modes based on external conditions (day/night, occupied/vacant, etc.), and to prevent complete or partial system outage, we would like to recognize as early as possible when these devices begin to operate outside the normal modes. Unfortunately, it is often impractical or impossible to predict failures using rules or supervised machine learning, because failure modes are too complex, devices are too new to adequately characterize in a specific environment, or environmental change puts the device into an unpredictable condition. We propose an unsupervised anomaly detection method that creates a negative sample from the positive, observed sample, and trains a classifier to distinguish between positive and negative samples. Using the Contraction Principle, we explain why such a classifier ought to establish suitable decision boundaries between normal and anomalous regions, and show how Integrated Gradients can attribute the anomaly to specific variables within the anomalous state vector. We have demonstrated that negative sampling with random forest or neural network classifiers yield significantly higher AUC scores than Isolation Forest, One Class SVM, and Deep SVDD, against (a) a synthetic dataset with dimensionality ranging between 2 and 128, with 1, 2, and 3 modes, and with and without noise dimensions; (b) four standard benchmark datasets; and (c) a multidimensional, multimodal dataset from real climate control devices. Finally, we describe how negative sampling with neural network classifiers have been successfully deployed at large scale to predict failures in real time in over 15,000 climate-control and power meter devices in 145 Google office buildings.
 
 </details>
-
-### Multi-Modal Domain Adaptation for Fine-Grained Action Recognition.
-- **链接**: [arXiv:2001.09691](https://arxiv.org/abs/2001.09691) · 📚 被引 173
-- **作者**: Jonathan Munro, Dima Damen
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Fine-grained action recognition datasets exhibit environmental bias, where multiple video sequences are captured from a limited number of environments. Training a model in one environment and deploying in another results in a drop in performance due to an unavoidable domain shift. Unsupervised Domain Adaptation (UDA) approaches have frequently utilised adversarial training between the source and target domains. However, these approaches have not explored the multi-modal nature of video within each domain. In this work we exploit the correspondence of modalities as a self-supervised alignment approach for UDA in addition to adversarial alignment. We test our approach on three kitchens from our large-scale dataset, EPIC-Kitchens, using two modalities commonly employed for action recognition: RGB and Optical Flow. We show that multi-modal self-supervision alone improves the performance over source-only training by 2.4% on average. We then combine adversarial training with multi-modal self-supervision, showing that our approach outperforms other UDA methods by 3%.
-
-</details>
-
-### Speech2Action: Cross-Modal Supervision for Action Recognition.
-- **链接**: [arXiv:2003.13594](https://arxiv.org/abs/2003.13594) · 📚 被引 45
-- **作者**: Arsha Nagrani, Chen Sun, David Ross, Rahul Sukthankar, Cordelia Schmid, Andrew Zisserman
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Is it possible to guess human action from dialogue alone? In this work we investigate the link between spoken words and actions in movies. We note that movie screenplays describe actions, as well as contain the speech of characters and hence can be used to learn this correlation with no additional supervision. We train a BERT-based Speech2Action classifier on over a thousand movie screenplays, to predict action labels from transcribed speech segments. We then apply this model to the speech segments of a large unlabelled movie corpus (188M speech segments from 288K movies). Using the predictions of this model, we obtain weak action labels for over 800K video clips. By training on these video clips, we demonstrate superior action recognition performance on standard action recognition benchmarks, without using a single manually labelled action example.
-
-</details>
-
-### Creating Something From Nothing: Unsupervised Knowledge Distillation for Cross-Modal Hashing.
-- **链接**: [arXiv:2004.00280](https://arxiv.org/abs/2004.00280) · 📚 被引 115
-- **作者**: Hengtong Hu, Lingxi Xie, Richang Hong, Qi Tian
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In recent years, cross-modal hashing (CMH) has attracted increasing attentions, mainly because its potential ability of mapping contents from different modalities, especially in vision and language, into the same space, so that it becomes efficient in cross-modal data retrieval. There are two main frameworks for CMH, differing from each other in whether semantic supervision is required. Compared to the unsupervised methods, the supervised methods often enjoy more accurate results, but require much heavier labors in data annotation. In this paper, we propose a novel approach that enables guiding a supervised method using outputs produced by an unsupervised method. Specifically, we make use of teacher-student optimization for propagating knowledge. Experiments are performed on two popular CMH benchmarks, i.e., the MIRFlickr and NUS-WIDE datasets. Our approach outperforms all existing unsupervised methods by a large margin.
-
-</details>
-
-## 跨领域论文（完整笔记在其他领域）
-
-- nuScenes: A Multimodal Dataset for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202020.md)
