@@ -1,9 +1,9 @@
 # Multi-camera Perception — 2024 Guideline
 
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
-> 论文数: 69 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 11 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: [2022](Guideline%202022.md)
+> 同领域其他年份: 
 
 ### PKU-DyMVHumans: A Multi-View Video Benchmark for High-Fidelity Dynamic Human Modeling. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2403.16080](https://arxiv.org/abs/2403.16080) · 📚 被引 16
@@ -570,7 +570,7 @@
 - **链接**: [arXiv:2311.18482](https://arxiv.org/abs/2311.18482)
 - **作者**: Jin-Chuan Shi, Miao Wang, Hao-Bin Duan, Shao-Hua Guan
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -578,11 +578,11 @@
 
 </details>
 
-### GOV-NeSF: Generalizable Open-Vocabulary Neural Semantic Fields.
-- **链接**: [arXiv:2404.00931](https://arxiv.org/abs/2404.00931) · 📚 被引 3
-- **作者**: Yunsong Wang, Hanlin Chen, Gim Hee Lee
-- **🏷️ 机构**: National University of Singapore,Department of Computer Science
-- **会议**: CVPR 2024
+### FroSSL: Frobenius Norm Minimization for Efficient Multiview Self-supervised Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73024-5_5)
+- **作者**: Oscar Skean, Aayush Dhakal, Nathan Jacobs, Luis Gonzalo Sánchez Giraldo
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -590,11 +590,11 @@
 
 </details>
 
-### MaskClustering: View Consensus Based Mask Graph Clustering for Open-Vocabulary 3D Instance Segmentation.
-- **链接**: [arXiv:2401.07745](https://arxiv.org/abs/2401.07745) · 📚 被引 41
-- **作者**: Mi Yan, Jiazhao Zhang, Yan Zhu, He Wang
-- **🏷️ 机构**: CFCS, School of CS, Peking University
-- **会议**: CVPR 2024
+### CAT3D: Create Anything in 3D with Multi-View Diffusion Models.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/89e4433fec4b99f1d859db57af1e0a0f-Abstract-Conference.html) · 📚 被引 31
+- **作者**: Ruiqi Gao, Aleksander Holynski, Philipp Henzler, Arthur Brussee, Ricardo Martin-Brualla, Pratul P. Srinivasan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -602,11 +602,11 @@
 
 </details>
 
-### EMOPortraits: Emotion-Enhanced Multimodal One-Shot Head Avatars.
-- **链接**: [arXiv:2404.19110](https://arxiv.org/abs/2404.19110) · 📚 被引 41
-- **作者**: Nikita Drobyshev, Antoni Bigata Casademunt, Konstantinos Vougioukas, Zoe Landgraf, Stavros Petridis, Maja Pantic
-- **🏷️ 机构**: Imperial College London
-- **会议**: CVPR 2024
+### EgoSim: An Egocentric Multi-view Simulator and Real Dataset for Body-worn Cameras during Motion and Activity.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/c1017d0a006d31dfbfd4cf1e9189d747-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 2
+- **作者**: Dominik Hollidt, Paul Streli, Jiaxi Jiang, Yasaman Haghighi, Changlin Qian, Xintong Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -614,11 +614,7 @@
 
 </details>
 
-### OmniSeg3D: Omniversal 3D Segmentation via Hierarchical Contrastive Learning.
-- **链接**: [arXiv:2311.11666](https://arxiv.org/abs/2311.11666) · 📚 被引 52
-- **作者**: Haiyang Ying, Yixuan Yin, Jinzhi Zhang, Fan Wang, Tao Yu, Ruqi Huang et al.
-- **🏷️ 机构**: Tsinghua University, Alibaba Group
-- **会议**: CVPR 2024
+> We present MV2Cyl, a novel method for reconstructing 3D from 2D multi-view images, not merely as a field or raw geometry but as a sketch-extrude CAD model. Extracting extrusion cylinders from raw 3D geometry has been extensively researched in computer vision, while the processing of 3D data through neural networks has remained a bottleneck. Since 3D scans are generally accompanied by multi-view images, leveraging 2D convolutional neural networks allows these images to be exploited as a rich source for extracting extrusion cylinder information. However, we observe that extracting only the surface information of the extrudes and utilizing it results in suboptimal outcomes due to the challenges in the occlusion and surface segmentation. By synergizing with the extracted base curve information, we achieve the optimal reconstruction result with the best accuracy in 2D sketch and extrude parameter estimation. Our experiments, comparing our method with previous work that takes a raw 3D point cloud as input, demonstrate the effectiveness of our approach by taking advantage of multi-view images. Our project page can be found at http://mv2cyl.github.io .
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -628,20 +624,7 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- CLIP-BEVFormer: Enhancing Multi-View Image-Based BEV Detector with Ground Truth Flow. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Cam4DOcc: Benchmark for Camera-Only 4D Occupancy Forecasting in Autonomous Driving Applications. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Enhancing 3D Object Detection with 2D Detection-Guided Query Anchors. → [3d-detection](../3d-detection/Guideline%202024.md)
-- ADA-Track: End-to-End Multi-Camera 3D Multi-Object Tracking with Alternating Detection and Association. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- RCBEVDet: Radar-Camera Fusion in Bird's Eye View for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- VSRD: Instance-Aware Volumetric Silhouette Rendering for Weakly Supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Multi-View Attentive Contextualization for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- From a Bird's Eye View to See: Joint Camera and Subject Registration without the Camera Calibration. → [bev](../bev/Guideline%202024.md)
-- SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Adaptive Fusion of Single-View and Multi-View Depth for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- MVIP-NeRF: Multi-View 3D Inpainting on NeRF Scenes via Diffusion Prior. → [knowledge-distillation](../knowledge-distillation/Guideline%202024.md)
-- Physical 3D Adversarial Attacks against Monocular Depth Estimation in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- Driving Into the Future: Multiview Visual Forecasting and Planning with World Model for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- DrivingGaussian: Composite Gaussian Splatting for Surrounding Dynamic Autonomous Driving Scenes. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- Light the Night: A Multi-Condition Diffusion Framework for Unpaired Low-Light Enhancement in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- DriveWorld: 4D Pre-Trained Scene Understanding via World Models for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Volumetric Environment Representation for Vision-Language Navigation. → [3d-detection](../3d-detection/Guideline%202024.md)
+- OPEN: Object-Wise Position Embedding for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Learning High-Resolution Vector Representation from Multi-camera Images for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Ray Denoising: Depth-Aware Hard Negative Sampling for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
