@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Road Anomaly Detection by Partial Image Reconstruction with Segmentation Coupling.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01536) · 📚 104 citations
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01536) · 📚 被引 83
 - **作者**: Tomas Vojir, Tomás Sipka, Rahaf Aljundi, Nikolay Chumerin, Daniel Olmeda Reino, Jiri Matas
-- **🏷️ 机构**: Department of Cybernetics, Faculty of Electrical Engineering, Czech Technical University in Prague
+- **🏷️ 机构**: Czech Technical University in Prague,Faculty of Electrical Engineering,Czech Republic, Toyota Motor Europe,Brussels,Belgium
 - **会议**: ICCV 2021
