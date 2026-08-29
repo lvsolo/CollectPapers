@@ -1,143 +1,259 @@
 # VLM — 2025 Guideline
 
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
-> 论文数: 60 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 54 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Generalized Few-shot 3D Point Cloud Segmentation with Vision-Language Model.
-- **链接**: [arXiv:2503.16282](https://arxiv.org/abs/2503.16282) · [代码](https://github.com/ZhaochongAn/GFS-VL)
-- **作者**: Zhaochong An, Guolei Sun, Yun Liu, Runjia Li, Junlin Han, Ender Konukoglu et al.
+### Do Vision-Language Models Really Understand Visual Language?
+- **链接**: [出版页](https://proceedings.mlr.press/v267/hou25c.html)
+- **作者**: Yifan Hou, Buse Giledereli, Yilei Tu, Mrinmaya Sachan
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2025
+- **会议**: ICML 2025
+
+### Surrogate Prompt Learning: Towards Efficient and Diverse Prompt Learning for Vision-Language Models.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/liu25bx.html)
+- **作者**: Liangchen Liu, Nannan Wang, Xi Yang, Xinbo Gao, Tongliang Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Improving Zero-Shot Adversarial Robustness in Vision-Language Models by Closed-form Alignment of Adversarial Path Simplices.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/dong25f.html)
+- **作者**: Junhao Dong, Piotr Koniusz, Yifei Zhang, Hao Zhu, Weiming Liu, Xinghua Qu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### The Hidden Life of Tokens: Reducing Hallucination of Large Vision-Language Models Via Visual Information Steering.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/li25ca.html)
+- **作者**: Zhuowei Li, Haizhou Shi, Yunhe Gao, Di Liu, Zhenting Wang, Yuxiao Chen et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Re-ranking Reasoning Context with Tree Search Makes Large Vision-Language Models Stronger.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/yang25at.html)
+- **作者**: Qi Yang, Chenghao Zhang, Lubin Fan, Kun Ding, Jieping Ye, Shiming Xiang
+- **🏷️ 机构**:  Alibaba / Zhejiang Lab
+- **会议**: ICML 2025
+
+### SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/zhang25s.html)
+- **作者**: Yuan Zhang, Chun-Kai Fan, Junpeng Ma, Wenzhao Zheng, Tao Huang, Kuan Cheng et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Layer-wise Alignment: Examining Safety Alignment Across Image Encoder Layers in Vision Language Models.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/bachu25a.html)
+- **作者**: Saketh Bachu, Erfan Shayegani, Rohit Lal, Trishna Chakraborty, Arindam Dutta, Chengyu Song et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Testing the Limits of Fine-Tuning for Improving Visual Cognition in Vision Language Models.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/schulze-buschoff25a.html)
+- **作者**: Luca M. Schulze Buschoff, Konstantinos Voudouris, Elif Akata, Matthias Bethge, Joshua B. Tenenbaum, Eric Schulz
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### From Local Details to Global Context: Advancing Vision-Language Models with Attention-Based Selection.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/cai25d.html)
+- **作者**: Lincan Cai, Jingxuan Kang, Shuang Li, Wenxuan Ma, Binhui Xie, Zhida Qin et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### TRUST-VLM: Thorough Red-Teaming for Uncovering Safety Threats in Vision-Language Models.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/chen25au.html)
+- **作者**: Kangjie Chen, Muyang Li, Guanlin Li, Shudong Zhang, Shangwei Guo, Tianwei Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### ELEMENTAL: Interactive Learning from Demonstrations and Vision-Language Models for Reward Design in Robotics.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/chen25at.html)
+- **作者**: Letian Chen, Nina Marie Moorman, Matthew Craig Gombolay
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### ERICT: Enhancing Robustness by Identifying Concept Tokens in Zero-Shot Vision Language Models.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/dong25o.html)
+- **作者**: Xinpeng Dong, Min Zhang, Didi Zhu, Ye Jun Jian, Keli Zhang, Aimin Zhou et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Kernel-based Unsupervised Embedding Alignment for Enhanced Visual Representation in Vision-language Models.
+- **链接**: [arXiv:2506.02557](https://arxiv.org/abs/2506.02557)
+- **作者**: Shizhan Gong, Yankai Jiang, Qi Dou, Farzan Farnia
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Generalized few-shot 3D point cloud segmentation (GFS-PCS) adapts models to new classes with few support samples while retaining base class segmentation. Existing GFS-PCS methods enhance prototypes via interacting with support or query features but remain limited by sparse knowledge from few-shot samples. Meanwhile, 3D vision-language models (3D VLMs), generalizing across open-world novel classes, contain rich but noisy novel class knowledge. In this work, we introduce a GFS-PCS framework that synergizes dense but noisy pseudo-labels from 3D VLMs with precise yet sparse few-shot samples to maximize the strengths of both, named GFS-VL. Specifically, we present a prototype-guided pseudo-label selection to filter low-quality regions, followed by an adaptive infilling strategy that combines knowledge from pseudo-label contexts and few-shot samples to adaptively label the filtered, unlabeled areas. Additionally, we design a novel-base mix strategy to embed few-shot samples into training scenes, preserving essential context for improved novel class learning. Moreover, recognizing the limited diversity in current GFS-PCS benchmarks, we introduce two challenging benchmarks with diverse novel classes for comprehensive generalization evaluation. Experiments validate the effectiveness of our framework across models and datasets. Our approach and benchmarks provide a solid foundation for advancing GFS-PCS in the real world. The code is at https://github.com/ZhaochongAn/GFS-VL
+> Vision-language models, such as CLIP, have achieved significant success in aligning visual and textual representations, becoming essential components of many multi-modal large language models (MLLMs) like LLaVA and OpenFlamingo. However, numerous studies have identified CLIP's limited fine-grained perception as a critical drawback, leading to substantial failures in downstream MLLMs. In contrast, vision-centric foundation models like DINOv2 demonstrate remarkable capabilities in capturing fine details from images. In this work, we propose a novel kernel-based method to align CLIP's visual representation with that of DINOv2, ensuring that the resulting embeddings maintain compatibility with text embeddings while enhancing perceptual capabilities. Our alignment objective is designed for efficient stochastic optimization. Following this image-only alignment fine-tuning, the visual encoder retains compatibility with the frozen text encoder and exhibits significant improvements in zero-shot object recognition, fine-grained spatial reasoning, and localization. By integrating the aligned visual encoder, downstream MLLMs also demonstrate enhanced performance.
 
 </details>
 
-### ProxyTransformation: Preshaping Point Cloud Manifold With Proxy Attention For 3D Visual Grounding.
-- **链接**: [arXiv:2502.19247](https://arxiv.org/abs/2502.19247) · 📚 被引 0
-- **作者**: Qihang Peng, Henry Zheng, Gao Huang
-- **🏷️ 机构**: Tsinghua University
-- **会议**: CVPR 2025
+### Double-Filter: Efficient Fine-tuning of Pre-trained Vision-Language Models via Patch&Layer Filtering.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/he25e.html)
+- **作者**: Yaoqin He, Junchen Fu, Kaiwen Zheng, Songpei Xu, Fuhai Chen, Jie Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### GS-Bias: Global-Spatial Bias Learner for Single-Image Test-Time Adaptation of Vision-Language Models.
+- **链接**: [arXiv:2507.11969](https://arxiv.org/abs/2507.11969)
+- **作者**: Zhaohong Huang, Yuxin Zhang, Jingjing Xie, Fei Chao, Rongrong Ji
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Embodied intelligence requires agents to interact with 3D environments in real time based on language instructions. A foundational task in this domain is ego-centric 3D visual grounding. However, the point clouds rendered from RGB-D images retain a large amount of redundant background data and inherent noise, both of which can interfere with the manifold structure of the target regions. Existing point cloud enhancement methods often require a tedious process to improve the manifold, which is not suitable for real-time tasks. We propose Proxy Transformation suitable for multimodal task to efficiently improve the point cloud manifold. Our method first leverages Deformable Point Clustering to identify the point cloud sub-manifolds in target regions. Then, we propose a Proxy Attention module that utilizes multimodal proxies to guide point cloud transformation. Built upon Proxy Attention, we design a submanifold transformation generation module where textual information globally guides translation vectors for different submanifolds, optimizing relative spatial relationships of target regions. Simultaneously, image information guides linear transformations within each submanifold, refining the local point cloud manifold of target regions. Extensive experiments demonstrate that Proxy Transformation significantly outperforms all existing methods, achieving an impressive improvement of 7.49% on easy targets and 4.60% on hard targets, while reducing the computational overhead of attention blocks by 40.6%. These results establish a new SOTA in ego-centric 3D visual grounding, showcasing the effectiveness and robustness of our approach.
+> Recent advances in test-time adaptation (TTA) for Vision-Language Models (VLMs) have garnered increasing attention, particularly through the use of multiple augmented views of a single image to boost zero-shot generalization. Unfortunately, existing methods fail to strike a satisfactory balance between performance and efficiency, either due to excessive overhead of tuning text prompts or unstable benefits from handcrafted, training-free visual feature enhancement. In this paper, we present Global-Spatial Bias Learner (GS-Bias), an efficient and effective TTA paradigm that incorporates two learnable biases during TTA, unfolded as the global bias and spatial bias. Particularly, the global bias captures the global semantic features of a test image by learning consistency across augmented views, while spatial bias learns the semantic coherence between regions in the image's spatial visual representation. It is worth highlighting that these two sets of biases are directly added to the logits outputed by the pretrained VLMs, which circumvent the full backpropagation through VLM that hinders the efficiency of existing TTA methods. This endows GS-Bias with extremely high efficiency while achieving state-of-the-art performance on 15 benchmark datasets. For example, it achieves a 2.23% improvement over TPT in cross-dataset generalization and a 2.72% improvement in domain generalization, while requiring only 6.5% of TPT's memory usage on ImageNet.
 
 </details>
 
-### UPME: An Unsupervised Peer Review Framework for Multimodal Large Language Model Evaluation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_UPME_An_Unsupervised_Peer_Review_Framework_for_Multimodal_Large_Language_CVPR_2025_paper.html) · 📚 被引 2
-- **作者**: Qihui Zhang, Munan Ning, Zheyuan Liu, Yue Huang, Shuo Yang, Yanbo Wang et al.
-- **🏷️ 机构**: Peking University,School of Electrical and Computer Engineering, University of Notre Dame, Tsinghua University
-- **会议**: CVPR 2025
+### Test-Time Adaptation for Online Vision-Language Navigation with Feedback-based Reinforcement Learning.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/kim25ad.html)
+- **作者**: Sungjune Kim, Gyeongrok Oh, Heeju Ko, Daehyun Ji, Dongwook Lee, Byung-Jun Lee et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
-### Debiasing Multimodal Large Language Models via Noise-Aware Preference Optimization.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Debiasing_Multimodal_Large_Language_Models_via_Noise-Aware_Preference_Optimization_CVPR_2025_paper.html) · 📚 被引 8
-- **作者**: Zefeng Zhang, Hengzhu Tang, Jiawei Sheng, Zhenyu Zhang, Yiming Ren, Zhenyang Li et al.
-- **🏷️ 机构**: Chinese Academy of Sciences,Institute of Information Engineering, Baidu Inc.
-- **会议**: CVPR 2025
+### FOCoOp: Enhancing Out-of-Distribution Robustness in Federated Prompt Learning for Vision-Language Models.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/liao25e.html)
+- **作者**: Xinting Liao, Weiming Liu, Jiaming Qian, Pengyang Zhou, Jiahe Xu, Wenjie Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
-### Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhao_Accelerating_Multimodal_Large_Language_Models_by_Searching_Optimal_Vision_Token_CVPR_2025_paper.html) · 📚 被引 4
-- **作者**: Shiyu Zhao, Zhenting Wang, Felix Juefei-Xu, Xide Xia, Miao Liu, Xiaofang Wang et al.
-- **🏷️ 机构**: Rutgers University, Meta
-- **会议**: CVPR 2025
+### HealthGPT: A Medical Large Vision-Language Model for Unifying Comprehension and Generation via Heterogeneous Knowledge Adaptation.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/lin25n.html)
+- **作者**: Tianwei Lin, Wenqiao Zhang, Sijing Li, Yuqian Yuan, Binhe Yu, Haoyuan Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
-### SynTab-LLaVA: Enhancing Multimodal Table Understanding with Decoupled Synthesis.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_SynTab-LLaVA_Enhancing_Multimodal_Table_Understanding_with_Decoupled_Synthesis_CVPR_2025_paper.html) · 📚 被引 3
-- **作者**: Bangbang Zhou, Zuan Gao, Zixiao Wang, Boqiang Zhang, Yuxin Wang, Zhineng Chen et al.
-- **🏷️ 机构**: University of Science and Technology of China, Fudan Univeristy
-- **会议**: CVPR 2025
+### Enhancing Rating-Based Reinforcement Learning to Effectively Leverage Feedback from Large Vision-Language Models.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/luu25a.html)
+- **作者**: Tung Minh Luu, Younghwan Lee, Donghoon Lee, Sunho Kim, Min Jun Kim, Chang D. Yoo
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
-### MotionBench: Benchmarking and Improving Fine-grained Video Motion Understanding for Vision Language Models.
-- **链接**: [arXiv:2501.02955](https://arxiv.org/abs/2501.02955) · 📚 被引 9
-- **作者**: Wenyi Hong, Yean Cheng, Zhuoyi Yang, Weihan Wang, Lefan Wang, Xiaotao Gu et al.
-- **🏷️ 机构**: Tsinghua University, Zhipu AI
-- **会议**: CVPR 2025
+### SECOND: Mitigating Perceptual Hallucination in Vision-Language Models via Selective and Contrastive Decoding.
+- **链接**: [arXiv:2506.08391](https://arxiv.org/abs/2506.08391)
+- **作者**: Woohyeon Park, Woojin Kim, Jaeik Kim, Jaeyoung Do
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In recent years, vision language models (VLMs) have made significant advancements in video understanding. However, a crucial capability - fine-grained motion comprehension - remains under-explored in current benchmarks. To address this gap, we propose MotionBench, a comprehensive evaluation benchmark designed to assess the fine-grained motion comprehension of video understanding models. MotionBench evaluates models' motion-level perception through six primary categories of motion-oriented question types and includes data collected from diverse sources, ensuring a broad representation of real-world video content. Experimental results reveal that existing VLMs perform poorly in understanding fine-grained motions. To enhance VLM's ability to perceive fine-grained motion within a limited sequence length of LLM, we conduct extensive experiments reviewing VLM architectures optimized for video feature compression and propose a novel and efficient Through-Encoder (TE) Fusion method. Experiments show that higher frame rate inputs and TE Fusion yield improvements in motion understanding, yet there is still substantial room for enhancement. Our benchmark aims to guide and motivate the development of more capable video understanding models, emphasizing the importance of fine-grained motion comprehension. Project page: https://motion-bench.github.io .
+> Despite significant advancements in Vision-Language Models (VLMs), the performance of existing VLMs remains hindered by object hallucination, a critical challenge to achieving accurate visual understanding. To address this issue, we propose SECOND: Selective and Contrastive Decoding, a novel approach that enables VLMs to effectively leverage multi-scale visual information with an object-centric manner, closely aligning with human visual perception. SECOND progressively selects and integrates multi-scale visual information, facilitating a more precise interpretation of images. By contrasting these visual information iteratively, SECOND significantly reduces perceptual hallucinations and outperforms a wide range of benchmarks. Our theoretical analysis and experiments highlight the largely unexplored potential of multi-scale application in VLMs, showing that prioritizing and contrasting across scales outperforms existing methods.
 
 </details>
 
-### Retaining Knowledge and Enhancing Long-Text Representations in CLIP through Dual-Teacher Distillation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Feng_Retaining_Knowledge_and_Enhancing_Long-Text_Representations_in_CLIP_through_Dual-Teacher_CVPR_2025_paper.html) · 📚 被引 2
-- **作者**: Yuheng Feng, Changsong Wen, Zelin Peng, Li jiaye, Siyu Zhu
-- **🏷️ 机构**: Fudan University, Shanghai Jiao Tong University
-- **会议**: CVPR 2025
-
-### VL2Lite: Task-Specific Knowledge Distillation from Large Vision-Language Models to Lightweight Networks.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jang_VL2Lite_Task-Specific_Knowledge_Distillation_from_Large_Vision-Language_Models_to_Lightweight_CVPR_2025_paper.html) · 📚 被引 11
-- **作者**: Jinseong Jang, Chunfei Ma, Byeongwon Lee
-- **🏷️ 机构**: Vision Lab, AI R&amp;D Center, SK Telecom
-- **会议**: CVPR 2025
-
-### Classifier-guided CLIP Distillation for Unsupervised Multi-label Classification.
-- **链接**: [arXiv:2503.16873](https://arxiv.org/abs/2503.16873) · [代码](https://github.com/k0u-id/CCD) · 📚 被引 3
-- **作者**: Dongseob Kim, Hyunjung Shim
-- **🏷️ 机构**: Samsung Electronics,Republic of Korea, KAIST,Republic of Korea
-- **会议**: CVPR 2025
+### Learning Invariant Causal Mechanism from Vision-Language Models.
+- **链接**: [arXiv:2405.15289](https://arxiv.org/abs/2405.15289)
+- **作者**: Zeen Song, Siyu Zhao, Xingyu Zhang, Jiangmeng Li, Changwen Zheng, Wenwen Qiang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Multi-label classification is crucial for comprehensive image understanding, yet acquiring accurate annotations is challenging and costly. To address this, a recent study suggests exploiting unsupervised multi-label classification leveraging CLIP, a powerful vision-language model. Despite CLIP's proficiency, it suffers from view-dependent predictions and inherent bias, limiting its effectiveness. We propose a novel method that addresses these issues by leveraging multiple views near target objects, guided by Class Activation Mapping (CAM) of the classifier, and debiasing pseudo-labels derived from CLIP predictions. Our Classifier-guided CLIP Distillation (CCD) enables selecting multiple local views without extra labels and debiasing predictions to enhance classification performance. Experimental results validate our method's superiority over existing techniques across diverse datasets. The code is available at https://github.com/k0u-id/CCD.
+> Contrastive Language-Image Pretraining (CLIP) has achieved remarkable success, but its performance can degrade when fine-tuned in out-of-distribution (OOD) scenarios. We model the prediction process using a Structural Causal Model (SCM) and show that the causal mechanism involving both invariant and variant factors in training environments differs from that in test environments. In contrast, the causal mechanism with solely invariant factors remains consistent across environments. We theoretically prove the existence of a linear mapping from CLIP embeddings to invariant factors, which can be estimated using interventional data. Additionally, we provide a condition to guarantee low OOD risk of the invariant predictor. Based on these insights, we propose the Invariant Causal Mechanism of CLIP (CLIP-ICM) framework. CLIP-ICM involves collecting interventional data, estimating a linear projection matrix, and making predictions within the invariant subspace. Experiments on several OOD datasets show that CLIP-ICM significantly improves the performance of CLIP. Our method offers a simple but powerful enhancement, boosting the reliability of CLIP in real-world applications.
 
 </details>
+
+### DS-VLM: Diffusion Supervision Vision Language Model.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/sun25p.html)
+- **作者**: Zhen Sun, Yunhang Shen, Jie Li, Xing Sun, Pingyang Dai, Liujuan Cao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Vision-Language Model Selection and Reuse for Downstream Adaptation.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/tan25i.html)
+- **作者**: Hao-Zhe Tan, Zhi Zhou, Yufeng Li, Lan-Zhe Guo
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Handling Imbalanced Pseudolabels for Vision-Language Models with Concept Alignment and Confusion-Aware Calibrated Margin.
+- **链接**: [arXiv:2505.02056](https://arxiv.org/abs/2505.02056)
+- **作者**: Yuchen Wang, Xuefeng Bai, Xiucheng Li, Weili Guan, Liqiang Nie, Xinyang Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Adapting vision-language models (VLMs) to downstream tasks with pseudolabels has gained increasing attention. A major obstacle is that the pseudolabels generated by VLMs tend to be imbalanced, leading to inferior performance. While existing methods have explored various strategies to address this, the underlying causes of imbalance remain insufficiently investigated. To fill this gap, we delve into imbalanced pseudolabels and identify two primary contributing factors: concept mismatch and concept confusion. To mitigate these two issues, we propose a novel framework incorporating concept alignment and confusion-aware calibrated margin mechanisms. The core of our approach lies in enhancing underperforming classes and promoting balanced predictions across categories, thus mitigating imbalance. Extensive experiments on six benchmark datasets with three learning paradigms demonstrate that the proposed method effectively enhances the accuracy and balance of pseudolabels, achieving a relative improvement of 6.29% over the SoTA method. Our code is avaliable at https://anonymous.4open.science/r/CAP-C642/
+
+</details>
+
+### Understanding and Mitigating Miscalibration in Prompt Tuning for Vision-Language Models.
+- **链接**: [arXiv:2410.02681](https://arxiv.org/abs/2410.02681) · 📚 被引 67
+- **作者**: Shuoyuan Wang, Yixuan Li, Hongxin Wei
+- **🏷️ 机构**: National Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences (CASIA), Beijing, China, Alibaba DAMO Academy, Hangzhou, China, Huawei Inc., Shenzhen, China
+- **会议**: ICML 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Confidence calibration is critical for the safe deployment of machine learning models in the real world. However, such issue in vision-language models like CLIP, particularly after fine-tuning, has not been fully addressed. In this work, we demonstrate that existing prompt tuning methods usually lead to a trade-off of calibration between base and new classes: the cross-entropy loss in CoOp causes overconfidence in new classes by increasing textual label divergence, whereas the regularization of KgCoOp maintains the confidence level but results in underconfidence in base classes due to the improved accuracy. Inspired by the observations, we introduce Dynamic Outlier Regularization (DOR) to ensure the confidence calibration on both base and new classes after fine-tuning. In particular, we propose to minimize the feature deviation of novel textual labels (instead of base classes) sampled from a large vocabulary. In effect, DOR prevents the increase in textual divergence for new labels while easing restrictions on base classes. Extensive experiments demonstrate that DOR can enhance the calibration performance of current fine-tuning methods on base and new classes.
+
+</details>
+
+### Textural or Textual: How Vision-Language Models Read Text in Images.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/wang25bw.html)
+- **作者**: Hanzhang Wang, Qingyuan Ma
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### 3D Question Answering via only 2D Vision-Language Models.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/wang25ef.html)
+- **作者**: Fengyun Wang, Sicheng Yu, Jiawei Wu, Jinhui Tang, Hanwang Zhang, Qianru Sun
+- **🏷️ 机构**: NUS
+- **会议**: ICML 2025
+
+### OmniBal: Towards Fast Instruction-Tuning for Vision-Language Models via Omniverse Computation Balance.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/yao25d.html)
+- **作者**: Yongqiang Yao, Jingru Tan, Feizhao Zhang, Jiahao Hu, Yazhe Niu, Xin Jin et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Unlocking the Capabilities of Large Vision-Language Models for Generalizable and Explainable Deepfake Detection.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/yu25d.html)
+- **作者**: Peipeng Yu, Jianwei Fei, Hui Gao, Xuan Feng, Zhihua Xia, Chip-Hong Chang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### PoisonedEye: Knowledge Poisoning Attack on Retrieval-Augmented Generation based Large Vision-Language Models.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/zhang25da.html)
+- **作者**: Chenyang Zhang, Xiaoyu Zhang, Jian Lou, Kai Wu, Zilong Wang, Xiaofeng Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Mitigating Object Hallucination in Large Vision-Language Models via Image-Grounded Guidance.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/zhao25j.html)
+- **作者**: Linxi Zhao, Yihe Deng, Weitong Zhang, Quanquan Gu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### BDC-CLIP: Brownian Distance Covariance for Adapting CLIP to Action Recognition.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/long25a.html)
+- **作者**: Fei Long, Xiaoou Li, Jiaming Lv, Haoyuan Yang, Xianjun Cheng, Peihua Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- ROD-MLLM: Towards More Reliable Object Detection in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- MIMO: A Medical Vision Language Model with Visual Referring Multimodal Input and Pixel Grounding Multimodal Output. → [multimodal](../multimodal/Guideline%202025.md)
-- Bridging Modalities: Improving Universal Multimodal Retrieval by Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- LoRASculpt: Sculpting LoRA for Harmonizing General and Specialized Knowledge in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- 4D LangSplat: 4D Language Gaussian Splatting via Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- RAP: Retrieval-Augmented Personalization for Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- S4-Driver: Scalable Self-Supervised Driving Multimodal Large Language Model with Spatio-Temporal Visual Representation. → [multimodal](../multimodal/Guideline%202025.md)
-- XLRS-Bench: Could Your Multimodal LLMs Understand Extremely Large Ultra-High-Resolution Remote Sensing Imagery? → [multimodal](../multimodal/Guideline%202025.md)
-- Cross-modal Information Flow in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- CoMM: A Coherent Interleaved Image-Text Dataset for Multimodal Understanding and Generation. → [multimodal](../multimodal/Guideline%202025.md)
-- Augmenting Multimodal LLMs with Self-Reflective Tokens for Knowledge-based Visual Question Answering. → [multimodal](../multimodal/Guideline%202025.md)
-- Insight-V: Exploring Long-Chain Visual Reasoning with Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- AdaMMS: Model Merging for Heterogeneous Multimodal Large Language Models with Unsupervised Coefficient Optimization. → [multimodal](../multimodal/Guideline%202025.md)
-- GroundingFace: Fine-grained Face Understanding via Pixel Grounding Multimodal Large Language Model. → [multimodal](../multimodal/Guideline%202025.md)
-- CL-MoE: Enhancing Multimodal Large Language Model with Dual Momentum Mixture-of-Experts for Continual Visual Question Answering. → [multimodal](../multimodal/Guideline%202025.md)
-- Playing the Fool: Jailbreaking LLMs and Multimodal LLMs with Out-of-Distribution Strategy. → [multimodal](../multimodal/Guideline%202025.md)
-- Img-Diff: Contrastive Data Synthesis for Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- Is 'Right' Right? Enhancing Object Orientation Understanding in Multimodal Large Language Models through Egocentric Instruction Tuning. → [multimodal](../multimodal/Guideline%202025.md)
-- LLaVA-ST: A Multimodal Large Language Model for Fine-Grained Spatial-Temporal Understanding. → [multimodal](../multimodal/Guideline%202025.md)
-- VidHalluc: Evaluating Temporal Hallucinations in Multimodal Large Language Models for Video Understanding. → [multimodal](../multimodal/Guideline%202025.md)
-- COUNTS: Benchmarking Object Detectors and Multimodal Large Language Models under Distribution Shifts. → [multimodal](../multimodal/Guideline%202025.md)
-- Multi-Layer Visual Feature Fusion in Multimodal LLMs: Methods, Analysis, and Best Practices. → [multimodal](../multimodal/Guideline%202025.md)
-- EventGPT: Event Stream Understanding with Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- BlueLM-V-3B: Algorithm and System Co-Design for Multimodal Large Language Models on Mobile Devices. → [multimodal](../multimodal/Guideline%202025.md)
-- Mono-InternVL: Pushing the Boundaries of Monolithic Multimodal Large Language Models with Endogenous Visual Pre-training. → [multimodal](../multimodal/Guideline%202025.md)
-- VideoGLaMM : A Large Multimodal Model for Pixel-Level Visual Grounding in Videos. → [multimodal](../multimodal/Guideline%202025.md)
-- The Photographer's Eye: Teaching Multimodal Large Language Models to See, and Critique Like Photographers. → [multimodal](../multimodal/Guideline%202025.md)
-- From Multimodal LLMs to Generalist Embodied Agents: Methods and Lessons. → [multimodal](../multimodal/Guideline%202025.md)
-- FlashSloth : Lightning Multimodal Large Language Models via Embedded Visual Compression. → [multimodal](../multimodal/Guideline%202025.md)
-- ODE: Open-Set Evaluation of Hallucinations in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- LLaVA-Critic: Learning to Evaluate Multimodal Models. → [multimodal](../multimodal/Guideline%202025.md)
-- Towards Zero-Shot Anomaly Detection and Reasoning with Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- Task Preference Optimization: Improving Multimodal Large Language Models with Vision Task Alignment. → [multimodal](../multimodal/Guideline%202025.md)
-- Distraction is All You Need for Multimodal Large Language Model Jailbreaking. → [multimodal](../multimodal/Guideline%202025.md)
-- TopV: Compatible Token Pruning with Inference Time Optimization for Fast and Low-Memory Multimodal Vision Language Model. → [multimodal](../multimodal/Guideline%202025.md)
-- Thinking in Space: How Multimodal Large Language Models See, Remember, and Recall Spaces. → [multimodal](../multimodal/Guideline%202025.md)
-- ClearSight: Visual Signal Enhancement for Object Hallucination Mitigation in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- SeqAfford: Sequential 3D Affordance Reasoning via Multimodal Large Language Model. → [multimodal](../multimodal/Guideline%202025.md)
-- Weakly Supervised Temporal Action Localization via Dual-Prior Collaborative Learning Guided by Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
-- Critic-V: VLM Critics Help Catch VLM Errors in Multimodal Reasoning. → [multimodal](../multimodal/Guideline%202025.md)
-- Period-LLM: Extending the Periodic Capability of Multimodal Large Language Model. → [multimodal](../multimodal/Guideline%202025.md)
-- Stealthy Backdoor Attack in Self-Supervised Learning Vision Encoders for Large Vision Language Models. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)
-- ImagineFSL: Self-Supervised Pretraining Matters on Imagined Base Set for VLM-based Few-shot Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)
-- Anyattack: Towards Large-scale Self-supervised Adversarial Attacks on Vision-language Models. → [self-supervised-vision](../self-supervised-vision/Guideline%202025.md)
-- Video-XL: Extra-Long Vision Language Model for Hour-Scale Video Understanding. → [video-understanding](../video-understanding/Guideline%202025.md)
-- BOLT: Boost Large Vision-Language Model Without Training for Long-form Video Understanding. → [video-understanding](../video-understanding/Guideline%202025.md)
-- Text-guided Sparse Voxel Pruning for Efficient 3D Visual Grounding. → [3d-detection](../3d-detection/Guideline%202025.md)
-- EfficientLLaVA: Generalizable Auto-Pruning for Large Vision-language Models. → [network-pruning](../network-pruning/Guideline%202025.md)
-- Libra-Merging: Importance-redundancy and Pruning-merging Trade-off for Acceleration Plug-in in Large Vision-Language Model. → [network-pruning](../network-pruning/Guideline%202025.md)
-- ATP-LLaVA: Adaptive Token Pruning for Large Vision Language Models. → [network-pruning](../network-pruning/Guideline%202025.md)
+- AffectGPT: A New Dataset, Model, and Benchmark for Emotion Understanding with Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+- Visual Graph Arena: Evaluating Visual Conceptualization of Vision and Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+- Vision-Language Models Create Cross-Modal Task Representations. → [multimodal](../multimodal/Guideline%202025.md)
+- CoreMatching: A Co-adaptive Sparse Inference Framework with Token and Neuron Pruning for Comprehensive Acceleration of Vision-Language Models. → [network-pruning](../network-pruning/Guideline%202025.md)
+- Time-VLM: Exploring Multimodal Vision-Language Models for Augmented Time Series Forecasting. → [multimodal](../multimodal/Guideline%202025.md)
+- MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization. → [multimodal](../multimodal/Guideline%202025.md)
+- Look Twice Before You Answer: Memory-Space Visual Retracing for Hallucination Mitigation in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+- Modularized Self-Reflected Video Reasoner for Multimodal LLM with Application to Video Question Answering. → [multimodal](../multimodal/Guideline%202025.md)
+- Learn from Downstream and Be Yourself in Multimodal Large Language Models Fine-Tuning. → [multimodal](../multimodal/Guideline%202025.md)
+- MM-RLHF: The Next Step Forward in Multimodal LLM Alignment. → [multimodal](../multimodal/Guideline%202025.md)
+- SK-VQA: Synthetic Knowledge Generation at Scale for Training Context-Augmented Multimodal LLMs. → [multimodal](../multimodal/Guideline%202025.md)
+- LV-XAttn: Distributed Cross-Attention for Long Visual Inputs in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+- Catch Your Emotion: Sharpening Emotion Perception in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+- Visual Attention Never Fades: Selective Progressive Attention ReCalibration for Detailed Image Captioning in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+- From Black Boxes to Transparent Minds: Evaluating and Enhancing the Theory of Mind in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+- Reasoning Limitations of Multimodal Large Language Models. A case study of Bongard Problems. → [multimodal](../multimodal/Guideline%202025.md)
+- Understanding Multimodal LLMs Under Distribution Shifts: An Information-Theoretic Approach. → [multimodal](../multimodal/Guideline%202025.md)
+- WMarkGPT: Watermarked Image Understanding via Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+- Robust Multimodal Large Language Models Against Modality Conflict. → [multimodal](../multimodal/Guideline%202025.md)
+- CPCF: A Cross-Prompt Contrastive Framework for Referring Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+- EasyRef: Omni-Generalized Group Image Reference for Diffusion Models via Multimodal LLM. → [multimodal](../multimodal/Guideline%202025.md)
+- LADA: Scalable Label-Specific CLIP Adapter for Continual Learning. → [continual-learning](../continual-learning/Guideline%202025.md)
