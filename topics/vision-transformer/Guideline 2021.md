@@ -6,13 +6,19 @@
 > 同领域其他年份: 
 
 ### Swin Transformer: Hierarchical Vision Transformer using Shifted Windows.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00986) · 📚 被引 29964
+- **链接**: [arXiv:2103.14030](https://arxiv.org/abs/2103.14030) · [代码](https://github.com/microsoft/Swin-Transformer) · 📚 被引 30009
 - **作者**: Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang et al.
 - **🏷️ 机构**: Microsoft Research Asia
 - **会议**: ICCV 2021
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents a new vision Transformer, called Swin Transformer, that capably serves as a general-purpose backbone for computer vision. Challenges in adapting Transformer from language to vision arise from differences between the two domains, such as large variations in the scale of visual entities and the high resolution of pixels in images compared to words in text. To address these differences, we propose a hierarchical Transformer whose representation is computed with \textbf{S}hifted \textbf{win}dows. The shifted windowing scheme brings greater efficiency by limiting self-attention computation to non-overlapping local windows while also allowing for cross-window connection. This hierarchical architecture has the flexibility to model at various scales and has linear computational complexity with respect to image size. These qualities of Swin Transformer make it compatible with a broad range of vision tasks, including image classification (87.3 top-1 accuracy on ImageNet-1K) and dense prediction tasks such as object detection (58.7 box AP and 51.1 mask AP on COCO test-dev) and semantic segmentation (53.5 mIoU on ADE20K val). Its performance surpasses the previous state-of-the-art by a large margin of +2.7 box AP and +2.6 mask AP on COCO, and +3.2 mIoU on ADE20K, demonstrating the potential of Transformer-based models as vision backbones. The hierarchical design and the shifted window approach also prove beneficial for all-MLP architectures. The code and models are publicly available at~\url{https://github.com/microsoft/Swin-Transformer}.
+
+</details>
+
 ### Tokens-to-Token ViT: Training Vision Transformers from Scratch on ImageNet.
-- **链接**: [arXiv:2101.11986](https://arxiv.org/abs/2101.11986) · [代码](https://github.com/yitu-opensource/T2T-ViT) · 📚 被引 1965
+- **链接**: [arXiv:2101.11986](https://arxiv.org/abs/2101.11986) · [代码](https://github.com/yitu-opensource/T2T-ViT) · 📚 被引 1967
 - **作者**: Li Yuan, Yunpeng Chen, Tao Wang, Weihao Yu, Yujun Shi, Zihang Jiang et al.
 - **🏷️ 机构**: National University of Singapore, YITU Technology
 - **会议**: ICCV 2021
@@ -36,7 +42,7 @@
 </details>
 
 ### ViViT: A Video Vision Transformer.
-- **链接**: [arXiv:2103.15691](https://arxiv.org/abs/2103.15691) · [代码](https://github.com/google-research/scenic) · 📚 被引 2386
+- **链接**: [arXiv:2103.15691](https://arxiv.org/abs/2103.15691) · [代码](https://github.com/google-research/scenic) · 📚 被引 2388
 - **作者**: Anurag Arnab, Mostafa Dehghani, Georg Heigold, Chen Sun, Mario Lucic, Cordelia Schmid
 - **🏷️ 机构**: Google Research
 - **会议**: ICCV 2021
@@ -48,7 +54,7 @@
 </details>
 
 ### CrossViT: Cross-Attention Multi-Scale Vision Transformer for Image Classification.
-- **链接**: [arXiv:2103.14899](https://arxiv.org/abs/2103.14899) · [代码](https://github.com/IBM/CrossViT) · 📚 被引 1848
+- **链接**: [arXiv:2103.14899](https://arxiv.org/abs/2103.14899) · [代码](https://github.com/IBM/CrossViT) · 📚 被引 1849
 - **作者**: Chun-Fu (Richard) Chen, Quanfu Fan, Rameswar Panda
 - **🏷️ 机构**: MIT-IBM Watson AI Lab
 - **会议**: ICCV 2021
@@ -63,40 +69,52 @@
 - **链接**: [arXiv:2104.01136](https://arxiv.org/abs/2104.01136) · [代码](https://github.com/facebookresearch/LeViT) · 📚 被引 812
 - **作者**: Benjamin Graham, Alaaeldin El-Nouby, Hugo Touvron, Pierre Stock, Armand Joulin, Hervé Jégou et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: NeurIPS 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We design a family of image classification architectures that optimize the trade-off between accuracy and efficiency in a high-speed regime. Our work exploits recent findings in attention-based architectures, which are competitive on highly parallel processing hardware. We revisit principles from the extensive literature on convolutional neural networks to apply them to transformers, in particular activation maps with decreasing resolutions. We also introduce the attention bias, a new way to integrate positional information in vision transformers. As a result, we propose LeVIT: a hybrid neural network for fast inference image classification. We consider different measures of efficiency on different hardware platforms, so as to best reflect a wide range of application scenarios. Our extensive experiments empirically validate our technical choices and show they are suitable to most architectures. Overall, LeViT significantly outperforms existing convnets and vision transformers with respect to the speed/accuracy tradeoff. For example, at 80% ImageNet top-1 accuracy, LeViT is 5 times faster than EfficientNet on CPU. We release the code at https://github.com/facebookresearch/LeViT
+> Vision Transformer has shown great visual representation power in substantial vision tasks such as recognition and detection, and thus been attracting fast-growing efforts on manually designing more effective architectures. In this paper, we propose to use neural architecture search to automate this process, by searching not only the architecture but also the search space. The central idea is to gradually evolve different search dimensions guided by their E-T Error computed using a weight-sharing supernet. Moreover, we provide design guidelines of general vision transformers with extensive analysis according to the space searching process, which could promote the understanding of vision transformer. Remarkably, the searched models, named S3 (short for Searching the Search Space), from the searched space achieve superior performance to recently proposed models, such as Swin, DeiT and ViT, when evaluated on ImageNet. The effectiveness of S3 is also illustrated on object detection, semantic segmentation and visual question answering, demonstrating its generality to downstream vision and vision-language tasks. Code and models will be available at https://github.com/microsoft/Cream.
 
 </details>
 
 ### Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions.
-- **链接**: [arXiv:2102.12122](https://arxiv.org/abs/2102.12122) · [代码](https://github.com/whai362/PVT) · 📚 被引 4521
+- **链接**: [arXiv:2102.12122](https://arxiv.org/abs/2102.12122) · [代码](https://github.com/whai362/PVT) · 📚 被引 4524
 - **作者**: Wenhai Wang, Enze Xie, Xiang Li, Deng-Ping Fan, Kaitao Song, Ding Liang et al.
 - **🏷️ 机构**: Nanjing University, The University of Hong Kong, Nanjing University of Science and Technology
 - **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Although using convolutional neural networks (CNNs) as backbones achieves great successes in computer vision, this work investigates a simple backbone network useful for many dense prediction tasks without convolutions. Unlike the recently-proposed Transformer model (e.g., ViT) that is specially designed for image classification, we propose Pyramid Vision Transformer~(PVT), which overcomes the difficulties of porting Transformer to various dense prediction tasks. PVT has several merits compared to prior arts. (1) Different from ViT that typically has low-resolution outputs and high computational and memory cost, PVT can be not only trained on dense partitions of the image to achieve high output resolution, which is important for dense predictions but also using a progressive shrinking pyramid to reduce computations of large feature maps. (2) PVT inherits the advantages from both CNN and Transformer, making it a unified backbone in various vision tasks without convolutions by simply replacing CNN backbones. (3) We validate PVT by conducting extensive experiments, showing that it boosts the performance of many downstream tasks, e.g., object detection, semantic, and instance segmentation. For example, with a comparable number of parameters, RetinaNet+PVT achieves 40.4 AP on the COCO dataset, surpassing RetinNet+ResNet50 (36.3 AP) by 4.1 absolute AP. We hope PVT could serve as an alternative and useful backbone for pixel-level predictions and facilitate future researches. Code is available at https://github.com/whai362/PVT.
+> The transformer architectures, based on self-attention mechanism and convolution-free design, recently found superior performance and booming applications in computer vision. However, the discontinuous patch-wise tokenization process implicitly introduces jagged artifacts into attention maps, arising the traditional problem of aliasing for vision transformers. Aliasing effect occurs when discrete patterns are used to produce high frequency or continuous information, resulting in the indistinguishable distortions. Recent researches have found that modern convolution networks still suffer from this phenomenon. In this work, we analyze the uncharted problem of aliasing in vision transformer and explore to incorporate anti-aliasing properties. Specifically, we propose a plug-and-play Aliasing-Reduction Module(ARM) to alleviate the aforementioned issue. We investigate the effectiveness and generalization of the proposed method across multiple tasks and various vision transformer families. This lightweight design consistently attains a clear boost over several famous structures. Furthermore, our module also improves data efficiency and robustness of vision transformers.
 
 </details>
 
-### Rethinking and Improving Relative Position Encoding for Vision Transformer.
-- **链接**: [arXiv:2107.14222](https://arxiv.org/abs/2107.14222) · [代码](https://github.com/microsoft/Cream) · 📚 被引 330
-- **作者**: Kan Wu, Houwen Peng, Minghao Chen, Jianlong Fu, Hongyang Chao
-- **🏷️ 机构**: Sun Yat-sen University,School of Computer Science and Engineering, Microsoft Research Asia
-- **会议**: ICCV 2021
+### Adder Attention for Vision Transformer.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/a57e8915461b83adefb011530b711704-Abstract.html)
+- **作者**: Han Shu, Jiahao Wang, Hanting Chen, Lin Li, Yujiu Yang, Yunhe Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+### ViTAE: Vision Transformer Advanced by Exploring Intrinsic Inductive Bias.
+- **链接**: [arXiv:2106.03348](https://arxiv.org/abs/2106.03348)
+- **作者**: Yufei Xu, Qiming Zhang, Jing Zhang, Dacheng Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Relative position encoding (RPE) is important for transformer to capture sequence ordering of input tokens. General efficacy has been proven in natural language processing. However, in computer vision, its efficacy is not well studied and even remains controversial, e.g., whether relative position encoding can work equally well as absolute position? In order to clarify this, we first review existing relative position encoding methods and analyze their pros and cons when applied in vision transformers. We then propose new relative position encoding methods dedicated to 2D images, called image RPE (iRPE). Our methods consider directional relative distance modeling as well as the interactions between queries and relative position embeddings in self-attention mechanism. The proposed iRPE methods are simple and lightweight. They can be easily plugged into transformer blocks. Experiments demonstrate that solely due to the proposed encoding methods, DeiT and DETR obtain up to 1.5% (top-1 Acc) and 1.3% (mAP) stable improvements over their original versions on ImageNet and COCO respectively, without tuning any extra hyperparameters such as learning rate and weight decay. Our ablation and analysis also yield interesting findings, some of which run counter to previous understanding. Code and models are open-sourced at https://github.com/microsoft/Cream/tree/main/iRPE.
+> Transformers have shown great potential in various computer vision tasks owing to their strong capability in modeling long-range dependency using the self-attention mechanism. Nevertheless, vision transformers treat an image as 1D sequence of visual tokens, lacking an intrinsic inductive bias (IB) in modeling local visual structures and dealing with scale variance. Alternatively, they require large-scale training data and longer training schedules to learn the IB implicitly. In this paper, we propose a novel Vision Transformer Advanced by Exploring intrinsic IB from convolutions, ie, ViTAE. Technically, ViTAE has several spatial pyramid reduction modules to downsample and embed the input image into tokens with rich multi-scale context by using multiple convolutions with different dilation rates. In this way, it acquires an intrinsic scale invariance IB and is able to learn robust feature representation for objects at various scales. Moreover, in each transformer layer, ViTAE has a convolution block in parallel to the multi-head self-attention module, whose features are fused and fed into the feed-forward network. Consequently, it has the intrinsic locality IB and is able to learn local features and global dependencies collaboratively. Experiments on ImageNet as well as downstream tasks prove the superiority of ViTAE over the baseline transformer and concurrent works. Source code and pretrained models will be available at GitHub.
 
 </details>
 
 ### Vision Transformer with Progressive Sampling.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00044) · 📚 被引 106
+- **链接**: [arXiv:2108.01684](https://arxiv.org/abs/2108.01684) · [代码](https://github.com/yuexy/PS-ViT) · 📚 被引 106
 - **作者**: Xiaoyu Yue, Shuyang Sun, Zhanghui Kuang, Meng Wei, Philip H. S. Torr, Wayne Zhang et al.
 - **🏷️ 机构**: Centre for Perceptual and Interactive Intelligence, University of Oxford, SenseTime Research
 - **会议**: ICCV 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Transformers with powerful global relation modeling abilities have been introduced to fundamental computer vision tasks recently. As a typical example, the Vision Transformer (ViT) directly applies a pure transformer architecture on image classification, by simply splitting images into tokens with a fixed length, and employing transformers to learn relations between these tokens. However, such naive tokenization could destruct object structures, assign grids to uninterested regions such as background, and introduce interference signals. To mitigate the above issues, in this paper, we propose an iterative and progressive sampling strategy to locate discriminative regions. At each iteration, embeddings of the current sampling step are fed into a transformer encoder layer, and a group of sampling offsets is predicted to update the sampling locations for the next step. The progressive sampling is differentiable. When combined with the Vision Transformer, the obtained PS-ViT network can adaptively learn where to look. The proposed PS-ViT is both effective and efficient. When trained from scratch on ImageNet, PS-ViT performs 3.8% higher than the vanilla ViT in terms of top-1 accuracy with about $4\times$ fewer parameters and $10\times$ fewer FLOPs. Code is available at https://github.com/yuexy/PS-ViT.
+
+</details>

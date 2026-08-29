@@ -5,8 +5,8 @@
 
 > 同领域其他年份: 
 
-### Predicting Semantic Map Representations From Images Using Pyramid Occupancy Networks.
-- **链接**: [arXiv:2003.13402](https://arxiv.org/abs/2003.13402) · 📚 被引 243
-- **作者**: Thomas Roddick, Roberto Cipolla
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+### Convolutional Occupancy Networks.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58580-8_31)
+- **作者**: Songyou Peng, Michael Niemeyer, Lars M. Mescheder, Marc Pollefeys, Andreas Geiger
+- **🏷️ 机构**: University of Tübingen
+- **会议**: ECCV 2020
