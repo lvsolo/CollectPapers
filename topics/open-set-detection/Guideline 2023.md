@@ -1,97 +1,200 @@
 # Open-set Detection — 2023 Guideline
 
 > 领域: 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）
-> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 29 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### OpenMask3D: Open-Vocabulary 3D Instance Segmentation.
-- **链接**: [arXiv:2306.13631](https://arxiv.org/abs/2306.13631) · 📚 被引 27
-- **作者**: Ayça Takmaz, Elisabetta Fedele, Robert W. Sumner, Marc Pollefeys, Federico Tombari, Francis Engelmann
+### Open-set Semantic Segmentation for Point Clouds via Adversarial Prototype Framework.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00909) · 📚 被引 17
+- **作者**: Jianan Li, Qiulei Dong
+- **🏷️ 机构**: School of Artificial Intelligence, University of Chinese Academy of Sciences,Beijing,China
+- **会议**: CVPR 2023
+
+### Novel Class Discovery for 3D Point Cloud Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00906)
+- **作者**: Luigi Riz, Cristiano Saltori, Elisa Ricci, Fabio Poiesi
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+- **会议**: CVPR 2023
+
+### OVTrack: Open-Vocabulary Multiple Object Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00539)
+- **作者**: Siyuan Li, Tobias Fischer, Lei Ke, Henghui Ding, Martin Danelljan, Fisher Yu
+- **🏷️ 机构**: ETH Zurich
+- **会议**: CVPR 2023
+
+### BundleSDF: Neural 6-DoF Tracking and 3D Reconstruction of Unknown Objects.
+- **链接**: [arXiv:2303.14158](https://arxiv.org/abs/2303.14158) · 📚 被引 155
+- **作者**: Bowen Wen, Jonathan Tremblay, Valts Blukis, Stephen Tyree, Thomas Müller, Alex Evans et al.
+- **🏷️ 机构**: NVIDIA
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We introduce the task of open-vocabulary 3D instance segmentation. Current approaches for 3D instance segmentation can typically only recognize object categories from a pre-defined closed set of classes that are annotated in the training datasets. This results in important limitations for real-world applications where one might need to perform tasks guided by novel, open-vocabulary queries related to a wide variety of objects. Recently, open-vocabulary 3D scene understanding methods have emerged to address this problem by learning queryable features for each point in the scene. While such a representation can be directly employed to perform semantic segmentation, existing methods cannot separate multiple object instances. In this work, we address this limitation, and propose OpenMask3D, which is a zero-shot approach for open-vocabulary 3D instance segmentation. Guided by predicted class-agnostic 3D instance masks, our model aggregates per-mask features via multi-view fusion of CLIP-based image embeddings. Experiments and ablation studies on ScanNet200 and Replica show that OpenMask3D outperforms other open-vocabulary methods, especially on the long-tail distribution. Qualitative experiments further showcase OpenMask3D's ability to segment object properties based on free-form queries describing geometry, affordances, and materials.
+> We present a near real-time method for 6-DoF tracking of an unknown object from a monocular RGBD video sequence, while simultaneously performing neural 3D reconstruction of the object. Our method works for arbitrary rigid objects, even when visual texture is largely absent. The object is assumed to be segmented in the first frame only. No additional information is required, and no assumption is made about the interaction agent. Key to our method is a Neural Object Field that is learned concurrently with a pose graph optimization process in order to robustly accumulate information into a consistent 3D representation capturing both geometry and appearance. A dynamic pool of posed memory frames is automatically maintained to facilitate communication between these threads. Our approach handles challenging sequences with large pose changes, partial and full occlusion, untextured surfaces, and specular highlights. We show results on HO3D, YCBInEOAT, and BEHAVE datasets, demonstrating that our method significantly outperforms existing approaches. Project page: https://bundlesdf.github.io
 
 </details>
 
-### Hierarchical Open-vocabulary Universal Image Segmentation.
-- **链接**: [arXiv:2307.00764](https://arxiv.org/abs/2307.00764) · [代码](https://github.com/berkeley-hipie/HIPIE) · 📚 被引 1
-- **作者**: Xudong Wang, Shufan Li, Konstantinos Kallidromitis, Yusuke Kato, Kazuki Kozuka, Trevor Darrell
-- **🏷️ 机构**: UC Berkeley
-- **会议**: NeurIPS 2023
+### Learning to Generate Language-Supervised and Open-Vocabulary Scene Graph Using Pre-Trained Visual-Semantic Space.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00285) · 📚 被引 41
+- **作者**: Yong Zhang, Yingwei Pan, Ting Yao, Rui Huang, Tao Mei, Chang Wen Chen
+- **🏷️ 机构**: The Chinese University of Hong Kong,Shenzhen, HiDream.ai Inc., The Hong Kong Polytechnic University
+- **会议**: CVPR 2023
+
+### Open-vocabulary Attribute Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00680)
+- **作者**: María Alejandra Bravo, Sudhanshu Mittal, Simon Ging, Thomas Brox
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2023
+
+### OvarNet: Towards Open-Vocabulary Object Attribute Recognition.
+- **链接**: [arXiv:2301.09506](https://arxiv.org/abs/2301.09506) · 📚 被引 47
+- **作者**: Keyan Chen, Xiaolong Jiang, Yao Hu, Xu Tang, Yan Gao, Jianqi Chen et al.
+- **🏷️ 机构**: Beihang University, Xiaohongshu Inc, Shanghai Jiao Tong University,CMIC
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Open-vocabulary image segmentation aims to partition an image into semantic regions according to arbitrary text descriptions. However, complex visual scenes can be naturally decomposed into simpler parts and abstracted at multiple levels of granularity, introducing inherent segmentation ambiguity. Unlike existing methods that typically sidestep this ambiguity and treat it as an external factor, our approach actively incorporates a hierarchical representation encompassing different semantic-levels into the learning process. We propose a decoupled text-image fusion mechanism and representation learning modules for both "things" and "stuff". Additionally, we systematically examine the differences that exist in the textual and visual features between these types of categories. Our resulting model, named HIPIE, tackles HIerarchical, oPen-vocabulary, and unIvErsal segmentation tasks within a unified framework. Benchmarked on over 40 datasets, e.g., ADE20K, COCO, Pascal-VOC Part, RefCOCO/RefCOCOg, ODinW and SeginW, HIPIE achieves the state-of-the-art results at various levels of image comprehension, including semantic-level (e.g., semantic segmentation), instance-level (e.g., panoptic/referring segmentation and object detection), as well as part-level (e.g., part/subpart segmentation) tasks. Our code is released at https://github.com/berkeley-hipie/HIPIE.
+> In this paper, we consider the problem of simultaneously detecting objects and inferring their visual attributes in an image, even for those with no manual annotations provided at the training stage, resembling an open-vocabulary scenario. To achieve this goal, we make the following contributions: (i) we start with a naive two-stage approach for open-vocabulary object detection and attribute classification, termed CLIP-Attr. The candidate objects are first proposed with an offline RPN and later classified for semantic category and attributes; (ii) we combine all available datasets and train with a federated strategy to finetune the CLIP model, aligning the visual representation with attributes, additionally, we investigate the efficacy of leveraging freely available online image-caption pairs under weakly supervised learning; (iii) in pursuit of efficiency, we train a Faster-RCNN type model end-to-end with knowledge distillation, that performs class-agnostic object proposals and classification on semantic categories and attributes with classifiers generated from a text encoder; Finally, (iv) we conduct extensive experiments on VAW, MS-COCO, LSA, and OVAD datasets, and show that recognition of semantic category and attributes is complementary for visual scene understanding, i.e., jointly training object detection and attributes prediction largely outperform existing approaches that treat the two tasks independently, demonstrating strong generalization ability to novel attributes and categories.
 
 </details>
 
-### Weakly Supervised 3D Open-vocabulary Segmentation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/a76b693f36916a5ed84d6e5b39a0dc03-Abstract-Conference.html)
-- **作者**: Kunhao Liu, Fangneng Zhan, Jiahui Zhang, Muyu Xu, Yingchen Yu, Abdulmotaleb El Saddik et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### PLA: Language-Driven Open-Vocabulary 3D Scene Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00677) · 📚 被引 134
+- **作者**: Runyu Ding, Jihan Yang, Chuhui Xue, Wenqing Zhang, Song Bai, Xiaojuan Qi
+- **🏷️ 机构**: The University of Hong Kong, ByteDance
+- **会议**: CVPR 2023
 
-### Open-Vocabulary Semantic Segmentation via Attribute Decomposition-Aggregation.
-- **链接**: [arXiv:2309.00096](https://arxiv.org/abs/2309.00096) · 📚 被引 1
-- **作者**: Chaofan Ma, Yuhuan Yang, Chen Ju, Fei Zhang, Ya Zhang, Yanfeng Wang
+### Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00682)
+- **作者**: Feng Liang, Bichen Wu, Xiaoliang Dai, Kunpeng Li, Yinan Zhao, Hang Zhang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+- **会议**: CVPR 2023
+
+### Being Comes from Not-Being: Open-Vocabulary Text-to-Motion Generation with Wordless Training.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02224) · 📚 被引 36
+- **作者**: Junfan Lin, Jianlong Chang, Lingbo Liu, Guanbin Li, Liang Lin, Qi Tian et al.
+- **🏷️ 机构**: Sun Yat-sen University, Huawei Cloud, The Hong Kong Polytechnic University
+- **会议**: CVPR 2023
+
+### Open Vocabulary Semantic Segmentation with Patch Aligned Contrastive Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01860)
+- **作者**: Jishnu Mukhoti, Tsung-Yu Lin, Omid Poursaeed, Rui Wang, Ashish Shah, Philip H. S. Torr et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2023
+
+### FreeSeg: Unified, Universal and Open-Vocabulary Image Segmentation.
+- **链接**: [arXiv:2303.17225](https://arxiv.org/abs/2303.17225) · 📚 被引 93
+- **作者**: Jie Qin, Jie Wu, Pengxiang Yan, Ming Li, Yuxi Ren, Xuefeng Xiao et al.
+- **🏷️ 机构**: Institute of Automation,Chinese Academy of Sciences, ByteDance Inc
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Open-vocabulary semantic segmentation is a challenging task that requires segmenting novel object categories at inference time. Recent studies have explored vision-language pre-training to handle this task, but suffer from unrealistic assumptions in practical scenarios, i.e., low-quality textual category names. For example, this paradigm assumes that new textual categories will be accurately and completely provided, and exist in lexicons during pre-training. However, exceptions often happen when encountering ambiguity for brief or incomplete names, new words that are not present in the pre-trained lexicons, and difficult-to-describe categories for users. To address these issues, this work proposes a novel attribute decomposition-aggregation framework, AttrSeg, inspired by human cognition in understanding new concepts. Specifically, in the decomposition stage, we decouple class names into diverse attribute descriptions to complement semantic contexts from multiple perspectives. Two attribute construction strategies are designed: using large language models for common categories, and involving manually labeling for human-invented categories. In the aggregation stage, we group diverse attributes into an integrated global description, to form a discriminative classifier that distinguishes the target object from others. One hierarchical aggregation architecture is further proposed to achieve multi-level aggregations, leveraging the meticulously designed clustering module. The final results are obtained by computing the similarity between aggregated attributes and images embeddings. To evaluate the effectiveness, we annotate three types of datasets with attribute descriptions, and conduct extensive experiments and ablation studies. The results show the superior performance of attribute decomposition-aggregation.
+> Recently, open-vocabulary learning has emerged to accomplish segmentation for arbitrary categories of text-based descriptions, which popularizes the segmentation system to more general-purpose application scenarios. However, existing methods devote to designing specialized architectures or parameters for specific segmentation tasks. These customized design paradigms lead to fragmentation between various segmentation tasks, thus hindering the uniformity of segmentation models. Hence in this paper, we propose FreeSeg, a generic framework to accomplish Unified, Universal and Open-Vocabulary Image Segmentation. FreeSeg optimizes an all-in-one network via one-shot training and employs the same architecture and parameters to handle diverse segmentation tasks seamlessly in the inference procedure. Additionally, adaptive prompt learning facilitates the unified model to capture task-aware and category-sensitive concepts, improving model robustness in multi-task and varied scenarios. Extensive experimental results demonstrate that FreeSeg establishes new state-of-the-art results in performance and generalization on three segmentation tasks, which outperforms the best task-specific architectures by a large margin: 5.5% mIoU on semantic segmentation, 17.6% mAP on instance segmentation, 20.1% PQ on panoptic segmentation for the unseen class on COCO.
 
 </details>
 
-### Prompt Pre-Training with Twenty-Thousand Classes for Open-Vocabulary Visual Recognition.
-- **链接**: [arXiv:2304.04704](https://arxiv.org/abs/2304.04704) · [代码](https://github.com/amazon-science/prompt-pretraining) · 📚 被引 4
-- **作者**: Shuhuai Ren, Aston Zhang, Yi Zhu, Shuai Zhang, Shuai Zheng, Mu Li et al.
-- **🏷️ 机构**: AWS / CMU
-- **会议**: NeurIPS 2023
+### Mask-Free OVIS: Open-Vocabulary Instance Segmentation without Manual Mask Annotations.
+- **链接**: [arXiv:2303.16891](https://arxiv.org/abs/2303.16891) · 📚 被引 15
+- **作者**: Vibashan VS, Ning Yu, Chen Xing, Can Qin, Mingfei Gao, Juan Carlos Niebles et al.
+- **🏷️ 机构**: Johns Hopkins University, Salesforce Research, Northeastern University
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> This work proposes POMP, a prompt pre-training method for vision-language models. Being memory and computation efficient, POMP enables the learned prompt to condense semantic information for a rich set of visual concepts with over twenty-thousand classes. Once pre-trained, the prompt with a strong transferable ability can be directly plugged into a variety of visual recognition tasks including image classification, semantic segmentation, and object detection, to boost recognition performances in a zero-shot manner. Empirical evaluation shows that POMP achieves state-of-the-art performances on 21 datasets, e.g., 67.0% average accuracy on 10 classification datasets (+3.1% compared to CoOp) and 84.4 hIoU on open-vocabulary Pascal VOC segmentation (+6.9 compared to ZSSeg). Our code is available at https://github.com/amazon-science/prompt-pretraining.
+> We present Contrastive Feature Masking Vision Transformer (CFM-ViT) - an image-text pretraining methodology that achieves simultaneous learning of image- and region-level representation for open-vocabulary object detection (OVD). Our approach combines the masked autoencoder (MAE) objective into the contrastive learning objective to improve the representation for localization tasks. Unlike standard MAE, we perform reconstruction in the joint image-text embedding space, rather than the pixel space as is customary with the classical MAE method, which causes the model to better learn region-level semantics. Moreover, we introduce Positional Embedding Dropout (PED) to address scale variation between image-text pretraining and detection finetuning by randomly dropping out the positional embeddings during pretraining. PED improves detection performance and enables the use of a frozen ViT backbone as a region classifier, preventing the forgetting of open-vocabulary knowledge during detection finetuning. On LVIS open-vocabulary detection benchmark, CFM-ViT achieves a state-of-the-art 33.9 AP$r$, surpassing the best approach by 7.6 points and achieves better zero-shot detection transfer. Finally, CFM-ViT acquires strong image-level representation, outperforming the state of the art on 8 out of 12 metrics on zero-shot image-text retrieval benchmarks.
 
 </details>
 
-### OV-PARTS: Towards Open-Vocabulary Part Segmentation.
-- **链接**: [arXiv:2310.05107](https://arxiv.org/abs/2310.05107) · [代码](https://github.com/OpenRobotLab/OV_PARTS) · 📚 被引 4
-- **作者**: Meng Wei, Xiaoyu Yue, Wenwei Zhang, Shu Kong, Xihui Liu, Jiangmiao Pang
+### Open-vocabulary Object Segmentation with Diffusion Models.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00705)
+- **作者**: Ziyi Li, Qinye Zhou, Xiaoyun Zhang, Ya Zhang, Yanfeng Wang, Weidi Xie
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+- **会议**: ICCV 2023
+
+### Going Denser with Open-Vocabulary Part Segmentation.
+- **链接**: [arXiv:2305.11173](https://arxiv.org/abs/2305.11173) · 📚 被引 50
+- **作者**: Peize Sun, Shoufa Chen, Chenchen Zhu, Fanyi Xiao, Ping Luo, Saining Xie et al.
+- **🏷️ 机构**: The University of Hong Kong, Meta AI, New York University
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Segmenting and recognizing diverse object parts is a crucial ability in applications spanning various computer vision and robotic tasks. While significant progress has been made in object-level Open-Vocabulary Semantic Segmentation (OVSS), i.e., segmenting objects with arbitrary text, the corresponding part-level research poses additional challenges. Firstly, part segmentation inherently involves intricate boundaries, while limited annotated data compounds the challenge. Secondly, part segmentation introduces an open granularity challenge due to the diverse and often ambiguous definitions of parts in the open world. Furthermore, the large-scale vision and language models, which play a key role in the open vocabulary setting, struggle to recognize parts as effectively as objects. To comprehensively investigate and tackle these challenges, we propose an Open-Vocabulary Part Segmentation (OV-PARTS) benchmark. OV-PARTS includes refined versions of two publicly available datasets: Pascal-Part-116 and ADE20K-Part-234. And it covers three specific tasks: Generalized Zero-Shot Part Segmentation, Cross-Dataset Part Segmentation, and Few-Shot Part Segmentation, providing insights into analogical reasoning, open granularity and few-shot adapting abilities of models. Moreover, we analyze and adapt two prevailing paradigms of existing object-level OVSS methods for OV-PARTS. Extensive experimental analysis is conducted to inspire future research in leveraging foundational models for OV-PARTS. The code and dataset are available at https://github.com/OpenRobotLab/OV_PARTS.
+> Object detection has been expanded from a limited number of categories to open vocabulary. Moving forward, a complete intelligent vision system requires understanding more fine-grained object descriptions, object parts. In this paper, we propose a detector with the ability to predict both open-vocabulary objects and their part segmentation. This ability comes from two designs. First, we train the detector on the joint of part-level, object-level and image-level data to build the multi-granularity alignment between language and image. Second, we parse the novel object into its parts by its dense semantic correspondence with the base object. These two designs enable the detector to largely benefit from various data sources and foundation models. In open-vocabulary part segmentation experiments, our method outperforms the baseline by 3.3$\sim$7.3 mAP in cross-dataset generalization on PartImageNet, and improves the baseline by 7.3 novel AP$_{50}$ in cross-category generalization on Pascal Part. Finally, we train a detector that generalizes to a wide range of part segmentation datasets while achieving better performance than dataset-specific training.
 
 </details>
 
-### Convolutions Die Hard: Open-Vocabulary Segmentation with Single Frozen Convolutional CLIP.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/661caac7729aa7d8c6b8ac0d39ccbc6a-Abstract-Conference.html)
-- **作者**: Qihang Yu, Ju He, Xueqing Deng, Xiaohui Shen, Liang-Chieh Chen
+### Towards Open-Vocabulary Video Instance Segmentation.
+- **链接**: [arXiv:2304.01715](https://arxiv.org/abs/2304.01715) · [代码](https://github.com/haochenheheda/LVVIS)
+- **作者**: Haochen Wang, Xiaolong Jiang, Xu Tang, Yao Hu, Cilin Yan, Weidi Xie et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Uncovering Prototypical Knowledge for Weakly Open-Vocabulary Semantic Segmentation.
-- **链接**: [arXiv:2310.19001](https://arxiv.org/abs/2310.19001) · [代码](https://github.com/Ferenas/PGSeg) · 📚 被引 5
-- **作者**: Fei Zhang, Tianfei Zhou, Boyang Li, Hao He, Chaofan Ma, Tianjiao Zhang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> This paper studies the problem of weakly open-vocabulary semantic segmentation (WOVSS), which learns to segment objects of arbitrary classes using mere image-text pairs. Existing works turn to enhance the vanilla vision transformer by introducing explicit grouping recognition, i.e., employing several group tokens/centroids to cluster the image tokens and perform the group-text alignment. Nevertheless, these methods suffer from a granularity inconsistency regarding the usage of group tokens, which are aligned in the all-to-one v.s. one-to-one manners during the training and inference phases, respectively. We argue that this discrepancy arises from the lack of elaborate supervision for each group token. To bridge this granularity gap, this paper explores explicit supervision for the group tokens from the prototypical knowledge. To this end, this paper proposes the non-learnable prototypical regularization (NPR) where non-learnable prototypes are estimated from source features to serve as supervision and enable contrastive matching of the group tokens. This regularization encourages the group tokens to segment objects with less redundancy and capture more comprehensive semantic regions, leading to increased compactness and richness. Based on NPR, we propose the prototypical guidance segmentation network (PGSeg) that incorporates multi-modal regularization by leveraging prototypical sources from both images and texts at different levels, progressively enhancing the segmentation capability with diverse prototypical patterns. Experimental results show that our proposed method achieves state-of-the-art performance on several benchmark datasets. The source code is available at https://github.com/Ferenas/PGSeg.
+> Video Instance Segmentation (VIS) aims at segmenting and categorizing objects in videos from a closed set of training categories, lacking the generalization ability to handle novel categories in real-world videos. To address this limitation, we make the following three contributions. First, we introduce the novel task of Open-Vocabulary Video Instance Segmentation, which aims to simultaneously segment, track, and classify objects in videos from open-set categories, including novel categories unseen during training. Second, to benchmark Open-Vocabulary VIS, we collect a Large-Vocabulary Video Instance Segmentation dataset (LV-VIS), that contains well-annotated objects from 1,196 diverse categories, significantly surpassing the category size of existing datasets by more than one order of magnitude. Third, we propose an efficient Memory-Induced Transformer architecture, OV2Seg, to first achieve Open-Vocabulary VIS in an end-to-end manner with near real-time inference speed. Extensive experiments on LV-VIS and four existing VIS datasets demonstrate the strong zero-shot generalization ability of OV2Seg on novel categories. The dataset and code are released here https://github.com/haochenheheda/LVVIS.
+
+</details>
+
+### Betrayed by Captions: Joint Caption Grounding and Generation for Open Vocabulary Instance Segmentation.
+- **链接**: [arXiv:2301.00805](https://arxiv.org/abs/2301.00805) · 📚 被引 7
+- **作者**: Jianzong Wu, Xiangtai Li, Henghui Ding, Xia Li, Guangliang Cheng, Yunhai Tong et al.
+- **🏷️ 机构**: Nanyang Technological University
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this work, we focus on open vocabulary instance segmentation to expand a segmentation model to classify and segment instance-level novel categories. Previous approaches have relied on massive caption datasets and complex pipelines to establish one-to-one mappings between image regions and words in captions. However, such methods build noisy supervision by matching non-visible words to image regions, such as adjectives and verbs. Meanwhile, context words are also important for inferring the existence of novel objects as they show high inter-correlations with novel categories. To overcome these limitations, we devise a joint \textbf{Caption Grounding and Generation (CGG)} framework, which incorporates a novel grounding loss that only focuses on matching object nouns to improve learning efficiency. We also introduce a caption generation head that enables additional supervision and contextual modeling as a complementation to the grounding loss. Our analysis and results demonstrate that grounding and generation components complement each other, significantly enhancing the segmentation performance for novel classes. Experiments on the COCO dataset with two settings: Open Vocabulary Instance Segmentation (OVIS) and Open Set Panoptic Segmentation (OSPS) demonstrate the superiority of the CGG. Specifically, CGG achieves a substantial improvement of 6.8% mAP for novel classes without extra data on the OVIS task and 15% PQ improvements for novel classes on the OSPS benchmark.
+
+</details>
+
+### MasQCLIP for Open-Vocabulary Universal Image Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00088) · 📚 被引 40
+- **作者**: Xin Xu, Tianyi Xiong, Zheng Ding, Zhuowen Tu
+- **🏷️ 机构**: Peking University, Tsinghua University, University of California,San Diego
+- **会议**: ICCV 2023
+
+### A Simple Framework for Open-Vocabulary Segmentation and Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00100) · 📚 被引 138
+- **作者**: Hao Zhang, Feng Li, Xueyan Zou, Shilong Liu, Chunyuan Li, Jianwei Yang et al.
+- **🏷️ 机构**: The Hong Kong University of Science and Technology, University of Wisconsin-Madison, International Digital Economy Academy (IDEA)
+- **会议**: ICCV 2023
+
+### SOAR: Scene-debiasing Open-set Action Recognition.
+- **链接**: [arXiv:2309.01265](https://arxiv.org/abs/2309.01265) · 📚 被引 12
+- **作者**: Yuanhao Zhai, Ziyi Liu, Zhenyu Wu, Yi Wu, Chunluan Zhou, David S. Doermann et al.
+- **🏷️ 机构**: University at Buffalo, Wormpex AI Research
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deep learning models have a risk of utilizing spurious clues to make predictions, such as recognizing actions based on the background scene. This issue can severely degrade the open-set action recognition performance when the testing samples have different scene distributions from the training samples. To mitigate this problem, we propose a novel method, called Scene-debiasing Open-set Action Recognition (SOAR), which features an adversarial scene reconstruction module and an adaptive adversarial scene classification module. The former prevents the decoder from reconstructing the video background given video features, and thus helps reduce the background information in feature learning. The latter aims to confuse scene type classification given video features, with a specific emphasis on the action foreground, and helps to learn scene-invariant information. In addition, we design an experiment to quantify the scene bias. The results indicate that the current open-set action recognizers are biased toward the scene, and our proposed SOAR method better mitigates such bias. Furthermore, our extensive experiments demonstrate that our method outperforms state-of-the-art methods, and the ablation studies confirm the effectiveness of our proposed modules.
+
+</details>
+
+### Exploring Open-Vocabulary Semantic Segmentation from CLIP Vision Encoder Distillation Only.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00071)
+- **作者**: Jun Chen, Deyao Zhu, Guocheng Qian, Bernard Ghanem, Zhicheng Yan, Chenchen Zhu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+</details>
 
 </details>
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- CoDA: Collaborative Novel Box Discovery and Cross-modal Alignment for Open-vocabulary 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- CoDet: Co-occurrence Guided Region-Word Alignment for Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
-- Scaling Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
-- POP-3D: Open-Vocabulary 3D Occupancy Prediction from Images. → [occupancy](../occupancy/Guideline%202023.md)
+- Object-Aware Distillation Pyramid for Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
+- Unknown Sniffer for Object Detection: Don't Turn a Blind Eye to Unknown Objects. → [object-detection](../object-detection/Guideline%202023.md)
+- CAT: LoCalization and IdentificAtion Cascade Detection Transformer for Open-World Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
+- Region-Aware Pretraining for Open-Vocabulary Object Detection with Vision Transformers. → [object-detection](../object-detection/Guideline%202023.md)
+- Open-Vocabulary Point-Cloud Object Detection without 3D Annotation. → [object-detection](../object-detection/Guideline%202023.md)
+- Learning to Detect and Segment for Open Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
+- Aligning Bag of Regions for Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
+- DetCLIPv2: Scalable Open-Vocabulary Object Detection Pre-training via Word-Region Alignment. → [object-detection](../object-detection/Guideline%202023.md)
+- Weakly Supervised Class-agnostic Motion Prediction for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)

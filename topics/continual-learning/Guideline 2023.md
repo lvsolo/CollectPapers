@@ -1,45 +1,57 @@
 # Continual Learning — 2023 Guideline
 
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
-> 论文数: 21 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 29 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Fairness Continual Learning Approach to Semantic Scene Understanding in Open-World Environments.
-- **链接**: [arXiv:2305.15700](https://arxiv.org/abs/2305.15700) · 📚 被引 3
-- **作者**: Thanh-Dat Truong, Hoang-Quan Nguyen, Bhiksha Raj, Khoa Luu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Geometry and Uncertainty-Aware 3D Point Cloud Class-Incremental Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02084) · 📚 被引 29
+- **作者**: Yuwei Yang, Munawar Hayat, Zhao Jin, Chao Ren, Yinjie Lei
+- **🏷️ 机构**: Sichuan University, Monash University
+- **会议**: CVPR 2023
+
+### Learning with Fantasy: Semantic-Aware Virtual Contrastive Constraint for Few-Shot Class-Incremental Learning.
+- **链接**: [arXiv:2304.00426](https://arxiv.org/abs/2304.00426) · [代码](https://github.com/zysong0113/SAVC) · 📚 被引 119
+- **作者**: Zeyin Song, Yifan Zhao, Yujun Shi, Peixi Peng, Li Yuan, Yonghong Tian
+- **🏷️ 机构**: School of Electronic and Computer Engineering, Peking University, School of Computer Science, Peking University, National University of Singapore
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual semantic segmentation aims to learn new classes while maintaining the information from the previous classes. Although prior studies have shown impressive progress in recent years, the fairness concern in the continual semantic segmentation needs to be better addressed. Meanwhile, fairness is one of the most vital factors in deploying the deep learning model, especially in human-related or safety applications. In this paper, we present a novel Fairness Continual Learning approach to the semantic segmentation problem. In particular, under the fairness objective, a new fairness continual learning framework is proposed based on class distributions. Then, a novel Prototypical Contrastive Clustering loss is proposed to address the significant challenges in continual learning, i.e., catastrophic forgetting and background shift. Our proposed loss has also been proven as a novel, generalized learning paradigm of knowledge distillation commonly used in continual learning. Moreover, the proposed Conditional Structural Consistency loss further regularized the structural constraint of the predicted segmentation. Our proposed approach has achieved State-of-the-Art performance on three standard scene understanding benchmarks, i.e., ADE20K, Cityscapes, and Pascal VOC, and promoted the fairness of the segmentation model.
+> Humans can watch a continuous video stream and effortlessly perform continual acquisition and transfer of new knowledge with minimal supervision yet retaining previously learnt experiences. In contrast, existing continual learning (CL) methods require fully annotated labels to effectively learn from individual frames in a video stream. Here, we examine a more realistic and challenging problem$\unicode{x2014}$Label-Efficient Online Continual Object Detection (LEOCOD) in streaming video. We propose a plug-and-play module, Efficient-CLS, that can be easily inserted into and improve existing continual learners for object detection in video streams with reduced data annotation costs and model retraining time. We show that our method has achieved significant improvement with minimal forgetting across all supervision levels on two challenging CL benchmarks for streaming real-world videos. Remarkably, with only 25% annotated video frames, our method still outperforms the base CL learners, which are trained with 100% annotations on all video frames. The data and source code will be publicly available at https://github.com/showlab/Efficient-CLS.
 
 </details>
 
-### Augmented Memory Replay-based Continual Learning Approaches for Network Intrusion Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/3755a02b1035fbadd5f93a022170e46f-Abstract-Conference.html) · 📚 被引 9
-- **作者**: Suresh Kumar Amalapuram, Sumohana S. Channappayya, Bheemarjuna Reddy Tamma
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### PCR: Proxy-Based Contrastive Replay for Online Class-Incremental Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02322) · 📚 被引 74
+- **作者**: Huiwei Lin, Baoquan Zhang, Shanshan Feng, Xutao Li, Yunming Ye
+- **🏷️ 机构**: Harbin Institute of Technology,Shenzhen
+- **会议**: CVPR 2023
 
-### FeCAM: Exploiting the Heterogeneity of Class Distributions in Exemplar-Free Continual Learning.
-- **链接**: [arXiv:2309.14062](https://arxiv.org/abs/2309.14062) · [代码](https://github.com/dipamgoswami/FeCAM) · 📚 被引 23
-- **作者**: Dipam Goswami, Yuyang Liu, Bartlomiej Twardowski, Joost van de Weijer
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### CODA-Prompt: COntinual Decomposed Attention-Based Prompting for Rehearsal-Free Continual Learning.
+- **链接**: [arXiv:2211.13218](https://arxiv.org/abs/2211.13218) · [代码](https://github.com/GT-RIPL/CODA-Prompt) · 📚 被引 320
+- **作者**: James Seale Smith, Leonid Karlinsky, Vyshnavi Gutta, Paola Cascante-Bonilla, Donghyun Kim, Assaf Arbelle et al.
+- **🏷️ 机构**: Georgia Institute of Technology, MIT-IBM Watson AI Lab, IBM Research
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Exemplar-free class-incremental learning (CIL) poses several challenges since it prohibits the rehearsal of data from previous tasks and thus suffers from catastrophic forgetting. Recent approaches to incrementally learning the classifier by freezing the feature extractor after the first task have gained much attention. In this paper, we explore prototypical networks for CIL, which generate new class prototypes using the frozen feature extractor and classify the features based on the Euclidean distance to the prototypes. In an analysis of the feature distributions of classes, we show that classification based on Euclidean metrics is successful for jointly trained features. However, when learning from non-stationary data, we observe that the Euclidean metric is suboptimal and that feature distributions are heterogeneous. To address this challenge, we revisit the anisotropic Mahalanobis distance for CIL. In addition, we empirically show that modeling the feature covariance relations is better than previous attempts at sampling features from normal distributions and training a linear classifier. Unlike existing methods, our approach generalizes to both many- and few-shot CIL settings, as well as to domain-incremental settings. Interestingly, without updating the backbone network, our method obtains state-of-the-art results on several standard continual learning benchmarks. Code is available at https://github.com/dipamgoswami/FeCAM.
+> State-of-the-art rehearsal-free continual learning methods exploit the peculiarities of Vision Transformers to learn task-specific prompts, drastically reducing catastrophic forgetting. However, there is a tradeoff between the number of learned parameters and the performance, making such models computationally expensive. In this work, we aim to reduce this cost while maintaining competitive performance. We achieve this by revisiting and extending a simple transfer learning idea: learning task-specific normalization layers. Specifically, we tune the scale and bias parameters of LayerNorm for each continual learning task, selecting them at inference time based on the similarity between task-specific keys and the output of the pre-trained model. To make the classifier robust to incorrect selection of parameters during inference, we introduce a two-stage training procedure, where we first optimize the task-specific parameters and then train the classifier with the same selection procedure of the inference time. Experiments on ImageNet-R and CIFAR-100 show that our method achieves results that are either superior or on par with {the state of the art} while being computationally cheaper.
 
 </details>
 
-### Bilevel Coreset Selection in Continual Learning: A New Formulation and Algorithm.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/a0251e494a7e75d59e06d37e646f46b7-Abstract-Conference.html) · 📚 被引 4
-- **作者**: Jie Hao, Kaiyi Ji, Mingrui Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Margin Contrastive Learning with Learnable-Vector for Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00383) · 📚 被引 2
+- **作者**: Kotaro Nagata, Kazuhiro Hotta
+- **🏷️ 机构**: Meijo University,Electrical and Electronic Engineering,Japan
+- **会议**: ICCV 2023
+
+### FedRCIL: Federated Knowledge Distillation for Representation based Contrastive Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00371) · 📚 被引 9
+- **作者**: Athanasios Psaltis, Christos Chatzikonstantinou, Charalampos Z. Patrikakis, Petros Daras
+- **🏷️ 机构**: Centre for Research and Technology Hellas,Thessaloniki,Greece, University of West Attica,Dept. of Electrical and Electronics Engineering,Athens,Greece
+- **会议**: ICCV 2023
 
 ### Selective Amnesia: A Continual Learning Approach to Forgetting in Deep Generative Models.
 - **链接**: [arXiv:2305.10120](https://arxiv.org/abs/2305.10120) · [代码](https://github.com/clear-nus/selective-amnesia) · 📚 被引 22
@@ -49,156 +61,222 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The recent proliferation of large-scale text-to-image models has led to growing concerns that such models may be misused to generate harmful, misleading, and inappropriate content. Motivated by this issue, we derive a technique inspired by continual learning to selectively forget concepts in pretrained deep generative models. Our method, dubbed Selective Amnesia, enables controllable forgetting where a user can specify how a concept should be forgotten. Selective Amnesia can be applied to conditional variational likelihood models, which encompass a variety of popular deep generative frameworks, including variational autoencoders and large-scale text-to-image diffusion models. Experiments across different models demonstrate that our approach induces forgetting on a variety of concepts, from entire classes in standard datasets to celebrity and nudity prompts in text-to-image models. Our code is publicly available at https://github.com/clear-nus/selective-amnesia.
+> Online continual learning (CL) studies the problem of learning continuously from a single-pass data stream while adapting to new data and mitigating catastrophic forgetting. Recently, by storing a small subset of old data, replay-based methods have shown promising performance. Unlike previous methods that focus on sample storage or knowledge distillation against catastrophic forgetting, this paper aims to understand why the online learning models fail to generalize well from a new perspective of shortcut learning. We identify shortcut learning as the key limiting factor for online CL, where the learned features may be biased, not generalizable to new tasks, and may have an adverse impact on knowledge distillation. To tackle this issue, we present the online prototype learning (OnPro) framework for online CL. First, we propose online prototype equilibrium to learn representative features against shortcut learning and discriminative features to avoid class confusion, ultimately achieving an equilibrium status that separates all seen classes well while learning new classes. Second, with the feedback of online prototypes, we devise a novel adaptive prototypical feedback mechanism to sense the classes that are easily misclassified and then enhance their boundaries. Extensive experimental results on widely-used benchmark datasets demonstrate the superior performance of OnPro over the state-of-the-art baseline methods. Source code is available at https://github.com/weilllllls/OnPro.
 
 </details>
 
-### NPCL: Neural Processes for Uncertainty-Aware Continual Learning.
-- **链接**: [arXiv:2310.19272](https://arxiv.org/abs/2310.19272) · [代码](https://github.com/srvCodes/NPCL) · 📚 被引 1
-- **作者**: Saurav Jha, Dong Gong, He Zhao, Lina Yao
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### CoMFormer: Continual Learning in Semantic and Panoptic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00294) · 📚 被引 33
+- **作者**: Fabio Cermelli, Matthieu Cord, Arthur Douillard
+- **🏷️ 机构**: Politecnico di Torino, Sorbonne Universit&#x00E9;
+- **会议**: CVPR 2023
+
+### Exploring Data Geometry for Continual Learning.
+- **链接**: [arXiv:2304.03931](https://arxiv.org/abs/2304.03931) · 📚 被引 12
+- **作者**: Zhi Gao, Chen Xu, Feng Li, Yunde Jia, Mehrtash Harandi, Yuwei Wu
+- **🏷️ 机构**: School of Computer Science &#x0026; Technology, Beijing Institute of Technology,Beijing Key Laboratory of Intelligent Information Technology,China, Shenzhen MSU-BIT University,Guangdong Laboratory of Machine Perception and Intelligent Computing,China, Monash University, and Data61,Department of Electrical and Computer Systems Eng.,Australia
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual learning (CL) aims to train deep neural networks efficiently on streaming data while limiting the forgetting caused by new tasks. However, learning transferable knowledge with less interference between tasks is difficult, and real-world deployment of CL models is limited by their inability to measure predictive uncertainties. To address these issues, we propose handling CL tasks with neural processes (NPs), a class of meta-learners that encode different tasks into probabilistic distributions over functions all while providing reliable uncertainty estimates. Specifically, we propose an NP-based CL approach (NPCL) with task-specific modules arranged in a hierarchical latent variable model. We tailor regularizers on the learned latent distributions to alleviate forgetting. The uncertainty estimation capabilities of the NPCL can also be used to handle the task head/module inference challenge in CL. Our experiments show that the NPCL outperforms previous CL approaches. We validate the effectiveness of uncertainty estimation in the NPCL for identifying novel data and evaluating instance-level model confidence. Code is available at \url{https://github.com/srvCodes/NPCL}.
+> Continual learning aims to efficiently learn from a non-stationary stream of data while avoiding forgetting the knowledge of old data. In many practical applications, data complies with non-Euclidean geometry. As such, the commonly used Euclidean space cannot gracefully capture non-Euclidean geometric structures of data, leading to inferior results. In this paper, we study continual learning from a novel perspective by exploring data geometry for the non-stationary stream of data. Our method dynamically expands the geometry of the underlying space to match growing geometric structures induced by new data, and prevents forgetting by keeping geometric structures of old data into account. In doing so, making use of the mixed curvature space, we propose an incremental search scheme, through which the growing geometric structures are encoded. Then, we introduce an angular-regularization loss and a neighbor-robustness loss to train the model, capable of penalizing the change of global geometric structures and local geometric structures. Experiments show that our method achieves better performance than baseline methods designed in Euclidean space.
 
 </details>
 
-### CLeAR: Continual Learning on Algorithmic Reasoning for Human-like Intelligence.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/986e0caad271b59417287737416d8594-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Bong Gyun Kang, HyunGi Kim, Dahuin Jung, Sungroh Yoon
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Real-Time Evaluation in Online Continual Learning: A New Hope.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01144) · 📚 被引 35
+- **作者**: Yasir Ghunaim, Adel Bibi, Kumail Alhamoud, Motasem Alfarra, Hasan Abed Al Kader Hammoud, Ameya Prabhu et al.
+- **🏷️ 机构**: King Abdullah University of Science and Technology (KAUST), University of Oxford
+- **会议**: CVPR 2023
 
-### Recasting Continual Learning as Sequence Modeling.
-- **链接**: [arXiv:2310.11952](https://arxiv.org/abs/2310.11952) · 📚 被引 0
-- **作者**: Soochan Lee, Jaehyeon Son, Gunhee Kim
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Preserving Linear Separability in Continual Learning by Backward Feature Projection.
+- **链接**: [arXiv:2303.14595](https://arxiv.org/abs/2303.14595) · [代码](https://github.com/rvl-lab-utoronto/BFP) · 📚 被引 12
+- **作者**: Qiao Gu, Dongsub Shim, Florian Shkurti
+- **🏷️ 机构**: University of Toronto, LG AI Research
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In this work, we aim to establish a strong connection between two significant bodies of machine learning research: continual learning and sequence modeling. That is, we propose to formulate continual learning as a sequence modeling problem, allowing advanced sequence models to be utilized for continual learning. Under this formulation, the continual learning process becomes the forward pass of a sequence model. By adopting the meta-continual learning (MCL) framework, we can train the sequence model at the meta-level, on multiple continual learning episodes. As a specific example of our new formulation, we demonstrate the application of Transformers and their efficient variants as MCL methods. Our experiments on seven benchmarks, covering both classification and regression, show that sequence models can be an attractive solution for general MCL.
+> Online continual learning (CL) aims to learn new knowledge and consolidate previously learned knowledge from non-stationary data streams. Due to the time-varying training setting, the model learned from a changing distribution easily forgets the previously learned knowledge and biases toward the newly received task. To address this problem, we propose a Continual Bias Adaptor (CBA) module to augment the classifier network to adapt to catastrophic distribution change during training, such that the classifier network is able to learn a stable consolidation of previously learned tasks. In the testing stage, CBA can be removed which introduces no additional computation cost and memory overhead. We theoretically reveal the reason why the proposed method can effectively alleviate catastrophic distribution shifts, and empirically demonstrate its effectiveness through extensive experiments based on four rehearsal-based baselines and three public continual learning benchmarks.
 
 </details>
 
-### Loss Decoupling for Task-Agnostic Continual Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/249f73e01f0a2bb6c8d971b565f159a7-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Yan-Shuo Liang, Wu-Jun Li
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Wasserstein Expansible Variational Autoencoder for Discriminative and Generative Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01711) · 📚 被引 2
+- **作者**: Fei Ye, Adrian G. Bors
+- **🏷️ 机构**: University of York,Department of Computer Science,York,UK,YO10 5GH
+- **会议**: ICCV 2023
 
-### Does Continual Learning Meet Compositionality? New Benchmarks and An Evaluation Framework.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/6a42b45af2b72e6e5b5e3a6fe695809f-Abstract-Datasets_and_Benchmarks.html) · 📚 被引 0
-- **作者**: Weiduo Liao, Ying Wei, Mingchen Jiang, Qingfu Zhang, Hisao Ishibuchi
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Self-Evolved Dynamic Expansion Model for Task-Free Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.02020) · 📚 被引 16
+- **作者**: Fei Ye, Adrian G. Bors
+- **🏷️ 机构**: University of York,Department of Computer Science,York,UK,YO10 5GH
+- **会议**: ICCV 2023
 
-### Overcoming Recency Bias of Normalization Statistics in Continual Learning: Balance and Adaptation.
-- **链接**: [arXiv:2310.08855](https://arxiv.org/abs/2310.08855) · [代码](https://github.com/lvyilin/AdaB2N) · 📚 被引 3
-- **作者**: Yilin Lyu, Liyuan Wang, Xingxing Zhang, Zicheng Sun, Hang Su, Jun Zhu et al.
+### Continual Learning for Personalized Co-Speech Gesture Generation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01910) · 📚 被引 8
+- **作者**: Chaitanya Ahuja, Pratik Joshi, Ryo Ishii, Louis-Philippe Morency
+- **🏷️ 机构**: CMU,Language Technologies Institute, NTT Human Informatics Laboratories
+- **会议**: ICCV 2023
+
+### CLNeRF: Continual Learning Meets NeRF.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.02119) · 📚 被引 18
+- **作者**: Zhipeng Cai, Matthias Müller
+- **🏷️ 机构**: Intel Labs
+- **会议**: ICCV 2023
+
+### Towards Realistic Evaluation of Industrial Continual Learning Scenarios with an Emphasis on Energy Consumption and Computational Footprint.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01057) · 📚 被引 9
+- **作者**: Vivek Chavan, Paul Koch, Marian Schlüter, Clemens Briese
+- **🏷️ 机构**: Fraunhofer IPK,Berlin,Germany
+- **会议**: ICCV 2023
+
+### A Unified Continual Learning Framework with General Parameter-Efficient Tuning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01055) · 📚 被引 96
+- **作者**: Qiankun Gao, Chen Zhao, Yifan Sun, Teng Xi, Gang Zhang, Bernard Ghanem et al.
+- **🏷️ 机构**: Peking University Shenzhen Graduate School, King Abdullah University of Science and Technology (KAUST), Baidu Inc.
+- **会议**: ICCV 2023
+
+### CLR: Channel-wise Lightweight Reprogramming for Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01723) · 📚 被引 8
+- **作者**: Yunhao Ge, Yuecheng Li, Shuo Ni, Jiaping Zhao, Ming-Hsuan Yang, Laurent Itti
+- **🏷️ 机构**: University of Southern California, Google Research
+- **会议**: ICCV 2023
+
+### Rapid Adaptation in Online Continual Learning: Are We Evaluating It Right?
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01728) · 📚 被引 6
+- **作者**: Hasan Abed Al Kader Hammoud, Ameya Prabhu, Ser-Nam Lim, Philip H. S. Torr, Adel Bibi, Bernard Ghanem
+- **🏷️ 机构**: KAUST, University of Oxford, Meta AI
+- **会议**: ICCV 2023
+
+### Class-incremental Continual Learning for Instance Segmentation with Image-level Weak Supervision.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00121) · 📚 被引 16
+- **作者**: Yu-Hsing Hsieh, Guan-Sheng Chen, Shun-Xian Cai, Ting-Yun Wei, Huei-Fang Yang, Chu-Song Chen
+- **🏷️ 机构**: National Taiwan University,Dept. Computer Science and Information Engineering,Taiwan, National Sun Yat-sen University,Dept. Information Management,Taiwan
+- **会议**: ICCV 2023
+
+### Growing a Brain with Sparsity-Inducing Generation for Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01738)
+- **作者**: Hyundong Jin, Gyeong-Hyeon Kim, Chanho Ahn, Eunwoo Kim
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+- **会议**: CVPR 2023
+
+### Bilateral Memory Consolidation for Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01538) · 📚 被引 16
+- **作者**: Xing Nie, Shixiong Xu, Xiyan Liu, Gaofeng Meng, Chunlei Huo, Shiming Xiang
+- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences,State Key Laboratory of Multimodal Artificial Intelligence Systems, Baidu Inc.,China
+- **会议**: CVPR 2023
+
+### Computationally Budgeted Continual Learning: What Does Matter?
+- **链接**: [arXiv:2303.11165](https://arxiv.org/abs/2303.11165) · [代码](https://github.com/drimpossible/BudgetCL) · 📚 被引 33
+- **作者**: Ameya Prabhu, Hasan Abed Al Kader Hammoud, Puneet K. Dokania, Philip H. S. Torr, Ser-Nam Lim, Bernard Ghanem et al.
+- **🏷️ 机构**: University of Oxford, King Abdullah University of Science and Technology (KAUST), Meta AI
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual learning entails learning a sequence of tasks and balancing their knowledge appropriately. With limited access to old training samples, much of the current work in deep neural networks has focused on overcoming catastrophic forgetting of old tasks in gradient-based optimization. However, the normalization layers provide an exception, as they are updated interdependently by the gradient and statistics of currently observed training samples, which require specialized strategies to mitigate recency bias. In this work, we focus on the most popular Batch Normalization (BN) and provide an in-depth theoretical analysis of its sub-optimality in continual learning. Our analysis demonstrates the dilemma between balance and adaptation of BN statistics for incremental tasks, which potentially affects training stability and generalization. Targeting on these particular challenges, we propose Adaptive Balance of BN (AdaB$^2$N), which incorporates appropriately a Bayesian-based strategy to adapt task-wise contributions and a modified momentum to balance BN statistics, corresponding to the training and testing stages. By implementing BN in a continual learning fashion, our approach achieves significant performance gains across a wide range of benchmarks, particularly for the challenging yet realistic online scenarios (e.g., up to 7.68%, 6.86% and 4.26% on Split CIFAR-10, Split CIFAR-100 and Split Mini-ImageNet, respectively). Our code is available at https://github.com/lvyilin/AdaB2N.
+> Continual Learning (CL) aims to sequentially train models on streams of incoming data that vary in distribution by preserving previous knowledge while adapting to new data. Current CL literature focuses on restricted access to previously seen data, while imposing no constraints on the computational budget for training. This is unreasonable for applications in-the-wild, where systems are primarily constrained by computational and time budgets, not storage. We revisit this problem with a large-scale benchmark and analyze the performance of traditional CL approaches in a compute-constrained setting, where effective memory samples used in training can be implicitly restricted as a consequence of limited computation. We conduct experiments evaluating various CL sampling strategies, distillation losses, and partial fine-tuning on two large-scale datasets, namely ImageNet2K and Continual Google Landmarks V2 in data incremental, class incremental, and time incremental settings. Through extensive experiments amounting to a total of over 1500 GPU-hours, we find that, under compute-constrained setting, traditional CL approaches, with no exception, fail to outperform a simple minimal baseline that samples uniformly from memory. Our conclusions are consistent in a different number of stream time steps, e.g., 20 to 200, and under several computational budgets. This suggests that most existing CL methods are particularly too computationally expensive for realistic budgeted deployment. Code for this project is available at: https://github.com/drimpossible/BudgetCL.
 
 </details>
 
-### RanPAC: Random Projections and Pre-trained Models for Continual Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/2793dc35e14003dd367684d93d236847-Abstract-Conference.html) · 📚 被引 20
-- **作者**: Mark D. McDonnell, Dong Gong, Amin Parvaneh, Ehsan Abbasnejad, Anton van den Hengel
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### Continual Learning for Instruction Following from Realtime Feedback.
-- **链接**: [arXiv:2212.09710](https://arxiv.org/abs/2212.09710) · 📚 被引 1
-- **作者**: Alane Suhr, Yoav Artzi
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### PIVOT: Prompting for Video Continual Learning.
+- **链接**: [arXiv:2212.04842](https://arxiv.org/abs/2212.04842) · 📚 被引 44
+- **作者**: Andrés Villa, Juan León Alcázar, Motasem Alfarra, Kumail Alhamoud, Julio Hurtado, Fabian Caba Heilbron et al.
+- **🏷️ 机构**: Pontificia Universidad Cat&#x00F3;lica de Chile, King Abdullah University of Science and Technology (KAUST), University of Pisa
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We propose and deploy an approach to continually train an instruction-following agent from feedback provided by users during collaborative interactions. During interaction, human users instruct an agent using natural language, and provide realtime binary feedback as they observe the agent following their instructions. We design a contextual bandit learning approach, converting user feedback to immediate reward. We evaluate through thousands of human-agent interactions, demonstrating 15.4% absolute improvement in instruction execution accuracy over time. We also show our approach is robust to several design variations, and that the feedback signal is roughly equivalent to the learning signal of supervised demonstration data.
+> Modern machine learning pipelines are limited due to data availability, storage quotas, privacy regulations, and expensive annotation processes. These constraints make it difficult or impossible to train and update large-scale models on such dynamic annotated sets. Continual learning directly approaches this problem, with the ultimate goal of devising methods where a deep neural network effectively learns relevant patterns for new (unseen) classes, without significantly altering its performance on previously learned ones. In this paper, we address the problem of continual learning for video data. We introduce PIVOT, a novel method that leverages extensive knowledge in pre-trained models from the image domain, thereby reducing the number of trainable parameters and the associated forgetting. Unlike previous methods, ours is the first approach that effectively uses prompting mechanisms for continual learning without any in-domain pre-training. Our experiments show that PIVOT improves state-of-the-art methods by a significant 27% on the 20-task ActivityNet setup.
 
 </details>
 
-### Temporal Continual Learning with Prior Compensation for Human Motion Prediction.
-- **链接**: [arXiv:2507.04060](https://arxiv.org/abs/2507.04060) · [代码](https://github.com/hyqlat/TCL) · 📚 被引 0
-- **作者**: Jianwei Tang, Jiangxin Sun, Xiaotong Lin, Lifang Zhang, Wei-Shi Zheng, Jian-Fang Hu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### MetaMix: Towards Corruption-Robust Continual Learning with Temporally Self-Adaptive Data Transformation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02349) · 📚 被引 6
+- **作者**: Zhenyi Wang, Li Shen, Donglin Zhan, Qiuling Suo, Yanjun Zhu, Tiehang Duan et al.
+- **🏷️ 机构**: State University of New York at Buffalo,USA, JD Explore Academy,China, Columbia University,USA
+- **会议**: CVPR 2023
+
+### VQACL: A Novel Visual Question Answering Continual Learning Setting.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01831) · 📚 被引 31
+- **作者**: Xi Zhang, Feifei Zhang, Changsheng Xu
+- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences,State Key Laboratory of Multimodal Artificial Intelligence Systems, School of Computer Science and Engineering, Tianjin University of Technology
+- **会议**: CVPR 2023
+
+### Rethinking Gradient Projection Continual Learning: Stability/Plasticity Feature Space Decoupling.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00362) · 📚 被引 24
+- **作者**: Zhen Zhao, Zhizhong Zhang, Xin Tan, Jun Liu, Yanyun Qu, Yuan Xie et al.
+- **🏷️ 机构**: School of Computer Science and Technology, East China Normal University,Shanghai,China, Tencent Youtu Lab, School of Informatics, Xiamen University,Fujian,China
+- **会议**: CVPR 2023
+
+### Class-Incremental Exemplar Compression for Class-Incremental Learning.
+- **链接**: [arXiv:2303.14042](https://arxiv.org/abs/2303.14042) · [代码](https://github.com/xfflzl/CIM-CIL) · 📚 被引 71
+- **作者**: Zilin Luo, Yaoyao Liu, Bernt Schiele, Qianru Sun
+- **🏷️ 机构**: Singapore Management University, Saarland Informatics Campus,Max Planck Institute for Informatics
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Human Motion Prediction (HMP) aims to predict future poses at different moments according to past motion sequences. Previous approaches have treated the prediction of various moments equally, resulting in two main limitations: the learning of short-term predictions is hindered by the focus on long-term predictions, and the incorporation of prior information from past predictions into subsequent predictions is limited. In this paper, we introduce a novel multi-stage training framework called Temporal Continual Learning (TCL) to address the above challenges. To better preserve prior information, we introduce the Prior Compensation Factor (PCF). We incorporate it into the model training to compensate for the lost prior information. Furthermore, we derive a more reasonable optimization objective through theoretical derivation. It is important to note that our TCL framework can be easily integrated with different HMP backbone models and adapted to various datasets and applications. Extensive experiments on four HMP benchmark datasets demonstrate the effectiveness and flexibility of TCL. The code is available at https://github.com/hyqlat/TCL.
+> Continual Learning aims to learn a single model on a sequence of tasks without having access to data from previous tasks. The biggest challenge in the domain still remains catastrophic forgetting: a loss in performance on seen classes of earlier tasks. Some existing methods rely on an expensive replay buffer to store a chunk of data from previous tasks. This, while promising, becomes expensive when the number of tasks becomes large or data can not be stored for privacy reasons. As an alternative, prompt-based methods have been proposed that store the task information in a learnable prompt pool. This prompt pool instructs a frozen image encoder on how to solve each task. While the model faces a disjoint set of classes in each task in this setting, we argue that these classes can be encoded to the same embedding space of a pre-trained language encoder. In this work, we propose Language Guidance for Prompt-based Continual Learning (LGCL) as a plug-in for prompt-based methods. LGCL is model agnostic and introduces language guidance at the task level in the prompt pool and at the class level on the output feature of the vision encoder. We show with extensive experimentation that LGCL consistently improves the performance of prompt-based continual learning methods to set a new state-of-the art. LGCL achieves these performance improvements without needing any additional learnable parameters.
 
 </details>
 
-### Hierarchical Decomposition of Prompt-Based Continual Learning: Rethinking Obscured Sub-optimality.
-- **链接**: [arXiv:2310.07234](https://arxiv.org/abs/2310.07234) · [代码](https://github.com/thu-ml/HiDe-Prompt) · 📚 被引 17
-- **作者**: Liyuan Wang, Jingyi Xie, Xingxing Zhang, Mingyi Huang, Hang Su, Jun Zhu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Decoupling Learning and Remembering: a Bilevel Memory Framework with Knowledge Projection for Task-Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01933) · 📚 被引 11
+- **作者**: Wenju Sun, Qingyong Li, Jing Zhang, Wen Wang, Yangli-ao Geng
+- **🏷️ 机构**: Beijing Jiaotong University,Beijing Key Lab of Traffic Data Analysis and Mining
+- **会议**: CVPR 2023
+
+### Rebalancing Batch Normalization for Exemplar-Based Class-Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01927) · 📚 被引 21
+- **作者**: Sungmin Cha, Sungjun Cho, Dasol Hwang, Sunwon Hong, Moontae Lee, Taesup Moon
+- **🏷️ 机构**: Seoul National University,Department of ECE, LG AI Research
+- **会议**: CVPR 2023
+
+### DKT: Diverse Knowledge Transfer Transformer for Class Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02321) · 📚 被引 22
+- **作者**: Xinyuan Gao, Yuhang He, Songlin Dong, Jie Cheng, Xing Wei, Yihong Gong
+- **🏷️ 机构**: School of Software Engineering, Xi&#x0027;an Jiaotong University, Institute of Artificial Intelligence and Robotics, Xi&#x0027;an Jiaotong University, Huawei Technologies,ACS Lab,Shenzhen,China
+- **会议**: CVPR 2023
+
+### Dense Network Expansion for Class Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01141) · 📚 被引 68
+- **作者**: Zhiyuan Hu, Yunsheng Li, Jiancheng Lyu, Dashan Gao, Nuno Vasconcelos
+- **🏷️ 机构**: UC San Diego, Microsoft Cloud &#x002B; AI, Qualcomm AI Research
+- **会议**: CVPR 2023
+
+### On the Stability-Plasticity Dilemma of Class-Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01934) · 📚 被引 59
+- **作者**: Dongwan Kim, Bohyung Han
+- **🏷️ 机构**: Seoul National University,Computer Vision Laboratory, ECE
+- **会议**: CVPR 2023
+
+### CafeBoost: Causal Feature Boost to Eliminate Task-Induced Bias for Class Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01537) · 📚 被引 8
+- **作者**: Benliu Qiu, Hongliang Li, Haitao Wen, Heqian Qiu, Lanxiao Wang, Fanman Meng et al.
+- **🏷️ 机构**: University of Electronic Science and Technology of China,Chengdu,China
+- **会议**: CVPR 2023
+
+### Foundation Model Drives Weakly Incremental Learning for Semantic Segmentation.
+- **链接**: [arXiv:2302.14250](https://arxiv.org/abs/2302.14250) · 📚 被引 21
+- **作者**: Chaohui Yu, Qiang Zhou, Jingliang Li, Jianlong Yuan, Zhibin Wang, Fan Wang
+- **🏷️ 机构**: Alibaba Group, University of the Chinese Academy of Sciences
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Prompt-based continual learning is an emerging direction in leveraging pre-trained knowledge for downstream continual learning, and has almost reached the performance pinnacle under supervised pre-training. However, our empirical research reveals that the current strategies fall short of their full potential under the more realistic self-supervised pre-training, which is essential for handling vast quantities of unlabeled data in practice. This is largely due to the difficulty of task-specific knowledge being incorporated into instructed representations via prompt parameters and predicted by uninstructed representations at test time. To overcome the exposed sub-optimality, we conduct a theoretical analysis of the continual learning objective in the context of pre-training, and decompose it into hierarchical components: within-task prediction, task-identity inference, and task-adaptive prediction. Following these empirical and theoretical insights, we propose Hierarchical Decomposition (HiDe-)Prompt, an innovative approach that explicitly optimizes the hierarchical components with an ensemble of task-specific prompts and statistics of both uninstructed and instructed representations, further with the coordination of a contrastive regularization strategy. Our extensive experiments demonstrate the superior performance of HiDe-Prompt and its robustness to pre-training paradigms in continual learning (e.g., up to 15.01% and 9.61% lead on Split CIFAR-100 and Split ImageNet-R, respectively). Our code is available at \url{https://github.com/thu-ml/HiDe-Prompt}.
+> Continual learning (CL) enables models to adapt to new tasks and environments without forgetting previously learned knowledge. While current CL setups have ignored the relationship between labels in the past task and the new task with or without small task overlaps, real-world scenarios often involve hierarchical relationships between old and new tasks, posing another challenge for traditional CL approaches. To address this challenge, we propose a novel multi-level hierarchical class incremental task configuration with an online learning constraint, called hierarchical label expansion (HLE). Our configuration allows a network to first learn coarse-grained classes, with data labels continually expanding to more fine-grained classes in various hierarchy depths. To tackle this new setup, we propose a rehearsal-based method that utilizes hierarchy-aware pseudo-labeling to incorporate hierarchical class information. Additionally, we propose a simple yet effective memory management and sampling strategy that selectively adopts samples of newly encountered classes. Our experiments demonstrate that our proposed method can effectively use hierarchy on our HLE setup to improve classification accuracy across all levels of hierarchies, regardless of depth and class imbalance ratio, outperforming prior state-of-the-art works by significant margins while also outperforming them on the conventional disjoint, blurry and i-Blurry CL setups.
 
 </details>
 
-### CL-NeRF: Continual Learning of Neural Radiance Fields for Evolving Scene Representation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/6c7154e394e24c69409256ccf8bf0804-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Xiuzhe Wu, Peng Dai, Weipeng Deng, Handi Chen, Yang Wu, Yan-Pei Cao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+### Few-Shot Class-Incremental Learning via Class-Aware Bilateral Distillation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01139) · 📚 被引 110
+- **作者**: Linglan Zhao, Jing Lu, Yunlu Xu, Zhanzhan Cheng, Dashan Guo, Yi Niu et al.
+- **🏷️ 机构**: Shanghai Jiao Tong University,Department of Electronic Engineering, Hikvision Research Institute
+- **会议**: CVPR 2023
 
-### An Efficient Dataset Condensation Plugin and Its Application to Continual Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/d5f34e7e70d80f5037ab16a48e2d186e-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Enneng Yang, Li Shen, Zhenyi Wang, Tongliang Liu, Guibing Guo
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### A Data-Free Approach to Mitigate Catastrophic Forgetting in Federated Class Incremental Learning for Vision Tasks.
-- **链接**: [arXiv:2311.07784](https://arxiv.org/abs/2311.07784) · 📚 被引 7
-- **作者**: Sara Babakniya, Zalan Fabian, Chaoyang He, Mahdi Soltanolkotabi, Salman Avestimehr
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Deep learning models often suffer from forgetting previously learned information when trained on new data. This problem is exacerbated in federated learning (FL), where the data is distributed and can change independently for each user. Many solutions are proposed to resolve this catastrophic forgetting in a centralized setting. However, they do not apply directly to FL because of its unique complexities, such as privacy concerns and resource limitations. To overcome these challenges, this paper presents a framework for $\textbf{federated class incremental learning}$ that utilizes a generative model to synthesize samples from past distributions. This data can be later exploited alongside the training data to mitigate catastrophic forgetting. To preserve privacy, the generative model is trained on the server using data-free methods at the end of each task without requesting data from clients. Moreover, our solution does not demand the users to store old data or models, which gives them the freedom to join/leave the training at any time. Additionally, we introduce SuperImageNet, a new regrouping of the ImageNet dataset specifically tailored for federated continual learning. We demonstrate significant improvements compared to existing baselines through extensive experiments on multiple datasets.
-
-</details>
-
-### Enhancing Knowledge Transfer for Task Incremental Learning with Data-free Subnetwork.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/d7b3cef7c31b94a4a533db83d01a8882-Abstract-Conference.html) · 📚 被引 3
-- **作者**: Qiang Gao, Xiaojun Shan, Yuchen Zhang, Fan Zhou
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-### A Unified Approach to Domain Incremental Learning with Memory: Theory and Algorithm.
-- **链接**: [arXiv:2310.12244](https://arxiv.org/abs/2310.12244) · [代码](https://github.com/Wang-ML-Lab/unified-continual-learning) · 📚 被引 7
-- **作者**: Haizhou Shi, Hao Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Domain incremental learning aims to adapt to a sequence of domains with access to only a small subset of data (i.e., memory) from previous domains. Various methods have been proposed for this problem, but it is still unclear how they are related and when practitioners should choose one method over another. In response, we propose a unified framework, dubbed Unified Domain Incremental Learning (UDIL), for domain incremental learning with memory. Our UDIL **unifies** various existing methods, and our theoretical analysis shows that UDIL always achieves a tighter generalization error bound compared to these methods. The key insight is that different existing methods correspond to our bound with different **fixed** coefficients; based on insights from this unification, our UDIL allows **adaptive** coefficients during training, thereby always achieving the tightest bound. Empirical results show that our UDIL outperforms the state-of-the-art domain incremental learning methods on both synthetic and real-world datasets. Code will be available at https://github.com/Wang-ML-Lab/unified-continual-learning.
-
-</details>
-
-### Few-Shot Class-Incremental Learning via Training-Free Prototype Calibration.
-- **链接**: [arXiv:2312.05229](https://arxiv.org/abs/2312.05229) · [代码](https://github.com/wangkiw/TEEN) · 📚 被引 31
-- **作者**: Qi-Wei Wang, Da-Wei Zhou, Yi-Kai Zhang, De-Chuan Zhan, Han-Jia Ye
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Real-world scenarios are usually accompanied by continuously appearing classes with scare labeled samples, which require the machine learning model to incrementally learn new classes and maintain the knowledge of base classes. In this Few-Shot Class-Incremental Learning (FSCIL) scenario, existing methods either introduce extra learnable components or rely on a frozen feature extractor to mitigate catastrophic forgetting and overfitting problems. However, we find a tendency for existing methods to misclassify the samples of new classes into base classes, which leads to the poor performance of new classes. In other words, the strong discriminability of base classes distracts the classification of new classes. To figure out this intriguing phenomenon, we observe that although the feature extractor is only trained on base classes, it can surprisingly represent the semantic similarity between the base and unseen new classes. Building upon these analyses, we propose a simple yet effective Training-frEE calibratioN (TEEN) strategy to enhance the discriminability of new classes by fusing the new prototypes (i.e., mean features of a class) with weighted base prototypes. In addition to standard benchmarks in FSCIL, TEEN demonstrates remarkable performance and consistent improvements over baseline methods in the few-shot learning scenario. Code is available at: https://github.com/wangkiw/TEEN
-
-</details>
+### Incrementer: Transformer for Class-Incremental Semantic Segmentation with Knowledge Distillation Focusing on Old Class.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00697) · 📚 被引 40
+- **作者**: Chao Shang, Hongliang Li, Fanman Meng, Qingbo Wu, Heqian Qiu, Lanxiao Wang
+- **🏷️ 机构**: University of Electronic Science and Technology of China
+- **会议**: CVPR 2023
