@@ -1,36 +1,42 @@
 # Neural Architecture Search — 2023 Guideline
 
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
-> 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### ElasticViT: Conflict-aware Supernet Training for Deploying Fast Vision Transformer on Diverse Mobile Devices.
-- **链接**: [arXiv:2303.09730](https://arxiv.org/abs/2303.09730) · 📚 被引 18
-- **作者**: Chen Tang, Li Lyna Zhang, Huiqiang Jiang, Jiahang Xu, Ting Cao, Quanlu Zhang et al.
-- **🏷️ 机构**: Tsinghua University, Microsoft Research
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Neural Architecture Search (NAS) has shown promising performance in the automatic design of vision transformers (ViT) exceeding 1G FLOPs. However, designing lightweight and low-latency ViT models for diverse mobile devices remains a big challenge. In this work, we propose ElasticViT, a two-stage NAS approach that trains a high-quality ViT supernet over a very large search space that supports a wide range of mobile devices, and then searches an optimal sub-network (subnet) for direct deployment. However, prior supernet training methods that rely on uniform sampling suffer from the gradient conflict issue: the sampled subnets can have vastly different model sizes (e.g., 50M vs. 2G FLOPs), leading to different optimization directions and inferior performance. To address this challenge, we propose two novel sampling techniques: complexity-aware sampling and performance-aware sampling. Complexity-aware sampling limits the FLOPs difference among the subnets sampled across adjacent training steps, while covering different-sized subnets in the search space. Performance-aware sampling further selects subnets that have good accuracy, which can reduce gradient conflicts and improve supernet quality. Our discovered models, ElasticViT models, achieve top-1 accuracy from 67.2% to 80.0% on ImageNet from 60M to 800M FLOPs without extra retraining, outperforming all prior CNNs and ViTs in terms of accuracy and latency. Our tiny and small models are also the first ViT models that surpass state-of-the-art CNNs with significantly lower latency on mobile devices. For instance, ElasticViT-S1 runs 2.62x faster than EfficientNet-B0 with 0.1% higher accuracy.
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Graph Neural Networks (GNNs) obtain tremendous success in modeling relational data. Still, they are prone to adversarial attacks, which are massive threats to applying GNNs to risk-sensitive domains. Existing defensive methods neither guarantee performance facing new data/tasks or adversarial attacks nor provide insights to understand GNN robustness from an architectural perspective. Neural Architecture Search (NAS) has the potential to solve this problem by automating GNN architecture designs. Nevertheless, current graph NAS approaches lack robust design and are vulnerable to adversarial attacks. To tackle these challenges, we propose a novel Robust Neural Architecture search framework for GNNs (G-RNA). Specifically, we design a robust search space for the message-passing mechanism by adding graph structure mask operations into the search space, which comprises various defensive operation candidates and allows us to search for defensive GNNs. Furthermore, we define a robustness metric to guide the search procedure, which helps to filter robust architectures. In this way, G-RNA helps understand GNN robustness from an architectural perspective and effectively searches for optimal adversarial robust GNNs. Extensive experimental results on benchmark datasets show that G-RNA significantly outperforms manually designed robust GNNs and vanilla graph NAS baselines by 12.1% to 23.4% under adversarial attacks.
-
-</details>
-
-### MixPath: A Unified Approach for One-shot Neural Architecture Search.
-- **链接**: [arXiv:2001.05887](https://arxiv.org/abs/2001.05887) · 📚 被引 15
-- **作者**: Xiangxiang Chu, Shun Lu, Xudong Li, Bo Zhang
+### EvoPrompting: Language Models for Code-Level Neural Architecture Search.
+- **链接**: [arXiv:2302.14838](https://arxiv.org/abs/2302.14838) · 📚 被引 20
+- **作者**: Angelica Chen, David Dohan, David R. So
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
+- **会议**: NeurIPS 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Differentiable architecture search (DARTS) has significantly promoted the development of NAS techniques because of its high search efficiency and effectiveness but suffers from performance collapse. In this paper, we make efforts to alleviate the performance collapse problem for DARTS from two aspects. First, we investigate the expressive power of the supernet in DARTS and then derive a new setup of DARTS paradigm with only training BatchNorm. Second, we theoretically find that random features dilute the auxiliary connection role of skip-connection in supernet optimization and enable search algorithm focus on fairer operation selection, thereby solving the performance collapse problem. We instantiate DARTS and PC-DARTS with random features to build an improved version for each named RF-DARTS and RF-PCDARTS respectively. Experimental results show that RF-DARTS obtains \textbf{94.36\%} test accuracy on CIFAR-10 (which is the nearest optimal result in NAS-Bench-201), and achieves the newest state-of-the-art top-1 test error of \textbf{24.0\%} on ImageNet when transferring from CIFAR-10. Moreover, RF-DARTS performs robustly across three datasets (CIFAR-10, CIFAR-100, and SVHN) and four search spaces (S1-S4). Besides, RF-PCDARTS achieves even better results on ImageNet, that is, \textbf{23.9\%} top-1 and \textbf{7.1\%} top-5 test error, surpassing representative methods like single-path, training-free, and partial-channel paradigms directly searched on ImageNet.
+> Given the recent impressive accomplishments of language models (LMs) for code generation, we explore the use of LMs as adaptive mutation and crossover operators for an evolutionary neural architecture search (NAS) algorithm. While NAS still proves too difficult a task for LMs to succeed at solely through prompting, we find that the combination of evolutionary prompt engineering with soft prompt-tuning, a method we term EvoPrompting, consistently finds diverse and high performing models. We first demonstrate that EvoPrompting is effective on the computationally efficient MNIST-1D dataset, where EvoPrompting produces convolutional architecture variants that outperform both those designed by human experts and naive few-shot prompting in terms of accuracy and model size. We then apply our method to searching for graph neural networks on the CLRS Algorithmic Reasoning Benchmark, where EvoPrompting is able to design novel architectures that outperform current state-of-the-art models on 21 out of 30 algorithmic reasoning tasks while maintaining similar model size. EvoPrompting is successful at designing accurate and efficient neural network architectures across a variety of machine learning tasks, while also being general enough for easy adaptation to other tasks beyond neural network design.
 
 </details>
+
+### Multi-task Graph Neural Architecture Search with Task-aware Collaboration and Curriculum.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/4e839c9c398c58c878a394633b806ccd-Abstract-Conference.html) · 📚 被引 3
+- **作者**: Yijian Qin, Xin Wang, Ziwei Zhang, Hong Chen, Wenwu Zhu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
+
+### Construction of Hierarchical Neural Architecture Search Spaces based on Context-free Grammars.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/4869f3f967dfe954439408dd92c50ee1-Abstract-Conference.html) · 📚 被引 2
+- **作者**: Simon Schrodi, Danny Stoll, Binxin Ru, Rhea Sanjay Sukthanker, Thomas Brox, Frank Hutter
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
+
+### Evolutionary Neural Architecture Search for Transformer in Knowledge Tracing.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/3e53d82a1113e3d240059a9195668edc-Abstract-Conference.html) · 📚 被引 6
+- **作者**: Shangshang Yang, Xiaoshan Yu, Ye Tian, Xueming Yan, Haiping Ma, Xingyi Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
+
+### Unsupervised Graph Neural Architecture Search with Disentangled Self-Supervision.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/e78399fc43dbb2d87b7e1e6906ce5baf-Abstract-Conference.html) · 📚 被引 1
+- **作者**: Zeyang Zhang, Xin Wang, Ziwei Zhang, Guangyao Shen, Shiqi Shen, Wenwu Zhu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
