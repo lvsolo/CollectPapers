@@ -23,9 +23,17 @@
 - **🏷️ 机构**: School of Microelectronics and Communication Engineering, Chongqing University, China Hikvision Research Institute,Hangzhou,China
 - **会议**: CVPR 2023
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### AIDE: A Vision-Driven Multi-View, Multi-Modal, Multi-Tasking Dataset for Assistive Driving Perception.
+- **链接**: [arXiv:2307.13933](https://arxiv.org/abs/2307.13933) · 📚 被引 67
+- **作者**: Dingkang Yang, Shuai Huang, Zhi Xu, Zhenpeng Li, Shunli Wang, Mingcheng Li et al.
+- **🏷️ 机构**: Academy for Engineering and Technology, Fudan University
+- **会议**: ICCV 2023
 
-> Domain shift degrades the performance of object detection models in practical applications. To alleviate the influence of domain shift, plenty of previous work try to decouple and learn the domain-invariant (common) features from source domains via domain adversarial learning (DAL). However, inspired by causal mechanisms, we find that previous methods ignore the implicit insignificant non-causal factors hidden in the common features. This is mainly due to the single-view nature of DAL. In this work, we present an idea to remove non-causal factors from common features by multi-view adversarial training on source domains, because we observe that such insignificant non-causal factors may still be significant in other latent spaces (views) due to the multi-mode structure of data. To summarize, we propose a Multi-view Adversarial Discriminator (MAD) based domain generalization model, consisting of a Spurious Correlations Generator (SCG) that increases the diversity of source domain by random augmentation and a Multi-View Domain Classifier (MVDC) that maps features to multiple latent spaces, such that the non-causal factors are removed and the domain-invariant features are purified. Extensive experiments on six benchmarks show our MAD obtains state-of-the-art performance.
+### Cross-view Topology Based Consistent and Complementary Information for Deep Multi-view Clustering.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01781) · 📚 被引 32
+- **作者**: Zhibin Dong, Siwei Wang, Jiaqi Jin, Xinwang Liu, En Zhu
+- **🏷️ 机构**: National University of Defense Technology,School of Computer,Changsha,China, Intelligent Game and Decision Lab,Beijing,China
+- **会议**: ICCV 2023
 
 </details>
 
@@ -245,11 +253,11 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
-### Sample-level Multi-view Graph Clustering.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02295) · 📚 被引 48
-- **作者**: Yuze Tan, Yixi Liu, Shudong Huang, Wentao Feng, Jiancheng Lv
-- **🏷️ 机构**: Sichuan University
-- **会议**: CVPR 2023
+### Replay: Multi-modal Multi-view Acted Videos for Casual Holography.
+- **链接**: [arXiv:2307.12067](https://arxiv.org/abs/2307.12067) · 📚 被引 7
+- **作者**: Roman Shapovalov, Yanir Kleiman, Ignacio Rocco, David Novotný, Andrea Vedaldi, Changan Chen et al.
+- **🏷️ 机构**: Meta
+- **会议**: ICCV 2023
 
 ### On the Effects of Self-supervision and Contrastive Alignment in Deep Multi-view Clustering.
 - **链接**: [arXiv:2303.09877](https://arxiv.org/abs/2303.09877) · 📚 被引 57
@@ -259,139 +267,13 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Self-supervised learning is a central component in recent approaches to deep multi-view clustering (MVC). However, we find large variations in the development of self-supervision-based methods for deep MVC, potentially slowing the progress of the field. To address this, we present DeepMVC, a unified framework for deep MVC that includes many recent methods as instances. We leverage our framework to make key observations about the effect of self-supervision, and in particular, drawbacks of aligning representations with contrastive learning. Further, we prove that contrastive alignment can negatively influence cluster separability, and that this effect becomes worse when the number of views increases. Motivated by our findings, we develop several new DeepMVC instances with new forms of self-supervision. We conduct extensive experiments and find that (i) in line with our theoretical findings, contrastive alignments decreases performance on datasets with many views; (ii) all methods benefit from some form of self-supervision; and (iii) our new instances outperform previous methods on several datasets. Based on our results, we suggest several promising directions for future research. To enhance the openness of the field, we provide an open-source implementation of DeepMVC, including recent models and our new instances. Our implementation includes a consistent evaluation protocol, facilitating fair and accurate evaluation of methods and components.
+> Multi-view image generation attracts particular attention these days due to its promising 3D-related applications, e.g., image viewpoint editing. Most existing methods follow a paradigm where a 3D representation is first synthesized, and then rendered into 2D images to ensure photo-consistency across viewpoints. However, such explicit bias for photo-consistency sacrifices photo-realism, causing geometry artifacts and loss of fine-scale details when these methods are applied to edit real images. To address this issue, we propose ray conditioning, a geometry-free alternative that relaxes the photo-consistency constraint. Our method generates multi-view images by conditioning a 2D GAN on a light field prior. With explicit viewpoint control, state-of-the-art photo-realism and identity consistency, our method is particularly suited for the viewpoint editing task.
 
 </details>
 
-### Highly Confident Local Structure Based Consensus Graph Learning for Incomplete Multi-view Clustering.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01508) · 📚 被引 51
-- **作者**: Jie Wen, Chengliang Liu, Gehui Xu, Zhihao Wu, Chao Huang, Lunke Fei et al.
-- **🏷️ 机构**: Harbin Institute of Technology,Shenzhen Key Laboratory of Visual Object Detection and Recognition,Shenzhen,China, School of Cyber Science and Technology, Shenzhen Campus of Sun Yat-sen University,Shenzhen,China, School of Computer Science and Technology, Guangdong University of Technology,Guangzhou,China
-- **会议**: CVPR 2023
-
-### CutMIB: Boosting Light Field Super-Resolution via Multi-View Image Blending.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00167) · 📚 被引 51
-- **作者**: Zeyu Xiao, Yutong Liu, Ruisheng Gao, Zhiwei Xiong
-- **🏷️ 机构**: University of Science and Technology of China
-- **会议**: CVPR 2023
-
-### Exploring and Exploiting Uncertainty for Incomplete Multi-View Classification.
-- **链接**: [arXiv:2304.05165](https://arxiv.org/abs/2304.05165) · 📚 被引 44
-- **作者**: Mengyao Xie, Zongbo Han, Changqing Zhang, Yichen Bai, Qinghua Hu
-- **🏷️ 机构**: College of Intelligence and Computing, Tianjin University
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Classifying incomplete multi-view data is inevitable since arbitrary view missing widely exists in real-world applications. Although great progress has been achieved, existing incomplete multi-view methods are still difficult to obtain a trustworthy prediction due to the relatively high uncertainty nature of missing views. First, the missing view is of high uncertainty, and thus it is not reasonable to provide a single deterministic imputation. Second, the quality of the imputed data itself is of high uncertainty. To explore and exploit the uncertainty, we propose an Uncertainty-induced Incomplete Multi-View Data Classification (UIMC) model to classify the incomplete multi-view data under a stable and reliable framework. We construct a distribution and sample multiple times to characterize the uncertainty of missing views, and adaptively utilize them according to the sampling quality. Accordingly, the proposed method realizes more perceivable imputation and controllable fusion. Specifically, we model each missing data with a distribution conditioning on the available views and thus introducing uncertainty. Then an evidence-based fusion strategy is employed to guarantee the trustworthy integration of the imputed views. Extensive experiments are conducted on multiple benchmark data sets and our method establishes a state-of-the-art performance in terms of both performance and trustworthiness.
-
-</details>
-
-### High-fidelity 3D GAN Inversion by Pseudo-multi-view Optimization.
-- **链接**: [arXiv:2211.15662](https://arxiv.org/abs/2211.15662) · 📚 被引 51
-- **作者**: Jiaxin Xie, Hao Ouyang, Jingtan Piao, Chenyang Lei, Qifeng Chen
-- **🏷️ 机构**: HKUST, CUHK,MMLab, CAIR, HKISI-CAS
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We present a high-fidelity 3D generative adversarial network (GAN) inversion framework that can synthesize photo-realistic novel views while preserving specific details of the input image. High-fidelity 3D GAN inversion is inherently challenging due to the geometry-texture trade-off in 3D inversion, where overfitting to a single view input image often damages the estimated geometry during the latent optimization. To solve this challenge, we propose a novel pipeline that builds on the pseudo-multi-view estimation with visibility analysis. We keep the original textures for the visible parts and utilize generative priors for the occluded parts. Extensive experiments show that our approach achieves advantageous reconstruction and novel view synthesis quality over state-of-the-art methods, even for images with out-of-distribution textures. The proposed pipeline also enables image attribute editing with the inverted latent code and 3D-aware texture modification. Our approach enables high-fidelity 3D rendering from a single image, which is promising for various applications of AI-generated 3D content.
-
-</details>
-
-### NEF: Neural Edge Fields for 3D Parametric Curve Reconstruction from Multi-View Images.
-- **链接**: [arXiv:2303.07653](https://arxiv.org/abs/2303.07653) · 📚 被引 35
-- **作者**: Yunfan Ye, Renjiao Yi, Zhirui Gao, Chenyang Zhu, Zhiping Cai, Kai Xu
-- **🏷️ 机构**: National University of Defense Technology
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We study the problem of reconstructing 3D feature curves of an object from a set of calibrated multi-view images. To do so, we learn a neural implicit field representing the density distribution of 3D edges which we refer to as Neural Edge Field (NEF). Inspired by NeRF, NEF is optimized with a view-based rendering loss where a 2D edge map is rendered at a given view and is compared to the ground-truth edge map extracted from the image of that view. The rendering-based differentiable optimization of NEF fully exploits 2D edge detection, without needing a supervision of 3D edges, a 3D geometric operator or cross-view edge correspondence. Several technical designs are devised to ensure learning a range-limited and view-independent NEF for robust edge extraction. The final parametric 3D curves are extracted from NEF with an iterative optimization method. On our benchmark with synthetic data, we demonstrate that NEF outperforms existing state-of-the-art methods on all metrics. Project page: https://yunfan1202.github.io/NEF/.
-
-</details>
-
-### MVImgNet: A Large-scale Dataset of Multi-view Images.
-- **链接**: [arXiv:2303.06042](https://arxiv.org/abs/2303.06042) · 📚 被引 131
-- **作者**: Xianggang Yu, Mutian Xu, Yidan Zhang, Haolin Liu, Chongjie Ye, Yushuang Wu et al.
-- **🏷️ 机构**: FNii, CUHKSZ, SSE, CUHKSZ
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Being data-driven is one of the most iconic properties of deep learning algorithms. The birth of ImageNet drives a remarkable trend of "learning from large-scale data" in computer vision. Pretraining on ImageNet to obtain rich universal representations has been manifested to benefit various 2D visual tasks, and becomes a standard in 2D vision. However, due to the laborious collection of real-world 3D data, there is yet no generic dataset serving as a counterpart of ImageNet in 3D vision, thus how such a dataset can impact the 3D community is unraveled. To remedy this defect, we introduce MVImgNet, a large-scale dataset of multi-view images, which is highly convenient to gain by shooting videos of real-world objects in human daily life. It contains 6.5 million frames from 219,188 videos crossing objects from 238 classes, with rich annotations of object masks, camera parameters, and point clouds. The multi-view attribute endows our dataset with 3D-aware signals, making it a soft bridge between 2D and 3D vision. We conduct pilot studies for probing the potential of MVImgNet on a variety of 3D and 2D visual tasks, including radiance field reconstruction, multi-view stereo, and view-consistent image understanding, where MVImgNet demonstrates promising performance, remaining lots of possibilities for future explorations. Besides, via dense reconstruction on MVImgNet, a 3D object point cloud dataset is derived, called MVPNet, covering 87,200 samples from 150 categories, with the class label on each point cloud. Experiments show that MVPNet can benefit the real-world 3D object classification while posing new challenges to point cloud understanding. MVImgNet and MVPNet will be publicly available, hoping to inspire the broader vision community.
-
-</details>
-
-### 3D-aware Facial Landmark Detection via Multi-view Consistent Training on Synthetic Data.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01226) · 📚 被引 17
-- **作者**: Libing Zeng, Lele Chen, Wentao Bao, Zhong Li, Yi Xu, Junsong Yuan et al.
-- **🏷️ 机构**: Texas A&#x0026;M University, InnoPeak Technology, Inc,OPPO US Research Center, Michigan State University
-- **会议**: CVPR 2023
-
-### NeuralDome: A Neural Modeling Pipeline on Multi-View Human-Object Interactions.
-- **链接**: [arXiv:2212.07626](https://arxiv.org/abs/2212.07626) · 📚 被引 33
-- **作者**: Juze Zhang, Haimin Luo, Hongdi Yang, Xinru Xu, Qianyang Wu, Ye Shi et al.
-- **🏷️ 机构**: ShanghaiTech University
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Humans constantly interact with objects in daily life tasks. Capturing such processes and subsequently conducting visual inferences from a fixed viewpoint suffers from occlusions, shape and texture ambiguities, motions, etc. To mitigate the problem, it is essential to build a training dataset that captures free-viewpoint interactions. We construct a dense multi-view dome to acquire a complex human object interaction dataset, named HODome, that consists of $\sim$75M frames on 10 subjects interacting with 23 objects. To process the HODome dataset, we develop NeuralDome, a layer-wise neural processing pipeline tailored for multi-view video inputs to conduct accurate tracking, geometry reconstruction and free-view rendering, for both human subjects and objects. Extensive experiments on the HODome dataset demonstrate the effectiveness of NeuralDome on a variety of inference, modeling, and rendering tasks. Both the dataset and the NeuralDome tools will be disseminated to the community for further development.
-
-</details>
-
-### GeoMVSNet: Learning Multi-View Stereo with Geometry Perception.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02060) · 📚 被引 119
-- **作者**: Zhe Zhang, Rui Peng, Yuxi Hu, Ronggang Wang
-- **🏷️ 机构**: School of Electronic and Computer Engineering, Peking University,China, School of Science and Engineering, The Chinese University of Hong Kong,Shenzhen,China
-- **会议**: CVPR 2023
-
-### Multi-View Stereo Representation Revist: Region-Aware MVSNet.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01667) · 📚 被引 28
-- **作者**: Yisu Zhang, Jianke Zhu, Lixiang Lin
-- **🏷️ 机构**: Zhejiang University
-- **会议**: CVPR 2023
-
-### NeuFace: Realistic 3D Neural Face Rendering from Multi-View Images.
-- **链接**: [arXiv:2303.14092](https://arxiv.org/abs/2303.14092) · 📚 被引 18
-- **作者**: Mingwu Zheng, Haiyu Zhang, Hongyu Yang, Di Huang
-- **🏷️ 机构**: Beihang University,State Key Laboratory of Software Development Environment,Beijing,China, Institute of Artificial Intelligence, Beihang University,Beijing,China
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Realistic face rendering from multi-view images is beneficial to various computer vision and graphics applications. Due to the complex spatially-varying reflectance properties and geometry characteristics of faces, however, it remains challenging to recover 3D facial representations both faithfully and efficiently in the current studies. This paper presents a novel 3D face rendering model, namely NeuFace, to learn accurate and physically-meaningful underlying 3D representations by neural rendering techniques. It naturally incorporates the neural BRDFs into physically based rendering, capturing sophisticated facial geometry and appearance clues in a collaborative manner. Specifically, we introduce an approximated BRDF integration and a simple yet new low-rank prior, which effectively lower the ambiguities and boost the performance of the facial BRDFs. Extensive experiments demonstrate the superiority of NeuFace in human face rendering, along with a decent generalization ability to common objects.
-
-</details>
-
-### Relightable Neural Human Assets from Multi-view Gradient Illuminations.
-- **链接**: [arXiv:2212.07648](https://arxiv.org/abs/2212.07648) · 📚 被引 24
-- **作者**: Taotao Zhou, Kai He, Di Wu, Teng Xu, Qixuan Zhang, Kuixiang Shao et al.
-- **🏷️ 机构**: ShanghaiTech University, University of Toronto
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Human modeling and relighting are two fundamental problems in computer vision and graphics, where high-quality datasets can largely facilitate related research. However, most existing human datasets only provide multi-view human images captured under the same illumination. Although valuable for modeling tasks, they are not readily used in relighting problems. To promote research in both fields, in this paper, we present UltraStage, a new 3D human dataset that contains more than 2,000 high-quality human assets captured under both multi-view and multi-illumination settings. Specifically, for each example, we provide 32 surrounding views illuminated with one white light and two gradient illuminations. In addition to regular multi-view images, gradient illuminations help recover detailed surface normal and spatially-varying material maps, enabling various relighting applications. Inspired by recent advances in neural representation, we further interpret each example into a neural human asset which allows novel view synthesis under arbitrary lighting conditions. We show our neural human assets can achieve extremely high capture performance and are capable of representing fine details such as facial wrinkles and cloth folds. We also validate UltraStage in single image relighting tasks, training neural networks with virtual relighted data from neural assets and demonstrating realistic rendering improvements over prior arts. UltraStage will be publicly available to the community to stimulate significant future developments in various human modeling and rendering tasks. The dataset is available at https://miaoing.github.io/RNHA.
-
-</details>
-
-### Multi-View Reconstruction Using Signed Ray Distance Functions (SRDF).
-- **链接**: [arXiv:2209.00082](https://arxiv.org/abs/2209.00082) · 📚 被引 11
-- **作者**: Pierre Zins, Yuanlu Xu, Edmond Boyer, Stefanie Wuhrer, Tony Tung
-- **🏷️ 机构**: Inria centre at the University Grenoble Alpes, Meta Reality Labs,Sausalito,USA
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this paper, we investigate a new optimization framework for multi-view 3D shape reconstructions. Recent differentiable rendering approaches have provided breakthrough performances with implicit shape representations though they can still lack precision in the estimated geometries. On the other hand multi-view stereo methods can yield pixel wise geometric accuracy with local depth predictions along viewing rays. Our approach bridges the gap between the two strategies with a novel volumetric shape representation that is implicit but parameterized with pixel depths to better materialize the shape surface with consistent signed distances along viewing rays. The approach retains pixel-accuracy while benefiting from volumetric integration in the optimization. To this aim, depths are optimized by evaluating, at each 3D location within the volumetric discretization, the agreement between the depth prediction consistency and the photometric consistency for the corresponding pixels. The optimization is agnostic to the associated photo-consistency term which can vary from a median-based baseline to more elaborate criteria learned functions. Our experiments demonstrate the benefit of the volumetric integration with depth predictions. They also show that our approach outperforms existing approaches over standard 3D benchmarks with better geometry estimations.
-
-</details>
-
-### Standing Between Past and Future: Spatio-Temporal Modeling for Multi-Camera 3D Multi-Object Tracking.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01719)
-- **作者**: Ziqi Pang, Jie Li, Pavel Tokmakov, Dian Chen, Sergey Zagoruyko, Yu-Xiong Wang
+### Multi-view Self-supervised Disentanglement for General Image Denoising.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01128)
+- **作者**: Hao Chen, Chenyuan Qu, Yu Zhang, Chen Chen, Jianbo Jiao
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
