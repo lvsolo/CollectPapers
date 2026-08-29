@@ -1,18 +1,24 @@
 # Multimodal — 2021 Guideline
 
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
-> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 19 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
+### Image2Reverb: Cross-Modal Reverb Impulse Response Synthesis.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00035) · 📚 被引 42
+- **作者**: Nikhil Singh, Jeff Mentch, Jerry Ng, Matthew Beveridge, Iddo Drori
+- **🏷️ 机构**: MIT Media Lab, Harvard University SHBT, MIT Mechanical Engineering
+- **会议**: ICCV 2021
+
 ### COOKIE: Contrastive Cross-Modal Knowledge Sharing Pre-training for Vision-Language Representation.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00221)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00221) · 📚 被引 25
 - **作者**: Keyu Wen, Jin Xia, Yuanyuan Huang, Linyang Li, Jiayan Xu, Jie Shao
 - **🏷️ 机构**: ByteDance AI Lab, Fudan University
 - **会议**: ICCV 2021
 
 ### Towers of Babel: Combining Images, Language, and 3D Geometry for Learning Multimodal Vision.
-- **链接**: [arXiv:2108.05863](https://arxiv.org/abs/2108.05863)
+- **链接**: [arXiv:2108.05863](https://arxiv.org/abs/2108.05863) · 📚 被引 14
 - **作者**: Xiaoshi Wu, Hadar Averbuch-Elor, Jin Sun, Noah Snavely
 - **🏷️ 机构**: Tsinghua University, Cornell University,Cornell Tech
 - **会议**: ICCV 2021
@@ -48,7 +54,7 @@
 - **会议**: ICCV 2021
 
 ### Multimodal Clustering Networks for Self-supervised Learning from Unlabeled Videos.
-- **链接**: [arXiv:2104.12671](https://arxiv.org/abs/2104.12671) · 📚 被引 64
+- **链接**: [arXiv:2104.12671](https://arxiv.org/abs/2104.12671) · 📚 被引 65
 - **作者**: Brian Chen, Andrew Rouditchenko, Kevin Duarte, Hilde Kuehne, Samuel Thomas, Angie W. Boggust et al.
 - **🏷️ 机构**: Columbia University, MIT CSAIL, University of Central Florida
 - **会议**: ICCV 2021
@@ -78,7 +84,7 @@
 - **会议**: ICCV 2021
 
 ### GLoRIA: A Multimodal Global-Local Representation Learning Framework for Label-efficient Medical Image Recognition.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00391) · 📚 被引 419
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00391) · 📚 被引 421
 - **作者**: Shih-Cheng Huang, Liyue Shen, Matthew P. Lungren, Serena Yeung
 - **🏷️ 机构**: Stanford University
 - **会议**: ICCV 2021
@@ -90,10 +96,16 @@
 - **会议**: ICCV 2021
 
 ### Contrastive Multimodal Fusion with TupleInfoNCE.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00079) · 📚 被引 68
+- **链接**: [arXiv:2107.02575](https://arxiv.org/abs/2107.02575) · 📚 被引 68
 - **作者**: Yunze Liu, Qingnan Fan, Shanghang Zhang, Hao Dong, Thomas A. Funkhouser, Li Yi
 - **🏷️ 机构**: Tsinghua University,IIIS, Stanford University, UC Berkeley
 - **会议**: ICCV 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper proposes a method for representation learning of multimodal data using contrastive losses. A traditional approach is to contrast different modalities to learn the information shared between them. However, that approach could fail to learn the complementary synergies between modalities that might be useful for downstream tasks. Another approach is to concatenate all the modalities into a tuple and then contrast positive and negative tuple correspondences. However, that approach could consider only the stronger modalities while ignoring the weaker ones. To address these issues, we propose a novel contrastive learning objective, TupleInfoNCE. It contrasts tuples based not only on positive and negative correspondences but also by composing new negative tuples using modalities describing different scenes. Training with these additional negatives encourages the learning model to examine the correspondences among modalities in the same tuple, ensuring that weak modalities are not ignored. We provide a theoretical justification based on mutual information for why this approach works, and we propose a sample optimization algorithm to generate positive and negative samples to maximize training efficacy. We find that TupleInfoNCE significantly outperforms the previous state of the arts on three different downstream tasks.
+
+</details>
 
 ### Multimodal Knowledge Expansion.
 - **链接**: [arXiv:2103.14431](https://arxiv.org/abs/2103.14431)
@@ -108,10 +120,16 @@
 </details>
 
 ### Learning Cross-Modal Contrastive Features for Video Domain Adaptation.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01336) · 📚 被引 63
+- **链接**: [arXiv:2108.11974](https://arxiv.org/abs/2108.11974) · 📚 被引 63
 - **作者**: Donghyun Kim, Yi-Hsuan Tsai, Bingbing Zhuang, Xiang Yu, Stan Sclaroff, Kate Saenko et al.
 - **🏷️ 机构**: Boston University, NEC Labs America
 - **会议**: ICCV 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Learning transferable and domain adaptive feature representations from videos is important for video-relevant tasks such as action recognition. Existing video domain adaptation methods mainly rely on adversarial feature alignment, which has been derived from the RGB image space. However, video data is usually associated with multi-modal information, e.g., RGB and optical flow, and thus it remains a challenge to design a better method that considers the cross-modal inputs under the cross-domain adaptation setting. To this end, we propose a unified framework for video domain adaptation, which simultaneously regularizes cross-modal and cross-domain feature representations. Specifically, we treat each modality in a domain as a view and leverage the contrastive learning technique with properly designed sampling strategies. As a result, our objectives regularize feature spaces, which originally lack the connection across modalities or have less alignment across domains. We conduct experiments on domain adaptive action recognition benchmark datasets, i.e., UCF, HMDB, and EPIC-Kitchens, and demonstrate the effectiveness of our components against state-of-the-art algorithms.
+
+</details>
 
 ### Single Image 3D Shape Retrieval via Cross-Modal Instance and Category Contrastive Learning.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01121) · 📚 被引 36
@@ -129,64 +147,16 @@
 - **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01342)
 - **作者**: Zhensheng Shi, Ju Liang, Qianqian Li, Haiyong Zheng, Zhaorui Gu, Junyu Dong et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2021
+- **会议**: ICCV 2021
+
+### Learning an Augmented RGB Representation with Cross-Modal Knowledge Distillation for Action Detection.
+- **链接**: [arXiv:2108.03619](https://arxiv.org/abs/2108.03619) · 📚 被引 38
+- **作者**: Rui Dai, Srijan Das, François Brémond
+- **🏷️ 机构**: Inria, Stony Brook University
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Revamping Cross-Modal Recipe Retrieval With Hierarchical Transformers and Self-Supervised Learning.
-- **链接**: [arXiv:2103.13061](https://arxiv.org/abs/2103.13061) · 📚 被引 74
-- **作者**: Amaia Salvador, Erhan Gundogdu, Loris Bazzani, Michael Donoser
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Cross-modal recipe retrieval has recently gained substantial attention due to the importance of food in people's lives, as well as the availability of vast amounts of digital cooking recipes and food images to train machine learning models. In this work, we revisit existing approaches for cross-modal recipe retrieval and propose a simplified end-to-end model based on well established and high performing encoders for text and images. We introduce a hierarchical recipe Transformer which attentively encodes individual recipe components (titles, ingredients and instructions). Further, we propose a self-supervised loss function computed on top of pairs of individual recipe components, which is able to leverage semantic relationships within recipes, and enables training using both image-recipe and recipe-only samples. We conduct a thorough analysis and ablation studies to validate our design choices. As a result, our proposed method achieves state-of-the-art performance in the cross-modal recipe retrieval task on the Recipe1M dataset. We make code and models publicly available.
+> In video understanding, most cross-modal knowledge distillation (KD) methods are tailored for classification tasks, focusing on the discriminative representation of the trimmed videos. However, action detection requires not only categorizing actions, but also localizing them in untrimmed videos. Therefore, transferring knowledge pertaining to temporal relations is critical for this task which is missing in the previous cross-modal KD frameworks. To this end, we aim at learning an augmented RGB representation for action detection, taking advantage of additional modalities at training time through KD. We propose a KD framework consisting of two levels of distillation. On one hand, atomic-level distillation encourages the RGB student to learn the sub-representation of the actions from the teacher in a contrastive manner. On the other hand, sequence-level distillation encourages the student to learn the temporal knowledge from the teacher, which consists of transferring the Global Contextual Relations and the Action Boundary Saliency. The result is an Augmented-RGB stream that can achieve competitive performance as the two-stream network while using only RGB at inference time. Extensive experimental analysis shows that our proposed distillation framework is generic and outperforms other popular cross-modal distillation methods in action detection task.
 
 </details>
-
-</details>
-
-### Attention Bottlenecks for Multimodal Fusion.
-- **链接**: [arXiv:2107.00135](https://arxiv.org/abs/2107.00135)
-- **作者**: Arsha Nagrani, Shan Yang, Anurag Arnab, Aren Jansen, Cordelia Schmid, Chen Sun
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The output of text-to-image synthesis systems should be coherent, clear, photo-realistic scenes with high semantic fidelity to their conditioned text descriptions. Our Cross-Modal Contrastive Generative Adversarial Network (XMC-GAN) addresses this challenge by maximizing the mutual information between image and text. It does this via multiple contrastive losses which capture inter-modality and intra-modality correspondences. XMC-GAN uses an attentional self-modulation generator, which enforces strong text-image correspondence, and a contrastive discriminator, which acts as a critic as well as a feature encoder for contrastive learning. The quality of XMC-GAN's output is a major step up from previous models, as we show on three challenging datasets. On MS-COCO, not only does XMC-GAN improve state-of-the-art FID from 24.70 to 9.33, but--more importantly--people prefer XMC-GAN by 77.3 for image quality and 74.1 for image-text alignment, compared to three other recent models. XMC-GAN also generalizes to the challenging Localized Narratives dataset (which has longer, more detailed descriptions), improving state-of-the-art FID from 48.70 to 14.12. Lastly, we train and evaluate XMC-GAN on the challenging Open Images data, establishing a strong benchmark FID score of 26.91.
-
-</details>
-
-</details>
-
-### Multimodal Few-Shot Learning with Frozen Language Models.
-- **链接**: [arXiv:2106.13884](https://arxiv.org/abs/2106.13884)
-- **作者**: Maria Tsimpoukelli, Jacob Menick, Serkan Cabi, S. M. Ali Eslami, Oriol Vinyals, Felix Hill
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Having access to multi-modal cues (e.g. vision and audio) empowers some cognitive tasks to be done faster compared to learning from a single modality. In this work, we propose to transfer knowledge across heterogeneous modalities, even though these data modalities may not be semantically correlated. Rather than directly aligning the representations of different modalities, we compose audio, image, and video representations across modalities to uncover richer multi-modal knowledge. Our main idea is to learn a compositional embedding that closes the cross-modal semantic gap and captures the task-relevant semantics, which facilitates pulling together representations across modalities by compositional contrastive learning. We establish a new, comprehensive multi-modal distillation benchmark on three video datasets: UCF101, ActivityNet, and VGGSound. Moreover, we demonstrate that our model significantly outperforms a variety of existing knowledge distillation methods in transferring audio-visual knowledge to improve video representation learning. Code is released here: https://github.com/yanbeic/CCL.
-
-</details>
-
-### Multimodal Contrastive Training for Visual Representation Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yuan_Multimodal_Contrastive_Training_for_Visual_Representation_Learning_CVPR_2021_paper.html)
-- **作者**: Xin Yuan, Zhe Lin, Jason Kuen, Jianming Zhang, Yilin Wang, Michael Maire et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Event cameras sense per-pixel intensity changes and produce asynchronous event streams with high dynamic range and less motion blur, showing advantages over conventional cameras. A hurdle of training event-based models is the lack of large qualitative labeled data. Prior works learning end-tasks mostly rely on labeled or pseudo-labeled datasets obtained from the active pixel sensor (APS) frames; however, such datasets' quality is far from rivaling those based on the canonical images. In this paper, we propose a novel approach, called \textbf{EvDistill}, to learn a student network on the unlabeled and unpaired event data (target modality) via knowledge distillation (KD) from a teacher network trained with large-scale, labeled image data (source modality). To enable KD across the unpaired modalities, we first propose a bidirectional modality reconstruction (BMR) module to bridge both modalities and simultaneously exploit them to distill knowledge via the crafted pairs, causing no extra computation in the inference. The BMR is improved by the end-tasks and KD losses in an end-to-end manner. Second, we leverage the structural similarities of both modalities and adapt the knowledge by matching their distributions. Moreover, as most prior feature KD methods are uni-modality and less applicable to our problem, we propose to leverage an affinity graph KD loss to boost the distillation. Our extensive experiments on semantic segmentation and object recognition demonstrate that EvDistill achieves significantly better results than the prior works and KD with only events and APS frames.
-
-</details>
-
-## 跨领域论文（完整笔记在其他领域）
-
-- Multimodal Virtual Point 3D Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
