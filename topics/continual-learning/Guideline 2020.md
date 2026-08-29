@@ -1,90 +1,88 @@
 # Continual Learning — 2020 Guideline
 
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
-> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Continual Learning with Adaptive Weights (CLAW).
-- **链接**: [arXiv:1911.09514](https://arxiv.org/abs/1911.09514)
-- **作者**: Tameem Adel, Han Zhao, Richard E. Turner
+### Conditional Channel Gated Networks for Task-Aware Continual Learning.
+- **链接**: [arXiv:2004.00070](https://arxiv.org/abs/2004.00070) · 📚 被引 140
+- **作者**: Davide Abati, Jakub M. Tomczak, Tijmen Blankevoort, Simone Calderara, Rita Cucchiara, Babak Ehteshami Bejnordi
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Approaches to continual learning aim to successfully learn a set of related tasks that arrive in an online manner. Recently, several frameworks have been developed which enable deep learning to be deployed in this learning scenario. A key modelling decision is to what extent the architecture should be shared across tasks. On the one hand, separately modelling each task avoids catastrophic forgetting but it does not support transfer learning and leads to large models. On the other hand, rigidly specifying a shared component and a task-specific part enables task transfer and limits the model size, but it is vulnerable to catastrophic forgetting and restricts the form of task-transfer that can occur. Ideally, the network should adaptively identify which parts of the network to share in a data driven way. Here we introduce such an approach called Continual Learning with Adaptive Weights (CLAW), which is based on probabilistic modelling and variational inference. Experiments show that CLAW achieves state-of-the-art performance on six benchmarks in terms of overall continual learning performance, as measured by classification accuracy, and in terms of addressing catastrophic forgetting.
+> Convolutional Neural Networks experience catastrophic forgetting when optimized on a sequence of learning problems: as they meet the objective of the current training examples, their performance on previous tasks drops drastically. In this work, we introduce a novel framework to tackle this problem with conditional computation. We equip each convolutional layer with task-specific gating modules, selecting which filters to apply on the given input. This way, we achieve two appealing properties. Firstly, the execution patterns of the gates allow to identify and protect important filters, ensuring no loss in the performance of the model for previously learned tasks. Secondly, by using a sparsity objective, we can promote the selection of a limited set of kernels, allowing to retain sufficient model capacity to digest new tasks.Existing solutions require, at test time, awareness of the task to which each example belongs to. This knowledge, however, may not be available in many practical scenarios. Therefore, we additionally introduce a task classifier that predicts the task label of each example, to deal with settings in which a task oracle is not available. We validate our proposal on four continual learning datasets. Results show that our model consistently outperforms existing methods both in the presence and the absence of a task oracle. Notably, on Split SVHN and Imagenet-50 datasets, our model yields up to 23.98% and 17.42% improvement in accuracy w.r.t. competing methods.
 
 </details>
 
-### Uncertainty-guided Continual Learning with Bayesian Neural Networks.
-- **链接**: [arXiv:1906.02425](https://arxiv.org/abs/1906.02425)
-- **作者**: Sayna Ebrahimi, Mohamed Elhoseiny, Trevor Darrell, Marcus Rohrbach
-- **🏷️ 机构**: UC Berkeley
-- **会议**: ICLR 2020
+### Continual Learning With Extended Kronecker-Factored Approximate Curvature.
+- **链接**: [arXiv:2004.07507](https://arxiv.org/abs/2004.07507) · 📚 被引 44
+- **作者**: Janghyeon Lee, Hyeong Gwon Hong, Donggyu Joo, Junmo Kim
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### GDumb: A Simple Approach that Questions Our Progress in Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58536-5_31) · 📚 被引 348
+- **作者**: Ameya Prabhu, Philip H. S. Torr, Puneet K. Dokania
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
 
-> Continual learning aims to learn new tasks without forgetting previously learned ones. This is especially challenging when one cannot access data from previous tasks and when the model has a fixed capacity. Current regularization-based continual learning algorithms need an external representation and extra computation to measure the parameters' \textit{importance}. In contrast, we propose Uncertainty-guided Continual Bayesian Neural Networks (UCB), where the learning rate adapts according to the uncertainty defined in the probability distribution of the weights in networks. Uncertainty is a natural way to identify \textit{what to remember} and \textit{what to change} as we continually learn, and thus mitigate catastrophic forgetting. We also show a variant of our model, which uses uncertainty for weight pruning and retains task performance after pruning by saving binary masks per tasks. We evaluate our UCB approach extensively on diverse object classification datasets with short and long sequences of tasks and report superior or on-par performance compared to existing approaches. Additionally, we show that our model does not necessarily need task information at test time, i.e. it does not presume knowledge of which task a sample belongs to.
+### More Classifiers, Less Forgetting: A Generic Multi-classifier Paradigm for Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58574-7_42) · 📚 被引 65
+- **作者**: Yu Liu, Sarah Parisot, Gregory G. Slabaugh, Xu Jia, Ales Leonardis, Tinne Tuytelaars
+- **🏷️ 机构**: SenseTime
+- **会议**: ECCV 2020
+
+> In continual learning (CL), a learner is faced with a sequence of tasks, arriving one after the other, and the goal is to remember all the tasks once the continual learning experience is finished. The prior art in CL uses episodic memory, parameter regularization or extensible network structures to reduce interference among tasks, but in the end, all the approaches learn different tasks in a joint vector space. We believe this invariably leads to interference among different tasks. We propose to learn tasks in different (low-rank) vector subspaces that are kept orthogonal to each other in order to minimize interference. Further, to keep the gradients of different tasks coming from these subspaces orthogonal to each other, we learn isometric mappings by posing network training as an optimization problem over the Stiefel manifold. To the best of our understanding, we report, for the first time, strong results over experience-replay baseline with and without memory on standard classification benchmarks in continual learning. The code is made publicly available.
 
 </details>
 
-### Continual Learning with Bayesian Neural Networks for Non-Stationary Data.
-- **链接**: [出版页](https://openreview.net/forum?id=SJlsFpVtDB)
-- **作者**: Richard Kurle, Botond Cseke, Alexej Klushyn, Patrick van der Smagt, Stephan Günnemann
+### Modeling the Background for Incremental Learning in Semantic Segmentation.
+- **链接**: [arXiv:2002.00718](https://arxiv.org/abs/2002.00718) · 📚 被引 310
+- **作者**: Fabio Cermelli, Massimiliano Mancini, Samuel Rota Bulò, Elisa Ricci, Barbara Caputo
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-### A Neural Dirichlet Process Mixture Model for Task-Free Continual Learning.
-- **链接**: [arXiv:2001.00689](https://arxiv.org/abs/2001.00689)
-- **作者**: Soochan Lee, Junsoo Ha, Dongsu Zhang, Gunhee Kim
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Despite the growing interest in continual learning, most of its contemporary works have been studied in a rather restricted setting where tasks are clearly distinguishable, and task boundaries are known during training. However, if our goal is to develop an algorithm that learns as humans do, this setting is far from realistic, and it is essential to develop a methodology that works in a task-free manner. Meanwhile, among several branches of continual learning, expansion-based methods have the advantage of eliminating catastrophic forgetting by allocating new resources to learn new data. In this work, we propose an expansion-based approach for task-free continual learning. Our model, named Continual Neural Dirichlet Process Mixture (CN-DPM), consists of a set of neural network experts that are in charge of a subset of the data. CN-DPM expands the number of experts in a principled way under the Bayesian nonparametric framework. With extensive experiments, we show that our model successfully performs task-free continual learning for both discriminative and generative tasks such as image classification and image generation.
+> The ability to continuously learn and adapt itself to new tasks, without losing grasp of already acquired knowledge is a hallmark of biological learning systems, which current deep learning systems fall short of. In this work, we present a novel methodology for continual learning called MERLIN: Meta-Consolidation for Continual Learning. We assume that weights of a neural network $\boldsymbol ψ$, for solving task $\boldsymbol t$, come from a meta-distribution $p(\boldsymbol{ψ|t})$. This meta-distribution is learned and consolidated incrementally. We operate in the challenging online continual learning setting, where a data point is seen by the model only once. Our experiments with continual learning benchmarks of MNIST, CIFAR-10, CIFAR-100 and Mini-ImageNet datasets show consistent improvement over five baselines, including a recent state-of-the-art, corroborating the promise of MERLIN.
 
 </details>
 
-### Compositional Language Continual Learning.
-- **链接**: [出版页](https://openreview.net/forum?id=rklnDgHtDS)
-- **作者**: Yuanpeng Li, Liang Zhao, Kenneth Church, Mohamed Elhoseiny
+### Incremental Learning in Online Scenario.
+- **链接**: [arXiv:2003.13191](https://arxiv.org/abs/2003.13191) · 📚 被引 140
+- **作者**: Jiangpeng He, Runyu Mao, Zeman Shao, Fengqing Zhu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: CVPR 2020
 
-### Continual learning with hypernetworks.
-- **链接**: [arXiv:1906.00695](https://arxiv.org/abs/1906.00695)
-- **作者**: Johannes von Oswald, Christian Henning, João Sacramento, Benjamin F. Grewe
+### Topology-Preserving Class-Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_16)
+- **作者**: Xiaoyu Tao, Xinyuan Chang, Xiaopeng Hong, Xing Wei, Yihong Gong
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: NeurIPS 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Artificial neural networks suffer from catastrophic forgetting when they are sequentially trained on multiple tasks. To overcome this problem, we present a novel approach based on task-conditioned hypernetworks, i.e., networks that generate the weights of a target model based on task identity. Continual learning (CL) is less difficult for this class of models thanks to a simple key feature: instead of recalling the input-output relations of all previously seen data, task-conditioned hypernetworks only require rehearsing task-specific weight realizations, which can be maintained in memory using a simple regularizer. Besides achieving state-of-the-art performance on standard CL benchmarks, additional experiments on long task sequences reveal that task-conditioned hypernetworks display a very large capacity to retain previous memories. Notably, such long memory lifetimes are achieved in a compressive regime, when the number of trainable hypernetwork weights is comparable or smaller than target network size. We provide insight into the structure of low-dimensional task embedding spaces (the input space of the hypernetwork) and show that task-conditioned hypernetworks demonstrate transfer learning. Finally, forward information transfer is further supported by empirical results on a challenging CL benchmark based on the CIFAR-10/100 image datasets.
+> Catastrophic forgetting affects the training of neural networks, limiting their ability to learn multiple tasks sequentially. From the perspective of the well established plasticity-stability dilemma, neural networks tend to be overly plastic, lacking the stability necessary to prevent the forgetting of previous knowledge, which means that as learning progresses, networks tend to forget previously seen tasks. This phenomenon coined in the continual learning literature, has attracted much attention lately, and several families of approaches have been proposed with different degrees of success. However, there has been limited prior work extensively analyzing the impact that different training regimes -- learning rate, batch size, regularization method-- can have on forgetting. In this work, we depart from the typical approach of altering the learning algorithm to improve stability. Instead, we hypothesize that the geometrical properties of the local minima found for each task play an important role in the overall degree of forgetting. In particular, we study the effect of dropout, learning rate decay, and batch size, on forming training regimes that widen the tasks' local minima and consequently, on helping it not to forget catastrophically. Our study provides practical insights to improve stability via simple yet effective techniques that outperform alternative baselines.
 
 </details>
 
-### Functional Regularisation for Continual Learning with Gaussian Processes.
-- **链接**: [出版页](https://openreview.net/forum?id=HkxCzeHFDB)
-- **作者**: Michalis K. Titsias, Jonathan Schwarz, Alexander G. de G. Matthews, Razvan Pascanu, Yee Whye Teh
+### Continual Learning of Control Primitives : Skill Discovery via Reset-Games.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/3472ab80b6dff70c54758fd6dfc800c2-Abstract.html)
+- **作者**: Kelvin Xu, Siddharth Verma, Chelsea Finn, Sergey Levine
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: CVPR 2020
 
-### Scalable and Order-robust Continual Learning with Additive Parameter Decomposition.
-- **链接**: [出版页](https://openreview.net/forum?id=r1gdj2EKPB)
-- **作者**: Jaehong Yoon, Saehoon Kim, Eunho Yang, Sung Ju Hwang
+### Maintaining Discrimination and Fairness in Class Incremental Learning.
+- **链接**: [arXiv:1911.07053](https://arxiv.org/abs/1911.07053) · 📚 被引 431
+- **作者**: Bowen Zhao, Xi Xiao, Guojun Gan, Bin Zhang, Shu-Tao Xia
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
-
-### The Implicit Bias of Depth: How Incremental Learning Drives Generalization.
-- **链接**: [arXiv:1909.12051](https://arxiv.org/abs/1909.12051)
-- **作者**: Daniel Gissin, Shai Shalev-Shwartz, Amit Daniely
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> A leading hypothesis for the surprising generalization of neural networks is that the dynamics of gradient descent bias the model towards simple solutions, by searching through the solution space in an incremental order of complexity. We formally define the notion of incremental learning dynamics and derive the conditions on depth and initialization for which this phenomenon arises in deep linear models. Our main theoretical contribution is a dynamical depth separation result, proving that while shallow models can exhibit incremental learning dynamics, they require the initialization to be exponentially small for these dynamics to present themselves. However, once the model becomes deeper, the dependence becomes polynomial and incremental learning can arise in more natural settings. We complement our theoretical findings by experimenting with deep matrix sensing, quadratic neural networks and with binary classification using diagonal and convolutional linear networks, showing all of these models exhibit incremental learning.
+> Deep neural networks (DNNs) have been applied in class incremental learning, which aims to solve common real-world problems of learning new classes continually. One drawback of standard DNNs is that they are prone to catastrophic forgetting. Knowledge distillation (KD) is a commonly used technique to alleviate this problem. In this paper, we demonstrate it can indeed help the model to output more discriminative results within old classes. However, it cannot alleviate the problem that the model tends to classify objects into new classes, causing the positive effect of KD to be hidden and limited. We observed that an important factor causing catastrophic forgetting is that the weights in the last fully connected (FC) layer are highly biased in class incremental learning. In this paper, we propose a simple and effective solution motivated by the aforementioned observations to address catastrophic forgetting. Firstly, we utilize KD to maintain the discrimination within old classes. Then, to further maintain the fairness between old classes and new classes, we propose Weight Aligning (WA) that corrects the biased weights in the FC layer after normal training process. Unlike previous work, WA does not require any extra parameters or a validation set in advance, as it utilizes the information provided by the biased weights themselves. The proposed method is evaluated on ImageNet-1000, ImageNet-100, and CIFAR-100 under various settings. Experimental results show that the proposed method can effectively alleviate catastrophic forgetting and significantly outperform state-of-the-art methods.
 
 </details>
