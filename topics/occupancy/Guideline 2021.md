@@ -6,7 +6,7 @@
 > 同领域其他年份: 
 
 ### Generative Occupancy Fields for 3D Surface-Aware Image Synthesis.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/acab0116c354964a558e65bdd07ff047-Abstract.html)
+- **链接**: [arXiv:2111.00969](https://arxiv.org/abs/2111.00969)
 - **作者**: Xudong Xu, Xingang Pan, Dahua Lin, Bo Dai
 - **🏷️ 机构**: CUHK, Shanghai AI Lab
 - **会议**: NeurIPS 2021
