@@ -381,7 +381,50 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
                 md.append("")
             out = out_dir / slug / f"Guideline {year}.md"
             out.parent.mkdir(parents=True, exist_ok=True)
-            out.write_text("\n".join(md), encoding="utf-8")
+            # ── 完成印章（用户核心要求）────────────────────────────────────
+            # 已完整的 Guideline 文件（带完成标记 + 论文数不减少）绝不重写。
+            # 新数据到来时只做【增量合并】：新论文条目追加，已有条目原样保留
+            # （包括 LLM 摘要/机构/引用等一切已生成内容）。
+            STAMP = "<!-- COMPLETE v1 papers=N -->"
+            new_text = "\n".join(md)
+            if out.exists():
+                old = out.read_text(encoding="utf-8")
+                m = re.search(r"<!-- COMPLETE v1 papers=(\d+) -->", old)
+                old_n = int(m.group(1)) if m else old.count("\n### ")
+                new_n = len(papers)
+                if m and new_n <= old_n:
+                    log(f"  [keep] {out.name}: 已完整({old_n}篇) ≥ 新数据({new_n}篇)，跳过重写")
+                    written.append(out)
+                    continue
+                if new_n > 0:
+                    # 增量合并：从新渲染中提取老文件里没有的论文条目追加到尾部
+                    def _title_of(block: str) -> str:
+                        first = block.strip().splitlines()[0] if block.strip() else ""
+                        t = re.sub(r"^### (?:\d+\. )?", "", first).strip()
+                        return re.split(r"\*\*", t)[0].strip()
+                    old_titles = {_title_of(b) for b in re.split(r"(?=^### )", old, flags=re.M)
+                                  if b.strip().startswith("### ")}
+                    add_blocks = [b.rstrip() for b in re.split(r"(?=^### )", new_text, flags=re.M)
+                                  if b.strip().startswith("### ") and _title_of(b)
+                                  and _title_of(b) not in old_titles]
+                    if add_blocks:
+                        merged = old.rstrip() + "\n\n## 🆕 增量新增\n\n" + "\n\n".join(add_blocks) + "\n"
+                        stamp = f"<!-- COMPLETE v1 papers={old_n + len(add_blocks)} -->"
+                        merged = re.sub(r"<!-- COMPLETE v1 papers=\d+ -->", "", merged).rstrip() + f"\n{stamp}\n"
+                        out.write_text(merged, encoding="utf-8")
+                        log(f"  [merge] {out.name}: 追加 {len(add_blocks)} 篇（原 {old_n} 篇保留不动）")
+                    else:
+                        # 无新论文：只补盖印章（不改内容）
+                        if not m:
+                            out.write_text(old.rstrip() + f"\n{STAMP.replace('papers=N', f'papers={old_n}')}\n",
+                                           encoding="utf-8")
+                        log(f"  [keep] {out.name}: 无新论文，原样保留")
+                    written.append(out)
+                    continue
+            if new_text.count("\n### ") > 0 or len(papers) > 0:
+                n = len(papers)
+                out.write_text(new_text.rstrip() + f"\n{STAMP.replace('papers=N', f'papers={n}')}\n",
+                               encoding="utf-8")
             written.append(out)
     return written
 
