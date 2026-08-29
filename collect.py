@@ -306,6 +306,19 @@ def render_paper_md(paper: dict, llm_eval: dict | None, primary: bool,
     return "\n".join(lines)
 
 
+def _count_polluted(md_text: str) -> int:
+    """统计文件里命中全局排除（医农遥等）的论文条目数——用于印章清理例外。"""
+    pats = [re.compile(re.escape(k), re.I) for k in CONFIG.get("global_exclude", [])]
+    n = 0
+    for block in re.split(r"(?=^### )", md_text, flags=re.M):
+        if not block.strip().startswith("### "):
+            continue
+        title_line = block.strip().splitlines()[0]
+        if any(p.search(title_line) for p in pats):
+            n += 1
+    return n
+
+
 def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
     """bucket: {slug: {year: [papers]}} → topics/<slug>/Guideline <year>.md"""
     written = []
@@ -376,7 +389,9 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
                 md.append("## 跨领域论文（完整笔记在其他领域）")
                 md.append("")
                 for p in cross:
-                    other = primary_owner[p["title"].lower().rstrip(". ")]
+                    # 归属用同一个专精度函数（不再查 primary_owner——它只记录本文件主领域，
+                    # 论文主领域可能在尚未渲染的其他文件，查不到会 KeyError 且链接指错）
+                    other = p["_cross_from"]
                     md.append(f"- {p['title']} → [{other}](../{other}/Guideline%20{year}.md)")
                 md.append("")
             out = out_dir / slug / f"Guideline {year}.md"
@@ -392,7 +407,9 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
                 m = re.search(r"<!-- COMPLETE v1 papers=(\d+) -->", old)
                 old_n = int(m.group(1)) if m else old.count("\n### ")
                 new_n = len(papers)
-                if m and new_n <= old_n:
+                # 清理例外：老文件里含全局排除领域的污染条目时必须重写（剔除后重新盖章）
+                polluted = _count_polluted(old)
+                if m and new_n <= old_n and polluted == 0:
                     log(f"  [keep] {out.name}: 已完整({old_n}篇) ≥ 新数据({new_n}篇)，跳过重写")
                     written.append(out)
                     continue
