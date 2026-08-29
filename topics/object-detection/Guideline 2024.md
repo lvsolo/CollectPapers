@@ -1,49 +1,27 @@
 # Object Detection — 2024 Guideline
 
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
-> 论文数: 35 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### SARDet-100K: Towards Open-Source Benchmark and ToolKit for Large-Scale SAR Object Detection.
-- **链接**: [arXiv:2403.06534](https://arxiv.org/abs/2403.06534) · [代码](https://github.com/zcablii/SARDet_100K) · 📚 被引 27
-- **作者**: Yuxuan Li, Xiang Li, Weijie Li, Qibin Hou, Li Liu, Ming-Ming Cheng et al.
+### LLMs Meet VLMs: Boost Open Vocabulary Object Detection with Fine-grained Descriptors.
+- **链接**: [出版页](https://openreview.net/forum?id=usrChqw6yK)
+- **作者**: Sheng Jin, Xueying Jiang, Jiaxing Huang, Lewei Lu, Shijian Lu
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ICLR 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Synthetic Aperture Radar (SAR) object detection has gained significant attention recently due to its irreplaceable all-weather imaging capabilities. However, this research field suffers from both limited public datasets (mostly comprising <2K images with only mono-category objects) and inaccessible source code. To tackle these challenges, we establish a new benchmark dataset and an open-source method for large-scale SAR object detection. Our dataset, SARDet-100K, is a result of intense surveying, collecting, and standardizing 10 existing SAR detection datasets, providing a large-scale and diverse dataset for research purposes. To the best of our knowledge, SARDet-100K is the first COCO-level large-scale multi-class SAR object detection dataset ever created. With this high-quality dataset, we conducted comprehensive experiments and uncovered a crucial challenge in SAR object detection: the substantial disparities between the pretraining on RGB datasets and finetuning on SAR datasets in terms of both data domain and model structure. To bridge these gaps, we propose a novel Multi-Stage with Filter Augmentation (MSFA) pretraining framework that tackles the problems from the perspective of data input, domain transition, and model migration. The proposed MSFA method significantly enhances the performance of SAR object detection models while demonstrating exceptional generalizability and flexibility across diverse models. This work aims to pave the way for further advancements in SAR object detection. The dataset and code is available at https://github.com/zcablii/SARDet_100K.
+> Despite previous DETR-like methods having performed successfully in generic object detection, tiny object detection is still a challenging task for them since the positional information of object queries is not customized for detecting tiny objects, whose scale is extraordinarily smaller than general objects. Also, DETR-like methods using a fixed number of queries make them unsuitable for aerial datasets, which only contain tiny objects, and the numbers of instances are imbalanced between different images. Thus, we present a simple yet effective model, named DQ-DETR, which consists of three different components: categorical counting module, counting-guided feature enhancement, and dynamic query selection to solve the above-mentioned problems. DQ-DETR uses the prediction and density maps from the categorical counting module to dynamically adjust the number of object queries and improve the positional information of queries. Our model DQ-DETR outperforms previous CNN-based and DETR-like methods, achieving state-of-the-art mAP 30.2% on the AI-TOD-V2 dataset, which mostly consists of tiny objects. Our code will be available at https://github.com/hoiliu-0801/DQ-DETR.
 
 </details>
 
-### Long-tailed Object Detection Pretraining: Dynamic Rebalancing Contrastive Learning with Dual Reconstruction.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/470629a47e2d65ce0606c40055df5d26-Abstract-Conference.html)
-- **作者**: Chen-Long Duan, Yong Li, Xiu-Shen Wei, Lin Zhao
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### You Only Look Around: Learning Illumination-Invariant Feature for Low-light Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/9e74900c3f6100c56add4bf417547848-Abstract-Conference.html) · 📚 被引 27
-- **作者**: Mingbo Hong, Shen Cheng, Haibin Huang, Haoqiang Fan, Shuaicheng Liu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Open-Vocabulary Object Detection via Language Hierarchy.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/e1fcd183ab33714a8464e4e9a20ac710-Abstract-Conference.html)
-- **作者**: Jiaxing Huang, Jingyi Zhang, Kai Jiang, Shijian Lu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### DA-Ada: Learning Domain-Aware Adapter for Domain Adaptive Object Detection.
-- **链接**: [arXiv:2410.09004](https://arxiv.org/abs/2410.09004) · [代码](https://github.com/Therock90421/DA-Ada) · 📚 被引 6
-- **作者**: Haochen Li, Rui Zhang, Hantao Yao, Xin Zhang, Yifan Hao, Xinkai Song et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Domain adaptive object detection (DAOD) aims to generalize detectors trained on an annotated source domain to an unlabelled target domain. As the visual-language models (VLMs) can provide essential general knowledge on unseen images, freezing the visual encoder and inserting a domain-agnostic adapter can learn domain-invariant knowledge for DAOD. However, the domain-agnostic adapter is inevitably biased to the source domain. It discards some beneficial knowledge discriminative on the unlabelled domain, i.e., domain-specific knowledge of the target domain. To solve the issue, we propose a novel Domain-Aware Adapter (DA-Ada) tailored for the DAOD task. The key point is exploiting domain-specific knowledge between the essential general knowledge and domain-invariant knowledge. DA-Ada consists of the Domain-Invariant Adapter (DIA) for learning domain-invariant knowledge and the Domain-Specific Adapter (DSA) for injecting the domain-specific knowledge from the information discarded by the visual encoder. Comprehensive experiments over multiple DAOD tasks show that DA-Ada can efficiently infer a domain-aware visual encoder for boosting domain adaptive object detection. Our code is available at https://github.com/Therock90421/DA-Ada.
+> In computer vision, object detection is an important task that finds its application in many scenarios. However, obtaining extensive labels can be challenging, especially in crowded scenes. Recently, the Segment Anything Model (SAM) has been proposed as a powerful zero-shot segmenter, offering a novel approach to instance segmentation tasks. However, the accuracy and efficiency of SAM and its variants are often compromised when handling objects in crowded and occluded scenes. In this paper, we introduce Crowd-SAM, a SAM-based framework designed to enhance SAM's performance in crowded and occluded scenes with the cost of few learnable parameters and minimal labeled images. We introduce an efficient prompt sampler (EPS) and a part-whole discrimination network (PWD-Net), enhancing mask selection and accuracy in crowded scenes. Despite its simplicity, Crowd-SAM rivals state-of-the-art (SOTA) fully-supervised object detection methods on several benchmarks including CrowdHuman and CityPersons. Our code is available at https://github.com/FelixCaae/CrowdSAM.
 
 </details>
 
@@ -53,134 +31,464 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
 
-### Training-Free Open-Ended Object Detection and Segmentation via Attention as Prompts.
-- **链接**: [arXiv:2410.05963](https://arxiv.org/abs/2410.05963) · 📚 被引 7
-- **作者**: Zhiwei Lin, Yongtao Wang, Zhi Tang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Existing perception models achieve great success by learning from large amounts of labeled data, but they still struggle with open-world scenarios. To alleviate this issue, researchers introduce open-set perception tasks to detect or segment unseen objects in the training set. However, these models require predefined object categories as inputs during inference, which are not available in real-world scenarios. Recently, researchers pose a new and more practical problem, \textit{i.e.}, open-ended object detection, which discovers unseen objects without any object categories as inputs. In this paper, we present VL-SAM, a training-free framework that combines the generalized object recognition model (\textit{i.e.,} Vision-Language Model) with the generalized object localization model (\textit{i.e.,} Segment-Anything Model), to address the open-ended object detection and segmentation task. Without additional training, we connect these two generalized models with attention maps as the prompts. Specifically, we design an attention map generation module by employing head aggregation and a regularized attention flow to aggregate and propagate attention maps across all heads and layers in VLM, yielding high-quality attention maps. Then, we iteratively sample positive and negative points from the attention maps with a prompt generation module and send the sampled points to SAM to segment corresponding objects. Experimental results on the long-tail instance segmentation dataset (LVIS) show that our method surpasses the previous open-ended method on the object detection task and can provide additional instance segmentation masks. Besides, VL-SAM achieves favorable performance on the corner case object detection dataset (CODA), demonstrating the effectiveness of VL-SAM in real-world applications. Moreover, VL-SAM exhibits good model generalization that can incorporate various VLMs and SAMs.
+> We propose InstructDET, a data-centric method for referring object detection (ROD) that localizes target objects based on user instructions. While deriving from referring expressions (REC), the instructions we leverage are greatly diversified to encompass common user intentions related to object detection. For one image, we produce tremendous instructions that refer to every single object and different combinations of multiple objects. Each instruction and its corresponding object bounding boxes (bbxs) constitute one training data pair. In order to encompass common detection expressions, we involve emerging vision-language model (VLM) and large language model (LLM) to generate instructions guided by text prompts and object bbxs, as the generalizations of foundation models are effective to produce human-like expressions (e.g., describing object property, category, and relationship). We name our constructed dataset as InDET. It contains images, bbxs and generalized instructions that are from foundation models. Our InDET is developed from existing REC datasets and object detection datasets, with the expanding potential that any image with object bbxs can be incorporated through using our InstructDET method. By using our InDET dataset, we show that a conventional ROD model surpasses existing methods on standard REC datasets and our InDET test set. Our data-centric method InstructDET, with automatic data expansion by leveraging foundation models, directs a promising field that ROD can be greatly diversified to execute common object detection instructions.
 
 </details>
 
-### Unsupervised Object Detection with Theoretical Guarantees.
-- **链接**: [arXiv:2406.07284](https://arxiv.org/abs/2406.07284) · 📚 被引 0
-- **作者**: Marian Longa, João F. Henriques
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Unsupervised object detection using deep neural networks is typically a difficult problem with few to no guarantees about the learned representation. In this work we present the first unsupervised object detection method that is theoretically guaranteed to recover the true object positions up to quantifiable small shifts. We develop an unsupervised object detection architecture and prove that the learned variables correspond to the true object positions up to small shifts related to the encoder and decoder receptive field sizes, the object sizes, and the widths of the Gaussians used in the rendering process. We perform detailed analysis of how the error depends on each of these variables and perform synthetic experiments validating our theoretical predictions up to a precision of individual pixels. We also perform experiments on CLEVR-based data and show that, unlike current SOTA object detection methods (SAM, CutLER), our method's prediction errors always lie within our theoretical bounds. We hope that this work helps open up an avenue of research into object detection methods with theoretical guarantees.
+> In frame-based vision, object detection faces substantial performance degradation under challenging conditions due to the limited sensing capability of conventional cameras. Event cameras output sparse and asynchronous events, providing a potential solution to solve these problems. However, effectively fusing two heterogeneous modalities remains an open issue. In this work, we propose a novel hierarchical feature refinement network for event-frame fusion. The core concept is the design of the coarse-to-fine fusion module, denoted as the cross-modality adaptive feature refinement (CAFR) module. In the initial phase, the bidirectional cross-modality interaction (BCI) part facilitates information bridging from two distinct sources. Subsequently, the features are further refined by aligning the channel-level mean and variance in the two-fold adaptive feature refinement (TAFR) part. We conducted extensive experiments on two benchmarks: the low-resolution PKU-DDD17-Car dataset and the high-resolution DSEC dataset. Experimental results show that our method surpasses the state-of-the-art by an impressive margin of $\textbf{8.0}\%$ on the DSEC dataset. Besides, our method exhibits significantly better robustness (\textbf{69.5}\% versus \textbf{38.7}\%) when introducing 15 different corruption types to the frame images. The code can be found at the link (https://github.com/HuCaoFighting/FRN).
 
 </details>
 
-### Progressive Exploration-Conformal Learning for Sparsely Annotated Object Detection in Aerial Images.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/47a287298e7887d1c25d4aabb918bd54-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Zihan Lu, Chenxu Wang, Chunyan Xu, Xiangwei Zheng, Zhen Cui
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Revisiting Few-Shot Object Detection with Vision-Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/22b2067b8f680812624032025864c5a1-Abstract-Datasets_and_Benchmarks_Track.html)
-- **作者**: Anish Madan, Neehar Peri, Shu Kong, Deva Ramanan
-- **🏷️ 机构**: CMU
-- **会议**: NeurIPS 2024
-
-### DI-MaskDINO: A Joint Object Detection and Instance Segmentation Model.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/6f1346bac8b02f76a631400e2799b24b-Abstract-Conference.html) · 📚 被引 4
-- **作者**: Zhixiong Nan, Xianghong Li, Tao Xiang, Jifeng Dai
-- **🏷️ 机构**: Tsinghua / Shanghai AI Lab
-- **会议**: NeurIPS 2024
-
-### Fetch and Forge: Efficient Dataset Condensation for Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/d7b351608d824a4680344a02b180a947-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Ding Qi, Jian Li, Jinlong Peng, Bo Zhao, Shuguang Dou, Jialin Li et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Amnesia as a Catalyst for Enhancing Black Box Pixel Attacks in Image Classification and Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/9e770fcdb456400325c11d58b3a04d08-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Dongsu Song, Daehwa Ko, Jay Hoon Jung
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### YOLOv10: Real-Time End-to-End Object Detection.
-- **链接**: [arXiv:2405.14458](https://arxiv.org/abs/2405.14458) · 📚 被引 1612
-- **作者**: Ao Wang, Hui Chen, Lihao Liu, Kai Chen, Zijia Lin, Jungong Han et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+### DeTra: A Unified Model for Object Detection and Trajectory Forecasting.
+- **链接**: [arXiv:2406.04426](https://arxiv.org/abs/2406.04426) · 📚 被引 8
+- **作者**: Sergio Casas, Ben Agro, Jiageng Mao, Thomas Gilles, Alexander Cui, Thomas Li et al.
+- **🏷️ 机构**: Waabi / University of Toronto
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Over the past years, YOLOs have emerged as the predominant paradigm in the field of real-time object detection owing to their effective balance between computational cost and detection performance. Researchers have explored the architectural designs, optimization objectives, data augmentation strategies, and others for YOLOs, achieving notable progress. However, the reliance on the non-maximum suppression (NMS) for post-processing hampers the end-to-end deployment of YOLOs and adversely impacts the inference latency. Besides, the design of various components in YOLOs lacks the comprehensive and thorough inspection, resulting in noticeable computational redundancy and limiting the model's capability. It renders the suboptimal efficiency, along with considerable potential for performance improvements. In this work, we aim to further advance the performance-efficiency boundary of YOLOs from both the post-processing and model architecture. To this end, we first present the consistent dual assignments for NMS-free training of YOLOs, which brings competitive performance and low inference latency simultaneously. Moreover, we introduce the holistic efficiency-accuracy driven model design strategy for YOLOs. We comprehensively optimize various components of YOLOs from both efficiency and accuracy perspectives, which greatly reduces the computational overhead and enhances the capability. The outcome of our effort is a new generation of YOLO series for real-time end-to-end object detection, dubbed YOLOv10. Extensive experiments show that YOLOv10 achieves state-of-the-art performance and efficiency across various model scales. For example, our YOLOv10-S is 1.8$\times$ faster than RT-DETR-R18 under the similar AP on COCO, meanwhile enjoying 2.8$\times$ smaller number of parameters and FLOPs. Compared with YOLOv9-C, YOLOv10-B has 46\% less latency and 25\% fewer parameters for the same performance.
+> The tasks of object detection and trajectory forecasting play a crucial role in understanding the scene for autonomous driving. These tasks are typically executed in a cascading manner, making them prone to compounding errors. Furthermore, there is usually a very thin interface between the two tasks, creating a lossy information bottleneck. To address these challenges, our approach formulates the union of the two tasks as a trajectory refinement problem, where the first pose is the detection (current time), and the subsequent poses are the waypoints of the multiple forecasts (future time). To tackle this unified task, we design a refinement transformer that infers the presence, pose, and multi-modal future behaviors of objects directly from LiDAR point clouds and high-definition maps. We call this model DeTra, short for object Detection and Trajectory forecasting. In our experiments, we observe that \ourmodel{} outperforms the state-of-the-art on Argoverse 2 Sensor and Waymo Open Dataset by a large margin, across a broad range of metrics. Last but not least, we perform extensive ablation studies that show the value of refinement for this task, that every proposed component contributes positively to its performance, and that key design choices were made.
 
 </details>
 
-### Adaptive Important Region Selection with Reinforced Hierarchical Search for Dense Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/510950c4e75d8bbe430dbe01c8ad2426-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Dingrong Wang, Hitesh Sapkota, Qi Yu
+### Self-supervised Co-salient Object Detection via Feature Correspondences at Multiple Scales.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72673-6_13)
+- **作者**: Souradeep Chakraborty, Dimitris Samaras
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
-### AdaptiveISP: Learning an Adaptive Image Signal Processor for Object Detection.
-- **链接**: [arXiv:2410.22939](https://arxiv.org/abs/2410.22939) · 📚 被引 6
-- **作者**: Yujin Wang, Tianyi Xu, Zhang Fan, Tianfan Xue, Jinwei Gu
+### Just a Hint: Point-Supervised Camouflaged Object Detection.
+- **链接**: [arXiv:2408.10777](https://arxiv.org/abs/2408.10777) · 📚 被引 21
+- **作者**: Huafeng Chen, Dian Shao, Guangqian Guo, Shan Gao
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Image Signal Processors (ISPs) convert raw sensor signals into digital images, which significantly influence the image quality and the performance of downstream computer vision tasks. Designing ISP pipeline and tuning ISP parameters are two key steps for building an imaging and vision system. To find optimal ISP configurations, recent works use deep neural networks as a proxy to search for ISP parameters or ISP pipelines. However, these methods are primarily designed to maximize the image quality, which are sub-optimal in the performance of high-level computer vision tasks such as detection, recognition, and tracking. Moreover, after training, the learned ISP pipelines are mostly fixed at the inference time, whose performance degrades in dynamic scenes. To jointly optimize ISP structures and parameters, we propose AdaptiveISP, a task-driven and scene-adaptive ISP. One key observation is that for the majority of input images, only a few processing modules are needed to improve the performance of downstream recognition tasks, and only a few inputs require more processing. Based on this, AdaptiveISP utilizes deep reinforcement learning to automatically generate an optimal ISP pipeline and the associated ISP parameters to maximize the detection performance. Experimental results show that AdaptiveISP not only surpasses the prior state-of-the-art methods for object detection but also dynamically manages the trade-off between detection performance and computational cost, especially suitable for scenes with large dynamic range variations. Project website: https://openimaginglab.github.io/AdaptiveISP/.
+> Camouflaged Object Detection (COD) demands models to expeditiously and accurately distinguish objects which conceal themselves seamlessly in the environment. Owing to the subtle differences and ambiguous boundaries, COD is not only a remarkably challenging task for models but also for human annotators, requiring huge efforts to provide pixel-wise annotations. To alleviate the heavy annotation burden, we propose to fulfill this task with the help of only one point supervision. Specifically, by swiftly clicking on each object, we first adaptively expand the original point-based annotation to a reasonable hint area. Then, to avoid partial localization around discriminative parts, we propose an attention regulator to scatter model attention to the whole object through partially masking labeled regions. Moreover, to solve the unstable feature representation of camouflaged objects under only point-based annotation, we perform unsupervised contrastive learning based on differently augmented image pairs (e.g. changing color or doing translation). On three mainstream COD benchmarks, experimental results show that our model outperforms several weakly-supervised methods by a large margin across various metrics.
 
 </details>
 
-### EGSST: Event-based Graph Spatiotemporal Sensitive Transformer for Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/da733d44e4be3902d952d6c1ffcb7db6-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Sheng Wu, Hang Sheng, Hui Feng, Bo Hu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### UMB: Understanding Model Behavior for Open-World Object Detection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/8766fbc68e1ed1cdef712ce273e0a363-Abstract-Conference.html)
-- **作者**: Xing Xi, Yangyang Huang, Zhijie Zhong, Ronghua Luo
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### Towards Unsupervised Model Selection for Domain Adaptive Object Detection.
-- **链接**: [arXiv:2412.17284](https://arxiv.org/abs/2412.17284) · 📚 被引 0
-- **作者**: Hengfu Yu, Jinhong Deng, Wen Li, Lixin Duan
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+### SAM-COD: SAM-Guided Unified Framework for Weakly-Supervised Camouflaged Object Detection.
+- **链接**: [arXiv:2408.10760](https://arxiv.org/abs/2408.10760) · 📚 被引 19
+- **作者**: Huafeng Chen, Pengxu Wei, Guangqian Guo, Shan Gao
+- **🏷️ 机构**: Unmanned System Research Institute, Northwestern Polytechnical University, Xi&#x2019;an, China, School of Computer Science and Engineering, Sun Yat-sen University, Guangzhou, China
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Evaluating the performance of deep models in new scenarios has drawn increasing attention in recent years. However, while it is possible to collect data from new scenarios, the annotations are not always available. Existing DAOD methods often rely on validation or test sets on the target domain for model selection, which is impractical in real-world applications. In this paper, we propose a novel unsupervised model selection approach for domain adaptive object detection, which is able to select almost the optimal model for the target domain without using any target labels. Our approach is based on the flat minima principle, i,e., models located in the flat minima region in the parameter space usually exhibit excellent generalization ability. However, traditional methods require labeled data to evaluate how well a model is located in the flat minima region, which is unrealistic for the DAOD task. Therefore, we design a Detection Adaptation Score (DAS) approach to approximately measure the flat minima without using target labels. We show via a generalization bound that the flatness can be deemed as model variance, while the minima depend on the domain distribution distance for the DAOD task. Accordingly, we propose a Flatness Index Score (FIS) to assess the flatness by measuring the classification and localization fluctuation before and after perturbations of model parameters and a Prototypical Distance Ratio (PDR) score to seek the minima by measuring the transferability and discriminability of the models. In this way, the proposed DAS approach can effectively evaluate the model generalization ability on the target domain. We have conducted extensive experiments on various DAOD benchmarks and approaches, and the experimental results show that the proposed DAS correlates well with the performance of DAOD models and can be used as an effective tool for model selection after training.
+> Most Camouflaged Object Detection (COD) methods heavily rely on mask annotations, which are time-consuming and labor-intensive to acquire. Existing weakly-supervised COD approaches exhibit significantly inferior performance compared to fully-supervised methods and struggle to simultaneously support all the existing types of camouflaged object labels, including scribbles, bounding boxes, and points. Even for Segment Anything Model (SAM), it is still problematic to handle the weakly-supervised COD and it typically encounters challenges of prompt compatibility of the scribble labels, extreme response, semantically erroneous response, and unstable feature representations, producing unsatisfactory results in camouflaged scenes. To mitigate these issues, we propose a unified COD framework in this paper, termed SAM-COD, which is capable of supporting arbitrary weakly-supervised labels. Our SAM-COD employs a prompt adapter to handle scribbles as prompts based on SAM. Meanwhile, we introduce response filter and semantic matcher modules to improve the quality of the masks obtained by SAM under COD prompts. To alleviate the negative impacts of inaccurate mask predictions, a new strategy of prompt-adaptive knowledge distillation is utilized to ensure a reliable feature representation. To validate the effectiveness of our approach, we have conducted extensive empirical experiments on three mainstream COD benchmarks. The results demonstrate the superiority of our method against state-of-the-art weakly-supervised and even fully-supervised methods.
 
 </details>
 
-### ODGEN: Domain-specific Object Detection Data Generation with Diffusion Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/743771397cef2aa0ef497c428c3a46b7-Abstract-Conference.html) · 📚 被引 4
-- **作者**: Jingyuan Zhu, Shiyu Li, Yuxuan Liu, Jian Yuan, Ping Huang, Jiulong Shan et al.
+### Simplifying Source-Free Domain Adaptation for Object Detection: Effective Self-training Strategies and Performance Insights.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72949-2_12) · 📚 被引 14
+- **作者**: Yan Hao, Florent Forest, Olga Fink
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
+
+### CoLA: Conditional Dropout and Language-Driven Robust Dual-Modal Salient Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72633-0_20) · 📚 被引 6
+- **作者**: Shuang Hao, Chunlin Zhong, He Tang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Equivariant Spatio-temporal Self-supervision for LiDAR Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73347-5_27) · 📚 被引 0
+- **作者**: Deepti Hegde, Suhas Lohit, Kuan-Chuan Peng, Michael J. Jones, Vishal M. Patel
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Weighting Pseudo-labels via High-Activation Feature Index Similarity and Object Detection for Semi-supervised Segmentation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73226-3_26) · 📚 被引 4
+- **作者**: Prantik Howlader, Hieu Le, Dimitris Samaras
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### MutDet: Mutually Optimizing Pre-training for Remote Sensing Object Detection.
+- **链接**: [arXiv:2407.09920](https://arxiv.org/abs/2407.09920) · [代码](https://github.com/floatingstarZ/MutDet) · 📚 被引 10
+- **作者**: Ziyue Huang, Yongchao Feng, Qingjie Liu, Yunhong Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Detection pre-training methods for the DETR series detector have been extensively studied in natural scenes, e.g., DETReg. However, the detection pre-training remains unexplored in remote sensing scenes. In existing pre-training methods, alignment between object embeddings extracted from a pre-trained backbone and detector features is significant. However, due to differences in feature extraction methods, a pronounced feature discrepancy still exists and hinders the pre-training performance. The remote sensing images with complex environments and more densely distributed objects exacerbate the discrepancy. In this work, we propose a novel Mutually optimizing pre-training framework for remote sensing object Detection, dubbed as MutDet. In MutDet, we propose a systemic solution against this challenge. Firstly, we propose a mutual enhancement module, which fuses the object embeddings and detector features bidirectionally in the last encoder layer, enhancing their information interaction.Secondly, contrastive alignment loss is employed to guide this alignment process softly and simultaneously enhances detector features' discriminativity. Finally, we design an auxiliary siamese head to mitigate the task gap arising from the introduction of enhancement module. Comprehensive experiments on various settings show new state-of-the-art transfer performance. The improvement is particularly pronounced when data quantity is limited. When using 10% of the DIOR-R data, MutDet improves DetReg by 6.1% in AP50. Codes and models are available at: https://github.com/floatingstarZ/MutDet.
+
+</details>
+
+### BugNIST a Large Volumetric Dataset for Object Detection Under Domain Shift.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73411-3_2) · 📚 被引 0
+- **作者**: Patrick Møller Jensen, Vedrana Andersen Dahl, Rebecca Engberg, Carsten Gundlach, Hans Martin Kjer, Anders Bjorholm Dahl
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### T-Rex2: Towards Generic Object Detection via Text-Visual Prompt Synergy.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73414-4_3) · 📚 被引 42
+- **作者**: Qing Jiang, Feng Li, Zhaoyang Zeng, Tianhe Ren, Shilong Liu, Lei Zhang
+- **🏷️ 机构**: PolyU / OPPO
+- **会议**: ECCV 2024
+
+### Dynamic Retraining-Updating Mean Teacher for Source-Free Object Detection.
+- **链接**: [arXiv:2407.16497](https://arxiv.org/abs/2407.16497) · [代码](https://github.com/lbktrinh/DRU) · 📚 被引 13
+- **作者**: Trinh Le Ba Khanh, Huy-Hung Nguyen, Long Hoang Pham, Duong Nguyen-Ngoc Tran, Jae Wook Jeon
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In object detection, unsupervised domain adaptation (UDA) aims to transfer knowledge from a labeled source domain to an unlabeled target domain. However, UDA's reliance on labeled source data restricts its adaptability in privacy-related scenarios. This study focuses on source-free object detection (SFOD), which adapts a source-trained detector to an unlabeled target domain without using labeled source data. Recent advancements in self-training, particularly with the Mean Teacher (MT) framework, show promise for SFOD deployment. However, the absence of source supervision significantly compromises the stability of these approaches. We identify two primary issues, (1) uncontrollable degradation of the teacher model due to inopportune updates from the student model, and (2) the student model's tendency to replicate errors from incorrect pseudo labels, leading to it being trapped in a local optimum. Both factors contribute to a detrimental circular dependency, resulting in rapid performance degradation in recent self-training frameworks. To tackle these challenges, we propose the Dynamic Retraining-Updating (DRU) mechanism, which actively manages the student training and teacher updating processes to achieve co-evolutionary training. Additionally, we introduce Historical Student Loss to mitigate the influence of incorrect pseudo labels. Our method achieves state-of-the-art performance in the SFOD setting on multiple domain adaptation benchmarks, comparable to or even surpassing advanced UDA methods. The code will be released at https://github.com/lbktrinh/DRU
+
+</details>
+
+### CamoTeacher: Dual-Rotation Consistency Learning for Semi-supervised Camouflaged Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72995-9_25) · 📚 被引 10
+- **作者**: Xunfa Lai, Zhiyu Yang, Jie Hu, Shengchuan Zhang, Liujuan Cao, Guannan Jiang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Rethinking Features-Fused-Pyramid-Neck for Object Detection.
+- **链接**: [arXiv:2505.12820](https://arxiv.org/abs/2505.12820) · [代码](https://github.com/AlanLi1997/rethinking-fpn) · 📚 被引 31
+- **作者**: Hulin Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-head detectors typically employ a features-fused-pyramid-neck for multi-scale detection and are widely adopted in the industry. However, this approach faces feature misalignment when representations from different hierarchical levels of the feature pyramid are forcibly fused point-to-point. To address this issue, we designed an independent hierarchy pyramid (IHP) architecture to evaluate the effectiveness of the features-unfused-pyramid-neck for multi-head detectors. Subsequently, we introduced soft nearest neighbor interpolation (SNI) with a weight downscaling factor to mitigate the impact of feature fusion at different hierarchies while preserving key textures. Furthermore, we present a features adaptive selection method for down sampling in extended spatial windows (ESD) to retain spatial features and enhance lightweight convolutional techniques (GSConvE). These advancements culminate in our secondary features alignment solution (SA) for real-time detection, achieving state-of-the-art results on Pascal VOC and MS COCO. Code will be released at https://github.com/AlanLi1997/rethinking-fpn. This paper has been accepted by ECCV2024 and published on Springer Nature.
+
+</details>
+
+### A Simple Background Augmentation Method for Object Detection with Diffusion Model.
+- **链接**: [arXiv:2408.00350](https://arxiv.org/abs/2408.00350) · 📚 被引 11
+- **作者**: Yuhang Li, Xin Dong, Chen Chen, Weiming Zhuang, Lingjuan Lyu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In computer vision, it is well-known that a lack of data diversity will impair model performance. In this study, we address the challenges of enhancing the dataset diversity problem in order to benefit various downstream tasks such as object detection and instance segmentation. We propose a simple yet effective data augmentation approach by leveraging advancements in generative models, specifically text-to-image synthesis technologies like Stable Diffusion. Our method focuses on generating variations of labeled real images, utilizing generative object and background augmentation via inpainting to augment existing training data without the need for additional annotations. We find that background augmentation, in particular, significantly improves the models' robustness and generalization capabilities. We also investigate how to adjust the prompt and mask to ensure the generated content comply with the existing annotations. The efficacy of our augmentation techniques is validated through comprehensive evaluations of the COCO dataset and several other key object detection benchmarks, demonstrating notable enhancements in model performance across diverse scenarios. This approach offers a promising solution to the challenges of dataset enhancement, contributing to the development of more accurate and robust computer vision models.
+
+</details>
+
+### Toward Open Vocabulary Aerial Object Detection with CLIP-Activated Student-Teacher Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73016-0_25)
+- **作者**: Yan Li, Weiwei Guo, Xue Yang, Ning Liao, Dunyun He, Jiaqi Zhou et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### CLIFF: Continual Latent Diffusion for Open-Vocabulary Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73001-6_15)
+- **作者**: Wuyang Li, Xinyu Liu, Jiayi Ma, Yixuan Yuan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### CONDA: Condensed Deep Association Learning for Co-salient Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72973-7_17) · 📚 被引 8
+- **作者**: Long Li, Nian Liu, Dingwen Zhang, Zhongyu Li, Salman Khan, Rao Muhammad Anwer et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Distilling Knowledge from Large-Scale Image Models for Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72907-2_9) · 📚 被引 5
+- **作者**: Gang Li, Wenhai Wang, Xiang Li, Ziheng Li, Jian Yang, Jifeng Dai et al.
+- **🏷️ 机构**: Shanghai AI Lab, Tsinghua / Shanghai AI Lab
+- **会议**: ECCV 2024
+
+### Integer-Valued Training and Spike-Driven Inference Spiking Neural Network for High-Performance and Energy-Efficient Object Detection.
+- **链接**: [arXiv:2407.20708](https://arxiv.org/abs/2407.20708) · [代码](https://github.com/BICLab/SpikeYOLO) · 📚 被引 63
+- **作者**: Xinhao Luo, Man Yao, Yuhong Chou, Bo Xu, Guoqi Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Brain-inspired Spiking Neural Networks (SNNs) have bio-plausibility and low-power advantages over Artificial Neural Networks (ANNs). Applications of SNNs are currently limited to simple classification tasks because of their poor performance. In this work, we focus on bridging the performance gap between ANNs and SNNs on object detection. Our design revolves around network architecture and spiking neuron. First, the overly complex module design causes spike degradation when the YOLO series is converted to the corresponding spiking version. We design a SpikeYOLO architecture to solve this problem by simplifying the vanilla YOLO and incorporating meta SNN blocks. Second, object detection is more sensitive to quantization errors in the conversion of membrane potentials into binary spikes by spiking neurons. To address this challenge, we design a new spiking neuron that activates Integer values during training while maintaining spike-driven by extending virtual timesteps during inference. The proposed method is validated on both static and neuromorphic object detection datasets. On the static COCO dataset, we obtain 66.2% mAP@50 and 48.9% mAP@50:95, which is +15.0% and +18.7% higher than the prior state-of-the-art SNN, respectively. On the neuromorphic Gen1 dataset, we achieve 67.2% mAP@50, which is +2.5% greater than the ANN with equivalent architecture, and the energy efficiency is improved by 5.7*. Code: https://github.com/BICLab/SpikeYOLO
+
+</details>
+
+### SMILe: Leveraging Submodular Mutual Information For Robust Few-Shot Object Detection.
+- **链接**: [arXiv:2407.02665](https://arxiv.org/abs/2407.02665) · 📚 被引 6
+- **作者**: Anay Majee, Ryan Sharp, Rishabh K. Iyer
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Confusion and forgetting of object classes have been challenges of prime interest in Few-Shot Object Detection (FSOD). To overcome these pitfalls in metric learning based FSOD techniques, we introduce a novel Submodular Mutual Information Learning (SMILe) framework which adopts combinatorial mutual information functions to enforce the creation of tighter and discriminative feature clusters in FSOD. Our proposed approach generalizes to several existing approaches in FSOD, agnostic of the backbone architecture demonstrating elevated performance gains. A paradigm shift from instance based objective functions to combinatorial objectives in SMILe naturally preserves the diversity within an object class resulting in reduced forgetting when subjected to few training examples. Furthermore, the application of mutual information between the already learnt (base) and newly added (novel) objects ensures sufficient separation between base and novel classes, minimizing the effect of class confusion. Experiments on popular FSOD benchmarks, PASCAL-VOC and MS-COCO show that our approach generalizes to State-of-the-Art (SoTA) approaches improving their novel class performance by up to 5.7% (3.3 mAP points) and 5.4% (2.6 mAP points) on the 10-shot setting of VOC (split 3) and 30-shot setting of COCO datasets respectively. Our experiments also demonstrate better retention of base class performance and up to 2x faster convergence over existing approaches agnostic of the underlying architecture.
+
+</details>
+
+### Modality Translation for Object Detection Adaptation Without Forgetting Prior Knowledge.
+- **链接**: [arXiv:2404.01492](https://arxiv.org/abs/2404.01492) · [代码](https://github.com/heitorrapela/ModTr) · 📚 被引 5
+- **作者**: Heitor Rapela Medeiros, Masih Aminbeidokhti, Fidel Alejandro Guerrero Peña, David Latortue, Eric Granger, Marco Pedersoli
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> A common practice in deep learning involves training large neural networks on massive datasets to achieve high accuracy across various domains and tasks. While this approach works well in many application areas, it often fails drastically when processing data from a new modality with a significant distribution shift from the data used to pre-train the model. This paper focuses on adapting a large object detection model trained on RGB images to new data extracted from IR images with a substantial modality shift. We propose Modality Translator (ModTr) as an alternative to the common approach of fine-tuning a large model to the new modality. ModTr adapts the IR input image with a small transformation network trained to directly minimize the detection loss. The original RGB model can then work on the translated inputs without any further changes or fine-tuning to its parameters. Experimental results on translating from IR to RGB images on two well-known datasets show that our simple approach provides detectors that perform comparably or better than standard fine-tuning, without forgetting the knowledge of the original model. This opens the door to a more flexible and efficient service-based detection pipeline, where a unique and unaltered server, such as an RGB detector, runs constantly while being queried by different modalities, such as IR with the corresponding translations model. Our code is available at: https://github.com/heitorrapela/ModTr.
+
+</details>
+
+### Bridge Past and Future: Overcoming Information Asymmetry in Incremental Object Detection.
+- **链接**: [arXiv:2407.11499](https://arxiv.org/abs/2407.11499) · [代码](https://github.com/iSEE-Laboratory/BPF) · 📚 被引 6
+- **作者**: Qijie Mo, Yipeng Gao, Shenghao Fu, Junkai Yan, Ancong Wu, Wei-Shi Zheng
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In incremental object detection, knowledge distillation has been proven to be an effective way to alleviate catastrophic forgetting. However, previous works focused on preserving the knowledge of old models, ignoring that images could simultaneously contain categories from past, present, and future stages. The co-occurrence of objects makes the optimization objectives inconsistent across different stages since the definition for foreground objects differs across various stages, which limits the model's performance greatly. To overcome this problem, we propose a method called ``Bridge Past and Future'' (BPF), which aligns models across stages, ensuring consistent optimization directions. In addition, we propose a novel Distillation with Future (DwF) loss, fully leveraging the background probability to mitigate the forgetting of old classes while ensuring a high level of adaptability in learning new classes. Extensive experiments are conducted on both Pascal VOC and MS COCO benchmarks. Without memory, BPF outperforms current state-of-the-art methods under various settings. The code is available at https://github.com/iSEE-Laboratory/BPF.
+
+</details>
+
+### LEROjD: Lidar Extended Radar-Only Object Detection.
+- **链接**: [arXiv:2409.05564](https://arxiv.org/abs/2409.05564) · [代码](https://github.com/rst-tu-dortmund/lerojd) · 📚 被引 6
+- **作者**: Patrick Palmer, Martin Krüger, Stefan Schütte, Richard Altendorfer, Ganesh Adam, Torsten Bertram
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Accurate 3D object detection is vital for automated driving. While lidar sensors are well suited for this task, they are expensive and have limitations in adverse weather conditions. 3+1D imaging radar sensors offer a cost-effective, robust alternative but face challenges due to their low resolution and high measurement noise. Existing 3+1D imaging radar datasets include radar and lidar data, enabling cross-modal model improvements. Although lidar should not be used during inference, it can aid the training of radar-only object detectors. We explore two strategies to transfer knowledge from the lidar to the radar domain and radar-only object detectors: 1. multi-stage training with sequential lidar point cloud thin-out, and 2. cross-modal knowledge distillation. In the multi-stage process, three thin-out methods are examined. Our results show significant performance gains of up to 4.2 percentage points in mean Average Precision with multi-stage training and up to 3.9 percentage points with knowledge distillation by initializing the student with the teacher's weights. The main benefit of these approaches is their applicability to other 3D object detection networks without altering their architecture, as we show by analyzing it on two different object detectors. Our code is available at https://github.com/rst-tu-dortmund/lerojd
+
+</details>
+
+### Active Domain Adaptation with False Negative Prediction for Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02719) · 📚 被引 10
+- **作者**: Yuzuru Nakamura, Yasunori Ishii, Takayoshi Yamashita
+- **🏷️ 机构**: Panasonic Holdings Corporation, Chubu University
+- **会议**: CVPR 2024
+
+### Neural Exposure Fusion for High-Dynamic Range Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01663) · 📚 被引 12
+- **作者**: Emmanuel Onzon, Maximilian Bömer, Fahim Mannan, Felix Heide
+- **🏷️ 机构**: Torc Robotics
+- **会议**: CVPR 2024
+
+### CrossKD: Cross-Head Knowledge Distillation for Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01563) · 📚 被引 119
+- **作者**: Jiabao Wang, Yuming Chen, Zhaohui Zheng, Xiang Li, Ming-Ming Cheng, Qibin Hou
+- **🏷️ 机构**: College of Computer Science, Nankai University,VCIP, NKIARI,Shenzhen Futian
+- **会议**: CVPR 2024
+
+### A-Teacher: Asymmetric Network for 3D Semi-Supervised Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01419) · 📚 被引 8
+- **作者**: Hanshi Wang, Zhipeng Zhang, Jin Gao, Weiming Hu
+- **🏷️ 机构**: CASIA,State Key Laboratory of Multimodal Artificial Intelligence Systems (MAIS), KargoBot
+- **会议**: CVPR 2024
+
+### SNIDA: Unlocking Few-Shot Object Detection with Non-Linear Semantic Decoupling Augmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01192) · 📚 被引 31
+- **作者**: Yanjie Wang, Xu Zou, Luxin Yan, Sheng Zhong, Jiahuan Zhou
+- **🏷️ 机构**: Huazhong University of Science and Technology,Wuhan,China,430074, Wangxuan Institute of Computer Technology, Peking University,Beijing,China,100871
+- **会议**: CVPR 2024
+
+> 同领域其他年份: 
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vision-language (VL) models often exhibit a limited understanding of complex expressions of visual objects (e.g., attributes, shapes, and their relations), given complex and diverse language queries. Traditional approaches attempt to improve VL models using hard negative synthetic text, but their effectiveness is limited. In this paper, we harness the exceptional compositional understanding capabilities of generative foundational models. We introduce a novel method for structured synthetic data generation aimed at enhancing the compositional understanding of VL models in language-based object detection. Our framework generates densely paired positive and negative triplets (image, text descriptions, and bounding boxes) in both image and text domains. By leveraging these synthetic triplets, we transform 'weaker' VL models into 'stronger' models in terms of compositional understanding, a process we call "Weak-to-Strong Compositional Learning" (WSCL). To achieve this, we propose a new compositional contrastive learning formulation that discovers semantics and structures in complex descriptions from synthetic triplets. As a result, VL models trained with our synthetic data generation exhibit a significant performance boost in the Omnilabel benchmark by up to +5AP and the D3 benchmark by +6.9AP upon existing baselines.
+
+</details>
+
+> Despite previous DETR-like methods having performed successfully in generic object detection, tiny object detection is still a challenging task for them since the positional information of object queries is not customized for detecting tiny objects, whose scale is extraordinarily smaller than general objects. Also, DETR-like methods using a fixed number of queries make them unsuitable for aerial datasets, which only contain tiny objects, and the numbers of instances are imbalanced between different images. Thus, we present a simple yet effective model, named DQ-DETR, which consists of three different components: categorical counting module, counting-guided feature enhancement, and dynamic query selection to solve the above-mentioned problems. DQ-DETR uses the prediction and density maps from the categorical counting module to dynamically adjust the number of object queries and improve the positional information of queries. Our model DQ-DETR outperforms previous CNN-based and DETR-like methods, achieving state-of-the-art mAP 30.2% on the AI-TOD-V2 dataset, which mostly consists of tiny objects. Our code will be available at https://github.com/hoiliu-0801/DQ-DETR.
+
+</details>
+
+### Grounding DINO: Marrying DINO with Grounded Pre-training for Open-Set Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72970-6_3)
+- **作者**: Shilong Liu, Zhaoyang Zeng, Tianhe Ren, Feng Li, Hao Zhang, Jie Yang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### SEED: A Simple and Effective 3D DETR in Point Clouds.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73247-8_7) · 📚 被引 14
+- **作者**: Zhe Liu, Jinghua Hou, Xiaoqing Ye, Tong Wang, Jingdong Wang, Xiang Bai
+- **🏷️ 机构**: HUAST
+- **会议**: ECCV 2024
+
+### Cross-Domain Few-Shot Object Detection via Enhanced Open-Set Object Detector.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73636-0_15)
+- **作者**: Yuqian Fu, Yu Wang, Yixuan Pan, Lian Huai, Xingyu Qiu, Zeyu Shangguan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### MarvelOVD: Marrying Object Recognition and Vision-Language Models for Robust Open-Vocabulary Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72643-9_7)
+- **作者**: Kuo Wang, Lechao Cheng, Weikai Chen, Pingping Zhang, Liang Lin, Fan Zhou et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### CSOT: Cross-scan Object Transfer for Semi-Supervised LiDAR Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72643-9_20) · 📚 被引 1
+- **作者**: Jinglin Zhan, Tiejun Liu, Rengang Li, Zhaoxiang Zhang, Yuntao Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Crowd-SAM: SAM as a Smart Annotator for Object Detection in Crowded Scenes.
+- **链接**: [arXiv:2407.11464](https://arxiv.org/abs/2407.11464) · [代码](https://github.com/FelixCaae/CrowdSAM) · 📚 被引 15
+- **作者**: Zhi Cai, Yingjie Gao, Yaoyan Zheng, Nan Zhou, Di Huang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In computer vision, object detection is an important task that finds its application in many scenarios. However, obtaining extensive labels can be challenging, especially in crowded scenes. Recently, the Segment Anything Model (SAM) has been proposed as a powerful zero-shot segmenter, offering a novel approach to instance segmentation tasks. However, the accuracy and efficiency of SAM and its variants are often compromised when handling objects in crowded and occluded scenes. In this paper, we introduce Crowd-SAM, a SAM-based framework designed to enhance SAM's performance in crowded and occluded scenes with the cost of few learnable parameters and minimal labeled images. We introduce an efficient prompt sampler (EPS) and a part-whole discrimination network (PWD-Net), enhancing mask selection and accuracy in crowded scenes. Despite its simplicity, Crowd-SAM rivals state-of-the-art (SOTA) fully-supervised object detection methods on several benchmarks including CrowdHuman and CityPersons. Our code is available at https://github.com/FelixCaae/CrowdSAM.
+
+</details>
+
+### Embracing Events and Frames with Hierarchical Feature Refinement Network for Object Detection.
+- **链接**: [arXiv:2407.12582](https://arxiv.org/abs/2407.12582) · [代码](https://github.com/HuCaoFighting/FRN) · 📚 被引 19
+- **作者**: Hu Cao, Zehua Zhang, Yan Xia, Xinyi Li, Jiahao Xia, Guang Chen et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In frame-based vision, object detection faces substantial performance degradation under challenging conditions due to the limited sensing capability of conventional cameras. Event cameras output sparse and asynchronous events, providing a potential solution to solve these problems. However, effectively fusing two heterogeneous modalities remains an open issue. In this work, we propose a novel hierarchical feature refinement network for event-frame fusion. The core concept is the design of the coarse-to-fine fusion module, denoted as the cross-modality adaptive feature refinement (CAFR) module. In the initial phase, the bidirectional cross-modality interaction (BCI) part facilitates information bridging from two distinct sources. Subsequently, the features are further refined by aligning the channel-level mean and variance in the two-fold adaptive feature refinement (TAFR) part. We conducted extensive experiments on two benchmarks: the low-resolution PKU-DDD17-Car dataset and the high-resolution DSEC dataset. Experimental results show that our method surpasses the state-of-the-art by an impressive margin of $\textbf{8.0}\%$ on the DSEC dataset. Besides, our method exhibits significantly better robustness (\textbf{69.5}\% versus \textbf{38.7}\%) when introducing 15 different corruption types to the frame images. The code can be found at the link (https://github.com/HuCaoFighting/FRN).
+
+</details>
+
+### DeTra: A Unified Model for Object Detection and Trajectory Forecasting.
+- **链接**: [arXiv:2406.04426](https://arxiv.org/abs/2406.04426) · 📚 被引 8
+- **作者**: Sergio Casas, Ben Agro, Jiageng Mao, Thomas Gilles, Alexander Cui, Thomas Li et al.
+- **🏷️ 机构**: Waabi / University of Toronto
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Camouflaged object detection has attracted a lot of attention in computer vision. The main challenge lies in the high degree of similarity between camouflaged objects and their surroundings in the spatial domain, making identification difficult. Existing methods attempt to reduce the impact of pixel similarity by maximizing the distinguishing ability of spatial features with complicated design, but often ignore the sensitivity and locality of features in the spatial domain, leading to sub-optimal results. In this paper, we propose a new approach to address this issue by jointly exploring the representation in the frequency and spatial domains, introducing the Frequency-Spatial Entanglement Learning (FSEL) method. This method consists of a series of well-designed Entanglement Transformer Blocks (ETB) for representation learning, a Joint Domain Perception Module for semantic enhancement, and a Dual-domain Reverse Parser for feature integration in the frequency and spatial domains. Specifically, the ETB utilizes frequency self-attention to effectively characterize the relationship between different frequency bands, while the entanglement feed-forward network facilitates information interaction between features of different domains through entanglement learning. Our extensive experiments demonstrate the superiority of our FSEL over 21 state-of-the-art methods, through comprehensive quantitative and qualitative comparisons in three widely-used datasets. The source code is available at: https://github.com/CSYSI/FSEL.
+
+</details>
+
+### Just a Hint: Point-Supervised Camouflaged Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72761-0_19) · 📚 被引 21
+- **作者**: Huafeng Chen, Dian Shao, Guangqian Guo, Shan Gao
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Acquiring fine-grained object detection annotations in unconstrained images is time-consuming, expensive, and prone to noise, especially in crowdsourcing scenarios. Most prior object detection methods assume accurate annotations; A few recent works have studied object detection with noisy crowdsourced annotations, with evaluation on distinct synthetic crowdsourced datasets of varying setups under artificial assumptions. To address these algorithmic limitations and evaluation inconsistency, we first propose a novel Bayesian Detector Combination (BDC) framework to more effectively train object detectors with noisy crowdsourced annotations, with the unique ability of automatically inferring the annotators' label qualities. Unlike previous approaches, BDC is model-agnostic, requires no prior knowledge of the annotators' skill level, and seamlessly integrates with existing object detection models. Due to the scarcity of real-world crowdsourced datasets, we introduce large synthetic datasets by simulating varying crowdsourcing scenarios. This allows consistent evaluation of different models at scale. Extensive experiments on both real and synthetic crowdsourced datasets show that BDC outperforms existing state-of-the-art methods, demonstrating its superiority in leveraging crowdsourced data for object detection. Our code and data are available at https://github.com/zhiqin1998/bdc.
+
+</details>
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Source-Free domain adaptive Object Detection (SFOD) is a promising strategy for deploying trained detectors to new, unlabeled domains without accessing source data, addressing significant concerns around data privacy and efficiency. Most SFOD methods leverage a Mean-Teacher (MT) self-training paradigm relying heavily on High-confidence Pseudo Labels (HPL). However, these HPL often overlook small instances that undergo significant appearance changes with domain shifts. Additionally, HPL ignore instances with low confidence due to the scarcity of training samples, resulting in biased adaptation toward familiar instances from the source domain. To address this limitation, we introduce the Low-confidence Pseudo Label Distillation (LPLD) loss within the Mean-Teacher based SFOD framework. This novel approach is designed to leverage the proposals from Region Proposal Network (RPN), which potentially encompasses hard-to-detect objects in unfamiliar domains. Initially, we extract HPL using a standard pseudo-labeling technique and mine a set of Low-confidence Pseudo Labels (LPL) from proposals generated by RPN, leaving those that do not overlap significantly with HPL. These LPL are further refined by leveraging class-relation information and reducing the effect of inherent noise for the LPLD loss calculation. Furthermore, we use feature distance to adaptively weight the LPLD loss to focus on LPL containing a larger foreground area. Our method outperforms previous SFOD methods on four cross-domain object detection benchmarks. Extensive experiments demonstrate that our LPLD loss leads to effective adaptation by reducing false negatives and facilitating the use of domain-invariant knowledge from the source model. Code is available at https://github.com/junia3/LPLD.
+
+</details>
+
+### Dynamic Retraining-Updating Mean Teacher for Source-Free Object Detection.
+- **链接**: [arXiv:2407.16497](https://arxiv.org/abs/2407.16497) · [代码](https://github.com/lbktrinh/DRU) · 📚 被引 13
+- **作者**: Trinh Le Ba Khanh, Huy-Hung Nguyen, Long Hoang Pham, Duong Nguyen-Ngoc Tran, Jae Wook Jeon
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We study the 3D object understanding task for manipulating everyday objects with different material properties (diffuse, specular, transparent and mixed). Existing monocular and RGB-D methods suffer from scale ambiguity due to missing or imprecise depth measurements. We present CODERS, a one-stage approach for Category-level Object Detection, pose Estimation and Reconstruction from Stereo images. The base of our pipeline is an implicit stereo matching module that combines stereo image features with 3D position information. Concatenating this presented module and the following transform-decoder architecture leads to end-to-end learning of multiple tasks required by robot manipulation. Our approach significantly outperforms all competing methods in the public TOD dataset. Furthermore, trained on simulated data, CODERS generalize well to unseen category-level object instances in real-world robot manipulation experiments. Our dataset, code, and demos will be available on our project page.
+
+</details>
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing Camouflaged Object Detection (COD) methods rely heavily on large-scale pixel-annotated training sets, which are both time-consuming and labor-intensive. Although weakly supervised methods offer higher annotation efficiency, their performance is far behind due to the unclear visual demarcations between foreground and background in camouflaged images. In this paper, we explore the potential of using boxes as prompts in camouflaged scenes and introduce the first weakly semi-supervised COD method, aiming for budget-efficient and high-precision camouflaged object segmentation with an extremely limited number of fully labeled images. Critically, learning from such limited set inevitably generates pseudo labels with serious noisy pixels. To address this, we propose a noise correction loss that facilitates the model's learning of correct pixels in the early learning stage, and corrects the error risk gradients dominated by noisy pixels in the memorization stage, ultimately achieving accurate segmentation of camouflaged objects from noisy labels. When using only 20% of fully labeled data, our method shows superior performance over the state-of-the-art methods.
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-head detectors typically employ a features-fused-pyramid-neck for multi-scale detection and are widely adopted in the industry. However, this approach faces feature misalignment when representations from different hierarchical levels of the feature pyramid are forcibly fused point-to-point. To address this issue, we designed an independent hierarchy pyramid (IHP) architecture to evaluate the effectiveness of the features-unfused-pyramid-neck for multi-head detectors. Subsequently, we introduced soft nearest neighbor interpolation (SNI) with a weight downscaling factor to mitigate the impact of feature fusion at different hierarchies while preserving key textures. Furthermore, we present a features adaptive selection method for down sampling in extended spatial windows (ESD) to retain spatial features and enhance lightweight convolutional techniques (GSConvE). These advancements culminate in our secondary features alignment solution (SA) for real-time detection, achieving state-of-the-art results on Pascal VOC and MS COCO. Code will be released at https://github.com/AlanLi1997/rethinking-fpn. This paper has been accepted by ECCV2024 and published on Springer Nature.
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Detecting objects seamlessly blended into their surroundings represents a complex task for both human cognitive capabilities and advanced artificial intelligence algorithms. Currently, the majority of methodologies for detecting camouflaged objects mainly focus on utilizing discriminative models with various unique designs. However, it has been observed that generative models, such as Stable Diffusion, possess stronger capabilities for understanding various objects in complex environments; Yet their potential for the cognition and detection of camouflaged objects has not been extensively explored. In this study, we present a novel denoising diffusion model, namely FocusDiffuser, to investigate how generative models can enhance the detection and interpretation of camouflaged objects. We believe that the secret to spotting camouflaged objects lies in catching the subtle nuances in details. Consequently, our FocusDiffuser innovatively integrates specialized enhancements, notably the Boundary-Driven LookUp (BDLU) module and Cyclic Positioning (CP) module, to elevate standard diffusion models, significantly boosting the detail-oriented analytical capabilities. Our experiments demonstrate that FocusDiffuser, from a generative perspective, effectively addresses the challenge of camouflaged object detection, surpassing leading models on benchmarks like CAMO, COD10K and NC4K.
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In computer vision, it is well-known that a lack of data diversity will impair model performance. In this study, we address the challenges of enhancing the dataset diversity problem in order to benefit various downstream tasks such as object detection and instance segmentation. We propose a simple yet effective data augmentation approach by leveraging advancements in generative models, specifically text-to-image synthesis technologies like Stable Diffusion. Our method focuses on generating variations of labeled real images, utilizing generative object and background augmentation via inpainting to augment existing training data without the need for additional annotations. We find that background augmentation, in particular, significantly improves the models' robustness and generalization capabilities. We also investigate how to adjust the prompt and mask to ensure the generated content comply with the existing annotations. The efficacy of our augmentation techniques is validated through comprehensive evaluations of the COCO dataset and several other key object detection benchmarks, demonstrating notable enhancements in model performance across diverse scenarios. This approach offers a promising solution to the challenges of dataset enhancement, contributing to the development of more accurate and robust computer vision models.
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper introduces the point-axis representation for oriented object detection, emphasizing its flexibility and geometrically intuitive nature with two key components: points and axes. 1) Points delineate the spatial extent and contours of objects, providing detailed shape descriptions. 2) Axes define the primary directionalities of objects, providing essential orientation cues crucial for precise detection. The point-axis representation decouples location and rotation, addressing the loss discontinuity issues commonly encountered in traditional bounding box-based approaches. For effective optimization without introducing additional annotations, we propose the max-projection loss to supervise point set learning and the cross-axis loss for robust axis representation learning. Further, leveraging this representation, we present the Oriented DETR model, seamlessly integrating the DETR framework for precise point-axis prediction and end-to-end detection. Experimental results demonstrate significant performance improvements in oriented object detection tasks.
+
+</details>
+
+### CLIFF: Continual Latent Diffusion for Open-Vocabulary Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73001-6_15)
+- **作者**: Wuyang Li, Xinyu Liu, Jiayi Ma, Yixuan Yuan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-vocabulary human-object interaction (HOI) detection, which is concerned with the problem of detecting novel HOIs guided by natural language, is crucial for understanding human-centric scenes. However, prior zero-shot HOI detectors often employ the same levels of feature maps to model HOIs with varying distances, leading to suboptimal performance in scenes containing human-object pairs with a wide range of distances. In addition, these detectors primarily rely on category names and overlook the rich contextual information that language can provide, which is essential for capturing open vocabulary concepts that are typically rare and not well-represented by category names alone. In this paper, we introduce a novel end-to-end open vocabulary HOI detection framework with conditional multi-level decoding and fine-grained semantic enhancement (CMD-SE), harnessing the potential of Visual-Language Models (VLMs). Specifically, we propose to model human-object pairs with different distances with different levels of feature maps by incorporating a soft constraint during the bipartite matching process. Furthermore, by leveraging large language models (LLMs) such as GPT models, we exploit their extensive world knowledge to generate descriptions of human body part states for various interactions. Then we integrate the generalizable and fine-grained semantics of human body parts to improve interaction recognition. Experimental results on two datasets, SWIG-HOI and HICO-DET, demonstrate that our proposed method achieves state-of-the-art results in open vocabulary HOI detection. The code and models are available at https://github.com/ltttpku/CMD-SE-release.
+
+</details>
+
+### Integer-Valued Training and Spike-Driven Inference Spiking Neural Network for High-Performance and Energy-Efficient Object Detection.
+- **链接**: [arXiv:2407.20708](https://arxiv.org/abs/2407.20708) · [代码](https://github.com/BICLab/SpikeYOLO) · 📚 被引 63
+- **作者**: Xinhao Luo, Man Yao, Yuhong Chou, Bo Xu, Guoqi Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recently, efficient Vision Transformers have shown great performance with low latency on resource-constrained devices. Conventionally, they use 4x4 patch embeddings and a 4-stage structure at the macro level, while utilizing sophisticated attention with multi-head configuration at the micro level. This paper aims to address computational redundancy at all design levels in a memory-efficient manner. We discover that using larger-stride patchify stem not only reduces memory access costs but also achieves competitive performance by leveraging token representations with reduced spatial redundancy from the early stages. Furthermore, our preliminary analyses suggest that attention layers in the early stages can be substituted with convolutions, and several attention heads in the latter stages are computationally redundant. To handle this, we introduce a single-head attention module that inherently prevents head redundancy and simultaneously boosts accuracy by parallelly combining global and local information. Building upon our solutions, we introduce SHViT, a Single-Head Vision Transformer that obtains the state-of-the-art speed-accuracy tradeoff. For example, on ImageNet-1k, our SHViT-S4 is 3.3x, 8.1x, and 2.4x faster than MobileViTv2 x1.0 on GPU, CPU, and iPhone12 mobile device, respectively, while being 1.3% more accurate. For object detection and instance segmentation on MS COCO using Mask-RCNN head, our model achieves performance comparable to FastViT-SA12 while exhibiting 3.8x and 2.0x lower backbone latency on GPU and mobile device, respectively.
+
+</details>
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Segment Anything Model (SAM) has emerged as a powerful tool for numerous vision applications. A key component that drives the impressive performance for zero-shot transfer and high versatility is a super large Transformer model trained on the extensive high-quality SA-1B dataset. While beneficial, the huge computation cost of SAM model has limited its applications to wider real-world applications. To address this limitation, we propose EfficientSAMs, light-weight SAM models that exhibits decent performance with largely reduced complexity. Our idea is based on leveraging masked image pretraining, SAMI, which learns to reconstruct features from SAM image encoder for effective visual representation learning. Further, we take SAMI-pretrained light-weight image encoders and mask decoder to build EfficientSAMs, and finetune the models on SA-1B for segment anything task. We perform evaluations on multiple vision tasks including image classification, object detection, instance segmentation, and semantic object detection, and find that our proposed pretraining method, SAMI, consistently outperforms other masked image pretraining methods. On segment anything task such as zero-shot instance segmentation, our EfficientSAMs with SAMI-pretrained lightweight image encoders perform favorably with a significant gain (e.g., ~4 AP on COCO/LVIS) over other fast SAM models.
+
+</details>
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- UNION: Unsupervised 3D Object Detection using Object Appearance-based Pseudo-Classes. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Towards Flexible 3D Perception: Object-Centric Occupancy Completion Augments 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- LION: Linear Group RNN for 3D Object Detection in Point Clouds. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Unified Domain Generalization and Adaptation for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- DiffuBox: Refining 3D Object Detection with Point Diffusion. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Zero-shot Generalizable Incremental Learning for Vision-Language Object Detection. → [continual-learning](../continual-learning/Guideline%202024.md)
-- CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Real-time Stereo-based 3D Object Detection for Streaming Perception. → [3d-detection](../3d-detection/Guideline%202024.md)
-- 3DET-Mamba: Causal Sequence Modelling for End-to-End 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- STONE: A Submodular Optimization Framework for Active 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- One for All: Multi-Domain Joint Training for Point Cloud Based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- MVSDet: Multi-View Indoor 3D Object Detection via Efficient Plane Sweeps. → [3d-detection](../3d-detection/Guideline%202024.md)
-- ImOV3D: Learning Open Vocabulary Point Clouds 3D Object Detection from Only 2D Images. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Voxel Mamba: Group-Free State Space Models for Point Cloud based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- RETR: Multi-View Radar Detection Transformer for Indoor Perception. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
+- OPEN: Object-Wise Position Embedding for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- LISO: Lidar-Only Self-supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- LiDAR-Based All-Weather 3D Object Detection via Prompting and Distilling 4D Radar. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Learning High-Resolution Vector Representation from Multi-camera Images for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Diff3DETR: Agent-Based Diffusion Model for Semi-supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- CMD: A Cross Mechanism Domain Adaptation Dataset for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Find n' Propagate: Open-Vocabulary 3D Object Detection in Urban Environments. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Weakly Supervised 3D Object Detection via Multi-level Visual Guidance. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Detecting as Labeling: Rethinking LiDAR-Camera Fusion in 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Unlocking Textual and Visual Wisdom: Open-Vocabulary 3D Object Detection Enhanced by Comprehensive Guidance from Text and Image. → [3d-detection](../3d-detection/Guideline%202024.md)
+- LabelDistill: Label-Guided Cross-Modal Knowledge Distillation for Camera-Based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Diffusion Model for Robust Multi-sensor Fusion in 3D Object Detection and BEV Segmentation. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Domain Generalization of 3D Object Detection by Density-Resampling. → [3d-detection](../3d-detection/Guideline%202024.md)
+- MonoTTA: Fully Test-Time Adaptation for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Ray Denoising: Depth-Aware Hard Negative Sampling for Multi-view 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- MonoWAD: Weather-Adaptive Diffusion Model for Robust Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- SAMFusion: Sensor-Adaptive Multimodal Fusion for 3D Object Detection in Adverse Weather. → [3d-detection](../3d-detection/Guideline%202024.md)
+- GraphBEV: Towards Robust BEV Feature Alignment for Multi-modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- SimPB: A Single Model for 2D and 3D Object Detection from Multiple Cameras. → [3d-detection](../3d-detection/Guideline%202024.md)
+- OV-Uni3DETR: Towards Unified Open-Vocabulary 3D Object Detection via Cycle-Modality Propagation. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Towards Stable 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- DSPDet3D: 3D Small Object Detection with Dynamic Spatial Pruning. → [network-pruning](../network-pruning/Guideline%202024.md)
+- Reg-TTA3D: Better Regression Makes Better Test-Time Adaptive 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- General Geometry-Aware Weakly Supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Interactive 3D Object Detection with Prompts. → [3d-detection](../3d-detection/Guideline%202024.md)
+- SparseLIF: High-Performance Sparse LiDAR-Camera Fusion for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Approaching Outside: Scaling Unsupervised 3D Object Detection from 2D Scene. → [3d-detection](../3d-detection/Guideline%202024.md)
+- LayoutDETR: Detection Transformer Is a Good Multimodal Layout Designer. → [multimodal](../multimodal/Guideline%202024.md)

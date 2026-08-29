@@ -1,75 +1,59 @@
 # VLM — 2024 Guideline
 
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
-> 论文数: 94 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 29 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### VLKEB: A Large Vision-Language Model Knowledge Editing Benchmark.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/1198b53fa686831d5f0c0860d7ec4f34-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 5
-- **作者**: Han Huang, Haitian Zhong, Tao Yu, Qiang Liu, Shu Wu, Liang Wang et al.
+### UMG-CLIP: A Unified Multi-granularity Vision Generalist for Open-World Understanding.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72920-1_15) · 📚 被引 2
+- **作者**: Bowen Shi, Peisen Zhao, Zichen Wang, Yuhang Zhang, Yaoming Wang, Jin Li et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-### ConvBench: A Multi-Turn Conversation Evaluation Benchmark with Hierarchical Ablation Capability for Large Vision-Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/b69396afc07a9ca3428d194f4db84c02-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 4
-- **作者**: Shuo Liu, Kaining Ying, Hao Zhang, Yue Yang, Yuqi Lin, Tianle Zhang et al.
-- **🏷️ 机构**: Shanghai AI Lab
-- **会议**: NeurIPS 2024
-
-### VLM4Bio: A Benchmark Dataset to Evaluate Pretrained Vision-Language Models for Trait Discovery from Biological Images.
-- **链接**: [arXiv:2408.16176](https://arxiv.org/abs/2408.16176) · [代码](https://github.com/sammarfy/VLM4Bio) · 📚 被引 2
-- **作者**: M. Maruf, Arka Daw, Kazi Sajeed Mehrab, Harish Babu Manogaran, Abhilash Neog, Medha Sawhney et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Images are increasingly becoming the currency for documenting biodiversity on the planet, providing novel opportunities for accelerating scientific discoveries in the field of organismal biology, especially with the advent of large vision-language models (VLMs). We ask if pre-trained VLMs can aid scientists in answering a range of biologically relevant questions without any additional fine-tuning. In this paper, we evaluate the effectiveness of 12 state-of-the-art (SOTA) VLMs in the field of organismal biology using a novel dataset, VLM4Bio, consisting of 469K question-answer pairs involving 30K images from three groups of organisms: fishes, birds, and butterflies, covering five biologically relevant tasks. We also explore the effects of applying prompting techniques and tests for reasoning hallucination on the performance of VLMs, shedding new light on the capabilities of current SOTA VLMs in answering biologically relevant questions using images. The code and datasets for running all the analyses reported in this paper can be found at https://github.com/sammarfy/VLM4Bio.
+> Text-to-Image (T2I) and multimodal large language models (MLLMs) have been adopted in solutions for several computer vision and multimodal learning tasks. However, it has been found that such vision-language models lack the ability to correctly reason over spatial relationships. To tackle this shortcoming, we develop the REVISION framework which improves spatial fidelity in vision-language models. REVISION is a 3D rendering based pipeline that generates spatially accurate synthetic images, given a textual prompt. REVISION is an extendable framework, which currently supports 100+ 3D assets, 11 spatial relationships, all with diverse camera perspectives and backgrounds. Leveraging images from REVISION as additional guidance in a training-free manner consistently improves the spatial consistency of T2I models across all spatial relationships, achieving competitive performance on the VISOR and T2I-CompBench benchmarks. We also design RevQA, a question-answering benchmark to evaluate the spatial reasoning abilities of MLLMs, and find that state-of-the-art models are not robust to complex spatial reasoning under adversarial settings. Our results and findings indicate that utilizing rendering-based frameworks is an effective approach for developing spatially-aware generative models.
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Hallucinations in vision-language models pose a significant challenge to their reliability, particularly in the generation of long captions. Current methods fall short of accurately identifying and mitigating these hallucinations. To address this issue, we introduce ESREAL, a novel unsupervised learning framework designed to suppress the generation of hallucinations through accurate localization and penalization of hallucinated tokens. Initially, ESREAL creates a reconstructed image based on the generated caption and aligns its corresponding regions with those of the original image. This semantic reconstruction aids in identifying both the presence and type of token-level hallucinations within the generated caption. Subsequently, ESREAL computes token-level hallucination scores by assessing the semantic similarity of aligned regions based on the type of hallucination. Finally, ESREAL employs a proximal policy optimization algorithm, where it selectively penalizes hallucinated tokens according to their token-level hallucination scores. Our framework notably reduces hallucinations in LLaVA, InstructBLIP, and mPLUG-Owl2 by 32.81%, 27.08%, and 7.46% on the CHAIR metric. This improvement is achieved solely through signals derived from the image itself, without the need for any image-text pairs.
 
 </details>
 
 ### CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models.
-- **链接**: [arXiv:2406.06007](https://arxiv.org/abs/2406.06007) · 📚 被引 18
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/fde7f40f8ced5735006810534dc66b33-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 18
 - **作者**: Peng Xia, Ze Chen, Juanxi Tian, Yangrui Gong, Ruibo Hou, Yue Xu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Artificial intelligence has significantly impacted medical applications, particularly with the advent of Medical Large Vision Language Models (Med-LVLMs), sparking optimism for the future of automated and personalized healthcare. However, the trustworthiness of Med-LVLMs remains unverified, posing significant risks for future model deployment. In this paper, we introduce CARES and aim to comprehensively evaluate the Trustworthiness of Med-LVLMs across the medical domain. We assess the trustworthiness of Med-LVLMs across five dimensions, including trustfulness, fairness, safety, privacy, and robustness. CARES comprises about 41K question-answer pairs in both closed and open-ended formats, covering 16 medical image modalities and 27 anatomical regions. Our analysis reveals that the models consistently exhibit concerns regarding trustworthiness, often displaying factual inaccuracies and failing to maintain fairness across different demographic groups. Furthermore, they are vulnerable to attacks and demonstrate a lack of privacy awareness. We publicly release our benchmark and code in https://cares-ai.github.io/.
+> Prompt learning has been widely adopted to efficiently adapt vision-language models (VLMs), e.g. CLIP, for few-shot image classification. Despite their success, most prompt learning methods trade-off between classification accuracy and robustness, e.g. in domain generalization or out-of-distribution (OOD) detection. In this work, we introduce Global-Local Prompts (GalLoP), a new prompt learning method that learns multiple diverse prompts leveraging both global and local visual features. The training of the local prompts relies on local features with an enhanced vision-text alignment. To focus only on pertinent features, this local alignment is coupled with a sparsity strategy in the selection of the local features. We enforce diversity on the set of prompts using a new ``prompt dropout'' technique and a multiscale strategy on the local prompts. GalLoP outperforms previous prompt learning methods on accuracy on eleven datasets in different few shots settings and with various backbones. Furthermore, GalLoP shows strong robustness performances in both domain generalization and OOD detection, even outperforming dedicated OOD detection methods. Code and instructions to reproduce our results: https://github.com/MarcLafon/gallop.
 
 </details>
-
-### BenchX: A Unified Benchmark Framework for Medical Vision-Language Pretraining on Chest X-Rays.
-- **链接**: [arXiv:2410.21969](https://arxiv.org/abs/2410.21969) · [代码](https://github.com/yangzhou12/BenchX) · 📚 被引 1
-- **作者**: Yang Zhou, Tan Li Hui Faith, Yanyu Xu, Sicong Leng, Xinxing Xu, Yong Liu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Medical Vision-Language Pretraining (MedVLP) shows promise in learning generalizable and transferable visual representations from paired and unpaired medical images and reports. MedVLP can provide useful features to downstream tasks and facilitate adapting task-specific models to new setups using fewer examples. However, existing MedVLP methods often differ in terms of datasets, preprocessing, and finetuning implementations. This pose great challenges in evaluating how well a MedVLP method generalizes to various clinically-relevant tasks due to the lack of unified, standardized, and comprehensive benchmark. To fill this gap, we propose BenchX, a unified benchmark framework that enables head-to-head comparison and systematical analysis between MedVLP methods using public chest X-ray datasets. Specifically, BenchX is composed of three components: 1) Comprehensive datasets covering nine datasets and four medical tasks; 2) Benchmark suites to standardize data preprocessing, train-test splits, and parameter selection; 3) Unified finetuning protocols that accommodate heterogeneous MedVLP methods for consistent task adaptation in classification, segmentation, and report generation, respectively. Utilizing BenchX, we establish baselines for nine state-of-the-art MedVLP methods and found that the performance of some early MedVLP methods can be enhanced to surpass more recent ones, prompting a revisiting of the developments and conclusions from prior works in MedVLP. Our code are available at https://github.com/yangzhou12/BenchX.
 
-</details>
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### EZ-HOI: VLM Adaptation via Guided Prompt Learning for Zero-Shot HOI Detection.
-- **链接**: [arXiv:2410.23904](https://arxiv.org/abs/2410.23904) · [代码](https://github.com/ChelsieLei/EZ-HOI) · 📚 被引 14
-- **作者**: Qinqian Lei, Bo Wang, Robby T. Tan
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+> Current high-resolution vision-language models encode images as high-resolution image tokens and exhaustively take all these tokens to compute attention, which significantly increases the computational cost. To address this problem, we propose FlexAttention, a flexible attention mechanism for efficient high-resolution vision-language models. Specifically, a high-resolution image is encoded both as high-resolution tokens and low-resolution tokens, where only the low-resolution tokens and a few selected high-resolution tokens are utilized to calculate the attention map, which greatly shrinks the computational cost. The high-resolution tokens are selected via a high-resolution selection module which could retrieve tokens of relevant regions based on an input attention map. The selected high-resolution tokens are then concatenated to the low-resolution tokens and text tokens, and input to a hierarchical self-attention layer which produces an attention map that could be used for the next-step high-resolution token selection. The hierarchical self-attention process and high-resolution token selection process are performed iteratively for each attention layer. Experiments on multimodal benchmarks prove that our FlexAttention outperforms existing high-resolution VLMs (e.g., relatively ~9% in V* Bench, ~7% in TextVQA), while also significantly reducing the computational cost by nearly 40%.
+
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Detecting Human-Object Interactions (HOI) in zero-shot settings, where models must handle unseen classes, poses significant challenges. Existing methods that rely on aligning visual encoders with large Vision-Language Models (VLMs) to tap into the extensive knowledge of VLMs, require large, computationally expensive models and encounter training difficulties. Adapting VLMs with prompt learning offers an alternative to direct alignment. However, fine-tuning on task-specific datasets often leads to overfitting to seen classes and suboptimal performance on unseen classes, due to the absence of unseen class labels. To address these challenges, we introduce a novel prompt learning-based framework for Efficient Zero-Shot HOI detection (EZ-HOI). First, we introduce Large Language Model (LLM) and VLM guidance for learnable prompts, integrating detailed HOI descriptions and visual semantics to adapt VLMs to HOI tasks. However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize learnable prompts for seen classes instead of unseen ones. Therefore, we design prompt learning for unseen classes using information from related seen classes, with LLMs utilized to highlight the differences between unseen and related seen classes. Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35% to 33.95% of the trainable parameters compared to existing methods. Code is available at https://github.com/ChelsieLei/EZ-HOI.
 
-</details>
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Homology Consistency Constrained Efficient Tuning for Vision-Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/a9338cd6e092ff1f96c3749b08cdc537-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Huatian Zhang, Lei Zhang, Yongdong Zhang, Zhendong Mao
-- **🏷️ 机构**: PolyU / OPPO
-- **会议**: NeurIPS 2024
+> The emergence of Vision Language Models (VLMs) is a significant advancement in integrating computer vision with Large Language Models (LLMs) to produce detailed text descriptions based on visual inputs, yet it introduces new security vulnerabilities. Unlike prior work that centered on single modalities or classification tasks, this study introduces TrojVLM, the first exploration of backdoor attacks aimed at VLMs engaged in complex image-to-text generation. Specifically, TrojVLM inserts predetermined target text into output text when encountering poisoned images. Moreover, a novel semantic preserving loss is proposed to ensure the semantic integrity of the original image content. Our evaluation on image captioning and visual question answering (VQA) tasks confirms the effectiveness of TrojVLM in maintaining original semantic content while triggering specific target text outputs. This study not only uncovers a critical security risk in VLMs and image-to-text generation but also sets a foundation for future research on securing multimodal models against such sophisticated threats.
+
+</details>
 
 ### Text-Guided Attention is All You Need for Zero-Shot Robustness in Vision-Language Models.
 - **链接**: [arXiv:2410.21802](https://arxiv.org/abs/2410.21802) · [代码](https://github.com/zhyblue424/TGA-ZSR) · 📚 被引 2
@@ -79,7 +63,9 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Due to the impressive zero-shot capabilities, pre-trained vision-language models (e.g. CLIP), have attracted widespread attention and adoption across various domains. Nonetheless, CLIP has been observed to be susceptible to adversarial examples. Through experimental analysis, we have observed a phenomenon wherein adversarial perturbations induce shifts in text-guided attention. Building upon this observation, we propose a simple yet effective strategy: Text-Guided Attention for Zero-Shot Robustness (TGA-ZSR). This framework incorporates two components: the Attention Refinement module and the Attention-based Model Constraint module. Our goal is to maintain the generalization of the CLIP model and enhance its adversarial robustness: The Attention Refinement module aligns the text-guided attention obtained from the target model via adversarial examples with the text-guided attention acquired from the original model via clean examples. This alignment enhances the model's robustness. Additionally, the Attention-based Model Constraint module acquires text-guided attention from both the target and original models using clean examples. Its objective is to maintain model performance on clean samples while enhancing overall robustness. The experiments validate that our method yields a 9.58% enhancement in zero-shot robust accuracy over the current state-of-the-art techniques across 16 datasets. Our code is available at https://github.com/zhyblue424/TGA-ZSR.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper addresses the critical issue of miscalibration in CLIP-based model adaptation, particularly in the challenging scenario of out-of-distribution (OOD) samples, which has been overlooked in the existing literature on CLIP adaptation. We empirically demonstrate that popular CLIP adaptation approaches, such as Adapters, Prompt Learning, and Test-Time Adaptation, substantially degrade the calibration capabilities of the zero-shot baseline in the presence of distributional drift. We identify the increase in logit ranges as the underlying cause of miscalibration of CLIP adaptation methods, contrasting with previous work on calibrating fully-supervised models. Motivated by these observations, we present a simple and model-agnostic solution to mitigate miscalibration, by scaling the logit range of each sample to its zero-shot prediction logits. We explore three different alternatives to achieve this, which can be either integrated during adaptation or directly used at inference time. Comprehensive experiments on popular OOD classification benchmarks demonstrate the effectiveness of the proposed approaches in mitigating miscalibration while maintaining discriminative performance, whose improvements are consistent across the three families of these increasingly popular approaches. The code is publicly available at: https://github.com/Bala93/CLIPCalib
 
 </details>
 
@@ -91,31 +77,23 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Large Vision-Language Models (LVLMs) typically encode an image into a fixed number of visual tokens (e.g., 576) and process these tokens with a language model. Despite their strong performance, LVLMs face challenges in adapting to varying computational constraints. This raises the question: can we achieve flexibility in the number of visual tokens to suit different tasks and computational resources? We answer this with an emphatic yes. Inspired by Matryoshka Representation Learning, we introduce the Matryoshka Query Transformer (MQT), capable of encoding an image into m visual tokens during inference, where m can be any number up to a predefined maximum. This is achieved by employing a query transformer with M latent query tokens to compress the visual embeddings. During each training step, we randomly select m <= M latent query tokens and train the model using only these first m tokens, discarding the rest. Combining MQT with LLaVA, we train a single model once, and flexibly and drastically reduce the number of inference-time visual tokens while maintaining similar or better performance compared to training independent models for each number of tokens. Our model, MQT-LLAVA, matches LLaVA-1.5 performance across 11 benchmarks using a maximum of 256 tokens instead of LLaVA's fixed 576. Reducing to 16 tokens (8x less TFLOPs) only sacrifices the performance by 2.4 points on MMBench. On certain tasks such as ScienceQA and MMMU, we can even go down to only 2 visual tokens with performance drops of just 3% and 6% each. Our exploration of the trade-off between the accuracy and computational cost brought about by the number of visual tokens facilitates future research to achieve the best of both worlds.
+> Despite recent successes, LVLMs or Large Vision Language Models are prone to hallucinating details like objects and their properties or relations, limiting their real-world deployment. To address this and improve their robustness, we present CLIP-DPO, a preference optimization method that leverages contrastively pre-trained Vision-Language (VL) embedding models, such as CLIP, for DPO-based optimization of LVLMs. Unlike prior works tackling LVLM hallucinations, our method does not rely on paid-for APIs, and does not require additional training data or the deployment of other external LVLMs. Instead, starting from the initial pool of supervised fine-tuning data, we generate a diverse set of predictions, which are ranked based on their CLIP image-text similarities, and then filtered using a robust rule-based approach to obtain a set of positive and negative pairs for DPO-based training. We applied CLIP-DPO fine-tuning to the MobileVLM-v2 family of models and to LlaVA-1.5, in all cases observing significant improvements in terms of hallucination reduction over baseline models. We also observe better performance for zero-shot classification, suggesting improved grounding capabilities, and verify that the original performance on standard LVLM benchmarks is overall preserved.
 
 </details>
 
-### Dual Prototype Evolving for Test-Time Generalization of Vision-Language Models.
-- **链接**: [arXiv:2410.12790](https://arxiv.org/abs/2410.12790) · [代码](https://github.com/zhangce01/DPE-CLIP) · 📚 被引 6
-- **作者**: Ce Zhang, Simon Stepputtis, Katia P. Sycara, Yaqi Xie
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advances in vision-language models have shown notable generalization in broad tasks through visual instruction tuning. However, bridging the gap between the pre-trained vision encoder and the large language models (LLMs) becomes the whole network's bottleneck. To improve cross-modality alignment, existing works usually consider more visual instruction data covering a broader range of vision tasks to fine-tune the model for question-answering, which, however, is costly to obtain and has not thoroughly explored the rich contextual information contained in images. This paper first attempts to harness the overlooked context within visual instruction data, training the model to self-supervised "learning" how to ask high-quality questions. In this way, we introduce a novel framework named SQ-LLaVA: Self-Questioning for Large Vision-Language Assistant. SQ-LLaVA exhibits proficiency in generating flexible and meaningful image-related questions while analyzing the visual clue and prior language knowledge, signifying an advanced level of generalized visual understanding. Moreover, fine-tuning SQ-LLaVA on higher-quality instruction data shows a performance improvement compared with traditional visual-instruction tuning methods. This improvement highlights the efficacy of self-questioning techniques in achieving a deeper and more nuanced comprehension of visual content across various contexts.
+
+</details>
 
 > Test-time adaptation, which enables models to generalize to diverse data with unlabeled test samples, holds significant value in real-world scenarios. Recently, researchers have applied this setting to advanced pre-trained vision-language models (VLMs), developing approaches such as test-time prompt tuning to further extend their practical applicability. However, these methods typically focus solely on adapting VLMs from a single modality and fail to accumulate task-specific knowledge as more samples are processed. To address this, we introduce Dual Prototype Evolving (DPE), a novel test-time adaptation approach for VLMs that effectively accumulates task-specific knowledge from multi-modalities. Specifically, we create and evolve two sets of prototypes--textual and visual--to progressively capture more accurate multi-modal representations for target classes during test time. Moreover, to promote consistent multi-modal representations, we introduce and optimize learnable residuals for each test sample to align the prototypes from both modalities. Extensive experimental results on 15 benchmark datasets demonstrate that our proposed DPE consistently outperforms previous state-of-the-art methods while also exhibiting competitive computational efficiency. Code is available at https://github.com/zhangce01/DPE-CLIP.
 
-</details>
-
-### Unveiling the Tapestry of Consistency in Large Vision-Language Models.
-- **链接**: [arXiv:2405.14156](https://arxiv.org/abs/2405.14156) · [代码](https://github.com/foundation-multimodal-models/ConBench) · 📚 被引 3
-- **作者**: Yuan Zhang, Fei Xiao, Tao Huang, Chun-Kai Fan, Hongyuan Dong, Jiawen Li et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Large vision-language models (LVLMs) have recently achieved rapid progress, exhibiting great perception and reasoning abilities concerning visual information. However, when faced with prompts in different sizes of solution spaces, LVLMs fail to always give consistent answers regarding the same knowledge point. This inconsistency of answers between different solution spaces is prevalent in LVLMs and erodes trust. To this end, we provide a multi-modal benchmark ConBench, to intuitively analyze how LVLMs perform when the solution space of a prompt revolves around a knowledge point. Based on the ConBench tool, we are the first to reveal the tapestry and get the following findings: (1) In the discriminate realm, the larger the solution space of the prompt, the lower the accuracy of the answers. (2) Establish the relationship between the discriminative and generative realms: the accuracy of the discriminative question type exhibits a strong positive correlation with its Consistency with the caption. (3) Compared to open-source models, closed-source models exhibit a pronounced bias advantage in terms of Consistency. Eventually, we ameliorate the consistency of LVLMs by trigger-based diagnostic refinement, indirectly improving the performance of their caption. We hope this paper will accelerate the research community in better evaluating their models and encourage future advancements in the consistency domain. The project is available at https://github.com/foundation-multimodal-models/ConBench.
+> Highlighting particularly relevant regions of an image can improve the performance of vision-language models (VLMs) on various vision-language (VL) tasks by guiding the model to attend more closely to these regions of interest. For example, VLMs can be given a "visual prompt", where visual markers such as bounding boxes delineate key image regions. However, current VLMs that can incorporate visual guidance are either proprietary and expensive or require costly training on curated data that includes visual prompts. We introduce Contrastive Region Guidance (CRG), a training-free guidance method that enables open-source VLMs to respond to visual prompts. CRG contrasts model outputs produced with and without visual prompts, factoring out biases revealed by the model when answering without the information required to produce a correct answer (i.e., the model's prior). CRG achieves substantial improvements in a wide variety of VL tasks: When region annotations are provided, CRG increases absolute accuracy by up to 11.1% on ViP-Bench, a collection of six diverse region-based tasks such as recognition, math, and object relationship reasoning. We also show CRG's applicability to spatial reasoning, with 10% improvement on What'sUp, as well as to compositional generalization -- improving accuracy by 11.5% and 7.5% on two challenging splits from SugarCrepe -- and to image-text alignment for generated images, where we improve by up to 8.4 AUROC and 6.8 F1 points on SeeTRUE. When reference regions are absent, CRG allows us to re-rank proposed regions in referring expression comprehension and phrase grounding benchmarks like RefCOCO/+/g and Flickr30K Entities, with an average gain of 3.2% in accuracy. Our analysis explores alternative masking strategies for CRG, quantifies CRG's probability shift, and evaluates the role of region guidance strength, empirically validating CRG's design choices.
 
 </details>
 
@@ -127,7 +105,9 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Recent work has documented striking heterogeneity in the performance of state-of-the-art vision language models (VLMs), including both multimodal language models and text-to-image models. These models are able to describe and generate a diverse array of complex, naturalistic images, yet they exhibit surprising failures on basic multi-object reasoning tasks -- such as counting, localization, and simple forms of visual analogy -- that humans perform with near perfect accuracy. To better understand this puzzling pattern of successes and failures, we turn to theoretical accounts of the binding problem in cognitive science and neuroscience, a fundamental problem that arises when a shared set of representational resources must be used to represent distinct entities (e.g., to represent multiple objects in an image), necessitating the use of serial processing to avoid interference. We find that many of the puzzling failures of state-of-the-art VLMs can be explained as arising due to the binding problem, and that these failure modes are strikingly similar to the limitations exhibited by rapid, feedforward processing in the human brain.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advances in contrastive language-image pretraining (CLIP) have demonstrated strong capabilities in zero-shot classification by aligning visual representations with target text embeddings in an image level. However, in dense prediction tasks, CLIP often struggles to localize visual features within an image and fails to give accurate pixel-level predictions, which prevents it from functioning as a generalized visual foundation model. In this work, we aim to enhance CLIP's potential for semantic segmentation with minimal modifications to its pretrained models. By rethinking self-attention, we surprisingly find that CLIP can adapt to dense prediction tasks by simply introducing a novel Correlative Self-Attention (CSA) mechanism. Specifically, we replace the traditional self-attention block of CLIP vision encoder's last layer by our CSA module and reuse its pretrained projection matrices of query, key, and value, leading to a training-free adaptation approach for CLIP's zero-shot semantic segmentation. Extensive experiments show the advantage of CSA: we obtain a 38.2% average zero-shot mIoU across eight semantic segmentation benchmarks highlighted in this paper, significantly outperforming the existing SoTA's 33.9% and the vanilla CLIP's 14.1%.
 
 </details>
 
@@ -156,16 +136,10 @@
 </details>
 
 ### Are We on the Right Way for Evaluating Large Vision-Language Models?
-- **链接**: [arXiv:2403.20330](https://arxiv.org/abs/2403.20330) · 📚 被引 92
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/2f8ee6a3d766b426d2618e555b5aeb39-Abstract-Conference.html) · 📚 被引 92
 - **作者**: Lin Chen, Jinsong Li, Xiaoyi Dong, Pan Zhang, Yuhang Zang, Zehui Chen et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Large vision-language models (LVLMs) have recently achieved rapid progress, sparking numerous studies to evaluate their multi-modal capabilities. However, we dig into current evaluation works and identify two primary issues: 1) Visual content is unnecessary for many samples. The answers can be directly inferred from the questions and options, or the world knowledge embedded in LLMs. This phenomenon is prevalent across current benchmarks. For instance, GeminiPro achieves 42.9% on the MMMU benchmark without any visual input, and outperforms the random choice baseline across six benchmarks over 24% on average. 2) Unintentional data leakage exists in LLM and LVLM training. LLM and LVLM could still answer some visual-necessary questions without visual content, indicating the memorizing of these samples within large-scale training data. For example, Sphinx-X-MoE gets 43.6% on MMMU without accessing images, surpassing its LLM backbone with 17.9%. Both problems lead to misjudgments of actual multi-modal gains and potentially misguide the study of LVLM. To this end, we present MMStar, an elite vision-indispensable multi-modal benchmark comprising 1,500 samples meticulously selected by humans. MMStar benchmarks 6 core capabilities and 18 detailed axes, aiming to evaluate LVLMs' multi-modal capacities with carefully balanced and purified samples. These samples are first roughly selected from current benchmarks with an automated pipeline, human review is then involved to ensure each curated sample exhibits visual dependency, minimal data leakage, and requires advanced multi-modal capabilities. Moreover, two metrics are developed to measure data leakage and actual performance gain in multi-modal training. We evaluate 16 leading LVLMs on MMStar to assess their multi-modal capabilities, and on 7 benchmarks with the proposed metrics to investigate their data leakage and actual multi-modal gain.
-
-</details>
 
 ### Multi-Object Hallucination in Vision Language Models.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/4ea4a1ea4d9ff273688c8e92bd087112-Abstract-Conference.html) · 📚 被引 8
@@ -504,16 +478,10 @@
 - **会议**: NeurIPS 2024
 
 ### Shadowcast: Stealthy Data Poisoning Attacks Against Vision-Language Models.
-- **链接**: [arXiv:2402.06659](https://arxiv.org/abs/2402.06659) · [代码](https://github.com/umd-huang-lab/VLM-Poisoning) · 📚 被引 1
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/6a2e30664b9647f97d7b9275358d083c-Abstract-Conference.html) · 📚 被引 1
 - **作者**: Yuancheng Xu, Jiarui Yao, Manli Shu, Yanchao Sun, Zichu Wu, Ning Yu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Vision-Language Models (VLMs) excel in generating textual responses from visual inputs, but their versatility raises security concerns. This study takes the first step in exposing VLMs' susceptibility to data poisoning attacks that can manipulate responses to innocuous, everyday prompts. We introduce Shadowcast, a stealthy data poisoning attack where poison samples are visually indistinguishable from benign images with matching texts. Shadowcast demonstrates effectiveness in two attack types. The first is a traditional Label Attack, tricking VLMs into misidentifying class labels, such as confusing Donald Trump for Joe Biden. The second is a novel Persuasion Attack, leveraging VLMs' text generation capabilities to craft persuasive and seemingly rational narratives for misinformation, such as portraying junk food as healthy. We show that Shadowcast effectively achieves the attacker's intentions using as few as 50 poison samples. Crucially, the poisoned samples demonstrate transferability across different VLM architectures, posing a significant concern in black-box settings. Moreover, Shadowcast remains potent under realistic conditions involving various text prompts, training data augmentation, and image compression techniques. This work reveals how poisoned VLMs can disseminate convincing yet deceptive misinformation to everyday, benign users, emphasizing the importance of data integrity for responsible VLM deployments. Our code is available at: https://github.com/umd-huang-lab/VLM-Poisoning.
-
-</details>
 
 ### Voila-A: Aligning Vision-Language Models with User's Gaze Attention.
 - **链接**: [arXiv:2401.09454](https://arxiv.org/abs/2401.09454) · 📚 被引 3
@@ -540,16 +508,10 @@
 - **会议**: NeurIPS 2024
 
 ### Self-Calibrated Tuning of Vision-Language Models for Out-of-Distribution Detection.
-- **链接**: [arXiv:2411.03359](https://arxiv.org/abs/2411.03359) · 📚 被引 3
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/666e5e1df2d04dbe2b545ea3a3e3f7d3-Abstract-Conference.html) · 📚 被引 3
 - **作者**: Geng Yu, Jianing Zhu, Jiangchao Yao, Bo Han
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Out-of-distribution (OOD) detection is crucial for deploying reliable machine learning models in open-world applications. Recent advances in CLIP-based OOD detection have shown promising results via regularizing prompt tuning with OOD features extracted from ID data. However, the irrelevant context mined from ID data can be spurious due to the inaccurate foreground-background decomposition, thus limiting the OOD detection performance. In this work, we propose a novel framework, namely, Self-Calibrated Tuning (SCT), to mitigate this problem for effective OOD detection with only the given few-shot ID data. Specifically, SCT introduces modulating factors respectively on the two components of the original learning objective. It adaptively directs the optimization process between the two tasks during training on data with different prediction uncertainty to calibrate the influence of OOD regularization, which is compatible with many prompt tuning based OOD detection methods. Extensive experiments and analyses have been conducted to characterize and demonstrate the effectiveness of the proposed SCT. The code is publicly available.
-
-</details>
 
 ### Boosting Vision-Language Models with Transduction.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/71d7dbe2652bd4662d29fa269f059db4-Abstract-Conference.html) · 📚 被引 7
@@ -649,32 +611,29 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- WikiDO: A New Benchmark Evaluating Cross-Modal Retrieval for Vision-Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- MLLM-CompBench: A Comparative Reasoning Benchmark for Multimodal LLMs. → [multimodal](../multimodal/Guideline%202024.md)
-- II-Bench: An Image Implication Understanding Benchmark for Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- MultiTrust: A Comprehensive Benchmark Towards Trustworthy Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- Revisiting Few-Shot Object Detection with Vision-Language Models. → [object-detection](../object-detection/Guideline%202024.md)
-- ChatTracker: Enhancing Visual Tracking Performance via Chatting with Multimodal Large Language Model. → [multimodal](../multimodal/Guideline%202024.md)
-- VisionLLM v2: An End-to-End Generalist Multimodal Large Language Model for Hundreds of Vision-Language Tasks. → [multimodal](../multimodal/Guideline%202024.md)
-- CLAP4CLIP: Continual Learning with Probabilistic Finetuning for Vision-Language Models. → [continual-learning](../continual-learning/Guideline%202024.md)
-- Advancing Cross-domain Discriminability in Continual Learning of Vision-Language Models. → [continual-learning](../continual-learning/Guideline%202024.md)
-- MoME: Mixture of Multimodal Experts for Generalist Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- RestoreAgent: Autonomous Image Restoration Agent via Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts. → [multimodal](../multimodal/Guideline%202024.md)
-- MLLMGuard: A Multi-dimensional Safety Evaluation Suite for Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- Accelerating Pre-training of Multimodal LLMs via Chain-of-Sight. → [multimodal](../multimodal/Guideline%202024.md)
-- MaVEn: An Effective Multi-granularity Hybrid Visual Encoding Framework for Multimodal Large Language Model. → [multimodal](../multimodal/Guideline%202024.md)
-- Single Image Unlearning: Efficient Machine Unlearning in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- Visual Anchors Are Strong Information Aggregators For Multimodal Large Language Model. → [multimodal](../multimodal/Guideline%202024.md)
-- Grounding Multimodal Large Language Models in Actions. → [multimodal](../multimodal/Guideline%202024.md)
-- Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
-- CLIPLoss and Norm-Based Data Selection Methods for Multimodal Contrastive Learning. → [multimodal](../multimodal/Guideline%202024.md)
-- GenArtist: Multimodal LLM as an Agent for Unified Image Generation and Editing. → [multimodal](../multimodal/Guideline%202024.md)
-- CharXiv: Charting Gaps in Realistic Chart Understanding in Multimodal LLMs. → [multimodal](../multimodal/Guideline%202024.md)
-- ControlMLLM: Training-Free Visual Prompt Learning for Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- Multimodal Large Language Models Make Text-to-Image Generative Models Align Better. → [multimodal](../multimodal/Guideline%202024.md)
-- Graph-based Unsupervised Disentangled Representation Learning via Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- T2Vs Meet VLMs: A Scalable Multimodal Dataset for Visual Harmfulness Recognition. → [multimodal](../multimodal/Guideline%202024.md)
-- DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution. → [multimodal](../multimodal/Guideline%202024.md)
-- Web2Code: A Large-scale Webpage-to-Code Dataset and Evaluation Framework for Multimodal LLMs. → [multimodal](../multimodal/Guideline%202024.md)
-- Wings: Learning Multimodal LLMs without Text-only Forgetting. → [multimodal](../multimodal/Guideline%202024.md)
+- MM-SafetyBench: A Benchmark for Safety Evaluation of Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
+- MarvelOVD: Marrying Object Recognition and Vision-Language Models for Robust Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- Toward Open Vocabulary Aerial Object Detection with CLIP-Activated Student-Teacher Learning. → [object-detection](../object-detection/Guideline%202024.md)
+- BLINK: Multimodal Large Language Models Can See but Not Perceive. → [multimodal](../multimodal/Guideline%202024.md)
+- Eyes Closed, Safety on: Protecting Multimodal LLMs via Image-to-Text Transformation. → [multimodal](../multimodal/Guideline%202024.md)
+- Images are Achilles' Heel of Alignment: Exploiting Visual Vulnerabilities for Jailbreaking Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
+- LLaVA-Plus: Learning to Use Tools for Creating Multimodal Agents. → [multimodal](../multimodal/Guideline%202024.md)
+- Groma: Localized Visual Tokenization for Grounding Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
+- MM1: Methods, Analysis and Insights from Multimodal LLM Pre-training. → [multimodal](../multimodal/Guideline%202024.md)
+- Strengthening Multimodal Large Language Model with Bootstrapped Preference Optimization. → [multimodal](../multimodal/Guideline%202024.md)
+- MoMA: Multimodal LLM Adapter for Fast Personalized Image Generation. → [multimodal](../multimodal/Guideline%202024.md)
+- Instruction Tuning-Free Visual Token Complement for Multimodal LLMs. → [multimodal](../multimodal/Guideline%202024.md)
+- AdaShield : Safeguarding Multimodal Large Language Models from Structure-Based Attack via Adaptive Shield Prompting. → [multimodal](../multimodal/Guideline%202024.md)
+- A Comprehensive Study of Multimodal Large Language Models for Image Quality Assessment. → [multimodal](../multimodal/Guideline%202024.md)
+- LLMGA: Multimodal Large Language Model Based Generation Assistant. → [multimodal](../multimodal/Guideline%202024.md)
+- CAT: Enhancing Multimodal Large Language Model to Answer Questions in Dynamic Audio-Visual Scenarios. → [multimodal](../multimodal/Guideline%202024.md)
+- Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs. → [multimodal](../multimodal/Guideline%202024.md)
+- Merlin: Empowering Multimodal LLMs with Foresight Minds. → [multimodal](../multimodal/Guideline%202024.md)
+- FreeMotion: MoCap-Free Human Motion Synthesis with Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
+- LLaVA-Grounding: Grounded Visual Chat with Large Multimodal Models. → [multimodal](../multimodal/Guideline%202024.md)
+- GENIXER: Empowering Multimodal Large Language Model as a Powerful Data Generator. → [multimodal](../multimodal/Guideline%202024.md)
+- UniCode: Learning a Unified Codebook for Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
+- Mind the Interference: Retaining Pre-trained Knowledge in Parameter Efficient Continual Learning of Vision-Language Models. → [continual-learning](../continual-learning/Guideline%202024.md)
+- Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models. → [continual-learning](../continual-learning/Guideline%202024.md)
+- Class-Incremental Learning with CLIP: Adaptive Representation Adjustment and Parameter Fusion. → [continual-learning](../continual-learning/Guideline%202024.md)
+- IVTP: Instruction-Guided Visual Token Pruning for Large Vision-Language Models. → [network-pruning](../network-pruning/Guideline%202024.md)
