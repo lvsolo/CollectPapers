@@ -1,15 +1,27 @@
 # Vision Transformer — 2023 Guideline
 
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
-> 论文数: 23 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Video OWL-ViT: Temporally-consistent open-world localization in video.
-- **链接**: [arXiv:2308.11093](https://arxiv.org/abs/2308.11093) · 📚 被引 11
-- **作者**: Georg Heigold, Daniel Keysers, Matthias Minderer, Mario Lucic, Alexey A. Gritsenko, Fisher Yu et al.
-- **🏷️ 机构**: Google DeepMind, ETH Zurich
-- **会议**: ICCV 2023
+### PaCa-ViT: Learning Patch-to-Cluster Attention in Vision Transformers.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01781) · 📚 被引 34
+- **作者**: Ryan Grainger, Thomas Paniagua, Xi Song, Naresh P. Cuntoor, Mun Wai Lee, Tianfu Wu
+- **🏷️ 机构**: NC State,Department of ECE, An Independent Researcher, BlueHalo
+- **会议**: CVPR 2023
+
+### Patch n' Pack: NaViT, a Vision Transformer for any Aspect Ratio and Resolution.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/06ea400b9b7cfce6428ec27a371632eb-Abstract-Conference.html) · 📚 被引 16
+- **作者**: Mostafa Dehghani, Basil Mustafa, Josip Djolonga, Jonathan Heek, Matthias Minderer, Mathilde Caron et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
+
+### Time Series as Images: Vision Transformer for Irregularly Sampled Time Series.
+- **链接**: [arXiv:2303.12799](https://arxiv.org/abs/2303.12799) · [代码](https://github.com/Leezekun/ViTST) · 📚 被引 28
+- **作者**: Zekun Li, Shiyang Li, Xifeng Yan
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -35,6 +47,18 @@
 - **🏷️ 机构**: Chinese Academy of Sciences,Institute of Automation
 - **会议**: ICCV 2023
 
+### DropKey for Vision Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02174) · 📚 被引 74
+- **作者**: Bonan Li, Yinhan Hu, Xuecheng Nie, Congying Han, Xiangjian Jiang, Tiande Guo et al.
+- **🏷️ 机构**: University of Chinese Academy of Sciences, MT Lab, Meitu Inc., University of Cambridge
+- **会议**: CVPR 2023
+
+### EfficientViT: Memory Efficient Vision Transformer with Cascaded Group Attention.
+- **链接**: [arXiv:2305.07027](https://arxiv.org/abs/2305.07027) · [代码](https://github.com/microsoft/Cream) · 📚 被引 830
+- **作者**: Xinyu Liu, Houwen Peng, Ningxin Zheng, Yuqing Yang, Han Hu, Yixuan Yuan
+- **🏷️ 机构**: The Chinese University of Hong Kong, Microsoft Research
+- **会议**: CVPR 2023
+
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Post-training quantization (PTQ), which only requires a tiny dataset for calibration without end-to-end retraining, is a light and practical model compression technique. Recently, several PTQ schemes for vision transformers (ViTs) have been presented; unfortunately, they typically suffer from non-trivial accuracy degradation, especially in low-bit cases. In this paper, we propose RepQ-ViT, a novel PTQ framework for ViTs based on quantization scale reparameterization, to address the above issues. RepQ-ViT decouples the quantization and inference processes, where the former employs complex quantizers and the latter employs scale-reparameterized simplified quantizers. This ensures both accurate quantization and efficient inference, which distinguishes it from existing approaches that sacrifice quantization performance to meet the target hardware. More specifically, we focus on two components with extreme distributions: post-LayerNorm activations with severe inter-channel variation and post-Softmax activations with power-law features, and initially apply channel-wise quantization and log$\sqrt{2}$ quantization, respectively. Then, we reparameterize the scales to hardware-friendly layer-wise quantization and log2 quantization for inference, with only slight accuracy or computational costs. Extensive experiments are conducted on multiple vision tasks with different model variants, proving that RepQ-ViT, without hyperparameters and expensive reconstruction procedures, can outperform existing strong baselines and encouragingly improve the accuracy of 4-bit PTQ of ViTs to a usable level. Code is available at https://github.com/zkkli/RepQ-ViT.
@@ -57,12 +81,6 @@
 - **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00263) · 📚 被引 8
 - **作者**: Ju Cheon Lee, Jin Tae Kwak
 - **🏷️ 机构**: Korea University,School of Electrical Engineering,Seoul,Republic of Korea
-- **会议**: ICCV 2023
-
-### Adaptive and Background-Aware Vision Transformer for Real-Time UAV Tracking.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01286) · 📚 被引 63
-- **作者**: Shuiwang Li, Xiangxyang Yang, Dan Zeng, Xucheng Wang
-- **🏷️ 机构**: Guilin University of Technology,College of Information Science and Engineering,China, Southern University of Science and Technology,Research Institue of Trustworthy Autonomous Systems,China
 - **会议**: ICCV 2023
 
 ### FLatten Transformer: Vision Transformer using Focused Linear Attention.
@@ -105,6 +123,12 @@
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01573) · 📚 被引 2
 - **作者**: Cheng Fu, Hanxian Huang, Zixuan Jiang, Yun Ni, Lifeng Nai, Gang Wu et al.
 - **🏷️ 机构**: UC San Diego, Google
+- **会议**: ICCV 2023
+
+### Adaptive and Background-Aware Vision Transformer for Real-Time UAV Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01286) · 📚 被引 63
+- **作者**: Shuiwang Li, Xiangxyang Yang, Dan Zeng, Xucheng Wang
+- **🏷️ 机构**: Guilin University of Technology,College of Information Science and Engineering,China, Southern University of Science and Technology,Research Institue of Trustworthy Autonomous Systems,China
 - **会议**: ICCV 2023
 
 ### FastViT: A Fast Hybrid Vision Transformer using Structural Reparameterization.
@@ -163,9 +187,7 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- T-FFTRadNet: Object Detection with Swin Vision Transformers from Raw ADC Radar Signals. → [object-detection](../object-detection/Guideline%202023.md)
-- MMST-ViT: Climate Change-aware Crop Yield Prediction via Multi-Modal Spatial-Temporal Vision Transformer. → [multimodal](../multimodal/Guideline%202023.md)
-- Unleashing Vanilla Vision Transformer with Masked Image Modeling for Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
-- A Simple Vision Transformer for Weakly Semi-supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- Contrastive Feature Masking Open-Vocabulary Vision Transformer. → [open-set-detection](../open-set-detection/Guideline%202023.md)
-- ElasticViT: Conflict-aware Supernet Training for Deploying Fast Vision Transformer on Diverse Mobile Devices. → [neural-architecture-search](../neural-architecture-search/Guideline%202023.md)
+- SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer. → [network-pruning](../network-pruning/Guideline%202023.md)
+- MDL-NAS: A Joint Multi-domain Learning Framework for Vision Transformer. → [neural-architecture-search](../neural-architecture-search/Guideline%202023.md)
+- Global Vision Transformer Pruning with Hessian-Aware Saliency. → [network-pruning](../network-pruning/Guideline%202023.md)
+- Boost Vision Transformer with GPU-Friendly Sparsity and Quantization. → [network-pruning](../network-pruning/Guideline%202023.md)

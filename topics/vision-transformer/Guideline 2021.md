@@ -6,13 +6,19 @@
 > 同领域其他年份: 
 
 ### Swin Transformer: Hierarchical Vision Transformer using Shifted Windows.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00986) · 📚 被引 29964
+- **链接**: [arXiv:2103.14030](https://arxiv.org/abs/2103.14030) · [代码](https://github.com/microsoft/Swin-Transformer) · 📚 被引 30009
 - **作者**: Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang et al.
 - **🏷️ 机构**: Microsoft Research Asia
 - **会议**: ICCV 2021
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents a new vision Transformer, called Swin Transformer, that capably serves as a general-purpose backbone for computer vision. Challenges in adapting Transformer from language to vision arise from differences between the two domains, such as large variations in the scale of visual entities and the high resolution of pixels in images compared to words in text. To address these differences, we propose a hierarchical Transformer whose representation is computed with \textbf{S}hifted \textbf{win}dows. The shifted windowing scheme brings greater efficiency by limiting self-attention computation to non-overlapping local windows while also allowing for cross-window connection. This hierarchical architecture has the flexibility to model at various scales and has linear computational complexity with respect to image size. These qualities of Swin Transformer make it compatible with a broad range of vision tasks, including image classification (87.3 top-1 accuracy on ImageNet-1K) and dense prediction tasks such as object detection (58.7 box AP and 51.1 mask AP on COCO test-dev) and semantic segmentation (53.5 mIoU on ADE20K val). Its performance surpasses the previous state-of-the-art by a large margin of +2.7 box AP and +2.6 mask AP on COCO, and +3.2 mIoU on ADE20K, demonstrating the potential of Transformer-based models as vision backbones. The hierarchical design and the shifted window approach also prove beneficial for all-MLP architectures. The code and models are publicly available at~\url{https://github.com/microsoft/Swin-Transformer}.
+
+</details>
+
 ### Tokens-to-Token ViT: Training Vision Transformers from Scratch on ImageNet.
-- **链接**: [arXiv:2101.11986](https://arxiv.org/abs/2101.11986) · [代码](https://github.com/yitu-opensource/T2T-ViT) · 📚 被引 1965
+- **链接**: [arXiv:2101.11986](https://arxiv.org/abs/2101.11986) · [代码](https://github.com/yitu-opensource/T2T-ViT) · 📚 被引 1967
 - **作者**: Li Yuan, Yunpeng Chen, Tao Wang, Weihao Yu, Yujun Shi, Zihang Jiang et al.
 - **🏷️ 机构**: National University of Singapore, YITU Technology
 - **会议**: ICCV 2021
@@ -36,7 +42,7 @@
 </details>
 
 ### ViViT: A Video Vision Transformer.
-- **链接**: [arXiv:2103.15691](https://arxiv.org/abs/2103.15691) · [代码](https://github.com/google-research/scenic) · 📚 被引 2386
+- **链接**: [arXiv:2103.15691](https://arxiv.org/abs/2103.15691) · [代码](https://github.com/google-research/scenic) · 📚 被引 2388
 - **作者**: Anurag Arnab, Mostafa Dehghani, Georg Heigold, Chen Sun, Mario Lucic, Cordelia Schmid
 - **🏷️ 机构**: Google Research
 - **会议**: ICCV 2021
@@ -48,7 +54,7 @@
 </details>
 
 ### CrossViT: Cross-Attention Multi-Scale Vision Transformer for Image Classification.
-- **链接**: [arXiv:2103.14899](https://arxiv.org/abs/2103.14899) · [代码](https://github.com/IBM/CrossViT) · 📚 被引 1848
+- **链接**: [arXiv:2103.14899](https://arxiv.org/abs/2103.14899) · [代码](https://github.com/IBM/CrossViT) · 📚 被引 1849
 - **作者**: Chun-Fu (Richard) Chen, Quanfu Fan, Rameswar Panda
 - **🏷️ 机构**: MIT-IBM Watson AI Lab
 - **会议**: ICCV 2021
@@ -72,7 +78,7 @@
 </details>
 
 ### Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions.
-- **链接**: [arXiv:2102.12122](https://arxiv.org/abs/2102.12122) · [代码](https://github.com/whai362/PVT) · 📚 被引 4521
+- **链接**: [arXiv:2102.12122](https://arxiv.org/abs/2102.12122) · [代码](https://github.com/whai362/PVT) · 📚 被引 4524
 - **作者**: Wenhai Wang, Enze Xie, Xiang Li, Deng-Ping Fan, Kaitao Song, Ding Liang et al.
 - **🏷️ 机构**: Nanjing University, The University of Hong Kong, Nanjing University of Science and Technology
 - **会议**: ICCV 2021
@@ -96,7 +102,13 @@
 </details>
 
 ### Vision Transformer with Progressive Sampling.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00044) · 📚 被引 106
+- **链接**: [arXiv:2108.01684](https://arxiv.org/abs/2108.01684) · [代码](https://github.com/yuexy/PS-ViT) · 📚 被引 106
 - **作者**: Xiaoyu Yue, Shuyang Sun, Zhanghui Kuang, Meng Wei, Philip H. S. Torr, Wayne Zhang et al.
 - **🏷️ 机构**: Centre for Perceptual and Interactive Intelligence, University of Oxford, SenseTime Research
 - **会议**: ICCV 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Transformers with powerful global relation modeling abilities have been introduced to fundamental computer vision tasks recently. As a typical example, the Vision Transformer (ViT) directly applies a pure transformer architecture on image classification, by simply splitting images into tokens with a fixed length, and employing transformers to learn relations between these tokens. However, such naive tokenization could destruct object structures, assign grids to uninterested regions such as background, and introduce interference signals. To mitigate the above issues, in this paper, we propose an iterative and progressive sampling strategy to locate discriminative regions. At each iteration, embeddings of the current sampling step are fed into a transformer encoder layer, and a group of sampling offsets is predicted to update the sampling locations for the next step. The progressive sampling is differentiable. When combined with the Vision Transformer, the obtained PS-ViT network can adaptively learn where to look. The proposed PS-ViT is both effective and efficient. When trained from scratch on ImageNet, PS-ViT performs 3.8% higher than the vanilla ViT in terms of top-1 accuracy with about $4\times$ fewer parameters and $10\times$ fewer FLOPs. Code is available at https://github.com/yuexy/PS-ViT.
+
+</details>

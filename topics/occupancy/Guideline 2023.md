@@ -1,7 +1,7 @@
 # Occupancy — 2023 Guideline
 
 > 领域: 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）
-> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 1 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -24,7 +24,7 @@
 - **会议**: ICCV 2023
 
 ### OccFormer: Dual-path Transformer for Vision-based 3D Semantic Occupancy Prediction.
-- **链接**: [arXiv:2304.05316](https://arxiv.org/abs/2304.05316) · 📚 被引 220
+- **链接**: [arXiv:2304.05316](https://arxiv.org/abs/2304.05316) · [代码](https://github.com/zhangyp15/OccFormer) · 📚 被引 220
 - **作者**: Yunpeng Zhang, Zheng Zhu, Dalong Du
 - **🏷️ 机构**: PhiGent Robotics
 - **会议**: ICCV 2023
