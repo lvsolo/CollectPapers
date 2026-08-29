@@ -1,7 +1,7 @@
 # Multimodal — 2023 Guideline
 
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
-> 论文数: 33 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 34 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
@@ -27,35 +27,61 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00640)
 - **作者**: Wenhao Wu, Xiaohan Wang, Haipeng Luo, Jingdong Wang, Yi Yang, Wanli Ouyang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
+- **会议**: CVPR 2023
 
-### Tensor Factorization for Leveraging Cross-Modal Knowledge in Data-Constrained Infrared Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00099) · 📚 被引 1
-- **作者**: Manish Sharma, Moitreya Chatterjee, Kuan-Chuan Peng, Suhas Lohit, Michael J. Jones
-- **🏷️ 机构**: Rochester Institute of Technology,NY,USA,14623, Mitsubishi Electric Research Laboratories,Cambridge,MA,USA,02139
-- **会议**: ICCV 2023
-
-### UniSeg: A Unified Multi-Modal LiDAR Segmentation Network and the OpenPCSeg Codebase.
-- **链接**: [arXiv:2309.05573](https://arxiv.org/abs/2309.05573) · [代码](https://github.com/PJLab-ADG/PCSeg) · 📚 被引 80
-- **作者**: Youquan Liu, Runnan Chen, Xin Li, Lingdong Kong, Yuchen Yang, Zhaoyang Xia et al.
-- **🏷️ 机构**: Shanghai AI Laboratory, The Chinese University of Hong Kong
-- **会议**: ICCV 2023
+### Multimodality Helps Unimodality: Cross-Modal Few-Shot Learning with Multimodal Models.
+- **链接**: [arXiv:2301.06267](https://arxiv.org/abs/2301.06267) · 📚 被引 118
+- **作者**: Zhiqiu Lin, Samuel Yu, Zhiyi Kuang, Deepak Pathak, Deva Ramanan
+- **🏷️ 机构**: Carnegie Mellon University
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
+> The ability to quickly learn a new task with minimal instruction - known as few-shot learning - is a central aspect of intelligent agents. Classical few-shot benchmarks make use of few-shot samples from a single modality, but such samples may not be sufficient to characterize an entire concept class. In contrast, humans use cross-modal information to learn new concepts efficiently. In this work, we demonstrate that one can indeed build a better ${\bf visual}$ dog classifier by ${\bf read}$ing about dogs and ${\bf listen}$ing to them bark. To do so, we exploit the fact that recent multimodal foundation models such as CLIP learn cross-modal encoders that map different modalities to the same representation space. Specifically, we propose a simple strategy for ${\bf cross-modal}$ ${\bf adaptation}$: we treat examples from different modalities as additional few-shot examples. For example, by simply repurposing class names as an additional training sample, we trivially turn any n-shot learning problem into a (n+1)-shot problem. This allows us to produce SOTA results with embarrassingly simple linear classifiers. We show that our approach can be combined with existing methods such as prefix tuning, adapters, and classifier ensembling. Finally, to explore other modalities beyond vision and language, we construct the first (to our knowledge) audiovisual few-shot benchmark and use cross-modal training to improve the performance of both image and audio classification.
+
+</details>
+
+### Revisiting Multimodal Representation in Contrastive Learning: From Patch and Token Embeddings to Finite Discrete Tokens.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01449) · 📚 被引 41
+- **作者**: Yuxiao Chen, Jianbo Yuan, Yu Tian, Shijie Geng, Xinyu Li, Ding Zhou et al.
+- **🏷️ 机构**: Rutgers University, ByteDance Inc., Zhejiang University
+- **会议**: CVPR 2023
+
+### Align and Attend: Multimodal Summarization with Dual Contrastive Losses.
+- **链接**: [arXiv:2303.07284](https://arxiv.org/abs/2303.07284) · 📚 被引 99
+- **作者**: Bo He, Jun Wang, Jielin Qiu, Trung Bui, Abhinav Shrivastava, Zhaowen Wang
+- **🏷️ 机构**: University of Maryland,College Park, Carnegie Mellon University, Adobe Research
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The goal of multimodal summarization is to extract the most important information from different modalities to form output summaries. Unlike the unimodal summarization, the multimodal summarization task explicitly leverages cross-modal information to help generate more reliable and high-quality summaries. However, existing methods fail to leverage the temporal correspondence between different modalities and ignore the intrinsic correlation between different samples. To address this issue, we introduce Align and Attend Multimodal Summarization (A2Summ), a unified multimodal transformer-based model which can effectively align and attend the multimodal input. In addition, we propose two novel contrastive losses to model both inter-sample and intra-sample correlations. Extensive experiments on two standard video summarization datasets (TVSum and SumMe) and two multimodal summarization datasets (Daily Mail and CNN) demonstrate the superiority of A2Summ, achieving state-of-the-art performances on all datasets. Moreover, we collected a large-scale multimodal summarization dataset BLiSS, which contains livestream videos and transcribed texts with annotated summaries. Our code and dataset are publicly available at ~\url{https://boheumd.github.io/A2Summ/}.
+
+</details>
+
 ### Multimodal Industrial Anomaly Detection via Hybrid Fusion.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00776) · 📚 被引 200
+- **链接**: [arXiv:2303.00601](https://arxiv.org/abs/2303.00601) · [代码](https://github.com/nomewang/M3DM) · 📚 被引 200
 - **作者**: Yue Wang, Jinlong Peng, Jiangning Zhang, Ran Yi, Yabiao Wang, Chengjie Wang
 - **🏷️ 机构**: Shanghai Jiao Tong University,Shanghai,China, Tencent,Youtu Lab
 - **会议**: CVPR 2023
 
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 2D-based Industrial Anomaly Detection has been widely discussed, however, multimodal industrial anomaly detection based on 3D point clouds and RGB images still has many untouched fields. Existing multimodal industrial anomaly detection methods directly concatenate the multimodal features, which leads to a strong disturbance between features and harms the detection performance. In this paper, we propose Multi-3D-Memory (M3DM), a novel multimodal anomaly detection method with hybrid fusion scheme: firstly, we design an unsupervised feature fusion with patch-wise contrastive learning to encourage the interaction of different modal features; secondly, we use a decision layer fusion with multiple memory banks to avoid loss of information and additional novelty classifiers to make the final decision. We further propose a point feature alignment operation to better align the point cloud and RGB features. Extensive experiments show that our multimodal industrial anomaly detection model outperforms the state-of-the-art (SOTA) methods on both detection and segmentation precision on MVTec-3D AD dataset. Code is available at https://github.com/nomewang/M3DM.
+
 </details>
 
-### See More and Know More: Zero-shot Point Cloud Segmentation via Multi-modal Visual Data.
-- **链接**: [arXiv:2307.10782](https://arxiv.org/abs/2307.10782) · 📚 被引 27
-- **作者**: Yuhang Lu, Qi Jiang, Runnan Chen, Yuenan Hou, Xinge Zhu, Yuexin Ma
-- **🏷️ 机构**: ShanghaiTech University, The University of Hong Kong, Shanghai AI Laboratory
-- **会议**: ICCV 2023
+### Self-Supervised Learning for Multimodal Non-Rigid 3D Shape Matching.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01701) · 📚 被引 29
+- **作者**: Dongliang Cao, Florian Bernard
+- **🏷️ 机构**: University of Bonn
+- **会议**: CVPR 2023
+
+### Seeing With Sound: Long-Range Acoustic Beamforming for Multimodal Scene Understanding.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00101) · 📚 被引 4
+- **作者**: Praneeth Chakravarthula, Jim Aldon D'Souza, Ethan Tseng, Joe Bartusek, Felix Heide
+- **🏷️ 机构**: Princeton University, Algolux
+- **会议**: CVPR 2023
 
 ### Multivariate, Multi-Frequency and Multimodal: Rethinking Graph Neural Networks for Emotion Recognition in Conversation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01036) · 📚 被引 79
@@ -63,7 +89,17 @@
 - **🏷️ 机构**: University of Electronic Science and Technology of China,Chengdu,China
 - **会议**: CVPR 2023
 
-> Zero-shot point cloud segmentation aims to make deep models capable of recognizing novel objects in point cloud that are unseen in the training phase. Recent trends favor the pipeline which transfers knowledge from seen classes with labels to unseen classes without labels. They typically align visual features with semantic features obtained from word embedding by the supervision of seen classes' annotations. However, point cloud contains limited information to fully match with semantic features. In fact, the rich appearance information of images is a natural complement to the textureless point cloud, which is not well explored in previous literature. Motivated by this, we propose a novel multi-modal zero-shot learning method to better utilize the complementary information of point clouds and images for more accurate visual-semantic alignment. Extensive experiments are performed in two popular benchmarks, i.e., SemanticKITTI and nuScenes, and our method outperforms current SOTA methods with 52% and 49% improvement on average for unseen class mIoU, respectively.
+### Enhanced Multimodal Representation Learning with Cross-modal KD.
+- **链接**: [arXiv:2306.07646](https://arxiv.org/abs/2306.07646) · 📚 被引 13
+- **作者**: Mengxi Chen, Linyu Xing, Yu Wang, Ya Zhang
+- **🏷️ 机构**: Shanghai Jiao Tong University
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper explores the tasks of leveraging auxiliary modalities which are only available at training to enhance multimodal representation learning through cross-modal Knowledge Distillation (KD). The widely adopted mutual information maximization-based objective leads to a short-cut solution of the weak teacher, i.e., achieving the maximum mutual information by simply making the teacher model as weak as the student model. To prevent such a weak solution, we introduce an additional objective term, i.e., the mutual information between the teacher and the auxiliary modality model. Besides, to narrow down the information gap between the student and teacher, we further propose to minimize the conditional entropy of the teacher given the student. Novel training schemes based on contrastive learning and adversarial learning are designed to optimize the mutual information and the conditional entropy, respectively. Experimental results on three popular multimodal benchmark datasets have shown that the proposed method outperforms a range of state-of-the-art approaches for video recognition, video retrieval and emotion classification.
+
+</details>
 
 ### SDFusion: Multimodal 3D Shape Completion, Reconstruction, and Generation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00433) · 📚 被引 218
@@ -77,11 +113,11 @@
 - **🏷️ 机构**: The Hong Kong Polytechnic University, Huazhong University of Science and Technology, KAUST
 - **会议**: CVPR 2023
 
-### UniTR: A Unified and Efficient Multi-Modal Transformer for Bird's-Eye-View Representation.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00625) · 📚 被引 94
-- **作者**: Haiyang Wang, Hao Tang, Shaoshuai Shi, Aoxue Li, Zhenguo Li, Bernt Schiele et al.
-- **🏷️ 机构**: Peking University, Max Planck Institute for Informatics, Huawei,China
-- **会议**: ICCV 2023
+### Tell Me What Happened: Unifying Text-guided Video Completion via Multimodal Masked Video Generation.
+- **链接**: [arXiv:2211.12824](https://arxiv.org/abs/2211.12824) · 📚 被引 18
+- **作者**: Tsu-Jui Fu, Licheng Yu, Ning Zhang, Cheng-Yang Fu, Jong-Chyi Su, William Yang Wang et al.
+- **🏷️ 机构**: UC Santa Barbara, Meta, NEC Laboratories America
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -207,13 +243,13 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01824)
 - **作者**: Chuanqi Zang, Hanqing Wang, Mingtao Pei, Wei Liang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
+- **会议**: CVPR 2023
 
-### ProVLA: Compositional Image Search with Progressive Vision-Language Alignment and Multimodal Fusion.
-- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00293) · 📚 被引 4
-- **作者**: Zhizhang Hu, Xinliang Zhu, Son Tran, René Vidal, Arnab Dhua
-- **🏷️ 机构**: University of California, Merced, Amazon Visual Search &amp; AR, Amazon M5
-- **会议**: ICCV 2023
+### Vision Transformers are Parameter-Efficient Audio-Visual Learners.
+- **链接**: [arXiv:2212.07983](https://arxiv.org/abs/2212.07983) · 📚 被引 90
+- **作者**: Yan-Bo Lin, Yi-Lin Sung, Jie Lei, Mohit Bansal, Gedas Bertasius
+- **🏷️ 机构**: UNC Chapel Hill,Department of Computer Science
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -221,11 +257,11 @@
 
 </details>
 
-### VQA-GNN: Reasoning with Multimodal Knowledge via Graph Neural Networks for Visual Question Answering.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01973) · 📚 被引 59
-- **作者**: Yanan Wang, Michihiro Yasunaga, Hongyu Ren, Shinya Wada, Jure Leskovec
-- **🏷️ 机构**: KDDI Research, Stanford University
-- **会议**: ICCV 2023
+### Self-Supervised Video Forensics by Audio-Visual Anomaly Detection.
+- **链接**: [arXiv:2301.01767](https://arxiv.org/abs/2301.01767) · 📚 被引 92
+- **作者**: Chao Feng, Ziyang Chen, Andrew Owens
+- **🏷️ 机构**: University of Michigan
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -257,16 +293,19 @@
 
 </details>
 
+### Decomposed Cross-Modal Distillation for RGB-based Temporal Action Detection.
+- **链接**: [arXiv:2303.17285](https://arxiv.org/abs/2303.17285) · 📚 被引 21
+- **作者**: Pilhyeon Lee, Taeoh Kim, Minho Shim, Dongyoon Wee, Hyeran Byun
+- **🏷️ 机构**: Yonsei University, Naver Cloud, AI Tech.
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Temporal action detection aims to predict the time intervals and the classes of action instances in the video. Despite the promising performance, existing two-stream models exhibit slow inference speed due to their reliance on computationally expensive optical flow. In this paper, we introduce a decomposed cross-modal distillation framework to build a strong RGB-based detector by transferring knowledge of the motion modality. Specifically, instead of direct distillation, we propose to separately learn RGB and motion representations, which are in turn combined to perform action localization. The dual-branch design and the asymmetric training objectives enable effective motion knowledge transfer while preserving RGB information intact. In addition, we introduce a local attentive fusion to better exploit the multimodal complementarity. It is designed to preserve the local discriminability of the features that is important for action localization. Extensive experiments on the benchmarks verify the effectiveness of the proposed method in enhancing RGB-based action detectors. Notably, our framework is agnostic to backbones and detection heads, bringing consistent gains across different model combinations.
+
+</details>
+
 ## 跨领域论文（完整笔记在其他领域）
 
-- ObjectFusion: Multi-modal 3D Object Detection with Object-Centric Fusion. → [3d-detection](../3d-detection/Guideline%202023.md)
-- DistillBEV: Boosting Multi-Camera 3D Object Detection with Cross-Modal Knowledge Distillation. → [3d-detection](../3d-detection/Guideline%202023.md)
-- GraphAlign: Enhancing Accurate Feature Alignment by Graph matching for Multi-Modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- SparseFusion: Fusing Multi-Modal Sparse Representations for Multi-Sensor 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-- PointDC: Unsupervised Semantic Segmentation of 3D Point Clouds via Cross-modal Distillation and Super-Voxel Clustering. → [3d-detection](../3d-detection/Guideline%202023.md)
-- BEV-DG: Cross-Modal Learning under Bird's-Eye View for Domain Generalization of 3D Semantic Segmentation. → [bev](../bev/Guideline%202023.md)
-- Zenseact Open Dataset: A large-scale and diverse multimodal dataset for autonomous driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)
-- AIDE: A Vision-Driven Multi-View, Multi-Modal, Multi-Tasking Dataset for Assistive Driving Perception. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
-- Multimodal Parameter-Efficient Few-Shot Class Incremental Learning. → [continual-learning](../continual-learning/Guideline%202023.md)
-- Class-Incremental Grouping Network for Continual Audio-Visual Learning. → [continual-learning](../continual-learning/Guideline%202023.md)
-- Audio-Visual Class-Incremental Learning. → [continual-learning](../continual-learning/Guideline%202023.md)
+- Virtual Sparse Convolution for Multimodal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- MSeg3D: Multi-Modal 3D Semantic Segmentation for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)
