@@ -1,9 +1,15 @@
 # Video Understanding — 2023 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 14 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 15 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
+
+### Tracking Anything with Decoupled Video Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00127) · 📚 被引 194
+- **作者**: Ho Kei Cheng, Seoung Wug Oh, Brian L. Price, Alexander G. Schwing, Joon-Young Lee
+- **🏷️ 机构**: University of Illinois Urbana-Champaign, Adobe Research
+- **会议**: ICCV 2023
 
 ### Understanding Video Scenes through Text: Insights from Text-based Video Question Answering.
 - **链接**: [arXiv:2309.01380](https://arxiv.org/abs/2309.01380) · 📚 被引 3
@@ -13,9 +19,7 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this paper we introduce a rule-based, compositional, and hierarchical modeling of action using Therbligs as our atoms. Introducing these atoms provides us with a consistent, expressive, contact-centered representation of action. Over the atoms we introduce a differentiable method of rule-based reasoning to regularize for logical consistency. Our approach is complementary to other approaches in that the Therblig-based representations produced by our architecture augment rather than replace existing architectures' representations. We release the first Therblig-centered annotations over two popular video datasets - EPIC Kitchens 100 and 50-Salads. We also broadly demonstrate benefits to adopting Therblig representations through evaluation on the following tasks: action segmentation, action anticipation, and action recognition - observing an average 10.5\%/7.53\%/6.5\% relative improvement, respectively, over EPIC Kitchens and an average 8.9\%/6.63\%/4.8\% relative improvement, respectively, over 50 Salads. Code and data will be made publicly available.
+> Researchers have extensively studied the field of vision and language, discovering that both visual and textual content is crucial for understanding scenes effectively. Particularly, comprehending text in videos holds great significance, requiring both scene text understanding and temporal reasoning. This paper focuses on exploring two recently introduced datasets, NewsVideoQA and M4-ViteVQA, which aim to address video question answering based on textual content. The NewsVideoQA dataset contains question-answer pairs related to the text in news videos, while M4-ViteVQA comprises question-answer pairs from diverse categories like vlogging, traveling, and shopping. We provide an analysis of the formulation of these datasets on various levels, exploring the degree of visual understanding and multi-frame comprehension required for answering the questions. Additionally, the study includes experimentation with BERT-QA, a text-only model, which demonstrates comparable performance to the original methods on both datasets, indicating the shortcomings in the formulation of these datasets. Furthermore, we also look into the domain adaptation aspect by examining the effectiveness of training on M4-ViteVQA and evaluating on NewsVideoQA and vice-versa, thereby shedding light on the challenges and potential benefits of out-of-domain training.
 
 </details>
 
@@ -33,9 +37,7 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Effective modeling of complex spatiotemporal dependencies in long-form videos remains an open problem. The recently proposed Structured State-Space Sequence (S4) model with its linear complexity offers a promising direction in this space. However, we demonstrate that treating all image-tokens equally as done by S4 model can adversely affect its efficiency and accuracy. To address this limitation, we present a novel Selective S4 (i.e., S5) model that employs a lightweight mask generator to adaptively select informative image tokens resulting in more efficient and accurate modeling of long-term spatiotemporal dependencies in videos. Unlike previous mask-based token reduction methods used in transformers, our S5 model avoids the dense self-attention calculation by making use of the guidance of the momentum-updated S4 model. This enables our model to efficiently discard less informative tokens and adapt to various long-form video understanding tasks more effectively. However, as is the case for most token reduction methods, the informative image tokens could be dropped incorrectly. To improve the robustness and the temporal horizon of our model, we propose a novel long-short masked contrastive learning (LSMCL) approach that enables our model to predict longer temporal context using shorter input videos. We present extensive comparative results using three challenging long-form video understanding datasets (LVU, COIN and Breakfast), demonstrating that our approach consistently outperforms the previous state-of-the-art S4 model by up to 9.6% accuracy while reducing its memory footprint by 23%.
+> Understanding verbs is crucial to modelling how people and objects interact with each other and the environment through space and time. Recently, state-of-the-art video-language models based on CLIP have been shown to have limited verb understanding and to rely extensively on nouns, restricting their performance in real-world video applications that require action and temporal understanding. In this work, we improve verb understanding for CLIP-based video-language models by proposing a new Verb-Focused Contrastive (VFC) framework. This consists of two main components: (1) leveraging pretrained large language models (LLMs) to create hard negatives for cross-modal contrastive learning, together with a calibration strategy to balance the occurrence of concepts in positive and negative pairs; and (2) enforcing a fine-grained, verb phrase alignment loss. Our method achieves state-of-the-art results for zero-shot performance on three downstream tasks that focus on verb understanding: video-text matching, video question-answering and video classification. To the best of our knowledge, this is the first work which proposes a method to alleviate the verb understanding problem, and does not simply highlight it.
 
 </details>
 
@@ -47,17 +49,17 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Our goal is to learn a video representation that is useful for downstream procedure understanding tasks in instructional videos. Due to the small amount of available annotations, a key challenge in procedure understanding is to be able to extract from unlabeled videos the procedural knowledge such as the identity of the task (e.g., 'make latte'), its steps (e.g., 'pour milk'), or the potential next steps given partial progress in its execution. Our main insight is that instructional videos depict sequences of steps that repeat between instances of the same or different tasks, and that this structure can be well represented by a Procedural Knowledge Graph (PKG), where nodes are discrete steps and edges connect steps that occur sequentially in the instructional activities. This graph can then be used to generate pseudo labels to train a video representation that encodes the procedural knowledge in a more accessible form to generalize to multiple procedure understanding tasks. We build a PKG by combining information from a text-based procedural knowledge database and an unlabeled instructional video corpus and then use it to generate training pseudo labels with four novel pre-training objectives. We call this PKG-based pre-training procedure and the resulting model Paprika, Procedure-Aware PRe-training for Instructional Knowledge Acquisition. We evaluate Paprika on COIN and CrossTask for procedure understanding tasks such as task recognition, step recognition, and step forecasting. Paprika yields a video representation that improves over the state of the art: up to 11.23% gains in accuracy in 12 evaluation settings. Implementation is available at https://github.com/salesforce/paprika.
+> While most modern video understanding models operate on short-range clips, real-world videos are often several minutes long with semantically consistent segments of variable length. A common approach to process long videos is applying a short-form video model over uniformly sampled clips of fixed temporal length and aggregating the outputs. This approach neglects the underlying nature of long videos since fixed-length clips are often redundant or uninformative. In this paper, we aim to provide a generic and adaptive sampling approach for long-form videos in lieu of the de facto uniform sampling. Viewing videos as semantically consistent segments, we formulate a task-agnostic, unsupervised, and scalable approach based on Kernel Temporal Segmentation (KTS) for sampling and tokenizing long videos. We evaluate our method on long-form video understanding tasks such as video classification and temporal action localization, showing consistent gains over existing approaches and achieving state-of-the-art performance on long-form video modeling.
 
 </details>
 
-</details>
+### Are current long-term video understanding datasets long-term?
+- **链接**: [arXiv:2308.11244](https://arxiv.org/abs/2308.11244) · 📚 被引 2
+- **作者**: Ombretta Strafforello, Klamer Schutte, Jan C. van Gemert
+- **🏷️ 机构**: TU Delft, TNO, TNO, TU Delft
+- **会议**: ICCV 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Semi-Supervised Learning can be more beneficial for the video domain compared to images because of its higher annotation cost and dimensionality. Besides, any video understanding task requires reasoning over both spatial and temporal dimensions. In order to learn both the static and motion related features for the semi-supervised action recognition task, existing methods rely on hard input inductive biases like using two-modalities (RGB and Optical-flow) or two-stream of different playback rates. Instead of utilizing unlabeled videos through diverse input streams, we rely on self-supervised video representations, particularly, we utilize temporally-invariant and temporally-distinctive representations. We observe that these representations complement each other depending on the nature of the action. Based on this observation, we propose a student-teacher semi-supervised learning framework, TimeBalance, where we distill the knowledge from a temporally-invariant and a temporally-distinctive teacher. Depending on the nature of the unlabeled video, we dynamically combine the knowledge of these two teachers based on a novel temporal similarity-based reweighting scheme. Our method achieves state-of-the-art performance on three action recognition benchmarks: UCF101, HMDB51, and Kinetics400. Code: https://github.com/DAVEISHAN/TimeBalance
-
-</details>
 
 > Many real-world applications, from sport analysis to surveillance, benefit from automatic long-term action recognition. In the current deep learning paradigm for automatic action recognition, it is imperative that models are trained and tested on datasets and tasks that evaluate if such models actually learn and reason over long-term information. In this work, we propose a method to evaluate how suitable a video dataset is to evaluate models for long-term action recognition. To this end, we define a long-term action as excluding all the videos that can be correctly recognized using solely short-term information. We test this definition on existing long-term classification tasks on three popular real-world datasets, namely Breakfast, CrossTask and LVU, to determine if these datasets are truly evaluating long-term recognition. Our study reveals that these datasets can be effectively solved using shortcuts based on short-term information. Following this finding, we encourage long-term action recognition researchers to make use of datasets that need long-term information to be solved.
 
@@ -76,7 +78,7 @@
 </details>
 
 ### Video-FocalNets: Spatio-Temporal Focal Modulation for Video Action Recognition.
-- **链接**: [arXiv:2307.06947](https://arxiv.org/abs/2307.06947) · [代码](https://github.com/TalalWasim/Video-FocalNets) · 📚 被引 37
+- **链接**: [arXiv:2307.06947](https://arxiv.org/abs/2307.06947) · 📚 被引 37
 - **作者**: Syed Talal Wasim, Muhammad Uzair Khattak, Muzammal Naseer, Salman Khan, Mubarak Shah, Fahad Shahbaz Khan
 - **🏷️ 机构**: Mohamed bin Zayed University of AI, University of Central Florida
 - **会议**: ICCV 2023
@@ -123,8 +125,8 @@
 - **🏷️ 机构**: Zhejiang Gongshang University, Peking University, Huazhong University of Science and Technology
 - **会议**: ICCV 2023
 
-</details>
+## 跨领域论文（完整笔记在其他领域）
 
-- Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection. → [multimodal](../multimodal/Guideline%202023.md)
-- MEGA: Multimodal Alignment Aggregation and Distillation For Cinematic Video Segmentation. → [multimodal](../multimodal/Guideline%202023.md)
+- Open-Vocabulary Video Question Answering: A New Benchmark for Evaluating the Generalizability of Video Question Answering Models. → [open-set-detection](../open-set-detection/Guideline%202023.md)
 - TeD-SPAD: Temporal Distinctiveness for Self-supervised Privacy-preservation for video Anomaly Detection. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
+- MEGA: Multimodal Alignment Aggregation and Distillation For Cinematic Video Segmentation. → [multimodal](../multimodal/Guideline%202023.md)
