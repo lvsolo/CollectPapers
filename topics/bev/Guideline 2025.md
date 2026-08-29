@@ -1,22 +1,22 @@
 # BEV — 2025 Guideline
 
 > 领域: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
-> 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### LaneDiffusion: Improving Centerline Graph Learning via Prior Injected BEV Feature Generation.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02511) · 📚 被引 0
-- **作者**: Zijie Wang, Weiming Zhang, Wei Zhang, Xiao Tan, Hongxing Liu, Yaowei Wang et al.
-- **🏷️ 机构**: Sun Yat-sen University, Baidu Inc., Harbin Institute of Technology,Shenzhen
-- **会议**: ICCV 2025
+### ForestLPR: LiDAR Place Recognition in Forests Attentioning Multiple BEV Density Images.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Shen_ForestLPR_LiDAR_Place_Recognition_in_Forests_Attentioning_Multiple_BEV_Density_CVPR_2025_paper.html) · 📚 被引 6
+- **作者**: Yanqing Shen, Turcan Tuna, Marco Hutter, César Cadena, Nanning Zheng
+- **🏷️ 机构**: Xi&#x2019;an Jiaotong University,Institute of Artificial Intelligence and Robotics, ETH Zurich,Robotic Systems Lab
+- **会议**: CVPR 2025
 
-### Leveraging BEV Paradigm for Ground-to-Aerial Image Synthesis.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02642) · 📚 被引 3
-- **作者**: Junyan Ye, Jun He, Weijia Li, Zhutao Lv, Yi Lin, Jinhua Yu et al.
-- **🏷️ 机构**: Sun Yat-Sen University, Shanghai AI Laboratory
-- **会议**: ICCV 2025
+### SDGOCC: Semantic and Depth-Guided Bird's-Eye View Transformation for 3D Multimodal Occupancy Prediction.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Duan_SDGOCC_Semantic_and_Depth-Guided_Birds-Eye_View_Transformation_for_3D_Multimodal_CVPR_2025_paper.html)
+- **作者**: Zaipeng Duan, Chenxu Dang, Xuzhong Hu, Pei An, Junfeng Ding, Jie Zhan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- End-to-End Driving with Online Trajectory Evaluation via BEV World Model. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
+- RobuRCDet: Enhancing Robustness of Radar-Camera Fusion in Bird's Eye View for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202025.md)

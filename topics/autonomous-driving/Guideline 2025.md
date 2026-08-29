@@ -1,27 +1,27 @@
 # Autonomous Driving — 2025 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 36 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 22 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Uniocc: a Unified Benchmark for Occupancy Forecasting and Prediction in Autonomous Driving.
-- **链接**: [arXiv:2503.24381](https://arxiv.org/abs/2503.24381) · 📚 被引 5
-- **作者**: Yuping Wang, Xiangyu Huang, Xiaokang Sun, Mingxuan Yan, Shuo Xing, Zhengzhong Tu et al.
-- **🏷️ 机构**: University of California,Riverside, University of Michigan, Texas A&#x0026;M University
-- **会议**: ICCV 2025
+### Driving by the Rules: A Benchmark for Integrating Traffic Sign Regulations into Vectorized HD Map.
+- **链接**: [arXiv:2410.23780](https://arxiv.org/abs/2410.23780) · [代码](https://github.com/MIV-XJTU/MapDR) · 📚 被引 3
+- **作者**: Xinyuan Chang, Maixuan Xue, Xinran Liu, Zheng Pan, Xing Wei
+- **🏷️ 机构**: Alibaba Group,Amap, Xi&#x2019;an Jiaotong University
+- **会议**: CVPR 2025
 
-### NuPlanQA: A Large-Scale Dataset and Benchmark for Multi-View Driving Scene Understanding in Multi-Modal Large Language Models.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00756)
-- **作者**: Sung-Yeon Park, Can Cui, Yunsheng Ma, Ahmadreza Moradipari, Rohit Gupta, Kyungtae Han et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Mixed Signals: A Diverse Point Cloud Dataset for Heterogeneous LiDAR V2X Collaboration.
-- **链接**: [arXiv:2502.14156](https://arxiv.org/abs/2502.14156) · 📚 被引 0
-- **作者**: Katie Z. Luo, Minh-Quan Dao, Zhenzhen Liu, Mark E. Campbell, Wei-Lun Chao, Kilian Q. Weinberger et al.
-- **🏷️ 机构**: Cornell University, Inria, The Ohio State University
-- **会议**: ICCV 2025
+> Ensuring adherence to traffic sign regulations is essential for both human and autonomous vehicle navigation. While current online mapping solutions often prioritize the construction of the geometric and connectivity layers of HD maps, overlooking the construction of the traffic regulation layer within HD maps. Addressing this gap, we introduce MapDR, a novel dataset designed for the extraction of Driving Rules from traffic signs and their association with vectorized, locally perceived HD Maps. MapDR features over $10,000$ annotated video clips that capture the intricate correlation between traffic sign regulations and lanes. Built upon this benchmark and the newly defined task of integrating traffic regulations into online HD maps, we provide modular and end-to-end solutions: VLE-MEE and RuleVLM, offering a strong baseline for advancing autonomous driving technology. It fills a critical gap in the integration of traffic sign rules, contributing to the development of reliable autonomous driving systems. Code is available at https://github.com/MIV-XJTU/MapDR.
+
+</details>
+
+### Spotting the Unexpected (STU): A 3D LiDAR Dataset for Anomaly Segmentation in Autonomous Driving.
+- **链接**: [arXiv:2505.02148](https://arxiv.org/abs/2505.02148) · 📚 被引 4
+- **作者**: Alexey Nekrasov, Malcolm Burdorf, Stewart Worrall, Bastian Leibe, Julie Stephany Berrio Perez
+- **🏷️ 机构**: RWTH Aachen University, The University of Sydney
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,17 +29,125 @@
 
 </details>
 
-### End-to-End Driving with Online Trajectory Evaluation via BEV World Model.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02519)
-- **作者**: Yingyan Li, Yuqi Wang, Yang Liu, Jiawei He, Lue Fan, Zhaoxiang Zhang
+### RoboTron-Drive: All-in-One Large Multimodal Model for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00751)
+- **作者**: Zhijian Huang, Chengjian Feng, Feng Yan, Baihui Xiao, Zequn Jie, Yujie Zhong et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2025
+- **会议**: CVPR 2025
 
-### UniMLVG: Unified Framework for Multi-View Long Video Generation with Comprehensive Control Capabilities for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02361)
-- **作者**: Rui Chen, Zehuan Wu, Yichen Liu, Yuxin Guo, Jingcheng Ni, Haifeng Xia et al.
+### T-norm Selection for Object Detection in Autonomous Driving with Logical Constraints.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/7dbdf006424e7749c8a35913d3574c4e-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Thomas Eiter, Katsumi Inoue, Nelson Higuera, Sota Moriyama
+- **🏷️ 机构**: Technische Universität Wien, NII, TU Wien
+- **会议**: NeurIPS 2025
+
+### DrivingRecon: Large 4D Gaussian Reconstruction Model For Autonomous Driving.
+- **链接**: [arXiv:2412.09043](https://arxiv.org/abs/2412.09043) · [代码](https://github.com/EnVision-Research/DriveRecon) · 📚 被引 0
+- **作者**: Hao Lu, Tianshuo Xu, Wenzhao Zheng, Yunpeng Zhang, Wei Zhan, Dalong Du et al.
+- **🏷️ 机构**: Hong Kong University of Science and Technology, University of California, Berkeley, Tsinghua University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Photorealistic 4D reconstruction of street scenes is essential for developing real-world simulators in autonomous driving. However, most existing methods perform this task offline and rely on time-consuming iterative processes, limiting their practical applications. To this end, we introduce the Large 4D Gaussian Reconstruction Model (DrivingRecon), a generalizable driving scene reconstruction model, which directly predicts 4D Gaussian from surround view videos. To better integrate the surround-view images, the Prune and Dilate Block (PD-Block) is proposed to eliminate overlapping Gaussian points between adjacent views and remove redundant background points. To enhance cross-temporal information, dynamic and static decoupling is tailored to better learn geometry and motion features. Experimental results demonstrate that DrivingRecon significantly improves scene reconstruction quality and novel view synthesis compared to existing methods. Furthermore, we explore applications of DrivingRecon in model pre-training, vehicle adaptation, and scene editing. Our code is available at https://github.com/EnVision-Research/DriveRecon.
+
+</details>
+
+### JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration.
+- **链接**: [arXiv:2504.04158](https://arxiv.org/abs/2504.04158) · 📚 被引 21
+- **作者**: Yunlong Lin, Zixu Lin, Haoyu Chen, Panwang Pan, Chenxin Li, Sixiang Chen et al.
+- **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China,Xiamen,China, The Hong Kong University of Science and Technology (Guangzhou), Bytedance&#x2019;s Pico
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vision-centric perception systems struggle with unpredictable and coupled weather degradations in the wild. Current solutions are often limited, as they either depend on specific degradation priors or suffer from significant domain gaps. To enable robust and autonomous operation in real-world conditions, we propose JarvisIR, a VLM-powered agent that leverages the VLM as a controller to manage multiple expert restoration models. To further enhance system robustness, reduce hallucinations, and improve generalizability in real-world adverse weather, JarvisIR employs a novel two-stage framework consisting of supervised fine-tuning and human feedback alignment. Specifically, to address the lack of paired data in real-world scenarios, the human feedback alignment enables the VLM to be fine-tuned effectively on large-scale real-world data in an unsupervised manner. To support the training and evaluation of JarvisIR, we introduce CleanBench, a comprehensive dataset consisting of high-quality and large-scale instruction-responses pairs, including 150K synthetic entries and 80K real entries. Extensive experiments demonstrate that JarvisIR exhibits superior decision-making and restoration capabilities. Compared with existing methods, it achieves a 50% improvement in the average of all perception metrics on CleanBench-Real. Project page: https://cvpr2025-jarvisir.github.io/.
+
+</details>
+
+### T2SG: Traffic Topology Scene Graph for Topology Reasoning in Autonomous Driving.
+- **链接**: [arXiv:2411.18894](https://arxiv.org/abs/2411.18894)
+- **作者**: Changsheng Lv, Mengshi Qi, Liang Liu, Huadong Ma
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2025
+- **会议**: CVPR 2025
+
+### AGC-Drive: A Large-Scale Dataset for Real-World Aerial-Ground Collaboration in Driving Scenarios.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/910ac01a3e5c5e7e67d64f23c0e1a740-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 0
+- **作者**: Yunhao Hou, Bochao Zou, Min Zhang, Ran Chen, Shangdong Yang, Yanmei Zhang et al.
+- **🏷️ 机构**: University of Science and Technology Beijing, Xiamen NEVC, 北京科技大学
+- **会议**: NeurIPS 2025
+
+### A Driving-Style-Adaptive Framework for Vehicle Trajectory Prediction.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/734615a8060a8e0c331bb4f87bf310f4-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Di Wen, Yu Wang, Zhigang Wu, Zhaocheng He, Zhe Wu, Qingfang Zheng
+- **🏷️ 机构**: Sun Yat-Sen University, Tsinghua University, SUN YAT-SEN UNIVERSITY
+- **会议**: NeurIPS 2025
+
+### Future-Aware End-to-End Driving: Bidirectional Modeling of Trajectory Planning and Scene Evolution.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/0ee633a6ade45eab4276352b3ee79c7a-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Bozhou Zhang, Nan Song, Jingyu Li, Xiatian Zhu, Jiankang Deng, Li Zhang
+- **🏷️ 机构**: Fudan University, University of Surrey, Imperial College London
+- **会议**: NeurIPS 2025
+
+### SimLingo: Vision-Only Closed-Loop Autonomous Driving with Language-Action Alignment.
+- **链接**: [arXiv:2503.09594](https://arxiv.org/abs/2503.09594) · 📚 被引 19
+- **作者**: Katrin Renz, Long Chen, Elahe Arani, Oleg Sinavski
+- **🏷️ 机构**: Wayve
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Integrating large language models (LLMs) into autonomous driving has attracted significant attention with the hope of improving generalization and explainability. However, existing methods often focus on either driving or vision-language understanding but achieving both high driving performance and extensive language understanding remains challenging. In addition, the dominant approach to tackle vision-language understanding is using visual question answering. However, for autonomous driving, this is only useful if it is aligned with the action space. Otherwise, the model's answers could be inconsistent with its behavior. Therefore, we propose a model that can handle three different tasks: (1) closed-loop driving, (2) vision-language understanding, and (3) language-action alignment. Our model SimLingo is based on a vision language model (VLM) and works using only camera, excluding expensive sensors like LiDAR. SimLingo obtains state-of-the-art performance on the widely used CARLA simulator on the Bench2Drive benchmark and is the winning entry at the CARLA challenge 2024. Additionally, we achieve strong results in a wide variety of language-related tasks while maintaining high driving performance.
+
+</details>
+
+### Don't Shake the Wheel: Momentum-Aware Planning in End-to-End Autonomous Driving.
+- **链接**: [arXiv:2503.03125](https://arxiv.org/abs/2503.03125)
+- **作者**: Ziying Song, Caiyan Jia, Lin Liu, Hongyu Pan, Yongchang Zhang, Junming Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> End-to-end autonomous driving frameworks enable seamless integration of perception and planning but often rely on one-shot trajectory prediction, which may lead to unstable control and vulnerability to occlusions in single-frame perception. To address this, we propose the Momentum-Aware Driving (MomAD) framework, which introduces trajectory momentum and perception momentum to stabilize and refine trajectory predictions. MomAD comprises two core components: (1) Topological Trajectory Matching (TTM) employs Hausdorff Distance to select the optimal planning query that aligns with prior paths to ensure coherence;(2) Momentum Planning Interactor (MPI) cross-attends the selected planning query with historical queries to expand static and dynamic perception files. This enriched query, in turn, helps regenerate long-horizon trajectory and reduce collision risks. To mitigate noise arising from dynamic environments and detection errors, we introduce robust instance denoising during training, enabling the planning model to focus on critical signals and improve its robustness. We also propose a novel Trajectory Prediction Consistency (TPC) metric to quantitatively assess planning stability. Experiments on the nuScenes dataset demonstrate that MomAD achieves superior long-term consistency (>=3s) compared to SOTA methods. Moreover, evaluations on the curated Turning-nuScenes shows that MomAD reduces the collision rate by 26% and improves TPC by 0.97m (33.45%) over a 6s prediction horizon, while closedloop on Bench2Drive demonstrates an up to 16.3% improvement in success rate.
+
+</details>
+
+### SplatFlow: Self-Supervised Dynamic Gaussian Splatting in Neural Motion Flow Field for Autonomous Driving.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Sun_SplatFlow_Self-Supervised_Dynamic_Gaussian_Splatting_in_Neural_Motion_Flow_Field_CVPR_2025_paper.html)
+- **作者**: Su Sun, Cheng Zhao, Zhuoyang Sun, Yingjie Victor Chen, Mei Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### OmniDrive: A Holistic Vision-Language Dataset for Autonomous Driving with Counterfactual Reasoning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_OmniDrive_A_Holistic_Vision-Language_Dataset_for_Autonomous_Driving_with_Counterfactual_CVPR_2025_paper.html) · 📚 被引 27
+- **作者**: Shihao Wang, Zhiding Yu, Xiaohui Jiang, Shiyi Lan, Min Shi, Nadine Chang et al.
+- **🏷️ 机构**: NVIDIA, Beijing Institute of Technology
+- **会议**: CVPR 2025
+
+### GoalFlow: Goal-Driven Flow Matching for Multimodal Trajectories Generation in End-to-End Autonomous Driving.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xing_GoalFlow_Goal-Driven_Flow_Matching_for_Multimodal_Trajectories_Generation_in_End-to-End_CVPR_2025_paper.html)
+- **作者**: Zebin Xing, Xingyu Zhang, Yang Hu, Bo Jiang, Tong He, Qian Zhang et al.
+- **🏷️ 机构**: Fudan / Shanghai AI Lab
+- **会议**: CVPR 2025
+
+### DriveGPT4-V2: Harnessing Large Language Model Capabilities for Enhanced Closed-Loop Autonomous Driving.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xu_DriveGPT4-V2_Harnessing_Large_Language_Model_Capabilities_for_Enhanced_Closed-Loop_Autonomous_CVPR_2025_paper.html) · 📚 被引 14
+- **作者**: Zhenhua Xu, Yan Bai, Yujia Zhang, Zhuoling Li, Fei Xia, Kwan-Yee K. Wong et al.
+- **🏷️ 机构**: The University of Hong Kong, Meituan, Tsinghua University
+- **会议**: CVPR 2025
+
+### Enduring, Efficient and Robust Trajectory Prediction Attack in Autonomous Driving via Optimization-Driven Multi-Frame Perturbation Framework.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yu_Enduring_Efficient_and_Robust_Trajectory_Prediction_Attack_in_Autonomous_Driving_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Yi Yu, Weizhen Han, Libing Wu, Bingyi Liu, Enshu Wang, Zhuangzhuang Zhang
+- **🏷️ 机构**: Wuhan University,Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education, School of Cyber Science and Engineering, Wuhan University of Technology,School of Computer Science and Artificial Intelligence, City University of Hong Kong,Department of Computer Science
+- **会议**: CVPR 2025
+
+### CarPlanner: Consistent Auto-regressive Trajectory Planning for Large-Scale Reinforcement Learning in Autonomous Driving.
+- **链接**: [arXiv:2502.19908](https://arxiv.org/abs/2502.19908) · 📚 被引 14
+- **作者**: Dongkun Zhang, Jiaming Liang, Ke Guo, Sha Lu, Qi Wang, Rong Xiong et al.
+- **🏷️ 机构**: Zhejiang University, Cainiao Network
+- **会议**: CVPR 2025
 
 ### Orion: A Holistic End-To-End Autonomous Driving Framework by Vision-Language Instructed Action Generation.
 - **链接**: [arXiv:2503.19755](https://arxiv.org/abs/2503.19755) · 📚 被引 8
@@ -59,17 +167,11 @@
 - **🏷️ 机构**: Shanghai Jiao Tong University, New York University, ETH Zurich
 - **会议**: ICCV 2025
 
-### RoboTron-Drive: All-in-One Large Multimodal Model for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00751)
-- **作者**: Zhijian Huang, Chengjian Feng, Feng Yan, Baihui Xiao, Zequn Jie, Yujie Zhong et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2025
-
-### From Gaze to Movement: Predicting Visual Attention for Autonomous Driving Human-Machine Interaction based on Programmatic Imitation Learning.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02426) · 📚 被引 2
-- **作者**: Yexin Huang, Yongbin Lin, Lishengsa Yue, Zhihong Yao, Jie Wang
-- **🏷️ 机构**: Ministry of Education, Tongji University,Key Laboratory of Road and Traffic Engineering, School of Transportation and Logistics, Southwest Jiaotong University
-- **会议**: ICCV 2025
+### MPDrive: Improving Spatial Understanding with Marker-Based Prompt Learning for Autonomous Driving.
+- **链接**: [arXiv:2504.00379](https://arxiv.org/abs/2504.00379) · 📚 被引 9
+- **作者**: Zhiyuan Zhang, Xiaofan Li, Zhihao Xu, Wenjie Peng, Zijian Zhou, Miaojing Shi et al.
+- **🏷️ 机构**: South China University of Technology, Baidu Inc., King&#x2019;s College London
+- **会议**: CVPR 2025
 
 ### CARIM: Caption-Based Autonomous Driving Scene Retrieval via Inclusive Text Matching.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02046) · 📚 被引 0
@@ -77,145 +179,22 @@
 - **🏷️ 机构**: Yonsei University,Korea, Naver Labs,Korea
 - **会议**: ICCV 2025
 
-### SynAD: Enhancing Real-World End-to-End Autonomous Driving Models through Synthetic Data Integration.
-- **链接**: [arXiv:2510.24052](https://arxiv.org/abs/2510.24052) · 📚 被引 0
-- **作者**: Jongsuk Kim, Jaeyoung Lee, Gyojin Han, Dong-Jae Lee, Minki Jeong, Junmo Kim
-- **🏷️ 机构**: KAIST, AI Center, Samsung Electronics
-- **会议**: ICCV 2025
+> The generation and simulation of diverse real-world scenes have significant application value in the field of autonomous driving, especially for the corner cases. Recently, researchers have explored employing neural radiance fields or diffusion models to generate novel views or synthetic data under driving scenes. However, these approaches suffer from unseen scenes or restricted video length, thus lacking sufficient adaptability for data generation and simulation. To address these issues, we propose a simple yet effective framework, named Glad, to generate video data in a frame-by-frame style. To ensure the temporal consistency of synthetic video, we introduce a latent variable propagation module, which views the latent features of previous frame as noise prior and injects it into the latent features of current frame. In addition, we design a streaming data sampler to orderly sample the original image in a video clip at continuous iterations. Given the reference frame, our Glad can be viewed as a streaming simulator by generating the videos for specific scenes. Extensive experiments are performed on the widely-used nuScenes dataset. Experimental results demonstrate that our proposed Glad achieves promising performance, serving as a strong baseline for online video generation. We will release the source code and models publicly.
 
-### VLR-Driver: Large Vision-Language-Reasoning Models for Embodied Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02503)
-- **作者**: Fanjie Kong, Yitong Li, Weihuang Chen, Chen Min, Yizhe Li, Zhiqiang Gao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2025
+</details>
 
-### RadarSplat: Radar Gaussian Splatting for High-Fidelity Data Synthesis and 3D Reconstruction of Autonomous Driving Scenes.
-- **链接**: [arXiv:2506.01379](https://arxiv.org/abs/2506.01379) · 📚 被引 4
-- **作者**: Pou-Chun Kung, Skanda Harisha, Ram Vasudevan, Aline Eid, Katherine A. Skinner
-- **🏷️ 机构**: University of Michigan,USA
-- **会议**: ICCV 2025
+### Bridging Past and Future: End-to-End Autonomous Driving with Historical Prediction and Planning.
+- **链接**: [arXiv:2503.14182](https://arxiv.org/abs/2503.14182) · 📚 被引 7
+- **作者**: Bozhou Zhang, Nan Song, Xin Jin, Li Zhang
+- **🏷️ 机构**: Fudan University,School of Data Science, Eastern Institute of Technology
+- **会议**: CVPR 2025
 
-### Fine-Grained Evaluation of Large Vision-Language Models in Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00880)
-- **作者**: Yue Li, Meng Tian, Zhenyu Lin, Jiangtong Zhu, Dechang Zhu, Haiqiang Liu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### U-ViLAR: Uncertainty-Aware Visual Localization for Autonomous Driving via Differentiable Association and Registration.
-- **链接**: [arXiv:2507.04503](https://arxiv.org/abs/2507.04503) · 📚 被引 0
-- **作者**: Xiaofan Li, Zhihao Xu, Chenming Wu, Zhao Yang, Yumeng Zhang, Jiang-Jiang Liu et al.
-- **🏷️ 机构**: Baidu Inc.
-- **会议**: ICCV 2025
+> Achieving human-like driving behaviors in complex open-world environments is a critical challenge in autonomous driving. Contemporary learning-based planning approaches such as imitation learning methods often struggle to balance competing objectives and lack of safety assurance,due to limited adaptability and inadequacy in learning complex multi-modal behaviors commonly exhibited in human planning, not to mention their strong reliance on the fallback strategy with predefined rules. We propose a novel transformer-based Diffusion Planner for closed-loop planning, which can effectively model multi-modal driving behavior and ensure trajectory quality without any rule-based refinement. Our model supports joint modeling of both prediction and planning tasks under the same architecture, enabling cooperative behaviors between vehicles. Moreover, by learning the gradient of the trajectory score function and employing a flexible classifier guidance mechanism, Diffusion Planner effectively achieves safe and adaptable planning behaviors. Evaluations on the large-scale real-world autonomous planning benchmark nuPlan and our newly collected 200-hour delivery-vehicle driving dataset demonstrate that Diffusion Planner achieves state-of-the-art closed-loop performance with robust transferability in diverse driving styles.
 
-### Colmdriver: Llm-Based Negotiation Benefits Cooperative Autonomous Driving.
-- **链接**: [arXiv:2503.08683](https://arxiv.org/abs/2503.08683) · 📚 被引 4
-- **作者**: Changxing Liu, Genjia Liu, Zijun Wang, Jinchang Yang, Siheng Chen
-- **🏷️ 机构**: Shanghai Jiao Tong University
-- **会议**: ICCV 2025
-
-### TAD-E2E: A Large-Scale End-to-End Autonomous Driving Dataset.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02469) · 📚 被引 0
-- **作者**: Chang Liu, Mingxu Zhu, Zheyuan Zhang, Linna Song, Xiao Zhao, Qingliang Luo et al.
-- **🏷️ 机构**: Tencent,ADLab
-- **会议**: ICCV 2025
-
-### ReAL-AD: Towards Human-Like Reasoning in End-to-End Autonomous Driving.
-- **链接**: [arXiv:2507.12499](https://arxiv.org/abs/2507.12499) · 📚 被引 1
-- **作者**: Yuhang Lu, Jiadong Tu, Yuexin Ma, Xinge Zhu
-- **🏷️ 机构**: ShanghaiTech University, The Chinese University of Hong Kong
-- **会议**: ICCV 2025
-
-### DriveX: Omni Scene Modeling for Learning Generalizable World Knowledge in Autonomous Driving.
-- **链接**: [arXiv:2505.19239](https://arxiv.org/abs/2505.19239) · 📚 被引 0
-- **作者**: Chen Shi, Shaoshuai Shi, Kehua Sheng, Bo Zhang, Li Jiang
-- **🏷️ 机构**: The Chinese University of Hong Kong,Shenzhen, Didi Chuxing,China
-- **会议**: ICCV 2025
-
-### OD-RASE: Ontology-Driven Risk Assessment and Safety Enhancement for Autonomous Driving.
-- **链接**: [arXiv:2603.05936](https://arxiv.org/abs/2603.05936) · 📚 被引 0
-- **作者**: Kota Shimomura, Masaki Nambata, Atsuya Ishikawa, Ryota Mimura, Koki Inoue, Takayoshi Yamashita et al.
-- **🏷️ 机构**: Chubu University, Honda R&#x0026;D Co., Ltd., Elith Inc.
-- **会议**: ICCV 2025
-
-### CoDa-4DGS: Dynamic Gaussian Splatting with Context and Deformation Awareness for Autonomous Driving.
-- **链接**: [arXiv:2503.06744](https://arxiv.org/abs/2503.06744) · 📚 被引 4
-- **作者**: Rui Song, Chenwei Liang, Yan Xia, Walter Zimmer, Hu Cao, Holger Caesar et al.
-- **🏷️ 机构**: Fraunhofer IVI, USTC, TU Munich
-- **会议**: ICCV 2025
-
-### HiP-AD: Hierarchical and Multi-Granularity Planning with Deformable Attention for Autonomous Driving in a Single Decoder.
-- **链接**: [arXiv:2503.08612](https://arxiv.org/abs/2503.08612) · 📚 被引 0
-- **作者**: Yingqi Tang, Zhuoran Xu, Zhaotie Meng, Erkang Cheng
-- **🏷️ 机构**: Nullmax
-- **会议**: ICCV 2025
-
-### Are VLMs Ready for Autonomous Driving? An Empirical Study from the Reliability, Data, and Metric Perspectives.
-- **链接**: [arXiv:2501.04003](https://arxiv.org/abs/2501.04003) · 📚 被引 23
-- **作者**: Shaoyuan Xie, Lingdong Kong, Yuhao Dong, Chonghao Sima, Wenwei Zhang, Qi Alfred Chen et al.
-- **🏷️ 机构**: University of California,Irvine, Shanghai AI Laboratory, Nanyang Technological University,S-Lab
-- **会议**: ICCV 2025
-
-### AD-GS: Object-Aware B-Spline Gaussian Splatting for Self-Supervised Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02297)
-- **作者**: Jiawei Xu, Kai Deng, Zexin Fan, Shenlong Wang, Jin Xie, Jian Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2025
-
-### DriveArena: A Closed-Loop Generative Simulation Platform for Autonomous Driving.
-- **链接**: [arXiv:2408.00415](https://arxiv.org/abs/2408.00415) · 📚 被引 7
-- **作者**: Xuemeng Yang, Licheng Wen, Tiantian Wei, Yukai Ma, Jianbiao Mei, Xin Li et al.
-- **🏷️ 机构**: Shanghai Artificial Intelligence Laboratory, Technical University of Munich, Zhejiang University
-- **会议**: ICCV 2025
-
-### DistillDrive: End-to-End Multi-Mode Autonomous Driving Distillation by Isomorphic Hetero-Source Planning Model.
-- **链接**: [arXiv:2508.05402](https://arxiv.org/abs/2508.05402) · 📚 被引 0
-- **作者**: Rui Yu, Xianghang Zhang, Runkai Zhao, Huaicheng Yan, Meng Wang
-- **🏷️ 机构**: East China University of Science and Technology, SenseAuto Research, The University of Sydney
-- **会议**: ICCV 2025
-
-### Epona: Autoregressive Diffusion World Model for Autonomous Driving.
-- **链接**: [arXiv:2506.24113](https://arxiv.org/abs/2506.24113) · 📚 被引 5
-- **作者**: Kaiwen Zhang, Zhenyu Tang, Xiaotao Hu, Xingang Pan, Xiaoyang Guo, Yuan Liu et al.
-- **🏷️ 机构**: Horizon Robotics, Nanyang Technological University, Hong Kong University of Science and Technology
-- **会议**: ICCV 2025
-
-### Adadrive: Self-Adaptive Slow-Fast System for Language-Grounded Autonomous Driving.
-- **链接**: [arXiv:2511.06253](https://arxiv.org/abs/2511.06253) · 📚 被引 3
-- **作者**: Ruifei Zhang, Junlin Xie, Wei Zhang, Weikai Chen, Xiao Tan, Xiang Wan et al.
-- **🏷️ 机构**: The Chinese University of Hong Kong, Shenzhen,China, Baidu Inc.,China, Shenzhen Research Institute of Big Data,China
-- **会议**: ICCV 2025
-
-### VLDrive: Vision-Augmented Lightweight MLLMs for Efficient Language-Grounded Autonomous Driving.
-- **链接**: [arXiv:2511.06256](https://arxiv.org/abs/2511.06256) · 📚 被引 0
-- **作者**: Ruifei Zhang, Wei Zhang, Xiao Tan, Sibei Yang, Xiang Wan, Xiaonan Luo et al.
-- **🏷️ 机构**: The Chinese University of Hong Kong,Shenzhen, Baidu Inc., Sun Yat-sen University
-- **会议**: ICCV 2025
-
-### World4Drive: End-to-End Autonomous Driving via Intention-Aware Physical Latent World Model.
-- **链接**: [arXiv:2507.00603](https://arxiv.org/abs/2507.00603) · 📚 被引 6
-- **作者**: Yupeng Zheng, Pengxuan Yang, Zebin Xing, Qichao Zhang, Yuhang Zheng, Yinfeng Gao et al.
-- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences, National University of Singapore, Tsinghua University
-- **会议**: ICCV 2025
-
-### Hints of Prompt: Enhancing Visual Representation for Multimodal LLMs in Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00582)
-- **作者**: Hao Zhou, Zhanning Gao, Zhili Chen, Maosheng Ye, Qifeng Chen, Tongyi Cao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2025
-
-### ETA: Efficiency through Thinking Ahead, a Dual Approach to Self-Driving with Large Models.
-- **链接**: [arXiv:2506.07725](https://arxiv.org/abs/2506.07725) · 📚 被引 1
-- **作者**: Shadi Hamdan, Chonghao Sima, Zetong Yang, Hongyang Li, Fatma Güney
-- **🏷️ 机构**: Ko&#x00E7; University, The University of Hong Kong, OpenDriveLab
-- **会议**: ICCV 2025
-
-### HERMES: A Unified Self-Driving World Model for Simultaneous 3D Scene Understanding and Generation.
-- **链接**: [arXiv:2501.14729](https://arxiv.org/abs/2501.14729) · 📚 被引 4
-- **作者**: Xin Zhou, Dingkang Liang, Sifan Tu, Xiwu Chen, Yikang Ding, Dingyuan Zhang et al.
-- **🏷️ 机构**: Huazhong University of Science and Technology, Mach Drive, MEGVII Technology
-- **会议**: ICCV 2025
+</details>
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- OcRFDet: Object-Centric Radiance Fields for Multi-View 3D Object Detection in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202025.md)
-- Towards Accurate and Efficient 3D Object Detection for Autonomous Driving: A Mixture of Experts Computing System on Edge. → [3d-detection](../3d-detection/Guideline%202025.md)
+- V2X-R: Cooperative LiDAR-4D Radar Fusion with Denoising Diffusion for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202025.md)
