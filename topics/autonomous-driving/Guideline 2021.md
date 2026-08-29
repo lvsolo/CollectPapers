@@ -5,6 +5,12 @@
 
 > 同领域其他年份: 
 
+### GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_GeoSim_Realistic_Video_Simulation_via_Geometry-Aware_Composition_for_Self-Driving_CVPR_2021_paper.html) · 📚 被引 89
+- **作者**: Yun Chen, Frieda Rong, Shivam Duggal, Shenlong Wang, Xinchen Yan, Sivabalan Manivasagam et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
 ### Shared Cross-Modal Trajectory Prediction for Autonomous Driving.
 - **链接**: [arXiv:2004.00202](https://arxiv.org/abs/2004.00202) · 📚 被引 56
 - **作者**: Chiho Choi, Joon Hee Choi, Jiachen Li, Srikanth Malla

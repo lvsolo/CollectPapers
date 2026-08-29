@@ -246,3 +246,21 @@
 > The ability to learn new concepts continually is necessary in this ever-changing world. However, deep neural networks suffer from catastrophic forgetting when learning new categories. Many works have been proposed to alleviate this phenomenon, whereas most of them either fall into the stability-plasticity dilemma or take too much computation or storage overhead. Inspired by the gradient boosting algorithm to gradually fit the residuals between the target model and the previous ensemble model, we propose a novel two-stage learning paradigm FOSTER, empowering the model to learn new categories adaptively. Specifically, we first dynamically expand new modules to fit the residuals between the target and the output of the original model. Next, we remove redundant parameters and feature dimensions through an effective distillation strategy to maintain the single backbone model. We validate our method FOSTER on CIFAR-100 and ImageNet-100/1000 under different settings. Experimental results show that our method achieves state-of-the-art performance. Code is available at: https://github.com/G-U-N/ECCV22-FOSTER.
 
 </details>
+
+### Subspace Regularizers for Few-Shot Class Incremental Learning.
+- **链接**: [arXiv:2110.07059](https://arxiv.org/abs/2110.07059)
+- **作者**: Afra Feyza Akyürek, Ekin Akyürek, Derry Wijaya, Jacob Andreas
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Few-shot class incremental learning -- the problem of updating a trained classifier to discriminate among an expanded set of classes with limited labeled data -- is a key challenge for machine learning systems deployed in non-stationary environments. Existing approaches to the problem rely on complex model architectures and training procedures that are difficult to tune and re-use. In this paper, we present an extremely simple approach that enables the use of ordinary logistic regression classifiers for few-shot incremental learning. The key to this approach is a new family of subspace regularization schemes that encourage weight vectors for new classes to lie close to the subspace spanned by the weights of existing classes. When combined with pretrained convolutional feature extractors, logistic regression models trained with subspace regularization outperform specialized, state-of-the-art approaches to few-shot incremental image classification by up to 22% on the miniImageNet dataset. Because of its simplicity, subspace regularization can be straightforwardly extended to incorporate additional background information about the new classes (including class names and descriptions specified in natural language); these further improve accuracy by up to 2%. Our results show that simple geometric regularization of class representations offers an effective tool for continual learning.
+
+</details>
+
+### Looking Back on Learned Experiences For Class/task Incremental Learning.
+- **链接**: [出版页](https://openreview.net/forum?id=RxplU3vmBx)
+- **作者**: Mozhgan PourKeshavarz, Guoying Zhao, Mohammad Sabokrou
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022

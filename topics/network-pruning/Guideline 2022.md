@@ -190,7 +190,11 @@
 - **创新点**: 在剪枝过程中显式维护组间重要性比例，实现公平性约束。
 - **结果**: 在多个数据集上性能退化差异最多降低90%。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Learning Extremely Lightweight and Robust Model with Differentiable Constraints on Sparsity and Condition Number.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19772-7_40) · 📚 被引 1
+- **作者**: Xian Wei, Yangyu Xu, Yanhui Huang, Hairong Lv, Hai Lan, Mingsong Chen et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
 
 > Existing pruning techniques preserve deep neural networks' overall ability to make correct predictions but may also amplify hidden biases during the compression process. We propose a novel pruning method, Fairness-aware GRAdient Pruning mEthod (FairGRAPE), that minimizes the disproportionate impacts of pruning on different sub-groups. Our method calculates the per-group importance of each model weight and selects a subset of weights that maintain the relative between-group total importance in pruning. The proposed method then prunes network edges with small importance values and repeats the procedure by updating importance values. We demonstrate the effectiveness of our method on four different datasets, FairFace, UTKFace, CelebA, and ImageNet, for the tasks of face attribute classification where our method reduces the disparity in performance degradation by up to 90% compared to the state-of-the-art pruning algorithms. Our method is substantially more effective in a setting with a high pruning rate (99%). The code and dataset used in the experiments are available at https://github.com/Bernardo1998/FairGRAPE
 

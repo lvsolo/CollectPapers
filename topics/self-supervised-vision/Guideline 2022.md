@@ -592,7 +592,11 @@
 
 </details>
 
-## 跨领域论文（完整笔记在其他领域）
+### VICRegL: Self-Supervised Learning of Local Visual Features.
+- **链接**: [arXiv:2210.01571](https://arxiv.org/abs/2210.01571) · [代码](https://github.com/facebookresearch/VICRegL) · 📚 被引 23
+- **作者**: Adrien Bardes, Jean Ponce, Yann LeCun
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
 
 - Object Discovery via Contrastive Learning for Weakly Supervised Object Detection. → [object-detection](../object-detection/Guideline%202022.md)
 - Exploring Resolution and Degradation Clues as Self-supervised Signal for Low Quality Object Detection. → [object-detection](../object-detection/Guideline%202022.md)

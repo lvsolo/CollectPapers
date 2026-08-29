@@ -369,6 +369,60 @@
 
 </details>
 
+### Towards Comprehensive Representation Enhancement in Semantics-Guided Self-supervised Monocular Depth Estimation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19769-7_18) · 📚 被引 21
+- **作者**: Jingyuan Ma, Xiangyu Lei, Nan Liu, Xian Zhao, Shiliang Pu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Adaptive Co-teaching for Unsupervised Monocular Depth Estimation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19769-7_6)
+- **作者**: Weisong Ren, Lijun Wang, Yongri Piao, Miao Zhang, Huchuan Lu, Ting Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Spike Transformer: Monocular Depth Estimation for Spiking Camera.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20071-7_3) · 📚 被引 28
+- **作者**: Jiyuan Zhang, Lulu Tang, Zhaofei Yu, Jiwen Lu, Tie-Jun Huang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Towards Scale-Aware, Robust, and Generalizable Unsupervised Monocular Depth Estimation by Integrating IMU Motion Dynamics.
+- **链接**: [arXiv:2207.04680](https://arxiv.org/abs/2207.04680) · 📚 被引 38
+- **作者**: Sen Zhang, Jing Zhang, Dacheng Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Unsupervised monocular depth and ego-motion estimation has drawn extensive research attention in recent years. Although current methods have reached a high up-to-scale accuracy, they usually fail to learn the true scale metric due to the inherent scale ambiguity from training with monocular sequences. In this work, we tackle this problem and propose DynaDepth, a novel scale-aware framework that integrates information from vision and IMU motion dynamics. Specifically, we first propose an IMU photometric loss and a cross-sensor photometric consistency loss to provide dense supervision and absolute scales. To fully exploit the complementary information from both sensors, we further drive a differentiable camera-centric extended Kalman filter (EKF) to update the IMU preintegrated motions when observing visual measurements. In addition, the EKF formulation enables learning an ego-motion uncertainty measure, which is non-trivial for unsupervised methods. By leveraging IMU during training, DynaDepth not only learns an absolute scale, but also provides a better generalization ability and robustness against vision degradation such as illumination change and moving objects. We validate the effectiveness of DynaDepth by conducting extensive experiments and simulations on the KITTI and Make3D datasets.
+
+</details>
+
+### Self-distilled Feature Aggregation for Self-supervised Monocular Depth Estimation.
+- **链接**: [arXiv:2209.07088](https://arxiv.org/abs/2209.07088) · [代码](https://github.com/ZM-Zhou/SDFA-Net_pytorch)
+- **作者**: Zhengming Zhou, Qiulei Dong
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised monocular depth estimation has received much attention recently in computer vision. Most of the existing works in literature aggregate multi-scale features for depth prediction via either straightforward concatenation or element-wise addition, however, such feature aggregation operations generally neglect the contextual consistency between multi-scale features. Addressing this problem, we propose the Self-Distilled Feature Aggregation (SDFA) module for simultaneously aggregating a pair of low-scale and high-scale features and maintaining their contextual consistency. The SDFA employs three branches to learn three feature offset maps respectively: one offset map for refining the input low-scale feature and the other two for refining the input high-scale feature under a designed self-distillation manner. Then, we propose an SDFA-based network for self-supervised monocular depth estimation, and design a self-distilled training strategy to train the proposed network with the SDFA module. Experimental results on the KITTI dataset demonstrate that the proposed method outperforms the comparative state-of-the-art methods in most cases. The code is available at https://github.com/ZM-Zhou/SDFA-Net_pytorch.
+
+</details>
+
+### KD-MVS: Knowledge Distillation Based Self-supervised Learning for Multi-view Stereo.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19821-2_36) · 📚 被引 31
+- **作者**: Yikang Ding, Qingtian Zhu, Xiangyue Liu, Wentao Yuan, Haotian Zhang, Chi Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Emotion-aware Multi-view Contrastive Learning for Facial Emotion Recognition.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19778-9_11) · 📚 被引 16
+- **作者**: Dae Ha Kim, Byung Cheol Song
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
 ## 跨领域论文（完整笔记在其他领域）
 
 - BEVFormer: Learning Bird's-Eye-View Representation from Multi-camera Images via Spatiotemporal Transformers. → [3d-detection](../3d-detection/Guideline%202022.md)

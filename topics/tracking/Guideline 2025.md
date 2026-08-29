@@ -5,35 +5,35 @@
 
 > 同领域其他年份: 
 
-### Multiple Object Tracking as ID Prediction.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Gao_Multiple_Object_Tracking_as_ID_Prediction_CVPR_2025_paper.html) · 📚 被引 52
-- **作者**: Ruopeng Gao, Ji Qi, Limin Wang
-- **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology, China Mobile (Suzhou) Software Technology Co., Ltd.
-- **会议**: CVPR 2025
+### TrackAny3D: Transferring Pretrained 3D Models for Category-Unified 3D Point Cloud Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02623) · 📚 被引 1
+- **作者**: Mengmeng Wang, Haonan Wang, Yulong Li, Xiangjie Kong, Jiaxin Du, Guojiang Shen et al.
+- **🏷️ 机构**: Zhejiang University of Technology, RMIT University
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 ### Omnidirectional Multi-Object Tracking.
-- **链接**: [arXiv:2503.04565](https://arxiv.org/abs/2503.04565) · [代码](https://github.com/xifen523/OmniTrack)
+- **链接**: [arXiv:2503.04565](https://arxiv.org/abs/2503.04565)
 - **作者**: Kai Luo, Hao Shi, Sheng Wu, Fei Teng, Mengfei Duan, Chang Huang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Panoramic imagery, with its 360° field of view, offers comprehensive information to support Multi-Object Tracking (MOT) in capturing spatial and temporal relationships of surrounding objects. However, most MOT algorithms are tailored for pinhole images with limited views, impairing their effectiveness in panoramic settings. Additionally, panoramic image distortions, such as resolution loss, geometric deformation, and uneven lighting, hinder direct adaptation of existing MOT methods, leading to significant performance degradation. To address these challenges, we propose OmniTrack, an omnidirectional MOT framework that incorporates Tracklet Management to introduce temporal cues, FlexiTrack Instances for object localization and association, and the CircularStatE Module to alleviate image and geometric distortions. This integration enables tracking in panoramic field-of-view scenarios, even under rapid sensor motion. To mitigate the lack of panoramic MOT datasets, we introduce the QuadTrack dataset--a comprehensive panoramic dataset collected by a quadruped robot, featuring diverse challenges such as panoramic fields of view, intense motion, and complex environments. Extensive experiments on the public JRDB dataset and the newly introduced QuadTrack benchmark demonstrate the state-of-the-art performance of the proposed framework. OmniTrack achieves a HOTA score of 26.92% on JRDB, representing an improvement of 3.43%, and further achieves 23.45% on QuadTrack, surpassing the baseline by 6.81%. The established dataset and source code are available at https://github.com/xifen523/OmniTrack.
+> In this paper, we present a novel benchmark, GSOT3D, that aims at facilitating development of generic 3D single object tracking (SOT) in the wild. Specifically, GSOT3D offers 620 sequences with 123K frames, and covers a wide selection of 54 object categories. Each sequence is offered with multiple modalities, including the point cloud (PC), RGB image, and depth. This allows GSOT3D to support various 3D tracking tasks, such as single-modal 3D SOT on PC and multi-modal 3D SOT on RGB-PC or RGB-D, and thus greatly broadens research directions for 3D object tracking. To provide highquality per-frame 3D annotations, all sequences are labeled manually with multiple rounds of meticulous inspection and refinement. To our best knowledge, GSOT3D is the largest benchmark dedicated to various generic 3D object tracking tasks. To understand how existing 3D trackers perform and to provide comparisons for future research on GSOT3D, we assess eight representative point cloud-based tracking models. Our evaluation results exhibit that these models heavily degrade on GSOT3D, and more efforts are required for robust and generic 3D object tracking. Besides, to encourage future research, we present a simple yet effective generic 3D tracker, named PROT3D, that localizes the target object via a progressive spatial-temporal network and outperforms all current solutions by a large margin. By releasing GSOT3D, we expect to advance further 3D tracking in future research and applications. Our benchmark and model as well as the evaluation results will be publicly released at our webpage https://github.com/ailovejinx/GSOT3D.
 
 </details>
 
 ### MUST: The First Dataset and Unified Framework for Multispectral UAV Single Object Tracking.
-- **链接**: [arXiv:2503.17699](https://arxiv.org/abs/2503.17699) · [代码](https://github.com/q2479036243/MUST-Multispectral-UAV-Single-Object-Tracking) · 📚 被引 12
+- **链接**: [arXiv:2503.17699](https://arxiv.org/abs/2503.17699) · 📚 被引 12
 - **作者**: Haolin Qin, Tingfa Xu, Tianhao Li, Zhenxiang Chen, Tao Feng, Jianan Li
 - **🏷️ 机构**: Beijing Institute of Technology
 - **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> UAV tracking faces significant challenges in real-world scenarios, such as small-size targets and occlusions, which limit the performance of RGB-based trackers. Multispectral images (MSI), which capture additional spectral information, offer a promising solution to these challenges. However, progress in this field has been hindered by the lack of relevant datasets. To address this gap, we introduce the first large-scale Multispectral UAV Single Object Tracking dataset (MUST), which includes 250 video sequences spanning diverse environments and challenges, providing a comprehensive data foundation for multispectral UAV tracking. We also propose a novel tracking framework, UNTrack, which encodes unified spectral, spatial, and temporal features from spectrum prompts, initial templates, and sequential searches. UNTrack employs an asymmetric transformer with a spectral background eliminate mechanism for optimal relationship modeling and an encoder that continuously updates the spectrum prompt to refine tracking, improving both accuracy and efficiency. Extensive experiments show that our proposed UNTrack outperforms state-of-the-art UAV trackers. We believe our dataset and framework will drive future research in this area. The dataset is available on https://github.com/q2479036243/MUST-Multispectral-UAV-Single-Object-Tracking.
+> We introduce a data capture system and a new dataset, HO-Cap, for 3D reconstruction and pose tracking of hands and objects in videos. The system leverages multiple RGBD cameras and a HoloLens headset for data collection, avoiding the use of expensive 3D scanners or mocap systems. We propose a semi-automatic method for annotating the shape and pose of hands and objects in the collected videos, significantly reducing the annotation time compared to manual labeling. With this system, we captured a video dataset of humans interacting with objects to perform various tasks, including simple pick-and-place actions, handovers between hands, and using objects according to their affordance, which can serve as human demonstrations for research in embodied AI and robot manipulation. Our data capture setup and annotation framework will be available for the community to use in reconstructing 3D shapes of objects and human hands and tracking their poses in videos.
 
 </details>
 
