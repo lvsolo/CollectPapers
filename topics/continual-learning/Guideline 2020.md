@@ -1,69 +1,49 @@
 # Continual Learning — 2020 Guideline
 
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
-> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Look-ahead Meta Learning for Continual Learning.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/85b9a5ac91cd629bd3afe396ec07270a-Abstract.html)
-- **作者**: Gunshi Gupta, Karmesh Yadav, Liam Paull
+### Conditional Channel Gated Networks for Task-Aware Continual Learning.
+- **链接**: [arXiv:2004.00070](https://arxiv.org/abs/2004.00070) · 📚 被引 140
+- **作者**: Davide Abati, Jakub M. Tomczak, Tijmen Blankevoort, Simone Calderara, Rita Cucchiara, Babak Ehteshami Bejnordi
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
-
-### Coresets via Bilevel Optimization for Continual Learning and Streaming.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/aa2a77371374094fe9e0bc1de3f94ed9-Abstract.html)
-- **作者**: Zalán Borsos, Mojmir Mutny, Andreas Krause
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
-
-### Dark Experience for General Continual Learning: a Strong, Simple Baseline.
-- **链接**: [arXiv:2004.07211](https://arxiv.org/abs/2004.07211)
-- **作者**: Pietro Buzzega, Matteo Boschini, Angelo Porrello, Davide Abati, Simone Calderara
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual Learning has inspired a plethora of approaches and evaluation settings; however, the majority of them overlooks the properties of a practical scenario, where the data stream cannot be shaped as a sequence of tasks and offline training is not viable. We work towards General Continual Learning (GCL), where task boundaries blur and the domain and class distributions shift either gradually or suddenly. We address it through mixing rehearsal with knowledge distillation and regularization; our simple baseline, Dark Experience Replay, matches the network's logits sampled throughout the optimization trajectory, thus promoting consistency with its past. By conducting an extensive analysis on both standard benchmarks and a novel GCL evaluation setting (MNIST-360), we show that such a seemingly simple baseline outperforms consolidated approaches and leverages limited resources. We further explore the generalization capabilities of our objective, showing its regularization being beneficial beyond mere performance.
+> Convolutional Neural Networks experience catastrophic forgetting when optimized on a sequence of learning problems: as they meet the objective of the current training examples, their performance on previous tasks drops drastically. In this work, we introduce a novel framework to tackle this problem with conditional computation. We equip each convolutional layer with task-specific gating modules, selecting which filters to apply on the given input. This way, we achieve two appealing properties. Firstly, the execution patterns of the gates allow to identify and protect important filters, ensuring no loss in the performance of the model for previously learned tasks. Secondly, by using a sparsity objective, we can promote the selection of a limited set of kernels, allowing to retain sufficient model capacity to digest new tasks.Existing solutions require, at test time, awareness of the task to which each example belongs to. This knowledge, however, may not be available in many practical scenarios. Therefore, we additionally introduce a task classifier that predicts the task label of each example, to deal with settings in which a task oracle is not available. We validate our proposal on four continual learning datasets. Results show that our model consistently outperforms existing methods both in the presence and the absence of a task oracle. Notably, on Split SVHN and Imagenet-50 datasets, our model yields up to 23.98% and 17.42% improvement in accuracy w.r.t. competing methods.
 
 </details>
 
-### Online Fast Adaptation and Knowledge Accumulation (OSAKA): a New Approach to Continual Learning.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/c0a271bc0ecb776a094786474322cb82-Abstract.html)
-- **作者**: Massimo Caccia, Pau Rodríguez, Oleksiy Ostapenko, Fabrice Normandin, Min Lin, Lucas Page-Caccia et al.
+### Continual Learning With Extended Kronecker-Factored Approximate Curvature.
+- **链接**: [arXiv:2004.07507](https://arxiv.org/abs/2004.07507) · 📚 被引 44
+- **作者**: Janghyeon Lee, Hyeong Gwon Hong, Donggyu Joo, Junmo Kim
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **会议**: CVPR 2020
 
-### Continual Learning in Low-rank Orthogonal Subspaces.
-- **链接**: [arXiv:2010.11635](https://arxiv.org/abs/2010.11635)
-- **作者**: Arslan Chaudhry, Naeemullah Khan, Puneet K. Dokania, Philip H. S. Torr
+### GDumb: A Simple Approach that Questions Our Progress in Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58536-5_31) · 📚 被引 348
+- **作者**: Ameya Prabhu, Philip H. S. Torr, Puneet K. Dokania
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **会议**: CVPR 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### More Classifiers, Less Forgetting: A Generic Multi-classifier Paradigm for Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58574-7_42) · 📚 被引 65
+- **作者**: Yu Liu, Sarah Parisot, Gregory G. Slabaugh, Xu Jia, Ales Leonardis, Tinne Tuytelaars
+- **🏷️ 机构**: SenseTime
+- **会议**: ECCV 2020
 
 > In continual learning (CL), a learner is faced with a sequence of tasks, arriving one after the other, and the goal is to remember all the tasks once the continual learning experience is finished. The prior art in CL uses episodic memory, parameter regularization or extensible network structures to reduce interference among tasks, but in the end, all the approaches learn different tasks in a joint vector space. We believe this invariably leads to interference among different tasks. We propose to learn tasks in different (low-rank) vector subspaces that are kept orthogonal to each other in order to minimize interference. Further, to keep the gradients of different tasks coming from these subspaces orthogonal to each other, we learn isometric mappings by posing network training as an optimization problem over the Stiefel manifold. To the best of our understanding, we report, for the first time, strong results over experience-replay baseline with and without memory on standard classification benchmarks in continual learning. The code is made publicly available.
 
 </details>
 
-### Mitigating Forgetting in Online Continual Learning via Instance-Aware Parameterization.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/ca4b5656b7e193e6bb9064c672ac8dce-Abstract.html)
-- **作者**: Hung-Jen Chen, An-Chieh Cheng, Da-Cheng Juan, Wei Wei, Min Sun
+### Modeling the Background for Incremental Learning in Semantic Segmentation.
+- **链接**: [arXiv:2002.00718](https://arxiv.org/abs/2002.00718) · 📚 被引 310
+- **作者**: Fabio Cermelli, Massimiliano Mancini, Samuel Rota Bulò, Elisa Ricci, Barbara Caputo
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
-
-### Organizing recurrent network dynamics by task-computation to enable continual learning.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/a576eafbce762079f7d1f77fca1c5cc2-Abstract.html)
-- **作者**: Lea Duncker, Laura Driscoll, Krishna V. Shenoy, Maneesh Sahani, David Sussillo
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
-
-### Meta-Consolidation for Continual Learning.
-- **链接**: [arXiv:2010.00352](https://arxiv.org/abs/2010.00352)
-- **作者**: K. J. Joseph, Vineeth Nallure Balasubramanian
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **会议**: CVPR 2020
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -71,27 +51,15 @@
 
 </details>
 
-### Continual Learning with Node-Importance based Adaptive Group Sparse Regularization.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/258be18e31c8188555c2ff05b4d542c3-Abstract.html)
-- **作者**: Sangwon Jung, Hongjoon Ahn, Sungmin Cha, Taesup Moon
+### Incremental Learning in Online Scenario.
+- **链接**: [arXiv:2003.13191](https://arxiv.org/abs/2003.13191) · 📚 被引 140
+- **作者**: Jiangpeng He, Runyu Mao, Zeman Shao, Fengqing Zhu
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **会议**: CVPR 2020
 
-### Continual Learning of a Mixed Sequence of Similar and Dissimilar Tasks.
-- **链接**: [arXiv:2112.10017](https://arxiv.org/abs/2112.10017)
-- **作者**: Zixuan Ke, Bing Liu, Xingchang Huang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Existing research on continual learning of a sequence of tasks focused on dealing with catastrophic forgetting, where the tasks are assumed to be dissimilar and have little shared knowledge. Some work has also been done to transfer previously learned knowledge to the new task when the tasks are similar and have shared knowledge. To the best of our knowledge, no technique has been proposed to learn a sequence of mixed similar and dissimilar tasks that can deal with forgetting and also transfer knowledge forward and backward. This paper proposes such a technique to learn both types of tasks in the same network. For dissimilar tasks, the algorithm focuses on dealing with forgetting, and for similar tasks, the algorithm focuses on selectively transferring the knowledge learned from some similar previous tasks to improve the new task learning. Additionally, the algorithm automatically detects whether a new task is similar to any previous tasks. Empirical evaluation using sequences of mixed tasks demonstrates the effectiveness of the proposed model.
-
-</details>
-
-### Understanding the Role of Training Regimes in Continual Learning.
-- **链接**: [arXiv:2006.06958](https://arxiv.org/abs/2006.06958)
-- **作者**: Seyed-Iman Mirzadeh, Mehrdad Farajtabar, Razvan Pascanu, Hassan Ghasemzadeh
+### Topology-Preserving Class-Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_16)
+- **作者**: Xiaoyu Tao, Xinyuan Chang, Xiaopeng Hong, Xing Wei, Yihong Gong
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
 
@@ -105,4 +73,16 @@
 - **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/3472ab80b6dff70c54758fd6dfc800c2-Abstract.html)
 - **作者**: Kelvin Xu, Siddharth Verma, Chelsea Finn, Sergey Levine
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **会议**: CVPR 2020
+
+### Maintaining Discrimination and Fairness in Class Incremental Learning.
+- **链接**: [arXiv:1911.07053](https://arxiv.org/abs/1911.07053) · 📚 被引 431
+- **作者**: Bowen Zhao, Xi Xiao, Guojun Gan, Bin Zhang, Shu-Tao Xia
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deep neural networks (DNNs) have been applied in class incremental learning, which aims to solve common real-world problems of learning new classes continually. One drawback of standard DNNs is that they are prone to catastrophic forgetting. Knowledge distillation (KD) is a commonly used technique to alleviate this problem. In this paper, we demonstrate it can indeed help the model to output more discriminative results within old classes. However, it cannot alleviate the problem that the model tends to classify objects into new classes, causing the positive effect of KD to be hidden and limited. We observed that an important factor causing catastrophic forgetting is that the weights in the last fully connected (FC) layer are highly biased in class incremental learning. In this paper, we propose a simple and effective solution motivated by the aforementioned observations to address catastrophic forgetting. Firstly, we utilize KD to maintain the discrimination within old classes. Then, to further maintain the fairness between old classes and new classes, we propose Weight Aligning (WA) that corrects the biased weights in the FC layer after normal training process. Unlike previous work, WA does not require any extra parameters or a validation set in advance, as it utilizes the information provided by the biased weights themselves. The proposed method is evaluated on ImageNet-1000, ImageNet-100, and CIFAR-100 under various settings. Experimental results show that the proposed method can effectively alleviate catastrophic forgetting and significantly outperform state-of-the-art methods.
+
+</details>
