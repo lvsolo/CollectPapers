@@ -1,15 +1,15 @@
 # VLM — 2021 Guideline
 
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
-> 论文数: 4 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### InstanceRefer: Cooperative Holistic Understanding for Visual Grounding on Point Clouds through Instance Multi-level Contextual Referring.
-- **链接**: [arXiv:2103.01128](https://arxiv.org/abs/2103.01128) · 📚 被引 102
-- **作者**: Zhihao Yuan, Xu Yan, Yinghong Liao, Ruimao Zhang, Sheng Wang, Zhen Li et al.
-- **🏷️ 机构**: The Chinese University of Hong Kong (Shenzhen),Shenzhen Research Institute of Big Data, Southern University of Science and Technology,CryoEM Center
-- **会议**: ICCV 2021
+### Structured Scene Memory for Vision-Language Navigation.
+- **链接**: [arXiv:2103.03454](https://arxiv.org/abs/2103.03454) · 📚 被引 106
+- **作者**: Hanqing Wang, Wenguan Wang, Wei Liang, Caiming Xiong, Jianbing Shen
+- **🏷️ 机构**: Beijing Institute of Technology, ETH Zurich, Salesforce Research
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +17,17 @@
 
 </details>
 
-### 3DVG-Transformer: Relation Modeling for Visual Grounding on Point Clouds.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00292) · 📚 被引 137
-- **作者**: Lichen Zhao, Daigang Cai, Lu Sheng, Dong Xu
-- **🏷️ 机构**: Beihang University,College of Software,China, The University of Sydney,Australia
-- **会议**: ICCV 2021
+### VinVL: Revisiting Visual Representations in Vision-Language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_VinVL_Revisiting_Visual_Representations_in_Vision-Language_Models_CVPR_2021_paper.html) · 📚 被引 747
+- **作者**: Pengchuan Zhang, Xiujun Li, Xiaowei Hu, Jianwei Yang, Lei Zhang, Lijuan Wang et al.
+- **🏷️ 机构**: PolyU / OPPO
+- **会议**: CVPR 2021
+
+### Improving Weakly Supervised Visual Grounding by Contrastive Knowledge Distillation.
+- **链接**: [arXiv:2007.01951](https://arxiv.org/abs/2007.01951) · 📚 被引 63
+- **作者**: Liwei Wang, Jing Huang, Yin Li, Kun Xu, Zhengyuan Yang, Dong Yu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
 
 ### Vision-Language Navigation with Random Environmental Mixup.
 - **链接**: [arXiv:2106.07876](https://arxiv.org/abs/2106.07876) · [代码](https://github.com/LCFractal/VLNREM) · 📚 被引 65

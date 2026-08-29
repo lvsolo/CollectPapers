@@ -1,15 +1,15 @@
 # Video Understanding — 2021 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 14 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Env-QA: A Video Question Answering Benchmark for Comprehensive Understanding of Dynamic Environments.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00170) · 📚 被引 21
-- **作者**: Difei Gao, Ruiping Wang, Ziyi Bai, Xilin Chen
-- **🏷️ 机构**: Institute of Computing Technology, CAS,Key Laboratory of Intelligent Information Processing of Chinese Academy of Sciences (CAS),Beijing,China,100190
-- **会议**: ICCV 2021
+### Spatiotemporal Contrastive Video Representation Learning.
+- **链接**: [arXiv:2008.03800](https://arxiv.org/abs/2008.03800) · [代码](https://github.com/tensorflow/models)
+- **作者**: Rui Qian, Tianjian Meng, Boqing Gong, Ming-Hsuan Yang, Huisheng Wang, Serge J. Belongie et al.
+- **🏷️ 机构**: UC Merced
+- **会议**: CVPR 2021
 
 ### Long Short View Feature Decomposition via Contrastive Video Representation Learning.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00911) · 📚 被引 25
@@ -29,17 +29,11 @@
 
 </details>
 
-### Motion-Focused Contrastive Learning of Video Representations*.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00211) · 📚 被引 30
-- **作者**: Rui Li, Yiheng Zhang, Zhaofan Qiu, Ting Yao, Dong Liu, Tao Mei
-- **🏷️ 机构**: University of Science and Technology of China,Hefei,China, JD AI Research,Beijing,China
-- **会议**: ICCV 2021
-
-### Unified Graph Structured Models for Video Understanding.
-- **链接**: [arXiv:2103.15662](https://arxiv.org/abs/2103.15662) · 📚 被引 40
-- **作者**: Anurag Arnab, Chen Sun, Cordelia Schmid
-- **🏷️ 机构**: Google Research
-- **会议**: ICCV 2021
+### Visual Semantic Role Labeling for Video Understanding.
+- **链接**: [arXiv:2104.00990](https://arxiv.org/abs/2104.00990) · 📚 被引 44
+- **作者**: Arka Sadhu, Tanmay Gupta, Mark Yatskar, Ram Nevatia, Aniruddha Kembhavi
+- **🏷️ 机构**: University of Southern California, PRIOR @ Allen Institute for AI, University of Pennsylvania
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -47,11 +41,11 @@
 
 </details>
 
-### Video Pose Distillation for Few-Shot, Fine-Grained Sports Action Recognition.
-- **链接**: [arXiv:2109.01305](https://arxiv.org/abs/2109.01305) · 📚 被引 48
-- **作者**: James Hong, Matthew Fisher, Michaël Gharbi, Kayvon Fatahalian
-- **🏷️ 机构**: Stanford University, Adobe Research
-- **会议**: ICCV 2021
+### Towards Long-Form Video Understanding.
+- **链接**: [arXiv:2106.11310](https://arxiv.org/abs/2106.11310) · 📚 被引 120
+- **作者**: Chao-Yuan Wu, Philipp Krähenbühl
+- **🏷️ 机构**: UT Austin
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -59,40 +53,33 @@
 
 </details>
 
-### Learning Self-Similarity in Space and Time as Generalized Motion for Video Action Recognition.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01282) · 📚 被引 41
-- **作者**: Heeseung Kwon, Manjin Kim, Suha Kwak, Minsu Cho
-- **🏷️ 机构**: Pohang University of Science and Technology (POSTECH),South Korea
-- **会议**: ICCV 2021
-
-### MGSampler: An Explainable Sampling Strategy for Video Action Recognition.
-- **链接**: [arXiv:2104.09952](https://arxiv.org/abs/2104.09952) · 📚 被引 74
-- **作者**: Yuan Zhi, Zhan Tong, Limin Wang, Gangshan Wu
-- **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology,China
-- **会议**: ICCV 2021
+### Temporal Query Networks for Fine-Grained Video Understanding.
+- **链接**: [arXiv:2104.09496](https://arxiv.org/abs/2104.09496) · 📚 被引 88
+- **作者**: Chuhan Zhang, Ankush Gupta, Andrew Zisserman
+- **🏷️ 机构**: University of Oxford, DeepMind,London
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Frame sampling is a fundamental problem in video action recognition due to the essential redundancy in time and limited computation resources. The existing sampling strategy often employs a fixed frame selection and lacks the flexibility to deal with complex variations in videos. In this paper, we present a simple, sparse, and explainable frame sampler, termed as Motion-Guided Sampler (MGSampler). Our basic motivation is that motion is an important and universal signal that can drive us to adaptively select frames from videos. Accordingly, we propose two important properties in our MGSampler design: motion sensitive and motion uniform. First, we present two different motion representations to enable us to efficiently distinguish the motion-salient frames from the background. Then, we devise a motion-uniform sampling strategy based on the cumulative motion distribution to ensure the sampled frames evenly cover all the important segments with high motion salience. Our MGSampler yields a new principled and holistic sampling scheme, that could be incorporated into any existing video architecture. Experiments on five benchmarks demonstrate the effectiveness of our MGSampler over the previous fixed sampling strategies, and its generalization power across different backbones, video models, and datasets.
+> Our objective in this work is fine-grained classification of actions in untrimmed videos, where the actions may be temporally extended or may span only a few frames of the video. We cast this into a query-response mechanism, where each query addresses a particular question, and has its own response label set. We make the following four contributions: (I) We propose a new model - a Temporal Query Network - which enables the query-response functionality, and a structural understanding of fine-grained actions. It attends to relevant segments for each query with a temporal attention mechanism, and can be trained using only the labels for each query. (ii) We propose a new way - stochastic feature bank update - to train a network on videos of various lengths with the dense sampling required to respond to fine-grained queries. (iii) We compare the TQN to other architectures and text supervision methods, and analyze their pros and cons. Finally, (iv) we evaluate the method extensively on the FineGym and Diving48 benchmarks for fine-grained action classification and surpass the state-of-the-art using only RGB features.
 
 </details>
 
-### TeachText: CrossModal Generalized Distillation for Text-Video Retrieval.
-- **链接**: [arXiv:2104.08271](https://arxiv.org/abs/2104.08271) · 📚 被引 3
-- **作者**: Ioana Croitoru, Simion-Vlad Bogolin, Marius Leordeanu, Hailin Jin, Andrew Zisserman, Samuel Albanie et al.
+### No Frame Left Behind: Full Video Action Recognition.
+- **链接**: [arXiv:2103.15395](https://arxiv.org/abs/2103.15395) · 📚 被引 41
+- **作者**: Xin Liu, Silvia L. Pintea, Fatemeh Karimi Nejadasl, Olaf Booij, Jan C. van Gemert
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In recent years, considerable progress on the task of text-video retrieval has been achieved by leveraging large-scale pretraining on visual and audio datasets to construct powerful video encoders. By contrast, despite the natural symmetry, the design of effective algorithms for exploiting large-scale language pretraining remains under-explored. In this work, we are the first to investigate the design of such algorithms and propose a novel generalized distillation method, TeachText, which leverages complementary cues from multiple text encoders to provide an enhanced supervisory signal to the retrieval model. Moreover, we extend our method to video side modalities and show that we can effectively reduce the number of used modalities at test time without compromising performance. Our approach advances the state of the art on several video retrieval benchmarks by a significant margin and adds no computational overhead at test time. Last but not least, we show an effective application of our method for eliminating noise from retrieval datasets. Code and data can be found at https://www.robots.ox.ac.uk/~vgg/research/teachtext/.
+> Convolution has been arguably the most important feature transform for modern neural networks, leading to the advance of deep learning. Recent emergence of Transformer networks, which replace convolution layers with self-attention blocks, has revealed the limitation of stationary convolution kernels and opened the door to the era of dynamic feature transforms. The existing dynamic transforms, including self-attention, however, are all limited for video understanding where correspondence relations in space and time, i.e., motion information, are crucial for effective representation. In this work, we introduce a relational feature transform, dubbed the relational self-attention (RSA), that leverages rich structures of spatio-temporal relations in videos by dynamically generating relational kernels and aggregating relational contexts. Our experiments and ablation studies show that the RSA network substantially outperforms convolution and self-attention counterparts, achieving the state of the art on the standard motion-centric benchmarks for video action recognition, such as Something-Something-V1 & V2, Diving48, and FineGym.
 
 </details>
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- ASCNet: Self-supervised Video Representation Learning with Appearance-Speed Consistency. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
-- Self-Supervised Video Representation Learning with Meta-Contrastive Network. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
-- Enhancing Self-supervised Video Representation Learning via Multi-level Feature Optimization. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
-- CrossCLR: Cross-modal Contrastive Learning For Multi-modal Video Representations. → [multimodal](../multimodal/Guideline%202021.md)
-- Multi-Modal Multi-Action Video Recognition. → [multimodal](../multimodal/Guideline%202021.md)
+- DeepVideoMVS: Multi-View Stereo on Video With Recurrent Spatio-Temporal Fusion. → [multi-camera-perception](../multi-camera-perception/Guideline%202021.md)
+- Self-Supervised Video Representation Learning by Context and Motion Decoupling. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+- Removing the Background by Adding the Background: Towards Background Robust Self-Supervised Video Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+- VideoMoCo: Contrastive Video Representation Learning With Temporally Adversarial Examples. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)

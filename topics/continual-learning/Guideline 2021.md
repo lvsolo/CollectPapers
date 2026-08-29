@@ -1,27 +1,105 @@
 # Continual Learning — 2021 Guideline
 
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
-> 论文数: 14 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 17 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Wanderlust: Online Continual Object Detection in the Real World.
-- **链接**: [arXiv:2108.11005](https://arxiv.org/abs/2108.11005) · 📚 被引 50
-- **作者**: Jianren Wang, Xin Wang, Yue Shang-Guan, Abhinav Gupta
-- **🏷️ 机构**: Carnegie Mellon University, Microsoft Research, University of Texas,Austin
-- **会议**: ICCV 2021
+### Rainbow Memory: Continual Learning With a Memory of Diverse Samples.
+- **链接**: [arXiv:2103.17230](https://arxiv.org/abs/2103.17230) · [代码](https://github.com/clovaai/rainbow-memory) · 📚 被引 334
+- **作者**: Jihwan Bang, Heesu Kim, Youngjoon Yoo, Jung-Woo Ha, Jonghyun Choi
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Online continual learning from data streams in dynamic environments is a critical direction in the computer vision field. However, realistic benchmarks and fundamental studies in this line are still missing. To bridge the gap, we present a new online continual object detection benchmark with an egocentric video dataset, Objects Around Krishna (OAK). OAK adopts the KrishnaCAM videos, an ego-centric video stream collected over nine months by a graduate student. OAK provides exhaustive bounding box annotations of 80 video snippets (~17.5 hours) for 105 object categories in outdoor scenes. The emergence of new object categories in our benchmark follows a pattern similar to what a single person might see in their day-to-day life. The dataset also captures the natural distribution shifts as the person travels to different places. These egocentric long-running videos provide a realistic playground for continual learning algorithms, especially in online embodied settings. We also introduce new evaluation metrics to evaluate the model performance and catastrophic forgetting and provide baseline studies for online continual object detection. We believe this benchmark will pose new exciting challenges for learning from non-stationary data in continual learning. The OAK dataset and the associated benchmark are released at https://oakdata.github.io/.
+> Continual learning is a realistic learning scenario for AI models. Prevalent scenario of continual learning, however, assumes disjoint sets of classes as tasks and is less realistic rather artificial. Instead, we focus on 'blurry' task boundary; where tasks shares classes and is more realistic and practical. To address such task, we argue the importance of diversity of samples in an episodic memory. To enhance the sample diversity in the memory, we propose a novel memory management strategy based on per-sample classification uncertainty and data augmentation, named Rainbow Memory (RM). With extensive empirical validations on MNIST, CIFAR10, CIFAR100, and ImageNet datasets, we show that the proposed method significantly improves the accuracy in blurry continual learning setups, outperforming state of the arts by large margins despite its simplicity. Code and data splits will be available in https://github.com/clovaai/rainbow-memory.
 
 </details>
 
-### Co2L: Contrastive Continual Learning.
-- **链接**: [arXiv:2106.14413](https://arxiv.org/abs/2106.14413)
-- **作者**: Hyuntak Cha, Jaeho Lee, Jinwoo Shin
+### Continual Learning via Bit-Level Information Preserving.
+- **链接**: [arXiv:2105.04444](https://arxiv.org/abs/2105.04444) · 📚 被引 37
+- **作者**: Yujun Shi, Li Yuan, Yunpeng Chen, Jiashi Feng
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning tackles the setting of learning different tasks sequentially. Despite the lots of previous solutions, most of them still suffer significant forgetting or expensive memory cost. In this work, targeted at these problems, we first study the continual learning process through the lens of information theory and observe that forgetting of a model stems from the loss of \emph{information gain} on its parameters from the previous tasks when learning a new task. From this viewpoint, we then propose a novel continual learning approach called Bit-Level Information Preserving (BLIP) that preserves the information gain on model parameters through updating the parameters at the bit level, which can be conveniently implemented with parameter quantization. More specifically, BLIP first trains a neural network with weight quantization on the new incoming task and then estimates information gain on each parameter provided by the task data to determine the bits to be frozen to prevent forgetting. We conduct extensive experiments ranging from classification tasks to reinforcement learning tasks, and the results show that our method produces better or on par results comparing to previous state-of-the-arts. Indeed, BLIP achieves close to zero forgetting while only requiring constant memory overheads throughout continual learning.
+
+</details>
+
+### Rectification-Based Knowledge Retention for Continual Learning.
+- **链接**: [arXiv:2103.16597](https://arxiv.org/abs/2103.16597) · 📚 被引 43
+- **作者**: Pravendra Singh, Pratik Mazumder, Piyush Rai, Vinay P. Namboodiri
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deep learning models suffer from catastrophic forgetting when trained in an incremental learning setting. In this work, we propose a novel approach to address the task incremental learning problem, which involves training a model on new tasks that arrive in an incremental manner. The task incremental learning problem becomes even more challenging when the test set contains classes that are not part of the train set, i.e., a task incremental generalized zero-shot learning problem. Our approach can be used in both the zero-shot and non zero-shot task incremental learning settings. Our proposed method uses weight rectifications and affine transformations in order to adapt the model to different tasks that arrive sequentially. Specifically, we adapt the network weights to work for new tasks by "rectifying" the weights learned from the previous task. We learn these weight rectifications using very few parameters. We additionally learn affine transformations on the outputs generated by the network in order to better adapt them for the new task. We perform experiments on several datasets in both zero-shot and non zero-shot task incremental learning settings and empirically show that our approach achieves state-of-the-art results. Specifically, our approach outperforms the state-of-the-art non zero-shot task incremental learning method by over 5% on the CIFAR-100 dataset. Our approach also significantly outperforms the state-of-the-art task incremental generalized zero-shot learning method by absolute margins of 6.91% and 6.33% for the AWA1 and CUB datasets, respectively. We validate our approach using various ablation studies.
+
+</details>
+
+### Layerwise Optimization by Gradient Decomposition for Continual Learning.
+- **链接**: [arXiv:2105.07561](https://arxiv.org/abs/2105.07561) · 📚 被引 57
+- **作者**: Shixiang Tang, Dapeng Chen, Jinguo Zhu, Shijie Yu, Wanli Ouyang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deep neural networks achieve state-of-the-art and sometimes super-human performance across various domains. However, when learning tasks sequentially, the networks easily forget the knowledge of previous tasks, known as "catastrophic forgetting". To achieve the consistencies between the old tasks and the new task, one effective solution is to modify the gradient for update. Previous methods enforce independent gradient constraints for different tasks, while we consider these gradients contain complex information, and propose to leverage inter-task information by gradient decomposition. In particular, the gradient of an old task is decomposed into a part shared by all old tasks and a part specific to that task. The gradient for update should be close to the gradient of the new task, consistent with the gradients shared by all old tasks, and orthogonal to the space spanned by the gradients specific to the old tasks. In this way, our approach encourages common knowledge consolidation without impairing the task-specific knowledge. Furthermore, the optimization is performed for the gradients of each layer separately rather than the concatenation of all gradients as in previous works. This effectively avoids the influence of the magnitude variation of the gradients in different layers. Extensive experiments validate the effectiveness of both gradient-decomposed optimization and layer-wise updates. Our proposed method achieves state-of-the-art results on various benchmarks of continual learning.
+
+</details>
+
+### Efficient Feature Transformations for Discriminative and Generative Continual Learning.
+- **链接**: [arXiv:2103.13558](https://arxiv.org/abs/2103.13558) · 📚 被引 51
+- **作者**: Vinay Kumar Verma, Kevin J. Liang, Nikhil Mehta, Piyush Rai, Lawrence Carin
+- **🏷️ 机构**: Duke University, IIT Kanpur
+- **会议**: CVPR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> As neural networks are increasingly being applied to real-world applications, mechanisms to address distributional shift and sequential task learning without forgetting are critical. Methods incorporating network expansion have shown promise by naturally adding model capacity for learning new tasks while simultaneously avoiding catastrophic forgetting. However, the growth in the number of additional parameters of many of these types of methods can be computationally expensive at larger scales, at times prohibitively so. Instead, we propose a simple task-specific feature map transformation strategy for continual learning, which we call Efficient Feature Transformations (EFTs). These EFTs provide powerful flexibility for learning new tasks, achieved with minimal parameters added to the base architecture. We further propose a feature distance maximization strategy, which significantly improves task prediction in class incremental settings, without needing expensive generative models. We demonstrate the efficacy and efficiency of our method with an extensive set of experiments in discriminative (CIFAR-100 and ImageNet-1K) and generative (LSUN, CUB-200, Cats) sequences of tasks. Even with low single-digit parameter growth rates, EFTs can outperform many other continual learning methods in a wide range of settings.
+
+</details>
+
+### Training Networks in Null Space of Feature Covariance for Continual Learning.
+- **链接**: [arXiv:2103.07113](https://arxiv.org/abs/2103.07113) · 📚 被引 105
+- **作者**: Shipeng Wang, Xiaorong Li, Jian Sun, Zongben Xu
+- **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Mathematics and Statistics,Xi&#x2019;an,China,710049
+- **会议**: CVPR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In the setting of continual learning, a network is trained on a sequence of tasks, and suffers from catastrophic forgetting. To balance plasticity and stability of network in continual learning, in this paper, we propose a novel network training algorithm called Adam-NSCL, which sequentially optimizes network parameters in the null space of previous tasks. We first propose two mathematical conditions respectively for achieving network stability and plasticity in continual learning. Based on them, the network training for sequential tasks can be simply achieved by projecting the candidate parameter update into the approximate null space of all previous tasks in the network training process, where the candidate parameter update can be generated by Adam. The approximate null space can be derived by applying singular value decomposition to the uncentered covariance matrix of all input features of previous tasks for each linear layer. For efficiency, the uncentered covariance matrix can be incrementally computed after learning each task. We also empirically verify the rationality of the approximate null space at each linear layer. We apply our approach to training networks for continual learning on benchmark datasets of CIFAR-100 and TinyImageNet, and the results suggest that the proposed approach outperforms or matches the state-ot-the-art continual learning approaches.
+
+</details>
+
+### ORDisCo: Effective and Efficient Usage of Incremental Unlabeled Data for Semi-Supervised Continual Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_ORDisCo_Effective_and_Efficient_Usage_of_Incremental_Unlabeled_Data_for_CVPR_2021_paper.html) · 📚 被引 68
+- **作者**: Liyuan Wang, Kuo Yang, Chongxuan Li, Lanqing Hong, Zhenguo Li, Jun Zhu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Few-Shot Incremental Learning With Continually Evolved Classifiers.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_Few-Shot_Incremental_Learning_With_Continually_Evolved_Classifiers_CVPR_2021_paper.html)
+- **作者**: Chi Zhang, Nan Song, Guosheng Lin, Yun Zheng, Pan Pan, Yinghui Xu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Image De-Raining via Continual Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhou_Image_De-Raining_via_Continual_Learning_CVPR_2021_paper.html) · 📚 被引 44
+- **作者**: Man Zhou, Jie Xiao, Yifan Chang, Xueyang Fu, Aiping Liu, Jinshan Pan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### On Learning the Geodesic Path for Incremental Learning.
+- **链接**: [arXiv:2104.08572](https://arxiv.org/abs/2104.08572) · 📚 被引 111
+- **作者**: Christian Simon, Piotr Koniusz, Mehrtash Harandi
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,11 +107,11 @@
 
 </details>
 
-### Class-Incremental Learning for Action Recognition in Videos.
-- **链接**: [arXiv:2203.13611](https://arxiv.org/abs/2203.13611) · 📚 被引 52
-- **作者**: Jaeyoo Park, Minsoo Kang, Bohyung Han
-- **🏷️ 机构**: Seoul National University,ECE &#x0026; ASRI
-- **会议**: ICCV 2021
+### Self-Promoted Prototype Refinement for Few-Shot Class-Incremental Learning.
+- **链接**: [arXiv:2107.08918](https://arxiv.org/abs/2107.08918) · 📚 被引 170
+- **作者**: Kai Zhu, Yang Cao, Wei Zhai, Jie Cheng, Zheng-Jun Zha
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,11 +119,11 @@
 
 </details>
 
-### Online Continual Learning with Natural Distribution Shifts: An Empirical Study with Visual Data.
-- **链接**: [arXiv:2108.09020](https://arxiv.org/abs/2108.09020) · [代码](https://github.com/IntelLabs/continuallearning) · 📚 被引 37
-- **作者**: Zhipeng Cai, Ozan Sener, Vladlen Koltun
-- **🏷️ 机构**: Intel Labs
-- **会议**: ICCV 2021
+### Semantic-Aware Knowledge Distillation for Few-Shot Class-Incremental Learning.
+- **链接**: [arXiv:2103.04059](https://arxiv.org/abs/2103.04059) · 📚 被引 185
+- **作者**: Ali Cheraghian, Shafin Rahman, Pengfei Fang, Soumava Kumar Roy, Lars Petersson, Mehrtash Harandi
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -53,11 +131,23 @@
 
 </details>
 
-### Continual Learning on Noisy Data Streams via Self-Purified Replay.
-- **链接**: [arXiv:2110.07735](https://arxiv.org/abs/2110.07735) · 📚 被引 35
-- **作者**: Chris Dongjoo Kim, Jinseo Jeong, Sangwoo Moon, Gunhee Kim
-- **🏷️ 机构**: Seoul National University,Department of Computer Science and Engineering,Seoul,Korea
-- **会议**: ICCV 2021
+### Distilling Causal Effect of Data in Class-Incremental Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hu_Distilling_Causal_Effect_of_Data_in_Class-Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 159
+- **作者**: Xinting Hu, Kaihua Tang, Chunyan Miao, Xian-Sheng Hua, Hanwang Zhang
+- **🏷️ 机构**: NUS
+- **会议**: CVPR 2021
+
+### Adaptive Aggregation Networks for Class-Incremental Learning.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Liu_Adaptive_Aggregation_Networks_for_Class-Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 193
+- **作者**: Yaoyao Liu, Bernt Schiele, Qianru Sun
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Incremental Learning via Rate Reduction.
+- **链接**: [arXiv:2011.14593](https://arxiv.org/abs/2011.14593) · 📚 被引 28
+- **作者**: Ziyang Wu, Christina Baek, Chong You, Yi Ma
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -77,80 +167,8 @@
 
 </details>
 
-### RECALL: Replay-based Continual Learning in Semantic Segmentation.
-- **链接**: [arXiv:2108.03673](https://arxiv.org/abs/2108.03673) · 📚 被引 134
-- **作者**: Andrea Maracani, Umberto Michieli, Marco Toldo, Pietro Zanuttigh
-- **🏷️ 机构**: University of Padova,Department of Information Engineering
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Deep networks allow to obtain outstanding results in semantic segmentation, however they need to be trained in a single shot with a large amount of data. Continual learning settings where new classes are learned in incremental steps and previous training data is no longer available are challenging due to the catastrophic forgetting phenomenon. Existing approaches typically fail when several incremental steps are performed or in presence of a distribution shift of the background class. We tackle these issues by recreating no longer available data for the old classes and outlining a content inpainting scheme on the background class. We propose two sources for replay data. The first resorts to a generative adversarial network to sample from the class space of past learning steps. The second relies on web-crawled data to retrieve images containing examples of old classes from online databases. In both scenarios no samples of past steps are stored, thus avoiding privacy concerns. Replay data are then blended with new samples during the incremental steps. Our approach, RECALL, outperforms state-of-the-art methods.
-
-</details>
-
-### Detection and Continual Learning of Novel Face Presentation Attacks.
-- **链接**: [arXiv:2108.12081](https://arxiv.org/abs/2108.12081) · 📚 被引 41
-- **作者**: Mohammad Rostami, Leonidas Spinoulas, Mohamed E. Hussein, Joe Mathai, Wael Abd-Almageed
-- **🏷️ 机构**: USC Information Sciences Institute,Los Angeles,CA,USA,90292
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Advances in deep learning, combined with availability of large datasets, have led to impressive improvements in face presentation attack detection research. However, state-of-the-art face antispoofing systems are still vulnerable to novel types of attacks that are never seen during training. Moreover, even if such attacks are correctly detected, these systems lack the ability to adapt to newly encountered attacks. The post-training ability of continually detecting new types of attacks and self-adaptation to identify these attack types, after the initial detection phase, is highly appealing. In this paper, we enable a deep neural network to detect anomalies in the observed input data points as potential new types of attacks by suppressing the confidence-level of the network outside the training samples' distribution. We then use experience replay to update the model to incorporate knowledge about new types of attacks without forgetting the past learned attack types. Experimental results are provided to demonstrate the effectiveness of the proposed method on two benchmark datasets as well as a newly introduced dataset which exhibits a large variety of attack types.
-
-</details>
-
-### Rehearsal revealed: The limits and merits of revisiting samples in continual learning.
-- **链接**: [arXiv:2104.07446](https://arxiv.org/abs/2104.07446) · 📚 被引 61
-- **作者**: Eli Verwimp, Matthias De Lange, Tinne Tuytelaars
-- **🏷️ 机构**: KU,Leuven
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Learning from non-stationary data streams and overcoming catastrophic forgetting still poses a serious challenge for machine learning research. Rather than aiming to improve state-of-the-art, in this work we provide insight into the limits and merits of rehearsal, one of continual learning's most established methods. We hypothesize that models trained sequentially with rehearsal tend to stay in the same low-loss region after a task has finished, but are at risk of overfitting on its sample memory, hence harming generalization. We provide both conceptual and strong empirical evidence on three benchmarks for both behaviors, bringing novel insights into the dynamics of rehearsal and continual learning in general. Finally, we interpret important continual learning works in the light of our findings, allowing for a deeper understanding of their successes.
-
-</details>
-
-### Continual Learning for Image-Based Camera Localization.
-- **链接**: [arXiv:2108.09112](https://arxiv.org/abs/2108.09112) · 📚 被引 26
-- **作者**: Shuzhe Wang, Zakaria Laskar, Iaroslav Melekhov, Xiaotian Li, Juho Kannala
-- **🏷️ 机构**: Aalto University
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> For several emerging technologies such as augmented reality, autonomous driving and robotics, visual localization is a critical component. Directly regressing camera pose/3D scene coordinates from the input image using deep neural networks has shown great potential. However, such methods assume a stationary data distribution with all scenes simultaneously available during training. In this paper, we approach the problem of visual localization in a continual learning setup -- whereby the model is trained on scenes in an incremental manner. Our results show that similar to the classification domain, non-stationary data induces catastrophic forgetting in deep networks for visual localization. To address this issue, a strong baseline based on storing and replaying images from a fixed buffer is proposed. Furthermore, we propose a new sampling method based on coverage score (Buff-CS) that adapts the existing sampling strategies in the buffering process to the problem of visual localization. Results demonstrate consistent improvements over standard buffering methods on two challenging datasets -- 7Scenes, 12Scenes, and also 19Scenes by combining the former scenes.
-
-</details>
-
-### SS-IL: Separated Softmax for Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00088) · 📚 被引 167
-- **作者**: Hongjoon Ahn, Jihwan Kwak, Subin Lim, Hyeonsu Bang, Hyojun Kim, Taesup Moon
-- **🏷️ 机构**: Sungkyunkwan University,Department of Artificial Intelligence,Suwon,Korea, Seoul National University,Department of Electrical and Computer Engineering,Seoul,Korea, Sungkyunkwan University,Department of Computer Engineering,Suwon,Korea
-- **会议**: ICCV 2021
-
-### Synthesized Feature based Few-Shot Class-Incremental Learning on a Mixture of Subspaces.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00854) · 📚 被引 64
-- **作者**: Ali Cheraghian, Shafin Rahman, Sameera Ramasinghe, Pengfei Fang, Christian Simon, Lars Petersson et al.
-- **🏷️ 机构**: Australian National University,Australia, North South University,Dhaka,Bangladesh, Data61-Csiro,Australia
-- **会议**: ICCV 2021
-
-### Always Be Dreaming: A New Approach for Data-Free Class-Incremental Learning.
-- **链接**: [arXiv:2106.09701](https://arxiv.org/abs/2106.09701) · 📚 被引 137
-- **作者**: James Seale Smith, Yen-Chang Hsu, Jonathan C. Balloch, Yilin Shen, Hongxia Jin, Zsolt Kira
-- **🏷️ 机构**: Georgia Institute of Technology, Samsung Research America
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Modern computer vision applications suffer from catastrophic forgetting when incrementally learning new concepts over time. The most successful approaches to alleviate this forgetting require extensive replay of previously seen data, which is problematic when memory constraints or data legality concerns exist. In this work, we consider the high-impact problem of Data-Free Class-Incremental Learning (DFCIL), where an incremental learning agent must learn new concepts over time without storing generators or training data from past tasks. One approach for DFCIL is to replay synthetic images produced by inverting a frozen copy of the learner's classification model, but we show this approach fails for common class-incremental benchmarks when using standard distillation strategies. We diagnose the cause of this failure and propose a novel incremental distillation strategy for DFCIL, contributing a modified cross-entropy training and importance-weighted feature distillation, and show that our method results in up to a 25.1% increase in final task accuracy (absolute difference) compared to SOTA DFCIL methods for common class-incremental benchmarks. Our method even outperforms several standard replay based methods which store a coreset of images.
-
-</details>
-
-### Striking a Balance between Stability and Plasticity for Class-Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00116) · 📚 被引 45
-- **作者**: Guile Wu, Shaogang Gong, Pan Li
-- **🏷️ 机构**: Mary University of London
-- **会议**: ICCV 2021
+### Graph-Based Continual Learning.
+- **链接**: [出版页](https://openreview.net/forum?id=HHSEKOnPvaO)
+- **作者**: Binh Tang, David S. Matteson
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021

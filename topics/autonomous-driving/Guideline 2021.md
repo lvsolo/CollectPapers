@@ -1,15 +1,33 @@
 # Autonomous Driving — 2021 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Exploring Simple 3D Multi-Object Tracking for Autonomous Driving.
-- **链接**: [arXiv:2108.10312](https://arxiv.org/abs/2108.10312) · 📚 被引 112
+### GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_GeoSim_Realistic_Video_Simulation_via_Geometry-Aware_Composition_for_Self-Driving_CVPR_2021_paper.html) · 📚 被引 89
+- **作者**: Yun Chen, Frieda Rong, Shivam Duggal, Shenlong Wang, Xinchen Yan, Sivabalan Manivasagam et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Shared Cross-Modal Trajectory Prediction for Autonomous Driving.
+- **链接**: [arXiv:2004.00202](https://arxiv.org/abs/2004.00202) · 📚 被引 56
+- **作者**: Chiho Choi, Joon Hee Choi, Jiachen Li, Srikanth Malla
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Predicting future trajectories of traffic agents in highly interactive environments is an essential and challenging problem for the safe operation of autonomous driving systems. On the basis of the fact that self-driving vehicles are equipped with various types of sensors (e.g., LiDAR scanner, RGB camera, radar, etc.), we propose a Cross-Modal Embedding framework that aims to benefit from the use of multiple input modalities. At training time, our model learns to embed a set of complementary features in a shared latent space by jointly optimizing the objective functions across different types of input data. At test time, a single input modality (e.g., LiDAR data) is required to generate predictions from the input perspective (i.e., in the LiDAR space), while taking advantages from the model trained with multiple sensor modalities. An extensive evaluation is conducted to show the efficacy of the proposed framework using two benchmark driving datasets.
+
+</details>
+
+### Self-Supervised Pillar Motion Learning for Autonomous Driving.
+- **链接**: [arXiv:2104.08683](https://arxiv.org/abs/2104.08683) · 📚 被引 62
 - **作者**: Chenxu Luo, Xiaodong Yang, Alan L. Yuille
-- **🏷️ 机构**: QCraft, Johns Hopkins University
-- **会议**: ICCV 2021
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -33,7 +51,7 @@
 - **链接**: [arXiv:2109.04456](https://arxiv.org/abs/2109.04456) · 📚 被引 212
 - **作者**: Kashyap Chitta, Aditya Prakash, Andreas Geiger
 - **🏷️ 机构**: Max Planck Institute for Intelligent Systems,T&#x00FC;bingen
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,68 +59,20 @@
 
 </details>
 
-### TMCOSS: Thresholded Multi-Criteria Online Subset Selection for Data-Efficient Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00628) · 📚 被引 4
-- **作者**: Soumi Das, Harikrishna Patibandla, Suparna Bhattacharya, Kshounis Bera, Niloy Ganguly, Sourangshu Bhattacharya
-- **🏷️ 机构**: IIT Kharagpur, HPE Enterprise,Hewlett Packard Labs, HPE Enterprise
-- **会议**: ICCV 2021
-
-### Large Scale Interactive Motion Forecasting for Autonomous Driving : The Waymo Open Motion Dataset.
-- **链接**: [arXiv:2104.10133](https://arxiv.org/abs/2104.10133) · 📚 被引 513
-- **作者**: Scott Ettinger, Shuyang Cheng, Benjamin Caine, Chenxi Liu, Hang Zhao, Sabeek Pradhan et al.
-- **🏷️ 机构**: Waymo LLC, Google Brain
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> As autonomous driving systems mature, motion forecasting has received increasing attention as a critical requirement for planning. Of particular importance are interactive situations such as merges, unprotected turns, etc., where predicting individual object motion is not sufficient. Joint predictions of multiple objects are required for effective route planning. There has been a critical need for high-quality motion data that is rich in both interactions and annotation to develop motion planning models. In this work, we introduce the most diverse interactive motion dataset to our knowledge, and provide specific labels for interacting objects suitable for developing joint prediction models. With over 100,000 scenes, each 20 seconds long at 10 Hz, our new dataset contains more than 570 hours of unique data over 1750 km of roadways. It was collected by mining for interesting interactions between vehicles, pedestrians, and cyclists across six cities within the United States. We use a high-accuracy 3D auto-labeling system to generate high quality 3D bounding boxes for each road agent, and provide corresponding high definition 3D maps for each scene. Furthermore, we introduce a new set of metrics that provides a comprehensive evaluation of both single agent and joint agent interaction motion forecasting models. Finally, we provide strong baseline models for individual-agent prediction and joint-prediction. We hope that this new large-scale interactive motion dataset will provide new opportunities for advancing motion forecasting models.
-
-</details>
-
-### Safety-aware Motion Prediction with Unseen Vehicles for Autonomous Driving.
-- **链接**: [arXiv:2109.01510](https://arxiv.org/abs/2109.01510) · [代码](https://github.com/xrenaa/Safety-Aware-Motion-Prediction) · 📚 被引 24
-- **作者**: Xuanchi Ren, Tao Yang, Li Erran Li, Alexandre Alahi, Qifeng Chen
-- **🏷️ 机构**: HKUST, Xi&#x2019;an Jiaotong University, Alexa AI, Amazon
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Motion prediction of vehicles is critical but challenging due to the uncertainties in complex environments and the limited visibility caused by occlusions and limited sensor ranges. In this paper, we study a new task, safety-aware motion prediction with unseen vehicles for autonomous driving. Unlike the existing trajectory prediction task for seen vehicles, we aim at predicting an occupancy map that indicates the earliest time when each location can be occupied by either seen and unseen vehicles. The ability to predict unseen vehicles is critical for safety in autonomous driving. To tackle this challenging task, we propose a safety-aware deep learning model with three new loss functions to predict the earliest occupancy map. Experiments on the large-scale autonomous driving nuScenes dataset show that our proposed model significantly outperforms the state-of-the-art baselines on the safety-aware motion prediction task. To the best of our knowledge, our approach is the first one that can predict the existence of unseen vehicles in most cases. Project page at {\url{https://github.com/xrenaa/Safety-Aware-Motion-Prediction}}.
-
-</details>
-
-### MGNet: Monocular Geometric Scene Understanding for Autonomous Driving.
-- **链接**: [arXiv:2206.13199](https://arxiv.org/abs/2206.13199) · [代码](https://github.com/markusschoen/MGNet) · 📚 被引 49
-- **作者**: Markus Schön, Michael Buchholz, Klaus Dietmayer
-- **🏷️ 机构**: Ulm University,Institute of Measurement, Control and Microtechnology
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We introduce MGNet, a multi-task framework for monocular geometric scene understanding. We define monocular geometric scene understanding as the combination of two known tasks: Panoptic segmentation and self-supervised monocular depth estimation. Panoptic segmentation captures the full scene not only semantically, but also on an instance basis. Self-supervised monocular depth estimation uses geometric constraints derived from the camera measurement model in order to measure depth from monocular video sequences only. To the best of our knowledge, we are the first to propose the combination of these two tasks in one single model. Our model is designed with focus on low latency to provide fast inference in real-time on a single consumer-grade GPU. During deployment, our model produces dense 3D point clouds with instance aware semantic labels from single high-resolution camera images. We evaluate our model on two popular autonomous driving benchmarks, i.e., Cityscapes and KITTI, and show competitive performance among other real-time capable methods. Source code is available at https://github.com/markusschoen/MGNet.
-
-</details>
-
-### LookOut: Diverse Multi-Future Prediction and Planning for Self-Driving.
-- **链接**: [arXiv:2101.06547](https://arxiv.org/abs/2101.06547) · 📚 被引 113
-- **作者**: Alexander Cui, Sergio Casas, Abbas Sadat, Renjie Liao, Raquel Urtasun
-- **🏷️ 机构**: Waabi, Google Brain
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this paper, we present LookOut, a novel autonomy system that perceives the environment, predicts a diverse set of futures of how the scene might unroll and estimates the trajectory of the SDV by optimizing a set of contingency plans over these future realizations. In particular, we learn a diverse joint distribution over multi-agent future trajectories in a traffic scene that covers a wide range of future modes with high sample efficiency while leveraging the expressive power of generative models. Unlike previous work in diverse motion forecasting, our diversity objective explicitly rewards sampling future scenarios that require distinct reactions from the self-driving vehicle for improved safety. Our contingency planner then finds comfortable and non-conservative trajectories that ensure safe reactions to a wide range of future scenarios. Through extensive evaluations, we show that our model demonstrates significantly more diverse and sample-efficient motion forecasting in a large-scale self-driving dataset as well as safer and less-conservative motion plans in long-term closed-loop simulations when compared to current state-of-the-art models.
-
-</details>
-
-### ACDC: The Adverse Conditions Dataset with Correspondences for Semantic Driving Scene Understanding.
-- **链接**: [arXiv:2104.13395](https://arxiv.org/abs/2104.13395) · 📚 被引 0
-- **作者**: Christos Sakaridis, Dengxin Dai, Luc Van Gool
+### GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_GeoSim_Realistic_Video_Simulation_via_Geometry-Aware_Composition_for_Self-Driving_CVPR_2021_paper.html) · 📚 被引 89
+- **作者**: Yun Chen, Frieda Rong, Shivam Duggal, Shenlong Wang, Xinchen Yan, Sivabalan Manivasagam et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
+
+### AdvSim: Generating Safety-Critical Scenarios for Self-Driving Vehicles.
+- **链接**: [arXiv:2101.06549](https://arxiv.org/abs/2101.06549) · 📚 被引 177
+- **作者**: Jingkang Wang, Ava Pun, James Tu, Sivabalan Manivasagam, Abbas Sadat, Sergio Casas et al.
+- **🏷️ 机构**: Waabi / University of Toronto
+- **会议**: CVPR 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Level-5 driving automation requires a robust visual perception system that can parse input images under any condition. However, existing driving datasets for dense semantic perception are either dominated by images captured under normal conditions or are small in scale. To address this, we introduce ACDC, the Adverse Conditions Dataset with Correspondences for training and testing methods for diverse semantic perception tasks on adverse visual conditions. ACDC consists of a large set of 8012 images, half of which (4006) are equally distributed between four common adverse conditions: fog, nighttime, rain, and snow. Each adverse-condition image comes with a high-quality pixel-level panoptic annotation, a corresponding image of the same scene under normal conditions, and a binary mask that distinguishes between intra-image regions of clear and uncertain semantic content. 1503 of the corresponding normal-condition images feature panoptic annotations, raising the total annotated images to 5509. ACDC supports the standard tasks of semantic segmentation, object detection, instance segmentation, and panoptic segmentation, as well as the newly introduced uncertainty-aware semantic segmentation. A detailed empirical study demonstrates the challenges that the adverse domains of ACDC pose to state-of-the-art supervised and unsupervised approaches and indicates the value of our dataset in steering future progress in the field. Our dataset and benchmark are publicly available at https://acdc.vision.ee.ethz.ch
+> As self-driving systems become better, simulating scenarios where the autonomy stack may fail becomes more important. Traditionally, those scenarios are generated for a few scenes with respect to the planning module that takes ground-truth actor states as input. This does not scale and cannot identify all possible autonomy failures, such as perception failures due to occlusion. In this paper, we propose AdvSim, an adversarial framework to generate safety-critical scenarios for any LiDAR-based autonomy system. Given an initial traffic scenario, AdvSim modifies the actors' trajectories in a physically plausible manner and updates the LiDAR sensor data to match the perturbed world. Importantly, by simulating directly from sensor data, we obtain adversarial scenarios that are safety-critical for the full autonomy stack. Our experiments show that our approach is general and can identify thousands of semantically meaningful safety-critical scenarios for a wide range of modern self-driving systems. Furthermore, we show that the robustness and safety of these systems can be further improved by training them with scenarios generated by AdvSim.
 
 </details>

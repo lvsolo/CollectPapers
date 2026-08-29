@@ -1,111 +1,27 @@
 # Neural Architecture Search — 2021 Guideline
 
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
-> 论文数: 17 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 23 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### iNAS: Integral NAS for Device-Aware Salient Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00489) · 📚 被引 11
-- **作者**: Yuchao Gu, Shang-Hua Gao, Xu-Sheng Cao, Peng Du, Shao-Ping Lu, Ming-Ming Cheng
-- **🏷️ 机构**: Nankai University,TKLNDST, CS, Huawei Technologies
-- **会议**: ICCV 2021
-
-### BossNAS: Exploring Hybrid CNN-transformers with Block-wisely Self-supervised Neural Architecture Search.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01206)
-- **作者**: Changlin Li, Tao Tang, Guangrun Wang, Jiefeng Peng, Bing Wang, Xiaodan Liang et al.
+### OPANAS: One-Shot Path Aggregation Network Architecture Search for Object Detection.
+- **链接**: [arXiv:2103.04507](https://arxiv.org/abs/2103.04507) · 📚 被引 61
+- **作者**: Tingting Liang, Yongtao Wang, Zhi Tang, Guosheng Hu, Haibin Ling
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
-### Evolving Search Space for Neural Architecture Search.
-- **链接**: [arXiv:2011.10904](https://arxiv.org/abs/2011.10904)
-- **作者**: Yuanzheng Ci, Chen Lin, Ming Sun, Boyu Chen, Hongwen Zhang, Wanli Ouyang
+### LightTrack: Finding Lightweight Neural Networks for Object Tracking via One-Shot Architecture Search.
+- **链接**: [arXiv:2104.14545](https://arxiv.org/abs/2104.14545) · [代码](https://github.com/researchmm/LightTrack) · 📚 被引 236
+- **作者**: Bin Yan, Houwen Peng, Kan Wu, Dong Wang, Jianlong Fu, Huchuan Lu
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The automation of neural architecture design has been a coveted alternative to human experts. Recent works have small search space, which is easier to optimize but has a limited upper bound of the optimal solution. Extra human design is needed for those methods to propose a more suitable space with respect to the specific task and algorithm capacity. To further enhance the degree of automation for neural architecture search, we present a Neural Search-space Evolution (NSE) scheme that iteratively amplifies the results from the previous effort by maintaining an optimized search space subset. This design minimizes the necessity of a well-designed search space. We further extend the flexibility of obtainable architectures by introducing a learnable multi-branch setting. By employing the proposed method, a consistent performance gain is achieved during a progressive search over upcoming search spaces. We achieve 77.3% top-1 retrain accuracy on ImageNet with 333M FLOPs, which yielded a state-of-the-art performance among previous auto-generated architectures that do not involve knowledge distillation or weight pruning. When the latency constraint is adopted, our result also performs better than the previous best-performing mobile models with a 77.9% Top-1 retrain accuracy.
-
-</details>
-
-### NAS-OoD: Neural Architecture Search for Out-of-Distribution Generalization.
-- **链接**: [arXiv:2109.02038](https://arxiv.org/abs/2109.02038) · 📚 被引 27
-- **作者**: Haoyue Bai, Fengwei Zhou, Lanqing Hong, Nanyang Ye, S.-H. Gary Chan, Zhenguo Li
-- **🏷️ 机构**: The Hong Kong University of Science and Technology, Huawei Noah&#x2019;s Ark Lab, Shanghai Jiao Tong University
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recent advances on Out-of-Distribution (OoD) generalization reveal the robustness of deep learning models against distribution shifts. However, existing works focus on OoD algorithms, such as invariant risk minimization, domain generalization, or stable learning, without considering the influence of deep model architectures on OoD generalization, which may lead to sub-optimal performance. Neural Architecture Search (NAS) methods search for architecture based on its performance on the training data, which may result in poor generalization for OoD tasks. In this work, we propose robust Neural Architecture Search for OoD generalization (NAS-OoD), which optimizes the architecture with respect to its performance on generated OoD data by gradient descent. Specifically, a data generator is learned to synthesize OoD data by maximizing losses computed by different neural architectures, while the goal for architecture search is to find the optimal architecture parameters that minimize the synthetic OoD data losses. The data generator and the neural architecture are jointly optimized in an end-to-end manner, and the minimax training process effectively discovers robust architectures that generalize well for different distribution shifts. Extensive experimental results show that NAS-OoD achieves superior performance on various OoD generalization benchmarks with deep models having a much fewer number of parameters. In addition, on a real industry dataset, the proposed NAS-OoD method reduces the error rate by more than 70% compared with the state-of-the-art method, demonstrating the proposed method's practicality for real applications.
-
-</details>
-
-### BN-NAS: Neural Architecture Search with Batch Normalization.
-- **链接**: [arXiv:2108.07375](https://arxiv.org/abs/2108.07375) · 📚 被引 30
-- **作者**: Boyu Chen, Peixia Li, Baopu Li, Chen Lin, Chuming Li, Ming Sun et al.
-- **🏷️ 机构**: The University of Sydney, Baidu USA LLC, University of Oxford
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We present BN-NAS, neural architecture search with Batch Normalization (BN-NAS), to accelerate neural architecture search (NAS). BN-NAS can significantly reduce the time required by model training and evaluation in NAS. Specifically, for fast evaluation, we propose a BN-based indicator for predicting subnet performance at a very early training stage. The BN-based indicator further facilitates us to improve the training efficiency by only training the BN parameters during the supernet training. This is based on our observation that training the whole supernet is not necessary while training only BN parameters accelerates network convergence for network architecture search. Extensive experiments show that our method can significantly shorten the time of training supernet by more than 10 times and shorten the time of evaluating subnets by more than 600,000 times without losing accuracy.
-
-</details>
-
-### GLiT: Neural Architecture Search for Global and Local Image Transformer.
-- **链接**: [arXiv:2107.02960](https://arxiv.org/abs/2107.02960) · 📚 被引 85
-- **作者**: Boyu Chen, Peixia Li, Chuming Li, Baopu Li, Lei Bai, Chen Lin et al.
-- **🏷️ 机构**: The University of Sydney, BAIDU USA LLC, University of Oxford
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We introduce the first Neural Architecture Search (NAS) method to find a better transformer architecture for image recognition. Recently, transformers without CNN-based backbones are found to achieve impressive performance for image recognition. However, the transformer is designed for NLP tasks and thus could be sub-optimal when directly used for image recognition. In order to improve the visual representation ability for transformers, we propose a new search space and searching algorithm. Specifically, we introduce a locality module that models the local correlations in images explicitly with fewer computational cost. With the locality module, our search space is defined to let the search algorithm freely trade off between global and local information as well as optimizing the low-level design choice in each module. To tackle the problem caused by huge search space, a hierarchical neural architecture search method is proposed to search the optimal vision transformer from two levels separately with the evolutionary algorithm. Extensive experiments on the ImageNet dataset demonstrate that our method can find more discriminative and efficient transformer variants than the ResNet family (e.g., ResNet101) and the baseline ViT for image classification.
-
-</details>
-
-### Not All Operations Contribute Equally: Hierarchical Operation-adaptive Predictor for Neural Architecture Search.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01034) · 📚 被引 11
-- **作者**: Ziye Chen, Yibing Zhan, Baosheng Yu, Mingming Gong, Bo Du
-- **🏷️ 机构**: Wuhan University,National Engineering Research Center for Multimedia Software, Institute of Artificial Intelligence, Hubei Key Laboratory of Multimedia and Network Communication Engineering, School of Computer Science,Wuhan,China, JD Explore Academy,China, The University of Sydney,Australia
-- **会议**: ICCV 2021
-
-### FairNAS: Rethinking Evaluation Fairness of Weight Sharing Neural Architecture Search.
-- **链接**: [arXiv:1907.01845](https://arxiv.org/abs/1907.01845) · [代码](https://github.com/fairnas/FairNAS) · 📚 被引 182
-- **作者**: Xiangxiang Chu, Bo Zhang, Ruijun Xu
-- **🏷️ 机构**: Xiaomi AI Lab.
-- **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> One of the most critical problems in weight-sharing neural architecture search is the evaluation of candidate models within a predefined search space. In practice, a one-shot supernet is trained to serve as an evaluator. A faithful ranking certainly leads to more accurate searching results. However, current methods are prone to making misjudgments. In this paper, we prove that their biased evaluation is due to inherent unfairness in the supernet training. In view of this, we propose two levels of constraints: expectation fairness and strict fairness. Particularly, strict fairness ensures equal optimization opportunities for all choice blocks throughout the training, which neither overestimates nor underestimates their capacity. We demonstrate that this is crucial for improving the confidence of models' ranking. Incorporating the one-shot supernet trained under the proposed fairness constraints with a multi-objective evolutionary search algorithm, we obtain various state-of-the-art models, e.g., FairNAS-A attains 77.5% top-1 validation accuracy on ImageNet. The models and their evaluation codes are made publicly available online http://github.com/fairnas/FairNAS .
-
-</details>
-
-### CM-NAS: Cross-Modality Neural Architecture Search for Visible-Infrared Person Re-Identification.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01161) · 📚 被引 164
-- **作者**: Chaoyou Fu, Yibo Hu, Xiang Wu, Hailin Shi, Tao Mei, Ran He
-- **🏷️ 机构**: University of Chinese Academy of Sciences,School of Artificial Intelligence, JD AI Research, CASIA,NLPR &amp; CEBSIT &amp; CRIPAC
-- **会议**: ICCV 2021
-
-### Pyramid Architecture Search for Real-Time Image Deblurring.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00426) · 📚 被引 38
-- **作者**: Xiaobin Hu, Wenqi Ren, Kaicheng Yu, Kaihao Zhang, Xiaochun Cao, Wei Liu et al.
-- **🏷️ 机构**: TU M&#x00FC;nchen,Informatics, CAS,SKLOIS, IIE, EPFL,CVLab
-- **会议**: ICCV 2021
+- **会议**: CVPR 2021
 
 ### Pi-NAS: Improving Neural Architecture Search by Reducing Supernet Training Consistency Shift.
-- **链接**: [arXiv:2108.09671](https://arxiv.org/abs/2108.09671) · [代码](https://github.com/Ernie1/Pi-NAS) · 📚 被引 12
+- **链接**: [arXiv:2108.09671](https://arxiv.org/abs/2108.09671) · 📚 被引 12
 - **作者**: Jiefeng Peng, Jiqi Zhang, Changlin Li, Guangrun Wang, Xiaodan Liang, Liang Lin
 - **🏷️ 机构**: Sun Yat-sen University, Monash University,GORSE Lab,Dept. of DSAI, University of Oxford
 - **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recently proposed neural architecture search (NAS) methods co-train billions of architectures in a supernet and estimate their potential accuracy using the network weights detached from the supernet. However, the ranking correlation between the architectures' predicted accuracy and their actual capability is incorrect, which causes the existing NAS methods' dilemma. We attribute this ranking correlation problem to the supernet training consistency shift, including feature shift and parameter shift. Feature shift is identified as dynamic input distributions of a hidden layer due to random path sampling. The input distribution dynamic affects the loss descent and finally affects architecture ranking. Parameter shift is identified as contradictory parameter updates for a shared layer lay in different paths in different training steps. The rapidly-changing parameter could not preserve architecture ranking. We address these two shifts simultaneously using a nontrivial supernet-Pi model, called Pi-NAS. Specifically, we employ a supernet-Pi model that contains cross-path learning to reduce the feature consistency shift between different paths. Meanwhile, we adopt a novel nontrivial mean teacher containing negative samples to overcome parameter shift and model collision. Furthermore, our Pi-NAS runs in an unsupervised manner, which can search for more transferable architectures. Extensive experiments on ImageNet and a wide range of downstream tasks (e.g., COCO 2017, ADE20K, and Cityscapes) demonstrate the effectiveness and universality of our Pi-NAS compared to supervised NAS. See Codes: https://github.com/Ernie1/Pi-NAS.
-
-</details>
 
 ### Once Quantization-Aware Training: High Performance Extremely Low-bit Architecture Search.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00529) · 📚 被引 35
@@ -119,38 +35,183 @@
 - **🏷️ 机构**: UCLA,Department of Computer Science, DiDi AI Labs
 - **会议**: ICCV 2021
 
+### One-Shot Neural Ensemble Architecture Search by Diversity-Guided Search Space Shrinking.
+- **链接**: [arXiv:2104.00597](https://arxiv.org/abs/2104.00597) · 📚 被引 26
+- **作者**: Minghao Chen, Jianlong Fu, Haibin Ling
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Contrastive Neural Architecture Search With Neural Architecture Comparators.
+- **链接**: [arXiv:2103.05471](https://arxiv.org/abs/2103.05471) · 📚 被引 66
+- **作者**: Yaofo Chen, Yong Guo, Qi Chen, Minli Li, Wei Zeng, Yaowei Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### NetAdaptV2: Efficient Neural Architecture Search With Fast Super-Network Training and Architecture Optimization.
+- **链接**: [arXiv:2104.00031](https://arxiv.org/abs/2104.00031) · 📚 被引 28
+- **作者**: Tien-Ju Yang, Yi-Lun Liao, Vivienne Sze
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### Rethinking Graph Neural Architecture Search From Message-Passing.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Cai_Rethinking_Graph_Neural_Architecture_Search_From_Message-Passing_CVPR_2021_paper.html) · 📚 被引 45
+- **作者**: Shaofei Cai, Liang Li, Jincan Deng, Beichen Zhang, Zheng-Jun Zha, Li Su et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### HR-NAS: Searching Efficient High-Resolution Neural Architectures With Lightweight Transformers.
+- **链接**: [arXiv:2106.06560](https://arxiv.org/abs/2106.06560) · 📚 被引 60
+- **作者**: Mingyu Ding, Xiaochen Lian, Linjie Yang, Peng Wang, Xiaojie Jin, Zhiwu Lu et al.
+- **🏷️ 机构**: The University of Hong Kong, Bytedance Inc., Renmin University of China,Gaoling School of Artificial Intelligence
+- **会议**: CVPR 2021
+
+> We introduce the first Neural Architecture Search (NAS) method to find a better transformer architecture for image recognition. Recently, transformers without CNN-based backbones are found to achieve impressive performance for image recognition. However, the transformer is designed for NLP tasks and thus could be sub-optimal when directly used for image recognition. In order to improve the visual representation ability for transformers, we propose a new search space and searching algorithm. Specifically, we introduce a locality module that models the local correlations in images explicitly with fewer computational cost. With the locality module, our search space is defined to let the search algorithm freely trade off between global and local information as well as optimizing the low-level design choice in each module. To tackle the problem caused by huge search space, a hierarchical neural architecture search method is proposed to search the optimal vision transformer from two levels separately with the evolutionary algorithm. Extensive experiments on the ImageNet dataset demonstrate that our method can find more discriminative and efficient transformer variants than the ResNet family (e.g., ResNet101) and the baseline ViT for image classification.
+
+</details>
+
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Predictor-based algorithms have achieved remarkable performance in the Neural Architecture Search (NAS) tasks. However, these methods suffer from high computation costs, as training the performance predictor usually requires training and evaluating hundreds of architectures from scratch. Previous works along this line mainly focus on reducing the number of architectures required to fit the predictor. In this work, we tackle this challenge from a different perspective - improve search efficiency by cutting down the computation budget of architecture training. We propose NOn-uniform Successive Halving (NOSH), a hierarchical scheduling algorithm that terminates the training of underperforming architectures early to avoid wasting budget. To effectively leverage the non-uniform supervision signals produced by NOSH, we formulate predictor-based architecture search as learning to rank with pairwise comparisons. The resulting method - RANK-NOSH, reduces the search budget by ~5x while achieving competitive or even better performance than previous state-of-the-art predictor-based methods on various spaces and datasets.
+> Differentiable Architecture Search (DARTS) has attracted extensive attention due to its efficiency in searching for cell structures. DARTS mainly focuses on the operation search and derives the cell topology from the operation weights. However, the operation weights can not indicate the importance of cell topology and result in poor topology rating correctness. To tackle this, we propose to Decouple the Operation and Topology Search (DOTS), which decouples the topology representation from operation weights and makes an explicit topology search. DOTS is achieved by introducing a topology search space that contains combinations of candidate edges. The proposed search space directly reflects the search objective and can be easily extended to support a flexible number of edges in the searched cell. Existing gradient-based NAS methods can be incorporated into DOTS for further improvement by the topology search. Considering that some operations (e.g., Skip-Connection) can affect the topology, we propose a group operation search scheme to preserve topology-related operations for a better topology search. The experiments on CIFAR10/100 and ImageNet demonstrate that DOTS is an effective solution for differentiable NAS.
 
 </details>
 
-### Learning Latent Architectural Distribution in Differentiable Neural Architecture Search via Variational Information Maximization.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01209) · 📚 被引 8
-- **作者**: Yaoming Wang, Yuchen Liu, Wenrui Dai, Chenglin Li, Junni Zou, Hongkai Xiong
-- **🏷️ 机构**: Shanghai Jiao Tong University,Department of Electronic Engineering,China, Shanghai Jiao Tong University,Department of Computer Science &#x0026; Engineering,China
-- **会议**: ICCV 2021
+### Searching by Generating: Flexible and Efficient One-Shot NAS With Architecture Generator.
+- **链接**: [arXiv:2103.07289](https://arxiv.org/abs/2103.07289) · [代码](https://github.com/eric8607242/SGNAS) · 📚 被引 17
+- **作者**: Sian-Yao Huang, Wei-Ta Chu
+- **🏷️ 机构**: National Cheng Kung University,Tainan,Taiwan
+- **会议**: CVPR 2021
 
-### IDARTS: Interactive Differentiable Architecture Search.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00120) · 📚 被引 11
-- **作者**: Song Xue, Runqi Wang, Baochang Zhang, Tian Wang, Guodong Guo, David S. Doermann
-- **🏷️ 机构**: Beihang University,Beijing,China, Institute of Deep Learning, Baidu Research,National Engineering Laboratory for Deep Learning Technology and Application,Beijing,China, University at Buffalo,USA
-- **会议**: ICCV 2021
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Neural Architecture Search for Joint Human Parsing and Pose Estimation.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01119) · 📚 被引 30
-- **作者**: Dan Zeng, Yuhang Huang, Qian Bao, Junjie Zhang, Chi Su, Wu Liu
-- **🏷️ 机构**: Shanghai University, AI Research of JD.com, Kingsoft Cloud
-- **会议**: ICCV 2021
+> In one-shot NAS, sub-networks need to be searched from the supernet to meet different hardware constraints. However, the search cost is high and $N$ times of searches are needed for $N$ different constraints. In this work, we propose a novel search strategy called architecture generator to search sub-networks by generating them, so that the search process can be much more efficient and flexible. With the trained architecture generator, given target hardware constraints as the input, $N$ good architectures can be generated for $N$ constraints by just one forward pass without re-searching and supernet retraining. Moreover, we propose a novel single-path supernet, called unified supernet, to further improve search efficiency and reduce GPU memory consumption of the architecture generator. With the architecture generator and the unified supernet, we propose a flexible and efficient one-shot NAS framework, called Searching by Generating NAS (SGNAS). With the pre-trained supernt, the search time of SGNAS for $N$ different hardware constraints is only 5 GPU hours, which is $4N$ times faster than previous SOTA single-path methods. After training from scratch, the top1-accuracy of SGNAS on ImageNet is 77.1%, which is comparable with the SOTAs. The code is available at: https://github.com/eric8607242/SGNAS.
 
-### AutoSpace: Neural Architecture Search with Less Human Interference.
-- **链接**: [arXiv:2103.11833](https://arxiv.org/abs/2103.11833) · 📚 被引 6
-- **作者**: Daquan Zhou, Xiaojie Jin, Xiaochen Lian, Linjie Yang, Yujing Xue, Qibin Hou et al.
-- **🏷️ 机构**: National University of Singapore, ByteDance US AI Lab
+</details>
+
+### Combined Depth Space Based Architecture Search for Person Re-Identification.
+- **链接**: [arXiv:2104.04163](https://arxiv.org/abs/2104.04163) · 📚 被引 167
+- **作者**: Hanjun Li, Gaojie Wu, Wei-Shi Zheng
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Most works on person re-identification (ReID) take advantage of large backbone networks such as ResNet, which are designed for image classification instead of ReID, for feature extraction. However, these backbones may not be computationally efficient or the most suitable architectures for ReID. In this work, we aim to design a lightweight and suitable network for ReID. We propose a novel search space called Combined Depth Space (CDS), based on which we search for an efficient network architecture, which we call CDNet, via a differentiable architecture search algorithm. Through the use of the combined basic building blocks in CDS, CDNet tends to focus on combined pattern information that is typically found in images of pedestrians. We then propose a low-cost search strategy named the Top-k Sample Search strategy to make full use of the search space and avoid trapping in local optimal result. Furthermore, an effective Fine-grained Balance Neck (FBLNeck), which is removable at the inference time, is presented to balance the effects of triplet loss and softmax loss during the training process. Extensive experiments show that our CDNet (~1.8M parameters) has comparable performance with state-of-the-art lightweight networks.
+
+</details>
+
+### Retinex-Inspired Unrolling With Cooperative Prior Architecture Search for Low-Light Image Enhancement.
+- **链接**: [arXiv:2012.05609](https://arxiv.org/abs/2012.05609) · 📚 被引 970
+- **作者**: Risheng Liu, Long Ma, Jiaao Zhang, Xin Fan, Zhongxuan Luo
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Neural Architecture Search (NAS) has been explosively studied to automate the discovery of top-performer neural networks. Current works require heavy training of supernet or intensive architecture evaluations, thus suffering from heavy resource consumption and often incurring search bias due to truncated training or approximations. Can we select the best neural architectures without involving any training and eliminate a drastic portion of the search cost? We provide an affirmative answer, by proposing a novel framework called training-free neural architecture search (TE-NAS). TE-NAS ranks architectures by analyzing the spectrum of the neural tangent kernel (NTK) and the number of linear regions in the input space. Both are motivated by recent theory advances in deep networks and can be computed without any training and any label. We show that: (1) these two measurements imply the trainability and expressivity of a neural network; (2) they strongly correlate with the network's test accuracy. Further on, we design a pruning-based NAS mechanism to achieve a more flexible and superior trade-off between the trainability and expressivity during the search. In NAS-Bench-201 and DARTS search spaces, TE-NAS completes high-quality search but only costs 0.5 and 4 GPU hours with one 1080Ti on CIFAR-10 and ImageNet, respectively. We hope our work inspires more attempts in bridging the theoretical findings of deep networks and practical impacts in real NAS applications. Code is available at: https://github.com/VITA-Group/TENAS.
+
+</details>
+
+### AttentiveNAS: Improving Neural Architecture Search via Attentive Sampling.
+- **链接**: [arXiv:2011.09011](https://arxiv.org/abs/2011.09011) · [代码](https://github.com/facebookresearch/AttentiveNAS) · 📚 被引 80
+- **作者**: Dilin Wang, Meng Li, Chengyue Gong, Vikas Chandra
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+### RANK-NOSH: Efficient Predictor-Based Architecture Search via Non-Uniform Successive Halving.
+- **链接**: [arXiv:2108.08019](https://arxiv.org/abs/2108.08019) · 📚 被引 5
+- **作者**: Ruochen Wang, Xiangning Chen, Minhao Cheng, Xiaocheng Tang, Cho-Jui Hsieh
+- **🏷️ 机构**: UCLA,Department of Computer Science, DiDi AI Labs
 - **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Current neural architecture search (NAS) algorithms still require expert knowledge and effort to design a search space for network construction. In this paper, we consider automating the search space design to minimize human interference, which however faces two challenges: the explosive complexity of the exploration space and the expensive computation cost to evaluate the quality of different search spaces. To solve them, we propose a novel differentiable evolutionary framework named AutoSpace, which evolves the search space to an optimal one with following novel techniques: a differentiable fitness scoring function to efficiently evaluate the performance of cells and a reference architecture to speedup the evolution procedure and avoid falling into sub-optimal solutions. The framework is generic and compatible with additional computational constraints, making it feasible to learn specialized search spaces that fit different computational budgets. With the learned search space, the performance of recent NAS algorithms can be improved significantly compared with using previously manually designed spaces. Remarkably, the models generated from the new search space achieve 77.8% top-1 accuracy on ImageNet under the mobile setting (MAdds < 500M), out-performing previous SOTA EfficientNet-B0 by 0.7%. All codes will be made public.
+> This paper proposes a novel differentiable architecture search method by formulating it into a distribution learning problem. We treat the continuously relaxed architecture mixing weight as random variables, modeled by Dirichlet distribution. With recently developed pathwise derivatives, the Dirichlet parameters can be easily optimized with gradient-based optimizer in an end-to-end manner. This formulation improves the generalization ability and induces stochasticity that naturally encourages exploration in the search space. Furthermore, to alleviate the large memory consumption of differentiable NAS, we propose a simple yet effective progressive learning scheme that enables searching directly on large-scale tasks, eliminating the gap between search and evaluation phases. Extensive experiments demonstrate the effectiveness of our method. Specifically, we obtain a test error of 2.46% for CIFAR-10, 23.7% for ImageNet under the mobile setting. On NAS-Bench-201, we also achieve state-of-the-art results on all three datasets and provide insights for the effective design of neural architecture search algorithms.
 
 </details>
+
+### ReNAS: Relativistic Evaluation of Neural Architecture Search.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Xu_ReNAS_Relativistic_Evaluation_of_Neural_Architecture_Search_CVPR_2021_paper.html) · 📚 被引 76
+- **作者**: Yixing Xu, Yunhe Wang, Kai Han, Yehui Tang, Shangling Jui, Chunjing Xu et al.
+- **🏷️ 机构**: Huawei Technologies,Noah&#x2019;s Ark Lab, Huawei Technologies, The University of Sydney
+- **会议**: CVPR 2021
+
+### ViPNAS: Efficient Video Pose Estimation via Neural Architecture Search.
+- **链接**: [arXiv:2105.10154](https://arxiv.org/abs/2105.10154) · 📚 被引 56
+- **作者**: Lumin Xu, Yingda Guan, Sheng Jin, Wentao Liu, Chen Qian, Ping Luo et al.
+- **🏷️ 机构**: CUHK / Shanghai AI Lab
+- **会议**: CVPR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Human pose estimation has achieved significant progress in recent years. However, most of the recent methods focus on improving accuracy using complicated models and ignoring real-time efficiency. To achieve a better trade-off between accuracy and efficiency, we propose a novel neural architecture search (NAS) method, termed ViPNAS, to search networks in both spatial and temporal levels for fast online video pose estimation. In the spatial level, we carefully design the search space with five different dimensions including network depth, width, kernel size, group number, and attentions. In the temporal level, we search from a series of temporal feature fusions to optimize the total accuracy and speed across multiple video frames. To the best of our knowledge, we are the first to search for the temporal feature fusion and automatic computation allocation in videos. Extensive experiments demonstrate the effectiveness of our approach on the challenging COCO2017 and PoseTrack2018 datasets. Our discovered model family, S-ViPNAS and T-ViPNAS, achieve significantly higher inference speed (CPU real-time) without sacrificing the accuracy compared to the previous state-of-the-art methods.
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Human pose estimation has achieved significant progress in recent years. However, most of the recent methods focus on improving accuracy using complicated models and ignoring real-time efficiency. To achieve a better trade-off between accuracy and efficiency, we propose a novel neural architecture search (NAS) method, termed ViPNAS, to search networks in both spatial and temporal levels for fast online video pose estimation. In the spatial level, we carefully design the search space with five different dimensions including network depth, width, kernel size, group number, and attentions. In the temporal level, we search from a series of temporal feature fusions to optimize the total accuracy and speed across multiple video frames. To the best of our knowledge, we are the first to search for the temporal feature fusion and automatic computation allocation in videos. Extensive experiments demonstrate the effectiveness of our approach on the challenging COCO2017 and PoseTrack2018 datasets. Our discovered model family, S-ViPNAS and T-ViPNAS, achieve significantly higher inference speed (CPU real-time) without sacrificing the accuracy compared to the previous state-of-the-art methods.
+
+</details>
+
+### FP-NAS: Fast Probabilistic Neural Architecture Search.
+- **链接**: [arXiv:2011.10949](https://arxiv.org/abs/2011.10949) · 📚 被引 18
+- **作者**: Zhicheng Yan, Xiaoliang Dai, Peizhao Zhang, Yuandong Tian, Bichen Wu, Matt Feiszli
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Differential Neural Architecture Search (NAS) requires all layer choices to be held in memory simultaneously; this limits the size of both search space and final architecture. In contrast, Probabilistic NAS, such as PARSEC, learns a distribution over high-performing architectures, and uses only as much memory as needed to train a single model. Nevertheless, it needs to sample many architectures, making it computationally expensive for searching in an extensive space. To solve these problems, we propose a sampling method adaptive to the distribution entropy, drawing more samples to encourage explorations at the beginning, and reducing samples as learning proceeds. Furthermore, to search fast in the multi-variate space, we propose a coarse-to-fine strategy by using a factorized distribution at the beginning which can reduce the number of architecture parameters by over an order of magnitude. We call this method Fast Probabilistic NAS (FP-NAS). Compared with PARSEC, it can sample 64% fewer architectures and search 2.1x faster. Compared with FBNetV2, FP-NAS is 1.9x - 3.5x faster, and the searched models outperform FBNetV2 models on ImageNet. FP-NAS allows us to expand the giant FBNetV2 space to be wider (i.e. larger channel choices) and deeper (i.e. more blocks), while adding Split-Attention block and enabling the search over the number of splits. When searching a model of size 0.4G FLOPS, FP-NAS is 132x faster than EfficientNet, and the searched FP-NAS-L0 model outperforms EfficientNet-B0 by 0.7% accuracy. Without using any architecture surrogate or scaling tricks, we directly search large models up to 1.0G FLOPS. Our FP-NAS-L2 model with simple distillation outperforms BigNAS-XL with advanced in-place distillation by 0.7% accuracy using similar FLOPS.
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Differential Neural Architecture Search (NAS) requires all layer choices to be held in memory simultaneously; this limits the size of both search space and final architecture. In contrast, Probabilistic NAS, such as PARSEC, learns a distribution over high-performing architectures, and uses only as much memory as needed to train a single model. Nevertheless, it needs to sample many architectures, making it computationally expensive for searching in an extensive space. To solve these problems, we propose a sampling method adaptive to the distribution entropy, drawing more samples to encourage explorations at the beginning, and reducing samples as learning proceeds. Furthermore, to search fast in the multi-variate space, we propose a coarse-to-fine strategy by using a factorized distribution at the beginning which can reduce the number of architecture parameters by over an order of magnitude. We call this method Fast Probabilistic NAS (FP-NAS). Compared with PARSEC, it can sample 64% fewer architectures and search 2.1x faster. Compared with FBNetV2, FP-NAS is 1.9x - 3.5x faster, and the searched models outperform FBNetV2 models on ImageNet. FP-NAS allows us to expand the giant FBNetV2 space to be wider (i.e. larger channel choices) and deeper (i.e. more blocks), while adding Split-Attention block and enabling the search over the number of splits. When searching a model of size 0.4G FLOPS, FP-NAS is 132x faster than EfficientNet, and the searched FP-NAS-L0 model outperforms EfficientNet-B0 by 0.7% accuracy. Without using any architecture surrogate or scaling tricks, we directly search large models up to 1.0G FLOPS. Our FP-NAS-L2 model with simple distillation outperforms BigNAS-XL with advanced in-place distillation by 0.7% accuracy using similar FLOPS.
+
+</details>
+
+### HourNAS: Extremely Fast Neural Architecture Search Through an Hourglass Lens.
+- **链接**: [arXiv:2005.14446](https://arxiv.org/abs/2005.14446) · 📚 被引 11
+- **作者**: Zhaohui Yang, Yunhe Wang, Xinghao Chen, Jianyuan Guo, Wei Zhang, Chao Xu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Neural Architecture Search (NAS) refers to automatically design the architecture. We propose an hourglass-inspired approach (HourNAS) for this problem that is motivated by the fact that the effects of the architecture often proceed from the vital few blocks. Acting like the narrow neck of an hourglass, vital blocks in the guaranteed path from the input to the output of a deep neural network restrict the information flow and influence the network accuracy. The other blocks occupy the major volume of the network and determine the overall network complexity, corresponding to the bulbs of an hourglass. To achieve an extremely fast NAS while preserving the high accuracy, we propose to identify the vital blocks and make them the priority in the architecture search. The search space of those non-vital blocks is further shrunk to only cover the candidates that are affordable under the computational resource constraints. Experimental results on the ImageNet show that only using 3 hours (0.1 days) with one GPU, our HourNAS can search an architecture that achieves a 77.0% Top-1 accuracy, which outperforms the state-of-the-art methods.
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Neural Architecture Search (NAS) refers to automatically design the architecture. We propose an hourglass-inspired approach (HourNAS) for this problem that is motivated by the fact that the effects of the architecture often proceed from the vital few blocks. Acting like the narrow neck of an hourglass, vital blocks in the guaranteed path from the input to the output of a deep neural network restrict the information flow and influence the network accuracy. The other blocks occupy the major volume of the network and determine the overall network complexity, corresponding to the bulbs of an hourglass. To achieve an extremely fast NAS while preserving the high accuracy, we propose to identify the vital blocks and make them the priority in the architecture search. The search space of those non-vital blocks is further shrunk to only cover the candidates that are affordable under the computational resource constraints. Experimental results on the ImageNet show that only using 3 hours (0.1 days) with one GPU, our HourNAS can search an architecture that achieves a 77.0% Top-1 accuracy, which outperforms the state-of-the-art methods.
+
+</details>
+
+### Towards Improving the Consistency, Efficiency, and Flexibility of Differentiable Neural Architecture Search.
+- **链接**: [arXiv:2101.11342](https://arxiv.org/abs/2101.11342) · 📚 被引 37
+- **作者**: Yibo Yang, Shan You, Hongyang Li, Fei Wang, Chen Qian, Zhouchen Lin
+- **🏷️ 机构**: Shanghai AI Lab, Peking University
+- **会议**: CVPR 2021
+
+> Recent state-of-the-art methods for neural architecture search (NAS) exploit gradient-based optimization by relaxing the problem into continuous optimization over architectures and shared-weights, a noisy process that remains poorly understood. We argue for the study of single-level empirical risk minimization to understand NAS with weight-sharing, reducing the design of NAS methods to devising optimizers and regularizers that can quickly obtain high-quality solutions to this problem. Invoking the theory of mirror descent, we present a geometry-aware framework that exploits the underlying structure of this optimization to return sparse architectural parameters, leading to simple yet novel algorithms that enjoy fast convergence guarantees and achieve state-of-the-art accuracy on the latest NAS benchmarks in computer vision. Notably, we exceed the best published results for both CIFAR and ImageNet on both the DARTS search space and NAS-Bench201; on the latter we achieve near-oracle-optimal performance on CIFAR-10 and CIFAR-100. Together, our theory and experiments demonstrate a principled way to co-design optimizers and continuous relaxations of discrete NAS search spaces.
+
+</details>
+
+### NAS-Bench-ASR: Reproducible Neural Architecture Search for Speech Recognition.
+- **链接**: [出版页](https://openreview.net/forum?id=CU0APx9LMaL)
+- **作者**: Abhinav Mehrotra, Alberto Gil C. P. Ramos, Sourav Bhattacharya, Lukasz Dudziak, Ravichander Vipperla, Thomas Chau et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+### Interpretable Neural Architecture Search via Bayesian Optimisation with Weisfeiler-Lehman Kernels.
+- **链接**: [出版页](https://openreview.net/forum?id=j9Rv7qdXjd)
+- **作者**: Bin Xin Ru, Xingchen Wan, Xiaowen Dong, Michael A. Osborne
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+
+## 跨领域论文（完整笔记在其他领域）
+
+- NPAS: A Compiler-Aware Framework of Unified Network Pruning and Architecture Search for Beyond Real-Time Mobile Acceleration. → [network-pruning](../network-pruning/Guideline%202021.md)
+- Joint-DetNAS: Upgrade Your Detector With NAS, Pruning and Dynamic Distillation. → [network-pruning](../network-pruning/Guideline%202021.md)
