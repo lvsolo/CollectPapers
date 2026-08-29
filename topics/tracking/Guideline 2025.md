@@ -1,39 +1,43 @@
 # Tracking — 2025 Guideline
 
 > 领域: 目标跟踪（MOT / 3D 跟踪 / 多目标多相机跟踪）
-> 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### MMOT: The First Challenging Benchmark for Drone-based Multispectral Multi-Object Tracking.
-- **链接**: [arXiv:2510.12565](https://arxiv.org/abs/2510.12565) · 📚 被引 1
-- **作者**: Tianhao Li, Tingfa Xu, Ying Wang, Haolin Qin, Xu Lin, Jianan Li
-- **🏷️ 机构**: Beijing Institute of Technology, Beijing Institute of Technology, Tsinghua University
-- **会议**: NeurIPS 2025
+### TrackAny3D: Transferring Pretrained 3D Models for Category-Unified 3D Point Cloud Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02623) · 📚 被引 1
+- **作者**: Mengmeng Wang, Haonan Wang, Yulong Li, Xiangjie Kong, Jiaxin Du, Guojiang Shen et al.
+- **🏷️ 机构**: Zhejiang University of Technology, RMIT University
+- **会议**: ICCV 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### GRAE-3DMOT: Geometry Relation-Aware Encoder for Online 3D Multi-Object Tracking.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kim_GRAE-3DMOT_Geometry_Relation-Aware_Encoder_for_Online_3D_Multi-Object_Tracking_CVPR_2025_paper.html) · 📚 被引 0
+- **作者**: Hyunseop Kim, Hyo-Jun Lee, Yonguk Lee, Jinu Lee, Hanul Kim, Yeong Jun Koh
+- **🏷️ 机构**: Chungnam National University, Kangwon National University, 42Dot Inc.
+- **会议**: CVPR 2025
 
-> Drone-based multi-object tracking is essential yet highly challenging due to small targets, severe occlusions, and cluttered backgrounds. Existing RGB-based tracking algorithms heavily depend on spatial appearance cues such as color and texture, which often degrade in aerial views, compromising reliability. Multispectral imagery, capturing pixel-level spectral reflectance, provides crucial cues that enhance object discriminability under degraded spatial conditions. However, the lack of dedicated multispectral UAV datasets has hindered progress in this domain. To bridge this gap, we introduce MMOT, the first challenging benchmark for drone-based multispectral multi-object tracking. It features three key characteristics: (i) Large Scale - 125 video sequences with over 488.8K annotations across eight categories; (ii) Comprehensive Challenges - covering diverse conditions such as extreme small targets, high-density scenarios, severe occlusions, and complex motion; and (iii) Precise Oriented Annotations - enabling accurate localization and reduced ambiguity under aerial perspectives. To better extract spectral features and leverage oriented annotations, we further present a multispectral and orientation-aware MOT scheme adapting existing methods, featuring: (i) a lightweight Spectral 3D-Stem integrating spectral features while preserving compatibility with RGB pretraining; (ii) an orientation-aware Kalman filter for precise state estimation; and (iii) an end-to-end orientation-adaptive transformer. Extensive experiments across representative trackers consistently show that multispectral input markedly improves tracking performance over RGB baselines, particularly for small and densely packed objects. We believe our work will advance drone-based multispectral multi-object tracking research. Our MMOT, code, and benchmarks are publicly available at https://github.com/Annzstbl/MMOT.
+### Omnidirectional Multi-Object Tracking.
+- **链接**: [arXiv:2503.04565](https://arxiv.org/abs/2503.04565)
+- **作者**: Kai Luo, Hao Shi, Sheng Wu, Fei Teng, Mengfei Duan, Chang Huang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+### Language Decoupling with Fine-Grained Knowledge Guidance for Referring Multi-Object Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02193) · 📚 被引 0
+- **作者**: Guangyao Li, Siping Zhuang, Yajun Jian, Yan Yan, Hanzi Wang
+- **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China,P.R. China,361005
+- **会议**: ICCV 2025
+
+> In this paper, we present a novel benchmark, GSOT3D, that aims at facilitating development of generic 3D single object tracking (SOT) in the wild. Specifically, GSOT3D offers 620 sequences with 123K frames, and covers a wide selection of 54 object categories. Each sequence is offered with multiple modalities, including the point cloud (PC), RGB image, and depth. This allows GSOT3D to support various 3D tracking tasks, such as single-modal 3D SOT on PC and multi-modal 3D SOT on RGB-PC or RGB-D, and thus greatly broadens research directions for 3D object tracking. To provide highquality per-frame 3D annotations, all sequences are labeled manually with multiple rounds of meticulous inspection and refinement. To our best knowledge, GSOT3D is the largest benchmark dedicated to various generic 3D object tracking tasks. To understand how existing 3D trackers perform and to provide comparisons for future research on GSOT3D, we assess eight representative point cloud-based tracking models. Our evaluation results exhibit that these models heavily degrade on GSOT3D, and more efforts are required for robust and generic 3D object tracking. Besides, to encourage future research, we present a simple yet effective generic 3D tracker, named PROT3D, that localizes the target object via a progressive spatial-temporal network and outperforms all current solutions by a large margin. By releasing GSOT3D, we expect to advance further 3D tracking in future research and applications. Our benchmark and model as well as the evaluation results will be publicly released at our webpage https://github.com/ailovejinx/GSOT3D.
 
 </details>
 
-### STAR: Spatial-Temporal Tracklet Matching for Multi-Object Tracking.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/62c599c5c2b365ba464a26ebad05b690-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Xuewei Bai, Yongcai Wang, Deying Li, Haodi Ping, Chunxu Li
-- **🏷️ 机构**: Renmin University of China, Beijing University of Technology
-- **会议**: NeurIPS 2025
-
-### Dual-Path Temporal Decoder for End-to-End Multi-Object Tracking.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/07054a34f24ac3ef64c5f2fdf571b8c0-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Hyunseop Kim, Juheon Jeong, Hanul Kim, Yeong Jun Koh
-- **🏷️ 机构**: Chungnam National University, Seoul National University of Science and Technology
-- **会议**: NeurIPS 2025
-
-### HO-Cap: A Capture System and Dataset for 3D Reconstruction and Pose Tracking of Hand-Object Interaction.
-- **链接**: [arXiv:2406.06843](https://arxiv.org/abs/2406.06843) · 📚 被引 0
-- **作者**: Jikai Wang, Qifan Zhang, Yu-Wei Chao, Bowen Wen, Xiaohu Guo, Yu Xiang
-- **🏷️ 机构**: University of Texas at Dallas, NVIDIA, University of Texas, Dallas
-- **会议**: NeurIPS 2025
+### MUST: The First Dataset and Unified Framework for Multispectral UAV Single Object Tracking.
+- **链接**: [arXiv:2503.17699](https://arxiv.org/abs/2503.17699) · 📚 被引 12
+- **作者**: Haolin Qin, Tingfa Xu, Tianhao Li, Zhenxiang Chen, Tao Feng, Jianan Li
+- **🏷️ 机构**: Beijing Institute of Technology
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,7 +45,42 @@
 
 </details>
 
+### Focusing on Tracks for Online Multi-Object Tracking.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Shim_Focusing_on_Tracks_for_Online_Multi-Object_Tracking_CVPR_2025_paper.html) · 📚 被引 20
+- **作者**: Kyujin Shim, Kangwook Ko, Yujin Yang, Changick Kim
+- **🏷️ 机构**: Korea Advanced Institute of Science and Technology (KAIST)
+- **会议**: CVPR 2025
+
+### SPMTrack: Spatio-Temporal Parameter-Efficient Fine-Tuning with Mixture of Experts for Scalable Visual Tracking.
+- **链接**: [arXiv:2503.18338](https://arxiv.org/abs/2503.18338) · 📚 被引 13
+- **作者**: Wenrui Cai, Qingjie Liu, Yunhong Wang
+- **🏷️ 机构**: Beihang University,State Key Laboratory of Virtual Reality Technology and Systems,Beijing,China
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Most state-of-the-art trackers adopt one-stream paradigm, using a single Vision Transformer for joint feature extraction and relation modeling of template and search region images. However, relation modeling between different image patches exhibits significant variations. For instance, background regions dominated by target-irrelevant information require reduced attention allocation, while foreground, particularly boundary areas, need to be be emphasized. A single model may not effectively handle all kinds of relation modeling simultaneously. In this paper, we propose a novel tracker called SPMTrack based on mixture-of-experts tailored for visual tracking task (TMoE), combining the capability of multiple experts to handle diverse relation modeling more flexibly. Benefiting from TMoE, we extend relation modeling from image pairs to spatio-temporal context, further improving tracking accuracy with minimal increase in model parameters. Moreover, we employ TMoE as a parameter-efficient fine-tuning method, substantially reducing trainable parameters, which enables us to train SPMTrack of varying scales efficiently and preserve the generalization ability of pretrained models to achieve superior performance. We conduct experiments on seven datasets, and experimental results demonstrate that our method significantly outperforms current state-of-the-art trackers. The source code is available at https://github.com/WenRuiCai/SPMTrack.
+
+</details>
+
+### Autoregressive Sequential Pretraining for Visual Tracking.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liang_Autoregressive_Sequential_Pretraining_for_Visual_Tracking_CVPR_2025_paper.html) · 📚 被引 8
+- **作者**: Shiyi Liang, Yifan Bai, Yihong Gong, Xing Wei
+- **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Software Engineering
+- **会议**: CVPR 2025
+
+### Exploring Historical Information for RGBE Visual Tracking with Mamba.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Sun_Exploring_Historical_Information_for_RGBE_Visual_Tracking_with_Mamba_CVPR_2025_paper.html) · 📚 被引 7
+- **作者**: Chuanyu Sun, Jiqing Zhang, Yang Wang, Huilin Ge, Qianchen Xia, Baocai Yin et al.
+- **🏷️ 机构**: Dalian University of Technology,Key Laboratory of Social Computing and Cognitive Intelligence, Dalian Maritime University, Jiangsu University of Science and Technology
+- **会议**: CVPR 2025
+
+### GaPT-DAR: Category-level Garments Pose Tracking via Integrated 2D Deformation and 3D Reconstruction.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_GaPT-DAR_Category-level_Garments_Pose_Tracking_via_Integrated_2D_Deformation_and_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Li Zhang, Mingliang Xu, Jianan Wang, Qiaojun Yu, Lixin Yang, Yonglu Li et al.
+- **🏷️ 机构**: University of Science and Technology of China,Hefei,China, Astribot,Shenzhen,China, Shanghai Jiao Tong University,Shanghai,China
+- **会议**: CVPR 2025
+
 ## 跨领域论文（完整笔记在其他领域）
 
-- SynCL: A Synergistic Training Strategy with Instance-Aware Contrastive Learning for End-to-End Multi-Camera 3D Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
-- TrackingWorld: World-centric Monocular 3D Tracking of Almost All Pixels. → [3d-detection](../3d-detection/Guideline%202025.md)
+- All-Day Multi-Camera Multi-Target Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
