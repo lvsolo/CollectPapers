@@ -1,166 +1,210 @@
 # Network Pruning — 2023 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 17 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 22 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Dynamic Token Pruning in Plain Vision Transformers for Semantic Segmentation.
-- **链接**: [arXiv:2308.01045](https://arxiv.org/abs/2308.01045) · 📚 被引 50
-- **作者**: Quan Tang, Bowen Zhang, Jiajun Liu, Fagui Liu, Yifan Liu
-- **🏷️ 机构**: South China University of Technology, The University of Adelaide, CSIRO
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-### Joint Token Pruning and Squeezing Towards More Aggressive Compression of Vision Transformers.
-- **链接**: [arXiv:2304.10716](https://arxiv.org/abs/2304.10716) · [代码](https://github.com/megvii-research/TPS-CVPR2023) · 📚 被引 75
-- **作者**: Siyuan Wei, Tianzhu Ye, Shen Zhang, Yao Tang, Jiajun Liang
-- **🏷️ 机构**: MEGVII Technology, Tsinghua University
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Although vision transformers (ViTs) have shown promising results in various computer vision tasks recently, their high computational cost limits their practical applications. Previous approaches that prune redundant tokens have demonstrated a good trade-off between performance and computation costs. Nevertheless, errors caused by pruning strategies can lead to significant information loss. Our quantitative experiments reveal that the impact of pruned tokens on performance should be noticeable. To address this issue, we propose a novel joint Token Pruning & Squeezing module (TPS) for compressing vision transformers with higher efficiency. Firstly, TPS adopts pruning to get the reserved and pruned subsets. Secondly, TPS squeezes the information of pruned tokens into partial reserved tokens via the unidirectional nearest-neighbor matching and similarity-based fusing steps. Compared to state-of-the-art methods, our approach outperforms them under all token pruning intensities. Especially while shrinking DeiT-tiny&small computational budgets to 35%, it improves the accuracy by 1%-6% compared with baselines on ImageNet classification. The proposed method can accelerate the throughput of DeiT-small beyond DeiT-tiny, while its accuracy surpasses DeiT-tiny by 4.78%. Experiments on various transformers demonstrate the effectiveness of our method, while analysis experiments prove our higher robustness to the errors of the token pruning policy. Code is available at https://github.com/megvii-research/TPS-CVPR2023.
-
-</details>
-
-### Global Vision Transformer Pruning with Hessian-Aware Saliency.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01779) · 📚 被引 59
-- **作者**: Huanrui Yang, Hongxu Yin, Maying Shen, Pavlo Molchanov, Hai Li, Jan Kautz
-- **🏷️ 机构**: NVIDIA, Duke University
-- **会议**: CVPR 2023
-
-### Boost Vision Transformer with GPU-Friendly Sparsity and Quantization.
-- **链接**: [arXiv:2305.10727](https://arxiv.org/abs/2305.10727) · 📚 被引 35
-- **作者**: Chong Yu, Tao Chen, Zhongxue Gan, Jiayuan Fan
-- **🏷️ 机构**: Fudan University,Academy for Engineering and Technology, School for Information Science and Technology, Fudan University
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The transformer extends its success from the language to the vision domain. Because of the stacked self-attention and cross-attention blocks, the acceleration deployment of vision transformer on GPU hardware is challenging and also rarely studied. This paper thoroughly designs a compression scheme to maximally utilize the GPU-friendly 2:4 fine-grained structured sparsity and quantization. Specially, an original large model with dense weight parameters is first pruned into a sparse one by 2:4 structured pruning, which considers the GPU's acceleration of 2:4 structured sparse pattern with FP16 data type, then the floating-point sparse model is further quantized into a fixed-point one by sparse-distillation-aware quantization aware training, which considers GPU can provide an extra speedup of 2:4 sparse calculation with integer tensors. A mixed-strategy knowledge distillation is used during the pruning and quantization process. The proposed compression scheme is flexible to support supervised and unsupervised learning styles. Experiment results show GPUSQ-ViT scheme achieves state-of-the-art compression by reducing vision transformer models 6.4-12.7 times on model size and 30.3-62 times on FLOPs with negligible accuracy degradation on ImageNet classification, COCO detection and ADE20K segmentation benchmarking tasks. Moreover, GPUSQ-ViT can boost actual deployment performance by 1.39-1.79 times and 3.22-3.43 times of latency and throughput on A100 GPU, and 1.57-1.69 times and 2.11-2.51 times improvement of latency and throughput on AGX Orin.
-
-</details>
-
-### X-Pruner: eXplainable Pruning for Vision Transformers.
-- **链接**: [arXiv:2303.04935](https://arxiv.org/abs/2303.04935) · 📚 被引 69
-- **作者**: Lu Yu, Wei Xiang
-- **🏷️ 机构**: James Cook University, La Trobe University
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recently vision transformer models have become prominent models for a range of tasks. These models, however, usually suffer from intensive computational costs and heavy memory requirements, making them impractical for deployment on edge platforms. Recent studies have proposed to prune transformers in an unexplainable manner, which overlook the relationship between internal units of the model and the target class, thereby leading to inferior performance. To alleviate this problem, we propose a novel explainable pruning framework dubbed X-Pruner, which is designed by considering the explainability of the pruning criterion. Specifically, to measure each prunable unit's contribution to predicting each target class, a novel explainability-aware mask is proposed and learned in an end-to-end manner. Then, to preserve the most informative units and learn the layer-wise pruning rate, we adaptively search the layer-wise threshold that differentiates between unpruned and pruned units based on their explainability-aware mask values. To verify and evaluate our method, we apply the X-Pruner on representative transformer models including the DeiT and Swin Transformer. Comprehensive simulation results demonstrate that the proposed X-Pruner outperforms the state-of-the-art black-box methods with significantly reduced computational costs and slight performance degradation.
-
-</details>
-
-### Single-Shot Pruning for Pre-trained Models: Rethinking the Importance of Magnitude Pruning.
-- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00155) · 📚 被引 13
-- **作者**: Hirokazu Kohama, Hiroaki Minoura, Tsubasa Hirakawa, Takayoshi Yamashita, Hironobu Fujiyoshi
-- **🏷️ 机构**: Chubu University
-- **会议**: ICCV 2023
-
-### Automatic Network Pruning via Hilbert-Schmidt Independence Criterion Lasso under Information Bottleneck Principle.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01601) · 📚 被引 22
-- **作者**: Song Guo, Lei Zhang, Xiawu Zheng, Yan Wang, Yuchao Li, Fei Chao et al.
-- **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China,Department of Artificial Intelligence, School of Informatics, Samsara Inc, Alibaba Group
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Structural pruning enables model acceleration by removing structurally-grouped parameters from neural networks. However, the parameter-grouping patterns vary widely across different models, making architecture-specific pruners, which rely on manually-designed grouping schemes, non-generalizable to new architectures. In this work, we study a highly-challenging yet barely-explored task, any structural pruning, to tackle general structural pruning of arbitrary architecture like CNNs, RNNs, GNNs and Transformers. The most prominent obstacle towards this goal lies in the structural coupling, which not only forces different layers to be pruned simultaneously, but also expects all removed parameters to be consistently unimportant, thereby avoiding structural issues and significant performance degradation after pruning. To address this problem, we propose a general and {fully automatic} method, \emph{Dependency Graph} (DepGraph), to explicitly model the dependency between layers and comprehensively group coupled parameters for pruning. In this work, we extensively evaluate our method on several architectures and tasks, including ResNe(X)t, DenseNet, MobileNet and Vision transformer for images, GAT for graph, DGCNN for 3D point cloud, alongside LSTM for language, and demonstrate that, even with a simple norm-based criterion, the proposed method consistently yields gratifying performances.
-
-</details>
-
-### CP3: Channel Pruning Plug-in for Point-Based Networks.
-- **链接**: [arXiv:2303.13097](https://arxiv.org/abs/2303.13097)
-- **作者**: Yaomin Huang, Ning Liu, Zhengping Che, Zhiyuan Xu, Chaomin Shen, Yaxin Peng et al.
+### Learning to Jointly Share and Prune Weights for Grounding Based Vision and Language Models.
+- **链接**: [出版页](https://openreview.net/forum?id=UMERaIHMwB3)
+- **作者**: Shangqian Gao, Burak Uzkent, Yilin Shen, Heng Huang, Hongxia Jin
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
+- **会议**: ICLR 2023
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Channel pruning can effectively reduce both computational cost and memory footprint of the original network while keeping a comparable accuracy performance. Though great success has been achieved in channel pruning for 2D image-based convolutional networks (CNNs), existing works seldom extend the channel pruning methods to 3D point-based neural networks (PNNs). Directly implementing the 2D CNN channel pruning methods to PNNs undermine the performance of PNNs because of the different representations of 2D images and 3D point clouds as well as the network architecture disparity. In this paper, we proposed CP$^3$, which is a Channel Pruning Plug-in for Point-based network. CP$^3$ is elaborately designed to leverage the characteristics of point clouds and PNNs in order to enable 2D channel pruning methods for PNNs. Specifically, it presents a coordinate-enhanced channel importance metric to reflect the correlation between dimensional information and individual channel features, and it recycles the discarded points in PNN's sampling process and reconsiders their potentially-exclusive information to enhance the robustness of channel pruning. Experiments on various PNN architectures show that CP$^3$ constantly improves state-of-the-art 2D CNN pruning approaches on different point cloud tasks. For instance, our compressed PointNeXt-S on ScanObjectNN achieves an accuracy of 88.52% with a pruning rate of 57.8%, outperforming the baseline pruning methods with an accuracy gain of 1.94%.
-
-</details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Deep learning algorithms are increasingly employed at the edge. However, edge devices are resource constrained and thus require efficient deployment of deep neural networks. Pruning methods are a key tool for edge deployment as they can improve storage, compute, memory bandwidth, and energy usage. In this paper we propose a novel accurate pruning technique that allows precise control over the output network size. Our method uses an efficient optimal transportation scheme which we make end-to-end differentiable and which automatically tunes the exploration-exploitation behavior of the algorithm to find accurate sparse sub-networks. We show that our method achieves state-of-the-art performance compared to previous pruning methods on 3 different datasets, using 5 different models, across a wide range of pruning ratios, and with two types of sparsity budgets and pruning granularities.
-
-</details>
-
-### HollowNeRF: Pruning Hashgrid-Based NeRFs with Trainable Collision Mitigation.
-- **链接**: [arXiv:2308.10122](https://arxiv.org/abs/2308.10122) · 📚 被引 15
-- **作者**: Xiufeng Xie, Riccardo Gherardi, Zhihong Pan, Stephen Huang
-- **🏷️ 机构**: Oppo Mobile Telecommunications Corp.,Palo Alto,CA,USA,94303
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Neural radiance fields (NeRF) have garnered significant attention, with recent works such as Instant-NGP accelerating NeRF training and evaluation through a combination of hashgrid-based positional encoding and neural networks. However, effectively leveraging the spatial sparsity of 3D scenes remains a challenge. To cull away unnecessary regions of the feature grid, existing solutions rely on prior knowledge of object shape or periodically estimate object shape during training by repeated model evaluations, which are costly and wasteful. To address this issue, we propose HollowNeRF, a novel compression solution for hashgrid-based NeRF which automatically sparsifies the feature grid during the training phase. Instead of directly compressing dense features, HollowNeRF trains a coarse 3D saliency mask that guides efficient feature pruning, and employs an alternating direction method of multipliers (ADMM) pruner to sparsify the 3D saliency mask during training. By exploiting the sparsity in the 3D scene to redistribute hash collisions, HollowNeRF improves rendering quality while using a fraction of the parameters of comparable state-of-the-art solutions, leading to a better cost-accuracy trade-off. Our method delivers comparable rendering quality to Instant-NGP, while utilizing just 31% of the parameters. In addition, our solution can achieve a PSNR accuracy gain of up to 1dB using only 56% of the parameters.
-
-</details>
-
-### Efficient Joint Optimization of Layer-Adaptive Weight Pruning in Deep Neural Networks.
-- **链接**: [arXiv:2308.10438](https://arxiv.org/abs/2308.10438) · [代码](https://github.com/Akimoto-Cris/RD_VIT_PRUNE) · 📚 被引 29
-- **作者**: Kaixin Xu, Zhe Wang, Xue Geng, Min Wu, Xiaoli Li, Weisi Lin
-- **🏷️ 机构**: Technology and Research (A*STAR),Institute for Infocomm Research (I2R), Agency for Science,Singapore,138632, Nanyang Technological University,Singapore
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this paper, we propose a novel layer-adaptive weight-pruning approach for Deep Neural Networks (DNNs) that addresses the challenge of optimizing the output distortion minimization while adhering to a target pruning ratio constraint. Our approach takes into account the collective influence of all layers to design a layer-adaptive pruning scheme. We discover and utilize a very important additivity property of output distortion caused by pruning weights on multiple layers. This property enables us to formulate the pruning as a combinatorial optimization problem and efficiently solve it through dynamic programming. By decomposing the problem into sub-problems, we achieve linear time complexity, making our optimization algorithm fast and feasible to run on CPUs. Our extensive experiments demonstrate the superiority of our approach over existing methods on the ImageNet and CIFAR-10 datasets. On CIFAR-10, our method achieves remarkable improvements, outperforming others by up to 1.0% for ResNet-32, 0.5% for VGG-16, and 0.7% for DenseNet-121 in terms of top-1 accuracy. On ImageNet, we achieve up to 4.7% and 4.6% higher top-1 accuracy compared to other methods for VGG-16 and ResNet-50, respectively. These results highlight the effectiveness and practicality of our approach for enhancing DNN performance through layer-adaptive weight pruning. Code will be available on https://github.com/Akimoto-Cris/RD_VIT_PRUNE.
-
-</details>
-
-### Towards Fairness-aware Adversarial Network Pruning.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00477) · 📚 被引 6
-- **作者**: Lei Zhang, Zhibo Wang, Xiaowei Dong, Yunhe Feng, Xiaoyi Pang, Zhifei Zhang et al.
-- **🏷️ 机构**: Zhejiang University, Wuhan University, University of North Texas
-- **会议**: ICCV 2023
-
-### CoroNetGAN: Controlled Pruning of GANs via Hypernetworks.
-- **链接**: [arXiv:2403.08261](https://arxiv.org/abs/2403.08261) · 📚 被引 3
-- **作者**: Aman Kumar, Khushboo Anand, Shubham Mandloi, Ashutosh Mishra, Avinash Thakur, Neeraj Kasera et al.
-- **🏷️ 机构**: OPPO Mobiles R &#x0026; D Center,Hyderabad,India, Indian Institute of Science,Bangalore
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Generative Adversarial Networks (GANs) have proven to exhibit remarkable performance and are widely used across many generative computer vision applications. However, the unprecedented demand for the deployment of GANs on resource-constrained edge devices still poses a challenge due to huge number of parameters involved in the generation process. This has led to focused attention on the area of compressing GANs. Most of the existing works use knowledge distillation with the overhead of teacher dependency. Moreover, there is no ability to control the degree of compression in these methods. Hence, we propose CoroNet-GAN for compressing GAN using the combined strength of differentiable pruning method via hypernetworks. The proposed method provides the advantage of performing controllable compression while training along with reducing training time by a substantial factor. Experiments have been done on various conditional GAN architectures (Pix2Pix and CycleGAN) to signify the effectiveness of our approach on multiple benchmark datasets such as Edges-to-Shoes, Horse-to-Zebra and Summer-to-Winter. The results obtained illustrate that our approach succeeds to outperform the baselines on Zebra-to-Horse and Summer-to-Winter achieving the best FID score of 32.3 and 72.3 respectively, yielding high-fidelity images across all the datasets. Additionally, our approach also outperforms the state-of-the-art methods in achieving better inference time on various smart-phone chipsets and data-types making it a feasible solution for deployment on edge devices.
-
-</details>
-
-### Can Unstructured Pruning Reduce the Depth in Deep Neural Networks?
-- **链接**: [arXiv:2308.06619](https://arxiv.org/abs/2308.06619) · 📚 被引 29
-- **作者**: Zhu Liao, Victor Quétu, Van-Tam Nguyen, Enzo Tartaglione
-- **🏷️ 机构**: Institut Polytechnique de Paris,LTCI, T&#x00E9;l&#x00E9;com Paris,France
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Pruning is a widely used technique for reducing the size of deep neural networks while maintaining their performance. However, such a technique, despite being able to massively compress deep models, is hardly able to remove entire layers from a model (even when structured): is this an addressable task? In this study, we introduce EGP, an innovative Entropy Guided Pruning algorithm aimed at reducing the size of deep neural networks while preserving their performance. The key focus of EGP is to prioritize pruning connections in layers with low entropy, ultimately leading to their complete removal. Through extensive experiments conducted on popular models like ResNet-18 and Swin-T, our findings demonstrate that EGP effectively compresses deep neural networks while maintaining competitive performance levels. Our results not only shed light on the underlying mechanism behind the advantages of unstructured pruning, but also pave the way for further investigations into the intricate relationship between entropy, pruning techniques, and deep learning performance. The EGP algorithm and its insights hold great promise for advancing the field of network compression and optimization. The source code for EGP is released open-source.
-
-</details>
-
-### Shannon Strikes Again! Entropy-based Pruning in Deep Neural Networks for Transfer Learning under Extreme Memory and Computation Budgets.
-- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00165) · 📚 被引 6
-- **作者**: Gabriele Spadaro, Riccardo Renzulli, Andrea Bragagnolo, Jhony H. Giraldo, Attilio Fiandrotti, Marco Grangetto et al.
-- **🏷️ 机构**: University of Turin,Computer Science Department,Italy, Independent Researcher, T&#x00E9;l&#x00E9;com Paris - Institut Polytechnique de Paris,LTCI,France
-- **会议**: ICCV 2023
-
-### Accelerating Deep Neural Networks via Semi-Structured Activation Sparsity.
-- **链接**: [arXiv:2309.06626](https://arxiv.org/abs/2309.06626) · 📚 被引 2
-- **作者**: Matteo Grimaldi, Darshan C. Ganji, Ivan Lazarevich, Sudhakar Sah Deeplite
+### MIMT: Masked Image Modeling Transformer for Video Compression.
+- **链接**: [出版页](https://openreview.net/forum?id=j9m-mVnndbm)
+- **作者**: Jinxi Xiang, Kuan Tian, Jun Zhang
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
+- **会议**: ICLR 2023
+
+### Dataset Pruning: Reducing Training Data by Examining Generalization Influence.
+- **链接**: [arXiv:2205.09329](https://arxiv.org/abs/2205.09329) · 📚 被引 0
+- **作者**: Shuo Yang, Zeke Xie, Hanyu Peng, Min Xu, Mingming Sun, Ping Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The demand for efficient processing of deep neural networks (DNNs) on embedded devices is a significant challenge limiting their deployment. Exploiting sparsity in the network's feature maps is one of the ways to reduce its inference latency. It is known that unstructured sparsity results in lower accuracy degradation with respect to structured sparsity but the former needs extensive inference engine changes to get latency benefits. To tackle this challenge, we propose a solution to induce semi-structured activation sparsity exploitable through minor runtime modifications. To attain high speedup levels at inference time, we design a sparse training procedure with awareness of the final position of the activations while computing the General Matrix Multiplication (GEMM). We extensively evaluate the proposed solution across various models for image classification and object detection tasks. Remarkably, our approach yields a speed improvement of $1.25 \times$ with a minimal accuracy drop of $1.1\%$ for the ResNet18 model on the ImageNet dataset. Furthermore, when combined with a state-of-the-art structured pruning method, the resulting models provide a good latency-accuracy trade-off, outperforming models that solely employ structured pruning techniques.
+> The great success of deep learning heavily relies on increasingly larger training data, which comes at a price of huge computational and infrastructural costs. This poses crucial questions that, do all training data contribute to model's performance? How much does each individual training sample or a sub-training-set affect the model's generalization, and how to construct the smallest subset from the entire training data as a proxy training set without significantly sacrificing the model's performance? To answer these, we propose dataset pruning, an optimization-based sample selection method that can (1) examine the influence of removing a particular set of training samples on model's generalization ability with theoretical guarantee, and (2) construct the smallest subset of training data that yields strictly constrained generalization gap. The empirically observed generalization gap of dataset pruning is substantially consistent with our theoretical expectations. Furthermore, the proposed method prunes 40% training examples on the CIFAR-10 dataset, halves the convergence time with only 1.3% test accuracy decrease, which is superior to previous score-based sample selection methods.
 
 </details>
 
-- Growing a Brain with Sparsity-Inducing Generation for Continual Learning. → [continual-learning](../continual-learning/Guideline%202023.md)
+### A Unified Framework for Soft Threshold Pruning.
+- **链接**: [arXiv:2302.13019](https://arxiv.org/abs/2302.13019) · [代码](https://github.com/Yanqi-Chen/LATS)
+- **作者**: Yanqi Chen, Zhengyu Ma, Wei Fang, Xiawu Zheng, Zhaofei Yu, Yonghong Tian
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Soft threshold pruning is among the cutting-edge pruning methods with state-of-the-art performance. However, previous methods either perform aimless searching on the threshold scheduler or simply set the threshold trainable, lacking theoretical explanation from a unified perspective. In this work, we reformulate soft threshold pruning as an implicit optimization problem solved using the Iterative Shrinkage-Thresholding Algorithm (ISTA), a classic method from the fields of sparse recovery and compressed sensing. Under this theoretical framework, all threshold tuning strategies proposed in previous studies of soft threshold pruning are concluded as different styles of tuning $L_1$-regularization term. We further derive an optimal threshold scheduler through an in-depth study of threshold scheduling based on our framework. This scheduler keeps $L_1$-regularization coefficient stable, implying a time-invariant objective function from the perspective of optimization. In principle, the derived pruning algorithm could sparsify any mathematical model trained via SGD. We conduct extensive experiments and verify its state-of-the-art performance on both Artificial Neural Networks (ResNet-50 and MobileNet-V1) and Spiking Neural Networks (SEW ResNet-18) on ImageNet datasets. On the basis of this framework, we derive a family of pruning methods, including sparsify-during-training, early pruning, and pruning at initialization. The code is available at https://github.com/Yanqi-Chen/LATS.
+
+</details>
+
+### Pruning Deep Neural Networks from a Sparsity Perspective.
+- **链接**: [arXiv:2302.05601](https://arxiv.org/abs/2302.05601)
+- **作者**: Enmao Diao, Ganghua Wang, Jiawei Zhang, Yuhong Yang, Jie Ding, Vahid Tarokh
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In recent years, deep network pruning has attracted significant attention in order to enable the rapid deployment of AI into small devices with computation and memory constraints. Pruning is often achieved by dropping redundant weights, neurons, or layers of a deep network while attempting to retain a comparable test performance. Many deep pruning algorithms have been proposed with impressive empirical success. However, existing approaches lack a quantifiable measure to estimate the compressibility of a sub-network during each pruning iteration and thus may under-prune or over-prune the model. In this work, we propose PQ Index (PQI) to measure the potential compressibility of deep neural networks and use this to develop a Sparsity-informed Adaptive Pruning (SAP) algorithm. Our extensive experiments corroborate the hypothesis that for a generic pruning procedure, PQI decreases first when a large model is being effectively regularized and then increases when its compressibility reaches a limit that appears to correspond to the beginning of underfitting. Subsequently, PQI decreases again when the model collapse and significant deterioration in the performance of the model start to occur. Additionally, our experiments demonstrate that the proposed adaptive pruning algorithm with proper choice of hyper-parameters is superior to the iterative pruning algorithms such as the lottery ticket-based pruning methods, in terms of both compression efficiency and robustness.
+
+</details>
+
+### Revisiting Pruning at Initialization Through the Lens of Ramanujan Graph.
+- **链接**: [出版页](https://openreview.net/forum?id=uVcDssQff_)
+- **作者**: Duc N. M. Hoang, Shiwei Liu, Radu Marculescu, Zhangyang Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+### TVSPrune - Pruning Non-discriminative filters via Total Variation separability of intermediate representations without fine tuning.
+- **链接**: [出版页](https://openreview.net/forum?id=sZI1Oj9KBKy)
+- **作者**: Chaitanya Murti, Tanay Narshana, Chiranjib Bhattacharyya
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+### DFPC: Data flow driven pruning of coupled channels without data.
+- **链接**: [出版页](https://openreview.net/forum?id=mhnHqRqcjYU)
+- **作者**: Tanay Narshana, Chaitanya Murti, Chiranjib Bhattacharyya
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+### Bit-Pruning: A Sparse Multiplication-Less Dot-Product.
+- **链接**: [出版页](https://openreview.net/forum?id=YUDiZcZTI8)
+- **作者**: Yusuke Sekikawa, Shingo Yashima
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+### Trainability Preserving Neural Pruning.
+- **链接**: [出版页](https://openreview.net/forum?id=AZFvpnnewr)
+- **作者**: Huan Wang, Yun Fu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+### NTK-SAP: Improving neural network pruning by aligning training dynamics.
+- **链接**: [arXiv:2304.02840](https://arxiv.org/abs/2304.02840)
+- **作者**: Yite Wang, Dawei Li, Ruoyu Sun
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Pruning neural networks before training has received increasing interest due to its potential to reduce training time and memory. One popular method is to prune the connections based on a certain metric, but it is not entirely clear what metric is the best choice. Recent advances in neural tangent kernel (NTK) theory suggest that the training dynamics of large enough neural networks is closely related to the spectrum of the NTK. Motivated by this finding, we propose to prune the connections that have the least influence on the spectrum of the NTK. This method can help maintain the NTK spectrum, which may help align the training dynamics to that of its dense counterpart. However, one possible issue is that the fixed-weight-NTK corresponding to a given initial point can be very different from the NTK corresponding to later iterates during the training phase. We further propose to sample multiple realizations of random weights to estimate the NTK spectrum. Note that our approach is weight-agnostic, which is different from most existing methods that are weight-dependent. In addition, we use random inputs to compute the fixed-weight-NTK, making our method data-agnostic as well. We name our foresight pruning algorithm Neural Tangent Kernel Spectrum-Aware Pruning (NTK-SAP). Empirically, our method achieves better performance than all baselines on multiple datasets.
+
+</details>
+
+### Symmetric Pruning in Quantum Neural Networks.
+- **链接**: [arXiv:2208.14057](https://arxiv.org/abs/2208.14057)
+- **作者**: Xinbiao Wang, Junyu Liu, Tongliang Liu, Yong Luo, Yuxuan Du, Dacheng Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Many fundamental properties of a quantum system are captured by its Hamiltonian and ground state. Despite the significance of ground states preparation (GSP), this task is classically intractable for large-scale Hamiltonians. Quantum neural networks (QNNs), which exert the power of modern quantum machines, have emerged as a leading protocol to conquer this issue. As such, how to enhance the performance of QNNs becomes a crucial topic in GSP. Empirical evidence showed that QNNs with handcraft symmetric ansatzes generally experience better trainability than those with asymmetric ansatzes, while theoretical explanations have not been explored. To fill this knowledge gap, here we propose the effective quantum neural tangent kernel (EQNTK) and connect this concept with over-parameterization theory to quantify the convergence of QNNs towards the global optima. We uncover that the advance of symmetric ansatzes attributes to their large EQNTK value with low effective dimension, which requests few parameters and quantum circuit depth to reach the over-parameterization regime permitting a benign loss landscape and fast convergence. Guided by EQNTK, we further devise a symmetric pruning (SP) scheme to automatically tailor a symmetric ansatz from an over-parameterized and asymmetric one to greatly improve the performance of QNNs when the explicit symmetry information of Hamiltonian is unavailable. Extensive numerical simulations are conducted to validate the analytical results of EQNTK and the effectiveness of SP.
+
+</details>
+
+### Holistic Adversarially Robust Pruning.
+- **链接**: [arXiv:2412.14714](https://arxiv.org/abs/2412.14714)
+- **作者**: Qi Zhao, Christian Wressnegger
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Neural networks can be drastically shrunk in size by removing redundant parameters. While crucial for the deployment on resource-constraint hardware, oftentimes, compression comes with a severe drop in accuracy and lack of adversarial robustness. Despite recent advances, counteracting both aspects has only succeeded for moderate compression rates so far. We propose a novel method, HARP, that copes with aggressive pruning significantly better than prior work. For this, we consider the network holistically. We learn a global compression strategy that optimizes how many parameters (compression rate) and which parameters (scoring connections) to prune specific to each layer individually. Our method fine-tunes an existing model with dynamic regularization, that follows a step-wise incremental function balancing the different objectives. It starts by favoring robustness before shifting focus on reaching the target compression rate and only then handles the objectives equally. The learned compression strategies allow us to maintain the pre-trained model natural accuracy and its adversarial robustness for a reduction by 99% of the network original size. Moreover, we observe a crucial influence of non-uniform compression across layers.
+
+</details>
+
+### Coverage-centric Coreset Selection for High Pruning Rates.
+- **链接**: [arXiv:2210.15809](https://arxiv.org/abs/2210.15809) · [代码](https://github.com/haizhongzheng/Coverage-centric-coreset-selection)
+- **作者**: Haizhong Zheng, Rui Liu, Fan Lai, Atul Prakash
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> One-shot coreset selection aims to select a representative subset of the training data, given a pruning rate, that can later be used to train future models while retaining high accuracy. State-of-the-art coreset selection methods pick the highest importance examples based on an importance metric and are found to perform well at low pruning rates. However, at high pruning rates, they suffer from a catastrophic accuracy drop, performing worse than even random sampling. This paper explores the reasons behind this accuracy drop both theoretically and empirically. We first propose a novel metric to measure the coverage of a dataset on a specific distribution by extending the classical geometric set cover problem to a distribution cover problem. This metric helps explain why coresets selected by SOTA methods at high pruning rates perform poorly compared to random sampling because of worse data coverage. We then propose a novel one-shot coreset selection method, Coverage-centric Coreset Selection (CCS), that jointly considers overall data coverage upon a distribution as well as the importance of each example. We evaluate CCS on five datasets and show that, at high pruning rates (e.g., 90%), it achieves significantly better accuracy than previous SOTA methods (e.g., at least 19.56% higher on CIFAR10) as well as random selection (e.g., 7.04% higher on CIFAR10) and comparable accuracy at low pruning rates. We make our code publicly available at https://github.com/haizhongzheng/Coverage-centric-coreset-selection.
+
+</details>
+
+### Minimum Variance Unbiased N: M Sparsity for the Neural Gradients.
+- **链接**: [出版页](https://openreview.net/forum?id=vuD2xEtxZcj)
+- **作者**: Brian Chmiel, Itay Hubara, Ron Banner, Daniel Soudry
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+### Rethinking Graph Lottery Tickets: Graph Sparsity Matters.
+- **链接**: [arXiv:2305.02190](https://arxiv.org/abs/2305.02190)
+- **作者**: Bo Hui, Da Yan, Xiaolong Ma, Wei-Shinn Ku
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Lottery Ticket Hypothesis (LTH) claims the existence of a winning ticket (i.e., a properly pruned sub-network together with original weight initialization) that can achieve competitive performance to the original dense network. A recent work, called UGS, extended LTH to prune graph neural networks (GNNs) for effectively accelerating GNN inference. UGS simultaneously prunes the graph adjacency matrix and the model weights using the same masking mechanism, but since the roles of the graph adjacency matrix and the weight matrices are very different, we find that their sparsifications lead to different performance characteristics. Specifically, we find that the performance of a sparsified GNN degrades significantly when the graph sparsity goes beyond a certain extent. Therefore, we propose two techniques to improve GNN performance when the graph sparsity is high. First, UGS prunes the adjacency matrix using a loss formulation which, however, does not properly involve all elements of the adjacency matrix; in contrast, we add a new auxiliary loss head to better guide the edge pruning by involving the entire adjacency matrix. Second, by regarding unfavorable graph sparsification as adversarial data perturbations, we formulate the pruning process as a min-max optimization problem to gain the robustness of lottery tickets when the graph sparsity is high. We further investigate the question: Can the "retrainable" winning ticket of a GNN be also effective for graph transferring learning? We call it the transferable graph lottery ticket (GLT) hypothesis. Extensive experiments were conducted which demonstrate the superiority of our proposed sparsification method over UGS, and which empirically verified our transferable GLT hypothesis.
+
+</details>
+
+### Implicit Regularization for Group Sparsity.
+- **链接**: [arXiv:2301.12540](https://arxiv.org/abs/2301.12540)
+- **作者**: Jiangyuan Li, Thanh Van Nguyen, Chinmay Hegde, Raymond K. W. Wong
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We study the implicit regularization of gradient descent towards structured sparsity via a novel neural reparameterization, which we call a diagonally grouped linear neural network. We show the following intriguing property of our reparameterization: gradient descent over the squared regression loss, without any explicit regularization, biases towards solutions with a group sparsity structure. In contrast to many existing works in understanding implicit regularization, we prove that our training trajectory cannot be simulated by mirror descent. We analyze the gradient dynamics of the corresponding regression problem in the general noise setting and obtain minimax-optimal error rates. Compared to existing bounds for implicit sparse regularization using diagonal linear networks, our analysis with the new reparameterization shows improved sample complexity. In the degenerate case of size-one groups, our approach gives rise to a new algorithm for sparse linear regression. Finally, we demonstrate the efficacy of our approach with several numerical experiments.
+
+</details>
+
+### The Lazy Neuron Phenomenon: On Emergence of Activation Sparsity in Transformers.
+- **链接**: [出版页](https://openreview.net/forum?id=TJ2nxciYCk-)
+- **作者**: Zonglin Li, Chong You, Srinadh Bhojanapalli, Daliang Li, Ankit Singh Rawat, Sashank J. Reddi et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+### More ConvNets in the 2020s: Scaling up Kernels Beyond 51x51 using Sparsity.
+- **链接**: [arXiv:2207.03620](https://arxiv.org/abs/2207.03620)
+- **作者**: Shiwei Liu, Tianlong Chen, Xiaohan Chen, Xuxi Chen, Qiao Xiao, Boqian Wu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Transformers have quickly shined in the computer vision world since the emergence of Vision Transformers (ViTs). The dominant role of convolutional neural networks (CNNs) seems to be challenged by increasingly effective transformer-based models. Very recently, a couple of advanced convolutional models strike back with large kernels motivated by the local-window attention mechanism, showing appealing performance and efficiency. While one of them, i.e. RepLKNet, impressively manages to scale the kernel size to 31x31 with improved performance, the performance starts to saturate as the kernel size continues growing, compared to the scaling trend of advanced ViTs such as Swin Transformer. In this paper, we explore the possibility of training extreme convolutions larger than 31x31 and test whether the performance gap can be eliminated by strategically enlarging convolutions. This study ends up with a recipe for applying extremely large kernels from the perspective of sparsity, which can smoothly scale up kernels to 61x61 with better performance. Built on this recipe, we propose Sparse Large Kernel Network (SLaK), a pure CNN architecture equipped with sparse factorized 51x51 kernels that can perform on par with or better than state-of-the-art hierarchical Transformers and modern ConvNet architectures like ConvNeXt and RepLKNet, on ImageNet classification as well as a wide range of downstream tasks including semantic segmentation on ADE20K, object detection on PASCAL VOC 2007, and object detection/segmentation on MS COCO.
+
+</details>
+
+### Sparsity May Cry: Let Us Fail (Current) Sparse Neural Networks Together!
+- **链接**: [arXiv:2303.02141](https://arxiv.org/abs/2303.02141)
+- **作者**: Shiwei Liu, Tianlong Chen, Zhenyu Zhang, Xuxi Chen, Tianjin Huang, Ajay Kumar Jaiswal et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Sparse Neural Networks (SNNs) have received voluminous attention predominantly due to growing computational and memory footprints of consistently exploding parameter count in large-scale models. Similar to their dense counterparts, recent SNNs generalize just as well and are equipped with numerous favorable benefits (e.g., low complexity, high scalability, and robustness), sometimes even better than the original dense networks. As research effort is focused on developing increasingly sophisticated sparse algorithms, it is startling that a comprehensive benchmark to evaluate the effectiveness of these algorithms has been highly overlooked. In absence of a carefully crafted evaluation benchmark, most if not all, sparse algorithms are evaluated against fairly simple and naive tasks (eg. CIFAR, ImageNet, GLUE, etc.), which can potentially camouflage many advantages as well unexpected predicaments of SNNs. In pursuit of a more general evaluation and unveiling the true potential of sparse algorithms, we introduce "Sparsity May Cry" Benchmark (SMC-Bench), a collection of carefully-curated 4 diverse tasks with 10 datasets, that accounts for capturing a wide range of domain-specific and sophisticated knowledge. Our systemic evaluation of the most representative sparse algorithms reveals an important obscured observation: the state-of-the-art magnitude- and/or gradient-based sparse algorithms seemingly fail to perform on SMC-Bench when applied out-of-the-box, sometimes at significantly trivial sparsity as low as 5%. By incorporating these well-thought and diverse tasks, SMC-Bench is designed to favor and encourage the development of more scalable and generalizable sparse algorithms.
+
+</details>
+
+### Sparsity-Constrained Optimal Transport.
+- **链接**: [arXiv:2209.15466](https://arxiv.org/abs/2209.15466)
+- **作者**: Tianlin Liu, Joan Puigcerver, Mathieu Blondel
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Regularized optimal transport (OT) is now increasingly used as a loss or as a matching layer in neural networks. Entropy-regularized OT can be computed using the Sinkhorn algorithm but it leads to fully-dense transportation plans, meaning that all sources are (fractionally) matched with all targets. To address this issue, several works have investigated quadratic regularization instead. This regularization preserves sparsity and leads to unconstrained and smooth (semi) dual objectives, that can be solved with off-the-shelf gradient methods. Unfortunately, quadratic regularization does not give direct control over the cardinality (number of nonzeros) of the transportation plan. We propose in this paper a new approach for OT with explicit cardinality constraints on the transportation plan. Our work is motivated by an application to sparse mixture of experts, where OT can be used to match input tokens such as image patches with expert models such as neural networks. Cardinality constraints ensure that at most $k$ tokens are matched with an expert, which is crucial for computational performance reasons. Despite the nonconvexity of cardinality constraints, we show that the corresponding (semi) dual problems are tractable and can be solved with first-order gradient methods. Our method can be thought as a middle ground between unregularized OT (recovered in the limit case $k=1$) and quadratically-regularized OT (recovered when $k$ is large enough). The smoothness of the objectives increases as $k$ increases, giving rise to a trade-off between convergence speed and sparsity of the optimal plan.
+
+</details>
+
+### Efficient recurrent architectures through activity sparsity and sparse back-propagation through time.
+- **链接**: [出版页](https://openreview.net/forum?id=lJdOlWg8td)
+- **作者**: Anand Subramoney, Khaleelulla Khan Nazeer, Mark Schöne, Christian Mayr, David Kappel
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2023
