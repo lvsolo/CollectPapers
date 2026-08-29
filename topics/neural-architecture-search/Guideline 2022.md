@@ -1,93 +1,47 @@
 # Neural Architecture Search — 2022 Guideline
 
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
-> 论文数: 11 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### BLOX: Macro Neural Architecture Search Benchmark and Algorithms.
-- **链接**: [arXiv:2210.07271](https://arxiv.org/abs/2210.07271) · [代码](https://github.com/SamsungLabs/blox) · 📚 被引 1
-- **作者**: Thomas Chau, Lukasz Dudziak, Hongkai Wen, Nicholas D. Lane, Mohamed S. Abdelfattah
+### Arch-Graph: Acyclic Architecture Relation Predictor for Task-Transferable Neural Architecture Search.
+- **链接**: [arXiv:2204.05941](https://arxiv.org/abs/2204.05941) · 📚 被引 21
+- **作者**: Minbin Huang, Zhijian Huang, Changlin Li, Xin Chen, Hang Xu, Zhenguo Li et al.
+- **🏷️ 机构**: Shenzhen Campus of Sun Yat-sen University, ReLER AAII, UTS, The University of Hong Kong
+- **会议**: CVPR 2022
+
+### Large-Scale Graph Neural Architecture Search.
+- **链接**: [出版页](https://proceedings.mlr.press/v162/guan22d.html)
+- **作者**: Chaoyu Guan, Xin Wang, Hong Chen, Ziwei Zhang, Wenwu Zhu
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
+- **会议**: ICML 2022
+
+> Neural Architecture Search (NAS) aims to find efficient models for multiple tasks. Beyond seeking solutions for a single task, there are surging interests in transferring network design knowledge across multiple tasks. In this line of research, effectively modeling task correlations is vital yet highly neglected. Therefore, we propose \textbf{Arch-Graph}, a transferable NAS method that predicts task-specific optimal architectures with respect to given task embeddings. It leverages correlations across multiple tasks by using their embeddings as a part of the predictor's input for fast adaptation. We also formulate NAS as an architecture relation graph prediction problem, with the relational graph constructed by treating candidate architectures as nodes and their pairwise relations as edges. To enforce some basic properties such as acyclicity in the relational graph, we add additional constraints to the optimization process, converting NAS into the problem of finding a Maximal Weighted Acyclic Subgraph (MWAS). Our algorithm then strives to eliminate cycles and only establish edges in the graph if the rank results can be trusted. Through MWAS, Arch-Graph can effectively rank candidate models for each task with only a small budget to finetune the predictor. With extensive experiments on TransNAS-Bench-101, we show Arch-Graph's transferability and high sample efficiency across numerous tasks, beating many NAS methods designed for both single-task and multi-task search. It is able to find top 0.16\% and 0.29\% architectures on average on two search spaces under the budget of only 50 models.
+
+### AGNAS: Attention-Guided Micro and Macro-Architecture Search.
+- **链接**: [出版页](https://proceedings.mlr.press/v162/sun22a.html)
+- **作者**: Zihao Sun, Yu Hu, Shun Lu, Longxing Yang, Jilin Mei, Yinhe Han et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2022
+
+### ISNAS-DIP: Image-Specific Neural Architecture Search for Deep Image Prior.
+- **链接**: [arXiv:2111.15362](https://arxiv.org/abs/2111.15362) · [代码](https://github.com/ozgurkara99/ISNAS-DIP) · 📚 被引 18
+- **作者**: Metin Ersin Arican, Ozgur Kara, Gustav Bredell, Ender Konukoglu
+- **🏷️ 机构**: Bogazici University,Department of Electrical and Electronics Engineering,Istanbul,Turkey, ETH-Zurich,Department of Information Technology and Electrical Engineering,Zurich,Switzerland
+- **会议**: CVPR 2022
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Neural architecture search (NAS) has been successfully used to design numerous high-performance neural networks. However, NAS is typically compute-intensive, so most existing approaches restrict the search to decide the operations and topological structure of a single block only, then the same block is stacked repeatedly to form an end-to-end model. Although such an approach reduces the size of search space, recent studies show that a macro search space, which allows blocks in a model to be different, can lead to better performance. To provide a systematic study of the performance of NAS algorithms on a macro search space, we release Blox - a benchmark that consists of 91k unique models trained on the CIFAR-100 dataset. The dataset also includes runtime measurements of all the models on a diverse set of hardware platforms. We perform extensive experiments to compare existing algorithms that are well studied on cell-based search spaces, with the emerging blockwise approaches that aim to make NAS scalable to much larger macro search spaces. The benchmark and code are available at https://github.com/SamsungLabs/blox.
+> Recent works show that convolutional neural network (CNN) architectures have a spectral bias towards lower frequencies, which has been leveraged for various image restoration tasks in the Deep Image Prior (DIP) framework. The benefit of the inductive bias the network imposes in the DIP framework depends on the architecture. Therefore, researchers have studied how to automate the search to determine the best-performing model. However, common neural architecture search (NAS) techniques are resource and time-intensive. Moreover, best-performing models are determined for a whole dataset of images instead of for each image independently, which would be prohibitively expensive. In this work, we first show that optimal neural architectures in the DIP framework are image-dependent. Leveraging this insight, we then propose an image-specific NAS strategy for the DIP framework that requires substantially less training than typical NAS approaches, effectively enabling image-specific NAS. We justify the proposed strategy's effectiveness by (1) demonstrating its performance on a NAS Dataset for DIP that includes 522 models from a particular search space (2) conducting extensive experiments on image denoising, inpainting, and super-resolution tasks. Our experiments show that image-specific metrics can reduce the search space to a small cohort of models, of which the best model outperforms current NAS approaches for image restoration. Codes and datasets are available at https://github.com/ozgurkara99/ISNAS-DIP.
 
 </details>
 
-### Saliency-Aware Neural Architecture Search.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/5e84e4413268b713f0d4a1b23a9dae57-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Ramtin Hosseini, Pengtao Xie
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
-
-### LiteTransformerSearch: Training-free Neural Architecture Search for Efficient Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/9949e6906be6448230cdba9a4cb2d564-Abstract-Conference.html) · 📚 被引 3
-- **作者**: Mojan Javaheripi, Gustavo de Rosa, Subhabrata Mukherjee, Shital Shah, Tomasz Religa, Caio César Teodoro Mendes et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
-
-### NAS-Bench-Graph: Benchmarking Graph Neural Architecture Search.
-- **链接**: [arXiv:2206.09166](https://arxiv.org/abs/2206.09166) · 📚 被引 5
-- **作者**: Yijian Qin, Ziwei Zhang, Xin Wang, Zeyang Zhang, Wenwu Zhu
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Graph neural architecture search (GraphNAS) has recently aroused considerable attention in both academia and industry. However, two key challenges seriously hinder the further research of GraphNAS. First, since there is no consensus for the experimental setting, the empirical results in different research papers are often not comparable and even not reproducible, leading to unfair comparisons. Secondly, GraphNAS often needs extensive computations, which makes it highly inefficient and inaccessible to researchers without access to large-scale computation. To solve these challenges, we propose NAS-Bench-Graph, a tailored benchmark that supports unified, reproducible, and efficient evaluations for GraphNAS. Specifically, we construct a unified, expressive yet compact search space, covering 26,206 unique graph neural network (GNN) architectures and propose a principled evaluation protocol. To avoid unnecessary repetitive training, we have trained and evaluated all of these architectures on nine representative graph datasets, recording detailed metrics including train, validation, and test performance in each epoch, the latency, the number of parameters, etc. Based on our proposed benchmark, the performance of GNN architectures can be directly obtained by a look-up table without any further computation, which enables fair, fully reproducible, and efficient comparisons. To demonstrate its usage, we make in-depth analyses of our proposed NAS-Bench-Graph, revealing several interesting findings for GraphNAS. We also showcase how the benchmark can be easily compatible with GraphNAS open libraries such as AutoGL and NNI. To the best of our knowledge, our work is the first benchmark for graph neural architecture search.
-
-</details>
-
-### Efficient Architecture Search for Diverse Tasks.
-- **链接**: [arXiv:2204.07554](https://arxiv.org/abs/2204.07554) · 📚 被引 5
-- **作者**: Junhong Shen, Mikhail Khodak, Ameet Talwalkar
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> While neural architecture search (NAS) has enabled automated machine learning (AutoML) for well-researched areas, its application to tasks beyond computer vision is still under-explored. As less-studied domains are precisely those where we expect AutoML to have the greatest impact, in this work we study NAS for efficiently solving diverse problems. Seeking an approach that is fast, simple, and broadly applicable, we fix a standard convolutional network (CNN) topology and propose to search for the right kernel sizes and dilations its operations should take on. This dramatically expands the model's capacity to extract features at multiple resolutions for different types of data while only requiring search over the operation space. To overcome the efficiency challenges of naive weight-sharing in this search space, we introduce DASH, a differentiable NAS algorithm that computes the mixture-of-operations using the Fourier diagonalization of convolution, achieving both a better asymptotic complexity and an up-to-10x search time speedup in practice. We evaluate DASH on ten tasks spanning a variety of application domains such as PDE solving, protein folding, and heart disease detection. DASH outperforms state-of-the-art AutoML methods in aggregate, attaining the best-known automated performance on seven tasks. Meanwhile, on six of the ten tasks, the combined search and retraining time is less than 2x slower than simply training a CNN backbone that is far less accurate.
-
-</details>
-
-### Unifying and Boosting Gradient-Based Training-Free Neural Architecture Search.
-- **链接**: [arXiv:2201.09785](https://arxiv.org/abs/2201.09785) · 📚 被引 1
-- **作者**: Yao Shu, Zhongxiang Dai, Zhaoxuan Wu, Bryan Kian Hsiang Low
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Neural architecture search (NAS) has gained immense popularity owing to its ability to automate neural architecture design. A number of training-free metrics are recently proposed to realize NAS without training, hence making NAS more scalable. Despite their competitive empirical performances, a unified theoretical understanding of these training-free metrics is lacking. As a consequence, (a) the relationships among these metrics are unclear, (b) there is no theoretical interpretation for their empirical performances, and (c) there may exist untapped potential in existing training-free NAS, which probably can be unveiled through a unified theoretical understanding. To this end, this paper presents a unified theoretical analysis of gradient-based training-free NAS, which allows us to (a) theoretically study their relationships, (b) theoretically guarantee their generalization performances, and (c) exploit our unified theoretical understanding to develop a novel framework named hybrid NAS (HNAS) which consistently boosts training-free NAS in a principled way. Remarkably, HNAS can enjoy the advantages of both training-free (i.e., the superior search efficiency) and training-based (i.e., the remarkable search effectiveness) NAS, which we have demonstrated through extensive experiments.
-
-</details>
-
-### NAS-Bench-360: Benchmarking Neural Architecture Search on Diverse Tasks.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/506630e4a43bb9d64a49f98b9ba934e9-Abstract-Datasets_and_Benchmarks.html) · 📚 被引 4
-- **作者**: Renbo Tu, Nicholas Roberts, Mikhail Khodak, Junhong Shen, Frederic Sala, Ameet Talwalkar
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
-
-### ZARTS: On Zero-order Optimization for Neural Architecture Search.
-- **链接**: [arXiv:2110.04743](https://arxiv.org/abs/2110.04743) · 📚 被引 3
-- **作者**: Xiaoxing Wang, Wenxuan Guo, Jianlin Su, Xiaokang Yang, Junchi Yan
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Differentiable architecture search (DARTS) has been a popular one-shot paradigm for NAS due to its high efficiency. It introduces trainable architecture parameters to represent the importance of candidate operations and proposes first/second-order approximation to estimate their gradients, making it possible to solve NAS by gradient descent algorithm. However, our in-depth empirical results show that the approximation will often distort the loss landscape, leading to the biased objective to optimize and in turn inaccurate gradient estimation for architecture parameters. This work turns to zero-order optimization and proposes a novel NAS scheme, called ZARTS, to search without enforcing the above approximation. Specifically, three representative zero-order optimization methods are introduced: RS, MGS, and GLD, among which MGS performs best by balancing the accuracy and speed. Moreover, we explore the connections between RS/MGS and gradient descent algorithm and show that our ZARTS can be seen as a robust gradient-free counterpart to DARTS. Extensive experiments on multiple datasets and search spaces show the remarkable performance of our method. In particular, results on 12 benchmarks verify the outstanding robustness of ZARTS, where the performance of DARTS collapses due to its known instability issue. Also, we search on the search space of DARTS to compare with peer methods, and our discovered architecture achieves 97.54% accuracy on CIFAR-10 and 75.7% top-1 accuracy on ImageNet, which are state-of-the-art performance.
-
-</details>
-
-### Few-shot Task-agnostic Neural Architecture Search for Distilling Large Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/b7c12689a89e98a61bcaa65285a41b7c-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Dongkuan Xu, Subhabrata Mukherjee, Xiaodong Liu, Debadeepta Dey, Wenhui Wang, Xiang Zhang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
+### Demystifying the Neural Tangent Kernel from a Practical Perspective: Can it be trusted for Neural Architecture Search without training?
+- **链接**: [arXiv:2203.14577](https://arxiv.org/abs/2203.14577) · [代码](https://github.com/nutellamok/DemystifyingNTK) · 📚 被引 17
+- **作者**: Jisoo Mok, Byunggook Na, Ji-Hoon Kim, Dongyoon Han, Sungroh Yoon
+- **🏷️ 机构**: Seoul National University,Department of ECE, NAVER AI Lab
+- **会议**: CVPR 2022
 
 ### TabNAS: Rejection Sampling for Neural Architecture Search on Tabular Datasets.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/4e392aa9bc70ed731d3c9c32810f92fb-Abstract-Conference.html) · 📚 被引 1
@@ -95,8 +49,96 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2022
 
-### Interpreting Operation Selection in Differentiable Architecture Search: A Perspective from Influence-Directed Explanations.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/cf1129594f603fde9e1913d10b7dbf77-Abstract-Conference.html) · 📚 被引 1
-- **作者**: Miao Zhang, Wei Huang, Bin Yang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2022
+> In Neural Architecture Search (NAS), reducing the cost of architecture evaluation remains one of the most crucial challenges. Among a plethora of efforts to bypass training of each candidate architecture to convergence for evaluation, the Neural Tangent Kernel (NTK) is emerging as a promising theoretical framework that can be utilized to estimate the performance of a neural architecture at initialization. In this work, we revisit several at-initialization metrics that can be derived from the NTK and reveal their key shortcomings. Then, through the empirical analysis of the time evolution of NTK, we deduce that modern neural architectures exhibit highly non-linear characteristics, making the NTK-based metrics incapable of reliably estimating the performance of an architecture without some amount of training. To take such non-linear characteristics into account, we introduce Label-Gradient Alignment (LGA), a novel NTK-based metric whose inherent formulation allows it to capture the large amount of non-linear advantage present in modern neural architectures. With minimal amount of training, LGA obtains a meaningful level of rank correlation with the post-training test accuracy of an architecture. Lastly, we demonstrate that LGA, complemented with few epochs of training, successfully guides existing search algorithms to achieve competitive search performances with significantly less search cost. The code is available at: https://github.com/nutellamok/DemystifyingNTK.
+
+</details>
+
+### Distribution Consistent Neural Architecture Search.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01061) · 📚 被引 7
+- **作者**: Junyi Pan, Chong Sun, Yizhou Zhou, Ying Zhang, Chen Li
+- **🏷️ 机构**: WeChat, Tencent Inc
+- **会议**: CVPR 2022
+
+### HyperSegNAS: Bridging One-Shot Neural Architecture Search with 3D Medical Image Segmentation using HyperNet.
+- **链接**: [arXiv:2112.10652](https://arxiv.org/abs/2112.10652) · 📚 被引 32
+- **作者**: Cheng Peng, Andriy Myronenko, Ali Hatamizadeh, Vishwesh Nath, Md Mahfuzur Rahman Siddiquee, Yufan He et al.
+- **🏷️ 机构**: Johns Hopkins University, NVIDIA, Arizona State University
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Semantic segmentation of 3D medical images is a challenging task due to the high variability of the shape and pattern of objects (such as organs or tumors). Given the recent success of deep learning in medical image segmentation, Neural Architecture Search (NAS) has been introduced to find high-performance 3D segmentation network architectures. However, because of the massive computational requirements of 3D data and the discrete optimization nature of architecture search, previous NAS methods require a long search time or necessary continuous relaxation, and commonly lead to sub-optimal network architectures. While one-shot NAS can potentially address these disadvantages, its application in the segmentation domain has not been well studied in the expansive multi-scale multi-path search space. To enable one-shot NAS for medical image segmentation, our method, named HyperSegNAS, introduces a HyperNet to assist super-net training by incorporating architecture topology information. Such a HyperNet can be removed once the super-net is trained and introduces no overhead during architecture search. We show that HyperSegNAS yields better performing and more intuitive architectures compared to the previous state-of-the-art (SOTA) segmentation networks; furthermore, it can quickly and accurately find good architecture candidates under different computing constraints. Our method is evaluated on public datasets from the Medical Segmentation Decathlon (MSD) challenge, and achieves SOTA performances.
+
+</details>
+
+### Global Convergence of MAML and Theory-Inspired Neural Architecture Search for Few-Shot Learning.
+- **链接**: [arXiv:2203.09137](https://arxiv.org/abs/2203.09137) · 📚 被引 34
+- **作者**: Haoxiang Wang, Yite Wang, Ruoyu Sun, Bo Li
+- **🏷️ 机构**: University of Illinois Urbana-Champaign
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Model-agnostic meta-learning (MAML) and its variants have become popular approaches for few-shot learning. However, due to the non-convexity of deep neural nets (DNNs) and the bi-level formulation of MAML, the theoretical properties of MAML with DNNs remain largely unknown. In this paper, we first prove that MAML with over-parameterized DNNs is guaranteed to converge to global optima at a linear rate. Our convergence analysis indicates that MAML with over-parameterized DNNs is equivalent to kernel regression with a novel class of kernels, which we name as Meta Neural Tangent Kernels (MetaNTK). Then, we propose MetaNTK-NAS, a new training-free neural architecture search (NAS) method for few-shot learning that uses MetaNTK to rank and select architectures. Empirically, we compare our MetaNTK-NAS with previous NAS methods on two popular few-shot learning benchmarks, miniImageNet, and tieredImageNet. We show that the performance of MetaNTK-NAS is comparable or better than the state-of-the-art NAS method designed for few-shot learning while enjoying more than 100x speedup. We believe the efficiency of MetaNTK-NAS makes itself more practical for many real-world tasks.
+
+</details>
+
+### Shapley-NAS: Discovering Operation Contribution for Neural Architecture Search.
+- **链接**: [arXiv:2206.09811](https://arxiv.org/abs/2206.09811) · [代码](https://github.com/Euphoria16/Shapley-NAS.git) · 📚 被引 55
+- **作者**: Han Xiao, Ziwei Wang, Zheng Zhu, Jie Zhou, Jiwen Lu
+- **🏷️ 机构**: Tsinghua University,Department of Automation,China
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper, we propose a Shapley value based method to evaluate operation contribution (Shapley-NAS) for neural architecture search. Differentiable architecture search (DARTS) acquires the optimal architectures by optimizing the architecture parameters with gradient descent, which significantly reduces the search cost. However, the magnitude of architecture parameters updated by gradient descent fails to reveal the actual operation importance to the task performance and therefore harms the effectiveness of obtained architectures. By contrast, we propose to evaluate the direct influence of operations on validation accuracy. To deal with the complex relationships between supernet components, we leverage Shapley value to quantify their marginal contributions by considering all possible combinations. Specifically, we iteratively optimize the supernet weights and update the architecture parameters by evaluating operation contributions via Shapley value, so that the optimal architectures are derived by selecting the operations that contribute significantly to the tasks. Since the exact computation of Shapley value is NP-hard, the Monte-Carlo sampling based algorithm with early truncation is employed for efficient approximation, and the momentum update mechanism is adopted to alleviate fluctuation of the sampling process. Extensive experiments on various datasets and various search spaces show that our Shapley-NAS outperforms the state-of-the-art methods by a considerable margin with light search cost. The code is available at https://github.com/Euphoria16/Shapley-NAS.git
+
+</details>
+
+### Performance-Aware Mutual Knowledge Distillation for Improving Neural Architecture Search.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01162) · 📚 被引 13
+- **作者**: Pengtao Xie, Xuefeng Du
+- **🏷️ 机构**: University of California, San Diego,La Jolla,CA,United States, University of Wisconsin-Madison,Madison,WI,United States
+- **会议**: CVPR 2022
+
+### β-DARTS: Beta-Decay Regularization for Differentiable Architecture Search.
+- **链接**: [arXiv:2203.01665](https://arxiv.org/abs/2203.01665) · 📚 被引 111
+- **作者**: Peng Ye, Baopu Li, Yikang Li, Tao Chen, Jiayuan Fan, Wanli Ouyang
+- **🏷️ 机构**: Fudan University, BAIDU USA LLC, Shanghai AI Laboratory
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Neural Architecture Search~(NAS) has attracted increasingly more attention in recent years because of its capability to design deep neural networks automatically. Among them, differential NAS approaches such as DARTS, have gained popularity for the search efficiency. However, they suffer from two main issues, the weak robustness to the performance collapse and the poor generalization ability of the searched architectures. To solve these two problems, a simple-but-efficient regularization method, termed as Beta-Decay, is proposed to regularize the DARTS-based NAS searching process. Specifically, Beta-Decay regularization can impose constraints to keep the value and variance of activated architecture parameters from too large. Furthermore, we provide in-depth theoretical analysis on how it works and why it works. Experimental results on NAS-Bench-201 show that our proposed method can help to stabilize the searching process and makes the searched network more transferable across different datasets. In addition, our search scheme shows an outstanding property of being less dependent on training time and data. Comprehensive experiments on a variety of search spaces and datasets validate the effectiveness of the proposed method.
+
+</details>
+
+### BaLeNAS: Differentiable Architecture Search via the Bayesian Learning Rule.
+- **链接**: [arXiv:2111.13204](https://arxiv.org/abs/2111.13204) · 📚 被引 15
+- **作者**: Miao Zhang, Shirui Pan, Xiaojun Chang, Steven Su, Jilin Hu, Gholamreza Haffari et al.
+- **🏷️ 机构**: Aalborg University, Monash University, ReLER, AAII, UTS
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Differentiable Architecture Search (DARTS) has received massive attention in recent years, mainly because it significantly reduces the computational cost through weight sharing and continuous relaxation. However, more recent works find that existing differentiable NAS techniques struggle to outperform naive baselines, yielding deteriorative architectures as the search proceeds. Rather than directly optimizing the architecture parameters, this paper formulates the neural architecture search as a distribution learning problem through relaxing the architecture weights into Gaussian distributions. By leveraging the natural-gradient variational inference (NGVI), the architecture distribution can be easily optimized based on existing codebases without incurring more memory and computational consumption. We demonstrate how the differentiable NAS benefits from Bayesian principles, enhancing exploration and improving stability. The experimental results on NAS-Bench-201 and NAS-Bench-1shot1 benchmark datasets confirm the significant improvements the proposed framework can make. In addition, instead of simply applying the argmax on the learned parameters, we further leverage the recently-proposed training-free proxies in NAS to select the optimal architecture from a group architectures drawn from the optimized distribution, where we achieve state-of-the-art results on the NAS-Bench-201 and NAS-Bench-1shot1 benchmarks. Our best architecture in the DARTS search space also obtains competitive test errors with 2.37\%, 15.72\%, and 24.2\% on CIFAR-10, CIFAR-100, and ImageNet datasets, respectively.
+
+</details>
+
+### Neural Architecture Search with Representation Mutual Information.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01161)
+- **作者**: Xiawu Zheng, Xiang Fei, Lei Zhang, Chenglin Wu, Fei Chao, Jianzhuang Liu et al.
+- **🏷️ 机构**: PolyU / OPPO
+- **会议**: CVPR 2022
+
+### Training-free Transformer Architecture Search.
+- **链接**: [arXiv:2203.12217](https://arxiv.org/abs/2203.12217) · 📚 被引 56
+- **作者**: Qinqin Zhou, Kekai Sheng, Xiawu Zheng, Ke Li, Xing Sun, Yonghong Tian et al.
+- **🏷️ 机构**: School of Informatics, Xiamen University,Media Analytics and Computing Lab, Tencent Youtu Lab, Peng Cheng Laboratory
+- **会议**: CVPR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recently, Vision Transformer (ViT) has achieved remarkable success in several computer vision tasks. The progresses are highly relevant to the architecture design, then it is worthwhile to propose Transformer Architecture Search (TAS) to search for better ViTs automatically. However, current TAS methods are time-consuming and existing zero-cost proxies in CNN do not generalize well to the ViT search space according to our experimental observations. In this paper, for the first time, we investigate how to conduct TAS in a training-free manner and devise an effective training-free TAS (TF-TAS) scheme. Firstly, we observe that the properties of multi-head self-attention (MSA) and multi-layer perceptron (MLP) in ViTs are quite different and that the synaptic diversity of MSA affects the performance notably. Secondly, based on the observation, we devise a modular strategy in TF-TAS that evaluates and ranks ViT architectures from two theoretical perspectives: synaptic diversity and synaptic saliency, termed as DSS-indicator. With DSS-indicator, evaluation results are strongly correlated with the test accuracies of ViT models. Experimental results demonstrate that our TF-TAS achieves a competitive performance against the state-of-the-art manually or automatically design ViT architectures, and it promotes the searching efficiency in ViT search space greatly: from about $24$ GPU days to less than $0.5$ GPU days. Moreover, the proposed DSS-indicator outperforms the existing cutting-edge zero-cost approaches (e.g., TE-score and NASWOT).
+
+</details>
