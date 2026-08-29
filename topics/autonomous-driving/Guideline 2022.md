@@ -71,7 +71,11 @@
 
 </details>
 
-## 跨领域论文（完整笔记在其他领域）
+### ST-P3: End-to-End Vision-Based Autonomous Driving via Spatial-Temporal Feature Learning.
+- **链接**: [arXiv:2207.07601](https://arxiv.org/abs/2207.07601) · [代码](https://github.com/OpenPerceptionX/ST-P3) · 📚 被引 258
+- **作者**: Shengchao Hu, Li Chen, Penghao Wu, Hongyang Li, Junchi Yan, Dacheng Tao
+- **🏷️ 机构**: Shanghai AI Lab
+- **会议**: ECCV 2022
 
 - Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Investigating the Impact of Multi-LiDAR Placement on Object Detection for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202022.md)

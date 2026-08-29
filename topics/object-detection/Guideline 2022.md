@@ -23,7 +23,11 @@
 - **🏷️ 机构**: Nanjing University,Nanjing,China
 - **会议**: CVPR 2022
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Omni-DETR: Omni-Supervised Object Detection with Transformers.
+- **链接**: [arXiv:2203.16089](https://arxiv.org/abs/2203.16089) · 📚 被引 39
+- **作者**: Pei Wang, Zhaowei Cai, Hao Yang, Gurumurthy Swaminathan, Nuno Vasconcelos, Bernt Schiele et al.
+- **🏷️ 机构**: UC San Diego, AWS AI Labs
+- **会议**: CVPR 2022
 
 > We endeavor on a rarely explored task named Insubstantial Object Detection (IOD), which aims to localize the object with following characteristics: (1) amorphous shape with indistinct boundary; (2) similarity to surroundings; (3) absence in color. Accordingly, it is far more challenging to distinguish insubstantial objects in a single static frame and the collaborative representation of spatial and temporal information is crucial. Thus, we construct an IOD-Video dataset comprised of 600 videos (141,017 frames) covering various distances, sizes, visibility, and scenes captured by different spectral ranges. In addition, we develop a spatio-temporal aggregation framework for IOD, in which different backbones are deployed and a spatio-temporal aggregation loss (STAloss) is elaborately designed to leverage the consistency along the time axis. Experiments conducted on IOD-Video dataset demonstrate that spatio-temporal aggregation can significantly improve the performance of IOD. We hope our work will attract further researches into this valuable yet challenging task. The code will be available at: \url{https://github.com/CalayZhou/IOD-Video}.
 
@@ -490,6 +494,18 @@
 > Domain adaptive object detection is challenging due to distinctive data distribution between source domain and target domain. In this paper, we propose a unified multi-granularity alignment based object detection framework towards domain-invariant feature learning. To this end, we encode the dependencies across different granularity perspectives including pixel-, instance-, and category-levels simultaneously to align two domains. Based on pixel-level feature maps from the backbone network, we first develop the omni-scale gated fusion module to aggregate discriminative representations of instances by scale-aware convolutions, leading to robust multi-scale object detection. Meanwhile, the multi-granularity discriminators are proposed to identify which domain different granularities of samples(i.e., pixels, instances, and categories) come from. Notably, we leverage not only the instance discriminability in different categories but also the category consistency between two domains. Extensive experiments are carried out on multiple domain adaptation scenarios, demonstrating the effectiveness of our framework over state-of-the-art algorithms on top of anchor-free FCOS and anchor-based Faster RCNN detectors with different backbones.
 
 </details>
+
+### Progressive End-to-End Object Detection in Crowded Scenes.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00093) · 📚 被引 73
+- **作者**: Anlin Zheng, Yuang Zhang, Xiangyu Zhang, Xiaojuan Qi, Jian Sun
+- **🏷️ 机构**: MEGVII Technology, Shanghai Jiao Tong University, University of Hong Kong
+- **会议**: CVPR 2022
+
+### Multi-Granularity Alignment Domain Adaptation for Object Detection.
+- **链接**: [arXiv:2203.16897](https://arxiv.org/abs/2203.16897) · 📚 被引 111
+- **作者**: Wenzhang Zhou, Dawei Du, Libo Zhang, Tiejian Luo, Yanjun Wu
+- **🏷️ 机构**: University of Chinese Academy of Sciences,Beijing,China, Kitware, Inc.,NY,USA, Institute of Software, Chinese Academy of Sciences,Beijing,China
+- **会议**: CVPR 2022
 
 ## 跨领域论文（完整笔记在其他领域）
 

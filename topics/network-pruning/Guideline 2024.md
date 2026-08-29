@@ -1,9 +1,9 @@
 # Network Pruning — 2024 Guideline
 
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
-> 论文数: 35 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: [2022](Guideline%202022.md)
+> 同领域其他年份: 
 
 ### Scene Adaptive Sparse Transformer for Event-based Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2404.01882](https://arxiv.org/abs/2404.01882) · 📚 被引 42
@@ -260,7 +260,7 @@
 - **链接**: [arXiv:2312.07061](https://arxiv.org/abs/2312.07061)
 - **作者**: Jingyang Xiang, Siqi Li, Junhao Chen, Zhuangzhi Chen, Tianxin Huang, Linpeng Peng et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -268,11 +268,7 @@
 
 </details>
 
-### UniPTS: A Unified Framework for Proficient Post-Training Sparsity.
-- **链接**: [arXiv:2405.18810](https://arxiv.org/abs/2405.18810)
-- **作者**: Jingjing Xie, Yuxin Zhang, Mingbao Lin, Zhihang Lin, Liujuan Cao, Rongrong Ji
-- **🏷️ 机构**: Efficient Computing, Ministry of Education of China, School of Informatics, Xiamen University,Key Laboratory of Multimedia Trusted Perception, Tencent Youtu Lab
-- **会议**: CVPR 2024
+> Compressing a set of unordered points is far more challenging than compressing images/videos of regular sample grids, because of the difficulties in characterizing neighboring relations in an irregular layout of points. Many researchers resort to voxelization to introduce regularity, but this approach suffers from quantization loss. In this research, we use the KNN method to determine the neighborhoods of raw surface points. This gives us a means to determine the spatial context in which the latent features of 3D points are compressed by arithmetic coding. As such, the conditional probability model is adaptive to local geometry, leading to significant rate reduction. Additionally, we propose a dual-layer architecture where a non-learning base layer reconstructs the main structures of the point cloud at low complexity, while a learned refinement layer focuses on preserving fine details. This design leads to reductions in model complexity and coding latency by two orders of magnitude compared to SOTA methods. Moreover, we incorporate an implicit neural representation (INR) into the refinement layer, allowing the decoder to sample points on the underlying surface at arbitrary densities. This work is the first to effectively exploit content-aware local contexts for compressing irregular raw point clouds, achieving high rate-distortion performance, low complexity, and the ability to function as an arbitrary-scale upsampling network simultaneously.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -280,17 +276,6 @@
 
 </details>
 
-## 跨领域论文（完整笔记在其他领域）
+> Modern neural networks are often massively overparameterized leading to high compute costs during training and at inference. One effective method to improve both the compute and energy efficiency of neural networks while maintaining good performance is structured pruning, where full network structures (e.g.~neurons or convolutional filters) that have limited impact on the model output are removed. In this work, we propose Bayesian Model Reduction for Structured pruning (BMRS), a fully end-to-end Bayesian method of structured pruning. BMRS is based on two recent methods: Bayesian structured pruning with multiplicative noise, and Bayesian model reduction (BMR), a method which allows efficient comparison of Bayesian models under a change in prior. We present two realizations of BMRS derived from different priors which yield different structured pruning characteristics: 1) BMRS_N with the truncated log-normal prior, which offers reliable compression rates and accuracy without the need for tuning any thresholds and 2) BMRS_U with the truncated log-uniform prior that can achieve more aggressive compression based on the boundaries of truncation. Overall, we find that BMRS offers a theoretically grounded approach to structured pruning of neural networks yielding both high compression rates and accuracy. Experiments on multiple datasets and neural networks of varying complexity showed that the two BMRS methods offer a competitive performance-efficiency trade-off compared to other pruning methods.
 
-- Weak-to-Strong 3D Object Detection with X-Ray Distillation. → [3d-detection](../3d-detection/Guideline%202024.md)
-- GAFusion: Adaptive Fusing LiDAR and Camera with Multiple Guidance for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Commonsense Prototype for Outdoor Unsupervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Improving Distant 3D Object Detection Using 2D Box Supervision. → [3d-detection](../3d-detection/Guideline%202024.md)
-- CaKDP: Category-Aware Knowledge Distillation and Pruning Framework for Lightweight 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
-- Differentiable Information Bottleneck for Deterministic Multi-View Clustering. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
-- MADTP: Multimodal Alignment-Guided Dynamic Token Pruning for Accelerating Vision-Language Transformer. → [multimodal](../multimodal/Guideline%202024.md)
-- MULTIFLOW: Shifting Towards Task-Agnostic Vision-Language Pruning. → [multimodal](../multimodal/Guideline%202024.md)
-- Sieve: Multimodal Dataset Pruning Using Image Captioning Models. → [multimodal](../multimodal/Guideline%202024.md)
-- Multimodal Industrial Anomaly Detection by Crossmodal Feature Mapping. → [multimodal](../multimodal/Guideline%202024.md)
-- Cloud-Device Collaborative Learning for Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202024.md)
-- Towards Backward-Compatible Continual Learning of Image Compression. → [continual-learning](../continual-learning/Guideline%202024.md)
+- Distill Gold from Massive Ores: Bi-level Data Pruning Towards Efficient Dataset Distillation. → [knowledge-distillation](../knowledge-distillation/Guideline%202024.md)

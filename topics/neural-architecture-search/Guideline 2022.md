@@ -11,11 +11,19 @@
 - **🏷️ 机构**: Shenzhen Campus of Sun Yat-sen University, ReLER AAII, UTS, The University of Hong Kong
 - **会议**: CVPR 2022
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Large-Scale Graph Neural Architecture Search.
+- **链接**: [出版页](https://proceedings.mlr.press/v162/guan22d.html)
+- **作者**: Chaoyu Guan, Xin Wang, Hong Chen, Ziwei Zhang, Wenwu Zhu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2022
 
 > Neural Architecture Search (NAS) aims to find efficient models for multiple tasks. Beyond seeking solutions for a single task, there are surging interests in transferring network design knowledge across multiple tasks. In this line of research, effectively modeling task correlations is vital yet highly neglected. Therefore, we propose \textbf{Arch-Graph}, a transferable NAS method that predicts task-specific optimal architectures with respect to given task embeddings. It leverages correlations across multiple tasks by using their embeddings as a part of the predictor's input for fast adaptation. We also formulate NAS as an architecture relation graph prediction problem, with the relational graph constructed by treating candidate architectures as nodes and their pairwise relations as edges. To enforce some basic properties such as acyclicity in the relational graph, we add additional constraints to the optimization process, converting NAS into the problem of finding a Maximal Weighted Acyclic Subgraph (MWAS). Our algorithm then strives to eliminate cycles and only establish edges in the graph if the rank results can be trusted. Through MWAS, Arch-Graph can effectively rank candidate models for each task with only a small budget to finetune the predictor. With extensive experiments on TransNAS-Bench-101, we show Arch-Graph's transferability and high sample efficiency across numerous tasks, beating many NAS methods designed for both single-task and multi-task search. It is able to find top 0.16\% and 0.29\% architectures on average on two search spaces under the budget of only 50 models.
 
-</details>
+### AGNAS: Attention-Guided Micro and Macro-Architecture Search.
+- **链接**: [出版页](https://proceedings.mlr.press/v162/sun22a.html)
+- **作者**: Zihao Sun, Yu Hu, Shun Lu, Longxing Yang, Jilin Mei, Yinhe Han et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2022
 
 ### ISNAS-DIP: Image-Specific Neural Architecture Search for Deep Image Prior.
 - **链接**: [arXiv:2111.15362](https://arxiv.org/abs/2111.15362) · [代码](https://github.com/ozgurkara99/ISNAS-DIP) · 📚 被引 18
@@ -35,7 +43,11 @@
 - **🏷️ 机构**: Seoul National University,Department of ECE, NAVER AI Lab
 - **会议**: CVPR 2022
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### TabNAS: Rejection Sampling for Neural Architecture Search on Tabular Datasets.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/4e392aa9bc70ed731d3c9c32810f92fb-Abstract-Conference.html) · 📚 被引 1
+- **作者**: Chengrun Yang, Gabriel Bender, Hanxiao Liu, Pieter-Jan Kindermans, Madeleine Udell, Yifeng Lu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
 
 > In Neural Architecture Search (NAS), reducing the cost of architecture evaluation remains one of the most crucial challenges. Among a plethora of efforts to bypass training of each candidate architecture to convergence for evaluation, the Neural Tangent Kernel (NTK) is emerging as a promising theoretical framework that can be utilized to estimate the performance of a neural architecture at initialization. In this work, we revisit several at-initialization metrics that can be derived from the NTK and reveal their key shortcomings. Then, through the empirical analysis of the time evolution of NTK, we deduce that modern neural architectures exhibit highly non-linear characteristics, making the NTK-based metrics incapable of reliably estimating the performance of an architecture without some amount of training. To take such non-linear characteristics into account, we introduce Label-Gradient Alignment (LGA), a novel NTK-based metric whose inherent formulation allows it to capture the large amount of non-linear advantage present in modern neural architectures. With minimal amount of training, LGA obtains a meaningful level of rank correlation with the post-training test accuracy of an architecture. Lastly, we demonstrate that LGA, complemented with few epochs of training, successfully guides existing search algorithms to achieve competitive search performances with significantly less search cost. The code is available at: https://github.com/nutellamok/DemystifyingNTK.
 
