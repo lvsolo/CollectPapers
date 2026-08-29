@@ -1,14 +1,32 @@
 # Autonomous Driving — 2023 Guideline
 
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
-> 论文数: 21 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 16 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Temporal Consistent 3D LiDAR Representation Learning for Semantic Perception in Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00505) · 📚 被引 43
-- **作者**: Lucas Nunes, Louis Wiesmann, Rodrigo Marcuzzi, Xieyuanli Chen, Jens Behley, Cyrill Stachniss
-- **🏷️ 机构**: University of Bonn
+### CO3: Cooperative Unsupervised 3D Representation Learning for Autonomous Driving.
+- **链接**: [出版页](https://openreview.net/forum?id=QUaDoIdgo0)
+- **作者**: Runjian Chen, Yao Mu, Runsen Xu, Wenqi Shao, Chenhan Jiang, Hang Xu et al.
+- **🏷️ 机构**: Shanghai AI Lab
+- **会议**: ICLR 2023
+
+### Unsupervised 3D Point Cloud Representation Learning by Triangle Constrained Contrast for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00506) · 📚 被引 17
+- **作者**: Bo Pang, Hongchi Xia, Cewu Lu
+- **🏷️ 机构**: Shanghai Jiao Tong University
+- **会议**: CVPR 2023
+
+### TBP-Former: Learning Temporal Bird's-Eye-View Pyramid for Joint Perception and Prediction in Vision-Centric Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00138) · 📚 被引 35
+- **作者**: Shaoheng Fang, Zi Wang, Yiqi Zhong, Junhao Ge, Siheng Chen
+- **🏷️ 机构**: Shanghai Jiao Tong University,Cooperative Medianet Innovation Center, University of Southern California,Department of Computer Science
+- **会议**: CVPR 2023
+
+### Implicit Occupancy Flow Fields for Perception and Prediction in Self-Driving.
+- **链接**: [arXiv:2308.01471](https://arxiv.org/abs/2308.01471) · 📚 被引 27
+- **作者**: Ben Agro, Quinlan Sykora, Sergio Casas, Raquel Urtasun
+- **🏷️ 机构**: Waabi, University of Toronto
 - **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
@@ -17,201 +35,97 @@
 
 </details>
 
+### Think Twice before Driving: Towards Scalable Decoders for End-to-End Autonomous Driving.
+- **链接**: [arXiv:2305.06242](https://arxiv.org/abs/2305.06242) · 📚 被引 113
+- **作者**: Xiaosong Jia, Penghao Wu, Li Chen, Jiangwei Xie, Conghui He, Junchi Yan et al.
+- **🏷️ 机构**: Shanghai Jiao Tong University, Shanghai AI Laboratory
+- **会议**: CVPR 2023
+
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> A self-driving vehicle (SDV) must be able to perceive its surroundings and predict the future behavior of other traffic participants. Existing works either perform object detection followed by trajectory forecasting of the detected objects, or predict dense occupancy and flow grids for the whole scene. The former poses a safety concern as the number of detections needs to be kept low for efficiency reasons, sacrificing object recall. The latter is computationally expensive due to the high-dimensionality of the output grid, and suffers from the limited receptive field inherent to fully convolutional networks. Furthermore, both approaches employ many computational resources predicting areas or objects that might never be queried by the motion planner. This motivates our unified approach to perception and future prediction that implicitly represents occupancy and flow over time with a single neural network. Our method avoids unnecessary computation, as it can be directly queried by the motion planner at continuous spatio-temporal locations. Moreover, we design an architecture that overcomes the limited receptive field of previous explicit occupancy prediction methods by adding an efficient yet effective global attention mechanism. Through extensive experiments in both urban and highway settings, we demonstrate that our implicit model outperforms the current state-of-the-art. For more information, visit the project website: https://waabi.ai/research/implicito.
-
-</details>
 
 > Multi-agent cooperative perception is an increasingly popular topic in the field of autonomous driving, where roadside LiDARs play an essential role. However, how to optimize the placement of roadside LiDARs is a crucial but often overlooked problem. This paper proposes an approach to optimize the placement of roadside LiDARs by selecting optimized positions within the scene for better perception performance. To efficiently obtain the best combination of locations, a greedy algorithm based on perceptual gain is proposed, which selects the location that can maximize the perceptual gain sequentially. We define perceptual gain as the increased perceptual capability when a new LiDAR is placed. To obtain the perception capability, we propose a perception predictor that learns to evaluate LiDAR placement using only a single point cloud frame. A dataset named Roadside-Opt is created using the CARLA simulator to facilitate research on the roadside LiDAR placement problem.
 
+</details>
+
+### RangeViT: Towards Vision Transformers for 3D Semantic Segmentation in Autonomous Driving.
+- **链接**: [arXiv:2301.10222](https://arxiv.org/abs/2301.10222) · [代码](https://github.com/valeoai/rangevit) · 📚 被引 141
+- **作者**: Angelika Ando, Spyros Gidaris, Andrei Bursuc, Gilles Puy, Alexandre Boulch, Renaud Marlet
+- **🏷️ 机构**: Valeo.ai,Paris,France
+- **会议**: CVPR 2023
+
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> End-to-end autonomous driving has made impressive progress in recent years. Existing methods usually adopt the decoupled encoder-decoder paradigm, where the encoder extracts hidden features from raw sensor data, and the decoder outputs the ego-vehicle's future trajectories or actions. Under such a paradigm, the encoder does not have access to the intended behavior of the ego agent, leaving the burden of finding out safety-critical regions from the massive receptive field and inferring about future situations to the decoder. Even worse, the decoder is usually composed of several simple multi-layer perceptrons (MLP) or GRUs while the encoder is delicately designed (e.g., a combination of heavy ResNets or Transformer). Such an imbalanced resource-task division hampers the learning process. In this work, we aim to alleviate the aforementioned problem by two principles: (1) fully utilizing the capacity of the encoder; (2) increasing the capacity of the decoder. Concretely, we first predict a coarse-grained future position and action based on the encoder features. Then, conditioned on the position and action, the future scene is imagined to check the ramification if we drive accordingly. We also retrieve the encoder features around the predicted coordinate to obtain fine-grained information about the safety-critical region. Finally, based on the predicted future and the retrieved salient feature, we refine the coarse-grained position and action by predicting its offset from ground-truth. The above refinement module could be stacked in a cascaded fashion, which extends the capacity of the decoder with spatial-temporal prior knowledge about the conditioned future. We conduct experiments on the CARLA simulator and achieve state-of-the-art performance in closed-loop benchmarks. Extensive ablation studies demonstrate the effectiveness of each proposed module.
+> Reconstructing 3D vehicles from noisy and sparse partial point clouds is of great significance to autonomous driving. Most existing 3D reconstruction methods cannot be directly applied to this problem because they are elaborately designed to deal with dense inputs with trivial noise. In this work, we propose a novel framework, dubbed MV-DeepSDF, which estimates the optimal Signed Distance Function (SDF) shape representation from multi-sweep point clouds to reconstruct vehicles in the wild. Although there have been some SDF-based implicit modeling methods, they only focus on single-view-based reconstruction, resulting in low fidelity. In contrast, we first analyze multi-sweep consistency and complementarity in the latent feature space and propose to transform the implicit space shape estimation problem into an element-to-set feature extraction problem. Then, we devise a new architecture to extract individual element-level representations and aggregate them to generate a set-level predicted latent code. This set-level latent code is an expression of the optimal 3D shape in the implicit space, and can be subsequently decoded to a continuous SDF of the vehicle. In this way, our approach learns consistent and complementary information among multi-sweeps for 3D vehicle reconstruction. We conduct thorough experiments on two real-world autonomous driving datasets (Waymo and KITTI) to demonstrate the superiority of our approach over state-of-the-art alternative methods both qualitatively and quantitatively.
 
 </details>
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Planning-oriented Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01712)
+- **作者**: Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu et al.
+- **🏷️ 机构**: Tsinghua / Shanghai AI Lab
+- **会议**: CVPR 2023
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Localized Semantic Feature Mixers for Efficient Pedestrian Detection in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00530) · 📚 被引 42
+- **作者**: Abdul Hannan Khan, Mohammed Shariq Nawaz, Andreas Dengel
+- **🏷️ 机构**: RPTU Kaiserslautern-Landau,Department of Computer Science
+- **会议**: CVPR 2023
 
-> Casting semantic segmentation of outdoor LiDAR point clouds as a 2D problem, e.g., via range projection, is an effective and popular approach. These projection-based methods usually benefit from fast computations and, when combined with techniques which use other point cloud representations, achieve state-of-the-art results. Today, projection-based methods leverage 2D CNNs but recent advances in computer vision show that vision transformers (ViTs) have achieved state-of-the-art results in many image-based benchmarks. In this work, we question if projection-based methods for 3D semantic segmentation can benefit from these latest improvements on ViTs. We answer positively but only after combining them with three key ingredients: (a) ViTs are notoriously hard to train and require a lot of training data to learn powerful representations. By preserving the same backbone architecture as for RGB images, we can exploit the knowledge from long training on large image collections that are much cheaper to acquire and annotate than point clouds. We reach our best results with pre-trained ViTs on large image datasets. (b) We compensate ViTs' lack of inductive bias by substituting a tailored convolutional stem for the classical linear embedding layer. (c) We refine pixel-wise predictions with a convolutional decoder and a skip connection from the convolutional stem to combine low-level but fine-grained features of the the convolutional stem with the high-level but coarse predictions of the ViT encoder. With these ingredients, we show that our method, called RangeViT, outperforms existing projection-based methods on nuScenes and SemanticKITTI. The code is available at https://github.com/valeoai/rangevit.
+### Weakly Supervised Class-agnostic Motion Prediction for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01688) · 📚 被引 13
+- **作者**: Ruibo Li, Hanyu Shi, Ziang Fu, Zhe Wang, Guosheng Lin
+- **🏷️ 机构**: Nanyang Technological University,S-Lab, School of Computer Science and Engineering, Nanyang Technological University, SenseTime Research
+- **会议**: CVPR 2023
 
-</details>
-
-### Zenseact Open Dataset: A large-scale and diverse multimodal dataset for autonomous driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01846) · 📚 被引 70
-- **作者**: Mina Alibeigi, William Ljungbergh, Adam Tonderski, Georg Hess, Adam Lilja, Carl Lindström et al.
-- **🏷️ 机构**: Zenseact
-- **会议**: ICCV 2023
-
-### Video Task Decathlon: Unifying Image and Video Tasks in Autonomous Driving.
-- **链接**: [arXiv:2309.04422](https://arxiv.org/abs/2309.04422) · 📚 被引 11
-- **作者**: Thomas E. Huang, Yifan Liu, Luc Van Gool, Fisher Yu
-- **🏷️ 机构**: ETH Z&#x00FC;rich
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Performing multiple heterogeneous visual tasks in dynamic scenes is a hallmark of human perception capability. Despite remarkable progress in image and video recognition via representation learning, current research still focuses on designing specialized networks for singular, homogeneous, or simple combination of tasks. We instead explore the construction of a unified model for major image and video recognition tasks in autonomous driving with diverse input and output structures. To enable such an investigation, we design a new challenge, Video Task Decathlon (VTD), which includes ten representative image and video tasks spanning classification, segmentation, localization, and association of objects and pixels. On VTD, we develop our unified network, VTDNet, that uses a single structure and a single set of weights for all ten tasks. VTDNet groups similar tasks and employs task interaction stages to exchange information within and between task groups. Given the impracticality of labeling all tasks on all frames, and the performance degradation associated with joint training of many tasks, we design a Curriculum training, Pseudo-labeling, and Fine-tuning (CPF) scheme to successfully train VTDNet on all tasks and mitigate performance loss. Armed with CPF, VTDNet significantly outperforms its single-task counterparts on most tasks with only 20% overall computations. VTD is a promising new direction for exploring the unification of perception tasks in autonomous driving.
-
-</details>
-
-### GameFormer: Game-theoretic Modeling and Learning of Transformer-based Interactive Prediction and Planning for Autonomous Driving.
-- **链接**: [arXiv:2303.05760](https://arxiv.org/abs/2303.05760) · 📚 被引 145
-- **作者**: Zhiyu Huang, Haochen Liu, Chen Lv
-- **🏷️ 机构**: Nanyang Technological University,Singapore
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Autonomous vehicles operating in complex real-world environments require accurate predictions of interactive behaviors between traffic participants. This paper tackles the interaction prediction problem by formulating it with hierarchical game theory and proposing the GameFormer model for its implementation. The model incorporates a Transformer encoder, which effectively models the relationships between scene elements, alongside a novel hierarchical Transformer decoder structure. At each decoding level, the decoder utilizes the prediction outcomes from the previous level, in addition to the shared environmental context, to iteratively refine the interaction process. Moreover, we propose a learning process that regulates an agent's behavior at the current level to respond to other agents' behaviors from the preceding level. Through comprehensive experiments on large-scale real-world driving datasets, we demonstrate the state-of-the-art accuracy of our model on the Waymo interaction prediction task. Additionally, we validate the model's capacity to jointly reason about the motion plan of the ego agent and the behaviors of multiple agents in both open-loop and closed-loop planning tests, outperforming various baseline methods. Furthermore, we evaluate the efficacy of our model on the nuPlan planning benchmark, where it achieves leading performance.
-
-</details>
-
-### DriveAdapter: Breaking the Coupling Barrier of Perception and Planning in End-to-End Autonomous Driving.
-- **链接**: [arXiv:2308.00398](https://arxiv.org/abs/2308.00398) · 📚 被引 76
-- **作者**: Xiaosong Jia, Yulu Gao, Li Chen, Junchi Yan, Patrick Langechuan Liu, Hongyang Li
-- **🏷️ 机构**: Shanghai Jiao Tong University,MoE Key Lab of Artificial Intelligence, Shanghai AI Lab,OpenDriveLab, Anker Innovations
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> End-to-end autonomous driving aims to build a fully differentiable system that takes raw sensor data as inputs and directly outputs the planned trajectory or control signals of the ego vehicle. State-of-the-art methods usually follow the `Teacher-Student' paradigm. The Teacher model uses privileged information (ground-truth states of surrounding agents and map elements) to learn the driving strategy. The student model only has access to raw sensor data and conducts behavior cloning on the data collected by the teacher model. By eliminating the noise of the perception part during planning learning, state-of-the-art works could achieve better performance with significantly less data compared to those coupled ones. However, under the current Teacher-Student paradigm, the student model still needs to learn a planning head from scratch, which could be challenging due to the redundant and noisy nature of raw sensor inputs and the casual confusion issue of behavior cloning. In this work, we aim to explore the possibility of directly adopting the strong teacher model to conduct planning while letting the student model focus more on the perception part. We find that even equipped with a SOTA perception model, directly letting the student model learn the required inputs of the teacher model leads to poor driving performance, which comes from the large distribution gap between predicted privileged inputs and the ground-truth. To this end, we propose DriveAdapter, which employs adapters with the feature alignment objective function between the student (perception) and teacher (planning) modules. Additionally, since the pure learning-based teacher model itself is imperfect and occasionally breaks safety rules, we propose a method of action-guided feature learning with a mask for those imperfect teacher features to further inject the priors of hand-crafted rules into the learning process.
-
-</details>
-
-### VAD: Vectorized Scene Representation for Efficient Autonomous Driving.
-- **链接**: [arXiv:2303.12077](https://arxiv.org/abs/2303.12077) · [代码](https://github.com/hustvl/VAD) · 📚 被引 319
-- **作者**: Bo Jiang, Shaoyu Chen, Qing Xu, Bencheng Liao, Jiajie Chen, Helong Zhou et al.
-- **🏷️ 机构**: Huazhong University of Science &amp; Technology, Horizon Robotics
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Autonomous driving requires a comprehensive understanding of the surrounding environment for reliable trajectory planning. Previous works rely on dense rasterized scene representation (e.g., agent occupancy and semantic map) to perform planning, which is computationally intensive and misses the instance-level structure information. In this paper, we propose VAD, an end-to-end vectorized paradigm for autonomous driving, which models the driving scene as a fully vectorized representation. The proposed vectorized paradigm has two significant advantages. On one hand, VAD exploits the vectorized agent motion and map elements as explicit instance-level planning constraints which effectively improves planning safety. On the other hand, VAD runs much faster than previous end-to-end planning methods by getting rid of computation-intensive rasterized representation and hand-designed post-processing steps. VAD achieves state-of-the-art end-to-end planning performance on the nuScenes dataset, outperforming the previous best method by a large margin. Our base model, VAD-Base, greatly reduces the average collision rate by 29.0% and runs 2.5x faster. Besides, a lightweight variant, VAD-Tiny, greatly improves the inference speed (up to 9.3x) while achieving comparable planning performance. We believe the excellent performance and the high efficiency of VAD are critical for the real-world deployment of an autonomous driving system. Code and models are available at https://github.com/hustvl/VAD for facilitating future research.
-
-</details>
-
-### Unsupervised 3D Perception with 2D Vision-Language Distillation for Autonomous Driving.
-- **链接**: [arXiv:2309.14491](https://arxiv.org/abs/2309.14491) · 📚 被引 27
-- **作者**: Mahyar Najibi, Jingwei Ji, Yin Zhou, Charles R. Qi, Xinchen Yan, Scott Ettinger et al.
-- **🏷️ 机构**: Waymo LLC
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Closed-set 3D perception models trained on only a pre-defined set of object categories can be inadequate for safety critical applications such as autonomous driving where new object types can be encountered after deployment. In this paper, we present a multi-modal auto labeling pipeline capable of generating amodal 3D bounding boxes and tracklets for training models on open-set categories without 3D human labels. Our pipeline exploits motion cues inherent in point cloud sequences in combination with the freely available 2D image-text pairs to identify and track all traffic participants. Compared to the recent studies in this domain, which can only provide class-agnostic auto labels limited to moving objects, our method can handle both static and moving objects in the unsupervised manner and is able to output open-vocabulary semantic labels thanks to the proposed vision-language knowledge distillation. Experiments on the Waymo Open Dataset show that our approach outperforms the prior work by significant margins on various unsupervised 3D perception tasks.
-
-</details>
-
-### Domain generalization of 3D semantic segmentation in autonomous driving.
-- **链接**: [arXiv:2212.04245](https://arxiv.org/abs/2212.04245) · [代码](https://github.com/JulesSanchez/3DLabelProp) · 📚 被引 34
-- **作者**: Jules Sanchez, Jean-Emmanuel Deschaud, François Goulette
-- **🏷️ 机构**: Mines Paris - PSL, PSL University,Centre for Robotics,Paris,France,75006
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Using deep learning, 3D autonomous driving semantic segmentation has become a well-studied subject, with methods that can reach very high performance. Nonetheless, because of the limited size of the training datasets, these models cannot see every type of object and scene found in real-world applications. The ability to be reliable in these various unknown environments is called \textup{domain generalization}. Despite its importance, domain generalization is relatively unexplored in the case of 3D autonomous driving semantic segmentation. To fill this gap, this paper presents the first benchmark for this application by testing state-of-the-art methods and discussing the difficulty of tackling Laser Imaging Detection and Ranging (LiDAR) domain shifts. We also propose the first method designed to address this domain generalization, which we call 3DLabelProp. This method relies on leveraging the geometry and sequentiality of the LiDAR data to enhance its generalization performances by working on partially accumulated point clouds. It reaches a mean Intersection over Union (mIoU) of 50.4% on SemanticPOSS and of 55.2% on PandaSet solid-state LiDAR while being trained only on SemanticKITTI, making it the state-of-the-art method for generalization (+5% and +33% better, respectively, than the second best method). The code for this method is available on GitHub: https://github.com/JulesSanchez/3DLabelProp.
-
-</details>
-
-### Does Physical Adversarial Example Really Matter to Autonomous Driving? Towards System-Level Effect of Adversarial Object Evasion Attack.
-- **链接**: [arXiv:2308.11894](https://arxiv.org/abs/2308.11894) · 📚 被引 7
-- **作者**: Ningfei Wang, Yunpeng Luo, Takami Sato, Kaidi Xu, Qi Alfred Chen
+### MSeg3D: Multi-Modal 3D Semantic Segmentation for Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02078)
+- **作者**: Jiale Li, Hang Dai, Hao Han, Yong Ding
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
+- **会议**: CVPR 2023
+
+### Azimuth Super-Resolution for FMCW Radar in Autonomous Driving.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01679) · 📚 被引 27
+- **作者**: Yu-Jhe Li, Shawn Hunt, Jinhyung Park, Matthew O'Toole, Kris Kitani
+- **🏷️ 机构**: Carnegie Mellon University, DENSO International America, Inc.
+- **会议**: CVPR 2023
+
+### Visual Exemplar Driven Task-Prompting for Unified Perception in Autonomous Driving.
+- **链接**: [arXiv:2303.01788](https://arxiv.org/abs/2303.01788) · 📚 被引 22
+- **作者**: Xiwen Liang, Minzhe Niu, Jianhua Han, Hang Xu, Chunjing Xu, Xiaodan Liang
+- **🏷️ 机构**: Shenzhen Campus of Sun Yat-sen University, Huawei Noah&#x0027;s Ark Lab
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In autonomous driving (AD), accurate perception is indispensable to achieving safe and secure driving. Due to its safety-criticality, the security of AD perception has been widely studied. Among different attacks on AD perception, the physical adversarial object evasion attacks are especially severe. However, we find that all existing literature only evaluates their attack effect at the targeted AI component level but not at the system level, i.e., with the entire system semantics and context such as the full AD pipeline. Thereby, this raises a critical research question: can these existing researches effectively achieve system-level attack effects (e.g., traffic rule violations) in the real-world AD context? In this work, we conduct the first measurement study on whether and how effectively the existing designs can lead to system-level effects, especially for the STOP sign-evasion attacks due to their popularity and severity. Our evaluation results show that all the representative prior works cannot achieve any system-level effects. We observe two design limitations in the prior works: 1) physical model-inconsistent object size distribution in pixel sampling and 2) lack of vehicle plant model and AD system model consideration. Then, we propose SysAdv, a novel system-driven attack design in the AD context and our evaluation results show that the system-level effects can be significantly improved, i.e., the violation rate increases by around 70%.
+> Multi-task learning has emerged as a powerful paradigm to solve a range of tasks simultaneously with good efficiency in both computation resources and inference time. However, these algorithms are designed for different tasks mostly not within the scope of autonomous driving, thus making it hard to compare multi-task methods in autonomous driving. Aiming to enable the comprehensive evaluation of present multi-task learning methods in autonomous driving, we extensively investigate the performance of popular multi-task methods on the large-scale driving dataset, which covers four common perception tasks, i.e., object detection, semantic segmentation, drivable area segmentation, and lane detection. We provide an in-depth analysis of current multi-task learning methods under different common settings and find out that the existing methods make progress but there is still a large performance gap compared with single-task baselines. To alleviate this dilemma in autonomous driving, we present an effective multi-task framework, VE-Prompt, which introduces visual exemplars via task-specific prompting to guide the model toward learning high-quality task-specific representations. Specifically, we generate visual exemplars based on bounding boxes and color-based markers, which provide accurate visual appearances of target categories and further mitigate the performance gap. Furthermore, we bridge transformer-based encoders and convolutional layers for efficient and accurate unified perception in autonomous driving. Comprehensive experimental results on the diverse self-driving dataset BDD100K show that the VE-Prompt improves the multi-task baseline and further surpasses single-task models.
 
 </details>
 
-### Learning Human Dynamics in Autonomous Driving Scenarios.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01901) · 📚 被引 23
-- **作者**: Jingbo Wang, Ye Yuan, Zhengyi Luo, Kevin Xie, Dahua Lin, Umar Iqbal et al.
-- **🏷️ 机构**: NVIDIA, The Chinese University of Hong Kong
-- **会议**: ICCV 2023
-
-### SurroundOcc: Multi-Camera 3D Occupancy Prediction for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01986)
-- **作者**: Yi Wei, Linqing Zhao, Wenzhao Zheng, Zheng Zhu, Jie Zhou, Jiwen Lu
+### Neural Map Prior for Autonomous Driving.
+- **链接**: [arXiv:2304.08481](https://arxiv.org/abs/2304.08481)
+- **作者**: Xuan Xiong, Yicheng Liu, Tianyuan Yuan, Yue Wang, Yilun Wang, Hang Zhao
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICCV 2023
-
-### SemARFlow: Injecting Semantics into Unsupervised Optical Flow Estimation for Autonomous Driving.
-- **链接**: [arXiv:2303.06209](https://arxiv.org/abs/2303.06209) · [代码](https://github.com/duke-vision/semantic-unsup-flow-release) · 📚 被引 8
-- **作者**: Shuai Yuan, Shuzhi Yu, Hannah Kim, Carlo Tomasi
-- **🏷️ 机构**: Duke University
-- **会议**: ICCV 2023
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Unsupervised optical flow estimation is especially hard near occlusions and motion boundaries and in low-texture regions. We show that additional information such as semantics and domain knowledge can help better constrain this problem. We introduce SemARFlow, an unsupervised optical flow network designed for autonomous driving data that takes estimated semantic segmentation masks as additional inputs. This additional information is injected into the encoder and into a learned upsampler that refines the flow output. In addition, a simple yet effective semantic augmentation module provides self-supervision when learning flow and its boundaries for vehicles, poles, and sky. Together, these injections of semantic information improve the KITTI-2015 optical flow test error rate from 11.80% to 8.38%. We also show visible improvements around object boundaries as well as a greater ability to generalize across datasets. Code is available at https://github.com/duke-vision/semantic-unsup-flow-release.
+> High-definition (HD) semantic maps are crucial in enabling autonomous vehicles to navigate urban environments. The traditional method of creating offline HD maps involves labor-intensive manual annotation processes, which are not only costly but also insufficient for timely updates. Recent studies have proposed an alternative approach that generates local maps using online sensor observations. However, this approach is limited by the sensor's perception range and its susceptibility to occlusions. In this study, we propose Neural Map Prior (NMP), a neural representation of global maps. This representation automatically updates itself and improves the performance of local map inference. Specifically, we utilize two approaches to achieve this. Firstly, to integrate a strong map prior into local map inference, we apply cross-attention, a mechanism that dynamically identifies correlations between current and prior features. Secondly, to update the global neural map prior, we utilize a learning-based fusion module that guides the network in fusing features from previous traversals. Our experimental results, based on the nuScenes dataset, demonstrate that our framework is highly compatible with various map segmentation and detection architectures. It significantly improves map prediction performance, even in challenging weather conditions and situations with a longer perception range. To the best of our knowledge, this is the first learning-based system for creating a global map prior.
 
 </details>
 
-### Exploring the Road Graph in Trajectory Forecasting for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00014) · 📚 被引 6
-- **作者**: Rémy Sun, Diane Lingrand, Frédéric Precioso
-- **🏷️ 机构**: Universit&#x00E9; C&#x00F4;te d&#x2019;Azur,Inria, CNRS, I3S,Maasai,Nice,France
-- **会议**: ICCV 2023
-
-### Sensitivity analysis of AI-based algorithms for autonomous driving on optical wavefront aberrations induced by the windshield.
-- **链接**: [arXiv:2308.11711](https://arxiv.org/abs/2308.11711) · 📚 被引 1
-- **作者**: Dominik Werner Wolf, Markus Ulrich, Nikhil Kapoor
-- **🏷️ 机构**: Volkswagen Group, Karlsruhe Institute of Technology, CARIAD SE
-- **会议**: ICCV 2023
+### ReasonNet: End-to-End Driving with Temporal and Global Reasoning.
+- **链接**: [arXiv:2305.10507](https://arxiv.org/abs/2305.10507) · 📚 被引 101
+- **作者**: Hao Shao, Letian Wang, Ruobing Chen, Steven L. Waslander, Hongsheng Li, Yu Liu
+- **🏷️ 机构**: Sense Time Research, University of Toronto, CUHK MMLab
+- **会议**: CVPR 2023
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Autonomous driving perception techniques are typically based on supervised machine learning models that are trained on real-world street data. A typical training process involves capturing images with a single car model and windshield configuration. However, deploying these trained models on different car types can lead to a domain shift, which can potentially hurt the neural networks performance and violate working ADAS requirements. To address this issue, this paper investigates the domain shift problem further by evaluating the sensitivity of two perception models to different windshield configurations. This is done by evaluating the dependencies between neural network benchmark metrics and optical merit functions by applying a Fourier optics based threat model. Our results show that there is a performance gap introduced by windshields and existing optical metrics used for posing requirements might not be sufficient.
+> The large-scale deployment of autonomous vehicles is yet to come, and one of the major remaining challenges lies in urban dense traffic scenarios. In such cases, it remains challenging to predict the future evolution of the scene and future behaviors of objects, and to deal with rare adverse events such as the sudden appearance of occluded objects. In this paper, we present ReasonNet, a novel end-to-end driving framework that extensively exploits both temporal and global information of the driving scene. By reasoning on the temporal behavior of objects, our method can effectively process the interactions and relationships among features in different frames. Reasoning about the global information of the scene can also improve overall perception performance and benefit the detection of adverse events, especially the anticipation of potential danger from occluded objects. For comprehensive evaluation on occlusion events, we also release publicly a driving simulation benchmark DriveOcclusionSim consisting of diverse occlusion events. We conduct extensive experiments on multiple CARLA benchmarks, where our model outperforms all prior methods, ranking first on the sensor track of the public CARLA Leaderboard.
 
 </details>
 
-### Hidden Biases of End-to-End Driving Models.
-- **链接**: [arXiv:2306.07957](https://arxiv.org/abs/2306.07957) · 📚 被引 72
-- **作者**: Bernhard Jaeger, Kashyap Chitta, Andreas Geiger
-- **🏷️ 机构**: University of T&#x00FC;bingen,T&#x00FC;bingen AI Center
-- **会议**: ICCV 2023
+## 跨领域论文（完整笔记在其他领域）
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> End-to-end driving systems have recently made rapid progress, in particular on CARLA. Independent of their major contribution, they introduce changes to minor system components. Consequently, the source of improvements is unclear. We identify two biases that recur in nearly all state-of-the-art methods and are critical for the observed progress on CARLA: (1) lateral recovery via a strong inductive bias towards target point following, and (2) longitudinal averaging of multimodal waypoint predictions for slowing down. We investigate the drawbacks of these biases and identify principled alternatives. By incorporating our insights, we develop TF++, a simple end-to-end method that ranks first on the Longest6 and LAV benchmarks, gaining 11 driving score over the best prior work on Longest6.
-
-</details>
-
-### Unsupervised Self-Driving Attention Prediction via Uncertainty Mining and Knowledge Embedding.
-- **链接**: [arXiv:2303.09706](https://arxiv.org/abs/2303.09706) · 📚 被引 14
-- **作者**: Pengfei Zhu, Mengshi Qi, Xia Li, Weijian Li, Huadong Ma
-- **🏷️ 机构**: Beijing University of Posts and Telecommunications,Beijing Key Laboratory of Intelligent Telecommunications Software and Multimedia,Beijing,100876, University of Rochester,Department of Computer Science
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Predicting attention regions of interest is an important yet challenging task for self-driving systems. Existing methodologies rely on large-scale labeled traffic datasets that are labor-intensive to obtain. Besides, the huge domain gap between natural scenes and traffic scenes in current datasets also limits the potential for model training. To address these challenges, we are the first to introduce an unsupervised way to predict self-driving attention by uncertainty modeling and driving knowledge integration. Our approach's Uncertainty Mining Branch (UMB) discovers commonalities and differences from multiple generated pseudo-labels achieved from models pre-trained on natural scenes by actively measuring the uncertainty. Meanwhile, our Knowledge Embedding Block (KEB) bridges the domain gap by incorporating driving knowledge to adaptively refine the generated pseudo-labels. Quantitative and qualitative results with equivalent or even more impressive performance compared to fully-supervised state-of-the-art approaches across all three public datasets demonstrate the effectiveness of the proposed method and the potential of this direction. The code will be made publicly available.
-
-</details>
-
-### Unsupervised Domain Adaptation for Self-Driving from Past Traversal Features.
-- **链接**: [arXiv:2309.12140](https://arxiv.org/abs/2309.12140) · [代码](https://github.com/zhangtravis/Hist-DA) · 📚 被引 2
-- **作者**: Travis Zhang, Katie Luo, Cheng Perng Phoo, Yurong You, Wei-Lun Chao, Bharath Hariharan et al.
-- **🏷️ 机构**: Cornell University, The Ohio State University
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The rapid development of 3D object detection systems for self-driving cars has significantly improved accuracy. However, these systems struggle to generalize across diverse driving environments, which can lead to safety-critical failures in detecting traffic participants. To address this, we propose a method that utilizes unlabeled repeated traversals of multiple locations to adapt object detectors to new driving environments. By incorporating statistics computed from repeated LiDAR scans, we guide the adaptation process effectively. Our approach enhances LiDAR-based detection models using spatial quantized historical features and introduces a lightweight regression head to leverage the statistics for feature regularization. Additionally, we leverage the statistics for a novel self-training process to stabilize the training. The framework is detector model-agnostic and experiments on real-world datasets demonstrate significant improvements, achieving up to a 20-point performance gain, especially in detecting pedestrians and distant objects. Code is available at https://github.com/zhangtravis/Hist-DA.
-
-</details>
-
-### Online Map Vectorization for Autonomous Driving: A Rasterization Perspective.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/654f61ecd998c9095d30d42c03b832aa-Abstract-Conference.html)
-- **作者**: Gongjie Zhang, Jiahao Lin, Shuang Wu, Yilin Song, Zhipeng Luo, Yang Xue et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-- Surround-View Vision-based 3D Detection for Autonomous Driving: A Survey. → [3d-detection](../3d-detection/Guideline%202023.md)
-- On Offline Evaluation of 3D Object Detection for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Benchmarking Robustness of 3D Object Detection to Common Corruptions in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Understanding the Robustness of 3D Object Detection with Bird'View Representations in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202023.md)

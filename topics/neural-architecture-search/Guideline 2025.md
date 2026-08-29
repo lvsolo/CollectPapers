@@ -1,27 +1,35 @@
 # Neural Architecture Search — 2025 Guideline
 
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
-> 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Per-Architecture Training-Free Metric Optimization for Neural Architecture Search.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/84f5e528dcab71efc71b79710f7d67eb-Abstract-Conference.html) · 📚 被引 2
-- **作者**: Mingzhuo Lin, Jianping Luo
-- **🏷️ 机构**: Shenzhen University, Department of Software Engineering, Shenzhen University
+### L-SWAG: Layer-Sample Wise Activation with Gradients Information for Zero-Shot NAS on Vision Transformers.
+- **链接**: [arXiv:2505.07300](https://arxiv.org/abs/2505.07300) · 📚 被引 2
+- **作者**: Sofia Casarin, Sergio Escalera, Oswald Lanz
+- **🏷️ 机构**: Free University of Bozen-Bolzano,Bolzano,Italy, Computer Vision Center,Barcelona,Spain
+- **会议**: CVPR 2025
+
+### TF-MAS: Training-free Mamba2 Architecture Search.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/08561abd6843266509d95bf30b856283-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Yi Fan, Yu-Bin Yang
+- **🏷️ 机构**: Nanjing University, NanjingUniversity
 - **会议**: NeurIPS 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Training-free Neural Architecture Search (NAS) efficiently identifies high-performing neural networks using zero-cost (ZC) proxies. Unlike multi-shot and one-shot NAS approaches, ZC-NAS is both (i) time-efficient, eliminating the need for model training, and (ii) interpretable, with proxy designs often theoretically grounded. Despite rapid developments in the field, current SOTA ZC proxies are typically constrained to well-established convolutional search spaces. With the rise of Large Language Models shaping the future of deep learning, this work extends ZC proxy applicability to Vision Transformers (ViTs). We present a new benchmark using the Autoformer search space evaluated on 6 distinct tasks and propose Layer-Sample Wise Activation with Gradients information (L-SWAG), a novel, generalizable metric that characterizes both convolutional and transformer architectures across 14 tasks. Additionally, previous works highlighted how different proxies contain complementary information, motivating the need for a ML model to identify useful combinations. To further enhance ZC-NAS, we therefore introduce LIBRA-NAS (Low Information gain and Bias Re-Alignment), a method that strategically combines proxies to best represent a specific benchmark. Integrated into the NAS search, LIBRA-NAS outperforms evolution and gradient-based NAS techniques by identifying an architecture with a 17.0% test error on ImageNet1k in just 0.1 GPU days.
-
-</details>
+> Evaluation is a critical but costly procedure in neural architecture search (NAS). Performance predictors have been widely adopted to reduce evaluation costs by directly estimating architecture performance. The effectiveness of predictors is heavily influenced by the choice of loss functions. While traditional predictors employ regression loss functions to evaluate the absolute accuracy of architectures, recent approaches have explored various ranking-based loss functions, such as pairwise and listwise ranking losses, to focus on the ranking of architecture performance. Despite their success in NAS, the effectiveness and characteristics of these loss functions have not been thoroughly investigated. In this paper, we conduct the first comprehensive study on loss functions in performance predictors, categorizing them into three main types: regression, ranking, and weighted loss functions. Specifically, we assess eight loss functions using a range of NAS-relevant metrics on 13 tasks across five search spaces. Our results reveal that specific categories of loss functions can be effectively combined to enhance predictor-based NAS. Furthermore, our findings could provide practical guidance for selecting appropriate loss functions for various tasks. We hope this work provides meaningful insights to guide the development of loss functions for predictor-based methods in the NAS community.
 
 ### TensorRL-QAS: Reinforcement learning with tensor networks for improved quantum architecture search.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/af008ae1c0301e218ee89a86833198e3-Abstract-Conference.html) · 📚 被引 0
 - **作者**: Akash Kundu, Stefano Mangini
 - **🏷️ 机构**: Delft University of Technology, University of Helsinki
 - **会议**: NeurIPS 2025
+
+### Subnet-Aware Dynamic Supernet Training for Neural Architecture Search.
+- **链接**: [arXiv:2503.10740](https://arxiv.org/abs/2503.10740) · 📚 被引 6
+- **作者**: Jeimin Jeon, Youngmin Oh, Junghyup Lee, Donghyeon Baek, Dohyung Kim, Chanho Eom et al.
+- **🏷️ 机构**: Yonsei University, Samsung Research, Samsung Advanced Institute of Technology
+- **会议**: CVPR 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -30,7 +38,7 @@
 </details>
 
 ### Training-free Neural Architecture Search through Variance of Knowledge of Deep Network Weights.
-- **链接**: [arXiv:2502.04975](https://arxiv.org/abs/2502.04975) · [代码](https://github.com/ondratybl/VKDNW) · 📚 被引 4
+- **链接**: [arXiv:2502.04975](https://arxiv.org/abs/2502.04975) · 📚 被引 4
 - **作者**: Ondrej Týbl, Lukás Neumann
 - **🏷️ 机构**: Czech Technical University in Prague,CMP Visual Recognition Group, Faculty of Electrical Engineering
 - **会议**: CVPR 2025
