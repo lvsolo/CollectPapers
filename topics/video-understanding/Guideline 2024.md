@@ -1,30 +1,134 @@
 # Video Understanding — 2024 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 2 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### VideoPrism: A Foundational Visual Encoder for Video Understanding.
-- **链接**: [arXiv:2402.13217](https://arxiv.org/abs/2402.13217) · [代码](https://github.com/google-deepmind/videoprism)
-- **作者**: Long Zhao, Nitesh Bharadwaj Gundavarapu, Liangzhe Yuan, Hao Zhou, Shen Yan, Jennifer J. Sun et al.
+### Meta-optimized Angular Margin Contrastive Framework for Video-Language Representation Learning.
+- **链接**: [arXiv:2407.03788](https://arxiv.org/abs/2407.03788) · 📚 被引 0
+- **作者**: Thong Nguyen, Yi Bin, Xiaobao Wu, Xinshuai Dong, Zhiyuan Hu, Khoi Le et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We introduce VideoPrism, a general-purpose video encoder that tackles diverse video understanding tasks with a single frozen model. We pretrain VideoPrism on a heterogeneous corpus containing 36M high-quality video-caption pairs and 582M video clips with noisy parallel text (e.g., ASR transcripts). The pretraining approach improves upon masked autoencoding by global-local distillation of semantic video embeddings and a token shuffling scheme, enabling VideoPrism to focus primarily on the video modality while leveraging the invaluable text associated with videos. We extensively test VideoPrism on four broad groups of video understanding tasks, from web video question answering to CV for science, achieving state-of-the-art performance on 31 out of 33 video understanding benchmarks. Our models are released at https://github.com/google-deepmind/videoprism.
+> We propose a novel and challenging benchmark, AutoEval-Video, to comprehensively evaluate large vision-language models in open-ended video question answering. The comprehensiveness of AutoEval-Video is demonstrated in two aspects: 1) AutoEval-Video constructs open-ended video-questions across 9 skill dimensions, addressing capabilities of perception, comprehension, and generation. 2) AutoEval-Video contains newly collected videos that cover over 40 distinct themes. To efficiently evaluate responses to the open-ended questions, we employ an LLM-based evaluation approach, but instead of merely providing a reference answer, we annotate unique evaluation rules for every single instance (video-question pair). To maximize the robustness of these rules, we develop a novel adversarial annotation mechanism. By using instance-specific rules as prompt, GPT-4, as an automatic evaluator, can achieve a stable evaluation accuracy of around 97.0%, comparable to the 94.9% - 97.5% accuracy of a human evaluator. Furthermore, we assess the performance of eight large vision-language models on AutoEval-Video. Among them, GPT-4V(ision) significantly outperforms other models, achieving an accuracy of 32.2%. However, there is still substantial room for improvement compared to human accuracy of 72.8%. By conducting an extensive case study, we uncover several drawbacks of GPT-4V, such as limited temporal and dynamic comprehension, and overly general responses. Code is available at https://github.com/Xiuyuan-Chen/AutoEval-Video.
 
 </details>
-
-### Memory Consolidation Enables Long-Context Video Understanding.
-- **链接**: [arXiv:2402.05861](https://arxiv.org/abs/2402.05861)
-- **作者**: Ivana Balazevic, Yuge Shi, Pinelopi Papalampidi, Rahma Chaabouni, Skanda Koppula, Olivier J. Hénaff
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Most transformer-based video encoders are limited to short temporal contexts due to their quadratic complexity. While various attempts have been made to extend this context, this has often come at the cost of both conceptual and computational complexity. We propose to instead re-purpose existing pre-trained video transformers by simply fine-tuning them to attend to memories derived non-parametrically from past activations. By leveraging redundancy reduction, our memory-consolidated vision transformer (MC-ViT) effortlessly extends its context far into the past and exhibits excellent scaling behavior when learning from longer videos. In doing so, MC-ViT sets a new state-of-the-art in long-context video understanding on EgoSchema, Perception Test, and Diving48, outperforming methods that benefit from orders of magnitude more parameters.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Data quality stands at the forefront of deciding the effectiveness of video-language representation learning. However, video-text pairs in previous data typically do not align perfectly with each other, which might lead to video-language representations that do not accurately reflect cross-modal semantics. Moreover, previous data also possess an uneven distribution of concepts, thereby hampering the downstream performance across unpopular subjects. To address these problems, we propose MAMA, a new approach to learning video-language representations by utilizing a contrastive objective with a subtractive angular margin to regularize cross-modal representations in their effort to reach perfect similarity. Furthermore, to adapt to the non-uniform concept distribution, MAMA utilizes a multi-layer perceptron (MLP)-parameterized weighting function that maps loss values to sample weights which enable dynamic adjustment of the model's focus throughout the training. With the training guided by a small amount of unbiased meta-data and augmented by video-text data generated by large vision-language model, MAMA improves video-language representations and achieve superior performances on commonly used video question answering and text-video retrieval datasets. The code, model, and data have been made available at https://nguyentthong.github.io/MAMA.
 
 </details>
+
+### VideoMamba: State Space Model for Efficient Video Understanding.
+- **链接**: [arXiv:2403.06977](https://arxiv.org/abs/2403.06977) · [代码](https://github.com/OpenGVLab/VideoMamba)
+- **作者**: Kunchang Li, Xinhao Li, Yi Wang, Yinan He, Yali Wang, Limin Wang et al.
+- **🏷️ 机构**: Shanghai AI Lab
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Addressing the dual challenges of local redundancy and global dependencies in video understanding, this work innovatively adapts the Mamba to the video domain. The proposed VideoMamba overcomes the limitations of existing 3D convolution neural networks and video transformers. Its linear-complexity operator enables efficient long-term modeling, which is crucial for high-resolution long video understanding. Extensive evaluations reveal VideoMamba's four core abilities: (1) Scalability in the visual domain without extensive dataset pretraining, thanks to a novel self-distillation technique; (2) Sensitivity for recognizing short-term actions even with fine-grained motion differences; (3) Superiority in long-term video understanding, showcasing significant advancements over traditional feature-based models; and (4) Compatibility with other modalities, demonstrating robustness in multi-modal contexts. Through these distinct advantages, VideoMamba sets a new benchmark for video understanding, offering a scalable and efficient solution for comprehensive video understanding. All the code and models are available at https://github.com/OpenGVLab/VideoMamba.
+
+</details>
+
+### VideoAgent: Long-Form Video Understanding with Large Language Model as Agent.
+- **链接**: [arXiv:2403.10517](https://arxiv.org/abs/2403.10517) · 📚 被引 74
+- **作者**: Xiaohan Wang, Yuhui Zhang, Orr Zohar, Serena Yeung-Levy
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Long-form video understanding represents a significant challenge within computer vision, demanding a model capable of reasoning over long multi-modal sequences. Motivated by the human cognitive process for long-form video understanding, we emphasize interactive reasoning and planning over the ability to process lengthy visual inputs. We introduce a novel agent-based system, VideoAgent, that employs a large language model as a central agent to iteratively identify and compile crucial information to answer a question, with vision-language foundation models serving as tools to translate and retrieve visual information. Evaluated on the challenging EgoSchema and NExT-QA benchmarks, VideoAgent achieves 54.1% and 71.3% zero-shot accuracy with only 8.4 and 8.2 frames used on average. These results demonstrate superior effectiveness and efficiency of our method over the current state-of-the-art methods, highlighting the potential of agent-based approaches in advancing long-form video understanding.
+
+</details>
+
+### Towards Neuro-Symbolic Video Understanding.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73229-4_13) · 📚 被引 7
+- **作者**: Minkyu Choi, Harsh Goel, Mohammad Omama, Yunhao Yang, Sahil Shah, Sandeep Chinchali
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper we present a text-conditioned video resampler (TCR) module that uses a pre-trained and frozen visual encoder and large language model (LLM) to process long video sequences for a task. TCR localises relevant visual features from the video given a text condition and provides them to a LLM to generate a text response. Due to its lightweight design and use of cross-attention, TCR can process more than 100 frames at a time with plain attention and without optimised implementations. We make the following contributions: (i) we design a transformer-based sampling architecture that can process long videos conditioned on a task, together with a training method that enables it to bridge pre-trained visual and language models; (ii) we identify tasks that could benefit from longer video perception; and (iii) we empirically validate its efficacy on a wide variety of evaluation tasks including NextQA, EgoSchema, and the EGO4D-LTA challenge.
+
+</details>
+
+> The advent of large vision-language models (LVLMs) has spurred research into their applications in multi-modal contexts, particularly in video understanding. Traditional VideoQA benchmarks, despite providing quantitative metrics, often fail to encompass the full spectrum of video content and inadequately assess models' temporal comprehension. To address these limitations, we introduce MMBench-Video, a quantitative benchmark designed to rigorously evaluate LVLMs' proficiency in video understanding. MMBench-Video incorporates lengthy videos from YouTube and employs free-form questions, mirroring practical use cases. The benchmark is meticulously crafted to probe the models' temporal reasoning skills, with all questions human-annotated according to a carefully constructed ability taxonomy. We employ GPT-4 for automated assessment, demonstrating superior accuracy and robustness over earlier LLM-based evaluations. Utilizing MMBench-Video, we have conducted comprehensive evaluations that include both proprietary and open-source LVLMs for images and videos. MMBench-Video stands as a valuable resource for the research community, facilitating improved evaluation of LVLMs and catalyzing progress in the field of video understanding. The evalutation code of MMBench-Video will be integrated into VLMEvalKit: https://github.com/open-compass/VLMEvalKit.
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The ability to perceive how objects change over time is a crucial ingredient in human intelligence. However, current benchmarks cannot faithfully reflect the temporal understanding abilities of video-language models (VidLMs) due to the existence of static visual shortcuts. To remedy this issue, we present VITATECS, a diagnostic VIdeo-Text dAtaset for the evaluation of TEmporal Concept underStanding. Specifically, we first introduce a fine-grained taxonomy of temporal concepts in natural language in order to diagnose the capability of VidLMs to comprehend different temporal aspects. Furthermore, to disentangle the correlation between static and temporal information, we generate counterfactual video descriptions that differ from the original one only in the specified temporal aspect. We employ a semi-automatic data collection framework using large language models and human-in-the-loop annotation to obtain high-quality counterfactual descriptions efficiently. Evaluation of representative video-language understanding models confirms their deficiency in temporal understanding, revealing the need for greater emphasis on the temporal elements in video-language research.
+
+</details>
+
+### TOPA: Extending Large Language Models for Video Understanding via Text-Only Pre-Alignment.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/0ae94013da7cd459402fd77874e09ee3-Abstract-Conference.html) · 📚 被引 3
+- **作者**: Wei Li, Hehe Fan, Yongkang Wong, Mohan S. Kankanhalli, Yi Yang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+### Referring Atomic Video Action Recognition.
+- **链接**: [arXiv:2407.01872](https://arxiv.org/abs/2407.01872) · [代码](https://github.com/KPeng9510/RAVAR) · 📚 被引 16
+- **作者**: Kunyu Peng, Jia Fu, Kailun Yang, Di Wen, Yufan Chen, Ruiping Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> What makes good representations for video understanding, such as anticipating future activities, or answering video-conditioned questions? While earlier approaches focus on end-to-end learning directly from video pixels, we propose to revisit text-based representations, such as general-purpose video captions, which are interpretable and can be directly consumed by large language models (LLMs). Intuitively, different video understanding tasks may require representations that are complementary and at different granularity. To this end, we propose versatile action models (Vamos), a learning framework powered by a large language model as the ``reasoner'', and can flexibly leverage visual embedding and free-form text descriptions as its input. To interpret the important text evidence for question answering, we generalize the concept bottleneck model to work with tokens and nonlinear models, which uses hard attention to select a small subset of tokens from the free-form text as inputs to the LLM reasoner. We evaluate Vamos on five complementary benchmarks, Ego4D, NeXT-QA, IntentQA, Spacewalk-18, and EgoSchema, on its capability to model temporal dynamics, encode visual history, and perform reasoning. Surprisingly, we observe that text-based representations consistently achieve competitive performance on all benchmarks, and that visual embeddings provide marginal or no performance improvement, demonstrating the effectiveness of text-based video representation in the LLM era. We also demonstrate that our token bottleneck model is able to select relevant evidence from free-form text, support test-time intervention, and achieves nearly 5 times inference speedup while keeping a competitive question answering performance. Code and models are publicly released at https://brown-palm.github.io/Vamos/
+
+</details>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose a novel framework for video understanding, called Temporally Contextualized CLIP (TC-CLIP), which leverages essential temporal information through global interactions in a spatio-temporal domain within a video. To be specific, we introduce Temporal Contextualization (TC), a layer-wise temporal information infusion mechanism for videos, which 1) extracts core information from each frame, 2) connects relevant information across frames for the summarization into context tokens, and 3) leverages the context tokens for feature encoding. Furthermore, the Video-conditional Prompting (VP) module processes context tokens to generate informative prompts in the text modality. Extensive experiments in zero-shot, few-shot, base-to-novel, and fully-supervised action recognition validate the effectiveness of our model. Ablation studies for TC and VP support our design choices. Our project page with the source code is available at https://github.com/naver-ai/tc-clip
+
+</details>
+
+### Referring Atomic Video Action Recognition.
+- **链接**: [arXiv:2407.01872](https://arxiv.org/abs/2407.01872) · [代码](https://github.com/KPeng9510/RAVAR) · 📚 被引 16
+- **作者**: Kunyu Peng, Jia Fu, Kailun Yang, Di Wen, Yufan Chen, Ruiping Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We introduce a new task called Referring Atomic Video Action Recognition (RAVAR), aimed at identifying atomic actions of a particular person based on a textual description and the video data of this person. This task differs from traditional action recognition and localization, where predictions are delivered for all present individuals. In contrast, we focus on recognizing the correct atomic action of a specific individual, guided by text. To explore this task, we present the RefAVA dataset, containing 36,630 instances with manually annotated textual descriptions of the individuals. To establish a strong initial benchmark, we implement and validate baselines from various domains, e.g., atomic action localization, video question answering, and text-video retrieval. Since these existing methods underperform on RAVAR, we introduce RefAtomNet -- a novel cross-stream attention-driven method specialized for the unique challenges of RAVAR: the need to interpret a textual referring expression for the targeted individual, utilize this reference to guide the spatial localization and harvest the prediction of the atomic actions for the referring person. The key ingredients are: (1) a multi-stream architecture that connects video, text, and a new location-semantic stream, and (2) cross-stream agent attention fusion and agent token fusion which amplify the most relevant information across these streams and consistently surpasses standard attention-based fusion on RAVAR. Extensive experiments demonstrate the effectiveness of RefAtomNet and its building blocks for recognizing the action of the described individual. The dataset and code will be made publicly available at https://github.com/KPeng9510/RAVAR.
+
+</details>
+
+### Masked Video and Body-Worn IMU Autoencoder for Egocentric Action Recognition.
+- **链接**: [arXiv:2407.06628](https://arxiv.org/abs/2407.06628) · 📚 被引 12
+- **作者**: Mingfang Zhang, Yifei Huang, Ruicong Liu, Yoichi Sato
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Compared with visual signals, Inertial Measurement Units (IMUs) placed on human limbs can capture accurate motion signals while being robust to lighting variation and occlusion. While these characteristics are intuitively valuable to help egocentric action recognition, the potential of IMUs remains under-explored. In this work, we present a novel method for action recognition that integrates motion data from body-worn IMUs with egocentric video. Due to the scarcity of labeled multimodal data, we design an MAE-based self-supervised pretraining method, obtaining strong multi-modal representations via modeling the natural correlation between visual and motion signals. To model the complex relation of multiple IMU devices placed across the body, we exploit the collaborative dynamics in multiple IMU devices and propose to embed the relative motion features of human joints into a graph structure. Experiments show our method can achieve state-of-the-art performance on multiple public datasets. The effectiveness of our MAE-based pretraining and graph-based IMU modeling are further validated by experiments in more challenging scenarios, including partially missing IMU devices and video quality corruption, promoting more flexible usages in the real world.
+
+</details>
+
+### FedVAD: Enhancing Federated Video Anomaly Detection with GPT-Driven Semantic Distillation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73668-1_14) · 📚 被引 5
+- **作者**: Fan Qi, Ruijie Pan, Huaiwen Zhang, Changsheng Xu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+## 跨领域论文（完整笔记在其他领域）
+
+- E3M: Zero-Shot Spatio-Temporal Video Grounding with Expectation-Maximization Multimodal Modulation. → [multimodal](../multimodal/Guideline%202024.md)
+- 🤖 VideoAgent: A Memory-Augmented Multimodal Agent for Video Understanding. → [multimodal](../multimodal/Guideline%202024.md)
+- InternVideo2: Scaling Foundation Models for Multimodal Video Understanding. → [multimodal](../multimodal/Guideline%202024.md)
