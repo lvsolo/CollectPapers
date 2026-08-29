@@ -11,9 +11,17 @@
 - **🏷️ 机构**: UNSW Sydney, Gaozhe Technology, SCAU
 - **会议**: CVPR 2025
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Scalable Cross-View Sample Alignment for Multi-View Clustering with View Structure Similarity.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/65338cfb603d4871a2c38e53a3e039c9-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Jun Wang, Zhenglai Li, Chang Tang, Suyuan Liu, Hao Yu, Chuan Tang et al.
+- **🏷️ 机构**: iWudao Tech, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, Chinese Academy of Sciences, China University of Geosciences
+- **会议**: NeurIPS 2025
 
-> We present MANTA, a visual-text anomaly detection dataset for tiny objects. The visual component comprises over 137.3K images across 38 object categories spanning five typical domains, of which 8.6K images are labeled as anomalous with pixel-level annotations. Each image is captured from five distinct viewpoints to ensure comprehensive object coverage. The text component consists of two subsets: Declarative Knowledge, including 875 words that describe common anomalies across various domains and specific categories, with detailed explanations for < what, why, how>, including causes and visual characteristics; and Constructivist Learning, providing 2K multiple-choice questions with varying levels of difficulty, each paired with images and corresponded answer explanations. We also propose a baseline for visual-text tasks and conduct extensive benchmarking experiments to evaluate advanced methods across different settings, highlighting the challenges and efficacy of our dataset.
+### Theory-Driven Label-Specific Representation for Incomplete Multi-View Multi-Label Learning.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/b07052dc9c644f40efbc813a76d08f36-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Quanjiang Li, Tianxiang Xu, Tingjin Luo, Yan Zhong, Yang Li, Yiyun Zhou et al.
+- **🏷️ 机构**: National University of Defense Technology, Peking University, Tsinghua-Berkeley Shenzhen Institute
+- **会议**: NeurIPS 2025
 
 </details>
 
@@ -23,15 +31,15 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
 
-### PCDreamer: Point Cloud Completion Through Multi-view Diffusion Priors.
-- **链接**: [arXiv:2411.19036](https://arxiv.org/abs/2411.19036) · 📚 被引 8
-- **作者**: Guangshun Wei, Yuan Feng, Long Ma, Chen Wang, Yuanfeng Zhou, Changjian Li
-- **🏷️ 机构**: Shandong University, University of Edinburgh
-- **会议**: CVPR 2025
+### ForeSight: Multi-View Streaming Joint Object Detection and Trajectory Forecasting.
+- **链接**: [arXiv:2508.07089](https://arxiv.org/abs/2508.07089) · 📚 被引 2
+- **作者**: Sandro Papais, Letian Wang, Brian Cheong, Steven L. Waslander
+- **🏷️ 机构**: University of Toronto
+- **会议**: ICCV 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> This paper presents PCDreamer, a novel method for point cloud completion. Traditional methods typically extract features from partial point clouds to predict missing regions, but the large solution space often leads to unsatisfactory results. More recent approaches have started to use images as extra guidance, effectively improving performance, but obtaining paired data of images and partial point clouds is challenging in practice. To overcome these limitations, we harness the relatively view-consistent multi-view diffusion priors within large models, to generate novel views of the desired shape. The resulting image set encodes both global and local shape cues, which are especially beneficial for shape completion. To fully exploit the priors, we have designed a shape fusion module for producing an initial complete shape from multi-modality input (i.e.,, images and point clouds), and a follow-up shape consolidation module to obtain the final complete shape by discarding unreliable points introduced by the inconsistency from diffusion priors. Extensive experimental results demonstrate our superior performance, especially in recovering fine details.
+> We introduce ForeSight, a novel joint detection and forecasting framework for vision-based 3D perception in autonomous vehicles. Traditional approaches treat detection and forecasting as separate sequential tasks, limiting their ability to leverage temporal cues. ForeSight addresses this limitation with a multi-task streaming and bidirectional learning approach, allowing detection and forecasting to share query memory and propagate information seamlessly. The forecast-aware detection transformer enhances spatial reasoning by integrating trajectory predictions from a multiple hypothesis forecast memory queue, while the streaming forecast transformer improves temporal consistency using past forecasts and refined detections. Unlike tracking-based methods, ForeSight eliminates the need for explicit object association, reducing error propagation with a tracking-free model that efficiently scales across multi-frame sequences. Experiments on the nuScenes dataset show that ForeSight achieves state-of-the-art performance, achieving an EPA of 54.9%, surpassing previous methods by 9.3%, while also attaining the best mAP and minADE among multi-view detection and forecasting models.
 
 </details>
 
@@ -127,7 +135,7 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Multimodal large language models (MLLMs) have demonstrated remarkable capabilities in various tasks. However, effectively evaluating these MLLMs on face perception remains largely unexplored. To address this gap, we introduce FaceBench, a dataset featuring hierarchical multi-view and multi-level attributes specifically designed to assess the comprehensive face perception abilities of MLLMs. Initially, we construct a hierarchical facial attribute structure, which encompasses five views with up to three levels of attributes, totaling over 210 attributes and 700 attribute values. Based on the structure, the proposed FaceBench consists of 49,919 visual question-answering (VQA) pairs for evaluation and 23,841 pairs for fine-tuning. Moreover, we further develop a robust face perception MLLM baseline, Face-LLaVA, by training with our proposed face VQA data. Extensive experiments on various mainstream MLLMs and Face-LLaVA are conducted to test their face perception ability, with results also compared against human performance. The results reveal that, the existing MLLMs are far from satisfactory in understanding the fine-grained facial attributes, while our Face-LLaVA significantly outperforms existing open-source models with a small amount of training data and is comparable to commercial ones like GPT-4o and Gemini. The dataset will be released at https://github.com/CVI-SZU/FaceBench.
+> We introduce the first data-driven multi-view 3D point tracker, designed to track arbitrary points in dynamic scenes using multiple camera views. Unlike existing monocular trackers, which struggle with depth ambiguities and occlusion, or prior multi-camera methods that require over 20 cameras and tedious per-sequence optimization, our feed-forward model directly predicts 3D correspondences using a practical number of cameras (e.g., four), enabling robust and accurate online tracking. Given known camera poses and either sensor-based or estimated multi-view depth, our tracker fuses multi-view features into a unified point cloud and applies k-nearest-neighbors correlation alongside a transformer-based update to reliably estimate long-range 3D correspondences, even under occlusion. We train on 5K synthetic multi-view Kubric sequences and evaluate on two real-world benchmarks: Panoptic Studio and DexYCB, achieving median trajectory errors of 3.1 cm and 2.0 cm, respectively. Our method generalizes well to diverse camera setups of 1-8 views with varying vantage points and video lengths of 24-150 frames. By releasing our tracker alongside training and evaluation datasets, we aim to set a new standard for multi-view 3D tracking research and provide a practical tool for real-world applications. Project page available at https://ethz-vlg.github.io/mvtracker.
 
 </details>
 
@@ -221,23 +229,35 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
 
-### MuTri: Multi-view Tri-alignment for OCT to OCTA 3D Image Translation.
-- **链接**: [arXiv:2504.01428](https://arxiv.org/abs/2504.01428) · 📚 被引 5
-- **作者**: Zhuangzhuang Chen, Hualiang Wang, Chubin Ou, Xiaomeng Li
-- **🏷️ 机构**: The Hong Kong University of Science and Technology,Department of Electronic and Computer Engineering, Southern Medical University,Department of Radiology, Guangdong Provincial People&#x2019;s Hospital
-- **会议**: CVPR 2025
+### Distil-E2D: Distilling Image-to-Depth Priors for Event-Based Monocular Depth Estimation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/b6fa3ed9624c184bd73e435123bd576a-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Jie Long Lee, Gim Hee Lee
+- **🏷️ 机构**: National University of Singapore
+- **会议**: NeurIPS 2025
+
+### ST$2$360D: Spatial-to-Temporal Consistency for Training-free 360 Monocular Depth Estimation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Zidong Cao, Jinjing Zhu, Hao Ai, Lutao Jiang, Yuanhuiyi Lyu, Hui Xiong
+- **🏷️ 机构**: HKUST (GZ), Hong Kong University of Science and Technology, University of Birmingham
+- **会议**: NeurIPS 2025
+
+### Evaluating Robustness of Monocular Depth Estimation with Procedural Scene Perturbations.
+- **链接**: [arXiv:2507.00981](https://arxiv.org/abs/2507.00981) · 📚 被引 0
+- **作者**: Jack Nugent, Siyang Wu, Zeyu Ma, Beining Han, Meenal Parakh, Abhishek Joshi et al.
+- **🏷️ 机构**: Princeton University, Department of Computer Science, Princeton University
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Optical coherence tomography angiography (OCTA) shows its great importance in imaging microvascular networks by providing accurate 3D imaging of blood vessels, but it relies upon specialized sensors and expensive devices. For this reason, previous works show the potential to translate the readily available 3D Optical Coherence Tomography (OCT) images into 3D OCTA images. However, existing OCTA translation methods directly learn the mapping from the OCT domain to the OCTA domain in continuous and infinite space with guidance from only a single view, i.e., the OCTA project map, resulting in suboptimal results. To this end, we propose the multi-view Tri-alignment framework for OCT to OCTA 3D image translation in discrete and finite space, named MuTri. In the first stage, we pre-train two vector-quantized variational auto-encoder (VQ- VAE) by reconstructing 3D OCT and 3D OCTA data, providing semantic prior for subsequent multi-view guidances. In the second stage, our multi-view tri-alignment facilitates another VQVAE model to learn the mapping from the OCT domain to the OCTA domain in discrete and finite space. Specifically, a contrastive-inspired semantic alignment is proposed to maximize the mutual information with the pre-trained models from OCT and OCTA views, to facilitate codebook learning. Meanwhile, a vessel structure alignment is proposed to minimize the structure discrepancy with the pre-trained models from the OCTA project map view, benefiting from learning the detailed vessel structure information. We also collect the first large-scale dataset, namely, OCTA2024, which contains a pair of OCT and OCTA volumes from 846 subjects.
+> Recent years have witnessed substantial progress on monocular depth estimation, particularly as measured by the success of large models on standard benchmarks. However, performance on standard benchmarks does not offer a complete assessment, because most evaluate accuracy but not robustness. In this work, we introduce PDE (Procedural Depth Evaluation), a new benchmark which enables systematic robustness evaluation. PDE uses procedural generation to create 3D scenes that test robustness to various controlled perturbations, including object, camera, material and lighting changes. Our analysis yields interesting findings on what perturbations are challenging for state-of-the-art depth models, which we hope will inform further research. Code and data are available at https://github.com/princeton-vl/proc-depth-eval.
 
 </details>
 
-### MVPaint: Synchronized Multi-View Diffusion for Painting Anything 3D.
-- **链接**: [arXiv:2411.02336](https://arxiv.org/abs/2411.02336) · 📚 被引 10
-- **作者**: Wei Cheng, Juncheng Mu, Xianfang Zeng, Xin Chen, Anqi Pang, Chi Zhang et al.
-- **🏷️ 机构**: StepFun, Shanghai AI Laboratory, ByteDance
-- **会议**: CVPR 2025
+### QSCA: Quantization with Self-Compensating Auxiliary for Monocular Depth Estimation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/2d13e0a4097e44b9f167f2e67aa0214a-Abstract-Conference.html) · 📚 被引 0
+- **作者**: Jincheol Yang, Jaemin Choi, Matti Zinke, Suk-Ju Kang
+- **🏷️ 机构**: Sogang University
+- **会议**: NeurIPS 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -262,6 +282,12 @@
 - **作者**: Yuzhuo Dai, Jiaqi Jin, Zhibin Dong, Siwei Wang, Xinwang Liu, En Zhu et al.
 - **🏷️ 机构**: National University of Defense Technology,Changsha,China, Intelligent Game and Decision Lab,Beijing,China
 - **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In incomplete multi-view clustering (IMVC), missing data induce prototype shifts within views and semantic inconsistencies across views. A feasible solution is to explore cross-view consistency in paired complete observations, further imputing and aligning the similarity relationships inherently shared across views. Nevertheless, existing methods are constrained by two-tiered limitations: (1) Neither instance- nor cluster-level consistency learning construct a semantic space shared across views to learn consensus semantics. The former enforces cross-view instances alignment, and wrongly regards unpaired observations with semantic consistency as negative pairs; the latter focuses on cross-view cluster counterparts while coarsely handling fine-grained intra-cluster relationships within views. (2) Excessive reliance on consistency results in unreliable imputation and alignment without incorporating view-specific cluster information. Thus, we propose an IMVC framework, imputation- and alignment-free for consensus semantics learning (FreeCSL). To bridge semantic gaps across all observations, we learn consensus prototypes from available data to discover a shared space, where semantically similar observations are pulled closer for consensus semantics learning. To capture semantic relationships within specific views, we design a heuristic graph clustering based on modularity to recover cluster structure with intra-cluster compactness and inter-cluster separation for cluster semantics enhancement. Extensive experiments demonstrate, compared to state-of-the-art competitors, FreeCSL achieves more confident and robust assignments on IMVC task.
+
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -456,7 +482,7 @@
 </details>
 
 ### CAP4D: Creating Animatable 4D Portrait Avatars with Morphable Multi-View Diffusion Models.
-- **链接**: [arXiv:2412.12093](https://arxiv.org/abs/2412.12093) · 📚 被引 16
+- **链接**: [arXiv:2412.12093](https://arxiv.org/abs/2412.12093) · 📚 被引 15
 - **作者**: Felix Taubner, Ruihang Zhang, Mathieu Tuli, David B. Lindell
 - **🏷️ 机构**: University of Toronto, LG Electronics
 - **会议**: CVPR 2025
@@ -481,7 +507,7 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We present CAT4D, a method for creating 4D (dynamic 3D) scenes from monocular video. CAT4D leverages a multi-view video diffusion model trained on a diverse combination of datasets to enable novel view synthesis at any specified camera poses and timestamps. Combined with a novel sampling approach, this model can transform a single monocular video into a multi-view video, enabling robust 4D reconstruction via optimization of a deformable 3D Gaussian representation. We demonstrate competitive performance on novel view synthesis and dynamic scene reconstruction benchmarks, and highlight the creative capabilities for 4D scene generation from real or generated videos. See our project page for results and interactive demos: https://cat-4d.github.io/.
+> In this paper, we propose Jasmine, the first Stable Diffusion (SD)-based self-supervised framework for monocular depth estimation, which effectively harnesses SD's visual priors to enhance the sharpness and generalization of unsupervised prediction. Previous SD-based methods are all supervised since adapting diffusion models for dense prediction requires high-precision supervision. In contrast, self-supervised reprojection suffers from inherent challenges (e.g., occlusions, texture-less regions, illumination variance), and the predictions exhibit blurs and artifacts that severely compromise SD's latent priors. To resolve this, we construct a novel surrogate task of hybrid image reconstruction. Without any additional supervision, it preserves the detail priors of SD models by reconstructing the images themselves while preventing depth estimation from degradation. Furthermore, to address the inherent misalignment between SD's scale and shift invariant estimation and self-supervised scale-invariant depth estimation, we build the Scale-Shift GRU. It not only bridges this distribution gap but also isolates the fine-grained texture of SD output against the interference of reprojection loss. Extensive experiments demonstrate that Jasmine achieves SoTA performance on the KITTI benchmark and exhibits superior zero-shot generalization across multiple datasets.
 
 </details>
 
@@ -603,25 +629,13 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_GeoDepth_From_Point-to-Depth_to_Plane-to-Depth_Modeling_for_Self-Supervised_Monocular_Depth_CVPR_2025_paper.html)
 - **作者**: Haifeng Wu, Shuhang Gu, Lixin Duan, Wen Li
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICML 2025
 
-### Align3R: Aligned Monocular Depth Estimation for Dynamic Videos.
-- **链接**: [arXiv:2412.03079](https://arxiv.org/abs/2412.03079) · 📚 被引 27
-- **作者**: Jiahao Lu, Tianyu Huang, Peng Li, Zhiyang Dou, Cheng Lin, Zhiming Cui et al.
-- **🏷️ 机构**: HKUST, CUHK, HKU
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recent developments in monocular depth estimation methods enable high-quality depth estimation of single-view images but fail to estimate consistent video depth across different frames. Recent works address this problem by applying a video diffusion model to generate video depth conditioned on the input video, which is training-expensive and can only produce scale-invariant depth values without camera poses. In this paper, we propose a novel video-depth estimation method called Align3R to estimate temporal consistent depth maps for a dynamic video. Our key idea is to utilize the recent DUSt3R model to align estimated monocular depth maps of different timesteps. First, we fine-tune the DUSt3R model with additional estimated monocular depth as inputs for the dynamic scenes. Then, we apply optimization to reconstruct both depth maps and camera poses. Extensive experiments demonstrate that Align3R estimates consistent video depth and camera poses for a monocular video with superior performance than baseline methods.
-
-</details>
-
-### Scalable Autoregressive Monocular Depth Estimation.
-- **链接**: [arXiv:2411.11361](https://arxiv.org/abs/2411.11361)
-- **作者**: Jinhong Wang, Jian Liu, Dongqi Tang, Weiqiang Wang, Wentong Li, Danny Chen et al.
+### Deep Fuzzy Multi-view Learning for Reliable Classification.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/duan25a.html)
+- **作者**: Siyuan Duan, Yuan Sun, Dezhong Peng, Guiduo Duan, Xi Peng, Peng Hu
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICML 2025
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -651,7 +665,79 @@
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Huang_Revisiting_Audio-Visual_Segmentation_with_Vision-Centric_Transformer_CVPR_2025_paper.html)
 - **作者**: Shaofei Huang, Rui Ling, Tianrui Hui, Hongyu Li, Xu Zhou, Shifeng Zhang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
+- **会议**: ICML 2025
+
+### Trusted Multi-View Classification with Expert Knowledge Constraints.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/liang25p.html)
+- **作者**: Xinyan Liang, Shijie Wang, Yuhua Qian, Qian Guo, Liang Du, Bingbing Jiang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Efficient Federated Incomplete Multi-View Clustering.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/liu25cq.html)
+- **作者**: Suyuan Liu, Hao Yu, Hao Tan, Ke Liang, Siwei Wang, Shengju Yu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Fast Incomplete Multi-view Clustering by Flexible Anchor Learning.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/qin25b.html)
+- **作者**: Yalan Qin, Guorui Feng, Xinpeng Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Robust Consensus Anchor Learning for Efficient Multi-view Subspace Clustering.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/qin25e.html)
+- **作者**: Yalan Qin, Nan Pu, Guorui Feng, Nicu Sebe
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### You Always Recognize Me (YARM): Robust Texture Synthesis Against Multi-View Corruption.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/ran25a.html)
+- **作者**: Weihang Ran, Wei Yuan, Yinqiang Zheng
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### GTR: A General, Multi-View, and Dynamic Framework for Trajectory Representation Learning.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/wang25z.html)
+- **作者**: Xiangheng Wang, Ziquan Fang, Chenglong Huang, Danlei Hu, Lu Chen, Yunjun Gao
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Learning Fused State Representations for Control from Multi-View Observations.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/wang25ay.html)
+- **作者**: Zeyu Wang, Yao-Hui Li, Xin Li, Hongyu Zang, Romain Laroche, Riashat Islam
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### MIRROR: Make Your Object-Level Multi-View Generation More Consistent with Training-Free Rectification.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/xing25b.html)
+- **作者**: Tianchi Xing, Bonan Li, Congying Han, Xinmin Qiu, Zicheng Zhang, Tiande Guo
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### PROTOCOL: Partial Optimal Transport-enhanced Contrastive Learning for Imbalanced Multi-view Clustering.
+- **链接**: [arXiv:2506.12408](https://arxiv.org/abs/2506.12408)
+- **作者**: Xuqian Xue, Yiming Lei, Qi Cai, Hongming Shan, Junping Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> While contrastive multi-view clustering has achieved remarkable success, it implicitly assumes balanced class distribution. However, real-world multi-view data primarily exhibits class imbalance distribution. Consequently, existing methods suffer performance degradation due to their inability to perceive and model such imbalance. To address this challenge, we present the first systematic study of imbalanced multi-view clustering, focusing on two fundamental problems: i. perceiving class imbalance distribution, and ii. mitigating representation degradation of minority samples. We propose PROTOCOL, a novel PaRtial Optimal TranspOrt-enhanced COntrastive Learning framework for imbalanced multi-view clustering. First, for class imbalance perception, we map multi-view features into a consensus space and reformulate the imbalanced clustering as a partial optimal transport (POT) problem, augmented with progressive mass constraints and weighted KL divergence for class distributions. Second, we develop a POT-enhanced class-rebalanced contrastive learning at both feature and class levels, incorporating logit adjustment and class-sensitive learning to enhance minority sample representations. Extensive experiments demonstrate that PROTOCOL significantly improves clustering performance on imbalanced multi-view data, filling a critical research gap in this field.
+
+</details>
+
+### Automatically Identify and Rectify: Robust Deep Contrastive Multi-view Clustering in Noisy Scenarios.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/yang25am.html)
+- **作者**: Xihong Yang, Siwei Wang, Fangdi Wang, Jiaqi Jin, Suyuan Liu, Yue Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Bifurcate then Alienate: Incomplete Multi-view Clustering via Coupled Distribution Learning with Linear Overhead.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/yu25b.html)
+- **作者**: Shengju Yu, Yiu-ming Cheung, Siwei Wang, Xinwang Liu, En Zhu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
 
 ## 跨领域论文（完整笔记在其他领域）
 

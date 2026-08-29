@@ -1,20 +1,15 @@
 # 3D Detection — 2024 Guideline
 
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
-> 论文数: 37 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 27 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: [2022](Guideline%202022.md)
+> 同领域其他年份: 
 
-### CLIP-BEVFormer: Enhancing Multi-View Image-Based BEV Detector with Ground Truth Flow. **⭐⭐⭐⭐** (相关度: 95%)
-- **链接**: [arXiv:2403.08919](https://arxiv.org/abs/2403.08919) · 📚 被引 24
-- **作者**: Chenbin Pan, Burhaneddin Yaman, Senem Velipasalar, Liu Ren
-- **🏷️ 机构**: Syracuse University, Bosch Research North America &#x0026; Bosch Center for Artificial Intelligence (BCAI)
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对多视角图像BEV检测中缺乏清晰监督的问题，提出了CLIP-BEVFormer，利用对比学习增强BEV骨干网络，引入真值信息流。该方法通过CLIP对齐图像和BEV特征，提升3D检测性能。在nuScenes数据集上，NDS和mAP分别提升8.5%和9.2%，显著优于现有最先进模型。
-- **摘要（英）**: This paper introduces CLIP-BEVFormer to address the lack of clear supervision in BEV detection by leveraging contrastive learning to enhance multi-view image-derived BEV backbones with ground truth flow. The method achieves significant improvements of 8.5% NDS and 9.2% mAP over state-of-the-art on nuScenes for 3D object detection.
-- **核心贡献**: 提出了CLIP-BEVFormer，利用对比学习增强BEV特征并引入真值信息流。
-- **创新点**: 将CLIP的对比学习机制引入BEV检测，解决监督不足问题。
-- **结果**: 在nuScenes上NDS和mAP分别提升8.5%和9.2%，超越现有最先进方法。
+### V-DETR: DETR with Vertex Relative Position Encoding for 3D Object Detection.
+- **链接**: [arXiv:2308.04409](https://arxiv.org/abs/2308.04409) · [代码](https://github.com/yichaoshen-MS/V-DETR)
+- **作者**: Yichao Shen, Zigang Geng, Yuhui Yuan, Yutong Lin, Ze Liu, Chunyu Wang et al.
+- **🏷️ 机构**: XJTU
+- **会议**: ICLR 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -241,12 +236,7 @@
 - **链接**: [arXiv:2305.15694](https://arxiv.org/abs/2305.15694)
 - **作者**: Liang Peng, Junkai Xu, Haoran Cheng, Zheng Yang, Xiaopei Wu, Wei Qian et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对单目3D检测中3D信息缺乏的问题，提出OccupancyM3D，通过直接学习视锥和3D空间中的占用状态，生成更判别性的3D特征。利用同步稀疏LiDAR点云定义空间状态并生成体素占用标签，将占用预测作为分类问题并设计损失函数，增强原始特征。在KITTI和Waymo数据集上，该方法显著超越现有方法，达到新SOTA。
-- **摘要（英）**: OccupancyM3D tackles the lack of 3D information in monocular 3D detection by directly learning occupancy in frustum and 3D space, using sparse LiDAR to generate voxel labels and classification losses. It enhances 3D features and achieves new state-of-the-art results on KITTI and Waymo.
-- **核心贡献**: 提出占用学习框架，通过分类任务增强单目3D检测的特征表示。
-- **创新点**: 在视锥和3D空间直接学习占用，利用LiDAR生成标签。
-- **结果**: 在KITTI和Waymo上显著超越现有方法。
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -254,27 +244,13 @@
 
 </details>
 
-### MonoDiff: Monocular 3D Object Detection and Pose Estimation with Diffusion Models. **⭐⭐⭐** (相关度: 80%)
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01014) · 📚 被引 26
-- **作者**: Yasiru Ranasinghe, Deepti Hegde, Vishal M. Patel
-- **🏷️ 机构**: Johns Hopkins University,Baltimore,USA
-- **会议**: CVPR 2024
-- **摘要（中）**: ①针对单目3D检测和姿态估计的挑战，利用扩散模型生成式建模。②提出MonoDiff，将扩散模型应用于3D检测和姿态估计，但摘要为空，无法获取具体方法细节。③相比现有方法，可能利用扩散模型的生成能力提升鲁棒性。④由于摘要缺失，无法评估效果。
-- **摘要（英）**: This paper applies diffusion models to monocular 3D detection and pose estimation, but the abstract is empty, so details and results are unavailable. It likely leverages generative modeling for improved robustness.
-- **核心贡献**: 探索扩散模型在单目3D检测中的应用。
-- **创新点**: 将扩散模型用于3D检测和姿态估计。
-- **结果**: 未知，因摘要缺失。
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### BEVSpread: Spread Voxel Pooling for Bird's-Eye-View Representation in Vision-Based Roadside 3D Object Detection. **⭐⭐⭐** (相关度: 75%)
-- **链接**: [arXiv:2406.08785](https://arxiv.org/abs/2406.08785) · 📚 被引 23
-- **作者**: Wenjie Wang, Yehao Lu, Guangcong Zheng, Shuigen Zhan, Xiaoqing Ye, Zichang Tan et al.
-- **🏷️ 机构**: College of Computer Science and Technology, Zhejiang University, Polytechnic Institute, Zhejiang University, Baidu
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对视觉路侧3D检测中体素池化的位置近似误差问题，提出BEVSpread，将每个视锥点视为源，将图像特征传播到周围BEV网格并赋予自适应权重。设计了根据距离和深度动态控制衰减速度的权重函数，并通过CUDA并行加速保持推理速度。在两大路侧基准上，BEVSpread作为即插即用模块显著提升了现有基于视锥的BEV方法性能。
-- **摘要（英）**: BEVSpread reduces position approximation error in voxel pooling for roadside 3D detection by spreading features from each frustum point to surrounding BEV grids with adaptive weights, controlled by distance and depth. It significantly improves existing frustum-based BEV methods on roadside benchmarks with comparable inference speed.
-- **核心贡献**: 提出BEVSpread体素池化策略，减少位置误差并提升检测性能。
-- **创新点**: 自适应权重传播和CUDA加速实现高效特征散布。
-- **结果**: 在路侧基准上显著提升检测精度。
+### LiDAR-Based All-Weather 3D Object Detection via Prompting and Distilling 4D Radar.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72992-8_21) · 📚 被引 8
+- **作者**: Yujeong Chae, Hyeonseong Kim, Changgyoon Oh, Minseok Kim, Kuk-Jin Yoon
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -282,16 +258,7 @@
 
 </details>
 
-### Commonsense Prototype for Outdoor Unsupervised 3D Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
-- **链接**: [arXiv:2404.16493](https://arxiv.org/abs/2404.16493) · 📚 被引 25
-- **作者**: Hai Wu, Shijia Zhao, Xun Huang, Chenglu Wen, Xin Li, Cheng Wang
-- **🏷️ 机构**: Xiamen University,Fujian Key Laboratory of Sensing and Computing for Smart Cities, Texas A&#x0026;M University,Section of Visual Computing and Interactive Media
-- **会议**: CVPR 2024
-- **摘要（中）**: 针对无监督3D检测中LiDAR稀疏性导致伪标签质量差的问题，提出基于常识原型的检测器CPD。首先构建高质量边界框和密集点云的常识原型，利用原型的大小先验优化低质量伪标签，并通过几何知识提升稀疏物体的检测精度。在Waymo、PandaSet和KITTI数据集上，CPD大幅超越现有无监督方法，且跨数据集测试接近全监督性能。
-- **摘要（英）**: CPD addresses poor pseudo-labels in unsupervised 3D detection caused by LiDAR sparsity by constructing commonsense prototypes with high-quality boxes and dense points, refining labels and enhancing sparse object detection. It outperforms SOTA unsupervised detectors on Waymo, PandaSet, and KITTI, approaching fully supervised performance in cross-dataset settings.
-- **核心贡献**: 提出基于常识原型的无监督3D检测器，显著改善伪标签质量。
-- **创新点**: 利用常识先验构建原型，指导标签优化和几何增强。
-- **结果**: 在多个数据集上大幅超越现有无监督方法，接近全监督性能。
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -299,27 +266,17 @@
 
 </details>
 
-### HINTED: Hard Instance Enhanced Detector with Mixed-Density Feature Fusion for Sparsely-Supervised 3D Object Detection. **⭐⭐⭐** (相关度: 75%)
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01451) · 📚 被引 28
-- **作者**: Qiming Xia, Wei Ye, Hai Wu, Shijia Zhao, Leyuan Xing, Xun Huang et al.
-- **🏷️ 机构**: Xiamen University,Fujian Key Laboratory of Sensing and Computing for Smart Cities,Xiamen,China, Texas A&#x0026;M University,Section of Visual Computing and Interactive Media,Texas,USA
-- **会议**: CVPR 2024
-- **摘要（中）**: ①针对稀疏监督3D检测中困难实例检测性能差的问题。②提出HINTED，包含困难实例增强和混合密度特征融合，但摘要为空，无法获取具体方法。③相比现有方法，可能通过特征融合提升稀疏监督下的检测精度。④由于摘要缺失，无法评估效果。
-- **摘要（英）**: This paper addresses hard instance detection under sparse supervision in 3D detection, proposing HINTED with mixed-density feature fusion. The abstract is empty, so details and results are unavailable.
-- **核心贡献**: 提出困难实例增强检测器用于稀疏监督3D检测。
-- **创新点**: 混合密度特征融合策略。
-- **结果**: 未知，因摘要缺失。
+### LiDAR-PTQ: Post-Training Quantization for Point Cloud 3D Object Detection.
+- **链接**: [arXiv:2401.15865](https://arxiv.org/abs/2401.15865) · [代码](https://github.com/StiphyJay/LiDAR-PTQ)
+- **作者**: Sifan Zhou, Liang Li, Xinyu Zhang, Bo Zhang, Shipeng Bai, Miao Sun et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2024
 
-### 3DiffTection: 3D Object Detection with Geometry-Aware Diffusion Features. **⭐⭐⭐⭐** (相关度: 85%)
-- **链接**: [arXiv:2311.04391](https://arxiv.org/abs/2311.04391) · 📚 被引 19
-- **作者**: Chenfeng Xu, Huan Ling, Sanja Fidler, Or Litany
-- **🏷️ 机构**: NVIDIA
-- **会议**: CVPR 2024
-- **摘要（中）**: ①针对单目3D检测中标注成本高和扩散模型特征域差距的问题。②提出3DiffTection，利用3D感知扩散模型特征，通过几何调优（新视角合成+极线变换）和语义调优（检测监督）两阶段，并用ControlNet保持特征完整性。③相比现有方法，首次将扩散模型特征适配到3D检测，解决域差距。④摘要未提供具体数值，但声称达到最先进性能。
-- **摘要（英）**: This paper proposes 3DiffTection for monocular 3D detection using 3D-aware diffusion features, with geometric tuning via novel view synthesis and semantic tuning with detection supervision. It bridges domain gaps and achieves state-of-the-art results, though metrics are not in the abstract.
-- **核心贡献**: 提出基于扩散模型特征的3D检测方法，解决域差距。
-- **创新点**: 几何和语义双阶段调优策略。
-- **结果**: 达到最先进性能，具体数值见全文。
+### CMD: A Cross Mechanism Domain Adaptation Dataset for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72998-0_13) · 📚 被引 8
+- **作者**: Jinhao Deng, Wei Ye, Hai Wu, Xun Huang, Qiming Xia, Xin Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -327,16 +284,7 @@
 
 </details>
 
-### MonoCD: Monocular 3D Object Detection with Complementary Depths. **⭐⭐⭐⭐** (相关度: 90%)
-- **链接**: [arXiv:2404.03181](https://arxiv.org/abs/2404.03181) · 📚 被引 74
-- **作者**: Longfei Yan, Pei Yan, Shengzhou Xiong, Xuanyu Xiang, Yihua Tan
-- **🏷️ 机构**: School of Artificial Intelligence and Automation, Huazhong University of Science and Technology,Hubei Engineering Research Center of Machine Vision and Intelligent Systems,China
-- **会议**: CVPR 2024
-- **摘要（中）**: ①针对单目3D检测中多深度预测误差同号导致精度受限的问题。②提出MonoCD，增加互补深度分支利用全局深度线索，并利用几何关系增强深度互补性。③相比现有方法，通过降低深度预测相关性提升组合精度。④在KITTI等数据集上取得显著提升，具体数值见全文。
-- **摘要（英）**: This paper addresses correlated depth errors in monocular 3D detection, proposing MonoCD with a complementary depth branch and geometric relation exploitation. It reduces error correlation and improves accuracy, with significant gains on KITTI.
-- **核心贡献**: 提出互补深度机制提升单目3D检测精度。
-- **创新点**: 全局深度分支和几何关系增强互补性。
-- **结果**: 在KITTI上取得显著性能提升。
+> While 3D object bounding box (bbox) representation has been widely used in autonomous driving perception, it lacks the ability to capture the precise details of an object's intrinsic geometry. Recently, occupancy has emerged as a promising alternative for 3D scene perception. However, constructing a high-resolution occupancy map remains infeasible for large scenes due to computational constraints. Recognizing that foreground objects only occupy a small portion of the scene, we introduce object-centric occupancy as a supplement to object bboxes. This representation not only provides intricate details for detected objects but also enables higher voxel resolution in practical applications. We advance the development of object-centric occupancy perception from both data and algorithm perspectives. On the data side, we construct the first object-centric occupancy dataset from scratch using an automated pipeline. From the algorithmic standpoint, we introduce a novel object-centric occupancy completion network equipped with an implicit shape decoder that manages dynamic-size occupancy generation. This network accurately predicts the complete object-centric occupancy volume for inaccurate object proposals by leveraging temporal information from long sequences. Our method demonstrates robust performance in completing object shapes under noisy detection and tracking conditions. Additionally, we show that our occupancy features significantly enhance the detection results of state-of-the-art 3D object detectors, especially for incomplete or distant objects in the Waymo Open Dataset.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -418,11 +366,11 @@
 - **🏷️ 机构**: National Engineering Research Center for Visual Information and Applications, and Institute of Artificial Intelligence and Robotics, Xi&#x0027;an Jiaotong University,National Key Laboratory of Human-Machine Hybrid Augmented Intelligence, Nanyang Technological University
 - **会议**: CVPR 2024
 
-### Decoupled Pseudo-Labeling for Semi-Supervised Monocular 3D Object Detection.
-- **链接**: [arXiv:2403.17387](https://arxiv.org/abs/2403.17387) · 📚 被引 21
-- **作者**: Jiacheng Zhang, Jiaming Li, Xiangru Lin, Wei Zhang, Xiao Tan, Junyu Han et al.
-- **🏷️ 机构**: School of Computer Science and Engineering, Sun Yat-sen University,Guangzhou,China, Baidu Inc.,Department of Computer Vision Technology (VIS),China
-- **会议**: CVPR 2024
+### FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73242-3_7)
+- **作者**: Zheng Jiang, Jinqing Zhang, Yanan Zhang, Qingjie Liu, Zhenghui Hu, Baohui Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -430,17 +378,9 @@
 
 </details>
 
-### Prompt3D: Random Prompt Assisted Weakly-Supervised 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02649) · 📚 被引 5
-- **作者**: Xiaohong Zhang, Huisheng Ye, Jingwen Li, Qinyu Tang, Yuanqi Li, Yanwen Guo et al.
-- **🏷️ 机构**: Nanjing University
-- **会议**: CVPR 2024
+> Open-vocabulary 3D object detection (OV-3DDet) aims to localize and recognize both seen and previously unseen object categories within any new 3D scene. While language and vision foundation models have achieved success in handling various open-vocabulary tasks with abundant training data, OV-3DDet faces a significant challenge due to the limited availability of training data. Although some pioneering efforts have integrated vision-language models (VLM) knowledge into OV-3DDet learning, the full potential of these foundational models has yet to be fully exploited. In this paper, we unlock the textual and visual wisdom to tackle the open-vocabulary 3D detection task by leveraging the language and vision foundation models. We leverage a vision foundation model to provide image-wise guidance for discovering novel classes in 3D scenes. Specifically, we utilize a object detection vision foundation model to enable the zero-shot discovery of objects in images, which serves as the initial seeds and filtering guidance to identify novel 3D objects. Additionally, to align the 3D space with the powerful vision-language space, we introduce a hierarchical alignment approach, where the 3D feature space is aligned with the vision-language feature space using a pre-trained VLM at the instance, category, and scene levels. Through extensive experimentation, we demonstrate significant improvements in accuracy and generalization, highlighting the potential of foundation models in advancing open-vocabulary 3D object detection in real-world scenarios.
 
-### CRKD: Enhanced Camera-Radar Object Detection with Cross-Modality Knowledge Distillation.
-- **链接**: [arXiv:2403.19104](https://arxiv.org/abs/2403.19104) · 📚 被引 35
-- **作者**: Lingjun Zhao, Jingyu Song, Katherine A. Skinner
-- **🏷️ 机构**: University of Michigan,Ann Arbor,MI,USA
-- **会议**: CVPR 2024
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -448,17 +388,17 @@
 
 </details>
 
-### Three Pillars Improving Vision Foundation Model Distillation for Lidar.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02033) · 📚 被引 28
-- **作者**: Gilles Puy, Spyros Gidaris, Alexandre Boulch, Oriane Siméoni, Corentin Sautier, Patrick Pérez et al.
-- **🏷️ 机构**: valeo.ai,Paris,France, Kyutai,Paris,France
-- **会议**: CVPR 2024
+### Domain Generalization of 3D Object Detection by Density-Resampling.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73039-9_26)
+- **作者**: Shuangzhi Li, Lei Ma, Xingyu Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
-### Visual Point Cloud Forecasting Enables Scalable Autonomous Driving.
-- **链接**: [arXiv:2312.17655](https://arxiv.org/abs/2312.17655) · 📚 被引 58
-- **作者**: Zetong Yang, Li Chen, Yanan Sun, Hongyang Li
-- **🏷️ 机构**: OpenDriveLab and Shanghai AI Lab
-- **会议**: CVPR 2024
+### MonoTTA: Fully Test-Time Adaptation for Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72784-9_6) · 📚 被引 11
+- **作者**: Hongbin Lin, Yifan Zhang, Shuaicheng Niu, Shuguang Cui, Zhen Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -466,11 +406,7 @@
 
 </details>
 
-### Collaborative Semantic Occupancy Prediction with Hybrid Feature Fusion in Connected Automated Vehicles.
-- **链接**: [arXiv:2402.07635](https://arxiv.org/abs/2402.07635) · 📚 被引 40
-- **作者**: Rui Song, Chenwei Liang, Hu Cao, Zhiran Yan, Walter Zimmer, Markus Gross et al.
-- **🏷️ 机构**: Fraunhofer IVI, Technical University of Munich, Technische Hochschule Ingolstadt
-- **会议**: CVPR 2024
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -478,11 +414,11 @@
 
 </details>
 
-### SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction.
-- **链接**: [arXiv:2311.12754](https://arxiv.org/abs/2311.12754) · 📚 被引 79
-- **作者**: Yuanhui Huang, Wenzhao Zheng, Borui Zhang, Jie Zhou, Jiwen Lu
-- **🏷️ 机构**: Beijing National Research Center for Information Science and Technology,China, Tsinghua University,Department of Automation,China
-- **会议**: CVPR 2024
+### SAMFusion: Sensor-Adaptive Multimodal Fusion for 3D Object Detection in Adverse Weather.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73030-6_27)
+- **作者**: Edoardo Palladin, Roland Dietze, Praveen Narayanan, Mario Bijelic, Felix Heide
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -490,11 +426,7 @@
 
 </details>
 
-### SparseOcc: Rethinking Sparse Latent Representation for Vision-Based Semantic Occupancy Prediction.
-- **链接**: [arXiv:2404.09502](https://arxiv.org/abs/2404.09502) · 📚 被引 51
-- **作者**: Pin Tang, Zhongdao Wang, Guoqing Wang, Jilai Zheng, Xiangxuan Ren, Bailan Feng et al.
-- **🏷️ 机构**: MoE Key Lab of Artificial Intelligence, AI Institute, Shanghai Jiao Tong University, Huawei Noah&#x0027;s Ark Lab
-- **会议**: CVPR 2024
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -502,11 +434,11 @@
 
 </details>
 
-### DriveWorld: 4D Pre-Trained Scene Understanding via World Models for Autonomous Driving.
-- **链接**: [arXiv:2405.04390](https://arxiv.org/abs/2405.04390) · 📚 被引 33
-- **作者**: Chen Min, Dawei Zhao, Liang Xiao, Jian Zhao, Xinli Xu, Zheng Zhu et al.
-- **🏷️ 机构**: School of Computer Science, Peking University, Unmanned Systems Technology Research Center, Defense Innovation Institute, China Telecom Institute of AI &#x0026; NPU
-- **会议**: CVPR 2024
+### OV-Uni3DETR: Towards Unified Open-Vocabulary 3D Object Detection via Cycle-Modality Propagation.
+- **链接**: [arXiv:2403.19580](https://arxiv.org/abs/2403.19580) · 📚 被引 10
+- **作者**: Zhenyu Wang, Yali Li, Taichi Liu, Hengshuang Zhao, Shengjin Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -514,11 +446,7 @@
 
 </details>
 
-### UniPAD: A Universal Pre-Training Paradigm for Autonomous Driving.
-- **链接**: [arXiv:2310.08370](https://arxiv.org/abs/2310.08370) · 📚 被引 42
-- **作者**: Honghui Yang, Sha Zhang, Di Huang, Xiaoyang Wu, Haoyi Zhu, Tong He et al.
-- **🏷️ 机构**: Zhejiang University,State Key Lab of CAD&#x0026;CG, Shanghai Artificial Intelligence Laboratory, HongKong University
-- **会议**: CVPR 2024
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -526,11 +454,7 @@
 
 </details>
 
-### Volumetric Environment Representation for Vision-Language Navigation.
-- **链接**: [arXiv:2403.14158](https://arxiv.org/abs/2403.14158) · 📚 被引 43
-- **作者**: Rui Liu, Wenguan Wang, Yi Yang
-- **🏷️ 机构**: Zhejiang University,ReLER, CCAI
-- **会议**: CVPR 2024
+> In autonomous driving, the temporal stability of 3D object detection greatly impacts the driving safety. However, the detection stability cannot be accessed by existing metrics such as mAP and MOTA, and consequently is less explored by the community. To bridge this gap, this work proposes Stability Index (SI), a new metric that can comprehensively evaluate the stability of 3D detectors in terms of confidence, box localization, extent, and heading. By benchmarking state-of-the-art object detectors on the Waymo Open Dataset, SI reveals interesting properties of object stability that have not been previously discovered by other metrics. To help models improve their stability, we further introduce a general and effective training strategy, called Prediction Consistency Learning (PCL). PCL essentially encourages the prediction consistency of the same objects under different timestamps and augmentations, leading to enhanced detection stability. Furthermore, we examine the effectiveness of PCL with the widely-used CenterPoint, and achieve a remarkable SI of 86.00 for vehicle class, surpassing the baseline by 5.48. We hope our work could serve as a reliable baseline and draw the community's attention to this crucial issue in 3D object detection. Codes will be made publicly available.
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 

@@ -1,9 +1,9 @@
 # Open-set Detection — 2024 Guideline
 
 > 领域: 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）
-> 论文数: 46 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 20 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: [2022](Guideline%202022.md)
+> 同领域其他年份: 
 
 ### VideoGrounding-DINO: Towards Open-Vocabulary Spatio- Temporal Video Grounding. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01789) · 📚 被引 18
@@ -178,7 +178,7 @@
 - **链接**: [arXiv:2312.04089](https://arxiv.org/abs/2312.04089)
 - **作者**: Yong Liu, Sule Bai, Guanbin Li, Yitong Wang, Yansong Tang
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -186,11 +186,7 @@
 
 </details>
 
-### Emergent Open-Vocabulary Semantic Segmentation from Off-the-Shelf Vision-Language Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00386) · 📚 被引 16
-- **作者**: Jiayun Luo, Siddhesh Khandelwal, Leonid Sigal, Boyang Li
-- **🏷️ 机构**: Nanyang Technological University,Singapore, University of British Columbia, Vector Institute for AI,Canada
-- **会议**: CVPR 2024
+</details>
 
 ### Open-Vocabulary Attention Maps with Token Optimization for Semantic Segmentation in Diffusion Models.
 - **链接**: [arXiv:2403.14291](https://arxiv.org/abs/2403.14291) · 📚 被引 16
@@ -244,7 +240,7 @@
 - **链接**: [arXiv:2311.07042](https://arxiv.org/abs/2311.07042)
 - **作者**: Peng Wu, Xuerong Zhou, Guansong Pang, Yujia Sun, Jing Liu, Peng Wang et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2024
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -252,11 +248,7 @@
 
 </details>
 
-### SED: A Simple Encoder-Decoder for Open-Vocabulary Semantic Segmentation.
-- **链接**: [arXiv:2311.15537](https://arxiv.org/abs/2311.15537) · 📚 被引 90
-- **作者**: Bin Xie, Jiale Cao, Jin Xie, Fahad Shahbaz Khan, Yanwei Pang
-- **🏷️ 机构**: Tianjin University, Chongqing University, Mohamed bin Zayed University of Artificial Intelligence
-- **会议**: CVPR 2024
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -264,11 +256,11 @@
 
 </details>
 
-### Visual Programming for Zero-Shot Open-Vocabulary 3D Visual Grounding.
-- **链接**: [arXiv:2311.15383](https://arxiv.org/abs/2311.15383) · 📚 被引 39
-- **作者**: Zhihao Yuan, Jinke Ren, Chun-Mei Feng, Hengshuang Zhao, Shuguang Cui, Zhen Li
-- **🏷️ 机构**: FNii, CUHKSZ, IHPC, A*STAR,Singapore, HKU
-- **会议**: CVPR 2024
+### Open Vocabulary 3D Scene Understanding via Geometry Guided Self-Distillation.
+- **链接**: [arXiv:2407.13362](https://arxiv.org/abs/2407.13362) · 📚 被引 5
+- **作者**: Pengfei Wang, Yuxi Wang, Shuai Li, Zhaoxiang Zhang, Zhen Lei, Lei Zhang
+- **🏷️ 机构**: PolyU / OPPO
+- **会议**: ECCV 2024
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -276,11 +268,7 @@
 
 </details>
 
-### ArGue: Attribute-Guided Prompt Tuning for Vision-Language Models.
-- **链接**: [arXiv:2311.16494](https://arxiv.org/abs/2311.16494) · 📚 被引 47
-- **作者**: Xinyu Tian, Shu Zou, Zhaoyuan Yang, Jing Zhang
-- **🏷️ 机构**: Australian National University, GE Research
-- **会议**: CVPR 2024
+</details>
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -290,28 +278,17 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- Generative Region-Language Pretraining for Open-Ended Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- YOLO-World: Real-Time Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- InstaGen: Enhancing Object Detection by Training on Synthetic Dataset. → [object-detection](../object-detection/Guideline%202024.md)
-- Retrieval-Augmented Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- Learning Background Prompts to Discover Implicit Knowledge for Open Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- SHiNe: Semantic Hierarchy Nexus for Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- DetCLIPv3: Towards Versatile Generative Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- Exploring Region-Word Alignment in Built-in Detector for Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- Scene-adaptive and Region-aware Multi-modal Prompt for Open Vocabulary Object Detection. → [multimodal](../multimodal/Guideline%202024.md)
-- Taming Self-Training for Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- Training-Free Open-Vocabulary Segmentation with Offline Diffusion-Augmented Prototype Generation. → [multimodal](../multimodal/Guideline%202024.md)
-- The Devil is in the Fine-Grained Details: Evaluating open-Vocabulary Object Detectors for Fine-Grained Understanding. → [object-detection](../object-detection/Guideline%202024.md)
-- CAT-Seg: Cost Aggregation for Open-Vocabulary Semantic Segmentation. → [multimodal](../multimodal/Guideline%202024.md)
-- Exploring the Potential of Large Foundation Models for Open-Vocabulary HOI Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- OVMR: Open-Vocabulary Recognition with Multi-Modal References. → [multimodal](../multimodal/Guideline%202024.md)
-- Language Embedded 3D Gaussians for Open-Vocabulary Scene Understanding. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
-- GOV-NeSF: Generalizable Open-Vocabulary Neural Semantic Fields. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
-- Image-to-Image Matching via Foundation Models: A New Perspective for Open-Vocabulary Semantic Segmentation. → [multimodal](../multimodal/Guideline%202024.md)
-- Transferable and Principled Efficiency for Open-Vocabulary Segmentation. → [network-pruning](../network-pruning/Guideline%202024.md)
-- MaskClustering: View Consensus Based Mask Graph Clustering for Open-Vocabulary 3D Instance Segmentation. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
-- OVER-NAV: Elevating Iterative Vision-and-Language Navigation with Open-Vocabulary Detection and StructurEd Representation. → [multimodal](../multimodal/Guideline%202024.md)
-- RegionPLC: Regional Point-Language Contrastive Learning for Open-World 3D Scene Understanding. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- Self-Supervised Class-Agnostic Motion Prediction with Spatial and Temporal Consistency Regularizations. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- OmniSeg3D: Omniversal 3D Segmentation via Hierarchical Contrastive Learning. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
-- EfficientSAM: Leveraged Masked Image Pretraining for Efficient Segment Anything. → [object-detection](../object-detection/Guideline%202024.md)
+- Grounding DINO: Marrying DINO with Grounded Pre-training for Open-Set Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- Cross-Domain Few-Shot Object Detection via Enhanced Open-Set Object Detector. → [object-detection](../object-detection/Guideline%202024.md)
+- MarvelOVD: Marrying Object Recognition and Vision-Language Models for Robust Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- Find n' Propagate: Open-Vocabulary 3D Object Detection in Urban Environments. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Unlocking Textual and Visual Wisdom: Open-Vocabulary 3D Object Detection Enhanced by Comprehensive Guidance from Text and Image. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Toward Open Vocabulary Aerial Object Detection with CLIP-Activated Student-Teacher Learning. → [object-detection](../object-detection/Guideline%202024.md)
+- CLIFF: Continual Latent Diffusion for Open-Vocabulary Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- OV-Uni3DETR: Towards Unified Open-Vocabulary 3D Object Detection via Cycle-Modality Propagation. → [3d-detection](../3d-detection/Guideline%202024.md)
+- OpenSight: A Simple Open-Vocabulary Framework for LiDAR-Based Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- Towards Multimodal Open-Set Domain Generalization and Adaptation Through Self-supervision. → [multimodal](../multimodal/Guideline%202024.md)
+- Dense Multimodal Alignment for Open-Vocabulary 3D Scene Understanding. → [multimodal](../multimodal/Guideline%202024.md)
+- OpenPSG: Open-Set Panoptic Scene Graph Generation via Large Multimodal Models. → [multimodal](../multimodal/Guideline%202024.md)
+- Continual Learning and Unknown Object Discovery in 3D Scenes via Self-distillation. → [continual-learning](../continual-learning/Guideline%202024.md)
+- Anytime Continual Learning for Open Vocabulary Classification. → [continual-learning](../continual-learning/Guideline%202024.md)
