@@ -11,11 +11,23 @@
 - **🏷️ 机构**: Microsoft
 - **会议**: ICCV 2021
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### MosaicOS: A Simple and Effective Use of Object-Centric Images for Long-Tailed Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00047) · 📚 被引 37
+- **作者**: Cheng Zhang, Tai-Yu Pan, Yandong Li, Hexiang Hu, Dong Xuan, Soravit Changpinyo et al.
+- **🏷️ 机构**: The Ohio State University, Google Research, University of Southern California
+- **会议**: ICCV 2021
 
-> DEtection TRansformer (DETR) for object detection reaches competitive performance compared with Faster R-CNN via a transformer encoder-decoder architecture. However, trained with scratch transformers, DETR needs large-scale training data and an extreme long training schedule even on COCO dataset. Inspired by the great success of pre-training transformers in natural language processing, we propose a novel pretext task named random query patch detection in Unsupervised Pre-training DETR (UP-DETR). Specifically, we randomly crop patches from the given image and then feed them as queries to the decoder. The model is pre-trained to detect these query patches from the input image. During the pre-training, we address two critical issues: multi-task learning and multi-query localization. (1) To trade off classification and localization preferences in the pretext task, we find that freezing the CNN backbone is the prerequisite for the success of pre-training transformers. (2) To perform multi-query localization, we develop UP-DETR with multi-query patch detection with attention mask. Besides, UP-DETR also provides a unified perspective for fine-tuning object detection and one-shot detection tasks. In our experiments, UP-DETR significantly boosts the performance of DETR with faster convergence and higher average precision on object detection, one-shot detection and panoptic segmentation. Code and pre-training models: https://github.com/dddzg/up-detr.
+### Uncertainty-Guided Transformer Reasoning for Camouflaged Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00411) · 📚 被引 310
+- **作者**: Fan Yang, Qiang Zhai, Xin Li, Rui Huang, Ao Luo, Hong Cheng et al.
+- **🏷️ 机构**: AIQ, Uestc, Megvii
+- **会议**: ICCV 2021
 
-</details>
+### Robust Object Detection via Instance-Level Temporal Cycle Confusion.
+- **链接**: [arXiv:2104.08381](https://arxiv.org/abs/2104.08381) · 📚 被引 25
+- **作者**: Xin Wang, Thomas E. Huang, Benlin Liu, Fisher Yu, Xiaolong Wang, Joseph E. Gonzalez et al.
+- **🏷️ 机构**: Microsoft Research, ETH Z&#x00FC;rich, University of Washington
+- **会议**: ICCV 2021
 
 ### Robust Object Detection via Instance-Level Temporal Cycle Confusion.
 - **链接**: [arXiv:2104.08381](https://arxiv.org/abs/2104.08381) · [代码](https://github.com/xinw1012/cycle-confusion) · 📚 被引 25
@@ -23,11 +35,23 @@
 - **🏷️ 机构**: Microsoft Research, ETH Z&#x00FC;rich, University of Washington
 - **会议**: ICCV 2021
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Dual Bipartite Graph Learning: A General Approach for Domain Adaptive Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00270) · 📚 被引 59
+- **作者**: Chaoqi Chen, Jiongcheng Li, Zebiao Zheng, Yue Huang, Xinghao Ding, Yizhou Yu
+- **🏷️ 机构**: The University of Hong Kong, Xiamen University
+- **会议**: ICCV 2021
 
-> Visual salient object detection (SOD) aims at finding the salient object(s) that attract human attention, while camouflaged object detection (COD) on the contrary intends to discover the camouflaged object(s) that hidden in the surrounding. In this paper, we propose a paradigm of leveraging the contradictory information to enhance the detection ability of both salient object detection and camouflaged object detection. We start by exploiting the easy positive samples in the COD dataset to serve as hard positive samples in the SOD task to improve the robustness of the SOD model. Then, we introduce a similarity measure module to explicitly model the contradicting attributes of these two tasks. Furthermore, considering the uncertainty of labeling in both tasks' datasets, we propose an adversarial learning network to achieve both higher order similarity measure and network confidence estimation. Experimental results on benchmark datasets demonstrate that our solution leads to state-of-the-art (SOTA) performance for both tasks.
+### Robust Small Object Detection on the Water Surface through Fusion of Camera and Millimeter Wave Radar.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01498) · 📚 被引 93
+- **作者**: Yuwei Cheng, Hu Xu, Yimin Liu
+- **🏷️ 机构**: Tsinghua University, ORCA-Uboat
+- **会议**: ICCV 2021
 
-</details>
+### Active Learning for Deep Object Detection via Probabilistic Modeling.
+- **链接**: [arXiv:2103.16130](https://arxiv.org/abs/2103.16130) · 📚 被引 110
+- **作者**: Jiwoong Choi, Ismail Elezi, Hyuk-Jae Lee, Clément Farabet, José M. Álvarez
+- **🏷️ 机构**: Seoul National University, Technical University of Munich, NVIDIA
+- **会议**: ICCV 2021
 
 </details>
 
@@ -187,19 +211,43 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2021
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Rank & Sort Loss for Object Detection and Instance Segmentation.
+- **链接**: [arXiv:2107.11669](https://arxiv.org/abs/2107.11669) · 📚 被引 46
+- **作者**: Kemal Oksuz, Baris Can Cam, Emre Akbas, Sinan Kalkan
+- **🏷️ 机构**: Middle East Technical University,Dept. of Computer Engineering,Ankara,Turkey
+- **会议**: ICCV 2021
 
-> Supervised learning based object detection frameworks demand plenty of laborious manual annotations, which may not be practical in real applications. Semi-supervised object detection (SSOD) can effectively leverage unlabeled data to improve the model performance, which is of great significance for the application of object detection models. In this paper, we revisit SSOD and propose Instant-Teaching, a completely end-to-end and effective SSOD framework, which uses instant pseudo labeling with extended weak-strong data augmentations for teaching during each training iteration. To alleviate the confirmation bias problem and improve the quality of pseudo annotations, we further propose a co-rectify scheme based on Instant-Teaching, denoted as Instant-Teaching$^*$. Extensive experiments on both MS-COCO and PASCAL VOC datasets substantiate the superiority of our framework. Specifically, our method surpasses state-of-the-art methods by 4.2 mAP on MS-COCO when using $2\%$ labeled data. Even with full supervised information of MS-COCO, the proposed method still outperforms state-of-the-art methods by about 1.0 mAP. On PASCAL VOC, we can achieve more than 5 mAP improvement by applying VOC07 as labeled data and VOC12 as unlabeled data.
+### MFNet: Multi-filter Directive Network for Weakly Supervised Salient Object Detection.
+- **链接**: [arXiv:2112.01732](https://arxiv.org/abs/2112.01732) · 📚 被引 85
+- **作者**: Yongri Piao, Jian Wang, Miao Zhang, Huchuan Lu
+- **🏷️ 机构**: Dalian University of Technology,China
+- **会议**: ICCV 2021
 
-</details>
+### DeFRCN: Decoupled Faster R-CNN for Few-Shot Object Detection.
+- **链接**: [arXiv:2108.09017](https://arxiv.org/abs/2108.09017) · 📚 被引 363
+- **作者**: Limeng Qiao, Yuxuan Zhao, Zhiyuan Li, Xi Qiu, Jianan Wu, Chi Zhang
+- **🏷️ 机构**: Megvii Technology
+- **会议**: ICCV 2021
 
 > We propose Rank & Sort (RS) Loss, a ranking-based loss function to train deep object detection and instance segmentation methods (i.e. visual detectors). RS Loss supervises the classifier, a sub-network of these methods, to rank each positive above all negatives as well as to sort positives among themselves with respect to (wrt.) their localisation qualities (e.g. Intersection-over-Union - IoU). To tackle the non-differentiable nature of ranking and sorting, we reformulate the incorporation of error-driven update with backpropagation as Identity Update, which enables us to model our novel sorting error among positives. With RS Loss, we significantly simplify training: (i) Thanks to our sorting objective, the positives are prioritized by the classifier without an additional auxiliary head (e.g. for centerness, IoU, mask-IoU), (ii) due to its ranking-based nature, RS Loss is robust to class imbalance, and thus, no sampling heuristic is required, and (iii) we address the multi-task nature of visual detectors using tuning-free task-balancing coefficients. Using RS Loss, we train seven diverse visual detectors only by tuning the learning rate, and show that it consistently outperforms baselines: e.g. our RS Loss improves (i) Faster R-CNN by ~ 3 box AP and aLRP Loss (ranking-based baseline) by ~ 2 box AP on COCO dataset, (ii) Mask R-CNN with repeat factor sampling (RFS) by 3.5 mask AP (~ 7 AP for rare classes) on LVIS dataset; and also outperforms all counterparts. Code is available at: https://github.com/kemaloksuz/RankSortLoss
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### SimROD: A Simple Adaptation Method for Robust Object Detection.
+- **链接**: [arXiv:2107.13389](https://arxiv.org/abs/2107.13389) · 📚 被引 47
+- **作者**: Rindra Ramamonjison, Amin Banitalebi-Dehkordi, Xinyu Kang, Xiaolong Bai, Yong Zhang
+- **🏷️ 机构**: Huawei Technologies Canada Co., Ltd, University of British Columbia, Huawei Cloud
+- **会议**: ICCV 2021
 
-> We propose a novel point annotated setting for the weakly semi-supervised object detection task, in which the dataset comprises small fully annotated images and large weakly annotated images by points. It achieves a balance between tremendous annotation burden and detection performance. Based on this setting, we analyze existing detectors and find that these detectors have difficulty in fully exploiting the power of the annotated points. To solve this, we introduce a new detector, Point DETR, which extends DETR by adding a point encoder. Extensive experiments conducted on MS-COCO dataset in various data settings show the effectiveness of our method. In particular, when using 20% fully labeled data from COCO, our detector achieves a promising performance, 33.3 AP, which outperforms a strong baseline (FCOS) by 2.0 AP, and we demonstrate the point annotations bring over 10 points in various AR metrics.
+### Seeking Similarities over Differences: Similarity-based Domain Alignment for Adaptive Object Detection.
+- **链接**: [arXiv:2110.01428](https://arxiv.org/abs/2110.01428) · 📚 被引 74
+- **作者**: Farzaneh Rezaeianaran, Rakshith Shetty, Rahaf Aljundi, Daniel Olmeda Reino, Shanshan Zhang, Bernt Schiele
+- **🏷️ 机构**: Max Planck Institute for Informatics, Toyota Motor Europe, Nanjing University of Science and Technology
+- **会议**: ICCV 2021
 
-</details>
+### Scene Context-Aware Salient Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00412) · 📚 被引 69
+- **作者**: Avishek Siris, Jianbo Jiao, Gary K. L. Tam, Xianghua Xie, Rynson W. H. Lau
+- **🏷️ 机构**: Swansea University,Department of Computer Science, University of Oxford, City University of Hong Kong
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -509,11 +557,23 @@
 - **🏷️ 机构**: Shanghai AI Lab
 - **会议**: ICCV 2021
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### End-to-End Semi-Supervised Object Detection with Soft Teacher.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00305) · 📚 被引 509
+- **作者**: Mengde Xu, Zheng Zhang, Han Hu, Jianfeng Wang, Lijuan Wang, Fangyun Wei et al.
+- **🏷️ 机构**: Huazhong University of Science and Technology, Microsoft
+- **会议**: ICCV 2021
 
-> Localization Quality Estimation (LQE) is crucial and popular in the recent advancement of dense object detectors since it can provide accurate ranking scores that benefit the Non-Maximum Suppression processing and improve detection performance. As a common practice, most existing methods predict LQE scores through vanilla convolutional features shared with object classification or bounding box regression. In this paper, we explore a completely novel and different perspective to perform LQE -- based on the learned distributions of the four parameters of the bounding box. The bounding box distributions are inspired and introduced as "General Distribution" in GFLV1, which describes the uncertainty of the predicted bounding boxes well. Such a property makes the distribution statistics of a bounding box highly correlated to its real localization quality. Specifically, a bounding box distribution with a sharp peak usually corresponds to high localization quality, and vice versa. By leveraging the close correlation between distribution statistics and the real localization quality, we develop a considerably lightweight Distribution-Guided Quality Predictor (DGQP) for reliable LQE based on GFLV1, thus producing GFLV2. To our best knowledge, it is the first attempt in object detection to use a highly relevant, statistical representation to facilitate LQE. Extensive experiments demonstrate the effectiveness of our method. Notably, GFLV2 (ResNet-101) achieves 46.2 AP at 14.6 FPS, surpassing the previous state-of-the-art ATSS baseline (43.6 AP at 14.6 FPS) by absolute 2.6 AP on COCO {\tt test-dev}, without sacrificing the efficiency both in training and inference. Code will be available at https://github.com/implus/GFocalV2.
+### Multi-Source Domain Adaptation for Object Detection.
+- **链接**: [arXiv:2106.15793](https://arxiv.org/abs/2106.15793) · 📚 被引 46
+- **作者**: Xingxu Yao, Sicheng Zhao, Pengfei Xu, Jufeng Yang
+- **🏷️ 机构**: Nankai University,China, Columbia University,USA, Didi Chuxing,China
+- **会议**: ICCV 2021
 
-</details>
+### Dynamic Context-Sensitive Filtering Network for Video Salient Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00158) · 📚 被引 112
+- **作者**: Miao Zhang, Jie Liu, Yifei Wang, Yongri Piao, Shunyu Yao, Wei Ji et al.
+- **🏷️ 机构**: Dalian University of Technology,China, University of Alberta,Canada
+- **会议**: ICCV 2021
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -558,7 +618,7 @@
 - **会议**: CVPR 2021
 
 ### Sparse R-CNN: End-to-End Object Detection With Learnable Proposals.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Sparse_R-CNN_End-to-End_Object_Detection_With_Learnable_Proposals_CVPR_2021_paper.html) · 📚 被引 1309
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Sun_Sparse_R-CNN_End-to-End_Object_Detection_With_Learnable_Proposals_CVPR_2021_paper.html) · 📚 被引 1310
 - **作者**: Peize Sun, Rufeng Zhang, Yi Jiang, Tao Kong, Chenfeng Xu, Wei Zhan et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
@@ -625,7 +685,73 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Mainstream object detectors based on the fully convolutional network has achieved impressive performance. While most of them still need a hand-designed non-maximum suppression (NMS) post-processing, which impedes fully end-to-end training. In this paper, we give the analysis of discarding NMS, where the results reveal that a proper label assignment plays a crucial role. To this end, for fully convolutional detectors, we introduce a Prediction-aware One-To-One (POTO) label assignment for classification to enable end-to-end detection, which obtains comparable performance with NMS. Besides, a simple 3D Max Filtering (3DMF) is proposed to utilize the multi-scale features and improve the discriminability of convolutions in the local region. With these techniques, our end-to-end framework achieves competitive performance against many state-of-the-art detectors with NMS on COCO and CrowdHuman datasets. The code is available at https://github.com/Megvii-BaseDetection/DeFCN .
+> Knowledge distillation has shown great success in classification, however, it is still challenging for detection. In a typical image for detection, representations from different locations may have different contributions to detection targets, making the distillation hard to balance. In this paper, we propose a conditional distillation framework to distill the desired knowledge, namely knowledge that is beneficial in terms of both classification and localization for every instance. The framework introduces a learnable conditional decoding module, which retrieves information given each target instance as query. Specifically, we encode the condition information as query and use the teacher's representations as key. The attention between query and key is used to measure the contribution of different features, guided by a localization-recognition-sensitive auxiliary task. Extensive experiments demonstrate the efficacy of our method: we observe impressive improvements under various settings. Notably, we boost RetinaNet with ResNet-50 backbone from 37.4 to 40.7 mAP (+3.3) under 1x schedule, that even surpasses the teacher (40.4 mAP) with ResNet-101 backbone under 3x schedule. Code has been released on https://github.com/megvii-research/ICD.
+
+</details>
+
+### Joint Semantic Mining for Weakly Supervised RGB-D Salient Object Detection.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/642e92efb79421734881b53e1e1b18b6-Abstract.html)
+- **作者**: Jingjing Li, Wei Ji, Qi Bi, Cheng Yan, Miao Zhang, Yongri Piao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+### Mixed Supervised Object Detection by Transferring Mask Prior and Semantic Similarity.
+- **链接**: [arXiv:2110.14191](https://arxiv.org/abs/2110.14191) · [代码](https://github.com/bcmi/TraMaS-Weak-Shot-Object-Detection)
+- **作者**: Yan Liu, Zhijie Zhang, Li Niu, Junjie Chen, Liqing Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Object detection has achieved promising success, but requires large-scale fully-annotated data, which is time-consuming and labor-extensive. Therefore, we consider object detection with mixed supervision, which learns novel object categories using weak annotations with the help of full annotations of existing base object categories. Previous works using mixed supervision mainly learn the class-agnostic objectness from fully-annotated categories, which can be transferred to upgrade the weak annotations to pseudo full annotations for novel categories. In this paper, we further transfer mask prior and semantic similarity to bridge the gap between novel categories and base categories. Specifically, the ability of using mask prior to help detect objects is learned from base categories and transferred to novel categories. Moreover, the semantic similarity between objects learned from base categories is transferred to denoise the pseudo full annotations for novel categories. Experimental results on three benchmark datasets demonstrate the effectiveness of our method over existing methods. Codes are available at https://github.com/bcmi/TraMaS-Weak-Shot-Object-Detection.
+
+</details>
+
+### SSAL: Synergizing between Self-Training and Adversarial Learning for Domain Adaptive Object Detection.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/c0cccc24dd23ded67404f5e511c342b0-Abstract.html)
+- **作者**: Muhammad Akhtar Munir, Muhammad Haris Khan, M. Saquib Sarfraz, Mohsen Ali
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+### On Model Calibration for Long-Tailed Object Detection and Instance Segmentation.
+- **链接**: [arXiv:2107.02170](https://arxiv.org/abs/2107.02170) · [代码](https://github.com/tydpan/NorCal)
+- **作者**: Tai-Yu Pan, Cheng Zhang, Yandong Li, Hexiang Hu, Dong Xuan, Soravit Changpinyo et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vanilla models for object detection and instance segmentation suffer from the heavy bias toward detecting frequent objects in the long-tailed setting. Existing methods address this issue mostly during training, e.g., by re-sampling or re-weighting. In this paper, we investigate a largely overlooked approach -- post-processing calibration of confidence scores. We propose NorCal, Normalized Calibration for long-tailed object detection and instance segmentation, a simple and straightforward recipe that reweighs the predicted scores of each class by its training sample size. We show that separately handling the background class and normalizing the scores over classes for each proposal are keys to achieving superior performance. On the LVIS dataset, NorCal can effectively improve nearly all the baseline models not only on rare classes but also on common and frequent classes. Finally, we conduct extensive analysis and ablation studies to offer insights into various modeling choices and mechanisms of our approach. Our code is publicly available at https://github.com/tydpan/NorCal/.
+
+</details>
+
+### Searching Parameterized AP Loss for Object Detection.
+- **链接**: [arXiv:2112.05138](https://arxiv.org/abs/2112.05138) · [代码](https://github.com/fundamentalvision/Parameterized-AP-Loss)
+- **作者**: Chenxin Tao, Zizhang Li, Xizhou Zhu, Gao Huang, Yong Liu, Jifeng Dai
+- **🏷️ 机构**: Tsinghua / Shanghai AI Lab
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Loss functions play an important role in training deep-network-based object detectors. The most widely used evaluation metric for object detection is Average Precision (AP), which captures the performance of localization and classification sub-tasks simultaneously. However, due to the non-differentiable nature of the AP metric, traditional object detectors adopt separate differentiable losses for the two sub-tasks. Such a mis-alignment issue may well lead to performance degradation. To address this, existing works seek to design surrogate losses for the AP metric manually, which requires expertise and may still be sub-optimal. In this paper, we propose Parameterized AP Loss, where parameterized functions are introduced to substitute the non-differentiable components in the AP calculation. Different AP approximations are thus represented by a family of parameterized functions in a unified formula. Automatic parameter search algorithm is then employed to search for the optimal parameters. Extensive experiments on the COCO benchmark with three different object detectors (i.e., RetinaNet, Faster R-CNN, and Deformable DETR) demonstrate that the proposed Parameterized AP Loss consistently outperforms existing handcrafted losses. Code is released at https://github.com/fundamentalvision/Parameterized-AP-Loss.
+
+</details>
+
+### Generalized and Discriminative Few-Shot Object Detection via SVD-Dictionary Enhancement.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/325995af77a0e8b06d1204a171010b3a-Abstract.html)
+- **作者**: Aming Wu, Suqi Zhao, Cheng Deng, Wei Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+### Learning High-Precision Bounding Box for Rotated Object Detection via Kullback-Leibler Divergence.
+- **链接**: [arXiv:2106.01883](https://arxiv.org/abs/2106.01883) · [代码](https://github.com/yangxue0827/RotationDetection)
+- **作者**: Xue Yang, Xiaojiang Yang, Jirui Yang, Qi Ming, Wentao Wang, Qi Tian et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing rotated object detectors are mostly inherited from the horizontal detection paradigm, as the latter has evolved into a well-developed area. However, these detectors are difficult to perform prominently in high-precision detection due to the limitation of current regression loss design, especially for objects with large aspect ratios. Taking the perspective that horizontal detection is a special case for rotated object detection, in this paper, we are motivated to change the design of rotation regression loss from induction paradigm to deduction methodology, in terms of the relation between rotation and horizontal detection. We show that one essential challenge is how to modulate the coupled parameters in the rotation regression loss, as such the estimated parameters can influence to each other during the dynamic joint optimization, in an adaptive and synergetic way. Specifically, we first convert the rotated bounding box into a 2-D Gaussian distribution, and then calculate the Kullback-Leibler Divergence (KLD) between the Gaussian distributions as the regression loss. By analyzing the gradient of each parameter, we show that KLD (and its derivatives) can dynamically adjust the parameter gradients according to the characteristics of the object. It will adjust the importance (gradient weight) of the angle parameter according to the aspect ratio. This mechanism can be vital for high-precision detection as a slight angle error would cause a serious accuracy drop for large aspect ratios objects. More importantly, we have proved that KLD is scale invariant. We further show that the KLD loss can be degenerated into the popular $l_{n}$-norm loss for horizontal detection. Experimental results on seven datasets using different detectors show its consistent superiority, and codes are available at https://github.com/yangxue0827/RotationDetection and https://github.com/open-mmlab/mmrotate.
 
 </details>
 

@@ -5,15 +5,23 @@
 
 > 同领域其他年份: 
 
-### Objects Are Different: Flexible Monocular 3D Object Detection.
-- **链接**: [arXiv:2104.02323](https://arxiv.org/abs/2104.02323) · [代码](https://github.com/zhangyp15/MonoFlex) · 📚 被引 296
-- **作者**: Yunpeng Zhang, Jiwen Lu, Jie Zhou
-- **🏷️ 机构**: Tsinghua University,Beijing National Research Center for Information Science and Technology,China Department of Automation,China
-- **会议**: CVPR 2021
+### RangeDet: In Defense of Range View for LiDAR-based 3D Object Detection.
+- **链接**: [arXiv:2103.10039](https://arxiv.org/abs/2103.10039) · 📚 被引 245
+- **作者**: Lue Fan, Xuan Xiong, Feng Wang, Naiyan Wang, Zhaoxiang Zhang
+- **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences (CASIA), TuSimple
+- **会议**: ICCV 2021
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Fog Simulation on Real LiDAR Point Clouds for 3D Object Detection in Adverse Weather.
+- **链接**: [arXiv:2108.05249](https://arxiv.org/abs/2108.05249) · 📚 被引 205
+- **作者**: Martin Hahner, Christos Sakaridis, Dengxin Dai, Luc Van Gool
+- **🏷️ 机构**: ETH Z&#x00FC;rich
+- **会议**: ICCV 2021
 
-> The precise localization of 3D objects from a single image without depth information is a highly challenging problem. Most existing methods adopt the same approach for all objects regardless of their diverse distributions, leading to limited performance for truncated objects. In this paper, we propose a flexible framework for monocular 3D object detection which explicitly decouples the truncated objects and adaptively combines multiple approaches for object depth estimation. Specifically, we decouple the edge of the feature map for predicting long-tail truncated objects so that the optimization of normal objects is not influenced. Furthermore, we formulate the object depth estimation as an uncertainty-guided ensemble of directly regressed object depth and solved depths from different groups of keypoints. Experiments demonstrate that our method outperforms the state-of-the-art method by relatively 27\% for the moderate level and 30\% for the hard level in the test set of KITTI benchmark while maintaining real-time efficiency. Code will be available at \url{https://github.com/zhangyp15/MonoFlex}.
+### Gated3D: Monocular 3D Object Detection From Temporal Illumination Cues.
+- **链接**: [arXiv:2102.03602](https://arxiv.org/abs/2102.03602) · 📚 被引 10
+- **作者**: Frank D. Julca-Aguilar, Jason Taylor, Mario Bijelic, Fahim Mannan, Ethan Tseng, Felix Heide
+- **🏷️ 机构**: Algolux, Mercedes-Benz AG, Princeton University
+- **会议**: ICCV 2021
 
 </details>
 
@@ -49,9 +57,17 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2021
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Group-Free 3D Object Detection via Transformers.
+- **链接**: [arXiv:2104.00678](https://arxiv.org/abs/2104.00678) · 📚 被引 297
+- **作者**: Ze Liu, Zheng Zhang, Yue Cao, Han Hu, Xin Tong
+- **🏷️ 机构**: University of Science and Technology of China, Microsoft Research Asia
+- **会议**: ICCV 2021
 
-> Modern 3D object detectors have immensely benefited from the end-to-end learning idea. However, most of them use a post-processing algorithm called Non-Maximal Suppression (NMS) only during inference. While there were attempts to include NMS in the training pipeline for tasks such as 2D object detection, they have been less widely adopted due to a non-mathematical expression of the NMS. In this paper, we present and integrate GrooMeD-NMS -- a novel Grouped Mathematically Differentiable NMS for monocular 3D object detection, such that the network is trained end-to-end with a loss on the boxes after NMS. We first formulate NMS as a matrix operation and then group and mask the boxes in an unsupervised manner to obtain a simple closed-form expression of the NMS. GrooMeD-NMS addresses the mismatch between training and inference pipelines and, therefore, forces the network to select the best 3D box in a differentiable manner. As a result, GrooMeD-NMS achieves state-of-the-art monocular 3D object detection results on the KITTI benchmark dataset performing comparably to monocular video-based methods. Code and models at https://github.com/abhi1kumar/groomed_nms
+### AutoShape: Real-Time Shape-Aware Monocular 3D Object Detection.
+- **链接**: [arXiv:2108.11127](https://arxiv.org/abs/2108.11127) · 📚 被引 140
+- **作者**: Zongdai Liu, Dingfu Zhou, Feixiang Lu, Jin Fang, Liangjun Zhang
+- **🏷️ 机构**: National Engineering Laboratory of Deep Learning Technology and Application,Robotics and Autonomous Driving Laboratory, Baidu Research,China
+- **会议**: ICCV 2021
 
 </details>
 
@@ -77,9 +93,17 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2021
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Multi-Echo LiDAR for 3D Object Detection.
+- **链接**: [arXiv:2107.11470](https://arxiv.org/abs/2107.11470) · 📚 被引 10
+- **作者**: Yunze Man, Xinshuo Weng, Prasanna Kumar Sivakumar, Matthew O'Toole, Kris Kitani
+- **🏷️ 机构**: Carnegie Mellon University, DENSO
+- **会议**: ICCV 2021
 
-> 3D object detection is an important yet demanding task that heavily relies on difficult to obtain 3D annotations. To reduce the required amount of supervision, we propose 3DIoUMatch, a novel semi-supervised method for 3D object detection applicable to both indoor and outdoor scenes. We leverage a teacher-student mutual learning framework to propagate information from the labeled to the unlabeled train set in the form of pseudo-labels. However, due to the high task complexity, we observe that the pseudo-labels suffer from significant noise and are thus not directly usable. To that end, we introduce a confidence-based filtering mechanism, inspired by FixMatch. We set confidence thresholds based upon the predicted objectness and class probability to filter low-quality pseudo-labels. While effective, we observe that these two measures do not sufficiently capture localization quality. We therefore propose to use the estimated 3D IoU as a localization metric and set category-aware self-adjusted thresholds to filter poorly localized proposals. We adopt VoteNet as our backbone detector on indoor datasets while we use PV-RCNN on the autonomous driving dataset, KITTI. Our method consistently improves state-of-the-art methods on both ScanNet and SUN-RGBD benchmarks by significant margins under all label ratios (including fully labeled setting). For example, when training using only 10\% labeled data on ScanNet, 3DIoUMatch achieves 7.7% absolute improvement on mAP@0.25 and 8.5% absolute improvement on mAP@0.5 upon the prior art. On KITTI, we are the first to demonstrate semi-supervised 3D object detection and our method surpasses a fully supervised baseline from 1.8% to 7.6% under different label ratios and categories.
+### Pyramid R-CNN: Towards Better Performance and Adaptability for 3D Object Detection.
+- **链接**: [arXiv:2109.02499](https://arxiv.org/abs/2109.02499) · 📚 被引 172
+- **作者**: Jiageng Mao, Minzhe Niu, Haoyue Bai, Xiaodan Liang, Hang Xu, Chunjing Xu
+- **🏷️ 机构**: The Chinese University of Hong Kong, Huawei Noah&#x2019;s Ark Lab, HKUST
+- **会议**: ICCV 2021
 
 </details>
 
@@ -87,7 +111,7 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> 3D object detection is vital for many robotics applications. For tasks where a 2D perspective range image exists, we propose to learn a 3D representation directly from this range image view. To this end, we designed a 2D convolutional network architecture that carries the 3D spherical coordinates of each pixel throughout the network. Its layers can consume any arbitrary convolution kernel in place of the default inner product kernel and exploit the underlying local geometry around each pixel. We outline four such kernels: a dense kernel according to the bag-of-words paradigm, and three graph kernels inspired by recent graph neural network advances: the Transformer, the PointNet, and the Edge Convolution. We also explore cross-modality fusion with the camera image, facilitated by operating in the perspective range image view. Our method performs competitively on the Waymo Open Dataset and improves the state-of-the-art AP for pedestrian detection from 69.7% to 75.5%. It is also efficient in that our smallest model, which still outperforms the popular PointPillars in quality, requires 180 times fewer FLOPS and model parameters
+> 3D object detection is a key module for safety-critical robotics applications such as autonomous driving. For these applications, we care most about how the detections affect the ego-agent's behavior and safety (the egocentric perspective). Intuitively, we seek more accurate descriptions of object geometry when it's more likely to interfere with the ego-agent's motion trajectory. However, current detection metrics, based on box Intersection-over-Union (IoU), are object-centric and aren't designed to capture the spatio-temporal relationship between objects and the ego-agent. To address this issue, we propose a new egocentric measure to evaluate 3D object detection, namely Support Distance Error (SDE). Our analysis based on SDE reveals that the egocentric detection quality is bounded by the coarse geometry of the bounding boxes. Given the insight that SDE would benefit from more accurate geometry descriptions, we propose to represent objects as amodal contours, specifically amodal star-shaped polygons, and devise a simple model, StarPoly, to predict such contours. Our experiments on the large-scale Waymo Open Dataset show that SDE better reflects the impact of detection quality on the ego-agent's safety compared to IoU; and the estimated contours from StarPoly consistently improve the egocentric detection quality over recent 3D object detectors.
 
 </details>
 
@@ -107,19 +131,43 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2021
 
+### An End-to-End Transformer Model for 3D Object Detection.
+- **链接**: [arXiv:2109.08141](https://arxiv.org/abs/2109.08141) · 📚 被引 481
+- **作者**: Ishan Misra, Rohit Girdhar, Armand Joulin
+- **🏷️ 机构**: Facebook AI Research
+- **会议**: ICCV 2021
+
+### Is Pseudo-Lidar needed for Monocular 3D Object detection?
+- **链接**: [arXiv:2108.06417](https://arxiv.org/abs/2108.06417) · 📚 被引 315
+- **作者**: Dennis Park, Rares Ambrus, Vitor Guizilini, Jie Li, Adrien Gaidon
+- **🏷️ 机构**: Toyota Research Institute
+- **会议**: ICCV 2021
+
+### RandomRooms: Unsupervised Pre-training from Synthetic Shapes and Randomized Layouts for 3D Object Detection.
+- **链接**: [arXiv:2108.07794](https://arxiv.org/abs/2108.07794) · 📚 被引 45
+- **作者**: Yongming Rao, Benlin Liu, Yi Wei, Jiwen Lu, Cho-Jui Hsieh, Jie Zhou
+- **🏷️ 机构**: Tsinghua University, UCLA
+- **会议**: ICCV 2021
+
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Object localization in 3D space is a challenging aspect in monocular 3D object detection. Recent advances in 6DoF pose estimation have shown that predicting dense 2D-3D correspondence maps between image and object 3D model and then estimating object pose via Perspective-n-Point (PnP) algorithm can achieve remarkable localization accuracy. Yet these methods rely on training with ground truth of object geometry, which is difficult to acquire in real outdoor scenes. To address this issue, we propose MonoRUn, a novel detection framework that learns dense correspondences and geometry in a self-supervised manner, with simple 3D bounding box annotations. To regress the pixel-related 3D object coordinates, we employ a regional reconstruction network with uncertainty awareness. For self-supervised training, the predicted 3D coordinates are projected back to the image plane. A Robust KL loss is proposed to minimize the uncertainty-weighted reprojection error. During testing phase, we exploit the network uncertainty by propagating it through all downstream modules. More specifically, the uncertainty-driven PnP algorithm is leveraged to estimate object pose and its covariance. Extensive experiments demonstrate that our proposed approach outperforms current state-of-the-art methods on KITTI benchmark.
+### Geometry-based Distance Decomposition for Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01489) · 📚 被引 147
+- **作者**: Xuepeng Shi, Qi Ye, Xiaozhi Chen, Chuangrong Chen, Zhixiang Chen, Tae-Kyun Kim
+- **🏷️ 机构**: Imperial College London, Zhejiang University, DJI
+- **会议**: ICCV 2021
 
-</details>
+### Are we Missing Confidence in Pseudo-LiDAR Methods for Monocular 3D Object Detection?
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00321) · 📚 被引 35
+- **作者**: Andrea Simonelli, Samuel Rota Bulò, Lorenzo Porzi, Peter Kontschieder, Elisa Ricci
+- **🏷️ 机构**: University of Trento,Fondazione Bruno Kessler, Facebook Reality Labs
+- **会议**: ICCV 2021
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> 3D object detection in point clouds is a challenging vision task that benefits various applications for understanding the 3D visual world. Lots of recent research focuses on how to exploit end-to-end trainable Hough voting for generating object proposals. However, the current voting strategy can only receive partial votes from the surfaces of potential objects together with severe outlier votes from the cluttered backgrounds, which hampers full utilization of the information from the input point clouds. Inspired by the back-tracing strategy in the conventional Hough voting methods, in this work, we introduce a new 3D object detection method, named as Back-tracing Representative Points Network (BRNet), which generatively back-traces the representative points from the vote centers and also revisits complementary seed points around these generated points, so as to better capture the fine local structural features surrounding the potential objects from the raw point clouds. Therefore, this bottom-up and then top-down strategy in our BRNet enforces mutual consistency between the predicted vote centers and the raw surface points and thus achieves more reliable and flexible object localization and class prediction results. Our BRNet is simple but effective, which significantly outperforms the state-of-the-art methods on two large-scale point cloud datasets, ScanNet V2 (+7.5% in terms of mAP@0.50) and SUN RGB-D (+4.7% in terms of mAP@0.50), while it is still lightweight and efficient. Code will be available at https://github.com/cheng052/BRNet.
-
-</details>
+### You Don't Only Look Once: Constructing Spatial-Temporal Memory for Integrated 3D Object Detection and Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00317) · 📚 被引 11
+- **作者**: Jiaming Sun, Yiming Xie, Siyu Zhang, Linghao Chen, Guofeng Zhang, Hujun Bao et al.
+- **🏷️ 机构**: Zhejiang University, SenseTime Research
+- **会议**: ICCV 2021
 
 ### RandomRooms: Unsupervised Pre-training from Synthetic Shapes and Randomized Layouts for 3D Object Detection.
 - **链接**: [arXiv:2108.07794](https://arxiv.org/abs/2108.07794)
@@ -224,11 +272,5 @@
 ### VoxelContext-Net: An Octree Based Framework for Point Cloud Compression.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Que_VoxelContext-Net_An_Octree_Based_Framework_for_Point_Cloud_Compression_CVPR_2021_paper.html)
 - **作者**: Zizheng Que, Guo Lu, Dong Xu
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
-
-### CanonPose: Self-Supervised Monocular 3D Human Pose Estimation in the Wild.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wandt_CanonPose_Self-Supervised_Monocular_3D_Human_Pose_Estimation_in_the_Wild_CVPR_2021_paper.html)
-- **作者**: Bastian Wandt, Marco Rudolph, Petrissa Zell, Helge Rhodin, Bodo Rosenhahn
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021

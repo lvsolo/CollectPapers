@@ -29,9 +29,7 @@
 - **🏷️ 机构**: ZJU
 - **会议**: CVPR 2020
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The success of deep neural networks relies on significant architecture engineering. Recently neural architecture search (NAS) has emerged as a promise to greatly reduce manual effort in network design by automatically searching for optimal architectures, although typically such algorithms need an excessive amount of computational resources, e.g., a few thousand GPU-days. To date, on challenging vision tasks such as object detection, NAS, especially fast versions of NAS, is less studied. Here we propose to search for the decoder structure of object detectors with search efficiency being taken into consideration. To be more specific, we aim to efficiently search for the feature pyramid network (FPN) as well as the prediction head of a simple anchor-free object detector, namely FCOS, using a tailored reinforcement learning paradigm. With carefully designed search space, search algorithms and strategies for evaluating network quality, we are able to efficiently search a top-performing detection architecture within 4 days using 8 V100 GPUs. The discovered architecture surpasses state-of-the-art object detection models (such as Faster R-CNN, RetinaNet and FCOS) by 1.5 to 3.5 points in AP on the COCO dataset, with comparable computation complexity and memory footprint, demonstrating the efficacy of the proposed NAS for object detection.
+> Existing Neural Architecture Search (NAS) methods either encode neural architectures using discrete encodings that do not scale well, or adopt supervised learning-based methods to jointly learn architecture representations and optimize architecture search on such representations which incurs search bias. Despite the widespread use, architecture representations learned in NAS are still poorly understood. We observe that the structural properties of neural architectures are hard to preserve in the latent space if architecture representation learning and search are coupled, resulting in less effective search performance. In this work, we find empirically that pre-training architecture representations using only neural architectures without their accuracies as labels considerably improve the downstream architecture search efficiency. To explain these observations, we visualize how unsupervised architecture representation learning better encourages neural architectures with similar connections and operators to cluster together. This helps to map neural architectures with similar performance to the same regions in the latent space and makes the transition of architectures in the latent space relatively smooth, which considerably benefits diverse downstream search strategies.
 
 </details>
 
@@ -60,7 +58,7 @@
 </details>
 
 ### MTL-NAS: Task-Agnostic Neural Architecture Search Towards General-Purpose Multi-Task Learning.
-- **链接**: [arXiv:2003.14058](https://arxiv.org/abs/2003.14058) · [代码](https://github.com/bhpfelix/MTLNAS) · 📚 被引 67
+- **链接**: [arXiv:2003.14058](https://arxiv.org/abs/2003.14058) · [代码](https://github.com/bhpfelix/MTLNAS) · 📚 被引 66
 - **作者**: Yuan Gao, Haoping Bai, Zequn Jie, Jiayi Ma, Kui Jia, Wei Liu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020

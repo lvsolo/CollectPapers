@@ -16,11 +16,19 @@
 - **创新点**: 内核复用技术和动态通道细化策略，实现了可微搜索中的高效计算。
 - **结果**: 在COCO上以1.4 GPU天搜索成本达到SOTA检测性能，并成功迁移至旋转检测。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### Large-Scale Graph Neural Architecture Search.
+- **链接**: [出版页](https://proceedings.mlr.press/v162/guan22d.html)
+- **作者**: Chaoyu Guan, Xin Wang, Hong Chen, Ziwei Zhang, Wenwu Zhu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2022
 
 > Training CNN for detection is time-consuming due to the large dataset and complex network modules, making it hard to search architectures on detection datasets directly, which usually requires vast search costs (usually tens and even hundreds of GPU-days). In contrast, this paper introduces an efficient framework, named EAutoDet, that can discover practical backbone and FPN architectures for object detection in 1.4 GPU-days. Specifically, we construct a supernet for both backbone and FPN modules and adopt the differentiable method. To reduce the GPU memory requirement and computational cost, we propose a kernel reusing technique by sharing the weights of candidate operations on one edge and consolidating them into one convolution. A dynamic channel refinement strategy is also introduced to search channel numbers. Extensive experiments show significant efficacy and efficiency of our method. In particular, the discovered architectures surpass state-of-the-art object detection NAS methods and achieve 40.1 mAP with 120 FPS and 49.2 mAP with 41.3 FPS on COCO test-dev set. We also transfer the discovered architectures to rotation detection task, which achieve 77.05 mAP$_{\text{50}}$ on DOTA-v1.0 test set with 21.1M parameters.
 
-</details>
+### AGNAS: Attention-Guided Micro and Macro-Architecture Search.
+- **链接**: [出版页](https://proceedings.mlr.press/v162/sun22a.html)
+- **作者**: Zihao Sun, Yu Hu, Shun Lu, Longxing Yang, Jilin Mei, Yinhe Han et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2022
 
 ### ViTAS: Vision Transformer Architecture Search. **⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19803-8_9)
@@ -72,7 +80,11 @@
 - **创新点**: 递归标签校准和区域更新策略，提升合成数据的语义和多样性。
 - **结果**: 在多种NAS算法上验证，性能与原始数据搜索相当。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+### TabNAS: Rejection Sampling for Neural Architecture Search on Tabular Datasets.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/4e392aa9bc70ed731d3c9c32810f92fb-Abstract-Conference.html) · 📚 被引 1
+- **作者**: Chengrun Yang, Gabriel Bender, Hanxiao Liu, Pieter-Jan Kindermans, Madeleine Udell, Yifeng Lu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
 
 > This paper aims to explore the feasibility of neural architecture search (NAS) given only a pre-trained model without using any original training data. This is an important circumstance for privacy protection, bias avoidance, etc., in real-world scenarios. To achieve this, we start by synthesizing usable data through recovering the knowledge from a pre-trained deep neural network. Then we use the synthesized data and their predicted soft-labels to guide neural architecture search. We identify that the NAS task requires the synthesized data (we target at image domain here) with enough semantics, diversity, and a minimal domain gap from the natural images. For semantics, we propose recursive label calibration to produce more informative outputs. For diversity, we propose a regional update strategy to generate more diverse and semantically-enriched synthetic data. For minimal domain gap, we use input and feature-level regularization to mimic the original data distribution in latent space. We instantiate our proposed framework with three popular NAS algorithms: DARTS, ProxylessNAS and SPOS. Surprisingly, our results demonstrate that the architectures discovered by searching with our synthetic data achieve accuracy that is comparable to, or even higher than, architectures discovered by searching from the original ones, for the first time, deriving the conclusion that NAS can be done effectively with no need of access to the original or called natural data if the synthesis method is well designed.
 
