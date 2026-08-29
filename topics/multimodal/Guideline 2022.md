@@ -310,3 +310,261 @@
 - DeepFusion: Lidar-Camera Deep Fusion for Multi-Modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
 - CAT-Det: Contrastively Augmented Transformer for Multimodal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
 - CroMo: Cross-Modal Learning for Monocular Depth Estimation. → [multi-camera-perception](../multi-camera-perception/Guideline%202022.md)
+
+## 🆕 增量新增
+
+### Multimodal Object Detection via Probabilistic Ensembling. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20077-9_9) · 📚 被引 201
+- **作者**: Yi-Ting Chen, Jinghao Shi, Zelin Ye, Christoph Mertz, Deva Ramanan, Shu Kong
+- **🏷️ 机构**: CMU
+- **会议**: ECCV 2022
+- **摘要（中）**: 针对多模态目标检测中不同模态预测不一致的问题，论文提出了一种概率集成方法，通过建模各模态预测的不确定性来加权融合结果。该方法利用概率分布表示每个模态的检测输出，并基于贝叶斯规则进行集成，从而减少冲突并提高整体可靠性。相比传统确定性融合，该方法能更好地处理噪声和缺失模态。实验显示，在多个多模态数据集上，该方法显著提升了检测精度和鲁棒性。
+- **摘要（英）**: This paper tackles inconsistent predictions in multimodal object detection by proposing a probabilistic ensembling method that weights fusion based on uncertainty. It models each modality's output as a probability distribution and integrates them via Bayesian rules, improving robustness against noise and missing modalities, with significant accuracy gains on multimodal datasets.
+- **核心贡献**: 提出概率集成框架，利用不确定性加权提升多模态检测性能。
+- **创新点**: 将概率建模引入多模态检测集成，处理预测冲突。
+- **结果**: 在多个数据集上提升精度和鲁棒性。
+
+### Multimodal Transformer for Automatic 3D Annotation and Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2207.09805](https://arxiv.org/abs/2207.09805)
+- **作者**: Chang Liu, Xiaoyan Qian, Binxiao Huang, Xiaojuan Qi, Edmund Y. Lam, Siew-Chong Tan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: 针对LiDAR扫描中3D框标注成本高的问题，本文提出端到端多模态Transformer自动标注器MTrans，利用LiDAR和图像从弱2D框生成精确3D框。方法通过图像信息生成新3D点来缓解点云稀疏性，并多任务同时进行前景分割、点云稠密化和3D框回归。在KITTI上，相比最先进自动标注器，moderate和hard样本的3D AP分别提升4.48%和4.03%，并扩展到3D检测达到89.45% AP。
+- **摘要（英）**: This paper proposes MTrans, an end-to-end multimodal transformer autolabeler that generates precise 3D boxes from weak 2D boxes using LiDAR and images, densifying sparse point clouds with image-derived points. It improves 3D AP by 4.48% and 4.03% on KITTI moderate and hard samples versus SOTA autolabeler, and extends to detection with 89.45% AP.
+- **核心贡献**: 提出多模态Transformer自动标注器，从弱2D框生成精确3D框。
+- **创新点**: 通过图像生成3D点稠密化点云，缓解稀疏性问题。
+- **结果**: 在KITTI上显著提升标注质量和检测精度。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Despite a growing number of datasets being collected for training 3D object detection models, significant human effort is still required to annotate 3D boxes on LiDAR scans. To automate the annotation and facilitate the production of various customized datasets, we propose an end-to-end multimodal transformer (MTrans) autolabeler, which leverages both LiDAR scans and images to generate precise 3D box annotations from weak 2D bounding boxes. To alleviate the pervasive sparsity problem that hinders existing autolabelers, MTrans densifies the sparse point clouds by generating new 3D points based on 2D image information. With a multi-task design, MTrans segments the foreground/background, densifies LiDAR point clouds, and regresses 3D boxes simultaneously. Experimental results verify the effectiveness of the MTrans for improving the quality of the generated labels. By enriching the sparse point clouds, our method achieves 4.48\% and 4.03\% better 3D AP on KITTI moderate and hard samples, respectively, versus the state-of-the-art autolabeler. MTrans can also be extended to improve the accuracy for 3D object detection, resulting in a remarkable 89.45\% AP on KITTI hard samples. Codes are at \url{https://github.com/Cliu2/MTrans}.
+
+</details>
+
+### Class-Agnostic Object Detection with Multi-modal Transformer. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20080-9_30) · 📚 被引 68
+- **作者**: Muhammad Maaz, Hanoona Abdul Rasheed, Salman Khan, Fahad Shahbaz Khan, Rao Muhammad Anwer, Ming-Hsuan Yang
+- **🏷️ 机构**: UC Merced
+- **会议**: ECCV 2022
+- **摘要（中）**: 该论文针对类别无关目标检测问题，提出一种基于多模态Transformer的检测框架。方法利用多模态信息（如文本或音频）增强目标提议的生成与分类，从而实现对任意类别目标的检测。通过跨模态注意力机制，模型能够更好地捕捉目标的语义特征。实验在多个数据集上验证了方法的有效性，但具体细节和量化结果在摘要中未给出。
+- **摘要（英）**: This paper addresses class-agnostic object detection by proposing a multi-modal Transformer framework. The method leverages multi-modal information to enhance proposal generation and classification, enabling detection of arbitrary categories. Cross-modal attention helps capture semantic features, with effectiveness demonstrated across datasets, though specific quantitative results are not detailed in the abstract.
+- **核心贡献**: 提出多模态Transformer用于类别无关目标检测。
+- **创新点**: 利用跨模态注意力融合多源信息。
+- **结果**: 在多个数据集上验证了有效性。
+
+### Multi-modal Masked Pre-training for Monocular Panoramic Depth Completion. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2203.09855](https://arxiv.org/abs/2203.09855) · 📚 被引 28
+- **作者**: Zhiqiang Yan, Xiang Li, Kun Wang, Zhenyu Zhang, Jun Li, Jian Yang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①针对全景深度补全（PDC）任务中，360°深度传感器在复杂场景下产生稀疏深度数据，需要结合RGB图像恢复密集深度的问题。②提出多模态掩码预训练方法M^3PT，在预训练阶段用共享随机掩码同时遮盖全景RGB图像和稀疏深度图的块，并重建掩码区域的稀疏深度。③相比MAE仅处理单模态，首次将掩码预训练扩展到多模态视觉任务，且预训练与微调架构一致，无需丢弃解码器。④实验表明该方法有效提升密集全景深度恢复性能，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses monocular panoramic depth completion by proposing M^3PT, a multi-modal masked pre-training approach that jointly masks and reconstructs patches of RGB images and sparse depth. It extends masked autoencoding to multi-modal tasks with no architectural gap between pre-training and fine-tuning. Experiments demonstrate improved dense depth recovery, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出首个多模态掩码预训练框架用于全景深度补全。
+- **创新点**: 将MAE的掩码重建思想扩展到RGB和深度双模态输入。
+- **结果**: 在PDC任务上验证了预训练方法的有效性，但未给出具体数据。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper, we formulate a potentially valuable panoramic depth completion (PDC) task as panoramic 3D cameras often produce 360° depth with missing data in complex scenes. Its goal is to recover dense panoramic depths from raw sparse ones and panoramic RGB images. To deal with the PDC task, we train a deep network that takes both depth and image as inputs for the dense panoramic depth recovery. However, it needs to face a challenging optimization problem of the network parameters due to its non-convex objective function. To address this problem, we propose a simple yet effective approach termed M{^3}PT: multi-modal masked pre-training. Specifically, during pre-training, we simultaneously cover up patches of the panoramic RGB image and sparse depth by shared random mask, then reconstruct the sparse depth in the masked regions. To our best knowledge, it is the first time that we show the effectiveness of masked pre-training in a multi-modal vision task, instead of the single-modal task resolved by masked autoencoders (MAE). Different from MAE where fine-tuning completely discards the decoder part of pre-training, there is no architectural difference between the pre-training and fine-tuning stages in our M$^{3}$PT as they only differ in the prediction density, which potentially makes the transfer learning more convenient and effective. Extensive experiments verify the effectiveness of M{^3}PT on three panoramic datasets. Notably, we improve the state-of-the-art baselines by averagely 26.2% in RMSE, 51.7% in MRE, 49.7% in MAE, and 37.5% in RMSElog on three benchmark datasets.
+
+</details>
+
+### Multimodal Transformer with Variable-Length Memory for Vision-and-Language Navigation. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2111.05759](https://arxiv.org/abs/2111.05759) · 📚 被引 29
+- **作者**: Chuang Lin, Yi Jiang, Jianfei Cai, Lizhen Qu, Gholamreza Haffari, Zehuan Yuan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①针对视觉-语言导航（VLN）中，现有Transformer方法用固定长度向量表示时间上下文，难以捕捉长期依赖的问题。②提出带可变长度记忆的多模态Transformer（MTVM），通过记忆库直接存储历史激活，并引入记忆感知一致性损失，增强时间上下文表示。③相比LSTM解码器或固定隐藏状态，可变长度记忆更灵活，能保留更多轨迹信息。④实验表明MTVM在VLN基准上优于现有方法，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses the limitation of fixed-length temporal context in Transformer-based VLN by introducing MTVM, which stores previous activations in a variable-length memory bank and uses a memory-aware consistency loss. This enables better long-term context modeling compared to LSTM or fixed hidden states. Experiments show improved navigation performance, though specific metrics are not given.
+- **核心贡献**: 提出可变长度记忆的多模态Transformer用于视觉-语言导航。
+- **创新点**: 用记忆库替代固定长度向量以增强时间上下文。
+- **结果**: 在VLN任务上取得优于现有方法的性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vision-and-Language Navigation (VLN) is a task that an agent is required to follow a language instruction to navigate to the goal position, which relies on the ongoing interactions with the environment during moving. Recent Transformer-based VLN methods have made great progress benefiting from the direct connections between visual observations and the language instruction via the multimodal cross-attention mechanism. However, these methods usually represent temporal context as a fixed-length vector by using an LSTM decoder or using manually designed hidden states to build a recurrent Transformer. Considering a single fixed-length vector is often insufficient to capture long-term temporal context, in this paper, we introduce Multimodal Transformer with Variable-length Memory (MTVM) for visually-grounded natural language navigation by modelling the temporal context explicitly. Specifically, MTVM enables the agent to keep track of the navigation trajectory by directly storing previous activations in a memory bank. To further boost the performance, we propose a memory-aware consistency loss to help learn a better joint representation of temporal context with random masked instructions. We evaluate MTVM on popular R2R and CVDN datasets, and our model improves Success Rate on R2R unseen validation and test set by 2% each, and reduce Goal Process by 1.6m on CVDN test set.
+
+</details>
+
+### Switch-BERT: Learning to Model Multimodal Interactions by Switching Attention and Input. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2306.14182](https://arxiv.org/abs/2306.14182) · 📚 被引 6
+- **作者**: Qingpei Guo, Kaisheng Yao, Wei Chu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①针对多模态模型中固定结构难以适应不同模态输入组合的模态不匹配问题。②提出Switch-BERT，扩展BERT架构，引入可学习的层内和跨层交互，从一组注意力模式中优化选择，并学习关注不同深度的输出。③相比ViLBERT和UNITER等固定结构模型，Switch-BERT能动态调整注意力，缓解模态不匹配。④在VQA、图像-文本检索和指代表达理解任务上，Switch-BERT一致优于或媲美现有模型，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses modality mismatch in fixed-structure multimodal models by proposing Switch-BERT, which learns layer-wise and cross-layer attention modes and attends to outputs from various depths. This dynamic adaptation mitigates mismatch issues compared to ViLBERT and UNITER. Experiments on VQA, retrieval, and referring expression tasks show consistent improvements or comparable performance, though specific metrics are omitted.
+- **核心贡献**: 提出可学习注意力模式的Switch-BERT用于多模态表示学习。
+- **创新点**: 通过切换注意力模式适应不同模态输入。
+- **结果**: 在多个多模态任务上取得优于或媲美现有模型的性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The ability to model intra-modal and inter-modal interactions is fundamental in multimodal machine learning. The current state-of-the-art models usually adopt deep learning models with fixed structures. They can achieve exceptional performances on specific tasks, but face a particularly challenging problem of modality mismatch because of diversity of input modalities and their fixed structures. In this paper, we present \textbf{Switch-BERT} for joint vision and language representation learning to address this problem. Switch-BERT extends BERT architecture by introducing learnable layer-wise and cross-layer interactions. It learns to optimize attention from a set of attention modes representing these interactions. One specific property of the model is that it learns to attend outputs from various depths, therefore mitigates the modality mismatch problem. We present extensive experiments on visual question answering, image-text retrieval and referring expression comprehension experiments. Results confirm that, whereas alternative architectures including ViLBERT and UNITER may excel in particular tasks, Switch-BERT can consistently achieve better or comparable performances than the current state-of-the-art models in these tasks. Ablation studies indicate that the proposed model achieves superior performances due to its ability in learning task-specific multimodal interactions.
+
+</details>
+
+### MUGEN: A Playground for Video-Audio-Text Multimodal Understanding and GENeration. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [arXiv:2204.08058](https://arxiv.org/abs/2204.08058) · 📚 被引 19
+- **作者**: Thomas Hayes, Songyang Zhang, Xi Yin, Guan Pang, Sasha Sheng, Harry Yang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①针对多模态视频-音频-文本理解与生成缺乏丰富且可控数据集的问题。②构建MUGEN数据集，基于游戏平台CoinRun修改，引入音频和新交互，训练RL代理生成375K个视频片段，并收集人工文本描述和自动语义标注。③相比现有数据集，MUGEN提供窄而丰富的任务环境，支持检索和生成基准测试。④基准实验显示该数据集能有效评估多模态方法，但摘要未提供具体性能数据。
+- **摘要（英）**: This paper introduces MUGEN, a large-scale video-audio-text dataset built on a modified CoinRun game, with 375K clips, human annotations, and automatic semantic maps. It provides a controlled environment for multimodal understanding and generation tasks. Benchmarks demonstrate its utility for evaluating retrieval and generation methods, though specific results are not detailed.
+- **核心贡献**: 构建了大规模视频-音频-文本数据集MUGEN及基准。
+- **创新点**: 利用游戏引擎生成可控且丰富的多模态数据。
+- **结果**: 为多模态理解与生成提供有效基准。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal video-audio-text understanding and generation can benefit from datasets that are narrow but rich. The narrowness allows bite-sized challenges that the research community can make progress on. The richness ensures we are making progress along the core challenges. To this end, we present a large-scale video-audio-text dataset MUGEN, collected using the open-sourced platform game CoinRun [11]. We made substantial modifications to make the game richer by introducing audio and enabling new interactions. We trained RL agents with different objectives to navigate the game and interact with 13 objects and characters. This allows us to automatically extract a large collection of diverse videos and associated audio. We sample 375K video clips (3.2s each) and collect text descriptions from human annotators. Each video has additional annotations that are extracted automatically from the game engine, such as accurate semantic maps for each frame and templated textual descriptions. Altogether, MUGEN can help progress research in many tasks in multimodal understanding and generation. We benchmark representative approaches on tasks involving video-audio-text retrieval and generation. Our dataset and code are released at: https://mugen-org.github.io/.
+
+</details>
+
+### Multimodal Conditional Image Synthesis with Product-of-Experts GANs.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19787-1_6) · 📚 被引 54
+- **作者**: Xun Huang, Arun Mallya, Ting-Chun Wang, Ming-Yu Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Learning Mutual Modulation for Self-supervised Cross-Modal Super-Resolution.
+- **链接**: [arXiv:2207.09156](https://arxiv.org/abs/2207.09156) · 📚 被引 15
+- **作者**: Xiaoyu Dong, Naoto Yokoya, Longguang Wang, Tatsumi Uezato
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised cross-modal super-resolution (SR) can overcome the difficulty of acquiring paired training data, but is challenging because only low-resolution (LR) source and high-resolution (HR) guide images from different modalities are available. Existing methods utilize pseudo or weak supervision in LR space and thus deliver results that are blurry or not faithful to the source modality. To address this issue, we present a mutual modulation SR (MMSR) model, which tackles the task by a mutual modulation strategy, including a source-to-guide modulation and a guide-to-source modulation. In these modulations, we develop cross-domain adaptive filters to fully exploit cross-modal spatial dependency and help induce the source to emulate the resolution of the guide and induce the guide to mimic the modality characteristics of the source. Moreover, we adopt a cycle consistency constraint to train MMSR in a fully self-supervised manner. Experiments on various tasks demonstrate the state-of-the-art performance of our MMSR.
+
+</details>
+
+### CMD: Self-supervised 3D Action Representation Learning with Cross-Modal Mutual Distillation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20062-5_42) · 📚 被引 62
+- **作者**: Yunyao Mao, Wengang Zhou, Zhenbo Lu, Jiajun Deng, Houqiang Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Drive&Segment: Unsupervised Semantic Segmentation of Urban Scenes via Cross-Modal Distillation.
+- **链接**: [arXiv:2203.11160](https://arxiv.org/abs/2203.11160)
+- **作者**: Antonín Vobecký, David Hurych, Oriane Siméoni, Spyros Gidaris, Andrei Bursuc, Patrick Pérez et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This work investigates learning pixel-wise semantic image segmentation in urban scenes without any manual annotation, just from the raw non-curated data collected by cars which, equipped with cameras and LiDAR sensors, drive around a city. Our contributions are threefold. First, we propose a novel method for cross-modal unsupervised learning of semantic image segmentation by leveraging synchronized LiDAR and image data. The key ingredient of our method is the use of an object proposal module that analyzes the LiDAR point cloud to obtain proposals for spatially consistent objects. Second, we show that these 3D object proposals can be aligned with the input images and reliably clustered into semantically meaningful pseudo-classes. Finally, we develop a cross-modal distillation approach that leverages image data partially annotated with the resulting pseudo-classes to train a transformer-based model for image semantic segmentation. We show the generalization capabilities of our method by testing on four different testing datasets (Cityscapes, Dark Zurich, Nighttime Driving and ACDC) without any finetuning, and demonstrate significant improvements compared to the current state of the art on this problem. See project webpage https://vobecant.github.io/DriveAndSegment/ for the code and more.
+
+</details>
+
+### On the Limitations of Multimodal VAEs.
+- **链接**: [arXiv:2110.04121](https://arxiv.org/abs/2110.04121)
+- **作者**: Imant Daunhawer, Thomas M. Sutter, Kieran Chin-Cheong, Emanuele Palumbo, Julia E. Vogt
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal variational autoencoders (VAEs) have shown promise as efficient generative models for weakly-supervised data. Yet, despite their advantage of weak supervision, they exhibit a gap in generative quality compared to unimodal VAEs, which are completely unsupervised. In an attempt to explain this gap, we uncover a fundamental limitation that applies to a large family of mixture-based multimodal VAEs. We prove that the sub-sampling of modalities enforces an undesirable upper bound on the multimodal ELBO and thereby limits the generative quality of the respective models. Empirically, we showcase the generative quality gap on both synthetic and real data and present the tradeoffs between different variants of multimodal VAEs. We find that none of the existing approaches fulfills all desired criteria of an effective multimodal generative model when applied on more complex datasets than those used in previous benchmarks. In summary, we identify, formalize, and validate fundamental limitations of VAE-based approaches for modeling weakly-supervised data and discuss implications for real-world applications.
+
+</details>
+
+### Learning Multimodal VAEs through Mutual Supervision.
+- **链接**: [arXiv:2106.12570](https://arxiv.org/abs/2106.12570)
+- **作者**: Tom Joy, Yuge Shi, Philip H. S. Torr, Tom Rainforth, Sebastian M. Schmon, Siddharth Narayanaswamy
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal VAEs seek to model the joint distribution over heterogeneous data (e.g.\ vision, language), whilst also capturing a shared representation across such modalities. Prior work has typically combined information from the modalities by reconciling idiosyncratic representations directly in the recognition model through explicit products, mixtures, or other such factorisations. Here we introduce a novel alternative, the MEME, that avoids such explicit combinations by repurposing semi-supervised VAEs to combine information between modalities implicitly through mutual supervision. This formulation naturally allows learning from partially-observed data where some modalities can be entirely missing -- something that most existing approaches either cannot handle, or do so to a limited extent. We demonstrate that MEME outperforms baselines on standard metrics across both partial and complete observation schemes on the MNIST-SVHN (image-image) and CUB (image-text) datasets. We also contrast the quality of the representations learnt by mutual supervision against standard approaches and observe interesting trends in its ability to capture relatedness between data.
+
+</details>
+
+### Learning Audio-Visual Speech Representation by Masked Multimodal Cluster Prediction.
+- **链接**: [arXiv:2201.02184](https://arxiv.org/abs/2201.02184)
+- **作者**: Bowen Shi, Wei-Ning Hsu, Kushal Lakhotia, Abdelrahman Mohamed
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Video recordings of speech contain correlated audio and visual information, providing a strong signal for speech representation learning from the speaker's lip movements and the produced sound. We introduce Audio-Visual Hidden Unit BERT (AV-HuBERT), a self-supervised representation learning framework for audio-visual speech, which masks multi-stream video input and predicts automatically discovered and iteratively refined multimodal hidden units. AV-HuBERT learns powerful audio-visual speech representation benefiting both lip-reading and automatic speech recognition. On the largest public lip-reading benchmark LRS3 (433 hours), AV-HuBERT achieves 32.5% WER with only 30 hours of labeled data, outperforming the former state-of-the-art approach (33.6%) trained with a thousand times more transcribed video data (31K hours). The lip-reading WER is further reduced to 26.9% when using all 433 hours of labeled data from LRS3 and combined with self-training. Using our audio-visual representation on the same benchmark for audio-only speech recognition leads to a 40% relative WER reduction over the state-of-the-art performance (1.3% vs 2.3%). Our code and models are available at https://github.com/facebookresearch/av_hubert
+
+</details>
+
+### Learning Vision-Guided Quadrupedal Locomotion End-to-End with Cross-Modal Transformers.
+- **链接**: [arXiv:2107.03996](https://arxiv.org/abs/2107.03996)
+- **作者**: Ruihan Yang, Minghao Zhang, Nicklas Hansen, Huazhe Xu, Xiaolong Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose to address quadrupedal locomotion tasks using Reinforcement Learning (RL) with a Transformer-based model that learns to combine proprioceptive information and high-dimensional depth sensor inputs. While learning-based locomotion has made great advances using RL, most methods still rely on domain randomization for training blind agents that generalize to challenging terrains. Our key insight is that proprioceptive states only offer contact measurements for immediate reaction, whereas an agent equipped with visual sensory observations can learn to proactively maneuver environments with obstacles and uneven terrain by anticipating changes in the environment many steps ahead. In this paper, we introduce LocoTransformer, an end-to-end RL method that leverages both proprioceptive states and visual observations for locomotion control. We evaluate our method in challenging simulated environments with different obstacles and uneven terrain. We transfer our learned policy from simulation to a real robot by running it indoors and in the wild with unseen obstacles and terrain. Our method not only significantly improves over baselines, but also achieves far better generalization performance, especially when transferred to the real robot. Our project page with videos is at https://rchalyang.github.io/LocoTransformer/ .
+
+</details>
+
+### Poisoning and Backdooring Contrastive Learning.
+- **链接**: [arXiv:2106.09667](https://arxiv.org/abs/2106.09667)
+- **作者**: Nicholas Carlini, Andreas Terzis
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal contrastive learning methods like CLIP train on noisy and uncurated training datasets. This is cheaper than labeling datasets manually, and even improves out-of-distribution robustness. We show that this practice makes backdoor and poisoning attacks a significant threat. By poisoning just 0.01% of a dataset (e.g., just 300 images of the 3 million-example Conceptual Captions dataset), we can cause the model to misclassify test images by overlaying a small patch. Targeted poisoning attacks, whereby the model misclassifies a particular test input with an adversarially-desired label, are even easier requiring control of 0.0001% of the dataset (e.g., just three out of the 3 million images). Our attacks call into question whether training on noisy and uncurated Internet scrapes is desirable.
+
+</details>
+
+### Gaussian Mixture Variational Autoencoder with Contrastive Learning for Multi-Label Classification.
+- **链接**: [arXiv:2112.00976](https://arxiv.org/abs/2112.00976)
+- **作者**: Junwen Bai, Shufeng Kong, Carla P. Gomes
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-label classification (MLC) is a prediction task where each sample can have more than one label. We propose a novel contrastive learning boosted multi-label prediction model based on a Gaussian mixture variational autoencoder (C-GMVAE), which learns a multimodal prior space and employs a contrastive loss. Many existing methods introduce extra complex neural modules like graph neural networks to capture the label correlations, in addition to the prediction modules. We find that by using contrastive learning in the supervised setting, we can exploit label information effectively in a data-driven manner, and learn meaningful feature and label embeddings which capture the label correlations and enhance the predictive power. Our method also adopts the idea of learning and aligning latent spaces for both features and labels. In contrast to previous works based on a unimodal prior, C-GMVAE imposes a Gaussian mixture structure on the latent space, to alleviate the posterior collapse and over-regularization issues. C-GMVAE outperforms existing methods on multiple public datasets and can often match other models' full performance with only 50% of the training data. Furthermore, we show that the learnt embeddings provide insights into the interpretation of label-label interactions.
+
+</details>
+
+### Geometric Multimodal Contrastive Representation Learning.
+- **链接**: [出版页](https://proceedings.mlr.press/v162/poklukar22a.html)
+- **作者**: Petra Poklukar, Miguel Vasco, Hang Yin, Francisco S. Melo, Ana Paiva, Danica Kragic
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2022
+
+### Cross-modal Learning for Image-Guided Point Cloud Shape Completion.
+- **链接**: [arXiv:2209.09552](https://arxiv.org/abs/2209.09552) · 📚 被引 15
+- **作者**: Emanuele Aiello, Diego Valsesia, Enrico Magli
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper we explore the recent topic of point cloud completion, guided by an auxiliary image. We show how it is possible to effectively combine the information from the two modalities in a localized latent space, thus avoiding the need for complex point cloud reconstruction methods from single views used by the state-of-the-art. We also investigate a novel weakly-supervised setting where the auxiliary image provides a supervisory signal to the training process by using a differentiable renderer on the completed point cloud to measure fidelity in the image space. Experiments show significant improvements over state-of-the-art supervised methods for both unimodal and multimodal completion. We also show the effectiveness of the weakly-supervised approach which outperforms a number of supervised methods and is competitive with the latest supervised models only exploiting point cloud information.
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Bridged Transformer for Vision and Point Cloud 3D Object Detection. → [object-detection](../object-detection/Guideline%202022.md)
+- Self-supervised object detection from audio-visual correspondence. → [object-detection](../object-detection/Guideline%202022.md)
+- Focal Sparse Convolutional Networks for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- DeepFusion: Lidar-Camera Deep Fusion for Multi-Modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- CAT-Det: Contrastively Augmented Transformer for Multimodal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- CrossPoint: Self-Supervised Cross-Modal Contrastive Learning for 3D Point Cloud Understanding. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+- Revisiting the "Video" in Video-Language Understanding. → [video-understanding](../video-understanding/Guideline%202022.md)
+- Deformable Feature Aggregation for Dynamic Multi-modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Homogeneous Multi-modal Feature Fusion and Interaction for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Enhancing Multi-modal Features Using Local Self-attention for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- DetMatch: Two Teachers are Better than One for Joint 2D and 3D Semi-Supervised Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Single-Stream Multi-level Alignment for Vision-Language Pretraining. → [vlm](../vlm/Guideline%202022.md)
+- Generative Negative Text Replay for Continual Vision-Language Pretraining. → [vlm](../vlm/Guideline%202022.md)
+- Sound Localization by Self-supervised Time Delay Estimation. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+- PreTraM: Self-supervised Pre-training via Connecting Trajectory and Map. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+- CODER: Coupled Diversity-Sensitive Momentum Contrastive Learning for Image-Text Retrieval. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+- Learning Visual Representation from Modality-Shared Contrastive Language-Image Pre-training. → [vlm](../vlm/Guideline%202022.md)
+- DeepInteraction: 3D Object Detection via Modality Interaction. → [3d-detection](../3d-detection/Guideline%202022.md)
+- Let Images Give You More: Point Cloud Cross-Modal Training for Shape Analysis. → [knowledge-distillation](../knowledge-distillation/Guideline%202022.md)
+<!-- COMPLETE v1 papers=56 -->

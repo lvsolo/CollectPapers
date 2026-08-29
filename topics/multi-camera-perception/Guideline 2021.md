@@ -182,3 +182,68 @@
 - **作者**: Lukas Hoyer, Dengxin Dai, Yuhua Chen, Adrian Köring, Suman Saha, Luc Van Gool
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+
+## 🆕 增量新增
+
+### 3D-MAN: 3D Multi-Frame Attention Network for Object Detection. **⭐⭐⭐⭐** (相关度: 88%)
+- **链接**: [arXiv:2103.16054](https://arxiv.org/abs/2103.16054) · 📚 被引 111
+- **作者**: Zetong Yang, Yin Zhou, Zhifeng Chen, Jiquan Ngiam
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+- **摘要（中）**: 针对3D目标检测中多帧信息利用不足的问题，提出3D-MAN多帧注意力网络。方法使用快速单帧检测器生成提议，存储于记忆库，并通过多视角对齐和聚合模块利用注意力网络提取时序特征。在Waymo开放数据集上达到最先进性能，优于现有单帧和多帧方法。
+- **摘要（英）**: This paper proposes 3D-MAN, a multi-frame attention network for 3D detection, aggregating features from multiple perspectives via a memory bank and attention-based alignment. It achieves state-of-the-art results on Waymo Open Dataset, outperforming both single-frame and multi-frame methods.
+- **核心贡献**: 提出3D-MAN网络，通过多帧注意力聚合提升3D检测精度。
+- **创新点**: 设计多视角对齐和聚合模块，结合记忆库实现高效时序特征融合。
+- **结果**: 在Waymo数据集上达到最先进性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 3D object detection is an important module in autonomous driving and robotics. However, many existing methods focus on using single frames to perform 3D detection, and do not fully utilize information from multiple frames. In this paper, we present 3D-MAN: a 3D multi-frame attention network that effectively aggregates features from multiple perspectives and achieves state-of-the-art performance on Waymo Open Dataset. 3D-MAN first uses a novel fast single-frame detector to produce box proposals. The box proposals and their corresponding feature maps are then stored in a memory bank. We design a multi-view alignment and aggregation module, using attention networks, to extract and aggregate the temporal features stored in the memory bank. This effectively combines the features coming from different perspectives of the scene. We demonstrate the effectiveness of our approach on the large-scale complex Waymo Open Dataset, achieving state-of-the-art results compared to published single-frame and multi-frame methods.
+
+</details>
+
+### Trusted Multi-View Classification. **⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://openreview.net/forum?id=OOsR8BzCnl5)
+- **作者**: Zongbo Han, Changqing Zhang, Huazhu Fu, Joey Tianyi Zhou
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+- **摘要（中）**: 该论文标题为“可信多视图分类”，但摘要内容缺失，无法评估其具体问题、方法、改进和效果。可能涉及多视图数据分类中的可靠性或不确定性处理，但缺乏详细信息。
+- **摘要（英）**: The paper titled 'Trusted Multi-View Classification' lacks an abstract, preventing assessment of its problem, method, and results. It likely addresses reliability in multi-view classification, but details are unavailable.
+- **核心贡献**: 无法确定，因摘要缺失。
+- **创新点**: 无法确定，因摘要缺失。
+- **结果**: 无法确定，因摘要缺失。
+
+### Real-Time and Accurate Self-Supervised Monocular Depth Estimation on Mobile Device. **⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://proceedings.mlr.press/v176/cai22a.html)
+- **作者**: Hong Cai, Fei Yin, Tushar Singhal, Sandeep Pendyam, Parham Noorzad, Yinhao Zhu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+- **摘要（中）**: ①这篇论文针对移动设备上实时且准确的自监督单目深度估计问题，但摘要内容缺失，无法具体判断其研究细节。②由于摘要未提供，无法得知具体方法或实验内容。③缺乏摘要信息，无法评估其相比已有工作的改进点。④由于摘要缺失，无法引用具体数据或效果。
+- **摘要（英）**: This paper focuses on real-time and accurate self-supervised monocular depth estimation on mobile devices, but the abstract is missing, preventing a detailed assessment of its problem, method, and results. No specific contributions or experimental data can be extracted.
+- **核心贡献**: 核心贡献不明确，因摘要缺失。
+- **创新点**: 创新点不明确，因摘要缺失。
+- **结果**: 效果不明确，因摘要缺失。
+
+### SubTab: Subsetting Features of Tabular Data for Self-Supervised Representation Learning. **⭐⭐⭐⭐** (相关度: 50%)
+- **链接**: [arXiv:2110.04361](https://arxiv.org/abs/2110.04361)
+- **作者**: Talip Ucar, Ehsan Hajiramezanali, Lindsay Edwards
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+- **摘要（中）**: ①这篇论文针对表格数据中自监督学习难以设计有效数据增强方法的问题，因为表格数据缺乏图像、音频等数据的空间、时间或语义结构。②提出了SubTab框架，通过将输入特征划分为多个子集，将表格数据学习转化为多视角表示学习问题，并在自编码器设置中从特征子集重建数据，而非使用损坏版本。③相比已有工作，SubTab利用特征子集重建而非数据损坏，能更好地捕获潜在表示，并引入协作推理机制，在测试时聚合子集的潜在变量作为联合表示。④实验表明SubTab在多个表格数据集上达到了最先进性能，但摘要未提供具体数据。
+- **摘要（英）**: This paper addresses the challenge of self-supervised learning on tabular data, where designing effective augmentations is difficult due to the lack of spatial, temporal, or semantic structure. It proposes SubTab, a framework that divides input features into subsets to transform tabular learning into a multi-view representation learning problem, reconstructing data from feature subsets rather than corrupted versions. The method introduces collaborative inference to aggregate latent variables at test time, and experiments show state-of-the-art performance on multiple tabular datasets, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出了SubTab框架，通过特征子集划分实现表格数据的自监督多视角表示学习。
+- **创新点**: 创新性地利用特征子集重建替代数据损坏，并引入协作推理机制。
+- **结果**: 在多个表格数据集上达到最先进性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised learning has been shown to be very effective in learning useful representations, and yet much of the success is achieved in data types such as images, audio, and text. The success is mainly enabled by taking advantage of spatial, temporal, or semantic structure in the data through augmentation. However, such structure may not exist in tabular datasets commonly used in fields such as healthcare, making it difficult to design an effective augmentation method, and hindering a similar progress in tabular data setting. In this paper, we introduce a new framework, Subsetting features of Tabular data (SubTab), that turns the task of learning from tabular data into a multi-view representation learning problem by dividing the input features to multiple subsets. We argue that reconstructing the data from the subset of its features rather than its corrupted version in an autoencoder setting can better capture its underlying latent representation. In this framework, the joint representation can be expressed as the aggregate of latent variables of the subsets at test time, which we refer to as collaborative inference. Our experiments show that the SubTab achieves the state of the art (SOTA) performance of 98.31% on MNIST in tabular setting, on par with CNN-based SOTA models, and surpasses existing baselines on three other real-world datasets by a significant margin.
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Self-Supervised Learning of Depth Inference for Multi-View Stereo. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+- STaR: Self-Supervised Tracking and Reconstruction of Rigid Objects in Motion With Neural Rendering. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+- Self-supervised Learning from a Multi-view Perspective. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+<!-- COMPLETE v1 papers=24 -->

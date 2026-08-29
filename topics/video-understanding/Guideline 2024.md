@@ -132,3 +132,420 @@
 - E3M: Zero-Shot Spatio-Temporal Video Grounding with Expectation-Maximization Multimodal Modulation. → [multimodal](../multimodal/Guideline%202024.md)
 - 🤖 VideoAgent: A Memory-Augmented Multimodal Agent for Video Understanding. → [multimodal](../multimodal/Guideline%202024.md)
 - InternVideo2: Scaling Foundation Models for Multimodal Video Understanding. → [multimodal](../multimodal/Guideline%202024.md)
+
+## 🆕 增量新增
+
+### Uncovering what, why and How: A Comprehensive Benchmark for Causation Understanding of Video Anomaly. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2405.00181](https://arxiv.org/abs/2405.00181) · 📚 被引 31
+- **作者**: Hang Du, Sicheng Zhang, Binzhu Xie, Guoshun Nan, Jiayang Zhang, Junrui Xu et al.
+- **🏷️ 机构**: Beijing University of Posts and Telecommunications, Nanyang Technological University
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对视频异常理解（VAU）中仅关注检测和定位、缺乏对异常原因和影响深度理解的问题，该论文提出了一个综合基准CUVA，包含异常类型、时间、事件描述、原因自然语言解释和影响自由文本等多层次标注。同时引入MMEval评估指标，以更好地对齐人类偏好，衡量现有大语言模型对视频异常因果关系的理解能力。相比已有基准，CUVA更注重实用性和因果推理，为视频异常理解提供了更全面的评估框架。
+- **摘要（英）**: This paper addresses the lack of deep causal understanding in video anomaly understanding by introducing CUVA, a comprehensive benchmark with multi-level annotations for anomaly type, cause, and effect. It also proposes MMEval, a novel metric aligned with human preferences to evaluate LLMs' comprehension of video anomaly causation. This advances beyond existing detection-focused benchmarks toward more practical and interpretable anomaly analysis.
+- **核心贡献**: 提出了首个面向视频异常因果理解的综合基准CUVA和评估指标MMEval。
+- **创新点**: 将视频异常理解从检测扩展到因果推理，并设计人类偏好对齐的评估指标。
+- **结果**: 提供了全面的标注基准和评估工具，但具体性能数据未在摘要中给出。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Video anomaly understanding (VAU) aims to automatically comprehend unusual occurrences in videos, thereby enabling various applications such as traffic surveillance and industrial manufacturing. While existing VAU benchmarks primarily concentrate on anomaly detection and localization, our focus is on more practicality, prompting us to raise the following crucial questions: "what anomaly occurred?", "why did it happen?", and "how severe is this abnormal event?". In pursuit of these answers, we present a comprehensive benchmark for Causation Understanding of Video Anomaly (CUVA). Specifically, each instance of the proposed benchmark involves three sets of human annotations to indicate the "what", "why" and "how" of an anomaly, including 1) anomaly type, start and end times, and event descriptions, 2) natural language explanations for the cause of an anomaly, and 3) free text reflecting the effect of the abnormality. In addition, we also introduce MMEval, a novel evaluation metric designed to better align with human preferences for CUVA, facilitating the measurement of existing LLMs in comprehending the underlying cause and corresponding effect of video anomalies. Finally, we propose a novel prompt-based method that can serve as a baseline approach for the challenging CUVA. We conduct extensive experiments to show the superiority of our evaluation metric and the prompt-based approach. Our code and dataset are available at https://github.com/fesvhtr/CUVA.
+
+</details>
+
+### VERIFIED: A Video Corpus Moment Retrieval Benchmark for Fine-Grained Video Understanding. **⭐⭐⭐** (相关度: 50%)
+- **链接**: [arXiv:2410.08593](https://arxiv.org/abs/2410.08593) · 📚 被引 5
+- **作者**: Houlun Chen, Xin Wang, Hong Chen, Zeyang Zhang, Wei Feng, Bin Huang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对视频语料时刻检索（VCMR）任务局限于粗粒度理解的问题。②提出了VERIFIED，一个自动化的视频-文本标注流水线，利用LLM和LMM生成细粒度静态和动态描述，并设计了噪声评估器过滤幻觉。③相比现有基准，引入了细粒度查询和部分匹配候选，提升了任务难度和实用性。④构建了更具挑战性的基准，并验证了方法的有效性。
+- **摘要（英）**: This paper addresses the limitation of coarse-grained understanding in video corpus moment retrieval (VCMR). It proposes VERIFIED, an automated video-text annotation pipeline using LLMs and LMMs to generate fine-grained static and dynamic captions, with a noise evaluator to filter hallucinations. Compared to existing benchmarks, it introduces fine-grained queries and partially matched candidates, enhancing task difficulty and practicality, and validates effectiveness through benchmark construction.
+- **核心贡献**: 提出了细粒度VCMR基准和自动化标注流水线VERIFIED。
+- **创新点**: 利用LLM/LMM生成细粒度描述，并设计噪声评估器过滤幻觉。
+- **结果**: 构建了更具挑战性的基准，验证了方法的有效性。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing Video Corpus Moment Retrieval (VCMR) is limited to coarse-grained understanding, which hinders precise video moment localization when given fine-grained queries. In this paper, we propose a more challenging fine-grained VCMR benchmark requiring methods to localize the best-matched moment from the corpus with other partially matched candidates. To improve the dataset construction efficiency and guarantee high-quality data annotations, we propose VERIFIED, an automatic \underline{V}id\underline{E}o-text annotation pipeline to generate captions with \underline{R}el\underline{I}able \underline{FI}n\underline{E}-grained statics and \underline{D}ynamics. Specifically, we resort to large language models (LLM) and large multimodal models (LMM) with our proposed Statics and Dynamics Enhanced Captioning modules to generate diverse fine-grained captions for each video. To filter out the inaccurate annotations caused by the LLM hallucination, we propose a Fine-Granularity Aware Noise Evaluator where we fine-tune a video foundation model with disturbed hard-negatives augmented contrastive and matching losses. With VERIFIED, we construct a more challenging fine-grained VCMR benchmark containing Charades-FIG, DiDeMo-FIG, and ActivityNet-FIG which demonstrate a high level of annotation quality. We evaluate several state-of-the-art VCMR models on the proposed dataset, revealing that there is still significant scope for fine-grained video understanding in VCMR. Code and Datasets are in \href{https://github.com/hlchen23/VERIFIED}{https://github.com/hlchen23/VERIFIED}.
+
+</details>
+
+### LongVideoBench: A Benchmark for Long-context Interleaved Video-Language Understanding. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [arXiv:2407.15754](https://arxiv.org/abs/2407.15754) · 📚 被引 28
+- **作者**: Haoning Wu, Dongxu Li, Bei Chen, Junnan Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对长上下文多模态模型缺乏公开基准的问题。②提出了LongVideoBench，一个包含长达一小时视频-语言交错输入的问答基准，并定义了引用推理任务。③相比现有基准，支持更长输入和更细粒度的类别，覆盖17个细粒度类别。④构建了6,678个人工标注的多选题，全面评估模型的长时多模态理解能力。
+- **摘要（英）**: This paper addresses the lack of public benchmarks for long-context multimodal models. It introduces LongVideoBench, a QA benchmark with video-language interleaved inputs up to an hour long, and defines a novel referring reasoning task. Compared to existing benchmarks, it supports longer inputs and finer-grained categories, covering 17 categories, and curates 6,678 human-annotated questions for comprehensive evaluation.
+- **核心贡献**: 提出了一个长上下文视频-语言交错理解基准LongVideoBench。
+- **创新点**: 定义了引用推理任务，支持长达一小时的输入。
+- **结果**: 构建了大规模基准，全面评估模型的长时理解能力。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large multimodal models (LMMs) are processing increasingly longer and richer inputs. Albeit the progress, few public benchmark is available to measure such development. To mitigate this gap, we introduce LongVideoBench, a question-answering benchmark that features video-language interleaved inputs up to an hour long. Our benchmark includes 3,763 varying-length web-collected videos with their subtitles across diverse themes, designed to comprehensively evaluate LMMs on long-term multimodal understanding. To achieve this, we interpret the primary challenge as to accurately retrieve and reason over detailed multimodal information from long inputs. As such, we formulate a novel video question-answering task termed referring reasoning. Specifically, as part of the question, it contains a referring query that references related video contexts, called referred context. The model is then required to reason over relevant video details from the referred context. Following the paradigm of referring reasoning, we curate 6,678 human-annotated multiple-choice questions in 17 fine-grained categories, establishing one of the most comprehensive benchmarks for long-form video understanding. Evaluations suggest that the LongVideoBench presents significant challenges even for the most advanced proprietary models (e.g. GPT-4o, Gemini-1.5-Pro, GPT-4-Turbo), while their open-source counterparts show an even larger performance gap. In addition, our results indicate that model performance on the benchmark improves only when they are capable of processing more frames, positioning LongVideoBench as a valuable benchmark for evaluating future-generation long-context LMMs.
+
+</details>
+
+### A Unified Framework for Human-centric Point Cloud Video Understanding. **⭐⭐⭐** (相关度: 50%)
+- **链接**: [arXiv:2403.20031](https://arxiv.org/abs/2403.20031) · 📚 被引 4
+- **作者**: Yiteng Xu, Kecheng Ye, Xiao Han, Yiming Ren, Xinge Zhu, Yuexin Ma
+- **🏷️ 机构**: ShanghaiTech University, The Chinese University of Hong Kong
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对人类中心点云视频理解（PVU）中现有方法通常针对单一任务且依赖大量标注数据、泛化能力差的问题，该论文提出一个统一框架，利用人体结构语义和运动动态的先验知识，探索数据内在特征，实现通用的人类点云视频理解。实验表明，该方法在动作识别和3D姿态估计等多个任务上达到最先进性能。相比已有工作，该框架强调通用性和数据效率。
+- **摘要（英）**: This paper tackles the poor generalization and task-specific limitations of human-centric point cloud video understanding by proposing a unified framework that leverages human body structural semantics and motion dynamics priors. It achieves state-of-the-art performance on action recognition and 3D pose estimation, demonstrating improved generalization across tasks. This advances beyond single-task, label-hungry approaches.
+- **核心贡献**: 提出了一个利用人体先验知识的统一框架，用于通用人类点云视频理解。
+- **创新点**: 结合人体结构语义和运动动态，实现跨任务的泛化能力。
+- **结果**: 在动作识别和3D姿态估计上达到最先进性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Human-centric Point Cloud Video Understanding (PVU) is an emerging field focused on extracting and interpreting human-related features from sequences of human point clouds, further advancing downstream human-centric tasks and applications. Previous works usually focus on tackling one specific task and rely on huge labeled data, which has poor generalization capability. Considering that human has specific characteristics, including the structural semantics of human body and the dynamics of human motions, we propose a unified framework to make full use of the prior knowledge and explore the inherent features in the data itself for generalized human-centric point cloud video understanding. Extensive experiments demonstrate that our method achieves state-of-the-art performance on various human-related tasks, including action recognition and 3D pose estimation. All datasets and code will be released soon.
+
+</details>
+
+### Abductive Ego-View Accident Video Understanding for Safe Driving Perception. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2403.00436](https://arxiv.org/abs/2403.00436) · 📚 被引 33
+- **作者**: Jianwu Fang, Lei-Lei Li, Junfei Zhou, Junbin Xiao, Hongkai Yu, Chen Lv et al.
+- **🏷️ 机构**: Xi&#x0027;an Jiaotong University, Chang&#x0027;an University, National University of Singapore
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对自动驾驶中事故视频理解缺乏多模态数据的问题，提出MM-AU数据集和AdVersa-SD框架。MM-AU包含11,727个真实世界ego-view事故视频，带时间对齐文本描述，标注超过223万个目标框和58,650对事故原因。AdVersa-SD采用对象中心视频扩散方法，通过溯因CLIP模型学习正常、近事故和事故帧与文本的共现，以识别事故因果链。实验验证了其溯因能力。
+- **摘要（英）**: This paper introduces MM-AU, a large-scale multi-modal accident video dataset with 11,727 ego-view videos and rich annotations, and AdVersa-SD, an abductive framework using object-centric video diffusion and a contrastive CLIP model to understand accident cause-effect chains. Experiments verify its abductive ability for safe driving perception.
+- **核心贡献**: 构建MM-AU数据集并提出AdVersa-SD溯因事故理解框架。
+- **创新点**: 利用对象中心视频扩散和溯因CLIP模型学习因果链。
+- **结果**: 实验验证了框架的溯因能力。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present MM-AU, a novel dataset for Multi-Modal Accident video Understanding. MM-AU contains 11,727 in-the-wild ego-view accident videos, each with temporally aligned text descriptions. We annotate over 2.23 million object boxes and 58,650 pairs of video-based accident reasons, covering 58 accident categories. MM-AU supports various accident understanding tasks, particularly multimodal video diffusion to understand accident cause-effect chains for safe driving. With MM-AU, we present an Abductive accident Video understanding framework for Safe Driving perception (AdVersa-SD). AdVersa-SD performs video diffusion via an Object-Centric Video Diffusion (OAVD) method which is driven by an abductive CLIP model. This model involves a contrastive interaction loss to learn the pair co-occurrence of normal, near-accident, accident frames with the corresponding text descriptions, such as accident reasons, prevention advice, and accident categories. OAVD enforces the causal region learning while fixing the content of the original frame background in video generation, to find the dominant cause-effect chain for certain accidents. Extensive experiments verify the abductive ability of AdVersa-SD and the superiority of OAVD against the state-of-the-art diffusion models. Additionally, we provide careful benchmark evaluations for object detection and accident reason answering since AdVersa-SD relies on precise object and accident reason information.
+
+</details>
+
+### MA-LMM: Memory-Augmented Large Multimodal Model for Long-Term Video Understanding. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2404.05726](https://arxiv.org/abs/2404.05726) · 📚 被引 98
+- **作者**: Bo He, Hengduo Li, Young Kyun Jang, Menglin Jia, Xuefei Cao, Ashish Shah et al.
+- **🏷️ 机构**: University of Maryland, Meta, University of Central Florida
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对现有基于LLM的多模态模型只能处理有限帧数、难以理解长视频的问题，该论文提出记忆增强的大多模态模型MA-LMM，通过在线方式处理视频并将历史信息存储在记忆库中，避免超出LLM上下文长度或GPU内存限制。该记忆库可无缝集成到现有多模态LLM中。实验表明，在长视频理解、视频问答和视频描述等任务上达到最先进性能。相比已有工作，该方法高效且可扩展。
+- **摘要（英）**: This paper addresses the limited frame processing of LLM-based multimodal models for long-term video understanding by proposing MA-LMM, which processes videos online and stores past information in a memory bank. This avoids context length and GPU memory constraints and integrates seamlessly with existing multimodal LLMs. It achieves state-of-the-art performance on long-video understanding, video QA, and captioning.
+- **核心贡献**: 提出了记忆增强的大多模态模型，支持高效长视频理解。
+- **创新点**: 在线处理视频并利用记忆库存储历史信息，突破LLM上下文限制。
+- **结果**: 在多个视频理解任务上达到最先进性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> With the success of large language models (LLMs), integrating the vision model into LLMs to build vision-language foundation models has gained much more interest recently. However, existing LLM-based large multimodal models (e.g., Video-LLaMA, VideoChat) can only take in a limited number of frames for short video understanding. In this study, we mainly focus on designing an efficient and effective model for long-term video understanding. Instead of trying to process more frames simultaneously like most existing work, we propose to process videos in an online manner and store past video information in a memory bank. This allows our model to reference historical video content for long-term analysis without exceeding LLMs' context length constraints or GPU memory limits. Our memory bank can be seamlessly integrated into current multimodal LLMs in an off-the-shelf manner. We conduct extensive experiments on various video understanding tasks, such as long-video understanding, video question answering, and video captioning, and our model can achieve state-of-the-art performances across multiple datasets. Code available at https://boheumd.github.io/MA-LMM/.
+
+</details>
+
+### TimeChat: A Time-sensitive Multimodal Large Language Model for Long Video Understanding. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2312.02051](https://arxiv.org/abs/2312.02051) · 📚 被引 170
+- **作者**: Shuhuai Ren, Linli Yao, Shicheng Li, Xu Sun, Lu Hou
+- **🏷️ 机构**: National Key Laboratory for Multimedia Information Processing, School of Computer Science, Peking University, Huawei Noah&#x0027;s Ark Lab
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对长视频理解中现有大语言模型缺乏时间敏感性和处理长序列能力不足的问题。②提出了TimeChat，包含时间戳感知的帧编码器和滑动视频Q-Former，可生成可变长度的视频token序列以适应不同时长视频，并构建了包含6个任务、125K实例的指令微调数据集。③相比现有视频大语言模型，TimeChat通过显式编码帧时间戳和滑动窗口机制，增强了时间定位和推理能力。④在YouCook2上F1提升9.2、CIDEr提升2.8，QVHighlights上HIT@1提升5.8，Charades-STA上R@1(IoU=0.5)提升27.5，展示了强大的零样本时间定位能力。
+- **摘要（英）**: This paper addresses the lack of temporal sensitivity and limited long-sequence handling in video LLMs. TimeChat introduces a timestamp-aware frame encoder and a sliding video Q-Former to generate variable-length token sequences, along with a 125K instruction-tuning dataset. It achieves significant improvements in dense captioning, temporal grounding, and highlight detection, e.g., +9.2 F1 and +2.8 CIDEr on YouCook2, demonstrating strong zero-shot temporal reasoning.
+- **核心贡献**: 提出了时间敏感的多模态大语言模型TimeChat，结合时间戳编码和滑动Q-Former实现长视频高效理解。
+- **创新点**: 创新性地引入时间戳感知帧编码器和滑动视频Q-Former，实现动态token长度以适应视频时长变化。
+- **结果**: 在多个长视频任务上显著超越现有方法，零样本性能大幅提升。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This work proposes TimeChat, a time-sensitive multimodal large language model specifically designed for long video understanding. Our model incorporates two key architectural contributions: (1) a timestamp-aware frame encoder that binds visual content with the timestamp of each frame, and (2) a sliding video Q-Former that produces a video token sequence of varying lengths to accommodate videos of various durations. Additionally, we construct an instruction-tuning dataset, encompassing 6 tasks and a total of 125K instances, to further enhance TimeChat's instruction-following performance. Experiment results across various video understanding tasks, such as dense captioning, temporal grounding, and highlight detection, demonstrate TimeChat's strong zero-shot temporal localization and reasoning capabilities. For example, it achieves +9.2 F1 score and +2.8 CIDEr on YouCook2, +5.8 HIT@1 on QVHighlights, and +27.5 R@1 (IoU=0.5) on Charades-STA, compared to state-of-the-art video large language models, holding the potential to serve as a versatile video assistant for long-form video comprehension tasks and satisfy realistic user requirements.
+
+</details>
+
+### Chat-UniVi: Unified Visual Representation Empowers Large Language Models with Image and Video Understanding. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2311.08046](https://arxiv.org/abs/2311.08046) · 📚 被引 156
+- **作者**: Peng Jin, Ryuichi Takanobu, Wancai Zhang, Xiaochun Cao, Li Yuan
+- **🏷️ 机构**: School of Electronic and Computer Engineering, Peking University,Shenzhen,China, Peng Cheng Laboratory,Shenzhen,China, Nari Technology Co.,Ltd.,China
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对现有视觉语言模型难以同时高效处理图像和视频，且视觉token数量有限的问题。②提出了Chat-UniVi，使用动态视觉token统一表示图像和视频，并采用多尺度表示以捕捉高层语义和低层细节。③相比现有方法，Chat-UniVi通过统一表示框架和混合训练，无需修改即可直接应用于图像和视频任务。④在多个图像和视频理解基准上表现优异，展示了强大的泛化能力。
+- **摘要（英）**: This paper addresses the challenge of unified image and video understanding with limited visual tokens. Chat-UniVi employs dynamic visual tokens and multi-scale representations to efficiently capture spatial details and temporal relationships. Trained on mixed data, it directly handles both modalities without modification, achieving strong performance across benchmarks.
+- **核心贡献**: 提出Chat-UniVi，通过动态视觉token和多尺度表示统一图像与视频理解。
+- **创新点**: 动态token机制和多尺度融合实现高效跨模态表示。
+- **结果**: 在图像和视频任务上均取得优异性能，泛化能力强。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large language models have demonstrated impressive universal capabilities across a wide range of open-ended tasks and have extended their utility to encompass multimodal conversations. However, existing methods encounter challenges in effectively handling both image and video understanding, particularly with limited visual tokens. In this work, we introduce Chat-UniVi, a Unified Vision-language model capable of comprehending and engaging in conversations involving images and videos through a unified visual representation. Specifically, we employ a set of dynamic visual tokens to uniformly represent images and videos. This representation framework empowers the model to efficiently utilize a limited number of visual tokens to simultaneously capture the spatial details necessary for images and the comprehensive temporal relationship required for videos. Moreover, we leverage a multi-scale representation, enabling the model to perceive both high-level semantic concepts and low-level visual details. Notably, Chat-UniVi is trained on a mixed dataset containing both images and videos, allowing direct application to tasks involving both mediums without requiring any modifications. Extensive experimental results demonstrate that Chat-UniVi consistently outperforms even existing methods exclusively designed for either images or videos. Code is available at https://github.com/PKU-YuanGroup/Chat-UniVi.
+
+</details>
+
+### HIG: Hierarchical Interlacement Graph Approach to Scene Graph Generation in Video Understanding. **⭐⭐⭐** (相关度: 50%)
+- **链接**: [arXiv:2312.03050](https://arxiv.org/abs/2312.03050) · 📚 被引 14
+- **作者**: Trong-Thuan Nguyen, Pha A. Nguyen, Khoa Luu
+- **🏷️ 机构**: University of Arkansas,CVIU Lab
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对视频场景图生成中现有方法难以处理复杂交互和多样关系的问题。②提出了新数据集ASPIRe，包含外观-情境-位置-交互-关系谓词，并提出了层次交织图（HIG）方法，通过统一层和图结构深入理解场景变化。③相比现有方法，HIG在五个不同任务上均展现出优越性能。④实验证明HIG在多种场景下优于其他方法。
+- **摘要（英）**: This paper tackles complex interactivity understanding in video scene graph generation. It introduces the ASPIRe dataset with diverse predicates and the Hierarchical Interlacement Graph (HIG) method, which uses a unified layer-graph structure for deep scene insights. HIG demonstrates superior performance across five tasks in various scenarios.
+- **核心贡献**: 提出ASPIRe数据集和HIG方法，提升视频交互理解能力。
+- **创新点**: 层次交织图结构统一处理多种交互任务。
+- **结果**: 在多个场景任务上优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Visual interactivity understanding within visual scenes presents a significant challenge in computer vision. Existing methods focus on complex interactivities while leveraging a simple relationship model. These methods, however, struggle with a diversity of appearance, situation, position, interaction, and relation in videos. This limitation hinders the ability to fully comprehend the interplay within the complex visual dynamics of subjects. In this paper, we delve into interactivities understanding within visual content by deriving scene graph representations from dense interactivities among humans and objects. To achieve this goal, we first present a new dataset containing Appearance-Situation-Position-Interaction-Relation predicates, named ASPIRe, offering an extensive collection of videos marked by a wide range of interactivities. Then, we propose a new approach named Hierarchical Interlacement Graph (HIG), which leverages a unified layer and graph within a hierarchical structure to provide deep insights into scene changes across five distinct tasks. Our approach demonstrates superior performance to other methods through extensive experiments conducted in various scenarios.
+
+</details>
+
+### A Backpack Full of Skills: Egocentric Video Understanding with Diverse Task Perspectives. **⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01730) · 📚 被引 4
+- **作者**: Simone Alberto Peirone, Francesca Pistilli, Antonio Alliegro, Giuseppe Averta
+- **🏷️ 机构**: Politecnico di Torino
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对第一人称视频理解中任务视角多样性的问题。②论文标题暗示提出一种多任务学习方法，但摘要缺失，无法评估具体方法。③缺乏摘要导致无法判断创新点和效果。④无法提供具体数据。
+- **摘要（英）**: This paper addresses egocentric video understanding with diverse task perspectives, but the abstract is missing, preventing assessment of methodology and results.
+- **核心贡献**: 未知，因摘要缺失。
+- **创新点**: 未知，因摘要缺失。
+- **结果**: 未知，因摘要缺失。
+
+### MovieChat: From Dense Token to Sparse Memory for Long Video Understanding. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2307.16449](https://arxiv.org/abs/2307.16449) · 📚 被引 186
+- **作者**: Enxin Song, Wenhao Chai, Guanhong Wang, Yucheng Zhang, Haoyang Zhou, Feiyang Wu et al.
+- **🏷️ 机构**: Zhejiang University, University of Washington, Microsoft Research Asia
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对长视频理解中计算复杂度高、内存消耗大和长期时序连接困难的问题。②提出了MovieChat，基于Atkinson-Shiffrin记忆模型，利用Transformer token作为记忆载体，结合专门设计的记忆机制，实现从密集token到稀疏记忆的转换。③相比现有系统仅能处理短视频，MovieChat能高效处理长视频，并发布了MovieChat-1K基准（含1K长视频和14K人工标注）。④在长视频理解任务上达到最先进性能。
+- **摘要（英）**: This paper addresses computational and memory challenges in long video understanding. MovieChat leverages the Atkinson-Shiffrin memory model with Transformer tokens as memory carriers, enabling efficient processing of long videos. It achieves state-of-the-art performance and introduces the MovieChat-1K benchmark with 1K videos and 14K annotations.
+- **核心贡献**: 提出MovieChat模型和MovieChat-1K基准，解决长视频理解中的内存和时序问题。
+- **创新点**: 将认知记忆模型融入Transformer token机制，实现稀疏记忆管理。
+- **结果**: 在长视频理解上达到最先进性能，并提供新基准。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recently, integrating video foundation models and large language models to build a video understanding system can overcome the limitations of specific pre-defined vision tasks. Yet, existing systems can only handle videos with very few frames. For long videos, the computation complexity, memory cost, and long-term temporal connection impose additional challenges. Taking advantage of the Atkinson-Shiffrin memory model, with tokens in Transformers being employed as the carriers of memory in combination with our specially designed memory mechanism, we propose the MovieChat to overcome these challenges. MovieChat achieves state-of-the-art performance in long video understanding, along with the released MovieChat-1K benchmark with 1K long video and 14K manual annotations for validation of the effectiveness of our method.
+
+</details>
+
+### OmniViD: A Generative Framework for Universal Video Understanding. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2403.17935](https://arxiv.org/abs/2403.17935) · 📚 被引 22
+- **作者**: Junke Wang, Dongdong Chen, Chong Luo, Bo He, Lu Yuan, Zuxuan Wu et al.
+- **🏷️ 机构**: School of CS, Fudan University,Shanghai Key Lab of Intell. Info. Processing, Microsoft Cloud &#x002B; AI, Microsoft Research Asia
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对视频理解任务（如识别、描述、跟踪）因架构和标注格式不同而难以统一的问题，提出OmniViD生成式框架，将语言作为标签并引入时间和框token，将多种视频任务统一为视频基础的token生成。该方法采用完全共享的编码器-解码器架构，覆盖分类、描述和定位任务。相比现有任务特定模型，实现了统一输出空间和架构。实验表明该简单直接的方法在多种视频任务上有效。
+- **摘要（英）**: To address the fragmentation of video understanding tasks due to distinct architectures and annotation formats, OmniViD proposes a generative framework unifying tasks as video-grounded token generation using language labels with time and box tokens. It employs a fully shared encoder-decoder architecture for classification, captioning, and localization. Experiments demonstrate the effectiveness of this simple approach across diverse video tasks.
+- **核心贡献**: 提出统一视频理解任务的生成式框架OmniViD。
+- **创新点**: 利用语言标签和时间/框token统一多种视频任务的输出空间。
+- **结果**: 实验验证了统一框架在多种视频任务上的有效性。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The core of video understanding tasks, such as recognition, captioning, and tracking, is to automatically detect objects or actions in a video and analyze their temporal evolution. Despite sharing a common goal, different tasks often rely on distinct model architectures and annotation formats. In contrast, natural language processing benefits from a unified output space, i.e., text sequences, which simplifies the training of powerful foundational language models, such as GPT-3, with extensive training corpora. Inspired by this, we seek to unify the output space of video understanding tasks by using languages as labels and additionally introducing time and box tokens. In this way, a variety of video tasks could be formulated as video-grounded token generation. This enables us to address various types of video tasks, including classification (such as action recognition), captioning (covering clip captioning, video question answering, and dense video captioning), and localization tasks (such as visual object tracking) within a fully shared encoder-decoder architecture, following a generative framework. Through comprehensive experiments, we demonstrate such a simple and straightforward idea is quite effective and can achieve state-of-the-art or competitive results on seven video benchmarks, providing a novel perspective for more universal video understanding. Code is available at https://github.com/wangjk666/OmniVid.
+
+</details>
+
+### Compositional Video Understanding with Spatiotemporal Structure-based Transformers. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01774) · 📚 被引 6
+- **作者**: Hoyeoung Yun, Jinwoo Ahn, Minseo Kim, Eun-Sol Kim
+- **🏷️ 机构**: Hanyang University,Department of Computer Science, Hanyang University,Department of Artificial Intelligence Application
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对视频理解中时空结构建模不足的问题，提出基于时空结构的Transformer方法，通过显式建模视频中的组合性时空关系来提升理解能力。该方法利用Transformer架构捕捉帧间和区域间的复杂交互。相比传统方法，增强了模型对视频动态结构的表征。摘要未提供具体实验数据，效果待验证。
+- **摘要（英）**: Addressing insufficient spatiotemporal structure modeling in video understanding, this work proposes a spatiotemporal structure-based Transformer to explicitly capture compositional relationships. It leverages Transformer architecture to model complex interactions across frames and regions. The approach enhances representation of dynamic video structures, though specific results are not detailed in the abstract.
+- **核心贡献**: 提出基于时空结构的Transformer用于组合性视频理解。
+- **创新点**: 显式建模视频中的组合性时空结构。
+- **结果**: 未提供具体数据，效果待验证。
+
+### Align Before Adapt: Leveraging Entity-to-Region Alignments for Generalizable Video Action Recognition. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2311.15619](https://arxiv.org/abs/2311.15619) · 📚 被引 15
+- **作者**: Yifei Chen, Dapeng Chen, Ruijin Liu, Sai Zhou, Wenyuan Xue, Wei Peng
+- **🏷️ 机构**: Huawei Technologies,IT Innovation and Research Center
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对现有视频动作识别中“先适应后对齐”范式忽略静态图像到复杂活动概念映射的问题，提出“先对齐后适应”（ALT）范式，在适应视频表示学习前，利用实体-区域对齐匹配区域感知图像嵌入到离线文本语料库，并将对齐实体的文本嵌入作为Transformer视频适配器的查询，提取视频中重要实体语义。该方法重用视觉-语言对齐，通过底层实体解释动作，有助于理解不熟悉或未见类别。
+- **摘要（英）**: To address the limitation of the 'adapt then align' paradigm in mapping static images to complex activity concepts, ALT proposes an 'Align before Adapt' paradigm, exploiting entity-to-region alignments before video adaptation. It uses aligned entity text embeddings as queries in a transformer adapter to extract key semantics. This reuses visual-language alignment and explains actions via entities, aiding generalization to unseen categories.
+- **核心贡献**: 提出先对齐后适应的视频动作识别范式ALT。
+- **创新点**: 在适应前利用实体-区域对齐增强语义理解。
+- **结果**: 有助于提升对复杂动作和未见类别的识别能力。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large-scale visual-language pre-trained models have achieved significant success in various video tasks. However, most existing methods follow an "adapt then align" paradigm, which adapts pre-trained image encoders to model video-level representations and utilizes one-hot or text embedding of the action labels for supervision. This paradigm overlooks the challenge of mapping from static images to complicated activity concepts. In this paper, we propose a novel "Align before Adapt" (ALT) paradigm. Prior to adapting to video representation learning, we exploit the entity-to-region alignments for each frame. The alignments are fulfilled by matching the region-aware image embeddings to an offline-constructed text corpus. With the aligned entities, we feed their text embeddings to a transformer-based video adapter as the queries, which can help extract the semantics of the most important entities from a video to a vector. This paradigm reuses the visual-language alignment of VLP during adaptation and tries to explain an action by the underlying entities. This helps understand actions by bridging the gap with complex activity semantics, particularly when facing unfamiliar or unseen categories. ALT demonstrates competitive performance while maintaining remarkably low computational costs. In fully supervised experiments, it achieves 88.1% top-1 accuracy on Kinetics-400 with only 4947 GFLOPs. Moreover, ALT outperforms the previous state-of-the-art methods in both zero-shot and few-shot experiments, emphasizing its superior generalizability across various learning scenarios.
+
+</details>
+
+### Ranking Distillation for Open-Ended Video Question Answering with Insufficient Labels. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2403.14430](https://arxiv.org/abs/2403.14430) · 📚 被引 6
+- **作者**: Tianming Liang, Chaolei Tan, Beihao Xia, Wei-Shi Zheng, Jian-Fang Hu
+- **🏷️ 机构**: Sun Yat-sen University,China, Huazhong University of Science and Technology,China
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对开放域视频问答中标签不足（通常每问一个答案）导致将所有未标注答案视为负标签的问题，提出排名蒸馏框架RADI，利用教师模型生成潜在答案排名，丰富标签信息，无需额外人工标注。提出两种鲁棒且无参数的排名蒸馏方法：成对方法引入自适应软间隔，以及另一种方法，避免对不完美教师模型的过度自信。该方法缓解了标签不足问题，提升泛化能力。
+- **摘要（英）**: To mitigate insufficient labels in open-ended video QA, RADI proposes a ranking distillation framework using a teacher model to generate rankings for potential answers, enriching label information without extra annotation. It introduces two robust parameter-free ranking distillation approaches, including a pairwise method with adaptive soft margins to avoid overconfidence. This improves generalization under label scarcity.
+- **核心贡献**: 提出排名蒸馏框架RADI解决视频问答标签不足问题。
+- **创新点**: 利用教师模型排名知识并设计无参数鲁棒蒸馏方法。
+- **结果**: 缓解标签不足，提升模型泛化能力。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper focuses on open-ended video question answering, which aims to find the correct answers from a large answer set in response to a video-related question. This is essentially a multi-label classification task, since a question may have multiple answers. However, due to annotation costs, the labels in existing benchmarks are always extremely insufficient, typically one answer per question. As a result, existing works tend to directly treat all the unlabeled answers as negative labels, leading to limited ability for generalization. In this work, we introduce a simple yet effective ranking distillation framework (RADI) to mitigate this problem without additional manual annotation. RADI employs a teacher model trained with incomplete labels to generate rankings for potential answers, which contain rich knowledge about label priority as well as label-associated visual cues, thereby enriching the insufficient labeling information. To avoid overconfidence in the imperfect teacher model, we further present two robust and parameter-free ranking distillation approaches: a pairwise approach which introduces adaptive soft margins to dynamically refine the optimization constraints on various pairwise rankings, and a listwise approach which adopts sampling-based partial listwise learning to resist the bias in teacher ranking. Extensive experiments on five popular benchmarks consistently show that both our pairwise and listwise RADIs outperform state-of-the-art methods. Further analysis demonstrates the effectiveness of our methods on the insufficient labeling problem.
+
+</details>
+
+### Language-aware Visual Semantic Distillation for Video Question Answering. **⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02560) · 📚 被引 6
+- **作者**: Bo Zou, Chao Yang, Yu Qiao, Chengbin Quan, Youjian Zhao
+- **🏷️ 机构**: Tsinghua University,Beijing,China, Shanghai AI Laboratory,Shanghai,China, Tsinghua University,Zhongguancun Laboratory,Beijing,China
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对视频问答中视觉语义与语言信息融合不足的问题，提出语言感知的视觉语义蒸馏方法，利用语言信息指导视觉特征的蒸馏，增强跨模态语义对齐。该方法可能通过教师-学生框架或注意力机制实现。相比现有方法，更强调语言对视觉语义的引导作用。摘要未提供具体实验数据，效果待验证。
+- **摘要（英）**: Addressing insufficient fusion of visual semantics and language in video QA, this work proposes language-aware visual semantic distillation to guide visual feature distillation with language information, enhancing cross-modal alignment. It likely employs a teacher-student framework or attention mechanism. The approach emphasizes language-guided visual semantics, though specific results are not provided.
+- **核心贡献**: 提出语言感知的视觉语义蒸馏方法用于视频问答。
+- **创新点**: 利用语言信息引导视觉语义蒸馏。
+- **结果**: 未提供具体数据，效果待验证。
+
+### E3M: Zero-Shot Spatio-Temporal Video Grounding with Expectation-Maximization Multimodal Modulation. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73010-8_14) · 📚 被引 5
+- **作者**: Peijun Bao, Zihao Shao, Wenhan Yang, Boon Poh Ng, Alex C. Kot
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+- **摘要（中）**: ①针对零样本时空视频定位（ZS-STVG）任务中，现有方法难以有效对齐视频与文本查询的时空语义问题。②提出了E3M框架，利用期望最大化（EM）算法进行多模态调制，通过迭代优化视觉和文本特征的对齐，实现零样本条件下的时空定位。③相比已有工作，创新性地将EM算法引入多模态调制，增强了跨模态特征融合的鲁棒性，无需任何标注数据。④在多个基准数据集上取得了优于现有零样本方法的性能，具体数值未在摘要中给出。
+- **摘要（英）**: This paper addresses zero-shot spatio-temporal video grounding (ZS-STVG) by proposing E3M, a framework that employs expectation-maximization (EM) for multimodal modulation to iteratively align visual and textual features. It improves cross-modal fusion robustness without requiring annotated data, outperforming existing zero-shot methods on benchmark datasets.
+- **核心贡献**: 提出EM多模态调制框架，解决零样本时空视频定位中的跨模态对齐问题。
+- **创新点**: 将期望最大化算法应用于多模态调制，实现无监督的视觉-文本特征对齐。
+- **结果**: 在多个基准上超越现有零样本方法，但未提供具体数值。
+
+### 🤖 VideoAgent: A Memory-Augmented Multimodal Agent for Video Understanding. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72670-5_5) · 📚 被引 54
+- **作者**: Yue Fan, Xiaojian Ma, Rujie Wu, Yuntao Du, Jiaqi Li, Zhi Gao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+- **摘要（中）**: ①针对长视频理解中，现有模型难以处理长时序依赖和复杂事件推理的问题。②提出了VideoAgent，一个基于记忆增强的多模态智能体，通过外部记忆模块存储和检索关键视频片段，结合大语言模型进行推理和问答。③相比已有工作，引入了记忆增强机制，使智能体能高效处理长视频，减少计算开销并提升推理准确性。④在多个长视频理解基准上取得了显著性能提升，具体数据未在摘要中给出。
+- **摘要（英）**: This paper tackles long-form video understanding by proposing VideoAgent, a memory-augmented multimodal agent that stores and retrieves key video segments via an external memory module, integrated with a large language model for reasoning. It improves efficiency and accuracy over existing methods on long-video benchmarks.
+- **核心贡献**: 提出记忆增强的多模态智能体VideoAgent，用于高效长视频理解与推理。
+- **创新点**: 结合外部记忆模块与LLM，实现长视频的稀疏检索和高效推理。
+- **结果**: 在长视频基准上取得显著性能提升，但未提供具体数值。
+
+### Learning Video Context as Interleaved Multimodal Sequences.
+- **链接**: [arXiv:2407.21757](https://arxiv.org/abs/2407.21757) · 📚 被引 4
+- **作者**: Kevin Qinghong Lin, Pengchuan Zhang, Difei Gao, Xide Xia, Joya Chen, Ziteng Gao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Narrative videos, such as movies, pose significant challenges in video understanding due to their rich contexts (characters, dialogues, storylines) and diverse demands (identify who, relationship, and reason). In this paper, we introduce MovieSeq, a multimodal language model developed to address the wide range of challenges in understanding video contexts. Our core idea is to represent videos as interleaved multimodal sequences (including images, plots, videos, and subtitles), either by linking external knowledge databases or using offline models (such as whisper for subtitles). Through instruction-tuning, this approach empowers the language model to interact with videos using interleaved multimodal instructions. For example, instead of solely relying on video as input, we jointly provide character photos alongside their names and dialogues, allowing the model to associate these elements and generate more comprehensive responses. To demonstrate its effectiveness, we validate MovieSeq's performance on six datasets (LVU, MAD, Movienet, CMD, TVC, MovieQA) across five settings (video classification, audio description, video-text retrieval, video captioning, and video question-answering). The code will be public at https://github.com/showlab/MovieSeq.
+
+</details>
+
+### InternVideo2: Scaling Foundation Models for Multimodal Video Understanding.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73013-9_23) · 📚 被引 184
+- **作者**: Yi Wang, Kunchang Li, Xinhao Li, Jiashuo Yu, Yinan He, Guo Chen et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Leveraging Temporal Contextualization for Video Action Recognition.
+- **链接**: [arXiv:2404.09490](https://arxiv.org/abs/2404.09490) · 📚 被引 11
+- **作者**: Minji Kim, Dongyoon Han, Taekyung Kim, Bohyung Han
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose a novel framework for video understanding, called Temporally Contextualized CLIP (TC-CLIP), which leverages essential temporal information through global interactions in a spatio-temporal domain within a video. To be specific, we introduce Temporal Contextualization (TC), a layer-wise temporal information infusion mechanism for videos, which 1) extracts core information from each frame, 2) connects relevant information across frames for the summarization into context tokens, and 3) leverages the context tokens for feature encoding. Furthermore, the Video-conditional Prompting (VP) module processes context tokens to generate informative prompts in the text modality. Extensive experiments in zero-shot, few-shot, base-to-novel, and fully-supervised action recognition validate the effectiveness of our model. Ablation studies for TC and VP support our design choices. Our project page with the source code is available at https://github.com/naver-ai/tc-clip
+
+</details>
+
+### InternVid: A Large-scale Video-Text Dataset for Multimodal Understanding and Generation.
+- **链接**: [arXiv:2307.06942](https://arxiv.org/abs/2307.06942)
+- **作者**: Yi Wang, Yinan He, Yizhuo Li, Kunchang Li, Jiashuo Yu, Xin Ma et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper introduces InternVid, a large-scale video-centric multimodal dataset that enables learning powerful and transferable video-text representations for multimodal understanding and generation. The InternVid dataset contains over 7 million videos lasting nearly 760K hours, yielding 234M video clips accompanied by detailed descriptions of total 4.1B words. Our core contribution is to develop a scalable approach to autonomously build a high-quality video-text dataset with large language models (LLM), thereby showcasing its efficacy in learning video-language representation at scale. Specifically, we utilize a multi-scale approach to generate video-related descriptions. Furthermore, we introduce ViCLIP, a video-text representation learning model based on ViT-L. Learned on InternVid via contrastive learning, this model demonstrates leading zero-shot action recognition and competitive video retrieval performance. Beyond basic video understanding tasks like recognition and retrieval, our dataset and model have broad applications. They are particularly beneficial for generating interleaved video-text data for learning a video-centric dialogue system, advancing video-to-text and text-to-video generation research. These proposed resources provide a tool for researchers and practitioners interested in multimodal video understanding and generation.
+
+</details>
+
+### VideoLLM-MoD: Efficient Video-Language Streaming with Mixture-of-Depths Vision Computation.
+- **链接**: [arXiv:2408.16730](https://arxiv.org/abs/2408.16730) · 📚 被引 7
+- **作者**: Shiwei Wu, Joya Chen, Kevin Qinghong Lin, Qimeng Wang, Yan Gao, Qianli Xu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> A well-known dilemma in large vision-language models (e.g., GPT-4, LLaVA) is that while increasing the number of vision tokens generally enhances visual understanding, it also significantly raises memory and computational costs, especially in long-term, dense video frame streaming scenarios. Although learnable approaches like Q-Former and Perceiver Resampler have been developed to reduce the vision token burden, they overlook the context causally modeled by LLMs (i.e., key-value cache), potentially leading to missed visual cues when addressing user queries. In this paper, we introduce a novel approach to reduce vision compute by leveraging redundant vision tokens "skipping layers" rather than decreasing the number of vision tokens. Our method, VideoLLM-MoD, is inspired by mixture-of-depths LLMs and addresses the challenge of numerous vision tokens in long-term or streaming video. Specifically, for each transformer layer, we learn to skip the computation for a high proportion (e.g., 80\%) of vision tokens, passing them directly to the next layer. This approach significantly enhances model efficiency, achieving approximately \textasciitilde42\% time and \textasciitilde30\% memory savings for the entire training. Moreover, our method reduces the computation in the context and avoid decreasing the vision tokens, thus preserving or even improving performance compared to the vanilla model. We conduct extensive experiments to demonstrate the effectiveness of VideoLLM-MoD, showing its state-of-the-art results on multiple benchmarks, including narration, forecasting, and summarization tasks in COIN, Ego4D, and Ego-Exo4D datasets.
+
+</details>
+
+### AWT: Transferring Vision-Language Models via Augmentation, Weighting, and Transportation.
+- **链接**: [arXiv:2407.04603](https://arxiv.org/abs/2407.04603) · 📚 被引 4
+- **作者**: Yuhan Zhu, Yuyang Ji, Zhiyu Zhao, Gangshan Wu, Limin Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Pre-trained vision-language models (VLMs) have shown impressive results in various visual classification tasks. However, we often fail to fully unleash their potential when adapting them for new concept understanding due to limited information on new classes. To address this limitation, we introduce a novel adaptation framework, AWT (Augment, Weight, then Transport). AWT comprises three key components: augmenting inputs with diverse visual perspectives and enriched class descriptions through image transformations and language models; dynamically weighting inputs based on the prediction entropy; and employing optimal transport to mine semantic correlations in the vision-language space. AWT can be seamlessly integrated into various VLMs, enhancing their zero-shot capabilities without additional training and facilitating few-shot learning through an integrated multimodal adapter module. We verify AWT in multiple challenging scenarios, including zero-shot and few-shot image classification, zero-shot video action recognition, and out-of-distribution generalization. AWT consistently outperforms the state-of-the-art methods in each setting. In addition, our extensive studies further demonstrate AWT's effectiveness and adaptability across different VLMs, architectures, and scales.
+
+</details>
+
+### Animal-Bench: Benchmarking Multimodal Video Models for Animal-centric Video Understanding.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/8fa604a81e5a236e2f38e917109571a3-Abstract-Conference.html) · 📚 被引 3
+- **作者**: Yinuo Jing, Ruxu Zhang, Kongming Liang, Yongxiang Li, Zhongjiang He, Zhanyu Ma et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+### Video Token Merging for Long Video Understanding.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/194fa4536bf36f35a4505d20cd5dd6fc-Abstract-Conference.html) · 📚 被引 1
+- **作者**: Seon-Ho Lee, Jue Wang, Zhikang Zhang, David Fan, Xinyu Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+### ShareGPT4Video: Improving Video Understanding and Generation with Better Captions.
+- **链接**: [arXiv:2406.04325](https://arxiv.org/abs/2406.04325) · 📚 被引 85
+- **作者**: Lin Chen, Xilin Wei, Jinsong Li, Xiaoyi Dong, Pan Zhang, Yuhang Zang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present the ShareGPT4Video series, aiming to facilitate the video understanding of large video-language models (LVLMs) and the video generation of text-to-video models (T2VMs) via dense and precise captions. The series comprises: 1) ShareGPT4Video, 40K GPT4V annotated dense captions of videos with various lengths and sources, developed through carefully designed data filtering and annotating strategy. 2) ShareCaptioner-Video, an efficient and capable captioning model for arbitrary videos, with 4.8M high-quality aesthetic videos annotated by it. 3) ShareGPT4Video-8B, a simple yet superb LVLM that reached SOTA performance on three advancing video benchmarks. To achieve this, taking aside the non-scalable costly human annotators, we find using GPT4V to caption video with a naive multi-frame or frame-concatenation input strategy leads to less detailed and sometimes temporal-confused results. We argue the challenge of designing a high-quality video captioning strategy lies in three aspects: 1) Inter-frame precise temporal change understanding. 2) Intra-frame detailed content description. 3) Frame-number scalability for arbitrary-length videos. To this end, we meticulously designed a differential video captioning strategy, which is stable, scalable, and efficient for generating captions for videos with arbitrary resolution, aspect ratios, and length. Based on it, we construct ShareGPT4Video, which contains 40K high-quality videos spanning a wide range of categories, and the resulting captions encompass rich world knowledge, object attributes, camera movements, and crucially, detailed and precise temporal descriptions of events. Based on ShareGPT4Video, we further develop ShareCaptioner-Video, a superior captioner capable of efficiently generating high-quality captions for arbitrary videos...
+
+</details>
+
+### HourVideo: 1-Hour Video-Language Understanding.
+- **链接**: [arXiv:2411.04998](https://arxiv.org/abs/2411.04998) · 📚 被引 14
+- **作者**: Keshigeyan Chandrasegaran, Agrim Gupta, Lea M. Hadzic, Taran Kota, Jimming He, Cristóbal Eyzaguirre et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present HourVideo, a benchmark dataset for hour-long video-language understanding. Our dataset consists of a novel task suite comprising summarization, perception (recall, tracking), visual reasoning (spatial, temporal, predictive, causal, counterfactual), and navigation (room-to-room, object retrieval) tasks. HourVideo includes 500 manually curated egocentric videos from the Ego4D dataset, spanning durations of 20 to 120 minutes, and features 12,976 high-quality, five-way multiple-choice questions. Benchmarking results reveal that multimodal models, including GPT-4 and LLaVA-NeXT, achieve marginal improvements over random chance. In stark contrast, human experts significantly outperform the state-of-the-art long-context multimodal model, Gemini Pro 1.5 (85.0% vs. 37.3%), highlighting a substantial gap in multimodal capabilities. Our benchmark, evaluation toolkit, prompts, and documentation are available at https://hourvideo.stanford.edu
+
+</details>
+
+### E.T. Bench: Towards Open-Ended Event-Level Video-Language Understanding.
+- **链接**: [arXiv:2409.18111](https://arxiv.org/abs/2409.18111) · 📚 被引 3
+- **作者**: Ye Liu, Zongyang Ma, Zhongang Qi, Yang Wu, Ying Shan, Chang Wen Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advances in Video Large Language Models (Video-LLMs) have demonstrated their great potential in general-purpose video understanding. To verify the significance of these models, a number of benchmarks have been proposed to diagnose their capabilities in different scenarios. However, existing benchmarks merely evaluate models through video-level question-answering, lacking fine-grained event-level assessment and task diversity. To fill this gap, we introduce E.T. Bench (Event-Level & Time-Sensitive Video Understanding Benchmark), a large-scale and high-quality benchmark for open-ended event-level video understanding. Categorized within a 3-level task taxonomy, E.T. Bench encompasses 7.3K samples under 12 tasks with 7K videos (251.4h total length) under 8 domains, providing comprehensive evaluations. We extensively evaluated 8 Image-LLMs and 12 Video-LLMs on our benchmark, and the results reveal that state-of-the-art models for coarse-level (video-level) understanding struggle to solve our fine-grained tasks, e.g., grounding event-of-interests within videos, largely due to the short video context length, improper time representations, and lack of multi-event training data. Focusing on these issues, we further propose a strong baseline model, E.T. Chat, together with an instruction-tuning dataset E.T. Instruct 164K tailored for fine-grained event-level understanding. Our simple but effective solution demonstrates superior performance in multiple scenarios.
+
+</details>
+
+### Streaming Long Video Understanding with Large Language Models.
+- **链接**: [arXiv:2405.16009](https://arxiv.org/abs/2405.16009) · 📚 被引 13
+- **作者**: Rui Qian, Xiaoyi Dong, Pan Zhang, Yuhang Zang, Shuangrui Ding, Dahua Lin et al.
+- **🏷️ 机构**: CUHK
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents VideoStreaming, an advanced vision-language large model (VLLM) for video understanding, that capably understands arbitrary-length video with a constant number of video tokens streamingly encoded and adaptively selected. The challenge of video understanding in the vision language area mainly lies in the significant computational burden caused by the great number of tokens extracted from long videos. Previous works rely on sparse sampling or frame compression to reduce tokens. However, such approaches either disregard temporal information in a long time span or sacrifice spatial details, resulting in flawed compression. To address these limitations, our VideoStreaming has two core designs: Memory-Propagated Streaming Encoding and Adaptive Memory Selection. The Memory-Propagated Streaming Encoding architecture segments long videos into short clips and sequentially encodes each clip with a propagated memory. In each iteration, we utilize the encoded results of the preceding clip as historical memory, which is integrated with the current clip to distill a condensed representation that encapsulates the video content up to the current timestamp. After the encoding process, the Adaptive Memory Selection strategy selects a constant number of question-related memories from all the historical memories and feeds them into the LLM to generate informative responses. The question-related selection reduces redundancy within the memories, enabling efficient and precise video understanding. Meanwhile, the disentangled video extraction and reasoning design allows the LLM to answer different questions about a video by directly selecting corresponding memories, without the need to encode the whole video for each question. Our model achieves superior performance and higher efficiency on long video benchmarks, showcasing precise temporal comprehension for detailed question answering.
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- MVBench: A Comprehensive Multi-modal Video Understanding Benchmark. → [multimodal](../multimodal/Guideline%202024.md)
+- MMBench-Video: A Long-Form Multi-Shot Benchmark for Holistic Video Understanding. → [vlm](../vlm/Guideline%202024.md)
+- Open-Vocabulary Video Anomaly Detection. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+- Distilling Vision-Language Models on Millions of Videos. → [vlm](../vlm/Guideline%202024.md)
+- Mirasol3B: A Multimodal Autoregressive Model for Time-Aligned and Contextual Modalities. → [multimodal](../multimodal/Guideline%202024.md)
+- Separating the "Chirp" from the "Chat": Self-supervised Visual Grounding of Sound and Language. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
+- TIM: A Time Interval Machine for Audio-Visual Action Recognition. → [multimodal](../multimodal/Guideline%202024.md)
+- Betrayed by Attention: A Simple yet Effective Approach for Self-supervised Video Object Segmentation. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
+- FROSTER: Frozen CLIP is A Strong Teacher for Open-Vocabulary Action Recognition. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+<!-- COMPLETE v1 papers=39 -->

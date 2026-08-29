@@ -46,3 +46,32 @@
 - **作者**: Yuankai Qi, Zizheng Pan, Yicong Hong, Ming-Hsuan Yang, Anton van den Hengel, Qi Wu
 - **🏷️ 机构**: The University of Adelaide,Australian Institute for Machine Learning, Monash University, The Australian National University
 - **会议**: ICCV 2021
+
+## 🆕 增量新增
+
+### InstanceRefer: Cooperative Holistic Understanding for Visual Grounding on Point Clouds through Instance Multi-level Contextual Referring. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00181)
+- **作者**: Zhihao Yuan, Xu Yan, Yinghong Liao, Ruimao Zhang, Sheng Wang, Zhen Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对点云视觉定位（visual grounding on point clouds）中现有方法仅利用局部或全局特征，缺乏对实例级上下文和跨模态关系的理解。②提出了InstanceRefer，通过实例多级上下文引用，协同理解点云场景，包括实例级特征提取、多级上下文建模和跨模态匹配。③相比已有工作，InstanceRefer更全面地整合了实例间关系和语言描述，提升了定位精度。④在ScanRefer和ReferIt3D等基准上取得了最先进的性能。
+- **摘要（英）**: This paper addresses the limitation of point cloud visual grounding methods that rely on local or global features without instance-level context and cross-modal relations. It proposes InstanceRefer, which uses instance multi-level contextual referring for cooperative understanding, including instance feature extraction, multi-level context modeling, and cross-modal matching. The method achieves state-of-the-art performance on ScanRefer and ReferIt3D benchmarks.
+- **核心贡献**: 提出了实例多级上下文引用方法，提升点云视觉定位性能。
+- **创新点**: 通过实例级特征和跨模态匹配，实现协同场景理解。
+- **结果**: 在ScanRefer和ReferIt3D上达到最先进性能。
+
+### 3DVG-Transformer: Relation Modeling for Visual Grounding on Point Clouds. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00292)
+- **作者**: Lichen Zhao, Daigang Cai, Lu Sheng, Dong Xu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对点云视觉定位中关系建模不足的问题，现有方法难以捕捉对象间的空间和语义关系。②提出了3DVG-Transformer，利用Transformer架构建模点云中对象间的关系，包括空间关系和语义关系，并融合语言特征进行定位。③相比已有工作，3DVG-Transformer通过关系建模增强了场景理解能力。④在ScanRefer和ReferIt3D等基准上取得了竞争性性能。
+- **摘要（英）**: This paper addresses the insufficient relation modeling in point cloud visual grounding, where existing methods struggle to capture spatial and semantic relations between objects. It proposes 3DVG-Transformer, which uses Transformer architecture to model object relations in point clouds and fuse language features for grounding. The method achieves competitive performance on ScanRefer and ReferIt3D benchmarks.
+- **核心贡献**: 提出了基于Transformer的关系建模方法，提升点云视觉定位精度。
+- **创新点**: 利用Transformer捕捉对象间空间和语义关系。
+- **结果**: 在ScanRefer和ReferIt3D上取得竞争性性能。
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Parameter Efficient Multimodal Transformers for Video Representation Learning. → [multimodal](../multimodal/Guideline%202021.md)
+<!-- COMPLETE v1 papers=7 -->

@@ -783,3 +783,279 @@
 - UniDistill: A Universal Cross-Modality Knowledge Distillation Framework for 3D Object Detection in Bird's-Eye View. → [3d-detection](../3d-detection/Guideline%202023.md)
 - MonoATT: Online Monocular 3D Object Detection with Adaptive Token Transformer. → [3d-detection](../3d-detection/Guideline%202023.md)
 - Understanding the Robustness of 3D Object Detection with Bird'View Representations in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202023.md)
+
+## 🆕 增量新增
+
+### Semi-DETR: Semi-Supervised Object Detection with Detection Transformers. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2307.08095](https://arxiv.org/abs/2307.08095) · 📚 被引 78
+- **作者**: Jiacheng Zhang, Xiangru Lin, Wei Zhang, Kuo Wang, Xiao Tan, Junyu Han et al.
+- **🏷️ 机构**: School of Computer Science and Engineering, Sun Yat-sen University,Guangzhou,China, Baidu Inc.,Department of Computer Vision Technology (VIS),China
+- **会议**: CVPR 2023
+- **摘要（中）**: 针对DETR框架在半监督目标检测中的两个问题：一对一匹配在不准确伪标签下导致训练效率低下，以及查询与预测间缺乏确定性对应关系，限制了基于一致性的正则化方法。提出了Semi-DETR，首个基于Transformer的端到端半监督检测器，包含阶段式混合匹配策略结合一对多和一对一分配，以及跨视图查询一致性方法学习语义特征不变性，并引入基于代价的伪标签挖掘模块。相比现有SSOD方法，有效提升了训练效率和伪标签质量，在COCO等基准上取得了显著性能提升。
+- **摘要（英）**: This paper addresses two issues in DETR-based semi-supervised object detection: inefficient training due to one-to-one assignment with inaccurate pseudo labels, and lack of deterministic query-prediction correspondence hindering consistency regularization. It proposes Semi-DETR, the first transformer-based end-to-end semi-supervised detector, with a stage-wise hybrid matching strategy, cross-view query consistency, and cost-based pseudo label mining. These innovations improve training efficiency and pseudo label quality, achieving significant performance gains on benchmarks like COCO.
+- **核心贡献**: 首个针对DETR框架的半监督目标检测方法，解决了匹配和一致性问题。
+- **创新点**: 提出阶段式混合匹配和跨视图查询一致性机制。
+- **结果**: 在COCO等数据集上显著提升半监督检测性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We analyze the DETR-based framework on semi-supervised object detection (SSOD) and observe that (1) the one-to-one assignment strategy generates incorrect matching when the pseudo ground-truth bounding box is inaccurate, leading to training inefficiency; (2) DETR-based detectors lack deterministic correspondence between the input query and its prediction output, which hinders the applicability of the consistency-based regularization widely used in current SSOD methods. We present Semi-DETR, the first transformer-based end-to-end semi-supervised object detector, to tackle these problems. Specifically, we propose a Stage-wise Hybrid Matching strategy that combines the one-to-many assignment and one-to-one assignment strategies to improve the training efficiency of the first stage and thus provide high-quality pseudo labels for the training of the second stage. Besides, we introduce a Crossview Query Consistency method to learn the semantic feature invariance of object queries from different views while avoiding the need to find deterministic query correspondence. Furthermore, we propose a Cost-based Pseudo Label Mining module to dynamically mine more pseudo boxes based on the matching cost of pseudo ground truth bounding boxes for consistency training. Extensive experiments on all SSOD settings of both COCO and Pascal VOC benchmark datasets show that our Semi-DETR method outperforms all state-of-the-art methods by clear margins. The PaddlePaddle version code1 is at https://github.com/PaddlePaddle/PaddleDetection/tree/develop/configs/semi_det/semi_detr.
+
+</details>
+
+### Mask DINO: Towards A Unified Transformer-based Framework for Object Detection and Segmentation. **⭐⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00297) · 📚 被引 494
+- **作者**: Feng Li, Hao Zhang, Huaizhe Xu, Shilong Liu, Lei Zhang, Lionel M. Ni et al.
+- **🏷️ 机构**: The Hong Kong University of Science and Technology, Institute for AI, Tsinghua University,BNRist Center,Dept. of CST., International Digital Economy Academy (IDEA)
+- **会议**: CVPR 2023
+- **摘要（中）**: 针对目标检测和分割任务分离的问题，提出了Mask DINO，一个统一的基于Transformer的框架，将检测和分割任务整合到同一模型中。通过扩展DINO的查询机制，支持掩码预测，并利用统一的损失函数联合优化。相比已有方法，Mask DINO在COCO和ADE20K等基准上同时取得了检测和分割的领先性能，展示了统一模型的优势。
+- **摘要（英）**: This paper addresses the separation of object detection and segmentation tasks by proposing Mask DINO, a unified transformer-based framework that integrates both tasks into one model. It extends DINO's query mechanism to support mask prediction and uses a unified loss for joint optimization. Mask DINO achieves state-of-the-art performance on both detection and segmentation benchmarks like COCO and ADE20K, demonstrating the benefit of unification.
+- **核心贡献**: 提出了统一的检测与分割Transformer框架。
+- **创新点**: 扩展查询机制以支持掩码预测和联合优化。
+- **结果**: 在多个基准上取得领先性能。
+
+### DETR with Additional Global Aggregation for Cross-domain Weakly Supervised Object Detection. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2304.07082](https://arxiv.org/abs/2304.07082) · 📚 被引 15
+- **作者**: Zongheng Tang, Yifan Sun, Si Liu, Yi Yang
+- **🏷️ 机构**: Institute of Artificial Intelligence, Beihang University, Baidu Inc, CCAI, Zhejiang University
+- **会议**: CVPR 2023
+- **摘要（中）**: 针对跨域弱监督目标检测中域适应困难的问题，提出了DETR-GA，一种基于DETR的检测器，通过额外的全局聚合机制实现图像级预测，利用弱监督进行域对齐。在编码器和解码器中分别添加类查询和前景查询，聚合语义信息。相比已有方法，DETR-GA能有效利用弱监督信息，在跨域场景中提升检测性能。
+- **摘要（英）**: This paper addresses cross-domain weakly supervised object detection by proposing DETR-GA, a DETR-based detector with additional global aggregation for image-level predictions, leveraging weak supervision for domain alignment. It adds class queries in the encoder and a foreground query in the decoder to aggregate semantics. DETR-GA effectively utilizes weak supervision, improving detection performance in cross-domain scenarios.
+- **核心贡献**: 提出基于全局聚合的DETR跨域弱监督检测方法。
+- **创新点**: 利用查询聚合实现图像级预测和域对齐。
+- **结果**: 在跨域检测任务中取得性能提升。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents a DETR-based method for cross-domain weakly supervised object detection (CDWSOD), aiming at adapting the detector from source to target domain through weak supervision. We think DETR has strong potential for CDWSOD due to an insight: the encoder and the decoder in DETR are both based on the attention mechanism and are thus capable of aggregating semantics across the entire image. The aggregation results, i.e., image-level predictions, can naturally exploit the weak supervision for domain alignment. Such motivated, we propose DETR with additional Global Aggregation (DETR-GA), a CDWSOD detector that simultaneously makes "instance-level + image-level" predictions and utilizes "strong + weak" supervisions. The key point of DETR-GA is very simple: for the encoder / decoder, we respectively add multiple class queries / a foreground query to aggregate the semantics into image-level predictions. Our query-based aggregation has two advantages. First, in the encoder, the weakly-supervised class queries are capable of roughly locating the corresponding positions and excluding the distraction from non-relevant regions. Second, through our design, the object queries and the foreground query in the decoder share consensus on the class semantics, therefore making the strong and weak supervision mutually benefit each other for domain alignment. Extensive experiments on four popular cross-domain benchmarks show that DETR-GA significantly improves CSWSOD and advances the states of the art (e.g., 29.0% --> 79.4% mAP on PASCAL VOC --> Clipart_all dataset).
+
+</details>
+
+### Toward RAW Object Detection: A New Benchmark and A New Model. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01286) · 📚 被引 31
+- **作者**: Ruikang Xu, Chang Chen, Jingyang Peng, Cheng Li, Yibin Huang, Fenglong Song et al.
+- **🏷️ 机构**: University of Science and Technology of China, Huawei Noah&#x0027;s Ark Lab
+- **会议**: CVPR 2023
+- **摘要（中）**: 针对现有目标检测依赖sRGB图像而忽略RAW图像信息的问题，提出了一个新的RAW目标检测基准和模型。该模型直接处理RAW传感器数据，利用原始图像的高动态范围和低光照优势，提升检测鲁棒性。相比传统方法，在低光等挑战性条件下取得了显著性能提升。
+- **摘要（英）**: This paper addresses the reliance of object detection on sRGB images, ignoring RAW sensor data, by introducing a new benchmark and model for RAW object detection. The model processes RAW data directly, leveraging high dynamic range and low-light advantages for improved robustness. It achieves significant performance gains in challenging conditions like low light.
+- **核心贡献**: 构建了RAW检测基准并提出了直接处理RAW数据的模型。
+- **创新点**: 利用RAW图像特性提升检测鲁棒性。
+- **结果**: 在低光条件下取得显著性能提升。
+
+### ConQueR: Query Contrast Voxel-DETR for 3D Object Detection. **⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2212.07289](https://arxiv.org/abs/2212.07289) · 📚 被引 30
+- **作者**: Benjin Zhu, Zhe Wang, Shaoshuai Shi, Hang Xu, Lanqing Hong, Hongsheng Li
+- **🏷️ 机构**: The Chinese University of Hong Kong,Multimedia Laboratory, Max Planck Institute for Informatics, Huawei Noah&#x0027;s Ark Lab
+- **会议**: CVPR 2023
+- **摘要（中）**: 针对DETR-based 3D检测器中大量查询导致假阳性问题，提出了ConQueR，一种基于查询对比的稀疏3D检测器。通过查询对比机制，显式增强查询与其最佳匹配GT的区分度，构建正负GT-查询对并应用对比损失。相比已有方法，ConQueR减少了约60%的假阳性，缩小了稀疏与密集检测器的性能差距。
+- **摘要（英）**: This paper addresses the false positive issue in DETR-based 3D detectors caused by excessive queries, proposing ConQueR, a sparse 3D detector with a query contrast mechanism. It explicitly enhances queries towards best-matched GTs using contrastive loss with positive and negative pairs. ConQueR reduces false positives by up to 60%, closing the gap with dense detectors.
+- **核心贡献**: 提出了查询对比机制以消除3D检测中的假阳性。
+- **创新点**: 利用对比学习增强查询与GT的匹配。
+- **结果**: 减少约60%假阳性，性能接近密集检测器。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Although DETR-based 3D detectors can simplify the detection pipeline and achieve direct sparse predictions, their performance still lags behind dense detectors with post-processing for 3D object detection from point clouds. DETRs usually adopt a larger number of queries than GTs (e.g., 300 queries v.s. 40 objects in Waymo) in a scene, which inevitably incur many false positives during inference. In this paper, we propose a simple yet effective sparse 3D detector, named Query Contrast Voxel-DETR (ConQueR), to eliminate the challenging false positives, and achieve more accurate and sparser predictions. We observe that most false positives are highly overlapping in local regions, caused by the lack of explicit supervision to discriminate locally similar queries. We thus propose a Query Contrast mechanism to explicitly enhance queries towards their best-matched GTs over all unmatched query predictions. This is achieved by the construction of positive and negative GT-query pairs for each GT, and a contrastive loss to enhance positive GT-query pairs against negative ones based on feature similarities. ConQueR closes the gap of sparse and dense 3D detectors, and reduces up to ~60% false positives. Our single-frame ConQueR achieves new state-of-the-art (sota) 71.6 mAPH/L2 on the challenging Waymo Open Dataset validation set, outperforming previous sota methods (e.g., PV-RCNN++) by over 2.0 mAPH/L2.
+
+</details>
+
+### Cascade-DETR: Delving into High-Quality Universal Object Detection. **⭐⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2307.11035](https://arxiv.org/abs/2307.11035) · 📚 被引 54
+- **作者**: Mingqiao Ye, Lei Ke, Siyuan Li, Yu-Wing Tai, Chi-Keung Tang, Martin Danelljan et al.
+- **🏷️ 机构**: ETH Z&#x00FC;rich, Dartmouth College, HKUST
+- **会议**: ICCV 2023
+- **摘要（中）**: 针对Transformer检测器在多样化领域泛化能力弱和定位精度不足的问题，该论文提出Cascade-DETR，通过级联注意力层将目标中心信息集成到解码器，限制注意力于先前框预测，提升定位精度。同时，用预测IoU替代分类分数作为查询置信度，使置信度更校准。引入包含10个多样化数据集的UDB10基准，实验表明Cascade-DETR在COCO上提升SOTA，并在UDB10所有数据集上显著优于DETR基线，部分提升超10 mAP。
+- **摘要（英）**: This paper proposes Cascade-DETR for high-quality universal object detection, using cascade attention and IoU prediction to improve localization and calibration. It introduces the UDB10 benchmark and achieves SOTA on COCO while substantially improving DETR on all UDB10 datasets, with gains over 10 mAP in some cases.
+- **核心贡献**: 提出级联注意力机制和IoU预测策略，并构建UDB10多域检测基准。
+- **创新点**: 级联注意力限制于先前框预测，提升定位精度。
+- **结果**: 在COCO和UDB10上均取得显著性能提升。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Object localization in general environments is a fundamental part of vision systems. While dominating on the COCO benchmark, recent Transformer-based detection methods are not competitive in diverse domains. Moreover, these methods still struggle to very accurately estimate the object bounding boxes in complex environments. We introduce Cascade-DETR for high-quality universal object detection. We jointly tackle the generalization to diverse domains and localization accuracy by proposing the Cascade Attention layer, which explicitly integrates object-centric information into the detection decoder by limiting the attention to the previous box prediction. To further enhance accuracy, we also revisit the scoring of queries. Instead of relying on classification scores, we predict the expected IoU of the query, leading to substantially more well-calibrated confidences. Lastly, we introduce a universal object detection benchmark, UDB10, that contains 10 datasets from diverse domains. While also advancing the state-of-the-art on COCO, Cascade-DETR substantially improves DETR-based detectors on all datasets in UDB10, even by over 10 mAP in some cases. The improvements under stringent quality requirements are even more pronounced. Our code and models will be released at https://github.com/SysCV/cascade-detr.
+
+</details>
+
+### Decoupled DETR: Spatially Disentangling Localization and Classification for Improved End-to-End Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2310.15955](https://arxiv.org/abs/2310.15955) · 📚 被引 28
+- **作者**: Manyuan Zhang, Guanglu Song, Yu Liu, Hongsheng Li
+- **🏷️ 机构**: The Chinese University of HongKong,Multimedia Laboratory, SenseTime Research
+- **会议**: ICCV 2023
+- **摘要（中）**: 针对DETR中分类和定位任务在空间上耦合导致优化冲突的问题，该论文提出解耦DETR，将定位和分类在空间上分离。方法通过设计解耦注意力机制，使分类和回归分支关注不同区域，减少任务冲突。相比标准DETR，该方法在保持端到端简洁性的同时，提升了检测精度和收敛速度。在COCO基准上取得了优于现有DETR变体的性能。
+- **摘要（英）**: This paper proposes Decoupled DETR to spatially disentangle localization and classification, reducing task conflicts in DETR. The method improves accuracy and convergence speed while maintaining end-to-end simplicity, achieving superior performance on COCO.
+- **核心贡献**: 提出空间解耦的DETR架构，分离定位和分类任务。
+- **创新点**: 解耦注意力机制使分类和回归关注不同空间区域。
+- **结果**: 在COCO上取得优于现有DETR变体的性能。
+
+### DETRDistill: A Universal Knowledge Distillation Framework for DETR-families. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2211.10156](https://arxiv.org/abs/2211.10156) · 📚 被引 39
+- **作者**: Jiahao Chang, Shuo Wang, Hai-Ming Xu, Zehui Chen, Chenhongyi Yang, Feng Zhao
+- **🏷️ 机构**: University of Science and Technology of China, University of Adelaide, University of Edinburgh
+- **会议**: ICCV 2023
+- **摘要（中）**: 针对DETR系列检测器模型大、推理慢的问题，提出了一种通用的知识蒸馏框架DETRDistill。该方法设计了匈牙利匹配logits蒸馏、目标感知特征蒸馏和查询先验分配蒸馏三个模块，分别促进学生模型预测对齐、学习目标中心特征和加速收敛。在COCO数据集上的实验表明，该方法能有效压缩DETR模型并保持检测性能。
+- **摘要（英）**: This paper addresses the deployment challenges of DETR-based detectors by proposing DETRDistill, a universal knowledge distillation framework. It introduces Hungarian-matching logits distillation, target-aware feature distillation, and query-prior assignment distillation to improve prediction alignment, feature learning, and convergence. Experiments on COCO demonstrate effective model compression with maintained detection performance.
+- **核心贡献**: 提出了首个专门针对DETR系列检测器的通用知识蒸馏框架。
+- **创新点**: 设计了三种针对DETR特性的蒸馏策略，包括logits、特征和查询先验。
+- **结果**: 在COCO数据集上实现了有效的模型压缩，性能接近教师模型。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Transformer-based detectors (DETRs) are becoming popular for their simple framework, but the large model size and heavy time consumption hinder their deployment in the real world. While knowledge distillation (KD) can be an appealing technique to compress giant detectors into small ones for comparable detection performance and low inference cost. Since DETRs formulate object detection as a set prediction problem, existing KD methods designed for classic convolution-based detectors may not be directly applicable. In this paper, we propose DETRDistill, a novel knowledge distillation method dedicated to DETR-families. Specifically, we first design a Hungarian-matching logits distillation to encourage the student model to have the exact predictions as that of teacher DETRs. Next, we propose a target-aware feature distillation to help the student model learn from the object-centric features of the teacher model. Finally, in order to improve the convergence rate of the student DETR, we introduce a query-prior assignment distillation to speed up the student model learning from well-trained queries and stable assignment of the teacher model. Extensive experimental results on the COCO dataset validate the effectiveness of our approach. Notably, DETRDistill consistently improves various DETRs by more than 2.0 mAP, even surpassing their teacher models.
+
+</details>
+
+### Rank-DETR for High Quality Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/34074479ee2186a9f236b8fd03635372-Abstract-Conference.html)
+- **作者**: Yifan Pu, Weicong Liang, Yiduo Hao, Yuhui Yuan, Yukang Yang, Chao Zhang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
+- **摘要（中）**: Rank-DETR针对DETR系列检测器在高质量检测（如高IoU阈值）下性能不佳的问题，提出了一种基于排序的查询机制。该方法通过引入排序损失和排序感知的查询设计，使模型更关注高IoU的预测。在COCO等数据集上，该方法在保持实时性的同时显著提升了高精度检测性能。
+- **摘要（英）**: Rank-DETR addresses the issue of suboptimal performance at high IoU thresholds in DETR detectors. It introduces a ranking-based query mechanism with ranking loss to prioritize high-quality predictions. Achieves significant improvements in high-accuracy detection on COCO while maintaining real-time efficiency.
+- **核心贡献**: 提出了排序感知的查询机制，提升DETR在高IoU下的检测性能。
+- **创新点**: 将排序学习引入DETR查询设计，优化了预测质量分布。
+- **结果**: 在COCO上实现了高精度检测性能的提升。
+
+### BEV-SAN: Accurate BEV 3D Object Detection via Slice Attention Networks.
+- **链接**: [arXiv:2212.01231](https://arxiv.org/abs/2212.01231) · 📚 被引 33
+- **作者**: Xiaowei Chi, Jiaming Liu, Ming Lu, Rongyu Zhang, Zhaoqing Wang, Yandong Guo et al.
+- **🏷️ 机构**: School of Computer Science, Peking University,National Key Laboratory for Multimedia Information Processing, The University of Sydney, AI2Robotics
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Bird's-Eye-View (BEV) 3D Object Detection is a crucial multi-view technique for autonomous driving systems. Recently, plenty of works are proposed, following a similar paradigm consisting of three essential components, i.e., camera feature extraction, BEV feature construction, and task heads. Among the three components, BEV feature construction is BEV-specific compared with 2D tasks. Existing methods aggregate the multi-view camera features to the flattened grid in order to construct the BEV feature. However, flattening the BEV space along the height dimension fails to emphasize the informative features of different heights. For example, the barrier is located at a low height while the truck is located at a high height. In this paper, we propose a novel method named BEV Slice Attention Network (BEV-SAN) for exploiting the intrinsic characteristics of different heights. Instead of flattening the BEV space, we first sample along the height dimension to build the global and local BEV slices. Then, the features of BEV slices are aggregated from the camera features and merged by the attention mechanism. Finally, we fuse the merged local and global BEV features by a transformer to generate the final feature map for task heads. The purpose of local BEV slices is to emphasize informative heights. In order to find them, we further propose a LiDAR-guided sampling strategy to leverage the statistical distribution of LiDAR to determine the heights of local slices. Compared with uniform sampling, LiDAR-guided sampling can determine more informative heights. We conduct detailed experiments to demonstrate the effectiveness of BEV-SAN. Code will be released.
+
+</details>
+
+### AeDet: Azimuth-Invariant Multi-View 3D Object Detection.
+- **链接**: [arXiv:2211.12501](https://arxiv.org/abs/2211.12501) · 📚 被引 25
+- **作者**: Chengjian Feng, Zequn Jie, Yujie Zhong, Xiangxiang Chu, Lin Ma
+- **🏷️ 机构**: Meituan Inc.
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent LSS-based multi-view 3D object detection has made tremendous progress, by processing the features in Brid-Eye-View (BEV) via the convolutional detector. However, the typical convolution ignores the radial symmetry of the BEV features and increases the difficulty of the detector optimization. To preserve the inherent property of the BEV features and ease the optimization, we propose an azimuth-equivariant convolution (AeConv) and an azimuth-equivariant anchor. The sampling grid of AeConv is always in the radial direction, thus it can learn azimuth-invariant BEV features. The proposed anchor enables the detection head to learn predicting azimuth-irrelevant targets. In addition, we introduce a camera-decoupled virtual depth to unify the depth prediction for the images with different camera intrinsic parameters. The resultant detector is dubbed Azimuth-equivariant Detector (AeDet). Extensive experiments are conducted on nuScenes, and AeDet achieves a 62.0% NDS, surpassing the recent multi-view 3D object detectors such as PETRv2 and BEVDepth by a large margin. Project page: https://fcjian.github.io/aedet.
+
+</details>
+
+### Generalized UAV Object Detection via Frequency Domain Disentanglement.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00109) · 📚 被引 74
+- **作者**: Kunyu Wang, Xueyang Fu, Yukun Huang, Chengzhi Cao, Gege Shi, Zheng-Jun Zha
+- **🏷️ 机构**: University of Science and Technology of China,China
+- **会议**: CVPR 2023
+
+### Towards Domain Generalization for Multi-view 3D Object Detection in Bird-Eye-View.
+- **链接**: [arXiv:2303.01686](https://arxiv.org/abs/2303.01686) · 📚 被引 25
+- **作者**: Shuo Wang, Xinhai Zhao, Hai-Ming Xu, Zehui Chen, Dameng Yu, Jiahao Chang et al.
+- **🏷️ 机构**: University of Science and Technology of China, Huawei Noah&#x0027;s Ark Lab, University of Adelaide
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-view 3D object detection (MV3D-Det) in Bird-Eye-View (BEV) has drawn extensive attention due to its low cost and high efficiency. Although new algorithms for camera-only 3D object detection have been continuously proposed, most of them may risk drastic performance degradation when the domain of input images differs from that of training. In this paper, we first analyze the causes of the domain gap for the MV3D-Det task. Based on the covariate shift assumption, we find that the gap mainly attributes to the feature distribution of BEV, which is determined by the quality of both depth estimation and 2D image's feature representation. To acquire a robust depth prediction, we propose to decouple the depth estimation from the intrinsic parameters of the camera (i.e. the focal length) through converting the prediction of metric depth to that of scale-invariant depth and perform dynamic perspective augmentation to increase the diversity of the extrinsic parameters (i.e. the camera poses) by utilizing homography. Moreover, we modify the focal length values to create multiple pseudo-domains and construct an adversarial training loss to encourage the feature representation to be more domain-agnostic. Without bells and whistles, our approach, namely DG-BEV, successfully alleviates the performance drop on the unseen target domain without impairing the accuracy of the source domain. Extensive experiments on various public datasets, including Waymo, nuScenes, and Lyft, demonstrate the generalization and effectiveness of our approach. To the best of our knowledge, this is the first systematic study to explore a domain generalization method for MV3D-Det.
+
+</details>
+
+### BEVHeight: A Robust Framework for Vision-based Roadside 3D Object Detection.
+- **链接**: [arXiv:2303.08498](https://arxiv.org/abs/2303.08498) · 📚 被引 122
+- **作者**: Lei Yang, Kaicheng Yu, Tao Tang, Jun Li, Kun Yuan, Li Wang et al.
+- **🏷️ 机构**: Tsinghua University,State Key Laboratory of Automotive Safety and Energy, Autonomous Driving Lab, Alibaba Group, Sun Yat-sen University,Shenzhen Campus
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> While most recent autonomous driving system focuses on developing perception methods on ego-vehicle sensors, people tend to overlook an alternative approach to leverage intelligent roadside cameras to extend the perception ability beyond the visual range. We discover that the state-of-the-art vision-centric bird's eye view detection methods have inferior performances on roadside cameras. This is because these methods mainly focus on recovering the depth regarding the camera center, where the depth difference between the car and the ground quickly shrinks while the distance increases. In this paper, we propose a simple yet effective approach, dubbed BEVHeight, to address this issue. In essence, instead of predicting the pixel-wise depth, we regress the height to the ground to achieve a distance-agnostic formulation to ease the optimization process of camera-only perception methods. On popular 3D detection benchmarks of roadside cameras, our method surpasses all previous vision-centric methods by a significant margin. The code is available at {\url{https://github.com/ADLab-AutoDrive/BEVHeight}}.
+
+</details>
+
+### MetaFusion: Infrared and Visible Image Fusion via Meta-Feature Embedding from Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01341) · 📚 被引 241
+- **作者**: Wenda Zhao, Shigeng Xie, Fan Zhao, You He, Huchuan Lu
+- **🏷️ 机构**: Dalian University of Technology,China, Liaoning Normal University,China, Tsinghua University,China
+- **会议**: CVPR 2023
+
+### Texture-Guided Saliency Distilling for Unsupervised Salient Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00701) · 📚 被引 74
+- **作者**: Huajun Zhou, Bo Qiao, Lingxiao Yang, Jianhuang Lai, Xiaohua Xie
+- **🏷️ 机构**: School of Computer Science and Engineering, Sun Yat-sen University,China
+- **会议**: CVPR 2023
+
+### Implicit Occupancy Flow Fields for Perception and Prediction in Self-Driving.
+- **链接**: [arXiv:2308.01471](https://arxiv.org/abs/2308.01471) · 📚 被引 27
+- **作者**: Ben Agro, Quinlan Sykora, Sergio Casas, Raquel Urtasun
+- **🏷️ 机构**: Waabi, University of Toronto
+- **会议**: CVPR 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> A self-driving vehicle (SDV) must be able to perceive its surroundings and predict the future behavior of other traffic participants. Existing works either perform object detection followed by trajectory forecasting of the detected objects, or predict dense occupancy and flow grids for the whole scene. The former poses a safety concern as the number of detections needs to be kept low for efficiency reasons, sacrificing object recall. The latter is computationally expensive due to the high-dimensionality of the output grid, and suffers from the limited receptive field inherent to fully convolutional networks. Furthermore, both approaches employ many computational resources predicting areas or objects that might never be queried by the motion planner. This motivates our unified approach to perception and future prediction that implicitly represents occupancy and flow over time with a single neural network. Our method avoids unnecessary computation, as it can be directly queried by the motion planner at continuous spatio-temporal locations. Moreover, we design an architecture that overcomes the limited receptive field of previous explicit occupancy prediction methods by adding an efficient yet effective global attention mechanism. Through extensive experiments in both urban and highway settings, we demonstrate that our implicit model outperforms the current state-of-the-art. For more information, visit the project website: https://waabi.ai/research/implicito.
+
+</details>
+
+### Objects do not disappear: Video object detection by single-frame object location anticipation.
+- **链接**: [arXiv:2308.04770](https://arxiv.org/abs/2308.04770) · 📚 被引 11
+- **作者**: Xin Liu, Fatemeh Karimi Nejadasl, Jan C. van Gemert, Olaf Booij, Silvia L. Pintea
+- **🏷️ 机构**: Delft University of Technology,Computer Vision Lab, University of Amsterdam,Institute for Biodiversity and Ecosystem Dynamics
+- **会议**: ICCV 2023
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Objects in videos are typically characterized by continuous smooth motion. We exploit continuous smooth motion in three ways. 1) Improved accuracy by using object motion as an additional source of supervision, which we obtain by anticipating object locations from a static keyframe. 2) Improved efficiency by only doing the expensive feature computations on a small subset of all frames. Because neighboring video frames are often redundant, we only compute features for a single static keyframe and predict object locations in subsequent frames. 3) Reduced annotation cost, where we only annotate the keyframe and use smooth pseudo-motion between keyframes. We demonstrate computational efficiency, annotation efficiency, and improved mean average precision compared to the state-of-the-art on four datasets: ImageNet VID, EPIC KITCHENS-55, YouTube-BoundingBoxes, and Waymo Open dataset. Our source code is available at https://github.com/L-KID/Videoobject-detection-by-location-anticipation.
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Omni3D: A Large Benchmark and Model for 3D Object Detection in the Wild. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Distilling DETR with Visual-Linguistic Knowledge for Open-Vocabulary Object Detection. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- OmniLabel: A Challenging Benchmark for Language-Based Object Detection. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- T-FFTRadNet: Object Detection with Swin Vision Transformers from Raw ADC Radar Signals. → [vision-transformer](../vision-transformer/Guideline%202023.md)
+- Transformer-Based Sensor Fusion for Autonomous Driving: A Survey. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)
+- Object-Aware Distillation Pyramid for Open-Vocabulary Object Detection. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- AShapeFormer : Semantics-Guided Object-Level Active Shape Encoding for 3D Object Detection via Transformers. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Unknown Sniffer for Object Detection: Don't Turn a Blind Eye to Unknown Objects. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- CAT: LoCalization and IdentificAtion Cascade Detection Transformer for Open-World Object Detection. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- PROB: Probabilistic Objectness for Open World Object Detection. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- Viewpoint Equivariance for Multi-View 3D Object Detection. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- VoxelNeXt: Fully Sparse VoxelNet for 3D Object Detection and Tracking. → [3d-detection](../3d-detection/Guideline%202023.md)
+- PiMAE: Point Cloud and Image Interactive Masked Autoencoders for 3D Object Detection. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
+- itKD: Interchange Transfer-based Knowledge Distillation for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Benchmarking Robustness of 3D Object Detection to Common Corruptions in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)
+- MSF: Motion-guided Sequential Fusion for Efficient 3D Object Detection from Point Cloud Sequences. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Density-Insensitive Unsupervised Domain Adaption on 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- MSMDFusion: Fusing LiDAR and Camera at Multiple Scales with Multi-Depth Seeds for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Region-Aware Pretraining for Open-Vocabulary Object Detection with Vision Transformers. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- X3KD: Knowledge Distillation Across Modalities, Tasks and Stages for Multi-Camera 3D Object Detection. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- LoGoNet: Towards Accurate 3D Object Detection with Local-to-Global Cross- Modal Fusion. → [3d-detection](../3d-detection/Guideline%202023.md)
+- PillarNeXt: Rethinking Network Designs for 3D Object Detection in LiDAR Point Clouds. → [3d-detection](../3d-detection/Guideline%202023.md)
+- MoDAR: Using Motion Forecasting for 3D Object Detection in Point Cloud Sequences. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Open-Vocabulary Point-Cloud Object Detection without 3D Annotation. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- DiGeo: Discriminative Geometry-Aware Learning for Generalized Few-Shot Object Detection. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- Deep Dive into Gradients: Better Optimization for 3D Object Detection with Gradient-Corrected IoU Supervision. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Weakly Supervised Monocular 3D Object Detection Using Multi-View Projection and Direction Consistency. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- CLIP the Gap: A Single Domain Generalization Approach for Object Detection. → [vlm](../vlm/Guideline%202023.md)
+- Learning to Detect and Segment for Open Vocabulary Object Detection. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- Semi-Supervised Stereo-Based 3D Object Detection via Cross-View Consensus. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Virtual Sparse Convolution for Multimodal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Aligning Bag of Regions for Open-Vocabulary Object Detection. → [vlm](../vlm/Guideline%202023.md)
+- CAPE: Camera View Position Embedding for Multi-View 3D Object Detection. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- Multi-view Adversarial Discriminator: Mine the Non-causal Factors for Object Detection in Unseen Domains. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- DetCLIPv2: Scalable Open-Vocabulary Object Detection Pre-training via Word-Region Alignment. → [vlm](../vlm/Guideline%202023.md)
+- Bi3D: Bi-Domain Active Learning for Cross-Domain 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Distilling Focal Knowledge from Imperfect Expert for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Uni3D: A Unified Baseline for Multi-Dataset 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- OcTr: Octree-Based Transformer for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- UniDistill: A Universal Cross-Modality Knowledge Distillation Framework for 3D Object Detection in Bird's-Eye View. → [bev](../bev/Guideline%202023.md)
+- MonoATT: Online Monocular 3D Object Detection with Adaptive Token Transformer. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Understanding the Robustness of 3D Object Detection with Bird'View Representations in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202023.md)
+- GeoMAE: Masked Geometric Target Prediction for Self-supervised Point Cloud Pre-Training. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
+- CORA: Adapting CLIP for Open-Vocabulary Detection with Region Prompting and Anchor Pre-Matching. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- Visual Exemplar Driven Task-Prompting for Unified Perception in Autonomous Driving. → [fod-detection](../fod-detection/Guideline%202023.md)
+- HOICLIP: Efficient Knowledge Transfer for HOI Detection with Vision-Language Models. → [vlm](../vlm/Guideline%202023.md)
+- SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer. → [vision-transformer](../vision-transformer/Guideline%202023.md)
+- Hyperbolic Contrastive Learning for Visual Representations beyond Objects. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
+- ObjectFusion: Multi-modal 3D Object Detection with Object-Centric Fusion. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Object as Query: Lifting any 2D Object Detector to 3D Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
+- Exploring Object-Centric Temporal Modeling for Efficient Multi-View 3D Object Detection. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+<!-- COMPLETE v1 papers=104 -->

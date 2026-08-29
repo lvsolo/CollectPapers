@@ -540,3 +540,102 @@
 - There Is More Than Meets the Eye: Self-Supervised Multi-Object Detection and Tracking With Sound by Distilling Multimodal Knowledge. → [multimodal](../multimodal/Guideline%202021.md)
 - PointAugmenting: Cross-Modal Augmentation for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
 - Depth-Conditioned Dynamic Message Propagation for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+
+## 🆕 增量新增
+
+### Dynamic DETR: End-to-End Object Detection with Dynamic Attention. **⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00298)
+- **作者**: Xiyang Dai, Yinpeng Chen, Jianwei Yang, Pengchuan Zhang, Lu Yuan, Lei Zhang
+- **🏷️ 机构**: PolyU / OPPO
+- **会议**: ICCV 2021
+- **摘要（中）**: 针对DETR中注意力机制计算复杂且收敛慢的问题，提出Dynamic DETR，通过动态注意力机制提高检测效率。该方法在解码器中引入动态查询和动态注意力，减少冗余计算。相比已有工作，改进了DETR的收敛速度和性能。实验在COCO上验证了有效性，但摘要未提供具体数据。
+- **摘要（英）**: Dynamic DETR addresses DETR's slow convergence and high computational cost by introducing dynamic attention mechanisms. It employs dynamic queries and attention to reduce redundancy, improving efficiency and performance on COCO, though specific metrics are not detailed.
+- **核心贡献**: 提出动态注意力机制，提升DETR检测效率。
+- **创新点**: 动态查询和注意力设计，减少计算冗余。
+- **结果**: 在COCO上验证了性能提升，但具体数据未给出。
+
+### Deformable DETR: Deformable Transformers for End-to-End Object Detection. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2010.04159](https://arxiv.org/abs/2010.04159)
+- **作者**: Xizhou Zhu, Weijie Su, Lewei Lu, Bin Li, Xiaogang Wang, Jifeng Dai
+- **🏷️ 机构**: Tsinghua / Shanghai AI Lab, CUHK / Shanghai AI Lab
+- **会议**: ICLR 2021
+- **摘要（中）**: 针对DETR收敛慢和特征空间分辨率受限的问题，提出Deformable DETR，其注意力模块仅关注参考点周围的小部分关键采样点。该方法结合可变形卷积思想，显著降低计算复杂度并提高小物体检测性能。相比DETR，训练周期减少10倍，性能更优。在COCO基准上的大量实验验证了其有效性，代码已开源。
+- **摘要（英）**: Deformable DETR mitigates DETR's slow convergence and limited spatial resolution by attending to a small set of key sampling points around references. It achieves better performance, especially on small objects, with 10 times fewer training epochs on COCO, and the code is publicly available.
+- **核心贡献**: 提出可变形注意力机制，大幅提升DETR收敛速度和性能。
+- **创新点**: 将可变形卷积思想融入Transformer注意力，实现稀疏采样。
+- **结果**: 在COCO上以10倍少训练周期超越DETR，尤其提升小物体检测。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> DETR has been recently proposed to eliminate the need for many hand-designed components in object detection while demonstrating good performance. However, it suffers from slow convergence and limited feature spatial resolution, due to the limitation of Transformer attention modules in processing image feature maps. To mitigate these issues, we proposed Deformable DETR, whose attention modules only attend to a small set of key sampling points around a reference. Deformable DETR can achieve better performance than DETR (especially on small objects) with 10 times less training epochs. Extensive experiments on the COCO benchmark demonstrate the effectiveness of our approach. Code is released at https://github.com/fundamentalvision/Deformable-DETR.
+
+</details>
+
+### 3DIoUMatch: Leveraging IoU Prediction for Semi-Supervised 3D Object Detection. **⭐⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2012.04355](https://arxiv.org/abs/2012.04355) · 📚 被引 121
+- **作者**: He Wang, Yezhen Cong, Or Litany, Yue Gao, Leonidas J. Guibas
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+- **摘要（中）**: 针对3D目标检测中3D标注获取困难的问题，提出3DIoUMatch，一种适用于室内外场景的半监督3D检测方法。方法采用师生互学习框架，通过伪标签传播信息，并引入基于预测IoU的置信度过滤机制，设置类别自适应阈值以筛选低质量伪标签。相比现有方法，该方法有效利用IoU预测提升定位质量，在室内数据集使用VoteNet，在KITTI上使用PV-RCNN，实验表明方法持续优于现有半监督方法。
+- **摘要（英）**: This paper addresses the difficulty of obtaining 3D annotations by proposing 3DIoUMatch, a semi-supervised method for 3D detection in indoor and outdoor scenes. It uses a teacher-student framework with pseudo-labels and introduces IoU-based confidence filtering with category-aware thresholds. The method consistently outperforms existing semi-supervised approaches on indoor datasets and KITTI.
+- **核心贡献**: 提出基于IoU预测的半监督3D检测方法，适用于室内外场景。
+- **创新点**: 利用预测3D IoU作为定位质量指标，设置自适应阈值过滤伪标签。
+- **结果**: 在多个数据集上持续优于现有半监督方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 3D object detection is an important yet demanding task that heavily relies on difficult to obtain 3D annotations. To reduce the required amount of supervision, we propose 3DIoUMatch, a novel semi-supervised method for 3D object detection applicable to both indoor and outdoor scenes. We leverage a teacher-student mutual learning framework to propagate information from the labeled to the unlabeled train set in the form of pseudo-labels. However, due to the high task complexity, we observe that the pseudo-labels suffer from significant noise and are thus not directly usable. To that end, we introduce a confidence-based filtering mechanism, inspired by FixMatch. We set confidence thresholds based upon the predicted objectness and class probability to filter low-quality pseudo-labels. While effective, we observe that these two measures do not sufficiently capture localization quality. We therefore propose to use the estimated 3D IoU as a localization metric and set category-aware self-adjusted thresholds to filter poorly localized proposals. We adopt VoteNet as our backbone detector on indoor datasets while we use PV-RCNN on the autonomous driving dataset, KITTI. Our method consistently improves state-of-the-art methods on both ScanNet and SUN-RGBD benchmarks by significant margins under all label ratios (including fully labeled setting). For example, when training using only 10\% labeled data on ScanNet, 3DIoUMatch achieves 7.7% absolute improvement on mAP@0.25 and 8.5% absolute improvement on mAP@0.5 upon the prior art. On KITTI, we are the first to demonstrate semi-supervised 3D object detection and our method surpasses a fully supervised baseline from 1.8% to 7.6% under different label ratios and categories.
+
+</details>
+
+### Scale-Aware Automatic Augmentation for Object Detection. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2103.17220](https://arxiv.org/abs/2103.17220) · 📚 被引 49
+- **作者**: Yukang Chen, Yanwei Li, Tao Kong, Lu Qi, Ruihang Chu, Lei Li et al.
+- **🏷️ 机构**: CUHK / SmartMore
+- **会议**: CVPR 2021
+- **摘要（中）**: ①针对目标检测中数据增强策略搜索空间有限和搜索效率低的问题。②提出了Scale-aware AutoAug，定义了尺度感知的搜索空间，包含图像级和框级增强，并设计了Pareto Scale Balance搜索指标。③相比先前自动增强方法，搜索成本更低，且策略可迁移至其他数据集和任务。④在RetinaNet、Faster R-CNN、Mask R-CNN和FCOS等检测器上取得显著一致提升，并改善实例分割和关键点估计性能。
+- **摘要（英）**: This paper addresses limited search space and low efficiency in data augmentation for object detection by proposing Scale-aware AutoAug. It defines a scale-aware search space with image- and box-level augmentations and a Pareto Scale Balance metric. The method achieves significant improvements on multiple detectors and transfers to other tasks with lower search cost.
+- **核心贡献**: 提出尺度感知的自动增强方法提升检测性能。
+- **创新点**: 尺度感知搜索空间和高效搜索指标。
+- **结果**: 在多个检测器上显著提升，并迁移至其他任务。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose Scale-aware AutoAug to learn data augmentation policies for object detection. We define a new scale-aware search space, where both image- and box-level augmentations are designed for maintaining scale invariance. Upon this search space, we propose a new search metric, termed Pareto Scale Balance, to facilitate search with high efficiency. In experiments, Scale-aware AutoAug yields significant and consistent improvement on various object detectors (e.g., RetinaNet, Faster R-CNN, Mask R-CNN, and FCOS), even compared with strong multi-scale training baselines. Our searched augmentation policies are transferable to other datasets and box-level tasks beyond object detection (e.g., instance segmentation and keypoint estimation) to improve performance. The search cost is much less than previous automated augmentation approaches for object detection. It is notable that our searched policies have meaningful patterns, which intuitively provide valuable insight for human data augmentation design. Code and models will be available at https://github.com/Jia-Research-Lab/SA-AutoAug.
+
+</details>
+
+### AQD: Towards Accurate Quantized Object Detection. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2007.06919](https://arxiv.org/abs/2007.06919) · 📚 被引 27
+- **作者**: Peng Chen, Jing Liu, Bohan Zhuang, Mingkui Tan, Chunhua Shen
+- **🏷️ 机构**: ZJU
+- **会议**: CVPR 2021
+- **摘要（中）**: ①针对低比特量化在目标检测中性能下降和硬件效率不可验证的问题。②提出了AQD方案，通过固定点运算覆盖卷积、归一化和跳跃连接层，实现整数-only推理。③相比先前量化方法，在极低比特下保持精度并提升延迟-精度权衡。④在MS-COCO上，AQD在低比特方案下达到与全精度相当或更好的性能。
+- **摘要（英）**: This paper addresses performance degradation and unverifiable efficiency in low-bit quantization for object detection by proposing AQD. It uses fixed-point operations across all layers for integer-only inference. The method achieves comparable or better performance than full-precision counterparts on MS-COCO under extremely low-bit schemes.
+- **核心贡献**: 提出整数-only量化的目标检测方案。
+- **创新点**: 全层固定点运算实现高效推理。
+- **结果**: 在MS-COCO上低比特下性能与全精度相当。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Network quantization allows inference to be conducted using low-precision arithmetic for improved inference efficiency of deep neural networks on edge devices. However, designing aggressively low-bit (e.g., 2-bit) quantization schemes on complex tasks, such as object detection, still remains challenging in terms of severe performance degradation and unverifiable efficiency on common hardware. In this paper, we propose an Accurate Quantized object Detection solution, termed AQD, to fully get rid of floating-point computation. To this end, we target using fixed-point operations in all kinds of layers, including the convolutional layers, normalization layers, and skip connections, allowing the inference to be executed using integer-only arithmetic. To demonstrate the improved latency-vs-accuracy trade-off, we apply the proposed methods on RetinaNet and FCOS. In particular, experimental results on MS-COCO dataset show that our AQD achieves comparable or even better performance compared with the full-precision counterpart under extremely low-bit schemes, which is of great practical value. Source code and models are available at: https://github.com/ziplab/QTool
+
+</details>
+
+### Robust and Accurate Object Detection via Adversarial Learning. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2103.13886](https://arxiv.org/abs/2103.13886) · 📚 被引 60
+- **作者**: Xiangning Chen, Cihang Xie, Mingxing Tan, Li Zhang, Cho-Jui Hsieh, Boqing Gong
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+- **摘要（中）**: ①针对数据增强在目标检测中潜力未被充分挖掘的问题。②提出通过对抗学习增强检测器微调阶段，动态选择来自分类和定位分支的更强对抗图像。③相比AutoAugment等模型无关方法，该方法更好地泛化到不同检测器。④在COCO上提升EfficientDets的mAP达+1.1，并改善鲁棒性。
+- **摘要（英）**: This paper addresses under-explored data augmentation in object detection by augmenting fine-tuning with adversarial examples. It dynamically selects stronger adversarial images from classification and localization branches. The method improves EfficientDets by +1.1 mAP on COCO and enhances robustness, generalizing better than AutoAugment.
+- **核心贡献**: 提出基于对抗学习的检测器增强方法。
+- **创新点**: 动态选择分类和定位分支的对抗样本。
+- **结果**: 在COCO上提升mAP +1.1。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Data augmentation has become a de facto component for training high-performance deep image classifiers, but its potential is under-explored for object detection. Noting that most state-of-the-art object detectors benefit from fine-tuning a pre-trained classifier, we first study how the classifiers' gains from various data augmentations transfer to object detection. The results are discouraging; the gains diminish after fine-tuning in terms of either accuracy or robustness. This work instead augments the fine-tuning stage for object detectors by exploring adversarial examples, which can be viewed as a model-dependent data augmentation. Our method dynamically selects the stronger adversarial images sourced from a detector's classification and localization branches and evolves with the detector to ensure the augmentation policy stays current and relevant. This model-dependent augmentation generalizes to different object detectors better than AutoAugment, a model-agnostic augmentation policy searched based on one particular detector. Our approach boosts the performance of state-of-the-art EfficientDets by +1.1 mAP on the COCO object detection benchmark. It also improves the detectors' robustness against natural distortions by +3.8 mAP and against domain shift by +1.3 mAP. Models are available at https://github.com/google/automl/tree/master/efficientdet/Det-AdvProp.md
+
+</details>
+<!-- COMPLETE v1 papers=69 -->

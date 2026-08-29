@@ -39,3 +39,25 @@
 
 - Video Playback Rate Perception for Self-Supervised Spatio-Temporal Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202020.md)
 - 3DV: 3D Dynamic Voxel for Action Recognition in Depth Video. → [3d-detection](../3d-detection/Guideline%202020.md)
+
+## 🆕 增量新增
+
+### RubiksNet: Learnable 3D-Shift for Efficient Video Action Recognition. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_30)
+- **作者**: Linxi Fan, Shyamal Buch, Guanzhi Wang, Ryan Cao, Yuke Zhu, Juan Carlos Niebles et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
+- **摘要（中）**: ①该论文针对视频动作识别中3D卷积计算成本高的问题。②提出了RubiksNet，利用可学习的3D移位操作替代传统卷积，实现高效时空特征提取。③相比固定移位模式，该方法通过可学习参数自适应调整移位策略，提升了模型灵活性。④由于摘要缺失，具体效果数据未知，但该方向在效率与性能平衡上有潜力。
+- **摘要（英）**: This paper addresses the high computational cost of 3D convolutions in video action recognition. It proposes RubiksNet, which uses learnable 3D shifts to replace standard convolutions for efficient spatio-temporal modeling. The learnable shifts offer adaptive routing compared to fixed patterns. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出可学习3D移位机制用于高效视频识别。
+- **创新点**: 将移位操作参数化，实现数据驱动的时空特征重组。
+- **结果**: 效果未知，因摘要缺失。
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Video Playback Rate Perception for Self-Supervised Spatio-Temporal Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202020.md)
+- Multi-Modal Domain Adaptation for Fine-Grained Action Recognition. → [multimodal](../multimodal/Guideline%202020.md)
+- Speech2Action: Cross-Modal Supervision for Action Recognition. → [multimodal](../multimodal/Guideline%202020.md)
+- 3DV: 3D Dynamic Voxel for Action Recognition in Depth Video. → [3d-detection](../3d-detection/Guideline%202020.md)
+- Multi-view Action Recognition Using Cross-View Video Prediction. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
+<!-- COMPLETE v1 papers=4 -->

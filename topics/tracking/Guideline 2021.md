@@ -154,3 +154,67 @@
 ## 跨领域论文（完整笔记在其他领域）
 
 - DyGLIP: A Dynamic Graph Model With Link Prediction for Accurate Multi-Camera Multiple Object Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202021.md)
+
+## 🆕 增量新增
+
+### CAPTRA: CAtegory-level Pose Tracking for Rigid and Articulated Objects from Point Clouds. **⭐⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01296)
+- **作者**: Yijia Weng, He Wang, Qiang Zhou, Yuzhe Qin, Yueqi Duan, Qingnan Fan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①该论文针对点云中刚体和关节物体的类别级姿态跟踪问题。②提出CAPTRA方法，利用点云输入进行类别级姿态估计与跟踪，支持刚体和关节物体。③相比实例级方法，泛化到未见过的同类物体，且统一处理两类物体。④摘要未提供具体数据，但强调类别级泛化能力。
+- **摘要（英）**: This paper tackles category-level pose tracking for rigid and articulated objects from point clouds. CAPTRA performs pose estimation and tracking at category level, generalizing to unseen instances and handling both object types uniformly. The abstract highlights generalization but lacks quantitative results.
+- **核心贡献**: 提出点云类别级刚体和关节物体姿态跟踪方法。
+- **创新点**: 统一处理刚体和关节物体的类别级姿态跟踪。
+- **结果**: 摘要未提供具体效果数据。
+
+### Box-Aware Feature Enhancement for Single Object Tracking on Point Clouds. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01295)
+- **作者**: Chaoda Zheng, Xu Yan, Jiantao Gao, Weibing Zhao, Wei Zhang, Zhen Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①该论文针对点云单目标跟踪中特征判别性不足的问题。②提出Box-Aware特征增强方法，利用目标框信息增强点云特征，提升跟踪鲁棒性。③相比仅依赖点云特征的方法，显式引入框先验，增强目标响应。④摘要未提供具体数据，但强调特征增强的有效性。
+- **摘要（英）**: This paper addresses insufficient feature discrimination in single object tracking on point clouds. It proposes box-aware feature enhancement that leverages target box information to improve tracking robustness. Compared to point-only methods, it explicitly incorporates box priors to strengthen target response. The abstract lacks quantitative results.
+- **核心贡献**: 提出框感知特征增强用于点云单目标跟踪。
+- **创新点**: 显式利用目标框信息增强点云特征。
+- **结果**: 摘要未提供具体效果数据。
+
+### Towards Distraction-Robust Active Visual Tracking. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2106.10110](https://arxiv.org/abs/2106.10110)
+- **作者**: Fangwei Zhong, Peng Sun, Wenhan Luo, Tingyun Yan, Yizhou Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2021
+- **摘要（中）**: ①针对主动视觉跟踪中干扰物（distractors）导致跟踪失败的问题。②提出混合合作-竞争多智能体博弈，目标与多个干扰物组成团队对抗跟踪器，通过博弈学习自然涌现多样的干扰行为，暴露跟踪器弱点。③提出干扰物奖励函数、跨模态师生学习策略和跟踪器的循环注意力机制。④实验表明跟踪器在干扰环境下表现鲁棒，并能泛化到未见环境，博弈还可用于对抗性测试跟踪器鲁棒性。
+- **摘要（英）**: This paper addresses distraction-robustness in active visual tracking by proposing a mixed cooperative-competitive multi-agent game where target and distractors collaborate against a tracker. It introduces practical methods including distractor rewards, cross-modal teacher-student learning, and recurrent attention, achieving robust tracking and generalization, with the game serving for adversarial testing.
+- **核心贡献**: 提出多智能体博弈框架增强主动跟踪的干扰鲁棒性。
+- **创新点**: 合作-竞争博弈机制和跨模态师生学习。
+- **结果**: 在干扰环境下实现鲁棒跟踪，并泛化到新环境。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In active visual tracking, it is notoriously difficult when distracting objects appear, as distractors often mislead the tracker by occluding the target or bringing a confusing appearance. To address this issue, we propose a mixed cooperative-competitive multi-agent game, where a target and multiple distractors form a collaborative team to play against a tracker and make it fail to follow. Through learning in our game, diverse distracting behaviors of the distractors naturally emerge, thereby exposing the tracker's weakness, which helps enhance the distraction-robustness of the tracker. For effective learning, we then present a bunch of practical methods, including a reward function for distractors, a cross-modal teacher-student learning strategy, and a recurrent attention mechanism for the tracker. The experimental results show that our tracker performs desired distraction-robust active visual tracking and can be well generalized to unseen environments. We also show that the multi-agent game can be used to adversarially test the robustness of trackers.
+
+</details>
+
+### Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2106.11958](https://arxiv.org/abs/2106.11958)
+- **作者**: Lei Ke, Xia Li, Martin Danelljan, Yu-Wing Tai, Chi-Keung Tang, Fisher Yu
+- **🏷️ 机构**: ETH Zurich
+- **会议**: NeurIPS 2021
+- **摘要（中）**: ①针对多目标跟踪与分割中仅利用时间维度解决关联问题、分割依赖单帧预测的局限，提出原型交叉注意力网络PCAN。②方法将时空记忆蒸馏为原型集，通过交叉注意力从过去帧检索丰富信息，并采用原型外观模块学习对比性前景/背景原型，随时间传播。③相比现有方法，能充分利用时空信息，适用于在线多目标跟踪与分割。④在YouTube-VIS和BDD100K数据集上超越当前视频实例跟踪与分割竞赛冠军，且适用于单阶段和双阶段分割框架。
+- **摘要（英）**: This paper addresses multiple object tracking and segmentation by proposing Prototypical Cross-Attention Network (PCAN), which distills spatio-temporal memory into prototypes and uses cross-attention to retrieve past information. It also learns contrastive foreground/background prototypes for segmentation. PCAN outperforms competition winners on YouTube-VIS and BDD100K, and works with both one-stage and two-stage frameworks.
+- **核心贡献**: 提出原型交叉注意力网络用于在线多目标跟踪与分割。
+- **创新点**: 利用原型蒸馏时空记忆并跨注意力检索。
+- **结果**: 在YouTube-VIS和BDD100K上超越SOTA。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multiple object tracking and segmentation requires detecting, tracking, and segmenting objects belonging to a set of given classes. Most approaches only exploit the temporal dimension to address the association problem, while relying on single frame predictions for the segmentation mask itself. We propose Prototypical Cross-Attention Network (PCAN), capable of leveraging rich spatio-temporal information for online multiple object tracking and segmentation. PCAN first distills a space-time memory into a set of prototypes and then employs cross-attention to retrieve rich information from the past frames. To segment each object, PCAN adopts a prototypical appearance module to learn a set of contrastive foreground and background prototypes, which are then propagated over time. Extensive experiments demonstrate that PCAN outperforms current video instance tracking and segmentation competition winners on both Youtube-VIS and BDD100K datasets, and shows efficacy to both one-stage and two-stage segmentation frameworks. Code and video resources are available at http://vis.xyz/pub/pcan.
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- DyGLIP: A Dynamic Graph Model With Link Prediction for Accurate Multi-Camera Multiple Object Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202021.md)
+- Self-Supervised Multi-Object Tracking with Cross-input Consistency. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+<!-- COMPLETE v1 papers=18 -->

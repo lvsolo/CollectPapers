@@ -254,3 +254,111 @@
 > Neural Architecture Search (NAS) achieves significant progress in many computer vision tasks. While many methods have been proposed to improve the efficiency of NAS, the search progress is still laborious because training and evaluating plausible architectures over large search space is time-consuming. Assessing network candidates under a proxy (i.e., computationally reduced setting) thus becomes inevitable. In this paper, we observe that most existing proxies exhibit different behaviors in maintaining the rank consistency among network candidates. In particular, some proxies can be more reliable -- the rank of candidates does not differ much comparing their reduced setting performance and final performance. In this paper, we systematically investigate some widely adopted reduction factors and report our observations. Inspired by these observations, we present a reliable proxy and further formulate a hierarchical proxy strategy. The strategy spends more computations on candidate networks that are potentially more accurate, while discards unpromising ones in early stage with a fast proxy. This leads to an economical evolutionary-based NAS (EcoNAS), which achieves an impressive 400x search time reduction in comparison to the evolutionary-based state of the art (8 vs. 3150 GPU days). Some new proxies led by our observations can also be applied to accelerate other NAS methods while still able to discover good candidate networks with performance matching those found by previous proxy strategies.
 
 </details>
+
+## 🆕 增量新增
+
+### MnasFPN: Learning Latency-Aware Pyramid Architecture for Object Detection on Mobile Devices. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:1912.01106](https://arxiv.org/abs/1912.01106) · 📚 被引 40
+- **作者**: Bo Chen, Golnaz Ghiasi, Hanxiao Liu, Tsung-Yi Lin, Dmitry Kalenichenko, Hartwig Adam et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+- **摘要（中）**: ①针对移动设备上目标检测架构设计依赖手工且缺乏延迟感知的问题。②提出了MnasFPN，一个移动友好的检测头搜索空间，结合延迟感知架构搜索。③改进点在于搜索空间设计创新，并考虑设备延迟。④MnasFPN+MobileNetV2在Pixel上比MobileNetV3+SSDLite提升1.8 mAP，且比NAS-FPNLite更准更快。
+- **摘要（英）**: This paper proposes MnasFPN, a mobile-friendly search space for detection heads with latency-aware NAS. It outperforms MobileNetV3+SSDLite by 1.8 mAP and is faster than NAS-FPNLite.
+- **核心贡献**: 设计了移动友好的检测头搜索空间和延迟感知搜索方法。
+- **创新点**: 将延迟纳入搜索目标并创新搜索空间。
+- **结果**: 在移动设备上实现精度和速度的显著提升。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Despite the blooming success of architecture search for vision tasks in resource-constrained environments, the design of on-device object detection architectures have mostly been manual. The few automated search efforts are either centered around non-mobile-friendly search spaces or not guided by on-device latency. We propose MnasFPN, a mobile-friendly search space for the detection head, and combine it with latency-aware architecture search to produce efficient object detection models. The learned MnasFPN head, when paired with MobileNetV2 body, outperforms MobileNetV3+SSDLite by 1.8 mAP at similar latency on Pixel. It is also both 1.0 mAP more accurate and 10% faster than NAS-FPNLite. Ablation studies show that the majority of the performance gain comes from innovations in the search space. Further explorations reveal an interesting coupling between the search space design and the search algorithm, and that the complexity of MnasFPN search space may be at a local optimum.
+
+</details>
+
+### Stabilizing Differentiable Architecture Search via Perturbation-based Regularization. **⭐⭐** (相关度: 30%)
+- **链接**: [出版页](http://proceedings.mlr.press/v119/chen20f.html)
+- **作者**: Xiangning Chen, Cho-Jui Hsieh
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2020
+- **摘要（中）**: ①该论文针对可微架构搜索（DARTS）稳定性差的问题。②提出基于扰动的正则化方法来稳定DARTS的搜索过程。③相比已有DARTS变体，该方法通过扰动正则化增强了搜索的鲁棒性。④由于摘要缺失，无法提供具体数据，但该方法旨在提升搜索稳定性。
+- **摘要（英）**: This paper addresses the instability in differentiable architecture search (DARTS). It proposes a perturbation-based regularization method to stabilize the search process. Compared to existing DARTS variants, it enhances robustness via perturbation regularization. Specific results are unavailable due to missing abstract details.
+- **核心贡献**: 提出了基于扰动的正则化方法，用于稳定DARTS搜索。
+- **创新点**: 通过扰动正则化增强搜索鲁棒性。
+- **结果**: 旨在提升DARTS的搜索稳定性。
+
+### Neural Architecture Search in A Proxy Validation Loss Landscape. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](http://proceedings.mlr.press/v119/li20c.html)
+- **作者**: Yanxi Li, Minjing Dong, Yunhe Wang, Chang Xu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2020
+- **摘要（中）**: ①该论文针对NAS中代理验证损失景观与真实性能不一致的问题。②提出在代理验证损失景观中进行架构搜索的方法，以更准确地评估候选架构。③相比已有代理方法，该方法利用损失景观信息提高搜索的可靠性。④由于摘要缺失，无法提供具体数据，但该方法旨在提升NAS的搜索效率与准确性。
+- **摘要（英）**: This paper addresses the inconsistency between proxy validation loss landscapes and true performance in NAS. It proposes searching within a proxy validation loss landscape to better evaluate candidate architectures. Compared to existing proxy methods, it leverages landscape information for improved reliability. Specific results are unavailable due to missing abstract details.
+- **核心贡献**: 提出了在代理验证损失景观中进行架构搜索的方法。
+- **创新点**: 利用损失景观信息提升NAS搜索的可靠性。
+- **结果**: 旨在提升NAS的搜索效率与准确性。
+
+### Generative Teaching Networks: Accelerating Neural Architecture Search by Learning to Generate Synthetic Training Data.
+- **链接**: [出版页](http://proceedings.mlr.press/v119/such20a.html)
+- **作者**: Felipe Petroski Such, Aditya Rawal, Joel Lehman, Kenneth O. Stanley, Jeffrey Clune
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2020
+
+### Does Unsupervised Architecture Representation Learning Help Neural Architecture Search?
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/937936029af671cf479fa893db91cbdd-Abstract.html)
+- **作者**: Shen Yan, Yu Zheng, Wei Ao, Xiao Zeng, Mi Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Hierarchical Neural Architecture Search for Deep Stereo Matching.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/fc146be0b230d7e0a92e66a6114b840d-Abstract.html)
+- **作者**: Xuelian Cheng, Yiran Zhong, Mehrtash Harandi, Yuchao Dai, Xiaojun Chang, Hongdong Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### CLEARER: Multi-Scale Neural Architecture Search for Image Restoration.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/c6e81542b125c36346d9167691b8bd09-Abstract.html)
+- **作者**: Yuanbiao Gou, Boyun Li, Zitao Liu, Songfan Yang, Xi Peng
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Semi-Supervised Neural Architecture Search.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/77305c2f862ad1d353f55bf38e5a5183-Abstract.html)
+- **作者**: Renqian Luo, Xu Tan, Rui Wang, Tao Qin, Enhong Chen, Tie-Yan Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Bridging the Gap between Sample-based and One-shot Neural Architecture Search with BONAS.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/13d4635deccc230c944e4ff6e03404b5-Abstract.html)
+- **作者**: Han Shi, Renjie Pi, Hang Xu, Zhenguo Li, James T. Kwok, Tong Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### A Study on Encodings for Neural Architecture Search.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/ea4eb49329550caaa1d2044105223721-Abstract.html)
+- **作者**: Colin White, Willie Neiswanger, Sam Nolen, Yash Savani
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Auto-Panoptic: Cooperative Multi-Component Architecture Search for Panoptic Segmentation.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/ec1f764517b7ffb52057af6df18142b7-Abstract.html)
+- **作者**: Yangxin Wu, Gengwei Zhang, Hang Xu, Xiaodan Liang, Liang Lin
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### ISTA-NAS: Efficient and Consistent Neural Architecture Search by Sparse Coding.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/76cf99d3614e23eabab16fb27e944bf9-Abstract.html)
+- **作者**: Yibo Yang, Hongyang Li, Shan You, Fei Wang, Chen Qian, Zhouchen Lin
+- **🏷️ 机构**: Shanghai AI Lab, Peking University
+- **会议**: NeurIPS 2020
+
+### Differentiable Neural Architecture Search in Equivalent Space with Exploration Enhancement.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/9a96a2c73c0d477ff2a6da3bf538f4f4-Abstract.html)
+- **作者**: Miao Zhang, Huiqi Li, Shirui Pan, Xiaojun Chang, Zongyuan Ge, Steven W. Su
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+
+### Theory-Inspired Path-Regularized Differential Network Architecture Search.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/5e1b18c4c6a6d31695acbae3fd70ecc6-Abstract.html)
+- **作者**: Pan Zhou, Caiming Xiong, Richard Socher, Steven Chu-Hong Hoi
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2020
+<!-- COMPLETE v1 papers=38 -->

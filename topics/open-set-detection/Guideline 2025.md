@@ -444,3 +444,707 @@
 - Cross-Modal and Uncertainty-Aware Agglomeration for Open-Vocabulary 3D Scene Understanding. → [multimodal](../multimodal/Guideline%202025.md)
 - Towards Open-Vocabulary Audio-Visual Event Localization. → [multimodal](../multimodal/Guideline%202025.md)
 - ODE: Open-Set Evaluation of Hallucinations in Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+
+## 🆕 增量新增
+
+### Dynamic-DINO: Fine-Grained Mixture of Experts Tuning for Real-Time Open-Vocabulary Object Detection. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01938) · 📚 被引 2
+- **作者**: Yehao Lu, Minghe Weng, Zekang Xiao, Rui Jiang, Wei Su, Guangcong Zheng et al.
+- **🏷️ 机构**: College of Computer Science and Technology, Zhejiang University, Polytechnic Institute, Zhejiang University, ZTE
+- **会议**: ICCV 2025
+- **摘要（中）**: 针对开放词汇目标检测中实时性与精度平衡的问题，提出了Dynamic-DINO，一种基于细粒度混合专家（MoE）调优的方法。该方法通过动态路由机制在推理时仅激活部分专家，降低计算开销，同时利用MoE的细粒度调整增强模型对开放词汇的适应能力。摘要信息有限，但推测其核心在于优化MoE调优策略以提升实时开放词汇检测性能。
+- **摘要（英）**: To balance real-time performance and accuracy in open-vocabulary object detection, Dynamic-DINO proposes fine-grained mixture of experts (MoE) tuning with dynamic routing to activate only relevant experts during inference, reducing computation while enhancing adaptability to open vocabulary. The abstract is limited, but the approach likely optimizes MoE tuning for real-time detection.
+- **核心贡献**: 提出基于细粒度MoE调优的实时开放词汇检测方法。
+- **创新点**: 利用动态路由机制实现推理时专家稀疏激活。
+- **结果**: 预期在保持精度的同时提升推理速度，具体数据待补充。
+
+### Talking to DINO: Bridging Self-Supervised Vision Backbones with Language for Open-Vocabulary Segmentation. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2411.19331](https://arxiv.org/abs/2411.19331) · 📚 被引 6
+- **作者**: Luca Barsellotti, Lorenzo Bianchi, Nicola Messina, Fabio Carrara, Marcella Cornia, Lorenzo Baraldi et al.
+- **🏷️ 机构**: University of Modena and Reggio Emilia,Italy, ISTI-CNR,Italy
+- **会议**: ICCV 2025
+- **摘要（中）**: 针对开放词汇分割中CLIP空间定位差、DINO缺乏语言理解的问题，提出Talk2DINO混合框架，通过学习映射函数将CLIP文本嵌入对齐到DINOv2的patch级特征，无需微调骨干网络。训练时利用DINOv2注意力图选择性对齐局部视觉patch与文本嵌入，增强分割的自然性和减少噪声，并能有效区分前景。相比现有方法，该方法结合了自监督视觉模型的细粒度编码与语言模型的语义理解，提升了分割精度和鲁棒性。
+- **摘要（英）**: This paper addresses the gap between CLIP's global alignment and DINO's lack of language integration in open-vocabulary segmentation. Talk2DINO aligns CLIP text embeddings to DINOv2 patch features via a learned mapping without fine-tuning backbones, using attention maps for selective alignment. It improves segmentation naturalness and foreground distinction over existing methods.
+- **核心贡献**: 提出Talk2DINO，一种无需微调骨干的混合框架，结合DINOv2与CLIP实现开放词汇分割。
+- **创新点**: 利用DINOv2注意力图进行选择性视觉-文本对齐，避免骨干微调。
+- **结果**: 分割更自然、噪声更少，且能有效区分前景。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-Vocabulary Segmentation (OVS) aims at segmenting images from free-form textual concepts without predefined training classes. While existing vision-language models such as CLIP can generate segmentation masks by leveraging coarse spatial information from Vision Transformers, they face challenges in spatial localization due to their global alignment of image and text features. Conversely, self-supervised visual models like DINO excel in fine-grained visual encoding but lack integration with language. To bridge this gap, we present Talk2DINO, a novel hybrid approach that combines the spatial accuracy of DINOv2 with the language understanding of CLIP. Our approach aligns the textual embeddings of CLIP to the patch-level features of DINOv2 through a learned mapping function without the need to fine-tune the underlying backbones. At training time, we exploit the attention maps of DINOv2 to selectively align local visual patches with textual embeddings. We show that the powerful semantic and localization abilities of Talk2DINO can enhance the segmentation process, resulting in more natural and less noisy segmentations, and that our approach can also effectively distinguish foreground objects from the background. Experimental results demonstrate that Talk2DINO achieves state-of-the-art performance across several unsupervised OVS benchmarks. Source code and models are publicly available at: https://lorebianchi98.github.io/Talk2DINO/.
+
+</details>
+
+### OpenLex3D: A Tiered Benchmark for Open-Vocabulary 3D Scene Representations. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/05057404e0cab4fe58971dc3a7d6044c-Abstract-Datasets_and_Benchmarks_Track.html)
+- **作者**: Christina Kassab, Sacha Morin, Martin Büchner, Matías Mattamala, Kumaraditya Gupta, Abhinav Valada et al.
+- **🏷️ 机构**: University of Oxford, Mila, Université de Montréal, Albert-Ludwigs-Universität Freiburg
+- **会议**: NeurIPS 2025
+- **摘要（中）**: 针对开放词汇3D场景表示缺乏统一基准的问题，提出OpenLex3D分层基准，用于评估3D场景理解中的开放词汇能力。该基准涵盖多个层次的任务，旨在标准化评估流程。方法可能包括数据收集和评估协议设计，但摘要不完整。相比现有基准，它更全面且分层，支持细粒度评估。效果需进一步验证。
+- **摘要（英）**: This paper introduces OpenLex3D, a tiered benchmark for open-vocabulary 3D scene representations, addressing the lack of standardized evaluation. It provides hierarchical tasks to assess open-vocabulary capabilities in 3D understanding. The benchmark aims to improve comparability across methods.
+- **核心贡献**: 提出OpenLex3D分层基准，标准化开放词汇3D场景表示评估。
+- **创新点**: 分层任务设计，覆盖多粒度3D开放词汇理解。
+- **结果**: 提供统一评估框架，但具体效果未在摘要中给出。
+
+### Search and Detect: Training-Free Long Tail Object Detection via Web-Image Retrieval. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2409.18733](https://arxiv.org/abs/2409.18733)
+- **作者**: Mankeerat Sidhu, Hetarth Chopra, Ansel Blume, Jeonghwan Kim, Revanth Gangi Reddy, Heng Ji
+- **🏷️ 机构**: University of Illinois Urbana Champaign,Urbana,USA
+- **会议**: CVPR 2025
+- **摘要（中）**: 针对长尾目标检测中稀有类性能差的问题，提出SearchDet训练-free框架，通过Web图像检索获取正负样本，嵌入后计算输入图像加权查询以检测目标。该方法无需训练，在ODinW上mAP提升48.7%，LVIS上提升59.1%，优于GroundingDINO等SOTA。相比现有方法，它利用检索示例增强检测，且对示例变化稳定，减少标注和训练成本。
+- **摘要（英）**: SearchDet addresses long-tail object detection by retrieving positive and negative web images to compute a weighted query for detection, without training. It achieves 48.7% mAP improvement on ODinW and 59.1% on LVIS over GroundingDINO. The method is stable to exemplar variations, reducing annotation and training costs.
+- **核心贡献**: 提出SearchDet，基于Web检索的训练-free长尾目标检测框架。
+- **创新点**: 利用检索图像构建加权查询，无需训练即可增强开放词汇检测。
+- **结果**: 在ODinW和LVIS上分别提升48.7%和59.1% mAP。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper, we introduce SearchDet, a training-free long-tail object detection framework that significantly enhances open-vocabulary object detection performance. SearchDet retrieves a set of positive and negative images of an object to ground, embeds these images, and computes an input image-weighted query which is used to detect the desired concept in the image. Our proposed method is simple and training-free, yet achieves over 48.7% mAP improvement on ODinW and 59.1% mAP improvement on LVIS compared to state-of-the-art models such as GroundingDINO. We further show that our approach of basing object detection on a set of Web-retrieved exemplars is stable with respect to variations in the exemplars, suggesting a path towards eliminating costly data annotation and training procedures.
+
+</details>
+
+### Percept, Memory, and Imagine: World Feature Simulating for Open-Domain Unknown Object Detection. **⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_Percept_Memory_and_Imagine_World_Feature_Simulating_for_Open-Domain_Unknown_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Aming Wu, Cheng Deng
+- **🏷️ 机构**: Xidian University,School of Electronic Engineering,Xi&#x2019;an,China
+- **会议**: CVPR 2025
+- **摘要（中）**: 针对开放域未知目标检测中感知、记忆和想象能力不足的问题，提出一种世界特征模拟框架。该方法可能通过模拟未知目标的特征来增强检测，但摘要不完整。相比现有方法，它强调对未知类的泛化。效果未在摘要中明确。
+- **摘要（英）**: This paper proposes a world feature simulating framework for open-domain unknown object detection, addressing perception, memory, and imagination limitations. It likely simulates features of unknown targets to improve detection. Specific improvements are not detailed in the abstract.
+- **核心贡献**: 提出世界特征模拟框架，用于开放域未知目标检测。
+- **创新点**: 通过模拟未知类特征增强检测泛化。
+- **结果**: 具体效果未在摘要中给出。
+
+### OW-OVD: Unified Open World and Open Vocabulary Object Detection. **⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xi_OW-OVD_Unified_Open_World_and_Open_Vocabulary_Object_Detection_CVPR_2025_paper.html) · 📚 被引 9
+- **作者**: Xing Xi, Yangyang Huang, Ronghua Luo, Yu Qiu
+- **🏷️ 机构**: South China University of Technology,School of Computer Science &#x0026; Engineering
+- **会议**: CVPR 2025
+- **摘要（中）**: 针对开放世界和开放词汇目标检测的分离问题，提出OW-OVD统一框架，旨在同时处理未知类检测和开放词汇识别。该方法可能整合了两种任务的学习策略，但摘要不完整。相比现有方法，它提供统一解决方案。效果未在摘要中明确。
+- **摘要（英）**: OW-OVD unifies open world and open vocabulary object detection, addressing the separation between unknown class detection and open-vocabulary recognition. It likely integrates learning strategies for both tasks. Specific results are not provided in the abstract.
+- **核心贡献**: 提出OW-OVD，统一开放世界与开放词汇目标检测。
+- **创新点**: 整合未知类检测与开放词汇识别任务。
+- **结果**: 具体效果未在摘要中给出。
+
+### Cross-Modal and Uncertainty-Aware Agglomeration for Open-Vocabulary 3D Scene Understanding. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2503.16707](https://arxiv.org/abs/2503.16707) · 📚 被引 4
+- **作者**: Jinlong Li, Cristiano Saltori, Fabio Poiesi, Nicu Sebe
+- **🏷️ 机构**: University of Trento, Fondazione Bruno Kessler
+- **会议**: CVPR 2025
+- **摘要（中）**: 针对3D场景理解中依赖单一VLM的局限，本文提出CUA-O3D，首个集成CLIP、DINOv2和Stable Diffusion等多基础模型的框架，并引入确定性不确定性估计来自适应蒸馏异构2D特征。该方法解决了语义和几何先验的融合问题，实验显示在开放词汇3D分割任务上优于现有方法。
+- **摘要（英）**: CUA-O3D integrates multiple foundation models (CLIP, DINOv2, Stable Diffusion) for 3D scene understanding with deterministic uncertainty estimation for adaptive feature distillation. It harmonizes heterogeneous representations and outperforms existing methods on open-vocabulary 3D tasks.
+- **核心贡献**: 提出多基础模型集成和不确定性估计的3D开放词汇理解框架。
+- **创新点**: 首次结合多种VLM和视觉模型，利用不确定性蒸馏提升鲁棒性。
+- **结果**: 在多个3D数据集上取得领先性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The lack of a large-scale 3D-text corpus has led recent works to distill open-vocabulary knowledge from vision-language models (VLMs). However, these methods typically rely on a single VLM to align the feature spaces of 3D models within a common language space, which limits the potential of 3D models to leverage the diverse spatial and semantic capabilities encapsulated in various foundation models. In this paper, we propose Cross-modal and Uncertainty-aware Agglomeration for Open-vocabulary 3D Scene Understanding dubbed CUA-O3D, the first model to integrate multiple foundation models-such as CLIP, DINOv2, and Stable Diffusion-into 3D scene understanding. We further introduce a deterministic uncertainty estimation to adaptively distill and harmonize the heterogeneous 2D feature embeddings from these models. Our method addresses two key challenges: (1) incorporating semantic priors from VLMs alongside the geometric knowledge of spatially-aware vision foundation models, and (2) using a novel deterministic uncertainty estimation to capture model-specific uncertainties across diverse semantic and geometric sensitivities, helping to reconcile heterogeneous representations during training. Extensive experiments on ScanNetV2 and Matterport3D demonstrate that our method not only advances open-vocabulary segmentation but also achieves robust cross-domain alignment and competitive spatial perception capabilities. The code will be available at: https://github.com/TyroneLi/CUA_O3D.
+
+</details>
+
+### ODE: Open-Set Evaluation of Hallucinations in Multimodal Large Language Models.
+- **链接**: [arXiv:2409.09318](https://arxiv.org/abs/2409.09318) · 📚 被引 3
+- **作者**: Yahan Tu, Rui Hu, Jitao Sang
+- **🏷️ 机构**: Beijing Jiaotong University,Beijing,China
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Hallucination poses a persistent challenge for multimodal large language models (MLLMs). However, existing benchmarks for evaluating hallucinations are generally static, which may overlook the potential risk of data contamination. To address this issue, we propose ODE, an open-set, dynamic protocol designed to evaluate object hallucinations in MLLMs at both the existence and attribute levels. ODE employs a graph-based structure to represent real-world object concepts, their attributes, and the distributional associations between them. This structure facilitates the extraction of concept combinations based on diverse distributional criteria, generating varied samples for structured queries that evaluate hallucinations in both generative and discriminative tasks. Through the generation of new samples, dynamic concept combinations, and varied distribution frequencies, ODE mitigates the risk of data contamination and broadens the scope of evaluation. This protocol is applicable to both general and specialized scenarios, including those with limited data. Experimental results demonstrate the effectiveness of our protocol, revealing that MLLMs exhibit higher hallucination rates when evaluated with ODE-generated samples, which indicates potential data contamination. Furthermore, these generated samples aid in analyzing hallucination patterns and fine-tuning models, offering an effective approach to mitigating hallucinations in MLLMs.
+
+</details>
+
+### OV-SCAN: Semantically Consistent Alignment for Novel Object Discovery in Open-Vocabulary 3D Object Detection.
+- **链接**: [arXiv:2503.06435](https://arxiv.org/abs/2503.06435)
+- **作者**: Adrian Chow, Evelien Riddell, Yimu Wang, Sean Sedwards, Krzysztof Czarnecki
+- **🏷️ 机构**: University of Waterloo
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-vocabulary 3D object detection for autonomous driving aims to detect novel objects beyond the predefined training label sets in point cloud scenes. Existing approaches achieve this by connecting traditional 3D object detectors with vision-language models (VLMs) to regress 3D bounding boxes for novel objects and perform open-vocabulary classification through cross-modal alignment between 3D and 2D features. However, achieving robust cross-modal alignment remains a challenge due to semantic inconsistencies when generating corresponding 3D and 2D feature pairs. To overcome this challenge, we present OV-SCAN, an Open-Vocabulary 3D framework that enforces Semantically Consistent Alignment for Novel object discovery. OV-SCAN employs two core strategies: discovering precise 3D annotations and filtering out low-quality or corrupted alignment pairs (arising from 3D annotation, occlusion-induced, or resolution-induced noise). Extensive experiments on the nuScenes dataset demonstrate that OV-SCAN achieves state-of-the-art performance.
+
+</details>
+
+### OpenM3D: Open Vocabulary Multi-View Indoor 3D Object Detection without Human Annotations.
+- **链接**: [arXiv:2508.20063](https://arxiv.org/abs/2508.20063) · 📚 被引 2
+- **作者**: Peng-Hao Hsu, Ke Zhang, Fu-En Wang, Tao Tu, Ming-Feng Li, Yu-Lun Liu et al.
+- **🏷️ 机构**: National Tsing Hua University, Amazon, Cornell University
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-vocabulary (OV) 3D object detection is an emerging field, yet its exploration through image-based methods remains limited compared to 3D point cloud-based methods. We introduce OpenM3D, a novel open-vocabulary multi-view indoor 3D object detector trained without human annotations. In particular, OpenM3D is a single-stage detector adapting the 2D-induced voxel features from the ImGeoNet model. To support OV, it is jointly trained with a class-agnostic 3D localization loss requiring high-quality 3D pseudo boxes and a voxel-semantic alignment loss requiring diverse pre-trained CLIP features. We follow the training setting of OV-3DET where posed RGB-D images are given but no human annotations of 3D boxes or classes are available. We propose a 3D Pseudo Box Generation method using a graph embedding technique that combines 2D segments into coherent 3D structures. Our pseudo-boxes achieve higher precision and recall than other methods, including the method proposed in OV-3DET. We further sample diverse CLIP features from 2D segments associated with each coherent 3D structure to align with the corresponding voxel feature. The key to training a highly accurate single-stage detector requires both losses to be learned toward high-quality targets. At inference, OpenM3D, a highly efficient detector, requires only multi-view images for input and demonstrates superior accuracy and speed (0.3 sec. per scene) on ScanNet200 and ARKitScenes indoor benchmarks compared to existing methods. We outperform a strong two-stage method that leverages our class-agnostic detector with a ViT CLIP-based OV classifier and a baseline incorporating multi-view depth estimator on both accuracy and speed.
+
+</details>
+
+### Bilateral Collaboration with Large Vision-Language Models for Open Vocabulary Human-Object Interaction Detection.
+- **链接**: [arXiv:2507.06510](https://arxiv.org/abs/2507.06510)
+- **作者**: Yupeng Hu, Changxing Ding, Chang Sun, Shaoli Huang, Xiangmin Xu
+- **🏷️ 机构**: South China University of Technology, Tencent AI Lab
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open vocabulary Human-Object Interaction (HOI) detection is a challenging task that detects all <human, verb, object> triplets of interest in an image, even those that are not pre-defined in the training set. Existing approaches typically rely on output features generated by large Vision-Language Models (VLMs) to enhance the generalization ability of interaction representations. However, the visual features produced by VLMs are holistic and coarse-grained, which contradicts the nature of detection tasks. To address this issue, we propose a novel Bilateral Collaboration framework for open vocabulary HOI detection (BC-HOI). This framework includes an Attention Bias Guidance (ABG) component, which guides the VLM to produce fine-grained instance-level interaction features according to the attention bias provided by the HOI detector. It also includes a Large Language Model (LLM)-based Supervision Guidance (LSG) component, which provides fine-grained token-level supervision for the HOI detector by the LLM component of the VLM. LSG enhances the ability of ABG to generate high-quality attention bias. We conduct extensive experiments on two popular benchmarks: HICO-DET and V-COCO, consistently achieving superior performance in the open vocabulary and closed settings. The code will be released in Github.
+
+</details>
+
+### Benefit from Seen: Enhancing Open-Vocabulary Object Detection by Bridging Visual and Textual Co-Occurrence Knowledge.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02053)
+- **作者**: Yanqi Li, Jianwei Niu, Tao Ren
+- **🏷️ 机构**: School of Computer Science and Engineering, Beihang University,State Key Laboratory of Virtual Reality Technology and Systems,Beijing,China, Institute of Software Chinese Academy of Sciences, University of Chinese Academy of Sciences,State Key Laboratory of Intelligent Game,Beijing,China
+- **会议**: ICCV 2025
+
+### SFUOD: Source-Free Unknown Object Detection.
+- **链接**: [arXiv:2507.17373](https://arxiv.org/abs/2507.17373)
+- **作者**: Keon-Hee Park, Seun-An Choe, Gyeong-Moon Park
+- **🏷️ 机构**: Kyung Hee University,Yongin,Republic of Korea, Korea University,Seoul,Republic of Korea
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Source-free object detection adapts a detector pre-trained on a source domain to an unlabeled target domain without requiring access to labeled source data. While this setting is practical as it eliminates the need for the source dataset during domain adaptation, it operates under the restrictive assumption that only pre-defined objects from the source domain exist in the target domain. This closed-set setting prevents the detector from detecting undefined objects. To ease this assumption, we propose Source-Free Unknown Object Detection (SFUOD), a novel scenario which enables the detector to not only recognize known objects but also detect undefined objects as unknown objects. To this end, we propose CollaPAUL (Collaborative tuning and Principal Axis-based Unknown Labeling), a novel framework for SFUOD. Collaborative tuning enhances knowledge adaptation by integrating target-dependent knowledge from the auxiliary encoder with source-dependent knowledge from the pre-trained detector through a cross-domain attention mechanism. Additionally, principal axes-based unknown labeling assigns pseudo-labels to unknown objects by estimating objectness via principal axes projection and confidence scores from model predictions. The proposed CollaPAUL achieves state-of-the-art performances on SFUOD benchmarks, and extensive experiments validate its effectiveness.
+
+</details>
+
+### Visual Textualization for Image Prompted Object Detection.
+- **链接**: [arXiv:2506.23785](https://arxiv.org/abs/2506.23785)
+- **作者**: Yongjian Wu, Yang Zhou, Jiya Saiyin, Bingzheng Wei, Yan Xu
+- **🏷️ 机构**: School of Biological Science and Medical Engineering, Beihang University, ByteDance Inc.
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose VisTex-OVLM, a novel image prompted object detection method that introduces visual textualization -- a process that projects a few visual exemplars into the text feature space to enhance Object-level Vision-Language Models' (OVLMs) capability in detecting rare categories that are difficult to describe textually and nearly absent from their pre-training data, while preserving their pre-trained object-text alignment. Specifically, VisTex-OVLM leverages multi-scale textualizing blocks and a multi-stage fusion strategy to integrate visual information from visual exemplars, generating textualized visual tokens that effectively guide OVLMs alongside text prompts. Unlike previous methods, our method maintains the original architecture of OVLM, maintaining its generalization capabilities while enhancing performance in few-shot settings. VisTex-OVLM demonstrates superior performance across open-set datasets which have minimal overlap with OVLM's pre-training data and achieves state-of-the-art results on few-shot benchmarks PASCAL VOC and MSCOCO. The code will be released at https://github.com/WitGotFlg/VisTex-OVLM.
+
+</details>
+
+### ASGS: Single-Domain Generalizable Open-Set Object Detection via Adaptive Subgraph Searching.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01944) · 📚 被引 1
+- **作者**: Yuxuan Yuan, Luyao Tang, Yixin Chen, Chaoqi Chen, Yue Huang, Xinghao Ding
+- **🏷️ 机构**: Ministry of Education of China, Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Shenzhen University
+- **会议**: ICCV 2025
+
+### Attention to Trajectory: Trajectory-Aware Open-Vocabulary Tracking.
+- **链接**: [arXiv:2503.08145](https://arxiv.org/abs/2503.08145)
+- **作者**: Yunhao Li, Yifan Jiao, Dan Meng, Heng Fan, Libo Zhang
+- **🏷️ 机构**: Institute of Software Chinese Academy of Sciences, OPPO Research Institute, University of North Texas
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-Vocabulary Multi-Object Tracking (OV-MOT) aims to enable approaches to track objects without being limited to a predefined set of categories. Current OV-MOT methods typically rely primarily on instance-level detection and association, often overlooking trajectory information that is unique and essential for object tracking tasks. Utilizing trajectory information can enhance association stability and classification accuracy, especially in cases of occlusion and category ambiguity, thereby improving adaptability to novel classes. Thus motivated, in this paper we propose \textbf{TRACT}, an open-vocabulary tracker that leverages trajectory information to improve both object association and classification in OV-MOT. Specifically, we introduce a \textit{Trajectory Consistency Reinforcement} (\textbf{TCR}) strategy, that benefits tracking performance by improving target identity and category consistency. In addition, we present \textbf{TraCLIP}, a plug-and-play trajectory classification module. It integrates \textit{Trajectory Feature Aggregation} (\textbf{TFA}) and \textit{Trajectory Semantic Enrichment} (\textbf{TSE}) strategies to fully leverage trajectory information from visual and language perspectives for enhancing the classification results. Extensive experiments on OV-TAO show that our TRACT significantly improves tracking performance, highlighting trajectory information as a valuable asset for OV-MOT. Code will be released.
+
+</details>
+
+### VOVTrack: Exploring the Potentiality in Raw Videos for Open-Vocabulary Multi-Object Tracking.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00701) · 📚 被引 2
+- **作者**: Zekun Qian, Ruize Han, Junhui Hou, Linqi Song, Wei Feng
+- **🏷️ 机构**: College of Intelligence and Computing, Tianjin University, Shenzhen University of Advanced Technology, City University of Hong Kong\\ \{clarkqian
+- **会议**: ICCV 2025
+
+### COVTrack: Continuous Open-Vocabulary Tracking via Adaptive Multi-Cue Fusion.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00937)
+- **作者**: Zekun Qian, Ruize Han, Zhixiang Wang, Junhui Hou, Wei Feng
+- **🏷️ 机构**: College of Intelligence and Computing, Tianjin University, Shenzhen University of Advanced Technology, City University of Hong Kong
+- **会议**: ICCV 2025
+
+### FLOSS: Free Lunch in Open-Vocabulary Semantic Segmentation.
+- **链接**: [arXiv:2504.10487](https://arxiv.org/abs/2504.10487) · 📚 被引 2
+- **作者**: Yasser Benigmim, Mohammad Fahes, Tuan-Hung Vu, Andrei Bursuc, Raoul de Charette
+- **🏷️ 机构**: Inria
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper, we challenge the conventional practice in Open-Vocabulary Semantic Segmentation (OVSS) of using averaged class-wise text embeddings, which are typically obtained by encoding each class name with multiple templates (e.g., a photo of <class>, a sketch of a <class>). We investigate the impact of templates for OVSS, and find that for each class, there exist single-template classifiers--which we refer to as class-experts--that significantly outperform the conventional averaged classifier. First, to identify these class-experts, we introduce a novel approach that estimates them without any labeled data or training. By leveraging the class-wise prediction entropy of single-template classifiers, we select those yielding the lowest entropy as the most reliable class-experts. Second, we combine the outputs of class-experts in a new fusion process. Our plug-and-play method, coined FLOSS, is orthogonal and complementary to existing OVSS methods, offering an improvement without the need for additional labels or training. Extensive experiments show that FLOSS consistently enhances state-of-the-art OVSS models, generalizes well across datasets with different distribution shifts, and delivers substantial improvements in low-data scenarios where only a few unlabeled images are available. Our code is available at https://github.com/yasserben/FLOSS .
+
+</details>
+
+### Training-Free Class Purification for Open-Vocabulary Semantic Segmentation.
+- **链接**: [arXiv:2508.00557](https://arxiv.org/abs/2508.00557) · 📚 被引 2
+- **作者**: Qi Chen, Lingxiao Yang, Yun Chen, Nailong Zhao, Jianhuang Lai, Jie Shao et al.
+- **🏷️ 机构**: Sun Yat-sen University, University of Surrey, Alibaba Cloud Computing
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Fine-tuning pre-trained vision-language models has emerged as a powerful approach for enhancing open-vocabulary semantic segmentation (OVSS). However, the substantial computational and resource demands associated with training on large datasets have prompted interest in training-free methods for OVSS. Existing training-free approaches primarily focus on modifying model architectures and generating prototypes to improve segmentation performance. However, they often neglect the challenges posed by class redundancy, where multiple categories are not present in the current test image, and visual-language ambiguity, where semantic similarities among categories create confusion in class activation. These issues can lead to suboptimal class activation maps and affinity-refined activation maps. Motivated by these observations, we propose FreeCP, a novel training-free class purification framework designed to address these challenges. FreeCP focuses on purifying semantic categories and rectifying errors caused by redundancy and ambiguity. The purified class representations are then leveraged to produce final segmentation predictions. We conduct extensive experiments across eight benchmarks to validate FreeCP's effectiveness. Results demonstrate that FreeCP, as a plug-and-play module, significantly boosts segmentation performance when combined with other OVSS methods.
+
+</details>
+
+### Plug-in Feedback Self-Adaptive Attention in CLIP for Training-Free Open-Vocabulary Segmentation.
+- **链接**: [arXiv:2508.20265](https://arxiv.org/abs/2508.20265) · 📚 被引 1
+- **作者**: Zhixiang Chi, Yanan Wu, Li Gu, Huan Liu, Ziqiang Wang, Yang Zhang et al.
+- **🏷️ 机构**: University of Toronto, China Agricultural University, Concordia University
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> CLIP exhibits strong visual-textual alignment but struggle with open-vocabulary segmentation due to poor localization. Prior methods enhance spatial coherence by modifying intermediate attention. But, this coherence isn't consistently propagated to the final output due to subsequent operations such as projections. Additionally, intermediate attention lacks direct interaction with text representations, such semantic discrepancy limits the full potential of CLIP. In this work, we propose a training-free, feedback-driven self-adaptive framework that adapts output-based patch-level correspondences back to the intermediate attention. The output predictions, being the culmination of the model's processing, encapsulate the most comprehensive visual and textual semantics about each patch. Our approach enhances semantic consistency between internal representations and final predictions by leveraging the model's outputs as a stronger spatial coherence prior. We design key modules, including attention isolation, confidence-based pruning for sparse adaptation, and adaptation ensemble, to effectively feedback the output coherence cues. Our method functions as a plug-in module, seamlessly integrating into four state-of-the-art approaches with three backbones (ViT-B, ViT-L, ViT-H). We further validate our framework across multiple attention types (Q-K, self-self, and Proxy augmented with MAE, SAM, and DINO). Our approach consistently improves their performance across eight benchmarks.
+
+</details>
+
+### 풟ℐℋ-CLIP: Unleashing the Diversity of Multi-Head Self-Attention for Training-Free Open-Vocabulary Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02116) · 📚 被引 1
+- **作者**: Songsong Duan, Xi Yang, Nannan Wang
+- **🏷️ 机构**: School of Telecommunications Engineering, Xidian University,State Key Laboratory of Integrated Services Networks,China
+- **会议**: ICCV 2025
+
+### CLIP-Adapted Region-to-Text Learning for Generative Open-Vocabulary Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02228) · 📚 被引 1
+- **作者**: Jiannan Ge, Lingxi Xie, Hongtao Xie, Pandeng Li, Sun-Ao Liu, Xiaopeng Zhang et al.
+- **🏷️ 机构**: Institute of Artificial Intelligence, Hefei Comprehensive National Science Center, Huawei Inc., University of Science and Technology of China
+- **会议**: ICCV 2025
+
+### SPADE: Spatial-Aware Denoising Network for Open-Vocabulary Panoptic Scene Graph Generation with Long- and Local-Range Context Reasoning.
+- **链接**: [arXiv:2507.05798](https://arxiv.org/abs/2507.05798) · 📚 被引 1
+- **作者**: Xin Hu, Ke Qin, Guiduo Duan, Ming Li, Yuan-Fang Li, Tao He
+- **🏷️ 机构**: The Laboratory of Intelligent Collaborative Computing of UESTC, Guangdong Laboratory of Artificial Intelligence and Digital Economy (SZ), Monash University
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Panoptic Scene Graph Generation (PSG) integrates instance segmentation with relation understanding to capture pixel-level structural relationships in complex scenes. Although recent approaches leveraging pre-trained vision-language models (VLMs) have significantly improved performance in the open-vocabulary setting, they commonly ignore the inherent limitations of VLMs in spatial relation reasoning, such as difficulty in distinguishing object relative positions, which results in suboptimal relation prediction. Motivated by the denoising diffusion model's inversion process in preserving the spatial structure of input images, we propose SPADE (SPatial-Aware Denoising-nEtwork) framework -- a novel approach for open-vocabulary PSG. SPADE consists of two key steps: (1) inversion-guided calibration for the UNet adaptation, and (2) spatial-aware context reasoning. In the first step, we calibrate a general pre-trained teacher diffusion model into a PSG-specific denoising network with cross-attention maps derived during inversion through a lightweight LoRA-based fine-tuning strategy. In the second step, we develop a spatial-aware relation graph transformer that captures both local and long-range contextual information, facilitating the generation of high-quality relation queries. Extensive experiments on benchmark PSG and Visual Genome datasets demonstrate that SPADE outperforms state-of-the-art methods in both closed- and open-set scenarios, particularly for spatial relationship prediction.
+
+</details>
+
+### Identity-Aware Language Gaussian Splatting for Open-Vocabulary 3D Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01903) · 📚 被引 1
+- **作者**: SungMin Jang, Wonjun Kim
+- **🏷️ 机构**: Konkuk University
+- **会议**: ICCV 2025
+
+### Feature Purification Matters: Suppressing Outlier Propagation for Training-Free Open-Vocabulary Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01887)
+- **作者**: Shuo Jin, Siyue Yu, Bingfeng Zhang, Mingjie Sun, Yi Dong, Jimin Xiao
+- **🏷️ 机构**: Xi&#x0027;an Jiaotong-Liverpool University, China University of Petroleum (East China), Soochow University
+- **会议**: ICCV 2025
+
+### Details Matter for Indoor Open-Vocabulary 3D Instance Segmentation.
+- **链接**: [arXiv:2507.23134](https://arxiv.org/abs/2507.23134)
+- **作者**: Sanghun Jung, Jingjing Zheng, Ke Zhang, Nan Qiao, Albert Y. C. Chen, Lu Xia et al.
+- **🏷️ 机构**: University of Washington, Amazon Lab126
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Unlike closed-vocabulary 3D instance segmentation that is often trained end-to-end, open-vocabulary 3D instance segmentation (OV-3DIS) often leverages vision-language models (VLMs) to generate 3D instance proposals and classify them. While various concepts have been proposed from existing research, we observe that these individual concepts are not mutually exclusive but complementary. In this paper, we propose a new state-of-the-art solution for OV-3DIS by carefully designing a recipe to combine the concepts together and refining them to address key challenges. Our solution follows the two-stage scheme: 3D proposal generation and instance classification. We employ robust 3D tracking-based proposal aggregation to generate 3D proposals and remove overlapped or partial proposals by iterative merging/removal. For the classification stage, we replace the standard CLIP model with Alpha-CLIP, which incorporates object masks as an alpha channel to reduce background noise and obtain object-centric representation. Additionally, we introduce the standardized maximum similarity (SMS) score to normalize text-to-proposal similarity, effectively filtering out false positives and boosting precision. Our framework achieves state-of-the-art performance on ScanNet200 and S3DIS across all AP and AR metrics, even surpassing an end-to-end closed-vocabulary method.
+
+</details>
+
+### Open-Vocabulary Hoi Detection With Interaction-Aware Prompt and Concept Calibration.
+- **链接**: [arXiv:2508.03207](https://arxiv.org/abs/2508.03207) · 📚 被引 3
+- **作者**: Ting Lei, Shaofeng Yin, Qingchao Chen, Yuxin Peng, Yang Liu
+- **🏷️ 机构**: Wangxuan Institute of Computer Technology,Peking University, National Institute of Health Data Science,Peking University
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open Vocabulary Human-Object Interaction (HOI) detection aims to detect interactions between humans and objects while generalizing to novel interaction classes beyond the training set. Current methods often rely on Vision and Language Models (VLMs) but face challenges due to suboptimal image encoders, as image-level pre-training does not align well with the fine-grained region-level interaction detection required for HOI. Additionally, effectively encoding textual descriptions of visual appearances remains difficult, limiting the model's ability to capture detailed HOI relationships. To address these issues, we propose INteraction-aware Prompting with Concept Calibration (INP-CC), an end-to-end open-vocabulary HOI detector that integrates interaction-aware prompts and concept calibration. Specifically, we propose an interaction-aware prompt generator that dynamically generates a compact set of prompts based on the input scene, enabling selective sharing among similar interactions. This approach directs the model's attention to key interaction patterns rather than generic image-level semantics, enhancing HOI detection. Furthermore, we refine HOI concept representations through language model-guided calibration, which helps distinguish diverse HOI concepts by investigating visual similarities across categories. A negative sampling strategy is also employed to improve inter-modal similarity modeling, enabling the model to better differentiate visually similar but semantically distinct actions. Extensive experimental results demonstrate that INP-CC significantly outperforms state-of-the-art models on the SWIG-HOI and HICO-DET datasets. Code is available at https://github.com/ltttpku/INP-CC.
+
+</details>
+
+### Unbiased Region-Language Alignment for Open-Vocabulary Dense Prediction.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02209) · 📚 被引 2
+- **作者**: Yunheng Li, Yuxuan Li, Quan-Sheng Zeng, Wenhai Wang, Qibin Hou, Ming-Ming Cheng
+- **🏷️ 机构**: Nankai University,VCIP, CS, Shanghai AI Laboratory,OpenGVLab
+- **会议**: ICCV 2025
+
+### Images as Noisy Labels: Unleashing the Potential of the Diffusion Model for Open-Vocabulary Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02248)
+- **作者**: Fan Li, Xuanbin Wang, Xuan Wang, Zhaoxiang Zhang, Yuelei Xu
+- **🏷️ 机构**: Northwestern Polytechnical University
+- **会议**: ICCV 2025
+
+### Stepping Out of Similar Semantic Space for Open-Vocabulary Segmentation.
+- **链接**: [arXiv:2506.16058](https://arxiv.org/abs/2506.16058) · 📚 被引 1
+- **作者**: Yong Liu, Song-Li Wu, Sule Bai, Jiahao Wang, Yitong Wang, Yansong Tang
+- **🏷️ 机构**: Tsinghua Shenzhen International Graduate School, The University of Hong Kong, ByteDance Inc.
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-vocabulary segmentation aims to achieve segmentation of arbitrary categories given unlimited text inputs as guidance. To achieve this, recent works have focused on developing various technical routes to exploit the potential of large-scale pre-trained vision-language models and have made significant progress on existing benchmarks. However, we find that existing test sets are limited in measuring the models' comprehension of ``open-vocabulary" concepts, as their semantic space closely resembles the training space, even with many overlapping categories. To this end, we present a new benchmark named OpenBench that differs significantly from the training semantics. It is designed to better assess the model's ability to understand and segment a wide range of real-world concepts. When testing existing methods on OpenBench, we find that their performance diverges from the conclusions drawn on existing test sets. In addition, we propose a method named OVSNet to improve the segmentation performance for diverse and open scenarios. Through elaborate fusion of heterogeneous features and cost-free expansion of the training space, OVSNet achieves state-of-the-art results on both existing datasets and our proposed OpenBench. Corresponding analysis demonstrate the soundness and effectiveness of our proposed benchmark and method.
+
+</details>
+
+### Vision-Language Interactive Relation Mining for Open-Vocabulary Scene Graph Generation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01556) · 📚 被引 1
+- **作者**: Yukuan Min, Muli Yang, Jinhao Zhang, Yuxuan Wang, Aming Wu, Cheng Deng
+- **🏷️ 机构**: Xidian University,China, A*STAR,Singapore
+- **会议**: ICCV 2025
+
+### Understanding Personal Concept in Open-Vocabulary Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01856) · 📚 被引 1
+- **作者**: Sunghyun Park, Jungsoo Lee, Shubhankar Borse, Munawar Hayat, Sungha Choi, Kyuwoong Hwang et al.
+- **🏷️ 机构**: Qualcomm AI Research
+- **会议**: ICCV 2025
+
+### ROVI: A VLM-LLM Re-Captioned Dataset for Open-Vocabulary Instance-Grounded Text-to-Image Generation.
+- **链接**: [arXiv:2508.01008](https://arxiv.org/abs/2508.01008)
+- **作者**: Cihang Peng, Qiming Hou, Zhong Ren, Kun Zhou
+- **🏷️ 机构**: State Key Lab of CAD &#x0026; CG, Zhejiang University
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present ROVI, a high-quality synthetic dataset for instance-grounded text-to-image generation, created by labeling 1M curated web images. Our key innovation is a strategy called re-captioning, focusing on the pre-detection stage, where a VLM (Vision-Language Model) generates comprehensive visual descriptions that are then processed by an LLM (Large Language Model) to extract a flat list of potential categories for OVDs (Open-Vocabulary Detectors) to detect. This approach yields a global prompt inherently linked to instance annotations while capturing secondary visual elements humans typically overlook. Evaluations show that ROVI exceeds existing detection datasets in image quality and resolution while containing two orders of magnitude more categories with an open-vocabulary nature. For demonstrative purposes, a text-to-image model GLIGEN trained on ROVI significantly outperforms state-of-the-art alternatives in instance grounding accuracy, prompt fidelity, and aesthetic quality. Our dataset and reproducible pipeline are available at https://github.com/CihangPeng/ROVI.
+
+</details>
+
+### DiSCO-3D : Discovering and Segmenting Sub-Concepts from Open-Vocabulary Queries in NeRF.
+- **链接**: [arXiv:2507.14596](https://arxiv.org/abs/2507.14596)
+- **作者**: Doriand Petit, Steve Bourgeois, Vincent Gay-Bellile, Florian Chabot, Loïc Barthe
+- **🏷️ 机构**: Universit&#x00E9; Paris-Saclay,CEA, List,Palaiseau,France,F-91120, IRIT Universit&#x00E9; de Toulouse CNRS,France
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 3D semantic segmentation provides high-level scene understanding for applications in robotics, autonomous systems, \textit{etc}. Traditional methods adapt exclusively to either task-specific goals (open-vocabulary segmentation) or scene content (unsupervised semantic segmentation). We propose DiSCO-3D, the first method addressing the broader problem of 3D Open-Vocabulary Sub-concepts Discovery, which aims to provide a 3D semantic segmentation that adapts to both the scene and user queries. We build DiSCO-3D on Neural Fields representations, combining unsupervised segmentation with weak open-vocabulary guidance. Our evaluations demonstrate that DiSCO-3D achieves effective performance in Open-Vocabulary Sub-concepts Discovery and exhibits state-of-the-art results in the edge cases of both open-vocabulary and unsupervised segmentation.
+
+</details>
+
+### Sliced Wasserstein Bridge for Open-Vocabulary Video Instance Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01159) · 📚 被引 6
+- **作者**: Zheyun Qin, Deng Yu, Chuanchen Luo, Zhumin Chen
+- **🏷️ 机构**: School of Computer Science and Technology, Shandong University, School of Artificial Intelligence, Shandong University
+- **会议**: ICCV 2025
+
+### Seeing the Unseen: A Semantic Alignment and Context-Aware Prompt Framework for Open-Vocabulary Camouflaged Object Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02196) · 📚 被引 2
+- **作者**: Peng Ren, Tian Bai, Jing Sun, Fuming Sun
+- **🏷️ 机构**: College of Computer Science and Technology, Jilin University, School of Information and Communication Engineering, Dalian Minzu University
+- **会议**: ICCV 2025
+
+### Harnessing Vision Foundation Models for High-Performance, Training-Free Open Vocabulary Segmentation.
+- **链接**: [arXiv:2411.09219](https://arxiv.org/abs/2411.09219) · 📚 被引 4
+- **作者**: Yuheng Shi, Minjing Dong, Chang Xu
+- **🏷️ 机构**: University of Sydney, City University of Hong Kong
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> While Contrastive Language-Image Pre-training (CLIP) has advanced open-vocabulary predictions, its performance on semantic segmentation remains suboptimal. This shortfall primarily stems from its spatial-invariant semantic features and constrained resolution. While previous adaptations addressed spatial invariance semantic by modifying the self-attention in CLIP's image encoder, the issue of limited resolution remains unexplored. Different from previous segment-then-splice methods that segment sub-images via a sliding window and splice the results, we introduce a splice-then-segment paradigm that incorporates Segment-Anything Model (SAM) to tackle the resolution issue since SAM excels at extracting fine-grained semantic correlations from high-resolution images. Specifically, we introduce Trident, a training-free framework that first splices features extracted by CLIP and DINO from sub-images, then leverages SAM's encoder to create a correlation matrix for global aggregation, enabling a broadened receptive field for effective segmentation. Besides, we propose a refinement strategy for CLIP's coarse segmentation outputs by transforming them into prompts for SAM, further enhancing the segmentation performance. Trident achieves a significant improvement in the mIoU across eight benchmarks compared with the current SOTA, increasing from 44.4 to 48.6.Code is available at https://github.com/YuHengsss/Trident.
+
+</details>
+
+### OVA-Fields: Weakly Supervised Open-Vocabulary Affordance Fields for Robot Operational Part Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00602) · 📚 被引 2
+- **作者**: Heng Su, Mengying Xie, Nieqing Cao, Yan Ding, Beichen Shao, Xianlei Long et al.
+- **🏷️ 机构**: Chongqing University, Xi&#x0027;an Jiaotong-Liverpool University, Shanghai AI Lab
+- **会议**: ICCV 2025
+
+### CLIPeR: Hierarchically Improving Spatial Representation of CLIP for Open-Vocabulary Semantic Segmentation.
+- **链接**: [arXiv:2411.13836](https://arxiv.org/abs/2411.13836) · 📚 被引 3
+- **作者**: Lin Sun, Jiale Cao, Jin Xie, Xiaoheng Jiang, Yanwei Pang
+- **🏷️ 机构**: Tianjin University, Chongqing University, Zhengzhou University
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Contrastive Language-Image Pre-training (CLIP) exhibits strong zero-shot classification ability on various image-level tasks, leading to the research to adapt CLIP for pixel-level open-vocabulary semantic segmentation without additional training. The key is to improve spatial representation of image-level CLIP, such as replacing self-attention map at last layer with self-self attention map or vision foundation model based attention map. In this paper, we present a novel hierarchical framework, named CLIPer, that hierarchically improves spatial representation of CLIP. The proposed CLIPer includes an early-layer fusion module and a fine-grained compensation module. We observe that, the embeddings and attention maps at early layers can preserve spatial structural information. Inspired by this, we design the early-layer fusion module to generate segmentation map with better spatial coherence. Afterwards, we employ a fine-grained compensation module to compensate the local details using the self-attention maps of diffusion model. We conduct the experiments on seven segmentation datasets. Our proposed CLIPer achieves the state-of-the-art performance on these datasets. For instance, using ViT-L, CLIPer has the mIoU of 69.8% and 43.3% on VOC and COCO Object, outperforming ProxyCLIP by 9.2% and 4.1% respectively.
+
+</details>
+
+### Open-Vocabulary Octree-Graph for 3D Scene Understanding.
+- **链接**: [arXiv:2411.16253](https://arxiv.org/abs/2411.16253)
+- **作者**: Zhigang Wang, Yifei Su, Chenhui Li, Dong Wang, Yan Huang, Xuelong Li et al.
+- **🏷️ 机构**: Northwestern Polytechnical University, University of Chinese Academy of Sciences, Shanghai AI Laboratory
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-vocabulary 3D scene understanding is indispensable for embodied agents. Recent works leverage pretrained vision-language models (VLMs) for object segmentation and project them to point clouds to build 3D maps. Despite progress, a point cloud is a set of unordered coordinates that requires substantial storage space and does not directly convey occupancy information or spatial relation, making existing methods inefficient for downstream tasks, e.g., path planning and text-based object retrieval. To address these issues, we propose \textbf{Octree-Graph}, a novel scene representation for open-vocabulary 3D scene understanding. Specifically, a Chronological Group-wise Segment Merging (CGSM) strategy and an Instance Feature Aggregation (IFA) algorithm are first designed to get 3D instances and corresponding semantic features. Subsequently, an adaptive-octree structure is developed that stores semantics and depicts the occupancy of an object adjustably according to its shape. Finally, the Octree-Graph is constructed where each adaptive-octree acts as a graph node, and edges describe the spatial relations among nodes. Extensive experiments on various tasks are conducted on several widely-used datasets, demonstrating the versatility and effectiveness of our method. Code is available \href{https://github.com/yifeisu/OV-Octree-Graph}{here}.
+
+</details>
+
+### SAMPLE: Semantic Alignment through Temporal-Adaptive Multimodal Prompt Learning for Event-Based Open-Vocabulary Action Recognition.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01337)
+- **作者**: Jing Wang, Rui Zhao, Ruiqin Xiong, Xingtao Wang, Xiaopeng Fan, Tiejun Huang
+- **🏷️ 机构**: School of Computer Science, Peking University, School of Computer Science and Technology Harbin Institute of Technology
+- **会议**: ICCV 2025
+
+### ReME: A Data-Centric Framework for Training-Free Open-Vocabulary Segmentation.
+- **链接**: [arXiv:2506.21233](https://arxiv.org/abs/2506.21233) · 📚 被引 2
+- **作者**: Xiwei Xuan, Ziquan Deng, Kwan-Liu Ma
+- **🏷️ 机构**: University of California, Davis
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Training-free open-vocabulary semantic segmentation (OVS) aims to segment images given a set of arbitrary textual categories without costly model fine-tuning. Existing solutions often explore attention mechanisms of pre-trained models, such as CLIP, or generate synthetic data and design complex retrieval processes to perform OVS. However, their performance is limited by the capability of reliant models or the suboptimal quality of reference sets. In this work, we investigate the largely overlooked data quality problem for this challenging dense scene understanding task, and identify that a high-quality reference set can significantly benefit training-free OVS. With this observation, we introduce a data-quality-oriented framework, comprising a data pipeline to construct a reference set with well-paired segment-text embeddings and a simple similarity-based retrieval to unveil the essential effect of data. Remarkably, extensive evaluations on ten benchmark datasets demonstrate that our method outperforms all existing training-free OVS approaches, highlighting the importance of data-centric design for advancing OVS without training. Our code is available at https://github.com/xiweix/ReME .
+
+</details>
+
+### ATAS: Any-to-Any Self-Distillation for Enhanced Open-Vocabulary Dense Prediction.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01896)
+- **作者**: Juan Yeo, Soonwoo Cha, Jiwoo Song, Hyunbin Jin, Taesup Kim
+- **🏷️ 机构**: Gradudate School of Data Science, Seoul National University
+- **会议**: ICCV 2025
+
+### Learning to Generalize Without Bias for Open-Vocabulary Action Recognition.
+- **链接**: [arXiv:2502.20158](https://arxiv.org/abs/2502.20158) · 📚 被引 1
+- **作者**: Yating Yu, Congqi Cao, Yifan Zhang, Yanning Zhang
+- **🏷️ 机构**: Northwestern Polytechnical University, Institute of Automation, Chinese Academy of Sciences
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Leveraging the effective visual-text alignment and static generalizability from CLIP, recent video learners adopt CLIP initialization with further regularization or recombination for generalization in open-vocabulary action recognition in-context. However, due to the static bias of CLIP, such video learners tend to overfit on shortcut static features, thereby compromising their generalizability, especially to novel out-of-context actions. To address this issue, we introduce Open-MeDe, a novel Meta-optimization framework with static Debiasing for Open-vocabulary action recognition. From a fresh perspective of generalization, Open-MeDe adopts a meta-learning approach to improve known-to-open generalizing and image-to-video debiasing in a cost-effective manner. Specifically, Open-MeDe introduces a cross-batch meta-optimization scheme that explicitly encourages video learners to quickly generalize to arbitrary subsequent data via virtual evaluation, steering a smoother optimization landscape. In effect, the free of CLIP regularization during optimization implicitly mitigates the inherent static bias of the video meta-learner. We further apply self-ensemble over the optimization trajectory to obtain generic optimal parameters that can achieve robust generalization to both in-context and out-of-context novel data. Extensive evaluations show that Open-MeDe not only surpasses state-of-the-art regularization methods tailored for in-context open-vocabulary action recognition but also substantially excels in out-of-context scenarios.Code is released at https://github.com/Mia-YatingYu/Open-MeDe.
+
+</details>
+
+### DanceEditor: Towards Iterative Editable Music-Driven Dance Generation with Open-Vocabulary Descriptions.
+- **链接**: [arXiv:2508.17342](https://arxiv.org/abs/2508.17342) · 📚 被引 3
+- **作者**: Hengyuan Zhang, Zhe Li, Xingqun Qi, Mengze Li, Muyi Sun, Siye Wang et al.
+- **🏷️ 机构**: Peking University, The Hong Kong University of Science and Technology, Beijing University of Posts and Telecommunications
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Generating coherent and diverse human dances from music signals has gained tremendous progress in animating virtual avatars. While existing methods support direct dance synthesis, they fail to recognize that enabling users to edit dance movements is far more practical in real-world choreography scenarios. Moreover, the lack of high-quality dance datasets incorporating iterative editing also limits addressing this challenge. To achieve this goal, we first construct DanceRemix, a large-scale multi-turn editable dance dataset comprising the prompt featuring over 25.3M dance frames and 84.5K pairs. In addition, we propose a novel framework for iterative and editable dance generation coherently aligned with given music signals, namely DanceEditor. Considering the dance motion should be both musical rhythmic and enable iterative editing by user descriptions, our framework is built upon a prediction-then-editing paradigm unifying multi-modal conditions. At the initial prediction stage, our framework improves the authority of generated results by directly modeling dance movements from tailored, aligned music. Moreover, at the subsequent iterative editing stages, we incorporate text descriptions as conditioning information to draw the editable results through a specifically designed Cross-modality Editing Module (CEM). Specifically, CEM adaptively integrates the initial prediction with music and text prompts as temporal motion cues to guide the synthesized sequences. Thereby, the results display music harmonics while preserving fine-grained semantic alignment with text descriptions. Extensive experiments demonstrate that our method outperforms the state-of-the-art models on our newly collected DanceRemix dataset. Code is available at https://lzvsdy.github.io/DanceEditor/.
+
+</details>
+
+### CorrCLIP: Reconstructing Patch Correlations in CLIP for Open-Vocabulary Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02288) · 📚 被引 4
+- **作者**: Dengke Zhang, Fagui Liu, Quan Tang
+- **🏷️ 机构**: South China University of Technology, Pengcheng Laboratory
+- **会议**: ICCV 2025
+
+### OV3D-CG: Open-Vocabulary 3D Instance Segmentation with Contextual Guidance.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00504)
+- **作者**: Mingquan Zhou, Chen He, Ruiping Wang, Xilin Chen
+- **🏷️ 机构**: Institute of Computing Technology, Chinese Academy of Sciences,China
+- **会议**: ICCV 2025
+
+### Unified Open-World Segmentation with Multi-Modal Prompts.
+- **链接**: [arXiv:2510.10524](https://arxiv.org/abs/2510.10524)
+- **作者**: Yang Liu, Yufei Yin, Chenchen Jing, Muzhi Zhu, Hao Chen, Yuling Xi et al.
+- **🏷️ 机构**: Zhejiang University, Hangzhou Dianzi University, Zhejiang University of Technology
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this work, we present COSINE, a unified open-world segmentation model that consolidates open-vocabulary segmentation and in-context segmentation with multi-modal prompts (e.g., text and image). COSINE exploits foundation models to extract representations for an input image and corresponding multi-modal prompts, and a SegDecoder to align these representations, model their interaction, and obtain masks specified by input prompts across different granularities. In this way, COSINE overcomes architectural discrepancies, divergent learning objectives, and distinct representation learning strategies of previous pipelines for open-vocabulary segmentation and in-context segmentation. Comprehensive experiments demonstrate that COSINE has significant performance improvements in both open-vocabulary and in-context segmentation tasks. Our exploratory analyses highlight that the synergistic collaboration between using visual and textual prompts leads to significantly improved generalization over single-modality approaches.
+
+</details>
+
+### CapeLLM: Support-Free Category-Agnostic Pose Estimation with Multimodal Large Language Models.
+- **链接**: [arXiv:2411.06869](https://arxiv.org/abs/2411.06869) · 📚 被引 1
+- **作者**: Junho Kim, Hyungjin Chung, Byung-Hoon Kim
+- **🏷️ 机构**: EverEx
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Category-agnostic pose estimation (CAPE) has traditionally relied on support images with annotated keypoints, a process that is often cumbersome and may fail to fully capture the necessary correspondences across diverse object categories. Recent efforts have explored the use of text queries, leveraging their enhanced stability and generalization capabilities. However, existing approaches often remain constrained by their reliance on support queries, their failure to fully utilize the rich priors embedded in pre-trained large language models, and the limitations imposed by their parametric distribution assumptions. To address these challenges, we introduce CapeLLM, the first multimodal large language model (MLLM) designed for CAPE. Our method only employs query image and detailed text descriptions as an input to estimate category-agnostic keypoints. Our method encompasses effective training strategies and carefully designed instructions for applying the MLLM to CAPE. Moreover, we propose an inference mechanism that further enhances the reasoning process for unseen keypoints. while flexibly modeling their underlying spatial distribution and uncertainty, allowing for adaptive refinement based on contextual cues. We conducted extensive experiments to apply the MLLM to CAPE effectively, focusing not only on the model architecture and prompt design but also on ensuring robustness across input variations. Our approach sets a new state-of-the-art on the MP-100 benchmark in the 1-shot and even 5-shot setting, marking a significant advancement in the field of category-agnostic pose estimation. Code is available at https://github.com/Junhojuno/CapeLLM.
+
+</details>
+
+### MPBR: Multimodal Progressive Bidirectional Reasoning for Open-Set Fine-Grained Recognition.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00127) · 📚 被引 1
+- **作者**: Junfu Tan, Peiguang Jing, Yu Zhu, Yu Liu
+- **🏷️ 机构**: Tianjin University, Fudan University
+- **会议**: ICCV 2025
+
+### Multi-Perspective Data Augmentation for Few-shot Object Detection.
+- **链接**: [arXiv:2502.18195](https://arxiv.org/abs/2502.18195)
+- **作者**: Anh-Khoa Nguyen Vu, Quoc-Truong Truong, Vinh-Tiep Nguyen, Thanh Duc Ngo, Thanh-Toan Do, Tam V. Nguyen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent few-shot object detection (FSOD) methods have focused on augmenting synthetic samples for novel classes, show promising results to the rise of diffusion models. However, the diversity of such datasets is often limited in representativeness because they lack awareness of typical and hard samples, especially in the context of foreground and background relationships. To tackle this issue, we propose a Multi-Perspective Data Augmentation (MPAD) framework. In terms of foreground-foreground relationships, we propose in-context learning for object synthesis (ICOS) with bounding box adjustments to enhance the detail and spatial information of synthetic samples. Inspired by the large margin principle, support samples play a vital role in defining class boundaries. Therefore, we design a Harmonic Prompt Aggregation Scheduler (HPAS) to mix prompt embeddings at each time step of the generation process in diffusion models, producing hard novel samples. For foreground-background relationships, we introduce a Background Proposal method (BAP) to sample typical and hard backgrounds. Extensive experiments on multiple FSOD benchmarks demonstrate the effectiveness of our approach. Our framework significantly outperforms traditional methods, achieving an average increase of $17.5\%$ in nAP50 over the baseline on PASCAL VOC. Code is available at https://github.com/nvakhoa/MPAD.
+
+</details>
+
+### Cyclic Contrastive Knowledge Transfer for Open-Vocabulary Object Detection.
+- **链接**: [arXiv:2503.11005](https://arxiv.org/abs/2503.11005)
+- **作者**: Chuhan Zhang, Chaoyang Zhu, Pingcheng Dong, Long Chen, Dong Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In pursuit of detecting unstinted objects that extend beyond predefined categories, prior arts of open-vocabulary object detection (OVD) typically resort to pretrained vision-language models (VLMs) for base-to-novel category generalization. However, to mitigate the misalignment between upstream image-text pretraining and downstream region-level perception, additional supervisions are indispensable, eg, image-text pairs or pseudo annotations generated via self-training strategies. In this work, we propose CCKT-Det trained without any extra supervision. The proposed framework constructs a cyclic and dynamic knowledge transfer from language queries and visual region features extracted from VLMs, which forces the detector to closely align with the visual-semantic space of VLMs. Specifically, 1) we prefilter and inject semantic priors to guide the learning of queries, and 2) introduce a regional contrastive loss to improve the awareness of queries on novel objects. CCKT-Det can consistently improve performance as the scale of VLMs increases, all while requiring the detector at a moderate level of computation overhead. Comprehensive experimental results demonstrate that our method achieves performance gain of +2.9% and +10.2% AP50 over previous state-of-the-arts on the challenging COCO benchmark, both without and with a stronger teacher model.
+
+</details>
+
+### OVTR: End-to-End Open-Vocabulary Multiple Object Tracking with Transformer.
+- **链接**: [arXiv:2503.10616](https://arxiv.org/abs/2503.10616)
+- **作者**: Jinyang Li, En Yu, Sijia Chen, Wenbing Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-vocabulary multiple object tracking aims to generalize trackers to unseen categories during training, enabling their application across a variety of real-world scenarios. However, the existing open-vocabulary tracker is constrained by its framework structure, isolated frame-level perception, and insufficient modal interactions, which hinder its performance in open-vocabulary classification and tracking. In this paper, we propose OVTR (End-to-End Open-Vocabulary Multiple Object Tracking with TRansformer), the first end-to-end open-vocabulary tracker that models motion, appearance, and category simultaneously. To achieve stable classification and continuous tracking, we design the CIP (Category Information Propagation) strategy, which establishes multiple high-level category information priors for subsequent frames. Additionally, we introduce a dual-branch structure for generalization capability and deep multimodal interaction, and incorporate protective strategies in the decoder to enhance performance. Experimental results show that our method surpasses previous trackers on the open-vocabulary MOT benchmark while also achieving faster inference speeds and significantly reducing preprocessing requirements. Moreover, the experiment transferring the model to another dataset demonstrates its strong adaptability. Models and code are released at https://github.com/jinyanglii/OVTR.
+
+</details>
+
+### Open-YOLO 3D: Towards Fast and Accurate Open-Vocabulary 3D Instance Segmentation.
+- **链接**: [arXiv:2406.02548](https://arxiv.org/abs/2406.02548)
+- **作者**: Mohamed El Amine Boudjoghra, Angela Dai, Jean Lahoud, Hisham Cholakkal, Rao Muhammad Anwer, Salman H. Khan et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent works on open-vocabulary 3D instance segmentation show strong promise, but at the cost of slow inference speed and high computation requirements. This high computation cost is typically due to their heavy reliance on 3D clip features, which require computationally expensive 2D foundation models like Segment Anything (SAM) and CLIP for multi-view aggregation into 3D. As a consequence, this hampers their applicability in many real-world applications that require both fast and accurate predictions. To this end, we propose a fast yet accurate open-vocabulary 3D instance segmentation approach, named Open-YOLO 3D, that effectively leverages only 2D object detection from multi-view RGB images for open-vocabulary 3D instance segmentation. We address this task by generating class-agnostic 3D masks for objects in the scene and associating them with text prompts. We observe that the projection of class-agnostic 3D point cloud instances already holds instance information; thus, using SAM might only result in redundancy that unnecessarily increases the inference time. We empirically find that a better performance of matching text prompts to 3D masks can be achieved in a faster fashion with a 2D object detector. We validate our Open-YOLO 3D on two benchmarks, ScanNet200 and Replica, under two scenarios: (i) with ground truth masks, where labels are required for given object proposals, and (ii) with class-agnostic 3D proposals generated from a 3D proposal network. Our Open-YOLO 3D achieves state-of-the-art performance on both datasets while obtaining up to $\sim$16$\times$ speedup compared to the best existing method in literature. On ScanNet200 val. set, our Open-YOLO 3D achieves mean average precision (mAP) of 24.7\% while operating at 22 seconds per scene. Code and model are available at github.com/aminebdj/OpenYOLO3D.
+
+</details>
+
+### Revisit the Open Nature of Open Vocabulary Semantic Segmentation.
+- **链接**: [出版页](https://openreview.net/forum?id=2vHIHrJAcI)
+- **作者**: Qiming Huang, Han Hu, Jianbo Jiao
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+### econSG: Efficient and Multi-view Consistent Open-Vocabulary 3D Semantic Gaussians.
+- **链接**: [arXiv:2504.06003](https://arxiv.org/abs/2504.06003)
+- **作者**: Can Zhang, Gim Hee Lee
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The primary focus of most recent works on open-vocabulary neural fields is extracting precise semantic features from the VLMs and then consolidating them efficiently into a multi-view consistent 3D neural fields representation. However, most existing works over-trusted SAM to regularize image-level CLIP without any further refinement. Moreover, several existing works improved efficiency by dimensionality reduction of semantic features from 2D VLMs before fusing with 3DGS semantic fields, which inevitably leads to multi-view inconsistency. In this work, we propose econSG for open-vocabulary semantic segmentation with 3DGS. Our econSG consists of: 1) A Confidence-region Guided Regularization (CRR) that mutually refines SAM and CLIP to get the best of both worlds for precise semantic features with complete and precise boundaries. 2) A low dimensional contextual space to enforce 3D multi-view consistency while improving computational efficiency by fusing backprojected multi-view 2D features and follow by dimensional reduction directly on the fused 3D features instead of operating on each 2D view separately. Our econSG shows state-of-the-art performance on four benchmark datasets compared to the existing methods. Furthermore, we are also the most efficient training among all the methods.
+
+</details>
+
+### 3D-AffordanceLLM: Harnessing Large Language Models for Open-Vocabulary Affordance Detection in 3D Worlds.
+- **链接**: [arXiv:2502.20041](https://arxiv.org/abs/2502.20041)
+- **作者**: Hengshuo Chu, Xiang Deng, Qi Lv, Xiaoyang Chen, Yinchuan Li, Jianye Hao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 3D Affordance detection is a challenging problem with broad applications on various robotic tasks. Existing methods typically formulate the detection paradigm as a label-based semantic segmentation task. This paradigm relies on predefined labels and lacks the ability to comprehend complex natural language, resulting in limited generalization in open-world scene. To address these limitations, we reformulate the traditional affordance detection paradigm into \textit{Instruction Reasoning Affordance Segmentation} (IRAS) task. This task is designed to output a affordance mask region given a query reasoning text, which avoids fixed categories of input labels. We accordingly propose the \textit{3D-AffordanceLLM} (3D-ADLLM), a framework designed for reasoning affordance detection in 3D open-scene. Specifically, 3D-ADLLM introduces large language models (LLMs) to 3D affordance perception with a custom-designed decoder for generating affordance masks, thus achieving open-world reasoning affordance detection. In addition, given the scarcity of 3D affordance datasets for training large models, we seek to extract knowledge from general segmentation data and transfer it to affordance detection. Thus, we propose a multi-stage training strategy that begins with a novel pre-training task, i.e., \textit{Referring Object Part Segmentation}~(ROPS). This stage is designed to equip the model with general recognition and segmentation capabilities at the object-part level. Then followed by fine-tuning with the IRAS task, 3D-ADLLM obtains the reasoning ability for affordance detection. In summary, 3D-ADLLM leverages the rich world knowledge and human-object interaction reasoning ability of LLMs, achieving approximately an 8\% improvement in mIoU on open-vocabulary affordance detection tasks.
+
+</details>
+
+### Class Distribution-induced Attention Map for Open-vocabulary Semantic Segmentations.
+- **链接**: [出版页](https://openreview.net/forum?id=CMqOfvD3tO)
+- **作者**: Dong Un Kang, Hayeon Kim, Se Young Chun
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+### A Simple Framework for Open-Vocabulary Zero-Shot Segmentation.
+- **链接**: [arXiv:2406.16085](https://arxiv.org/abs/2406.16085)
+- **作者**: Thomas Stegmüller, Tim Lebailly, Nikola Dukic, Behzad Bozorgtabar, Tinne Tuytelaars, Jean-Philippe Thiran
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Zero-shot classification capabilities naturally arise in models trained within a vision-language contrastive framework. Despite their classification prowess, these models struggle in dense tasks like zero-shot open-vocabulary segmentation. This deficiency is often attributed to the absence of localization cues in captions and the intertwined nature of the learning process, which encompasses both image representation learning and cross-modality alignment. To tackle these issues, we propose SimZSS, a Simple framework for open-vocabulary Zero-Shot Segmentation. The method is founded on two key principles: i) leveraging frozen vision-only models that exhibit spatial awareness while exclusively aligning the text encoder and ii) exploiting the discrete nature of text and linguistic knowledge to pinpoint local concepts within captions. By capitalizing on the quality of the visual representations, our method requires only image-caption pairs datasets and adapts to both small curated and large-scale noisy datasets. When trained on COCO Captions across 8 GPUs, SimZSS achieves state-of-the-art results on 7 out of 8 benchmark datasets in less than 15 minutes.
+
+</details>
+
+### Open-Vocabulary Customization from CLIP via Data-Free Knowledge Distillation.
+- **链接**: [出版页](https://openreview.net/forum?id=1aF2D2CPHi)
+- **作者**: Yongxian Wei, Zixuan Hu, Li Shen, Zhenyi Wang, Chun Yuan, Dacheng Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+### ImagineNav: Prompting Vision-Language Models as Embodied Navigator through Scene Imagination.
+- **链接**: [arXiv:2410.09874](https://arxiv.org/abs/2410.09874)
+- **作者**: Xinxin Zhao, Wenzhe Cai, Likun Tang, Teng Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Visual navigation is an essential skill for home-assistance robots, providing the object-searching ability to accomplish long-horizon daily tasks. Many recent approaches use Large Language Models (LLMs) for commonsense inference to improve exploration efficiency. However, the planning process of LLMs is limited within texts and it is difficult to represent the spatial occupancy and geometry layout only by texts. Both are important for making rational navigation decisions. In this work, we seek to unleash the spatial perception and planning ability of Vision-Language Models (VLMs), and explore whether the VLM, with only on-board camera captured RGB/RGB-D stream inputs, can efficiently finish the visual navigation tasks in a mapless manner. We achieve this by developing the imagination-powered navigation framework ImagineNav, which imagines the future observation images at valuable robot views and translates the complex navigation planning process into a rather simple best-view image selection problem for VLM. To generate appropriate candidate robot views for imagination, we introduce the Where2Imagine module, which is distilled to align with human navigation habits. Finally, to reach the VLM preferred views, an off-the-shelf point-goal navigation policy is utilized. Empirical experiments on the challenging open-vocabulary object navigation benchmarks demonstrates the superiority of our proposed system.
+
+</details>
+
+### Towards Robust Multimodal Open-set Test-time Adaptation via Adaptive Entropy-aware Optimization.
+- **链接**: [arXiv:2501.13924](https://arxiv.org/abs/2501.13924)
+- **作者**: Hao Dong, Eleni N. Chatzi, Olga Fink
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Test-time adaptation (TTA) has demonstrated significant potential in addressing distribution shifts between training and testing data. Open-set test-time adaptation (OSTTA) aims to adapt a source pre-trained model online to an unlabeled target domain that contains unknown classes. This task becomes more challenging when multiple modalities are involved. Existing methods have primarily focused on unimodal OSTTA, often filtering out low-confidence samples without addressing the complexities of multimodal data. In this work, we present Adaptive Entropy-aware Optimization (AEO), a novel framework specifically designed to tackle Multimodal Open-set Test-time Adaptation (MM-OSTTA) for the first time. Our analysis shows that the entropy difference between known and unknown samples in the target domain strongly correlates with MM-OSTTA performance. To leverage this, we propose two key components: Unknown-aware Adaptive Entropy Optimization (UAE) and Adaptive Modality Prediction Discrepancy Optimization (AMP). These components enhance the ability of model to distinguish unknown class samples during online adaptation by amplifying the entropy difference between known and unknown samples. To thoroughly evaluate our proposed methods in the MM-OSTTA setting, we establish a new benchmark derived from existing datasets. This benchmark includes two downstream tasks and incorporates five modalities. Extensive experiments across various domain shift situations demonstrate the efficacy and versatility of the AEO framework. Additionally, we highlight the strong performance of AEO in long-term and continual MM-OSTTA settings, both of which are challenging and highly relevant to real-world applications. Our source code is available at https://github.com/donghao51/AEO.
+
+</details>
+
+### OV-MER: Towards Open-Vocabulary Multimodal Emotion Recognition.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/lian25b.html)
+- **作者**: Zheng Lian, Haiyang Sun, Licai Sun, Haoyu Chen, Lan Chen, Hao Gu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### GUIDED: Granular Understanding via Identification, Detection, and Discrimination for Fine-Grained Open-Vocabulary Object Detection.
+- **链接**: [arXiv:2603.27014](https://arxiv.org/abs/2603.27014)
+- **作者**: Jiaming Li, Zhijia Liang, Weikai Chen, Lin Ma, Guanbin Li
+- **🏷️ 机构**: SUN YAT-SEN UNIVERSITY, Zhengzhou University, Tencent AI Lab
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Fine-grained open-vocabulary object detection (FG-OVD) aims to detect novel object categories described by attribute-rich texts. While existing open-vocabulary detectors show promise at the base-category level, they underperform in fine-grained settings due to the semantic entanglement of subjects and attributes in pretrained vision-language model (VLM) embeddings -- leading to over-representation of attributes, mislocalization, and semantic drift in embedding space. We propose GUIDED, a decomposition framework specifically designed to address the semantic entanglement between subjects and attributes in fine-grained prompts. By separating object localization and fine-grained recognition into distinct pathways, HUIDED aligns each subtask with the module best suited for its respective roles. Specifically, given a fine-grained class name, we first use a language model to extract a coarse-grained subject and its descriptive attributes. Then the detector is guided solely by the subject embedding, ensuring stable localization unaffected by irrelevant or overrepresented attributes. To selectively retain helpful attributes, we introduce an attribute embedding fusion module that incorporates attribute information into detection queries in an attention-based manner. This mitigates over-representation while preserving discriminative power. Finally, a region-level attribute discrimination module compares each detected region against full fine-grained class names using a refined vision-language model with a projection head for improved alignment. Extensive experiments on FG-OVD and 3F-OVD benchmarks show that GUIDED achieves new state-of-the-art results, demonstrating the benefits of disentangled modeling and modular optimization. Our code will be released at https://github.com/lijm48/GUIDED.
+
+</details>
+
+### DitHub: A Modular Framework for Incremental Open-Vocabulary Object Detection.
+- **链接**: [arXiv:2503.09271](https://arxiv.org/abs/2503.09271)
+- **作者**: Chiara Cappellino, Gianluca Mancusi, Matteo Mosconi, Angelo Porrello, Simone Calderara, Rita Cucchiara
+- **🏷️ 机构**: University of Modena and Reggio Emilia, Mercuria, University of Modena and Reggio Emilia, Italy
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-Vocabulary object detectors can generalize to an unrestricted set of categories through simple textual prompting. However, adapting these models to rare classes or reinforcing their abilities on multiple specialized domains remains essential. While recent methods rely on monolithic adaptation strategies with a single set of weights, we embrace modular deep learning. We introduce DitHub, a framework designed to build and maintain a library of efficient adaptation modules. Inspired by Version Control Systems, DitHub manages expert modules as branches that can be fetched and merged as needed. This modular approach allows us to conduct an in-depth exploration of the compositional properties of adaptation modules, marking the first such study in Object Detection. Our method achieves state-of-the-art performance on the ODinW-13 benchmark and ODinW-O, a newly introduced benchmark designed to assess class reappearance. For more details, visit our project page: https://aimagelab.github.io/DitHub/
+
+</details>
+
+### VL-SAM-V2: Open-World Object Detection with General and Specific Query Fusion.
+- **链接**: [arXiv:2505.18986](https://arxiv.org/abs/2505.18986)
+- **作者**: Zhiwei Lin, Yongtao Wang
+- **🏷️ 机构**: Peking University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Current perception models have achieved remarkable success by leveraging large-scale labeled datasets, but still face challenges in open-world environments with novel objects. To address this limitation, researchers introduce open-set perception models to detect or segment arbitrary test-time user-input categories. However, open-set models rely on human involvement to provide predefined object categories as input during inference. More recently, researchers have framed a more realistic and challenging task known as open-ended perception that aims to discover unseen objects without requiring any category-level input from humans at inference time. Nevertheless, open-ended models suffer from low performance compared to open-set models. In this paper, we present VL-SAM-V2, an open-world object detection framework that is capable of discovering unseen objects while achieving favorable performance. To achieve this, we combine queries from open-set and open-ended models and propose a general and specific query fusion module to allow different queries to interact. By adjusting queries from open-set models, we enable VL-SAM-V2 to be evaluated in the open-set or open-ended mode. In addition, to learn more diverse queries, we introduce ranked learnable queries to match queries with proposals from open-ended models by sorting. Moreover, we design a denoising point training strategy to facilitate the training process. Experimental results on LVIS show that our method surpasses the previous open-set and open-ended methods, especially on rare objects.
+
+</details>
+
+### Looking Beyond the Known: Towards a Data Discovery Guided Open-World Object Detection.
+- **链接**: [arXiv:2510.00303](https://arxiv.org/abs/2510.00303) · 📚 被引 1
+- **作者**: Anay Majee, Amitesh Gangrade, Rishabh Iyer
+- **🏷️ 机构**: The University of Texas at Dallas, University of Texas at Dallas, University of Texas, Dallas
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-World Object Detection (OWOD) enriches traditional object detectors by enabling continual discovery and integration of unknown objects via human guidance. However, existing OWOD approaches frequently suffer from semantic confusion between known and unknown classes, alongside catastrophic forgetting, leading to diminished unknown recall and degraded known-class accuracy. To overcome these challenges, we propose Combinatorial Open-World Detection (CROWD), a unified framework reformulating unknown object discovery and adaptation as an interwoven combinatorial (set-based) data-discovery (CROWD-Discover) and representation learning (CROWD-Learn) task. CROWD-Discover strategically mines unknown instances by maximizing Submodular Conditional Gain (SCG) functions, selecting representative examples distinctly dissimilar from known objects. Subsequently, CROWD-Learn employs novel combinatorial objectives that jointly disentangle known and unknown representations while maintaining discriminative coherence among known classes, thus mitigating confusion and forgetting. Extensive evaluations on OWOD benchmarks illustrate that CROWD achieves improvements of 2.83% and 2.05% in known-class accuracy on M-OWODB and S-OWODB, respectively, and nearly 2.4x unknown recall compared to leading baselines.
+
+</details>
+
+### OVS Meets Continual Learning: Towards Sustainable Open-Vocabulary Segmentation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/184cfed554856b4812b19cd0235a0f6a-Abstract-Conference.html)
+- **作者**: Dongjun Hwang, Yejin Kim, Minyoung Lee, Seong Joon Oh, Junsuk Choe
+- **🏷️ 机构**: Sogang University, University of Tübingen
+- **会议**: NeurIPS 2025
+
+### OpenHOI: Open-World Hand-Object Interaction Synthesis with Multimodal Large Language Model.
+- **链接**: [arXiv:2505.18947](https://arxiv.org/abs/2505.18947)
+- **作者**: Zhenhao Zhang, Ye Shi, Lingxiao Yang, Suting Ni, Qi Ye, Jingya Wang
+- **🏷️ 机构**: ShanghaiTech University, Zhejiang University
+- **会议**: NeurIPS 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Understanding and synthesizing realistic 3D hand-object interactions (HOI) is critical for applications ranging from immersive AR/VR to dexterous robotics. Existing methods struggle with generalization, performing well on closed-set objects and predefined tasks but failing to handle unseen objects or open-vocabulary instructions. We introduce OpenHOI, the first framework for open-world HOI synthesis, capable of generating long-horizon manipulation sequences for novel objects guided by free-form language commands. Our approach integrates a 3D Multimodal Large Language Model (MLLM) fine-tuned for joint affordance grounding and semantic task decomposition, enabling precise localization of interaction regions (e.g., handles, buttons) and breakdown of complex instructions (e.g., "Find a water bottle and take a sip") into executable sub-tasks. To synthesize physically plausible interactions, we propose an affordance-driven diffusion model paired with a training-free physics refinement stage that minimizes penetration and optimizes affordance alignment. Evaluations across diverse scenarios demonstrate OpenHOI's superiority over state-of-the-art methods in generalizing to novel object categories, multi-stage tasks, and complex language instructions. Our project page at \href{https://openhoi.github.io}
+
+</details>
+<!-- COMPLETE v1 papers=115 -->

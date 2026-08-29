@@ -96,3 +96,141 @@
 - Expanding Large Pre-trained Unimodal Models with Multimodal Information Injection for Image-Text Multimodal Classification. → [multimodal](../multimodal/Guideline%202022.md)
 - EI-CLIP: Entity-aware Interventional Contrastive Learning for E-commerce Cross-modal Retrieval. → [multimodal](../multimodal/Guideline%202022.md)
 - Unified Contrastive Learning in Image-Text-Label Space. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+
+## 🆕 增量新增
+
+### Single-Stream Multi-level Alignment for Vision-Language Pretraining. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2203.14395](https://arxiv.org/abs/2203.14395)
+- **作者**: Zaid Khan, B. G. Vijay Kumar, Xiang Yu, Samuel Schulter, Manmohan Chandraker, Yun Fu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①针对现有视觉-语言预训练中，双流对比学习仅全局对齐、忽略细粒度对齐的问题。②提出单流架构，通过对称跨模态重建（XMM）和伪标签关键词预测（PSL）两个新任务，实现全局、patch-token和概念语义三个级别的对齐。③相比双流方法，单流架构支持更细粒度交互；相比监督方法，无需密集标注，利用动量编码器自动生成伪标签。④实验显示该方法在多个下游任务上优于现有对比学习方法，但摘要未给出具体数值。
+- **摘要（英）**: This work tackles the lack of fine-grained alignment in contrastive vision-language pretraining by proposing a single-stream architecture with two novel tasks: symmetric cross-modality reconstruction (XMM) and pseudo-labeled keyword prediction (PSL). These tasks enable alignment at global, patch-token, and semantic levels without dense annotations. The method outperforms contrastive baselines on downstream tasks, though specific numbers are omitted.
+- **核心贡献**: 提出单流多级对齐的视觉-语言预训练方法。
+- **创新点**: 通过XMM和PSL任务实现无需标注的多级对齐。
+- **结果**: 在多个下游任务上取得优于对比学习方法的性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised vision-language pretraining from pure images and text with a contrastive loss is effective, but ignores fine-grained alignment due to a dual-stream architecture that aligns image and text representations only on a global level. Earlier, supervised, non-contrastive methods were capable of finer-grained alignment, but required dense annotations that were not scalable. We propose a single stream architecture that aligns images and language at multiple levels: global, fine-grained patch-token, and conceptual/semantic, using two novel tasks: symmetric cross-modality reconstruction (XMM) and a pseudo-labeled key word prediction (PSL). In XMM, we mask input tokens from one modality and use cross-modal information to reconstruct the masked token, thus improving fine-grained alignment between the two modalities. In PSL, we use attention to select keywords in a caption, use a momentum encoder to recommend other important keywords that are missing from the caption but represented in the image, and then train the visual encoder to predict the presence of those keywords, helping it learn semantic concepts that are essential for grounding a textual token to an image region. We demonstrate competitive performance and improved data efficiency on image-text retrieval, grounding, visual question answering/reasoning against larger models and models trained on more data. Code and models available at zaidkhan.me/SIMLA.
+
+</details>
+
+### A Dataset for Interactive Vision-Language Navigation with Unknown Command Feasibility. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20074-8_18) · 📚 被引 29
+- **作者**: Andrea Burns, Deniz Arsan, Sanjna Agrawal, Ranjitha Kumar, Kate Saenko, Bryan A. Plummer
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①该论文针对视觉-语言导航（VLN）中指令可能不可执行的问题，即现有数据集假设所有指令均可执行，但实际中命令可能因环境或物理限制而失败。②提出了一个包含未知命令可行性的交互式VLN数据集，并设计了相应的任务设置和评估协议，以模拟真实场景中的不确定性。③相比已有VLN数据集，该工作首次引入命令可行性判断，增强了模型的鲁棒性和实用性。④摘要未提供具体数据，但通过新数据集和任务设计，为后续研究提供了基准。
+- **摘要（英）**: This paper addresses the issue of unknown command feasibility in vision-language navigation, where existing datasets assume all instructions are executable. It introduces a new interactive VLN dataset with feasibility annotations and task protocols to handle uncertain commands. The contribution lies in benchmarking realistic navigation scenarios, though no quantitative results are reported in the abstract.
+- **核心贡献**: 提出了首个考虑命令可行性的交互式VLN数据集和评估协议。
+- **创新点**: 将命令可行性判断融入VLN任务设计。
+- **结果**: 提供了新基准，但未报告具体性能数据。
+
+### Learning Disentanglement with Decoupled Labels for Vision-Language Navigation. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20059-5_18) · 📚 被引 8
+- **作者**: Wenhao Cheng, Xingping Dong, Salman H. Khan, Jianbing Shen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①该论文针对视觉-语言导航中解耦表示学习不足的问题，即现有方法难以分离指令中的不同语义成分。②提出了一种利用解耦标签（如动作、目标、空间关系）来引导特征解耦的学习方法，增强导航决策的准确性。③相比已有工作，该方法显式利用标签信息进行解耦，提高了表示的可解释性和泛化能力。④摘要未提供具体数据，但预期在VLN基准上有所提升。
+- **摘要（英）**: This paper tackles the insufficient disentanglement in vision-language navigation by introducing decoupled labels to guide feature separation. The method improves interpretability and generalization, though specific experimental results are not detailed in the abstract.
+- **核心贡献**: 提出利用解耦标签增强VLN表示学习的方法。
+- **创新点**: 将标签解耦引入导航任务。
+- **结果**: 未报告具体效果。
+
+### Generative Negative Text Replay for Continual Vision-Language Pretraining. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2210.17322](https://arxiv.org/abs/2210.17322)
+- **作者**: Shipeng Yan, Lanqing Hong, Hang Xu, Jianhua Han, Tinne Tuytelaars, Zhenguo Li et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①针对视觉-语言预训练（VLP）在流式数据下遭遇灾难性遗忘的问题。②提出生成式负文本回放（GNTR）方法，利用记忆中的图像生成硬负样本文本，增强对比学习的负样本多样性；同时提出多模态知识蒸馏，对齐新旧模型的实例级预测。③相比传统回放，生成式负样本更有效保留旧知识，且蒸馏损失提升跨模态一致性。④在Conceptual Caption数据集上的实例和类增量分割上评估，结果显示优于现有持续学习方法，但摘要未给出具体数值。
+- **摘要（英）**: This paper addresses catastrophic forgetting in continual vision-language pretraining by proposing generative negative text replay (GNTR), which synthesizes hard negative texts from memory images, and multi-modal knowledge distillation to align predictions. This improves negative sample diversity and preserves learned knowledge. Experiments on Conceptual Caption splits show superior performance over existing methods, though specific numbers are not provided.
+- **核心贡献**: 提出生成式负文本回放和知识蒸馏的持续视觉-语言预训练方法。
+- **创新点**: 利用生成硬负样本增强回放效果。
+- **结果**: 在持续学习基准上优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vision-language pre-training (VLP) has attracted increasing attention recently. With a large amount of image-text pairs, VLP models trained with contrastive loss have achieved impressive performance in various tasks, especially the zero-shot generalization on downstream datasets. In practical applications, however, massive data are usually collected in a streaming fashion, requiring VLP models to continuously integrate novel knowledge from incoming data and retain learned knowledge. In this work, we focus on learning a VLP model with sequential chunks of image-text pair data. To tackle the catastrophic forgetting issue in this multi-modal continual learning setting, we first introduce pseudo text replay that generates hard negative texts conditioned on the training images in memory, which not only better preserves learned knowledge but also improves the diversity of negative samples in the contrastive loss. Moreover, we propose multi-modal knowledge distillation between images and texts to align the instance-wise prediction between old and new models. We incrementally pre-train our model on both the instance and class incremental splits of the Conceptual Caption dataset, and evaluate the model on zero-shot image classification and image-text retrieval tasks. Our method consistently outperforms the existing baselines with a large margin, which demonstrates its superiority. Notably, we realize an average performance boost of $4.60\%$ on image-classification downstream datasets for the class incremental split.
+
+</details>
+
+### UniTAB: Unifying Text and Box Outputs for Grounded Vision-Language Modeling. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20059-5_30)
+- **作者**: Zhengyuan Yang, Zhe Gan, Jianfeng Wang, Xiaowei Hu, Faisal Ahmed, Zicheng Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①该论文针对接地视觉-语言建模中文本和框输出不统一的问题，即现有模型通常分别处理文本生成和物体定位。②提出了UniTAB框架，统一文本和框的输出空间，通过联合训练实现多任务学习。③相比已有工作，该方法简化了模型结构，提高了跨任务泛化能力。④摘要未提供具体数据，但预期在接地任务上达到先进水平。
+- **摘要（英）**: This paper addresses the disconnection between text and box outputs in grounded vision-language modeling by proposing UniTAB, a unified framework that jointly generates text and bounding boxes. It simplifies architecture and enhances generalization, though quantitative results are not specified.
+- **核心贡献**: 提出UniTAB统一文本和框输出。
+- **创新点**: 联合输出空间设计。
+- **结果**: 未报告具体数据。
+
+### Learning Visual Representation from Modality-Shared Contrastive Language-Image Pre-training. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2207.12661](https://arxiv.org/abs/2207.12661)
+- **作者**: Haoxuan You, Luowei Zhou, Bin Xiao, Noel Codella, Yu Cheng, Ruochen Xu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①针对多模态对比预训练中通常为每个模态使用独立编码器、限制跨模态知识共享的问题。②提出MS-CLIP框架，系统研究视觉和语言Transformer在对比预训练中可共享参数的比例，并引入轻量级模态特定并行模块。③相比vanilla CLIP，通过共享大部分编码器参数并添加少量模态特定模块，在多种架构变体中取得更优性能。④在零样本ImageNet分类上相对提升高达13%，表明共享参数能增强跨模态对齐和泛化能力。
+- **摘要（英）**: This paper addresses the limitation of separate encoders in multimodal contrastive pre-training by proposing MS-CLIP frameworks that systematically explore parameter sharing between vision and language transformers. It finds that a mostly unified encoder with light-weight modality-specific modules outperforms variants with more separated parameters, achieving up to 13% relative improvement over vanilla CLIP in zero-shot ImageNet classification.
+- **核心贡献**: 系统探索了对比语言-图像预训练中跨模态参数共享的架构设计空间。
+- **创新点**: 提出在共享Transformer编码器中加入轻量级模态特定并行模块的混合架构。
+- **结果**: 零样本ImageNet分类相对提升高达13%。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large-scale multi-modal contrastive pre-training has demonstrated great utility to learn transferable features for a range of downstream tasks by mapping multiple modalities into a shared embedding space. Typically, this has employed separate encoders for each modality. However, recent work suggests that transformers can support learning across multiple modalities and allow knowledge sharing. Inspired by this, we investigate a variety of Modality-Shared Contrastive Language-Image Pre-training (MS-CLIP) frameworks. More specifically, we question how many parameters of a transformer model can be shared across modalities during contrastive pre-training, and rigorously examine architectural design choices that position the proportion of parameters shared along a spectrum. In studied conditions, we observe that a mostly unified encoder for vision and language signals outperforms all other variations that separate more parameters. Additionally, we find that light-weight modality-specific parallel modules further improve performance. Experimental results show that the proposed MS-CLIP approach outperforms vanilla CLIP by up to 13\% relative in zero-shot ImageNet classification (pre-trained on YFCC-100M), while simultaneously supporting a reduction of parameters. In addition, our approach outperforms vanilla CLIP by 1.6 points in linear probing on a collection of 24 downstream vision tasks. Furthermore, we discover that sharing parameters leads to semantic concepts from different modalities being encoded more closely in the embedding space, facilitating the transferring of common semantic structure (e.g., attention patterns) from language to vision. Code is available at \href{https://github.com/Hxyou/MSCLIP}{URL}.
+
+</details>
+
+### How Much Can CLIP Benefit Vision-and-Language Tasks? **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2107.06383](https://arxiv.org/abs/2107.06383)
+- **作者**: Sheng Shen, Liunian Harold Li, Hao Tan, Mohit Bansal, Anna Rohrbach, Kai-Wei Chang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+- **摘要（中）**: ①针对视觉-语言任务中视觉编码器依赖人工标注数据、泛化能力有限的问题。②提出将CLIP作为视觉编码器集成到现有V&L模型中，包括任务特定微调和V&L预训练两种场景。③相比广泛使用的BottomUp-TopDown编码器，CLIP利用大规模图文对预训练，显著提升视觉表示质量。④在VQA、视觉蕴含和V&L导航任务上取得新的最先进结果，性能大幅提升。
+- **摘要（英）**: This paper investigates the benefit of using CLIP as a visual encoder in vision-and-language models, addressing the limitation of manually-annotated visual encoders. It integrates CLIP into both task-specific fine-tuning and V&L pretraining scenarios, showing significant improvements over BottomUp-TopDown. The method achieves new state-of-the-art results on VQA, Visual Entailment, and V&L Navigation tasks.
+- **核心贡献**: 系统评估了CLIP在V&L任务中的优势，并建立了新的性能基准。
+- **创新点**: 将CLIP作为通用视觉编码器，替代传统基于区域的特征。
+- **结果**: 在多个V&L任务上刷新最先进结果。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Most existing Vision-and-Language (V&L) models rely on pre-trained visual encoders, using a relatively small set of manually-annotated data (as compared to web-crawled data), to perceive the visual world. However, it has been observed that large-scale pretraining usually can result in better generalization performance, e.g., CLIP (Contrastive Language-Image Pre-training), trained on a massive amount of image-caption pairs, has shown a strong zero-shot capability on various vision tasks. To further study the advantage brought by CLIP, we propose to use CLIP as the visual encoder in various V&L models in two typical scenarios: 1) plugging CLIP into task-specific fine-tuning; 2) combining CLIP with V&L pre-training and transferring to downstream tasks. We show that CLIP significantly outperforms widely-used visual encoders trained with in-domain annotated data, such as BottomUp-TopDown. We achieve competitive or better results on diverse V&L tasks, while establishing new state-of-the-art results on Visual Question Answering, Visual Entailment, and V&L Navigation tasks. We release our code at https://github.com/clip-vil/CLIP-ViL.
+
+</details>
+
+### Look Around and Refer: 2D Synthetic Semantics Knowledge Distillation for 3D Visual Grounding. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2211.14241](https://arxiv.org/abs/2211.14241)
+- **作者**: Eslam Mohamed Bakr, Yasmeen Alsaedy, Mohamed Elhoseiny
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+- **摘要（中）**: ①该论文针对3D视觉定位任务中视觉流仅依赖点云编码器、缺乏丰富2D语义线索的问题，提出利用从点云合成的2D线索来增强3D视觉表示。②方法上，提出了Look Around and Refer (LAR)模块，通过知识蒸馏将2D合成语义知识融入3D编码器，无需额外2D输入，在训练和测试阶段均能高效利用。③相比现有方法，LAR在不增加推理负担的前提下，通过2D线索辅助3D编码器，提升了视觉表示质量。④在Nr3D、Sr3D和ScanRefer三个基准上，LAR显著优于现有最先进方法，取得了持续的性能提升。
+- **摘要（英）**: This paper addresses the limitation of 3D visual grounding methods that rely solely on point cloud encoders, proposing to synthesize 2D clues from 3D point clouds to enrich visual representations. The proposed Look Around and Refer (LAR) module employs knowledge distillation to integrate 2D semantic knowledge into the 3D encoder without extra 2D inputs, consistently outperforming state-of-the-art methods on Nr3D, Sr3D, and ScanRefer benchmarks.
+- **核心贡献**: 提出LAR模块，通过2D合成语义知识蒸馏增强3D视觉定位的视觉表示。
+- **创新点**: 利用从点云合成的2D线索进行知识蒸馏，无需额外2D输入即可提升3D编码器性能。
+- **结果**: 在Nr3D、Sr3D和ScanRefer上显著超越现有最先进方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The 3D visual grounding task has been explored with visual and language streams comprehending referential language to identify target objects in 3D scenes. However, most existing methods devote the visual stream to capturing the 3D visual clues using off-the-shelf point clouds encoders. The main question we address in this paper is "can we consolidate the 3D visual stream by 2D clues synthesized from point clouds and efficiently utilize them in training and testing?". The main idea is to assist the 3D encoder by incorporating rich 2D object representations without requiring extra 2D inputs. To this end, we leverage 2D clues, synthetically generated from 3D point clouds, and empirically show their aptitude to boost the quality of the learned visual representations. We validate our approach through comprehensive experiments on Nr3D, Sr3D, and ScanRefer datasets and show consistent performance gains compared to existing methods. Our proposed module, dubbed as Look Around and Refer (LAR), significantly outperforms the state-of-the-art 3D visual grounding techniques on three benchmarks, i.e., Nr3D, Sr3D, and ScanRefer. The code is available at https://eslambakr.github.io/LAR.github.io/.
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Learning to Prompt for Open-Vocabulary Object Detection with Vision-Language Model. → [open-set-detection](../open-set-detection/Guideline%202022.md)
+- Robust Cross-Modal Representation Learning with Progressive Self-Distillation. → [multimodal](../multimodal/Guideline%202022.md)
+- MPPNet: Multi-frame Feature Intertwining with Proxy Points for 3D Temporal Object Detection. → [object-detection](../object-detection/Guideline%202022.md)
+- Homogeneous Multi-modal Feature Fusion and Interaction for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
+- A Simple Baseline for Open-Vocabulary Semantic Segmentation with Pre-trained Vision-Language Model. → [open-set-detection](../open-set-detection/Guideline%202022.md)
+- Switch-BERT: Learning to Model Multimodal Interactions by Switching Attention and Input. → [multimodal](../multimodal/Guideline%202022.md)
+- MUGEN: A Playground for Video-Audio-Text Multimodal Understanding and GENeration. → [multimodal](../multimodal/Guideline%202022.md)
+- Hierarchically Self-supervised Transformer for Human Skeleton Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+- Motion Sensitive Contrastive Learning for Self-supervised Video Representation. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+- CODER: Coupled Diversity-Sensitive Momentum Contrastive Learning for Image-Text Retrieval. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+- Learning Multimodal VAEs through Mutual Supervision. → [multimodal](../multimodal/Guideline%202022.md)
+- Poisoning and Backdooring Contrastive Learning. → [multimodal](../multimodal/Guideline%202022.md)
+- Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection. → [open-set-detection](../open-set-detection/Guideline%202022.md)
+- Patching open-vocabulary models by interpolating weights. → [open-set-detection](../open-set-detection/Guideline%202022.md)
+<!-- COMPLETE v1 papers=16 -->

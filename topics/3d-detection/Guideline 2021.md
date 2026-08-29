@@ -242,3 +242,174 @@
 - **作者**: Zizheng Que, Guo Lu, Dong Xu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+
+## 🆕 增量新增
+
+### Objects Are Different: Flexible Monocular 3D Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2104.02323](https://arxiv.org/abs/2104.02323) · 📚 被引 296
+- **作者**: Yunpeng Zhang, Jiwen Lu, Jie Zhou
+- **🏷️ 机构**: Tsinghua University,Beijing National Research Center for Information Science and Technology,China Department of Automation,China
+- **会议**: CVPR 2021
+- **摘要（中）**: 针对单目3D检测中截断物体性能受限的问题，提出MonoFlex，一种灵活框架，显式解耦截断物体并自适应组合深度估计方法。该方法通过特征图边缘解耦预测长尾截断物体，并将深度估计建模为直接回归和关键点求解的不确定性引导集成。在KITTI测试集上，中等难度相对提升27%，困难难度提升30%，同时保持实时效率。
+- **摘要（英）**: MonoFlex addresses limited performance on truncated objects in monocular 3D detection by decoupling edge features and adaptively ensembling depth estimation methods. It uses uncertainty-guided combination of direct regression and keypoint-based solutions, achieving 27% and 30% relative improvements on moderate and hard KITTI levels with real-time efficiency.
+- **核心贡献**: 提出解耦截断物体和自适应深度集成的单目3D检测框架。
+- **创新点**: 不确定性引导的深度估计集成与边缘特征解耦。
+- **结果**: 在KITTI上中等和困难难度分别提升27%和30%。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The precise localization of 3D objects from a single image without depth information is a highly challenging problem. Most existing methods adopt the same approach for all objects regardless of their diverse distributions, leading to limited performance for truncated objects. In this paper, we propose a flexible framework for monocular 3D object detection which explicitly decouples the truncated objects and adaptively combines multiple approaches for object depth estimation. Specifically, we decouple the edge of the feature map for predicting long-tail truncated objects so that the optimization of normal objects is not influenced. Furthermore, we formulate the object depth estimation as an uncertainty-guided ensemble of directly regressed object depth and solved depths from different groups of keypoints. Experiments demonstrate that our method outperforms the state-of-the-art method by relatively 27\% for the moderate level and 30\% for the hard level in the test set of KITTI benchmark while maintaining real-time efficiency. Code will be available at \url{https://github.com/zhangyp15/MonoFlex}.
+
+</details>
+
+### Categorical Depth Distribution Network for Monocular 3D Object Detection. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2103.01100](https://arxiv.org/abs/2103.01100) · 📚 被引 517
+- **作者**: Cody Reading, Ali Harakeh, Julia Chae, Steven L. Waslander
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+- **摘要（中）**: ①针对单目3D检测中深度估计不准确导致检测性能受限的问题。②提出CaDDN，通过预测每个像素的类别深度分布，将上下文特征投影到3D空间，并结合BEV投影和单阶段检测器。③相比直接估计深度的方法，CaDDN利用分布建模提高了深度精度。④在KITTI基准上排名第一，并首次在Waymo上提供单目3D检测结果。
+- **摘要（英）**: This paper addresses the depth inaccuracy issue in monocular 3D detection. It proposes CaDDN, which predicts categorical depth distributions per pixel to project features into 3D space, combined with BEV projection and a single-stage detector. Compared to direct depth estimation, CaDDN improves depth accuracy via distribution modeling. It ranks 1st on KITTI and provides the first monocular 3D detection results on Waymo.
+- **核心贡献**: 提出类别深度分布网络，实现端到端的单目3D检测。
+- **创新点**: 利用深度分布而非点估计来投影特征。
+- **结果**: 在KITTI上排名第一，并首次在Waymo上取得结果。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Monocular 3D object detection is a key problem for autonomous vehicles, as it provides a solution with simple configuration compared to typical multi-sensor systems. The main challenge in monocular 3D detection lies in accurately predicting object depth, which must be inferred from object and scene cues due to the lack of direct range measurement. Many methods attempt to directly estimate depth to assist in 3D detection, but show limited performance as a result of depth inaccuracy. Our proposed solution, Categorical Depth Distribution Network (CaDDN), uses a predicted categorical depth distribution for each pixel to project rich contextual feature information to the appropriate depth interval in 3D space. We then use the computationally efficient bird's-eye-view projection and single-stage detector to produce the final output bounding boxes. We design CaDDN as a fully differentiable end-to-end approach for joint depth estimation and object detection. We validate our approach on the KITTI 3D object detection benchmark, where we rank 1st among published monocular methods. We also provide the first monocular 3D detection results on the newly released Waymo Open Dataset. We provide a code release for CaDDN which is made available.
+
+</details>
+
+### LiDAR R-CNN: An Efficient and Universal 3D Object Detector. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2103.15297](https://arxiv.org/abs/2103.15297) · 📚 被引 223
+- **作者**: Zhichao Li, Feng Wang, Naiyan Wang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+- **摘要（中）**: 针对现有3D检测器第二阶段细化中直接应用PointNet导致特征忽略提议框尺寸的问题，提出LiDAR R-CNN通用第二阶段检测器。该方法分析问题根源，提出多种补救措施（如点云池化、尺寸感知特征），显著提升性能。在Waymo和KITTI数据集上基于PointPillars变体实现新SOTA，且计算开销小。
+- **摘要（英）**: This paper addresses the overlooked issue in second-stage 3D detection where naively applying PointNet makes features ignore proposal sizes. It proposes LiDAR R-CNN, a universal second-stage detector with several remedies (e.g., point cloud pooling, size-aware features), significantly improving performance. On Waymo and KITTI, it achieves new state-of-the-art results based on a PointPillars variant with minor computational cost.
+- **核心贡献**: 提出LiDAR R-CNN通用第二阶段检测器，解决PointNet特征忽略提议尺寸问题。
+- **创新点**: 设计尺寸感知的点云特征提取方法，提升细化精度。
+- **结果**: 在Waymo和KITTI上取得SOTA结果，且开销小。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> LiDAR-based 3D detection in point cloud is essential in the perception system of autonomous driving. In this paper, we present LiDAR R-CNN, a second stage detector that can generally improve any existing 3D detector. To fulfill the real-time and high precision requirement in practice, we resort to point-based approach other than the popular voxel-based approach. However, we find an overlooked issue in previous work: Naively applying point-based methods like PointNet could make the learned features ignore the size of proposals. To this end, we analyze this problem in detail and propose several methods to remedy it, which bring significant performance improvement. Comprehensive experimental results on real-world datasets like Waymo Open Dataset (WOD) and KITTI dataset with various popular detectors demonstrate the universality and superiority of our LiDAR R-CNN. In particular, based on one variant of PointPillars, our method could achieve new state-of-the-art results with minor cost. Codes will be released at https://github.com/tusimple/LiDAR_RCNN .
+
+</details>
+
+### Exploring Geometry-aware Contrast and Clustering Harmonization for Self-supervised 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00328)
+- **作者**: Hanxue Liang, Chenhan Jiang, Dapeng Feng, Xin Chen, Hang Xu, Xiaodan Liang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### Geometry Uncertainty Projection Network for Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00310)
+- **作者**: Yan Lu, Xinzhu Ma, Lei Yang, Tianzhu Zhang, Yating Liu, Qi Chu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### Voxel Transformer for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00315)
+- **作者**: Jiageng Mao, Yujing Xue, Minzhe Niu, Haoyue Bai, Jiashi Feng, Xiaodan Liang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### Improving 3D Object Detection with Channel-wise Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00274)
+- **作者**: Hualian Sheng, Sijia Cai, Yuan Liu, Bing Deng, Jianqiang Huang, Xian-Sheng Hua et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### VENet: Voting Enhancement Network for 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00369)
+- **作者**: Qian Xie, Yu-Kun Lai, Jing Wu, Zhoutao Wang, Dening Lu, Mingqiang Wei et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### The Devil is in the Task: Exploiting Reciprocal Appearance-Localization Features for Monocular 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00271)
+- **作者**: Zhikang Zou, Xiaoqing Ye, Liang Du, Xianhui Cheng, Xiao Tan, Li Zhang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### RPVNet: A Deep and Efficient Range-Point-Voxel Fusion Network for LiDAR Point Cloud Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01572)
+- **作者**: Jianyun Xu, Ruixiang Zhang, Jian Dou, Yushi Zhu, Jie Sun, Shiliang Pu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### Object DGCNN: 3D Object Detection using Dynamic Graphs.
+- **链接**: [arXiv:2110.06923](https://arxiv.org/abs/2110.06923)
+- **作者**: Yue Wang, Justin M. Solomon
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 3D object detection often involves complicated training and testing pipelines, which require substantial domain knowledge about individual datasets. Inspired by recent non-maximum suppression-free 2D object detection models, we propose a 3D object detection architecture on point clouds. Our method models 3D object detection as message passing on a dynamic graph, generalizing the DGCNN framework to predict a set of objects. In our construction, we remove the necessity of post-processing via object confidence aggregation or non-maximum suppression. To facilitate object detection from sparse point clouds, we also propose a set-to-set distillation approach customized to 3D detection. This approach aligns the outputs of the teacher model and the student model in a permutation-invariant fashion, significantly simplifying knowledge distillation for the 3D detection task. Our method achieves state-of-the-art performance on autonomous driving benchmarks. We also provide abundant analysis of the detection model and distillation framework.
+
+</details>
+
+### Revisiting 3D Object Detection From an Egocentric Perspective.
+- **链接**: [arXiv:2112.07787](https://arxiv.org/abs/2112.07787)
+- **作者**: Boyang Deng, Charles R. Qi, Mahyar Najibi, Thomas A. Funkhouser, Yin Zhou, Dragomir Anguelov
+- **🏷️ 机构**: Waymo
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 3D object detection is a key module for safety-critical robotics applications such as autonomous driving. For these applications, we care most about how the detections affect the ego-agent's behavior and safety (the egocentric perspective). Intuitively, we seek more accurate descriptions of object geometry when it's more likely to interfere with the ego-agent's motion trajectory. However, current detection metrics, based on box Intersection-over-Union (IoU), are object-centric and aren't designed to capture the spatio-temporal relationship between objects and the ego-agent. To address this issue, we propose a new egocentric measure to evaluate 3D object detection, namely Support Distance Error (SDE). Our analysis based on SDE reveals that the egocentric detection quality is bounded by the coarse geometry of the bounding boxes. Given the insight that SDE would benefit from more accurate geometry descriptions, we propose to represent objects as amodal contours, specifically amodal star-shaped polygons, and devise a simple model, StarPoly, to predict such contours. Our experiments on the large-scale Waymo Open Dataset show that SDE better reflects the impact of detection quality on the ego-agent's safety compared to IoU; and the estimated contours from StarPoly consistently improve the egocentric detection quality over recent 3D object detectors.
+
+</details>
+
+### Voxel-based 3D Detection and Reconstruction of Multiple Objects from a Single Image.
+- **链接**: [arXiv:2111.03098](https://arxiv.org/abs/2111.03098)
+- **作者**: Feng Liu, Xiaoming Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Inferring 3D locations and shapes of multiple objects from a single 2D image is a long-standing objective of computer vision. Most of the existing works either predict one of these 3D properties or focus on solving both for a single object. One fundamental challenge lies in how to learn an effective representation of the image that is well-suited for 3D detection and reconstruction. In this work, we propose to learn a regular grid of 3D voxel features from the input image which is aligned with 3D scene space via a 3D feature lifting operator. Based on the 3D voxel features, our novel CenterNet-3D detection head formulates the 3D detection as keypoint detection in the 3D space. Moreover, we devise an efficient coarse-to-fine reconstruction module, including coarse-level voxelization and a novel local PCA-SDF shape representation, which enables fine detail reconstruction and one order of magnitude faster inference than prior methods. With complementary supervision from both 3D detection and reconstruction, one enables the 3D voxel features to be geometry and context preserving, benefiting both tasks.The effectiveness of our approach is demonstrated through 3D detection and reconstruction in single object and multiple object scenarios.
+
+</details>
+
+### Progressive Coordinate Transforms for Monocular 3D Object Detection.
+- **链接**: [arXiv:2108.05793](https://arxiv.org/abs/2108.05793)
+- **作者**: Li Wang, Li Zhang, Yi Zhu, Zhi Zhang, Tong He, Mu Li et al.
+- **🏷️ 机构**: Fudan / Shanghai AI Lab, AWS / CMU
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recognizing and localizing objects in the 3D space is a crucial ability for an AI agent to perceive its surrounding environment. While significant progress has been achieved with expensive LiDAR point clouds, it poses a great challenge for 3D object detection given only a monocular image. While there exist different alternatives for tackling this problem, it is found that they are either equipped with heavy networks to fuse RGB and depth information or empirically ineffective to process millions of pseudo-LiDAR points. With in-depth examination, we realize that these limitations are rooted in inaccurate object localization. In this paper, we propose a novel and lightweight approach, dubbed {\em Progressive Coordinate Transforms} (PCT) to facilitate learning coordinate representations. Specifically, a localization boosting mechanism with confidence-aware loss is introduced to progressively refine the localization prediction. In addition, semantic image representation is also exploited to compensate for the usage of patch proposals. Despite being lightweight and simple, our strategy leads to superior improvements on the KITTI and Waymo Open Dataset monocular 3D detection benchmarks. At the same time, our proposed PCT shows great generalization to most coordinate-based 3D detection frameworks. The code is available at: https://github.com/amazon-research/progressive-coordinate-transforms .
+
+</details>
+
+### Learning Transferable Features for Point Cloud Detection via 3D Contrastive Co-training.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/b3b25a26a0828ea5d48d8f8aa0d6f9af-Abstract.html)
+- **作者**: Yihan Zeng, Chunwei Wang, Yunbo Wang, Hang Xu, Chaoqiang Ye, Zhen Yang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+### Multimodal Virtual Point 3D Detection.
+- **链接**: [arXiv:2111.06881](https://arxiv.org/abs/2111.06881)
+- **作者**: Tianwei Yin, Xingyi Zhou, Philipp Krähenbühl
+- **🏷️ 机构**: UT Austin
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Lidar-based sensing drives current autonomous vehicles. Despite rapid progress, current Lidar sensors still lag two decades behind traditional color cameras in terms of resolution and cost. For autonomous driving, this means that large objects close to the sensors are easily visible, but far-away or small objects comprise only one measurement or two. This is an issue, especially when these objects turn out to be driving hazards. On the other hand, these same objects are clearly visible in onboard RGB sensors. In this work, we present an approach to seamlessly fuse RGB sensors into Lidar-based 3D recognition. Our approach takes a set of 2D detections to generate dense 3D virtual points to augment an otherwise sparse 3D point cloud. These virtual points naturally integrate into any standard Lidar-based 3D detectors along with regular Lidar measurements. The resulting multi-modal detector is simple and effective. Experimental results on the large-scale nuScenes dataset show that our framework improves a strong CenterPoint baseline by a significant 6.6 mAP, and outperforms competing fusion approaches. Code and more visualizations are available at https://tianweiy.github.io/mvp/
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- 3DIoUMatch: Leveraging IoU Prediction for Semi-Supervised 3D Object Detection. → [object-detection](../object-detection/Guideline%202021.md)
+- Unsupervised Object Detection With LIDAR Clues. → [object-detection](../object-detection/Guideline%202021.md)
+- 3D-MAN: 3D Multi-Frame Attention Network for Object Detection. → [multi-camera-perception](../multi-camera-perception/Guideline%202021.md)
+- SE-SSD: Self-Ensembling Single-Stage Object Detector From Point Cloud. → [bev](../bev/Guideline%202021.md)
+- Self-Supervised Pillar Motion Learning for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202021.md)
+- 3D Siamese Voxel-to-BEV Tracker for Sparse Point Clouds. → [bev](../bev/Guideline%202021.md)
+<!-- COMPLETE v1 papers=48 -->

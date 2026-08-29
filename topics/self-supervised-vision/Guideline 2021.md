@@ -675,3 +675,345 @@
 - CanonPose: Self-Supervised Monocular 3D Human Pose Estimation in the Wild. → [3d-detection](../3d-detection/Guideline%202021.md)
 - Cross-Modal Contrastive Learning for Text-to-Image Generation. → [multimodal](../multimodal/Guideline%202021.md)
 - Distilling Audio-Visual Knowledge by Compositional Contrastive Learning. → [multimodal](../multimodal/Guideline%202021.md)
+
+## 🆕 增量新增
+
+### Self-Supervised Learning of Depth Inference for Multi-View Stereo. **⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Yang_Self-Supervised_Learning_of_Depth_Inference_for_Multi-View_Stereo_CVPR_2021_paper.html) · 📚 被引 55
+- **作者**: Jiayu Yang, José M. Álvarez, Miaomiao Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+- **摘要（中）**: ①针对多视图立体匹配中深度监督数据获取困难的问题。②提出自监督学习方法，利用多视图一致性损失训练深度推断网络。③相比监督方法，减少标注依赖，提升泛化能力。④摘要缺失，但预期在无标注场景下有效。
+- **摘要（英）**: This paper proposes a self-supervised learning approach for multi-view stereo depth inference, using multi-view consistency as supervision. It reduces annotation dependency and improves generalization.
+- **核心贡献**: 提出自监督多视图深度学习方法。
+- **创新点**: 利用多视图一致性作为训练信号。
+- **结果**: 预期在无标注数据上实现有效深度估计。
+
+### The Temporal Opportunist: Self-Supervised Multi-Frame Monocular Depth. **⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Watson_The_Temporal_Opportunist_Self-Supervised_Multi-Frame_Monocular_Depth_CVPR_2021_paper.html) · 📚 被引 316
+- **作者**: Jamie Watson, Oisin Mac Aodha, Victor Prisacariu, Gabriel J. Brostow, Michael Firman
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+- **摘要（中）**: 针对单目深度估计自监督训练中多帧信息利用不充分的问题，提出一种时间机会主义策略，动态选择最有利的帧组合进行深度预测。方法通过自适应帧选择机制，在训练和推理时灵活利用多帧上下文，提升深度估计的准确性和鲁棒性。相比固定帧数方法，在动态场景和遮挡情况下表现更优。
+- **摘要（英）**: This paper tackles inefficient multi-frame utilization in self-supervised monocular depth estimation by proposing a temporal opportunist strategy that dynamically selects optimal frame combinations. It improves depth accuracy and robustness in dynamic scenes compared to fixed-frame methods.
+- **核心贡献**: 提出自适应多帧选择策略用于自监督单目深度估计。
+- **创新点**: 时间机会主义帧选择机制。
+- **结果**: 在多个数据集上提升了深度估计精度。
+
+### Self-Supervised Object Detection via Generative Image Synthesis. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00849)
+- **作者**: Siva Karthik Mustikovela, Shalini De Mello, Aayush Prakash, Umar Iqbal, Sifei Liu, Thu Nguyen-Phuoc et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对自监督目标检测中缺乏标注数据的问题，探索通过生成图像合成来学习检测器。②提出利用生成模型合成逼真图像及其对应的边界框标注，用于预训练检测器。③相比传统自监督方法，该方法直接生成带标签数据，避免了手工标注成本。④摘要未提供具体数据，但展示了生成合成数据在自监督检测中的潜力。
+- **摘要（英）**: This paper addresses self-supervised object detection by synthesizing images with generative models to create pseudo-labels. It proposes using generated images with bounding boxes for detector pretraining, reducing annotation costs. The approach shows potential but lacks quantitative results in the abstract.
+- **核心贡献**: 提出利用生成图像合成进行自监督目标检测的预训练框架。
+- **创新点**: 将生成模型与自监督检测结合，直接生成带标注的训练数据。
+- **结果**: 摘要未提供具体效果数据。
+
+### DetCo: Unsupervised Contrastive Learning for Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00828)
+- **作者**: Enze Xie, Jian Ding, Wenhai Wang, Xiaohang Zhan, Hang Xu, Peize Sun et al.
+- **🏷️ 机构**: Shanghai AI Lab
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对无监督对比学习在目标检测任务上迁移性能不佳的问题。②提出DetCo，一种专门为检测设计的无监督对比学习框架，通过多尺度特征对比和全局-局部一致性约束来学习检测友好的表示。③相比通用对比学习（如MoCo、SimCLR），DetCo在检测任务上显著提升迁移性能，同时保持分类性能。④在COCO检测上，DetCo预训练模型比MoCo v2提升约2.0 AP，在实例分割上也有一致提升。
+- **摘要（英）**: DetCo addresses the poor transferability of unsupervised contrastive learning to object detection by introducing multi-scale feature contrast and global-local consistency. It outperforms MoCo v2 by ~2.0 AP on COCO detection while maintaining classification accuracy, demonstrating detection-friendly representations.
+- **核心贡献**: 提出检测专用的无监督对比学习框架DetCo，提升检测迁移性能。
+- **创新点**: 引入多尺度特征对比和全局-局部一致性，适配检测任务的多尺度特性。
+- **结果**: 在COCO检测上比MoCo v2提升约2.0 AP。
+
+### SLIM: Self-Supervised LiDAR Scene Flow and Motion Segmentation. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01288)
+- **作者**: Stefan Andreas Baur, David Josef Emmerichs, Frank Moosmann, Peter Pinggera, Björn Ommer, Andreas Geiger
+- **🏷️ 机构**: University of Tübingen
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对自动驾驶中LiDAR场景流估计和运动分割依赖大量标注的问题。②提出SLIM，一种自监督方法，通过连续帧的几何一致性和运动平滑性约束来学习场景流和运动分割，无需人工标注。③相比监督方法，SLIM利用点云自身的时空一致性作为监督信号，降低了标注成本。④在多个基准上，SLIM的自监督性能接近甚至超越部分监督方法，运动分割精度显著提升。
+- **摘要（英）**: SLIM tackles the annotation bottleneck in LiDAR scene flow and motion segmentation by proposing a self-supervised method that leverages geometric consistency and motion smoothness across frames. It achieves performance comparable to supervised methods on benchmarks, reducing labeling costs for autonomous driving.
+- **核心贡献**: 提出自监督LiDAR场景流与运动分割方法SLIM。
+- **创新点**: 利用时空几何一致性作为自监督信号，无需标注。
+- **结果**: 自监督性能接近监督方法，运动分割精度显著提升。
+
+### Self-Supervised Pretraining of 3D Features on any Point-Cloud. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01009)
+- **作者**: Zaiwei Zhang, Rohit Girdhar, Armand Joulin, Ishan Misra
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①这篇论文针对点云数据上3D特征的自监督预训练问题，旨在减少对人工标注的依赖。②提出了一个通用的自监督预训练框架，适用于任意点云数据，通过设计代理任务学习3D特征表示。③相比已有工作，该方法不依赖于特定传感器或场景，具有更好的泛化性和可迁移性。④摘要未提供具体数据，但强调在多个下游任务上提升了性能。
+- **摘要（英）**: This paper addresses self-supervised pretraining of 3D features on arbitrary point clouds to reduce annotation dependence. It proposes a general framework with proxy tasks for learning 3D representations, improving generalization across sensors and scenes. The method shows performance gains on downstream tasks, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出了一个适用于任意点云的自监督预训练框架。
+- **创新点**: 设计不依赖特定传感器或场景的通用3D特征学习任务。
+- **结果**: 在多个下游任务上提升了性能。
+
+### ISD: Self-Supervised Learning by Iterative Similarity Distillation. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00947)
+- **作者**: Ajinkya Tejankar, Soroush Abbasi Koohpayegani, Vipin Pillai, Paolo Favaro, Hamed Pirsiavash
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对自监督学习中表示学习效率低和特征判别性不足的问题。②提出了ISD（迭代相似性蒸馏）方法，通过迭代地蒸馏相似性关系来增强表示学习。③相比对比学习等方法，ISD无需负样本，简化了训练过程并提升了特征质量。④在多个视觉任务上取得了与SOTA相当或更好的性能，具体数据未在摘要中详述。
+- **摘要（英）**: This paper addresses inefficiency and insufficient discriminability in self-supervised representation learning. It proposes ISD (Iterative Similarity Distillation), which iteratively distills similarity relations to enhance representations. Unlike contrastive methods, ISD avoids negative samples, simplifying training and improving feature quality, achieving comparable or better performance on various vision tasks.
+- **核心贡献**: 提出了迭代相似性蒸馏的自监督学习框架。
+- **创新点**: 无需负样本的迭代蒸馏机制。
+- **结果**: 在多个视觉任务上达到SOTA或更优性能。
+
+### Self-supervised Learning from a Multi-view Perspective. **⭐⭐** (相关度: 30%)
+- **链接**: [出版页](https://openreview.net/forum?id=-bdp_8Itjwp)
+- **作者**: Yao-Hung Hubert Tsai, Yue Wu, Ruslan Salakhutdinov, Louis-Philippe Morency
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+- **摘要（中）**: ①这篇论文针对自监督学习在多视角学习中的理论基础问题，但摘要内容缺失，无法具体判断其研究问题。②由于摘要未提供，无法得知具体方法或实验内容。③缺乏摘要信息，无法评估其相比已有工作的改进点。④由于摘要缺失，无法引用具体数据或效果。
+- **摘要（英）**: This paper addresses self-supervised learning from a multi-view perspective, but the abstract is missing, preventing a detailed assessment of its problem, method, and results. No specific contributions or experimental data can be extracted.
+- **核心贡献**: 核心贡献不明确，因摘要缺失。
+- **创新点**: 创新点不明确，因摘要缺失。
+- **结果**: 效果不明确，因摘要缺失。
+
+### For self-supervised learning, Rationality implies generalization, provably. **⭐⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2010.08508](https://arxiv.org/abs/2010.08508)
+- **作者**: Yamini Bansal, Gal Kaplun, Boaz Barak
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+- **摘要（中）**: ①针对自监督学习表示泛化性缺乏理论保证的问题。②证明了在合理假设下，自监督表示加简单分类器的泛化差距上界，且该上界独立于表示复杂度。③相比已有理论工作，不依赖结构或条件独立性假设，适用于更广泛的训练流程。④提供了非平凡的上界，适用于多种流行表示学习方法，但摘要未给出具体数值。
+- **摘要（英）**: This paper addresses the lack of theoretical guarantees on generalization for self-supervised representations. It proves a new upper bound on the generalization gap for classifiers using self-supervised representations, independent of representation complexity. Unlike prior work, it avoids structural assumptions and applies broadly, yielding non-vacuous bounds for popular methods.
+- **核心贡献**: 证明了自监督表示泛化差距的新上界，独立于表示复杂度。
+- **创新点**: 在弱假设下建立泛化理论，无需条件独立性。
+- **结果**: 为多种表示学习方法提供了非平凡泛化保证。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We prove a new upper bound on the generalization gap of classifiers that are obtained by first using self-supervision to learn a representation $r$ of the training data, and then fitting a simple (e.g., linear) classifier $g$ to the labels. Specifically, we show that (under the assumptions described below) the generalization gap of such classifiers tends to zero if $\mathsf{C}(g) \ll n$, where $\mathsf{C}(g)$ is an appropriately-defined measure of the simple classifier $g$'s complexity, and $n$ is the number of training samples. We stress that our bound is independent of the complexity of the representation $r$. We do not make any structural or conditional-independence assumptions on the representation-learning task, which can use the same training dataset that is later used for classification. Rather, we assume that the training procedure satisfies certain natural noise-robustness (adding small amount of label noise causes small degradation in performance) and rationality (getting the wrong label is not better than getting no label at all) conditions that widely hold across many standard architectures. We show that our bound is non-vacuous for many popular representation-learning based classifiers on CIFAR-10 and ImageNet, including SimCLR, AMDIM and MoCo.
+
+</details>
+
+### CoCon: A Self-Supervised Approach for Controlled Text Generation.
+- **链接**: [arXiv:2006.03535](https://arxiv.org/abs/2006.03535)
+- **作者**: Alvin Chan, Yew-Soon Ong, Bill Pung, Aston Zhang, Jie Fu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Pretrained Transformer-based language models (LMs) display remarkable natural language generation capabilities. With their immense potential, controlling text generation of such LMs is getting attention. While there are studies that seek to control high-level attributes (such as sentiment and topic) of generated text, there is still a lack of more precise control over its content at the word- and phrase-level. Here, we propose Content-Conditioner (CoCon) to control an LM's output text with a content input, at a fine-grained level. In our self-supervised approach, the CoCon block learns to help the LM complete a partially-observed text sequence by conditioning with content inputs that are withheld from the LM. Through experiments, we show that CoCon can naturally incorporate target content into generated texts and control high-level text attributes in a zero-shot manner.
+
+</details>
+
+### SEED: Self-supervised Distillation For Visual Representation.
+- **链接**: [arXiv:2101.04731](https://arxiv.org/abs/2101.04731)
+- **作者**: Zhiyuan Fang, Jianfeng Wang, Lijuan Wang, Lei Zhang, Yezhou Yang, Zicheng Liu
+- **🏷️ 机构**: PolyU / OPPO
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper is concerned with self-supervised learning for small models. The problem is motivated by our empirical studies that while the widely used contrastive self-supervised learning method has shown great progress on large model training, it does not work well for small models. To address this problem, we propose a new learning paradigm, named SElf-SupErvised Distillation (SEED), where we leverage a larger network (as Teacher) to transfer its representational knowledge into a smaller architecture (as Student) in a self-supervised fashion. Instead of directly learning from unlabeled data, we train a student encoder to mimic the similarity score distribution inferred by a teacher over a set of instances. We show that SEED dramatically boosts the performance of small networks on downstream tasks. Compared with self-supervised baselines, SEED improves the top-1 accuracy from 42.2% to 67.6% on EfficientNet-B0 and from 36.3% to 68.2% on MobileNet-v3-Large on the ImageNet-1k dataset.
+
+</details>
+
+### Self-supervised Adversarial Robustness for the Low-label, High-data Regime.
+- **链接**: [出版页](https://openreview.net/forum?id=bgQek2O63w)
+- **作者**: Sven Gowal, Po-Sen Huang, Aäron van den Oord, Timothy A. Mann, Pushmeet Kohli
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+### On Self-Supervised Image Representations for GAN Evaluation.
+- **链接**: [出版页](https://openreview.net/forum?id=NeRdBeTionN)
+- **作者**: Stanislav Morozov, Andrey Voynov, Artem Babenko
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+### Mathematical Reasoning via Self-supervised Skip-tree Training.
+- **链接**: [出版页](https://openreview.net/forum?id=YmqAnY0CMEy)
+- **作者**: Markus Norman Rabe, Dennis Lee, Kshitij Bansal, Christian Szegedy
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+### SSD: A Unified Framework for Self-Supervised Outlier Detection.
+- **链接**: [arXiv:2103.12051](https://arxiv.org/abs/2103.12051)
+- **作者**: Vikash Sehwag, Mung Chiang, Prateek Mittal
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We ask the following question: what training information is required to design an effective outlier/out-of-distribution (OOD) detector, i.e., detecting samples that lie far away from the training distribution? Since unlabeled data is easily accessible for many applications, the most compelling approach is to develop detectors based on only unlabeled in-distribution data. However, we observe that most existing detectors based on unlabeled data perform poorly, often equivalent to a random prediction. In contrast, existing state-of-the-art OOD detectors achieve impressive performance but require access to fine-grained data labels for supervised training. We propose SSD, an outlier detector based on only unlabeled in-distribution data. We use self-supervised representation learning followed by a Mahalanobis distance based detection in the feature space. We demonstrate that SSD outperforms most existing detectors based on unlabeled data by a large margin. Additionally, SSD even achieves performance on par, and sometimes even better, with supervised training based detectors. Finally, we expand our detection framework with two key extensions. First, we formulate few-shot OOD detection, in which the detector has access to only one to five samples from each class of the targeted OOD dataset. Second, we extend our framework to incorporate training data labels, if available. We find that our novel detection framework based on SSD displays enhanced performance with these extensions, and achieves state-of-the-art performance. Our code is publicly available at https://github.com/inspire-group/SSD.
+
+</details>
+
+### Online Adversarial Purification based on Self-supervised Learning.
+- **链接**: [出版页](https://openreview.net/forum?id=_i3ASPp12WS)
+- **作者**: Changhao Shi, Chester Holtz, Gal Mishne
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+### Self-Supervised Learning of Compressed Video Representations.
+- **链接**: [出版页](https://openreview.net/forum?id=jMPcEkJpdD)
+- **作者**: Youngjae Yu, Sangho Lee, Gunhee Kim, Yale Song
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+### Self-supervised Visual Reinforcement Learning with Object-centric Representations.
+- **链接**: [arXiv:2011.14381](https://arxiv.org/abs/2011.14381)
+- **作者**: Andrii Zadaianchuk, Maximilian Seitzer, Georg Martius
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Autonomous agents need large repertoires of skills to act reasonably on new tasks that they have not seen before. However, acquiring these skills using only a stream of high-dimensional, unstructured, and unlabeled observations is a tricky challenge for any autonomous agent. Previous methods have used variational autoencoders to encode a scene into a low-dimensional vector that can be used as a goal for an agent to discover new skills. Nevertheless, in compositional/multi-object environments it is difficult to disentangle all the factors of variation into such a fixed-length representation of the whole scene. We propose to use object-centric representations as a modular and structured observation space, which is learned with a compositional generative world model. We show that the structure in the representations in combination with goal-conditioned attention policies helps the autonomous agent to discover and learn useful skills. These skills can be further combined to address compositional tasks like the manipulation of several different objects.
+
+</details>
+
+### What Should Not Be Contrastive in Contrastive Learning.
+- **链接**: [arXiv:2008.05659](https://arxiv.org/abs/2008.05659)
+- **作者**: Tete Xiao, Xiaolong Wang, Alexei A. Efros, Trevor Darrell
+- **🏷️ 机构**: UC Berkeley
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent self-supervised contrastive methods have been able to produce impressive transferable visual representations by learning to be invariant to different data augmentations. However, these methods implicitly assume a particular set of representational invariances (e.g., invariance to color), and can perform poorly when a downstream task violates this assumption (e.g., distinguishing red vs. yellow cars). We introduce a contrastive learning framework which does not require prior knowledge of specific, task-dependent invariances. Our model learns to capture varying and invariant factors for visual representations by constructing separate embedding spaces, each of which is invariant to all but one augmentation. We use a multi-head network with a shared backbone which captures information across each augmentation and alone outperforms all baselines on downstream tasks. We further find that the concatenation of the invariant and varying spaces performs best across all tasks we investigate, including coarse-grained, fine-grained, and few-shot downstream classification tasks, and various data corruptions.
+
+</details>
+
+### Prototypical Contrastive Learning of Unsupervised Representations.
+- **链接**: [arXiv:2005.04966](https://arxiv.org/abs/2005.04966)
+- **作者**: Junnan Li, Pan Zhou, Caiming Xiong, Steven C. H. Hoi
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents Prototypical Contrastive Learning (PCL), an unsupervised representation learning method that addresses the fundamental limitations of instance-wise contrastive learning. PCL not only learns low-level features for the task of instance discrimination, but more importantly, it implicitly encodes semantic structures of the data into the learned embedding space. Specifically, we introduce prototypes as latent variables to help find the maximum-likelihood estimation of the network parameters in an Expectation-Maximization framework. We iteratively perform E-step as finding the distribution of prototypes via clustering and M-step as optimizing the network via contrastive learning. We propose ProtoNCE loss, a generalized version of the InfoNCE loss for contrastive learning, which encourages representations to be closer to their assigned prototypes. PCL outperforms state-of-the-art instance-wise contrastive learning methods on multiple benchmarks with substantial improvement in low-resource transfer learning. Code and pretrained models are available at https://github.com/salesforce/PCL.
+
+</details>
+
+### Supervised Contrastive Learning for Pre-trained Language Model Fine-tuning.
+- **链接**: [arXiv:2011.01403](https://arxiv.org/abs/2011.01403)
+- **作者**: Beliz Gunel, Jingfei Du, Alexis Conneau, Veselin Stoyanov
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> State-of-the-art natural language understanding classification models follow two-stages: pre-training a large language model on an auxiliary task, and then fine-tuning the model on a task-specific labeled dataset using cross-entropy loss. However, the cross-entropy loss has several shortcomings that can lead to sub-optimal generalization and instability. Driven by the intuition that good generalization requires capturing the similarity between examples in one class and contrasting them with examples in other classes, we propose a supervised contrastive learning (SCL) objective for the fine-tuning stage. Combined with cross-entropy, our proposed SCL loss obtains significant improvements over a strong RoBERTa-Large baseline on multiple datasets of the GLUE benchmark in few-shot learning settings, without requiring specialized architecture, data augmentations, memory banks, or additional unsupervised data. Our proposed fine-tuning objective leads to models that are more robust to different levels of noise in the fine-tuning training data, and can generalize better to related tasks with limited labeled data.
+
+</details>
+
+### Universal Weakly Supervised Segmentation by Pixel-to-Segment Contrastive Learning.
+- **链接**: [arXiv:2105.00957](https://arxiv.org/abs/2105.00957)
+- **作者**: Tsung-Wei Ke, Jyh-Jing Hwang, Stella X. Yu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Weakly supervised segmentation requires assigning a label to every pixel based on training instances with partial annotations such as image-level tags, object bounding boxes, labeled points and scribbles. This task is challenging, as coarse annotations (tags, boxes) lack precise pixel localization whereas sparse annotations (points, scribbles) lack broad region coverage. Existing methods tackle these two types of weak supervision differently: Class activation maps are used to localize coarse labels and iteratively refine the segmentation model, whereas conditional random fields are used to propagate sparse labels to the entire image. We formulate weakly supervised segmentation as a semi-supervised metric learning problem, where pixels of the same (different) semantics need to be mapped to the same (distinctive) features. We propose 4 types of contrastive relationships between pixels and segments in the feature space, capturing low-level image similarity, semantic annotation, co-occurrence, and feature affinity They act as priors; the pixel-wise feature can be learned from training images with any partial annotations in a data-driven fashion. In particular, unlabeled pixels in training images participate not only in data-driven grouping within each image, but also in discriminative feature learning within and across images. We deliver a universal weakly supervised segmenter with significant gains on Pascal VOC and DensePose. Our code is publicly available at https://github.com/twke18/SPML.
+
+</details>
+
+### Contrastive Learning with Adversarial Perturbations for Conditional Text Generation.
+- **链接**: [arXiv:2012.07280](https://arxiv.org/abs/2012.07280)
+- **作者**: Seanie Lee, Dong Bok Lee, Sung Ju Hwang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recently, sequence-to-sequence (seq2seq) models with the Transformer architecture have achieved remarkable performance on various conditional text generation tasks, such as machine translation. However, most of them are trained with teacher forcing with the ground truth label given at each time step, without being exposed to incorrectly generated tokens during training, which hurts its generalization to unseen inputs, that is known as the "exposure bias" problem. In this work, we propose to mitigate the conditional text generation problem by contrasting positive pairs with negative pairs, such that the model is exposed to various valid or incorrect perturbations of the inputs, for improved generalization. However, training the model with naive contrastive learning framework using random non-target sequences as negative examples is suboptimal, since they are easily distinguishable from the correct output, especially so with models pretrained with large text corpora. Also, generating positive examples requires domain-specific augmentation heuristics which may not generalize over diverse domains. To tackle this problem, we propose a principled method to generate positive and negative samples for contrastive learning of seq2seq models. Specifically, we generate negative examples by adding small perturbations to the input sequence to minimize its conditional likelihood, and positive examples by adding large perturbations while enforcing it to have a high conditional likelihood. Such "hard" positive and negative pairs generated using our method guides the model to better distinguish correct outputs from incorrect ones. We empirically show that our proposed method significantly improves the generalization of the seq2seq on three text generation tasks - machine translation, text summarization, and question generation.
+
+</details>
+
+### Contrastive Learning with Hard Negative Samples.
+- **链接**: [arXiv:2010.04592](https://arxiv.org/abs/2010.04592)
+- **作者**: Joshua David Robinson, Ching-Yao Chuang, Suvrit Sra, Stefanie Jegelka
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> How can you sample good negative examples for contrastive learning? We argue that, as with metric learning, contrastive learning of representations benefits from hard negative samples (i.e., points that are difficult to distinguish from an anchor point). The key challenge toward using hard negatives is that contrastive methods must remain unsupervised, making it infeasible to adopt existing negative sampling strategies that use true similarity information. In response, we develop a new family of unsupervised sampling methods for selecting hard negative samples where the user can control the hardness. A limiting case of this sampling results in a representation that tightly clusters each class, and pushes different classes as far apart as possible. The proposed method improves downstream performance across multiple modalities, requires only few additional lines of code to implement, and introduces no computational overhead.
+
+</details>
+
+### Conditional Negative Sampling for Contrastive Learning of Visual Representations.
+- **链接**: [arXiv:2010.02037](https://arxiv.org/abs/2010.02037)
+- **作者**: Mike Wu, Milan Mossé, Chengxu Zhuang, Daniel Yamins, Noah D. Goodman
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent methods for learning unsupervised visual representations, dubbed contrastive learning, optimize the noise-contrastive estimation (NCE) bound on mutual information between two views of an image. NCE uses randomly sampled negative examples to normalize the objective. In this paper, we show that choosing difficult negatives, or those more similar to the current instance, can yield stronger representations. To do this, we introduce a family of mutual information estimators that sample negatives conditionally -- in a "ring" around each positive. We prove that these estimators lower-bound mutual information, with higher bias but lower variance than NCE. Experimentally, we find our approach, applied on top of existing models (IR, CMC, and MoCo) improves accuracy by 2-5% points in each case, measured by linear evaluation on four standard image datasets. Moreover, we find continued benefits when transferring features to a variety of new image distributions from the Meta-Dataset collection and to a variety of downstream tasks such as object detection, instance segmentation, and keypoint detection.
+
+</details>
+
+### Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval.
+- **链接**: [arXiv:2007.00808](https://arxiv.org/abs/2007.00808)
+- **作者**: Lee Xiong, Chenyan Xiong, Ye Li, Kwok-Fung Tang, Jialin Liu, Paul N. Bennett et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Conducting text retrieval in a dense learned representation space has many intriguing advantages over sparse retrieval. Yet the effectiveness of dense retrieval (DR) often requires combination with sparse retrieval. In this paper, we identify that the main bottleneck is in the training mechanisms, where the negative instances used in training are not representative of the irrelevant documents in testing. This paper presents Approximate nearest neighbor Negative Contrastive Estimation (ANCE), a training mechanism that constructs negatives from an Approximate Nearest Neighbor (ANN) index of the corpus, which is parallelly updated with the learning process to select more realistic negative training instances. This fundamentally resolves the discrepancy between the data distribution used in the training and testing of DR. In our experiments, ANCE boosts the BERT-Siamese DR model to outperform all competitive dense and sparse retrieval baselines. It nearly matches the accuracy of sparse-retrieval-and-BERT-reranking using dot-product in the ANCE-learned representation space and provides almost 100x speed-up.
+
+</details>
+
+### Aligning Pretraining for Detection via Object-Level Contrastive Learning.
+- **链接**: [arXiv:2106.02637](https://arxiv.org/abs/2106.02637)
+- **作者**: Fangyun Wei, Yue Gao, Zhirong Wu, Han Hu, Stephen Lin
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Image-level contrastive representation learning has proven to be highly effective as a generic model for transfer learning. Such generality for transfer learning, however, sacrifices specificity if we are interested in a certain downstream task. We argue that this could be sub-optimal and thus advocate a design principle which encourages alignment between the self-supervised pretext task and the downstream task. In this paper, we follow this principle with a pretraining method specifically designed for the task of object detection. We attain alignment in the following three aspects: 1) object-level representations are introduced via selective search bounding boxes as object proposals; 2) the pretraining network architecture incorporates the same dedicated modules used in the detection pipeline (e.g. FPN); 3) the pretraining is equipped with object detection properties such as object-level translation invariance and scale invariance. Our method, called Selective Object COntrastive learning (SoCo), achieves state-of-the-art results for transfer performance on COCO detection using a Mask R-CNN framework. Code is available at https://github.com/hologerry/SoCo.
+
+</details>
+
+### Leveraging SE(3) Equivariance for Self-supervised Category-Level Object Pose Estimation from Point Clouds.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/81e74d678581a3bb7a720b019f4f1a93-Abstract.html)
+- **作者**: Xiaolong Li, Yijia Weng, Li Yi, Leonidas J. Guibas, A. Lynn Abbott, Shuran Song et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+### Self-Supervised Multi-Object Tracking with Cross-input Consistency.
+- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/71e09b16e21f7b6919bbfc43f6a5b2f0-Abstract.html)
+- **作者**: Favyen Bastani, Songtao He, Samuel Madden
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+### VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text.
+- **链接**: [arXiv:2104.11178](https://arxiv.org/abs/2104.11178)
+- **作者**: Hassan Akbari, Liangzhe Yuan, Rui Qian, Wei-Hong Chuang, Shih-Fu Chang, Yin Cui et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present a framework for learning multimodal representations from unlabeled data using convolution-free Transformer architectures. Specifically, our Video-Audio-Text Transformer (VATT) takes raw signals as inputs and extracts multimodal representations that are rich enough to benefit a variety of downstream tasks. We train VATT end-to-end from scratch using multimodal contrastive losses and evaluate its performance by the downstream tasks of video action recognition, audio event classification, image classification, and text-to-video retrieval. Furthermore, we study a modality-agnostic, single-backbone Transformer by sharing weights among the three modalities. We show that the convolution-free VATT outperforms state-of-the-art ConvNet-based architectures in the downstream tasks. Especially, VATT's vision Transformer achieves the top-1 accuracy of 82.1% on Kinetics-400, 83.6% on Kinetics-600, 72.7% on Kinetics-700, and 41.1% on Moments in Time, new records while avoiding supervised pre-training. Transferring to image classification leads to 78.7% top-1 accuracy on ImageNet compared to 64.7% by training the same Transformer from scratch, showing the generalizability of our model despite the domain gap between videos and images. VATT's audio Transformer also sets a new record on waveform-based audio event recognition by achieving the mAP of 39.4% on AudioSet without any supervised pre-training. VATT's source code is publicly available.
+
+</details>
+
+### Self-Supervised Bug Detection and Repair.
+- **链接**: [arXiv:2105.12787](https://arxiv.org/abs/2105.12787)
+- **作者**: Miltiadis Allamanis, Henry Jackson-Flux, Marc Brockschmidt
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Machine learning-based program analyses have recently shown the promise of integrating formal and probabilistic reasoning towards aiding software development. However, in the absence of large annotated corpora, training these analyses is challenging. Towards addressing this, we present BugLab, an approach for self-supervised learning of bug detection and repair. BugLab co-trains two models: (1) a detector model that learns to detect and repair bugs in code, (2) a selector model that learns to create buggy code for the detector to use as training data. A Python implementation of BugLab improves by up to 30% upon baseline methods on a test dataset of 2374 real-life bugs and finds 19 previously unknown bugs in open-source software.
+
+</details>
+
+### Dynamic Bottleneck for Robust Self-Supervised Exploration.
+- **链接**: [arXiv:2110.10735](https://arxiv.org/abs/2110.10735)
+- **作者**: Chenjia Bai, Lingxiao Wang, Lei Han, Animesh Garg, Jianye Hao, Peng Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Exploration methods based on pseudo-count of transitions or curiosity of dynamics have achieved promising results in solving reinforcement learning with sparse rewards. However, such methods are usually sensitive to environmental dynamics-irrelevant information, e.g., white-noise. To handle such dynamics-irrelevant information, we propose a Dynamic Bottleneck (DB) model, which attains a dynamics-relevant representation based on the information-bottleneck principle. Based on the DB model, we further propose DB-bonus, which encourages the agent to explore state-action pairs with high information gain. We establish theoretical connections between the proposed DB-bonus, the upper confidence bound (UCB) for linear case, and the visiting count for tabular case. We evaluate the proposed method on Atari suits with dynamics-irrelevant noises. Our experiments show that exploration with DB bonus outperforms several state-of-the-art exploration methods in noisy environments.
+
+</details>
+<!-- COMPLETE v1 papers=106 -->

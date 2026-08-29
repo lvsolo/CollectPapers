@@ -752,3 +752,313 @@
 - Leveraging Temporal Cues for Semi-Supervised Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202025.md)
 - CorrBEV: Multi-View 3D Object Detection by Correlation Learning with Multi-modal Prototypes. → [3d-detection](../3d-detection/Guideline%202025.md)
 - VisionPAD: A Vision-Centric Pre-training Paradigm for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
+
+## 🆕 增量新增
+
+### SiM3D: Single-Instance Multiview Multimodal and Multisetup 3D Anomaly Detection Benchmark. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2506.21549](https://arxiv.org/abs/2506.21549)
+- **作者**: Alex Costanzino, Pierluigi Zama Ramirez, Luigi Lella, Matteo Ragaglia, Alessandro Oliva, Giuseppe Lisanti et al.
+- **🏷️ 机构**: University of Bologna,Italy, SACMI Imola,Italy
+- **会议**: ICCV 2025
+- **摘要（中）**: ①针对制造业中单实例3D异常检测与分割（ADS）任务缺乏多视角、多模态基准的问题，提出了SiM3D基准。②该基准整合了多视角高分辨率图像（12 Mpx）和点云（7M点）数据，包含333个实例和8种物体类型，并提供了CAD模型和3D分割标注。③相比现有工作，SiM3D首次支持从合成训练数据泛化到真实测试数据的单实例检测场景，并提出了基于Anomaly Volume的新评估指标。④通过适配多种单视角方法作为基线，实验表明该任务具有挑战性，为后续研究提供了参考。
+- **摘要（英）**: This paper introduces SiM3D, the first benchmark for single-instance multiview multimodal 3D anomaly detection and segmentation, integrating high-resolution images and point clouds with CAD models. It uniquely addresses generalization from synthetic training to real test data and proposes novel metrics based on Anomaly Volume. Baseline evaluations show the task's difficulty, providing a foundation for future research.
+- **核心贡献**: 提出了首个多视角多模态单实例3D异常检测基准及配套数据集和评估协议。
+- **创新点**: 首次在3D ADS中引入合成到真实的泛化挑战和多模态融合。
+- **结果**: 基线方法在SiM3D上表现有限，验证了任务的挑战性。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose SiM3D, the first benchmark considering the integration of multiview and multimodal information for comprehensive 3D anomaly detection and segmentation (ADS), where the task is to produce a voxel-based Anomaly Volume. Moreover, SiM3D focuses on a scenario of high interest in manufacturing: single-instance anomaly detection, where only one object, either real or synthetic, is available for training. In this respect, SiM3D stands out as the first ADS benchmark that addresses the challenge of generalising from synthetic training data to real test data. SiM3D includes a novel multimodal multiview dataset acquired using top-tier industrial sensors and robots. The dataset features multiview high-resolution images (12 Mpx) and point clouds (7M points) for 333 instances of eight types of objects, alongside a CAD model for each type. We also provide manually annotated 3D segmentation GTs for anomalous test samples. To establish reference baselines for the proposed multiview 3D ADS task, we adapt prominent singleview methods and assess their performance using novel metrics that operate on Anomaly Volumes.
+
+</details>
+
+### OpenAD: Open-World Autonomous Driving Benchmark for 3D Object Detection. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2411.17761](https://arxiv.org/abs/2411.17761)
+- **作者**: Zhongyu Xia, Jishuo Li, Zhiwei Lin, Xinhao Wang, Yongtao Wang, Ming-Hsuan Yang
+- **🏷️ 机构**: UC Merced
+- **会议**: NeurIPS 2025
+- **摘要（中）**: 针对开放世界3D感知缺乏综合基准和泛化方法的问题，提出OpenAD，首个真实开放世界自动驾驶3D检测基准。方法基于角落案例发现和标注流程，集成多模态大语言模型，统一标注五个自动驾驶数据集的2000个场景。同时提出视觉中心3D开放世界检测基线和融合通用与专用模型的集成方法，以提升精度，并举办在线挑战赛。
+- **摘要（英）**: To address the lack of comprehensive open-world 3D perception benchmarks, OpenAD introduces the first real open-world autonomous driving benchmark for 3D detection. It uses an MLLM-integrated pipeline to annotate corner cases across five datasets with 2000 scenarios, and proposes a vision-centric baseline plus ensemble method to improve precision. An online challenge is hosted on EvalAI.
+- **核心贡献**: 构建首个开放世界自动驾驶3D检测基准。
+- **创新点**: MLLM驱动的角落案例标注与评估方法。
+- **结果**: 提供全面基准并提升开放世界检测精度。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-world perception aims to develop a model adaptable to novel domains and various sensor configurations and can understand uncommon objects and corner cases. However, current research lacks sufficiently comprehensive open-world 3D perception benchmarks and robust generalizable methodologies. This paper introduces OpenAD, the first real open-world autonomous driving benchmark for 3D object detection. OpenAD is built upon a corner case discovery and annotation pipeline that integrates with a multimodal large language model (MLLM). The proposed pipeline annotates corner case objects in a unified format for five autonomous driving perception datasets with 2000 scenarios. In addition, we devise evaluation methodologies and evaluate various open-world and specialized 2D and 3D models. Moreover, we propose a vision-centric 3D open-world object detection baseline and further introduce an ensemble method by fusing general and specialized models to address the issue of lower precision in existing open-world methods for the OpenAD benchmark. We host an online challenge on EvalAI. Data, toolkit codes, and evaluation codes are available at https://github.com/VDIGPKU/OpenAD.
+
+</details>
+
+### Leveraging Temporal Cues for Semi-Supervised Multi-View 3D Object Detection. **⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Park_Leveraging_Temporal_Cues_for_Semi-Supervised_Multi-View_3D_Object_Detection_CVPR_2025_paper.html) · 📚 被引 2
+- **作者**: Jinhyung Park, Navyata Sanghvi, Hiroki Adachi, Yoshihisa Shibata, Shawn Hunt, Shinya Tanaka et al.
+- **🏷️ 机构**: Carnegie Mellon University, DENSO Corporation, DENSO International America, Inc.
+- **会议**: CVPR 2025
+- **摘要（中）**: ①针对多视角3D检测中标注成本高的问题，半监督学习利用未标注数据，但现有方法未充分利用时间信息。②提出利用时间线索增强半监督多视角3D检测，可能通过时序一致性或伪标签传播来提升性能。③相比静态方法，时间信息提供额外监督信号，改善检测鲁棒性。④摘要缺失，具体效果未提供，但方法具有潜力。
+- **摘要（英）**: This paper addresses annotation cost in multi-view 3D detection by leveraging temporal cues for semi-supervised learning, potentially using temporal consistency to improve pseudo-label quality. The approach aims to enhance detection robustness, though specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出利用时间线索增强半监督多视角3D检测的方法。
+- **创新点**: 将时间一致性引入半监督学习框架，提升伪标签可靠性。
+- **结果**: 具体效果未在摘要中提供。
+
+### CorrBEV: Multi-View 3D Object Detection by Correlation Learning with Multi-modal Prototypes. **⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xue_CorrBEV_Multi-View_3D_Object_Detection_by_Correlation_Learning_with_Multi-modal_CVPR_2025_paper.html) · 📚 被引 4
+- **作者**: Ziteng Xue, Mingzhe Guo, Heng Fan, Shihui Zhang, Zhipeng Zhang
+- **🏷️ 机构**: Yanshan University,School of Information Science and Engineering, Beijing Jiaotong University, University of North Texas
+- **会议**: CVPR 2025
+- **摘要（中）**: ①针对多视角3D检测中跨模态信息融合不足的问题，现有方法未充分利用多模态原型。②提出CorrBEV，通过相关学习与多模态原型增强BEV特征，可能利用相机和LiDAR的互补信息。③相比传统融合方法，相关学习能更好地捕捉模态间关联。④摘要缺失，具体效果未提供。
+- **摘要（英）**: This paper addresses cross-modal fusion in multi-view 3D detection by proposing CorrBEV, which uses correlation learning with multi-modal prototypes to enhance BEV features. The approach aims to improve detection accuracy, though results are unavailable due to missing abstract.
+- **核心贡献**: 提出基于相关学习和多模态原型的BEV检测方法。
+- **创新点**: 利用相关学习增强多模态特征融合。
+- **结果**: 具体效果未在摘要中提供。
+
+### PCDreamer: Point Cloud Completion Through Multi-view Diffusion Priors. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2411.19036](https://arxiv.org/abs/2411.19036) · 📚 被引 8
+- **作者**: Guangshun Wei, Yuan Feng, Long Ma, Chen Wang, Yuanfeng Zhou, Changjian Li
+- **🏷️ 机构**: Shandong University, University of Edinburgh
+- **会议**: CVPR 2025
+- **摘要（中）**: ①针对点云补全中解空间大、依赖配对图像数据的问题。②提出PCDreamer，利用多视图扩散先验生成目标形状的新视图，结合形状融合和整合模块完成补全。③相比传统特征提取和图像引导方法，无需配对数据，利用大模型先验提升细节恢复。④实验表明在恢复细粒度细节上性能优越。
+- **摘要（英）**: This paper tackles point cloud completion with large solution spaces and reliance on paired image data. PCDreamer leverages multi-view diffusion priors to generate novel views, with shape fusion and consolidation modules for completion. It avoids paired data requirements and excels in recovering fine details, as shown in experiments.
+- **核心贡献**: 提出无需配对数据的多视图扩散先验点云补全方法。
+- **创新点**: 利用大模型多视图扩散先验生成形状线索。
+- **结果**: 在细节恢复上优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper presents PCDreamer, a novel method for point cloud completion. Traditional methods typically extract features from partial point clouds to predict missing regions, but the large solution space often leads to unsatisfactory results. More recent approaches have started to use images as extra guidance, effectively improving performance, but obtaining paired data of images and partial point clouds is challenging in practice. To overcome these limitations, we harness the relatively view-consistent multi-view diffusion priors within large models, to generate novel views of the desired shape. The resulting image set encodes both global and local shape cues, which are especially beneficial for shape completion. To fully exploit the priors, we have designed a shape fusion module for producing an initial complete shape from multi-modality input (i.e.,, images and point clouds), and a follow-up shape consolidation module to obtain the final complete shape by discarding unreliable points introduced by the inconsistency from diffusion priors. Extensive experimental results demonstrate our superior performance, especially in recovering fine details.
+
+</details>
+
+### MuTri: Multi-view Tri-alignment for OCT to OCTA 3D Image Translation.
+- **链接**: [arXiv:2504.01428](https://arxiv.org/abs/2504.01428) · 📚 被引 5
+- **作者**: Zhuangzhuang Chen, Hualiang Wang, Chubin Ou, Xiaomeng Li
+- **🏷️ 机构**: The Hong Kong University of Science and Technology,Department of Electronic and Computer Engineering, Southern Medical University,Department of Radiology, Guangdong Provincial People&#x2019;s Hospital
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Optical coherence tomography angiography (OCTA) shows its great importance in imaging microvascular networks by providing accurate 3D imaging of blood vessels, but it relies upon specialized sensors and expensive devices. For this reason, previous works show the potential to translate the readily available 3D Optical Coherence Tomography (OCT) images into 3D OCTA images. However, existing OCTA translation methods directly learn the mapping from the OCT domain to the OCTA domain in continuous and infinite space with guidance from only a single view, i.e., the OCTA project map, resulting in suboptimal results. To this end, we propose the multi-view Tri-alignment framework for OCT to OCTA 3D image translation in discrete and finite space, named MuTri. In the first stage, we pre-train two vector-quantized variational auto-encoder (VQ- VAE) by reconstructing 3D OCT and 3D OCTA data, providing semantic prior for subsequent multi-view guidances. In the second stage, our multi-view tri-alignment facilitates another VQVAE model to learn the mapping from the OCT domain to the OCTA domain in discrete and finite space. Specifically, a contrastive-inspired semantic alignment is proposed to maximize the mutual information with the pre-trained models from OCT and OCTA views, to facilitate codebook learning. Meanwhile, a vessel structure alignment is proposed to minimize the structure discrepancy with the pre-trained models from the OCTA project map view, benefiting from learning the detailed vessel structure information. We also collect the first large-scale dataset, namely, OCTA2024, which contains a pair of OCT and OCTA volumes from 846 subjects.
+
+</details>
+
+### MVPaint: Synchronized Multi-View Diffusion for Painting Anything 3D.
+- **链接**: [arXiv:2411.02336](https://arxiv.org/abs/2411.02336) · 📚 被引 10
+- **作者**: Wei Cheng, Juncheng Mu, Xianfang Zeng, Xin Chen, Anqi Pang, Chi Zhang et al.
+- **🏷️ 机构**: StepFun, Shanghai AI Laboratory, ByteDance
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Texturing is a crucial step in the 3D asset production workflow, which enhances the visual appeal and diversity of 3D assets. Despite recent advancements in Text-to-Texture (T2T) generation, existing methods often yield subpar results, primarily due to local discontinuities, inconsistencies across multiple views, and their heavy dependence on UV unwrapping outcomes. To tackle these challenges, we propose a novel generation-refinement 3D texturing framework called MVPaint, which can generate high-resolution, seamless textures while emphasizing multi-view consistency. MVPaint mainly consists of three key modules. 1) Synchronized Multi-view Generation (SMG). Given a 3D mesh model, MVPaint first simultaneously generates multi-view images by employing an SMG model, which leads to coarse texturing results with unpainted parts due to missing observations. 2) Spatial-aware 3D Inpainting (S3I). To ensure complete 3D texturing, we introduce the S3I method, specifically designed to effectively texture previously unobserved areas. 3) UV Refinement (UVR). Furthermore, MVPaint employs a UVR module to improve the texture quality in the UV space, which first performs a UV-space Super-Resolution, followed by a Spatial-aware Seam-Smoothing algorithm for revising spatial texturing discontinuities caused by UV unwrapping. Moreover, we establish two T2T evaluation benchmarks: the Objaverse T2T benchmark and the GSO T2T benchmark, based on selected high-quality 3D meshes from the Objaverse dataset and the entire GSO dataset, respectively. Extensive experimental results demonstrate that MVPaint surpasses existing state-of-the-art methods. Notably, MVPaint could generate high-fidelity textures with minimal Janus issues and highly enhanced cross-view consistency.
+
+</details>
+
+### Align3R: Aligned Monocular Depth Estimation for Dynamic Videos.
+- **链接**: [arXiv:2412.03079](https://arxiv.org/abs/2412.03079) · 📚 被引 27
+- **作者**: Jiahao Lu, Tianyu Huang, Peng Li, Zhiyang Dou, Cheng Lin, Zhiming Cui et al.
+- **🏷️ 机构**: HKUST, CUHK, HKU
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent developments in monocular depth estimation methods enable high-quality depth estimation of single-view images but fail to estimate consistent video depth across different frames. Recent works address this problem by applying a video diffusion model to generate video depth conditioned on the input video, which is training-expensive and can only produce scale-invariant depth values without camera poses. In this paper, we propose a novel video-depth estimation method called Align3R to estimate temporal consistent depth maps for a dynamic video. Our key idea is to utilize the recent DUSt3R model to align estimated monocular depth maps of different timesteps. First, we fine-tune the DUSt3R model with additional estimated monocular depth as inputs for the dynamic scenes. Then, we apply optimization to reconstruct both depth maps and camera poses. Extensive experiments demonstrate that Align3R estimates consistent video depth and camera poses for a monocular video with superior performance than baseline methods.
+
+</details>
+
+### Scalable Autoregressive Monocular Depth Estimation.
+- **链接**: [arXiv:2411.11361](https://arxiv.org/abs/2411.11361)
+- **作者**: Jinhong Wang, Jian Liu, Dongqi Tang, Weiqiang Wang, Wentong Li, Danny Chen et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper shows that the autoregressive model is an effective and scalable monocular depth estimator. Our idea is simple: We tackle the monocular depth estimation (MDE) task with an autoregressive prediction paradigm, based on two core designs. First, our depth autoregressive model (DAR) treats the depth map of different resolutions as a set of tokens, and conducts the low-to-high resolution autoregressive objective with a patch-wise casual mask. Second, our DAR recursively discretizes the entire depth range into more compact intervals, and attains the coarse-to-fine granularity autoregressive objective in an ordinal-regression manner. By coupling these two autoregressive objectives, our DAR establishes new state-of-the-art (SOTA) on KITTI and NYU Depth v2 by clear margins. Further, our scalable approach allows us to scale the model up to 2.0B and achieve the best RMSE of 1.799 on the KITTI dataset (5% improvement) compared to 1.896 by the current SOTA (Depth Anything). DAR further showcases zero-shot generalization ability on unseen datasets. These results suggest that DAR yields superior performance with an autoregressive prediction paradigm, providing a promising approach to equip modern autoregressive large models (e.g., GPT-4o) with depth estimation capabilities.
+
+</details>
+
+### JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration.
+- **链接**: [arXiv:2504.04158](https://arxiv.org/abs/2504.04158) · 📚 被引 21
+- **作者**: Yunlong Lin, Zixu Lin, Haoyu Chen, Panwang Pan, Chenxin Li, Sixiang Chen et al.
+- **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China,Xiamen,China, The Hong Kong University of Science and Technology (Guangzhou), Bytedance&#x2019;s Pico
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vision-centric perception systems struggle with unpredictable and coupled weather degradations in the wild. Current solutions are often limited, as they either depend on specific degradation priors or suffer from significant domain gaps. To enable robust and autonomous operation in real-world conditions, we propose JarvisIR, a VLM-powered agent that leverages the VLM as a controller to manage multiple expert restoration models. To further enhance system robustness, reduce hallucinations, and improve generalizability in real-world adverse weather, JarvisIR employs a novel two-stage framework consisting of supervised fine-tuning and human feedback alignment. Specifically, to address the lack of paired data in real-world scenarios, the human feedback alignment enables the VLM to be fine-tuned effectively on large-scale real-world data in an unsupervised manner. To support the training and evaluation of JarvisIR, we introduce CleanBench, a comprehensive dataset consisting of high-quality and large-scale instruction-responses pairs, including 150K synthetic entries and 80K real entries. Extensive experiments demonstrate that JarvisIR exhibits superior decision-making and restoration capabilities. Compared with existing methods, it achieves a 50% improvement in the average of all perception metrics on CleanBench-Real. Project page: https://cvpr2025-jarvisir.github.io/.
+
+</details>
+
+### DriveGEN: Generalized and Robust 3D Detection in Driving via Controllable Text-to-Image Diffusion Generation.
+- **链接**: [arXiv:2503.11122](https://arxiv.org/abs/2503.11122) · 📚 被引 4
+- **作者**: Hongbin Lin, Zilu Guo, Yifan Zhang, Shuaicheng Niu, Yafeng Li, Ruimao Zhang et al.
+- **🏷️ 机构**: FNii-Shenzhen, National University of Singapore, Nanyang Technological University
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In autonomous driving, vision-centric 3D detection aims to identify 3D objects from images. However, high data collection costs and diverse real-world scenarios limit the scale of training data. Once distribution shifts occur between training and test data, existing methods often suffer from performance degradation, known as Out-of-Distribution (OOD) problems. To address this, controllable Text-to-Image (T2I) diffusion offers a potential solution for training data enhancement, which is required to generate diverse OOD scenarios with precise 3D object geometry. Nevertheless, existing controllable T2I approaches are restricted by the limited scale of training data or struggle to preserve all annotated 3D objects. In this paper, we present DriveGEN, a method designed to improve the robustness of 3D detectors in Driving via Training-Free Controllable Text-to-Image Diffusion Generation. Without extra diffusion model training, DriveGEN consistently preserves objects with precise 3D geometry across diverse OOD generations, consisting of 2 stages: 1) Self-Prototype Extraction: We empirically find that self-attention features are semantic-aware but require accurate region selection for 3D objects. Thus, we extract precise object features via layouts to capture 3D object geometry, termed self-prototypes. 2) Prototype-Guided Diffusion: To preserve objects across various OOD scenarios, we perform semantic-aware feature alignment and shallow feature alignment during denoising. Extensive experiments demonstrate the effectiveness of DriveGEN in improving 3D detection. The code is available at https://github.com/Hongbin98/DriveGEN.
+
+</details>
+
+### MemDistill: Distilling LiDAR Knowledge into Memory for Camera-Only 3D Object Detection.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00642) · 📚 被引 2
+- **作者**: Donghyeon Kwon, Youngseok Yoon, Hyeongseok Son, Suha Kwak
+- **🏷️ 机构**: POSTECH,Dept. of CSE,South Korea, AI Center, Samsung Electronics,DS Division,South Korea
+- **会议**: ICCV 2025
+
+### FreqPDE: Rethinking Positional Depth Embedding for Multi-View 3D Object Detection Transformers.
+- **链接**: [arXiv:2510.15385](https://arxiv.org/abs/2510.15385)
+- **作者**: Haisheng Su, Junjie Zhang, Feixiang Song, Sanping Zhou, Wei Wu, Junchi Yan et al.
+- **🏷️ 机构**: Shanghai Jiao Tong University, Xi&#x0027;an Jiaotong University, SenseAuto Research
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Detecting 3D objects accurately from multi-view 2D images is a challenging yet essential task in the field of autonomous driving. Current methods resort to integrating depth prediction to recover the spatial information for object query decoding, which necessitates explicit supervision from LiDAR points during the training phase. However, the predicted depth quality is still unsatisfactory such as depth discontinuity of object boundaries and indistinction of small objects, which are mainly caused by the sparse supervision of projected points and the use of high-level image features for depth prediction. Besides, cross-view consistency and scale invariance are also overlooked in previous methods. In this paper, we introduce Frequency-aware Positional Depth Embedding (FreqPDE) to equip 2D image features with spatial information for 3D detection transformer decoder, which can be obtained through three main modules. Specifically, the Frequency-aware Spatial Pyramid Encoder (FSPE) constructs a feature pyramid by combining high-frequency edge clues and low-frequency semantics from different levels respectively. Then the Cross-view Scale-invariant Depth Predictor (CSDP) estimates the pixel-level depth distribution with cross-view and efficient channel attention mechanism. Finally, the Positional Depth Encoder (PDE) combines the 2D image features and 3D position embeddings to generate the 3D depth-aware features for query decoding. Additionally, hybrid depth supervision is adopted for complementary depth learning from both metric and distribution aspects. Extensive experiments conducted on the nuScenes dataset demonstrate the effectiveness and superiority of our proposed method.
+
+</details>
+
+### Boosting Multi-View Indoor 3D Object Detection Via Adaptive 3D Volume Construction.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00565) · 📚 被引 2
+- **作者**: Runmin Zhang, Zhu Yu, Si-Yuan Cao, Lingyu Zhu, Guangyi Zhang, Xiaokai Bai et al.
+- **🏷️ 机构**: College of Information Science and Electronic Engineering, Zhejiang University, Zhejiang University,Ningbo Global Innovation Center, City University of Hong Kong
+- **会议**: ICCV 2025
+
+### Multi-View 3D Point Tracking.
+- **链接**: [arXiv:2508.21060](https://arxiv.org/abs/2508.21060)
+- **作者**: Frano Rajic, Haofei Xu, Marko Mihajlovic, Siyuan Li, Irem Demir, Emircan Gündogdu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We introduce the first data-driven multi-view 3D point tracker, designed to track arbitrary points in dynamic scenes using multiple camera views. Unlike existing monocular trackers, which struggle with depth ambiguities and occlusion, or prior multi-camera methods that require over 20 cameras and tedious per-sequence optimization, our feed-forward model directly predicts 3D correspondences using a practical number of cameras (e.g., four), enabling robust and accurate online tracking. Given known camera poses and either sensor-based or estimated multi-view depth, our tracker fuses multi-view features into a unified point cloud and applies k-nearest-neighbors correlation alongside a transformer-based update to reliably estimate long-range 3D correspondences, even under occlusion. We train on 5K synthetic multi-view Kubric sequences and evaluate on two real-world benchmarks: Panoptic Studio and DexYCB, achieving median trajectory errors of 3.1 cm and 2.0 cm, respectively. Our method generalizes well to diverse camera setups of 1-8 views with varying vantage points and video lengths of 24-150 frames. By releasing our tracker alongside training and evaluation datasets, we aim to set a new standard for multi-view 3D tracking research and provide a practical tool for real-world applications. Project page available at https://ethz-vlg.github.io/mvtracker.
+
+</details>
+
+### MVTrajecter: Multi-View Pedestrian Tracking With Trajectory Motion Cost and Trajectory Appearance Cost.
+- **链接**: [arXiv:2509.01157](https://arxiv.org/abs/2509.01157) · 📚 被引 1
+- **作者**: Taiga Yamane, Ryo Masumura, Satoshi Suzuki, Shota Orihashi
+- **🏷️ 机构**: NTT Corporation,NTT Human Informatics Laboratries
+- **会议**: ICCV 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-View Pedestrian Tracking (MVPT) aims to track pedestrians in the form of a bird's eye view occupancy map from multi-view videos. End-to-end methods that detect and associate pedestrians within one model have shown great progress in MVPT. The motion and appearance information of pedestrians is important for the association, but previous end-to-end MVPT methods rely only on the current and its single adjacent past timestamp, discarding the past trajectories before that. This paper proposes a novel end-to-end MVPT method called Multi-View Trajectory Tracker (MVTrajecter) that utilizes information from multiple timestamps in past trajectories for robust association. MVTrajecter introduces trajectory motion cost and trajectory appearance cost to effectively incorporate motion and appearance information, respectively. These costs calculate which pedestrians at the current and each past timestamp are likely identical based on the information between those timestamps. Even if a current pedestrian could be associated with a false pedestrian at some past timestamp, these costs enable the model to associate that current pedestrian with the correct past trajectory based on other past timestamps. In addition, MVTrajecter effectively captures the relationships between multiple timestamps leveraging the attention mechanism. Extensive experiments demonstrate the effectiveness of each component in MVTrajecter and show that it outperforms the previous state-of-the-art methods.
+
+</details>
+
+### Gaussian-Det: Learning Closed-Surface Gaussians for 3D Object Detection.
+- **链接**: [arXiv:2410.01404](https://arxiv.org/abs/2410.01404)
+- **作者**: Hongru Yan, Yu Zheng, Yueqi Duan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Skins wrapping around our bodies, leathers covering over the sofa, sheet metal coating the car - it suggests that objects are enclosed by a series of continuous surfaces, which provides us with informative geometry prior for objectness deduction. In this paper, we propose Gaussian-Det which leverages Gaussian Splatting as surface representation for multi-view based 3D object detection. Unlike existing monocular or NeRF-based methods which depict the objects via discrete positional data, Gaussian-Det models the objects in a continuous manner by formulating the input Gaussians as feature descriptors on a mass of partial surfaces. Furthermore, to address the numerous outliers inherently introduced by Gaussian splatting, we accordingly devise a Closure Inferring Module (CIM) for the comprehensive surface-based objectness deduction. CIM firstly estimates the probabilistic feature residuals for partial surfaces given the underdetermined nature of Gaussian Splatting, which are then coalesced into a holistic representation on the overall surface closure of the object proposal. In this way, the surface information Gaussian-Det exploits serves as the prior on the quality and reliability of objectness and the information basis of proposal refinement. Experiments on both synthetic and real-world datasets demonstrate that Gaussian-Det outperforms various existing approaches, in terms of both average precision and recall.
+
+</details>
+
+### X-Drive: Cross-modality Consistent Multi-Sensor Data Synthesis for Driving Scenarios.
+- **链接**: [arXiv:2411.01123](https://arxiv.org/abs/2411.01123)
+- **作者**: Yichen Xie, Chenfeng Xu, Chensheng Peng, Shuqi Zhao, Nhat Ho, Alexander T. Pham et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent advancements have exploited diffusion models for the synthesis of either LiDAR point clouds or camera image data in driving scenarios. Despite their success in modeling single-modality data marginal distribution, there is an under-exploration in the mutual reliance between different modalities to describe complex driving scenes. To fill in this gap, we propose a novel framework, X-DRIVE, to model the joint distribution of point clouds and multi-view images via a dual-branch latent diffusion model architecture. Considering the distinct geometrical spaces of the two modalities, X-DRIVE conditions the synthesis of each modality on the corresponding local regions from the other modality, ensuring better alignment and realism. To further handle the spatial ambiguity during denoising, we design the cross-modality condition module based on epipolar lines to adaptively learn the cross-modality local correspondence. Besides, X-DRIVE allows for controllable generation through multi-level input conditions, including text, bounding box, image, and point clouds. Extensive results demonstrate the high-fidelity synthetic results of X-DRIVE for both point clouds and multi-view images, adhering to input conditions while ensuring reliable cross-modality consistency. Our code will be made publicly available at https://github.com/yichen928/X-Drive.
+
+</details>
+
+### MRAG-Bench: Vision-Centric Evaluation for Retrieval-Augmented Multimodal Models.
+- **链接**: [arXiv:2410.08182](https://arxiv.org/abs/2410.08182)
+- **作者**: Wenbo Hu, Jia-Chen Gu, Zi-Yi Dou, Mohsen Fayyaz, Pan Lu, Kai-Wei Chang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing multimodal retrieval benchmarks primarily focus on evaluating whether models can retrieve and utilize external textual knowledge for question answering. However, there are scenarios where retrieving visual information is either more beneficial or easier to access than textual data. In this paper, we introduce a multimodal retrieval-augmented generation benchmark, MRAG-Bench, in which we systematically identify and categorize scenarios where visually augmented knowledge is better than textual knowledge, for instance, more images from varying viewpoints. MRAG-Bench consists of 16,130 images and 1,353 human-annotated multiple-choice questions across 9 distinct scenarios. With MRAG-Bench, we conduct an evaluation of 10 open-source and 4 proprietary large vision-language models (LVLMs). Our results show that all LVLMs exhibit greater improvements when augmented with images compared to textual knowledge, confirming that MRAG-Bench is vision-centric. Additionally, we conduct extensive analysis with MRAG-Bench, which offers valuable insights into retrieval-augmented LVLMs. Notably, the top-performing model, GPT-4o, faces challenges in effectively leveraging retrieved knowledge, achieving only a 5.82% improvement with ground-truth information, in contrast to a 33.16% improvement observed in human participants. These findings highlight the importance of MRAG-Bench in encouraging the community to enhance LVLMs' ability to utilize retrieved visual knowledge more effectively.
+
+</details>
+
+### See What You Are Told: Visual Attention Sink in Large Multimodal Models.
+- **链接**: [arXiv:2503.03321](https://arxiv.org/abs/2503.03321)
+- **作者**: Seil Kang, Jinyeong Kim, Junhyeok Kim, Seong Jae Hwang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large multimodal models (LMMs) "see" images by leveraging the attention mechanism between text and visual tokens in the transformer decoder. Ideally, these models should focus on key visual information relevant to the text token. However, recent findings indicate that LMMs have an extraordinary tendency to consistently allocate high attention weights to specific visual tokens, even when these tokens are irrelevant to the corresponding text. In this study, we investigate the property behind the appearance of these irrelevant visual tokens and examine their characteristics. Our findings show that this behavior arises due to the massive activation of certain hidden state dimensions, which resembles the attention sink found in language models. Hence, we refer to this phenomenon as the visual attention sink. In particular, our analysis reveals that removing the irrelevant visual sink tokens does not impact model performance, despite receiving high attention weights. Consequently, we recycle the attention to these tokens as surplus resources, redistributing the attention budget to enhance focus on the image. To achieve this, we introduce Visual Attention Redistribution (VAR), a method that redistributes attention in image-centric heads, which we identify as innately focusing on visual information. VAR can be seamlessly applied across different LMMs to improve performance on a wide range of tasks, including general vision-language tasks, visual hallucination tasks, and vision-centric tasks, all without the need for additional training, models, or inference steps. Experimental results demonstrate that VAR enables LMMs to process visual information more effectively by adjusting their internal attention mechanisms, offering a new direction to enhancing the multimodal capabilities of LMMs.
+
+</details>
+
+### Self-supervised Monocular Depth Estimation Robust to Reflective Surface Leveraged by Triplet Mining.
+- **链接**: [arXiv:2502.14573](https://arxiv.org/abs/2502.14573)
+- **作者**: Wonhyeok Choi, Kyumin Hwang, Wei Peng, Minwoo Choi, Sunghoon Im
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised monocular depth estimation (SSMDE) aims to predict the dense depth map of a monocular image, by learning depth from RGB image sequences, eliminating the need for ground-truth depth labels. Although this approach simplifies data acquisition compared to supervised methods, it struggles with reflective surfaces, as they violate the assumptions of Lambertian reflectance, leading to inaccurate training on such surfaces. To tackle this problem, we propose a novel training strategy for an SSMDE by leveraging triplet mining to pinpoint reflective regions at the pixel level, guided by the camera geometry between different viewpoints. The proposed reflection-aware triplet mining loss specifically penalizes the inappropriate photometric error minimization on the localized reflective regions while preserving depth accuracy in non-reflective areas. We also incorporate a reflection-aware knowledge distillation method that enables a student model to selectively learn the pixel-level knowledge from reflective and non-reflective regions. This results in robust depth estimation across areas. Evaluation results on multiple datasets demonstrate that our method effectively enhances depth quality on reflective surfaces and outperforms state-of-the-art SSMDE baselines.
+
+</details>
+
+### Generalizable Multi-Camera 3D Object Detection from a Single Source via Fourier Cross-View Learning.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/zhao25l.html)
+- **作者**: Xue Zhao, Qinying Gu, Xinbing Wang, Chenghu Zhou, Nanyang Ye
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Learning Compact Semantic Information for Incomplete Multi-View Missing Multi-Label Classification.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/wen25c.html)
+- **作者**: Jie Wen, Yadong Liu, Zhanyan Tang, Yuting He, Yulong Chen, Mu Li et al.
+- **🏷️ 机构**: AWS / CMU
+- **会议**: ICML 2025
+
+### Cavia: Camera-controllable Multi-view Video Diffusion with View-Integrated Attention.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/xu25l.html)
+- **作者**: Dejia Xu, Yifan Jiang, Chen Huang, Liangchen Song, Thorsten Gernoth, Liangliang Cao et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### From Spectrum-free towards Baseline-view-free: Double-track Proximity Driven Multi-view Clustering.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/yu25c.html)
+- **作者**: Shengju Yu, Zhibin Dong, Siwei Wang, Suyuan Liu, Ke Liang, Xinwang Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Tensorized Multi-View Multi-Label Classification via Laplace Tensor Rank.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/zhong25c.html)
+- **作者**: Qiyu Zhong, Yi Shan, Haobo Wang, Zhen Yang, Gengyu Lyu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Multi-View Graph Clustering via Node-Guided Contrastive Encoding.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/ren25a.html)
+- **作者**: Yazhou Ren, Junlong Ke, Zichen Wen, Tianyi Wu, Yang Yang, Xiaorong Pu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### An Effective and Secure Federated Multi-View Clustering Method with Information-Theoretic Perspective.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/chen25az.html)
+- **作者**: Xinyue Chen, Jinfeng Peng, Yuhao Li, Xiaorong Pu, Yang Yang, Yazhou Ren
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### Federated Incomplete Multi-view Clustering with Globally Fused Graph Guidance.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/chao25a.html)
+- **作者**: Guoqing Chao, Zhenghao Zhang, Lei Meng, Jie Wen, Dianhui Chu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+
+### 3D-LMVIC: Learning-based Multi-View Image Compression with 3D Gaussian Geometric Priors.
+- **链接**: [出版页](https://proceedings.mlr.press/v267/huang25e.html)
+- **作者**: Yujun Huang, Bin Chen, Niu Lian, Xin Wang, Baoyi An, Tao Dai et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2025
+<!-- COMPLETE v1 papers=115 -->

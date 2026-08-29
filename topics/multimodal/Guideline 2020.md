@@ -124,3 +124,69 @@
 > We present a multimodal camera relocalization framework that captures ambiguities and uncertainties with continuous mixture models defined on the manifold of camera poses. In highly ambiguous environments, which can easily arise due to symmetries and repetitive structures in the scene, computing one plausible solution (what most state-of-the-art methods currently regress) may not be sufficient. Instead we predict multiple camera pose hypotheses as well as the respective uncertainty for each prediction. Towards this aim, we use Bingham distributions, to model the orientation of the camera pose, and a multivariate Gaussian to model the position, with an end-to-end deep neural network. By incorporating a Winner-Takes-All training scheme, we finally obtain a mixture model that is well suited for explaining ambiguities in the scene, yet does not suffer from mode collapse, a common problem with mixture density networks. We introduce a new dataset specifically designed to foster camera localization research in ambiguous environments and exhaustively evaluate our method on synthetic as well as real data on both ambiguous scenes and on non-ambiguous benchmark datasets. We plan to release our code and dataset under $\href{https://multimodal3dvision.github.io}{multimodal3dvision.github.io}$.
 
 </details>
+
+## 🆕 增量新增
+
+### Multi-Modal Domain Adaptation for Fine-Grained Action Recognition. **⭐⭐⭐** (相关度: 35%)
+- **链接**: [arXiv:2001.09691](https://arxiv.org/abs/2001.09691) · 📚 被引 173
+- **作者**: Jonathan Munro, Dima Damen
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+- **摘要（中）**: 针对细粒度动作识别中环境偏差导致的域偏移问题，提出利用多模态（RGB和光流）的对应关系作为自监督对齐方法，结合对抗训练进行无监督域适应。在EPIC-Kitchens三个厨房数据集上，多模态自监督单独提升2.4%平均性能，结合对抗训练后比其他UDA方法提升3%。
+- **摘要（英）**: This work addresses domain shift in fine-grained action recognition by exploiting multimodal correspondence as self-supervised alignment for UDA, combined with adversarial training. On EPIC-Kitchens, multi-modal self-supervision improves 2.4% over source-only, and combined with adversarial training outperforms other UDA methods by 3%.
+- **核心贡献**: 提出多模态自监督对齐与对抗训练结合的UDA方法，用于细粒度动作识别。
+- **创新点**: 利用模态间对应关系作为自监督信号，增强域适应中的特征对齐。
+- **结果**: 在EPIC-Kitchens上显著提升域适应性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Fine-grained action recognition datasets exhibit environmental bias, where multiple video sequences are captured from a limited number of environments. Training a model in one environment and deploying in another results in a drop in performance due to an unavoidable domain shift. Unsupervised Domain Adaptation (UDA) approaches have frequently utilised adversarial training between the source and target domains. However, these approaches have not explored the multi-modal nature of video within each domain. In this work we exploit the correspondence of modalities as a self-supervised alignment approach for UDA in addition to adversarial alignment. We test our approach on three kitchens from our large-scale dataset, EPIC-Kitchens, using two modalities commonly employed for action recognition: RGB and Optical Flow. We show that multi-modal self-supervision alone improves the performance over source-only training by 2.4% on average. We then combine adversarial training with multi-modal self-supervision, showing that our approach outperforms other UDA methods by 3%.
+
+</details>
+
+### Speech2Action: Cross-Modal Supervision for Action Recognition. **⭐⭐⭐** (相关度: 30%)
+- **链接**: [arXiv:2003.13594](https://arxiv.org/abs/2003.13594) · 📚 被引 45
+- **作者**: Arsha Nagrani, Chen Sun, David Ross, Rahul Sukthankar, Cordelia Schmid, Andrew Zisserman
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+- **摘要（中）**: 针对动作识别中依赖人工标注的问题，探索从对话中预测动作的可能性，利用电影剧本训练BERT-based Speech2Action分类器，应用于大规模未标注电影语料，获得弱标签并训练视频模型。在标准动作识别基准上，无需任何手动标注动作示例，实现了优越性能。
+- **摘要（英）**: This paper investigates predicting actions from dialogue, training a BERT-based classifier on screenplays and applying it to large unlabelled movie corpora to obtain weak labels. Training on these clips achieves superior action recognition performance without manual action annotations.
+- **核心贡献**: 提出利用对话预测动作的跨模态弱监督方法，生成大规模弱标签训练数据。
+- **创新点**: 通过电影剧本学习语音与动作的关联，实现无需人工标注的动作识别。
+- **结果**: 在标准基准上超越现有方法，无需手动标注。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Is it possible to guess human action from dialogue alone? In this work we investigate the link between spoken words and actions in movies. We note that movie screenplays describe actions, as well as contain the speech of characters and hence can be used to learn this correlation with no additional supervision. We train a BERT-based Speech2Action classifier on over a thousand movie screenplays, to predict action labels from transcribed speech segments. We then apply this model to the speech segments of a large unlabelled movie corpus (188M speech segments from 288K movies). Using the predictions of this model, we obtain weak action labels for over 800K video clips. By training on these video clips, we demonstrate superior action recognition performance on standard action recognition benchmarks, without using a single manually labelled action example.
+
+</details>
+
+### Cross-Modal Weighting Network for RGB-D Salient Object Detection. **⭐⭐** (相关度: 20%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58520-4_39)
+- **作者**: Gongyang Li, Zhi Liu, Linwei Ye, Yang Wang, Haibin Ling
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
+- **摘要（中）**: 该论文摘要缺失，无法提供具体内容。根据标题推测，可能针对RGB-D显著目标检测中的跨模态加权问题，提出一种加权网络以融合RGB和深度信息。但缺乏摘要和实验细节，无法评估其方法和效果。
+- **摘要（英）**: The abstract is missing, so specific details are unavailable. Based on the title, it likely addresses cross-modal weighting for RGB-D salient object detection, but without abstract and experiments, evaluation is impossible.
+- **核心贡献**: 未知，因摘要缺失。
+- **创新点**: 未知，因摘要缺失。
+- **结果**: 未知，因摘要缺失。
+
+### Interpretable, Multidimensional, Multimodal Anomaly Detection with Negative Sampling for Detection of Device Failure. **⭐⭐** (相关度: 30%)
+- **链接**: [出版页](http://proceedings.mlr.press/v119/sipple20a.html)
+- **作者**: John Sipple
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2020
+- **摘要（中）**: ①该论文针对设备故障检测中的异常检测问题，旨在通过多模态数据识别异常模式。②提出了一种基于负采样的可解释、多维、多模态异常检测方法，利用负样本增强模型对异常边界的区分能力。③相比传统单模态或黑盒异常检测方法，该方法强调可解释性，并整合多维特征与多模态信息。④摘要未提供具体数据，但方法在设备故障场景中具有潜在应用价值。
+- **摘要（英）**: This paper addresses anomaly detection for device failure using multimodal data, proposing an interpretable, multidimensional approach with negative sampling to improve boundary discrimination. It enhances existing methods by integrating explainability and multimodal features, though no quantitative results are reported in the abstract.
+- **核心贡献**: 提出了一种结合负采样和可解释性的多模态异常检测框架。
+- **创新点**: 将负采样策略应用于多模态异常检测以增强区分能力。
+- **结果**: 摘要未提供具体性能数据，效果待验证。
+
+## 跨领域论文（完整笔记在其他领域）
+
+- ImVoteNet: Boosting 3D Object Detection in Point Clouds With Image Votes. → [3d-detection](../3d-detection/Guideline%202020.md)
+- nuScenes: A Multimodal Dataset for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202020.md)
+- Vision-Language Navigation With Self-Supervised Auxiliary Reasoning Tasks. → [self-supervised-vision](../self-supervised-vision/Guideline%202020.md)
+- Creating Something From Nothing: Unsupervised Knowledge Distillation for Cross-Modal Hashing. → [knowledge-distillation](../knowledge-distillation/Guideline%202020.md)
+<!-- COMPLETE v1 papers=15 -->

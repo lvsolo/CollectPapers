@@ -172,3 +172,273 @@
 - **作者**: Binh Tang, David S. Matteson
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+
+## 🆕 增量新增
+
+### DER: Dynamically Expandable Representation for Class Incremental Learning. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2103.16788](https://arxiv.org/abs/2103.16788) · 📚 被引 655
+- **作者**: Shipeng Yan, Jiangwei Xie, Xuming He
+- **🏷️ 机构**: ShanghaiTech University,School of Information Science and Technology
+- **会议**: CVPR 2021
+- **摘要（中）**: ①针对类增量学习在有限内存下稳定性-可塑性权衡不佳的问题。②提出两阶段学习方法，冻结旧表征并动态扩展新特征维度，结合通道级掩码剪枝和辅助损失。③相比固定容量方法，能根据新概念复杂度自适应扩展表征。④在三个基准上大幅超越现有方法。
+- **摘要（英）**: This paper addresses class incremental learning with limited memory, proposing a two-stage approach with dynamically expandable representations via channel-level pruning and auxiliary loss. It improves stability-plasticity trade-off and outperforms prior methods on three benchmarks.
+- **核心贡献**: 提出动态可扩展表征的类增量学习框架。
+- **创新点**: 结合通道级剪枝实现表征自适应扩展。
+- **结果**: 在三个基准上大幅领先现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We address the problem of class incremental learning, which is a core step towards achieving adaptive vision intelligence. In particular, we consider the task setting of incremental learning with limited memory and aim to achieve better stability-plasticity trade-off. To this end, we propose a novel two-stage learning approach that utilizes a dynamically expandable representation for more effective incremental concept modeling. Specifically, at each incremental step, we freeze the previously learned representation and augment it with additional feature dimensions from a new learnable feature extractor. This enables us to integrate new visual concepts with retaining learned knowledge. We dynamically expand the representation according to the complexity of novel concepts by introducing a channel-level mask-based pruning strategy. Moreover, we introduce an auxiliary loss to encourage the model to learn diverse and discriminate features for novel concepts. We conduct extensive experiments on the three class incremental learning benchmarks and our method consistently outperforms other methods with a large margin.
+
+</details>
+
+### Prototype Augmentation and Self-Supervision for Incremental Learning. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhu_Prototype_Augmentation_and_Self-Supervision_for_Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 365
+- **作者**: Fei Zhu, Xu-Yao Zhang, Chuang Wang, Fei Yin, Cheng-Lin Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+- **摘要（中）**: ①针对类增量学习中数据稀缺导致新类表示不充分的问题。②提出原型增强和自监督学习，通过生成原型增强新类数据，并利用自监督任务提升特征泛化。③相比仅用原始数据的方法，增强原型和自监督信号提高新类可判别性。④摘要未提供具体数据，但预期在CIL基准上提升准确率。
+- **摘要（英）**: ①Addresses insufficient representation for new classes in class-incremental learning. ②Proposes prototype augmentation and self-supervision to enrich new class data and improve feature generalization. ③Improves on raw-data-only methods by enhancing discriminability. ④Expected to boost accuracy, but no specific numbers are given.
+- **核心贡献**: 提出原型增强与自监督结合的增量学习方法。
+- **创新点**: 利用自监督信号增强原型表示。
+- **结果**: 未报告具体性能数据。
+
+### Wanderlust: Online Continual Object Detection in the Real World. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01065)
+- **作者**: Jianren Wang, Xin Wang, Yue Shang-Guan, Abhinav Gupta
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对现实世界中在线持续目标检测的挑战，如数据流非平稳和类别增量。②提出Wanderlust系统，设计在线学习框架处理连续数据流，结合回放和蒸馏技术。③相比离线训练方法，该方法适应真实动态环境，减少遗忘。④摘要未提供具体数据，但强调在真实场景中的实用性。
+- **摘要（英）**: ①Addresses online continual object detection in real-world non-stationary data streams. ②Proposes Wanderlust, an online learning framework with replay and distillation. ③Improves on offline methods by adapting to dynamic environments. ④Emphasizes practical utility, though no specific metrics are provided.
+- **核心贡献**: 提出首个面向真实世界的在线持续目标检测系统。
+- **创新点**: 将在线学习与检测结合，处理非平稳数据流。
+- **结果**: 未报告具体性能数据。
+
+### Class-Incremental Learning for Action Recognition in Videos. **⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01344)
+- **作者**: Jaeyoo Park, Minsoo Kang, Bohyung Han
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对视频动作识别中的类增量学习问题，即模型需不断学习新动作类别而不遗忘旧类。②提出专门针对视频的CIL方法，利用时空特征和蒸馏技术。③相比图像CIL方法，该方法考虑视频时序信息，提升动作识别性能。④摘要未提供具体数据，但预期在视频基准上优于通用CIL方法。
+- **摘要（英）**: ①Addresses class-incremental learning for video action recognition. ②Proposes a video-specific CIL method leveraging spatiotemporal features and distillation. ③Improves on image-based CIL by exploiting temporal information. ④Expected to outperform generic methods, but no specific results are given.
+- **核心贡献**: 提出针对视频动作识别的类增量学习方法。
+- **创新点**: 将时空建模融入CIL框架。
+- **结果**: 未报告具体性能数据。
+
+### Online Continual Learning with Natural Distribution Shifts: An Empirical Study with Visual Data. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00817)
+- **作者**: Zhipeng Cai, Ozan Sener, Vladlen Koltun
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对在线持续学习在自然分布偏移（如自动驾驶场景中的天气、光照变化）下的性能退化问题。②通过大规模视觉数据集（如iNaturalist、Places365）进行实证研究，系统比较了多种持续学习算法在自然分布偏移下的表现，并分析了类别增量与任务增量的影响。③不同于以往人工合成分布偏移，该研究首次聚焦于真实世界自然分布偏移，提供了更贴近实际应用的评估基准。④研究发现现有算法在自然偏移下性能显著下降，且简单经验回放方法表现优于复杂方法，为后续研究提供了重要基线。
+- **摘要（英）**: This paper addresses performance degradation of online continual learning under natural distribution shifts, such as weather and lighting changes in autonomous driving. It conducts an empirical study on large-scale visual datasets, comparing various continual learning algorithms and analyzing the impact of class-incremental vs. task-incremental settings. Unlike prior work using synthetic shifts, it focuses on real-world natural shifts, revealing that simple experience replay outperforms complex methods and providing a crucial baseline for future research.
+- **核心贡献**: 首次系统评估了自然分布偏移下在线持续学习算法的性能，并建立了新的基准。
+- **创新点**: 聚焦真实世界自然分布偏移而非人工合成偏移，更贴近实际应用场景。
+- **结果**: 发现现有算法在自然偏移下性能显著下降，简单经验回放方法表现最佳。
+
+### Co2L: Contrastive Continual Learning. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00938)
+- **作者**: Hyuntak Cha, Jaeho Lee, Jinwoo Shin
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对持续学习中灾难性遗忘问题，特别是监督对比学习在持续学习场景下的适用性。②提出Co2L框架，将监督对比学习与持续学习结合，通过对比损失增强特征表示的可迁移性，并引入基于原型的分类器减少遗忘。③相比传统交叉熵损失，对比学习能学习更鲁棒的特征，且无需额外存储大量样本。④在CIFAR-100、ImageNet等基准上，Co2L显著优于现有持续学习方法，在多个设定下刷新了SOTA。
+- **摘要（英）**: This paper tackles catastrophic forgetting in continual learning by integrating supervised contrastive learning into the framework. The proposed Co2L uses contrastive losses to learn more transferable feature representations and a prototype-based classifier to mitigate forgetting. Compared to cross-entropy-based methods, it achieves superior performance on benchmarks like CIFAR-100 and ImageNet, setting new state-of-the-art results across multiple settings.
+- **核心贡献**: 提出了一种基于监督对比学习的持续学习框架，显著提升特征可迁移性。
+- **创新点**: 利用对比学习替代交叉熵损失，增强特征鲁棒性并减少遗忘。
+- **结果**: 在多个基准上刷新SOTA，性能显著优于现有方法。
+
+### Continual Learning on Noisy Data Streams via Self-Purified Replay. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00058)
+- **作者**: Chris Dongjoo Kim, Jinseo Jeong, Sangwoo Moon, Gunhee Kim
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对持续学习中数据流存在噪声（如标签错误）时，经验回放方法会放大噪声影响的问题。②提出Self-Purified Replay（SPR）方法，通过自净化机制在回放前过滤噪声样本，利用模型自身预测置信度识别并剔除错误标签样本。③相比传统回放方法，SPR能有效降低噪声对模型更新的干扰，提升鲁棒性。④在多个含噪持续学习基准上，SPR显著优于现有方法，尤其在噪声比例较高时性能提升明显。
+- **摘要（英）**: This paper addresses the issue of noisy data streams in continual learning, where experience replay can amplify label noise. It proposes Self-Purified Replay (SPR), which filters noisy samples before replay using model confidence to identify and remove mislabeled data. Compared to standard replay methods, SPR reduces noise interference and improves robustness, achieving significant gains on noisy continual learning benchmarks, especially under high noise ratios.
+- **核心贡献**: 提出自净化回放机制，有效过滤噪声样本，提升持续学习鲁棒性。
+- **创新点**: 利用模型自身置信度动态净化回放缓冲区，无需额外监督。
+- **结果**: 在含噪基准上显著优于现有方法，高噪声下性能提升明显。
+
+### RECALL: Replay-based Continual Learning in Semantic Segmentation. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00694)
+- **作者**: Andrea Maracani, Umberto Michieli, Marco Toldo, Pietro Zanuttigh
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对语义分割中的持续学习问题，特别是自动驾驶场景中新增类别时的灾难性遗忘。②提出RECALL方法，基于回放的持续学习框架，结合知识蒸馏和特征对齐，在分割任务中有效保留旧类别知识。③相比通用持续学习方法，RECALL专门针对语义分割的像素级预测特性设计，利用分割掩码进行更精准的回放。④在多个语义分割基准（如Pascal VOC、ADE20K）上，RECALL显著优于现有方法，在增量类别设定下保持高mIoU。
+- **摘要（英）**: This paper tackles continual learning in semantic segmentation, focusing on catastrophic forgetting when new classes are added in autonomous driving scenarios. It proposes RECALL, a replay-based framework combining knowledge distillation and feature alignment to preserve old class knowledge. Unlike general methods, RECALL is tailored for pixel-level prediction, using segmentation masks for more precise replay, and significantly outperforms existing approaches on benchmarks like Pascal VOC and ADE20K under incremental class settings.
+- **核心贡献**: 提出面向语义分割的回放式持续学习框架，结合蒸馏与特征对齐。
+- **创新点**: 利用分割掩码进行像素级回放，专门优化分割任务的持续学习。
+- **结果**: 在多个分割基准上显著优于现有方法，保持高mIoU。
+
+### Detection and Continual Learning of Novel Face Presentation Attacks. **⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01458)
+- **作者**: Mohammad Rostami, Leonidas Spinoulas, Mohamed E. Hussein, Joe Mathai, Wael Abd-Almageed
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对人脸呈现攻击检测（FOD）中新型攻击不断出现，模型需持续学习新攻击类型的问题。②提出一种结合检测与持续学习的框架，在检测已知攻击的同时，通过持续学习机制适应新攻击，并利用回放策略避免遗忘。③相比静态检测模型，该方法能动态更新，适应不断演变的攻击手段。④在多个FOD基准上，该方法在保持已知攻击检测性能的同时，对新攻击的检测准确率显著提升。
+- **摘要（英）**: This paper addresses novel face presentation attack detection (FOD), where new attack types emerge and models must continually learn. It proposes a framework combining detection with continual learning, adapting to new attacks via replay-based strategies while maintaining performance on known attacks. Compared to static models, it dynamically updates and significantly improves detection accuracy on novel attacks across multiple FOD benchmarks.
+- **核心贡献**: 提出结合检测与持续学习的FOD框架，适应新型攻击。
+- **创新点**: 将持续学习机制引入FOD，实现动态更新。
+- **结果**: 在保持已知攻击性能的同时，显著提升新攻击检测准确率。
+
+### Rehearsal revealed: The limits and merits of revisiting samples in continual learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00925)
+- **作者**: Eli Verwimp, Matthias De Lange, Tinne Tuytelaars
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### Continual Learning for Image-Based Camera Localization.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00324)
+- **作者**: Shuzhe Wang, Zakaria Laskar, Iaroslav Melekhov, Xiaotian Li, Juho Kannala
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### SS-IL: Separated Softmax for Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00088)
+- **作者**: Hongjoon Ahn, Jihwan Kwak, Subin Lim, Hyeonsu Bang, Hyojun Kim, Taesup Moon
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### Synthesized Feature based Few-Shot Class-Incremental Learning on a Mixture of Subspaces.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00854)
+- **作者**: Ali Cheraghian, Shafin Rahman, Sameera Ramasinghe, Pengfei Fang, Christian Simon, Lars Petersson et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### Always Be Dreaming: A New Approach for Data-Free Class-Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00924)
+- **作者**: James Seale Smith, Yen-Chang Hsu, Jonathan C. Balloch, Yilin Shen, Hongxia Jin, Zsolt Kira
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### Striking a Balance between Stability and Plasticity for Class-Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00116)
+- **作者**: Guile Wu, Shaogang Gong, Pan Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+
+### EEC: Learning to Encode and Regenerate Images for Continual Learning.
+- **链接**: [arXiv:2101.04904](https://arxiv.org/abs/2101.04904)
+- **作者**: Ali Ayub, Alan R. Wagner
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The two main impediments to continual learning are catastrophic forgetting and memory limitations on the storage of data. To cope with these challenges, we propose a novel, cognitively-inspired approach which trains autoencoders with Neural Style Transfer to encode and store images. During training on a new task, reconstructed images from encoded episodes are replayed in order to avoid catastrophic forgetting. The loss function for the reconstructed images is weighted to reduce its effect during classifier training to cope with image degradation. When the system runs out of memory the encoded episodes are converted into centroids and covariance matrices, which are used to generate pseudo-images during classifier training, keeping classifier performance stable while using less memory. Our approach increases classification accuracy by 13-17% over state-of-the-art methods on benchmark datasets, while requiring 78% less storage space.
+
+</details>
+
+### CPR: Classifier-Projection Regularization for Continual Learning.
+- **链接**: [arXiv:2006.07326](https://arxiv.org/abs/2006.07326)
+- **作者**: Sungmin Cha, Hsiang Hsu, Taebaek Hwang, Flávio P. Calmon, Taesup Moon
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose a general, yet simple patch that can be applied to existing regularization-based continual learning methods called classifier-projection regularization (CPR). Inspired by both recent results on neural networks with wide local minima and information theory, CPR adds an additional regularization term that maximizes the entropy of a classifier's output probability. We demonstrate that this additional term can be interpreted as a projection of the conditional probability given by a classifier's output to the uniform distribution. By applying the Pythagorean theorem for KL divergence, we then prove that this projection may (in theory) improve the performance of continual learning methods. In our extensive experimental results, we apply CPR to several state-of-the-art regularization-based continual learning methods and benchmark performance on popular image recognition datasets. Our results demonstrate that CPR indeed promotes a wide local minima and significantly improves both accuracy and plasticity while simultaneously mitigating the catastrophic forgetting of baseline continual learning methods. The codes and scripts for this work are available at https://github.com/csm9493/CPR_CL.
+
+</details>
+
+### Continual learning in recurrent neural networks.
+- **链接**: [出版页](https://openreview.net/forum?id=8xeBUgD8u9)
+- **作者**: Benjamin Ehret, Christian Henning, Maria R. Cervera, Alexander Meulemans, Johannes von Oswald, Benjamin F. Grewe
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+### Generalized Variational Continual Learning.
+- **链接**: [arXiv:2011.12328](https://arxiv.org/abs/2011.12328)
+- **作者**: Noel Loo, Siddharth Swaroop, Richard E. Turner
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning deals with training models on new tasks and datasets in an online fashion. One strand of research has used probabilistic regularization for continual learning, with two of the main approaches in this vein being Online Elastic Weight Consolidation (Online EWC) and Variational Continual Learning (VCL). VCL employs variational inference, which in other settings has been improved empirically by applying likelihood-tempering. We show that applying this modification to VCL recovers Online EWC as a limiting case, allowing for interpolation between the two approaches. We term the general algorithm Generalized VCL (GVCL). In order to mitigate the observed overpruning effect of VI, we take inspiration from a common multi-task architecture, neural networks with task-specific FiLM layers, and find that this addition leads to significant performance gains, specifically for variational methods. In the small-data regime, GVCL strongly outperforms existing baselines. In larger datasets, GVCL with FiLM layers outperforms or is competitive with existing baselines in terms of accuracy, whilst also providing significantly better calibration.
+
+</details>
+
+### Linear Mode Connectivity in Multitask and Continual Learning.
+- **链接**: [arXiv:2010.04495](https://arxiv.org/abs/2010.04495)
+- **作者**: Seyed-Iman Mirzadeh, Mehrdad Farajtabar, Dilan Görür, Razvan Pascanu, Hassan Ghasemzadeh
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual (sequential) training and multitask (simultaneous) training are often attempting to solve the same overall objective: to find a solution that performs well on all considered tasks. The main difference is in the training regimes, where continual learning can only have access to one task at a time, which for neural networks typically leads to catastrophic forgetting. That is, the solution found for a subsequent task does not perform well on the previous ones anymore. However, the relationship between the different minima that the two training regimes arrive at is not well understood. What sets them apart? Is there a local structure that could explain the difference in performance achieved by the two different schemes? Motivated by recent work showing that different minima of the same task are typically connected by very simple curves of low error, we investigate whether multitask and continual solutions are similarly connected. We empirically find that indeed such connectivity can be reliably achieved and, more interestingly, it can be done by a linear path, conditioned on having the same initialization for both. We thoroughly analyze this observation and discuss its significance for the continual learning process. Furthermore, we exploit this finding to propose an effective algorithm that constrains the sequentially learned minima to behave as the multitask solution. We show that our method outperforms several state of the art continual learning algorithms on various vision benchmarks.
+
+</details>
+
+### Contextual Transformation Networks for Online Continual Learning.
+- **链接**: [出版页](https://openreview.net/forum?id=zx_uX-BO7CH)
+- **作者**: Quang Pham, Chenghao Liu, Doyen Sahoo, Steven C. H. Hoi
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+### Gradient Projection Memory for Continual Learning.
+- **链接**: [arXiv:2103.09762](https://arxiv.org/abs/2103.09762)
+- **作者**: Gobinda Saha, Isha Garg, Kaushik Roy
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The ability to learn continually without forgetting the past tasks is a desired attribute for artificial learning systems. Existing approaches to enable such learning in artificial neural networks usually rely on network growth, importance based weight update or replay of old data from the memory. In contrast, we propose a novel approach where a neural network learns new tasks by taking gradient steps in the orthogonal direction to the gradient subspaces deemed important for the past tasks. We find the bases of these subspaces by analyzing network representations (activations) after learning each task with Singular Value Decomposition (SVD) in a single shot manner and store them in the memory as Gradient Projection Memory (GPM). With qualitative and quantitative analyses, we show that such orthogonal gradient descent induces minimum to no interference with the past tasks, thereby mitigates forgetting. We evaluate our algorithm on diverse image classification datasets with short and long sequences of tasks and report better or on-par performance compared to the state-of-the-art approaches.
+
+</details>
+
+### Efficient Continual Learning with Modular Networks and Task-Driven Priors.
+- **链接**: [arXiv:2012.12631](https://arxiv.org/abs/2012.12631)
+- **作者**: Tom Veniat, Ludovic Denoyer, Marc'Aurelio Ranzato
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing literature in Continual Learning (CL) has focused on overcoming catastrophic forgetting, the inability of the learner to recall how to perform tasks observed in the past. There are however other desirable properties of a CL system, such as the ability to transfer knowledge from previous tasks and to scale memory and compute sub-linearly with the number of tasks. Since most current benchmarks focus only on forgetting using short streams of tasks, we first propose a new suite of benchmarks to probe CL algorithms across these new axes. Finally, we introduce a new modular architecture, whose modules represent atomic skills that can be composed to perform a certain task. Learning a task reduces to figuring out which past modules to re-use, and which new modules to instantiate to solve the current task. Our learning algorithm leverages a task-driven prior over the exponential search space of all possible ways to combine modules, enabling efficient learning on long streams of tasks. Our experiments show that this modular architecture and learning algorithm perform competitively on widely used CL benchmarks while yielding superior performance on the more challenging benchmarks we introduce in this work.
+
+</details>
+
+### Bayesian Structural Adaptation for Continual Learning.
+- **链接**: [出版页](http://proceedings.mlr.press/v139/kumar21a.html)
+- **作者**: Abhishek Kumar, Sunabha Chatterjee, Piyush Rai
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2021
+
+### Kernel Continual Learning.
+- **链接**: [出版页](http://proceedings.mlr.press/v139/derakhshani21a.html)
+- **作者**: Mohammad Mahdi Derakhshani, Xiantong Zhen, Ling Shao, Cees Snoek
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2021
+
+### Variational Auto-Regressive Gaussian Processes for Continual Learning.
+- **链接**: [arXiv:2006.05468](https://arxiv.org/abs/2006.05468)
+- **作者**: Sanyam Kapoor, Theofanis Karaletsos, Thang D. Bui
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Through sequential construction of posteriors on observing data online, Bayes' theorem provides a natural framework for continual learning. We develop Variational Auto-Regressive Gaussian Processes (VAR-GPs), a principled posterior updating mechanism to solve sequential tasks in continual learning. By relying on sparse inducing point approximations for scalable posteriors, we propose a novel auto-regressive variational distribution which reveals two fruitful connections to existing results in Bayesian inference, expectation propagation and orthogonal inducing points. Mean predictive entropy estimates show VAR-GPs prevent catastrophic forgetting, which is empirically supported by strong performance on modern continual learning benchmarks against competitive baselines. A thorough ablation study demonstrates the efficacy of our modeling choices.
+
+</details>
+
+### Continual Learning in the Teacher-Student Setup: Impact of Task Similarity.
+- **链接**: [arXiv:2107.04384](https://arxiv.org/abs/2107.04384)
+- **作者**: Sebastian Lee, Sebastian Goldt, Andrew M. Saxe
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2021
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning-the ability to learn many tasks in sequence-is critical for artificial learning systems. Yet standard training methods for deep networks often suffer from catastrophic forgetting, where learning new tasks erases knowledge of earlier tasks. While catastrophic forgetting labels the problem, the theoretical reasons for interference between tasks remain unclear. Here, we attempt to narrow this gap between theory and practice by studying continual learning in the teacher-student setup. We extend previous analytical work on two-layer networks in the teacher-student setup to multiple teachers. Using each teacher to represent a different task, we investigate how the relationship between teachers affects the amount of forgetting and transfer exhibited by the student when the task switches. In line with recent work, we find that when tasks depend on similar features, intermediate task similarity leads to greatest forgetting. However, feature similarity is only one way in which tasks may be related. The teacher-student approach allows us to disentangle task similarity at the level of readouts (hidden-to-output weights) and features (input-to-hidden weights). We find a complex interplay between both types of similarity, initial transfer/forgetting rates, maximum transfer/forgetting, and long-term transfer/forgetting. Together, these results help illuminate the diverse factors contributing to catastrophic forgetting.
+
+</details>
+
+### Federated Continual Learning with Weighted Inter-client Transfer.
+- **链接**: [出版页](http://proceedings.mlr.press/v139/yoon21b.html)
+- **作者**: Jaehong Yoon, Wonyong Jeong, Giwoong Lee, Eunho Yang, Sung Ju Hwang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICML 2021
+<!-- COMPLETE v1 papers=45 -->

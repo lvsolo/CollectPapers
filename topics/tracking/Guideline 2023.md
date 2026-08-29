@@ -112,3 +112,41 @@
 > Unsupervised learning is a challenging task due to the lack of labels. Multiple Object Tracking (MOT), which inevitably suffers from mutual object interference, occlusion, etc., is even more difficult without label supervision. In this paper, we explore the latent consistency of sample features across video frames and propose an Unsupervised Contrastive Similarity Learning method, named UCSL, including three contrast modules: self-contrast, cross-contrast, and ambiguity contrast. Specifically, i) self-contrast uses intra-frame direct and inter-frame indirect contrast to obtain discriminative representations by maximizing self-similarity. ii) Cross-contrast aligns cross- and continuous-frame matching results, mitigating the persistent negative effect caused by object occlusion. And iii) ambiguity contrast matches ambiguous objects with each other to further increase the certainty of subsequent object association through an implicit manner. On existing benchmarks, our method outperforms the existing unsupervised methods using only limited help from ReID head, and even provides higher accuracy than lots of fully supervised methods.
 
 </details>
+
+## 🆕 增量新增
+
+### MBPTrack: Improving 3D Point Cloud Tracking with Memory networks and Box Priors. **⭐⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2303.05071](https://arxiv.org/abs/2303.05071) · 📚 被引 25
+- **作者**: Tian-Xing Xu, Yuan-Chen Guo, Yu-Kun Lai, Song-Hai Zhang
+- **🏷️ 机构**: Tsinghua University,China, Cardiff University,United Kingdom
+- **会议**: ICCV 2023
+- **摘要（中）**: ①该论文针对3D单目标跟踪中外观变化和尺寸差异问题，提出MBPTrack，利用记忆网络和框先验进行粗到细定位。②方法上，采用外部记忆存储过去帧和目标掩码，通过transformer模块传播目标线索，并利用第一帧的框先验自适应采样参考点。③改进点在于结合记忆机制和框先验，提升不同尺寸目标的定位精度。④实验表明，MBPTrack在KITTI、nuScenes和Waymo数据集上达到最先进性能，显著优于现有方法。
+- **摘要（英）**: This paper addresses appearance variation and size differences in 3D single object tracking by proposing MBPTrack, which uses memory networks and box priors for coarse-to-fine localization. It propagates target cues via transformer and adaptively samples reference points. Experiments show state-of-the-art performance on KITTI, nuScenes, and Waymo datasets.
+- **核心贡献**: 提出MBPTrack，结合记忆网络和框先验提升3D跟踪性能。
+- **创新点**: 记忆机制和自适应参考点采样。
+- **结果**: 在多个数据集上达到最先进性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> 3D single object tracking has been a crucial problem for decades with numerous applications such as autonomous driving. Despite its wide-ranging use, this task remains challenging due to the significant appearance variation caused by occlusion and size differences among tracked targets. To address these issues, we present MBPTrack, which adopts a Memory mechanism to utilize past information and formulates localization in a coarse-to-fine scheme using Box Priors given in the first frame. Specifically, past frames with targetness masks serve as an external memory, and a transformer-based module propagates tracked target cues from the memory to the current frame. To precisely localize objects of all sizes, MBPTrack first predicts the target center via Hough voting. By leveraging box priors given in the first frame, we adaptively sample reference points around the target center that roughly cover the target of different sizes. Then, we obtain dense feature maps by aggregating point features into the reference points, where localization can be performed more effectively. Extensive experiments demonstrate that MBPTrack achieves state-of-the-art performance on KITTI, nuScenes and Waymo Open Dataset, while running at 50 FPS on a single RTX3090 GPU.
+
+</details>
+
+### ZoomTrack: Target-aware Non-uniform Resizing for Efficient Visual Tracking. **⭐⭐** (相关度: 50%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/9fc291fef2f9607a46777d367f900a15-Abstract-Conference.html)
+- **作者**: Yutong Kou, Jin Gao, Bing Li, Gang Wang, Weiming Hu, Yizheng Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
+- **摘要（中）**: 该论文摘要缺失，无法提供具体内容。根据标题推测，可能针对视觉跟踪中的目标感知非均匀缩放问题，提出ZoomTrack方法，但缺乏详细信息。
+- **摘要（英）**: The abstract is missing, so specific details are unavailable. Based on the title, it likely addresses target-aware non-uniform resizing for efficient visual tracking, but no concrete information is provided.
+- **核心贡献**: 未知，因摘要缺失。
+- **创新点**: 未知，因摘要缺失。
+- **结果**: 未知，因摘要缺失。
+
+## 跨领域论文（完整笔记在其他领域）
+
+- GeoMAE: Masked Geometric Target Prediction for Self-supervised Point Cloud Pre-Training. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
+- Standing Between Past and Future: Spatio-Temporal Modeling for Multi-Camera 3D Multi-Object Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
+- OVTrack: Open-Vocabulary Multiple Object Tracking. → [open-set-detection](../open-set-detection/Guideline%202023.md)
+- Unsupervised 3D Perception with 2D Vision-Language Distillation for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)
+<!-- COMPLETE v1 papers=14 -->

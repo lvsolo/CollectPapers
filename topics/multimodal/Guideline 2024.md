@@ -1410,3 +1410,337 @@
 - LabelDistill: Label-Guided Cross-Modal Knowledge Distillation for Camera-Based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - SAMFusion: Sensor-Adaptive Multimodal Fusion for 3D Object Detection in Adverse Weather. → [3d-detection](../3d-detection/Guideline%202024.md)
 - GraphBEV: Towards Robust BEV Feature Alignment for Multi-modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+
+## 🆕 增量新增
+
+### MTMMC: A Large-Scale Real-World Multi-Modal Camera Tracking Benchmark. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2403.20225](https://arxiv.org/abs/2403.20225) · 📚 被引 6
+- **作者**: Sanghyun Woo, Kwanyong Park, Inkyu Shin, Myungchul Kim, In So Kweon
+- **🏷️ 机构**: New York University, ETRI, KAIST
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对现有跨摄像头多目标跟踪数据集多为合成或受控环境、难以模拟真实动态的问题，该论文提出了MTMMC，一个大规模真实世界多模态数据集，包含16个多模态相机在校园和工厂两种环境、不同时间天气季节下捕获的长视频序列。该数据集提供RGB和热成像两种模态，增强了跟踪精度，并作为现有数据集的超集，为研究复杂真实场景下的多摄像头跟踪提供了挑战性测试平台。
+- **摘要（英）**: This paper tackles the limitation of existing multi-target multi-camera tracking datasets being synthetic or controlled, by introducing MTMMC, a large-scale real-world dataset with long videos from 16 multi-modal cameras in campus and factory environments across various conditions. It includes RGB and thermal modalities to improve tracking accuracy and serves as a superset of existing datasets, providing a challenging benchmark for real-world complexities.
+- **核心贡献**: 构建了大规模真实世界多模态多摄像头跟踪数据集。
+- **创新点**: 引入RGB和热成像双模态，覆盖多样环境条件。
+- **结果**: 提供了更具挑战性的基准，促进真实场景跟踪研究。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multi-target multi-camera tracking is a crucial task that involves identifying and tracking individuals over time using video streams from multiple cameras. This task has practical applications in various fields, such as visual surveillance, crowd behavior analysis, and anomaly detection. However, due to the difficulty and cost of collecting and labeling data, existing datasets for this task are either synthetically generated or artificially constructed within a controlled camera network setting, which limits their ability to model real-world dynamics and generalize to diverse camera configurations. To address this issue, we present MTMMC, a real-world, large-scale dataset that includes long video sequences captured by 16 multi-modal cameras in two different environments - campus and factory - across various time, weather, and season conditions. This dataset provides a challenging test-bed for studying multi-camera tracking under diverse real-world complexities and includes an additional input modality of spatially aligned and temporally synchronized RGB and thermal cameras, which enhances the accuracy of multi-camera tracking. MTMMC is a super-set of existing datasets, benefiting independent fields such as person detection, re-identification, and multiple object tracking. We provide baselines and new learning setups on this dataset and set the reference scores for future studies. The datasets, models, and test server will be made publicly available.
+
+</details>
+
+### MMMU: A Massive Multi-Discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2311.16502](https://arxiv.org/abs/2311.16502) · 📚 被引 399
+- **作者**: Xiang Yue, Yuansheng Ni, Tianyu Zheng, Kai Zhang, Ruoqi Liu, Ge Zhang et al.
+- **🏷️ 机构**: IN. AI Research, University of Waterloo, Independent
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对现有多模态基准测试主要评估静态图像理解，缺乏对需要大学水平学科知识和深度推理的专家级任务评估的问题。②提出了MMMU基准，包含11.5K个来自大学考试、测验和教科书的跨学科多模态问题，覆盖6大学科、30个主题、183个子领域和30种异构图像类型。③相比现有基准，MMMU强调高级感知与领域特定知识推理，模拟专家任务。④评估14个开源LMM和GPT-4V、Gemini，GPT-4V和Gemini Ultra仅分别达到56%和59%的准确率，表明该基准极具挑战性。
+- **摘要（英）**: This paper introduces MMMU, a massive multi-discipline multimodal benchmark with 11.5K college-level questions across 30 subjects and 183 subfields, targeting expert-level perception and reasoning. Unlike existing benchmarks, it emphasizes domain-specific knowledge and deliberate reasoning. Evaluation shows GPT-4V and Gemini Ultra achieve only 56% and 59% accuracy, highlighting significant room for improvement.
+- **核心贡献**: 构建了首个大规模多学科、专家级多模态理解与推理基准MMMU。
+- **创新点**: 通过覆盖30种异构图像类型和大学水平学科知识，实现从基础感知到专家推理的全面评估。
+- **结果**: GPT-4V和Gemini Ultra准确率仅56%和59%，证明现有模型在专家级任务上仍有巨大提升空间。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We introduce MMMU: a new benchmark designed to evaluate multimodal models on massive multi-discipline tasks demanding college-level subject knowledge and deliberate reasoning. MMMU includes 11.5K meticulously collected multimodal questions from college exams, quizzes, and textbooks, covering six core disciplines: Art & Design, Business, Science, Health & Medicine, Humanities & Social Science, and Tech & Engineering. These questions span 30 subjects and 183 subfields, comprising 30 highly heterogeneous image types, such as charts, diagrams, maps, tables, music sheets, and chemical structures. Unlike existing benchmarks, MMMU focuses on advanced perception and reasoning with domain-specific knowledge, challenging models to perform tasks akin to those faced by experts. The evaluation of 14 open-source LMMs as well as the proprietary GPT-4V(ision) and Gemini highlights the substantial challenges posed by MMMU. Even the advanced GPT-4V and Gemini Ultra only achieve accuracies of 56% and 59% respectively, indicating significant room for improvement. We believe MMMU will stimulate the community to build next-generation multimodal foundation models towards expert artificial general intelligence.
+
+</details>
+
+### MVBench: A Comprehensive Multi-modal Video Understanding Benchmark. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2311.17005](https://arxiv.org/abs/2311.17005) · 📚 被引 308
+- **作者**: Kunchang Li, Yali Wang, Yinan He, Yizhuo Li, Yi Wang, Yi Liu et al.
+- **🏷️ 机构**: Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, Shanghai AI Laboratory, Pudan University
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对现有多模态大模型基准主要评估静态图像空间理解，忽视视频时间动态理解的问题。②提出了MVBench基准，包含20个无法通过单帧解决的挑战性视频任务，并引入静态到动态的方法定义时间相关任务。③通过将静态任务转换为动态任务，系统生成需要从感知到认知的广泛时间技能的视频任务，并自动将公开视频注释转换为多项选择问答。④该范式高效构建基准且保证评估公平性，为视频理解评估提供了新标准。
+- **摘要（英）**: MVBench addresses the lack of temporal understanding evaluation in video tasks for MLLMs by introducing 20 challenging video tasks that cannot be solved with a single frame. It uses a static-to-dynamic method to define tasks and automatically converts public annotations into multiple-choice QA, ensuring efficiency and fairness. This benchmark systematically evaluates temporal skills from perception to cognition.
+- **核心贡献**: 提出了首个覆盖20个时间相关视频任务的综合多模态视频理解基准MVBench。
+- **创新点**: 通过静态到动态的任务转换方法，系统生成需要广泛时间技能的视频任务。
+- **结果**: 高效构建基准并保证评估公平性，为视频理解研究提供了新标准。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> With the rapid development of Multi-modal Large Language Models (MLLMs), a number of diagnostic benchmarks have recently emerged to evaluate the comprehension capabilities of these models. However, most benchmarks predominantly assess spatial understanding in the static image tasks, while overlooking temporal understanding in the dynamic video tasks. To alleviate this issue, we introduce a comprehensive Multi-modal Video understanding Benchmark, namely MVBench, which covers 20 challenging video tasks that cannot be effectively solved with a single frame. Specifically, we first introduce a novel static-to-dynamic method to define these temporal-related tasks. By transforming various static tasks into dynamic ones, we enable the systematic generation of video tasks that require a broad spectrum of temporal skills, ranging from perception to cognition. Then, guided by the task definition, we automatically convert public video annotations into multiple-choice QA to evaluate each task. On one hand, such a distinct paradigm allows us to build MVBench efficiently, without much manual intervention. On the other hand, it guarantees evaluation fairness with ground-truth video annotations, avoiding the biased scoring of LLMs. Moreover, we further develop a robust video MLLM baseline, i.e., VideoChat2, by progressive multi-modal training with diverse instruction-tuning data. The extensive results on our MVBench reveal that, the existing MLLMs are far from satisfactory in temporal understanding, while our VideoChat2 largely surpasses these leading models by over 15% on MVBench. All models and data are available at https://github.com/OpenGVLab/Ask-Anything.
+
+</details>
+
+### MIntRec2.0: A Large-scale Benchmark Dataset for Multimodal Intent Recognition and Out-of-scope Detection in Conversations. **⭐⭐⭐** (相关度: 35%)
+- **链接**: [arXiv:2403.10943](https://arxiv.org/abs/2403.10943)
+- **作者**: Hanlei Zhang, Xin Wang, Hua Xu, Qianrui Zhou, Kai Gao, Jianhua Su et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2024
+- **摘要（中）**: ①针对多模态意图识别中数据集规模有限和难以处理对话中越界样本的问题。②提出了MIntRec2.0，一个大规模多模态意图识别基准，包含1245个对话和15040个样本，标注30个细粒度意图类别，并包含5736个越界样本。③相比现有工作，数据集规模更大，并专门处理多轮对话中的越界样本。④提供了通用框架支持单轮和多轮对话数据组织、特征提取、融合和分类检测。
+- **摘要（英）**: This paper addresses limited dataset scale and out-of-scope sample handling in multimodal intent recognition. It introduces MIntRec2.0, a large-scale benchmark with 1,245 dialogues and 15,040 samples, annotated with 30 intent classes and 5,736 out-of-scope samples. It provides a general framework for data organization, feature extraction, fusion, and classification.
+- **核心贡献**: 提出了大规模多模态意图识别基准，包含越界样本处理。
+- **创新点**: 专门处理多轮对话中的越界样本，并扩展意图类别。
+- **结果**: 数据集和框架支持多模态意图识别研究。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal intent recognition poses significant challenges, requiring the incorporation of non-verbal modalities from real-world contexts to enhance the comprehension of human intentions. Existing benchmark datasets are limited in scale and suffer from difficulties in handling out-of-scope samples that arise in multi-turn conversational interactions. We introduce MIntRec2.0, a large-scale benchmark dataset for multimodal intent recognition in multi-party conversations. It contains 1,245 dialogues with 15,040 samples, each annotated within a new intent taxonomy of 30 fine-grained classes. Besides 9,304 in-scope samples, it also includes 5,736 out-of-scope samples appearing in multi-turn contexts, which naturally occur in real-world scenarios. Furthermore, we provide comprehensive information on the speakers in each utterance, enriching its utility for multi-party conversational research. We establish a general framework supporting the organization of single-turn and multi-turn dialogue data, modality feature extraction, multimodal fusion, as well as in-scope classification and out-of-scope detection. Evaluation benchmarks are built using classic multimodal fusion methods, ChatGPT, and human evaluators. While existing methods incorporating nonverbal information yield improvements, effectively leveraging context information and detecting out-of-scope samples remains a substantial challenge. Notably, large language models exhibit a significant performance gap compared to humans, highlighting the limitations of machine learning methods in the cognitive intent understanding task. We believe that MIntRec2.0 will serve as a valuable resource, providing a pioneering foundation for research in human-machine conversational interactions, and significantly facilitating related applications. The full dataset and codes are available at https://github.com/thuiar/MIntRec2.0.
+
+</details>
+
+### Can LLMs Solve Molecule Puzzles? A Multimodal Benchmark for Molecular Structure Elucidation. **⭐⭐** (相关度: 20%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/f2b9e8e7a36d43ddfd3d55113d56b1e0-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 5
+- **作者**: Kehan Guo, Bozhao Nan, Yujun Zhou, Taicheng Guo, Zhichun Guo, Mihir Surve et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对大语言模型（LLM）在分子结构解析任务中的能力评估问题。②提出了一个多模态基准，用于测试LLM解决分子谜题的能力。③相比现有工作，该基准结合了分子结构和多模态数据。④摘要未提供具体结果数据。
+- **摘要（英）**: This paper addresses the evaluation of LLMs on molecular structure elucidation tasks. It proposes a multimodal benchmark for testing LLMs on molecule puzzles. Compared to existing work, it integrates molecular structures with multimodal data. Specific results are not provided in the abstract.
+- **核心贡献**: 提出了分子结构解析的多模态基准。
+- **创新点**: 将LLM评估扩展到分子科学领域。
+- **结果**: 未报告具体实验结果。
+
+### MLLM-CompBench: A Comparative Reasoning Benchmark for Multimodal LLMs. **⭐⭐** (相关度: 25%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/32923dff09f75cf1974c145764a523e2-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 5
+- **作者**: Jihyung Kil, Zheda Mai, Justin Lee, Arpita Chowdhury, Zihe Wang, Kerrie Cheng et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对多模态大语言模型（MLLM）在比较推理任务上的评估不足问题。②提出了MLLM-CompBench基准，专门测试模型的比较推理能力。③相比现有基准，更聚焦于比较推理这一特定认知能力。④摘要未提供具体数据。
+- **摘要（英）**: This paper addresses the insufficient evaluation of MLLMs on comparative reasoning tasks. It introduces MLLM-CompBench, a benchmark specifically for testing comparative reasoning. Compared to existing benchmarks, it focuses on this specific cognitive ability. Specific results are not detailed in the abstract.
+- **核心贡献**: 提出了比较推理基准MLLM-CompBench。
+- **创新点**: 聚焦于比较推理能力的评估。
+- **结果**: 未报告具体性能数据。
+
+### II-Bench: An Image Implication Understanding Benchmark for Multimodal Large Language Models. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2406.05862](https://arxiv.org/abs/2406.05862)
+- **作者**: Ziqiang Liu, Feiteng Fang, Xi Feng, Xeron Du, Chenhao Zhang, Noah Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对多模态大语言模型（MLLM）在图像高阶感知（如隐含意义理解）能力评估的缺失问题。②提出了II-Bench基准，专门评估模型对图像隐含意义的理解能力。③相比现有基准，更关注高阶感知和抽象图像理解。④实验发现MLLM最高准确率仅74.8%，而人类平均90%、最高98%，且模型在抽象复杂图像上表现更差，加入情感极性提示可提升准确率。
+- **摘要（英）**: This paper addresses the lack of evaluation for MLLMs' higher-order perception, such as image implication understanding. It proposes II-Bench, a benchmark for this purpose. Compared to existing benchmarks, it focuses on abstract and complex image semantics. Experiments show MLLMs achieve at most 74.8% accuracy versus 90% human average, with worse performance on abstract images and improvements when sentiment hints are added.
+- **核心贡献**: 提出了II-Bench基准，系统评估MLLM的图像隐含意义理解能力。
+- **创新点**: 首次聚焦于图像高阶感知的基准设计。
+- **结果**: MLLM最高准确率74.8%，远低于人类90%平均水平。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The rapid advancements in the development of multimodal large language models (MLLMs) have consistently led to new breakthroughs on various benchmarks. In response, numerous challenging and comprehensive benchmarks have been proposed to more accurately assess the capabilities of MLLMs. However, there is a dearth of exploration of the higher-order perceptual capabilities of MLLMs. To fill this gap, we propose the Image Implication understanding Benchmark, II-Bench, which aims to evaluate the model's higher-order perception of images. Through extensive experiments on II-Bench across multiple MLLMs, we have made significant findings. Initially, a substantial gap is observed between the performance of MLLMs and humans on II-Bench. The pinnacle accuracy of MLLMs attains 74.8%, whereas human accuracy averages 90%, peaking at an impressive 98%. Subsequently, MLLMs perform worse on abstract and complex images, suggesting limitations in their ability to understand high-level semantics and capture image details. Finally, it is observed that most models exhibit enhanced accuracy when image sentiment polarity hints are incorporated into the prompts. This observation underscores a notable deficiency in their inherent understanding of image sentiment. We believe that II-Bench will inspire the community to develop the next generation of MLLMs, advancing the journey towards expert artificial general intelligence (AGI). II-Bench is publicly available at https://huggingface.co/datasets/m-a-p/II-Bench.
+
+</details>
+
+### WONDERBREAD: A Benchmark for Evaluating Multimodal Foundation Models on Business Process Management Tasks. **⭐⭐** (相关度: 20%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/d1fa821312040303b089ae529dbf81a6-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 1
+- **作者**: Michael Wornow, Avanika Narayan, Ben Viggiano, Ishan S. Khare, Tathagat Verma, Tibor Thompson et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对多模态基础模型在业务流程管理（BPM）任务中的评估缺失问题。②提出了WONDERBREAD基准，用于评估模型在BPM任务上的表现。③相比现有基准，专注于业务流程管理这一特定领域。④摘要未提供具体数据。
+- **摘要（英）**: This paper addresses the lack of evaluation for multimodal foundation models on business process management tasks. It introduces WONDERBREAD, a benchmark for this purpose. Compared to existing benchmarks, it focuses on the BPM domain. Specific results are not provided in the abstract.
+- **核心贡献**: 提出了WONDERBREAD基准，评估多模态模型在BPM任务上的能力。
+- **创新点**: 将多模态评估扩展到业务流程管理领域。
+- **结果**: 未报告具体实验结果。
+
+### MultiTrust: A Comprehensive Benchmark Towards Trustworthy Multimodal Large Language Models. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/586640cda3db2dc77349013dcefee456-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 8
+- **作者**: Yichi Zhang, Yao Huang, Yitong Sun, Chang Liu, Zhe Zhao, Zhengwei Fang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对多模态大语言模型（MLLM）在可信度方面缺乏系统评估的问题。②提出了MultiTrust，一个全面的基准测试，涵盖真实性、安全性、鲁棒性等维度，并设计了多层次的评估任务。③相比现有基准，更全面地覆盖了可信度的多个方面，并引入了细粒度的评估协议。④通过大规模实验揭示了当前MLLM在可信度上的显著缺陷，为后续改进提供了方向。
+- **摘要（英）**: This paper addresses the lack of systematic evaluation of trustworthiness in multimodal large language models (MLLMs). It introduces MultiTrust, a comprehensive benchmark covering dimensions such as truthfulness, safety, and robustness, with multi-level evaluation tasks. Compared to existing benchmarks, it provides broader coverage and finer-grained protocols, revealing significant deficiencies in current MLLMs through extensive experiments.
+- **核心贡献**: 提出了首个全面覆盖多模态大语言模型可信度的基准测试MultiTrust。
+- **创新点**: 设计了多维度、多粒度的可信度评估框架，并引入细粒度协议。
+- **结果**: 实验揭示了当前MLLM在可信度上的显著缺陷，为改进提供了依据。
+
+### Weakly Misalignment-Free Adaptive Feature Alignment for UAVs-Based Multimodal Object Detection. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02534) · 📚 被引 83
+- **作者**: Chen Chen, Jiahao Qi, Xingyue Liu, Kangcheng Bin, Ruigang Fu, Xikun Hu et al.
+- **🏷️ 机构**: National University of Defense Technology,China
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对无人机多模态目标检测中特征对齐易受弱对齐影响的问题，提出弱对齐无关的自适应特征对齐方法，通过设计对齐机制减少模态间错位。该方法在无人机多模态检测任务上提升鲁棒性，但摘要信息不完整，具体效果未给出。
+- **摘要（英）**: This work tackles weak misalignment in multimodal object detection for UAVs, proposing an adaptive feature alignment method that is robust to misalignment. It improves robustness in UAV-based detection, though specific results are not provided in the abstract.
+- **核心贡献**: 提出弱对齐无关的自适应特征对齐方法用于无人机多模态检测。
+- **创新点**: 设计对弱对齐鲁棒的特征对齐机制。
+- **结果**: 提升无人机多模态检测的鲁棒性。
+
+### Open-World Human-Object Interaction Detection via Multi-Modal Prompts. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01604) · 📚 被引 28
+- **作者**: Jie Yang, Bingliang Li, Ailing Zeng, Lei Zhang, Ruimao Zhang
+- **🏷️ 机构**: The Chinese University of Hong Kong,Shenzhen, International Digital Economy Academy
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对开放世界场景下人类-物体交互检测中，现有方法难以处理未见过的交互类别和多样化的提示信息的问题。②提出了利用多模态提示（如文本和视觉）进行开放世界HOI检测的方法，通过融合多模态信息增强模型对未知交互的泛化能力。③相比传统闭集检测方法，该方法能适应开放世界中的新类别和动态场景。④摘要未提供具体数据，但方法设计旨在提升开放世界检测的鲁棒性和灵活性。
+- **摘要（英）**: This work addresses open-world human-object interaction detection by leveraging multi-modal prompts to handle unseen interaction categories. It integrates text and visual cues to improve generalization to novel interactions. The approach aims to enhance robustness and flexibility in dynamic open-world scenarios.
+- **核心贡献**: 提出基于多模态提示的开放世界HOI检测方法。
+- **创新点**: 利用多模态信息融合提升对未知交互类别的泛化能力。
+- **结果**: 摘要未提供具体数据，但方法旨在提升开放世界检测性能。
+
+### IS-Fusion: Instance-Scene Collaborative Fusion for Multimodal 3D Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2403.15241](https://arxiv.org/abs/2403.15241) · 📚 被引 110
+- **作者**: Junbo Yin, Jianbing Shen, Runnan Chen, Wei Li, Ruigang Yang, Pascal Frossard et al.
+- **🏷️ 机构**: School of Computer Science and Technology, Beijing Institute of Technology, SKL-IOTSC, CIS, University of Macau, The University of Hong Kong
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对BEV表示中物体尺寸小、点云稀疏导致3D感知可靠性差的问题，提出IS-Fusion多模态融合框架，联合捕获实例级和场景级上下文信息。通过层级场景融合模块（HSF）和实例引导融合模块（IGF），在不同粒度上融合多模态场景上下文，并利用实例候选增强场景特征。相比仅关注BEV场景级融合的现有方法，显式引入实例级多模态信息，提升实例中心任务性能。在挑战性数据集上验证了有效性。
+- **摘要（英）**: To address the challenges of small object sizes and sparse point clouds in BEV representation for reliable 3D perception, this paper proposes IS-Fusion, a multimodal fusion framework that jointly captures instance- and scene-level contextual information. It introduces Hierarchical Scene Fusion (HSF) and Instance-Guided Fusion (IGF) modules to fuse multimodal context at different granularities and enhance scene features with instance guidance. Unlike existing BEV-only fusion methods, it explicitly incorporates instance-level information, improving instance-centric tasks like 3D detection. Experiments on challenging datasets demonstrate its effectiveness.
+- **核心贡献**: 提出IS-Fusion框架，首次在BEV融合中显式结合实例级与场景级多模态上下文。
+- **创新点**: 设计HSF和IGF模块，实现多粒度场景融合与实例引导的BEV特征增强。
+- **结果**: 在挑战性数据集上验证了实例级融合对3D检测性能的提升。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Bird's eye view (BEV) representation has emerged as a dominant solution for describing 3D space in autonomous driving scenarios. However, objects in the BEV representation typically exhibit small sizes, and the associated point cloud context is inherently sparse, which leads to great challenges for reliable 3D perception. In this paper, we propose IS-Fusion, an innovative multimodal fusion framework that jointly captures the Instance- and Scene-level contextual information. IS-Fusion essentially differs from existing approaches that only focus on the BEV scene-level fusion by explicitly incorporating instance-level multimodal information, thus facilitating the instance-centric tasks like 3D object detection. It comprises a Hierarchical Scene Fusion (HSF) module and an Instance-Guided Fusion (IGF) module. HSF applies Point-to-Grid and Grid-to-Region transformers to capture the multimodal scene context at different granularities. IGF mines instance candidates, explores their relationships, and aggregates the local multimodal context for each instance. These instances then serve as guidance to enhance the scene feature and yield an instance-aware BEV representation. On the challenging nuScenes benchmark, IS-Fusion outperforms all the published multimodal works to date. Code is available at: https://github.com/yinjunbo/IS-Fusion.
+
+</details>
+
+### Scene-adaptive and Region-aware Multi-modal Prompt for Open Vocabulary Object Detection. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01584) · 📚 被引 14
+- **作者**: Xiaowei Zhao, Xianglong Liu, Duorui Wang, Yajun Gao, Zhide Liu
+- **🏷️ 机构**: Beihang University,State Key Laboratory of Complex &#x0026; Critical Software Environment
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对开放词汇目标检测中多模态提示（prompt）设计不足的问题，该论文提出场景自适应和区域感知的多模态提示方法。方法通过引入场景级和区域级上下文信息，动态调整提示特征，以提升模型对未知类别的泛化能力。相比固定提示或单一模态提示，该方法能更好地适应不同场景和区域分布。实验表明在多个开放词汇检测基准上取得了性能提升。
+- **摘要（英）**: This paper addresses the limitations of multimodal prompts in open-vocabulary object detection by proposing scene-adaptive and region-aware prompt learning. It dynamically adjusts prompt features using scene-level and region-level context, improving generalization to unseen categories. Compared to fixed or single-modal prompts, the method adapts better to diverse scenes and regions, achieving performance gains on multiple benchmarks.
+- **核心贡献**: 提出场景自适应与区域感知的多模态提示机制，提升开放词汇检测的泛化性。
+- **创新点**: 将场景和区域上下文动态融入提示生成过程。
+- **结果**: 在多个基准上取得性能提升。
+
+### AlignMiF: Geometry-Aligned Multimodal Implicit Field for LiDAR-Camera Joint Synthesis.
+- **链接**: [arXiv:2402.17483](https://arxiv.org/abs/2402.17483) · 📚 被引 13
+- **作者**: Tang Tao, Guangrun Wang, Yixing Lao, Peng Chen, Jie Liu, Liang Lin et al.
+- **🏷️ 机构**: Shenzhen Campus of Sun Yat-sen University, University of Oxford, HKU
+- **会议**: CVPR 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Neural implicit fields have been a de facto standard in novel view synthesis. Recently, there exist some methods exploring fusing multiple modalities within a single field, aiming to share implicit features from different modalities to enhance reconstruction performance. However, these modalities often exhibit misaligned behaviors: optimizing for one modality, such as LiDAR, can adversely affect another, like camera performance, and vice versa. In this work, we conduct comprehensive analyses on the multimodal implicit field of LiDAR-camera joint synthesis, revealing the underlying issue lies in the misalignment of different sensors. Furthermore, we introduce AlignMiF, a geometrically aligned multimodal implicit field with two proposed modules: Geometry-Aware Alignment (GAA) and Shared Geometry Initialization (SGI). These modules effectively align the coarse geometry across different modalities, significantly enhancing the fusion process between LiDAR and camera data. Through extensive experiments across various datasets and scenes, we demonstrate the effectiveness of our approach in facilitating better interaction between LiDAR and camera modalities within a unified neural field. Specifically, our proposed AlignMiF, achieves remarkable improvement over recent implicit fusion methods (+2.01 and +3.11 image PSNR on the KITTI-360 and Waymo datasets) and consistently surpasses single modality performance (13.8% and 14.2% reduction in LiDAR Chamfer Distance on the respective datasets).
+
+</details>
+
+### Draw Step by Step: Reconstructing CAD Construction Sequences from Point Clouds via Multimodal Diffusion.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02564) · 📚 被引 23
+- **作者**: Weijian Ma, Shuaiqi Chen, Yunzhong Lou, Xueyang Li, Xiangdong Zhou
+- **🏷️ 机构**: School of Computer Science and Technology, Fudan University
+- **会议**: CVPR 2024
+
+### StreamingFlow: Streaming Occupancy Forecasting with Asynchronous Multi-modal Data Streams via Neural Ordinary Differential Equation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01405) · 📚 被引 3
+- **作者**: Yining Shi, Kun Jiang, Ke Wang, Jiusi Li, Yunlong Wang, Mengmeng Yang et al.
+- **🏷️ 机构**: School of Vehicle and Mobility, Tsinghua University, KargoBot, Inc
+- **会议**: CVPR 2024
+
+### SDSTrack: Self-Distillation Symmetric Adapter Learning for Multi-Modal Visual Object Tracking.
+- **链接**: [arXiv:2403.16002](https://arxiv.org/abs/2403.16002) · 📚 被引 113
+- **作者**: Xiaojun Hou, Jiazheng Xing, Yijie Qian, Yaowei Guo, Shuo Xin, Junhao Chen et al.
+- **🏷️ 机构**: Zhejiang University
+- **会议**: CVPR 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal Visual Object Tracking (VOT) has recently gained significant attention due to its robustness. Early research focused on fully fine-tuning RGB-based trackers, which was inefficient and lacked generalized representation due to the scarcity of multimodal data. Therefore, recent studies have utilized prompt tuning to transfer pre-trained RGB-based trackers to multimodal data. However, the modality gap limits pre-trained knowledge recall, and the dominance of the RGB modality persists, preventing the full utilization of information from other modalities. To address these issues, we propose a novel symmetric multimodal tracking framework called SDSTrack. We introduce lightweight adaptation for efficient fine-tuning, which directly transfers the feature extraction ability from RGB to other domains with a small number of trainable parameters and integrates multimodal features in a balanced, symmetric manner. Furthermore, we design a complementary masked patch distillation strategy to enhance the robustness of trackers in complex environments, such as extreme weather, poor imaging, and sensor failure. Extensive experiments demonstrate that SDSTrack outperforms state-of-the-art methods in various multimodal tracking scenarios, including RGB+Depth, RGB+Thermal, and RGB+Event tracking, and exhibits impressive results in extreme conditions. Our source code is available at https://github.com/hoqolo/SDSTrack.
+
+</details>
+
+### OVMR: Open-Vocabulary Recognition with Multi-Modal References.
+- **链接**: [arXiv:2406.04675](https://arxiv.org/abs/2406.04675) · 📚 被引 8
+- **作者**: Zehong Ma, Shiliang Zhang, Longhui Wei, Qi Tian
+- **🏷️ 机构**: School of Computer Science, Peking University,National Key Laboratory for Multimedia Information Processing, Huawei Inc.
+- **会议**: CVPR 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The challenge of open-vocabulary recognition lies in the model has no clue of new categories it is applied to. Existing works have proposed different methods to embed category cues into the model, \eg, through few-shot fine-tuning, providing category names or textual descriptions to Vision-Language Models. Fine-tuning is time-consuming and degrades the generalization capability. Textual descriptions could be ambiguous and fail to depict visual details. This paper tackles open-vocabulary recognition from a different perspective by referring to multi-modal clues composed of textual descriptions and exemplar images. Our method, named OVMR, adopts two innovative components to pursue a more robust category cues embedding. A multi-modal classifier is first generated by dynamically complementing textual descriptions with image exemplars. A preference-based refinement module is hence applied to fuse uni-modal and multi-modal classifiers, with the aim to alleviate issues of low-quality exemplar images or textual descriptions. The proposed OVMR is a plug-and-play module, and works well with exemplar images randomly crawled from the Internet. Extensive experiments have demonstrated the promising performance of OVMR, \eg, it outperforms existing methods across various scenarios and setups. Codes are publicly available at \href{https://github.com/Zehong-Ma/OVMR}{https://github.com/Zehong-Ma/OVMR}.
+
+</details>
+
+### Multiagent Multitraversal Multimodal Self-Driving: Open MARS Dataset.
+- **链接**: [arXiv:2406.09383](https://arxiv.org/abs/2406.09383) · 📚 被引 16
+- **作者**: Yiming Li, Zhiheng Li, Nuo Chen, Moonjun Gong, Zonglin Lyu, Zehong Wang et al.
+- **🏷️ 机构**: New York University
+- **会议**: CVPR 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large-scale datasets have fueled recent advancements in AI-based autonomous vehicle research. However, these datasets are usually collected from a single vehicle's one-time pass of a certain location, lacking multiagent interactions or repeated traversals of the same place. Such information could lead to transformative enhancements in autonomous vehicles' perception, prediction, and planning capabilities. To bridge this gap, in collaboration with the self-driving company May Mobility, we present the MARS dataset which unifies scenarios that enable MultiAgent, multitraveRSal, and multimodal autonomous vehicle research. More specifically, MARS is collected with a fleet of autonomous vehicles driving within a certain geographical area. Each vehicle has its own route and different vehicles may appear at nearby locations. Each vehicle is equipped with a LiDAR and surround-view RGB cameras. We curate two subsets in MARS: one facilitates collaborative driving with multiple vehicles simultaneously present at the same location, and the other enables memory retrospection through asynchronous traversals of the same location by multiple vehicles. We conduct experiments in place recognition and neural reconstruction. More importantly, MARS introduces new research opportunities and challenges such as multitraversal 3D reconstruction, multiagent perception, and unsupervised object discovery. Our data and codes can be found at https://ai4ce.github.io/MARS/.
+
+</details>
+
+### VCoder: Versatile Vision Encoders for Multimodal Large Language Models.
+- **链接**: [arXiv:2312.14233](https://arxiv.org/abs/2312.14233) · 📚 被引 37
+- **作者**: Jitesh Jain, Jianwei Yang, Humphrey Shi
+- **🏷️ 机构**: SHI Labs@Georgia Tech, Microsoft Research, Redmond
+- **会议**: CVPR 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Humans possess the remarkable skill of Visual Perception, the ability to see and understand the seen, helping them make sense of the visual world and, in turn, reason. Multimodal Large Language Models (MLLM) have recently achieved impressive performance on vision-language tasks ranging from visual question-answering and image captioning to visual reasoning and image generation. However, when prompted to identify or count (perceive) the entities in a given image, existing MLLM systems fail. Working towards developing an accurate MLLM system for perception and reasoning, we propose using Versatile vision enCoders (VCoder) as perception eyes for Multimodal LLMs. We feed the VCoder with perception modalities such as segmentation or depth maps, improving the MLLM's perception abilities. Secondly, we leverage the images from COCO and outputs from off-the-shelf vision perception models to create our COCO Segmentation Text (COST) dataset for training and evaluating MLLMs on the object perception task. Thirdly, we introduce metrics to assess the object perception abilities in MLLMs on our COST dataset. Lastly, we provide extensive experimental evidence proving the VCoder's improved object-level perception skills over existing Multimodal LLMs, including GPT-4V. We open-source our dataset, code, and models to promote research. We open-source our code at https://github.com/SHI-Labs/VCoder
+
+</details>
+
+### Unified-IO 2: Scaling Autoregressive Multimodal Models with Vision, Language, Audio, and Action.
+- **链接**: [arXiv:2312.17172](https://arxiv.org/abs/2312.17172) · 📚 被引 95
+- **作者**: Jiasen Lu, Christopher Clark, Sangho Lee, Zichen Zhang, Savya Khosla, Ryan Marten et al.
+- **🏷️ 机构**: Allen Institute for AI, University of Illinois Urbana-Champaign
+- **会议**: CVPR 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present Unified-IO 2, the first autoregressive multimodal model that is capable of understanding and generating image, text, audio, and action. To unify different modalities, we tokenize inputs and outputs -- images, text, audio, action, bounding boxes, etc., into a shared semantic space and then process them with a single encoder-decoder transformer model. Since training with such diverse modalities is challenging, we propose various architectural improvements to stabilize model training. We train our model from scratch on a large multimodal pre-training corpus from diverse sources with a multimodal mixture of denoisers objective. To learn an expansive set of skills, such as following multimodal instructions, we construct and finetune on an ensemble of 120 datasets with prompts and augmentations. With a single unified model, Unified-IO 2 achieves state-of-the-art performance on the GRIT benchmark and strong results in more than 35 benchmarks, including image generation and understanding, natural language understanding, video and audio understanding, and robotic manipulation. We release all our models to the research community.
+
+</details>
+
+### EMOPortraits: Emotion-Enhanced Multimodal One-Shot Head Avatars.
+- **链接**: [arXiv:2404.19110](https://arxiv.org/abs/2404.19110) · 📚 被引 41
+- **作者**: Nikita Drobyshev, Antoni Bigata Casademunt, Konstantinos Vougioukas, Zoe Landgraf, Stavros Petridis, Maja Pantic
+- **🏷️ 机构**: Imperial College London
+- **会议**: CVPR 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Head avatars animated by visual signals have gained popularity, particularly in cross-driving synthesis where the driver differs from the animated character, a challenging but highly practical approach. The recently presented MegaPortraits model has demonstrated state-of-the-art results in this domain. We conduct a deep examination and evaluation of this model, with a particular focus on its latent space for facial expression descriptors, and uncover several limitations with its ability to express intense face motions. To address these limitations, we propose substantial changes in both training pipeline and model architecture, to introduce our EMOPortraits model, where we: Enhance the model's capability to faithfully support intense, asymmetric face expressions, setting a new state-of-the-art result in the emotion transfer task, surpassing previous methods in both metrics and quality. Incorporate speech-driven mode to our model, achieving top-tier performance in audio-driven facial animation, making it possible to drive source identity through diverse modalities, including visual signal, audio, or a blend of both. We propose a novel multi-view video dataset featuring a wide range of intense and asymmetric facial expressions, filling the gap with absence of such data in existing datasets.
+
+</details>
+
+### SAMFusion: Sensor-Adaptive Multimodal Fusion for 3D Object Detection in Adverse Weather.
+- **链接**: [arXiv:2508.16408](https://arxiv.org/abs/2508.16408) · 📚 被引 23
+- **作者**: Edoardo Palladin, Roland Dietze, Praveen Narayanan, Mario Bijelic, Felix Heide
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal sensor fusion is an essential capability for autonomous robots, enabling object detection and decision-making in the presence of failing or uncertain inputs. While recent fusion methods excel in normal environmental conditions, these approaches fail in adverse weather, e.g., heavy fog, snow, or obstructions due to soiling. We introduce a novel multi-sensor fusion approach tailored to adverse weather conditions. In addition to fusing RGB and LiDAR sensors, which are employed in recent autonomous driving literature, our sensor fusion stack is also capable of learning from NIR gated camera and radar modalities to tackle low light and inclement weather. We fuse multimodal sensor data through attentive, depth-based blending schemes, with learned refinement on the Bird's Eye View (BEV) plane to combine image and range features effectively. Our detections are predicted by a transformer decoder that weighs modalities based on distance and visibility. We demonstrate that our method improves the reliability of multimodal sensor fusion in autonomous vehicles under challenging weather conditions, bridging the gap between ideal conditions and real-world edge cases. Our approach improves average precision by 17.2 AP compared to the next best method for vulnerable pedestrians in long distances and challenging foggy scenes. Our project page is available at https://light.princeton.edu/samfusion/
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- MLLM-as-a-Judge: Assessing Multimodal LLM-as-a-Judge with Vision-Language Benchmark. → [vlm](../vlm/Guideline%202024.md)
+- MMT-Bench: A Comprehensive Multimodal Benchmark for Evaluating Large Vision-Language Models Towards Multitask AGI. → [vlm](../vlm/Guideline%202024.md)
+- WikiDO: A New Benchmark Evaluating Cross-Modal Retrieval for Vision-Language Models. → [vlm](../vlm/Guideline%202024.md)
+- DevBench: A multimodal developmental benchmark for language learning. → [vlm](../vlm/Guideline%202024.md)
+- VERIFIED: A Video Corpus Moment Retrieval Benchmark for Fine-Grained Video Understanding. → [video-understanding](../video-understanding/Guideline%202024.md)
+- MMBench-Video: A Long-Form Multi-Shot Benchmark for Holistic Video Understanding. → [vlm](../vlm/Guideline%202024.md)
+- LongVideoBench: A Benchmark for Long-context Interleaved Video-Language Understanding. → [video-understanding](../video-understanding/Guideline%202024.md)
+- UniMODE: Unified Monocular 3D Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- RCBEVDet: Radar-Camera Fusion in Bird's Eye View for 3D Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- Holistic Autonomous Driving Understanding by Bird'View Injected Multi-Modal Large Models. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+- Training-Free Open-Vocabulary Segmentation with Offline Diffusion-Augmented Prototype Generation. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+- CAT-Seg: Cost Aggregation for Open-Vocabulary Semantic Segmentation. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+- Image-to-Image Matching via Foundation Models: A New Perspective for Open-Vocabulary Semantic Segmentation. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+- OVER-NAV: Elevating Iterative Vision-and-Language Navigation with Open-Vocabulary Detection and StructurEd Representation. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+- Abductive Ego-View Accident Video Understanding for Safe Driving Perception. → [video-understanding](../video-understanding/Guideline%202024.md)
+- Consistency and Uncertainty: Identifying Unreliable Responses From Black-Box Vision-Language Models for Selective Visual Question Answering. → [vlm](../vlm/Guideline%202024.md)
+- MADTP: Multimodal Alignment-Guided Dynamic Token Pruning for Accelerating Vision-Language Transformer. → [network-pruning](../network-pruning/Guideline%202024.md)
+- MULTIFLOW: Shifting Towards Task-Agnostic Vision-Language Pruning. → [network-pruning](../network-pruning/Guideline%202024.md)
+- SyncMask: Synchronized Attentional Masking for Fashion-centric Vision-Language Pretraining. → [vlm](../vlm/Guideline%202024.md)
+- PartDistill: 3D Shape Part Segmentation by Vision-Language Model Distillation. → [vlm](../vlm/Guideline%202024.md)
+- MMA: Multi-Modal Adapter for Vision-Language Models. → [vlm](../vlm/Guideline%202024.md)
+- MA-LMM: Memory-Augmented Large Multimodal Model for Long-Term Video Understanding. → [video-understanding](../video-understanding/Guideline%202024.md)
+- Honeybee: Locality-Enhanced Projector for Multimodal LLM. → [vlm](../vlm/Guideline%202024.md)
+- LION : Empowering Multimodal Large Language Model with Dual-Level Visual Knowledge. → [vlm](../vlm/Guideline%202024.md)
+- Question Aware Vision Transformer for Multimodal Reasoning. → [vision-transformer](../vision-transformer/Guideline%202024.md)
+- SmartEdit: Exploring Complex Instruction-Based Image Editing with Multimodal Large Language Models. → [vlm](../vlm/Guideline%202024.md)
+- Sniffer: Multimodal Large Language Model for Explainable Out-of-Context Misinformation Detection. → [vlm](../vlm/Guideline%202024.md)
+- TimeChat: A Time-sensitive Multimodal Large Language Model for Long Video Understanding. → [video-understanding](../video-understanding/Guideline%202024.md)
+- Link-Context Learning for Multimodal LLMs. → [vlm](../vlm/Guideline%202024.md)
+- Eyes Wide Shut? Exploring the Visual Shortcomings of Multimodal LLMs. → [vlm](../vlm/Guideline%202024.md)
+- GSVA: Generalized Segmentation via Multimodal Large Language Models. → [vlm](../vlm/Guideline%202024.md)
+- Separating the "Chirp" from the "Chat": Self-supervised Visual Grounding of Sound and Language. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
+- Self-Supervised Class-Agnostic Motion Prediction with Spatial and Temporal Consistency Regularizations. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+- ES3: Evolving Self-Supervised Learning of Robust Audio-Visual Speech Representations. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
+- Enhancing Visual Document Understanding with Contrastive Learning in Large Visual-Language Models. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
+- Chat-UniVi: Unified Visual Representation Empowers Large Language Models with Image and Video Understanding. → [video-understanding](../video-understanding/Guideline%202024.md)
+- DeTra: A Unified Model for Object Detection and Trajectory Forecasting. → [object-detection](../object-detection/Guideline%202024.md)
+- FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- LabelDistill: Label-Guided Cross-Modal Knowledge Distillation for Camera-Based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- LEROjD: Lidar Extended Radar-Only Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- GraphBEV: Towards Robust BEV Feature Alignment for Multi-modal 3D Object Detection. → [bev](../bev/Guideline%202024.md)
+<!-- COMPLETE v1 papers=160 -->

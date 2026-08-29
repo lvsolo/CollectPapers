@@ -1465,3 +1465,314 @@
 - CL-MoE: Enhancing Multimodal Large Language Model with Dual Momentum Mixture-of-Experts for Continual Visual Question Answering. → [multimodal](../multimodal/Guideline%202025.md)
 - Playing the Fool: Jailbreaking LLMs and Multimodal LLMs with Out-of-Distribution Strategy. → [multimodal](../multimodal/Guideline%202025.md)
 - Img-Diff: Contrastive Data Synthesis for Multimodal Large Language Models. → [multimodal](../multimodal/Guideline%202025.md)
+
+## 🆕 增量新增
+
+### Towards Realistic UAV Vision-Language Navigation: Platform, Benchmark, and Methodology. **⭐⭐** (相关度: 30%)
+- **链接**: [出版页](https://openreview.net/forum?id=rUvCIvI4eB)
+- **作者**: Xiangyu Wang, Donglin Yang, Ziqin Wang, Hohin Kwan, Jinyu Chen, Wenjun Wu et al.
+- **🏷️ 机构**: CUHK
+- **会议**: ICLR 2025
+- **摘要（中）**: ①针对无人机视觉语言导航（UAV-VLN）在现实场景中的挑战，如动态环境和复杂任务。②提出了面向现实UAV-VLN的平台、基准和方法，但摘要内容缺失，无法获取具体细节。③改进点可能涉及更真实的场景模拟和评估。④由于摘要不完整，无法提供具体效果数据。
+- **摘要（英）**: This paper aims to address challenges in realistic UAV vision-language navigation by proposing a platform, benchmark, and methodology. However, the abstract is incomplete, limiting detailed assessment. The work likely focuses on improving navigation in dynamic environments, but specific contributions and results are unavailable.
+- **核心贡献**: 提出了面向现实无人机视觉语言导航的平台和基准。
+- **创新点**: 可能涉及更真实的场景模拟，但细节未知。
+- **结果**: 效果数据未提供。
+
+### MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models. **⭐⭐⭐⭐** (相关度: 55%)
+- **链接**: [arXiv:2410.10139](https://arxiv.org/abs/2410.10139)
+- **作者**: Peng Xia, Siwei Han, Shi Qiu, Yiyang Zhou, Zhaoyang Wang, Wenhao Zheng et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+- **摘要（中）**: ①针对交错多模态理解与生成评估不足的问题，提出了MMIE基准。②MMIE包含20K个多模态查询，覆盖3个类别、12个领域和102个子领域，支持交错输入输出和多种问题格式。③相比现有基准，MMIE在数据规模、范围和评估深度上更全面，并提出了基于微调评分模型的自动化评估指标以减少偏差。④实验表明该基准能有效评估LVLMs的能力，但摘要未提供具体性能数据。
+- **摘要（英）**: This paper introduces MMIE, a large-scale benchmark for interleaved multimodal comprehension and generation, with 20K queries across diverse fields. It supports interleaved inputs/outputs and proposes a reliable automated scoring model to reduce evaluation bias. The benchmark aims to address limitations in existing evaluations, though specific results are not detailed.
+- **核心贡献**: 提出了大规模交错多模态理解基准MMIE及自动化评估指标。
+- **创新点**: 支持交错输入输出和知识密集型任务。
+- **结果**: 提供了可靠的评估工具，但未报告具体模型性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Interleaved multimodal comprehension and generation, enabling models to produce and interpret both images and text in arbitrary sequences, have become a pivotal area in multimodal learning. Despite significant advancements, the evaluation of this capability remains insufficient. Existing benchmarks suffer from limitations in data scale, scope, and evaluation depth, while current evaluation metrics are often costly or biased, lacking in reliability for practical applications. To address these challenges, we introduce MMIE, a large-scale knowledge-intensive benchmark for evaluating interleaved multimodal comprehension and generation in Large Vision-Language Models (LVLMs). MMIE comprises 20K meticulously curated multimodal queries, spanning 3 categories, 12 fields, and 102 subfields, including mathematics, coding, physics, literature, health, and arts. It supports both interleaved inputs and outputs, offering a mix of multiple-choice and open-ended question formats to evaluate diverse competencies. Moreover, we propose a reliable automated evaluation metric, leveraging a scoring model fine-tuned with human-annotated data and systematic evaluation criteria, aimed at reducing bias and improving evaluation accuracy. Extensive experiments demonstrate the effectiveness of our benchmark and metrics in providing a comprehensive evaluation of interleaved LVLMs. Specifically, we evaluate eight LVLMs, revealing that even the best models show significant room for improvement, with most achieving only moderate results. We believe MMIE will drive further advancements in the development of interleaved LVLMs. We publicly release our benchmark and code in https://mmie-bench.github.io/.
+
+</details>
+
+### DynaMath: A Dynamic Visual Benchmark for Evaluating Mathematical Reasoning Robustness of Vision Language Models. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2411.00836](https://arxiv.org/abs/2411.00836)
+- **作者**: Chengke Zou, Xingang Guo, Rui Yang, Junyu Zhang, Bin Hu, Huan Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+- **摘要（中）**: ①针对视觉语言模型（VLM）在数学推理中缺乏鲁棒性的问题，即对同一问题的变体（如数值或图形变化）表现不一致。②提出了DynaMath，一个动态视觉数学基准，包含501个高质量种子问题，每个问题以Python程序表示，可自动生成大量具体问题变体。③改进点在于动态生成问题，克服了静态基准无法评估推理鲁棒性的局限。④摘要未提供具体性能数据，但基准设计支持大规模变体生成，用于深入评估VLM的数学推理能力。
+- **摘要（英）**: This paper addresses the lack of robustness in VLM mathematical reasoning by introducing DynaMath, a dynamic visual math benchmark with 501 seed questions represented as Python programs for automatic generation of variants. It overcomes the limitation of static benchmarks by enabling assessment of reasoning robustness under question variations. The benchmark provides a comprehensive tool for evaluating VLMs, though specific performance results are not detailed in the abstract.
+- **核心贡献**: 提出了动态视觉数学基准DynaMath，用于评估VLM的推理鲁棒性。
+- **创新点**: 通过Python程序表示种子问题，实现自动生成大量变体。
+- **结果**: 构建了501个种子问题，支持大规模变体生成。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The rapid advancements in Vision-Language Models (VLMs) have shown great potential in tackling mathematical reasoning tasks that involve visual context. Unlike humans who can reliably apply solution steps to similar problems with minor modifications, we found that SOTA VLMs like GPT-4o can consistently fail in these scenarios, revealing limitations in their mathematical reasoning capabilities. In this paper, we investigate the mathematical reasoning robustness in VLMs and evaluate how well these models perform under different variants of the same question, such as changes in visual numerical values or function graphs. While several vision-based math benchmarks have been developed to assess VLMs' problem-solving capabilities, these benchmarks contain only static sets of problems and cannot easily evaluate mathematical reasoning robustness. To fill this gap, we introduce DynaMath, a dynamic visual math benchmark designed for in-depth assessment of VLMs. DynaMath includes 501 high-quality, multi-topic seed questions, each represented as a Python program. Those programs are carefully designed and annotated to enable the automatic generation of a much larger set of concrete questions, including many different types of visual and textual variations. DynaMath allows us to evaluate the generalization ability of VLMs, by assessing their performance under varying input conditions of a seed question. We evaluated 14 SOTA VLMs with 5,010 generated concrete questions. Our results show that the worst-case model accuracy, defined as the percentage of correctly answered seed questions in all 10 variants, is significantly lower than the average-case accuracy. Our analysis emphasizes the need to study the robustness of VLMs' reasoning abilities, and DynaMath provides valuable insights to guide the development of more reliable models for mathematical reasoning.
+
+</details>
+
+### MME-RealWorld: Could Your Multimodal LLM Challenge High-Resolution Real-World Scenarios that are Difficult for Humans? **⭐⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2408.13257](https://arxiv.org/abs/2408.13257)
+- **作者**: Yifan Zhang, Huanyu Zhang, Haochen Tian, Chaoyou Fu, Shuangqing Zhang, Junfei Wu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+- **摘要（中）**: ①针对现有MLLM基准存在数据规模小、依赖模型标注导致质量受限、图像分辨率不足导致任务难度不够的问题。②提出了MME-RealWorld基准，从公共数据集和互联网收集超过30万张图像，筛选出13,366张高质量图像，由25名专业标注员和7名专家生成29,429个问答对，覆盖5个真实世界场景的43个子任务。③相比已有工作，该基准是迄今最大规模的人工标注基准，具有最高分辨率和针对真实世界应用的聚焦。④对28个主流MLLM进行了全面评估，发现模型在真实世界高分辨率场景中表现显著下降，尤其在人难辨别的任务上。
+- **摘要（英）**: This paper introduces MME-RealWorld, a large-scale manually annotated benchmark for evaluating MLLMs in high-resolution real-world scenarios, addressing issues of small data scale, model-based annotation bias, and insufficient task difficulty. It comprises 13,366 high-quality images and 29,429 QA pairs across 43 subtasks, and evaluation of 28 MLLMs reveals significant performance degradation in challenging real-world settings.
+- **核心贡献**: 构建了迄今最大规模、最高分辨率的人工标注多模态真实世界基准。
+- **创新点**: 强调人类难以辨别的任务和高分辨率图像，提升了评估难度和真实性。
+- **结果**: 28个主流MLLM在基准上表现不佳，揭示了真实世界应用的挑战。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Comprehensive evaluation of Multimodal Large Language Models (MLLMs) has recently garnered widespread attention in the research community. However, we observe that existing benchmarks present several common barriers that make it difficult to measure the significant challenges that models face in the real world, including: 1) small data scale leads to a large performance variance; 2) reliance on model-based annotations results in restricted data quality; 3) insufficient task difficulty, especially caused by the limited image resolution. To tackle these issues, we introduce MME-RealWorld. Specifically, we collect more than $300$K images from public datasets and the Internet, filtering $13,366$ high-quality images for annotation. This involves the efforts of professional $25$ annotators and $7$ experts in MLLMs, contributing to $29,429$ question-answer pairs that cover $43$ subtasks across $5$ real-world scenarios, extremely challenging even for humans. As far as we know, MME-RealWorld is the largest manually annotated benchmark to date, featuring the highest resolution and a targeted focus on real-world applications. We further conduct a thorough evaluation involving $28$ prominent MLLMs, such as GPT-4o, Gemini 1.5 Pro, and Claude 3.5 Sonnet. Our results show that even the most advanced models struggle with our benchmarks, where none of them reach $60\%$ accuracy. The challenges of perceiving high-resolution images and understanding complex real-world scenarios remain urgent issues to be addressed. The data and evaluation code are released at https://mme-realworld.github.io/ .
+
+</details>
+
+### SPORTU: A Comprehensive Sports Understanding Benchmark for Multimodal Large Language Models. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2410.08474](https://arxiv.org/abs/2410.08474)
+- **作者**: Haotian Xia, Zhengbang Yang, Junbo Zou, Rhys Tracy, Yuqing Wang, Chi Lu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2025
+- **摘要（中）**: ①针对多模态大语言模型（MLLMs）在复杂体育场景推理能力评估不足的问题。②提出了SPORTU基准，包含SPORTU-text（900道选择题，带人工注释）和SPORTU-video（1701个慢动作视频片段，12048个QA对），覆盖从简单识别到犯规检测等多层次推理任务。③相比现有基准，SPORTU强调多级别推理和慢动作视频分析，并包含规则理解与策略评估。④在SPORTU-text上，GPT-4o达到最高准确率71%，但仍低于人类水平。
+- **摘要（英）**: This paper addresses the lack of comprehensive benchmarks for evaluating MLLMs in complex sports reasoning. It introduces SPORTU, comprising text and video components with multi-level QA tasks, and finds GPT-4o achieves 71% accuracy on text, below human performance.
+- **核心贡献**: 提出了首个覆盖多级别体育推理的MLLM基准SPORTU。
+- **创新点**: 结合慢动作视频与多级别推理任务设计。
+- **结果**: GPT-4o在文本部分准确率71%，未达人类水平。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Multimodal Large Language Models (MLLMs) are advancing the ability to reason about complex sports scenarios by integrating textual and visual information. To comprehensively evaluate their capabilities, we introduce SPORTU, a benchmark designed to assess MLLMs across multi-level sports reasoning tasks. SPORTU comprises two key components: SPORTU-text, featuring 900 multiple-choice questions with human-annotated explanations for rule comprehension and strategy understanding. This component focuses on testing models' ability to reason about sports solely through question-answering (QA), without requiring visual inputs; SPORTU-video, consisting of 1,701 slow-motion video clips across 7 different sports and 12,048 QA pairs, designed to assess multi-level reasoning, from simple sports recognition to complex tasks like foul detection and rule application. We evaluate four prevalent LLMs mainly utilizing few-shot learning paradigms supplemented by chain-of-thought (CoT) prompting on the SPORTU-text part. We evaluate four LLMs using few-shot learning and chain-of-thought (CoT) prompting on SPORTU-text. GPT-4o achieves the highest accuracy of 71%, but still falls short of human-level performance, highlighting room for improvement in rule comprehension and reasoning. The evaluation for the SPORTU-video part includes 7 proprietary and 6 open-source MLLMs. Experiments show that models fall short on hard tasks that require deep reasoning and rule-based understanding. Claude-3.5-Sonnet performs the best with only 52.6% accuracy on the hard task, showing large room for improvement. We hope that SPORTU will serve as a critical step toward evaluating models' capabilities in sports understanding and reasoning.
+
+</details>
+
+### Roboflow100-VL: A Multi-Domain Object Detection Benchmark for Vision-Language Models. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2505.20612](https://arxiv.org/abs/2505.20612)
+- **作者**: Matvei Popov, Peter Robicheaux, Anish Madan, Isaac Robinson, Joseph Nelson, Deva Ramanan et al.
+- **🏷️ 机构**: Trinity University, Roboflow, Carnegie Mellon University
+- **会议**: NeurIPS 2025
+- **摘要（中）**: 针对视觉语言模型在分布外类别和成像模态上泛化能力不足的问题，提出Roboflow100-VL基准，包含100个多模态目标检测数据集，覆盖VLM预训练中不常见的概念。方法通过提供带视觉示例和丰富文本描述的注释指令来对齐VLM，并在零样本、少样本、半监督和全监督设置下评估模型。实验发现GroundingDINO和Qwen2.5-VL在医学影像等挑战性数据集上零样本准确率低于2%，凸显了少样本概念对齐的必要性。
+- **摘要（英）**: To address poor generalization of VLMs to out-of-distribution classes and modalities, Roboflow100-VL introduces a benchmark of 100 multimodal detection datasets with uncommon concepts. It aligns VLMs via annotation instructions with visual examples and rich text, evaluating models across zero-shot, few-shot, semi-supervised, and fully-supervised settings. Results show GroundingDINO and Qwen2.5-VL achieve under 2% zero-shot accuracy on medical imaging, highlighting the need for few-shot alignment.
+- **核心贡献**: 构建大规模多域VLM检测基准并系统评估。
+- **创新点**: 提出基于注释指令的VLM对齐评估框架。
+- **结果**: 揭示VLM在挑战性域上的低零样本性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vision-language models (VLMs) trained on internet-scale data achieve remarkable zero-shot detection performance on common objects like car, truck, and pedestrian. However, state-of-the-art models still struggle to generalize to out-of-distribution classes, tasks and imaging modalities not typically found in their pre-training. Rather than simply re-training VLMs on more visual data, we argue that one should align VLMs to new concepts with annotation instructions containing a few visual examples and rich textual descriptions. To this end, we introduce Roboflow100-VL, a large-scale collection of 100 multi-modal object detection datasets with diverse concepts not commonly found in VLM pre-training. We evaluate state-of-the-art models on our benchmark in zero-shot, few-shot, semi-supervised, and fully-supervised settings, allowing for comparison across data regimes. Notably, we find that VLMs like GroundingDINO and Qwen2.5-VL achieve less than 2% zero-shot accuracy on challenging medical imaging datasets within Roboflow100-VL, demonstrating the need for few-shot concept alignment. Lastly, we discuss our recent CVPR 2025 Foundational FSOD competition and share insights from the community. Notably, the winning team significantly outperforms our baseline by 17 mAP! Our code and dataset are available at https://github.com/roboflow/rf100-vl and https://universe.roboflow.com/rf100-vl/.
+
+</details>
+
+### STSBench: A Spatio-temporal Scenario Benchmark for Multi-modal Large Language Models in Autonomous Driving. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2506.06218](https://arxiv.org/abs/2506.06218)
+- **作者**: Christian Fruhwirth-Reisinger, Dusan Malic, Wei Lin, David Schinagl, Samuel Schulter, Horst Possegger
+- **🏷️ 机构**: Graz University of Technology, Technische Universität Graz, ELLIS Unit Linz &amp; LIT AI Lab, JKU
+- **会议**: NeurIPS 2025
+- **摘要（中）**: 针对现有自动驾驶视觉语言模型基准仅关注单视角图像或视频的语义任务，缺乏时空推理能力评估的问题，本文提出了STSBench框架，可自动从数据集中挖掘预定义交通场景，生成多项选择题，并应用于NuScenes数据集构建了STSnu基准。该基准基于多视角相机或LiDAR视频，评估端到端驾驶专家VLM对自车行为和交通参与者复杂交互的推理能力。相比现有基准，STSnu更全面地覆盖了时空推理，包含43个场景和971个问题。
+- **摘要（英）**: To address the lack of spatio-temporal reasoning benchmarks for autonomous driving VLMs, this paper proposes STSBench, an automated framework that mines scenarios and generates multiple-choice questions, applied to NuScenes to create STSnu. It evaluates VLMs on multi-view videos for ego-action and interaction reasoning, covering 43 scenarios and 971 questions, surpassing existing single-view semantic benchmarks.
+- **核心贡献**: 提出了STSBench框架和STSnu基准，用于评估自动驾驶VLM的时空推理能力。
+- **创新点**: 自动化场景挖掘与多视角视频评估，聚焦自车行为和交互推理。
+- **结果**: 提供了43个场景和971个问题，推动VLM在自动驾驶中的评估。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We introduce STSBench, a scenario-based framework to benchmark the holistic understanding of vision-language models (VLMs) for autonomous driving. The framework automatically mines pre-defined traffic scenarios from any dataset using ground-truth annotations, provides an intuitive user interface for efficient human verification, and generates multiple-choice questions for model evaluation. Applied to the NuScenes dataset, we present STSnu, the first benchmark that evaluates the spatio-temporal reasoning capabilities of VLMs based on comprehensive 3D perception. Existing benchmarks typically target off-the-shelf or fine-tuned VLMs for images or videos from a single viewpoint and focus on semantic tasks such as object recognition, dense captioning, risk assessment, or scene understanding. In contrast, STSnu evaluates driving expert VLMs for end-to-end driving, operating on videos from multi-view cameras or LiDAR. It specifically assesses their ability to reason about both ego-vehicle actions and complex interactions among traffic participants, a crucial capability for autonomous vehicles. The benchmark features 43 diverse scenarios spanning multiple views and frames, resulting in 971 human-verified multiple-choice questions. A thorough evaluation uncovers critical shortcomings in existing models' ability to reason about fundamental traffic dynamics in complex environments. These findings highlight the urgent need for architectural advances that explicitly model spatio-temporal reasoning. By addressing a core gap in spatio-temporal evaluation, STSBench enables the development of more robust and explainable VLMs for autonomous driving.
+
+</details>
+
+### MMCSBench: A Fine-Grained Benchmark for Large Vision-Language Models in Camouflage Scenes. **⭐⭐⭐** (相关度: 50%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/2c09ffac15c54c56bde4db13acfef196-Abstract-Datasets_and_Benchmarks_Track.html)
+- **作者**: Jing Zhang, Ruiheng Zhang, Zhe Cao, Kaizheng Chen
+- **🏷️ 机构**: Beijing Institute of Technology
+- **会议**: NeurIPS 2025
+- **摘要（中）**: ①针对大型视觉语言模型（LVLM）在伪装场景中理解能力评估不足的问题。②提出了MMCSBench，一个细粒度基准，用于评估LVLM在伪装场景中的性能。③改进点在于专门针对伪装场景设计，提供细粒度评估。④摘要内容缺失，无法提供具体效果数据。
+- **摘要（英）**: This paper introduces MMCSBench, a fine-grained benchmark for evaluating large vision-language models in camouflage scenes, addressing the lack of comprehensive assessment in such challenging scenarios. The benchmark likely provides detailed evaluation metrics, but the abstract is incomplete, limiting specific details. It contributes to understanding LVLM capabilities in complex visual contexts.
+- **核心贡献**: 提出了伪装场景下的LVLM细粒度评估基准。
+- **创新点**: 专门针对伪装场景设计评估任务。
+- **结果**: 效果数据未提供。
+
+### A Multimodal Benchmark for Framing of Oil & Gas Advertising and Potential Greenwashing Detection. **⭐⭐** (相关度: 20%)
+- **链接**: [arXiv:2510.21679](https://arxiv.org/abs/2510.21679)
+- **作者**: Gaku Morio, Harri Rowlands, Dominik Stammbach, Christopher D. Manning, Peter Henderson
+- **🏷️ 机构**: Hitachi, CAST, Princeton University
+- **会议**: NeurIPS 2025
+- **摘要（中）**: ①针对油气行业广告中绿色洗白（greenwashing）检测问题，现有数据集多为纯文本，缺乏多模态视频标注。②构建了一个包含Facebook和YouTube视频广告的专家标注基准数据集，涵盖20个国家50多家公司的13种框架类型，并评估了视觉语言模型（VLMs）的检测能力。③相比以往纯文本数据集，该基准专门设计用于评估VLMs，支持视频级多模态理解。④基线实验显示GPT-4.1在环境信息检测上F1达79%，但最佳模型在绿色创新框架识别上仅46% F1，表明仍有较大提升空间。
+- **摘要（英）**: This paper addresses greenwashing detection in oil & gas video ads by introducing a multimodal benchmark with expert annotations for 13 framing types across 50+ companies. It evaluates VLMs, showing GPT-4.1 achieves 79% F1 for environmental message detection but only 46% for green innovation framing, highlighting room for improvement.
+- **核心贡献**: 构建了首个面向VLMs的视频广告框架标注基准数据集。
+- **创新点**: 将绿色洗白检测从纯文本扩展到多模态视频场景。
+- **结果**: GPT-4.1在环境检测上F1达79%，但绿色创新识别仅46%。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Companies spend large amounts of money on public relations campaigns to project a positive brand image. However, sometimes there is a mismatch between what they say and what they do. Oil & gas companies, for example, are accused of "greenwashing" with imagery of climate-friendly initiatives. Understanding the framing, and changes in framing, at scale can help better understand the goals and nature of public relations campaigns. To address this, we introduce a benchmark dataset of expert-annotated video ads obtained from Facebook and YouTube. The dataset provides annotations for 13 framing types for more than 50 companies or advocacy groups across 20 countries. Our dataset is especially designed for the evaluation of vision-language models (VLMs), distinguishing it from past text-only framing datasets. Baseline experiments show some promising results, while leaving room for improvement for future work: GPT-4.1 can detect environmental messages with 79% F1 score, while our best model only achieves 46% F1 score on identifying framing around green innovation. We also identify challenges that VLMs must address, such as implicit framing, handling videos of various lengths, or implicit cultural backgrounds. Our dataset contributes to research in multimodal analysis of strategic communication in the energy sector.
+
+</details>
+
+### Hyperphantasia: A Benchmark for Evaluating the Mental Visualization Capabilities of Multimodal LLMs. **⭐⭐** (相关度: 15%)
+- **链接**: [arXiv:2507.11932](https://arxiv.org/abs/2507.11932)
+- **作者**: Mohammad Shahab Sepehri, Berk Tinaz, Zalan Fabian, Mahdi Soltanolkotabi
+- **🏷️ 机构**: University of Southern California, Amazon AGI
+- **会议**: NeurIPS 2025
+- **摘要（中）**: ①针对多模态大语言模型（MLLMs）缺乏主动心理可视化能力评估的问题，现有基准主要测试被动视觉感知。②提出了Hyperphantasia，一个合成基准，通过四种程序化生成的谜题在三个难度级别评估MLLMs的心理可视化能力。③相比现有基准，该基准专注于内部视觉构建和操作，而非简单感知。④评估显示MLLMs与人类性能存在显著差距，揭示了当前模型的局限性。
+- **摘要（英）**: This paper introduces Hyperphantasia, a synthetic benchmark to evaluate mental visualization in MLLMs via four procedurally generated puzzles at three difficulty levels. Results show a substantial performance gap between humans and MLLMs, highlighting limitations in internal visual construction.
+- **核心贡献**: 提出了首个评估MLLMs心理可视化能力的合成基准。
+- **创新点**: 通过谜题设计量化模型的内部视觉构建能力。
+- **结果**: MLLMs在心理可视化任务上显著落后于人类。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Mental visualization, the ability to construct and manipulate visual representations internally, is a core component of human cognition and plays a vital role in tasks involving reasoning, prediction, and abstraction. Despite the rapid progress of Multimodal Large Language Models (MLLMs), current benchmarks primarily assess passive visual perception, offering limited insight into the more active capability of internally constructing visual patterns to support problem solving. Yet mental visualization is a critical cognitive skill in humans, supporting abilities such as spatial navigation, predicting physical trajectories, and solving complex visual problems through imaginative simulation. To bridge this gap, we introduce Hyperphantasia, a synthetic benchmark designed to evaluate the mental visualization abilities of MLLMs through four carefully constructed puzzles. Each puzzle is procedurally generated and presented at three difficulty levels, enabling controlled analysis of model performance across increasing complexity. Our comprehensive evaluation of state-of-the-art models reveals a substantial gap between the performance of humans and MLLMs. Additionally, we explore the potential of reinforcement learning to improve visual simulation capabilities. Our findings suggest that while some models exhibit partial competence in recognizing visual patterns, robust mental visualization remains an open challenge for current MLLMs.
+
+</details>
+
+### ProxyTransformation: Preshaping Point Cloud Manifold With Proxy Attention For 3D Visual Grounding.
+- **链接**: [arXiv:2502.19247](https://arxiv.org/abs/2502.19247)
+- **作者**: Qihang Peng, Henry Zheng, Gao Huang
+- **🏷️ 机构**: Tsinghua University
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Embodied intelligence requires agents to interact with 3D environments in real time based on language instructions. A foundational task in this domain is ego-centric 3D visual grounding. However, the point clouds rendered from RGB-D images retain a large amount of redundant background data and inherent noise, both of which can interfere with the manifold structure of the target regions. Existing point cloud enhancement methods often require a tedious process to improve the manifold, which is not suitable for real-time tasks. We propose Proxy Transformation suitable for multimodal task to efficiently improve the point cloud manifold. Our method first leverages Deformable Point Clustering to identify the point cloud sub-manifolds in target regions. Then, we propose a Proxy Attention module that utilizes multimodal proxies to guide point cloud transformation. Built upon Proxy Attention, we design a submanifold transformation generation module where textual information globally guides translation vectors for different submanifolds, optimizing relative spatial relationships of target regions. Simultaneously, image information guides linear transformations within each submanifold, refining the local point cloud manifold of target regions. Extensive experiments demonstrate that Proxy Transformation significantly outperforms all existing methods, achieving an impressive improvement of 7.49% on easy targets and 4.60% on hard targets, while reducing the computational overhead of attention blocks by 40.6%. These results establish a new SOTA in ego-centric 3D visual grounding, showcasing the effectiveness and robustness of our approach.
+
+</details>
+
+### Distilling Spectral Graph for Object-Context Aware Open-Vocabulary Semantic Segmentation.
+- **链接**: [arXiv:2411.17150](https://arxiv.org/abs/2411.17150) · 📚 被引 8
+- **作者**: Chanyoung Kim, Dayun Ju, Woojung Han, Ming-Hsuan Yang, Seong Jae Hwang
+- **🏷️ 机构**: Yonsei University
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Open-Vocabulary Semantic Segmentation (OVSS) has advanced with recent vision-language models (VLMs), enabling segmentation beyond predefined categories through various learning schemes. Notably, training-free methods offer scalable, easily deployable solutions for handling unseen data, a key goal of OVSS. Yet, a critical issue persists: lack of object-level context consideration when segmenting complex objects in the challenging environment of OVSS based on arbitrary query prompts. This oversight limits models' ability to group semantically consistent elements within object and map them precisely to user-defined arbitrary classes. In this work, we introduce a novel approach that overcomes this limitation by incorporating object-level contextual knowledge within images. Specifically, our model enhances intra-object consistency by distilling spectral-driven features from vision foundation models into the attention mechanism of the visual encoder, enabling semantically coherent components to form a single object mask. Additionally, we refine the text embeddings with zero-shot object presence likelihood to ensure accurate alignment with the specific objects represented in the images. By leveraging object-level contextual knowledge, our proposed approach achieves state-of-the-art performance with strong generalizability across diverse datasets.
+
+</details>
+
+### GROVE: A Generalized Reward for Learning Open-Vocabulary Physical Skill.
+- **链接**: [arXiv:2504.04191](https://arxiv.org/abs/2504.04191) · 📚 被引 5
+- **作者**: Jieming Cui, Tengyu Liu, Ziyu Meng, Jiale Yu, Ran Song, Wei Zhang et al.
+- **🏷️ 机构**: Peking University,Institute for Artificial Intelligence, BIGAI,State Key Laboratory of General Artificial Intelligence, Tsinghua University,Department of Automation
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Learning open-vocabulary physical skills for simulated agents presents a significant challenge in artificial intelligence. Current reinforcement learning approaches face critical limitations: manually designed rewards lack scalability across diverse tasks, while demonstration-based methods struggle to generalize beyond their training distribution. We introduce GROVE, a generalized reward framework that enables open-vocabulary physical skill learning without manual engineering or task-specific demonstrations. Our key insight is that Large Language Models(LLMs) and Vision Language Models(VLMs) provide complementary guidance -- LLMs generate precise physical constraints capturing task requirements, while VLMs evaluate motion semantics and naturalness. Through an iterative design process, VLM-based feedback continuously refines LLM-generated constraints, creating a self-improving reward system. To bridge the domain gap between simulation and natural images, we develop Pose2CLIP, a lightweight mapper that efficiently projects agent poses directly into semantic feature space without computationally expensive rendering. Extensive experiments across diverse embodiments and learning paradigms demonstrate GROVE's effectiveness, achieving 22.2% higher motion naturalness and 25.7% better task completion scores while training 8.4x faster than previous methods. These results establish a new foundation for scalable physical skill acquisition in simulated environments.
+
+</details>
+
+### Compositional Caching for Training-free Open-vocabulary Attribute Detection.
+- **链接**: [arXiv:2503.19145](https://arxiv.org/abs/2503.19145) · 📚 被引 1
+- **作者**: Marco Garosi, Alessandro Conti, Gaowen Liu, Elisa Ricci, Massimiliano Mancini
+- **🏷️ 机构**: University of Trento, Cisco Research
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Attribute detection is crucial for many computer vision tasks, as it enables systems to describe properties such as color, texture, and material. Current approaches often rely on labor-intensive annotation processes which are inherently limited: objects can be described at an arbitrary level of detail (e.g., color vs. color shades), leading to ambiguities when the annotators are not instructed carefully. Furthermore, they operate within a predefined set of attributes, reducing scalability and adaptability to unforeseen downstream applications. We present Compositional Caching (ComCa), a training-free method for open-vocabulary attribute detection that overcomes these constraints. ComCa requires only the list of target attributes and objects as input, using them to populate an auxiliary cache of images by leveraging web-scale databases and Large Language Models to determine attribute-object compatibility. To account for the compositional nature of attributes, cache images receive soft attribute labels. Those are aggregated at inference time based on the similarity between the input and cache images, refining the predictions of underlying Vision-Language Models (VLMs). Importantly, our approach is model-agnostic, compatible with various VLMs. Experiments on public datasets demonstrate that ComCa significantly outperforms zero-shot and cache-based baselines, competing with recent training-based methods, proving that a carefully designed training-free approach can successfully address open-vocabulary attribute detection.
+
+</details>
+
+### DeCLIP: Decoupled Learning for Open-Vocabulary Dense Perception.
+- **链接**: [arXiv:2505.04410](https://arxiv.org/abs/2505.04410) · 📚 被引 9
+- **作者**: Junjie Wang, Bin Chen, Yulin Li, Bin Kang, Yichi Chen, Zhuotao Tian
+- **🏷️ 机构**: HIT,School of Computer Science and Technology,Shenzhen, HIT,International Research Institute for Artificial Intelligence,Shenzhen, University of Chinese Academy of Sciences
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Dense visual prediction tasks have been constrained by their reliance on predefined categories, limiting their applicability in real-world scenarios where visual concepts are unbounded. While Vision-Language Models (VLMs) like CLIP have shown promise in open-vocabulary tasks, their direct application to dense prediction often leads to suboptimal performance due to limitations in local feature representation. In this work, we present our observation that CLIP's image tokens struggle to effectively aggregate information from spatially or semantically related regions, resulting in features that lack local discriminability and spatial consistency. To address this issue, we propose DeCLIP, a novel framework that enhances CLIP by decoupling the self-attention module to obtain ``content'' and ``context'' features respectively. The ``content'' features are aligned with image crop representations to improve local discriminability, while ``context'' features learn to retain the spatial correlations under the guidance of vision foundation models, such as DINO. Extensive experiments demonstrate that DeCLIP significantly outperforms existing methods across multiple open-vocabulary dense prediction tasks, including object detection and semantic segmentation. Code is available at \textcolor{magenta}{https://github.com/xiaomoguhz/DeCLIP}.
+
+</details>
+
+### Towards Zero-Shot Anomaly Detection and Reasoning with Multimodal Large Language Models.
+- **链接**: [arXiv:2502.07601](https://arxiv.org/abs/2502.07601) · 📚 被引 39
+- **作者**: Jiacong Xu, Shao-Yuan Lo, Bardia Safaei, Vishal M. Patel, Isht Dwivedi
+- **🏷️ 机构**: Johns Hopkins University, Honda Research Institute,USA
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Zero-Shot Anomaly Detection (ZSAD) is an emerging AD paradigm. Unlike the traditional unsupervised AD setting that requires a large number of normal samples to train a model, ZSAD is more practical for handling data-restricted real-world scenarios. Recently, Multimodal Large Language Models (MLLMs) have shown revolutionary reasoning capabilities in various vision tasks. However, the reasoning of image abnormalities remains underexplored due to the lack of corresponding datasets and benchmarks. To facilitate research in AD & reasoning, we establish the first visual instruction tuning dataset, Anomaly-Instruct-125k, and the evaluation benchmark, VisA-D&R. Through investigation with our benchmark, we reveal that current MLLMs like GPT-4o cannot accurately detect and describe fine-grained anomalous details in images. To address this, we propose Anomaly-OneVision (Anomaly-OV), the first specialist visual assistant for ZSAD and reasoning. Inspired by human behavior in visual inspection, Anomaly-OV leverages a Look-Twice Feature Matching (LTFM) mechanism to adaptively select and emphasize abnormal visual tokens. Extensive experiments demonstrate that Anomaly-OV achieves significant improvements over advanced generalist models in both detection and reasoning. Extensions to medical and 3D AD are provided for future study. The link to our project page: https://xujiacong.github.io/Anomaly-OV/
+
+</details>
+
+### Stealthy Backdoor Attack in Self-Supervised Learning Vision Encoders for Large Vision Language Models.
+- **链接**: [arXiv:2502.18290](https://arxiv.org/abs/2502.18290) · 📚 被引 3
+- **作者**: Zhaoyi Liu, Huan Zhang
+- **🏷️ 机构**: University of Illinois Urbana-Champaign (UIUC)
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Self-supervised learning (SSL) vision encoders learn high-quality image representations and thus have become a vital part of developing vision modality of large vision language models (LVLMs). Due to the high cost of training such encoders, pre-trained encoders are widely shared and deployed into many LVLMs, which are security-critical or bear societal significance. Under this practical scenario, we reveal a new backdoor threat that significant visual hallucinations can be induced into these LVLMs by merely compromising vision encoders. Because of the sharing and reuse of these encoders, many downstream LVLMs may inherit backdoor behaviors from encoders, leading to widespread backdoors. In this work, we propose BadVision, the first method to exploit this vulnerability in SSL vision encoders for LVLMs with novel trigger optimization and backdoor learning techniques. We evaluate BadVision on two types of SSL encoders and LVLMs across eight benchmarks. We show that BadVision effectively drives the LVLMs to attacker-chosen hallucination with over 99% attack success rate, causing a 77.6% relative visual understanding error while maintaining the stealthiness. SoTA backdoor detection methods cannot detect our attack effectively.
+
+</details>
+
+### BOLT: Boost Large Vision-Language Model Without Training for Long-form Video Understanding.
+- **链接**: [arXiv:2503.21483](https://arxiv.org/abs/2503.21483) · 📚 被引 10
+- **作者**: Shuming Liu, Chen Zhao, Tianqi Xu, Bernard Ghanem
+- **🏷️ 机构**: King Abdullah University of Science and Technology (KAUST)
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large video-language models (VLMs) have demonstrated promising progress in various video understanding tasks. However, their effectiveness in long-form video analysis is constrained by limited context windows. Traditional approaches, such as uniform frame sampling, often inevitably allocate resources to irrelevant content, diminishing their effectiveness in real-world scenarios. In this paper, we introduce BOLT, a method to BOost Large VLMs without additional Training through a comprehensive study of frame selection strategies. First, to enable a more realistic evaluation of VLMs in long-form video understanding, we propose a multi-source retrieval evaluation setting. Our findings reveal that uniform sampling performs poorly in noisy contexts, underscoring the importance of selecting the right frames. Second, we explore several frame selection strategies based on query-frame similarity and analyze their effectiveness at inference time. Our results show that inverse transform sampling yields the most significant performance improvement, increasing accuracy on the Video-MME benchmark from 53.8% to 56.1% and MLVU benchmark from 58.9% to 63.4%. Our code is available at https://github.com/sming256/BOLT.
+
+</details>
+
+### MMRL: Multi-Modal Representation Learning for Vision-Language Models.
+- **链接**: [arXiv:2503.08497](https://arxiv.org/abs/2503.08497) · 📚 被引 23
+- **作者**: Yuncheng Guo, Xiaodong Gu
+- **🏷️ 机构**: Fudan University,Department of Electronic Engineering,Shanghai,China,200438
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large-scale pre-trained Vision-Language Models (VLMs) have become essential for transfer learning across diverse tasks. However, adapting these models with limited few-shot data often leads to overfitting, diminishing their performance on new tasks. To tackle this issue, we propose a novel Multi-Modal Representation Learning (MMRL) framework that introduces a shared, learnable, and modality-agnostic representation space. MMRL projects the space tokens to text and image representation tokens, facilitating more effective multi-modal interactions. Unlike previous approaches that solely optimize class token features, MMRL integrates representation tokens at higher layers of the encoders--where dataset-specific features are more prominent--while preserving generalized knowledge in the lower layers. During training, both representation and class features are optimized, with trainable projection layer applied to the representation tokens, whereas the class token projection layer remains frozen to retain pre-trained knowledge. Furthermore, a regularization term is introduced to align the class features and text features with the zero-shot features from the frozen VLM, thereby safeguarding the model's generalization capacity. For inference, a decoupling strategy is employed, wherein both representation and class features are utilized for base classes, while only the class features, which retain more generalized knowledge, are used for new tasks. Extensive experiments across 15 datasets demonstrate that MMRL outperforms state-of-the-art methods, achieving a balanced trade-off between task-specific adaptation and generalization. Code is available at https://github.com/yunncheng/MMRL.
+
+</details>
+
+### Rethinking Vision-Language Model in Face Forensics: Multi-Modal Interpretable Forged Face Detector.
+- **链接**: [arXiv:2503.20188](https://arxiv.org/abs/2503.20188) · 📚 被引 32
+- **作者**: Xiao Guo, Xiufeng Song, Yue Zhang, Xiaohong Liu, Xiaoming Liu
+- **🏷️ 机构**: Michigan State University, Shanghai Jiao Tong University
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Deepfake detection is a long-established research topic vital for mitigating the spread of malicious misinformation. Unlike prior methods that provide either binary classification results or textual explanations separately, we introduce a novel method capable of generating both simultaneously. Our method harnesses the multi-modal learning capability of the pre-trained CLIP and the unprecedented interpretability of large language models (LLMs) to enhance both the generalization and explainability of deepfake detection. Specifically, we introduce a multi-modal face forgery detector (M2F2-Det) that employs tailored face forgery prompt learning, incorporating the pre-trained CLIP to improve generalization to unseen forgeries. Also, M2F2-Det incorporates an LLM to provide detailed textual explanations of its detection decisions, enhancing interpretability by bridging the gap between natural language and subtle cues of facial forgeries. Empirically, we evaluate M2F2-Det on both detection and explanation generation tasks, where it achieves state-of-the-art performance, demonstrating its effectiveness in identifying and explaining diverse forgeries.
+
+</details>
+
+### MotionBench: Benchmarking and Improving Fine-grained Video Motion Understanding for Vision Language Models.
+- **链接**: [arXiv:2501.02955](https://arxiv.org/abs/2501.02955) · 📚 被引 9
+- **作者**: Wenyi Hong, Yean Cheng, Zhuoyi Yang, Weihan Wang, Lefan Wang, Xiaotao Gu et al.
+- **🏷️ 机构**: Tsinghua University, Zhipu AI
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In recent years, vision language models (VLMs) have made significant advancements in video understanding. However, a crucial capability - fine-grained motion comprehension - remains under-explored in current benchmarks. To address this gap, we propose MotionBench, a comprehensive evaluation benchmark designed to assess the fine-grained motion comprehension of video understanding models. MotionBench evaluates models' motion-level perception through six primary categories of motion-oriented question types and includes data collected from diverse sources, ensuring a broad representation of real-world video content. Experimental results reveal that existing VLMs perform poorly in understanding fine-grained motions. To enhance VLM's ability to perceive fine-grained motion within a limited sequence length of LLM, we conduct extensive experiments reviewing VLM architectures optimized for video feature compression and propose a novel and efficient Through-Encoder (TE) Fusion method. Experiments show that higher frame rate inputs and TE Fusion yield improvements in motion understanding, yet there is still substantial room for enhancement. Our benchmark aims to guide and motivate the development of more capable video understanding models, emphasizing the importance of fine-grained motion comprehension. Project page: https://motion-bench.github.io .
+
+</details>
+
+### Enhancing Vision-Language Compositional Understanding with Multimodal Synthetic Data.
+- **链接**: [arXiv:2503.01167](https://arxiv.org/abs/2503.01167) · 📚 被引 4
+- **作者**: Haoxin Li, Boyang Li
+- **🏷️ 机构**: Nanyang Technological University
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Paired image-text data with subtle variations in-between (e.g., people holding surfboards vs. people holding shovels) hold the promise of producing Vision-Language Models with proper compositional understanding. Synthesizing such training data from generative models is a highly coveted prize due to the reduced cost of data collection. However, synthesizing training images for compositional learning presents three challenges: (1) efficiency in generating large quantities of images, (2) text alignment between the generated image and the caption in the exact place of the subtle change, and (3) image fidelity in ensuring sufficient similarity with the original real images in all other places. We propose SPARCL (Synthetic Perturbations for Advancing Robust Compositional Learning), which integrates image feature injection into a fast text-to-image generative model, followed by an image style transfer step, to meet the three challenges. Further, to cope with any residual issues of text alignment, we propose an adaptive margin loss to filter out potentially incorrect synthetic samples and focus the learning on informative hard samples. Evaluation on four compositional understanding benchmarks demonstrates that SPARCL significantly improves the compositionality of CLIP, boosting the average accuracy of the CLIP base model by over 8% across all benchmarks and outperforming state-of-the-art methods by 2% on three benchmarks.
+
+</details>
+
+### EfficientLLaVA: Generalizable Auto-Pruning for Large Vision-language Models.
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liang_EfficientLLaVA_Generalizable_Auto-Pruning_for_Large_Vision-language_Models_CVPR_2025_paper.html) · 📚 被引 3
+- **作者**: Yinan Liang, Ziwei Wang, Xiuwei Xu, Jie Zhou, Jiwen Lu
+- **🏷️ 机构**: Tsinghua University, Nanyang Technological University
+- **会议**: CVPR 2025
+<!-- COMPLETE v1 papers=181 -->

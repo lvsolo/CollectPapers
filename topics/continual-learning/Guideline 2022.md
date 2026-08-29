@@ -328,3 +328,347 @@
 - **作者**: Mozhgan PourKeshavarz, Guoying Zhao, Mohammad Sabokrou
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2022
+
+## 🆕 增量新增
+
+### Few-Shot Class-Incremental Learning for 3D Point Cloud Objects.
+- **链接**: [arXiv:2205.15225](https://arxiv.org/abs/2205.15225)
+- **作者**: Townim F. Chowdhury, Ali Cheraghian, Sameera Ramasinghe, Sahar Ahmadi, Morteza Saberi, Shafin Rahman
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Few-shot class-incremental learning (FSCIL) aims to incrementally fine-tune a model (trained on base classes) for a novel set of classes using a few examples without forgetting the previous training. Recent efforts address this problem primarily on 2D images. However, due to the advancement of camera technology, 3D point cloud data has become more available than ever, which warrants considering FSCIL on 3D data. This paper addresses FSCIL in the 3D domain. In addition to well-known issues of catastrophic forgetting of past knowledge and overfitting of few-shot data, 3D FSCIL can bring newer challenges. For example, base classes may contain many synthetic instances in a realistic scenario. In contrast, only a few real-scanned samples (from RGBD sensors) of novel classes are available in incremental steps. Due to the data variation from synthetic to real, FSCIL endures additional challenges, degrading performance in later incremental steps. We attempt to solve this problem using Microshapes (orthogonal basis vectors) by describing any 3D objects using a pre-defined set of rules. It supports incremental training with few-shot examples minimizing synthetic to real data variation. We propose new test protocols for 3D FSCIL using popular synthetic datasets (ModelNet and ShapeNet) and 3D real-scanned datasets (ScanObjectNN and CO3D). By comparing state-of-the-art methods, we establish the effectiveness of our approach in the 3D domain.
+
+</details>
+
+### Online Continual Learning with Contrastive Vision Transformer.
+- **链接**: [arXiv:2207.13516](https://arxiv.org/abs/2207.13516) · 📚 被引 30
+- **作者**: Zhen Wang, Liu Liu, Yajing Kong, Jiaxian Guo, Dacheng Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Online continual learning (online CL) studies the problem of learning sequential tasks from an online data stream without task boundaries, aiming to adapt to new data while alleviating catastrophic forgetting on the past tasks. This paper proposes a framework Contrastive Vision Transformer (CVT), which designs a focal contrastive learning strategy based on a transformer architecture, to achieve a better stability-plasticity trade-off for online CL. Specifically, we design a new external attention mechanism for online CL that implicitly captures previous tasks' information. Besides, CVT contains learnable focuses for each class, which could accumulate the knowledge of previous classes to alleviate forgetting. Based on the learnable focuses, we design a focal contrastive loss to rebalance contrastive learning between new and past classes and consolidate previously learned representations. Moreover, CVT contains a dual-classifier structure for decoupling learning current classes and balancing all observed classes. The extensive experimental results show that our approach achieves state-of-the-art performance with even fewer parameters on online CL benchmarks and effectively alleviates the catastrophic forgetting.
+
+</details>
+
+### S3C: Self-Supervised Stochastic Classifiers for Few-Shot Class-Incremental Learning.
+- **链接**: [arXiv:2307.02246](https://arxiv.org/abs/2307.02246) · 📚 被引 45
+- **作者**: Jayateja Kalla, Soma Biswas
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Few-shot class-incremental learning (FSCIL) aims to learn progressively about new classes with very few labeled samples, without forgetting the knowledge of already learnt classes. FSCIL suffers from two major challenges: (i) over-fitting on the new classes due to limited amount of data, (ii) catastrophically forgetting about the old classes due to unavailability of data from these classes in the incremental stages. In this work, we propose a self-supervised stochastic classifier (S3C) to counter both these challenges in FSCIL. The stochasticity of the classifier weights (or class prototypes) not only mitigates the adverse effect of absence of large number of samples of the new classes, but also the absence of samples from previously learnt classes during the incremental steps. This is complemented by the self-supervision component, which helps to learn features from the base classes which generalize well to unseen classes that are encountered in future, thus reducing catastrophic forgetting. Extensive evaluation on three benchmark datasets using multiple evaluation metrics show the effectiveness of the proposed framework. We also experiment on two additional realistic scenarios of FSCIL, namely where the number of annotated data available for each of the new classes can be different, and also where the number of base classes is much lesser, and show that the proposed S3C performs significantly better than the state-of-the-art for all these challenging scenarios.
+
+</details>
+
+### DualPrompt: Complementary Prompting for Rehearsal-Free Continual Learning.
+- **链接**: [arXiv:2204.04799](https://arxiv.org/abs/2204.04799) · 📚 被引 421
+- **作者**: Zifeng Wang, Zizhao Zhang, Sayna Ebrahimi, Ruoxi Sun, Han Zhang, Chen-Yu Lee et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning aims to enable a single model to learn a sequence of tasks without catastrophic forgetting. Top-performing methods usually require a rehearsal buffer to store past pristine examples for experience replay, which, however, limits their practical value due to privacy and memory constraints. In this work, we present a simple yet effective framework, DualPrompt, which learns a tiny set of parameters, called prompts, to properly instruct a pre-trained model to learn tasks arriving sequentially without buffering past examples. DualPrompt presents a novel approach to attach complementary prompts to the pre-trained backbone, and then formulates the objective as learning task-invariant and task-specific "instructions". With extensive experimental validation, DualPrompt consistently sets state-of-the-art performance under the challenging class-incremental setting. In particular, DualPrompt outperforms recent advanced continual learning methods with relatively large buffer sizes. We also introduce a more challenging benchmark, Split ImageNet-R, to help generalize rehearsal-free continual learning research. Source code is available at https://github.com/google-research/l2p.
+
+</details>
+
+### Theoretical Understanding of the Information Flow on Continual Learning Performance.
+- **链接**: [arXiv:2204.12010](https://arxiv.org/abs/2204.12010) · 📚 被引 4
+- **作者**: Joshua Andle, Salimeh Yasaei Sekeh
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning (CL) is a setting in which an agent has to learn from an incoming stream of data sequentially. CL performance evaluates the model's ability to continually learn and solve new problems with incremental available information over time while retaining previous knowledge. Despite the numerous previous solutions to bypass the catastrophic forgetting (CF) of previously seen tasks during the learning process, most of them still suffer significant forgetting, expensive memory cost, or lack of theoretical understanding of neural networks' conduct while learning new tasks. While the issue that CL performance degrades under different training regimes has been extensively studied empirically, insufficient attention has been paid from a theoretical angle. In this paper, we establish a probabilistic framework to analyze information flow through layers in networks for task sequences and its impact on learning performance. Our objective is to optimize the information preservation between layers while learning new tasks to manage task-specific knowledge passing throughout the layers while maintaining model performance on previous tasks. In particular, we study CL performance's relationship with information flow in the network to answer the question "How can knowledge of information flow between layers be used to alleviate CF?". Our analysis provides novel insights of information adaptation within the layers during the incremental task learning process. Through our experiments, we provide empirical evidence and practically highlight the performance improvement across multiple tasks.
+
+</details>
+
+### Helpful or Harmful: Inter-task Association in Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-20083-0_31) · 📚 被引 18
+- **作者**: Hyundong Jin, Eunwoo Kim
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Balancing Stability and Plasticity Through Advanced Null Space in Continual Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19809-0_13) · 📚 被引 25
+- **作者**: Yajing Kong, Liu Liu, Zhen Wang, Dacheng Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Online Task-free Continual Learning with Dynamic Sparse Distributed Memory.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19806-9_42) · 📚 被引 12
+- **作者**: Julien Pourcel, Ngoc-Son Vu, Robert M. French
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### DLCFT: Deep Linear Continual Fine-Tuning for General Incremental Learning.
+- **链接**: [arXiv:2208.08112](https://arxiv.org/abs/2208.08112) · 📚 被引 15
+- **作者**: Hyounguk Shon, Janghyeon Lee, Seung Hwan Kim, Junmo Kim
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Pre-trained representation is one of the key elements in the success of modern deep learning. However, existing works on continual learning methods have mostly focused on learning models incrementally from scratch. In this paper, we explore an alternative framework to incremental learning where we continually fine-tune the model from a pre-trained representation. Our method takes advantage of linearization technique of a pre-trained neural network for simple and effective continual learning. We show that this allows us to design a linear model where quadratic parameter regularization method is placed as the optimal continual learning policy, and at the same time enjoying the high performance of neural networks. We also show that the proposed algorithm enables parameter regularization methods to be applied to class-incremental problems. Additionally, we provide a theoretical reason why the existing parameter-space regularization algorithms such as EWC underperform on neural networks trained with cross-entropy loss. We show that the proposed method can prevent forgetting while achieving high continual fine-tuning performance on image classification tasks. To show that our method can be applied to general continual learning settings, we evaluate our method in data-incremental, task-incremental, and class-incremental learning problems.
+
+</details>
+
+### R-DFCIL: Relation-Guided Representation Learning for Data-Free Class Incremental Learning.
+- **链接**: [arXiv:2203.13104](https://arxiv.org/abs/2203.13104)
+- **作者**: Qiankun Gao, Chen Zhao, Bernard Ghanem, Jian Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Class-Incremental Learning (CIL) struggles with catastrophic forgetting when learning new knowledge, and Data-Free CIL (DFCIL) is even more challenging without access to the training data of previously learned classes. Though recent DFCIL works introduce techniques such as model inversion to synthesize data for previous classes, they fail to overcome forgetting due to the severe domain gap between the synthetic and real data. To address this issue, this paper proposes relation-guided representation learning (RRL) for DFCIL, dubbed R-DFCIL. In RRL, we introduce relational knowledge distillation to flexibly transfer the structural relation of new data from the old model to the current model. Our RRL-boosted DFCIL can guide the current model to learn representations of new classes better compatible with representations of previous classes, which greatly reduces forgetting while improving plasticity. To avoid the mutual interference between representation and classifier learning, we employ local rather than global classification loss during RRL. After RRL, the classification head is refined with global class-balanced classification loss to address the data imbalance issue as well as learn the decision boundaries between new and previous classes. Extensive experiments on CIFAR100, Tiny-ImageNet200, and ImageNet100 demonstrate that our R-DFCIL significantly surpasses previous approaches and achieves a new state-of-the-art performance for DFCIL. Code is available at https://github.com/jianzhangcs/R-DFCIL
+
+</details>
+
+### Class-Incremental Learning with Cross-Space Clustering and Controlled Transfer.
+- **链接**: [arXiv:2208.03767](https://arxiv.org/abs/2208.03767) · 📚 被引 31
+- **作者**: Arjun Ashok, K. J. Joseph, Vineeth N. Balasubramanian
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In class-incremental learning, the model is expected to learn new classes continually while maintaining knowledge on previous classes. The challenge here lies in preserving the model's ability to effectively represent prior classes in the feature space, while adapting it to represent incoming new classes. We propose two distillation-based objectives for class incremental learning that leverage the structure of the feature space to maintain accuracy on previous classes, as well as enable learning the new classes. In our first objective, termed cross-space clustering (CSC), we propose to use the feature space structure of the previous model to characterize directions of optimization that maximally preserve the class: directions that all instances of a specific class should collectively optimize towards, and those that they should collectively optimize away from. Apart from minimizing forgetting, this indirectly encourages the model to cluster all instances of a class in the current feature space, and gives rise to a sense of herd-immunity, allowing all samples of a class to jointly combat the model from forgetting the class. Our second objective termed controlled transfer (CT) tackles incremental learning from an understudied perspective of inter-class transfer. CT explicitly approximates and conditions the current model on the semantic similarities between incrementally arriving classes and prior classes. This allows the model to learn classes in such a way that it maximizes positive forward transfer from similar prior classes, thus increasing plasticity, and minimizes negative backward transfer on dissimilar prior classes, whereby strengthening stability. We perform extensive experiments on two benchmark datasets, adding our method (CSCCT) on top of three prominent class-incremental learning methods. We observe consistent performance improvement on a variety of experimental settings.
+
+</details>
+
+### Few-Shot Class-Incremental Learning via Entropy-Regularized Data-Free Replay.
+- **链接**: [arXiv:2207.11213](https://arxiv.org/abs/2207.11213)
+- **作者**: Huan Liu, Li Gu, Zhixiang Chi, Yang Wang, Yuanhao Yu, Jun Chen et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Few-shot class-incremental learning (FSCIL) has been proposed aiming to enable a deep learning system to incrementally learn new classes with limited data. Recently, a pioneer claims that the commonly used replay-based method in class-incremental learning (CIL) is ineffective and thus not preferred for FSCIL. This has, if truth, a significant influence on the fields of FSCIL. In this paper, we show through empirical results that adopting the data replay is surprisingly favorable. However, storing and replaying old data can lead to a privacy concern. To address this issue, we alternatively propose using data-free replay that can synthesize data by a generator without accessing real data. In observing the the effectiveness of uncertain data for knowledge distillation, we impose entropy regularization in the generator training to encourage more uncertain examples. Moreover, we propose to relabel the generated data with one-hot-like labels. This modification allows the network to learn by solely minimizing the cross-entropy loss, which mitigates the problem of balancing different objectives in the conventional knowledge distillation approach. Finally, we show extensive experimental results and analysis on CIFAR-100, miniImageNet and CUB-200 to demonstrate the effectiveness of our proposed one.
+
+</details>
+
+### Long-Tailed Class Incremental Learning.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19827-4_29)
+- **作者**: Xialei Liu, Yusong Hu, Xu-Sheng Cao, Andrew D. Bagdanov, Ke Li, Ming-Ming Cheng
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### Few-Shot Class-Incremental Learning from an Open-Set Perspective.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-19806-9_22)
+- **作者**: Can Peng, Kun Zhao, Tianren Wang, Meng Li, Brian C. Lovell
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+### FOSTER: Feature Boosting and Compression for Class-Incremental Learning.
+- **链接**: [arXiv:2204.04662](https://arxiv.org/abs/2204.04662) · 📚 被引 294
+- **作者**: Fu-Yun Wang, Da-Wei Zhou, Han-Jia Ye, De-Chuan Zhan
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The ability to learn new concepts continually is necessary in this ever-changing world. However, deep neural networks suffer from catastrophic forgetting when learning new categories. Many works have been proposed to alleviate this phenomenon, whereas most of them either fall into the stability-plasticity dilemma or take too much computation or storage overhead. Inspired by the gradient boosting algorithm to gradually fit the residuals between the target model and the previous ensemble model, we propose a novel two-stage learning paradigm FOSTER, empowering the model to learn new categories adaptively. Specifically, we first dynamically expand new modules to fit the residuals between the target and the output of the original model. Next, we remove redundant parameters and feature dimensions through an effective distillation strategy to maintain the single backbone model. We validate our method FOSTER on CIFAR-100 and ImageNet-100/1000 under different settings. Experimental results show that our method achieves state-of-the-art performance. Code is available at: https://github.com/G-U-N/ECCV22-FOSTER.
+
+</details>
+
+### Learning Fast, Learning Slow: A General Continual Learning Method based on Complementary Learning System.
+- **链接**: [arXiv:2201.12604](https://arxiv.org/abs/2201.12604)
+- **作者**: Elahe Arani, Fahad Sarfraz, Bahram Zonooz
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Humans excel at continually learning from an ever-changing environment whereas it remains a challenge for deep neural networks which exhibit catastrophic forgetting. The complementary learning system (CLS) theory suggests that the interplay between rapid instance-based learning and slow structured learning in the brain is crucial for accumulating and retaining knowledge. Here, we propose CLS-ER, a novel dual memory experience replay (ER) method which maintains short-term and long-term semantic memories that interact with the episodic memory. Our method employs an effective replay mechanism whereby new knowledge is acquired while aligning the decision boundaries with the semantic memories. CLS-ER does not utilize the task boundaries or make any assumption about the distribution of the data which makes it versatile and suited for "general continual learning". Our approach achieves state-of-the-art performance on standard benchmarks as well as more realistic general continual learning settings.
+
+</details>
+
+### Learning curves for continual learning in neural networks: Self-knowledge transfer and forgetting.
+- **链接**: [出版页](https://openreview.net/forum?id=tFgdrQbbaa)
+- **作者**: Ryo Karakida, Shotaro Akaho
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+### Continual Normalization: Rethinking Batch Normalization for Online Continual Learning.
+- **链接**: [arXiv:2203.16102](https://arxiv.org/abs/2203.16102)
+- **作者**: Quang Pham, Chenghao Liu, Steven C. H. Hoi
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Existing continual learning methods use Batch Normalization (BN) to facilitate training and improve generalization across tasks. However, the non-i.i.d and non-stationary nature of continual learning data, especially in the online setting, amplify the discrepancy between training and testing in BN and hinder the performance of older tasks. In this work, we study the cross-task normalization effect of BN in online continual learning where BN normalizes the testing data using moments biased towards the current task, resulting in higher catastrophic forgetting. This limitation motivates us to propose a simple yet effective method that we call Continual Normalization (CN) to facilitate training similar to BN while mitigating its negative effect. Extensive experiments on different continual learning algorithms and online scenarios show that CN is a direct replacement for BN and can provide substantial performance improvements. Our implementation is available at \url{https://github.com/phquang/Continual-Normalization}.
+
+</details>
+
+### New Insights on Reducing Abrupt Representation Change in Online Continual Learning.
+- **链接**: [出版页](https://openreview.net/forum?id=N8MaByOzUfb)
+- **作者**: Lucas Caccia, Rahaf Aljundi, Nader Asadi, Tinne Tuytelaars, Joelle Pineau, Eugene Belilovsky
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+### Online Continual Learning on Class Incremental Blurry Task Configuration with Anytime Inference.
+- **链接**: [arXiv:2110.10031](https://arxiv.org/abs/2110.10031)
+- **作者**: Hyunseo Koh, Dahyun Kim, Jung-Woo Ha, Jonghyun Choi
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Despite rapid advances in continual learning, a large body of research is devoted to improving performance in the existing setups. While a handful of work do propose new continual learning setups, they still lack practicality in certain aspects. For better practicality, we first propose a novel continual learning setup that is online, task-free, class-incremental, of blurry task boundaries and subject to inference queries at any moment. We additionally propose a new metric to better measure the performance of the continual learning methods subject to inference queries at any moment. To address the challenging setup and evaluation protocol, we propose an effective method that employs a new memory management scheme and novel learning techniques. Our empirical validation demonstrates that the proposed method outperforms prior arts by large margins. Code and data splits are available at https://github.com/naver-ai/i-Blurry.
+
+</details>
+
+### TRGP: Trust Region Gradient Projection for Continual Learning.
+- **链接**: [arXiv:2202.02931](https://arxiv.org/abs/2202.02931)
+- **作者**: Sen Lin, Li Yang, Deliang Fan, Junshan Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Catastrophic forgetting is one of the major challenges in continual learning. To address this issue, some existing methods put restrictive constraints on the optimization space of the new task for minimizing the interference to old tasks. However, this may lead to unsatisfactory performance for the new task, especially when the new task is strongly correlated with old tasks. To tackle this challenge, we propose Trust Region Gradient Projection (TRGP) for continual learning to facilitate the forward knowledge transfer based on an efficient characterization of task correlation. Particularly, we introduce a notion of `trust region' to select the most related old tasks for the new task in a layer-wise and single-shot manner, using the norm of gradient projection onto the subspace spanned by task inputs. Then, a scaled weight projection is proposed to cleverly reuse the frozen weights of the selected old tasks in the trust region through a layer-wise scaling matrix. By jointly optimizing the scaling matrices and the model, where the model is updated along the directions orthogonal to the subspaces of old tasks, TRGP can effectively prompt knowledge transfer without forgetting. Extensive experiments show that our approach achieves significant improvement over related state-of-the-art methods.
+
+</details>
+
+### Continual Learning with Recursive Gradient Optimization.
+- **链接**: [arXiv:2201.12522](https://arxiv.org/abs/2201.12522)
+- **作者**: Hao Liu, Huaping Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Learning multiple tasks sequentially without forgetting previous knowledge, called Continual Learning(CL), remains a long-standing challenge for neural networks. Most existing methods rely on additional network capacity or data replay. In contrast, we introduce a novel approach which we refer to as Recursive Gradient Optimization(RGO). RGO is composed of an iteratively updated optimizer that modifies the gradient to minimize forgetting without data replay and a virtual Feature Encoding Layer(FEL) that represents different long-term structures with only task descriptors. Experiments demonstrate that RGO has significantly better performance on popular continual classification benchmarks when compared to the baselines and achieves new state-of-the-art performance on 20-split-CIFAR100(82.22%) and 20-split-miniImageNet(72.63%). With higher average accuracy than Single-Task Learning(STL), this method is flexible and reliable to provide continual learning capabilities for learning models that rely on gradient descent.
+
+</details>
+
+### Representational Continuity for Unsupervised Continual Learning.
+- **链接**: [出版页](https://openreview.net/forum?id=9Hrka5PA7LW)
+- **作者**: Divyam Madaan, Jaehong Yoon, Yuanchun Li, Yunxin Liu, Sung Ju Hwang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+### Continual Learning with Filter Atom Swapping.
+- **链接**: [出版页](https://openreview.net/forum?id=metRpM4Zrcb)
+- **作者**: Zichen Miao, Ze Wang, Wei Chen, Qiang Qiu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+### CLEVA-Compass: A Continual Learning Evaluation Assessment Compass to Promote Research Transparency and Comparability.
+- **链接**: [arXiv:2110.03331](https://arxiv.org/abs/2110.03331)
+- **作者**: Martin Mundt, Steven Lang, Quentin Delfosse, Kristian Kersting
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> What is the state of the art in continual machine learning? Although a natural question for predominant static benchmarks, the notion to train systems in a lifelong manner entails a plethora of additional challenges with respect to set-up and evaluation. The latter have recently sparked a growing amount of critiques on prominent algorithm-centric perspectives and evaluation protocols being too narrow, resulting in several attempts at constructing guidelines in favor of specific desiderata or arguing against the validity of prevalent assumptions. In this work, we depart from this mindset and argue that the goal of a precise formulation of desiderata is an ill-posed one, as diverse applications may always warrant distinct scenarios. Instead, we introduce the Continual Learning EValuation Assessment Compass: the CLEVA-Compass. The compass provides the visual means to both identify how approaches are practically reported and how works can simultaneously be contextualized in the broader literature landscape. In addition to promoting compact specification in the spirit of recent replication trends, it thus provides an intuitive chart to understand the priorities of individual systems, where they resemble each other, and what elements are missing towards a fair comparison.
+
+</details>
+
+### Information-theoretic Online Memory Selection for Continual Learning.
+- **链接**: [arXiv:2204.04763](https://arxiv.org/abs/2204.04763)
+- **作者**: Shengyang Sun, Daniele Calandriello, Huiyi Hu, Ang Li, Michalis K. Titsias
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> A challenging problem in task-free continual learning is the online selection of a representative replay memory from data streams. In this work, we investigate the online memory selection problem from an information-theoretic perspective. To gather the most information, we propose the \textit{surprise} and the \textit{learnability} criteria to pick informative points and to avoid outliers. We present a Bayesian model to compute the criteria efficiently by exploiting rank-one matrix structures. We demonstrate that these criteria encourage selecting informative points in a greedy algorithm for online memory selection. Furthermore, by identifying the importance of \textit{the timing to update the memory}, we introduce a stochastic information-theoretic reservoir sampler (InfoRS), which conducts sampling among selective points with high information. Compared to reservoir sampling, InfoRS demonstrates improved robustness against data imbalance. Finally, empirical performances over continual learning benchmarks manifest its efficiency and efficacy.
+
+</details>
+
+### Memory Replay with Data Compression for Continual Learning.
+- **链接**: [arXiv:2202.06592](https://arxiv.org/abs/2202.06592)
+- **作者**: Liyuan Wang, Xingxing Zhang, Kuo Yang, Longhui Yu, Chongxuan Li, Lanqing Hong et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning needs to overcome catastrophic forgetting of the past. Memory replay of representative old training samples has been shown as an effective solution, and achieves the state-of-the-art (SOTA) performance. However, existing work is mainly built on a small memory buffer containing a few original data, which cannot fully characterize the old data distribution. In this work, we propose memory replay with data compression (MRDC) to reduce the storage cost of old training samples and thus increase their amount that can be stored in the memory buffer. Observing that the trade-off between the quality and quantity of compressed data is highly nontrivial for the efficacy of memory replay, we propose a novel method based on determinantal point processes (DPPs) to efficiently determine an appropriate compression quality for currently-arrived training samples. In this way, using a naive data compression algorithm with a properly selected quality can largely boost recent strong baselines by saving more compressed data in a limited storage space. We extensively validate this across several benchmarks of class-incremental learning and in a realistic scenario of object detection for autonomous driving.
+
+</details>
+
+### Pretrained Language Model in Continual Learning: A Comparative Study.
+- **链接**: [出版页](https://openreview.net/forum?id=figzpGMrdD)
+- **作者**: Tongtong Wu, Massimo Caccia, Zhuang Li, Yuan-Fang Li, Guilin Qi, Gholamreza Haffari
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+### Online Coreset Selection for Rehearsal-based Continual Learning.
+- **链接**: [arXiv:2106.01085](https://arxiv.org/abs/2106.01085)
+- **作者**: Jaehong Yoon, Divyam Madaan, Eunho Yang, Sung Ju Hwang
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICLR 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> A dataset is a shred of crucial evidence to describe a task. However, each data point in the dataset does not have the same potential, as some of the data points can be more representative or informative than others. This unequal importance among the data points may have a large impact in rehearsal-based continual learning, where we store a subset of the training examples (coreset) to be replayed later to alleviate catastrophic forgetting. In continual learning, the quality of the samples stored in the coreset directly affects the model's effectiveness and efficiency. The coreset selection problem becomes even more important under realistic settings, such as imbalanced continual learning or noisy data scenarios. To tackle this problem, we propose Online Coreset Selection (OCS), a simple yet effective method that selects the most representative and informative coreset at each iteration and trains them in an online manner. Our proposed method maximizes the model's adaptation to a current dataset while selecting high-affinity samples to past tasks, which directly inhibits catastrophic forgetting. We validate the effectiveness of our coreset selection mechanism over various standard, imbalanced, and noisy datasets against strong continual learning baselines, demonstrating that it improves task adaptation and prevents catastrophic forgetting in a sample-efficient manner.
+
+</details>
+
+### Learning a Condensed Frame for Memory-Efficient Video Class-Incremental Learning.
+- **链接**: [arXiv:2211.00833](https://arxiv.org/abs/2211.00833) · 📚 被引 1
+- **作者**: Yixuan Pei, Zhiwu Qing, Jun Cen, Xiang Wang, Shiwei Zhang, Yaxiong Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recent incremental learning for action recognition usually stores representative videos to mitigate catastrophic forgetting. However, only a few bulky videos can be stored due to the limited memory. To address this problem, we propose FrameMaker, a memory-efficient video class-incremental learning approach that learns to produce a condensed frame for each selected video. Specifically, FrameMaker is mainly composed of two crucial components: Frame Condensing and Instance-Specific Prompt. The former is to reduce the memory cost by preserving only one condensed frame instead of the whole video, while the latter aims to compensate the lost spatio-temporal details in the Frame Condensing stage. By this means, FrameMaker enables a remarkable reduction in memory but keep enough information that can be applied to following incremental tasks. Experimental results on multiple challenging benchmarks, i.e., HMDB51, UCF101 and Something-Something V2, demonstrate that FrameMaker can achieve better performance to recent advanced methods while consuming only 20% memory. Additionally, under the same memory consumption conditions, FrameMaker significantly outperforms existing state-of-the-arts by a convincing margin.
+
+</details>
+
+### S-Prompts Learning with Pre-trained Transformers: An Occam's Razor for Domain Incremental Learning.
+- **链接**: [arXiv:2207.12819](https://arxiv.org/abs/2207.12819) · 📚 被引 34
+- **作者**: Yabin Wang, Zhiwu Huang, Xiaopeng Hong
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> State-of-the-art deep neural networks are still struggling to address the catastrophic forgetting problem in continual learning. In this paper, we propose one simple paradigm (named as S-Prompting) and two concrete approaches to highly reduce the forgetting degree in one of the most typical continual learning scenarios, i.e., domain increment learning (DIL). The key idea of the paradigm is to learn prompts independently across domains with pre-trained transformers, avoiding the use of exemplars that commonly appear in conventional methods. This results in a win-win game where the prompting can achieve the best for each domain. The independent prompting across domains only requests one single cross-entropy loss for training and one simple K-NN operation as a domain identifier for inference. The learning paradigm derives an image prompt learning approach and a novel language-image prompt learning approach. Owning an excellent scalability (0.03% parameter increase per domain), the best of our approaches achieves a remarkable relative improvement (an average of about 30%) over the best of the state-of-the-art exemplar-free methods for three standard DIL tasks, and even surpasses the best of them relatively by about 6% in average when they use exemplars. Source code is available at \url{https://github.com/iamwangyabin/S-Prompts}.
+
+</details>
+
+### ACIL: Analytic Class-Incremental Learning with Absolute Memorization and Privacy Protection.
+- **链接**: [arXiv:2205.14922](https://arxiv.org/abs/2205.14922) · 📚 被引 12
+- **作者**: Huiping Zhuang, Zhenyu Weng, Hongxin Wei, Renchunzi Xie, Kar-Ann Toh, Zhiping Lin
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Class-incremental learning (CIL) learns a classification model with training data of different classes arising progressively. Existing CIL either suffers from serious accuracy loss due to catastrophic forgetting, or invades data privacy by revisiting used exemplars. Inspired by linear learning formulations, we propose an analytic class-incremental learning (ACIL) with absolute memorization of past knowledge while avoiding breaching of data privacy (i.e., without storing historical data). The absolute memorization is demonstrated in the sense that class-incremental learning using ACIL given present data would give identical results to that from its joint-learning counterpart which consumes both present and historical samples. This equality is theoretically validated. Data privacy is ensured since no historical data are involved during the learning process. Empirical validations demonstrate ACIL's competitive accuracy performance with near-identical results for various incremental task settings (e.g., 5-50 phases). This also allows ACIL to outperform the state-of-the-art methods for large-phase scenarios (e.g., 25 and 50 phases).
+
+</details>
+
+### Margin-Based Few-Shot Class-Incremental Learning with Class-Level Overfitting Mitigation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/ae817e85f71ef86d5c9566598e185b89-Abstract-Conference.html) · 📚 被引 4
+- **作者**: Yixiong Zou, Shanghang Zhang, Yuhua Li, Ruixuan Li
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+### Decomposed Knowledge Distillation for Class-Incremental Semantic Segmentation.
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/439bf902de1807088d8b731ca20b0777-Abstract-Conference.html) · 📚 被引 10
+- **作者**: Donghyeon Baek, Youngmin Oh, Sanghoon Lee, Junghyup Lee, Bumsub Ham
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2022
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Meta-attention for ViT-backed Continual Learning. → [vision-transformer](../vision-transformer/Guideline%202022.md)
+- Generative Negative Text Replay for Continual Vision-Language Pretraining. → [vlm](../vlm/Guideline%202022.md)
+<!-- COMPLETE v1 papers=65 -->
