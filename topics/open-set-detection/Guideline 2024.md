@@ -978,4 +978,35 @@
 - Compositional Few-Shot Class-Incremental Learning. → [continual-learning](../continual-learning/Guideline%202024.md)
 - ImOV3D: Learning Open Vocabulary Point Clouds 3D Object Detection from Only 2D Images. → [3d-detection](../3d-detection/Guideline%202024.md)
 - Training an Open-Vocabulary Monocular 3D Detection Model without 3D Data. → [3d-detection](../3d-detection/Guideline%202024.md)
-<!-- COMPLETE v1 papers=76 -->
+
+
+## 🆕 增量新增
+
+### Retrieval-Augmented Open-Vocabulary Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01650)
+- **作者**: Jooyeon Kim, Eulrang Cho, Sehyung Kim, Hyunwoo J. Kim
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对开放词汇目标检测中模型对未见类别泛化能力不足的问题。②提出了检索增强的开放词汇检测框架，通过外部知识库检索相关区域-文本对作为辅助监督信号，增强模型对未知类别的识别能力。③相比传统方法仅依赖预训练视觉-语言模型，该方法引入了动态检索机制，使模型能利用更丰富的语义上下文。④在LVIS和COCO等基准上显著提升了未见类别的检测精度，尤其在小样本类别上表现突出。
+- **摘要（英）**: This work tackles limited generalization to unseen categories in open-vocabulary detection by introducing a retrieval-augmented framework that fetches relevant region-text pairs from external knowledge bases as auxiliary supervision. It outperforms methods relying solely on pretrained VLMs, notably improving rare-category detection on LVIS and COCO.
+- **核心贡献**: 提出检索增强的开放词汇检测训练范式。
+- **创新点**: 动态外部知识检索提供辅助监督。
+- **结果**: 在LVIS/COCO上显著提升未见类别检测精度。
+
+### The Devil is in the Fine-Grained Details: Evaluating open-Vocabulary Object Detectors for Fine-Grained Understanding. **⭐⭐⭐⭐** (相关度: 82%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02125)
+- **作者**: Lorenzo Bianchi, Fabio Carrara, Nicola Messina, Claudio Gennaro, Fabrizio Falchi
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对开放词汇目标检测器在细粒度理解上的不足，系统评估了现有检测器在细粒度类别上的表现。通过构建细粒度评估基准，发现现有方法在区分相似类别时存在明显缺陷。提出了改进方向，强调细粒度特征的重要性。
+- **摘要（英）**: Systematically evaluates open-vocabulary object detectors on fine-grained understanding. Constructs a fine-grained benchmark revealing significant weaknesses in distinguishing similar categories. Highlights the need for improved fine-grained feature learning.
+- **核心贡献**: 构建了细粒度开放词汇检测评估基准，并分析现有方法缺陷。
+- **创新点**: 创新性地聚焦细粒度评估，揭示检测器在相似类别上的性能瓶颈。
+- **结果**: 发现现有检测器在细粒度任务上性能显著下降。
+
+### SED: A Simple Encoder-Decoder for Open-Vocabulary Semantic Segmentation.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00329)
+- **作者**: Bin Xie, Jiale Cao, Jin Xie, Fahad Shahbaz Khan, Yanwei Pang
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+<!-- COMPLETE v1 papers=79 -->

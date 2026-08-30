@@ -1037,4 +1037,29 @@
 > Although multi-view 3D object detection based on the Bird's-Eye-View (BEV) paradigm has garnered widespread attention as an economical and deployment-friendly perception solution for autonomous driving, there is still a performance gap compared to LiDAR-based methods. In recent years, several cross-modal distillation methods have been proposed to transfer beneficial information from teacher models to student models, with the aim of enhancing performance. However, these methods face challenges due to discrepancies in feature distribution originating from different data modalities and network structures, making knowledge transfer exceptionally challenging. In this paper, we propose a Foreground Self-Distillation (FSD) scheme that effectively avoids the issue of distribution discrepancies, maintaining remarkable distillation effects without the need for pre-trained teacher models or cumbersome distillation strategies. Additionally, we design two Point Cloud Intensification (PCI) strategies to compensate for the sparsity of point clouds by frame combination and pseudo point assignment. Finally, we develop a Multi-Scale Foreground Enhancement (MSFE) module to extract and fuse multi-scale foreground features by predicted elliptical Gaussian heatmap, further improving the model's performance. We integrate all the above innovations into a unified framework named FSD-BEV. Extensive experiments on the nuScenes dataset exhibit that FSD-BEV achieves state-of-the-art performance, highlighting its effectiveness. The code and models are available at: https://github.com/CocoBoom/fsd-bev.
 
 </details>
-<!-- COMPLETE v1 papers=87 -->
+
+
+## 🆕 增量新增
+
+### Generative Region-Language Pretraining for Open-Ended Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2403.10191](https://arxiv.org/abs/2403.10191)
+- **作者**: Chuang Lin, Yi Jiang, Lizhen Qu, Zehuan Yuan, Jianfei Cai
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对开放世界目标检测中模型只能识别预定义类别、无法处理未知类别的问题，提出了一种生成式区域-语言预训练方法。该方法通过将区域特征与语言描述进行生成式对齐，使模型能够对任意区域生成自然语言描述，从而实现对开放类别目标的检测与描述。相比传统的判别式分类方法，该方法利用生成式预训练增强了模型的泛化能力，能够识别训练中未见过的目标类别。实验表明，该方法在开放词汇检测和开放世界检测基准上取得了显著提升，尤其在未知类别召回率上表现优异。
+- **摘要（英）**: This paper addresses the limitation of open-world object detection models that only recognize predefined categories. It proposes a generative region-language pretraining approach that aligns region features with language descriptions, enabling the model to generate natural language descriptions for arbitrary regions and detect unseen categories. Compared to discriminative classification methods, this generative pretraining enhances generalization, achieving significant improvements on open-vocabulary and open-world detection benchmarks, particularly in unknown-class recall.
+- **核心贡献**: 提出生成式区域-语言预训练框架，实现开放端目标检测。
+- **创新点**: 用生成式语言建模替代判别式分类，实现开放类别描述与检测。
+- **结果**: 在开放词汇和开放世界检测基准上显著提升未知类别召回率。
+
+### InstaGen: Enhancing Object Detection by Training on Synthetic Dataset. **⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01339)
+- **作者**: Chengjian Feng, Yujie Zhong, Zequn Jie, Weidi Xie, Lin Ma
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对真实数据标注成本高，目标检测训练数据不足的问题。②提出InstaGen，利用生成模型（如扩散模型）合成逼真图像，并自动生成实例级标注，用于增强检测器训练。③相比传统数据增强或纯合成数据，InstaGen生成更真实且标注更准确。④在COCO等数据集上，合成数据补充训练后mAP提升约2-3%，尤其在稀有类别上提升明显。
+- **摘要（英）**: This paper addresses high annotation costs in object detection by using generative models to synthesize realistic images with instance-level labels. InstaGen enhances training data, improving mAP by 2-3% on COCO, especially for rare classes, compared to traditional augmentation.
+- **核心贡献**: 利用生成模型自动合成带标注的检测训练数据。
+- **创新点**: 扩散模型生成图像与自动实例标注流程。
+- **结果**: COCO上mAP提升2-3%。
+<!-- COMPLETE v1 papers=89 -->

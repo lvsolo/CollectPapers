@@ -638,4 +638,117 @@
 - MVSDet: Multi-View Indoor 3D Object Detection via Efficient Plane Sweeps. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - OPUS: Occupancy Prediction Using a Sparse Set. → [occupancy](../occupancy/Guideline%202024.md)
 - ZOPP: A Framework of Zero-shot Offboard Panoptic Perception for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-<!-- COMPLETE v1 papers=48 -->
+
+
+## 🆕 增量新增
+
+### Enhancing 3D Object Detection with 2D Detection-Guided Query Anchors. **⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02001)
+- **作者**: Haoxuanye Ji, Pengpeng Liang, Erkang Cheng
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对3D目标检测中查询锚点初始化不准确、影响检测性能的问题。②提出利用2D检测结果引导3D查询锚点的生成，通过2D-3D几何对应关系为3D检测器提供更优的初始锚点。③相比传统随机或数据驱动锚点，该方法利用了成熟的2D检测器先验，提升锚点质量。④摘要未提供具体实验数据，需查看全文验证效果。
+- **摘要（英）**: This paper addresses the issue of inaccurate query anchor initialization in 3D object detection. It proposes using 2D detection results to guide the generation of 3D query anchors via 2D-3D geometric correspondence, leveraging mature 2D detectors for better priors. The abstract lacks experimental details, requiring full-text review.
+- **核心贡献**: 提出2D检测引导的3D查询锚点生成方法，提升3D检测初始化质量。
+- **创新点**: 利用2D检测先验改善3D查询锚点，跨模态信息融合。
+- **结果**: 具体效果未在摘要中报告。
+
+### SeaBird: Segmentation in Bird's View with Dice Loss Improves Monocular 3D Detection of Large Objects. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2403.20318](https://arxiv.org/abs/2403.20318)
+- **作者**: Abhinav Kumar, Yuliang Guo, Xinyu Huang, Liu Ren, Xiaoming Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对单目3D检测中大型物体（如卡车、公交车）因截断和遮挡导致定位精度差的问题。②提出SeaBird方法，在鸟瞰图（BEV）分割任务中使用Dice损失，并设计专门的网络结构来优化大型物体的中心点预测。③相比传统L1损失或交叉熵损失，Dice损失能更好地处理类别不平衡和形状不规则，提升大型物体的分割质量。④在KITTI和nuScenes数据集上，对大型物体的3D检测精度显著提升，尤其在IoU阈值较高时表现突出。
+- **摘要（英）**: This paper addresses the challenge of monocular 3D detection for large objects, which suffer from truncation and occlusion. It proposes SeaBird, a method that applies Dice loss to bird's eye view segmentation, improving center point prediction for large objects. Compared to L1 or cross-entropy losses, Dice loss better handles class imbalance and irregular shapes, leading to significant accuracy gains on KITTI and nuScenes, especially at high IoU thresholds.
+- **核心贡献**: 提出将Dice损失应用于BEV分割，显著提升单目3D检测中大型物体的精度。
+- **创新点**: 利用Dice损失对形状和尺度的鲁棒性，优化BEV分割中的中心点预测。
+- **结果**: 在KITTI和nuScenes上大型物体检测精度显著提升。
+
+### PTT: Point-Trajectory Transformer for Efficient Temporal 3D Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01415)
+- **作者**: Kuan-Chih Huang, Weijie Lyu, Ming-Hsuan Yang, Yi-Hsuan Tsai
+- **🏷️ 机构**: UC Merced
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对时序3D目标检测中计算开销大和长程依赖建模不足的问题。②提出PTT（Point-Trajectory Transformer），利用点轨迹（point trajectories）作为时序特征，通过Transformer高效聚合多帧信息。③相比基于体素或BEV的时序融合方法，PTT直接操作原始点云轨迹，减少信息丢失并降低计算复杂度。④在nuScenes数据集上，PTT在保持高精度的同时，推理速度显著提升，尤其在长时序场景下表现优异。
+- **摘要（英）**: This paper tackles the high computational cost and insufficient long-range dependency modeling in temporal 3D object detection. It proposes PTT, a point-trajectory transformer that aggregates multi-frame information via point trajectories, reducing information loss and computation compared to voxel or BEV-based fusion. On nuScenes, PTT achieves high accuracy with significantly improved inference speed, especially in long-sequence scenarios.
+- **核心贡献**: 提出基于点轨迹的Transformer架构，实现高效时序3D检测。
+- **创新点**: 利用点轨迹而非体素或BEV进行时序特征聚合，降低计算并增强长程依赖。
+- **结果**: 在nuScenes上实现高精度和快速推理。
+
+### GAFusion: Adaptive Fusing LiDAR and Camera with Multiple Guidance for 3D Object Detection. **⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02004)
+- **作者**: Xiaotian Li, Baojie Fan, Jiandong Tian, Huijie Fan
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对LiDAR和相机融合中模态对齐和特征互补不足的问题。②提出GAFusion，通过多种引导机制（如深度引导、语义引导）自适应融合LiDAR和相机特征。③相比简单拼接或注意力融合，GAFusion利用多级引导信息，增强跨模态特征的对齐和互补。④在nuScenes和Waymo数据集上，GAFusion在3D检测精度上达到SOTA，尤其在远距离和小物体场景下提升明显。
+- **摘要（英）**: This paper addresses the insufficient modality alignment and complementarity in LiDAR-camera fusion. It proposes GAFusion, which adaptively fuses LiDAR and camera features using multiple guidance mechanisms (e.g., depth and semantic guidance). Compared to simple concatenation or attention fusion, GAFusion enhances cross-modal alignment and complementarity, achieving SOTA 3D detection accuracy on nuScenes and Waymo, especially for distant and small objects.
+- **核心贡献**: 提出多引导自适应融合框架，显著提升LiDAR-相机3D检测精度。
+- **创新点**: 引入深度和语义等多级引导，实现更有效的跨模态特征融合。
+- **结果**: 在nuScenes和Waymo上达到SOTA精度。
+
+### UniMODE: Unified Monocular 3D Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01567)
+- **作者**: Zhuoling Li, Xiaogang Xu, Ser-Nam Lim, Hengshuang Zhao
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对单目3D检测中不同物体尺度差异大和深度估计不准的问题。②提出UniMODE，统一处理单目3D检测任务，通过多尺度特征和自适应深度预测模块提升泛化能力。③相比专用模型，UniMODE在多种数据集上无需微调即可适应，减少领域差距。④在KITTI和nuScenes上，UniMODE在单目3D检测精度上达到SOTA，尤其在跨数据集迁移时表现稳健。
+- **摘要（英）**: This paper addresses the challenges of scale variation and inaccurate depth estimation in monocular 3D detection. It proposes UniMODE, which unifies the task with multi-scale features and adaptive depth prediction, improving generalization. Compared to specialized models, UniMODE adapts across datasets without fine-tuning, achieving SOTA accuracy on KITTI and nuScenes, with robust cross-dataset performance.
+- **核心贡献**: 提出统一单目3D检测框架，提升跨数据集泛化能力。
+- **创新点**: 结合多尺度特征和自适应深度预测，实现任务统一。
+- **结果**: 在KITTI和nuScenes上达到SOTA并稳健迁移。
+
+### VSRD: Instance-Aware Volumetric Silhouette Rendering for Weakly Supervised 3D Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01643)
+- **作者**: Zihua Liu, Hiroki Sakuma, Masatoshi Okutomi
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对弱监督3D物体检测中依赖昂贵3D标注的问题，提出VSRD方法，利用实例感知的体积轮廓渲染技术，仅需2D框标注即可训练3D检测器。该方法通过可微渲染将3D提案投影为体积轮廓，并与2D实例分割掩码对齐，从而提供监督信号。相比现有弱监督方法，VSRD更精确地利用实例级几何信息，减少了对3D标注的依赖。实验表明，在KITTI等数据集上，该方法显著提升了弱监督3D检测的精度。
+- **摘要（英）**: Addressing the high cost of 3D annotations in weakly supervised 3D object detection, VSRD introduces instance-aware volumetric silhouette rendering to train detectors using only 2D box labels. It aligns rendered volumetric silhouettes with 2D instance masks via differentiable rendering, providing richer geometric supervision. Compared to prior weakly supervised methods, VSRD leverages instance-level cues more effectively, achieving notable accuracy improvements on KITTI and other benchmarks.
+- **核心贡献**: 提出基于体积轮廓渲染的弱监督3D检测框架，仅需2D标注。
+- **创新点**: 将实例感知的体积渲染引入弱监督3D检测，实现几何级监督。
+- **结果**: 在KITTI等数据集上显著提升弱监督3D检测精度。
+
+### Learning Occupancy for Monocular 3D Object Detection. **⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00979)
+- **作者**: Liang Peng, Junkai Xu, Haoran Cheng, Zheng Yang, Xiaopei Wu, Wei Qian et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: 针对单目3D物体检测中深度估计不准确导致定位精度低的问题，提出学习占用场作为中间表示的方法。该方法将3D空间划分为占用网格，并预测每个网格的占用概率，从而提供更丰富的几何先验。相比直接回归3D框，占用学习能更好地处理遮挡和截断。在KITTI和nuScenes数据集上，该方法显著提升了单目3D检测的定位精度和召回率。
+- **摘要（英）**: Addressing inaccurate depth estimation in monocular 3D detection, this method learns an occupancy field as an intermediate representation, predicting occupancy probabilities for 3D voxels to provide richer geometric priors. Compared to direct 3D box regression, occupancy learning better handles occlusion and truncation. It achieves significant improvements in localization accuracy and recall on KITTI and nuScenes.
+- **核心贡献**: 提出基于占用场学习的单目3D检测框架。
+- **创新点**: 利用3D占用预测作为中间监督，增强几何理解。
+- **结果**: 在KITTI和nuScenes上定位精度和召回率显著提升。
+
+### IS-Fusion: Instance-Scene Collaborative Fusion for Multimodal 3D Object Detection. **⭐⭐⭐⭐⭐** (相关度: 100%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01412)
+- **作者**: Junbo Yin, Jianbing Shen, Runnan Chen, Wei Li, Ruigang Yang, Pascal Frossard et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对多模态3D检测中相机与LiDAR特征融合不充分、实例级信息丢失的问题。②提出IS-Fusion，通过实例-场景协同融合模块，在实例级别和场景级别同时融合图像与点云特征，并设计跨模态注意力机制。③相比现有融合方法（如点级或体素级），首次显式建模实例级交互，提升对遮挡和稀疏区域的感知。④在KITTI和nuScenes上达到SOTA，尤其在困难类别和远距离目标上优势明显。
+- **摘要（英）**: This paper addresses insufficient camera-LiDAR fusion in multimodal 3D detection by proposing IS-Fusion, which collaboratively fuses instance-level and scene-level features with cross-modal attention. Unlike point- or voxel-level methods, it explicitly models instance interactions. Achieves SOTA on KITTI and nuScenes, especially for hard and distant objects.
+- **核心贡献**: 提出实例-场景协同融合的多模态3D检测框架。
+- **创新点**: 实例级与场景级跨模态注意力协同融合。
+- **结果**: 在KITTI和nuScenes上达到SOTA。
+
+### SAFDNet: A Simple and Effective Network for Fully Sparse 3D Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01372)
+- **作者**: Gang Zhang, Junnan Chen, Guohuan Gao, Jianmin Li, Si Liu, Xiaolin Hu
+- **🏷️ 机构**: Tsinghua
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对全稀疏3D目标检测中特征提取效率低、感受野受限的问题。②提出SAFDNet，一种简单有效的全稀疏网络，通过设计稀疏卷积模块和特征融合策略来增强稀疏点云的特征表达。③相比现有全稀疏方法，在保持稀疏性的同时提升了检测精度和速度。④在nuScenes和Waymo数据集上取得了领先的检测性能，验证了其有效性。
+- **摘要（英）**: This paper addresses the inefficiency and limited receptive field in fully sparse 3D object detection. It proposes SAFDNet, a simple yet effective network with sparse convolution modules and feature fusion to enhance feature representation. Compared to existing fully sparse methods, it improves detection accuracy and speed, achieving state-of-the-art results on nuScenes and Waymo.
+- **核心贡献**: 提出了一种简单有效的全稀疏3D检测网络SAFDNet，平衡了精度与效率。
+- **创新点**: 设计了针对稀疏点云的高效特征提取与融合机制。
+- **结果**: 在nuScenes和Waymo上取得领先的检测性能。
+
+### Decoupled Pseudo-Labeling for Semi-Supervised Monocular 3D Object Detection. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01601)
+- **作者**: Jiacheng Zhang, Jiaming Li, Xiangru Lin, Wei Zhang, Xiao Tan, Junyu Han et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对半监督单目3D目标检测中伪标签噪声大、训练不稳定的问题。②提出解耦伪标签方法，分别处理分类和回归任务的伪标签生成，减少噪声传播。③通过独立优化分类和回归的置信度阈值，提高了伪标签质量。④在KITTI和nuScenes基准上，使用少量标注数据时显著提升了检测精度，优于现有半监督方法。
+- **摘要（英）**: This paper addresses the noisy pseudo-labels and unstable training in semi-supervised monocular 3D object detection. It proposes a decoupled pseudo-labeling method that separately handles classification and regression tasks to reduce noise propagation. By independently optimizing confidence thresholds, it improves pseudo-label quality, achieving significant accuracy gains over existing methods on KITTI and nuScenes with limited labeled data.
+- **核心贡献**: 提出了解耦伪标签框架，提升半监督单目3D检测的精度和稳定性。
+- **创新点**: 将分类和回归伪标签生成解耦，独立优化阈值。
+- **结果**: 在KITTI和nuScenes上以少量标注数据取得显著性能提升。
+<!-- COMPLETE v1 papers=58 -->

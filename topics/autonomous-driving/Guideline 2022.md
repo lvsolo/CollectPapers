@@ -291,4 +291,19 @@
 - Fully Convolutional One-Stage 3D Object Detection on LiDAR Range Images. → [bev](../bev/Guideline%202022.md)
 - DeepInteraction: 3D Object Detection via Modality Interaction. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Towards Efficient 3D Object Detection with Knowledge Distillation. → [knowledge-distillation](../knowledge-distillation/Guideline%202022.md)
-<!-- COMPLETE v1 papers=23 -->
+
+
+## 🆕 增量新增
+
+### Semi-supervised 3D Object Detection with Proficient Teachers.
+- **链接**: [arXiv:2207.12655](https://arxiv.org/abs/2207.12655) · 📚 被引 73
+- **作者**: Junbo Yin, Jin Fang, Dingfu Zhou, Liangjun Zhang, Cheng-Zhong Xu, Jianbing Shen et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Dominated point cloud-based 3D object detectors in autonomous driving scenarios rely heavily on the huge amount of accurately labeled samples, however, 3D annotation in the point cloud is extremely tedious, expensive and time-consuming. To reduce the dependence on large supervision, semi-supervised learning (SSL) based approaches have been proposed. The Pseudo-Labeling methodology is commonly used for SSL frameworks, however, the low-quality predictions from the teacher model have seriously limited its performance. In this work, we propose a new Pseudo-Labeling framework for semi-supervised 3D object detection, by enhancing the teacher model to a proficient one with several necessary designs. First, to improve the recall of pseudo labels, a Spatialtemporal Ensemble (STE) module is proposed to generate sufficient seed boxes. Second, to improve the precision of recalled boxes, a Clusteringbased Box Voting (CBV) module is designed to get aggregated votes from the clustered seed boxes. This also eliminates the necessity of sophisticated thresholds to select pseudo labels. Furthermore, to reduce the negative influence of wrongly pseudo-labeled samples during the training, a soft supervision signal is proposed by considering Box-wise Contrastive Learning (BCL). The effectiveness of our model is verified on both ONCE and Waymo datasets. For example, on ONCE, our approach significantly improves the baseline by 9.51 mAP. Moreover, with half annotations, our model outperforms the oracle model with full annotations on Waymo.
+
+</details>
+<!-- COMPLETE v1 papers=24 -->

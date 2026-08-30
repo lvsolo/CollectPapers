@@ -425,4 +425,35 @@
 > Autonomous driving demands an integrated approach that encompasses perception, prediction, and planning, all while operating under strict energy constraints to enhance scalability and environmental sustainability. We present Spiking Autonomous Driving (SAD), the first unified Spiking Neural Network (SNN) to address the energy challenges faced by autonomous driving systems through its event-driven and energy-efficient nature. SAD is trained end-to-end and consists of three main modules: perception, which processes inputs from multi-view cameras to construct a spatiotemporal bird's eye view; prediction, which utilizes a novel dual-pathway with spiking neurons to forecast future states; and planning, which generates safe trajectories considering predicted occupancy, traffic rules, and ride comfort. Evaluated on the nuScenes dataset, SAD achieves competitive performance in perception, prediction, and planning tasks, while drawing upon the energy efficiency of SNNs. This work highlights the potential of neuromorphic computing to be applied to energy-efficient autonomous driving, a critical step toward sustainable and safety-critical automotive technology. Our code is available at \url{https://github.com/ridgerchu/SAD}.
 
 </details>
-<!-- COMPLETE v1 papers=40 -->
+
+
+## 🆕 增量新增
+
+### Cam4DOcc: Benchmark for Camera-Only 4D Occupancy Forecasting in Autonomous Driving Applications. **⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02030)
+- **作者**: Junyi Ma, Xieyuanli Chen, Jiawei Huang, Jingyi Xu, Zhen Luo, Jintao Xu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对纯相机4D占用预测缺乏统一基准的问题。②提出了Cam4DOcc基准，包含多相机输入下的4D占用预测任务定义、数据集和评估指标。③相比已有3D占用预测工作，扩展到了时间维度，支持未来占用预测。④实验验证了基准的可行性，但摘要未提供具体性能数据。
+- **摘要（英）**: This paper addresses the lack of a unified benchmark for camera-only 4D occupancy forecasting. It proposes Cam4DOcc, a benchmark with task definition, dataset, and evaluation metrics for 4D occupancy prediction from multi-camera inputs. The key improvement over existing 3D occupancy works is the extension to the temporal dimension for future prediction. Experiments validate the benchmark's feasibility, though specific results are not detailed in the abstract.
+- **核心贡献**: 建立了纯相机4D占用预测的基准，包括数据集和评估协议。
+- **创新点**: 将占用预测从3D扩展到4D时间维度，填补了该领域基准空白。
+- **结果**: 验证了基准的可行性，但具体数值未在摘要中提及。
+
+### DriveWorld: 4D Pre-Trained Scene Understanding via World Models for Autonomous Driving. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01470)
+- **作者**: Chen Min, Dawei Zhao, Liang Xiao, Jian Zhao, Xinli Xu, Zheng Zhu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中多模态4D预训练缺乏统一场景理解的问题，提出世界模型驱动的预训练框架。②构建DriveWorld，利用时空记忆库和动态/静态解耦的world model，在nuScenes和Sonic等多个数据集上进行4D预训练。③相比现有3D预训练方法，该方法能同时建模动态物体和静态环境，并支持多任务迁移。④在BEV分割、3D检测、跟踪等多项下游任务上取得SOTA性能，显著提升跨域泛化能力。
+- **摘要（英）**: DriveWorld introduces a world-model-based 4D pre-training framework for autonomous driving, decoupling dynamic and static scene components with a spatiotemporal memory bank. It achieves state-of-the-art performance across multiple downstream tasks and datasets, demonstrating strong cross-domain generalization.
+- **核心贡献**: 提出首个基于世界模型的4D预训练框架，统一动态与静态场景理解。
+- **创新点**: 动态/静态解耦的world model与时空记忆库设计。
+- **结果**: 在多项下游任务上取得SOTA，跨域泛化显著提升。
+
+### Multiagent Multitraversal Multimodal Self-Driving: Open MARS Dataset.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02081)
+- **作者**: Yiming Li, Zhiheng Li, Nuo Chen, Moonjun Gong, Zonglin Lyu, Zehong Wang et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+<!-- COMPLETE v1 papers=43 -->

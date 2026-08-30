@@ -1743,4 +1743,13 @@
 - LabelDistill: Label-Guided Cross-Modal Knowledge Distillation for Camera-Based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - LEROjD: Lidar Extended Radar-Only Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - GraphBEV: Towards Robust BEV Feature Alignment for Multi-modal 3D Object Detection. → [bev](../bev/Guideline%202024.md)
-<!-- COMPLETE v1 papers=160 -->
+
+
+## 🆕 增量新增
+
+### MADTP: Multimodal Alignment-Guided Dynamic Token Pruning for Accelerating Vision-Language Transformer.
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01487)
+- **作者**: Jianjian Cao, Peng Ye, Shengze Li, Chong Yu, Yansong Tang, Jiwen Lu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+<!-- COMPLETE v1 papers=161 -->
