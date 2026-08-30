@@ -3,17 +3,22 @@
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
 > 论文数: 60 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Cross-Domain Document Object Detection: Benchmark Suite and Method.
-- **链接**: [arXiv:2003.13197](https://arxiv.org/abs/2003.13197) · [代码](https://github.com/kailigo/cddod) · 📚 被引 41
+### Cross-Domain Document Object Detection: Benchmark Suite and Method. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2003.13197](https://arxiv.org/abs/2003.13197) · 📚 被引 41
 - **作者**: Kai Li, Curtis Wigington, Chris Tensmeyer, Handong Zhao, Nikolaos Barmpalios, Vlad I. Morariu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: 针对文档对象检测（DOD）在跨域场景下因布局、语言和类型差异导致的性能下降问题，该论文建立了一个包含多种PDF文档数据集的基准套件，并提供页面图像、边界框标注、PDF文件和渲染层。同时提出了一种基于标准检测模型的跨域DOD方法，通过整合未标注目标域数据来缓解域偏移。实验表明该方法在跨域检测任务上有效提升了性能，但摘要未提供具体数据。
+- **摘要（英）**: This paper addresses cross-domain document object detection by establishing a benchmark suite with diverse PDF datasets and proposing a novel method that extends standard detectors to mitigate domain shifts using unlabeled target data. The approach shows improved performance in cross-domain scenarios, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 建立了跨域文档对象检测的基准套件并提出了一种域适应方法。
+- **创新点**: 利用渲染层和未标注目标域数据来缓解域偏移。
+- **结果**: 在跨域文档检测任务上取得了性能提升，但具体数据未给出。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> 3D object detection has been widely studied due to its potential applicability to many promising areas such as robotics and augmented reality. Yet, the sparse nature of the 3D data poses unique challenges to this task. Most notably, the observable surface of the 3D point clouds is disjoint from the center of the instance to ground the bounding box prediction on. To this end, we propose Generative Sparse Detection Network (GSDN), a fully-convolutional single-shot sparse detection network that efficiently generates the support for object proposals. The key component of our model is a generative sparse tensor decoder, which uses a series of transposed convolutions and pruning layers to expand the support of sparse tensors while discarding unlikely object centers to maintain minimal runtime and memory footprint. GSDN can process unprecedentedly large-scale inputs with a single fully-convolutional feed-forward pass, thus does not require the heuristic post-processing stage that stitches results from sliding windows as other previous methods have. We validate our approach on three 3D indoor datasets including the large-scale 3D indoor reconstruction dataset where our method outperforms the state-of-the-art methods by a relative improvement of 7.14% while being 3.78 times faster than the best prior work.
+> Decomposing images of document pages into high-level semantic regions (e.g., figures, tables, paragraphs), document object detection (DOD) is fundamental for downstream tasks like intelligent document editing and understanding. DOD remains a challenging problem as document objects vary significantly in layout, size, aspect ratio, texture, etc. An additional challenge arises in practice because large labeled training datasets are only available for domains that differ from the target domain. We investigate cross-domain DOD, where the goal is to learn a detector for the target domain using labeled data from the source domain and only unlabeled data from the target domain. Documents from the two domains may vary significantly in layout, language, and genre. We establish a benchmark suite consisting of different types of PDF document datasets that can be utilized for cross-domain DOD model training and evaluation. For each dataset, we provide the page images, bounding box annotations, PDF files, and the rendering layers extracted from the PDF files. Moreover, we propose a novel cross-domain DOD model which builds upon the standard detection model and addresses domain shifts by incorporating three novel alignment modules: Feature Pyramid Alignment (FPA) module, Region Alignment (RA) module and Rendering Layer alignment (RLA) module. Extensive experiments on the benchmark suite substantiate the efficacy of the three proposed modules and the proposed method significantly outperforms the baseline methods. The project page is at \url{https://github.com/kailigo/cddod}.
 
 </details>
 
@@ -41,21 +46,31 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### Context R-CNN: Long Term Temporal Context for Per-Camera Object Detection.
+### Context R-CNN: Long Term Temporal Context for Per-Camera Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Beery_Context_R-CNN_Long_Term_Temporal_Context_for_Per-Camera_Object_Detection_CVPR_2020_paper.html) · 📚 被引 113
 - **作者**: Sara Beery, Guanhang Wu, Vivek Rathod, Ronny Votel, Jonathan Huang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: 针对单帧检测器无法利用长期时间上下文的问题，该论文提出了Context R-CNN，通过维护一个记忆库来存储历史帧的特征，并在检测时通过注意力机制检索相关上下文，从而提升检测精度。该方法在野生动物监测等视频数据集上取得了显著改进，例如mAP提升约5-10个百分点，尤其对稀有类别效果明显。
+- **摘要（英）**: This paper proposes Context R-CNN, which leverages long-term temporal context by maintaining a memory bank of historical features and using attention to retrieve relevant information during detection. Experiments on video datasets show significant mAP improvements, particularly for rare classes, demonstrating the value of temporal context.
+- **核心贡献**: 提出了利用长期时间上下文的检测框架Context R-CNN。
+- **创新点**: 通过记忆库和注意力机制整合历史帧特征。
+- **结果**: 在视频检测数据集上取得了显著精度提升。
 
-### Learning a Unified Sample Weighting Network for Object Detection.
-- **链接**: [arXiv:2006.06568](https://arxiv.org/abs/2006.06568) · [代码](https://github.com/caiqi/sample-weighting-network) · 📚 被引 36
+### Learning a Unified Sample Weighting Network for Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2006.06568](https://arxiv.org/abs/2006.06568) · 📚 被引 36
 - **作者**: Qi Cai, Yingwei Pan, Yu Wang, Jingen Liu, Ting Yao, Tao Mei
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: 针对现有目标检测中样本加权策略仅关注难样本且依赖人工调参的问题，该论文提出了一种统一的样本加权网络，通过预测样本在分类和回归任务上的权重，实现数据驱动的自适应加权。该方法可无缝集成到多数区域检测器中，并在COCO等数据集上提升了检测精度，例如mAP提升约1-2个百分点，同时减少了手动参数调整。
+- **摘要（英）**: This paper proposes a unified sample weighting network that predicts task-specific weights for classification and regression, enabling data-driven adaptive sample weighting in object detection. The method is plug-and-play for most region-based detectors and achieves mAP improvements on COCO, reducing manual tuning.
+- **核心贡献**: 提出了一个统一的样本加权网络，联合学习分类和回归的样本权重。
+- **创新点**: 利用样本的不确定性分布（如IoU和概率分数）来预测权重。
+- **结果**: 在多个检测器上提升了精度，并简化了调参过程。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We introduce TIDE, a framework and associated toolbox for analyzing the sources of error in object detection and instance segmentation algorithms. Importantly, our framework is applicable across datasets and can be applied directly to output prediction files without required knowledge of the underlying prediction system. Thus, our framework can be used as a drop-in replacement for the standard mAP computation while providing a comprehensive analysis of each model's strengths and weaknesses. We segment errors into six types and, crucially, are the first to introduce a technique for measuring the contribution of each error in a way that isolates its effect on overall performance. We show that such a representation is critical for drawing accurate, comprehensive conclusions through in-depth analysis across 4 datasets and 7 recognition models. Available at https://dbolya.github.io/tide/
+> Region sampling or weighting is significantly important to the success of modern region-based object detectors. Unlike some previous works, which only focus on "hard" samples when optimizing the objective function, we argue that sample weighting should be data-dependent and task-dependent. The importance of a sample for the objective function optimization is determined by its uncertainties to both object classification and bounding box regression tasks. To this end, we devise a general loss function to cover most region-based object detectors with various sampling strategies, and then based on it we propose a unified sample weighting network to predict a sample's task weights. Our framework is simple yet effective. It leverages the samples' uncertainty distributions on classification loss, regression loss, IoU, and probability score, to predict sample weights. Our approach has several advantages: (i). It jointly learns sample weights for both classification and regression tasks, which differentiates it from most previous work. (ii). It is a data-driven process, so it avoids some manual parameter tuning. (iii). It can be effortlessly plugged into most object detectors and achieves noticeable performance improvements without affecting their inference time. Our approach has been thoroughly evaluated with recent object detection frameworks and it can consistently boost the detection accuracy. Code has been made available at \url{https://github.com/caiqi/sample-weighting-network}.
 
 </details>
 
@@ -71,27 +86,37 @@
 
 </details>
 
-### Memory Enhanced Global-Local Aggregation for Video Object Detection.
-- **链接**: [arXiv:2003.12063](https://arxiv.org/abs/2003.12063) · [代码](https://github.com/Scalsol/mega.pytorch) · 📚 被引 316
+### Memory Enhanced Global-Local Aggregation for Video Object Detection. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2003.12063](https://arxiv.org/abs/2003.12063) · 📚 被引 316
 - **作者**: Yihong Chen, Yue Cao, Han Hu, Liwei Wang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对视频目标检测中单帧质量差导致识别困难的问题。②提出了Memory Enhanced Global-Local Aggregation (MEGA)网络，结合全局语义和局部定位信息，并引入Long Range Memory模块。③改进点在于同时利用全局和局部信息，并扩展了关键帧可访问的内容范围。④在ImageNet VID数据集上取得了最先进的性能。
+- **摘要（英）**: This paper addresses the challenge of video object detection where single frames are often degraded. It proposes MEGA network that aggregates global semantic and local localization information with a Long Range Memory module. The improvement lies in jointly leveraging global and local cues and extending accessible content. It achieves state-of-the-art on ImageNet VID.
+- **核心贡献**: 提出了MEGA网络用于视频目标检测。
+- **创新点**: 设计Long Range Memory模块增强特征聚合。
+- **结果**: 在ImageNet VID上达到最先进性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We present a new method that views object detection as a direct set prediction problem. Our approach streamlines the detection pipeline, effectively removing the need for many hand-designed components like a non-maximum suppression procedure or anchor generation that explicitly encode our prior knowledge about the task. The main ingredients of the new framework, called DEtection TRansformer or DETR, are a set-based global loss that forces unique predictions via bipartite matching, and a transformer encoder-decoder architecture. Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel. The new model is conceptually simple and does not require a specialized library, unlike many other modern detectors. DETR demonstrates accuracy and run-time performance on par with the well-established and highly-optimized Faster RCNN baseline on the challenging COCO object detection dataset. Moreover, DETR can be easily generalized to produce panoptic segmentation in a unified manner. We show that it significantly outperforms competitive baselines. Training code and pretrained models are available at https://github.com/facebookresearch/detr.
+> How do humans recognize an object in a piece of video? Due to the deteriorated quality of single frame, it may be hard for people to identify an occluded object in this frame by just utilizing information within one image. We argue that there are two important cues for humans to recognize objects in videos: the global semantic information and the local localization information. Recently, plenty of methods adopt the self-attention mechanisms to enhance the features in key frame with either global semantic information or local localization information. In this paper we introduce memory enhanced global-local aggregation (MEGA) network, which is among the first trials that takes full consideration of both global and local information. Furthermore, empowered by a novel and carefully-designed Long Range Memory (LRM) module, our proposed MEGA could enable the key frame to get access to much more content than any previous methods. Enhanced by these two sources of information, our method achieves state-of-the-art performance on ImageNet VID dataset. Code is available at \url{https://github.com/Scalsol/mega.pytorch}.
 
 </details>
 
-### SLV: Spatial Likelihood Voting for Weakly Supervised Object Detection.
+### SLV: Spatial Likelihood Voting for Weakly Supervised Object Detection. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2006.12884](https://arxiv.org/abs/2006.12884) · 📚 被引 72
 - **作者**: Ze Chen, Zhihang Fu, Rongxin Jiang, Yaowu Chen, Xian-Sheng Hua
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对弱监督目标检测中MIL方法倾向于定位判别性部分而非整体的问题。②提出了空间似然投票（SLV）模块，通过区域提议投票收敛定位过程，并设计端到端多任务学习框架。③改进点在于无需边界框标注即可正则化定位结果。④在PASCAL VOC 2007和2012上取得了优越性能。
+- **摘要（英）**: This paper addresses the issue of MIL-based WSOD methods localizing discriminative parts instead of whole objects. It proposes a Spatial Likelihood Voting (SLV) module to converge proposal localization without annotations, and an end-to-end multi-task framework. The improvement lies in regularizing localization without bounding boxes. It achieves superior performance on PASCAL VOC.
+- **核心贡献**: 提出了SLV模块用于弱监督目标检测。
+- **创新点**: 通过空间投票机制改进定位收敛。
+- **结果**: 在PASCAL VOC上取得优越性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In this paper, we aim to develop an efficient and compact deep network for RGB-D salient object detection, where the depth image provides complementary information to boost performance in complex scenarios. Starting from a coarse initial prediction by a multi-scale residual block, we propose a progressively guided alternate refinement network to refine it. Instead of using ImageNet pre-trained backbone network, we first construct a lightweight depth stream by learning from scratch, which can extract complementary features more efficiently with less redundancy. Then, different from the existing fusion based methods, RGB and depth features are fed into proposed guided residual (GR) blocks alternately to reduce their mutual degradation. By assigning progressive guidance in the stacked GR blocks within each side-output, the false detection and missing parts can be well remedied. Extensive experiments on seven benchmark datasets demonstrate that our model outperforms existing state-of-the-art approaches by a large margin, and also shows superiority in efficiency (71 FPS) and model size (64.9 MB).
+> Based on the framework of multiple instance learning (MIL), tremendous works have promoted the advances of weakly supervised object detection (WSOD). However, most MIL-based methods tend to localize instances to their discriminative parts instead of the whole content. In this paper, we propose a spatial likelihood voting (SLV) module to converge the proposal localizing process without any bounding box annotations. Specifically, all region proposals in a given image play the role of voters every iteration during training, voting for the likelihood of each category in spatial dimensions. After dilating alignment on the area with large likelihood values, the voting results are regularized as bounding boxes, being used for the final classification and localization. Based on SLV, we further propose an end-to-end training framework for multi-task learning. The classification and localization tasks promote each other, which further improves the detection performance. Extensive experiments on the PASCAL VOC 2007 and 2012 datasets demonstrate the superior performance of SLV.
 
 </details>
 
@@ -107,11 +132,16 @@
 
 </details>
 
-### CentripetalNet: Pursuing High-Quality Keypoint Pairs for Object Detection.
-- **链接**: [arXiv:2003.09119](https://arxiv.org/abs/2003.09119) · [代码](https://github.com/KiveeDong/CentripetalNet) · 📚 被引 163
+### CentripetalNet: Pursuing High-Quality Keypoint Pairs for Object Detection. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2003.09119](https://arxiv.org/abs/2003.09119) · 📚 被引 163
 - **作者**: Zhiwei Dong, Guoxuan Li, Yue Liao, Fei Wang, Pengju Ren, Chen Qian
 - **🏷️ 机构**: Institute of Artificial Intelligence and Robotics\, Xi&#x2019;an Jiaotong University; SenseTime Research, University of Chinese Academy of Sciences, Beihang University
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对基于关键点的检测器中关键点匹配错误的问题。②提出了CentripetalNet，利用向心偏移来配对同一实例的角点，并设计了跨星形可变形卷积网络进行特征适应。③相比传统嵌入方法，该方法结合位置信息更准确地匹配角点。④在MS-COCO test-dev上，AP达到48.0%，超越所有现有anchor-free检测器，并在实例分割上达到40.2% MaskAP。
+- **摘要（英）**: This paper addresses incorrect keypoint matching in keypoint-based detectors by proposing CentripetalNet, which uses centripetal shifts for corner pairing and cross-star deformable convolutions for feature adaptation. It achieves 48.0% AP on MS-COCO test-dev, outperforming all anchor-free detectors, and 40.2% MaskAP for instance segmentation.
+- **核心贡献**: 提出向心偏移和跨星形可变形卷积提升关键点配对质量。
+- **创新点**: 向心偏移替代嵌入方法进行角点匹配。
+- **结果**: 在MS-COCO上AP 48.0%，超越所有anchor-free方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -119,11 +149,22 @@
 
 </details>
 
-### Associate-3Ddet: Perceptual-to-Conceptual Association for 3D Point Cloud Object Detection.
+### Associate-3Ddet: Perceptual-to-Conceptual Association for 3D Point Cloud Object Detection. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2006.04356](https://arxiv.org/abs/2006.04356) · 📚 被引 86
 - **作者**: Liang Du, Xiaoqing Ye, Xiao Tan, Jianfeng Feng, Zhenbo Xu, Errui Ding et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对点云3D物体检测中因遮挡和距离导致的物体外观变化问题。②提出了Associate-3Ddet，一种类似域适应的方法，通过桥接真实场景的感知域和增强场景的概念域来增强特征鲁棒性。③相比直接使用原始点云的方法，该方法模拟人脑感知过程，提升特征对变化的鲁棒性。④实验表明该方法在3D点云检测上取得了最先进的结果。
+- **摘要（英）**: This paper addresses appearance variations in 3D point cloud detection by proposing Associate-3Ddet, a domain adaptation approach that bridges perceptual and conceptual domains to enhance feature robustness. It mimics human brain processing and achieves state-of-the-art results in experiments.
+- **核心贡献**: 提出感知到概念的关联方法增强点云检测特征鲁棒性。
+- **创新点**: 域适应模拟人脑感知过程。
+- **结果**: 在3D点云检测上取得最先进结果。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Object detection from 3D point clouds remains a challenging task, though recent studies pushed the envelope with the deep learning techniques. Owing to the severe spatial occlusion and inherent variance of point density with the distance to sensors, appearance of a same object varies a lot in point cloud data. Designing robust feature representation against such appearance changes is hence the key issue in a 3D object detection method. In this paper, we innovatively propose a domain adaptation like approach to enhance the robustness of the feature representation. More specifically, we bridge the gap between the perceptual domain where the feature comes from a real scene and the conceptual domain where the feature is extracted from an augmented scene consisting of non-occlusion point cloud rich of detailed information. This domain adaptation approach mimics the functionality of the human brain when proceeding object perception. Extensive experiments demonstrate that our simple yet effective approach fundamentally boosts the performance of 3D point cloud object detection and achieves the state-of-the-art results.
+
+</details>
 
 ### Dive Deeper into Box for Object Detection.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-030-58542-6_25) · 📚 被引 13
@@ -137,17 +178,33 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### Taking a Deeper Look at Co-Salient Object Detection.
+### Taking a Deeper Look at Co-Salient Object Detection. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Fan_Taking_a_Deeper_Look_at_Co-Salient_Object_Detection_CVPR_2020_paper.html) · 📚 被引 77
 - **作者**: Deng-Ping Fan, Zheng Lin, Ge-Peng Ji, Dingwen Zhang, Huazhu Fu, Ming-Ming Cheng
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①该论文深入探讨共显著物体检测问题，旨在从一组相关图像中检测共同出现的显著物体。②摘要为空，无法得知具体方法或实验。③无法评估改进点。④效果未知。
+- **摘要（英）**: This paper takes a deeper look at co-salient object detection, aiming to detect common salient objects across a group of images. However, the abstract is empty, so no method or results are available.
+- **核心贡献**: 无有效信息。
+- **创新点**: 无有效信息。
+- **结果**: 无有效信息。
 
-### JL-DCF: Joint Learning and Densely-Cooperative Fusion Framework for RGB-D Salient Object Detection.
-- **链接**: [arXiv:2004.08515](https://arxiv.org/abs/2004.08515) · [代码](https://github.com/kerenfu/JLDCF) · 📚 被引 308
+### JL-DCF: Joint Learning and Densely-Cooperative Fusion Framework for RGB-D Salient Object Detection. **⭐⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2004.08515](https://arxiv.org/abs/2004.08515) · 📚 被引 308
 - **作者**: Keren Fu, Deng-Ping Fan, Ge-Peng Ji, Qijun Zhao
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对RGB-D显著物体检测中现有方法将RGB和深度信息独立处理、受限于训练数据或依赖复杂训练过程的问题。②提出JL-DCF架构，采用Siamese网络联合学习RGB和深度输入，包含联合学习（JL）和密集协作融合（DCF）两个模块。③相比独立网络设计，JL模块提供鲁棒的显著特征学习，DCF模块用于互补特征发现，提升跨模态互补性。④在六个挑战性数据集上，平均S-measure比顶级D3Net模型提升约1.9%，展示了良好的泛化能力。
+- **摘要（英）**: This paper addresses the limitation of existing RGB-D salient object detection methods that treat RGB and depth independently, leading to constraints from limited data or complex training. It proposes JL-DCF, a Siamese network with joint learning (JL) and densely-cooperative fusion (DCF) modules for robust feature learning and complementary discovery. The method improves the top D3Net model by ~1.9% in average S-measure across six datasets, demonstrating strong generalization.
+- **核心贡献**: 提出JL-DCF联合学习与密集协作融合框架，有效提升RGB-D显著物体检测性能。
+- **创新点**: 采用Siamese网络联合学习RGB和深度，并通过密集协作融合增强跨模态互补性。
+- **结果**: 在六个数据集上平均S-measure提升约1.9%，优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> This paper proposes a novel joint learning and densely-cooperative fusion (JL-DCF) architecture for RGB-D salient object detection. Existing models usually treat RGB and depth as independent information and design separate networks for feature extraction from each. Such schemes can easily be constrained by a limited amount of training data or over-reliance on an elaborately-designed training process. In contrast, our JL-DCF learns from both RGB and depth inputs through a Siamese network. To this end, we propose two effective components: joint learning (JL), and densely-cooperative fusion (DCF). The JL module provides robust saliency feature learning, while the latter is introduced for complementary feature discovery. Comprehensive experiments on four popular metrics show that the designed framework yields a robust RGB-D saliency detector with good generalization. As a result, JL-DCF significantly advances the top-1 D3Net model by an average of ~1.9% (S-measure) across six challenging datasets, showing that the proposed framework offers a potential solution for real-world applications and could provide more insight into the cross-modality complementarity task. The code will be available at https://github.com/kerenfu/JLDCF/.
+
+</details>
 
 ### Highly Efficient Salient Object Detection with 100K Parameters.
 - **链接**: [arXiv:2003.05643](https://arxiv.org/abs/2003.05643) · 📚 被引 180
@@ -664,4 +721,5 @@
 - NAS-FCOS: Fast Neural Architecture Search for Object Detection. → [neural-architecture-search](../neural-architecture-search/Guideline%202020.md)
 - Exploring Bottom-Up and Top-Down Cues With Attentive Learning for Webly Supervised Object Detection. → [open-set-detection](../open-set-detection/Guideline%202020.md)
 - HVNet: Hybrid Voxel Network for LiDAR Based 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
+
 <!-- COMPLETE v1 papers=68 -->

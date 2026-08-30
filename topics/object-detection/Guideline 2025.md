@@ -3,13 +3,24 @@
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
 > 论文数: 51 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### MI-DETR: An Object Detection Model with Multi-time Inquiries Mechanism.
+### MI-DETR: An Object Detection Model with Multi-time Inquiries Mechanism. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2503.01463](https://arxiv.org/abs/2503.01463) · 📚 被引 17
 - **作者**: Zhixiong Nan, Xianghong Li, Jifeng Dai, Tao Xiang
 - **🏷️ 机构**: Chongqing University,College of Computer Science,Chongqing,China, Tsinghua University,Department of Electronic Engineering,Beijing,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对现有DETR类模型中级联解码器结构限制目标查询从图像特征中学习信息有限的问题，尤其是在自然场景中检测极小、严重遮挡和与背景混淆的目标时。②提出了一种具有并行多时间查询（MI）机制的新型解码器架构，使目标查询能够学习更全面的信息。③相比传统级联解码器，MI机制允许并行查询，增强了特征利用效率。④在COCO基准上，MI-DETR在ResNet-50骨干下比DINO和Relation-DETR分别提升+2.3 AP和+0.6 AP，并通过诊断和可视化实验验证了有效性、合理性和可解释性。
+- **摘要（英）**: This paper addresses the limited information learning of object queries in cascaded decoders of DETR-like models, especially for small, occluded, and background-confused objects. It proposes a parallel Multi-time Inquiries (MI) mechanism for decoder architecture, enabling comprehensive feature learning. MI-DETR achieves +2.3 AP over DINO and +0.6 AP over Relation-DETR on COCO with ResNet-50, with diagnostic experiments confirming its effectiveness and interpretability.
+- **核心贡献**: 提出了一种并行多时间查询机制，改进了DETR类模型的解码器架构。
+- **创新点**: 通过并行MI机制替代级联更新，使目标查询更全面地利用图像特征。
+- **结果**: 在COCO上超越现有DETR类模型，实现+2.3 AP提升。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Based on analyzing the character of cascaded decoder architecture commonly adopted in existing DETR-like models, this paper proposes a new decoder architecture. The cascaded decoder architecture constrains object queries to update in the cascaded direction, only enabling object queries to learn relatively-limited information from image features. However, the challenges for object detection in natural scenes (e.g., extremely-small, heavily-occluded, and confusingly mixed with the background) require an object detection model to fully utilize image features, which motivates us to propose a new decoder architecture with the parallel Multi-time Inquiries (MI) mechanism. MI enables object queries to learn more comprehensive information, and our MI based model, MI-DETR, outperforms all existing DETR-like models on COCO benchmark under different backbones and training epochs, achieving +2.3 AP and +0.6 AP improvements compared to the most representative model DINO and SOTA model Relation-DETR under ResNet-50 backbone. In addition, a series of diagnostic and visualization experiments demonstrate the effectiveness, rationality, and interpretability of MI.
+
+</details>
 
 ### Roboflow100-VL: A Multi-Domain Object Detection Benchmark for Vision-Language Models.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/1013f8ff40a194f3f12a6bcc5221bb34-Abstract-Datasets_and_Benchmarks_Track.html)
@@ -21,11 +32,22 @@
 
 </details>
 
-### Object Detection using Event Camera: A MoE Heat Conduction based Detector and A New Benchmark Dataset.
-- **链接**: [arXiv:2412.06647](https://arxiv.org/abs/2412.06647) · [代码](https://github.com/Event-AHU/OpenEvDET) · 📚 被引 13
+### Object Detection using Event Camera: A MoE Heat Conduction based Detector and A New Benchmark Dataset. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2412.06647](https://arxiv.org/abs/2412.06647) · 📚 被引 13
 - **作者**: Xiao Wang, Yu Jin, Wentao Wu, Wei Zhang, Lin Zhu, Bo Jiang et al.
 - **🏷️ 机构**: Anhui University,School of Computer Science and Technology,Hefei,China, Anhui University,School of Artificial Intelligence,Hefei,China, Peng Cheng Laboratory,Shenzhen,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对事件流中目标检测面临现有方法（SNN、Transformer、CNN）性能受限、计算开销大或感受野有限的问题。②提出了一种基于MoE热传导的目标检测算法，包含事件数据嵌入的stem网络、MoE-HCO块（模拟热传导）和IoU查询选择模块。③通过混合专家机制平衡精度与计算效率，并引入新的基准数据集EvDET200K。④实验表明该方法在精度和效率上取得了良好平衡，但摘要中未提供具体数值。
+- **摘要（英）**: This paper tackles object detection in event streams, where existing SNN, Transformer, and CNN methods suffer from performance limits, high computation, or limited receptive fields. It introduces a MoE heat conduction-based detector with stem embedding, MoE-HCO blocks, and IoU-based query selection, plus a new benchmark EvDET200K. The method balances accuracy and efficiency, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出了基于MoE热传导的事件目标检测算法和新基准数据集EvDET200K。
+- **创新点**: 利用MoE架构模拟热传导过程，实现高效的事件流特征提取。
+- **结果**: 在精度与计算效率间取得平衡，但具体数值未在摘要中给出。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Object detection in event streams has emerged as a cutting-edge research area, demonstrating superior performance in low-light conditions, scenarios with motion blur, and rapid movements. Current detectors leverage spiking neural networks, Transformers, or convolutional neural networks as their core architectures, each with its own set of limitations including restricted performance, high computational overhead, or limited local receptive fields. This paper introduces a novel MoE (Mixture of Experts) heat conduction-based object detection algorithm that strikingly balances accuracy and computational efficiency. Initially, we employ a stem network for event data embedding, followed by processing through our innovative MoE-HCO blocks. Each block integrates various expert modules to mimic heat conduction within event streams. Subsequently, an IoU-based query selection module is utilized for efficient token extraction, which is then channeled into a detection head for the final object detection process. Furthermore, we are pleased to introduce EvDET200K, a novel benchmark dataset for event-based object detection. Captured with a high-definition Prophesee EVK4-HD event camera, this dataset encompasses 10 distinct categories, 200,000 bounding boxes, and 10,054 samples, each spanning 2 to 5 seconds. We also provide comprehensive results from over 15 state-of-the-art detectors, offering a solid foundation for future research and comparison. The source code of this paper will be released on: https://github.com/Event-AHU/OpenEvDET
+
+</details>
 
 ### Roboflow100-VL: A Multi-Domain Object Detection Benchmark for Vision-Language Models.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/1013f8ff40a194f3f12a6bcc5221bb34-Abstract-Datasets_and_Benchmarks_Track.html)
@@ -37,17 +59,27 @@
 
 </details>
 
-### Open-World Objectness Modeling Unifies Novel Object Detection.
+### Open-World Objectness Modeling Unifies Novel Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Open-World_Objectness_Modeling_Unifies_Novel_Object_Detection_CVPR_2025_paper.html) · 📚 被引 7
 - **作者**: Shan Zhang, Yao Ni, Jinhao Du, Yuan Xue, Philip Torr, Piotr Koniusz et al.
 - **🏷️ 机构**: Australian Institute for Machine Learning, Australian National University, Peking University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对开放世界目标检测中未知类别目标难以识别的问题，现有方法通常依赖特定训练策略或复杂模块。②提出了一种统一的对象性建模方法，通过建模通用对象性特征来区分已知和未知目标。③相比已有工作，该方法无需显式标注未知类别，而是从数据中学习通用的对象性先验。④在多个基准数据集上取得了显著的未知目标检测性能提升，同时保持了已知类别的检测精度。
+- **摘要（英）**: This paper addresses the challenge of detecting unknown objects in open-world object detection. It proposes a unified objectness modeling approach that learns generic objectness features to distinguish known and unknown targets. Compared to existing methods, it eliminates the need for explicit unknown annotations. The method achieves significant improvements in unknown object detection while maintaining known-class accuracy.
+- **核心贡献**: 提出了一种基于对象性建模的统一开放世界目标检测方法。
+- **创新点**: 通过通用对象性先验实现未知类别检测，无需额外标注。
+- **结果**: 在多个基准上显著提升未知目标检测性能，同时保持已知类别精度。
 
-### Test-Time Backdoor Detection for Object Detection Models.
-- **链接**: [arXiv:2503.15293](https://arxiv.org/abs/2503.15293) · 📚 被引 3
+### Test-Time Backdoor Detection for Object Detection Models. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2503.15293](https://arxiv.org/abs/2503.15293) · 📚 被引 2
 - **作者**: Hangtao Zhang, Yichen Wang, Shihui Yan, Chenyu Zhu, Ziqi Zhou, Linshan Hou et al.
 - **🏷️ 机构**: Huazhong University of Science and Technology,School of Cyber Science and Engineering, Huazhong University of Science and Technology,School of Software Engineering, Huazhong University of Science and Technology,School of Computer Science and Technology
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对目标检测模型易受后门攻击，且现有防御方法因检测输出复杂而失效的问题。②提出了TRACE方法，利用变换一致性评估来检测测试时的中毒样本，包括前景和背景变换。③基于中毒样本在不同背景下检测结果更一致、干净样本在不同焦点信息下更一致的观察。④在多个检测模型和攻击场景下验证了有效性，显著提高了后门样本的检测准确率。
+- **摘要（英）**: This paper tackles the vulnerability of object detection models to backdoor attacks, where existing defenses fail due to complex outputs. It proposes TRACE, a transformation consistency evaluation method that detects poisoned samples at test time using foreground and background transformations. The method leverages observations that poisoned samples show higher consistency across backgrounds. It demonstrates significant improvements in detection accuracy across various models and attack scenarios.
+- **核心贡献**: 提出了首个针对目标检测的测试时后门样本检测方法TRACE。
+- **创新点**: 利用变换一致性现象区分中毒与干净样本。
+- **结果**: 在多种攻击下显著提升后门样本检测准确率。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -55,29 +87,49 @@
 
 </details>
 
-### ReDiffDet: Rotation-equivariant Diffusion Model for Oriented Object Detection.
+### ReDiffDet: Rotation-equivariant Diffusion Model for Oriented Object Detection. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhao_ReDiffDet_Rotation-equivariant_Diffusion_Model_for_Oriented_Object_Detection_CVPR_2025_paper.html) · 📚 被引 17
 - **作者**: Jiaqi Zhao, Zeyu Ding, Yong Zhou, Hancheng Zhu, Wen-Liang Du, Rui Yao
 - **🏷️ 机构**: China University of Mining and Technology,School of Computer Science and Technology
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对旋转等变目标检测中方向估计不准确的问题。②提出了ReDiffDet，一种基于旋转等变扩散模型的定向目标检测方法。③通过引入旋转等变性到扩散过程，增强了模型对方向变化的鲁棒性。④在多个定向检测基准上取得了优于现有方法的性能。
+- **摘要（英）**: This paper addresses inaccurate orientation estimation in oriented object detection. It proposes ReDiffDet, a rotation-equivariant diffusion model for oriented object detection. By incorporating rotation equivariance into the diffusion process, the model becomes more robust to orientation changes. It achieves superior performance on multiple oriented detection benchmarks.
+- **核心贡献**: 提出了旋转等变扩散模型用于定向目标检测。
+- **创新点**: 在扩散模型中引入旋转等变性。
+- **结果**: 在多个基准上取得领先性能。
 
-### SEEN-DA: SEmantic ENtropy guided Domain-aware Attention for Domain Adaptive Object Detection.
+### SEEN-DA: SEmantic ENtropy guided Domain-aware Attention for Domain Adaptive Object Detection. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Li_SEEN-DA_SEmantic_ENtropy_guided_Domain-aware_Attention_for_Domain_Adaptive_Object_CVPR_2025_paper.html) · 📚 被引 7
 - **作者**: Haochen Li, Rui Zhang, Hantao Yao, Xin Zhang, Yifan Hao, Xinkai Song et al.
 - **🏷️ 机构**: Institute of Software, CAS,Intelligent Software Research Center, Institute of Computing Technology, CAS,State Key Lab of Processors, University of Science and Technology of China,School of Information Science and Technology
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对域自适应目标检测中域差异导致性能下降的问题。②提出了SEEN-DA方法，利用语义熵引导的域感知注意力来对齐源域和目标域特征。③通过熵度量识别不确定区域，并自适应调整注意力权重。④在多个域适应基准上验证了有效性，提升了目标域检测精度。
+- **摘要（英）**: This paper addresses performance degradation in domain adaptive object detection due to domain shift. It proposes SEEN-DA, which uses semantic entropy-guided domain-aware attention to align features between source and target domains. The method identifies uncertain regions via entropy and adjusts attention weights adaptively. It demonstrates improved target-domain detection accuracy on multiple benchmarks.
+- **核心贡献**: 提出了语义熵引导的域感知注意力机制。
+- **创新点**: 利用熵度量指导注意力分配。
+- **结果**: 在多个域适应基准上提升检测精度。
 
-### Learning Endogenous Attention for Incremental Object Detection.
+### Learning Endogenous Attention for Incremental Object Detection. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Song_Learning_Endogenous_Attention_for_Incremental_Object_Detection_CVPR_2025_paper.html) · 📚 被引 4
 - **作者**: Xiang Song, Yuhang He, Jingyuan Li, Qiang Wang, Yihong Gong
 - **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Software Engineering, Xi&#x2019;an Jiaotong University,College of Artificial Intelligence
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对增量目标检测中灾难性遗忘的问题。②提出了学习内生注意力的方法，通过注意力机制保留旧知识并适应新类别。③相比已有方法，内生注意力无需外部存储，更高效。④在多个增量检测基准上验证了性能，减少了遗忘并保持了检测精度。
+- **摘要（英）**: This paper addresses catastrophic forgetting in incremental object detection. It proposes learning endogenous attention to preserve old knowledge while adapting to new classes. Compared to existing methods, the endogenous attention requires no external storage and is more efficient. It demonstrates reduced forgetting and maintained detection accuracy on multiple benchmarks.
+- **核心贡献**: 提出了内生注意力机制用于增量目标检测。
+- **创新点**: 无需外部存储的注意力遗忘缓解方法。
+- **结果**: 在多个基准上减少遗忘并保持精度。
 
-### Point2RBox-v2: Rethinking Point-supervised Oriented Object Detection with Spatial Layout Among Instances.
-- **链接**: [arXiv:2502.04268](https://arxiv.org/abs/2502.04268) · [代码](https://github.com/VisionXLab/point2rbox-v2) · 📚 被引 13
+### Point2RBox-v2: Rethinking Point-supervised Oriented Object Detection with Spatial Layout Among Instances. **⭐⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2502.04268](https://arxiv.org/abs/2502.04268) · 📚 被引 13
 - **作者**: Yi Yu, Botao Ren, Peiyuan Zhang, Mingxin Liu, Junwei Luo, Shaofeng Zhang et al.
 - **🏷️ 机构**: Southeast University, Tsinghua University, Wuhan University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对点监督定向目标检测中缺乏精确标注导致性能受限的问题。②提出了Point2RBox-v2，首次利用实例间空间布局，通过高斯重叠损失、Voronoi watershed损失和一致性损失来学习目标边界。③相比已有方法，该方案轻量且优雅，特别适用于密集场景。④在DOTA/HRSC/FAIR1M上分别达到62.61%/86.15%/34.71%，展示了竞争力。
+- **摘要（英）**: This paper addresses the limited performance of point-supervised oriented object detection due to lack of precise annotations. It proposes Point2RBox-v2, the first to exploit spatial layout among instances via Gaussian overlap loss, Voronoi watershed loss, and consistency loss. The method is elegant and lightweight, especially effective in densely packed scenes. It achieves competitive results of 62.61%/86.15%/34.71% on DOTA/HRSC/FAIR1M.
+- **核心贡献**: 首次探索实例间空间布局用于点监督定向目标检测。
+- **创新点**: 结合高斯重叠和Voronoi watershed损失学习目标边界。
+- **结果**: 在多个密集场景基准上取得领先性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -85,17 +137,27 @@
 
 </details>
 
-### Efficient Event-Based Object Detection: A Hybrid Neural Network with Spatial and Temporal Attention.
+### Efficient Event-Based Object Detection: A Hybrid Neural Network with Spatial and Temporal Attention. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ahmed_Efficient_Event-Based_Object_Detection_A_Hybrid_Neural_Network_with_Spatial_CVPR_2025_paper.html) · 📚 被引 8
 - **作者**: Soikat Hasan Ahmed, Jan Finkbeiner, Emre Neftci
 - **🏷️ 机构**: RWTH Aachen University,Forschungszentrum J&#x00FC;lich
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对事件相机数据中对象检测的效率和精度问题。②提出一种混合神经网络，结合空间和时间注意力机制，处理事件流的稀疏性和异步性。③相比纯事件或纯帧方法，混合架构能更有效利用时空信息。④摘要未提供具体数据，但强调高效性和检测性能提升。
+- **摘要（英）**: This paper tackles efficient object detection on event-based data. It proposes a hybrid neural network with spatial and temporal attention to handle sparse asynchronous events. The method improves detection efficiency and accuracy by jointly modeling spatial and temporal cues.
+- **核心贡献**: 提出混合时空注意力网络用于事件流对象检测。
+- **创新点**: 融合空间和时间注意力处理事件数据。
+- **结果**: 提升事件检测的效率和精度。
 
-### Fractal Calibration for Long-tailed Object Detection.
-- **链接**: [arXiv:2410.11774](https://arxiv.org/abs/2410.11774) · [代码](https://github.com/kostas1515/FRACAL) · 📚 被引 4
+### Fractal Calibration for Long-tailed Object Detection. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2410.11774](https://arxiv.org/abs/2410.11774) · 📚 被引 3
 - **作者**: Konstantinos Panagiotis Alexandridis, Ismail Elezi, Jiankang Deng, Anh Nguyen, Shan Luo
 - **🏷️ 机构**: Huawei Noah&#x2019;s Ark Lab, Imperial College London, University of Liverpool
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对长尾分布下稀有类别对象检测性能差的问题。②提出FRACAL，一种基于分形维数的后校准方法，利用分形维数估计类别在图像空间的分布均匀性，并在推理时调整logit。③相比仅依赖频率的re-weighting/re-sampling方法，FRACAL同时考虑频率和空间分布，无需训练即可应用。④显著提升稀有类性能，具体提升幅度未在摘要中给出。
+- **摘要（英）**: This paper addresses long-tailed object detection by proposing FRACAL, a post-calibration method using fractal dimension to estimate class distribution uniformity in image space. It adjusts logits during inference to balance frequent and rare classes, without requiring training. FRACAL boosts rare class performance and is compatible with various detectors.
+- **核心贡献**: 提出基于分形维数的后校准方法，解决长尾检测中的类别不平衡问题。
+- **创新点**: 利用分形维数捕捉类别空间分布，超越传统频率统计。
+- **结果**: 显著提升稀有类检测性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -103,23 +165,38 @@
 
 </details>
 
-### ReRAW: RGB-to-RAW Image Reconstruction via Stratified Sampling for Efficient Object Detection on the Edge.
+### ReRAW: RGB-to-RAW Image Reconstruction via Stratified Sampling for Efficient Object Detection on the Edge. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Berdan_ReRAW_RGB-to-RAW_Image_Reconstruction_via_Stratified_Sampling_for_Efficient_Object_CVPR_2025_paper.html) · 📚 被引 3
 - **作者**: Radu Berdan, Beril Besbinar, Christoph Reinders, Junji Otsuka, Daisuke Iso
 - **🏷️ 机构**: Sony AI, Leibniz University Hannover, Sony Group Corporation
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对边缘设备上对象检测的能效和精度平衡问题。②提出ReRAW，通过分层采样从RGB图像重建RAW数据，以利用RAW图像的优势进行高效检测。③相比直接使用RGB，RAW重建保留了更多原始信息，且分层采样降低计算成本。④摘要未提供具体数据，但强调边缘部署的高效性。
+- **摘要（英）**: This paper addresses efficient object detection on edge devices by proposing ReRAW, which reconstructs RAW images from RGB via stratified sampling. This preserves raw sensor information while reducing computational cost. The method enhances detection efficiency for edge deployment.
+- **核心贡献**: 提出RGB到RAW重建的分层采样方法，用于边缘高效检测。
+- **创新点**: 利用RAW数据特性并采用分层采样降低计算负担。
+- **结果**: 提升边缘设备上的检测效率。
 
-### Believing is Seeing: Unobserved Object Detection using Generative Models.
+### Believing is Seeing: Unobserved Object Detection using Generative Models. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Bhattacharjee_Believing_is_Seeing_Unobserved_Object_Detection_using_Generative_Models_CVPR_2025_paper.html) · 📚 被引 2
 - **作者**: Subhransu S. Bhattacharjee, Dylan Campbell, Rahul Shome
 - **🏷️ 机构**: The Australian National University,School of Computing
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对开放世界场景中未观察对象（unobserved objects）的检测问题。②提出利用生成模型来检测训练中未见过的对象，通过生成模型的能力推断潜在对象的存在。③相比传统开放集检测方法，该方法更侧重于生成式建模，可能更好地泛化到未知类别。④摘要未提供具体数据，但强调在未观察对象检测上的有效性。
+- **摘要（英）**: This paper addresses unobserved object detection in open-world settings. It leverages generative models to infer the presence of unseen objects, going beyond traditional open-set methods. The approach improves generalization to unknown categories.
+- **核心贡献**: 提出基于生成模型的未观察对象检测方法。
+- **创新点**: 利用生成式建模处理开放世界中的未知类别。
+- **结果**: 提升未观察对象的检测能力。
 
-### Feature Information Driven Position Gaussian Distribution Estimation for Tiny Object Detection.
+### Feature Information Driven Position Gaussian Distribution Estimation for Tiny Object Detection. **⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Bian_Feature_Information_Driven_Position_Gaussian_Distribution_Estimation_for_Tiny_Object_CVPR_2025_paper.html) · 📚 被引 14
 - **作者**: Jinghao Bian, Mingtao Feng, Weisheng Dong, Fangfang Wu, Jianqiao Luo, Yaonan Wang et al.
 - **🏷️ 机构**: Xidian University, Hunan University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对微小目标检测中位置定位不准确的问题。②提出基于特征信息驱动的位置高斯分布估计方法，通过特征信息指导位置分布建模。③相比传统回归方法，该方法利用特征信息更精确地估计目标位置。④摘要未提供具体数据，但强调对微小目标检测性能的提升。
+- **摘要（英）**: This paper addresses inaccurate localization in tiny object detection. It proposes a feature-information-driven position Gaussian distribution estimation method to model target locations. The approach improves localization precision for tiny objects.
+- **核心贡献**: 提出特征信息驱动的高斯分布估计用于微小目标定位。
+- **创新点**: 利用特征信息指导位置分布建模。
+- **结果**: 提升微小目标检测的定位精度。
 
 ### Shift the Lens: Environment-Aware Unsupervised Camouflaged Object Detection.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Du_Shift_the_Lens_Environment-Aware_Unsupervised_Camouflaged_Object_Detection_CVPR_2025_paper.html) · 📚 被引 4
@@ -198,18 +275,6 @@
 - **作者**: Huixin Sun, Runqi Wang, Yanjing Li, Linlin Yang, Shaohui Lin, Xianbin Cao et al.
 - **🏷️ 机构**: Beihang University,School of Electronic Information Engineering,Beijing,China, Beijing Jiaotong University,School of Computer Science and Technology, Communication University of China,State Key Laboratory of Media Convergence and Communication,Beijing,China
 - **会议**: CVPR 2025
-
-### AeroGen: Enhancing Remote Sensing Object Detection with Diffusion-Driven Data Generation.
-- **链接**: [arXiv:2411.15497](https://arxiv.org/abs/2411.15497) · [代码](https://github.com/Sonettoo/AeroGen) · 📚 被引 34
-- **作者**: Datao Tang, Xiangyong Cao, Xuan Wu, Jialin Li, Jing Yao, Xueru Bai et al.
-- **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Computer Science and Technology,Xi&#x2019;an,China,710049, Chinese Academy of Sciences, Xidian University
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Sparse annotation in remote sensing object detection poses significant challenges due to dense object distributions and category imbalances. Although existing Dense Pseudo-Label methods have demonstrated substantial potential in pseudo-labeling tasks, they remain constrained by selection ambiguities and inconsistencies in confidence estimation.In this paper, we introduce an LLM-assisted semantic guidance framework tailored for sparsely annotated remote sensing object detection, exploiting the advanced semantic reasoning capabilities of large language models (LLMs) to distill high-confidence pseudo-labels.By integrating LLM-generated semantic priors, we propose a Class-Aware Dense Pseudo-Label Assignment mechanism that adaptively assigns pseudo-labels for both unlabeled and sparsely labeled data, ensuring robust supervision across varying data distributions. Additionally, we develop an Adaptive Hard-Negative Reweighting Module to stabilize the supervised learning branch by mitigating the influence of confounding background information. Extensive experiments on DOTA and HRSC2016 demonstrate that the proposed method outperforms existing single-stage detector-based frameworks, significantly improving detection performance under sparse annotations.
-
-</details>
 
 ### SimLTD: Simple Supervised and Semi-Supervised Long-Tailed Object Detection.
 - **链接**: [arXiv:2412.20047](https://arxiv.org/abs/2412.20047) · 📚 被引 6
@@ -825,4 +890,5 @@
 - **作者**: Seungju Yoo, Hyuk Kwon, Joong-Won Hwang, Kibok Lee
 - **🏷️ 机构**: Yonsei University, ETRI
 - **会议**: ICCV 2025
-<!-- COMPLETE v1 papers=88 -->
+
+<!-- COMPLETE v1 papers=87 -->

@@ -3,13 +3,18 @@
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
 > 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### PointCLIP: Point Cloud Understanding by CLIP.
-- **链接**: [arXiv:2112.02413](https://arxiv.org/abs/2112.02413) · [代码](https://github.com/ZrrSkywalker/PointCLIP) · 📚 被引 421
+### PointCLIP: Point Cloud Understanding by CLIP. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2112.02413](https://arxiv.org/abs/2112.02413) · 📚 被引 421
 - **作者**: Renrui Zhang, Ziyu Guo, Wei Zhang, Kunchang Li, Xupeng Miao, Bin Cui et al.
 - **🏷️ 机构**: Shanghai AI Laboratory, Peking University,School of CS and Key Lab of HCST
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对CLIP模型能否从2D泛化到3D点云识别的问题，本文提出PointCLIP，通过将点云投影为多视角深度图，无需渲染即可与CLIP编码的文本进行对齐，实现零样本和少样本3D识别。方法设计了视角间适配器（inter-view adapter）以提取全局特征并自适应融合少样本知识，仅微调轻量适配器即可大幅提升性能。实验表明，PointCLIP在零样本3D分类上取得有竞争力结果，且与经典3D监督网络互补，简单集成可提升基线性能。
+- **摘要（英）**: This paper proposes PointCLIP to generalize CLIP to 3D point cloud recognition by projecting point clouds into multi-view depth maps and aligning with text embeddings. An inter-view adapter enables few-shot adaptation with lightweight fine-tuning. Experiments show competitive zero-shot performance and complementary gains when ensembled with supervised 3D networks.
+- **核心贡献**: 首次将CLIP成功应用于3D点云理解，通过多视角深度投影实现零样本识别。
+- **创新点**: 利用深度图投影和视角间适配器实现2D预训练模型到3D的知识迁移。
+- **结果**: 在零样本和少样本3D分类上取得显著性能，并与监督网络互补。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +22,16 @@
 
 </details>
 
-### 3DJCG: A Unified Framework for Joint Dense Captioning and Visual Grounding on 3D Point Clouds.
+### 3DJCG: A Unified Framework for Joint Dense Captioning and Visual Grounding on 3D Point Clouds. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01597) · 📚 被引 94
 - **作者**: Daigang Cai, Lichen Zhao, Jing Zhang, Lu Sheng, Dong Xu
 - **🏷️ 机构**: College of Software, Beihang University,China, The University of Sydney,Australia
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对3D点云场景中密集描述与视觉定位任务分离、缺乏统一框架的问题。②提出了3DJCG，一个联合处理3D密集描述和视觉定位的统一框架，通过共享编码器和任务特定解码器实现多任务学习。③相比分别训练两个任务的现有方法，该框架利用任务间互补信息，提升整体性能。④在ScanRefer和ReferIt3D数据集上，密集描述和视觉定位任务均达到领先水平，具体数值未在摘要中给出。
+- **摘要（英）**: This paper addresses the separation of dense captioning and visual grounding in 3D point clouds by proposing 3DJCG, a unified framework with shared encoders and task-specific decoders. It leverages complementary information between tasks, achieving state-of-the-art performance on ScanRefer and ReferIt3D datasets, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出首个联合3D密集描述与视觉定位的统一框架。
+- **创新点**: 通过共享编码器实现任务间知识共享。
+- **结果**: 在多个3D数据集上达到领先性能。
 
 ### Scaling Up Vision-Language Pretraining for Image Captioning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01745) · 📚 被引 167
@@ -233,4 +243,5 @@
 - Poisoning and Backdooring Contrastive Learning. → [multimodal](../multimodal/Guideline%202022.md)
 - Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection. → [open-set-detection](../open-set-detection/Guideline%202022.md)
 - Patching open-vocabulary models by interpolating weights. → [open-set-detection](../open-set-detection/Guideline%202022.md)
+
 <!-- COMPLETE v1 papers=16 -->

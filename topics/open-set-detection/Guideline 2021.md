@@ -3,21 +3,24 @@
 > 领域: 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）
 > 论文数: 1 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Open-Vocabulary Object Detection Using Captions.
+### Open-Vocabulary Object Detection Using Captions. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2011.10678](https://arxiv.org/abs/2011.10678) · 📚 被引 404
 - **作者**: Alireza Zareian, Kevin Dela Rosa, Derek Hao Hu, Shih-Fu Chang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对目标检测中标注成本高、难以扩展到更多类别的问题，提出开放词汇目标检测的新问题设定。该方法利用有限类别的边界框标注和图像-文本对训练检测器，能够检测和定位训练中未提供边界框标注的物体。相比弱监督和零样本方法，该方法更通用、实用且有效。实验表明，对无标注类别的检测精度显著高于零样本方法，同时有标注类别几乎不损失精度。
+- **摘要（英）**: This paper introduces open-vocabulary object detection, a novel formulation that trains detectors using limited bounding box annotations and image-caption pairs, enabling detection of objects without box annotations. The method significantly outperforms zero-shot approaches for unannotated categories while maintaining accuracy for annotated ones.
+- **核心贡献**: 提出开放词汇目标检测问题及利用图像-文本对的训练方法。
+- **创新点**: 结合边界框标注和图像-文本对实现开放词汇检测。
+- **结果**: 无标注类别检测精度显著高于零样本方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Despite the remarkable accuracy of deep neural networks in object detection, they are costly to train and scale due to supervision requirements. Particularly, learning more object categories typically requires proportionally more bounding box annotations. Weakly supervised and zero-shot learning techniques have been explored to scale object detectors to more categories with less supervision, but they have not been as successful and widely adopted as supervised models. In this paper, we put forth a novel formulation of the object detection problem, namely open-vocabulary object detection, which is more general, more practical, and more effective than weakly supervised and zero-shot approaches. We propose a new method to train object detectors using bounding box annotations for a limited set of object categories, as well as image-caption pairs that cover a larger variety of objects at a significantly lower cost. We show that the proposed method can detect and localize objects for which no bounding box annotation is provided during training, at a significantly higher accuracy than zero-shot approaches. Meanwhile, objects with bounding box annotation can be detected almost as accurately as supervised methods, which is significantly better than weakly supervised baselines. Accordingly, we establish a new state of the art for scalable object detection.
 
 </details>
-
-## 🆕 增量新增
 
 ### Class-Aware Robust Adversarial Training for Object Detection. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2103.16148](https://arxiv.org/abs/2103.16148) · 📚 被引 52
@@ -158,4 +161,5 @@
 ## 跨领域论文（完整笔记在其他领域）
 
 - Self-Supervised Pillar Motion Learning for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202021.md)
+
 <!-- COMPLETE v1 papers=9 -->

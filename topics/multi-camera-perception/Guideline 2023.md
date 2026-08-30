@@ -3,13 +3,18 @@
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
 > 论文数: 58 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Are We Ready for Vision-Centric Driving Streaming Perception? The ASAP Benchmark.
-- **链接**: [arXiv:2212.08914](https://arxiv.org/abs/2212.08914) · [代码](https://github.com/JeffWang987/ASAP) · 📚 被引 21
+### Are We Ready for Vision-Centric Driving Streaming Perception? The ASAP Benchmark. **⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2212.08914](https://arxiv.org/abs/2212.08914) · 📚 被引 21
 - **作者**: Xiaofeng Wang, Zheng Zhu, Yunpeng Zhang, Guan Huang, Yun Ye, Wenbo Xu et al.
 - **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences, PhiGent Robotics, Southeast University
 - **会议**: CVPR 2023
+- **摘要（中）**: 针对视觉中心感知方法在实际部署中延迟过高（如多数相机3D检测器运行时间超过300ms）而现有基准仅进行离线评估、忽略推理延迟的问题，提出了ASAP基准，这是首个评估自动驾驶视觉中心感知在线性能的基准。基于2Hz标注的nuScenes数据集，提出标注扩展流程生成12Hz高帧率标签，并构建了SPUR评估协议，利用12Hz输入进行流式评估。相比已有工作，首次量化了性能与效率的权衡，为实际部署提供了更真实的评估标准。
+- **摘要（英）**: To address the high latency of vision-centric perception in real-world deployment and the lack of online evaluation in existing benchmarks, this paper proposes the ASAP benchmark, the first to evaluate online performance of vision-centric perception in autonomous driving. It introduces an annotation-extending pipeline to generate 12Hz labels from 2Hz annotated nuScenes data and a SPUR evaluation protocol for streaming assessment, quantifying the performance-efficiency trade-off.
+- **核心贡献**: 提出首个面向自动驾驶视觉中心感知的在线流式感知基准ASAP及SPUR评估协议。
+- **创新点**: 通过标注扩展和高帧率评估协议，首次将推理延迟纳入感知性能评估。
+- **结果**: 提供了12Hz高帧率标签和流式评估协议，量化了性能与效率的权衡。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +22,22 @@
 
 </details>
 
-### Multi-view Adversarial Discriminator: Mine the Non-causal Factors for Object Detection in Unseen Domains.
+### Multi-view Adversarial Discriminator: Mine the Non-causal Factors for Object Detection in Unseen Domains. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2304.02950](https://arxiv.org/abs/2304.02950) · 📚 被引 56
 - **作者**: Mingjun Xu, Lingyun Qin, Weijie Chen, Shiliang Pu, Lei Zhang
 - **🏷️ 机构**: School of Microelectronics and Communication Engineering, Chongqing University, China Hikvision Research Institute,Hangzhou,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①该论文针对目标检测在未知域中因域偏移导致性能下降的问题，现有域泛化方法忽略了公共特征中隐含的非因果因素。②提出了基于多视角对抗判别器（MAD）的域泛化模型，包含伪相关生成器（SCG）和多视角域分类器（MVDC），通过多视角对抗训练去除非因果因素。③相比传统单视角域对抗学习，创新在于利用数据多模态结构，在多个潜在空间中识别并移除非因果因素。④摘要不完整，具体效果未提及，但理论上可提升跨域检测鲁棒性。
+- **摘要（英）**: This paper addresses domain shift in object detection by removing non-causal factors from common features. It proposes a Multi-view Adversarial Discriminator (MAD) model with a Spurious Correlations Generator and Multi-View Domain Classifier. The innovation is using multi-view adversarial training to purify domain-invariant features. Specific results are not provided in the incomplete abstract, but the approach aims to improve cross-domain robustness.
+- **核心贡献**: 提出多视角对抗判别器以去除目标检测中的非因果因素。
+- **创新点**: 利用多视角潜在空间识别并移除非因果特征。
+- **结果**: 具体效果未在摘要中提及。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Domain shift degrades the performance of object detection models in practical applications. To alleviate the influence of domain shift, plenty of previous work try to decouple and learn the domain-invariant (common) features from source domains via domain adversarial learning (DAL). However, inspired by causal mechanisms, we find that previous methods ignore the implicit insignificant non-causal factors hidden in the common features. This is mainly due to the single-view nature of DAL. In this work, we present an idea to remove non-causal factors from common features by multi-view adversarial training on source domains, because we observe that such insignificant non-causal factors may still be significant in other latent spaces (views) due to the multi-mode structure of data. To summarize, we propose a Multi-view Adversarial Discriminator (MAD) based domain generalization model, consisting of a Spurious Correlations Generator (SCG) that increases the diversity of source domain by random augmentation and a Multi-View Domain Classifier (MVDC) that maps features to multiple latent spaces, such that the non-causal factors are removed and the domain-invariant features are purified. Extensive experiments on six benchmarks show our MAD obtains state-of-the-art performance.
+
+</details>
 
 ### AIDE: A Vision-Driven Multi-View, Multi-Modal, Multi-Tasking Dataset for Assistive Driving Perception.
 - **链接**: [arXiv:2307.13933](https://arxiv.org/abs/2307.13933) · 📚 被引 67
@@ -43,17 +59,27 @@
 - **🏷️ 机构**: National University of Defense Technology,School of Computer,Changsha,China, Intelligent Game and Decision Lab,Beijing,China
 - **会议**: ICCV 2023
 
-### Neural Pixel Composition for 3D-4D View Synthesis from Multi-Views.
+### Neural Pixel Composition for 3D-4D View Synthesis from Multi-Views. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00036) · 📚 被引 8
 - **作者**: Aayush Bansal, Michael Zollhöfer
 - **🏷️ 机构**: Reality Labs Research,Pittsburgh,USA
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对多视图3D-4D视图合成中的神经像素合成问题。②提出了一个基于神经像素合成的框架，用于从多视图图像生成3D-4D表示。③相比现有方法，可能改进了视图合成的质量和一致性。④由于摘要不完整，无法提供具体效果数据。
+- **摘要（英）**: This paper addresses neural pixel composition for 3D-4D view synthesis from multi-views. It proposes a framework for generating 3D-4D representations from multi-view images. The improvement over existing work is unclear due to incomplete abstract. Specific results are not available.
+- **核心贡献**: 提出了一个多视图3D-4D视图合成的神经像素组合方法。
+- **创新点**: 利用神经像素组合进行3D-4D表示。
+- **结果**: 未提供具体效果数据。
 
-### Deep Incomplete Multi-View Clustering with Cross-View Partial Sample and Prototype Alignment.
+### Deep Incomplete Multi-View Clustering with Cross-View Partial Sample and Prototype Alignment. **⭐⭐** (相关度: 20%)
 - **链接**: [arXiv:2303.15689](https://arxiv.org/abs/2303.15689) · 📚 被引 102
 - **作者**: Jiaqi Jin, Siwei Wang, Zhibin Dong, Xinwang Liu, En Zhu
 - **🏷️ 机构**: School of Computer, National University of Defense Technology,Changsha,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对不完整多视图聚类中样本缺失和原型对齐问题。②提出了跨视图部分样本和原型对齐网络（CPSPAN），利用成对观测数据对齐作为代理监督信号，并改进原型对齐。③相比现有对比学习方法，避免了强制视图表示完全一致，保留了视图差异。④摘要不完整，未提供具体效果数据。
+- **摘要（英）**: This paper addresses incomplete multi-view clustering with cross-view partial sample and prototype alignment. It proposes CPSPAN, which uses pair-observed data alignment as proxy supervision and improves prototype alignment. The improvement over existing contrastive methods is avoiding exact representation consistency. Specific results are not provided.
+- **核心贡献**: 提出了CPSPAN网络用于不完整多视图聚类。
+- **创新点**: 利用代理监督信号和原型对齐处理不完整视图。
+- **结果**: 未提供具体效果数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -61,11 +87,16 @@
 
 </details>
 
-### Learning to Fuse Monocular and Multi-view Cues for Multi-frame Depth Estimation in Dynamic Scenes.
+### Learning to Fuse Monocular and Multi-view Cues for Multi-frame Depth Estimation in Dynamic Scenes. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2304.08993](https://arxiv.org/abs/2304.08993) · 📚 被引 41
 - **作者**: Rui Li, Dong Gong, Wei Yin, Hao Chen, Yu Zhu, Kaixuan Wang et al.
 - **🏷️ 机构**: Northwestern Polytechnical University, The University of New South Wales, DJI
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对动态场景中多帧深度估计因多视图几何一致性被破坏而性能下降的问题。②提出了一种学习融合单目和多视图线索的方法，无需启发式掩码，通过跨线索融合（CCF）模块传播静态区域的几何信息到动态区域的单目表示。③相比现有方法，避免了掩码质量不可控和线索融合不充分的问题。④摘要不完整，未提供具体效果数据，但方法在动态场景中具有潜力。
+- **摘要（英）**: This paper addresses multi-frame depth estimation in dynamic scenes where multi-view geometric consistency is violated. It proposes a method to learn fusion of monocular and multi-view cues without heuristic masks, using a cross-cue fusion module. The improvement is avoiding mask quality issues and better utilizing both cues. Specific results are not provided.
+- **核心贡献**: 提出了动态场景中多帧深度估计的跨线索融合方法。
+- **创新点**: 无需掩码的跨线索融合模块。
+- **结果**: 未提供具体效果数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -73,11 +104,16 @@
 
 </details>
 
-### OmniCity: Omnipotent City Understanding with Multi-Level and Multi-View Images.
+### OmniCity: Omnipotent City Understanding with Multi-Level and Multi-View Images. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2208.00928](https://arxiv.org/abs/2208.00928) · 📚 被引 30
 - **作者**: Weijia Li, Yawen Lai, Linning Xu, Yuanbo Xiangli, Jinhua Yu, Conghui He et al.
 - **🏷️ 机构**: Sun Yat-Sen University, SenseTime Research, The Chinese University of Hong Kong
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对城市理解中多级别和多视图图像数据集缺乏的问题。②提出了OmniCity数据集，包含多视图卫星图像和街景全景/单视图图像，超过10万张像素级标注图像，来自纽约市2.5万个地理位置。③相比现有基准，图像数量更多、标注类型更丰富、视图更多，并引入了街景全景图像上的细粒度建筑实例分割新任务。④提供了多种任务的基准结果，包括建筑足迹提取、高度估计和分割。
+- **摘要（英）**: This paper addresses the lack of multi-level and multi-view datasets for city understanding. It introduces OmniCity, a dataset with over 100K pixel-wise annotated images from satellite and street-level views in NYC. It offers more images, richer annotations, and a new fine-grained building instance segmentation task. Benchmarks for multiple tasks are provided.
+- **核心贡献**: 构建了OmniCity多级别多视图城市理解数据集。
+- **创新点**: 引入街景全景图像上的细粒度建筑实例分割任务。
+- **结果**: 提供了多种任务的基准结果。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -85,11 +121,16 @@
 
 </details>
 
-### Multi-Sensor Large-Scale Dataset for Multi-View 3D Reconstruction.
+### Multi-Sensor Large-Scale Dataset for Multi-View 3D Reconstruction. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2203.06111](https://arxiv.org/abs/2203.06111) · 📚 被引 14
 - **作者**: Oleg Voynov, Gleb Bobrovskikh, Pavel A. Karpyshev, Saveliy Galochkin, Andrei-Timotei Ardelean, Arseniy Bozhenko et al.
 - **🏷️ 机构**: Skolkovo Institute of Science and Technology
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对多视图3D表面重建中多传感器数据缺乏的问题。②提出了一个新的多传感器数据集，包含来自不同分辨率和模态的RGB和深度数据，如智能手机、RealSense、Kinect等。③相比现有数据集，场景多样且材料属性丰富，对算法具有挑战性。④提供了约140万张图像，覆盖107个场景、100个视角和14种光照条件。
+- **摘要（英）**: This paper addresses the lack of multi-sensor data for multi-view 3D reconstruction. It presents a dataset with registered RGB and depth data from various sensors. The scenes are diverse and challenging for existing algorithms. It includes around 1.4 million images of 107 scenes under 14 lighting conditions.
+- **核心贡献**: 构建了多传感器多视图3D重建数据集。
+- **创新点**: 包含多种传感器和挑战性材料属性。
+- **结果**: 提供了大规模图像数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -97,11 +138,16 @@
 
 </details>
 
-### GCFAgg: Global and Cross-View Feature Aggregation for Multi-View Clustering.
+### GCFAgg: Global and Cross-View Feature Aggregation for Multi-View Clustering. **⭐⭐** (相关度: 15%)
 - **链接**: [arXiv:2305.06799](https://arxiv.org/abs/2305.06799) · 📚 被引 186
 - **作者**: Weiqing Yan, Yuanyang Zhang, Chenlei Lv, Chang Tang, Guanghui Yue, Liang Liao et al.
 - **🏷️ 机构**: School of Computer and Control Engineering, Yantai University,Yantai,China,264005, College of Computer Science and Software Engineering, Shenzhen University,Shenzhen,China,518060, School of Computer, China University of Geosciences,Wuhan,China,430074
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对多视图聚类中忽略样本结构关系的问题。②提出了全局和跨视图特征聚合网络（GCFAggMVC），通过跨样本和跨视图特征聚合获得共识表示，并用结构引导对比学习对齐。③相比现有视图级聚合方法，充分探索了相似样本的互补性。④摘要不完整，未提供具体效果数据。
+- **摘要（英）**: This paper addresses the issue of ignoring sample structure relationships in multi-view clustering. It proposes GCFAggMVC, which uses cross-sample and cross-view feature aggregation and structure-guided contrastive learning. The improvement is exploring complementarity of similar samples. Specific results are not provided.
+- **核心贡献**: 提出了GCFAggMVC网络用于多视图聚类。
+- **创新点**: 跨样本和跨视图特征聚合。
+- **结果**: 未提供具体效果数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -109,17 +155,27 @@
 
 </details>
 
-### Cross-Guided Optimization of Radiance Fields with Multi-View Image Super-Resolution for High-Resolution Novel View Synthesis.
+### Cross-Guided Optimization of Radiance Fields with Multi-View Image Super-Resolution for High-Resolution Novel View Synthesis. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01196) · 📚 被引 14
 - **作者**: Youngho Yoon, Kuk-Jin Yoon
 - **🏷️ 机构**: Visual Intelligence Lab., KAIST,Korea
 - **会议**: CVPR 2023
+- **摘要（中）**: 该论文针对高分辨率新视角合成中辐射场优化与多视图图像超分辨率结合的问题，提出了一种交叉引导优化方法。方法通过联合优化辐射场和超分辨率网络，利用多视图一致性约束提升重建质量。相比已有工作，该方法在跨视图信息融合上有所改进。摘要未提供具体数据，效果未知。
+- **摘要（英）**: This paper addresses high-resolution novel view synthesis by proposing a cross-guided optimization of radiance fields with multi-view image super-resolution. It jointly optimizes the radiance field and super-resolution network with multi-view consistency constraints. The improvement over prior work lies in cross-view information fusion, but no quantitative results are reported in the abstract.
+- **核心贡献**: 提出辐射场与多视图超分辨率的交叉引导优化框架。
+- **创新点**: 交叉引导机制联合优化辐射场和超分辨率。
+- **结果**: 未提供具体效果数据。
 
-### POEM: Reconstructing Hand in a Point Embedded Multi-view Stereo.
-- **链接**: [arXiv:2304.04038](https://arxiv.org/abs/2304.04038) · [代码](https://github.com/lixiny/POEM) · 📚 被引 14
+### POEM: Reconstructing Hand in a Point Embedded Multi-view Stereo. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2304.04038](https://arxiv.org/abs/2304.04038) · 📚 被引 14
 - **作者**: Lixin Yang, Jian Xu, Licheng Zhong, Xinyu Zhan, Zhicheng Wang, Kejian Wu et al.
 - **🏷️ 机构**: Shanghai Jiao Tong University, Nreal
 - **会议**: CVPR 2023
+- **摘要（中）**: 该论文针对多视图立体中手部网格重建时3D几何感知特征捕获不足的问题，提出POEM方法，直接在嵌入多视图立体的3D点上操作。方法利用点作为跨视图特征融合的媒介，设计基于点的特征融合和跨集点注意力机制。相比已有工作，POEM直接处理3D点而非将3D信息编码到2D特征，在三个多视图数据集上优于现有最先进方法。
+- **摘要（英）**: This paper addresses the challenge of capturing 3D geometrical-aware features in multi-view hand mesh reconstruction by proposing POEM, which directly operates on 3D points embedded in multi-view stereo. It uses points as a medium for cross-view feature fusion and designs point-based feature fusion and cross-set point attention. Compared to prior methods that encode 3D info into 2D features, POEM outperforms state-of-the-art on three multi-view datasets.
+- **核心贡献**: 提出基于3D点嵌入的多视图手部重建方法POEM。
+- **创新点**: 直接在3D点上进行跨视图特征融合和注意力机制。
+- **结果**: 在三个多视图数据集上优于现有最先进方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -127,11 +183,16 @@
 
 </details>
 
-### Adaptive Patch Deformation for Textureless-Resilient Multi-View Stereo.
+### Adaptive Patch Deformation for Textureless-Resilient Multi-View Stereo. **⭐⭐** (相关度: 35%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00162) · 📚 被引 35
 - **作者**: Yuesong Wang, Zhaojie Zeng, Tao Guan, Wei Yang, Zhuo Chen, Wenkai Liu et al.
 - **🏷️ 机构**: School of Computer Science &#x0026; Technology, Huazhong University of Science &#x0026; Technology, School of Computer Science &#x0026; Technology, Zhejiang University
 - **会议**: CVPR 2023
+- **摘要（中）**: 该论文针对多视图立体中无纹理区域重建鲁棒性问题，提出自适应补丁变形方法。方法通过动态调整匹配补丁的形状以适应无纹理区域，提升重建精度。相比已有工作，该方法在无纹理场景下具有更好的适应性。摘要未提供具体实验数据，效果未知。
+- **摘要（英）**: This paper addresses the robustness of multi-view stereo in textureless regions by proposing adaptive patch deformation. It dynamically adjusts the shape of matching patches to handle textureless areas, improving reconstruction accuracy. The improvement over prior work lies in adaptability to textureless scenes, but no quantitative results are provided in the abstract.
+- **核心贡献**: 提出自适应补丁变形以增强无纹理区域的多视图立体重建。
+- **创新点**: 动态调整补丁形状以适应无纹理区域。
+- **结果**: 未提供具体效果数据。
 
 ### MetaViewer: Towards A Unified Multi-View Representation.
 - **链接**: [arXiv:2303.06329](https://arxiv.org/abs/2303.06329) · 📚 被引 14
@@ -945,4 +1006,5 @@
 - Multi-view Self-supervised Disentanglement for General Image Denoising. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
 - CLIP-FO3D: Learning Free Open-world 3D Scene Representations from 2D Dense CLIP. → [vlm](../vlm/Guideline%202023.md)
 - BEVDistill: Cross-Modal BEV Distillation for Multi-View 3D Object Detection. → [multimodal](../multimodal/Guideline%202023.md)
+
 <!-- COMPLETE v1 papers=107 -->

@@ -3,37 +3,51 @@
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
 > 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### There Is More Than Meets the Eye: Self-Supervised Multi-Object Detection and Tracking With Sound by Distilling Multimodal Knowledge.
+### There Is More Than Meets the Eye: Self-Supervised Multi-Object Detection and Tracking With Sound by Distilling Multimodal Knowledge. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Valverde_There_Is_More_Than_Meets_the_Eye_Self-Supervised_Multi-Object_Detection_CVPR_2021_paper.html) · 📚 被引 73
 - **作者**: Francisco Rivera Valverde, Juana Valeria Hurtado, Abhinav Valada
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对多目标检测与跟踪中仅依赖视觉信息在复杂场景下鲁棒性不足的问题。②提出一种自监督方法，通过蒸馏多模态知识（声音）来增强视觉检测与跟踪，利用声音信号作为辅助监督。③改进点在于无需额外标注，利用跨模态一致性提升视觉模型的泛化能力。④效果上，在多个基准上显著提升了检测和跟踪精度，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses the robustness issue of visual-only multi-object detection and tracking by proposing a self-supervised method that distills multimodal knowledge from sound. It leverages audio as auxiliary supervision without extra labels, improving generalization. The method achieves notable gains in detection and tracking accuracy on benchmarks, though specific numbers are not in the abstract.
+- **核心贡献**: 提出利用声音知识自监督增强视觉检测与跟踪。
+- **创新点**: 跨模态知识蒸馏用于自监督视觉任务。
+- **结果**: 在检测和跟踪基准上精度提升。
 
-### Robust Multimodal Vehicle Detection in Foggy Weather Using Complementary Lidar and Radar Signals.
+### Robust Multimodal Vehicle Detection in Foggy Weather Using Complementary Lidar and Radar Signals. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Qian_Robust_Multimodal_Vehicle_Detection_in_Foggy_Weather_Using_Complementary_Lidar_CVPR_2021_paper.html) · 📚 被引 183
 - **作者**: Kun Qian, Shilin Zhu, Xinyu Zhang, Li Erran Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对雾天环境下车辆检测性能下降的问题，单一传感器（如相机或激光雷达）易受干扰。②提出一种融合激光雷达和雷达信号的互补方法，利用两种传感器的特性增强鲁棒性。③改进点在于结合激光雷达的高分辨率和雷达的穿透性，弥补雾天视觉退化。④效果上，在雾天数据集上显著提升了检测精度，具体数据未在摘要中给出。
+- **摘要（英）**: This paper tackles the degradation of vehicle detection in foggy weather by proposing a complementary fusion of LiDAR and radar signals. It leverages LiDAR's high resolution and radar's penetration capability to enhance robustness. The method achieves significant detection accuracy improvements on foggy datasets, though specific numbers are not in the abstract.
+- **核心贡献**: 提出激光雷达与雷达互补融合的雾天车辆检测方法。
+- **创新点**: 利用多传感器互补特性应对天气退化。
+- **结果**: 雾天检测精度显著提升。
 
-### UC2: Universal Cross-Lingual Cross-Modal Vision-and-Language Pre-Training.
-- **链接**: [arXiv:2104.00332](https://arxiv.org/abs/2104.00332)
+### UC2: Universal Cross-Lingual Cross-Modal Vision-and-Language Pre-Training. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhou_UC2_Universal_Cross-Lingual_Cross-Modal_Vision-and-Language_Pre-Training_CVPR_2021_paper.html)
 - **作者**: Mingyang Zhou, Luowei Zhou, Shuohang Wang, Yu Cheng, Linjie Li, Zhou Yu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对跨语言跨模态视觉-语言预训练中多语言与多模态对齐不足的问题。②提出UC2框架，通过统一跨语言和跨模态的预训练目标，增强模型的多语言视觉-语言理解。③改进点在于同时处理语言和模态的跨域迁移。④效果上，在多个跨语言视觉-语言基准上达到领先性能，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses the insufficient alignment in cross-lingual cross-modal vision-language pre-training by proposing UC2, a unified framework that enhances multilingual multimodal understanding. It improves cross-domain transfer across languages and modalities. The method achieves state-of-the-art results on several benchmarks, though specific numbers are not in the abstract.
+- **核心贡献**: 提出通用跨语言跨模态预训练框架UC2。
+- **创新点**: 统一跨语言与跨模态的对齐目标。
+- **结果**: 在跨语言视觉-语言基准上领先。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Vision-and-language pre-training has achieved impressive success in learning multimodal representations between vision and language. To generalize this success to non-English languages, we introduce UC2, the first machine translation-augmented framework for cross-lingual cross-modal representation learning. To tackle the scarcity problem of multilingual captions for image datasets, we first augment existing English-only datasets with other languages via machine translation (MT). Then we extend the standard Masked Language Modeling and Image-Text Matching training objectives to multilingual setting, where alignment between different languages is captured through shared visual context (i.e, using image as pivot). To facilitate the learning of a joint embedding space of images and all languages of interest, we further propose two novel pre-training tasks, namely Masked Region-to-Token Modeling (MRTM) and Visual Translation Language Modeling (VTLM), leveraging MT-enhanced translated data. Evaluation on multilingual image-text retrieval and multilingual visual question answering benchmarks demonstrates that our proposed framework achieves new state-of-the-art on diverse non-English benchmarks while maintaining comparable performance to monolingual pre-trained models on English tasks.
-
-</details>
-
-### Progressive Modality Reinforcement for Human Multimodal Emotion Recognition From Unaligned Multimodal Sequences.
+### Progressive Modality Reinforcement for Human Multimodal Emotion Recognition From Unaligned Multimodal Sequences. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Progressive_Modality_Reinforcement_for_Human_Multimodal_Emotion_Recognition_From_Unaligned_CVPR_2021_paper.html) · 📚 被引 191
 - **作者**: Fengmao Lv, Xiang Chen, Yanyong Huang, Lixin Duan, Guosheng Lin
 - **🏷️ 机构**: Southwest Jiaotong University, Platform and Content Group,Tencent, Southwestern University of Finance and Economics,Center of Statistical Research
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对非对齐多模态序列中人类情感识别中模态间时序错位和融合不充分的问题。②提出渐进式模态强化方法，通过逐步增强各模态的特征表示并优化融合策略。③改进点在于处理非对齐序列，提升模态间交互。④效果上，在情感识别基准上优于现有方法，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses the issue of misaligned multimodal sequences in human emotion recognition by proposing progressive modality reinforcement, which gradually enhances feature representations and fusion. It handles temporal misalignment and improves cross-modal interaction. The method outperforms existing approaches on emotion recognition benchmarks, though specific numbers are not in the abstract.
+- **核心贡献**: 提出渐进式模态强化用于非对齐多模态情感识别。
+- **创新点**: 渐进式增强策略处理时序错位。
+- **结果**: 在情感识别基准上性能提升。
 
 ### Vx2Text: End-to-End Learning of Video-Based Text Generation From Multimodal Inputs.
 - **链接**: [arXiv:2101.12059](https://arxiv.org/abs/2101.12059) · 📚 被引 43
@@ -203,15 +217,16 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2021
 
-### Learning an Augmented RGB Representation with Cross-Modal Knowledge Distillation for Action Detection.
-- **链接**: [arXiv:2108.03619](https://arxiv.org/abs/2108.03619) · 📚 被引 38
+### Learning an Augmented RGB Representation with Cross-Modal Knowledge Distillation for Action Detection. **⭐⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01281)
 - **作者**: Rui Dai, Srijan Das, François Brémond
-- **🏷️ 机构**: Inria, Stony Brook University
+- **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Multimodal regression is a fundamental task, which integrates the information from different sources to improve the performance of follow-up applications. However, existing methods mainly focus on improving the performance and often ignore the confidence of prediction for diverse situations. In this study, we are devoted to trustworthy multimodal regression which is critical in cost-sensitive domains. To this end, we introduce a novel Mixture of Normal-Inverse Gamma distributions (MoNIG) algorithm, which efficiently estimates uncertainty in principle for adaptive integration of different modalities and produces a trustworthy regression result. Our model can be dynamically aware of uncertainty for each modality, and also robust for corrupted modalities. Furthermore, the proposed MoNIG ensures explicitly representation of (modality-specific/global) epistemic and aleatoric uncertainties, respectively. Experimental results on both synthetic and different real-world data demonstrate the effectiveness and trustworthiness of our method on various multimodal regression tasks (e.g., temperature prediction for superconductivity, relative location prediction for CT slices, and multimodal sentiment analysis).
+- **摘要（中）**: ①该论文针对动作检测中RGB表示信息不足的问题。②提出了学习增强RGB表示的方法，通过跨模态知识蒸馏从其他模态（如光流）迁移知识。③相比仅使用RGB的方法，该方法增强了RGB特征的表征能力。④摘要未提供具体数据，但声称在动作检测任务上取得了改进。
+- **摘要（英）**: This paper addresses the insufficiency of RGB representations for action detection. It proposes learning an augmented RGB representation via cross-modal knowledge distillation from other modalities like optical flow. Compared to RGB-only methods, it enhances the representational power of RGB features. The abstract does not provide specific numbers but claims improvements on action detection tasks.
+- **核心贡献**: 提出通过跨模态蒸馏增强RGB表示用于动作检测。
+- **创新点**: 利用知识蒸馏将光流信息注入RGB特征。
+- **结果**: 在动作检测任务上取得改进。
 
 ### VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text.
 - **链接**: [arXiv:2104.11178](https://arxiv.org/abs/2104.11178)
@@ -511,4 +526,5 @@
 - Towards Distraction-Robust Active Visual Tracking. → [tracking](../tracking/Guideline%202021.md)
 - VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
 - Multimodal Virtual Point 3D Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+
 <!-- COMPLETE v1 papers=42 -->

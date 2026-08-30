@@ -3,21 +3,18 @@
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
 > 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Meta-optimized Angular Margin Contrastive Framework for Video-Language Representation Learning.
-- **链接**: [arXiv:2407.03788](https://arxiv.org/abs/2407.03788) · 📚 被引 0
+### Meta-optimized Angular Margin Contrastive Framework for Video-Language Representation Learning. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2407.03788](https://arxiv.org/abs/2407.03788)
 - **作者**: Thong Nguyen, Yi Bin, Xiaobao Wu, Xinshuai Dong, Zhiyuan Hu, Khoi Le et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We propose a novel and challenging benchmark, AutoEval-Video, to comprehensively evaluate large vision-language models in open-ended video question answering. The comprehensiveness of AutoEval-Video is demonstrated in two aspects: 1) AutoEval-Video constructs open-ended video-questions across 9 skill dimensions, addressing capabilities of perception, comprehension, and generation. 2) AutoEval-Video contains newly collected videos that cover over 40 distinct themes. To efficiently evaluate responses to the open-ended questions, we employ an LLM-based evaluation approach, but instead of merely providing a reference answer, we annotate unique evaluation rules for every single instance (video-question pair). To maximize the robustness of these rules, we develop a novel adversarial annotation mechanism. By using instance-specific rules as prompt, GPT-4, as an automatic evaluator, can achieve a stable evaluation accuracy of around 97.0%, comparable to the 94.9% - 97.5% accuracy of a human evaluator. Furthermore, we assess the performance of eight large vision-language models on AutoEval-Video. Among them, GPT-4V(ision) significantly outperforms other models, achieving an accuracy of 32.2%. However, there is still substantial room for improvement compared to human accuracy of 72.8%. By conducting an extensive case study, we uncover several drawbacks of GPT-4V, such as limited temporal and dynamic comprehension, and overly general responses. Code is available at https://github.com/Xiuyuan-Chen/AutoEval-Video.
-
-</details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+- **摘要（中）**: ①该论文针对视频-语言表示学习中数据质量不佳（如视频-文本对不完全对齐）和概念分布不均导致的下游性能受限问题。②提出了MAMA方法，采用带减法角度边距的对比目标来正则化跨模态表示，并使用MLP参数化的权重函数动态调整样本权重，同时利用少量无偏元数据和大型视觉语言模型生成的增强数据指导训练。③相比现有工作，MAMA通过自适应样本加权和元学习策略，更好地处理了噪声数据和不平衡分布。④在常见基准上取得了优越性能，具体数据未在摘要中提供，但表明其有效性。
+- **摘要（英）**: This paper addresses the issues of imperfect video-text alignment and uneven concept distribution in video-language representation learning. It proposes MAMA, which uses a contrastive objective with a subtractive angular margin to regularize cross-modal representations and an MLP-parameterized weighting function to adaptively adjust sample weights, guided by unbiased meta-data and augmented data from large vision-language models. This approach improves robustness to noisy data and handles non-uniform distributions, achieving superior performance on common benchmarks, though specific metrics are not detailed.
+- **核心贡献**: 提出了MAMA框架，通过角度边距对比学习和元学习加权策略提升视频-语言表示质量。
+- **创新点**: 引入减法角度边距和MLP参数化权重函数，动态适应数据分布和噪声。
+- **结果**: 在常见视频-语言基准上取得优越性能，具体数据未在摘要中给出。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -411,11 +408,16 @@
 - **创新点**: 结合外部记忆模块与LLM，实现长视频的稀疏检索和高效推理。
 - **结果**: 在长视频基准上取得显著性能提升，但未提供具体数值。
 
-### Learning Video Context as Interleaved Multimodal Sequences.
+### Learning Video Context as Interleaved Multimodal Sequences. **⭐⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2407.21757](https://arxiv.org/abs/2407.21757) · 📚 被引 4
 - **作者**: Kevin Qinghong Lin, Pengchuan Zhang, Difei Gao, Xide Xia, Joya Chen, Ziteng Gao et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对叙事视频（如电影）理解中上下文丰富（角色、对话、情节）和任务多样（识别、关系、推理）的挑战。②提出MovieSeq，一个多模态语言模型，将视频表示为交错多模态序列（图像、情节、视频、字幕），通过链接外部知识库或离线模型（如whisper）生成，并采用指令微调。③改进点在于联合提供角色照片、名字和对话，使模型能关联元素生成更全面响应。④在六个数据集（LVU、MAD、Movienet、CMD、TVC、MovieQA）和五种设置（分类、音频描述、检索、字幕、问答）上验证了有效性。
+- **摘要（英）**: This paper addresses narrative video understanding by proposing MovieSeq, a multimodal language model that represents videos as interleaved multimodal sequences (images, plots, videos, subtitles) via external knowledge or offline models, and uses instruction tuning to enable joint reasoning with character photos, names, and dialogues. It demonstrates effectiveness across six datasets and five settings, covering classification, audio description, retrieval, captioning, and QA.
+- **核心贡献**: 提出MovieSeq，统一处理叙事视频的多任务理解。
+- **创新点**: 将视频表示为交错多模态序列并联合指令微调。
+- **结果**: 在六个数据集和五种设置上验证有效性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -423,11 +425,16 @@
 
 </details>
 
-### InternVideo2: Scaling Foundation Models for Multimodal Video Understanding.
+### InternVideo2: Scaling Foundation Models for Multimodal Video Understanding. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73013-9_23) · 📚 被引 184
 - **作者**: Yi Wang, Kunchang Li, Xinhao Li, Jiashuo Yu, Yinan He, Guo Chen et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①该论文针对视频理解中多模态基础模型规模扩展和性能提升的问题，旨在统一处理视频、音频和文本等多种模态。②提出了InternVideo2，通过大规模预训练和模型架构优化，整合视频、音频和文本编码器，并采用多任务学习策略增强跨模态理解。③相比现有工作，InternVideo2在模型规模、数据多样性和任务覆盖上进行了系统扩展，并引入了新的训练技巧以提升泛化能力。④在多个视频理解基准上取得了领先性能，具体数据未在摘要中提供，但表明其显著优于先前模型。
+- **摘要（英）**: This paper addresses the challenge of scaling foundation models for comprehensive multimodal video understanding. It proposes InternVideo2, which integrates video, audio, and text encoders with multi-task learning to enhance cross-modal capabilities. Compared to prior works, it systematically scales model size and data diversity, achieving state-of-the-art results on various video benchmarks, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出了InternVideo2，一个大规模多模态视频理解基础模型，统一处理视频、音频和文本。
+- **创新点**: 通过系统性的规模扩展和多任务学习策略，提升了跨模态视频理解的泛化能力。
+- **结果**: 在多个视频理解基准上取得领先性能，具体数据未在摘要中给出。
 
 ### Leveraging Temporal Contextualization for Video Action Recognition.
 - **链接**: [arXiv:2404.09490](https://arxiv.org/abs/2404.09490) · 📚 被引 11
@@ -548,4 +555,5 @@
 - TIM: A Time Interval Machine for Audio-Visual Action Recognition. → [multimodal](../multimodal/Guideline%202024.md)
 - Betrayed by Attention: A Simple yet Effective Approach for Self-supervised Video Object Segmentation. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
 - FROSTER: Frozen CLIP is A Strong Teacher for Open-Vocabulary Action Recognition. → [open-set-detection](../open-set-detection/Guideline%202024.md)
+
 <!-- COMPLETE v1 papers=39 -->

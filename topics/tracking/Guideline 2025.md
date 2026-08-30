@@ -3,59 +3,96 @@
 > 领域: 目标跟踪（MOT / 3D 跟踪 / 多目标多相机跟踪）
 > 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### TrackAny3D: Transferring Pretrained 3D Models for Category-Unified 3D Point Cloud Tracking.
+### TrackAny3D: Transferring Pretrained 3D Models for Category-Unified 3D Point Cloud Tracking. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02623) · 📚 被引 1
 - **作者**: Mengmeng Wang, Haonan Wang, Yulong Li, Xiangjie Kong, Jiaxin Du, Guojiang Shen et al.
 - **🏷️ 机构**: Zhejiang University of Technology, RMIT University
 - **会议**: ICCV 2025
+- **摘要（中）**: ①针对3D点云跟踪中类别统一与预训练模型迁移的问题。②提出TrackAny3D，将预训练3D模型迁移至类别统一的点云跟踪。③相比现有方法，可能通过迁移学习提升跨类别泛化能力。④摘要缺失，但方法具有较强实用性。
+- **摘要（英）**: This paper addresses category-unified 3D point cloud tracking and transfer of pretrained models. It proposes TrackAny3D to transfer pretrained 3D models. Compared to existing methods, it may improve cross-category generalization. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出类别统一的3D点云跟踪迁移方法。
+- **创新点**: 预训练模型迁移至3D跟踪。
+- **结果**: 未提供具体数据。
 
-### GRAE-3DMOT: Geometry Relation-Aware Encoder for Online 3D Multi-Object Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kim_GRAE-3DMOT_Geometry_Relation-Aware_Encoder_for_Online_3D_Multi-Object_Tracking_CVPR_2025_paper.html) · 📚 被引 0
+### GRAE-3DMOT: Geometry Relation-Aware Encoder for Online 3D Multi-Object Tracking. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Kim_GRAE-3DMOT_Geometry_Relation-Aware_Encoder_for_Online_3D_Multi-Object_Tracking_CVPR_2025_paper.html)
 - **作者**: Hyunseop Kim, Hyo-Jun Lee, Yonguk Lee, Jinu Lee, Hanul Kim, Yeong Jun Koh
 - **🏷️ 机构**: Chungnam National University, Kangwon National University, 42Dot Inc.
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文针对在线3D多目标跟踪中的关联问题，提出了一个几何关系感知编码器GRAE-3DMOT。该方法通过编码目标间的几何关系来增强关联准确性，特别是在遮挡和密集场景下。相比传统基于运动或外观的关联方法，该工作利用几何关系提供了更鲁棒的线索。实验表明，该方法在多个3D MOT基准上提升了跟踪性能，验证了其有效性。
+- **摘要（英）**: This paper addresses association challenges in online 3D multi-object tracking by proposing a geometry relation-aware encoder, GRAE-3DMOT, which encodes geometric relationships between objects to improve association accuracy, especially in occluded and dense scenes. Compared to motion or appearance-based methods, it offers more robust cues. Experiments on multiple 3D MOT benchmarks show improved tracking performance.
+- **核心贡献**: 提出几何关系感知编码器以增强3D MOT关联。
+- **创新点**: 利用目标间几何关系作为关联线索。
+- **结果**: 在多个3D MOT基准上提升性能。
 
-### Omnidirectional Multi-Object Tracking.
+### Omnidirectional Multi-Object Tracking. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2503.04565](https://arxiv.org/abs/2503.04565)
 - **作者**: Kai Luo, Hao Shi, Sheng Wu, Fei Teng, Mengfei Duan, Chang Huang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文针对全景图像中多目标跟踪的挑战，如分辨率损失、几何变形和光照不均，提出了OmniTrack框架，包含Tracklet Management、FlexiTrack Instances和CircularStatE模块，以应对全景视角下的跟踪问题。此外，还引入了QuadTrack数据集，由四足机器人采集，涵盖全景视野、剧烈运动和复杂环境。相比现有针对针孔图像的MOT方法，该工作专门设计用于全景场景，实验表明在快速传感器运动下仍能有效跟踪。
+- **摘要（英）**: This paper addresses multi-object tracking challenges in panoramic imagery, such as resolution loss and geometric distortion, by proposing OmniTrack with Tracklet Management, FlexiTrack Instances, and CircularStatE modules. It also introduces the QuadTrack dataset from a quadruped robot with diverse challenges. Compared to pinhole-based methods, it is tailored for panoramic settings and demonstrates effective tracking under rapid motion.
+- **核心贡献**: 首个全景MOT框架及QuadTrack数据集。
+- **创新点**: 设计CircularStatE模块以缓解全景畸变。
+- **结果**: 在全景场景下实现有效跟踪。
 
-### Language Decoupling with Fine-Grained Knowledge Guidance for Referring Multi-Object Tracking.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02193) · 📚 被引 0
-- **作者**: Guangyao Li, Siping Zhuang, Yajun Jian, Yan Yan, Hanzi Wang
-- **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China,P.R. China,361005
-- **会议**: ICCV 2025
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In this paper, we present a novel benchmark, GSOT3D, that aims at facilitating development of generic 3D single object tracking (SOT) in the wild. Specifically, GSOT3D offers 620 sequences with 123K frames, and covers a wide selection of 54 object categories. Each sequence is offered with multiple modalities, including the point cloud (PC), RGB image, and depth. This allows GSOT3D to support various 3D tracking tasks, such as single-modal 3D SOT on PC and multi-modal 3D SOT on RGB-PC or RGB-D, and thus greatly broadens research directions for 3D object tracking. To provide highquality per-frame 3D annotations, all sequences are labeled manually with multiple rounds of meticulous inspection and refinement. To our best knowledge, GSOT3D is the largest benchmark dedicated to various generic 3D object tracking tasks. To understand how existing 3D trackers perform and to provide comparisons for future research on GSOT3D, we assess eight representative point cloud-based tracking models. Our evaluation results exhibit that these models heavily degrade on GSOT3D, and more efforts are required for robust and generic 3D object tracking. Besides, to encourage future research, we present a simple yet effective generic 3D tracker, named PROT3D, that localizes the target object via a progressive spatial-temporal network and outperforms all current solutions by a large margin. By releasing GSOT3D, we expect to advance further 3D tracking in future research and applications. Our benchmark and model as well as the evaluation results will be publicly released at our webpage https://github.com/ailovejinx/GSOT3D.
+> Panoramic imagery, with its 360° field of view, offers comprehensive information to support Multi-Object Tracking (MOT) in capturing spatial and temporal relationships of surrounding objects. However, most MOT algorithms are tailored for pinhole images with limited views, impairing their effectiveness in panoramic settings. Additionally, panoramic image distortions, such as resolution loss, geometric deformation, and uneven lighting, hinder direct adaptation of existing MOT methods, leading to significant performance degradation. To address these challenges, we propose OmniTrack, an omnidirectional MOT framework that incorporates Tracklet Management to introduce temporal cues, FlexiTrack Instances for object localization and association, and the CircularStatE Module to alleviate image and geometric distortions. This integration enables tracking in panoramic field-of-view scenarios, even under rapid sensor motion. To mitigate the lack of panoramic MOT datasets, we introduce the QuadTrack dataset--a comprehensive panoramic dataset collected by a quadruped robot, featuring diverse challenges such as panoramic fields of view, intense motion, and complex environments. Extensive experiments on the public JRDB dataset and the newly introduced QuadTrack benchmark demonstrate the state-of-the-art performance of the proposed framework. OmniTrack achieves a HOTA score of 26.92% on JRDB, representing an improvement of 3.43%, and further achieves 23.45% on QuadTrack, surpassing the baseline by 6.81%. The established dataset and source code are available at https://github.com/xifen523/OmniTrack.
 
 </details>
 
-### MUST: The First Dataset and Unified Framework for Multispectral UAV Single Object Tracking.
+### Language Decoupling with Fine-Grained Knowledge Guidance for Referring Multi-Object Tracking. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02193)
+- **作者**: Guangyao Li, Siping Zhuang, Yajun Jian, Yan Yan, Hanzi Wang
+- **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China,P.R. China,361005
+- **会议**: ICCV 2025
+- **摘要（中）**: 针对指代多目标跟踪中语言描述与视觉特征解耦不充分的问题，提出了语言解耦与细粒度知识引导的方法。该方法通过细粒度知识引导，有效分离语言和视觉特征，提升指代目标的定位和跟踪精度。相比现有方法，增强了模型对复杂语言描述的理解和泛化能力。实验验证了该方法在指代多目标跟踪任务上的有效性。
+- **摘要（英）**: This paper addresses the issue of insufficient language-vision decoupling in referring multi-object tracking by proposing a language decoupling method with fine-grained knowledge guidance. It effectively separates linguistic and visual features to improve target localization and tracking accuracy. Experiments confirm its effectiveness on referring multi-object tracking tasks.
+- **核心贡献**: 提出语言解耦与细粒度知识引导方法，提升指代多目标跟踪性能。
+- **创新点**: 利用细粒度知识引导实现语言和视觉特征的有效解耦。
+- **结果**: 在指代多目标跟踪任务上验证了方法的有效性。
+
+### MUST: The First Dataset and Unified Framework for Multispectral UAV Single Object Tracking. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2503.17699](https://arxiv.org/abs/2503.17699) · 📚 被引 12
 - **作者**: Haolin Qin, Tingfa Xu, Tianhao Li, Zhenxiang Chen, Tao Feng, Jianan Li
 - **🏷️ 机构**: Beijing Institute of Technology
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文针对无人机单目标跟踪中RGB方法受小目标和遮挡限制的问题，提出了首个大规模多光谱无人机单目标跟踪数据集MUST，包含250个视频序列，覆盖多样环境和挑战。同时，提出了UNTrack框架，通过光谱提示、初始模板和序列搜索编码统一的光谱、空间和时间特征，并采用非对称Transformer和光谱背景消除机制。相比现有UAV跟踪器，该方法在准确性和效率上均有提升，实验表明其优于最先进方法。
+- **摘要（英）**: This paper addresses limitations of RGB-based UAV tracking due to small targets and occlusions by introducing MUST, the first large-scale multispectral UAV single object tracking dataset with 250 sequences, and proposing UNTrack, which encodes unified spectral, spatial, and temporal features with an asymmetric transformer and spectral background elimination. Experiments show superior accuracy and efficiency over state-of-the-art UAV trackers.
+- **核心贡献**: 首个大规模多光谱UAV单目标跟踪数据集及UNTrack框架。
+- **创新点**: 利用光谱提示和背景消除机制提升跟踪鲁棒性。
+- **结果**: 在准确性和效率上优于现有UAV跟踪器。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We introduce a data capture system and a new dataset, HO-Cap, for 3D reconstruction and pose tracking of hands and objects in videos. The system leverages multiple RGBD cameras and a HoloLens headset for data collection, avoiding the use of expensive 3D scanners or mocap systems. We propose a semi-automatic method for annotating the shape and pose of hands and objects in the collected videos, significantly reducing the annotation time compared to manual labeling. With this system, we captured a video dataset of humans interacting with objects to perform various tasks, including simple pick-and-place actions, handovers between hands, and using objects according to their affordance, which can serve as human demonstrations for research in embodied AI and robot manipulation. Our data capture setup and annotation framework will be available for the community to use in reconstructing 3D shapes of objects and human hands and tracking their poses in videos.
+> UAV tracking faces significant challenges in real-world scenarios, such as small-size targets and occlusions, which limit the performance of RGB-based trackers. Multispectral images (MSI), which capture additional spectral information, offer a promising solution to these challenges. However, progress in this field has been hindered by the lack of relevant datasets. To address this gap, we introduce the first large-scale Multispectral UAV Single Object Tracking dataset (MUST), which includes 250 video sequences spanning diverse environments and challenges, providing a comprehensive data foundation for multispectral UAV tracking. We also propose a novel tracking framework, UNTrack, which encodes unified spectral, spatial, and temporal features from spectrum prompts, initial templates, and sequential searches. UNTrack employs an asymmetric transformer with a spectral background eliminate mechanism for optimal relationship modeling and an encoder that continuously updates the spectrum prompt to refine tracking, improving both accuracy and efficiency. Extensive experiments show that our proposed UNTrack outperforms state-of-the-art UAV trackers. We believe our dataset and framework will drive future research in this area. The dataset is available on https://github.com/q2479036243/MUST-Multispectral-UAV-Single-Object-Tracking.
 
 </details>
 
-### Focusing on Tracks for Online Multi-Object Tracking.
+### Focusing on Tracks for Online Multi-Object Tracking. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Shim_Focusing_on_Tracks_for_Online_Multi-Object_Tracking_CVPR_2025_paper.html) · 📚 被引 20
 - **作者**: Kyujin Shim, Kangwook Ko, Yujin Yang, Changick Kim
 - **🏷️ 机构**: Korea Advanced Institute of Science and Technology (KAIST)
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对在线多目标跟踪中轨迹关联的鲁棒性问题。②提出一种聚焦于轨迹的在线多目标跟踪方法，可能通过改进轨迹特征或关联策略来提升跟踪性能。③相比现有方法，更强调轨迹级别的信息利用。④摘要缺失，无法提供具体数据。
+- **摘要（英）**: This paper addresses robust trajectory association in online multi-object tracking. It proposes a trajectory-focused approach, likely enhancing track features or association strategies. Compared to existing methods, it emphasizes trajectory-level information. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出聚焦轨迹的在线多目标跟踪方法。
+- **创新点**: 轨迹级信息利用。
+- **结果**: 未提供具体数据。
 
-### SPMTrack: Spatio-Temporal Parameter-Efficient Fine-Tuning with Mixture of Experts for Scalable Visual Tracking.
+### SPMTrack: Spatio-Temporal Parameter-Efficient Fine-Tuning with Mixture of Experts for Scalable Visual Tracking. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2503.18338](https://arxiv.org/abs/2503.18338) · 📚 被引 13
 - **作者**: Wenrui Cai, Qingjie Liu, Yunhong Wang
 - **🏷️ 机构**: Beihang University,State Key Laboratory of Virtual Reality Technology and Systems,Beijing,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对单流视觉跟踪器中单一模型难以同时处理不同图像块间关系建模的问题。②提出SPMTrack，基于为跟踪任务定制的混合专家（TMoE），结合多个专家的能力灵活处理多样关系建模，并扩展至时空上下文。③相比现有方法，TMoE作为参数高效微调方法，大幅减少可训练参数，保持预训练模型泛化能力。④实验表明，在最小参数增加下提升跟踪精度，并支持不同规模模型的高效训练。
+- **摘要（英）**: This paper addresses the limitation of single-model relation modeling in one-stream visual trackers. It proposes SPMTrack with a task-specific mixture-of-experts (TMoE), enabling flexible handling of diverse relations and extending to spatio-temporal context. TMoE serves as a parameter-efficient fine-tuning method, reducing trainable parameters while preserving generalization. Experiments show improved accuracy with minimal parameter increase and efficient training across scales.
+- **核心贡献**: 提出基于TMoE的SPMTrack跟踪器，实现灵活关系建模与高效微调。
+- **创新点**: 将混合专家机制适配于跟踪任务并用于参数高效微调。
+- **结果**: 在最小参数增加下提升跟踪精度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -63,29 +100,55 @@
 
 </details>
 
-### Autoregressive Sequential Pretraining for Visual Tracking.
+### Autoregressive Sequential Pretraining for Visual Tracking. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liang_Autoregressive_Sequential_Pretraining_for_Visual_Tracking_CVPR_2025_paper.html) · 📚 被引 8
 - **作者**: Shiyi Liang, Yifan Bai, Yihong Gong, Xing Wei
 - **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Software Engineering
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对视觉跟踪中预训练策略的改进。②提出自回归序列预训练方法用于视觉跟踪。③相比现有预训练方法，可能更适应跟踪任务的时序特性。④摘要缺失，无法提供具体数据。
+- **摘要（英）**: This paper addresses pretraining strategies for visual tracking. It proposes an autoregressive sequential pretraining method. Compared to existing approaches, it may better capture temporal characteristics. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出自回归序列预训练方法。
+- **创新点**: 自回归预训练应用于跟踪。
+- **结果**: 未提供具体数据。
 
-### Exploring Historical Information for RGBE Visual Tracking with Mamba.
+### Exploring Historical Information for RGBE Visual Tracking with Mamba. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Sun_Exploring_Historical_Information_for_RGBE_Visual_Tracking_with_Mamba_CVPR_2025_paper.html) · 📚 被引 7
 - **作者**: Chuanyu Sun, Jiqing Zhang, Yang Wang, Huilin Ge, Qianchen Xia, Baocai Yin et al.
 - **🏷️ 机构**: Dalian University of Technology,Key Laboratory of Social Computing and Cognitive Intelligence, Dalian Maritime University, Jiangsu University of Science and Technology
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对RGBE视觉跟踪中历史信息利用不足的问题。②提出基于Mamba的RGBE跟踪方法，探索历史信息。③相比现有方法，可能通过状态空间模型更好地建模时序依赖。④摘要缺失，无法提供具体数据。
+- **摘要（英）**: This paper addresses insufficient historical information utilization in RGBE visual tracking. It proposes a Mamba-based method to explore historical context. Compared to existing methods, it may model temporal dependencies better. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出基于Mamba的RGBE跟踪方法。
+- **创新点**: 利用Mamba建模历史信息。
+- **结果**: 未提供具体数据。
 
-### GaPT-DAR: Category-level Garments Pose Tracking via Integrated 2D Deformation and 3D Reconstruction.
+### GaPT-DAR: Category-level Garments Pose Tracking via Integrated 2D Deformation and 3D Reconstruction. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_GaPT-DAR_Category-level_Garments_Pose_Tracking_via_Integrated_2D_Deformation_and_CVPR_2025_paper.html) · 📚 被引 3
 - **作者**: Li Zhang, Mingliang Xu, Jianan Wang, Qiaojun Yu, Lixin Yang, Yonglu Li et al.
 - **🏷️ 机构**: University of Science and Technology of China,Hefei,China, Astribot,Shenzhen,China, Shanghai Jiao Tong University,Shanghai,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对类别级服装姿态跟踪中的2D形变与3D重建集成问题。②提出GaPT-DAR方法，集成2D形变和3D重建。③相比现有方法，可能更全面地处理服装的复杂形变。④摘要缺失，无法提供具体数据。
+- **摘要（英）**: This paper addresses category-level garment pose tracking with integrated 2D deformation and 3D reconstruction. It proposes GaPT-DAR to combine these aspects. Compared to existing methods, it may handle complex deformations better. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出集成2D形变与3D重建的服装姿态跟踪方法。
+- **创新点**: 2D与3D信息集成。
+- **结果**: 未提供具体数据。
 
-### Delta: Dense Efficient Long-Range 3D tracking for any video.
+### Delta: Dense Efficient Long-Range 3D tracking for any video. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2410.24211](https://arxiv.org/abs/2410.24211)
 - **作者**: Tuan Duc Ngo, Peiye Zhuang, Evangelos Kalogerakis, Chuang Gan, Sergey Tulyakov, Hsin-Ying Lee et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICML 2025
+- **会议**: ICLR 2025
+- **摘要（中）**: 针对单目视频中密集3D运动跟踪的计算效率和稀疏性问题，提出DELTA方法。方法采用联合全局-局部注意力机制进行降分辨率跟踪，并通过Transformer上采样实现高分辨率预测。相比已有方法，运行速度提升8倍以上，同时达到最先进精度。在多个基准上取得2D和3D密集跟踪的新最先进结果。
+- **摘要（英）**: Addressing computational inefficiency and sparsity in dense 3D motion tracking from monocular videos, DELTA employs joint global-local attention for reduced-resolution tracking and transformer-based upsampling for high-resolution predictions. It runs over 8x faster than prior methods while achieving state-of-the-art accuracy, setting new records on multiple benchmarks for 2D and 3D dense tracking.
+- **核心贡献**: 提出高效密集3D跟踪方法DELTA。
+- **创新点**: 联合全局-局部注意力与上采样机制。
+- **结果**: 速度提升8倍以上，精度达到最先进。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Tracking dense 3D motion from monocular videos remains challenging, particularly when aiming for pixel-level precision over long sequences. We introduce DELTA, a novel method that efficiently tracks every pixel in 3D space, enabling accurate motion estimation across entire videos. Our approach leverages a joint global-local attention mechanism for reduced-resolution tracking, followed by a transformer-based upsampler to achieve high-resolution predictions. Unlike existing methods, which are limited by computational inefficiency or sparse tracking, DELTA delivers dense 3D tracking at scale, running over 8x faster than previous methods while achieving state-of-the-art accuracy. Furthermore, we explore the impact of depth representation on tracking performance and identify log-depth as the optimal choice. Extensive experiments demonstrate the superiority of DELTA on multiple benchmarks, achieving new state-of-the-art results in both 2D and 3D dense tracking tasks. Our method provides a robust solution for applications requiring fine-grained, long-term motion tracking in 3D space.
+
+</details>
 
 ### Efficient Motion Prompt Learning for Robust Visual Tracking.
 - **链接**: [arXiv:2505.16321](https://arxiv.org/abs/2505.16321) · [代码](https://github.com/zj5559/Motion-Prompt-Tracking)
@@ -99,23 +162,22 @@
 
 </details>
 
-### 6D Object Pose Tracking in Internet Videos for Robotic Manipulation.
+### 6D Object Pose Tracking in Internet Videos for Robotic Manipulation. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2503.10307](https://arxiv.org/abs/2503.10307)
 - **作者**: Georgy Ponimatkin, Martin Cífka, Tomás Soucek, Médéric Fourmy, Yann Labbé, Vladimír Petrík et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2025
+- **摘要（中）**: 针对互联网视频中物体6D姿态跟踪的挑战，提出新方法估计任意物体的6D姿态，无需先验知识。方法通过检索CAD模型、6D对齐和尺度接地，并提取平滑轨迹用于机器人操作。相比已有工作，适应无控制条件和未知物体。在YCB-V和HOPE-Video数据集上进行了评估。
+- **摘要（英）**: Addressing challenges in 6D pose tracking from internet videos, this method estimates 6D pose of arbitrary objects without prior knowledge via CAD retrieval, alignment, and scale grounding, then extracts smooth trajectories for robotic manipulation. It adapts to uncontrolled conditions and unknown objects, evaluated on YCB-V and HOPE-Video datasets.
+- **核心贡献**: 提出无先验的6D姿态跟踪方法。
+- **创新点**: 结合CAD检索和轨迹优化。
+- **结果**: 在多个数据集上验证了有效性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > We seek to extract a temporally consistent 6D pose trajectory of a manipulated object from an Internet instructional video. This is a challenging set-up for current 6D pose estimation methods due to uncontrolled capturing conditions, subtle but dynamic object motions, and the fact that the exact mesh of the manipulated object is not known. To address these challenges, we present the following contributions. First, we develop a new method that estimates the 6D pose of any object in the input image without prior knowledge of the object itself. The method proceeds by (i) retrieving a CAD model similar to the depicted object from a large-scale model database, (ii) 6D aligning the retrieved CAD model with the input image, and (iii) grounding the absolute scale of the object with respect to the scene. Second, we extract smooth 6D object trajectories from Internet videos by carefully tracking the detected objects across video frames. The extracted object trajectories are then retargeted via trajectory optimization into the configuration space of a robotic manipulator. Third, we thoroughly evaluate and ablate our 6D pose estimation method on YCB-V and HOPE-Video datasets as well as a new dataset of instructional videos manually annotated with approximate 6D object trajectories. We demonstrate significant improvements over existing state-of-the-art RGB 6D pose estimation methods. Finally, we show that the 6D object motion estimated from Internet videos can be transferred to a 7-axis robotic manipulator both in a virtual simulator as well as in a real world set-up. We also successfully apply our method to egocentric videos taken from the EPIC-KITCHENS dataset, demonstrating potential for Embodied AI applications.
 
 </details>
-
-## 跨领域论文（完整笔记在其他领域）
-
-- All-Day Multi-Camera Multi-Target Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
-
-## 🆕 增量新增
 
 ### MMOT: The First Challenging Benchmark for Drone-based Multispectral Multi-Object Tracking. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2510.12565](https://arxiv.org/abs/2510.12565) · 📚 被引 1
@@ -288,4 +350,5 @@
 - Details Matter for Indoor Open-Vocabulary 3D Instance Segmentation. → [open-set-detection](../open-set-detection/Guideline%202025.md)
 - AD-GS: Object-Aware B-Spline Gaussian Splatting for Self-Supervised Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
 - OVTR: End-to-End Open-Vocabulary Multiple Object Tracking with Transformer. → [open-set-detection](../open-set-detection/Guideline%202025.md)
+
 <!-- COMPLETE v1 papers=28 -->

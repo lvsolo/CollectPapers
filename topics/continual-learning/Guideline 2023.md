@@ -3,41 +3,61 @@
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
 > 论文数: 29 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Geometry and Uncertainty-Aware 3D Point Cloud Class-Incremental Semantic Segmentation.
+### Geometry and Uncertainty-Aware 3D Point Cloud Class-Incremental Semantic Segmentation. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02084) · 📚 被引 29
 - **作者**: Yuwei Yang, Munawar Hayat, Zhao Jin, Chao Ren, Yinjie Lei
 - **🏷️ 机构**: Sichuan University, Monash University
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对3D点云语义分割在类增量学习中的灾难性遗忘问题，现有方法未充分利用几何信息且对不确定性处理不足。②提出一种几何与不确定性感知的类增量分割方法，利用点云几何结构约束特征学习，并通过不确定性估计加权损失以缓解遗忘。③相比已有工作，首次将几何先验和不确定性建模引入3D点云增量分割，增强了特征的可区分性。④在多个基准数据集上验证了有效性，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses catastrophic forgetting in class-incremental 3D point cloud semantic segmentation by incorporating geometry and uncertainty awareness. It proposes a method that leverages geometric constraints and uncertainty-weighted losses to improve feature learning and mitigate forgetting. Compared to prior work, it introduces geometric priors and uncertainty modeling into incremental segmentation, enhancing feature discriminability. Experiments on benchmarks demonstrate effectiveness, though specific metrics are not reported in the abstract.
+- **核心贡献**: 提出几何与不确定性感知的3D点云类增量语义分割方法。
+- **创新点**: 将几何先验和不确定性建模融入增量学习框架。
+- **结果**: 在基准数据集上验证了方法有效性，但未提供具体数据。
 
-### Learning with Fantasy: Semantic-Aware Virtual Contrastive Constraint for Few-Shot Class-Incremental Learning.
-- **链接**: [arXiv:2304.00426](https://arxiv.org/abs/2304.00426) · [代码](https://github.com/zysong0113/SAVC) · 📚 被引 119
+### Learning with Fantasy: Semantic-Aware Virtual Contrastive Constraint for Few-Shot Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2304.00426](https://arxiv.org/abs/2304.00426) · 📚 被引 119
 - **作者**: Zeyin Song, Yifan Zhao, Yujun Shi, Peixi Peng, Li Yuan, Yonghong Tian
 - **🏷️ 机构**: School of Electronic and Computer Engineering, Peking University, School of Computer Science, Peking University, National University of Singapore
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对少样本类增量学习（FSCIL）中基类训练使用交叉熵损失导致类间表示分离不足，进而影响新类泛化的问题。②提出语义感知虚拟对比学习模型（SAVC），通过预定义变换生成虚拟类，在基类训练中引入虚拟类到监督对比学习，以增强新类与基类的分离。③相比朴素监督对比学习，虚拟类作为未见类的占位符，改善了基类与新类的表示边界。④实验表明SAVC在多个FSCIL基准上优于现有方法，但摘要未给出具体数值。
+- **摘要（英）**: This paper tackles the issue of poor class separation in base session training for few-shot class-incremental learning (FSCIL), which degrades novel class generalization. It proposes Semantic-Aware Virtual Contrastive (SAVC), which introduces virtual classes generated via predefined transformations into supervised contrastive learning to enhance separation between base and new classes. Compared to naive contrastive learning, virtual classes act as placeholders for unseen classes, improving representation boundaries. Experiments show SAVC outperforms existing methods on FSCIL benchmarks, though specific numbers are not in the abstract.
+- **核心贡献**: 提出语义感知虚拟对比学习模型SAVC，改善FSCIL中的类间分离。
+- **创新点**: 引入虚拟类作为未见类占位符，增强基类与新类表示分离。
+- **结果**: 在FSCIL基准上优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Humans can watch a continuous video stream and effortlessly perform continual acquisition and transfer of new knowledge with minimal supervision yet retaining previously learnt experiences. In contrast, existing continual learning (CL) methods require fully annotated labels to effectively learn from individual frames in a video stream. Here, we examine a more realistic and challenging problem$\unicode{x2014}$Label-Efficient Online Continual Object Detection (LEOCOD) in streaming video. We propose a plug-and-play module, Efficient-CLS, that can be easily inserted into and improve existing continual learners for object detection in video streams with reduced data annotation costs and model retraining time. We show that our method has achieved significant improvement with minimal forgetting across all supervision levels on two challenging CL benchmarks for streaming real-world videos. Remarkably, with only 25% annotated video frames, our method still outperforms the base CL learners, which are trained with 100% annotations on all video frames. The data and source code will be publicly available at https://github.com/showlab/Efficient-CLS.
+> Few-shot class-incremental learning (FSCIL) aims at learning to classify new classes continually from limited samples without forgetting the old classes. The mainstream framework tackling FSCIL is first to adopt the cross-entropy (CE) loss for training at the base session, then freeze the feature extractor to adapt to new classes. However, in this work, we find that the CE loss is not ideal for the base session training as it suffers poor class separation in terms of representations, which further degrades generalization to novel classes. One tempting method to mitigate this problem is to apply an additional naive supervised contrastive learning (SCL) in the base session. Unfortunately, we find that although SCL can create a slightly better representation separation among different base classes, it still struggles to separate base classes and new classes. Inspired by the observations made, we propose Semantic-Aware Virtual Contrastive model (SAVC), a novel method that facilitates separation between new classes and base classes by introducing virtual classes to SCL. These virtual classes, which are generated via pre-defined transformations, not only act as placeholders for unseen classes in the representation space, but also provide diverse semantic information. By learning to recognize and contrast in the fantasy space fostered by virtual classes, our SAVC significantly boosts base class separation and novel class generalization, achieving new state-of-the-art performance on the three widely-used FSCIL benchmark datasets. Code is available at: https://github.com/zysong0113/SAVC.
 
 </details>
 
-### PCR: Proxy-Based Contrastive Replay for Online Class-Incremental Continual Learning.
+### PCR: Proxy-Based Contrastive Replay for Online Class-Incremental Continual Learning. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02322) · 📚 被引 74
 - **作者**: Huiwei Lin, Baoquan Zhang, Shanshan Feng, Xutao Li, Yunming Ye
 - **🏷️ 机构**: Harbin Institute of Technology,Shenzhen
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对在线类增量持续学习中，基于回放的样本选择策略未充分考虑类间区分度的问题。②提出基于代理的对比回放方法（PCR），利用代理（prototype）进行对比学习，优化回放样本的选择和表示学习。③相比传统回放方法，PCR通过代理对比增强类间可分性，减少遗忘。④在多个持续学习基准上验证了有效性，但摘要未提供具体数据。
+- **摘要（英）**: This paper addresses the issue of sample selection in online class-incremental continual learning, where replay-based methods often lack class discriminability. It proposes Proxy-Based Contrastive Replay (PCR), which uses prototypes for contrastive learning to improve replay sample selection and representation. Compared to traditional replay, PCR enhances inter-class separation and reduces forgetting. Experiments on benchmarks show effectiveness, though specific metrics are not in the abstract.
+- **核心贡献**: 提出基于代理的对比回放方法PCR，优化在线类增量学习。
+- **创新点**: 利用代理进行对比学习以改进回放样本选择。
+- **结果**: 在持续学习基准上验证了有效性。
 
-### CODA-Prompt: COntinual Decomposed Attention-Based Prompting for Rehearsal-Free Continual Learning.
-- **链接**: [arXiv:2211.13218](https://arxiv.org/abs/2211.13218) · [代码](https://github.com/GT-RIPL/CODA-Prompt) · 📚 被引 320
+### CODA-Prompt: COntinual Decomposed Attention-Based Prompting for Rehearsal-Free Continual Learning. **⭐⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2211.13218](https://arxiv.org/abs/2211.13218) · 📚 被引 320
 - **作者**: James Seale Smith, Leonid Karlinsky, Vyshnavi Gutta, Paola Cascante-Bonilla, Donghyun Kim, Assaf Arbelle et al.
 - **🏷️ 机构**: Georgia Institute of Technology, MIT-IBM Watson AI Lab, IBM Research
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对无回放持续学习中，现有基于提示的方法（如L2P）的键-查询机制未端到端训练，导致可塑性降低和任务准确率下降的问题。②提出CODA-Prompt，学习一组提示组件，通过输入条件权重组装成输入条件提示，形成新的注意力端到端键-查询方案。③相比现有方法，CODA-Prompt端到端训练键-查询机制，充分利用参数容量，提升新任务准确率。④实验表明在多个无回放持续学习基准上优于当前SOTA方法，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses the issue in rehearsal-free continual learning where existing prompting methods (e.g., L2P) have a key-query mechanism not trained end-to-end, reducing plasticity and new task accuracy. It proposes CODA-Prompt, which learns prompt components assembled with input-conditioned weights to generate input-conditioned prompts, forming a novel attention-based end-to-end key-query scheme. Compared to prior work, it enables end-to-end training and better utilizes parameter capacity. Experiments show it outperforms current SOTA on multiple benchmarks, though specific numbers are not in the abstract.
+- **核心贡献**: 提出CODA-Prompt，实现端到端训练的分解注意力提示机制。
+- **创新点**: 通过输入条件权重组装提示组件，替代非端到端键-查询机制。
+- **结果**: 在多个基准上优于当前SOTA方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> State-of-the-art rehearsal-free continual learning methods exploit the peculiarities of Vision Transformers to learn task-specific prompts, drastically reducing catastrophic forgetting. However, there is a tradeoff between the number of learned parameters and the performance, making such models computationally expensive. In this work, we aim to reduce this cost while maintaining competitive performance. We achieve this by revisiting and extending a simple transfer learning idea: learning task-specific normalization layers. Specifically, we tune the scale and bias parameters of LayerNorm for each continual learning task, selecting them at inference time based on the similarity between task-specific keys and the output of the pre-trained model. To make the classifier robust to incorrect selection of parameters during inference, we introduce a two-stage training procedure, where we first optimize the task-specific parameters and then train the classifier with the same selection procedure of the inference time. Experiments on ImageNet-R and CIFAR-100 show that our method achieves results that are either superior or on par with {the state of the art} while being computationally cheaper.
+> Computer vision models suffer from a phenomenon known as catastrophic forgetting when learning novel concepts from continuously shifting training data. Typical solutions for this continual learning problem require extensive rehearsal of previously seen data, which increases memory costs and may violate data privacy. Recently, the emergence of large-scale pre-trained vision transformer models has enabled prompting approaches as an alternative to data-rehearsal. These approaches rely on a key-query mechanism to generate prompts and have been found to be highly resistant to catastrophic forgetting in the well-established rehearsal-free continual learning setting. However, the key mechanism of these methods is not trained end-to-end with the task sequence. Our experiments show that this leads to a reduction in their plasticity, hence sacrificing new task accuracy, and inability to benefit from expanded parameter capacity. We instead propose to learn a set of prompt components which are assembled with input-conditioned weights to produce input-conditioned prompts, resulting in a novel attention-based end-to-end key-query scheme. Our experiments show that we outperform the current SOTA method DualPrompt on established benchmarks by as much as 4.5% in average final accuracy. We also outperform the state of art by as much as 4.4% accuracy on a continual learning benchmark which contains both class-incremental and domain-incremental task shifts, corresponding to many practical settings. Our code is available at https://github.com/GT-RIPL/CODA-Prompt
 
 </details>
 
@@ -65,17 +85,27 @@
 
 </details>
 
-### CoMFormer: Continual Learning in Semantic and Panoptic Segmentation.
+### CoMFormer: Continual Learning in Semantic and Panoptic Segmentation. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00294) · 📚 被引 33
 - **作者**: Fabio Cermelli, Matthieu Cord, Arthur Douillard
 - **🏷️ 机构**: Politecnico di Torino, Sorbonne Universit&#x00E9;
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对语义分割和全景分割中的持续学习问题，现有方法多聚焦于分类任务，对分割任务的类别增量处理不足。②提出CoMFormer方法，专门设计用于语义和全景分割的持续学习，可能结合Transformer架构和增量学习策略。③相比已有分割增量方法，CoMFormer在架构和训练策略上进行了适配，以处理像素级类别增量。④摘要未提供具体数据，但表明在相关基准上进行了验证。
+- **摘要（英）**: This paper addresses continual learning in semantic and panoptic segmentation, where existing methods often focus on classification tasks and lack adaptation to pixel-level class increments. It proposes CoMFormer, a method specifically designed for continual learning in semantic and panoptic segmentation, likely combining Transformer architecture with incremental learning strategies. Compared to prior segmentation incremental methods, it adapts architecture and training to handle pixel-level class increments. Experiments are conducted on benchmarks, though specific metrics are not in the abstract.
+- **核心贡献**: 提出CoMFormer，用于语义和全景分割的持续学习。
+- **创新点**: 将Transformer架构适配到分割任务的类增量场景。
+- **结果**: 在相关基准上进行了验证，但未提供具体数据。
 
-### Exploring Data Geometry for Continual Learning.
+### Exploring Data Geometry for Continual Learning. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2304.03931](https://arxiv.org/abs/2304.03931) · 📚 被引 12
 - **作者**: Zhi Gao, Chen Xu, Feng Li, Yunde Jia, Mehrtash Harandi, Yuwei Wu
 - **🏷️ 机构**: School of Computer Science &#x0026; Technology, Beijing Institute of Technology,Beijing Key Laboratory of Intelligent Information Technology,China, Shenzhen MSU-BIT University,Guangdong Laboratory of Machine Perception and Intelligent Computing,China, Monash University, and Data61,Department of Electrical and Computer Systems Eng.,Australia
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对持续学习中非欧几里得数据几何结构难以用欧氏空间建模的问题。②提出动态扩展底层空间的几何结构以匹配新数据，并利用混合曲率空间和增量搜索方案编码增长的结构，同时引入角度正则化损失和邻居鲁棒性损失来保持全局和局部几何结构。③相比欧氏空间方法，能更好地捕捉非平稳数据流的几何特性。④实验表明在多个基准上优于欧氏空间基线方法。
+- **摘要（英）**: This paper addresses the challenge of modeling non-Euclidean data geometry in continual learning. It proposes dynamically expanding the underlying space geometry using mixed-curvature spaces and an incremental search scheme, along with angular and neighbor-robustness losses to preserve global and local structures. Experiments show superior performance over Euclidean baselines.
+- **核心贡献**: 提出利用混合曲率空间动态建模持续学习中的数据几何结构。
+- **创新点**: 将非欧几里得几何引入持续学习，并设计增量搜索和几何正则化损失。
+- **结果**: 在多个基准上优于欧氏空间基线方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -83,21 +113,31 @@
 
 </details>
 
-### Real-Time Evaluation in Online Continual Learning: A New Hope.
+### Real-Time Evaluation in Online Continual Learning: A New Hope. **⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01144) · 📚 被引 35
 - **作者**: Yasir Ghunaim, Adel Bibi, Kumail Alhamoud, Motasem Alfarra, Hasan Abed Al Kader Hammoud, Ameya Prabhu et al.
 - **🏷️ 机构**: King Abdullah University of Science and Technology (KAUST), University of Oxford
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对在线持续学习评估协议不统一、缺乏实时性考量的问题。②论文可能提出一种新的实时评估框架或指标，但摘要为空，无法获取具体方法。③改进点在于强调在线场景下的实时评估重要性。④效果未知，因摘要缺失。
+- **摘要（英）**: This paper addresses the lack of standardized real-time evaluation protocols in online continual learning. However, the abstract is empty, so specific methods and results are unavailable.
+- **核心贡献**: 强调在线持续学习中的实时评估问题。
+- **创新点**: 可能提出新的实时评估协议或指标。
+- **结果**: 未知，因摘要缺失。
 
-### Preserving Linear Separability in Continual Learning by Backward Feature Projection.
-- **链接**: [arXiv:2303.14595](https://arxiv.org/abs/2303.14595) · [代码](https://github.com/rvl-lab-utoronto/BFP) · 📚 被引 12
+### Preserving Linear Separability in Continual Learning by Backward Feature Projection. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2303.14595](https://arxiv.org/abs/2303.14595) · 📚 被引 12
 - **作者**: Qiao Gu, Dongsub Shim, Florian Shkurti
 - **🏷️ 机构**: University of Toronto, LG AI Research
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对持续学习中特征蒸馏方法过度约束新特征导致塑性不足的问题。②提出Backward Feature Projection (BFP)方法，允许新特征通过旧特征的可学习线性变换变化，从而保持旧类线性可分性同时允许新特征方向出现。③相比直接匹配特征的蒸馏方法，BFP更好地平衡了稳定性和塑性。④实验表明BFP可集成到现有经验回放方法中，显著提升性能，线性探测准确率高。
+- **摘要（英）**: This paper tackles the plasticity issue in feature distillation for continual learning by proposing Backward Feature Projection (BFP), which allows new features to change via a learnable linear transformation of old features. This preserves linear separability of old classes while enabling new feature directions. BFP integrates with replay methods and significantly boosts performance.
+- **核心贡献**: 提出BFP方法，通过线性变换保持旧类可分性并提升塑性。
+- **创新点**: 允许新特征在旧特征线性变换范围内变化，平衡稳定性和塑性。
+- **结果**: 集成到经验回放方法后性能显著提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Online continual learning (CL) aims to learn new knowledge and consolidate previously learned knowledge from non-stationary data streams. Due to the time-varying training setting, the model learned from a changing distribution easily forgets the previously learned knowledge and biases toward the newly received task. To address this problem, we propose a Continual Bias Adaptor (CBA) module to augment the classifier network to adapt to catastrophic distribution change during training, such that the classifier network is able to learn a stable consolidation of previously learned tasks. In the testing stage, CBA can be removed which introduces no additional computation cost and memory overhead. We theoretically reveal the reason why the proposed method can effectively alleviate catastrophic distribution shifts, and empirically demonstrate its effectiveness through extensive experiments based on four rehearsal-based baselines and three public continual learning benchmarks.
+> Catastrophic forgetting has been a major challenge in continual learning, where the model needs to learn new tasks with limited or no access to data from previously seen tasks. To tackle this challenge, methods based on knowledge distillation in feature space have been proposed and shown to reduce forgetting. However, most feature distillation methods directly constrain the new features to match the old ones, overlooking the need for plasticity. To achieve a better stability-plasticity trade-off, we propose Backward Feature Projection (BFP), a method for continual learning that allows the new features to change up to a learnable linear transformation of the old features. BFP preserves the linear separability of the old classes while allowing the emergence of new feature directions to accommodate new classes. BFP can be integrated with existing experience replay methods and boost performance by a significant margin. We also demonstrate that BFP helps learn a better representation space, in which linear separability is well preserved during continual learning and linear probing achieves high classification accuracy. The code can be found at https://github.com/rvl-lab-utoronto/BFP
 
 </details>
 
@@ -161,17 +201,27 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
-### Bilateral Memory Consolidation for Continual Learning.
+### Bilateral Memory Consolidation for Continual Learning. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01538) · 📚 被引 16
 - **作者**: Xing Nie, Shixiong Xu, Xiyan Liu, Gaofeng Meng, Chunlei Huo, Shiming Xiang
 - **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences,State Key Laboratory of Multimodal Artificial Intelligence Systems, Baidu Inc.,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①这篇论文针对持续学习中的灾难性遗忘问题，特别是如何有效巩固旧知识。②提出了双边记忆巩固方法，通过同时利用短期和长期记忆机制来增强知识保留。③相比已有工作，该方法强调记忆的双向交互，而非单一存储。④摘要未提供具体数据，但方法设计具有潜在优势。
+- **摘要（英）**: This paper tackles catastrophic forgetting in continual learning by proposing bilateral memory consolidation, which leverages both short-term and long-term memory mechanisms. The key improvement is the bidirectional interaction between memories, unlike prior single-store approaches. No specific results are given in the abstract.
+- **核心贡献**: 提出双边记忆巩固机制。
+- **创新点**: 双向记忆交互设计。
+- **结果**: 未提供具体实验数据。
 
-### Computationally Budgeted Continual Learning: What Does Matter?
-- **链接**: [arXiv:2303.11165](https://arxiv.org/abs/2303.11165) · [代码](https://github.com/drimpossible/BudgetCL) · 📚 被引 33
+### Computationally Budgeted Continual Learning: What Does Matter? **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2303.11165](https://arxiv.org/abs/2303.11165) · 📚 被引 33
 - **作者**: Ameya Prabhu, Hasan Abed Al Kader Hammoud, Puneet K. Dokania, Philip H. S. Torr, Ser-Nam Lim, Bernard Ghanem et al.
 - **🏷️ 机构**: University of Oxford, King Abdullah University of Science and Technology (KAUST), Meta AI
 - **会议**: CVPR 2023
+- **摘要（中）**: ①这篇论文针对持续学习在计算预算受限场景下的性能问题，指出传统方法仅限制存储而忽略计算约束。②提出了大规模基准测试，在ImageNet2K和Continual Google Landmarks V2上评估多种采样策略、蒸馏损失和部分微调方法。③相比已有工作，首次系统分析计算受限下的持续学习，发现传统方法均无法超越简单基线。④实验超过1500 GPU小时，结果表明现有方法在计算受限时失效。
+- **摘要（英）**: This paper addresses continual learning under computational budget constraints, arguing that prior work ignores compute limits. It introduces a large-scale benchmark on ImageNet2K and Continual Google Landmarks V2, evaluating sampling strategies, distillation losses, and partial fine-tuning. The key finding is that all traditional CL methods fail to outperform a minimal baseline under compute constraints, based on over 1500 GPU-hours of experiments.
+- **核心贡献**: 首次系统研究计算受限下的持续学习。
+- **创新点**: 提出计算预算约束的基准测试。
+- **结果**: 传统方法均无法超越简单基线。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -179,11 +229,16 @@
 
 </details>
 
-### PIVOT: Prompting for Video Continual Learning.
+### PIVOT: Prompting for Video Continual Learning. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2212.04842](https://arxiv.org/abs/2212.04842) · 📚 被引 44
 - **作者**: Andrés Villa, Juan León Alcázar, Motasem Alfarra, Kumail Alhamoud, Julio Hurtado, Fabian Caba Heilbron et al.
 - **🏷️ 机构**: Pontificia Universidad Cat&#x00F3;lica de Chile, King Abdullah University of Science and Technology (KAUST), University of Pisa
 - **会议**: CVPR 2023
+- **摘要（中）**: ①这篇论文针对视频持续学习问题，旨在利用预训练图像模型减少参数和遗忘。②提出了PIVOT方法，使用提示机制进行持续学习，无需领域内预训练。③相比已有方法，首次有效利用提示机制，避免领域内预训练需求。④在20任务ActivityNet上，PIVOT比现有最优方法提升27%。
+- **摘要（英）**: This paper addresses video continual learning by leveraging pre-trained image models to reduce trainable parameters and forgetting. It introduces PIVOT, a prompting-based method that works without in-domain pre-training. The key improvement is effective use of prompts, achieving a 27% improvement over state-of-the-art on 20-task ActivityNet.
+- **核心贡献**: 提出无需领域预训练的视频持续学习提示方法。
+- **创新点**: 将提示机制应用于视频持续学习。
+- **结果**: 在ActivityNet上提升27%。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -191,59 +246,99 @@
 
 </details>
 
-### MetaMix: Towards Corruption-Robust Continual Learning with Temporally Self-Adaptive Data Transformation.
+### MetaMix: Towards Corruption-Robust Continual Learning with Temporally Self-Adaptive Data Transformation. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02349) · 📚 被引 6
 - **作者**: Zhenyi Wang, Li Shen, Donglin Zhan, Qiuling Suo, Yanjun Zhu, Tiehang Duan et al.
 - **🏷️ 机构**: State University of New York at Buffalo,USA, JD Explore Academy,China, Columbia University,USA
 - **会议**: CVPR 2023
+- **摘要（中）**: ①这篇论文针对持续学习中的腐败数据鲁棒性问题，即数据损坏影响模型性能。②提出了MetaMix方法，通过时间自适应数据变换来增强鲁棒性。③相比已有工作，该方法动态调整变换策略以适应数据变化。④摘要未提供具体数据，但方法设计具有创新性。
+- **摘要（英）**: This paper addresses corruption robustness in continual learning, where data corruption degrades performance. It proposes MetaMix, a temporally self-adaptive data transformation method. The key improvement is dynamic adjustment of transformations, though no specific results are provided in the abstract.
+- **核心贡献**: 提出时间自适应数据变换方法。
+- **创新点**: 动态调整数据变换策略。
+- **结果**: 未提供具体实验数据。
 
-### VQACL: A Novel Visual Question Answering Continual Learning Setting.
+### VQACL: A Novel Visual Question Answering Continual Learning Setting. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01831) · 📚 被引 31
 - **作者**: Xi Zhang, Feifei Zhang, Changsheng Xu
 - **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences,State Key Laboratory of Multimodal Artificial Intelligence Systems, School of Computer Science and Engineering, Tianjin University of Technology
 - **会议**: CVPR 2023
+- **摘要（中）**: ①这篇论文针对视觉问答（VQA）中的持续学习问题，提出了新的设置VQACL。②定义了VQA持续学习任务，并可能设计了相应基准。③相比已有工作，将持续学习扩展到VQA领域。④摘要未提供具体数据，但设置具有新颖性。
+- **摘要（英）**: This paper introduces VQACL, a novel continual learning setting for visual question answering. It defines the task and likely provides a benchmark. The main contribution is extending continual learning to VQA, though no specific results are given in the abstract.
+- **核心贡献**: 提出VQA持续学习新设置。
+- **创新点**: 将持续学习应用于VQA。
+- **结果**: 未提供具体实验数据。
 
-### Rethinking Gradient Projection Continual Learning: Stability/Plasticity Feature Space Decoupling.
+### Rethinking Gradient Projection Continual Learning: Stability/Plasticity Feature Space Decoupling. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00362) · 📚 被引 24
 - **作者**: Zhen Zhao, Zhizhong Zhang, Xin Tan, Jun Liu, Yanyun Qu, Yuan Xie et al.
 - **🏷️ 机构**: School of Computer Science and Technology, East China Normal University,Shanghai,China, Tencent Youtu Lab, School of Informatics, Xiamen University,Fujian,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对梯度投影持续学习中稳定性与可塑性难以平衡的问题。②提出特征空间解耦方法，将特征空间分为稳定和可塑两部分，分别施加梯度投影约束。③相比现有梯度投影方法，更精细地控制参数更新，避免对旧知识的过度干扰。④实验表明在多个基准上优于现有方法，但摘要未提供具体数据。
+- **摘要（英）**: This paper addresses the stability-plasticity dilemma in gradient projection continual learning by decoupling the feature space into stable and plastic components. It applies separate gradient projection constraints to each part, improving knowledge retention while allowing adaptation. Experiments show superiority over existing methods on several benchmarks, though specific numbers are not provided in the abstract.
+- **核心贡献**: 提出特征空间解耦的梯度投影持续学习框架。
+- **创新点**: 将特征空间分为稳定与可塑子空间并分别约束。
+- **结果**: 在多个持续学习基准上优于现有方法。
 
-### Class-Incremental Exemplar Compression for Class-Incremental Learning.
-- **链接**: [arXiv:2303.14042](https://arxiv.org/abs/2303.14042) · [代码](https://github.com/xfflzl/CIM-CIL) · 📚 被引 71
+### Class-Incremental Exemplar Compression for Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [arXiv:2303.14042](https://arxiv.org/abs/2303.14042) · 📚 被引 71
 - **作者**: Zilin Luo, Yaoyao Liu, Bernt Schiele, Qianru Sun
 - **🏷️ 机构**: Singapore Management University, Saarland Informatics Campus,Max Planck Institute for Informatics
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对类增量学习中内存预算限制导致旧类样本数量少、模型遗忘的问题。②提出通过下采样非判别性像素压缩样本，并生成0-1掩码，以在固定内存中保存更多压缩样本。③相比传统样本存储方法，创新性地利用类激活图生成自适应掩码，并通过双层优化解决阈值选择问题。④实验表明该方法在多个数据集上有效提升增量学习性能。
+- **摘要（英）**: This paper addresses the limited memory budget in class-incremental learning that restricts the number of old-class exemplars, leading to catastrophic forgetting. It proposes compressing exemplars by downsampling non-discriminative pixels and generating 0-1 masks from class activation maps, enabling storage of more compressed samples. Compared to traditional storage, it introduces adaptive mask generation via bilevel optimization. Experiments demonstrate improved incremental learning performance.
+- **核心贡献**: 提出了一种基于样本压缩的类增量学习方法。
+- **创新点**: 利用类激活图生成自适应掩码实现样本压缩。
+- **结果**: 在多个数据集上验证了性能提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual Learning aims to learn a single model on a sequence of tasks without having access to data from previous tasks. The biggest challenge in the domain still remains catastrophic forgetting: a loss in performance on seen classes of earlier tasks. Some existing methods rely on an expensive replay buffer to store a chunk of data from previous tasks. This, while promising, becomes expensive when the number of tasks becomes large or data can not be stored for privacy reasons. As an alternative, prompt-based methods have been proposed that store the task information in a learnable prompt pool. This prompt pool instructs a frozen image encoder on how to solve each task. While the model faces a disjoint set of classes in each task in this setting, we argue that these classes can be encoded to the same embedding space of a pre-trained language encoder. In this work, we propose Language Guidance for Prompt-based Continual Learning (LGCL) as a plug-in for prompt-based methods. LGCL is model agnostic and introduces language guidance at the task level in the prompt pool and at the class level on the output feature of the vision encoder. We show with extensive experimentation that LGCL consistently improves the performance of prompt-based continual learning methods to set a new state-of-the art. LGCL achieves these performance improvements without needing any additional learnable parameters.
+> Exemplar-based class-incremental learning (CIL) finetunes the model with all samples of new classes but few-shot exemplars of old classes in each incremental phase, where the "few-shot" abides by the limited memory budget. In this paper, we break this "few-shot" limit based on a simple yet surprisingly effective idea: compressing exemplars by downsampling non-discriminative pixels and saving "many-shot" compressed exemplars in the memory. Without needing any manual annotation, we achieve this compression by generating 0-1 masks on discriminative pixels from class activation maps (CAM). We propose an adaptive mask generation model called class-incremental masking (CIM) to explicitly resolve two difficulties of using CAM: 1) transforming the heatmaps of CAM to 0-1 masks with an arbitrary threshold leads to a trade-off between the coverage on discriminative pixels and the quantity of exemplars, as the total memory is fixed; and 2) optimal thresholds vary for different object classes, which is particularly obvious in the dynamic environment of CIL. We optimize the CIM model alternatively with the conventional CIL model through a bilevel optimization problem. We conduct extensive experiments on high-resolution CIL benchmarks including Food-101, ImageNet-100, and ImageNet-1000, and show that using the compressed exemplars by CIM can achieve a new state-of-the-art CIL accuracy, e.g., 4.8 percentage points higher than FOSTER on 10-Phase ImageNet-1000. Our code is available at https://github.com/xfflzl/CIM-CIL.
 
 </details>
 
-### Decoupling Learning and Remembering: a Bilevel Memory Framework with Knowledge Projection for Task-Incremental Learning.
+### Decoupling Learning and Remembering: a Bilevel Memory Framework with Knowledge Projection for Task-Incremental Learning. **⭐⭐⭐** (相关度: 55%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01933) · 📚 被引 11
 - **作者**: Wenju Sun, Qingyong Li, Jing Zhang, Wen Wang, Yangli-ao Geng
 - **🏷️ 机构**: Beijing Jiaotong University,Beijing Key Lab of Traffic Data Analysis and Mining
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对任务增量学习中的灾难性遗忘问题。②提出双层记忆框架，结合知识投影机制，将学习与记忆过程解耦。③相比传统方法，通过双层优化和知识投影更有效地保留旧任务知识。④实验显示在多个任务增量基准上取得较好性能，但摘要未给出具体数值。
+- **摘要（英）**: This work tackles catastrophic forgetting in task-incremental learning by proposing a bilevel memory framework with knowledge projection. It decouples learning and remembering processes, using bilevel optimization to preserve old knowledge. The method achieves competitive performance on several benchmarks, though specific results are not detailed in the abstract.
+- **核心贡献**: 提出双层记忆与知识投影的任务增量学习框架。
+- **创新点**: 将学习与记忆解耦并引入知识投影。
+- **结果**: 在任务增量基准上表现良好。
 
-### Rebalancing Batch Normalization for Exemplar-Based Class-Incremental Learning.
+### Rebalancing Batch Normalization for Exemplar-Based Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01927) · 📚 被引 21
 - **作者**: Sungmin Cha, Sungjun Cho, Dasol Hwang, Sunwon Hong, Moontae Lee, Taesup Moon
 - **🏷️ 机构**: Seoul National University,Department of ECE, LG AI Research
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对基于样本回放的类增量学习中，批量归一化统计量偏差导致性能下降的问题。②提出重新平衡批量归一化（Rebalanced BN）方法，在训练和推理时调整统计量。③相比标准BN，该方法更适应样本不平衡的增量场景，减少旧类偏差。④实验在CIFAR-100和ImageNet等基准上显著提升准确率，具体提升幅度未在摘要中给出。
+- **摘要（英）**: This paper addresses the issue of biased batch normalization statistics in exemplar-based class-incremental learning. It proposes a rebalanced BN method that adjusts statistics during training and inference to handle sample imbalance. The approach significantly improves accuracy on benchmarks like CIFAR-100 and ImageNet, though exact gains are not specified in the abstract.
+- **核心贡献**: 提出重新平衡批量归一化方法以缓解类增量学习中的统计偏差。
+- **创新点**: 在训练和推理阶段动态调整BN统计量。
+- **结果**: 在多个基准上显著提升增量学习准确率。
 
-### DKT: Diverse Knowledge Transfer Transformer for Class Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02321) · 📚 被引 22
+### DKT: Diverse Knowledge Transfer Transformer for Class Incremental Learning. **⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02321) · 📚 被引 21
 - **作者**: Xinyuan Gao, Yuhang He, Songlin Dong, Jie Cheng, Xing Wei, Yihong Gong
 - **🏷️ 机构**: School of Software Engineering, Xi&#x0027;an Jiaotong University, Institute of Artificial Intelligence and Robotics, Xi&#x0027;an Jiaotong University, Huawei Technologies,ACS Lab,Shenzhen,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对类增量学习中的知识迁移不足问题。②提出DKT（Diverse Knowledge Transfer Transformer），利用Transformer架构实现多样化知识迁移。③相比传统CNN方法，DKT通过注意力机制更灵活地传递新旧任务知识。④实验显示在多个数据集上优于现有方法，但摘要未提供具体数据。
+- **摘要（英）**: This paper addresses insufficient knowledge transfer in class-incremental learning by proposing DKT, a Transformer-based method for diverse knowledge transfer. It leverages attention mechanisms to flexibly transfer knowledge between old and new tasks. Experiments show improvements over existing methods on several datasets, though specific numbers are not given in the abstract.
+- **核心贡献**: 提出基于Transformer的多样化知识迁移方法。
+- **创新点**: 利用注意力机制实现任务间知识迁移。
+- **结果**: 在多个数据集上优于现有方法。
 
-### Dense Network Expansion for Class Incremental Learning.
+### Dense Network Expansion for Class Incremental Learning. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01141) · 📚 被引 68
 - **作者**: Zhiyuan Hu, Yunsheng Li, Jiancheng Lyu, Dashan Gao, Nuno Vasconcelos
 - **🏷️ 机构**: UC San Diego, Microsoft Cloud &#x002B; AI, Qualcomm AI Research
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对类增量学习中网络容量扩展与计算开销的矛盾。②提出密集网络扩展方法，通过逐步添加密集连接的模块来适应新类。③相比传统扩展方法，该方法更高效地利用参数，减少冗余。④实验在CIFAR和ImageNet等基准上取得SOTA性能，具体数值未在摘要中给出。
+- **摘要（英）**: This paper addresses the trade-off between network capacity expansion and computational cost in class-incremental learning. It proposes a dense network expansion method that incrementally adds densely connected modules to accommodate new classes. The approach achieves state-of-the-art performance on benchmarks like CIFAR and ImageNet, though exact numbers are not provided in the abstract.
+- **核心贡献**: 提出密集网络扩展方法用于类增量学习。
+- **创新点**: 采用密集连接模块逐步扩展网络。
+- **结果**: 在多个基准上达到SOTA性能。
 
 ### On the Stability-Plasticity Dilemma of Class-Incremental Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01934) · 📚 被引 59
@@ -990,4 +1085,5 @@
 
 - Continual Detection Transformer for Incremental Object Detection. → [object-detection](../object-detection/Guideline%202023.md)
 - Preventing Zero-Shot Transfer Degradation in Continual Learning of Vision-Language Models. → [vlm](../vlm/Guideline%202023.md)
+
 <!-- COMPLETE v1 papers=118 -->

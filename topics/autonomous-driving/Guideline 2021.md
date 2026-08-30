@@ -3,19 +3,29 @@
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
 > 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving.
+### GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_GeoSim_Realistic_Video_Simulation_via_Geometry-Aware_Composition_for_Self-Driving_CVPR_2021_paper.html) · 📚 被引 89
 - **作者**: Yun Chen, Frieda Rong, Shivam Duggal, Shenlong Wang, Xinchen Yan, Sivabalan Manivasagam et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对自动驾驶中真实视频仿真缺乏几何感知和场景合成的问题。②提出了GeoSim，通过几何感知的组合方法，将虚拟物体（如车辆）逼真地合成到真实驾驶场景中，并生成对应的视频序列。③相比已有工作，该方法利用几何信息（如深度、姿态）来指导合成，确保虚拟物体与场景的交互（如遮挡、光照）更真实。④在多个驾驶数据集上验证，生成的视频在视觉真实性和下游任务（如检测）性能上均有显著提升。
+- **摘要（英）**: This paper addresses the lack of geometry-aware composition in realistic video simulation for self-driving. It proposes GeoSim, which synthesizes virtual objects into real driving scenes using geometric cues, improving realism and downstream task performance. The method outperforms prior approaches in visual fidelity and applicability.
+- **核心贡献**: 提出几何感知的视频合成框架，用于生成逼真的自动驾驶仿真场景。
+- **创新点**: 利用几何信息指导虚拟物体与真实场景的合成，增强交互真实性。
+- **结果**: 生成的视频在视觉质量和下游任务性能上优于现有方法。
 
-### Shared Cross-Modal Trajectory Prediction for Autonomous Driving.
+### Shared Cross-Modal Trajectory Prediction for Autonomous Driving. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2004.00202](https://arxiv.org/abs/2004.00202) · 📚 被引 56
 - **作者**: Chiho Choi, Joon Hee Choi, Jiachen Li, Srikanth Malla
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对自动驾驶中多传感器轨迹预测的模态融合问题。②提出了跨模态嵌入框架，在训练时联合优化多模态目标，将互补特征嵌入共享潜在空间，测试时仅需单一模态（如LiDAR）即可预测。③相比已有方法，该框架在训练时利用多模态信息，测试时降低传感器依赖，提高实用性。④在两个基准数据集上验证，预测精度优于单模态基线。
+- **摘要（英）**: This paper tackles multimodal trajectory prediction by proposing a cross-modal embedding framework that learns shared representations from multiple sensors during training, requiring only one modality at test time. It improves prediction accuracy over unimodal baselines on two driving datasets.
+- **核心贡献**: 提出跨模态嵌入框架，实现训练时多模态融合、测试时单模态预测。
+- **创新点**: 通过共享潜在空间联合优化多模态目标，提升单模态推理性能。
+- **结果**: 在基准数据集上预测精度优于单模态方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -23,15 +33,20 @@
 
 </details>
 
-### Self-Supervised Pillar Motion Learning for Autonomous Driving.
-- **链接**: [arXiv:2104.08683](https://arxiv.org/abs/2104.08683) · 📚 被引 62
+### Self-Supervised Pillar Motion Learning for Autonomous Driving. **⭐⭐⭐⭐** (相关度: 88%)
+- **链接**: [arXiv:2104.08683](https://arxiv.org/abs/2104.08683) · 📚 被引 61
 - **作者**: Chenxu Luo, Xiaodong Yang, Alan L. Yuille
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对自动驾驶中点云运动估计依赖大量人工标注的问题。②提出自监督学习框架，利用点云结构一致性和跨传感器（相机）正则化，从无标注数据中学习运动。③相比监督方法，无需标注，且结合微调后达到SOTA。④实验表明，自监督模型性能与监督方法相当，微调后取得最优结果。
+- **摘要（英）**: This work addresses the annotation burden in point cloud motion estimation for autonomous driving. It proposes a self-supervised framework using structural consistency and cross-sensor regularization from paired images. The method performs competitively with supervised approaches and achieves state-of-the-art when fine-tuned.
+- **核心贡献**: 提出自监督点云运动学习框架，利用多传感器信号。
+- **创新点**: 点云结构一致性与跨传感器正则化。
+- **结果**: 自监督性能接近监督方法，微调后SOTA。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> 3D multi-object tracking in LiDAR point clouds is a key ingredient for self-driving vehicles. Existing methods are predominantly based on the tracking-by-detection pipeline and inevitably require a heuristic matching step for the detection association. In this paper, we present SimTrack to simplify the hand-crafted tracking paradigm by proposing an end-to-end trainable model for joint detection and tracking from raw point clouds. Our key design is to predict the first-appear location of each object in a given snippet to get the tracking identity and then update the location based on motion estimation. In the inference, the heuristic matching step can be completely waived by a simple read-off operation. SimTrack integrates the tracked object association, newborn object detection, and dead track killing in a single unified model. We conduct extensive evaluations on two large-scale datasets: nuScenes and Waymo Open Dataset. Experimental results reveal that our simple approach compares favorably with the state-of-the-art methods while ruling out the heuristic matching rules.
+> Autonomous driving can benefit from motion behavior comprehension when interacting with diverse traffic participants in highly dynamic environments. Recently, there has been a growing interest in estimating class-agnostic motion directly from point clouds. Current motion estimation methods usually require vast amount of annotated training data from self-driving scenes. However, manually labeling point clouds is notoriously difficult, error-prone and time-consuming. In this paper, we seek to answer the research question of whether the abundant unlabeled data collections can be utilized for accurate and efficient motion learning. To this end, we propose a learning framework that leverages free supervisory signals from point clouds and paired camera images to estimate motion purely via self-supervision. Our model involves a point cloud based structural consistency augmented with probabilistic motion masking as well as a cross-sensor motion regularization to realize the desired self-supervision. Experiments reveal that our approach performs competitively to supervised methods, and achieves the state-of-the-art result when combining our self-supervised model with supervised fine-tuning.
 
 </details>
 
@@ -59,25 +74,33 @@
 
 </details>
 
-### GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving.
+### GeoSim: Realistic Video Simulation via Geometry-Aware Composition for Self-Driving. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_GeoSim_Realistic_Video_Simulation_via_Geometry-Aware_Composition_for_Self-Driving_CVPR_2021_paper.html) · 📚 被引 89
 - **作者**: Yun Chen, Frieda Rong, Shivam Duggal, Shenlong Wang, Xinchen Yan, Sivabalan Manivasagam et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对自动驾驶中真实视频仿真缺乏几何感知和场景合成的问题。②提出了GeoSim，通过几何感知的组合方法，将虚拟物体（如车辆）逼真地合成到真实驾驶场景中，并生成对应的视频序列。③相比已有工作，该方法利用几何信息（如深度、姿态）来指导合成，确保虚拟物体与场景的交互（如遮挡、光照）更真实。④在多个驾驶数据集上验证，生成的视频在视觉真实性和下游任务（如检测）性能上均有显著提升。
+- **摘要（英）**: This paper addresses the lack of geometry-aware composition in realistic video simulation for self-driving. It proposes GeoSim, which synthesizes virtual objects into real driving scenes using geometric cues, improving realism and downstream task performance. The method outperforms prior approaches in visual fidelity and applicability.
+- **核心贡献**: 提出几何感知的视频合成框架，用于生成逼真的自动驾驶仿真场景。
+- **创新点**: 利用几何信息指导虚拟物体与真实场景的合成，增强交互真实性。
+- **结果**: 生成的视频在视觉质量和下游任务性能上优于现有方法。
 
-### AdvSim: Generating Safety-Critical Scenarios for Self-Driving Vehicles.
+### AdvSim: Generating Safety-Critical Scenarios for Self-Driving Vehicles. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2101.06549](https://arxiv.org/abs/2101.06549) · 📚 被引 177
 - **作者**: Jingkang Wang, Ava Pun, James Tu, Sivabalan Manivasagam, Abbas Sadat, Sergio Casas et al.
 - **🏷️ 机构**: Waabi / University of Toronto
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对自动驾驶系统安全关键场景生成问题，传统方法仅针对规划模块且无法覆盖感知失败。②提出了AdvSim，一个对抗性框架，通过物理合理的方式修改轨迹并更新LiDAR数据，生成全栈安全关键场景。③相比已有工作，该方法直接从传感器数据模拟，能识别感知失败（如遮挡）导致的危险场景。④实验表明，该方法能为多种现代自动驾驶系统生成数千个语义有意义的安全关键场景，并用于训练提升系统鲁棒性。
+- **摘要（英）**: This paper addresses the generation of safety-critical scenarios for LiDAR-based autonomy by proposing AdvSim, an adversarial framework that modifies trajectories and updates sensor data to create full-stack failures. It identifies thousands of meaningful scenarios and improves system robustness through training.
+- **核心贡献**: 提出对抗性框架生成全栈安全关键场景，并用于训练增强。
+- **创新点**: 直接从传感器数据模拟，覆盖感知和规划失败。
+- **结果**: 生成大量安全关键场景，并提升系统安全性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > As self-driving systems become better, simulating scenarios where the autonomy stack may fail becomes more important. Traditionally, those scenarios are generated for a few scenes with respect to the planning module that takes ground-truth actor states as input. This does not scale and cannot identify all possible autonomy failures, such as perception failures due to occlusion. In this paper, we propose AdvSim, an adversarial framework to generate safety-critical scenarios for any LiDAR-based autonomy system. Given an initial traffic scenario, AdvSim modifies the actors' trajectories in a physically plausible manner and updates the LiDAR sensor data to match the perturbed world. Importantly, by simulating directly from sensor data, we obtain adversarial scenarios that are safety-critical for the full autonomy stack. Our experiments show that our approach is general and can identify thousands of semantically meaningful safety-critical scenarios for a wide range of modern self-driving systems. Furthermore, we show that the robustness and safety of these systems can be further improved by training them with scenarios generated by AdvSim.
 
 </details>
-
-## 🆕 增量新增
 
 ### Multi-Modal Fusion Transformer for End-to-End Autonomous Driving. **⭐⭐⭐⭐⭐** (相关度: 95%)
 - **链接**: [arXiv:2104.09224](https://arxiv.org/abs/2104.09224) · 📚 被引 548
@@ -128,4 +151,5 @@
 - Progressive Coordinate Transforms for Monocular 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
 - 3D Siamese Voxel-to-BEV Tracker for Sparse Point Clouds. → [bev](../bev/Guideline%202021.md)
 - Multimodal Virtual Point 3D Detection. → [3d-detection](../3d-detection/Guideline%202021.md)
+
 <!-- COMPLETE v1 papers=9 -->

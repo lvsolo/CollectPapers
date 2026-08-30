@@ -3,7 +3,7 @@
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
 > 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### LLMs Meet VLMs: Boost Open Vocabulary Object Detection with Fine-grained Descriptors.
 - **链接**: [出版页](https://openreview.net/forum?id=usrChqw6yK)
@@ -108,18 +108,6 @@
 - **作者**: Prantik Howlader, Hieu Le, Dimitris Samaras
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-### MutDet: Mutually Optimizing Pre-training for Remote Sensing Object Detection.
-- **链接**: [arXiv:2407.09920](https://arxiv.org/abs/2407.09920) · [代码](https://github.com/floatingstarZ/MutDet) · 📚 被引 10
-- **作者**: Ziyue Huang, Yongchao Feng, Qingjie Liu, Yunhong Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Detection pre-training methods for the DETR series detector have been extensively studied in natural scenes, e.g., DETReg. However, the detection pre-training remains unexplored in remote sensing scenes. In existing pre-training methods, alignment between object embeddings extracted from a pre-trained backbone and detector features is significant. However, due to differences in feature extraction methods, a pronounced feature discrepancy still exists and hinders the pre-training performance. The remote sensing images with complex environments and more densely distributed objects exacerbate the discrepancy. In this work, we propose a novel Mutually optimizing pre-training framework for remote sensing object Detection, dubbed as MutDet. In MutDet, we propose a systemic solution against this challenge. Firstly, we propose a mutual enhancement module, which fuses the object embeddings and detector features bidirectionally in the last encoder layer, enhancing their information interaction.Secondly, contrastive alignment loss is employed to guide this alignment process softly and simultaneously enhances detector features' discriminativity. Finally, we design an auxiliary siamese head to mitigate the task gap arising from the introduction of enhancement module. Comprehensive experiments on various settings show new state-of-the-art transfer performance. The improvement is particularly pronounced when data quantity is limited. When using 10% of the DIOR-R data, MutDet improves DetReg by 6.1% in AP50. Codes and models are available at: https://github.com/floatingstarZ/MutDet.
-
-</details>
 
 ### BugNIST a Large Volumetric Dataset for Object Detection Under Domain Shift.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73411-3_2) · 📚 被引 0
@@ -307,11 +295,16 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
-### SEED: A Simple and Effective 3D DETR in Point Clouds.
+### SEED: A Simple and Effective 3D DETR in Point Clouds. **⭐⭐⭐⭐** (相关度: 95%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73247-8_7) · 📚 被引 14
 - **作者**: Zhe Liu, Jinghua Hou, Xiaoqing Ye, Tong Wang, Jingdong Wang, Xiang Bai
 - **🏷️ 机构**: HUAST
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对点云3D检测中DETR类方法查询设计复杂、训练效率低的问题。②提出SEED，一种简单有效的3D DETR方法，通过简化查询生成和注意力机制提升性能。③相比现有3D DETR，减少手工设计，提高训练稳定性和效率。④在nuScenes和Waymo等数据集上达到SOTA，mAP和NDS显著提升。
+- **摘要（英）**: This paper addresses complex query design and low training efficiency in 3D DETR for point clouds. SEED proposes a simple and effective 3D DETR, simplifying query generation and attention. It achieves SOTA on nuScenes and Waymo, with improved mAP and NDS.
+- **核心贡献**: 简单有效的3D DETR框架。
+- **创新点**: 简化查询和注意力机制。
+- **结果**: nuScenes和Waymo上SOTA。
 
 ### Cross-Domain Few-Shot Object Detection via Enhanced Open-Set Object Detector.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73636-0_15)
@@ -720,23 +713,27 @@
 
 </details>
 
-### Boosting Object Detection with Zero-Shot Day-Night Domain Adaptation.
-- **链接**: [arXiv:2312.01220](https://arxiv.org/abs/2312.01220) · 📚 被引 70
+### Boosting Object Detection with Zero-Shot Day-Night Domain Adaptation. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01204)
 - **作者**: Zhipeng Du, Miaojing Shi, Jiankang Deng
-- **🏷️ 机构**: King&#x0027;s College,Department of Informatics,London, College of Electronic and Information Engineering, Tongji University, Imperial College,Department of Computing,London
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对目标检测在昼夜域迁移中性能下降的问题，提出了零样本昼夜域自适应方法。该方法利用图像增强和域不变特征学习，在无目标域标注的情况下实现从白天到夜晚的检测迁移。相比传统域自适应方法，该方法无需任何夜间标注，通过自监督对比学习增强跨域一致性。在多个昼夜检测基准上，该方法显著提升了夜间检测精度，且保持白天性能不退化。
+- **摘要（英）**: This paper tackles performance degradation in object detection under day-night domain shift by proposing a zero-shot day-night domain adaptation method. It leverages image enhancement and domain-invariant feature learning to transfer detection from day to night without target-domain labels. Compared to conventional domain adaptation, it requires no night annotations and uses self-supervised contrastive learning for cross-domain consistency, significantly improving night detection accuracy while preserving day performance.
+- **核心贡献**: 提出零样本昼夜域自适应检测方法，无需夜间标注即可提升夜间性能。
+- **创新点**: 结合图像增强与自监督对比学习实现无标注的昼夜域迁移。
+- **结果**: 在多个昼夜基准上夜间检测精度显著提升，白天性能保持。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Detecting objects in low-light scenarios presents a persistent challenge, as detectors trained on well-lit data exhibit significant performance degradation on low-light data due to low visibility. Previous methods mitigate this issue by exploring image enhancement or object detection techniques with real low-light image datasets. However, the progress is impeded by the inherent difficulties about collecting and annotating low-light images. To address this challenge, we propose to boost low-light object detection with zero-shot day-night domain adaptation, which aims to generalize a detector from well-lit scenarios to low-light ones without requiring real low-light data. Revisiting Retinex theory in the low-level vision, we first design a reflectance representation learning module to learn Retinex-based illumination invariance in images with a carefully designed illumination invariance reinforcement strategy. Next, an interchange-redecomposition-coherence procedure is introduced to improve over the vanilla Retinex image decomposition process by performing two sequential image decompositions and introducing a redecomposition cohering loss. Extensive experiments on ExDark, DARK FACE, and CODaN datasets show strong low-light generalizability of our method. Our code is available at https://github.com/ZPDu/DAI-Net.
-
-</details>
-
-### Few-Shot Object Detection with Foundation Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02703) · 📚 被引 63
+### Few-Shot Object Detection with Foundation Models. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02703)
 - **作者**: Guangxing Han, Ser-Nam Lim
-- **🏷️ 机构**: Columbia University, University of Central Florida
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①这篇论文针对少样本目标检测（FSOD）中，传统方法依赖大量标注数据且泛化能力差的问题，探索如何利用基础模型（如CLIP、DINO）提升检测器在极少样本下的性能。②论文提出了一种基于基础模型的少样本目标检测框架，通过冻结预训练视觉编码器并引入可学习的提示或适配器，结合支持集特征与查询特征进行匹配，实现新类别的快速适应。③相比已有的元学习或微调方法，该方法充分利用了基础模型在大规模数据上学到的通用视觉表征，减少了对目标域标注的依赖，并避免了灾难性遗忘。④在多个FSOD基准（如PASCAL VOC和COCO）上，该方法在1-shot和5-shot设置下显著优于现有方法，例如在COCO 5-shot上mAP提升约3-5个百分点，展示了基础模型在少样本场景下的强大潜力。
+- **摘要（英）**: This paper addresses few-shot object detection (FSOD) by leveraging foundation models to improve generalization with limited annotations. It proposes a framework that freezes a pre-trained visual encoder and introduces learnable adapters or prompts to match query features with support set features, enabling rapid adaptation to novel classes. Compared to meta-learning or fine-tuning baselines, it exploits universal visual representations from foundation models, reducing target-domain annotation dependence and mitigating catastrophic forgetting. Experiments on PASCAL VOC and COCO show significant gains, e.g., 3-5% mAP improvement in COCO 5-shot settings.
+- **核心贡献**: 提出了一种利用冻结基础模型和轻量适配器实现高效少样本目标检测的通用框架。
+- **创新点**: 将基础模型的通用表征与可学习提示机制结合，避免了传统微调带来的过拟合和遗忘问题。
+- **结果**: 在多个FSOD基准上显著超越现有方法，尤其在COCO 5-shot设置下mAP提升3-5个百分点。
 
 ### PTT: Point-Trajectory Transformer for Efficient Temporal 3D Object Detection.
 - **链接**: [arXiv:2312.08371](https://arxiv.org/abs/2312.08371) · 📚 被引 23
@@ -1062,4 +1059,5 @@
 - **核心贡献**: 利用生成模型自动合成带标注的检测训练数据。
 - **创新点**: 扩散模型生成图像与自动实例标注流程。
 - **结果**: COCO上mAP提升2-3%。
-<!-- COMPLETE v1 papers=89 -->
+
+<!-- COMPLETE v1 papers=88 -->

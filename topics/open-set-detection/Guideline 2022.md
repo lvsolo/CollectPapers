@@ -3,13 +3,18 @@
 > 领域: 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）
 > 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Open-Vocabulary One-Stage Detection with Hierarchical Visual-Language Knowledge Distillation.
+### Open-Vocabulary One-Stage Detection with Hierarchical Visual-Language Knowledge Distillation. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2203.10593](https://arxiv.org/abs/2203.10593) · 📚 被引 39
 - **作者**: Zongyang Ma, Guan Luo, Jin Gao, Liang Li, Yuxin Chen, Shaoru Wang et al.
 - **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences,NLPR, Beijing Institute of Basic Medical Sciences,Brain Science Center, Nanchana Hangkong University
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对开放词汇单阶段检测器中未见类别知识蒸馏困难的问题，提出层次化视觉-语言知识蒸馏方法（HierKD）。通过全局级知识蒸馏转移未见类别知识，并结合实例级蒸馏同时学习已知和未知类别。在MS-COCO上，零样本检测和广义零样本检测的AP50分别提升11.9%和6.7%。
+- **摘要（英）**: This paper addresses the challenge of knowledge distillation for unseen categories in open-vocabulary one-stage detectors, proposing hierarchical visual-language knowledge distillation (HierKD). It transfers unseen category knowledge via global-level distillation and combines with instance-level distillation. Experiments on MS-COCO show AP50 gains of 11.9% and 6.7% in zero-shot and generalized zero-shot detection.
+- **核心贡献**: 提出层次化知识蒸馏框架，解决单阶段开放词汇检测的未见类别学习问题。
+- **创新点**: 全局与实例级蒸馏结合，同时学习已知和未知类别知识。
+- **结果**: 在MS-COCO上显著提升开放词汇检测性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -240,11 +245,16 @@
 - **创新点**: 通过视觉-语言对齐实现无需像素级标注的开放词汇分割。
 - **结果**: 在多个基准上达到与全监督方法相当的性能。
 
-### Towards Open-Vocabulary Scene Graph Generation with Prompt-Based Finetuning.
+### Towards Open-Vocabulary Scene Graph Generation with Prompt-Based Finetuning. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2208.08165](https://arxiv.org/abs/2208.08165) · 📚 被引 46
 - **作者**: Tao He, Lianli Gao, Jingkuan Song, Yuan-Fang Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
+- **摘要（中）**: ①该论文针对传统场景图生成（SGG）方法只能在封闭类别集合上工作、无法处理训练中未见的目标类别的问题，提出了开放词汇场景图生成（Ov-SGG）这一新任务。②方法分为两步：首先在大规模粗粒度区域-文本描述数据上预训练模型，然后利用两种基于提示（prompt）的技术在不更新模型参数的情况下进行微调，从而实现对完全未见目标类别的关系推断。③相比现有SGG方法，该方法的创新在于支持对完全未见类别的推理，突破了封闭设定的限制，且无需更新预训练参数。④在Visual Genome、GQA和Open-Image三个基准数据集上的实验表明，该方法在Ov-SGG设定下显著优于近期强SGG方法，同时在传统封闭SGG设定下也表现更优。
+- **摘要（英）**: This paper addresses the limitation of conventional scene graph generation (SGG) methods that require all object classes in training, proposing a novel open-vocabulary SGG (Ov-SGG) setting where models must infer relations for unseen classes. The proposed two-step method pre-trains on coarse-grained region-caption data and then applies two prompt-based finetuning techniques without updating parameters, enabling inference over completely unseen object classes. Experiments on Visual Genome, GQA, and Open-Image show significant improvements over strong SGG baselines in both Ov-SGG and closed-set settings.
+- **核心贡献**: 提出了开放词汇场景图生成任务及一种基于提示微调的两步方法，支持对完全未见类别的推理。
+- **创新点**: 利用提示技术在不更新预训练参数的情况下实现开放词汇关系推断，突破了封闭类别设定的限制。
+- **结果**: 在三个基准数据集上显著优于现有SGG方法，同时保持封闭设定下的竞争力。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -332,4 +342,5 @@
 - Few-Shot Class-Incremental Learning for 3D Point Cloud Objects. → [continual-learning](../continual-learning/Guideline%202022.md)
 - Motion Inspired Unsupervised Perception and Prediction in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202022.md)
 - Few-Shot Class-Incremental Learning from an Open-Set Perspective. → [continual-learning](../continual-learning/Guideline%202022.md)
+
 <!-- COMPLETE v1 papers=24 -->

@@ -3,7 +3,7 @@
 > 领域: 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）
 > 论文数: 20 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### Global-Local Collaborative Inference with LLM for Lidar-Based Open-Vocabulary Detection.
 - **链接**: [arXiv:2407.08931](https://arxiv.org/abs/2407.08931) · [代码](https://github.com/GradiusTwinbee/GLIS) · 📚 被引 4
@@ -470,17 +470,16 @@
 
 </details>
 
-### OMG: Towards Open-vocabulary Motion Generation via Mixture of Controllers.
-- **链接**: [arXiv:2312.08985](https://arxiv.org/abs/2312.08985) · 📚 被引 29
+### OMG: Towards Open-vocabulary Motion Generation via Mixture of Controllers. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00053)
 - **作者**: Han Liang, Jiacheng Bao, Ruichi Zhang, Sihan Ren, Yuecheng Xu, Sibei Yang et al.
-- **🏷️ 机构**: ShanghaiTecn University, Tencent PCG
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We have recently seen tremendous progress in realistic text-to-motion generation. Yet, the existing methods often fail or produce implausible motions with unseen text inputs, which limits the applications. In this paper, we present OMG, a novel framework, which enables compelling motion generation from zero-shot open-vocabulary text prompts. Our key idea is to carefully tailor the pretrain-then-finetune paradigm into the text-to-motion generation. At the pre-training stage, our model improves the generation ability by learning the rich out-of-domain inherent motion traits. To this end, we scale up a large unconditional diffusion model up to 1B parameters, so as to utilize the massive unlabeled motion data up to over 20M motion instances. At the subsequent fine-tuning stage, we introduce motion ControlNet, which incorporates text prompts as conditioning information, through a trainable copy of the pre-trained model and the proposed novel Mixture-of-Controllers (MoC) block. MoC block adaptively recognizes various ranges of the sub-motions with a cross-attention mechanism and processes them separately with the text-token-specific experts. Such a design effectively aligns the CLIP token embeddings of text prompts to various ranges of compact and expressive motion features. Extensive experiments demonstrate that our OMG achieves significant improvements over the state-of-the-art methods on zero-shot text-to-motion generation. Project page: https://tr3e.github.io/omg-page.
-
-</details>
+- **摘要（中）**: ①针对开放词汇运动生成中，现有模型难以处理多样化和未见过的运动类别的问题。②提出OMG框架，采用混合控制器（Mixture of Controllers）结合多个专家模块，以应对不同运动模式。③相比单一模型，该方法通过控制器混合增强了对新运动类别的适应性和生成质量。④摘要未提供具体数值，但声称在开放词汇运动生成任务上优于现有方法。
+- **摘要（英）**: This paper addresses the challenge of open-vocabulary motion generation by introducing OMG, a mixture-of-controllers framework that combines multiple expert modules for diverse motion patterns. It improves adaptability to unseen categories compared to single-model approaches. The method claims superior performance, though specific metrics are not given in the abstract.
+- **核心贡献**: 提出混合控制器框架用于开放词汇运动生成。
+- **创新点**: 通过控制器混合增强对多样运动模式的建模能力。
+- **结果**: 在开放词汇运动生成上优于现有方法，但无具体数据。
 
 ### Open-Vocabulary Segmentation with Semantic-Assisted Calibration.
 - **链接**: [arXiv:2312.04089](https://arxiv.org/abs/2312.04089)
@@ -1009,4 +1008,5 @@
 - **作者**: Bin Xie, Jiale Cao, Jin Xie, Fahad Shahbaz Khan, Yanwei Pang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+
 <!-- COMPLETE v1 papers=79 -->

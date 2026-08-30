@@ -3,13 +3,18 @@
 > 领域: 知识蒸馏（特征/逻辑蒸馏、VLM 蒸馏、自蒸馏）
 > 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Periodically Exchange Teacher-Student for Source-Free Object Detection.
+### Periodically Exchange Teacher-Student for Source-Free Object Detection. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2311.13930](https://arxiv.org/abs/2311.13930) · 📚 被引 45
 - **作者**: Qipeng Liu, Luojun Lin, Zhifeng Shen, Zhifeng Yang
 - **🏷️ 机构**: Fuzhou University,College of Computer and Data Science
 - **会议**: ICCV 2023
+- **摘要（中）**: 针对源自由目标检测（SFOD）中均值教师框架的训练不稳定问题，本文提出PETS方法，引入多教师框架（静态教师、动态教师和学生）。方法上，周期性地在静态教师和学生之间交换权重，并用学生模型的移动平均更新动态教师。相比已有单教师方法，PETS减少误差累积，提升训练稳定性。实验表明，PETS在多个域适应检测基准上取得最优性能。
+- **摘要（英）**: This paper proposes PETS, a multiple-teacher framework for source-free object detection, addressing training instability in mean-teacher paradigms. It periodically exchanges weights between a static teacher and student, and updates a dynamic teacher via moving average, reducing error accumulation. The method achieves state-of-the-art performance on multiple domain adaptation benchmarks.
+- **核心贡献**: 提出PETS方法，通过多教师周期交换提升源自由目标检测的稳定性。
+- **创新点**: 创新点在于静态与动态教师结合，周期交换权重减少误差累积。
+- **结果**: 在多个基准上取得最优性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,19 +22,33 @@
 
 </details>
 
-### Masked Retraining Teacher-Student Framework for Domain Adaptive Object Detection.
+### Masked Retraining Teacher-Student Framework for Domain Adaptive Object Detection. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01745) · 📚 被引 49
 - **作者**: Zijing Zhao, Sitong Wei, Qingchao Chen, Dehui Li, Yifan Yang, Yuxin Peng et al.
 - **🏷️ 机构**: Peking University,Wangxuan Institute of Computer Technology, Peking University,National Institute of Health Data Science, Tencent Intelligent Mobility
 - **会议**: ICCV 2023
+- **摘要（中）**: 针对域自适应目标检测中教师-学生框架的伪标签噪声问题，本文提出掩码重训练教师-学生框架。方法上，通过掩码策略重训练教师模型，生成更可靠的伪标签，并指导学生模型学习。相比已有方法，该框架减少噪声传播，提升域适应性能。实验表明，该方法在多个域适应数据集上取得改进。
+- **摘要（英）**: This paper proposes a masked retraining teacher-student framework for domain adaptive object detection, addressing pseudo-label noise. It retrains the teacher with masking strategies to generate reliable pseudo-labels, improving adaptation performance. The method reduces noise propagation and achieves improvements on multiple benchmarks.
+- **核心贡献**: 提出掩码重训练教师-学生框架，提升域适应目标检测性能。
+- **创新点**: 创新点在于掩码策略用于教师重训练。
+- **结果**: 在多个数据集上取得改进。
 
-### TSOSVNet: Teacher-student collaborative knowledge distillation for Online Signature Verification.
+### TSOSVNet: Teacher-student collaborative knowledge distillation for Online Signature Verification. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00082) · 📚 被引 2
 - **作者**: Chandra Sekhar Vorugunti, Avinash Gautam, Viswanath Pulabaigari, Sreeja SR, Rama Krishna Sai G
 - **🏷️ 机构**: IIIT-SriCity,Andhra Pradesh,India, BITS-Pilani,India, IIT-Tirupati,Andhra Pradesh,India
 - **会议**: ICCV 2023
+- **摘要（中）**: 针对在线签名验证中模型泛化能力不足的问题，本文提出TSOSVNet，采用教师-学生协作知识蒸馏框架。方法上，通过多教师协作蒸馏，提升学生模型的特征表示能力。相比已有方法，该框架增强模型鲁棒性。实验表明，TSOSVNet在多个签名验证数据集上取得改进。
+- **摘要（英）**: This paper proposes TSOSVNet, a teacher-student collaborative knowledge distillation framework for online signature verification. It uses multiple teachers to distill knowledge, improving feature representation and robustness. The method achieves improvements on multiple signature verification datasets.
+- **核心贡献**: 提出TSOSVNet，通过协作蒸馏提升在线签名验证性能。
+- **创新点**: 创新点在于多教师协作蒸馏。
+- **结果**: 在多个数据集上取得改进。
 
-## 🆕 增量新增
+## 跨领域论文（完整笔记在其他领域）
+
+- Foundation Model Drives Weakly Incremental Learning for Semantic Segmentation. → [continual-learning](../continual-learning/Guideline%202023.md)
+- Masked Video Distillation: Rethinking Masked Feature Modeling for Self-supervised Video Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
+- DriveAdapter: Breaking the Coupling Barrier of Perception and Planning in End-to-End Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202023.md)
 
 ### Complete-to-Partial 4D Distillation for Self-Supervised Point Cloud Sequence Representation Learning. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2212.05330](https://arxiv.org/abs/2212.05330) · 📚 被引 23
@@ -64,4 +83,5 @@
 > This paper presents a simple yet effective framework MaskCLIP, which incorporates a newly proposed masked self-distillation into contrastive language-image pretraining. The core idea of masked self-distillation is to distill representation from a full image to the representation predicted from a masked image. Such incorporation enjoys two vital benefits. First, masked self-distillation targets local patch representation learning, which is complementary to vision-language contrastive focusing on text-related representation. Second, masked self-distillation is also consistent with vision-language contrastive from the perspective of training objective as both utilize the visual encoder for feature aligning, and thus is able to learn local semantics getting indirect supervision from the language. We provide specially designed experiments with a comprehensive analysis to validate the two benefits. Symmetrically, we also introduce the local semantic supervision into the text branch, which further improves the pretraining performance. With extensive experiments, we show that MaskCLIP, when applied to various challenging downstream tasks, achieves superior results in linear probing, finetuning, and zero-shot performance with the guidance of the language encoder. Code will be release at \url{https://github.com/LightDXY/MaskCLIP}.
 
 </details>
+
 <!-- COMPLETE v1 papers=5 -->

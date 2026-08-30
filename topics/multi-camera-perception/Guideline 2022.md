@@ -3,7 +3,7 @@
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
 > 论文数: 33 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### Multi-View Depth Estimation by Fusing Single-View Depth Probability with Multi-View Geometry.
 - **链接**: [arXiv:2112.08177](https://arxiv.org/abs/2112.08177) · [代码](https://github.com/baegwangbin/MaGNet) · 📚 被引 60
@@ -143,11 +143,16 @@
 
 </details>
 
-### Assembly101: A Large-Scale Multi-View Video Dataset for Understanding Procedural Activities.
+### Assembly101: A Large-Scale Multi-View Video Dataset for Understanding Procedural Activities. **⭐⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2203.14712](https://arxiv.org/abs/2203.14712) · 📚 被引 201
 - **作者**: Fadime Sener, Dibyadip Chatterjee, Daniel Shelepov, Kun He, Dipika Singhania, Robert Wang et al.
 - **🏷️ 机构**: Meta Reality Labs Research, National University of Singapore
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对程序性活动理解中缺乏大规模多视角数据集的问题，现有数据集通常规模小、视角单一且动作序列固定。②提出了Assembly101数据集，包含4321个视频，记录101种可拆卸玩具车辆的组装与拆卸过程，同时采集8个静态视角和4个第一人称视角，并提供了超过100K粗粒度、1M细粒度动作片段和18M 3D手部姿态的标注。③相比已有工作，该数据集首次结合多视角与第一人称视角，且动作序列自然多变，包含错误和纠正，支持跨视角迁移、长尾分布等研究。④在动作识别、预测和时间分割三个任务上进行了基准测试，并提出了错误检测新任务，为活动理解提供了新挑战。
+- **摘要（英）**: This paper introduces Assembly101, a large-scale multi-view procedural activity dataset with 4321 videos of assembling/disassembling toy vehicles, featuring 8 static and 4 egocentric views and rich annotations including 100K coarse and 1M fine-grained action segments and 18M 3D hand poses. It benchmarks action recognition, anticipation, and temporal segmentation, and proposes a novel mistake detection task, enabling studies on generalization, cross-view transfer, and long-tailed distributions.
+- **核心贡献**: 提供了首个大规模多视角程序性活动数据集，并引入错误检测新任务。
+- **创新点**: 多视角与第一人称视角同步录制，且动作序列自然多变。
+- **结果**: 在多个任务上建立基准，推动活动理解研究。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -353,17 +358,16 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
 
-### Emotion-aware Multi-view Contrastive Learning for Facial Emotion Recognition.
+### Emotion-aware Multi-view Contrastive Learning for Facial Emotion Recognition. **⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19778-9_11) · 📚 被引 16
 - **作者**: Dae Ha Kim, Byung Cheol Song
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2022
-
-## 跨领域论文（完整笔记在其他领域）
-
-- A Versatile Multi-View Framework for LiDAR-based 3D Object Detection with Guidance from Panoptic Segmentation. → [3d-detection](../3d-detection/Guideline%202022.md)
-
-## 🆕 增量新增
+- **摘要（中）**: ①针对面部表情识别中情感信息利用不足的问题。②提出情感感知的多视图对比学习方法，结合情感标签增强特征学习。③相比标准对比学习，引入情感感知机制提升识别性能。④摘要未提供具体数据，但强调情感感知的有效性。
+- **摘要（英）**: This paper addresses insufficient emotion information in facial emotion recognition, proposing emotion-aware multi-view contrastive learning to incorporate emotion labels for better feature learning. It enhances recognition over standard contrastive methods, though specific results are not detailed.
+- **核心贡献**: 提出情感感知的多视图对比学习用于面部表情识别。
+- **创新点**: 将情感信息融入对比学习框架。
+- **结果**: 识别性能提升，但未量化。
 
 ### SpatialDETR: Robust Scalable Transformer-Based 3D Object Detection From Multi-view Camera Images With Global Cross-Sensor Attention. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19842-7_14) · 📚 被引 24
@@ -697,4 +701,5 @@
 - PPT: Token-Pruned Pose Transformer for Monocular and Multi-view Human Pose Estimation. → [network-pruning](../network-pruning/Guideline%202022.md)
 - MvDeCor: Multi-view Dense Correspondence Learning for Fine-Grained 3D Segmentation. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
 - DevNet: Self-supervised Monocular Depth Learning via Density Volume Construction. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
+
 <!-- COMPLETE v1 papers=65 -->

@@ -3,7 +3,7 @@
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
 > 论文数: 37 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### Self-supervised object detection from audio-visual correspondence.
 - **链接**: [arXiv:2104.06401](https://arxiv.org/abs/2104.06401) · 📚 被引 40
@@ -29,11 +29,16 @@
 
 </details>
 
-### Text2Pos: Text-to-Point-Cloud Cross-Modal Localization.
+### Text2Pos: Text-to-Point-Cloud Cross-Modal Localization. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2203.15125](https://arxiv.org/abs/2203.15125) · 📚 被引 26
 - **作者**: Manuel Kolmet, Qunjie Zhou, Aljosa Osep, Laura Leal-Taixé
 - **🏷️ 机构**: Technical University of Munich,Germany
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对自然语言描述与3D点云环境之间的跨模态定位问题，旨在通过文本指定车辆接驳或货物配送位置。②提出了Text2Pos，一个跨模态定位模块，采用从粗到细的方式对齐文本描述与点云中的定位线索。③构建了KITTI360Pose数据集，这是该任务的首个基准。④实验显示，在top-10检索中，65%的文本查询能在15米内定位到目标位置。
+- **摘要（英）**: This paper addresses text-to-point-cloud localization by proposing Text2Pos, a cross-modal module that aligns textual descriptions with point cloud cues in a coarse-to-fine manner. It introduces the KITTI360Pose dataset and achieves 65% localization accuracy within 15m for top-10 retrievals.
+- **核心贡献**: 首次提出文本到点云定位任务并构建基准数据集。
+- **创新点**: 采用粗到细的跨模态对齐策略。
+- **结果**: 在KITTI360Pose上实现65%的top-10定位精度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,11 +46,16 @@
 
 </details>
 
-### Multimodal Colored Point Cloud to Image Alignment.
+### Multimodal Colored Point Cloud to Image Alignment. **⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00654) · 📚 被引 4
 - **作者**: Noam Rotstein, Amit Bracha, Ron Kimmel
 - **🏷️ 机构**: Technion - Israel Institute of Technology
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对彩色点云与图像对齐问题，可能涉及多模态数据配准。②摘要缺失，无法详细评估方法。③缺乏具体信息，难以判断创新点。④效果未知。
+- **摘要（英）**: This paper addresses multimodal colored point cloud to image alignment, but the abstract is missing, limiting detailed assessment. No specific methods or results are available.
+- **核心贡献**: 未知，摘要缺失。
+- **创新点**: 未知。
+- **结果**: 未知。
 
 ### Open-Vocabulary Instance Segmentation via Robust Cross-Modal Pseudo-Labeling.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00689)
@@ -101,11 +111,16 @@
 
 </details>
 
-### Learnable Irrelevant Modality Dropout for Multimodal Action Recognition on Modality-Specific Annotated Videos.
+### Learnable Irrelevant Modality Dropout for Multimodal Action Recognition on Modality-Specific Annotated Videos. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01957) · 📚 被引 30
 - **作者**: Saghir Alfasly, Jian Lu, Chen Xu, Yuru Zou
 - **🏷️ 机构**: Shenzhen University,Shenzhen Key Laboratory of Advanced Machine Learning and Applications,China
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对多模态动作识别中，模态特定标注视频导致模态缺失或噪声的问题。②提出了可学习的无关模态丢弃方法，在训练中动态丢弃不相关模态，增强模型鲁棒性。③相比固定丢弃策略，可学习机制适应不同样本。④在动作识别任务上提升了性能，但具体数据未提供。
+- **摘要（英）**: This paper addresses multimodal action recognition with modality-specific annotated videos by proposing a learnable irrelevant modality dropout method. It dynamically drops irrelevant modalities during training, improving robustness and performance, though specific results are not detailed.
+- **核心贡献**: 提出可学习的模态丢弃策略，处理模态缺失问题。
+- **创新点**: 动态学习丢弃不相关模态，提升泛化性。
+- **结果**: 在动作识别任务上性能提升，但未提供具体数值。
 
 ### End-to-End Referring Video Object Segmentation with Multimodal Transformers.
 - **链接**: [arXiv:2111.14821](https://arxiv.org/abs/2111.14821) · [代码](https://github.com/mttr2021/MTTR) · 📚 被引 163
@@ -219,18 +234,6 @@
 - **🏷️ 机构**: Google Research
 - **会议**: CVPR 2022
 
-### ContIG: Self-supervised Multimodal Contrastive Learning for Medical Imaging with Genetics.
-- **链接**: [arXiv:2111.13424](https://arxiv.org/abs/2111.13424) · 📚 被引 65
-- **作者**: Aiham Taleb, Matthias Kirchler, Remo Monti, Christoph Lippert
-- **🏷️ 机构**: Hasso Plattner Institute for Digital Engineering, University of Potsdam,Germany
-- **会议**: CVPR 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> High annotation costs are a substantial bottleneck in applying modern deep learning architectures to clinically relevant medical use cases, substantiating the need for novel algorithms to learn from unlabeled data. In this work, we propose ContIG, a self-supervised method that can learn from large datasets of unlabeled medical images and genetic data. Our approach aligns images and several genetic modalities in the feature space using a contrastive loss. We design our method to integrate multiple modalities of each individual person in the same model end-to-end, even when the available modalities vary across individuals. Our procedure outperforms state-of-the-art self-supervised methods on all evaluated downstream benchmark tasks. We also adapt gradient-based explainability algorithms to better understand the learned cross-modal associations between the images and genetic modalities. Finally, we perform genome-wide association studies on the features learned by our models, uncovering interesting relationships between images and genetic data.
-
-</details>
-
 ### Dual-Key Multimodal Backdoors for Visual Question Answering.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01494) · 📚 被引 28
 - **作者**: Matthew Walmer, Karan Sikka, Indranil Sur, Abhinav Shrivastava, Susmit Jha
@@ -273,27 +276,33 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
 
-### Interact before Align: Leveraging Cross-Modal Knowledge for Domain Adaptive Action Recognition.
+### Interact before Align: Leveraging Cross-Modal Knowledge for Domain Adaptive Action Recognition. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01431) · 📚 被引 32
 - **作者**: Lijin Yang, Yifei Huang, Yusuke Sugano, Yoichi Sato
 - **🏷️ 机构**: Institute of Industrial Science, The University of Tokyo
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对无监督域适应动作识别中，跨模态对齐前缺乏有效交互导致域偏移问题。②提出在特征对齐前先进行跨模态知识交互的方法，利用多模态信息增强域适应能力。③相比直接对齐方法，强调交互阶段对模态互补性的利用。④摘要缺失，无法提供具体数据，但方法设计具有合理性。
+- **摘要（英）**: This paper addresses the problem of unsupervised domain adaptation in action recognition by proposing a cross-modal interaction step before alignment. It leverages multimodal knowledge to improve domain adaptation, though specific results are unavailable due to missing abstract details.
+- **核心贡献**: 提出交互-对齐两阶段框架用于域适应动作识别。
+- **创新点**: 在域适应中引入跨模态交互前置阶段。
+- **结果**: 摘要未提供具体数据。
 
-### Robust Cross-Modal Representation Learning with Progressive Self-Distillation.
+### Robust Cross-Modal Representation Learning with Progressive Self-Distillation. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2204.04588](https://arxiv.org/abs/2204.04588) · 📚 被引 46
 - **作者**: Alex Andonian, Shixing Chen, Raffay Hamid
 - **🏷️ 机构**: MIT CSAIL, Amazon Prime Video
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对CLIP在噪声图文数据上训练效率低、表示鲁棒性不足的问题。②提出渐进自蒸馏框架，通过模型自身生成软对齐目标，动态调整图像-文本匹配。③相比CLIP，无需额外计算成本，通过软对齐缓解噪声对应关系。④在14个基准数据集上，零样本分类、线性探测和图文检索均优于CLIP，且对自然分布偏移具有更好的有效鲁棒性。
+- **摘要（英）**: This paper tackles the inefficiency of CLIP training on noisy web data by introducing progressive self-distillation with soft image-text alignments. The method dynamically generates soft targets from the model itself, improving robustness without extra compute. It outperforms CLIP across 14 benchmarks in zero-shot, linear probe, and retrieval, with better effective robustness to distribution shifts.
+- **核心贡献**: 提出渐进自蒸馏的跨模态对比学习框架，提升噪声数据下的表示质量。
+- **创新点**: 利用模型自身知识生成软对齐目标，替代硬标签。
+- **结果**: 在14个数据集上全面超越CLIP，且鲁棒性更优。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > The learning objective of vision-language approach of CLIP does not effectively account for the noisy many-to-many correspondences found in web-harvested image captioning datasets, which contributes to its compute and data inefficiency. To address this challenge, we introduce a novel training framework based on cross-modal contrastive learning that uses progressive self-distillation and soft image-text alignments to more efficiently learn robust representations from noisy data. Our model distills its own knowledge to dynamically generate soft-alignment targets for a subset of images and captions in every minibatch, which are then used to update its parameters. Extensive evaluation across 14 benchmark datasets shows that our method consistently outperforms its CLIP counterpart in multiple settings, including: (a) zero-shot classification, (b) linear probe transfer, and (c) image-text retrieval, without incurring added computational cost. Analysis using an ImageNet-based robustness test-bed reveals that our method offers better effective robustness to natural distribution shifts compared to both ImageNet-trained models and CLIP itself. Lastly, pretraining with datasets spanning two orders of magnitude in size shows that our improvements over CLIP tend to scale with number of training examples.
 
 </details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The learning objective of vision-language approach of CLIP does not effectively account for the noisy many-to-many correspondences found in web-harvested image captioning datasets, which contributes to its compute and data inefficiency. To address this challenge, we introduce a novel training framework based on cross-modal contrastive learning that uses progressive self-distillation and soft image-text alignments to more efficiently learn robust representations from noisy data. Our model distills its own knowledge to dynamically generate soft-alignment targets for a subset of images and captions in every minibatch, which are then used to update its parameters. Extensive evaluation across 14 benchmark datasets shows that our method consistently outperforms its CLIP counterpart in multiple settings, including: (a) zero-shot classification, (b) linear probe transfer, and (c) image-text retrieval, without incurring added computational cost. Analysis using an ImageNet-based robustness test-bed reveals that our method offers better effective robustness to natural distribution shifts compared to both ImageNet-trained models and CLIP itself. Lastly, pretraining with datasets spanning two orders of magnitude in size shows that our improvements over CLIP tend to scale with number of training examples.
 
 ### Scaling Multimodal Pre-Training via Cross-Modality Gradient Harmonization.
 - **链接**: [arXiv:2211.02077](https://arxiv.org/abs/2211.02077) · 📚 被引 2
@@ -567,4 +576,5 @@
 - Learning Visual Representation from Modality-Shared Contrastive Language-Image Pre-training. → [vlm](../vlm/Guideline%202022.md)
 - DeepInteraction: 3D Object Detection via Modality Interaction. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Let Images Give You More: Point Cloud Cross-Modal Training for Shape Analysis. → [knowledge-distillation](../knowledge-distillation/Guideline%202022.md)
-<!-- COMPLETE v1 papers=56 -->
+
+<!-- COMPLETE v1 papers=55 -->

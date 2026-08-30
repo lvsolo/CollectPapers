@@ -3,49 +3,78 @@
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
 > 论文数: 19 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Object as Hotspots: An Anchor-Free 3D Object Detection Approach via Firing of Hotspots.
-- **链接**: [arXiv:1912.12791](https://arxiv.org/abs/1912.12791) · 📚 被引 132
+### Object as Hotspots: An Anchor-Free 3D Object Detection Approach via Firing of Hotspots. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58589-1_5)
 - **作者**: Qi Chen, Lin Sun, Zhixin Wang, Kui Jia, Alan L. Yuille
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **会议**: ECCV 2020
+- **摘要（中）**: ①该论文针对3D目标检测中锚点方法在稀疏点云上的局限性，现有方法依赖预定义锚点导致效率低和泛化差。②提出了基于热点（Hotspots）的无锚点3D检测方法，通过预测目标的热点位置并直接回归边界框，简化了检测流程。③相比锚点方法，该方法无需锚点设计，提高了检测效率和灵活性，适用于LiDAR点云。④摘要未提供具体数值，但方法在标准数据集上展示了竞争力，具体效果需查阅全文。
+- **摘要（英）**: This paper addresses limitations of anchor-based 3D detection in sparse point clouds by proposing an anchor-free approach based on hotspots, which predicts target locations and regresses boxes directly. It eliminates anchor design, improving efficiency and flexibility, though specific results are not detailed in the abstract.
+- **核心贡献**: 提出了基于热点的无锚点3D检测方法，简化了检测流程。
+- **创新点**: 利用热点预测替代锚点机制，实现端到端3D检测。
+- **结果**: 在标准数据集上展示了竞争力，但摘要未提供具体数值。
 
-### DSGN: Deep Stereo Geometry Network for 3D Object Detection.
-- **链接**: [arXiv:2001.03398](https://arxiv.org/abs/2001.03398) · [代码](https://github.com/chenyilun95/DSGN) · 📚 被引 179
+### DSGN: Deep Stereo Geometry Network for 3D Object Detection. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2001.03398](https://arxiv.org/abs/2001.03398) · 📚 被引 179
 - **作者**: Yilun Chen, Shu Liu, Xiaoyong Shen, Jiaya Jia
 - **🏷️ 机构**: CUHK / SmartMore
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对基于图像的3D检测与LiDAR方法性能差距大的问题。②提出了Deep Stereo Geometry Network (DSGN)，通过可微的3D几何体积表示进行端到端检测。③改进点在于首次提供简单有效的单阶段立体3D检测流程，同时学习深度和语义。④在KITTI 3D检测上比先前立体方法提升约10 AP，并达到与部分LiDAR方法相当的性能。
+- **摘要（英）**: This paper addresses the large performance gap between image-based and LiDAR-based 3D detection. It proposes DSGN using a differentiable volumetric representation for end-to-end detection. The improvement lies in jointly estimating depth and detecting objects in a one-stage pipeline. It outperforms previous stereo methods by ~10 AP on KITTI and matches some LiDAR methods.
+- **核心贡献**: 提出了基于立体几何体积的端到端3D检测框架。
+- **创新点**: 利用3D几何体积同时编码深度和语义信息。
+- **结果**: 在KITTI上提升约10 AP，接近LiDAR性能。
 
-> Accurate 3D object detection in LiDAR based point clouds suffers from the challenges of data sparsity and irregularities. Existing methods strive to organize the points regularly, e.g. voxelize, pass them through a designed 2D/3D neural network, and then define object-level anchors that predict offsets of 3D bounding boxes using collective evidences from all the points on the objects of interest. Contrary to the state-of-the-art anchor-based methods, based on the very nature of data sparsity, we observe that even points on an individual object part are informative about semantic information of the object. We thus argue in this paper for an approach opposite to existing methods using object-level anchors. Inspired by compositional models, which represent an object as parts and their spatial relations, we propose to represent an object as composition of its interior non-empty voxels, termed hotspots, and the spatial relations of hotspots. This gives rise to the representation of Object as Hotspots (OHS). Based on OHS, we further propose an anchor-free detection head with a novel ground truth assignment strategy that deals with inter-object point-sparsity imbalance to prevent the network from biasing towards objects with more points. Experimental results show that our proposed method works remarkably well on objects with a small number of points. Notably, our approach ranked 1st on KITTI 3D Detection Benchmark for cyclist and pedestrian detection, and achieved state-of-the-art performance on NuScenes 3D Detection Benchmark.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Most state-of-the-art 3D object detectors heavily rely on LiDAR sensors because there is a large performance gap between image-based and LiDAR-based methods. It is caused by the way to form representation for the prediction in 3D scenarios. Our method, called Deep Stereo Geometry Network (DSGN), significantly reduces this gap by detecting 3D objects on a differentiable volumetric representation -- 3D geometric volume, which effectively encodes 3D geometric structure for 3D regular space. With this representation, we learn depth information and semantic cues simultaneously. For the first time, we provide a simple and effective one-stage stereo-based 3D detection pipeline that jointly estimates the depth and detects 3D objects in an end-to-end learning manner. Our approach outperforms previous stereo-based 3D detectors (about 10 higher in terms of AP) and even achieves comparable performance with several LiDAR-based methods on the KITTI 3D object detection leaderboard. Our code is publicly available at https://github.com/chenyilun95/DSGN.
 
 </details>
 
-### A Hierarchical Graph Network for 3D Object Detection on Point Clouds.
+### A Hierarchical Graph Network for 3D Object Detection on Point Clouds. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_A_Hierarchical_Graph_Network_for_3D_Object_Detection_on_Point_CVPR_2020_paper.html) · 📚 被引 143
 - **作者**: Jintai Chen, Biwen Lei, Qingyu Song, Haochao Ying, Danny Z. Chen, Jian Wu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对点云3D物体检测中如何有效利用点云层次结构信息的问题。②提出了一种层次图网络，通过构建点级、区域级和物体级的图结构来传播和聚合特征。③相比传统直接处理原始点云的方法，该方法能更好地建模点云的内在结构关系。④摘要未提供具体数据，但该方法在点云检测任务上展示了潜力。
+- **摘要（英）**: This paper addresses 3D object detection from point clouds by proposing a hierarchical graph network that constructs graphs at point, region, and object levels to propagate and aggregate features. It improves upon methods that directly process raw points by better modeling structural relationships. The abstract lacks quantitative results but demonstrates potential for point cloud detection.
+- **核心贡献**: 提出层次图网络用于点云3D物体检测。
+- **创新点**: 多层级图结构建模点云内在关系。
+- **结果**: 在点云检测任务上展示了潜力，但未提供具体数据。
 
-### MonoPair: Monocular 3D Object Detection Using Pairwise Spatial Relationships.
+### MonoPair: Monocular 3D Object Detection Using Pairwise Spatial Relationships. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2003.00504](https://arxiv.org/abs/2003.00504) · 📚 被引 285
 - **作者**: Yongjian Chen, Lei Tai, Kai Sun, Mingyang Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对单目3D物体检测中遮挡样本信息不足的问题。②提出了MonoPair方法，通过考虑成对样本的空间关系，利用相邻物体的空间约束来编码部分遮挡物体的信息。具体包括不确定性感知的位置预测和相邻物体对的3D距离预测，并通过非线性最小二乘进行联合优化。③相比独立处理每个物体的检测器，该方法能利用邻域信息提升遮挡样本的检测精度。④在KITTI 3D检测基准上取得了最佳性能，尤其在困难样本上大幅超越现有方法。
+- **摘要（英）**: This paper addresses monocular 3D object detection for occluded samples by proposing MonoPair, which encodes spatial constraints from adjacent object pairs via uncertainty-aware predictions and nonlinear least squares optimization. It outperforms existing methods on KITTI 3D detection, especially for hard samples, by leveraging pairwise relationships.
+- **核心贡献**: 提出成对空间关系建模提升单目3D检测的遮挡样本性能。
+- **创新点**: 不确定性感知预测与后优化模块的集成。
+- **结果**: 在KITTI基准上取得最佳性能，困难样本提升明显。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Perceiving the physical world in 3D is fundamental for self-driving applications. Although temporal motion is an invaluable resource to human vision for detection, tracking, and depth perception, such features have not been thoroughly utilized in modern 3D object detectors. In this work, we propose a novel method for monocular video-based 3D object detection which carefully leverages kinematic motion to improve precision of 3D localization. Specifically, we first propose a novel decomposition of object orientation as well as a self-balancing 3D confidence. We show that both components are critical to enable our kinematic model to work effectively. Collectively, using only a single model, we efficiently leverage 3D kinematics from monocular videos to improve the overall localization precision in 3D object detection while also producing useful by-products of scene dynamics (ego-motion and per-object velocity). We achieve state-of-the-art performance on monocular 3D object detection and the Bird's Eye View tasks within the KITTI self-driving dataset.
+> Monocular 3D object detection is an essential component in autonomous driving while challenging to solve, especially for those occluded samples which are only partially visible. Most detectors consider each 3D object as an independent training target, inevitably resulting in a lack of useful information for occluded samples. To this end, we propose a novel method to improve the monocular 3D object detection by considering the relationship of paired samples. This allows us to encode spatial constraints for partially-occluded objects from their adjacent neighbors. Specifically, the proposed detector computes uncertainty-aware predictions for object locations and 3D distances for the adjacent object pairs, which are subsequently jointly optimized by nonlinear least squares. Finally, the one-stage uncertainty-aware prediction structure and the post-optimization module are dedicatedly integrated for ensuring the run-time efficiency. Experiments demonstrate that our method yields the best performance on KITTI 3D detection benchmark, by outperforming state-of-the-art competitors by wide margins, especially for the hard samples.
 
-### Learning Depth-Guided Convolutions for Monocular 3D Object Detection.
-- **链接**: [arXiv:1912.04799](https://arxiv.org/abs/1912.04799) · [代码](https://github.com/dingmyu/D4LCN) · 📚 被引 210
+</details>
+
+### Learning Depth-Guided Convolutions for Monocular 3D Object Detection. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:1912.04799](https://arxiv.org/abs/1912.04799) · 📚 被引 210
 - **作者**: Mingyu Ding, Yuqi Huo, Hongwei Yi, Zhe Wang, Jianping Shi, Zhiwu Lu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对单目3D物体检测中缺乏准确深度信息的问题。②提出了深度引导的局部卷积网络D4LCN，其中滤波器和感受野可从图像深度图自动学习，使不同像素具有不同滤波器。③相比依赖伪LiDAR表示的方法，该方法直接改进2D卷积，缩小了图像表示与点云表示的差距。④实验表明D4LCN在单目3D检测上取得了显著性能提升。
+- **摘要（英）**: This paper tackles monocular 3D detection by proposing depth-guided local convolutions (D4LCN), where filters and receptive fields are learned from depth maps, avoiding pseudo-LiDAR dependency. It narrows the gap between image and point cloud representations, achieving significant performance gains in experiments.
+- **核心贡献**: 提出深度引导的局部卷积网络用于单目3D检测。
+- **创新点**: 动态深度-深度可分离-膨胀卷积自动学习滤波器。
+- **结果**: 在单目3D检测上取得显著性能提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Data augmentation has been widely adopted for object detection in 3D point clouds. However, all previous related efforts have focused on manually designing specific data augmentation methods for individual architectures. In this work, we present the first attempt to automate the design of data augmentation policies for 3D object detection. We introduce the Progressive Population Based Augmentation (PPBA) algorithm, which learns to optimize augmentation strategies by narrowing down the search space and adopting the best parameters discovered in previous iterations. On the KITTI 3D detection test set, PPBA improves the StarNet detector by substantial margins on the moderate difficulty category of cars, pedestrians, and cyclists, outperforming all current state-of-the-art single-stage detection models. Additional experiments on the Waymo Open Dataset indicate that PPBA continues to effectively improve the StarNet and PointPillars detectors on a 20x larger dataset compared to KITTI. The magnitude of the improvements may be comparable to advances in 3D perception architectures and the gains come without an incurred cost at inference time. In subsequent experiments, we find that PPBA may be up to 10x more data efficient than baseline 3D detection models without augmentation, highlighting that 3D detection models may achieve competitive accuracy with far fewer labeled examples.
+> 3D object detection from a single image without LiDAR is a challenging task due to the lack of accurate depth information. Conventional 2D convolutions are unsuitable for this task because they fail to capture local object and its scale information, which are vital for 3D object detection. To better represent 3D structure, prior arts typically transform depth maps estimated from 2D images into a pseudo-LiDAR representation, and then apply existing 3D point-cloud based object detectors. However, their results depend heavily on the accuracy of the estimated depth maps, resulting in suboptimal performance. In this work, instead of using pseudo-LiDAR representation, we improve the fundamental 2D fully convolutions by proposing a new local convolutional network (LCN), termed Depth-guided Dynamic-Depthwise-Dilated LCN (D$^4$LCN), where the filters and their receptive fields can be automatically learned from image-based depth maps, making different pixels of different images have different filters. D$^4$LCN overcomes the limitation of conventional 2D convolutions and narrows the gap between image representation and 3D point cloud representation. Extensive experiments show that D$^4$LCN outperforms existing works by large margins. For example, the relative improvement of D$^4$LCN against the state-of-the-art on KITTI is 9.1\% in the moderate setting. The code is available at https://github.com/dingmyu/D4LCN.
 
 </details>
 
@@ -55,15 +84,22 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### ImVoteNet: Boosting 3D Object Detection in Point Clouds With Image Votes.
+### ImVoteNet: Boosting 3D Object Detection in Point Clouds With Image Votes. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2001.10692](https://arxiv.org/abs/2001.10692) · 📚 被引 258
 - **作者**: Charles R. Qi, Xinlei Chen, Or Litany, Leonidas J. Guibas
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对点云3D检测中数据稀疏、缺乏颜色和纹理信息的问题。②提出ImVoteNet，在VoteNet基础上融合2D图像投票和3D点云投票，提取几何和语义特征并提升到3D。③相比多模态检测方法，显式利用2D特征并设计多塔训练方案。④在SUN RGB-D数据集上提升SOTA 5.7 mAP。
+- **摘要（英）**: This paper tackles the limitations of point cloud data in 3D detection, such as sparsity and lack of texture. It proposes ImVoteNet, which fuses 2D image votes with 3D point cloud votes, extracting geometric and semantic features. Compared to prior multi-modal methods, it explicitly leverages 2D features with a multi-tower training scheme. It improves SOTA by 5.7 mAP on SUN RGB-D.
+- **核心贡献**: 提出基于2D-3D投票融合的3D检测架构。
+- **创新点**: 显式提取2D几何和语义特征并提升到3D。
+- **结果**: 在SUN RGB-D上提升SOTA 5.7 mAP。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Detecting objects in 3D LiDAR data is a core technology for autonomous driving and other robotics applications. Although LiDAR data is acquired over time, most of the 3D object detection algorithms propose object bounding boxes independently for each frame and neglect the useful information available in the temporal domain. To address this problem, in this paper we propose a sparse LSTM-based multi-frame 3d object detection algorithm. We use a U-Net style 3D sparse convolution network to extract features for each frame's LiDAR point-cloud. These features are fed to the LSTM module together with the hidden and memory features from last frame to predict the 3d objects in the current frame as well as hidden and memory features that are passed to the next frame. Experiments on the Waymo Open Dataset show that our algorithm outperforms the traditional frame by frame approach by 7.5% mAP@0.7 and other multi-frame approaches by 1.2% while using less memory and computation per frame. To the best of our knowledge, this is the first work to use an LSTM for 3D object detection in sparse point clouds.
+> 3D object detection has seen quick progress thanks to advances in deep learning on point clouds. A few recent works have even shown state-of-the-art performance with just point clouds input (e.g. VoteNet). However, point cloud data have inherent limitations. They are sparse, lack color information and often suffer from sensor noise. Images, on the other hand, have high resolution and rich texture. Thus they can complement the 3D geometry provided by point clouds. Yet how to effectively use image information to assist point cloud based detection is still an open question. In this work, we build on top of VoteNet and propose a 3D detection architecture called ImVoteNet specialized for RGB-D scenes. ImVoteNet is based on fusing 2D votes in images and 3D votes in point clouds. Compared to prior work on multi-modal detection, we explicitly extract both geometric and semantic features from the 2D images. We leverage camera parameters to lift these features to 3D. To improve the synergy of 2D-3D feature fusion, we also propose a multi-tower training scheme. We validate our model on the challenging SUN RGB-D dataset, advancing state-of-the-art results by 5.7 mAP. We also provide rich ablation studies to analyze the contribution of each design choice.
+
+</details>
 
 ### End-to-End Pseudo-LiDAR for Image-Based 3D Object Detection.
 - **链接**: [arXiv:2004.03080](https://arxiv.org/abs/2004.03080) · [代码](https://github.com/mileyan/pseudo-LiDAR_e2e) · 📚 被引 168
@@ -77,11 +113,16 @@
 
 </details>
 
-### PV-RCNN: Point-Voxel Feature Set Abstraction for 3D Object Detection.
-- **链接**: [arXiv:1912.13192](https://arxiv.org/abs/1912.13192) · [代码](https://github.com/open-mmlab/OpenPCDet) · 📚 被引 1987
+### PV-RCNN: Point-Voxel Feature Set Abstraction for 3D Object Detection. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:1912.13192](https://arxiv.org/abs/1912.13192) · 📚 被引 1987
 - **作者**: Shaoshuai Shi, Chaoxu Guo, Li Jiang, Zhe Wang, Jianping Shi, Xiaogang Wang et al.
 - **🏷️ 机构**: CUHK / Shanghai AI Lab, CUHK
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对点云3D检测中体素CNN和PointNet网络各自局限性的问题。②提出PV-RCNN，深度融合3D体素CNN和PointNet特征，通过体素集抽象和RoI-grid池化提取丰富特征。③相比传统方法，结合了体素CNN的高效和PointNet的灵活感受野。④在KITTI和Waymo Open数据集上取得领先性能。
+- **摘要（英）**: This paper addresses the limitations of voxel CNN and PointNet in point cloud 3D detection. It proposes PV-RCNN, which deeply integrates both, using voxel set abstraction and RoI-grid pooling. Compared to prior methods, it combines efficiency and flexible receptive fields. It achieves leading performance on KITTI and Waymo Open datasets.
+- **核心贡献**: 提出点-体素特征集抽象框架PV-RCNN。
+- **创新点**: 深度融合体素CNN和PointNet特征。
+- **结果**: 在KITTI和Waymo上取得领先性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -89,11 +130,22 @@
 
 </details>
 
-### Point-GNN: Graph Neural Network for 3D Object Detection in a Point Cloud.
-- **链接**: [arXiv:2003.01251](https://arxiv.org/abs/2003.01251) · [代码](https://github.com/WeijingShi/Point-GNN) · 📚 被引 845
+### Point-GNN: Graph Neural Network for 3D Object Detection in a Point Cloud. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2003.01251](https://arxiv.org/abs/2003.01251) · 📚 被引 845
 - **作者**: Weijing Shi, Raj Rajkumar
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对LiDAR点云3D检测中传统方法难以处理不规则数据的问题。②提出Point-GNN，将点云编码为固定半径近邻图，用图神经网络预测物体类别和形状。③相比之前方法，引入自动配准机制减少平移方差，并设计框合并和评分操作。④在KITTI基准上仅用点云达到领先精度，甚至超越融合方法。
+- **摘要（英）**: This paper addresses the challenge of irregular point cloud data in LiDAR-based 3D detection. It proposes Point-GNN, encoding the point cloud as a fixed-radius near-neighbor graph and using GNN for prediction. Compared to prior methods, it introduces auto-registration and box merging. It achieves leading accuracy on KITTI using point cloud alone, surpassing fusion methods.
+- **核心贡献**: 提出基于图神经网络的3D检测方法Point-GNN。
+- **创新点**: 利用图结构处理点云并引入自动配准。
+- **结果**: 在KITTI上超越融合方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper, we propose a graph neural network to detect objects from a LiDAR point cloud. Towards this end, we encode the point cloud efficiently in a fixed radius near-neighbors graph. We design a graph neural network, named Point-GNN, to predict the category and shape of the object that each vertex in the graph belongs to. In Point-GNN, we propose an auto-registration mechanism to reduce translation variance, and also design a box merging and scoring operation to combine detections from multiple vertices accurately. Our experiments on the KITTI benchmark show the proposed approach achieves leading accuracy using the point cloud alone and can even surpass fusion-based algorithms. Our results demonstrate the potential of using the graph neural network as a new approach for 3D object detection. The code is available https://github.com/WeijingShi/Point-GNN.
+
+</details>
 
 ### Weakly Supervised 3D Object Detection from Lidar Point Cloud.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-030-58601-0_31)
@@ -119,13 +171,22 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### 3DV: 3D Dynamic Voxel for Action Recognition in Depth Video.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wang_3DV_3D_Dynamic_Voxel_for_Action_Recognition_in_Depth_Video_CVPR_2020_paper.html)
+### 3DV: 3D Dynamic Voxel for Action Recognition in Depth Video. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2005.05501](https://arxiv.org/abs/2005.05501) · 📚 被引 111
 - **作者**: Yancheng Wang, Yang Xiao, Fu Xiong, Wenxiang Jiang, Zhiguo Cao, Joey Tianyi Zhou et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①该论文针对深度视频中3D动作识别的挑战，现有方法难以有效编码3D空间和运动信息。②提出了3D动态体素（3DV）作为新的3D运动表示，通过时间秩池化将深度视频编码为规则体素集，并输入PointNet++进行端到端学习。③相比现有方法，3DV紧凑地联合编码3D空间和运动特征，并支持多流学习以融合外观信息，同时通过时间分割增强时序信息。④在NTU RGB+D 120数据集上，跨主体和跨设置的准确率分别达到82.4%和93.5%，优于已有方法。
+- **摘要（英）**: This paper addresses 3D action recognition in depth videos by proposing 3D dynamic voxels (3DV), which encode motion via temporal rank pooling and are processed by PointNet++. It integrates spatial and motion features, supports multi-stream learning, and achieves 82.4% and 93.5% accuracy on NTU RGB+D 120 for cross-subject and cross-setup settings.
+- **核心贡献**: 提出了3DV表示，将深度视频编码为体素集用于3D动作识别。
+- **创新点**: 利用时间秩池化和PointNet++实现紧凑的3D运动表示。
+- **结果**: 在NTU RGB+D 120上达到82.4%和93.5%的准确率。
 
-## 🆕 增量新增
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> To facilitate depth-based 3D action recognition, 3D dynamic voxel (3DV) is proposed as a novel 3D motion representation. With 3D space voxelization, the key idea of 3DV is to encode 3D motion information within depth video into a regular voxel set (i.e., 3DV) compactly, via temporal rank pooling. Each available 3DV voxel intrinsically involves 3D spatial and motion feature jointly. 3DV is then abstracted as a point set and input into PointNet++ for 3D action recognition, in the end-to-end learning way. The intuition for transferring 3DV into the point set form is that, PointNet++ is lightweight and effective for deep feature learning towards point set. Since 3DV may lose appearance clue, a multi-stream 3D action recognition manner is also proposed to learn motion and appearance feature jointly. To extract richer temporal order information of actions, we also divide the depth video into temporal splits and encode this procedure in 3DV integrally. The extensive experiments on 4 well-established benchmark datasets demonstrate the superiority of our proposition. Impressively, we acquire the accuracy of 82.4% and 93.5% on NTU RGB+D 120 [13] with the cross-subject and crosssetup test setting respectively. 3DV's code is available at https://github.com/3huo/3DV-Action.
+
+</details>
 
 ### MLCVNet: Multi-Level Context VoteNet for 3D Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2004.05679](https://arxiv.org/abs/2004.05679) · 📚 被引 172
@@ -321,4 +382,5 @@
 - nuScenes: A Multimodal Dataset for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202020.md)
 - Scalability in Perception for Autonomous Driving: Waymo Open Dataset. → [autonomous-driving](../autonomous-driving/Guideline%202020.md)
 - SurfelGAN: Synthesizing Realistic Sensor Data for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202020.md)
+
 <!-- COMPLETE v1 papers=36 -->

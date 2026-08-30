@@ -3,51 +3,29 @@
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
 > 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### HyTAS: A Hyperspectral Image Transformer Architecture Search Benchmark and Analysis.
-- **链接**: [arXiv:2407.16269](https://arxiv.org/abs/2407.16269) · 📚 被引 3
-- **作者**: Fangqin Zhou, Mert Kilickaya, Joaquin Vanschoren, Ran Piao
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Hyperspectral Imaging (HSI) plays an increasingly critical role in precise vision tasks within remote sensing, capturing a wide spectrum of visual data. Transformer architectures have significantly enhanced HSI task performance, while advancements in Transformer Architecture Search (TAS) have improved model discovery. To harness these advancements for HSI classification, we make the following contributions: i) We propose HyTAS, the first benchmark on transformer architecture search for Hyperspectral imaging, ii) We comprehensively evaluate 12 different methods to identify the optimal transformer over 5 different datasets, iii) We perform an extensive factor analysis on the Hyperspectral transformer search performance, greatly motivating future research in this direction. All benchmark materials are available at HyTAS.
-
-</details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-### Auto-GAS: Automated Proxy Discovery for Training-Free Generative Architecture Search.
+### Auto-GAS: Automated Proxy Discovery for Training-Free Generative Architecture Search. **⭐⭐** (相关度: 25%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72652-1_3) · 📚 被引 14
 - **作者**: Lujun Li, Haosen Sun, Shiwen Li, Peijie Dong, Wenhan Luo, Wei Xue et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对生成式架构搜索中训练成本高的问题。②提出了Auto-GAS，自动发现训练无关的代理指标，用于生成式架构搜索。③相比手工设计代理指标，该方法通过自动化发现提高搜索效率。④摘要未提供具体数据，效果未知。
+- **摘要（英）**: This paper addresses the high training cost in generative architecture search. It proposes Auto-GAS, which automatically discovers training-free proxies for generative architecture search. Compared to hand-crafted proxies, it improves search efficiency, though no specific results are provided.
+- **核心贡献**: 提出自动发现训练无关代理指标的方法。
+- **创新点**: 将代理发现自动化应用于生成式NAS。
+- **结果**: 效果未明确报告。
 
-### Auto-DAS: Automated Proxy Discovery for Training-Free Distillation-Aware Architecture Search.
+### Auto-DAS: Automated Proxy Discovery for Training-Free Distillation-Aware Architecture Search. **⭐⭐** (相关度: 25%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72652-1_4) · 📚 被引 5
 - **作者**: Haosen Sun, Lujun Li, Peijie Dong, Zimian Wei, Shitong Shao
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-</details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The boundless possibility of neural networks which can be used to solve a problem -- each with different performance -- leads to a situation where a Deep Learning expert is required to identify the best neural network. This goes against the hope of removing the need for experts. Neural Architecture Search (NAS) offers a solution to this by automatically identifying the best architecture. However, to date, NAS work has focused on a small set of datasets which we argue are not representative of real-world problems. We introduce eight new datasets created for a series of NAS Challenges: AddNIST, Language, MultNIST, CIFARTile, Gutenberg, Isabella, GeoClassing, and Chesseract. These datasets and challenges are developed to direct attention to issues in NAS development and to encourage authors to consider how their models will perform on datasets unknown to them at development time. We present experimentation using standard Deep Learning methods as well as the best results from challenge participants.
-
-</details>
-
-</details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Training-free network architecture search (NAS) aims to discover high-performing networks with zero-cost proxies, capturing network characteristics related to the final performance. However, network rankings estimated by previous training-free NAS methods have shown weak correlations with the performance. To address this issue, we propose AZ-NAS, a novel approach that leverages the ensemble of various zero-cost proxies to enhance the correlation between a predicted ranking of networks and the ground truth substantially in terms of the performance. To achieve this, we introduce four novel zero-cost proxies that are complementary to each other, analyzing distinct traits of architectures in the views of expressivity, progressivity, trainability, and complexity. The proxy scores can be obtained simultaneously within a single forward and backward pass, making an overall NAS process highly efficient. In order to integrate the rankings predicted by our proxies effectively, we introduce a non-linear ranking aggregation method that highlights the networks highly-ranked consistently across all the proxies. Experimental results conclusively demonstrate the efficacy and efficiency of AZ-NAS, outperforming state-of-the-art methods on standard benchmarks, all while maintaining a reasonable runtime cost.
-
-</details>
+- **摘要（中）**: ①针对蒸馏感知架构搜索中代理指标设计困难的问题。②提出了Auto-DAS，自动发现训练无关的代理指标，用于蒸馏感知的架构搜索。③相比手工设计，该方法自动化代理发现，提升搜索效率。④摘要未提供具体数据，效果未知。
+- **摘要（英）**: This paper addresses the difficulty of designing proxies in distillation-aware architecture search. It proposes Auto-DAS, which automatically discovers training-free proxies for distillation-aware NAS. Compared to manual design, it automates proxy discovery, though no specific results are provided.
+- **核心贡献**: 提出自动发现蒸馏感知NAS代理指标的方法。
+- **创新点**: 将代理发现自动化应用于蒸馏感知NAS。
+- **结果**: 效果未明确报告。
 
 ### SNED: Superposition Network Architecture Search for Efficient Video Diffusion Model. **⭐⭐** (相关度: 15%)
 - **链接**: [arXiv:2406.00195](https://arxiv.org/abs/2406.00195)
@@ -286,4 +264,5 @@
 > This work presents a novel approach to neural architecture search (NAS) that aims to increase carbon efficiency for the model design process. The proposed framework CE-NAS addresses the key challenge of high carbon cost associated with NAS by exploring the carbon emission variations of energy and energy differences of different NAS algorithms. At the high level, CE-NAS leverages a reinforcement-learning agent to dynamically adjust GPU resources based on carbon intensity, predicted by a time-series transformer, to balance energy-efficient sampling and energy-intensive evaluation tasks. Furthermore, CE-NAS leverages a recently proposed multi-objective optimizer to effectively reduce the NAS search space. We demonstrate the efficacy of CE-NAS in lowering carbon emissions while achieving SOTA results for both NAS datasets and open-domain NAS tasks. For example, on the HW-NasBench dataset, CE-NAS reduces carbon emissions by up to 7.22X while maintaining a search efficiency comparable to vanilla NAS. For open-domain NAS tasks, CE-NAS achieves SOTA results with 97.35% top-1 accuracy on CIFAR-10 with only 1.68M parameters and a carbon consumption of 38.53 lbs of CO2. On ImageNet, our searched model achieves 80.6% top-1 accuracy with a 0.78 ms TensorRT latency using FP16 on NVIDIA V100, consuming only 909.86 lbs of CO2, making it comparable to other one-shot-based NAS baselines.
 
 </details>
-<!-- COMPLETE v1 papers=19 -->
+
+<!-- COMPLETE v1 papers=18 -->

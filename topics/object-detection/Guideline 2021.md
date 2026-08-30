@@ -3,13 +3,24 @@
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
 > 论文数: 60 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### UP-DETR: Unsupervised Pre-Training for Object Detection With Transformers.
-- **链接**: [arXiv:2011.09094](https://arxiv.org/abs/2011.09094) · [代码](https://github.com/dddzg/up-detr) · 📚 被引 447
+### UP-DETR: Unsupervised Pre-Training for Object Detection With Transformers. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2011.09094](https://arxiv.org/abs/2011.09094) · 📚 被引 447
 - **作者**: Zhigang Dai, Bolun Cai, Yugeng Lin, Junying Chen
 - **🏷️ 机构**: South China University of Technology,School of Software Engineering, Tencent Wechat AI
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对DETR从零训练需要大量数据和极长训练时间的问题，提出随机查询块检测作为预训练任务，通过从图像中随机裁剪补丁作为解码器查询进行无监督预训练。解决了多任务学习和多查询定位两个关键问题，发现冻结CNN骨干是预训练成功的前提，并设计了带注意力掩码的多查询补丁检测。预训练后微调可提升DETR在COCO上的收敛速度和检测性能，并支持小样本检测。
+- **摘要（英）**: To address DETR's need for large-scale data and long training schedules, this paper proposes random query patch detection as a pretext task for unsupervised pre-training, feeding cropped patches as decoder queries. It identifies freezing the CNN backbone as crucial and introduces multi-query localization with attention masks, improving fine-tuning convergence and enabling one-shot detection.
+- **核心贡献**: 提出首个针对DETR的无监督预训练框架UP-DETR。
+- **创新点**: 设计随机查询块检测预训练任务并解决多查询定位问题。
+- **结果**: 预训练后微调显著加速收敛并提升检测精度。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> DEtection TRansformer (DETR) for object detection reaches competitive performance compared with Faster R-CNN via a transformer encoder-decoder architecture. However, trained with scratch transformers, DETR needs large-scale training data and an extreme long training schedule even on COCO dataset. Inspired by the great success of pre-training transformers in natural language processing, we propose a novel pretext task named random query patch detection in Unsupervised Pre-training DETR (UP-DETR). Specifically, we randomly crop patches from the given image and then feed them as queries to the decoder. The model is pre-trained to detect these query patches from the input image. During the pre-training, we address two critical issues: multi-task learning and multi-query localization. (1) To trade off classification and localization preferences in the pretext task, we find that freezing the CNN backbone is the prerequisite for the success of pre-training transformers. (2) To perform multi-query localization, we develop UP-DETR with multi-query patch detection with attention mask. Besides, UP-DETR also provides a unified perspective for fine-tuning object detection and one-shot detection tasks. In our experiments, UP-DETR significantly boosts the performance of DETR with faster convergence and higher average precision on object detection, one-shot detection and panoptic segmentation. Code and pre-training models: https://github.com/dddzg/up-detr.
+
+</details>
 
 ### MosaicOS: A Simple and Effective Use of Object-Centric Images for Long-Tailed Object Detection.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00047) · 📚 被引 37
@@ -29,15 +40,20 @@
 - **🏷️ 机构**: Microsoft Research, ETH Z&#x00FC;rich, University of Washington
 - **会议**: ICCV 2021
 
-### Uncertainty-Aware Joint Salient Object and Camouflaged Object Detection.
+### Uncertainty-Aware Joint Salient Object and Camouflaged Object Detection. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2104.02628](https://arxiv.org/abs/2104.02628) · 📚 被引 270
 - **作者**: Aixuan Li, Jing Zhang, Yunqiu Lv, Bowen Liu, Tong Zhang, Yuchao Dai
 - **🏷️ 机构**: Northwestern Polytechnical University,China, Australian National University,Australia, EPFL,Switzerland
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对显著目标检测和伪装目标检测任务间的矛盾信息，提出利用两者互补性增强检测能力。通过利用COD数据集中的易正样本作为SOD的难正样本，引入相似度度量模块建模任务矛盾属性，并采用对抗学习网络实现高阶相似度度量和置信度估计。在基准数据集上达到SOTA性能。
+- **摘要（英）**: This paper leverages contradictory information between salient and camouflaged object detection, using easy positives from COD as hard positives for SOD and a similarity measure module to model task conflicts. An adversarial network enables higher-order similarity and confidence estimation, achieving SOTA on benchmarks.
+- **核心贡献**: 提出联合SOD和COD的对抗学习框架，利用矛盾信息提升性能。
+- **创新点**: 显式建模任务间矛盾属性并引入不确定性估计。
+- **结果**: 在多个基准上达到SOTA性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> A large gap exists between fully-supervised object detection and weakly-supervised object detection. To narrow this gap, some methods consider knowledge transfer from additional fully-supervised dataset. But these methods do not fully exploit discriminative category information in the fully-supervised dataset, thus causing low mAP. To solve this issue, we propose a novel category transfer framework for weakly supervised object detection. The intuition is to fully leverage both visually-discriminative and semantically-correlated category information in the fully-supervised dataset to enhance the object-classification ability of a weakly-supervised detector. To handle overlapping category transfer, we propose a double-supervision mean teacher to gather common category information and bridge the domain gap between two datasets. To handle non-overlapping category transfer, we propose a semantic graph convolutional network to promote the aggregation of semantic features between correlated categories. Experiments are conducted with Pascal VOC 2007 as the target weakly-supervised dataset and COCO as the source fully-supervised dataset. Our category transfer framework achieves 63.5% mAP and 80.3% CorLoc with 5 overlapping categories between two datasets, which outperforms the state-of-the-art methods. Codes are avaliable at https://github.com/MediaBrain-SJTU/CaT.
+> Visual salient object detection (SOD) aims at finding the salient object(s) that attract human attention, while camouflaged object detection (COD) on the contrary intends to discover the camouflaged object(s) that hidden in the surrounding. In this paper, we propose a paradigm of leveraging the contradictory information to enhance the detection ability of both salient object detection and camouflaged object detection. We start by exploiting the easy positive samples in the COD dataset to serve as hard positive samples in the SOD task to improve the robustness of the SOD model. Then, we introduce a similarity measure module to explicitly model the contradicting attributes of these two tasks. Furthermore, considering the uncertainty of labeling in both tasks' datasets, we propose an adversarial learning network to achieve both higher order similarity measure and network confidence estimation. Experimental results on benchmark datasets demonstrate that our solution leads to state-of-the-art (SOTA) performance for both tasks.
 
 </details>
 
@@ -59,11 +75,22 @@
 - **🏷️ 机构**: Seoul National University, Technical University of Munich, NVIDIA
 - **会议**: ICCV 2021
 
-### Instant-Teaching: An End-to-End Semi-Supervised Object Detection Framework.
+### Instant-Teaching: An End-to-End Semi-Supervised Object Detection Framework. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2103.11402](https://arxiv.org/abs/2103.11402) · 📚 被引 194
 - **作者**: Qiang Zhou, Chaohui Yu, Zhibin Wang, Qi Qian, Hao Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对半监督目标检测中标注成本高的问题，提出端到端框架Instant-Teaching，在每次训练迭代中使用即时伪标签和强弱数据增强进行教学。为缓解确认偏差，提出co-rectify方案Instant-Teaching*，提升伪标签质量。在MS-COCO上使用2%标注数据时超越SOTA 4.2 mAP，在PASCAL VOC上提升超过5 mAP。
+- **摘要（英）**: This paper proposes Instant-Teaching, an end-to-end semi-supervised object detection framework using instant pseudo labeling with weak-strong augmentations, and a co-rectify scheme to reduce confirmation bias. It surpasses SOTA by 4.2 mAP on COCO with 2% labeled data and over 5 mAP on PASCAL VOC.
+- **核心贡献**: 提出即时伪标签和协同纠正的半监督检测框架。
+- **创新点**: 端到端即时教学和co-rectify方案。
+- **结果**: 在COCO和VOC上显著超越SOTA。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Supervised learning based object detection frameworks demand plenty of laborious manual annotations, which may not be practical in real applications. Semi-supervised object detection (SSOD) can effectively leverage unlabeled data to improve the model performance, which is of great significance for the application of object detection models. In this paper, we revisit SSOD and propose Instant-Teaching, a completely end-to-end and effective SSOD framework, which uses instant pseudo labeling with extended weak-strong data augmentations for teaching during each training iteration. To alleviate the confirmation bias problem and improve the quality of pseudo annotations, we further propose a co-rectify scheme based on Instant-Teaching, denoted as Instant-Teaching$^*$. Extensive experiments on both MS-COCO and PASCAL VOC datasets substantiate the superiority of our framework. Specifically, our method surpasses state-of-the-art methods by 4.2 mAP on MS-COCO when using $2\%$ labeled data. Even with full supervised information of MS-COCO, the proposed method still outperforms state-of-the-art methods by about 1.0 mAP. On PASCAL VOC, we can achieve more than 5 mAP improvement by applying VOC07 as labeled data and VOC12 as unlabeled data.
+
+</details>
 
 ### Rank & Sort Loss for Object Detection and Instance Segmentation.
 - **链接**: [arXiv:2107.11669](https://arxiv.org/abs/2107.11669) · 📚 被引 46
@@ -83,11 +110,22 @@
 - **🏷️ 机构**: Megvii Technology
 - **会议**: ICCV 2021
 
-### Points As Queries: Weakly Semi-Supervised Object Detection by Points.
+### Points As Queries: Weakly Semi-Supervised Object Detection by Points. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2104.07434](https://arxiv.org/abs/2104.07434) · 📚 被引 87
 - **作者**: Liangyu Chen, Tong Yang, Xiangyu Zhang, Wei Zhang, Jian Sun
 - **🏷️ 机构**: MEGVII
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对弱半监督目标检测中标注负担与性能平衡问题，提出一种新的点标注设置，即数据集包含少量全标注图像和大量点标注图像。为此设计了Point DETR检测器，在DETR基础上增加点编码器以充分利用点标注信息。在MS-COCO数据集上，使用20%全标注数据时达到33.3 AP，超过强基线FCOS 2.0 AP，并在多种AR指标上提升超过10点。
+- **摘要（英）**: This paper addresses the balance between annotation burden and detection performance in weakly semi-supervised object detection by proposing a novel point-annotated setting. It introduces Point DETR, which extends DETR with a point encoder to fully exploit point annotations. On MS-COCO with 20% fully labeled data, it achieves 33.3 AP, outperforming FCOS by 2.0 AP and improving AR metrics by over 10 points.
+- **核心贡献**: 提出点标注的弱半监督检测设置及Point DETR检测器。
+- **创新点**: 在DETR中引入点编码器以利用点级监督。
+- **结果**: 在COCO上以20%全标注数据达到33.3 AP，显著超越基线。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We propose a novel point annotated setting for the weakly semi-supervised object detection task, in which the dataset comprises small fully annotated images and large weakly annotated images by points. It achieves a balance between tremendous annotation burden and detection performance. Based on this setting, we analyze existing detectors and find that these detectors have difficulty in fully exploiting the power of the annotated points. To solve this, we introduce a new detector, Point DETR, which extends DETR by adding a point encoder. Extensive experiments conducted on MS-COCO dataset in various data settings show the effectiveness of our method. In particular, when using 20% fully labeled data from COCO, our detector achieves a promising performance, 33.3 AP, which outperforms a strong baseline (FCOS) by 2.0 AP, and we demonstrate the point annotations bring over 10 points in various AR metrics.
+
+</details>
 
 ### SimROD: A Simple Adaptation Method for Robust Object Detection.
 - **链接**: [arXiv:2107.13389](https://arxiv.org/abs/2107.13389) · 📚 被引 47
@@ -119,23 +157,33 @@
 - **🏷️ 机构**: Swansea University,Department of Computer Science, University of Oxford, City University of Hong Kong
 - **会议**: ICCV 2021
 
-### GAIA: A Transfer Learning System of Object Detection That Fits Your Needs.
+### GAIA: A Transfer Learning System of Object Detection That Fits Your Needs. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2106.11346](https://arxiv.org/abs/2106.11346) · 📚 被引 35
 - **作者**: Xingyuan Bu, Junran Peng, Junjie Yan, Tieniu Tan, Zhaoxiang Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对迁移学习中不同下游任务对预训练模型和模型选择的需求差异，提出GAIA系统，能够自动生成定制化目标检测解决方案。系统提供预训练权重、根据延迟约束和数据域选择模型，并为数据稀少的从业者收集相关数据。在COCO、Objects365、Open Images等多个数据集上取得良好结果，并能高效生成覆盖广泛需求的模型。
+- **摘要（英）**: This paper addresses the diverse needs of downstream tasks in transfer learning for object detection by proposing GAIA, a system that automatically generates customized solutions. It provides pre-trained weights, selects models based on latency and data domain, and collects relevant data for scarce-data scenarios. It achieves promising results on multiple datasets including COCO and Objects365.
+- **核心贡献**: 提出自动化的目标检测迁移学习系统GAIA。
+- **创新点**: 根据下游需求自动选择模型和数据。
+- **结果**: 在多个数据集上取得良好性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Current state-of-the-art two-stage detectors generate oriented proposals through time-consuming schemes. This diminishes the detectors' speed, thereby becoming the computational bottleneck in advanced oriented object detection systems. This work proposes an effective and simple oriented object detection framework, termed Oriented R-CNN, which is a general two-stage oriented detector with promising accuracy and efficiency. To be specific, in the first stage, we propose an oriented Region Proposal Network (oriented RPN) that directly generates high-quality oriented proposals in a nearly cost-free manner. The second stage is oriented R-CNN head for refining oriented Regions of Interest (oriented RoIs) and recognizing them. Without tricks, oriented R-CNN with ResNet50 achieves state-of-the-art detection accuracy on two commonly-used datasets for oriented object detection including DOTA (75.87% mAP) and HRSC2016 (96.50% mAP), while having a speed of 15.1 FPS with the image size of 1024$\times$1024 on a single RTX 2080Ti. We hope our work could inspire rethinking the design of oriented detectors and serve as a baseline for oriented object detection. Code is available at https://github.com/jbwang1997/OBBDetection.
+> Transfer learning with pre-training on large-scale datasets has played an increasingly significant role in computer vision and natural language processing recently. However, as there exist numerous application scenarios that have distinctive demands such as certain latency constraints and specialized data distributions, it is prohibitively expensive to take advantage of large-scale pre-training for per-task requirements. In this paper, we focus on the area of object detection and present a transfer learning system named GAIA, which could automatically and efficiently give birth to customized solutions according to heterogeneous downstream needs. GAIA is capable of providing powerful pre-trained weights, selecting models that conform to downstream demands such as latency constraints and specified data domains, and collecting relevant data for practitioners who have very few datapoints for their tasks. With GAIA, we achieve promising results on COCO, Objects365, Open Images, Caltech, CityPersons, and UODB which is a collection of datasets including KITTI, VOC, WiderFace, DOTA, Clipart, Comic, and more. Taking COCO as an example, GAIA is able to efficiently produce models covering a wide range of latency from 16ms to 53ms, and yields AP from 38.2 to 46.5 without whistles and bells. To benefit every practitioner in the community of object detection, GAIA is released at https://github.com/GAIA-vision.
 
 </details>
 
-### Adaptive Image Transformer for One-Shot Object Detection.
+### Adaptive Image Transformer for One-Shot Object Detection. **⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_Adaptive_Image_Transformer_for_One-Shot_Object_Detection_CVPR_2021_paper.html) · 📚 被引 57
 - **作者**: Ding-Jie Chen, He-Yen Hsieh, Tyng-Luh Liu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①这篇论文针对单样本目标检测中，传统卷积网络难以有效利用有限样本和全局上下文信息的问题。②提出了自适应图像变换器（Adaptive Image Transformer），利用注意力机制捕捉全局依赖，并自适应调整特征表示以适应单样本场景。③相比基于卷积的匹配方法，创新性地引入变换器架构，增强了对未见类别的泛化能力。④摘要未提供具体数据，但预期在标准单样本检测基准上提升性能。
+- **摘要（英）**: This paper addresses one-shot object detection by proposing an adaptive image transformer that leverages attention mechanisms for global context. It improves generalization to unseen classes compared to convolutional baselines. Specific results are not detailed in the abstract.
+- **核心贡献**: 提出自适应图像变换器用于单样本目标检测。
+- **创新点**: 将变换器架构引入单样本检测，实现自适应特征调整。
+- **结果**: 预期提升单样本检测性能，但未提供具体数据。
 
 ### Class-Aware Robust Adversarial Training for Object Detection.
 - **链接**: [arXiv:2103.16148](https://arxiv.org/abs/2103.16148) · 📚 被引 52
@@ -155,11 +203,16 @@
 
 </details>
 
-### Dynamic Head: Unifying Object Detection Heads With Attentions.
-- **链接**: [arXiv:2106.08322](https://arxiv.org/abs/2106.08322) · [代码](https://github.com/microsoft/DynamicHead) · 📚 被引 942
+### Dynamic Head: Unifying Object Detection Heads With Attentions. **⭐⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2106.08322](https://arxiv.org/abs/2106.08322) · 📚 被引 942
 - **作者**: Xiyang Dai, Yinpeng Chen, Bin Xiao, Dongdong Chen, Mengchen Liu, Lu Yuan et al.
 - **🏷️ 机构**: Microsoft,Redmond,USA
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对目标检测中定位与分类任务复杂结合导致检测头设计缺乏统一视角的问题，提出动态头框架，通过尺度感知、空间感知和任务感知三种自注意力机制分别作用于特征层级、空间位置和输出通道，统一了检测头设计。相比已有工作，该方法在不增加计算开销的情况下显著提升表示能力，在COCO上以ResNeXt-101-DCN骨干达到54.0 AP，结合Transformer骨干和额外数据刷新至60.6 AP。
+- **摘要（英）**: To address the lack of a unified view in object detection head design, this paper proposes Dynamic Head, which integrates scale-aware, spatial-aware, and task-aware self-attentions across feature levels, spatial locations, and output channels. It improves representation ability without extra computational cost, achieving 54.0 AP on COCO with ResNeXt-101-DCN and a record 60.6 AP with a Transformer backbone and extra data.
+- **核心贡献**: 提出动态头框架，统一了目标检测头的注意力机制设计。
+- **创新点**: 通过多类型自注意力的协同组合实现尺度、空间和任务感知。
+- **结果**: 在COCO上达到54.0 AP，并刷新至60.6 AP。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -167,11 +220,16 @@
 
 </details>
 
-### General Instance Distillation for Object Detection.
-- **链接**: [arXiv:2103.02340](https://arxiv.org/abs/2103.02340) · 📚 被引 236
+### General Instance Distillation for Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2103.02340](https://arxiv.org/abs/2103.02340) · 📚 被引 235
 - **作者**: Xing Dai, Zeren Jiang, Zhao Wu, Yiping Bao, Zhicheng Wang, Si Liu et al.
 - **🏷️ 机构**: MEGVII Technology, BeiHang University
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对现有检测蒸馏方法泛化性弱且依赖GT标注、忽略实例间关系信息的问题，提出通用实例蒸馏方法，通过通用实例选择模块充分利用基于特征、关系和响应的知识进行蒸馏。相比已有方法，该方法不区分正负样本，适用于多种检测框架，在COCO上RetinaNet-ResNet-50学生模型达到39.1% mAP，超过基线2.9%，甚至优于ResNet-101教师模型。
+- **摘要（英）**: To address weak generalization and heavy GT dependence in detection distillation, this paper proposes General Instance Distillation, which uses a selection module to leverage feature-, relation-, and response-based knowledge without distinguishing positive/negative samples. It achieves 39.1% mAP with RetinaNet-ResNet-50 on COCO, surpassing the baseline by 2.9% and even outperforming the ResNet-101 teacher.
+- **核心贡献**: 提出通用实例蒸馏框架，摆脱GT依赖并利用实例关系知识。
+- **创新点**: 设计通用实例选择模块，融合多类型知识进行蒸馏。
+- **结果**: 学生模型在COCO上达到39.1% mAP，超越教师模型。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -179,17 +237,27 @@
 
 </details>
 
-### Unbiased Mean Teacher for Cross-Domain Object Detection.
+### Unbiased Mean Teacher for Cross-Domain Object Detection. **⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Deng_Unbiased_Mean_Teacher_for_Cross-Domain_Object_Detection_CVPR_2021_paper.html) · 📚 被引 336
 - **作者**: Jinhong Deng, Wen Li, Yuhua Chen, Lixin Duan
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对跨域目标检测中域偏移导致性能下降的问题，提出无偏均值教师方法，通过改进教师模型更新策略和一致性正则化来减少域差异。该方法在多个跨域场景下验证了有效性，但摘要信息有限，具体技术细节和实验数据未提供。
+- **摘要（英）**: This paper addresses domain shift in cross-domain object detection by proposing an unbiased mean teacher approach, which improves teacher model updates and consistency regularization. It demonstrates effectiveness across scenarios, though specific details and results are limited in the abstract.
+- **核心贡献**: 提出无偏均值教师方法用于跨域目标检测。
+- **创新点**: 通过无偏更新策略增强教师模型的稳定性。
+- **结果**: 在跨域场景中验证了有效性。
 
-### Group Collaborative Learning for Co-Salient Object Detection.
+### Group Collaborative Learning for Co-Salient Object Detection. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2104.01108](https://arxiv.org/abs/2104.01108) · 📚 被引 101
 - **作者**: Qi Fan, Deng-Ping Fan, Huazhu Fu, Chi-Keung Tang, Ling Shao, Yu-Wing Tai
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对共显性目标检测中组内一致性和组间可分性不足的问题，提出组协作学习框架，通过组亲和模块捕捉共享属性、组协作模块抑制噪声目标，并引入辅助分类监督。相比已有方法，该框架在实时速度（16ms）下实现SOTA性能，在CoCA、CoSOD3k和Cosal2015基准上超越10种先进模型。
+- **摘要（英）**: To improve intra-group compactness and inter-group separability in co-salient object detection, this paper proposes a group collaborative learning framework with affinity and collaborating modules, plus auxiliary classification. It achieves real-time speed (16ms) and SOTA performance on three benchmarks, outperforming 10 cutting-edge models.
+- **核心贡献**: 提出组协作学习框架用于实时共显性目标检测。
+- **创新点**: 设计组亲和与协作模块，结合辅助分类监督。
+- **结果**: 在三个基准上达到SOTA，速度16ms。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -197,11 +265,16 @@
 
 </details>
 
-### Generalized Few-Shot Object Detection Without Forgetting.
+### Generalized Few-Shot Object Detection Without Forgetting. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2105.09491](https://arxiv.org/abs/2105.09491) · 📚 被引 166
 - **作者**: Zhibo Fan, Yuchen Ma, Zeming Li, Jian Sun
 - **🏷️ 机构**: MEGVII
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对少样本目标检测中学习新类别时遗忘旧知识的问题，提出Retentive R-CNN，包含偏置平衡RPN和重检测器，以在检测所有类别时不遗忘基类。相比已有方法，该方法利用迁移学习的有利特性，在少样本基准上显著提升整体性能，同时保持基类性能不下降。
+- **摘要（英）**: To address catastrophic forgetting in few-shot object detection, this paper proposes Retentive R-CNN with a bias-balanced RPN and re-detector, enabling learning new classes without forgetting base classes. It significantly outperforms SOTA on overall performance while maintaining base class accuracy.
+- **核心贡献**: 提出Retentive R-CNN实现无遗忘的少样本检测。
+- **创新点**: 设计偏置平衡RPN和重检测器以平衡新旧类别。
+- **结果**: 在少样本基准上显著提升整体性能且不遗忘基类。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -209,11 +282,16 @@
 
 </details>
 
-### OTA: Optimal Transport Assignment for Object Detection.
-- **链接**: [arXiv:2103.14259](https://arxiv.org/abs/2103.14259) · [代码](https://github.com/Megvii-BaseDetection/OTA) · 📚 被引 484
+### OTA: Optimal Transport Assignment for Object Detection. **⭐⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2103.14259](https://arxiv.org/abs/2103.14259) · 📚 被引 484
 - **作者**: Zheng Ge, Songtao Liu, Zeming Li, Osamu Yoshie, Jian Sun
 - **🏷️ 机构**: MEGVII
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对目标检测中标签分配（正负样本定义）仅独立考虑每个GT对象，缺乏全局最优性的问题。②提出将标签分配建模为最优传输（OT）问题，定义每个锚点与GT之间的传输成本为分类和回归损失的加权和，通过Sinkhorn-Knopp迭代求解最优传输计划。③相比现有方法（如ATSS、PAA）的独立分配策略，OTA从全局视角优化分配，实现成本最小化。④在COCO上，配备OTA的FCOS-ResNet-50在1X调度下达到40.7% mAP，优于所有现有分配方法；在CrowdHuman上进一步验证了其在拥挤场景中的优越性。
+- **摘要（英）**: This paper addresses the label assignment problem in object detection by formulating it as an Optimal Transport (OT) problem, where the transportation cost between anchors and ground-truths is defined as the weighted sum of classification and regression losses. The optimal assignment is solved via Sinkhorn-Knopp iteration, achieving global optimality. Experiments on COCO show 40.7% mAP with FCOS-ResNet-50 under 1X scheduler, outperforming existing methods, and demonstrate superiority in crowded scenarios on CrowdHuman.
+- **核心贡献**: 首次将标签分配问题形式化为最优传输问题，提供全局最优的分配方案。
+- **创新点**: 利用Sinkhorn-Knopp迭代高效求解最优传输计划，实现检测器性能的显著提升。
+- **结果**: 在COCO和CrowdHuman上取得领先性能，尤其在拥挤场景中表现突出。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -638,4 +716,5 @@
 > Data augmentation has become a de facto component for training high-performance deep image classifiers, but its potential is under-explored for object detection. Noting that most state-of-the-art object detectors benefit from fine-tuning a pre-trained classifier, we first study how the classifiers' gains from various data augmentations transfer to object detection. The results are discouraging; the gains diminish after fine-tuning in terms of either accuracy or robustness. This work instead augments the fine-tuning stage for object detectors by exploring adversarial examples, which can be viewed as a model-dependent data augmentation. Our method dynamically selects the stronger adversarial images sourced from a detector's classification and localization branches and evolves with the detector to ensure the augmentation policy stays current and relevant. This model-dependent augmentation generalizes to different object detectors better than AutoAugment, a model-agnostic augmentation policy searched based on one particular detector. Our approach boosts the performance of state-of-the-art EfficientDets by +1.1 mAP on the COCO object detection benchmark. It also improves the detectors' robustness against natural distortions by +3.8 mAP and against domain shift by +1.3 mAP. Models are available at https://github.com/google/automl/tree/master/efficientdet/Det-AdvProp.md
 
 </details>
+
 <!-- COMPLETE v1 papers=69 -->

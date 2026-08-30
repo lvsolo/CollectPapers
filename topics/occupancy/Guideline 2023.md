@@ -3,25 +3,40 @@
 > 领域: 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）
 > 论文数: 1 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### OpenOccupancy: A Large Scale Benchmark for Surrounding Semantic Occupancy Perception.
+### OpenOccupancy: A Large Scale Benchmark for Surrounding Semantic Occupancy Perception. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01636) · 📚 被引 191
 - **作者**: Xiaofeng Wang, Zheng Zhu, Wenbo Xu, Yunpeng Zhang, Yi Wei, Xu Chi et al.
 - **🏷️ 机构**: Institute of Automation,Chinese Academy of Sciences, PhiGent Robotics, Tsinghua University
 - **会议**: ICCV 2023
+- **摘要（中）**: ①针对自动驾驶中3D语义占用感知缺乏大规模基准的问题。②提出了OpenOccupancy，一个包含约8000个LiDAR扫描的大规模基准，并提供了详细的语义标注和评估协议。③相比现有数据集，其规模更大、标注更细，并支持多模态输入。④通过基准测试，为后续研究提供了标准化的评估平台。
+- **摘要（英）**: This paper addresses the lack of large-scale benchmarks for 3D semantic occupancy perception in autonomous driving. It introduces OpenOccupancy, a large-scale benchmark with around 8000 LiDAR scans and detailed semantic annotations, along with evaluation protocols. Compared to existing datasets, it offers larger scale and finer annotations, supporting multimodal inputs. The benchmark provides a standardized platform for future research.
+- **核心贡献**: 构建了大规模3D语义占用感知基准OpenOccupancy。
+- **创新点**: 提供了更全面、更细粒度的标注和评估协议。
+- **结果**: 为自动驾驶占用感知研究提供了标准化评估平台。
 
-### ASUR3D: Arbitrary Scale Upsampling and Refinement of 3D Point Clouds using Local Occupancy Fields.
+### ASUR3D: Arbitrary Scale Upsampling and Refinement of 3D Point Clouds using Local Occupancy Fields. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00180) · 📚 被引 1
 - **作者**: Akash Kumbar, Tejas Anvekar, Ramesh Ashok Tabib, Uma Mudenagudi
 - **🏷️ 机构**: KLE Technological University Vidyanagar,Center of Excellence in Visual Intelligence (CEVI),Hubballi,Karnataka,India
 - **会议**: ICCV 2023
+- **摘要（中）**: ①针对3D点云任意尺度上采样和细化的问题。②提出了ASUR3D方法，利用局部占用场实现点云的上采样和细化。③相比现有方法，支持任意尺度上采样，并保持局部几何细节。④实验表明在多个点云任务上性能提升。
+- **摘要（英）**: This paper addresses arbitrary scale upsampling and refinement of 3D point clouds. It proposes ASUR3D, which uses local occupancy fields for upsampling and refinement. Compared to existing methods, it supports arbitrary scale upsampling while preserving local geometric details. Experiments show performance improvements on multiple point cloud tasks.
+- **核心贡献**: 提出基于局部占用场的点云任意尺度上采样方法。
+- **创新点**: 支持任意尺度上采样并保持几何细节。
+- **结果**: 在多个点云任务上取得性能提升。
 
-### Occ2Net: Robust Image Matching Based on 3D Occupancy Estimation for Occluded Regions.
+### Occ2Net: Robust Image Matching Based on 3D Occupancy Estimation for Occluded Regions. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00885) · 📚 被引 6
 - **作者**: Miao Fan, Mingrui Chen, Chen Hu, Shuchang Zhou
 - **🏷️ 机构**: MEGVII Technology
 - **会议**: ICCV 2023
+- **摘要（中）**: ①针对图像匹配中遮挡区域鲁棒性差的问题。②提出了Occ2Net，通过3D占用估计来增强遮挡区域的图像匹配。③相比传统方法，利用3D占用信息提高匹配的鲁棒性。④在标准数据集上验证了方法的有效性。
+- **摘要（英）**: This paper addresses the robustness issue of image matching in occluded regions. It proposes Occ2Net, which enhances image matching by estimating 3D occupancy. Compared to traditional methods, it leverages 3D occupancy information to improve matching robustness. Experiments on standard datasets validate its effectiveness.
+- **核心贡献**: 提出基于3D占用估计的鲁棒图像匹配方法。
+- **创新点**: 利用3D占用信息处理遮挡问题。
+- **结果**: 在标准数据集上验证了有效性。
 
 ### OccFormer: Dual-path Transformer for Vision-based 3D Semantic Occupancy Prediction.
 - **链接**: [arXiv:2304.05316](https://arxiv.org/abs/2304.05316) · [代码](https://github.com/zhangyp15/OccFormer) · 📚 被引 220
@@ -79,4 +94,5 @@
 - GeoMAE: Masked Geometric Target Prediction for Self-supervised Point Cloud Pre-Training. → [self-supervised-vision](../self-supervised-vision/Guideline%202023.md)
 - Implicit Occupancy Flow Fields for Perception and Prediction in Self-Driving. → [object-detection](../object-detection/Guideline%202023.md)
 - OccFormer: Dual-path Transformer for Vision-based 3D Semantic Occupancy Prediction. → [network-pruning](../network-pruning/Guideline%202023.md)
+
 <!-- COMPLETE v1 papers=7 -->

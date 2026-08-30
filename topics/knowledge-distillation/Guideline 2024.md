@@ -3,15 +3,18 @@
 > 领域: 知识蒸馏（特征/逻辑蒸馏、VLM 蒸馏、自蒸馏）
 > 论文数: 1 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Distill Gold from Massive Ores: Bi-level Data Pruning Towards Efficient Dataset Distillation.
+### Distill Gold from Massive Ores: Bi-level Data Pruning Towards Efficient Dataset Distillation. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72661-3_14) · 📚 被引 6
 - **作者**: Yue Xu, Yong-Lu Li, Kaitong Cui, Ziyu Wang, Cewu Lu, Yu-Wing Tai et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-## 🆕 增量新增
+- **摘要（中）**: 该论文针对数据集蒸馏中数据冗余和效率低下的问题，提出了一种双层数据剪枝方法，旨在从大规模数据中提取关键样本以优化蒸馏过程。方法通过粗粒度筛选和细粒度选择两个阶段，减少数据冗余并提升蒸馏效率。实验表明该方法在多个数据集上显著降低了计算成本，同时保持了蒸馏性能。
+- **摘要（英）**: This paper tackles data redundancy in dataset distillation by proposing a bi-level data pruning method that selects critical samples from large-scale data. The approach combines coarse and fine-grained selection to improve efficiency, achieving reduced computational cost while maintaining distillation performance on multiple benchmarks.
+- **核心贡献**: 提出双层数据剪枝策略，提升数据集蒸馏效率。
+- **创新点**: 将数据剪枝与蒸馏结合，实现高效样本选择。
+- **结果**: 在多个数据集上降低计算成本并保持性能。
 
 ### Multi-modal Relation Distillation for Unified 3D Representation Learning. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2407.14007](https://arxiv.org/abs/2407.14007)
@@ -97,4 +100,5 @@
 - MVIP-NeRF: Multi-View 3D Inpainting on NeRF Scenes via Diffusion Prior. → [multi-camera-perception](../multi-camera-perception/Guideline%202024.md)
 - On the Road to Portability: Compressing End-to-End Motion Planner for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
 - Select and Distill: Selective Dual-Teacher Knowledge Transfer for Continual Learning on Vision-Language Models. → [continual-learning](../continual-learning/Guideline%202024.md)
+
 <!-- COMPLETE v1 papers=6 -->

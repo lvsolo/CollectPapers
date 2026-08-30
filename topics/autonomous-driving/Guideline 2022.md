@@ -3,13 +3,18 @@
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
 > 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Image-to-Lidar Self-Supervised Distillation for Autonomous Driving Data.
+### Image-to-Lidar Self-Supervised Distillation for Autonomous Driving Data. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2203.16258](https://arxiv.org/abs/2203.16258) · 📚 被引 112
 - **作者**: Corentin Sautier, Gilles Puy, Spyros Gidaris, Alexandre Boulch, Andrei Bursuc, Renaud Marlet
 - **🏷️ 机构**: valeo.ai,Paris,France
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对自动驾驶中3D感知模型依赖大量标注数据的问题，提出自监督预训练方法。②利用同步校准的图像和LiDAR数据，通过超像素池化点云和图像特征，训练3D网络匹配跨模态特征，无需任何标注。③相比已有自监督方法，创新在于使用超像素进行区域对比，适应自动驾驶数据的视觉一致性。④实验表明，该方法在3D分割和检测任务上有效提升预训练模型性能。
+- **摘要（英）**: This paper addresses the heavy annotation requirement for 3D perception models in autonomous driving by proposing a self-supervised pre-training method. It leverages synchronized image and LiDAR data, using superpixels to pool features and train a 3D network to match cross-modal representations without labels. Compared to prior work, it uniquely employs superpixel-based region contrast for driving data. Experiments show improved performance on downstream 3D tasks.
+- **核心贡献**: 提出基于超像素的图像到LiDAR自监督蒸馏预训练方法。
+- **创新点**: 利用超像素实现跨模态特征匹配，无需标注。
+- **结果**: 在3D分割和检测任务上提升预训练效果。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -306,4 +311,5 @@
 > Dominated point cloud-based 3D object detectors in autonomous driving scenarios rely heavily on the huge amount of accurately labeled samples, however, 3D annotation in the point cloud is extremely tedious, expensive and time-consuming. To reduce the dependence on large supervision, semi-supervised learning (SSL) based approaches have been proposed. The Pseudo-Labeling methodology is commonly used for SSL frameworks, however, the low-quality predictions from the teacher model have seriously limited its performance. In this work, we propose a new Pseudo-Labeling framework for semi-supervised 3D object detection, by enhancing the teacher model to a proficient one with several necessary designs. First, to improve the recall of pseudo labels, a Spatialtemporal Ensemble (STE) module is proposed to generate sufficient seed boxes. Second, to improve the precision of recalled boxes, a Clusteringbased Box Voting (CBV) module is designed to get aggregated votes from the clustered seed boxes. This also eliminates the necessity of sophisticated thresholds to select pseudo labels. Furthermore, to reduce the negative influence of wrongly pseudo-labeled samples during the training, a soft supervision signal is proposed by considering Box-wise Contrastive Learning (BCL). The effectiveness of our model is verified on both ONCE and Waymo datasets. For example, on ONCE, our approach significantly improves the baseline by 9.51 mAP. Moreover, with half annotations, our model outperforms the oracle model with full annotations on Waymo.
 
 </details>
+
 <!-- COMPLETE v1 papers=24 -->

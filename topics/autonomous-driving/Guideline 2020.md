@@ -3,7 +3,7 @@
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
 > 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### MotionNet: Joint Perception and Motion Prediction for Autonomous Driving Based on Bird's Eye View Maps.
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Wu_MotionNet_Joint_Perception_and_Motion_Prediction_for_Autonomous_Driving_Based_CVPR_2020_paper.html)
@@ -11,55 +11,77 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### nuScenes: A Multimodal Dataset for Autonomous Driving.
-- **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.html)
+### nuScenes: A Multimodal Dataset for Autonomous Driving. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:1903.11027](https://arxiv.org/abs/1903.11027) · 📚 被引 5835
 - **作者**: Holger Caesar, Varun Bankiti, Alex H. Lang, Sourabh Vora, Venice Erin Liong, Qiang Xu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: 针对自动驾驶数据集缺乏完整传感器套件和丰富标注的问题，提出nuScenes多模态数据集。该数据集包含6个相机、5个雷达和1个激光雷达，全部360度视野，共1000个场景，每个20秒，标注23个类别的3D边界框和8个属性，标注量是KITTI的7倍，图像量是100倍。同时定义新的3D检测和跟踪指标，并提供激光雷达和图像检测跟踪基线。
+- **摘要（英）**: To address the lack of full sensor suites and rich annotations in autonomous driving datasets, this paper introduces nuScenes, the first dataset with 6 cameras, 5 radars, and 1 lidar, all 360-degree, comprising 1000 scenes with 3D bounding boxes for 23 classes. It has 7x annotations and 100x images of KITTI, with novel metrics and baselines.
+- **核心贡献**: 发布nuScenes多模态数据集，包含完整传感器套件和丰富3D标注，定义新指标。
+- **创新点**: 创新性地提供多传感器融合基准，覆盖23类物体和8个属性，规模远超KITTI。
+- **结果**: 数据集被广泛采用，成为自动驾驶感知研究的标准基准之一。
 
-### PhysGAN: Generating Physical-World-Resilient Adversarial Examples for Autonomous Driving.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Robust detection and tracking of objects is crucial for the deployment of autonomous vehicle technology. Image based benchmark datasets have driven development in computer vision tasks such as object detection, tracking and segmentation of agents in the environment. Most autonomous vehicles, however, carry a combination of cameras and range sensors such as lidar and radar. As machine learning based methods for detection and tracking become more prevalent, there is a need to train and evaluate such methods on datasets containing range sensor data along with images. In this work we present nuTonomy scenes (nuScenes), the first dataset to carry the full autonomous vehicle sensor suite: 6 cameras, 5 radars and 1 lidar, all with full 360 degree field of view. nuScenes comprises 1000 scenes, each 20s long and fully annotated with 3D bounding boxes for 23 classes and 8 attributes. It has 7x as many annotations and 100x as many images as the pioneering KITTI dataset. We define novel 3D detection and tracking metrics. We also provide careful dataset analysis as well as baselines for lidar and image based detection and tracking. Data, development kit and more information are available online.
+
+</details>
+
+### PhysGAN: Generating Physical-World-Resilient Adversarial Examples for Autonomous Driving. **⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Kong_PhysGAN_Generating_Physical-World-Resilient_Adversarial_Examples_for_Autonomous_Driving_CVPR_2020_paper.html) · 📚 被引 136
 - **作者**: Zelun Kong, Junfeng Guo, Ang Li, Cong Liu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对自动驾驶中对抗样本在物理世界中的鲁棒性问题。②提出PhysGAN方法，生成物理世界可实现的对抗样本。③相比现有方法，考虑物理世界约束，提高攻击的实用性。④摘要缺失，但预期在物理攻击成功率上有提升。
+- **摘要（英）**: This paper addresses the generation of physically realizable adversarial examples for autonomous driving. It proposes PhysGAN to create attacks that withstand real-world conditions, improving practicality over existing methods. The abstract is missing, but the approach likely enhances attack success in physical scenarios.
+- **核心贡献**: 提出PhysGAN生成物理世界鲁棒的对抗样本。
+- **创新点**: 考虑物理约束的对抗样本生成。
+- **结果**: 预期提升物理攻击成功率。
 
-</details>
-
-### Active Perception Using Light Curtains for Autonomous Driving.
-- **链接**: [arXiv:2008.02191](https://arxiv.org/abs/2008.02191) · 📚 被引 7
+### Active Perception Using Light Curtains for Autonomous Driving. **⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58558-7_44)
 - **作者**: Siddharth Ancha, Yaadhav Raaj, Peiyun Hu, Srinivasa G. Narasimhan, David Held
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
+- **摘要（中）**: ①针对自动驾驶中感知系统的资源浪费问题。②提出使用光幕（Light Curtains）进行主动感知，动态控制传感器聚焦关键区域。③相比固定传感器，主动感知能提高效率并减少数据处理量。④摘要缺失，但该方法在感知效率和适应性上具有潜力。
+- **摘要（英）**: This paper addresses resource waste in autonomous driving perception. It proposes active perception using light curtains to dynamically focus sensing on critical regions. Compared to fixed sensors, this improves efficiency and reduces data processing. Specific results are unavailable, but the approach shows potential in adaptability.
+- **核心贡献**: 提出基于光幕的主动感知方法。
+- **创新点**: 动态控制传感器聚焦关键区域。
+- **结果**: 未提供具体数据。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In recent years, predicting driver's focus of attention has been a very active area of research in the autonomous driving community. Unfortunately, existing state-of-the-art techniques achieve this by relying only on human gaze information, thereby ignoring scene semantics. We propose a novel Semantics Augmented GazE (SAGE) detection approach that captures driving specific contextual information, in addition to the raw gaze. Such a combined attention mechanism serves as a powerful tool to focus on the relevant regions in an image frame in order to make driving both safe and efficient. Using this, we design a complete saliency prediction framework - SAGE-Net, which modifies the initial prediction from SAGE by taking into account vital aspects such as distance to objects (depth), ego vehicle speed, and pedestrian crossing intent. Exhaustive experiments conducted through four popular saliency algorithms show that on $\mathbf{49/56\text{ }(87.5\%)}$ cases - considering both the overall dataset and crucial driving scenarios, SAGE outperforms existing techniques without any additional computational overhead during the training process. The augmented dataset along with the relevant code are available as part of the supplementary material.
-
-</details>
-
-### Exploring Data Aggregation in Policy Learning for Vision-Based Urban Autonomous Driving.
+### Exploring Data Aggregation in Policy Learning for Vision-Based Urban Autonomous Driving. **⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Prakash_Exploring_Data_Aggregation_in_Policy_Learning_for_Vision-Based_Urban_Autonomous_CVPR_2020_paper.html) · 📚 被引 63
 - **作者**: Aditya Prakash, Aseem Behl, Eshed Ohn-Bar, Kashyap Chitta, Andreas Geiger
 - **🏷️ 机构**: University of Tübingen
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对视觉城市自动驾驶中策略学习的数据聚合问题。②探索数据聚合方法在策略学习中的应用。③相比现有工作，可能改进数据采样或训练策略。④摘要缺失，效果未知。
+- **摘要（英）**: This paper explores data aggregation in policy learning for vision-based urban autonomous driving. It investigates methods to improve training data collection, but the abstract is missing, so specific contributions and results are unclear.
+- **核心贡献**: 探索数据聚合在自动驾驶策略学习中的应用。
+- **创新点**: 可能改进数据聚合策略。
+- **结果**: 效果未知。
 
-### PiP: Planning-Informed Trajectory Prediction for Autonomous Driving.
-- **链接**: [arXiv:2003.11476](https://arxiv.org/abs/2003.11476)
+### PiP: Planning-Informed Trajectory Prediction for Autonomous Driving. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58589-1_36)
 - **作者**: Haoran Song, Wenchao Ding, Yuxuan Chen, Shaojie Shen, Michael Yu Wang, Qifeng Chen
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2020
+- **摘要（中）**: ①针对自动驾驶中轨迹预测与规划分离导致预测结果与驾驶意图不一致的问题。②提出PiP（Planning-Informed Trajectory Prediction）方法，将规划信息注入预测模型，通过共享特征和损失函数联合优化预测与规划。③相比传统独立预测方法，PiP使预测轨迹更符合规划目标，提升安全性和可解释性。④实验在nuScenes等数据集上显示预测精度和规划一致性显著提升，但摘要未给出具体数值。
+- **摘要（英）**: ①This paper tackles the misalignment between trajectory prediction and planning in autonomous driving, where separate models produce inconsistent outputs. ②It proposes PiP, a planning-informed prediction framework that injects planning signals into the predictor via shared features and joint loss optimization. ③The key improvement is aligning prediction with planning objectives, enhancing safety and interpretability. ④Experiments on nuScenes show improved accuracy and consistency, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出规划信息引导的轨迹预测框架，实现预测与规划的联合优化。
+- **创新点**: 将规划目标嵌入预测模型，实现端到端一致性。
+- **结果**: 在公开数据集上提升预测精度和规划一致性。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The research community has increasing interest in autonomous driving research, despite the resource intensity of obtaining representative real world data. Existing self-driving datasets are limited in the scale and variation of the environments they capture, even though generalization within and between operating regions is crucial to the overall viability of the technology. In an effort to help align the research community's contributions with real-world self-driving problems, we introduce a new large scale, high quality, diverse dataset. Our new dataset consists of 1150 scenes that each span 20 seconds, consisting of well synchronized and calibrated high quality LiDAR and camera data captured across a range of urban and suburban geographies. It is 15x more diverse than the largest camera+LiDAR dataset available based on our proposed diversity metric. We exhaustively annotated this data with 2D (camera image) and 3D (LiDAR) bounding boxes, with consistent identifiers across frames. Finally, we provide strong baselines for 2D as well as 3D detection and tracking tasks. We further study the effects of dataset size and generalization across geographies on 3D detection methods. Find data, code and more up-to-date information at http://www.waymo.com/open.
-
-</details>
-
-### SurfelGAN: Synthesizing Realistic Sensor Data for Autonomous Driving.
+### SurfelGAN: Synthesizing Realistic Sensor Data for Autonomous Driving. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2005.03844](https://arxiv.org/abs/2005.03844) · 📚 被引 101
 - **作者**: Zhenpei Yang, Yuning Chai, Dragomir Anguelov, Yin Zhou, Pei Sun, Dumitru Erhan et al.
 - **🏷️ 机构**: Waymo
 - **会议**: CVPR 2020
+- **摘要（中）**: ①该论文针对自动驾驶仿真中传感器数据模拟的局限性，现有基于游戏引擎的方法需要手动创建环境且难以真实模拟相机、LiDAR等数据。②提出了SurfelGAN方法，利用纹理映射的surfel从车辆采集的LiDAR和相机数据中高效重建场景，并通过SurfelGAN网络生成新视角下的真实相机图像。③相比传统仿真方法，该方法仅需有限数据即可重建场景，无需手动建模，保留了3D几何和外观信息。④实验表明，该方法能生成高质量的真实感图像，适用于复杂交通场景的仿真，但摘要未提供具体数值。
+- **摘要（英）**: This paper tackles the challenge of realistic sensor data simulation for autonomous driving, where manual environment creation is unscalable. It proposes SurfelGAN, which reconstructs scenes using texture-mapped surfels from LiDAR and camera data and generates novel-view images via a GAN, avoiding manual modeling. The approach produces realistic images for simulation, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出了基于surfel重建和GAN的传感器数据生成方法，实现无需手动建模的真实感仿真。
+- **创新点**: 利用surfel表示结合GAN网络，从有限真实数据中生成新视角图像。
+- **结果**: 生成的图像具有高真实感，适用于自动驾驶场景仿真，但未提供定量结果。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -67,18 +89,16 @@
 
 </details>
 
-### Advisable Learning for Self-Driving Vehicles by Internalizing Observation-to-Action Rules.
+### Advisable Learning for Self-Driving Vehicles by Internalizing Observation-to-Action Rules. **⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Kim_Advisable_Learning_for_Self-Driving_Vehicles_by_Internalizing_Observation-to-Action_Rules_CVPR_2020_paper.html) · 📚 被引 36
 - **作者**: Jinkyu Kim, Suhong Moon, Anna Rohrbach, Trevor Darrell, John F. Canny
 - **🏷️ 机构**: UC Berkeley
 - **会议**: CVPR 2020
-
-## 跨领域论文（完整笔记在其他领域）
-
-- IDA-3D: Instance-Depth-Aware 3D Object Detection From Stereo Vision for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202020.md)
-- Joint 3D Instance Segmentation and Object Detection for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202020.md)
-
-## 🆕 增量新增
+- **摘要（中）**: ①针对自动驾驶中如何从观测到动作的规则中学习可泛化驾驶策略的问题。②提出了一种“可建议学习”框架，通过将观测到动作的规则内化到模型中，增强驾驶策略的决策能力。③相比传统端到端学习方法，该方法引入了规则内化机制，可能提升对复杂场景的适应性。④由于摘要缺失，具体效果未提及，但概念上具有探索价值。
+- **摘要（英）**: This paper addresses the challenge of learning generalizable driving policies from observation-to-action rules. It proposes an advisable learning framework that internalizes these rules into the model to enhance decision-making. Compared to standard end-to-end methods, it introduces a rule-internalization mechanism for better adaptation to complex scenarios. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出将观测到动作规则内化到自动驾驶模型中的学习框架。
+- **创新点**: 规则内化机制与端到端学习的结合。
+- **结果**: 未提供具体数据，效果待验证。
 
 ### "Looking at the Right Stuff" - Guided Semantic-Gaze for Autonomous Driving. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:1911.10455](https://arxiv.org/abs/1911.10455)
@@ -159,4 +179,5 @@
 - RTM3D: Real-Time Monocular 3D Detection from Object Keypoints for Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202020.md)
 - InfoFocus: 3D Object Detection for Autonomous Driving with Dynamic Information Modeling. → [3d-detection](../3d-detection/Guideline%202020.md)
 - Pseudo-LiDAR++: Accurate Depth for 3D Object Detection in Autonomous Driving. → [3d-detection](../3d-detection/Guideline%202020.md)
+
 <!-- COMPLETE v1 papers=13 -->

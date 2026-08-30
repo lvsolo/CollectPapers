@@ -3,7 +3,7 @@
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
 > 论文数: 31 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### AVQACL: A Novel Benchmark for Audio-Visual Question Answering Continual Learning.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_AVQACL_A_Novel_Benchmark_for_Audio-Visual_Question_Answering_Continual_Learning_CVPR_2025_paper.html)
@@ -11,11 +11,22 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
 
-### Advancing Multiple Instance Learning with Continual Learning for Whole Slide Imaging.
+### Advancing Multiple Instance Learning with Continual Learning for Whole Slide Imaging. **⭐⭐⭐** (相关度: 20%)
 - **链接**: [arXiv:2505.10649](https://arxiv.org/abs/2505.10649) · 📚 被引 1
 - **作者**: Xianrui Li, Yufei Cui, Jun Li, Antoni B. Chan
 - **🏷️ 机构**: City University of Hong Kong,Dept. of Computer Science, Noah&#x2019;s Ark Lab, Huawei Canada,Montreal,Canada, Guangzhou Bingli Technology Co., Ltd.,Guangzhou
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对全切片图像分析中传统多实例学习模型无法适应数据分布变化、需要大量重训练的问题，本文分析了注意力多实例学习模型在持续学习中的遗忘机制，发现遗忘主要集中在注意力层。为此提出了注意力知识蒸馏和伪包记忆池两个组件，前者通过保留注意力层知识来缓解灾难性遗忘，后者通过选择性存储信息量最大的伪包来降低内存占用。实验表明该方法在多个全切片图像数据集上显著提升了准确率和内存效率。
+- **摘要（英）**: This paper addresses the lack of adaptability in conventional multiple instance learning (MIL) models for whole slide image analysis under evolving datasets. By analyzing catastrophic forgetting in attention-based MIL, they identify attention layers as the main source of forgetting and propose Attention Knowledge Distillation (AKD) and Pseudo-Bag Memory Pool (PMP) to mitigate it. Experiments show significant improvements in accuracy and memory efficiency across diverse WSI datasets.
+- **核心贡献**: 提出了针对注意力MIL模型的持续学习改进方法，包括注意力知识蒸馏和伪包记忆池。
+- **创新点**: 首次分析并利用注意力层遗忘特性设计持续学习策略。
+- **结果**: 在多个WSI数据集上显著提升准确率和内存效率。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Advances in medical imaging and deep learning have propelled progress in whole slide image (WSI) analysis, with multiple instance learning (MIL) showing promise for efficient and accurate diagnostics. However, conventional MIL models often lack adaptability to evolving datasets, as they rely on static training that cannot incorporate new information without extensive retraining. Applying continual learning (CL) to MIL models is a possible solution, but often sees limited improvements. In this paper, we analyze CL in the context of attention MIL models and find that the model forgetting is mainly concentrated in the attention layers of the MIL model. Using the results of this analysis we propose two components for improving CL on MIL: Attention Knowledge Distillation (AKD) and the Pseudo-Bag Memory Pool (PMP). AKD mitigates catastrophic forgetting by focusing on retaining attention layer knowledge between learning sessions, while PMP reduces the memory footprint by selectively storing only the most informative patches, or ``pseudo-bags'' from WSIs. Experimental evaluations demonstrate that our method significantly improves both accuracy and memory efficiency on diverse WSI datasets, outperforming current state-of-the-art CL methods. This work provides a foundation for CL in large-scale, weakly annotated clinical datasets, paving the way for more adaptable and resilient diagnostic models.
+
+</details>
 
 ### Feature Decomposition-Recomposition in Large Vision-Language Model for Few-Shot Class-Incremental Learning.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00302) · 📚 被引 0
@@ -31,11 +42,22 @@
 - **🏷️ 机构**: STEM University of South Australia,South Australia, Institute for Infocomm Research
 - **会议**: ICCV 2025
 
-### Self-Expansion of Pre-trained Models with Mixture of Adapters for Continual Learning.
+### Self-Expansion of Pre-trained Models with Mixture of Adapters for Continual Learning. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2403.18886](https://arxiv.org/abs/2403.18886) · 📚 被引 15
 - **作者**: Huiyi Wang, Haodong Lu, Lina Yao, Dong Gong
 - **🏷️ 机构**: University of New South Wales, CSIRO&#x2019;s Data61
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对基于预训练模型的持续学习方法因固定模块集导致学习能力受限、或周期性添加任务特定模块导致模型线性增长和知识复用不足的问题，本文提出SEMA方法，通过自动决定重用或添加适配器模块来控制稳定性-可塑性平衡。SEMA设计模块化适配器，包含功能适配器和表示描述符，根据表示级别的分布偏移检测来决定是否扩展。该方法在多个持续学习基准上取得了优于现有方法的性能。
+- **摘要（英）**: This paper tackles the limited learning capacity and linear model growth in pre-trained model-based continual learning. SEMA automatically decides to reuse or add adapter modules based on distribution shift detection at different representation levels, using modular adapters with functional adapters and representation descriptors. It achieves superior performance on multiple continual learning benchmarks.
+- **核心贡献**: 提出SEMA方法，通过模块化适配器的自动扩展实现高效的持续学习。
+- **创新点**: 基于分布偏移检测的自适应模块扩展机制。
+- **结果**: 在多个基准上优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual learning (CL) aims to continually accumulate knowledge from a non-stationary data stream without catastrophic forgetting of learned knowledge, requiring a balance between stability and adaptability. Relying on the generalizable representation in pre-trained models (PTMs), PTM-based CL methods perform effective continual adaptation on downstream tasks by adding learnable adapters or prompts upon the frozen PTMs. However, many existing PTM-based CL methods use restricted adaptation on a fixed set of these modules to avoid forgetting, suffering from limited CL ability. Periodically adding task-specific modules results in linear model growth rate and impaired knowledge reuse. We propose Self-Expansion of pre-trained models with Modularized Adaptation (SEMA), a novel approach to enhance the control of stability-plasticity balance in PTM-based CL. SEMA automatically decides to reuse or add adapter modules on demand in CL, depending on whether significant distribution shift that cannot be handled is detected at different representation levels. We design modular adapter consisting of a functional adapter and a representation descriptor. The representation descriptors are trained as a distribution shift indicator and used to trigger self-expansion signals. For better composing the adapters, an expandable weighting router is learned jointly for mixture of adapter outputs. SEMA enables better knowledge reuse and sub-linear expansion rate. Extensive experiments demonstrate the effectiveness of the proposed self-expansion method, achieving state-of-the-art performance compared to PTM-based CL methods without memory rehearsal. Code is available at https://github.com/huiyiwang01/SEMA-CL.
+
+</details>
 
 ### CODE-CL: Conceptor-Based Gradient Projection for Deep Continual Learning.
 - **链接**: [arXiv:2411.15235](https://arxiv.org/abs/2411.15235) · 📚 被引 1
@@ -51,11 +73,16 @@
 - **🏷️ 机构**: CS Nankai University,VCIP, NKIARI,Shenzhen,Futian
 - **会议**: ICCV 2025
 
-### Online Task-Free Continual Learning via Dynamic Expansionable Memory Distribution.
+### Online Task-Free Continual Learning via Dynamic Expansionable Memory Distribution. **⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ye_Online_Task-Free_Continual_Learning_via_Dynamic_Expansionable_Memory_Distribution_CVPR_2025_paper.html) · 📚 被引 1
 - **作者**: Fei Ye, Adrian G. Bors
 - **🏷️ 机构**: University of Electronic Science and Technology of China,School of Information and Software Engineering,Chengdu, University of York,Department of Computer Science,York,UK,YO10 5GH
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文摘要缺失，无法提供具体内容。根据标题推测，可能针对在线无任务持续学习问题，提出动态可扩展记忆分布的方法。由于缺乏细节，无法评估其方法质量和效果。
+- **摘要（英）**: The abstract is missing, so the content cannot be summarized. Based on the title, it likely addresses online task-free continual learning with dynamic expandable memory distribution, but details are unavailable.
+- **核心贡献**: 未知。
+- **创新点**: 未知。
+- **结果**: 未知。
 
 ### Joint Diffusion Models in Continual Learning.
 - **链接**: [arXiv:2411.08224](https://arxiv.org/abs/2411.08224) · 📚 被引 0
@@ -97,11 +124,16 @@
 - **🏷️ 机构**: School of Informatics, Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China, Hanjiang National Laboratory, Shanghai Innovation Institute
 - **会议**: ICCV 2025
 
-### KAC: Kolmogorov-Arnold Classifier for Continual Learning.
+### KAC: Kolmogorov-Arnold Classifier for Continual Learning. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2503.21076](https://arxiv.org/abs/2503.21076) · 📚 被引 5
 - **作者**: Yusong Hu, Zichen Liang, Fei Yang, Qibin Hou, Xialei Liu, Ming-Ming Cheng
 - **🏷️ 机构**: Nankai University,VCIP, CS
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对持续学习中线性分类器难以在连续任务中保持稳定分类空间的问题，本文提出基于Kolmogorov-Arnold网络的KAC分类器，并引入径向基函数以提升与持续学习的兼容性。将KAC替换多种现有方法中的线性分类器，在多个持续学习基准上均取得性能提升，验证了其有效性和鲁棒性。
+- **摘要（英）**: This paper addresses the instability of linear classifiers in continual learning by proposing the Kolmogorov-Arnold Classifier (KAC) based on KAN structure, with Radial Basis Functions for improved compatibility. Replacing linear classifiers with KAC in several recent methods yields performance improvements across benchmarks, demonstrating effectiveness and robustness.
+- **核心贡献**: 提出基于KAN的KAC分类器用于持续学习。
+- **创新点**: 将KAN结构和RBF函数应用于持续学习分类器。
+- **结果**: 在多个基准上提升性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -109,11 +141,22 @@
 
 </details>
 
-### Do Your Best and Get Enough Rest for Continual Learning.
+### Do Your Best and Get Enough Rest for Continual Learning. **⭐⭐** (相关度: 30%)
 - **链接**: [arXiv:2503.18371](https://arxiv.org/abs/2503.18371) · 📚 被引 1
 - **作者**: Hankyul Kang, Gregor Seifer, Donghyun Lee, Jongbin Ryu
 - **🏷️ 机构**: Ajou University, KAIST
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对持续学习中灾难性遗忘问题，受人类遗忘曲线理论启发，提出通过调整学习计划来优化重训练间隔。②提出了view-batch模型，包括一种保证最优回忆间隔的重放方法和一种自监督学习方法。③相比现有重放方法，创新性地将认知科学理论引入学习调度，强调回忆间隔的重要性。④摘要未提供具体实验数据，效果待验证。
+- **摘要（英）**: This paper addresses catastrophic forgetting in continual learning by drawing inspiration from Ebbinghaus' forgetting curve theory. It proposes a view-batch model that adjusts learning schedules to optimize recall intervals, including a replay method and a self-supervised learning approach. The novelty lies in applying cognitive science principles to learning scheduling, though experimental results are not detailed in the abstract.
+- **核心贡献**: 将遗忘曲线理论引入持续学习，提出基于回忆间隔优化的重放策略。
+- **创新点**: 利用认知科学中的遗忘曲线来设计学习调度，而非仅依赖数据重放。
+- **结果**: 摘要未提供具体效果数据。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> According to the forgetting curve theory, we can enhance memory retention by learning extensive data and taking adequate rest. This means that in order to effectively retain new knowledge, it is essential to learn it thoroughly and ensure sufficient rest so that our brain can memorize without forgetting. The main takeaway from this theory is that learning extensive data at once necessitates sufficient rest before learning the same data again. This aspect of human long-term memory retention can be effectively utilized to address the continual learning of neural networks. Retaining new knowledge for a long period of time without catastrophic forgetting is the critical problem of continual learning. Therefore, based on Ebbinghaus' theory, we introduce the view-batch model that adjusts the learning schedules to optimize the recall interval between retraining the same samples. The proposed view-batch model allows the network to get enough rest to learn extensive knowledge from the same samples with a recall interval of sufficient length. To this end, we specifically present two approaches: 1) a replay method that guarantees the optimal recall interval, and 2) a self-supervised learning that acquires extensive knowledge from a single training sample at a time. We empirically show that these approaches of our method are aligned with the forgetting curve theory, which can enhance long-term memory. In our experiments, we also demonstrate that our method significantly improves many state-of-the-art continual learning methods in various protocols and scenarios. We open-source this project at https://github.com/hankyul2/ViewBatchModel.
+
+</details>
 
 ### Lark: Low-Rank Updates After Knowledge Localization for Few-Shot Class-Incremental Learning.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00344) · 📚 被引 0
@@ -129,11 +172,22 @@
 - **🏷️ 机构**: Beihang University,State Key Laboratory of Virtual Reality Technology and Systems, SCSE &#x0026; QRI
 - **会议**: ICCV 2025
 
-### LoRA Subtraction for Drift-Resistant Space in Exemplar-Free Continual Learning.
+### LoRA Subtraction for Drift-Resistant Space in Exemplar-Free Continual Learning. **⭐⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2503.18985](https://arxiv.org/abs/2503.18985) · 📚 被引 8
 - **作者**: Xuan Liu, Xiaobin Chang
 - **🏷️ 机构**: School of Artificial Intelligence, Sun Yat-sen University,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对无样本持续学习（EFCL）中特征漂移导致的灾难性遗忘问题。②提出了漂移抵抗空间（DRS）概念，并设计了LoRA减法（LoRA-）方法，通过从预训练权重中减去旧任务的LoRA权重来构建DRS。③相比依赖静态特征或过时统计的方法，LoRA-无需显式特征建模或存储旧任务，能动态适应特征空间演化。④实验表明该方法在稳定性、效率和实现简便性上均有提升，但摘要未给出具体数值。
+- **摘要（英）**: This paper tackles feature drift in exemplar-free continual learning by introducing a Drift-Resistant Space (DRS) and a Low-Rank Adaptation Subtraction (LoRA-) method. LoRA- subtracts old-task LoRA weights from pre-trained weights to establish DRS, avoiding explicit feature modeling and old-task storage. It enhances stability and efficiency, though specific performance numbers are not provided in the abstract.
+- **核心贡献**: 提出LoRA-方法构建漂移抵抗空间，解决无样本持续学习中的特征漂移问题。
+- **创新点**: 利用LoRA权重减法动态构建DRS，无需存储旧任务样本。
+- **结果**: 提升了稳定性、效率和实现简便性，具体数值未给出。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In continual learning (CL), catastrophic forgetting often arises due to feature drift. This challenge is particularly prominent in the exemplar-free continual learning (EFCL) setting, where samples from previous tasks cannot be retained, making it difficult to preserve prior knowledge. To address this issue, some EFCL methods aim to identify feature spaces that minimize the impact on previous tasks while accommodating new ones. However, they rely on static features or outdated statistics stored from old tasks, which prevents them from capturing the dynamic evolution of the feature space in CL, leading to performance degradation over time. In this paper, we introduce the Drift-Resistant Space (DRS), which effectively handles feature drifts without requiring explicit feature modeling or the storage of previous tasks. A novel parameter-efficient fine-tuning approach called Low-Rank Adaptation Subtraction (LoRA-) is proposed to develop the DRS. This method subtracts the LoRA weights of old tasks from the initial pre-trained weight before processing new task data to establish the DRS for model training. Therefore, LoRA- enhances stability, improves efficiency, and simplifies implementation. Furthermore, stabilizing feature drifts allows for better plasticity by learning with a triplet loss. Our method consistently achieves state-of-the-art results, especially for long task sequences, across multiple datasets.
+
+</details>
 
 ### Flexi-FSCIL: Adaptive Knowledge Retention for Breaking the Stability-Plasticity Dilemma in Few-Shot Class-Incremental Learning.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00236) · 📚 被引 2
@@ -149,29 +203,50 @@
 - **🏷️ 机构**: School of Computer Science and Engineering, Sun Yat-sen University,china
 - **会议**: ICCV 2025
 
-### Enhancing Online Continual Learning with Plug-and-Play State Space Model and Class-Conditional Mixture of Discretization.
+### Enhancing Online Continual Learning with Plug-and-Play State Space Model and Class-Conditional Mixture of Discretization. **⭐⭐⭐⭐** (相关度: 35%)
 - **链接**: [arXiv:2412.18177](https://arxiv.org/abs/2412.18177) · 📚 被引 1
 - **作者**: Sihao Liu, Yibo Yang, Xiaojie Li, David A. Clifton, Bernard Ghanem
 - **🏷️ 机构**: Harbin Institute of Technology, King Abdullah University of Science and Technology, Harbin Institute of Technology (Shenzhen)
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对在线持续学习（OCL）中模型适应性不足，难以从在线数据流中增量学习泛化特征的问题。②提出了即插即用模块S6MOD，在骨干网络后添加分支，通过混合离散化方法调整选择性状态空间模型的参数，并设计了类条件路由算法和对比离散化损失。③相比现有依赖重放和正则化的方法，S6MOD直接提升模型适应性，可集成到多数现有方法中。④大量实验表明S6MOD显著提升模型适应性，但摘要未给出具体数值。
+- **摘要（英）**: This work addresses the limited adaptability of models in online continual learning by proposing a plug-and-play module S6MOD. It adds a branch after the backbone, using a mixture of discretization to adjust selective state space model parameters, with a class-conditional routing algorithm and contrastive loss. S6MOD can be integrated into existing methods, significantly improving adaptability, though specific results are not detailed.
+- **核心贡献**: 提出即插即用的S6MOD模块，增强在线持续学习中的模型适应性。
+- **创新点**: 将选择性状态空间模型与混合离散化结合，实现动态参数调整。
+- **结果**: 显著提升模型适应性，具体数值未在摘要中给出。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Machine Learning models in real-world applications must continuously learn new tasks to adapt to shifts in the data-generating distribution. Yet, for Continual Learning (CL), models often struggle to balance learning new tasks (plasticity) with retaining previous knowledge (memory stability). Consequently, they are susceptible to Catastrophic Forgetting, which degrades performance and undermines the reliability of deployed systems. In the Bayesian CL literature, variational methods tackle this challenge by employing a learning objective that recursively updates the posterior distribution while constraining it to stay close to its previous estimate. Nonetheless, we argue that these methods may be ineffective due to compounding approximation errors over successive recursions. To mitigate this, we propose new learning objectives that integrate the regularization effects of multiple previous posterior estimations, preventing individual errors from dominating future posterior updates and compounding over time. We reveal insightful connections between these objectives and Temporal-Difference methods, a popular learning mechanism in Reinforcement Learning and Neuroscience. Experiments on challenging CL benchmarks show that our approach effectively mitigates Catastrophic Forgetting, outperforming strong Variational CL methods.
+> Online continual learning (OCL) seeks to learn new tasks from data streams that appear only once, while retaining knowledge of previously learned tasks. Most existing methods rely on replay, focusing on enhancing memory retention through regularization or distillation. However, they often overlook the adaptability of the model, limiting the ability to learn generalizable and discriminative features incrementally from online training data. To address this, we introduce a plug-and-play module, S6MOD, which can be integrated into most existing methods and directly improve adaptability. Specifically, S6MOD introduces an extra branch after the backbone, where a mixture of discretization selectively adjusts parameters in a selective state space model, enriching selective scan patterns such that the model can adaptively select the most sensitive discretization method for current dynamics. We further design a class-conditional routing algorithm for dynamic, uncertainty-based adjustment and implement a contrastive discretization loss to optimize it. Extensive experiments combining our module with various models demonstrate that S6MOD significantly enhances model adaptability, leading to substantial performance gains and achieving the state-of-the-art results.
 
 </details>
 
-### Handling Spatial-Temporal Data Heterogeneity for Federated Continual Learning via Tail Anchor.
+### Handling Spatial-Temporal Data Heterogeneity for Federated Continual Learning via Tail Anchor. **⭐** (相关度: 20%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yu_Handling_Spatial-Temporal_Data_Heterogeneity_for_Federated_Continual_Learning_via_Tail_CVPR_2025_paper.html) · 📚 被引 5
 - **作者**: Hao Yu, Xin Yang, Le Zhang, Hanlin Gu, Tianrui Li, Lixin Fan et al.
 - **🏷️ 机构**: Southwestern University of Finance and Economics, University of Electronic Science and Technology of China, WeBank
 - **会议**: CVPR 2025
+- **摘要（中）**: ①摘要为空，无法评估具体问题和方法。②论文标题涉及联邦持续学习中的时空数据异质性，可能提出Tail Anchor方法。③无可用信息。④无效果数据。
+- **摘要（英）**: The abstract is empty, so no details on the problem, method, or results can be assessed. The title suggests a focus on spatial-temporal data heterogeneity in federated continual learning, possibly with a Tail Anchor approach.
+- **核心贡献**: 未知，因摘要为空。
+- **创新点**: 未知。
+- **结果**: 未知。
 
-### Ferret: An Efficient Online Continual Learning Framework under Varying Memory Constraints.
-- **链接**: [arXiv:2503.12053](https://arxiv.org/abs/2503.12053) · 📚 被引 0
+### Ferret: An Efficient Online Continual Learning Framework under Varying Memory Constraints. **⭐⭐⭐⭐** (相关度: 30%)
+- **链接**: [arXiv:2503.12053](https://arxiv.org/abs/2503.12053)
 - **作者**: Yuhao Zhou, Yuxin Tian, Jindi Lv, Mingjia Shi, Yuanxi Li, Qing Ye et al.
 - **🏷️ 机构**: Sichuan University, National University of Singapore, University of Illinois Urbana-Champaign
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对在线持续学习（OCL）在高频数据流中实时学习且内存受限的问题。②提出了Ferret框架，采用细粒度流水线并行策略和迭代梯度补偿算法，并自动进行模型分区和流水线规划以适应内存预算。③相比现有方法，Ferret在内存效率和适应性上显著提升。④在20个基准和5个OCL算法上，达到相同在线精度时内存开销降低3.7倍，且在不同内存预算下均优于对比方法。
+- **摘要（英）**: This paper presents Ferret, a framework for online continual learning under varying memory constraints, using fine-grained pipeline parallelism and iterative gradient compensation. It automates model partitioning to adapt to memory budgets, achieving up to 3.7x lower memory overhead for the same online accuracy across 20 benchmarks and 5 OCL algorithms. Ferret consistently outperforms competing methods under diverse memory budgets.
+- **核心贡献**: 提出Ferret框架，实现内存约束下的高效在线持续学习。
+- **创新点**: 结合流水线并行和梯度补偿，动态适应内存预算。
+- **结果**: 内存开销降低3.7倍，性能优于对比方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In the realm of high-frequency data streams, achieving real-time learning within varying memory constraints is paramount. This paper presents Ferret, a comprehensive framework designed to enhance online accuracy of Online Continual Learning (OCL) algorithms while dynamically adapting to varying memory budgets. Ferret employs a fine-grained pipeline parallelism strategy combined with an iterative gradient compensation algorithm, ensuring seamless handling of high-frequency data with minimal latency, and effectively counteracting the challenge of stale gradients in parallel training. To adapt to varying memory budgets, its automated model partitioning and pipeline planning optimizes performance regardless of memory limitations. Extensive experiments across 20 benchmarks and 5 integrated OCL algorithms show Ferret's remarkable efficiency, achieving up to 3.7$\times$ lower memory overhead to reach the same online accuracy compared to competing methods. Furthermore, Ferret consistently outperforms these methods across diverse memory budgets, underscoring its superior adaptability. These findings position Ferret as a premier solution for efficient and adaptive OCL framework in real-time environments.
+
+</details>
 
 ### Model Inversion with Layer-Specific Modeling and Alignment for Data-Free Continual Learning.
 - **链接**: [arXiv:2510.26311](https://arxiv.org/abs/2510.26311) · 📚 被引 0
@@ -185,29 +260,55 @@
 
 </details>
 
-### BiLoRA: Almost-Orthogonal Parameter Spaces for Continual Learning.
+### BiLoRA: Almost-Orthogonal Parameter Spaces for Continual Learning. **⭐⭐⭐** (相关度: 25%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_BiLoRA_Almost-Orthogonal_Parameter_Spaces_for_Continual_Learning_CVPR_2025_paper.html) · 📚 被引 6
 - **作者**: Hao Zhu, Yifei Zhang, Junhao Dong, Piotr Koniusz
 - **🏷️ 机构**: Data61&#x2665;CSIRO, Nanyang Technological University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对持续学习中参数空间干扰导致灾难性遗忘的问题。②提出了BiLoRA方法，构建几乎正交的参数空间以减少任务间干扰。③相比标准LoRA，BiLoRA通过正交化设计提升知识保留能力。④摘要未提供具体实验数据，效果待验证。
+- **摘要（英）**: This paper addresses parameter interference in continual learning by proposing BiLoRA, which constructs almost-orthogonal parameter spaces to reduce cross-task interference. It improves knowledge retention compared to standard LoRA, though specific experimental results are not provided in the abstract.
+- **核心贡献**: 提出BiLoRA方法，利用几乎正交参数空间缓解持续学习中的遗忘。
+- **创新点**: 将正交性引入LoRA参数空间设计。
+- **结果**: 摘要未提供具体效果数据。
 
-### Learning Conditional Space-Time Prompt Distributions for Video Class-Incremental Learning.
+### Learning Conditional Space-Time Prompt Distributions for Video Class-Incremental Learning. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zou_Learning_Conditional_Space-Time_Prompt_Distributions_for_Video_Class-Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 1
 - **作者**: Xiaohan Zou, Wenchao Ma, Shu Zhao
 - **🏷️ 机构**: The Pennsylvania State University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对视频类增量学习（Video Class-Incremental Learning）中灾难性遗忘和时序信息利用不足的问题。②提出学习条件空间-时间提示分布（Conditional Space-Time Prompt Distributions），通过条件生成机制动态调整提示以适应视频帧的时空变化。③相比静态提示方法，该方法能更好地捕捉视频中的动态特征，提升增量学习中的知识保留。④在多个视频基准上取得了优于现有方法的性能，具体数据未在摘要中提供。
+- **摘要（英）**: This paper addresses catastrophic forgetting and insufficient temporal exploitation in video class-incremental learning. It proposes learning conditional space-time prompt distributions that dynamically adjust prompts to accommodate spatial-temporal variations in video frames. Compared to static prompt methods, it better captures dynamic features, improving knowledge retention. It achieves superior performance on multiple video benchmarks, though specific numbers are not provided.
+- **核心贡献**: 提出条件空间-时间提示分布用于视频类增量学习。
+- **创新点**: 将提示学习扩展到时空条件分布，动态适应视频动态。
+- **结果**: 在视频基准上性能优于现有方法。
 
-### Dual Consolidation for Pre-Trained Model-Based Domain-Incremental Learning.
+### Dual Consolidation for Pre-Trained Model-Based Domain-Incremental Learning. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_Dual_Consolidation_for_Pre-Trained_Model-Based_Domain-Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 14
 - **作者**: Da-Wei Zhou, Zi-Wen Cai, Han-Jia Ye, Lijun Zhang, De-Chuan Zhan
 - **🏷️ 机构**: Nanjing University,School of Artificial Intelligence
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对基于预训练模型的域增量学习（Domain-Incremental Learning）中灾难性遗忘问题。②提出双重巩固（Dual Consolidation）机制，结合参数和特征层面的巩固策略，以保持模型在多个域上的稳定性。③相比单一巩固方法，双重巩固更全面地保留预训练知识，同时适应新域。④在多个域增量基准上展示了有效性，具体数据未在摘要中提供。
+- **摘要（英）**: This paper tackles catastrophic forgetting in pre-trained model-based domain-incremental learning. It proposes a dual consolidation mechanism combining parameter and feature-level strategies to maintain stability across domains. Compared to single consolidation, it more comprehensively preserves pre-trained knowledge while adapting to new domains. It demonstrates effectiveness on multiple benchmarks, though specific numbers are not provided.
+- **核心贡献**: 提出双重巩固机制用于域增量学习。
+- **创新点**: 结合参数和特征巩固，增强知识保留。
+- **结果**: 在多个基准上有效。
 
-### Reducing Class-wise Confusion for Incremental Learning with Disentangled Manifolds.
+### Reducing Class-wise Confusion for Incremental Learning with Disentangled Manifolds. **⭐⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2503.17677](https://arxiv.org/abs/2503.17677) · 📚 被引 5
 - **作者**: Huitong Chen, Yu Wang, Yan Fan, Guosong Jiang, Qinghua Hu
 - **🏷️ 机构**: Tianjin University,Tianjin Key Lab of Machine Learning, College of Intelligence and Computing,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对类增量学习（CIL）中原型方法表示能力不足和特征重叠导致的类间混淆问题。②提出Confusion-REduced AuTo-Encoder分类器（CREATE），使用轻量级自编码器为每个类学习紧凑流形，并设计混淆感知的潜在空间分离损失，使样本在正确自编码器上重建良好且远离其他类分布。③相比传统原型方法，增强了表示稳定性和类分布能力，缓解类间混淆。④实验表明方法性能更强，具体数据未在摘要中提供。
+- **摘要（英）**: This paper addresses inadequate representation and feature overlap in prototype-based class incremental learning, causing class-wise confusion. It proposes CREATE, a confusion-reduced auto-encoder classifier that learns compact manifolds per class and uses a confusion-aware separation loss to keep samples close to their class manifold and away from others. Compared to prototype methods, it enhances representation stability and reduces confusion. Experiments show stronger performance, though specific numbers are not provided.
+- **核心贡献**: 提出CREATE方法缓解类增量学习中的类间混淆。
+- **创新点**: 利用自编码器流形和分离损失增强类表示。
+- **结果**: 性能优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Class incremental learning (CIL) aims to enable models to continuously learn new classes without catastrophically forgetting old ones. A promising direction is to learn and use prototypes of classes during incremental updates. Despite simplicity and intuition, we find that such methods suffer from inadequate representation capability and unsatisfied feature overlap. These two factors cause class-wise confusion and limited performance. In this paper, we develop a Confusion-REduced AuTo-Encoder classifier (CREATE) for CIL. Specifically, our method employs a lightweight auto-encoder module to learn compact manifold for each class in the latent subspace, constraining samples to be well reconstructed only on the semantically correct auto-encoder. Thus, the representation stability and capability of class distributions are enhanced, alleviating the potential class-wise confusion problem. To further distinguish the overlapped features, we propose a confusion-aware latent space separation loss that ensures samples are closely distributed in their corresponding low-dimensional manifold while keeping away from the distributions of features from other classes. Our method demonstrates stronger representational capacity and discrimination ability by learning disentangled manifolds and reduces class confusion. Extensive experiments on multiple datasets and settings show that CREATE outperforms other state-of-the-art methods up to 5.41%.
+
+</details>
 
 ### C2Prompt: Class-aware Client Knowledge Interaction for Federated Continual Learning.
 - **链接**: [arXiv:2509.19674](https://arxiv.org/abs/2509.19674) · 📚 被引 0
@@ -221,47 +322,72 @@
 
 </details>
 
-### Enhancing Few-Shot Class-Incremental Learning via Training-Free Bi-Level Modality Calibration.
+### Enhancing Few-Shot Class-Incremental Learning via Training-Free Bi-Level Modality Calibration. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Enhancing_Few-Shot_Class-Incremental_Learning_via_Training-Free_Bi-Level_Modality_Calibration_CVPR_2025_paper.html) · 📚 被引 5
 - **作者**: Yiyang Chen, Tianyu Ding, Lei Wang, Jing Huo, Yang Gao, Wenbin Li
 - **🏷️ 机构**: Nanjing University,State Key Laboratory for Novel Software Technology,China, Microsoft,Applied Sciences Group,USA, University of Wollongong,Australia
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对少样本类增量学习（Few-Shot Class-Incremental Learning）中模态校准不足的问题。②提出训练无关的双层模态校准方法（Training-Free Bi-Level Modality Calibration），无需额外训练即可校准不同模态间的特征分布。③相比需要训练的方法，该方法计算开销低，易于部署。④在少样本增量基准上展示了有效性，具体数据未在摘要中提供。
+- **摘要（英）**: This paper addresses insufficient modality calibration in few-shot class-incremental learning. It proposes a training-free bi-level modality calibration method that aligns feature distributions across modalities without additional training. Compared to training-based methods, it has lower computational cost and is easy to deploy. It demonstrates effectiveness on few-shot incremental benchmarks, though specific numbers are not provided.
+- **核心贡献**: 提出训练无关的双层模态校准方法。
+- **创新点**: 无需训练即可实现模态校准。
+- **结果**: 在少样本基准上有效。
 
-### Adapter Merging with Centroid Prototype Mapping for Scalable Class-Incremental Learning.
+### Adapter Merging with Centroid Prototype Mapping for Scalable Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2412.18219](https://arxiv.org/abs/2412.18219) · 📚 被引 4
 - **作者**: Takuma Fukuda, Hiroshi Kera, Kazuhiko Kawamoto
 - **🏷️ 机构**: Chiba University, Chiba University Zuse Institute Berlin
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对类增量学习（CIL）中推理时间与精度权衡的问题。②提出Adapter Merging with Centroid Prototype Mapping（ACMap），将任务特定适配器合并为单一适配器，实现恒定推理时间，并通过质心原型映射保持高精度。③相比现有方法，ACMap在保持精度的同时显著降低推理开销，且无需存储样本。④在五个基准数据集上，ACMap匹配最先进精度，推理时间与最快方法相当。
+- **摘要（英）**: This paper addresses the trade-off between inference time and accuracy in class-incremental learning. It proposes ACMap, which merges task-specific adapters into a single one for constant inference time, while using centroid prototype mapping to maintain accuracy. Compared to existing methods, it achieves state-of-the-art accuracy with inference time comparable to the fastest approaches, without storing exemplars. Extensive experiments on five benchmarks confirm its effectiveness.
+- **核心贡献**: 提出ACMap框架实现高效类增量学习。
+- **创新点**: 适配器合并与质心原型映射结合，平衡精度和效率。
+- **结果**: 匹配最先进精度，推理时间最快。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual learning (CL) aims to incrementally train a model on a sequence of tasks while retaining performance on prior ones. However, storing and replaying data is often infeasible due to privacy or security constraints and impractical for arbitrary pre-trained models. Data-free CL seeks to update models without access to previous data. Beyond regularization, we employ model inversion to synthesize data from the trained model, enabling replay without storing samples. Yet, model inversion in predictive models faces two challenges: (1) generating inputs solely from compressed output labels causes drift between synthetic and real data, and replaying such data can erode prior knowledge; (2) inversion is computationally expensive since each step backpropagates through the full model. These issues are amplified in large pre-trained models such as CLIP. To improve efficiency, we propose Per-layer Model Inversion (PMI), inspired by faster convergence in single-layer optimization. PMI provides strong initialization for full-model inversion, substantially reducing iterations. To mitigate feature shift, we model class-wise features via Gaussian distributions and contrastive model, ensuring alignment between synthetic and real features. Combining PMI and feature modeling, our approach enables continual learning of new classes by generating pseudo-images from semantic-aware projected features, achieving strong effectiveness and compatibility across multiple CL settings.
+> We propose Adapter Merging with Centroid Prototype Mapping (ACMap), an exemplar-free framework for class-incremental learning (CIL) that addresses both catastrophic forgetting and scalability. While existing methods involve a trade-off between inference time and accuracy, ACMap consolidates task-specific adapters into a single adapter, thus achieving constant inference time across tasks without sacrificing accuracy. The framework employs adapter merging to build a shared subspace that aligns task representations and mitigates forgetting, while centroid prototype mapping maintains high accuracy by consistently adapting representations within the shared subspace. To further improve scalability, an early stopping strategy limits adapter merging as tasks increase. Extensive experiments on five benchmark datasets demonstrate that ACMap matches state-of-the-art accuracy while maintaining inference time comparable to the fastest existing methods. The code is available at https://github.com/tf63/ACMap.
 
 </details>
 
-### Knowledge Memorization and Rumination for Pre-trained Model-based Class-Incremental Learning.
+### Knowledge Memorization and Rumination for Pre-trained Model-based Class-Incremental Learning. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Gao_Knowledge_Memorization_and_Rumination_for_Pre-trained_Model-based_Class-Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 8
 - **作者**: Zijian Gao, Wangwang Jia, Xingxing Zhang, Dulan Zhou, Kele Xu, Dawei Feng et al.
 - **🏷️ 机构**: National University of Defense Technology,College of Computer Science and Technology, Tsinghua University,School of Computer Science
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对基于预训练模型的类增量学习（CIL）中知识遗忘和利用不足的问题。②提出知识记忆与反刍（Knowledge Memorization and Rumination）机制，通过记忆旧知识并在新任务中反复利用，增强知识保留。③相比传统方法，该机制更有效地整合预训练知识，提升增量学习稳定性。④在多个基准上展示了有效性，具体数据未在摘要中提供。
+- **摘要（英）**: This paper addresses knowledge forgetting and underutilization in pre-trained model-based class-incremental learning. It proposes a knowledge memorization and rumination mechanism that stores old knowledge and reuses it during new tasks to enhance retention. Compared to traditional methods, it better integrates pre-trained knowledge, improving stability. It demonstrates effectiveness on multiple benchmarks, though specific numbers are not provided.
+- **核心贡献**: 提出知识记忆与反刍机制用于类增量学习。
+- **创新点**: 通过反复利用记忆知识增强稳定性。
+- **结果**: 在多个基准上有效。
 
-### T-CIL: Temperature Scaling using Adversarial Perturbation for Calibration in Class-Incremental Learning.
+### T-CIL: Temperature Scaling using Adversarial Perturbation for Calibration in Class-Incremental Learning. **⭐⭐⭐** (相关度: 30%)
 - **链接**: [arXiv:2503.22163](https://arxiv.org/abs/2503.22163) · 📚 被引 1
 - **作者**: Seonghyeon Hwang, Minsu Kim, Steven Euijong Whang
 - **🏷️ 机构**: KAIST
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对类增量学习中模型置信度校准被忽视的问题，提出T-CIL方法，利用记忆中的对抗扰动样本来进行温度缩放，无需旧任务验证集。通过基于特征距离调整扰动方向，使新任务计算的扰动幅度适用于旧任务，解决了旧任务数据有限时校准困难的问题。实验表明该方法在保持准确率的同时有效改善了校准性能。
+- **摘要（英）**: This paper addresses the overlooked issue of confidence calibration in class-incremental learning by proposing T-CIL, a temperature scaling method that uses adversarially perturbed exemplars from memory without requiring a validation set for old tasks. It adjusts perturbation directions based on feature distance to make the magnitude computed from new tasks applicable to old ones, improving calibration while maintaining accuracy.
+- **核心贡献**: 提出了一种无需旧任务验证集的温度缩放校准方法T-CIL。
+- **创新点**: 利用对抗扰动和特征距离自适应调整扰动方向，实现跨任务校准。
+- **结果**: 在类增量学习基准上显著提升了模型置信度校准效果。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Federated continual learning (FCL) tackles scenarios of learning from continuously emerging task data across distributed clients, where the key challenge lies in addressing both temporal forgetting over time and spatial forgetting simultaneously. Recently, prompt-based FCL methods have shown advanced performance through task-wise prompt communication.In this study, we underscore that the existing prompt-based FCL methods are prone to class-wise knowledge coherence between prompts across clients. The class-wise knowledge coherence includes two aspects: (1) intra-class distribution gap across clients, which degrades the learned semantics across prompts, (2) inter-prompt class-wise relevance, which highlights cross-class knowledge confusion. During prompt communication, insufficient class-wise coherence exacerbates knowledge conflicts among new prompts and induces interference with old prompts, intensifying both spatial and temporal forgetting. To address these issues, we propose a novel Class-aware Client Knowledge Interaction (C${}^2$Prompt) method that explicitly enhances class-wise knowledge coherence during prompt communication. Specifically, a local class distribution compensation mechanism (LCDC) is introduced to reduce intra-class distribution disparities across clients, thereby reinforcing intra-class knowledge consistency. Additionally, a class-aware prompt aggregation scheme (CPA) is designed to alleviate inter-class knowledge confusion by selectively strengthening class-relevant knowledge aggregation. Extensive experiments on multiple FCL benchmarks demonstrate that C${}^2$Prompt achieves state-of-the-art performance. Our source code is available at https://github.com/zhoujiahuan1991/NeurIPS2025-C2Prompt
+> We study model confidence calibration in class-incremental learning, where models learn from sequential tasks with different class sets. While existing works primarily focus on accuracy, maintaining calibrated confidence has been largely overlooked. Unfortunately, most post-hoc calibration techniques are not designed to work with the limited memories of old-task data typical in class-incremental learning, as retaining a sufficient validation set would be impractical. Thus, we propose T-CIL, a novel temperature scaling approach for class-incremental learning without a validation set for old tasks, that leverages adversarially perturbed exemplars from memory. Directly using exemplars is inadequate for temperature optimization, since they are already used for training. The key idea of T-CIL is to perturb exemplars more strongly for old tasks than for the new task by adjusting the perturbation direction based on feature distance, with the single magnitude determined using the new-task validation set. This strategy makes the perturbation magnitude computed from the new task also applicable to old tasks, leveraging the tendency that the accuracy of old tasks is lower than that of the new task. We empirically show that T-CIL significantly outperforms various baselines in terms of calibration on real datasets and can be integrated with existing class-incremental learning techniques with minimal impact on accuracy.
 
 </details>
 
-### Order-Robust Class Incremental Learning: Graph-Driven Dynamic Similarity Grouping.
+### Order-Robust Class Incremental Learning: Graph-Driven Dynamic Similarity Grouping. **⭐⭐⭐** (相关度: 25%)
 - **链接**: [arXiv:2502.20032](https://arxiv.org/abs/2502.20032) · 📚 被引 4
 - **作者**: Guannan Lai, Yujie Li, Xiangkun Wang, Junbo Zhang, Tianrui Li, Xin Yang
 - **🏷️ 机构**: Southwestern University of Finance and Economics,School of Computing and Artificial Intelligence, JD Intelligent Cities Research, Southwest Jiaotong University
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对类增量学习对类别到达顺序敏感的问题，通过理论分析证明在增量阶段分组低相似度类别可提升模型鲁棒性，提出图驱动动态相似度分组方法GDDSG，利用图着色算法动态划分类别组，每个组训练独立子模型并构建元特征用于类别组识别。实验证明该方法有效解决了顺序敏感性问题，并在准确率和抗遗忘性上达到最优。
+- **摘要（英）**: This paper tackles the class order sensitivity issue in class-incremental learning by theoretically proving that grouping classes with lower pairwise similarity improves robustness, and proposes GDDSG, which uses graph coloring to dynamically partition classes into groups, each training an isolated sub-model with meta-features for group identification. Experiments show it effectively addresses order sensitivity and achieves optimal accuracy and anti-forgetting performance.
+- **核心贡献**: 提出了图驱动的动态相似度分组方法GDDSG，解决类增量学习的顺序敏感性问题。
+- **创新点**: 将图着色算法应用于类别分组，结合子模型和元特征提升鲁棒性。
+- **结果**: 在多个基准上实现了最优的准确率和抗遗忘性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -269,11 +395,16 @@
 
 </details>
 
-### Tripartite Weight-Space Ensemble for Few-Shot Class-Incremental Learning.
-- **链接**: [arXiv:2506.15720](https://arxiv.org/abs/2506.15720) · 📚 被引 0
+### Tripartite Weight-Space Ensemble for Few-Shot Class-Incremental Learning. **⭐⭐⭐** (相关度: 20%)
+- **链接**: [arXiv:2506.15720](https://arxiv.org/abs/2506.15720)
 - **作者**: Juntae Lee, Munawar Hayat, Sungrack Yun
 - **🏷️ 机构**: Qualcomm AI Research
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对少样本类增量学习中固定特征提取器限制模型适应性的问题，提出三部分权重空间集成方法Tri-WE，在权重空间中对基础模型、前一模型和当前模型进行插值，特别是分类头部分，以协同维护知识和适应新类。同时处理从先前模型蒸馏广义表示的挑战，有效缓解灾难性遗忘和过拟合。实验表明该方法在少样本增量学习基准上表现优异。
+- **摘要（英）**: This paper addresses the limitation of fixed feature extractors in few-shot class-incremental learning by proposing Tri-WE, a tripartite weight-space ensemble that interpolates base, previous, and current models, especially for classification heads, to collaboratively maintain knowledge and adapt to new classes. It also handles distillation challenges, effectively mitigating catastrophic forgetting and overfitting, with superior performance on FSCIL benchmarks.
+- **核心贡献**: 提出了三部分权重空间集成方法Tri-WE，用于少样本类增量学习。
+- **创新点**: 在权重空间中对多个模型进行插值，实现知识协同和适应性更新。
+- **结果**: 在少样本增量学习基准上取得了领先的性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -281,11 +412,16 @@
 
 </details>
 
-### Dynamic Integration of Task-Specific Adapters for Class Incremental Learning.
+### Dynamic Integration of Task-Specific Adapters for Class Incremental Learning. **⭐⭐⭐** (相关度: 25%)
 - **链接**: [arXiv:2409.14983](https://arxiv.org/abs/2409.14983) · 📚 被引 4
 - **作者**: Jiashuo Li, Shaokun Wang, Bo Qian, Yuhang He, Xing Wei, Qiang Wang et al.
 - **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Software Engineering, Xi&#x2019;an Jiaotong University,College of Artificial Intelligence
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对无样本类增量学习中灾难性遗忘加剧的问题，提出动态集成任务特定适配器框架DIA，包含任务特定适配器集成和补丁级模型对齐两部分。通过补丁级适配器集成策略提升组合性并降低计算成本，利用补丁级蒸馏损失和特征重建方法保持特征一致性和准确决策边界。实验证明该方法在NECIL基准上有效缓解了遗忘问题。
+- **摘要（英）**: This paper addresses the exacerbated catastrophic forgetting in non-exemplar class-incremental learning by proposing DIA, a framework with task-specific adapter integration and patch-level model alignment. It uses patch-level adapter integration for flexible composition with low cost, and patch-level distillation loss and feature reconstruction to maintain feature consistency and decision boundaries, effectively mitigating forgetting on NECIL benchmarks.
+- **核心贡献**: 提出了动态集成任务特定适配器框架DIA，解决无样本类增量学习中的遗忘问题。
+- **创新点**: 结合补丁级适配器集成和特征重建，实现高效且稳定的增量学习。
+- **结果**: 在无样本类增量学习基准上显著提升了性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -293,17 +429,27 @@
 
 </details>
 
-### SEC-Prompt: SEmantic Complementary Prompting for Few-Shot Class-Incremental Learning.
+### SEC-Prompt: SEmantic Complementary Prompting for Few-Shot Class-Incremental Learning. **⭐⭐** (相关度: 20%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_SEC-PromptSEmantic_Complementary_Prompting_for_Few-Shot_Class-Incremental_Learning_CVPR_2025_paper.html)
 - **作者**: Ye Liu, Meng Yang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文摘要为空，无法获取具体内容。根据标题推测，可能针对少样本类增量学习提出语义互补提示方法，但缺乏详细信息。
+- **摘要（英）**: The abstract is empty, so specific details are unavailable. Based on the title, it likely proposes a semantic complementary prompting method for few-shot class-incremental learning, but no concrete information is provided.
+- **核心贡献**: 未知。
+- **创新点**: 未知。
+- **结果**: 未知。
 
-### Low-Rank Adaptation in Multilinear Operator Networks for Security-Preserving Incremental Learning.
+### Low-Rank Adaptation in Multilinear Operator Networks for Security-Preserving Incremental Learning. **⭐⭐⭐** (相关度: 25%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ta_Low-Rank_Adaptation_in_Multilinear_Operator_Networks_for_Security-Preserving_Incremental_Learning_CVPR_2025_paper.html) · 📚 被引 1
 - **作者**: Huu Binh Ta, Duc Nguyen, Quyen Tran, Toan Tran, Tung Pham
 - **🏷️ 机构**: Qualcomm AI Research
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对增量学习中的安全性和效率问题，提出在多线性算子网络中使用低秩适配的方法，以实现安全保护的增量学习。通过低秩适配减少参数更新量，同时保持模型性能，可能涉及隐私保护机制。实验可能展示了在保持准确率的同时降低计算和存储成本。
+- **摘要（英）**: This paper proposes low-rank adaptation in multilinear operator networks for security-preserving incremental learning, aiming to reduce parameter updates while maintaining performance, potentially with privacy protection. Experiments likely show reduced computational and storage costs while preserving accuracy.
+- **核心贡献**: 提出了多线性算子网络中的低秩适配方法，用于安全增量学习。
+- **创新点**: 将低秩适配应用于多线性算子网络，兼顾效率和安全性。
+- **结果**: 在增量学习任务中实现了性能与效率的平衡。
 
 ### Theory on Mixture-of-Experts in Continual Learning.
 - **链接**: [arXiv:2406.16437](https://arxiv.org/abs/2406.16437)
@@ -992,4 +1138,5 @@
 - **作者**: Fei Ye, Yulong Zhao, Qihe Liu, Junlin Chen, Adrian G. Bors, Jingling Sun et al.
 - **🏷️ 机构**: University of Electronic Science and Technology of China, ByteDance Inc., University of York
 - **会议**: NeurIPS 2025
+
 <!-- COMPLETE v1 papers=134 -->

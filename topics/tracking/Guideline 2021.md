@@ -3,43 +3,63 @@
 > 领域: 目标跟踪（MOT / 3D 跟踪 / 多目标多相机跟踪）
 > 论文数: 15 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### GMOT-40: A Benchmark for Generic Multiple Object Tracking.
+### GMOT-40: A Benchmark for Generic Multiple Object Tracking. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2011.11858](https://arxiv.org/abs/2011.11858) · 📚 被引 38
 - **作者**: Hexin Bai, Wensheng Cheng, Peng Chu, Juehuan Liu, Kai Zhang, Haibin Ling
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对通用多目标跟踪（GMOT）领域缺乏公开基准和专用算法的问题，现有MOT方法依赖目标先验知识，难以泛化到未见类别。②构建了首个GMOT数据集GMOT-40，包含10个类别、40个精心标注的序列，并设计了两种跟踪协议以评估算法特性；同时提出了一系列基线GMOT算法。③相比现有MOT基准，GMOT-40强调无需目标先验的通用跟踪，填补了该方向空白。④对GMOT-40进行了全面评估，涵盖主流MOT算法（经必要修改）和所提基线，结果将公开。
+- **摘要（英）**: This paper addresses the lack of benchmarks and dedicated algorithms for Generic Multiple Object Tracking (GMOT), where prior knowledge of targets is unavailable. It introduces GMOT-40, the first public GMOT dataset with 40 sequences across 10 categories, along with two evaluation protocols and baseline algorithms. The work fills a gap by enabling evaluation of tracking methods on unseen categories, with comprehensive results to be released.
+- **核心贡献**: 构建了首个通用多目标跟踪基准GMOT-40及配套评估协议和基线算法。
+- **创新点**: 首次系统性地定义和评估无需目标先验的通用多目标跟踪任务。
+- **结果**: 提供了全面的基准评估结果，并公开数据集和基线以促进后续研究。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Multiple object tracking and segmentation requires detecting, tracking, and segmenting objects belonging to a set of given classes. Most approaches only exploit the temporal dimension to address the association problem, while relying on single frame predictions for the segmentation mask itself. We propose Prototypical Cross-Attention Network (PCAN), capable of leveraging rich spatio-temporal information for online multiple object tracking and segmentation. PCAN first distills a space-time memory into a set of prototypes and then employs cross-attention to retrieve rich information from the past frames. To segment each object, PCAN adopts a prototypical appearance module to learn a set of contrastive foreground and background prototypes, which are then propagated over time. Extensive experiments demonstrate that PCAN outperforms current video instance tracking and segmentation competition winners on both Youtube-VIS and BDD100K datasets, and shows efficacy to both one-stage and two-stage segmentation frameworks. Code and video resources are available at http://vis.xyz/pub/pcan.
+> Multiple Object Tracking (MOT) has witnessed remarkable advances in recent years. However, existing studies dominantly request prior knowledge of the tracking target, and hence may not generalize well to unseen categories. In contrast, Generic Multiple Object Tracking (GMOT), which requires little prior information about the target, is largely under-explored. In this paper, we make contributions to boost the study of GMOT in three aspects. First, we construct the first public GMOT dataset, dubbed GMOT-40, which contains 40 carefully annotated sequences evenly distributed among 10 object categories. In addition, two tracking protocols are adopted to evaluate different characteristics of tracking algorithms. Second, by noting the lack of devoted tracking algorithms, we have designed a series of baseline GMOT algorithms. Third, we perform a thorough evaluation on GMOT-40, involving popular MOT algorithms (with necessary modifications) and the proposed baselines. We will release the GMOT-40 benchmark, the evaluation results, as well as the baseline algorithm to the public upon the publication of the paper.
 
 </details>
 
-### Improving Multiple Object Tracking With Single Object Tracking.
+### Improving Multiple Object Tracking With Single Object Tracking. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Improving_Multiple_Object_Tracking_With_Single_Object_Tracking_CVPR_2021_paper.html)
 - **作者**: Linyu Zheng, Ming Tang, Yingying Chen, Guibo Zhu, Jinqiao Wang, Hanqing Lu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对多目标跟踪（MOT）中数据关联的鲁棒性问题，现有方法在遮挡和外观变化下性能受限。②提出利用单目标跟踪（SOT）来改进MOT，通过整合SOT的时序信息增强目标定位和关联。③相比纯MOT方法，该方法结合了SOT的长期跟踪能力，提高了跟踪稳定性。④摘要不完整，未提供具体数据，但方法思路具有潜力。
+- **摘要（英）**: This paper proposes improving multiple object tracking by leveraging single object tracking techniques to enhance temporal consistency and association robustness. The integration aims to address challenges like occlusion and appearance changes. Specific results are not available due to incomplete abstract.
+- **核心贡献**: 提出将单目标跟踪能力融入多目标跟踪框架以提升性能。
+- **创新点**: 利用SOT的时序建模增强MOT的数据关联。
+- **结果**: 未提供具体实验数据，效果待验证。
 
-### Discriminative Appearance Modeling With Multi-Track Pooling for Real-Time Multi-Object Tracking.
+### Discriminative Appearance Modeling With Multi-Track Pooling for Real-Time Multi-Object Tracking. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2101.12159](https://arxiv.org/abs/2101.12159) · 📚 被引 73
 - **作者**: Chanho Kim, Fuxin Li, Mazen Alotaibi, James M. Rehg
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对多目标跟踪中外观模型孤立建模的问题，现有方法忽略场景中所有目标间的相互影响，导致相似外观目标易混淆。②提出多轨迹池化模块，在更新记忆时同时考虑所有轨迹，并设计适配的在线训练策略生成困难跟踪片段。③相比逐目标独立建模，该方法以极小空间开销实现联合外观建模，支持贪心数据关联。④在公开MOT数据集上达到实时、最先进的性能。
+- **摘要（英）**: This paper tackles the issue of isolated appearance modeling in multi-object tracking by introducing a multi-track pooling module that jointly updates memory across all tracks with minimal spatial overhead. A tailored training strategy generates hard episodes online. The method achieves real-time state-of-the-art performance on public MOT benchmarks.
+- **核心贡献**: 提出多轨迹池化模块和配套训练策略，实现实时高精度多目标跟踪。
+- **创新点**: 在记忆更新中同时考虑所有轨迹，增强外观判别能力。
+- **结果**: 在公开MOT数据集上达到实时最先进性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Current 3D single object tracking approaches track the target based on a feature comparison between the target template and the search area. However, due to the common occlusion in LiDAR scans, it is non-trivial to conduct accurate feature comparisons on severe sparse and incomplete shapes. In this work, we exploit the ground truth bounding box given in the first frame as a strong cue to enhance the feature description of the target object, enabling a more accurate feature comparison in a simple yet effective way. In particular, we first propose the BoxCloud, an informative and robust representation, to depict an object using the point-to-box relation. We further design an efficient box-aware feature fusion module, which leverages the aforementioned BoxCloud for reliable feature matching and embedding. Integrating the proposed general components into an existing model P2B, we construct a superior box-aware tracker (BAT). Experiments confirm that our proposed BAT outperforms the previous state-of-the-art by a large margin on both KITTI and NuScenes benchmarks, achieving a 15.2% improvement in terms of precision while running ~20% faster.
+> In multi-object tracking, the tracker maintains in its memory the appearance and motion information for each object in the scene. This memory is utilized for finding matches between tracks and detections and is updated based on the matching result. Many approaches model each target in isolation and lack the ability to use all the targets in the scene to jointly update the memory. This can be problematic when there are similar looking objects in the scene. In this paper, we solve the problem of simultaneously considering all tracks during memory updating, with only a small spatial overhead, via a novel multi-track pooling module. We additionally propose a training strategy adapted to multi-track pooling which generates hard tracking episodes online. We show that the combination of these innovations results in a strong discriminative appearance model, enabling the use of greedy data association to achieve online tracking performance. Our experiments demonstrate real-time, state-of-the-art performance on public multi-object tracking (MOT) datasets.
 
 </details>
 
-### Seeing Behind Objects for 3D Multi-Object Tracking in RGB-D Sequences.
+### Seeing Behind Objects for 3D Multi-Object Tracking in RGB-D Sequences. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2012.08197](https://arxiv.org/abs/2012.08197) · 📚 被引 18
 - **作者**: Norman Müller, Yu-Shiang Wong, Niloy J. Mitra, Angela Dai, Matthias Nießner
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对RGB-D序列中多目标跟踪因视角变化、运动和遮挡导致的挑战，现有方法缺乏对物体完整几何的利用。②提出联合推断物体完整几何和跟踪，通过预测未见区域和密集对应映射到规范空间，从而获得6DoF姿态和帧间对应。③相比仅依赖可见部分的方法，完整几何补全提供了更多对应关系，增强遮挡下的鲁棒性。④在合成和真实RGB-D数据上达到动态物体跟踪的最先进性能。
+- **摘要（英）**: This paper addresses RGB-D multi-object tracking by jointly inferring complete object geometry and tracking, using hallucinated regions to obtain additional correspondences. This enables robust 6DoF pose estimation and tracking under strong appearance changes. Experiments on synthetic and real data show state-of-the-art performance.
+- **核心贡献**: 提出联合物体几何补全与跟踪的框架，提升RGB-D序列中动态物体跟踪鲁棒性。
+- **创新点**: 利用完整几何推断增强帧间对应，克服外观变化。
+- **结果**: 在合成和真实数据上达到最先进性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -47,31 +67,50 @@
 
 </details>
 
-### Learning a Proposal Classifier for Multiple Object Tracking.
-- **链接**: [arXiv:2103.07889](https://arxiv.org/abs/2103.07889) · [代码](https://github.com/daip13/LPC_MOT.git) · 📚 被引 115
+### Learning a Proposal Classifier for Multiple Object Tracking. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2103.07889](https://arxiv.org/abs/2103.07889) · 📚 被引 115
 - **作者**: Peng Dai, Renliang Weng, Wongun Choi, Changshui Zhang, Zhangping He, Wei Ding
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
-
-</details>
-
-### Online Multiple Object Tracking With Cross-Task Synergy.
-- **链接**: [arXiv:2104.00380](https://arxiv.org/abs/2104.00380) · [代码](https://github.com/songguocode/TADAM) · 📚 被引 70
-- **作者**: Song Guo, Jingya Wang, Xinchao Wang, Dacheng Tao
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2021
+- **摘要（中）**: ①针对多目标跟踪中数据关联难以端到端学习的问题，现有方法多依赖手工设计或分步优化。②提出基于提议的可学习框架，将MOT建模为提议生成、评分和轨迹推断，类似Faster RCNN的两阶段范式；使用迭代图聚类生成提议，图卷积网络学习结构模式并评分。③相比传统关联方法，该框架以数据驱动方式解决关联问题，降低计算成本。④在MOTA和IDF1指标上均取得明显性能提升。
+- **摘要（英）**: This paper proposes a proposal-based learnable framework for MOT, modeling it as proposal generation, scoring, and trajectory inference on an affinity graph, akin to Faster R-CNN. It uses iterative graph clustering and graph convolutional networks for efficient and effective association. The method achieves clear improvements in MOTA and IDF1.
+- **核心贡献**: 提出基于提议和图卷积的MOT框架，实现数据驱动的数据关联。
+- **创新点**: 借鉴两阶段检测器设计，将关联问题转化为提议评分问题。
+- **结果**: 在MOTA和IDF1上均显著提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Siamese tracking has achieved groundbreaking performance in recent years, where the essence is the efficient matching operator cross-correlation and its variants. Besides the remarkable success, it is important to note that the heuristic matching network design relies heavily on expert experience. Moreover, we experimentally find that one sole matching operator is difficult to guarantee stable tracking in all challenging environments. Thus, in this work, we introduce six novel matching operators from the perspective of feature fusion instead of explicit similarity learning, namely Concatenation, Pointwise-Addition, Pairwise-Relation, FiLM, Simple-Transformer and Transductive-Guidance, to explore more feasibility on matching operator selection. The analyses reveal these operators' selective adaptability on different environment degradation types, which inspires us to combine them to explore complementary features. To this end, we propose binary channel manipulation (BCM) to search for the optimal combination of these operators. BCM determines to retrain or discard one operator by learning its contribution to other tracking steps. By inserting the learned matching networks to a strong baseline tracker Ocean, our model achieves favorable gains by $67.2 \rightarrow 71.4$, $52.6 \rightarrow 58.3$, $70.3 \rightarrow 76.0$ success on OTB100, LaSOT, and TrackingNet, respectively. Notably, Our tracker, dubbed AutoMatch, uses less than half of training data/time than the baseline tracker, and runs at 50 FPS using PyTorch. Code and model will be released at https://github.com/JudasDie/SOTS.
+> The recent trend in multiple object tracking (MOT) is heading towards leveraging deep learning to boost the tracking performance. However, it is not trivial to solve the data-association problem in an end-to-end fashion. In this paper, we propose a novel proposal-based learnable framework, which models MOT as a proposal generation, proposal scoring and trajectory inference paradigm on an affinity graph. This framework is similar to the two-stage object detector Faster RCNN, and can solve the MOT problem in a data-driven way. For proposal generation, we propose an iterative graph clustering method to reduce the computational cost while maintaining the quality of the generated proposals. For proposal scoring, we deploy a trainable graph-convolutional-network (GCN) to learn the structural patterns of the generated proposals and rank them according to the estimated quality scores. For trajectory inference, a simple deoverlapping strategy is adopted to generate tracking output while complying with the constraints that no detection can be assigned to more than one track. We experimentally demonstrate that the proposed method achieves a clear performance improvement in both MOTA and IDF1 with respect to previous state-of-the-art on two public benchmarks. Our code is available at https://github.com/daip13/LPC_MOT.git.
 
 </details>
 
-### Learnable Graph Matching: Incorporating Graph Partitioning With Deep Feature Learning for Multiple Object Tracking.
-- **链接**: [arXiv:2103.16178](https://arxiv.org/abs/2103.16178) · [代码](https://github.com/jiaweihe1996/GMTracker) · 📚 被引 124
+### Online Multiple Object Tracking With Cross-Task Synergy. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2104.00380](https://arxiv.org/abs/2104.00380) · 📚 被引 70
+- **作者**: Song Guo, Jingya Wang, Xinchao Wang, Dacheng Tao
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2021
+- **摘要（中）**: ①针对在线多目标跟踪中位置预测和嵌入关联两个任务独立处理、缺乏协同的问题，现有方法难以从相互增强中获益。②提出统一模型，通过时间感知的目标注意力和干扰物注意力连接两个任务，并利用身份感知记忆聚合模型增强身份意识。③相比分别处理两任务的方法，该协同机制使预测更聚焦目标，嵌入更可靠，从而提升关联鲁棒性。④实验表明对遮挡具有强鲁棒性，性能优于现有方法。
+- **摘要（英）**: This paper addresses the lack of synergy between position prediction and embedding association in online MOT by proposing a unified model with temporal-aware target and distractor attention, plus identity-aware memory aggregation. This synergy enhances prediction focus and embedding reliability, improving robustness to occlusions. Experiments demonstrate superior performance.
+- **核心贡献**: 提出位置预测与嵌入关联协同的统一MOT模型，增强遮挡鲁棒性。
+- **创新点**: 利用注意力机制和记忆聚合实现任务间互惠增强。
+- **结果**: 在遮挡场景下表现强鲁棒性，性能优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Modern online multiple object tracking (MOT) methods usually focus on two directions to improve tracking performance. One is to predict new positions in an incoming frame based on tracking information from previous frames, and the other is to enhance data association by generating more discriminative identity embeddings. Some works combined both directions within one framework but handled them as two individual tasks, thus gaining little mutual benefits. In this paper, we propose a novel unified model with synergy between position prediction and embedding association. The two tasks are linked by temporal-aware target attention and distractor attention, as well as identity-aware memory aggregation model. Specifically, the attention modules can make the prediction focus more on targets and less on distractors, therefore more reliable embeddings can be extracted accordingly for association. On the other hand, such reliable embeddings can boost identity-awareness through memory aggregation, hence strengthen attention modules and suppress drifts. In this way, the synergy between position prediction and embedding association is achieved, which leads to strong robustness to occlusions. Extensive experiments demonstrate the superiority of our proposed model over a wide range of existing methods on MOTChallenge benchmarks. Our code and models are publicly available at https://github.com/songguocode/TADAM.
+
+</details>
+
+### Learnable Graph Matching: Incorporating Graph Partitioning With Deep Feature Learning for Multiple Object Tracking. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2103.16178](https://arxiv.org/abs/2103.16178) · 📚 被引 124
 - **作者**: Jiawei He, Zehao Huang, Naiyan Wang, Zhaoxiang Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对多目标跟踪中数据关联忽略轨迹间和帧内检测的上下文信息、端到端方法缺乏优化分配优势、图优化方法特征提取与推理不一致的问题，提出了一种可学习的图匹配方法。该方法将轨迹与检测建模为无向图，将关联问题转化为图匹配问题，并实现端到端优化。相比已有工作，它结合了深度特征学习与图划分优化，缓解了训练与推理的不一致性。实验表明该方法在MOT基准上具有竞争力。
+- **摘要（英）**: This paper addresses data association in multi-object tracking by proposing a learnable graph matching method that models tracklets and detections as graphs and solves association via graph matching. It integrates deep feature learning with graph partitioning to handle context information and reduce train-inference inconsistency. Experiments show competitive performance on MOT benchmarks.
+- **核心贡献**: 提出了一种可学习的图匹配框架，统一了特征提取与关联优化。
+- **创新点**: 将轨迹-检测关联建模为图匹配问题，并实现端到端训练。
+- **结果**: 在MOT基准上取得有竞争力的跟踪性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -79,17 +118,27 @@
 
 </details>
 
-### Quasi-Dense Similarity Learning for Multiple Object Tracking.
+### Quasi-Dense Similarity Learning for Multiple Object Tracking. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Pang_Quasi-Dense_Similarity_Learning_for_Multiple_Object_Tracking_CVPR_2021_paper.html) · 📚 被引 426
 - **作者**: Jiangmiao Pang, Linlu Qiu, Xia Li, Haofeng Chen, Qi Li, Trevor Darrell et al.
 - **🏷️ 机构**: Zhejiang University, Georgia Institute of Technology, ETH Z&#x00FC;rich
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对多目标跟踪中相似度学习效率低、难以处理密集场景的问题，提出了准密集相似度学习方法。该方法通过密集采样实例对进行对比学习，增强特征判别力，并利用准密集匹配实现高效关联。相比稀疏匹配方法，它充分利用了空间上下文，提升了跟踪鲁棒性。在MOT17、MOT20等基准上取得了领先性能。
+- **摘要（英）**: This paper introduces quasi-dense similarity learning for multi-object tracking, which densely samples instance pairs for contrastive learning and uses quasi-dense matching for association. It improves feature discrimination and robustness in crowded scenes. The method achieves state-of-the-art results on MOT17 and MOT20.
+- **核心贡献**: 提出了准密集相似度学习框架，增强了MOT中的特征匹配能力。
+- **创新点**: 利用密集对比学习与准密集匹配替代稀疏关联。
+- **结果**: 在多个MOT基准上达到领先性能。
 
-### Probabilistic Tracklet Scoring and Inpainting for Multiple Object Tracking.
+### Probabilistic Tracklet Scoring and Inpainting for Multiple Object Tracking. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2012.02337](https://arxiv.org/abs/2012.02337) · 📚 被引 87
 - **作者**: Fatemeh Sadat Saleh, Sadegh Aliakbarian, Hamid Rezatofighi, Mathieu Salzmann, Stephen Gould
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对多目标跟踪中长期遮挡导致轨迹丢失的问题，提出了概率自回归运动模型来评分轨迹提议。该方法通过学习自然轨迹的分布，直接测量轨迹似然，既能分配新检测，也能通过采样修复丢失轨迹。相比现有方法，它显式建模长期运动信息，提升了遮挡场景下的跟踪鲁棒性。在MOT16、MOT17和MOT20上超越了多数现有方法。
+- **摘要（英）**: This paper proposes a probabilistic autoregressive motion model for tracklet scoring and inpainting in MOT, learning the distribution of natural tracklets to handle long occlusions. It enables both detection assignment and tracklet gap filling via sampling. The method outperforms state-of-the-art on MOT16, MOT17, and MOT20.
+- **核心贡献**: 提出了基于概率自回归模型的轨迹评分与修复方法。
+- **创新点**: 将轨迹似然建模用于遮挡恢复。
+- **结果**: 在多个MOT数据集上取得最优性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -97,11 +146,16 @@
 
 </details>
 
-### SiamMOT: Siamese Multi-Object Tracking.
-- **链接**: [arXiv:2105.11595](https://arxiv.org/abs/2105.11595) · [代码](https://github.com/amazon-research/siam-mot) · 📚 被引 143
+### SiamMOT: Siamese Multi-Object Tracking. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2105.11595](https://arxiv.org/abs/2105.11595) · 📚 被引 143
 - **作者**: Bing Shuai, Andrew G. Berneshawi, Xinyu Li, Davide Modolo, Joseph Tighe
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对在线多目标跟踪中运动建模不足的问题，提出了基于区域的Siamese多目标跟踪网络SiamMOT。该方法包含运动模型估计实例帧间移动，并设计了隐式和显式两种运动建模变体。相比现有方法，它显著提升了运动建模能力，在MOT17、TAO-person和Caltech数据集上超越现有技术。SiamMOT运行效率高，在720P视频上达到17 FPS。
+- **摘要（英）**: This paper introduces SiamMOT, a region-based Siamese network for online MOT with an explicit motion model for instance association. It explores implicit and explicit motion modeling variants, showing significant improvements over state-of-the-art on MOT17, TAO-person, and Caltech. The method runs at 17 FPS on 720P videos.
+- **核心贡献**: 提出了SiamMOT，将Siamese网络与运动模型结合用于在线跟踪。
+- **创新点**: 显式运动建模与区域级Siamese匹配的集成。
+- **结果**: 在多个数据集上超越现有方法，且保持实时性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -109,11 +163,16 @@
 
 </details>
 
-### Multiple Object Tracking With Correlation Learning.
+### Multiple Object Tracking With Correlation Learning. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2104.03541](https://arxiv.org/abs/2104.03541)
 - **作者**: Qiang Wang, Yun Zheng, Pan Pan, Yinghui Xu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对多目标跟踪中卷积网络难以捕获长距离时空依赖的问题，提出利用局部相关模块建模目标与周围环境的拓扑关系，并通过自监督学习约束相关体积。同时提出可学习的相关算子，在不同层特征图上建立帧间匹配以对齐和传播时序上下文。相比仅依赖相邻帧特征增强的方法，该方法在拥挤场景下显著提升了判别能力，在MOT基准上取得了领先性能。
+- **摘要（英）**: This paper addresses the limitation of CNNs in capturing long-range spatio-temporal dependencies for multi-object tracking by introducing local correlation modules for topological modeling and learnable correlation operators for frame-to-frame matching. It achieves state-of-the-art performance on MOT benchmarks, especially in crowded scenes.
+- **核心贡献**: 提出基于相关学习的多目标跟踪框架，增强时空上下文建模。
+- **创新点**: 利用局部相关模块和可学习相关算子实现长距离依赖捕获。
+- **结果**: 在多个MOT基准上取得领先的跟踪精度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -121,11 +180,16 @@
 
 </details>
 
-### Transformer Meets Tracker: Exploiting Temporal Context for Robust Visual Tracking.
+### Transformer Meets Tracker: Exploiting Temporal Context for Robust Visual Tracking. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2103.11681](https://arxiv.org/abs/2103.11681) · 📚 被引 805
 - **作者**: Ning Wang, Wengang Zhou, Jie Wang, Houqiang Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对视频目标跟踪中时间上下文利用不足的问题，提出了基于Transformer的跟踪框架。该方法将编码器和解码器分离为并行分支，编码器增强目标模板特征，解码器传播跟踪线索。相比传统Siamese跟踪器，它有效利用了帧间时间信息，提升了跟踪鲁棒性。在多个基准上超越了当前顶尖跟踪器。
+- **摘要（英）**: This paper proposes a transformer-based tracking framework that exploits temporal context by separating encoder and decoder branches for template enhancement and cue propagation. It improves tracking robustness compared to Siamese trackers. The method achieves state-of-the-art results on prevalent benchmarks.
+- **核心贡献**: 提出了并行编码器-解码器Transformer结构用于视觉跟踪。
+- **创新点**: 将Transformer的编码器和解码器分别用于模板增强和线索传播。
+- **结果**: 在多个跟踪基准上取得领先性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -133,11 +197,16 @@
 
 </details>
 
-### STMTrack: Template-Free Visual Tracking With Space-Time Memory Networks.
-- **链接**: [arXiv:2104.00324](https://arxiv.org/abs/2104.00324) · [代码](https://github.com/fzh0917/STMTrack) · 📚 被引 350
+### STMTrack: Template-Free Visual Tracking With Space-Time Memory Networks. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2104.00324](https://arxiv.org/abs/2104.00324) · 📚 被引 350
 - **作者**: Zhihong Fu, Qingjie Liu, Zehua Fu, Yunhong Wang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对Siamese跟踪器固定模板难以适应目标外观变化的问题，提出了基于时空记忆网络的模板无关跟踪框架STMTrack。该方法利用记忆机制存储历史目标信息，引导跟踪器关注当前帧的显著区域，并通过像素级相似度计算生成精确边界框。相比模板更新方法，它避免了复杂优化和手工策略。在OTB等基准上展现了竞争力。
+- **摘要（英）**: This paper proposes STMTrack, a template-free tracking framework using space-time memory networks to store historical target information and guide attention. It avoids complex template updating strategies and generates accurate bounding boxes via pixel-level similarity. The method shows competitive performance on large-scale benchmarks.
+- **核心贡献**: 提出了基于时空记忆网络的模板无关跟踪方法。
+- **创新点**: 利用记忆机制替代固定模板更新。
+- **结果**: 在OTB等基准上取得有竞争力的结果。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -145,17 +214,16 @@
 
 </details>
 
-### TesseTrack: End-to-End Learnable Multi-Person Articulated 3D Pose Tracking.
+### TesseTrack: End-to-End Learnable Multi-Person Articulated 3D Pose Tracking. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Reddy_TesseTrack_End-to-End_Learnable_Multi-Person_Articulated_3D_Pose_Tracking_CVPR_2021_paper.html) · 📚 被引 104
 - **作者**: N. Dinesh Reddy, Laurent Guigues, Leonid Pishchulin, Jayan Eledath, Srinivasa G. Narasimhan
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
-
-## 跨领域论文（完整笔记在其他领域）
-
-- DyGLIP: A Dynamic Graph Model With Link Prediction for Accurate Multi-Camera Multiple Object Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202021.md)
-
-## 🆕 增量新增
+- **摘要（中）**: ①这篇论文针对多人体关节3D姿态跟踪问题，旨在从视频中端到端地学习人体姿态序列。②提出了一个可学习的端到端框架，直接输出多人的关节3D姿态轨迹，可能结合了检测与关联模块。③相比传统分步方法，该方法统一了检测和跟踪，减少了误差累积。④摘要未提供具体数据，效果未知，但作为端到端方法具有探索意义。
+- **摘要（英）**: This paper addresses multi-person articulated 3D pose tracking in videos, proposing an end-to-end learnable framework that directly outputs pose trajectories. It unifies detection and association to reduce error accumulation, though no quantitative results are reported in the abstract.
+- **核心贡献**: 提出端到端的多人体3D姿态跟踪框架。
+- **创新点**: 将检测与关联集成于单一可学习网络。
+- **结果**: 未报告具体效果数据。
 
 ### CAPTRA: CAtegory-level Pose Tracking for Rigid and Articulated Objects from Point Clouds. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01296)
@@ -217,4 +285,5 @@
 
 - DyGLIP: A Dynamic Graph Model With Link Prediction for Accurate Multi-Camera Multiple Object Tracking. → [multi-camera-perception](../multi-camera-perception/Guideline%202021.md)
 - Self-Supervised Multi-Object Tracking with Cross-input Consistency. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
+
 <!-- COMPLETE v1 papers=18 -->

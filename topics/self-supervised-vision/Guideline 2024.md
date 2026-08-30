@@ -3,25 +3,29 @@
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
 > 论文数: 64 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### T-MAE : Temporal Masked Autoencoders for Point Cloud Representation Learning.
+### T-MAE : Temporal Masked Autoencoders for Point Cloud Representation Learning. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73247-8_11) · 📚 被引 6
 - **作者**: Weijie Wei, Fatemeh Karimi Nejadasl, Theo Gevers, Martin R. Oswald
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: 针对点云表示学习中时间信息利用不足的问题，该论文提出T-MAE，一种时间掩码自编码器。方法在预训练时同时掩蔽空间和时间维度的点云块，迫使模型学习时空一致性特征。相比仅空间MAE，T-MAE能捕捉动态场景中的时序依赖。实验表明在多个点云下游任务（如分类、分割）上显著提升性能。
+- **摘要（英）**: This paper addresses insufficient temporal information in point cloud representation learning by proposing T-MAE, a temporal masked autoencoder that masks both spatial and temporal patches during pretraining. It learns spatiotemporal consistency, outperforming spatial-only MAE on downstream tasks like classification and segmentation.
+- **核心贡献**: 提出时间掩码自编码器用于点云表示学习。
+- **创新点**: 联合掩蔽空间与时间维度。
+- **结果**: 在点云下游任务上显著提升性能。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Object detection is a pivotal task in computer vision that has received significant attention in previous years. Nonetheless, the capability of a detector to localise objects out of the training distribution remains unexplored. Whilst recent approaches in object-level out-of-distribution (OoD) detection heavily rely on class labels, such approaches contradict truly open-world scenarios where the class distribution is often unknown. In this context, anomaly detection focuses on detecting unseen instances rather than classifying detections as OoD. This work aims to bridge this gap by leveraging an open-world object detector and an OoD detector via virtual outlier synthesis. This is achieved by using the detector backbone features to first learn object pseudo-classes via self-supervision. These pseudo-classes serve as the basis for class-conditional virtual outlier sampling of anomalous features that are classified by an OoD head. Our approach empowers our overall object detector architecture to learn anomaly-aware feature representations without relying on class labels, hence enabling truly open-world object anomaly detection. Empirical validation of our approach demonstrates its effectiveness across diverse datasets encompassing various imaging modalities (visible, infrared, and X-ray). Moreover, our method establishes state-of-the-art performance on object-level anomaly detection, achieving an average recall score improvement of over 5.4% for natural images and 23.5% for a security X-ray dataset compared to the current approaches. In addition, our method detects anomalies in datasets where current approaches fail. Code available at https://github.com/KostadinovShalon/oln-ssos.
-
-</details>
-
-### DINO-Tracker: Taming DINO for Self-supervised Point Tracking in a Single Video.
+### DINO-Tracker: Taming DINO for Self-supervised Point Tracking in a Single Video. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73347-5_21) · 📚 被引 34
 - **作者**: Narek Tumanyan, Assaf Singer, Shai Bagon, Tali Dekel
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: 针对单视频中无监督点跟踪的挑战，该论文提出DINO-Tracker，利用DINO预训练特征进行自监督点跟踪。方法通过特征匹配和时序一致性约束，无需标注即可跟踪任意点。相比传统光流或监督方法，DINO-Tracker在遮挡和复杂运动下更鲁棒。实验表明在多个视频跟踪基准上达到最先进性能。
+- **摘要（英）**: This paper addresses unsupervised point tracking in a single video by proposing DINO-Tracker, which leverages DINO pretrained features for self-supervised tracking. It uses feature matching and temporal consistency without annotations, showing robustness to occlusion and complex motion, achieving state-of-the-art on tracking benchmarks.
+- **核心贡献**: 提出基于DINO的自监督点跟踪方法。
+- **创新点**: 利用预训练视觉特征实现无监督跟踪。
+- **结果**: 在多个跟踪基准上达到最先进性能。
 
 ### Towards Open-World Object-Based Anomaly Detection via Self-Supervised Outlier Synthesis.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73209-6_12) · 📚 被引 6
@@ -56,12 +60,6 @@
 </details>
 
 </details>
-
-### OmniSat: Self-supervised Modality Fusion for Earth Observation.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73390-1_24) · 📚 被引 42
-- **作者**: Guillaume Astruc, Nicolas Gonthier, Clément Mallet, Loïc Landrieu
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
 
 ### Self-supervised Visual Learning from Interactions with Objects.
 - **链接**: [arXiv:2407.06704](https://arxiv.org/abs/2407.06704)
@@ -168,12 +166,6 @@
 ### CroMo-Mixup: Augmenting Cross-Model Representations for Continual Self-Supervised Learning.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72989-8_18) · 📚 被引 3
 - **作者**: Erum Mushtaq, Duygu Nur Yaldiz, Yavuz Faruk Bakman, Jie Ding, Chenyang Tao, Dimitrios Dimitriadis et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### Self-Supervised Underwater Caustics Removal and Descattering via Deep Monocular SLAM.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72907-2_13) · 📚 被引 3
-- **作者**: Jonathan Sauder, Devis Tuia
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
@@ -303,12 +295,6 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
-### SAH-SCI: Self-supervised Adapter for Efficient Hyperspectral Snapshot Compressive Imaging.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73039-9_18) · 📚 被引 2
-- **作者**: Haijin Zeng, Yuxi Liu, Yongyong Chen, Youfa Liu, Chong Peng, Jingyong Su
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
 ### Test-Time Model Adaptation for Image Reconstruction Using Self-supervised Adaptive Layers.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72913-3_7) · 📚 被引 3
 - **作者**: Yutian Zhao, Tianjing Zhang, Hui Ji
@@ -368,18 +354,6 @@
 - **作者**: Yichao Cai, Yuhang Liu, Zhen Zhang, Javen Qinfeng Shi
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-### Contrastive Learning with Counterfactual Explanations for Radiology Report Generation.
-- **链接**: [arXiv:2407.14474](https://arxiv.org/abs/2407.14474) · 📚 被引 21
-- **作者**: Mingjie Li, Haokun Lin, Liang Qiu, Xiaodan Liang, Ling Chen, Abdulmotaleb Elsaddik et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Due to the common content of anatomy, radiology images with their corresponding reports exhibit high similarity. Such inherent data bias can predispose automatic report generation models to learn entangled and spurious representations resulting in misdiagnostic reports. To tackle these, we propose a novel \textbf{Co}unter\textbf{F}actual \textbf{E}xplanations-based framework (CoFE) for radiology report generation. Counterfactual explanations serve as a potent tool for understanding how decisions made by algorithms can be changed by asking ``what if'' scenarios. By leveraging this concept, CoFE can learn non-spurious visual representations by contrasting the representations between factual and counterfactual images. Specifically, we derive counterfactual images by swapping a patch between positive and negative samples until a predicted diagnosis shift occurs. Here, positive and negative samples are the most semantically similar but have different diagnosis labels. Additionally, CoFE employs a learnable prompt to efficiently fine-tune the pre-trained large language model, encapsulating both factual and counterfactual content to provide a more generalizable prompt representation. Extensive experiments on two benchmarks demonstrate that leveraging the counterfactual explanations enables CoFE to generate semantically coherent and factually complete reports and outperform in terms of language generation and clinical efficacy metrics.
-
-</details>
 
 ### Understanding and Mitigating Human-Labelling Errors in Supervised Contrastive Learning.
 - **链接**: [arXiv:2403.06289](https://arxiv.org/abs/2403.06289) · 📚 被引 1
@@ -600,59 +574,60 @@
 - **创新点**: 将自监督学习应用于雷达模态，解决标注稀缺问题。
 - **结果**: 摘要未提供具体性能数据。
 
-### What, When, and Where? Self-Supervised Spatio- Temporal Grounding in Untrimmed Multi-Action Videos from Narrated Instructions.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01743) · 📚 被引 4
+### What, When, and Where? Self-Supervised Spatio- Temporal Grounding in Untrimmed Multi-Action Videos from Narrated Instructions. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01743)
 - **作者**: Brian Chen, Nina Shvetsova, Andrew Rouditchenko, Daniel Kondermann, Samuel Thomas, Shih-Fu Chang et al.
-- **🏷️ 机构**: Columbia University, Goethe University,Frankfurt, MIT CSAIL
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对未修剪多动作视频中时空定位的挑战，现有方法依赖密集标注。②提出自监督方法，利用叙述指令作为监督信号，学习视频片段与文本指令的对应关系，实现动作的时空定位。③通过联合建模时间顺序和空间位置，改进了对多动作视频的理解。④在多个基准数据集上验证了方法的有效性，但未提供具体数值。
+- **摘要（英）**: This paper tackles spatio-temporal grounding in untrimmed multi-action videos, which typically requires dense annotations. It proposes a self-supervised method that leverages narrated instructions as supervision to learn correspondences between video segments and text, enabling action localization. By jointly modeling temporal order and spatial positions, it improves video understanding, with effectiveness validated on multiple benchmarks.
+- **核心贡献**: 提出利用叙述指令进行自监督时空定位的方法。
+- **创新点**: 联合建模时间顺序和空间位置，无需密集标注。
+- **结果**: 在多个基准上验证了有效性。
 
-### Low-Res Leads the Way: Improving Generalization for Super-Resolution by Self-Supervised Learning.
-- **链接**: [arXiv:2403.02601](https://arxiv.org/abs/2403.02601) · 📚 被引 26
+### Low-Res Leads the Way: Improving Generalization for Super-Resolution by Self-Supervised Learning. **⭐⭐⭐** (相关度: 30%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02443)
 - **作者**: Haoyu Chen, Wenbo Li, Jinjin Gu, Jingjing Ren, Haoze Sun, Xueyi Zou et al.
-- **🏷️ 机构**: The Hong Kong University of Science and Technology (Guangzhou), Huawei Noah&#x0027;s Ark Lab, The University of Sydney
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对超分辨率模型在低分辨率输入上泛化能力差的问题。②提出自监督学习策略，利用低分辨率图像作为引导，增强模型对未知退化模式的鲁棒性。③通过预训练和微调阶段的自监督任务，改进了超分辨率模型的泛化性能。④在多个超分辨率基准上，该方法在低分辨率测试集上显著提升了PSNR和SSIM。
+- **摘要（英）**: This paper addresses poor generalization of super-resolution models on low-resolution inputs. It proposes a self-supervised learning strategy that uses low-resolution images as guidance to enhance robustness to unknown degradation patterns. Through self-supervised tasks in pretraining and fine-tuning, it improves generalization, achieving significant PSNR and SSIM gains on low-resolution test sets.
+- **核心贡献**: 提出利用低分辨率图像引导的自监督超分辨率泛化方法。
+- **创新点**: 自监督预训练和微调策略增强退化鲁棒性。
+- **结果**: 在低分辨率测试集上显著提升PSNR和SSIM。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> For image super-resolution (SR), bridging the gap between the performance on synthetic datasets and real-world degradation scenarios remains a challenge. This work introduces a novel "Low-Res Leads the Way" (LWay) training framework, merging Supervised Pre-training with Self-supervised Learning to enhance the adaptability of SR models to real-world images. Our approach utilizes a low-resolution (LR) reconstruction network to extract degradation embeddings from LR images, merging them with super-resolved outputs for LR reconstruction. Leveraging unseen LR images for self-supervised learning guides the model to adapt its modeling space to the target domain, facilitating fine-tuning of SR models without requiring paired high-resolution (HR) images. The integration of Discrete Wavelet Transform (DWT) further refines the focus on high-frequency details. Extensive evaluations show that our method significantly improves the generalization and detail restoration capabilities of SR models on unseen real-world datasets, outperforming existing methods. Our training regime is universally compatible, requiring no network architecture modifications, making it a practical solution for real-world SR applications.
-
-</details>
-
-### Self-Supervised Facial Representation Learning with Facial Region Awareness.
-- **链接**: [arXiv:2403.02138](https://arxiv.org/abs/2403.02138) · 📚 被引 28
+### Self-Supervised Facial Representation Learning with Facial Region Awareness. **⭐⭐⭐** (相关度: 35%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00203)
 - **作者**: Zheng Gao, Ioannis Patras
-- **🏷️ 机构**: Queen Mary University of London,London,El 4NS
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对人脸表示学习中缺乏区域感知的问题。②提出区域感知的自监督人脸表示学习方法，通过显式建模面部区域（如眼睛、鼻子）来增强特征判别力。③相比通用自监督方法，该方法利用人脸结构先验，提升了细粒度特征学习。④在多个下游人脸任务上（如识别、属性分析）取得了改进，但未提供具体数值。
+- **摘要（英）**: This paper addresses the lack of region awareness in facial representation learning. It proposes a region-aware self-supervised method that explicitly models facial regions (e.g., eyes, nose) to enhance feature discriminability. By leveraging facial structure priors, it improves fine-grained feature learning over generic self-supervised methods, with gains on downstream tasks like recognition and attribute analysis.
+- **核心贡献**: 提出区域感知的自监督人脸表示学习方法。
+- **创新点**: 显式建模面部区域先验。
+- **结果**: 在多个下游人脸任务上取得改进。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Self-supervised pre-training has been proved to be effective in learning transferable representations that benefit various visual tasks. This paper asks this question: can self-supervised pre-training learn general facial representations for various facial analysis tasks? Recent efforts toward this goal are limited to treating each face image as a whole, i.e., learning consistent facial representations at the image-level, which overlooks the consistency of local facial representations (i.e., facial regions like eyes, nose, etc). In this work, we make a first attempt to propose a novel self-supervised facial representation learning framework to learn consistent global and local facial representations, Facial Region Awareness (FRA). Specifically, we explicitly enforce the consistency of facial regions by matching the local facial representations across views, which are extracted with learned heatmaps highlighting the facial regions. Inspired by the mask prediction in supervised semantic segmentation, we obtain the heatmaps via cosine similarity between the per-pixel projection of feature maps and facial mask embeddings computed from learnable positional embeddings, which leverage the attention mechanism to globally look up the facial image for facial regions. To learn such heatmaps, we formulate the learning of facial mask embeddings as a deep clustering problem by assigning the pixel features from the feature maps to them. The transfer learning results on facial classification and regression tasks show that our FRA outperforms previous pre-trained models and more importantly, using ResNet as the unified backbone for various tasks, our FRA achieves comparable or even better performance compared with SOTA methods in facial analysis tasks.
-
-</details>
-
-### CuVLER: Enhanced Unsupervised Object Discoveries through Exhaustive Self-Supervised Transformers.
-- **链接**: [arXiv:2403.07700](https://arxiv.org/abs/2403.07700) · 📚 被引 10
+### CuVLER: Enhanced Unsupervised Object Discoveries through Exhaustive Self-Supervised Transformers. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02180)
 - **作者**: Shahaf Arica, Or Rubin, Sapir Gershov, Shlomi Laufer
-- **🏷️ 机构**: Technion - Israel Institute of Technology
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对无监督目标发现中现有方法对目标覆盖不完整的问题。②提出CuVLER，利用自监督Transformer进行穷举式目标发现，通过增强特征提取和候选生成，提高召回率。③相比现有无监督方法，CuVLER在多个数据集上发现了更多且更准确的目标。④在PASCAL VOC和COCO等基准上，CuVLER显著提升了目标发现的准确率和召回率。
+- **摘要（英）**: This paper addresses incomplete object coverage in unsupervised object discovery. It proposes CuVLER, which uses self-supervised Transformers for exhaustive discovery by enhancing feature extraction and candidate generation, improving recall. CuVLER finds more accurate objects than existing methods on PASCAL VOC and COCO, with significant gains in precision and recall.
+- **核心贡献**: 提出CuVLER，利用自监督Transformer实现穷举式目标发现。
+- **创新点**: 增强特征提取和候选生成，提高目标召回率。
+- **结果**: 在PASCAL VOC和COCO上显著提升准确率和召回率。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this paper, we introduce VoteCut, an innovative method for unsupervised object discovery that leverages feature representations from multiple self-supervised models. VoteCut employs normalized-cut based graph partitioning, clustering and a pixel voting approach. Additionally, We present CuVLER (Cut-Vote-and-LEaRn), a zero-shot model, trained using pseudo-labels, generated by VoteCut, and a novel soft target loss to refine segmentation accuracy. Through rigorous evaluations across multiple datasets and several unsupervised setups, our methods demonstrate significant improvements in comparison to previous state-of-the-art models. Our ablation studies further highlight the contributions of each component, revealing the robustness and efficacy of our approach. Collectively, VoteCut and CuVLER pave the way for future advancements in image segmentation.
-
-</details>
-
-### Prompt Augmentation for Self-supervised Text-guided Image Manipulation.
-- **链接**: [arXiv:2412.13081](https://arxiv.org/abs/2412.13081) · 📚 被引 4
+### Prompt Augmentation for Self-supervised Text-guided Image Manipulation. **⭐⭐** (相关度: 20%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00843)
 - **作者**: Rumeysa Bodur, Binod Bhattarai, Tae-Kyun Kim
-- **🏷️ 机构**: Imperial College London,UK, University of Aberdeen,UK
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Text-guided image editing finds applications in various creative and practical fields. While recent studies in image generation have advanced the field, they often struggle with the dual challenges of coherent image transformation and context preservation. In response, our work introduces prompt augmentation, a method amplifying a single input prompt into several target prompts, strengthening textual context and enabling localised image editing. Specifically, we use the augmented prompts to delineate the intended manipulation area. We propose a Contrastive Loss tailored to driving effective image editing by displacing edited areas and drawing preserved regions closer. Acknowledging the continuous nature of image manipulations, we further refine our approach by incorporating the similarity concept, creating a Soft Contrastive Loss. The new losses are incorporated to the diffusion model, demonstrating improved or competitive image editing results on public datasets and generated images over state-of-the-art approaches.
-
-</details>
+- **摘要（中）**: ①针对文本引导图像编辑中提示词不足导致编辑效果不佳的问题。②提出提示增强方法，通过自监督方式生成更丰富的文本提示，提升编辑的语义一致性。③相比固定提示，该方法动态调整提示，增强了编辑的灵活性和准确性。④在多个图像编辑基准上验证了改进，但未提供具体数值。
+- **摘要（英）**: This paper addresses insufficient prompts in text-guided image manipulation. It proposes a prompt augmentation method that generates richer text prompts in a self-supervised manner, improving semantic consistency. Compared to fixed prompts, it dynamically adjusts prompts, enhancing flexibility and accuracy, with improvements on editing benchmarks.
+- **核心贡献**: 提出自监督提示增强方法提升文本引导图像编辑。
+- **创新点**: 动态生成丰富提示。
+- **结果**: 在图像编辑基准上验证了改进。
 
 ### Exploring Efficient Asymmetric Blind-Spots for Self-Supervised Denoising in Real-World Scenarios.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00272) · 📚 被引 16
@@ -1001,4 +976,5 @@
 > We propose a novel unsupervised cross-modal homography estimation framework based on intra-modal Self-supervised learning, Correlation, and consistent feature map Projection, namely SCPNet. The concept of intra-modal self-supervised learning is first presented to facilitate the unsupervised cross-modal homography estimation. The correlation-based homography estimation network and the consistent feature map projection are combined to form the learnable architecture of SCPNet, boosting the unsupervised learning framework. SCPNet is the first to achieve effective unsupervised homography estimation on the satellite-map image pair cross-modal dataset, GoogleMap, under [-32,+32] offset on a 128x128 image, leading the supervised approach MHN by 14.0% of mean average corner error (MACE). We further conduct extensive experiments on several cross-modal/spectral and manually-made inconsistent datasets, on which SCPNet achieves the state-of-the-art (SOTA) performance among unsupervised approaches, and owns 49.0%, 25.2%, 36.4%, and 10.7% lower MACEs than the supervised approach MHN. Source code is available at https://github.com/RM-Zhang/SCPNet.
 
 </details>
-<!-- COMPLETE v1 papers=103 -->
+
+<!-- COMPLETE v1 papers=99 -->

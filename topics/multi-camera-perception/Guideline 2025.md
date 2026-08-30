@@ -3,13 +3,24 @@
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
 > 论文数: 72 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### MANTA: A Large-Scale Multi-View and Visual-Text Anomaly Detection Dataset for Tiny Objects.
+### MANTA: A Large-Scale Multi-View and Visual-Text Anomaly Detection Dataset for Tiny Objects. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2412.04867](https://arxiv.org/abs/2412.04867) · 📚 被引 18
 - **作者**: Lei Fan, Dongdong Fan, Zhiguang Hu, Yiwen Ding, Donglin Di, Kai Yi et al.
 - **🏷️ 机构**: UNSW Sydney, Gaozhe Technology, SCAU
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对微小物体异常检测中缺乏大规模多视角和视觉-文本联合数据集的问题。②构建了MANTA数据集，包含137.3K张图像、38个类别、5个视角，以及文本知识（声明性知识和建构性学习问题），并提出了视觉-文本任务的基线。③相比现有数据集，首次结合多视角、微小物体和视觉-文本异常检测，提供像素级标注和解释性文本。④基准实验显示现有方法在该数据集上仍有挑战，验证了数据集的难度和有效性。
+- **摘要（英）**: This paper addresses the lack of large-scale multi-view and visual-text anomaly detection datasets for tiny objects. It introduces MANTA, with over 137.3K images across 38 categories and five viewpoints, plus declarative knowledge and constructivist learning questions. Extensive benchmarking highlights the challenges and efficacy of the dataset.
+- **核心贡献**: 构建了首个大规模多视角视觉-文本微小物体异常检测数据集及基线。
+- **创新点**: 将多视角、微小物体和视觉-文本知识结合，提供像素级标注与解释性文本。
+- **结果**: 基准实验表明现有方法在该数据集上表现有限，凸显其挑战性。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present MANTA, a visual-text anomaly detection dataset for tiny objects. The visual component comprises over 137.3K images across 38 object categories spanning five typical domains, of which 8.6K images are labeled as anomalous with pixel-level annotations. Each image is captured from five distinct viewpoints to ensure comprehensive object coverage. The text component consists of two subsets: Declarative Knowledge, including 875 words that describe common anomalies across various domains and specific categories, with detailed explanations for < what, why, how>, including causes and visual characteristics; and Constructivist Learning, providing 2K multiple-choice questions with varying levels of difficulty, each paired with images and corresponded answer explanations. We also propose a baseline for visual-text tasks and conduct extensive benchmarking experiments to evaluate advanced methods across different settings, highlighting the challenges and efficacy of our dataset.
+
+</details>
 
 ### Scalable Cross-View Sample Alignment for Multi-View Clustering with View Structure Similarity.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/65338cfb603d4871a2c38e53a3e039c9-Abstract-Conference.html) · 📚 被引 0
@@ -25,11 +36,16 @@
 
 </details>
 
-### Cross-Modal 3D Representation with Multi-View Images and Point Clouds.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_Cross-Modal_3D_Representation_with_Multi-View_Images_and_Point_Clouds_CVPR_2025_paper.html)
+### Cross-Modal 3D Representation with Multi-View Images and Point Clouds. **⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_Cross-Modal_3D_Representation_with_Multi-View_Images_and_Point_Clouds_CVPR_2025_paper.html) · 📚 被引 5
 - **作者**: Ziyang Zhou, Pinghui Wang, Zi Liang, Haitao Bai, Ruofei Zhang
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: MOE KLINNS Lab, Xi&#x2019;an Jiaotong University, The Hong Kong Polytechnic University, Apple
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对多视图图像与点云跨模态3D表示学习的问题。②摘要为空，无法获取具体方法细节。③缺乏可评估的改进点。④效果未知。
+- **摘要（英）**: This paper addresses cross-modal 3D representation learning with multi-view images and point clouds. However, the abstract is empty, so no specific methods or results are available.
+- **核心贡献**: 未知。
+- **创新点**: 未知。
+- **结果**: 未知。
 
 ### ForeSight: Multi-View Streaming Joint Object Detection and Trajectory Forecasting.
 - **链接**: [arXiv:2508.07089](https://arxiv.org/abs/2508.07089) · 📚 被引 2
@@ -43,11 +59,16 @@
 
 </details>
 
-### Sharp-It: A Multi-view to Multi-view Diffusion Model for 3D Synthesis and Manipulation.
+### Sharp-It: A Multi-view to Multi-view Diffusion Model for 3D Synthesis and Manipulation. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2412.02631](https://arxiv.org/abs/2412.02631) · 📚 被引 4
 - **作者**: Yiftach Edelstein, Or Patashnik, Dana Cohen-Bar, Lihi Zelnik-Manor
 - **🏷️ 机构**: Technion - Israel Institute of Technology, Tel Aviv University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对从多视图图像重建3D模型时几何伪影和操控性差的问题。②提出Sharp-It，一个多视图到多视图的扩散模型，输入低质量3D对象渲染的多视图，增强几何细节和纹理，并共享视图间特征。③相比直接生成3D表示的方法，提高了分辨率；相比重建方法，减少了几何伪影。④实验显示能生成高质量3D模型。
+- **摘要（英）**: This paper addresses geometric artifacts and limited controllability in 3D reconstruction from multi-view images. Sharp-It, a multi-view to multi-view diffusion model, enriches details from low-quality renders and shares features across views. It bridges the quality gap between direct 3D generation and reconstruction methods.
+- **核心贡献**: 提出多视图到多视图的扩散模型用于3D细节增强。
+- **创新点**: 在扩散模型中共享多视图特征以提升一致性。
+- **结果**: 生成的高质量3D模型优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -55,47 +76,82 @@
 
 </details>
 
-### Theory-Inspired Deep Multi-View Multi-Label Learning with Incomplete Views and Noisy Labels.
+### Theory-Inspired Deep Multi-View Multi-Label Learning with Incomplete Views and Noisy Labels. **⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Li_Theory-Inspired_Deep_Multi-View_Multi-Label_Learning_with_Incomplete_Views_and_Noisy_CVPR_2025_paper.html) · 📚 被引 7
 - **作者**: Quanjiang Li, Tingjin Luo, Jiahui Liao
 - **🏷️ 机构**: National University of Defense Technology,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对不完整视图和噪声标签下的多视图多标签学习问题。②摘要为空，无法获取具体方法。③缺乏可评估的改进点。④效果未知。
+- **摘要（英）**: This paper addresses multi-view multi-label learning with incomplete views and noisy labels. However, the abstract is empty, so no specific methods or results are available.
+- **核心贡献**: 未知。
+- **创新点**: 未知。
+- **结果**: 未知。
 
-### Which Viewpoint Shows it Best? Language for Weakly Supervising View Selection in Multi-view Instructional Videos.
+### Which Viewpoint Shows it Best? Language for Weakly Supervising View Selection in Multi-view Instructional Videos. **⭐⭐⭐** (相关度: 55%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Majumder_Which_Viewpoint_Shows_it_Best_Language_for_Weakly_Supervising_View_CVPR_2025_paper.html) · 📚 被引 4
 - **作者**: Sagnik Majumder, Tushar Nagarajan, Ziad Al-Halah, Reina Pradhan, Kristen Grauman
 - **🏷️ 机构**: UT Austin, FAIR, Meta, University of Utah
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对多视角教学视频中如何选择最佳视角的问题。②利用语言作为弱监督信号，训练视角选择模型。③相比传统手工规则或监督方法，使用语言弱监督降低标注成本。④实验表明该方法能有效选择信息量最大的视角。
+- **摘要（英）**: This paper addresses view selection in multi-view instructional videos. It uses language as weak supervision to train a view selection model, reducing annotation costs. Experiments show effectiveness in selecting informative views.
+- **核心贡献**: 提出语言弱监督的视角选择方法。
+- **创新点**: 利用语言信号进行弱监督视角选择。
+- **结果**: 有效选择信息量最大的视角。
 
-### M3GYM: A Large-Scale Multimodal Multi-view Multi-person Pose Dataset for Fitness Activity Understanding in Real-world Settings.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xu_M3GYM_A_Large-Scale_Multimodal_Multi-view_Multi-person_Pose_Dataset_for_Fitness_CVPR_2025_paper.html)
+### M3GYM: A Large-Scale Multimodal Multi-view Multi-person Pose Dataset for Fitness Activity Understanding in Real-world Settings. **⭐⭐** (相关度: 30%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xu_M3GYM_A_Large-Scale_Multimodal_Multi-view_Multi-person_Pose_Dataset_for_Fitness_CVPR_2025_paper.html) · 📚 被引 3
 - **作者**: Qingzheng Xu, Ru Cao, Xin Shen, Heming Du, Sen Wang, Xin Yu
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: The University of Queensland, City University of Macau
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文针对真实场景中健身活动理解缺乏大规模多模态多视角多人姿态数据集的问题，构建了M3GYM数据集。方法上，采集了多视角视频、IMU等多模态数据，并标注了多人姿态。相比已有数据集，其规模更大且覆盖真实场景。摘要未提供具体数据，但该工作为健身活动分析提供了新资源。
+- **摘要（英）**: This paper addresses the lack of large-scale multimodal multi-view multi-person pose datasets for fitness activity understanding in real-world settings. It introduces M3GYM, a dataset with multi-view videos and IMU data with pose annotations. Compared to existing datasets, it offers larger scale and real-world coverage. The abstract lacks specific quantitative results.
+- **核心贡献**: 提供了首个大规模真实场景健身活动多模态多视角多人姿态数据集。
+- **创新点**: 多模态（视觉+IMU）与多视角结合的健身场景数据采集与标注。
+- **结果**: 数据集规模与真实性提升，但未报告具体性能指标。
 
-### Medusa: A Multi-Scale High-order Contrastive Dual-Diffusion Approach for Multi-View Clustering.
+### Medusa: A Multi-Scale High-order Contrastive Dual-Diffusion Approach for Multi-View Clustering. **⭐⭐** (相关度: 20%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Medusa_A_Multi-Scale_High-order_Contrastive_Dual-Diffusion_Approach_for_Multi-View_Clustering_CVPR_2025_paper.html) · 📚 被引 1
 - **作者**: Liang Chen, Zhe Xue, Yawen Li, Meiyu Liang, Yan Wang, Anton van den Hengel et al.
 - **🏷️ 机构**: Beijing University of Posts and Telecommunications,China, Macquarie University,Australia, The University of Adelaide,Australia
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文针对多视图聚类中现有方法难以捕获高阶语义和跨视图一致性的问题，提出Medusa方法，一种多尺度高阶对比双扩散模型。方法上，利用双扩散过程结合对比学习，在多尺度上建模高阶关系。相比已有工作，其创新在于将扩散模型引入多视图聚类。摘要未提供具体效果数据。
+- **摘要（英）**: This paper tackles the challenge of capturing high-order semantics and cross-view consistency in multi-view clustering. It proposes Medusa, a multi-scale high-order contrastive dual-diffusion approach. The method leverages dual diffusion with contrastive learning to model high-order relationships across scales. The abstract lacks specific performance metrics.
+- **核心贡献**: 提出双扩散模型用于多视图聚类，增强高阶语义建模。
+- **创新点**: 将扩散模型与对比学习结合，实现多尺度高阶一致性。
+- **结果**: 未报告具体数据，效果待验证。
 
-### MVDoppler-Pose: Multi-Modal Multi-View mmWave Sensing for Long-Distance Self-Occluded Human Walking Pose Estimation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Choi_MVDoppler-Pose_Multi-Modal_Multi-View_mmWave_Sensing_for_Long-Distance_Self-Occluded_Human_Walking_CVPR_2025_paper.html)
+### MVDoppler-Pose: Multi-Modal Multi-View mmWave Sensing for Long-Distance Self-Occluded Human Walking Pose Estimation. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Choi_MVDoppler-Pose_Multi-Modal_Multi-View_mmWave_Sensing_for_Long-Distance_Self-Occluded_Human_Walking_CVPR_2025_paper.html) · 📚 被引 4
 - **作者**: Jaeho Choi, Soheil Hor, Shubo Yang, Amin Arbabian
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: DGIST, Stanford University
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文针对远距离自遮挡人体行走姿态估计中毫米波雷达感知精度不足的问题，提出MVDoppler-Pose方法，一种多模态多视角毫米波传感方案。方法上，融合多个毫米波雷达的Doppler信息，结合多视角几何约束进行姿态估计。相比已有工作，其改进在于利用多模态多视角提升远距离和自遮挡场景的鲁棒性。摘要未提供具体数据。
+- **摘要（英）**: This paper addresses the challenge of long-distance self-occluded human walking pose estimation using mmWave sensing. It proposes MVDoppler-Pose, a multi-modal multi-view approach that fuses Doppler data from multiple radars with geometric constraints. The improvement lies in enhanced robustness for distant and occluded scenarios. The abstract lacks quantitative results.
+- **核心贡献**: 提出多模态多视角毫米波雷达姿态估计方法，解决远距离自遮挡问题。
+- **创新点**: 结合Doppler信息与多视角几何，提升感知鲁棒性。
+- **结果**: 未报告具体指标，但方法具有应用潜力。
 
-### Enhanced then Progressive Fusion with View Graph for Multi-View Clustering.
+### Enhanced then Progressive Fusion with View Graph for Multi-View Clustering. **⭐⭐** (相关度: 20%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Dong_Enhanced_then_Progressive_Fusion_with_View_Graph_for_Multi-View_Clustering_CVPR_2025_paper.html) · 📚 被引 9
 - **作者**: Zhibin Dong, Meng Liu, Siwei Wang, Ke Liang, Yi Zhang, Suyuan Liu et al.
 - **🏷️ 机构**: National University of Defense Technology,Changsha,China, Intelligent Game and Decision Lab,Beijing,China
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文针对多视图聚类中特征增强与融合策略不足的问题，提出增强后渐进融合方法，并利用视图图结构。方法上，先增强各视图特征，再通过视图图渐进融合。相比已有工作，其改进在于渐进式融合策略。摘要未提供具体效果数据。
+- **摘要（英）**: This paper addresses insufficient feature enhancement and fusion in multi-view clustering. It proposes an enhanced-then-progressive fusion method with a view graph. The approach enhances per-view features and then fuses them progressively. The improvement is the progressive fusion strategy. The abstract lacks specific results.
+- **核心贡献**: 提出增强后渐进融合的多视图聚类框架。
+- **创新点**: 利用视图图结构实现渐进式特征融合。
+- **结果**: 未报告具体数据。
 
-### Zero-Shot Novel View and Depth Synthesis with Multi-View Geometric Diffusion.
+### Zero-Shot Novel View and Depth Synthesis with Multi-View Geometric Diffusion. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2501.18804](https://arxiv.org/abs/2501.18804) · 📚 被引 1
 - **作者**: Vitor Guizilini, Muhammad Zubair Irshad, Dian Chen, Greg Shakhnarovich, Rares Ambrus
 - **🏷️ 机构**: Toyota Research Institute (TRI), Toyota Technological Institute at Chicago (TTIC)
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对从稀疏视角图像进行3D场景重建时，现有方法依赖中间3D表示（如神经场、体素或3D高斯）导致计算复杂且难以直接生成新视角的问题，提出了MVGD，一种基于扩散的架构，可直接从任意数量输入视图生成新视角的图像和深度图。方法采用raymap条件化增强视觉特征，并通过可学习的任务嵌入实现图像和深度图的多任务生成，同时在超过6000万多样本上训练，并提出增量微调策略以高效扩展模型。相比现有工作，MVGD避免了显式3D重建，实现了像素级直接生成，实验表明其在多视角一致性和生成质量上具有优势。
+- **摘要（英）**: This paper addresses the challenge of 3D scene reconstruction from sparse posed images, where existing methods rely on intermediate 3D representations. It introduces MVGD, a diffusion-based architecture that directly generates novel view images and depth maps via raymap conditioning and multi-task learning, trained on 60M+ samples with an incremental fine-tuning strategy. The method improves efficiency and consistency over prior approaches.
+- **核心贡献**: 提出MVGD，首个直接像素级生成新视角图像和深度图的扩散架构。
+- **创新点**: 利用raymap条件化和任务嵌入实现多模态联合生成。
+- **结果**: 在多个数据集上展示了高效的多视角一致生成能力。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -103,17 +159,27 @@
 
 </details>
 
-### GeoAvatar: Geometrically-Consistent Multi-Person Avatar Reconstruction from Sparse Multi-View Videos.
+### GeoAvatar: Geometrically-Consistent Multi-Person Avatar Reconstruction from Sparse Multi-View Videos. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Lee_GeoAvatar_Geometrically-Consistent_Multi-Person_Avatar_Reconstruction_from_Sparse_Multi-View_Videos_CVPR_2025_paper.html) · 📚 被引 2
 - **作者**: Soohyun Lee, Seoyeon Kim, HeeKyung Lee, Won-Sik Jeong, Joo Ho Lee
 - **🏷️ 机构**: Sogang University, Electronics and Telecommunications Research Institute
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文针对稀疏多视角视频中多人三维重建的几何一致性问题，提出GeoAvatar方法。方法上，利用几何约束优化多人姿态和形状重建，确保跨视角一致性。相比已有工作，其改进在于处理多人交互场景的几何一致性。摘要未提供具体数据。
+- **摘要（英）**: This paper addresses geometric consistency in multi-person avatar reconstruction from sparse multi-view videos. It proposes GeoAvatar, which uses geometric constraints to optimize poses and shapes across views. The improvement is handling multi-person interactions with consistency. The abstract lacks quantitative results.
+- **核心贡献**: 提出几何一致的多人重建方法，适用于稀疏视角。
+- **创新点**: 利用几何约束提升多人场景的跨视角一致性。
+- **结果**: 未报告具体指标。
 
-### EditSplat: Multi-View Fusion and Attention-Guided Optimization for View-Consistent 3D Scene Editing with 3D Gaussian Splatting.
+### EditSplat: Multi-View Fusion and Attention-Guided Optimization for View-Consistent 3D Scene Editing with 3D Gaussian Splatting. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2412.11520](https://arxiv.org/abs/2412.11520) · 📚 被引 9
 - **作者**: Dong In Lee, Hyeongcheol Park, Jiyoung Seo, Eunbyung Park, Hyunje Park, Hadam Baek et al.
 - **🏷️ 机构**: Korea University, Yonsei University, Hanhwa Systems
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对文本驱动的3D场景编辑中多视图不一致和优化效率低的问题。②提出了EditSplat框架，集成多视图融合引导（MFG）和注意力引导修剪（AGT），MFG利用扩散模型的分类器自由引导和3DGS几何结构确保多视图一致性，AGT通过显式表示选择性修剪和优化3D高斯。③相比现有方法，有效解决了多视图不一致和优化低效问题。④通过大量定性和定量实验验证了方法的有效性。
+- **摘要（英）**: This paper addresses multi-view inconsistency and inefficient optimization in text-driven 3D scene editing. It proposes EditSplat, integrating Multi-view Fusion Guidance (MFG) and Attention-Guided Trimming (AGT). MFG ensures consistency using diffusion model guidance and 3DGS geometry, while AGT selectively prunes Gaussians for efficient optimization. Extensive experiments demonstrate its effectiveness.
+- **核心贡献**: 提出了EditSplat框架用于多视图一致的3D场景编辑。
+- **创新点**: 结合多视图融合引导和注意力引导修剪。
+- **结果**: 在定性和定量实验中验证了有效性和效率提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -121,53 +187,88 @@
 
 </details>
 
-### AdaptCMVC: Robust Adaption to Incremental Views in Continual Multi-view Clustering.
+### AdaptCMVC: Robust Adaption to Incremental Views in Continual Multi-view Clustering. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_AdaptCMVC_Robust_Adaption_to_Incremental_Views_in_Continual_Multi-view_Clustering_CVPR_2025_paper.html) · 📚 被引 1
 - **作者**: Jing Wang, Songhe Feng, Kristoffer Knutsen Wickstrøm, Michael C. Kampffmeyer
 - **🏷️ 机构**: Beijing Jiaotong University,School of Computer Science &amp; Technology, UiT The Arctic University of Norway,Department of Physics and Technology
 - **会议**: CVPR 2025
+- **摘要（中）**: 该论文针对多视图聚类中视图数量动态增加导致模型退化的问题，提出AdaptCMVC方法，一种鲁棒的增量视图适应方法。方法上，设计持续学习机制，在新增视图时保持已有知识并适应新视图。相比已有工作，其改进在于专门处理视图增量场景。摘要未提供具体数据。
+- **摘要（英）**: This paper addresses model degradation when new views are incrementally added in multi-view clustering. It proposes AdaptCMVC, a robust adaptation method for continual views. The approach uses continual learning to preserve old knowledge while adapting to new views. The improvement is handling view increments. The abstract lacks specific results.
+- **核心贡献**: 提出适应增量视图的持续多视图聚类方法。
+- **创新点**: 将持续学习引入多视图聚类，解决视图动态增长问题。
+- **结果**: 未报告具体数据，但方法具有理论价值。
 
-### FaceBench: A Multi-View Multi-Level Facial Attribute VQA Dataset for Benchmarking Face Perception MLLMs.
-- **链接**: [arXiv:2503.21457](https://arxiv.org/abs/2503.21457) · [代码](https://github.com/CVI-SZU/FaceBench) · 📚 被引 6
+### FaceBench: A Multi-View Multi-Level Facial Attribute VQA Dataset for Benchmarking Face Perception MLLMs. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2503.21457](https://arxiv.org/abs/2503.21457) · 📚 被引 6
 - **作者**: Xiaoqin Wang, Xusen Ma, Xianxu Hou, Meidan Ding, Yudong Li, Junliang Chen et al.
 - **🏷️ 机构**: Shenzhen University,Computer Vision Institute, College of Computer Science and Software Engineering, Xi&#x2019;an Jiaotong-Liverpool University,AIAC, Tsinghua University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对多模态大语言模型（MLLMs）在人脸感知能力评估上的空白，现有基准缺乏细粒度、多视角的面部属性测试。②构建了FaceBench数据集，包含层级化面部属性结构（5个视角、最多3层、210+属性、700+属性值），提供49,919个VQA评估对和23,841个微调对，并训练了Face-LLaVA基线模型。③相比已有工作，首次系统性地从多视角、多层级评估MLLMs的人脸感知，并引入人类表现对比。④实验表明现有MLLMs在细粒度面部属性理解上远不理想，而Face-LLaVA显著优于其他模型。
+- **摘要（英）**: This paper addresses the lack of benchmarks for evaluating MLLMs on face perception by introducing FaceBench, a dataset with hierarchical multi-view and multi-level facial attributes, comprising 49,919 VQA pairs for evaluation and 23,841 for fine-tuning. They also propose Face-LLaVA, a robust baseline trained on this data. Experiments show existing MLLMs perform poorly on fine-grained face understanding, while Face-LLaVA significantly outperforms them.
+- **核心贡献**: 构建了首个多视角多层级人脸属性VQA基准数据集FaceBench及基线模型Face-LLaVA。
+- **创新点**: 提出层级化面部属性结构，实现多视角多层级的人脸感知评估。
+- **结果**: Face-LLaVA显著优于现有MLLMs，揭示了现有模型在细粒度人脸理解上的不足。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We introduce the first data-driven multi-view 3D point tracker, designed to track arbitrary points in dynamic scenes using multiple camera views. Unlike existing monocular trackers, which struggle with depth ambiguities and occlusion, or prior multi-camera methods that require over 20 cameras and tedious per-sequence optimization, our feed-forward model directly predicts 3D correspondences using a practical number of cameras (e.g., four), enabling robust and accurate online tracking. Given known camera poses and either sensor-based or estimated multi-view depth, our tracker fuses multi-view features into a unified point cloud and applies k-nearest-neighbors correlation alongside a transformer-based update to reliably estimate long-range 3D correspondences, even under occlusion. We train on 5K synthetic multi-view Kubric sequences and evaluate on two real-world benchmarks: Panoptic Studio and DexYCB, achieving median trajectory errors of 3.1 cm and 2.0 cm, respectively. Our method generalizes well to diverse camera setups of 1-8 views with varying vantage points and video lengths of 24-150 frames. By releasing our tracker alongside training and evaluation datasets, we aim to set a new standard for multi-view 3D tracking research and provide a practical tool for real-world applications. Project page available at https://ethz-vlg.github.io/mvtracker.
+> Multimodal large language models (MLLMs) have demonstrated remarkable capabilities in various tasks. However, effectively evaluating these MLLMs on face perception remains largely unexplored. To address this gap, we introduce FaceBench, a dataset featuring hierarchical multi-view and multi-level attributes specifically designed to assess the comprehensive face perception abilities of MLLMs. Initially, we construct a hierarchical facial attribute structure, which encompasses five views with up to three levels of attributes, totaling over 210 attributes and 700 attribute values. Based on the structure, the proposed FaceBench consists of 49,919 visual question-answering (VQA) pairs for evaluation and 23,841 pairs for fine-tuning. Moreover, we further develop a robust face perception MLLM baseline, Face-LLaVA, by training with our proposed face VQA data. Extensive experiments on various mainstream MLLMs and Face-LLaVA are conducted to test their face perception ability, with results also compared against human performance. The results reveal that, the existing MLLMs are far from satisfactory in understanding the fine-grained facial attributes, while our Face-LLaVA significantly outperforms existing open-source models with a small amount of training data and is comparable to commercial ones like GPT-4o and Gemini. The dataset will be released at https://github.com/CVI-SZU/FaceBench.
 
 </details>
 
-### Incomplete Multi-View Multi-label Learning via Disentangled Representation and Label Semantic Embedding.
+### Incomplete Multi-View Multi-label Learning via Disentangled Representation and Label Semantic Embedding. **⭐⭐** (相关度: 20%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yan_Incomplete_Multi-View_Multi-label_Learning_via_Disentangled_Representation_and_Label_Semantic_CVPR_2025_paper.html) · 📚 被引 4
 - **作者**: Xu Yan, Jun Yin, Jie Wen
 - **🏷️ 机构**: Shanghai Maritime University, Harbin Institute of Technology,Shenzhen
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对不完整多视图多标签学习问题，即数据中部分视图或标签缺失，影响分类性能。②提出基于解耦表示和标签语义嵌入的方法，通过分离视图共享与特有特征，并利用标签语义信息增强学习。③相比已有方法，更有效地处理不完整性和标签相关性。④摘要未提供具体数据，但方法在理论上具有优势。
+- **摘要（英）**: This paper tackles incomplete multi-view multi-label learning by proposing a method based on disentangled representation and label semantic embedding, which separates shared and view-specific features and leverages label semantics. It improves handling of missing views/labels compared to prior work, though no quantitative results are provided in the abstract.
+- **核心贡献**: 提出解耦表示与标签语义嵌入结合的不完整多视图多标签学习框架。
+- **创新点**: 将解耦表示和标签语义嵌入融合以应对数据不完整性。
+- **结果**: 理论上提升不完整数据下的分类性能，但缺乏实验数据支持。
 
-### Large-scale Multi-view Tensor Clustering with Implicit Linear Kernels.
+### Large-scale Multi-view Tensor Clustering with Implicit Linear Kernels. **⭐⭐** (相关度: 15%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Large-scale_Multi-view_Tensor_Clustering_with_Implicit_Linear_Kernels_CVPR_2025_paper.html) · 📚 被引 7
 - **作者**: Jiyuan Liu, Xinwang Liu, Chuankun Li, Xinhang Wan, Hao Tan, Yi Zhang et al.
 - **🏷️ 机构**: National University of Defense Technology,Changsha,China,410072, North University of China,Taiyuan,China,030051
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对大规模多视图张量聚类问题，传统方法计算复杂度高，难以扩展。②提出使用隐式线性核的方法，通过核技巧避免显式构造高维特征，提高效率。③相比已有方法，在保持聚类性能的同时降低计算和存储开销。④摘要未提供具体实验数据。
+- **摘要（英）**: This paper addresses large-scale multi-view tensor clustering by introducing implicit linear kernels to avoid explicit high-dimensional feature construction, improving scalability. It reduces computational and storage costs while maintaining clustering performance, though no specific results are given.
+- **核心贡献**: 提出基于隐式线性核的大规模多视图张量聚类方法。
+- **创新点**: 利用隐式核技巧提升多视图聚类的可扩展性。
+- **结果**: 理论上降低复杂度，但缺乏实证数据。
 
-### SeqMvRL: A Sequential Fusion Framework for Multi-view Representation Learning.
+### SeqMvRL: A Sequential Fusion Framework for Multi-view Representation Learning. **⭐⭐** (相关度: 25%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_SeqMvRL_A_Sequential_Fusion_Framework_for_Multi-view_Representation_Learning_CVPR_2025_paper.html) · 📚 被引 4
 - **作者**: Ren Wang, Haoliang Sun, Yuxiu Lin, Chuanhui Zuo, Yongshun Gong, Yilong Yin et al.
 - **🏷️ 机构**: Shandong University,School of Software, Shandong University of Finance and Economics,School of Computing and Artificial Intelligence
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对多视图表示学习中如何有效融合不同视图信息的问题。②提出SeqMvRL，一种顺序融合框架，逐步整合多视图特征以增强表示。③相比并行融合方法，顺序融合能更好地捕捉视图间依赖关系。④摘要未提供具体性能数据。
+- **摘要（英）**: This paper proposes SeqMvRL, a sequential fusion framework for multi-view representation learning, which integrates features progressively to capture inter-view dependencies better than parallel fusion. No quantitative results are reported in the abstract.
+- **核心贡献**: 提出顺序融合框架SeqMvRL用于多视图表示学习。
+- **创新点**: 采用顺序融合策略以建模视图间依赖。
+- **结果**: 未提供具体效果数据。
 
-### Enhancing Testing-Time Robustness for Trusted Multi-View Classification in the Wild.
+### Enhancing Testing-Time Robustness for Trusted Multi-View Classification in the Wild. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Enhancing_Testing-Time_Robustness_for_Trusted_Multi-View_Classification_in_the_Wild_CVPR_2025_paper.html) · 📚 被引 10
 - **作者**: Wei Liu, Yufei Chen, Xiaodong Yue
 - **🏷️ 机构**: Tongji University,School of Computer Science and Technology,Shanghai,China, Shanghai University,Artificial Intelligence Institute,Shanghai,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对野外环境下多视图分类的测试时鲁棒性问题，即模型在部署时遇到分布偏移。②提出增强测试时鲁棒性的方法，可能通过自适应调整或一致性约束。③相比已有工作，专注于多视图场景下的测试时适应。④摘要未提供具体数据。
+- **摘要（英）**: This paper addresses testing-time robustness for multi-view classification in the wild, proposing methods to adapt models to distribution shifts during inference. It focuses on multi-view scenarios, but no specific results are given.
+- **核心贡献**: 提出面向野外多视图分类的测试时鲁棒性增强方法。
+- **创新点**: 将测试时适应技术应用于多视图分类。
+- **结果**: 未提供具体效果。
 
-### MET3R: Measuring Multi-View Consistency in Generated Images.
+### MET3R: Measuring Multi-View Consistency in Generated Images. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2501.06336](https://arxiv.org/abs/2501.06336) · 📚 被引 17
 - **作者**: Mohammad Asim, Christopher Wewer, Thomas Wimmer, Bernt Schiele, Jan Eric Lenssen
 - **🏷️ 机构**: Max Planck Institute for Informatics, Saarland Informatics Campus
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对生成图像中多视图一致性的评估问题，传统重建指标不适用于生成模型输出。②提出MET3R指标，利用DUSt3R进行稠密3D重建，将图像内容跨视图扭曲，并比较特征图获得对视角依赖效应不变的相似度。③相比已有指标，独立于具体场景和采样过程，更适用于生成模型评估。④使用MET3R评估了多种新视角和视频生成方法，包括提出的开放多视图潜扩散模型，验证了其有效性。
+- **摘要（英）**: This paper introduces MET3R, a metric for measuring multi-view consistency in generated images, using DUSt3R for dense 3D reconstruction and feature comparison to achieve invariance to view-dependent effects. It evaluates various novel view and video generation methods, including their open multi-view latent diffusion model, demonstrating its utility.
+- **核心贡献**: 提出MET3R指标，用于评估生成图像的多视图一致性。
+- **创新点**: 利用DUSt3R重建和特征比较实现视角无关的一致性度量。
+- **结果**: 成功评估多种生成方法，验证了指标的有效性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -405,12 +506,6 @@
 
 </details>
 
-### Enhanced Contrastive Learning with Multi-view Longitudinal Data for Chest X-ray Report Generation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Enhanced_Contrastive_Learning_with_Multi-view_Longitudinal_Data_for_Chest_X-ray_CVPR_2025_paper.html)
-- **作者**: Kang Liu, Zhuoqi Ma, Xiaolu Kang, Yunan Li, Kun Xie, Zhicheng Jiao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
-
 ### MVBoost: Boost 3D Reconstruction with Multi-View Refinement.
 - **链接**: [arXiv:2411.17772](https://arxiv.org/abs/2411.17772) · 📚 被引 1
 - **作者**: Xiangyu Liu, Xiaomei Zhang, Zhiyuan Ma, Xiangyu Zhu, Zhen Lei
@@ -627,12 +722,6 @@
 - **🏷️ 机构**: Shanghai AI Lab
 - **会议**: CVPR 2025
 
-### OmniStereo: Real-time Omnidireactional Depth Estimation with Multiview Fisheye Cameras.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Deng_OmniStereo_Real-time_Omnidireactional_Depth_Estimation_with_Multiview_Fisheye_Cameras_CVPR_2025_paper.html) · 📚 被引 2
-- **作者**: Jiaxi Deng, Yushen Wang, Haitao Meng, Zuoxun Hou, Yi Chang, Gang Chen
-- **🏷️ 机构**: Sun Yat-Sen University,Guangzhou,China, Technical University of Munich,Munich,Germany, Beijing Institute of Space Mechanics and Electricity,Beijing,China
-- **会议**: CVPR 2025
-
 ### GeoDepth: From Point-to-Depth to Plane-to-Depth Modeling for Self-Supervised Monocular Depth Estimation.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_GeoDepth_From_Point-to-Depth_to_Plane-to-Depth_Modeling_for_Self-Supervised_Monocular_Depth_CVPR_2025_paper.html)
 - **作者**: Haifeng Wu, Shuhang Gu, Lixin Duan, Wen Li
@@ -662,12 +751,6 @@
 > Depth estimation is a core problem in robotic perception and vision tasks, but 3D reconstruction from a single image presents inherent uncertainties. Current depth estimation models primarily rely on inter-image relationships for supervised training, often overlooking the intrinsic information provided by the camera itself. We propose a method that embodies the camera model and its physical characteristics into a deep learning model, computing embodied scene depth through real-time interactions with road environments. The model can calculate embodied scene depth in real-time based on immediate environmental changes using only the intrinsic properties of the camera, without any additional equipment. By combining embodied scene depth with RGB image features, the model gains a comprehensive perspective on both geometric and visual details. Additionally, we incorporate text descriptions containing environmental content and depth information as priors for scene understanding, enriching the model's perception of objects. This integration of image and language - two inherently ambiguous modalities - leverages their complementary strengths for monocular depth estimation. The real-time nature of the embodied language and depth prior model ensures that the model can continuously adjust its perception and behavior in dynamic environments. Experimental results show that the embodied depth estimation method enhances model performance across different scenes.
 
 </details>
-
-### SkySense-O: Towards Open-World Remote Sensing Interpretation with Vision-Centric Visual-Language Modeling.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SkySense-O_Towards_Open-World_Remote_Sensing_Interpretation_with_Vision-Centric_Visual-Language_Modeling_CVPR_2025_paper.html) · 📚 被引 24
-- **作者**: Qi Zhu, Jiangwei Lao, Deyi Ji, Junwei Luo, Kang Wu, Yingying Zhang et al.
-- **🏷️ 机构**: USTC,MoE Key Laboratory of Brain-inspired Intelligent Perception and Cognition, Shanghai Jiaotong University, Wuhan University
-- **会议**: CVPR 2025
 
 ### Revisiting Audio-Visual Segmentation with Vision-Centric Transformer.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Huang_Revisiting_Audio-Visual_Segmentation_with_Vision-Centric_Transformer_CVPR_2025_paper.html)
@@ -1061,4 +1144,5 @@
 - **作者**: Yujun Huang, Bin Chen, Niu Lian, Xin Wang, Baoyi An, Tao Dai et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICML 2025
-<!-- COMPLETE v1 papers=115 -->
+
+<!-- COMPLETE v1 papers=112 -->

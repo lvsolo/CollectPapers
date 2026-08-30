@@ -3,13 +3,18 @@
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
 > 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### RIDDLE: Lidar Data Compression with Range Image Deep Delta Encoding.
+### RIDDLE: Lidar Data Compression with Range Image Deep Delta Encoding. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2206.01738](https://arxiv.org/abs/2206.01738) · 📚 被引 32
 - **作者**: Xuanyu Zhou, Charles R. Qi, Yin Zhou, Dragomir Anguelov
 - **🏷️ 机构**: Waymo LLC
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对LiDAR数据存储和传输成本高的问题，提出范围图像压缩算法。②提出了RIDDLE方法，利用深度模型预测光栅扫描顺序中的下一个像素值，基于上下文激光点，并通过熵编码压缩残差。③相比压缩3D点云，直接压缩范围图像能利用扫描模式，提高压缩率。④在Waymo和KITTI数据集上，RIDDLE在相同失真下显著优于现有压缩算法。
+- **摘要（英）**: This paper addresses the high storage and transmission costs of LiDAR data by proposing a range image compression algorithm. It introduces RIDDLE, which uses a deep model to predict pixel values in raster order and compresses residuals via entropy coding. Compared to point cloud compression, it leverages scanning patterns for better efficiency. Experiments on Waymo and KITTI show significant compression improvements.
+- **核心贡献**: 提出了基于深度预测的范围图像压缩方法RIDDLE。
+- **创新点**: 利用扫描顺序和上下文预测提升压缩率。
+- **结果**: 在多个数据集上显著优于现有算法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +22,16 @@
 
 </details>
 
-### 3DAC: Learning Attribute Compression for Point Clouds.
+### 3DAC: Learning Attribute Compression for Point Clouds. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2203.09931](https://arxiv.org/abs/2203.09931) · 📚 被引 51
 - **作者**: Guangchi Fang, Qingyong Hu, Hanyun Wang, Yiling Xu, Yulan Guo
 - **🏷️ 机构**: Sun Yat-sen University, University of Oxford, Information Engineering University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对大规模非结构化3D点云属性压缩问题，减少存储开销。②提出了3DAC深度压缩网络，将颜色和反射率等属性转换为变换系数，并用深度熵模型建模概率，最终压缩为属性比特流。③相比已有方法，显式考虑了属性变换和先前编码属性的信息，提升了压缩率。④在ScanNet和SemanticKITTI数据集上，3DAC展示了优越的压缩率和重建质量。
+- **摘要（英）**: This paper tackles attribute compression for large-scale unstructured 3D point clouds, proposing 3DAC, a deep compression network that converts attributes to transform coefficients and uses a deep entropy model for probability estimation. It achieves superior compression rates and reconstruction quality on ScanNet and SemanticKITTI.
+- **核心贡献**: 提出了3DAC，一种显式利用属性变换和先前编码信息的点云属性压缩网络。
+- **创新点**: 深度熵模型结合属性变换和先前编码信息，提升压缩效率。
+- **结果**: 在ScanNet和SemanticKITTI上取得优越压缩率和重建质量。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,11 +39,16 @@
 
 </details>
 
-### Density-preserving Deep Point Cloud Compression.
+### Density-preserving Deep Point Cloud Compression. **⭐⭐⭐** (相关度: 55%)
 - **链接**: [arXiv:2204.12684](https://arxiv.org/abs/2204.12684) · 📚 被引 80
 - **作者**: Yun He, Xinlin Ren, Danhang Tang, Yinda Zhang, Xiangyang Xue, Yanwei Fu
 - **🏷️ 机构**: Fudan University, Google
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对现有点云压缩方法忽略局部密度信息的问题，影响局部细节表示。②提出了一种保留局部密度信息的深度点云压缩方法，采用自编码器结构，编码器下采样并学习点特征，解码器上采样，并设计了密度嵌入、局部位置嵌入和祖先嵌入。③相比已有方法，显式预测上采样因子和方向/尺度，并设计子点卷积层和自适应尺度上采样块，缓解点聚类问题。④在SemanticKITTI和ShapeNet上，该方法实现了最先进的率失真权衡。
+- **摘要（英）**: This paper addresses the overlooked local density information in point cloud compression, proposing a density-preserving deep compression method with auto-encoder architecture and novel embeddings. It achieves state-of-the-art rate-distortion trade-off on SemanticKITTI and ShapeNet.
+- **核心贡献**: 提出了密度保持的深度点云压缩方法，显式编码局部密度信息。
+- **创新点**: 设计了密度嵌入和自适应上采样块，缓解点聚类问题。
+- **结果**: 在SemanticKITTI和ShapeNet上取得最先进率失真性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,11 +56,16 @@
 
 </details>
 
-### Fire Together Wire Together: A Dynamic Pruning Approach with Self-Supervised Mask Prediction.
+### Fire Together Wire Together: A Dynamic Pruning Approach with Self-Supervised Mask Prediction. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2110.08232](https://arxiv.org/abs/2110.08232) · 📚 被引 43
 - **作者**: Sara Elkerdawy, Mostafa Elhoushi, Hong Zhang, Nilanjan Ray
 - **🏷️ 机构**: University of Alberta,Huawei, Toronto Heterogeneous Compilers Lab,Huawei
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对动态模型剪枝中正则化损失平衡复杂和超参数选择不透明的问题。②提出了一种基于自监督掩码预测的动态剪枝方法，灵感来自Hebbian理论，预测掩码以选择每层top-k滤波器，k值基于热图质量动态估计。③相比已有方法，解耦了任务损失和剪枝损失，简化了超参数选择，并能在训练前估计FLOPs减少。④实验表明该方法在保持精度的同时有效降低计算复杂度。
+- **摘要（英）**: This paper addresses complexity in dynamic pruning, proposing a self-supervised mask prediction approach inspired by Hebbian theory, decoupling task and pruning losses. It enables FLOPs reduction estimation before training and achieves efficient compression.
+- **核心贡献**: 提出了基于自监督掩码预测的动态剪枝方法，解耦损失并简化超参数选择。
+- **创新点**: 利用Hebbian理论和热图质量动态估计k值，实现输入自适应的剪枝。
+- **结果**: 在保持精度的同时有效降低计算复杂度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -53,23 +73,27 @@
 
 </details>
 
-### Revisiting Random Channel Pruning for Neural Network Compression.
-- **链接**: [arXiv:2205.05676](https://arxiv.org/abs/2205.05676) · 📚 被引 110
+### Revisiting Random Channel Pruning for Neural Network Compression. **⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00029) · 📚 被引 110
 - **作者**: Yawei Li, Kamil Adamczewski, Wen Li, Shuhang Gu, Radu Timofte, Luc Van Gool
 - **🏷️ 机构**: Computer Vision Lab, ETH Zurich, MPI-IS, UESTC
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对随机通道剪枝在神经网络压缩中的有效性进行重新评估。②该论文摘要不完整，但推测通过实验分析随机剪枝与结构化剪枝的性能对比，探讨其作为基线的合理性。③相比已有工作，可能提供对随机剪枝的深入理解，但缺乏具体方法创新。④由于摘要不完整，无法提供具体效果数据。
+- **摘要（英）**: This paper revisits random channel pruning for neural network compression, likely providing empirical analysis on its effectiveness. However, the abstract is incomplete, limiting detailed assessment.
+- **核心贡献**: 重新评估随机通道剪枝在压缩中的表现。
+- **创新点**: 对随机剪枝的深入分析，但缺乏新方法。
+- **结果**: 未提供具体效果数据。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Channel (or 3D filter) pruning serves as an effective way to accelerate the inference of neural networks. There has been a flurry of algorithms that try to solve this practical problem, each being claimed effective in some ways. Yet, a benchmark to compare those algorithms directly is lacking, mainly due to the complexity of the algorithms and some custom settings such as the particular network configuration or training procedure. A fair benchmark is important for the further development of channel pruning. Meanwhile, recent investigations reveal that the channel configurations discovered by pruning algorithms are at least as important as the pre-trained weights. This gives channel pruning a new role, namely searching the optimal channel configuration. In this paper, we try to determine the channel configuration of the pruned models by random search. The proposed approach provides a new way to compare different methods, namely how well they behave compared with random pruning. We show that this simple strategy works quite well compared with other channel pruning methods. We also show that under this setting, there are surprisingly no clear winners among different channel importance evaluation methods, which then may tilt the research efforts into advanced channel configuration searching methods.
-
-</details>
-
-### When to Prune? A Policy towards Early Structural Pruning.
+### When to Prune? A Policy towards Early Structural Pruning. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2110.12007](https://arxiv.org/abs/2110.12007) · 📚 被引 49
 - **作者**: Maying Shen, Pavlo Molchanov, Hongxu Yin, José M. Álvarez
 - **🏷️ 机构**: NVIDIA
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对传统剪枝方法在训练后期进行导致训练计算量大的问题，以及训练前剪枝导致性能下降的问题。②提出一种在训练早期进行结构剪枝的策略，通过初始密集训练快速引导架构，并利用神经元重要性排序评估主导子网络，引入早期剪枝指标（EPI）基于子网络架构相似性触发剪枝。③相比现有方法，结合了训练后剪枝和训练前剪枝的优点，在训练早期进行剪枝而不损害性能。④在ImageNet上的实验表明，EPI能够快速追踪适合剪枝的早期训练轮次，在降低训练成本的同时保持模型性能。
+- **摘要（英）**: This paper addresses the trade-off between post-training pruning (efficient inference but heavy training) and pre-training pruning (training cost reduction but performance degradation). It proposes an early structural pruning policy that uses initial dense training to guide architecture and an Early Pruning Indicator (EPI) based on sub-network architectural similarity to trigger pruning when structure stabilizes. Experiments on ImageNet show EPI effectively identifies early epochs suitable for pruning, reducing training cost without hurting performance.
+- **核心贡献**: 提出了一种基于架构相似性指标在训练早期触发结构剪枝的策略。
+- **创新点**: 利用子网络架构稳定性作为剪枝时机的判断依据。
+- **结果**: 在ImageNet上验证了早期剪枝的可行性，降低了训练成本。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -77,11 +101,16 @@
 
 </details>
 
-### Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs.
+### Interspace Pruning: Using Adaptive Filter Representations to Improve Training of Sparse CNNs. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2203.07808](https://arxiv.org/abs/2203.07808) · 📚 被引 29
 - **作者**: Paul Wimmer, Jens Mehnert, Alexandru Condurache
 - **🏷️ 机构**: Automated Driving Research, Robert Bosch GmbH,Stuttgart,Germany,70469
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对非结构化剪枝在训练前或训练中应用时，固定子空间约束滤波器导致强偏差的问题。②提出交空间剪枝（IP），使用自适应滤波器基的线性组合表示滤波器，在动态交空间中进行剪枝，被剪枝的系数置零，未剪枝的系数和基联合训练。③相比标准非结构化剪枝，IP提供了更灵活的表示空间，减少了剪枝带来的偏差。④数学上证明了IP的优越性，并在多个最先进的非结构化剪枝方法上，尤其是在ImageNet和高稀疏度场景下，IP以相同的运行时和参数成本显著优于标准剪枝。
+- **摘要（英）**: This paper tackles the bias induced by standard unstructured pruning (SP) which fixes a subspace for filters. It introduces interspace pruning (IP) that represents filters in a dynamic interspace via linear combinations of an adaptive filter basis, setting coefficients to zero while training the rest. IP outperforms SP across tested methods, especially in challenging scenarios like ImageNet and high sparsity, with equal runtime and parameter costs, due to improved trainability.
+- **核心贡献**: 提出交空间剪枝（IP）方法，通过自适应滤波器基改善非结构化剪枝的训练性能。
+- **创新点**: 将滤波器表示在动态交空间中，以线性组合形式进行剪枝。
+- **结果**: 在多个数据集和剪枝方法上，IP优于标准非结构化剪枝。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -89,11 +118,22 @@
 
 </details>
 
-### Quarantine: Sparsity Can Uncover the Trojan Attack Trigger for Free.
-- **链接**: [arXiv:2205.11819](https://arxiv.org/abs/2205.11819) · [代码](https://github.com/VITA-Group/Backdoor-LTH) · 📚 被引 13
+### Quarantine: Sparsity Can Uncover the Trojan Attack Trigger for Free. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2205.11819](https://arxiv.org/abs/2205.11819) · 📚 被引 13
 - **作者**: Tianlong Chen, Zhenyu Zhang, Yihua Zhang, Shiyu Chang, Sijia Liu, Zhangyang Wang
 - **🏷️ 机构**: University of Texas at Austin, Michigan State University, University of California,Santa Barbara
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对木马攻击检测问题，即在无干净训练数据的情况下，如何检测DNN是否被植入特定触发器。②提出利用网络剪枝（稀疏性）来检测木马网络，关键观察是木马特征对剪枝的稳定性远高于良性特征。方法首先定位一个“中奖木马彩票”，该子网络保留几乎全部木马信息但在干净输入上仅表现随机水平，然后从该子网络中恢复触发器。③相比现有检测方法，该方法无需干净数据，且利用了剪枝的特性。④在CIFAR-10、CIFAR-100和ImageNet等多个数据集和不同网络架构上进行了广泛实验，验证了方法的有效性。
+- **摘要（英）**: This paper addresses Trojan attack detection in DNNs without clean training data. It observes that Trojan features are more stable to network pruning than benign features, and proposes a detection regime that locates a 'winning Trojan lottery ticket' preserving Trojan information but chance-level performance on clean inputs, then recovers the trigger. Extensive experiments on various datasets and architectures demonstrate its effectiveness.
+- **核心贡献**: 提出了一种基于剪枝的木马网络检测方法，无需干净训练数据。
+- **创新点**: 发现木马特征对剪枝的稳定性，并利用此特性进行检测。
+- **结果**: 在多个数据集上成功检测木马网络并恢复触发器。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Trojan attacks threaten deep neural networks (DNNs) by poisoning them to behave normally on most samples, yet to produce manipulated results for inputs attached with a particular trigger. Several works attempt to detect whether a given DNN has been injected with a specific trigger during the training. In a parallel line of research, the lottery ticket hypothesis reveals the existence of sparse subnetworks which are capable of reaching competitive performance as the dense network after independent training. Connecting these two dots, we investigate the problem of Trojan DNN detection from the brand new lens of sparsity, even when no clean training data is available. Our crucial observation is that the Trojan features are significantly more stable to network pruning than benign features. Leveraging that, we propose a novel Trojan network detection regime: first locating a "winning Trojan lottery ticket" which preserves nearly full Trojan information yet only chance-level performance on clean inputs; then recovering the trigger embedded in this already isolated subnetwork. Extensive experiments on various datasets, i.e., CIFAR-10, CIFAR-100, and ImageNet, with different network architectures, i.e., VGG-16, ResNet-18, ResNet-20s, and DenseNet-100 demonstrate the effectiveness of our proposal. Codes are available at https://github.com/VITA-Group/Backdoor-LTH.
+
+</details>
 
 ### Learning Extremely Lightweight and Robust Model with Differentiable Constraints on Sparsity and Condition Number.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-19772-7_40) · 📚 被引 1
@@ -105,19 +145,22 @@
 
 </details>
 
-### Attentive Fine-Grained Structured Sparsity for Image Restoration.
-- **链接**: [arXiv:2204.12266](https://arxiv.org/abs/2204.12266) · [代码](https://github.com/JungHunOh/SLS_CVPR2022) · 📚 被引 12
+### Attentive Fine-Grained Structured Sparsity for Image Restoration. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2204.12266](https://arxiv.org/abs/2204.12266) · 📚 被引 12
 - **作者**: Junghun Oh, Heewon Kim, Seungjun Nah, Cheeun Hong, Jonghyun Choi, Kyoung Mu Lee
 - **🏷️ 机构**: ASRI,Dept. of ECE, Yonsei University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对图像恢复任务中深度模型计算量大，而现有N:M结构化剪枝未考虑不同层计算复杂度和性能需求差异的问题。②提出一种新颖的剪枝方法，为N:M结构化稀疏的每一层确定剪枝比例。③相比现有N:M剪枝方法，该方法能更好地平衡效率和恢复精度。④在超分辨率和去模糊任务上的实验表明，该方法显著优于之前的剪枝方法。
+- **摘要（英）**: This paper addresses the limitation of N:M structured pruning for image restoration, which fails to account for layer-wise computational and performance requirements. It proposes a novel pruning method that determines the pruning ratio for N:M structured sparsity at each layer. Experiments on super-resolution and deblurring demonstrate significant improvement over previous pruning methods.
+- **核心贡献**: 提出了一种面向图像恢复的逐层N:M结构化剪枝比例确定方法。
+- **创新点**: 根据层间差异动态调整N:M剪枝比例。
+- **结果**: 在超分辨率和去模糊任务上优于现有剪枝方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Image restoration tasks have witnessed great performance improvement in recent years by developing large deep models. Despite the outstanding performance, the heavy computation demanded by the deep models has restricted the application of image restoration. To lift the restriction, it is required to reduce the size of the networks while maintaining accuracy. Recently, N:M structured pruning has appeared as one of the effective and practical pruning approaches for making the model efficient with the accuracy constraint. However, it fails to account for different computational complexities and performance requirements for different layers of an image restoration network. To further optimize the trade-off between the efficiency and the restoration accuracy, we propose a novel pruning method that determines the pruning ratio for N:M structured sparsity at each layer. Extensive experimental results on super-resolution and deblurring tasks demonstrate the efficacy of our method which outperforms previous pruning methods significantly. PyTorch implementation for the proposed methods is available at https://github.com/JungHunOh/SLS_CVPR2022.
 
 </details>
-
-## 🆕 增量新增
 
 ### Point Cloud Compression with Sibling Context and Surface Priors. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2205.00760](https://arxiv.org/abs/2205.00760)
@@ -693,4 +736,5 @@
 - Unifying Voxel-based Representation with Transformer for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Towards Efficient 3D Object Detection with Knowledge Distillation. → [knowledge-distillation](../knowledge-distillation/Guideline%202022.md)
 - SAViT: Structure-Aware Vision Transformer Pruning via Collaborative Optimization. → [vision-transformer](../vision-transformer/Guideline%202022.md)
+
 <!-- COMPLETE v1 papers=72 -->

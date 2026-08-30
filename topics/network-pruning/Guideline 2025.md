@@ -3,7 +3,7 @@
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
 > 论文数: 25 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### DeepCompress-ViT: Rethinking Model Compression to Enhance Efficiency of Vision Transformers at the Edge.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ahmed_DeepCompress-ViT_Rethinking_Model_Compression_to_Enhance_Efficiency_of_Vision_Transformers_CVPR_2025_paper.html)
@@ -11,11 +11,22 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
 
-### Efficient Test-time Adaptive Object Detection via Sensitivity-Guided Pruning.
+### Efficient Test-time Adaptive Object Detection via Sensitivity-Guided Pruning. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2506.02462](https://arxiv.org/abs/2506.02462) · 📚 被引 4
 - **作者**: Kunyu Wang, Xueyang Fu, Xin Lu, Chengjie Ge, Chengzhi Cao, Wei Zhai et al.
 - **🏷️ 机构**: University of Science and Technology of China,School of Information Science and Technology and MoE Key Laboratory of Brain-Inspired Intelligent Perception and Cognition,Hefei,China,230026
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对持续测试时自适应目标检测（CTTA-OD）在连续域偏移下计算效率低的问题。②提出了一种基于剪枝的高效CTTA-OD方法，通过敏感性引导的通道剪枝策略，在图像和实例级别量化通道对域差异的敏感性，并应用加权稀疏正则化抑制和剪除敏感通道。③引入随机通道重激活机制恢复被剪通道，避免早期剪枝风险。④在三个基准上的实验表明，该方法在保持性能的同时显著提升了效率。
+- **摘要（英）**: This paper tackles the computational inefficiency of continual test-time adaptive object detection under domain shifts. It proposes a sensitivity-guided channel pruning strategy that quantifies channel sensitivity at image and instance levels, with weighted sparsity regularization to prune sensitive channels. A stochastic channel reactivation mechanism is introduced to recover pruned channels. Experiments on three benchmarks show superior efficiency while maintaining performance.
+- **核心贡献**: 提出了敏感性引导的剪枝方法用于高效CTTA-OD。
+- **创新点**: 结合敏感性量化和通道重激活机制。
+- **结果**: 在三个基准上实现了高效且性能优越的自适应检测。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Continual test-time adaptive object detection (CTTA-OD) aims to online adapt a source pre-trained detector to ever-changing environments during inference under continuous domain shifts. Most existing CTTA-OD methods prioritize effectiveness while overlooking computational efficiency, which is crucial for resource-constrained scenarios. In this paper, we propose an efficient CTTA-OD method via pruning. Our motivation stems from the observation that not all learned source features are beneficial; certain domain-sensitive feature channels can adversely affect target domain performance. Inspired by this, we introduce a sensitivity-guided channel pruning strategy that quantifies each channel based on its sensitivity to domain discrepancies at both image and instance levels. We apply weighted sparsity regularization to selectively suppress and prune these sensitive channels, focusing adaptation efforts on invariant ones. Additionally, we introduce a stochastic channel reactivation mechanism to restore pruned channels, enabling recovery of potentially useful features and mitigating the risks of early pruning. Extensive experiments on three benchmarks show that our method achieves superior adaptation performance while reducing computational overhead by 12% in FLOPs compared to the recent SOTA method.
+
+</details>
 
 ### ConceptPrune: Concept Editing in Diffusion Models via Skilled Neuron Pruning.
 - **链接**: [arXiv:2405.19237](https://arxiv.org/abs/2405.19237)
@@ -29,23 +40,39 @@
 
 </details>
 
-### RENO: Real-Time Neural Compression for 3D LiDAR Point Clouds.
-- **链接**: [arXiv:2503.12382](https://arxiv.org/abs/2503.12382) · [代码](https://github.com/NJUVISION/RENO) · 📚 被引 20
+### RENO: Real-Time Neural Compression for 3D LiDAR Point Clouds. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2503.12382](https://arxiv.org/abs/2503.12382) · 📚 被引 20
 - **作者**: Kang You, Tong Chen, Dandan Ding, M. Salman Asif, Zhan Ma
 - **🏷️ 机构**: Nanjing University, Hangzhou Normal University, University of California Riverside
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对LiDAR点云压缩中实时性难以实现的问题，提出RENO，首个实时神经编解码器。方法跳过八叉树构建，直接基于多尺度稀疏张量表示，并设计稀疏占用码一次性推断体素占用，节省处理时间。实验表明在RTX 3090上实现10fps的14位深度编解码速度，相比G-PCCv23和Draco分别节省12.25%和48.34%的比特率，模型大小仅1MB。
+- **摘要（英）**: To achieve real-time LiDAR point cloud compression, RENO skips octree construction and uses multiscale sparse tensors with sparse occupancy codes for one-shot inference. It achieves 10fps at 14-bit depth on RTX 3090, with 12.25% and 48.34% bit-rate savings over G-PCCv23 and Draco, and a model size of 1MB.
+- **核心贡献**: 提出首个实时LiDAR点云神经压缩编解码器。
+- **创新点**: 利用稀疏占用码和稀疏张量表示实现高效压缩。
+- **结果**: 实现实时速度并显著节省比特率。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Existing AI-based point cloud compression methods struggle with dependence on specific training data distributions, which limits their real-world deployment. Implicit Neural Representation (INR) methods solve the above problem by encoding overfitted network parameters to the bitstream, resulting in more distribution-agnostic results. However, due to the limitation of encoding time and decoder size, current INR based methods only consider lossy geometry compression. In this paper, we propose the first INR based lossless point cloud geometry compression method called Lossless Implicit Neural Representations for Point Cloud Geometry Compression (LINR-PCGC). To accelerate encoding speed, we design a group of point clouds level coding framework with an effective network initialization strategy, which can reduce around 60% encoding time. A lightweight coding network based on multiscale SparseConv, consisting of scale context extraction, child node prediction, and model compression modules, is proposed to realize fast inference and compact decoder size. Experimental results show that our method consistently outperforms traditional and AI-based methods: for example, with the convergence time in the MVUB dataset, our method reduces the bitstream by approximately 21.21% compared to G-PCC TMC13v23 and 21.95% compared to SparsePCGC. Our project can be seen on https://huangwenjie2023.github.io/LINR-PCGC/.
+> Despite the substantial advancements demonstrated by learning-based neural models in the LiDAR Point Cloud Compression (LPCC) task, realizing real-time compression - an indispensable criterion for numerous industrial applications - remains a formidable challenge. This paper proposes RENO, the first real-time neural codec for 3D LiDAR point clouds, achieving superior performance with a lightweight model. RENO skips the octree construction and directly builds upon the multiscale sparse tensor representation. Instead of the multi-stage inferring, RENO devises sparse occupancy codes, which exploit cross-scale correlation and derive voxels' occupancy in a one-shot manner, greatly saving processing time. Experimental results demonstrate that the proposed RENO achieves real-time coding speed, 10 fps at 14-bit depth on a desktop platform (e.g., one RTX 3090 GPU) for both encoding and decoding processes, while providing 12.25% and 48.34% bit-rate savings compared to G-PCCv23 and Draco, respectively, at a similar quality. RENO model size is merely 1MB, making it attractive for practical applications. The source code is available at https://github.com/NJUVISION/RENO.
 
 </details>
 
-### Generalized Gaussian Entropy Model for Point Cloud Attribute Compression with Dynamic Likelihood Intervals.
-- **链接**: [arXiv:2506.09510](https://arxiv.org/abs/2506.09510) · 📚 被引 0
+### Generalized Gaussian Entropy Model for Point Cloud Attribute Compression with Dynamic Likelihood Intervals. **⭐⭐⭐** (相关度: 30%)
+- **链接**: [arXiv:2506.09510](https://arxiv.org/abs/2506.09510)
 - **作者**: Changhao Peng
 - **🏷️ 机构**: Peking University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对现有高斯和拉普拉斯熵模型在点云属性压缩中概率估计不准确的问题。②引入了广义高斯熵模型，通过形状参数控制尾部形状以更精确估计潜在变量的概率，并提出了均值误差判别器（MED）动态调整算术编码的似然区间。③相比固定似然区间，动态调整提升了概率估计的准确性。④实验表明，该方法在三个VAE模型上显著提升了率失真性能，并可扩展到图像和视频压缩。
+- **摘要（英）**: This paper addresses the inaccurate probability estimation in point cloud attribute compression using Gaussian/Laplacian entropy models. It introduces a generalized Gaussian entropy model with shape parameters and a Mean Error Discriminator (MED) to dynamically adjust likelihood intervals. This improves probability estimation accuracy. Experiments show significant rate-distortion improvements on three VAE models, with applicability to other compression tasks.
+- **核心贡献**: 提出了广义高斯熵模型和动态似然区间调整方法。
+- **创新点**: 利用形状参数和MED动态调整编码区间。
+- **结果**: 在点云属性压缩上显著提升率失真性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Gaussian and Laplacian entropy models are proved effective in learned point cloud attribute compression, as they assist in arithmetic coding of latents. However, we demonstrate through experiments that there is still unutilized information in entropy parameters estimated by neural networks in current methods, which can be used for more accurate probability estimation. Thus we introduce generalized Gaussian entropy model, which controls the tail shape through shape parameter to more accurately estimate the probability of latents. Meanwhile, to the best of our knowledge, existing methods use fixed likelihood intervals for each integer during arithmetic coding, which limits model performance. We propose Mean Error Discriminator (MED) to determine whether the entropy parameter estimation is accurate and then dynamically adjust likelihood intervals. Experiments show that our method significantly improves rate-distortion (RD) performance on three VAE-based models for point cloud attribute compression, and our method can be applied to other compression tasks, such as image and video compression.
+
+</details>
 
 ### Keyframe-Oriented Vision Token Pruning: Enhancing Efficiency of Large Vision Language Models on Long-form Video Processing.
 - **链接**: [arXiv:2503.10742](https://arxiv.org/abs/2503.10742) · 📚 被引 2
@@ -61,17 +88,16 @@
 
 </details>
 
-### TopNet: Transformer-Efficient Occupancy Prediction Network for Octree-Structured Point Cloud Geometry Compression.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_TopNet_Transformer-Efficient_Occupancy_Prediction_Network_for_Octree-Structured_Point_Cloud_Geometry_CVPR_2025_paper.html)
+### TopNet: Transformer-Efficient Occupancy Prediction Network for Octree-Structured Point Cloud Geometry Compression. **⭐⭐** (相关度: 25%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wang_TopNet_Transformer-Efficient_Occupancy_Prediction_Network_for_Octree-Structured_Point_Cloud_Geometry_CVPR_2025_paper.html) · 📚 被引 12
 - **作者**: Xinjie Wang, Yifan Zhang, Ting Liu, Xinpu Liu, Ke Xu, Jianwei Wan et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: National University of Defense Technology, Academy of Millitary Science, Sun Yat-sen University
 - **会议**: CVPR 2025
-
-## 跨领域论文（完整笔记在其他领域）
-
-> In this paper, we propose MixA-Q, a mixed-precision activation quantization framework that leverages intra-layer activation sparsity (a concept widely explored in activation pruning methods) for efficient inference of quantized window-based vision transformers. For a given uniform-bit quantization configuration, MixA-Q separates the batched window computations within Swin blocks and assigns a lower bit width to the activations of less important windows, improving the trade-off between model performance and efficiency. We introduce a Two-Branch Swin Block that processes activations separately in high- and low-bit precision, enabling seamless integration of our method with most quantization-aware training (QAT) and post-training quantization (PTQ) methods, or with simple modifications. Our experimental evaluations over the COCO dataset demonstrate that MixA-Q achieves a training-free 1.35x computational speedup without accuracy loss in PTQ configuration. With QAT, MixA-Q achieves a lossless 1.25x speedup and a 1.53x speedup with only a 1% mAP drop by incorporating activation pruning. Notably, by reducing the quantization error in important regions, our sparsity-aware quantization adaptation improves the mAP of the quantized W4A4 model (with both weights and activations in 4-bit precision) by 0.7%, reducing quantization degradation by 24%.
-
-</details>
+- **摘要（中）**: ①针对八叉树结构点云几何压缩的效率问题。②提出了TopNet，一种基于Transformer的高效占用预测网络。③利用Transformer架构改进占用预测的准确性。④摘要未提供具体数据，但旨在提升压缩效率。
+- **摘要（英）**: This paper addresses the efficiency of octree-structured point cloud geometry compression. It proposes TopNet, a Transformer-efficient occupancy prediction network. The approach leverages Transformer architecture to improve occupancy prediction accuracy. Specific results are not detailed in the abstract, but the goal is to enhance compression efficiency.
+- **核心贡献**: 提出了基于Transformer的占用预测网络用于点云压缩。
+- **创新点**: 将Transformer应用于八叉树占用预测。
+- **结果**: 旨在提升压缩效率，具体效果未给出。
 
 ### HybridGS: High-Efficiency Gaussian Splatting Data Compression using Dual-Channel Sparse Representation and Point Cloud Encoder.
 - **链接**: [arXiv:2505.01938](https://arxiv.org/abs/2505.01938) · [代码](https://github.com/Qi-Yangsjtu/HybridGS)
@@ -485,17 +511,33 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-### ATP-LLaVA: Adaptive Token Pruning for Large Vision Language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ye_ATP-LLaVA_Adaptive_Token_Pruning_for_Large_Vision_Language_Models_CVPR_2025_paper.html)
+### ATP-LLaVA: Adaptive Token Pruning for Large Vision Language Models. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2412.00447](https://arxiv.org/abs/2412.00447) · 📚 被引 18
 - **作者**: Xubing Ye, Yukang Gan, Yixiao Ge, Xiao-Ping Zhang, Yansong Tang
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Tsinghua University,Tsinghua Shenzhen International Graduate School, Tencent PCG,ARC Lab
 - **会议**: CVPR 2025
+- **摘要（中）**: ①这篇论文针对大型视觉语言模型（LVLM）中视觉token冗余导致的计算开销问题，指出固定剪枝比例在不同层和实例间效果不佳。②提出了ATP-LLaVA方法，通过自适应token剪枝模块，根据输入实例动态确定每层的剪枝比例。③相比已有固定比例剪枝方法，它实现了层间和实例间的自适应，平衡计算与性能。④摘要未提供具体数据，但强调模块可无缝集成且计算开销可忽略。
+- **摘要（英）**: This paper addresses the computational cost of redundant visual tokens in LVLMs, noting that fixed pruning ratios are suboptimal across layers and instances. It proposes ATP-LLaVA with an adaptive token pruning module that determines instance-specific ratios per layer. Unlike fixed-ratio methods, it balances efficiency and performance adaptively. The abstract lacks quantitative results but highlights negligible overhead.
+- **核心贡献**: 提出层间和实例间自适应的token剪枝方法。
+- **创新点**: 引入自适应剪枝模块，动态调整每层剪枝比例。
+- **结果**: 旨在平衡计算与性能，具体效果未量化。
 
-### VoCo-LLaMA: Towards Vision Compression with Large Language Models.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Large Vision Language Models (LVLMs) have achieved significant success across multi-modal tasks. However, the computational cost of processing long visual tokens can be prohibitively expensive on resource-limited devices. Previous methods have identified redundancy in visual tokens within the Large Language Model (LLM) decoder layers and have mitigated this by pruning tokens using a pre-defined or fixed ratio, thereby reducing computational overhead. Nonetheless, we observe that the impact of pruning ratio varies across different LLM layers and instances (image-prompt pairs). Therefore, it is essential to develop a layer-wise and instance-wise vision token pruning strategy to balance computational cost and model performance effectively. We propose ATP-LLaVA, a novel approach that adaptively determines instance-specific token pruning ratios for each LLM layer. Specifically, we introduce an Adaptive Token Pruning (ATP) module, which computes the importance score and pruning threshold based on input instance adaptively. The ATP module can be seamlessly integrated between any two LLM layers with negligible computational overhead. Additionally, we develop a Spatial Augmented Pruning (SAP) strategy that prunes visual tokens with both token redundancy and spatial modeling perspectives. Our approach reduces the average token count by 75% while maintaining performance, with only a minimal 1.9% degradation across seven widely used benchmarks. The project page can be accessed via https://yxxxb.github.io/ATP-LLaVA-page/.
+
+</details>
+
+### VoCo-LLaMA: Towards Vision Compression with Large Language Models. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2406.12275](https://arxiv.org/abs/2406.12275) · 📚 被引 20
 - **作者**: Xubing Ye, Yukang Gan, Xiaoke Huang, Yixiao Ge, Yansong Tang
 - **🏷️ 机构**: Tsinghua University,Tsinghua Shenzhen International Graduate School, Tencent PCG,ARC Lab, UC Santa Cruz
 - **会议**: CVPR 2025
+- **摘要（中）**: ①这篇论文针对视觉语言模型（VLM）处理高分辨率图像和视频时上下文窗口有限和计算成本高的问题。②提出了VoCo-LLaMA，首次利用LLM自身压缩视觉token，通过引入视觉压缩token和注意力蒸馏，让LLM理解压缩token。③相比外部模块压缩方法，它充分利用了LLM的理解范式，减少视觉信息损失。④在压缩比576倍下，实现了最小性能损失，FLOPs减少94.8%，推理时间加速69.6%。
+- **摘要（英）**: This paper addresses the limited context window and high computational cost in VLMs for high-resolution inputs by proposing VoCo-LLaMA, the first to compress vision tokens using LLMs via vision compression tokens and attention distillation. Unlike external compression modules, it leverages LLM understanding to reduce information loss. At a 576x compression ratio, it achieves minimal performance loss with 94.8% fewer FLOPs and 69.6% inference acceleration.
+- **核心贡献**: 首次利用LLM自身进行视觉token压缩。
+- **创新点**: 通过注意力蒸馏将LLM理解迁移到压缩token。
+- **结果**: 压缩576倍下FLOPs减少94.8%，加速69.6%。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -503,11 +545,16 @@
 
 </details>
 
-### PUP 3D-GS: Principled Uncertainty Pruning for 3D Gaussian Splatting.
+### PUP 3D-GS: Principled Uncertainty Pruning for 3D Gaussian Splatting. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2406.10219](https://arxiv.org/abs/2406.10219) · 📚 被引 37
 - **作者**: Alex Hanson, Allen Tu, Vasu Singla, Mayuka Jayawardhana, Matthias Zwicker, Tom Goldstein
 - **🏷️ 机构**: University of Maryland,College Park
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对3D高斯泼溅（3D-GS）模型在复杂场景中存储需求高、现有剪枝方法在高压缩比下视觉保真度严重下降的问题，本文提出基于原理的不确定性剪枝方法。该方法计算训练视图重建误差对每个高斯空间参数的二阶近似作为敏感性分数，并设计多轮剪枝-精炼流程。相比已有启发式方法，该方法在显著更高压缩比下保持视觉保真度和前景细节。
+- **摘要（英）**: To address high storage demands of 3D Gaussian Splatting and severe visual degradation at high compression ratios with heuristic pruning, this paper proposes a principled sensitivity score based on second-order approximation of reconstruction error, along with a multi-round prune-refine pipeline. It preserves visual fidelity and foreground details at significantly higher compression ratios than existing approaches.
+- **核心贡献**: 提出基于二阶近似的敏感性剪枝分数和多轮剪枝-精炼流程。
+- **创新点**: 利用重建误差二阶近似作为剪枝依据。
+- **结果**: 在更高压缩比下保持视觉保真度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -1412,4 +1459,5 @@
 - DoppDrive: Doppler-Driven Temporal Aggregation for Improved Radar Object Detection. → [object-detection](../object-detection/Guideline%202025.md)
 - Plug-in Feedback Self-Adaptive Attention in CLIP for Training-Free Open-Vocabulary Segmentation. → [open-set-detection](../open-set-detection/Guideline%202025.md)
 - 3D-LMVIC: Learning-based Multi-View Image Compression with 3D Gaussian Geometric Priors. → [multi-camera-perception](../multi-camera-perception/Guideline%202025.md)
+
 <!-- COMPLETE v1 papers=147 -->

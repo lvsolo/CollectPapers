@@ -3,13 +3,18 @@
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
 > 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### PaCa-ViT: Learning Patch-to-Cluster Attention in Vision Transformers.
+### PaCa-ViT: Learning Patch-to-Cluster Attention in Vision Transformers. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01781) · 📚 被引 34
 - **作者**: Ryan Grainger, Thomas Paniagua, Xi Song, Naresh P. Cuntoor, Mun Wai Lee, Tianfu Wu
 - **🏷️ 机构**: NC State,Department of ECE, An Independent Researcher, BlueHalo
 - **会议**: CVPR 2023
+- **摘要（中）**: 针对视觉Transformer中自注意力计算复杂度高且难以捕捉局部细节的问题，提出PaCa-ViT方法，通过引入patch到簇的注意力机制，将注意力计算从全局patch对patch转变为patch与聚类中心之间的交互，从而降低计算成本并增强局部特征建模。相比标准ViT，该方法在保持全局上下文的同时，更高效地处理高分辨率输入。实验表明，在图像分类等任务上，PaCa-ViT在计算效率和精度之间取得了更好的平衡。
+- **摘要（英）**: To address the high computational cost and limited local detail capture in vision transformers, PaCa-ViT introduces patch-to-cluster attention, replacing global patch-pair interactions with patch-cluster center computations. This reduces complexity while enhancing local feature modeling. Experiments show improved efficiency-accuracy trade-offs on image classification benchmarks.
+- **核心贡献**: 提出patch-to-cluster注意力机制，降低ViT计算复杂度并提升局部建模能力。
+- **创新点**: 创新性地将注意力从patch对patch改为patch对簇中心，实现高效全局-局部融合。
+- **结果**: 在图像分类任务上实现更优的效率与精度平衡。
 
 ### Patch n' Pack: NaViT, a Vision Transformer for any Aspect Ratio and Resolution.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/06ea400b9b7cfce6428ec27a371632eb-Abstract-Conference.html) · 📚 被引 16
@@ -29,11 +34,16 @@
 
 </details>
 
-### I-ViT: Integer-only Quantization for Efficient Vision Transformer Inference.
-- **链接**: [arXiv:2207.01405](https://arxiv.org/abs/2207.01405) · [代码](https://github.com/zkkli/I-ViT) · 📚 被引 122
+### I-ViT: Integer-only Quantization for Efficient Vision Transformer Inference. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2207.01405](https://arxiv.org/abs/2207.01405) · 📚 被引 122
 - **作者**: Zhikai Li, Qingyi Gu
 - **🏷️ 机构**: Chinese Academy of Sciences,Institute of Automation
 - **会议**: ICCV 2023
+- **摘要（中）**: 针对ViT在边缘设备上部署时浮点运算开销大的问题，提出I-ViT整数-only量化方案，使ViT的整个推理计算图仅使用整数算术和位移操作，避免浮点运算。线性操作采用dyadic算术，非线性操作（如Softmax、GELU、LayerNorm）通过轻量级整数近似方法实现。实验表明，I-ViT在保持精度的同时，显著降低存储和计算开销，适用于资源受限场景。
+- **摘要（英）**: To enable efficient ViT inference on edge devices, I-ViT proposes an integer-only quantization scheme where the entire computational graph uses integer arithmetic and bit-shifting, avoiding floating-point operations. Linear layers follow dyadic arithmetic, while non-linear functions are approximated with lightweight integer methods. Experiments show significant reductions in storage and computation with minimal accuracy loss.
+- **核心贡献**: 提出首个ViT整数-only推理方案，覆盖所有操作。
+- **创新点**: 创新性地设计非线性操作的整数近似方法，突破dyadic算术限制。
+- **结果**: 在保持精度下，实现高效整数推理，降低部署成本。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,23 +51,16 @@
 
 </details>
 
-### RepQ-ViT: Scale Reparameterization for Post-Training Quantization of Vision Transformers.
-- **链接**: [arXiv:2212.08254](https://arxiv.org/abs/2212.08254) · [代码](https://github.com/zkkli/RepQ-ViT) · 📚 被引 114
+### RepQ-ViT: Scale Reparameterization for Post-Training Quantization of Vision Transformers. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2212.08254](https://arxiv.org/abs/2212.08254) · 📚 被引 113
 - **作者**: Zhikai Li, Junrui Xiao, Lianwei Yang, Qingyi Gu
 - **🏷️ 机构**: Chinese Academy of Sciences,Institute of Automation
 - **会议**: ICCV 2023
-
-### DropKey for Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02174) · 📚 被引 74
-- **作者**: Bonan Li, Yinhan Hu, Xuecheng Nie, Congying Han, Xiangjian Jiang, Tiande Guo et al.
-- **🏷️ 机构**: University of Chinese Academy of Sciences, MT Lab, Meitu Inc., University of Cambridge
-- **会议**: CVPR 2023
-
-### EfficientViT: Memory Efficient Vision Transformer with Cascaded Group Attention.
-- **链接**: [arXiv:2305.07027](https://arxiv.org/abs/2305.07027) · [代码](https://github.com/microsoft/Cream) · 📚 被引 830
-- **作者**: Xinyu Liu, Houwen Peng, Ningxin Zheng, Yuqing Yang, Han Hu, Yixuan Yuan
-- **🏷️ 机构**: The Chinese University of Hong Kong, Microsoft Research
-- **会议**: CVPR 2023
+- **摘要（中）**: 这篇论文针对视觉Transformer（ViT）在后训练量化（PTQ）中精度下降的问题，尤其是在低比特情况下。作者提出了RepQ-ViT框架，通过量化尺度重参数化来解耦量化和推理过程，前者使用复杂量化器，后者使用简化量化器。该方法特别关注LayerNorm后激活的通道间变化和Softmax后激活的幂律分布，分别采用通道量化和log√2量化，然后重参数化到硬件友好的格式。实验表明，RepQ-ViT在低比特量化下显著提升了ViT的精度，优于现有PTQ方法。
+- **摘要（英）**: This paper addresses the accuracy degradation of vision transformers (ViTs) in post-training quantization (PTQ), especially at low bit-widths. The authors propose RepQ-ViT, a framework that decouples quantization and inference via scale reparameterization, using complex quantizers for training and simplified ones for deployment. It targets extreme activation distributions, applying channel-wise and log√2 quantization, then reparameterizes scales for hardware efficiency. Experiments show significant accuracy improvements over existing PTQ methods for ViTs.
+- **核心贡献**: 提出RepQ-ViT，一种基于尺度重参数化的ViT后训练量化框架，兼顾精度和硬件效率。
+- **创新点**: 通过解耦量化和推理过程，并针对极端激活分布设计专用量化策略。
+- **结果**: 在低比特量化下显著提升ViT精度，优于现有PTQ方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -65,23 +68,50 @@
 
 </details>
 
-### HM-ViT: Hetero-modal Vehicle-to-Vehicle Cooperative Perception with Vision Transformer.
+### DropKey for Vision Transformer. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02174) · 📚 被引 74
+- **作者**: Bonan Li, Yinhan Hu, Xuecheng Nie, Congying Han, Xiangjian Jiang, Tiande Guo et al.
+- **🏷️ 机构**: University of Chinese Academy of Sciences, MT Lab, Meitu Inc., University of Cambridge
+- **会议**: CVPR 2023
+- **摘要（中）**: 针对ViT训练中过拟合和注意力退化问题，提出DropKey方法，在训练过程中随机丢弃部分注意力键，增强模型泛化能力。该方法类似Dropout但作用于注意力矩阵，能有效缓解注意力集中问题。实验表明在图像分类等任务上提升性能。
+- **摘要（英）**: This paper proposes DropKey, a regularization technique that randomly drops attention keys during ViT training to improve generalization and mitigate attention degeneration. It demonstrates performance gains on image classification tasks.
+- **核心贡献**: 提出DropKey正则化方法，提升ViT泛化能力。
+- **创新点**: 将Dropout思想应用于注意力键的随机丢弃。
+- **结果**: 在图像分类任务上提升性能。
+
+### EfficientViT: Memory Efficient Vision Transformer with Cascaded Group Attention. **⭐⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2305.07027](https://arxiv.org/abs/2305.07027) · 📚 被引 828
+- **作者**: Xinyu Liu, Houwen Peng, Ningxin Zheng, Yuqing Yang, Han Hu, Yixuan Yuan
+- **🏷️ 机构**: The Chinese University of Hong Kong, Microsoft Research
+- **会议**: CVPR 2023
+- **摘要（中）**: 针对ViT在实时应用中计算成本高的问题，提出EfficientViT系列，通过三明治布局（单个内存受限的MHSA夹在高效FFN之间）提升内存效率，并设计级联组注意力模块，将特征分片喂给不同注意力头，减少计算冗余并增强注意力多样性。实验表明EfficientViT在速度和精度上优于现有高效模型，如EfficientViT-M5在ImageNet上达到高精度同时保持低延迟。
+- **摘要（英）**: This paper proposes EfficientViT, a family of high-speed vision transformers with a sandwich layout and cascaded group attention to reduce memory-bound operations and attention redundancy. It outperforms existing efficient models in speed-accuracy trade-off, with EfficientViT-M5 achieving high accuracy on ImageNet at low latency.
+- **核心贡献**: 提出高效ViT架构，通过三明治布局和级联组注意力实现速度与精度的平衡。
+- **创新点**: 级联组注意力机制减少计算冗余，三明治布局提升内存效率。
+- **结果**: 在ImageNet等任务上优于现有高效模型，速度更快。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vision transformers have shown great success due to their high model capabilities. However, their remarkable performance is accompanied by heavy computation costs, which makes them unsuitable for real-time applications. In this paper, we propose a family of high-speed vision transformers named EfficientViT. We find that the speed of existing transformer models is commonly bounded by memory inefficient operations, especially the tensor reshaping and element-wise functions in MHSA. Therefore, we design a new building block with a sandwich layout, i.e., using a single memory-bound MHSA between efficient FFN layers, which improves memory efficiency while enhancing channel communication. Moreover, we discover that the attention maps share high similarities across heads, leading to computational redundancy. To address this, we present a cascaded group attention module feeding attention heads with different splits of the full feature, which not only saves computation cost but also improves attention diversity. Comprehensive experiments demonstrate EfficientViT outperforms existing efficient models, striking a good trade-off between speed and accuracy. For instance, our EfficientViT-M5 surpasses MobileNetV3-Large by 1.9% in accuracy, while getting 40.4% and 45.2% higher throughput on Nvidia V100 GPU and Intel Xeon CPU, respectively. Compared to the recent efficient model MobileViT-XXS, EfficientViT-M2 achieves 1.8% superior accuracy, while running 5.8x/3.7x faster on the GPU/CPU, and 7.4x faster when converted to ONNX format. Code and models are available at https://github.com/microsoft/Cream/tree/main/EfficientViT.
+
+</details>
+
+### HM-ViT: Hetero-modal Vehicle-to-Vehicle Cooperative Perception with Vision Transformer. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2304.10628](https://arxiv.org/abs/2304.10628) · 📚 被引 100
 - **作者**: Hao Xiang, Runsheng Xu, Jiaqi Ma
 - **🏷️ 机构**: University of California,Los Angeles
 - **会议**: ICCV 2023
+- **摘要（中）**: ①该论文针对车车协同感知中异构模态（如相机与LiDAR）协作的问题，现有方法仅支持同质传感器配置。②提出了HM-ViT，首个统一的多智能体异构模态协同感知框架，通过异构3D图Transformer联合推理智能体间和智能体内交互，融合多视角图像与LiDAR点云特征。③相比现有协同感知方法，创新在于支持不同数量和类型的传感器组合，提升协作规模与跨模态交互。④在OPV2V数据集上，HM-ViT优于SOTA协同感知方法，具体数值未在摘要中给出。
+- **摘要（英）**: This paper tackles the problem of hetero-modal cooperative perception in V2V scenarios, where agents have different sensor modalities. It proposes HM-ViT, the first unified framework for multi-agent hetero-modal cooperation, using a heterogeneous 3D graph transformer to fuse multi-view images and LiDAR features. The innovation is supporting varying agent types and numbers, enhancing collaboration scale. Experiments on OPV2V show superiority over SOTA methods, though exact metrics are omitted.
+- **核心贡献**: 提出首个异构模态V2V协同感知框架HM-ViT。
+- **创新点**: 设计异构3D图Transformer以联合建模智能体间和智能体内交互。
+- **结果**: 在OPV2V上优于现有SOTA协同感知方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Vehicle-to-Vehicle technologies have enabled autonomous vehicles to share information to see through occlusions, greatly enhancing perception performance. Nevertheless, existing works all focused on homogeneous traffic where vehicles are equipped with the same type of sensors, which significantly hampers the scale of collaboration and benefit of cross-modality interactions. In this paper, we investigate the multi-agent hetero-modal cooperative perception problem where agents may have distinct sensor modalities. We present HM-ViT, the first unified multi-agent hetero-modal cooperative perception framework that can collaboratively predict 3D objects for highly dynamic vehicle-to-vehicle (V2V) collaborations with varying numbers and types of agents. To effectively fuse features from multi-view images and LiDAR point clouds, we design a novel heterogeneous 3D graph transformer to jointly reason inter-agent and intra-agent interactions. The extensive experiments on the V2V perception dataset OPV2V demonstrate that the HM-ViT outperforms SOTA cooperative perception methods for V2V hetero-modal cooperative perception. We will release codes to facilitate future research.
 
 </details>
-
-### Order-ViT: Order Learning Vision Transformer for Cancer Classification in Pathology Images.
-- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00263) · 📚 被引 8
-- **作者**: Ju Cheon Lee, Jin Tae Kwak
-- **🏷️ 机构**: Korea University,School of Electrical Engineering,Seoul,Republic of Korea
-- **会议**: ICCV 2023
 
 ### FLatten Transformer: Vision Transformer using Focused Linear Attention.
 - **链接**: [arXiv:2308.00442](https://arxiv.org/abs/2308.00442) · [代码](https://github.com/LeapLabTHU/FLatten-Transformer) · 📚 被引 322
@@ -159,12 +189,6 @@
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00557) · 📚 被引 8
 - **作者**: Haokui Zhang, Wenze Hu, Xiaoyu Wang
 - **🏷️ 机构**: Intellifusion, The Hong Kong University of Science and Technology (Guangzhou)
-- **会议**: ICCV 2023
-
-### A Comparative Study of Vision Transformer Encoders and Few-shot Learning for Medical Image Classification.
-- **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00265) · 📚 被引 17
-- **作者**: Maxat Nurgazin, Nguyen Anh Tu
-- **🏷️ 机构**: Nazarbayev University,School of Engineering and Digital Sciences,Department of Computer Science,Astana,Kazakhstan,010000
 - **会议**: ICCV 2023
 
 ### A Re-Parameterized Vision Transformer (ReVT) for Domain-Generalized Semantic Segmentation.
@@ -429,4 +453,5 @@
 - InstaTune: Instantaneous Neural Architecture Search During Fine-Tuning. → [neural-architecture-search](../neural-architecture-search/Guideline%202023.md)
 - Can Unstructured Pruning Reduce the Depth in Deep Neural Networks? → [network-pruning](../network-pruning/Guideline%202023.md)
 - TinyCLIP: CLIP Distillation via Affinity Mimicking and Weight Inheritance. → [vlm](../vlm/Guideline%202023.md)
-<!-- COMPLETE v1 papers=40 -->
+
+<!-- COMPLETE v1 papers=38 -->

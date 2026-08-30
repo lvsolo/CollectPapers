@@ -3,13 +3,24 @@
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
 > 论文数: 34 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### From Image Collections to Point Clouds With Self-Supervised Shape and Pose Networks.
+### From Image Collections to Point Clouds With Self-Supervised Shape and Pose Networks. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2005.01939](https://arxiv.org/abs/2005.01939) · 📚 被引 31
 - **作者**: Navaneet K. L., Ansu Mathew, Shashank Kashyap, Wei-Chih Hung, Varun Jampani, R. Venkatesh Babu
 - **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **会议**: CVPR 2020
+- **摘要（中）**: ①针对从单张图像重建3D物体时依赖3D或多视角监督的问题，提出仅使用单视角图像和轮廓的自监督方法。②同时学习3D点云重建和姿态估计网络，利用可微点云渲染器进行2D监督，并通过随机采样姿态和循环一致性约束增强3D几何推理。③相比需要姿态监督的方法，本方法在训练时无需任何姿态信息，更实用。④在ShapeNet和Pix3D数据集上，尽管监督更少，性能与姿态监督方法相当。
+- **摘要（英）**: This paper proposes a self-supervised method for 3D object reconstruction from single images, requiring only image collections and silhouettes without pose supervision. It jointly learns point cloud reconstruction and pose estimation with cycle consistency, achieving competitive performance on ShapeNet and Pix3D compared to pose-supervised methods.
+- **核心贡献**: 提出仅需单视图图像和轮廓的自监督3D重建与姿态估计方法。
+- **创新点**: 通过随机姿态旋转和循环一致性实现无姿态监督的3D几何学习。
+- **结果**: 在ShapeNet和Pix3D上达到与姿态监督方法相当的性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Reconstructing 3D models from 2D images is one of the fundamental problems in computer vision. In this work, we propose a deep learning technique for 3D object reconstruction from a single image. Contrary to recent works that either use 3D supervision or multi-view supervision, we use only single view images with no pose information during training as well. This makes our approach more practical requiring only an image collection of an object category and the corresponding silhouettes. We learn both 3D point cloud reconstruction and pose estimation networks in a self-supervised manner, making use of differentiable point cloud renderer to train with 2D supervision. A key novelty of the proposed technique is to impose 3D geometric reasoning into predicted 3D point clouds by rotating them with randomly sampled poses and then enforcing cycle consistency on both 3D reconstructions and poses. In addition, using single-view supervision allows us to do test-time optimization on a given test image. Experiments on the synthetic ShapeNet and real-world Pix3D datasets demonstrate that our approach, despite using less supervision, can achieve competitive performance compared to pose-supervised and multi-view supervised approaches.
+
+</details>
 
 ### Self-Supervised Relational Reasoning for Representation Learning.
 - **链接**: [arXiv:2006.05849](https://arxiv.org/abs/2006.05849)
@@ -29,45 +40,65 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### Self-Supervised Monocular Trained Depth Estimation Using Self-Attention and Discrete Disparity Volume.
+### Self-Supervised Monocular Trained Depth Estimation Using Self-Attention and Discrete Disparity Volume. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2003.13951](https://arxiv.org/abs/2003.13951) · 📚 被引 231
 - **作者**: Adrian Johnston, Gustavo Carneiro
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对自监督单目深度估计中卷积操作局部性限制和连续深度预测精度不足的问题。②提出在自监督框架中引入自注意力机制和离散视差体积预测，自注意力能捕捉非连续区域的上下文信息，离散预测提高深度精度。③相比现有自监督方法，增强了全局上下文建模能力，并改进了深度离散化策略。④实验表明，该方法在KITTI等基准上显著提升了深度估计精度，但摘要未给出具体数值。
+- **摘要（英）**: This paper improves self-supervised monocular depth estimation by introducing self-attention to capture global context and discrete disparity volume prediction for finer depth granularity. It outperforms existing self-supervised methods on benchmarks like KITTI, though specific numbers are not in the abstract.
+- **核心贡献**: 提出结合自注意力和离散视差体积的自监督单目深度估计方法。
+- **创新点**: 利用自注意力捕捉非连续区域上下文，并采用离散视差预测提升精度。
+- **结果**: 在KITTI等基准上显著提升深度估计精度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Self-supervised learning is showing great promise for monocular depth estimation, using geometry as the only source of supervision. Depth networks are indeed capable of learning representations that relate visual appearance to 3D properties by implicitly leveraging category-level patterns. In this work we investigate how to leverage more directly this semantic structure to guide geometric representation learning, while remaining in the self-supervised regime. Instead of using semantic labels and proxy losses in a multi-task approach, we propose a new architecture leveraging fixed pretrained semantic segmentation networks to guide self-supervised representation learning via pixel-adaptive convolutions. Furthermore, we propose a two-stage training process to overcome a common semantic bias on dynamic objects via resampling. Our method improves upon the state of the art for self-supervised monocular depth prediction over all pixels, fine-grained details, and per semantic categories.
+> Monocular depth estimation has become one of the most studied applications in computer vision, where the most accurate approaches are based on fully supervised learning models. However, the acquisition of accurate and large ground truth data sets to model these fully supervised methods is a major challenge for the further development of the area. Self-supervised methods trained with monocular videos constitute one the most promising approaches to mitigate the challenge mentioned above due to the wide-spread availability of training data. Consequently, they have been intensively studied, where the main ideas explored consist of different types of model architectures, loss functions, and occlusion masks to address non-rigid motion. In this paper, we propose two new ideas to improve self-supervised monocular trained depth estimation: 1) self-attention, and 2) discrete disparity prediction. Compared with the usual localised convolution operation, self-attention can explore a more general contextual information that allows the inference of similar disparity values at non-contiguous regions of the image. Discrete disparity prediction has been shown by fully supervised methods to provide a more robust and sharper depth estimation than the more common continuous disparity prediction, besides enabling the estimation of depth uncertainty. We show that the extension of the state-of-the-art self-supervised monocular trained depth estimator Monodepth2 with these two ideas allows us to design a model that produces the best results in the field in KITTI 2015 and Make3D, closing the gap with respect self-supervised stereo training and fully supervised approaches.
 
 </details>
 
-### Self2Self With Dropout: Learning Self-Supervised Denoising From Single Image.
+### Self2Self With Dropout: Learning Self-Supervised Denoising From Single Image. **⭐⭐** (相关度: 20%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Quan_Self2Self_With_Dropout_Learning_Self-Supervised_Denoising_From_Single_Image_CVPR_2020_paper.html) · 📚 被引 381
 - **作者**: Yuhui Quan, Mingqin Chen, Tongyao Pang, Hui Ji
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对单张图像自监督去噪问题，传统方法依赖多张噪声图像或统计先验。②提出Self2Self方法，利用dropout在单张图像上训练网络，通过多次采样预测平均实现去噪。③相比BM3D等传统方法，无需外部数据，完全自监督。④在合成和真实噪声图像上表现接近监督方法，但摘要未提供具体数据。
+- **摘要（英）**: This paper addresses single-image self-supervised denoising. It proposes Self2Self, which trains a network with dropout on a single noisy image and averages multiple predictions. It achieves performance comparable to supervised methods without external data, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出基于dropout的单图像自监督去噪框架。
+- **创新点**: 利用dropout的随机性实现单图像自监督训练。
+- **结果**: 在单图像去噪任务上达到接近监督方法的性能。
 
-### Self-Supervised Equivariant Attention Mechanism for Weakly Supervised Semantic Segmentation.
-- **链接**: [arXiv:2004.04581](https://arxiv.org/abs/2004.04581) · 📚 被引 670
+### Self-Supervised Equivariant Attention Mechanism for Weakly Supervised Semantic Segmentation. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2004.04581](https://arxiv.org/abs/2004.04581) · 📚 被引 668
 - **作者**: Yude Wang, Jie Zhang, Meina Kan, Shiguang Shan, Xilin Chen
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对弱监督语义分割中CAM与真实掩码差距大的问题。②提出自监督等变注意力机制SEAM，通过变换图像的一致性正则化提供额外监督，并设计像素相关模块PCM利用上下文信息细化预测。③相比现有CAM方法，首次将等变性约束引入弱监督分割。④在PASCAL VOC 2012上优于现有方法，但摘要未给出具体数值。
+- **摘要（英）**: This paper tackles the gap between CAMs and ground-truth masks in weakly supervised semantic segmentation. It proposes SEAM, a self-supervised equivariant attention mechanism with consistency regularization on transformed images, and a pixel correlation module for refinement. It outperforms prior methods on PASCAL VOC 2012, though exact numbers are omitted.
+- **核心贡献**: 提出等变一致性正则化提升弱监督分割性能。
+- **创新点**: 将等变性约束引入CAM训练。
+- **结果**: 在PASCAL VOC 2012上取得领先性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> This work seeks the possibility of generating the human face from voice solely based on the audio-visual data without any human-labeled annotations. To this end, we propose a multi-modal learning framework that links the inference stage and generation stage. First, the inference networks are trained to match the speaker identity between the two different modalities. Then the trained inference networks cooperate with the generation network by giving conditional information about the voice. The proposed method exploits the recent development of GANs techniques and generates the human face directly from the speech waveform making our system fully end-to-end. We analyze the extent to which the network can naturally disentangle two latent factors that contribute to the generation of a face image - one that comes directly from a speech signal and the other that is not related to it - and explore whether the network can learn to generate natural human face image distribution by modeling these factors. Experimental results show that the proposed network can not only match the relationship between the human face and speech, but can also generate the high-quality human face sample conditioned on its speech. Finally, the correlation between the generated face and the corresponding speech is quantitatively measured to analyze the relationship between the two modalities.
+> Image-level weakly supervised semantic segmentation is a challenging problem that has been deeply studied in recent years. Most of advanced solutions exploit class activation map (CAM). However, CAMs can hardly serve as the object mask due to the gap between full and weak supervisions. In this paper, we propose a self-supervised equivariant attention mechanism (SEAM) to discover additional supervision and narrow the gap. Our method is based on the observation that equivariance is an implicit constraint in fully supervised semantic segmentation, whose pixel-level labels take the same spatial transformation as the input images during data augmentation. However, this constraint is lost on the CAMs trained by image-level supervision. Therefore, we propose consistency regularization on predicted CAMs from various transformed images to provide self-supervision for network learning. Moreover, we propose a pixel correlation module (PCM), which exploits context appearance information and refines the prediction of current pixel by its similar neighbors, leading to further improvement on CAMs consistency. Extensive experiments on PASCAL VOC 2012 dataset demonstrate our method outperforms state-of-the-art methods using the same level of supervision. The code is released online.
 
 </details>
 
-### Adversarial Robustness: From Self-Supervised Pre-Training to Fine-Tuning.
-- **链接**: [arXiv:2003.12862](https://arxiv.org/abs/2003.12862) · [代码](https://github.com/TAMU-VITA/Adv-SS-Pretraining) · 📚 被引 132
+### Adversarial Robustness: From Self-Supervised Pre-Training to Fine-Tuning. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2003.12862](https://arxiv.org/abs/2003.12862) · 📚 被引 132
 - **作者**: Tianlong Chen, Sijia Liu, Shiyu Chang, Yu Cheng, Lisa Amini, Zhangyang Wang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对自监督预训练模型在对抗鲁棒性方面未被探索的问题。②首次将对抗训练引入自监督预训练，生成通用鲁棒预训练模型，并发现其可提升下游微调的鲁棒性和计算效率。③相比传统端到端对抗训练，在CIFAR-10上鲁棒准确率提升3.83%，标准准确率提升1.3%。④集成多种预训练任务进一步将鲁棒准确率提升3.59%。
+- **摘要（英）**: This paper addresses the unexplored adversarial robustness of self-supervised pretrained models. It introduces adversarial training into self-supervision to create robust pretrained models, which boost downstream fine-tuning robustness and save computation. It achieves 3.83% higher robust accuracy and 1.3% higher standard accuracy on CIFAR-10, with ensemble methods adding 3.59% more.
+- **核心贡献**: 首次提供通用鲁棒自监督预训练模型。
+- **创新点**: 将对抗训练融入自监督预训练阶段。
+- **结果**: 在CIFAR-10上显著提升鲁棒和标准准确率。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Increasing model size when pretraining natural language representations often results in improved performance on downstream tasks. However, at some point further model increases become harder due to GPU/TPU memory limitations and longer training times. To address these problems, we present two parameter-reduction techniques to lower memory consumption and increase the training speed of BERT. Comprehensive empirical evidence shows that our proposed methods lead to models that scale much better compared to the original BERT. We also use a self-supervised loss that focuses on modeling inter-sentence coherence, and show it consistently helps downstream tasks with multi-sentence inputs. As a result, our best model establishes new state-of-the-art results on the GLUE, RACE, and \squad benchmarks while having fewer parameters compared to BERT-large. The code and the pretrained models are available at https://github.com/google-research/ALBERT.
+> Pretrained models from self-supervision are prevalently used in fine-tuning downstream tasks faster or for better accuracy. However, gaining robustness from pretraining is left unexplored. We introduce adversarial training into self-supervision, to provide general-purpose robust pre-trained models for the first time. We find these robust pre-trained models can benefit the subsequent fine-tuning in two ways: i) boosting final model robustness; ii) saving the computation cost, if proceeding towards adversarial fine-tuning. We conduct extensive experiments to demonstrate that the proposed framework achieves large performance margins (eg, 3.83% on robust accuracy and 1.3% on standard accuracy, on the CIFAR-10 dataset), compared with the conventional end-to-end adversarial training baseline. Moreover, we find that different self-supervised pre-trained models have a diverse adversarial vulnerability. It inspires us to ensemble several pretraining tasks, which boosts robustness more. Our ensemble strategy contributes to a further improvement of 3.59% on robust accuracy, while maintaining a slightly higher standard accuracy on CIFAR-10. Our codes are available at https://github.com/TAMU-VITA/Adv-SS-Pretraining.
 
 </details>
 
@@ -89,41 +120,61 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### Self-Supervised Monocular Scene Flow Estimation.
+### Self-Supervised Monocular Scene Flow Estimation. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2004.04143](https://arxiv.org/abs/2004.04143) · 📚 被引 99
 - **作者**: Junhwa Hur, Stefan Roth
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对单目场景流估计这一病态问题，即从连续两帧图像同时估计3D结构和3D运动，现有方法精度低且缺乏实用方案。②提出一种逆问题视角的单一CNN，从经典光流代价体积中同时估计深度和3D运动，并采用自监督学习与3D损失函数及遮挡推理来利用无标签数据。③相比已有工作，创新性地将光流代价体积作为输入，并通过代理损失和增强设置验证设计选择。④在无监督/自监督单目场景流方法中达到最先进精度，在光流和单目深度估计子任务上也有竞争力，半监督微调进一步提升精度并实现实时性能。
+- **摘要（英）**: This paper addresses the ill-posed monocular scene flow estimation problem by proposing a single CNN that jointly estimates depth and 3D motion from an optical flow cost volume, using self-supervised learning with 3D losses and occlusion reasoning. It achieves state-of-the-art accuracy among unsupervised/self-supervised methods and competitive results on subtasks, with real-time performance after semi-supervised fine-tuning.
+- **核心贡献**: 提出了一种基于光流代价体积的单一CNN自监督单目场景流估计方法。
+- **创新点**: 将经典光流代价体积作为输入，结合3D损失和遮挡推理实现自监督联合估计。
+- **结果**: 在无监督/自监督方法中达到最先进精度，并支持实时推理。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Identifying salient points in images is a crucial component for visual odometry, Structure-from-Motion or SLAM algorithms. Recently, several learned keypoint methods have demonstrated compelling performance on challenging benchmarks. However, generating consistent and accurate training data for interest-point detection in natural images still remains challenging, especially for human annotators. We introduce IO-Net (i.e. InlierOutlierNet), a novel proxy task for the self-supervision of keypoint detection, description and matching. By making the sampling of inlier-outlier sets from point-pair correspondences fully differentiable within the keypoint learning framework, we show that are able to simultaneously self-supervise keypoint description and improve keypoint matching. Second, we introduce KeyPointNet, a keypoint-network architecture that is especially amenable to robust keypoint detection and description. We design the network to allow local keypoint aggregation to avoid artifacts due to spatial discretizations commonly used for this task, and we improve fine-grained keypoint descriptor performance by taking advantage of efficient sub-pixel convolutions to upsample the descriptor feature-maps to a higher operating resolution. Through extensive experiments and ablative analysis, we show that the proposed self-supervised keypoint learning method greatly improves the quality of feature matching and homography estimation on challenging benchmarks over the state-of-the-art.
+> Scene flow estimation has been receiving increasing attention for 3D environment perception. Monocular scene flow estimation -- obtaining 3D structure and 3D motion from two temporally consecutive images -- is a highly ill-posed problem, and practical solutions are lacking to date. We propose a novel monocular scene flow method that yields competitive accuracy and real-time performance. By taking an inverse problem view, we design a single convolutional neural network (CNN) that successfully estimates depth and 3D motion simultaneously from a classical optical flow cost volume. We adopt self-supervised learning with 3D loss functions and occlusion reasoning to leverage unlabeled data. We validate our design choices, including the proxy loss and augmentation setup. Our model achieves state-of-the-art accuracy among unsupervised/self-supervised learning approaches to monocular scene flow, and yields competitive results for the optical flow and monocular depth estimation sub-tasks. Semi-supervised fine-tuning further improves the accuracy and yields promising results in real-time.
 
 </details>
 
-### Self-Supervised Learning of Interpretable Keypoints From Unlabelled Videos.
+### Self-Supervised Learning of Interpretable Keypoints From Unlabelled Videos. **⭐⭐⭐** (相关度: 45%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Jakab_Self-Supervised_Learning_of_Interpretable_Keypoints_From_Unlabelled_Videos_CVPR_2020_paper.html) · 📚 被引 57
 - **作者**: Tomas Jakab, Ankush Gupta, Hakan Bilen, Andrea Vedaldi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对从无标注视频中学习可解释关键点的问题。②提出自监督方法，利用视频中的运动一致性学习关键点，无需人工标注。③相比现有方法，强调关键点的可解释性和时序一致性。④摘要未提供具体数据，但方法在多个基准上验证。
+- **摘要（英）**: This paper addresses learning interpretable keypoints from unlabelled videos. It proposes a self-supervised method leveraging motion consistency to learn keypoints without annotations. It emphasizes interpretability and temporal consistency, though specific metrics are not provided.
+- **核心贡献**: 提出自监督可解释关键点学习方法。
+- **创新点**: 利用视频运动一致性学习关键点。
+- **结果**: 在无标注视频上学习到可解释关键点，具体效果未详述。
 
-### Steering Self-Supervised Feature Learning Beyond Local Pixel Statistics.
+### Steering Self-Supervised Feature Learning Beyond Local Pixel Statistics. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2004.02331](https://arxiv.org/abs/2004.02331) · 📚 被引 33
 - **作者**: Simon Jenni, Hailin Jin, Paolo Favaro
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对自监督特征学习依赖局部像素统计、难以捕捉全局图像统计的问题。②提出基于图像变换判别的新原则，并设计了一种名为有限上下文修复（LCI）的新变换，仅用小块矩形边界修复图像块。③相比已有方法，LCI能迫使网络学习更全局的特征，从而更好地表示物体形状和上下文。④实验表明，该方法在物体分类和检测等下游任务上泛化性能更优。
+- **摘要（英）**: This paper addresses the limitation of self-supervised feature learning relying on local pixel statistics. It introduces a principle based on discriminating image transformations and a novel transformation, limited context inpainting (LCI), which inpaints patches using only a small boundary. LCI encourages learning more global features, improving generalization to downstream tasks like classification and detection.
+- **核心贡献**: 提出基于变换判别的新原则和LCI变换，推动自监督学习向全局特征迈进。
+- **创新点**: 创新性地利用有限上下文修复作为变换，量化局部与全局统计的判别难度。
+- **结果**: 在分类和检测任务上展示了更好的泛化能力。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> A structured understanding of our world in terms of objects, relations, and hierarchies is an important component of human cognition. Learning such a structured world model from raw sensory data remains a challenge. As a step towards this goal, we introduce Contrastively-trained Structured World Models (C-SWMs). C-SWMs utilize a contrastive approach for representation learning in environments with compositional structure. We structure each state embedding as a set of object representations and their relations, modeled by a graph neural network. This allows objects to be discovered from raw pixel observations without direct supervision as part of the learning process. We evaluate C-SWMs on compositional environments involving multiple interacting objects that can be manipulated independently by an agent, simple Atari games, and a multi-object physics simulation. Our experiments demonstrate that C-SWMs can overcome limitations of models based on pixel reconstruction and outperform typical representatives of this model class in highly structured environments, while learning interpretable object-based representations.
+> We introduce a novel principle for self-supervised feature learning based on the discrimination of specific transformations of an image. We argue that the generalization capability of learned features depends on what image neighborhood size is sufficient to discriminate different image transformations: The larger the required neighborhood size and the more global the image statistics that the feature can describe. An accurate description of global image statistics allows to better represent the shape and configuration of objects and their context, which ultimately generalizes better to new tasks such as object classification and detection. This suggests a criterion to choose and design image transformations. Based on this criterion, we introduce a novel image transformation that we call limited context inpainting (LCI). This transformation inpaints an image patch conditioned only on a small rectangular pixel boundary (the limited context). Because of the limited boundary information, the inpainter can learn to match local pixel statistics, but is unlikely to match the global statistics of the image. We claim that the same principle can be used to justify the performance of transformations such as image rotations and warping. Indeed, we demonstrate experimentally that learning to discriminate transformations such as LCI, image warping and rotations, yields features with state of the art generalization capabilities on several datasets such as Pascal VOC, STL-10, CelebA, and ImageNet. Remarkably, our trained features achieve a performance on Places on par with features trained through supervised learning with ImageNet labels.
 
 </details>
 
-### Self-Supervised 3D Human Pose Estimation via Part Guided Novel Image Synthesis.
+### Self-Supervised 3D Human Pose Estimation via Part Guided Novel Image Synthesis. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2004.04400](https://arxiv.org/abs/2004.04400) · 📚 被引 66
 - **作者**: Jogendra Nath Kundu, Siddharth Seth, Varun Jampani, Mugalodi Rakesh, R. Venkatesh Babu, Anirban Chakraborty
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对监督3D姿态估计中的任务偏差和数据集偏差问题。②提出自监督框架，利用2D木偶模型、姿态约束和未配对3D姿态，通过可微分形式化解耦形状和外观等变化。③相比弱监督方法，该方法能更好地泛化到未见数据集，并支持多任务。④在3D姿态估计和部件分割上展示了优越的跨数据集泛化性能。
+- **摘要（英）**: This paper tackles task and dataset bias in supervised 3D pose estimation. It proposes a self-supervised framework that disentangles variations using a 2D puppet model and unpaired 3D poses via differentiable formalization. The method improves generalization to unseen datasets and supports multiple tasks.
+- **核心贡献**: 提出可微分的姿态解耦框架，增强跨数据集泛化。
+- **创新点**: 利用2D木偶模型和未配对3D姿态实现自监督解耦。
+- **结果**: 在未见数据集上表现优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -131,15 +182,20 @@
 
 </details>
 
-### MAST: A Memory-Augmented Self-Supervised Tracker.
+### MAST: A Memory-Augmented Self-Supervised Tracker. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2002.07793](https://arxiv.org/abs/2002.07793) · 📚 被引 134
 - **作者**: Zihang Lai, Erika Lu, Weidi Xie
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对自监督密集跟踪性能远低于监督方法的问题。②提出MAST模型，通过重新评估自监督训练和重建损失的选择，并引入记忆增强架构。③相比已有自监督方法，性能提升15%，并首次达到与监督方法相当的水平。④在视频目标分割基准上，自监督方法在泛化性指标上优于多数监督方法。
+- **摘要（英）**: This paper addresses the performance gap in self-supervised dense tracking. It proposes MAST, which reassesses training choices and adds a memory component, achieving a 15% improvement over prior self-supervised methods. The model matches supervised performance and shows superior generalizability.
+- **核心贡献**: 提出记忆增强的自监督密集跟踪模型，性能大幅提升。
+- **创新点**: 引入记忆组件和优化训练策略，首次媲美监督方法。
+- **结果**: 在基准上超越自监督方法15%，泛化性优于监督方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Self-supervised representation learning approaches have recently surpassed their supervised learning counterparts on downstream tasks like object detection and image classification. Somewhat mysteriously the recent gains in performance come from training instance classification models, treating each image and it's augmented versions as samples of a single class. In this work, we first present quantitative experiments to demystify these gains. We demonstrate that approaches like MOCO and PIRL learn occlusion-invariant representations. However, they fail to capture viewpoint and category instance invariance which are crucial components for object recognition. Second, we demonstrate that these approaches obtain further gains from access to a clean object-centric training dataset like Imagenet. Finally, we propose an approach to leverage unstructured videos to learn representations that possess higher viewpoint invariance. Our results show that the learned representations outperform MOCOv2 trained on the same data in terms of invariances encoded and the performance on downstream image classification and semantic segmentation tasks.
+> Recent interest in self-supervised dense tracking has yielded rapid progress, but performance still remains far from supervised methods. We propose a dense tracking model trained on videos without any annotations that surpasses previous self-supervised methods on existing benchmarks by a significant margin (+15%), and achieves performance comparable to supervised methods. In this paper, we first reassess the traditional choices used for self-supervised training and reconstruction loss by conducting thorough experiments that finally elucidate the optimal choices. Second, we further improve on existing methods by augmenting our architecture with a crucial memory component. Third, we benchmark on large-scale semi-supervised video object segmentation(aka. dense tracking), and propose a new metric: generalizability. Our first two contributions yield a self-supervised network that for the first time is competitive with supervised methods on standard evaluation metrics of dense tracking. When measuring generalizability, we show self-supervised approaches are actually superior to the majority of supervised methods. We believe this new generalizability metric can better capture the real-world use-cases for dense tracking, and will spur new interest in this research direction.
 
 </details>
 
@@ -173,63 +229,98 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### PULSE: Self-Supervised Photo Upsampling via Latent Space Exploration of Generative Models.
+### PULSE: Self-Supervised Photo Upsampling via Latent Space Exploration of Generative Models. **⭐⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Menon_PULSE_Self-Supervised_Photo_Upsampling_via_Latent_Space_Exploration_of_Generative_CVPR_2020_paper.html) · 📚 被引 406
 - **作者**: Sachit Menon, Alexandru Damian, Shijia Hu, Nikhil Ravi, Cynthia Rudin
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对自监督图像超分辨率问题，即如何利用生成模型的潜空间实现高倍数上采样。②提出PULSE方法，通过在预训练GAN的潜空间中搜索与低分辨率图像下采样一致的潜在编码，生成高分辨率图像。③相比传统超分方法，不依赖成对训练数据，利用生成先验实现感知质量提升。④在面部图像上达到与现有方法相当或更好的感知质量，但保真度有限。
+- **摘要（英）**: This paper addresses self-supervised image super-resolution by exploring the latent space of a pre-trained GAN. PULSE searches for latent codes that downscale to match the input low-resolution image, generating high-resolution outputs without paired training data. It achieves competitive perceptual quality on face images but with limited fidelity.
+- **核心贡献**: 提出利用GAN潜空间搜索实现无配对数据的自监督超分辨率方法。
+- **创新点**: 将超分问题转化为潜空间优化问题，利用生成先验。
+- **结果**: 在面部图像上实现高感知质量超分，但保真度不足。
 
-### Self-Supervised Learning of Pretext-Invariant Representations.
+### Self-Supervised Learning of Pretext-Invariant Representations. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Misra_Self-Supervised_Learning_of_Pretext-Invariant_Representations_CVPR_2020_paper.html) · 📚 被引 935
 - **作者**: Ishan Misra, Laurens van der Maaten
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对自监督表示学习中预文本任务选择敏感的问题，即不同预文本任务导致表示质量差异大。②提出预文本不变表示学习（PIRL），通过构造预文本任务的等价变换，使表示对预文本任务不变。③相比SimCLR等对比方法，PIRL更关注任务不变性而非增强不变性，提升表示泛化性。④在ImageNet线性评估和下游任务上优于多种自监督方法。
+- **摘要（英）**: This paper tackles the sensitivity of self-supervised representations to pretext task choice. PIRL learns representations invariant to pretext task transformations, improving generalization over contrastive methods like SimCLR. It achieves superior linear evaluation and downstream task performance on ImageNet.
+- **核心贡献**: 提出预文本不变表示学习框架，增强自监督表示的泛化性。
+- **创新点**: 引入任务不变性作为自监督学习的新目标。
+- **结果**: 在ImageNet上线性评估和下游任务优于现有自监督方法。
 
-### Just Go With the Flow: Self-Supervised Scene Flow Estimation.
+### Just Go With the Flow: Self-Supervised Scene Flow Estimation. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Mittal_Just_Go_With_the_Flow_Self-Supervised_Scene_Flow_Estimation_CVPR_2020_paper.html) · 📚 被引 122
 - **作者**: Himangi Mittal, Brian Okorn, David Held
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对场景流估计依赖大量标注数据的问题，即真实场景流标注昂贵且难以获取。②提出自监督场景流估计方法，利用点云序列的刚性运动一致性和局部几何约束作为监督信号。③相比监督方法，无需标注即可训练，且利用多帧一致性提升鲁棒性。④在FlyingThings3D和KITTI上达到与监督方法相当的性能，且泛化性更好。
+- **摘要（英）**: This paper addresses the scarcity of labeled scene flow data by proposing a self-supervised method that leverages rigid motion consistency and local geometric constraints in point cloud sequences. It trains without annotations and achieves performance comparable to supervised methods on FlyingThings3D and KITTI, with better generalization.
+- **核心贡献**: 提出无需标注的自监督场景流估计方法，利用几何一致性。
+- **创新点**: 将刚性运动先验作为自监督信号，替代人工标注。
+- **结果**: 在多个数据集上达到与监督方法相当的性能。
 
-### Self-Supervised Viewpoint Learning From Image Collections.
+### Self-Supervised Viewpoint Learning From Image Collections. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Mustikovela_Self-Supervised_Viewpoint_Learning_From_Image_Collections_CVPR_2020_paper.html) · 📚 被引 26
 - **作者**: Siva Karthik Mustikovela, Varun Jampani, Shalini De Mello, Sifei Liu, Umar Iqbal, Carsten Rother et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对从图像集合中学习视角表示的问题，即无标注时如何估计物体视角。②提出自监督视角学习方法，通过重建图像和视角一致性约束训练编码器。③相比监督方法，无需视角标注，利用多视图一致性提升视角估计准确性。④在合成和真实数据集上验证了方法的有效性，但精度低于监督方法。
+- **摘要（英）**: This paper tackles viewpoint estimation from unlabeled image collections by proposing a self-supervised method that trains an encoder via image reconstruction and viewpoint consistency. It avoids annotation and improves accuracy with multi-view consistency, though underperforming supervised methods.
+- **核心贡献**: 提出自监督视角学习方法，利用重建和一致性约束。
+- **创新点**: 将视角估计转化为自监督重建任务。
+- **结果**: 在多个数据集上验证有效性，但精度有限。
 
-### A Self-supervised Approach for Adversarial Robustness.
-- **链接**: [arXiv:2006.04924](https://arxiv.org/abs/2006.04924) · [代码](https://github.com/Muzammal-Naseer/NRP) · 📚 被引 260
+### A Self-supervised Approach for Adversarial Robustness. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2006.04924](https://arxiv.org/abs/2006.04924) · 📚 被引 260
 - **作者**: Muzammal Naseer, Salman H. Khan, Munawar Hayat, Fahad Shahbaz Khan, Fatih Porikli
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对对抗样本防御缺乏泛化性的问题，即现有防御方法难以应对未知攻击。②提出自监督对抗训练机制，在输入空间进行防御，结合对抗训练和输入处理。③相比传统对抗训练，该方法可跨任务泛化，且作为即插即用模块保护多种视觉系统。④在分类任务上，将平移不变集成攻击成功率从82.6%降至31.9%，优于现有最先进方法。
+- **摘要（英）**: This paper addresses the lack of generalization in adversarial defenses by proposing a self-supervised adversarial training mechanism in input space. It combines adversarial training and input processing, offering cross-task protection and plug-and-play deployment. It reduces translation-invariant ensemble attack success from 82.6% to 31.9% on classification.
+- **核心贡献**: 提出自监督对抗训练方法，提升防御的泛化性和可移植性。
+- **创新点**: 在输入空间进行自监督对抗训练，实现跨任务防御。
+- **结果**: 显著降低未知攻击成功率，优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Recent studies have demonstrated the cross-lingual alignment ability of multilingual pretrained language models. In this work, we found that the cross-lingual alignment can be further improved by training seq2seq models on sentence pairs mined using their own encoder outputs. We utilized these findings to develop a new approach -- cross-lingual retrieval for iterative self-supervised training (CRISS), where mining and training processes are applied iteratively, improving cross-lingual alignment and translation ability at the same time. Using this method, we achieved state-of-the-art unsupervised machine translation results on 9 language directions with an average improvement of 2.4 BLEU, and on the Tatoeba sentence retrieval task in the XTREME benchmark on 16 languages with an average improvement of 21.5% in absolute accuracy. Furthermore, CRISS also brings an additional 1.8 BLEU improvement on average compared to mBART, when finetuned on supervised machine translation downstream tasks.
+> Adversarial examples can cause catastrophic mistakes in Deep Neural Network (DNNs) based vision systems e.g., for classification, segmentation and object detection. The vulnerability of DNNs against such attacks can prove a major roadblock towards their real-world deployment. Transferability of adversarial examples demand generalizable defenses that can provide cross-task protection. Adversarial training that enhances robustness by modifying target model's parameters lacks such generalizability. On the other hand, different input processing based defenses fall short in the face of continuously evolving attacks. In this paper, we take the first step to combine the benefits of both approaches and propose a self-supervised adversarial training mechanism in the input space. By design, our defense is a generalizable approach and provides significant robustness against the \textbf{unseen} adversarial attacks (\eg by reducing the success rate of translation-invariant \textbf{ensemble} attack from 82.6\% to 31.9\% in comparison to previous state-of-the-art). It can be deployed as a plug-and-play solution to protect a variety of vision systems, as we demonstrate for the case of classification, segmentation and detection. Code is available at: {\small\url{https://github.com/Muzammal-Naseer/NRP}}.
 
 </details>
 
-### How Useful Is Self-Supervised Pretraining for Visual Tasks?
-- **链接**: [arXiv:2003.14323](https://arxiv.org/abs/2003.14323) · [代码](https://github.com/princeton-vl/selfstudy) · 📚 被引 82
+### How Useful Is Self-Supervised Pretraining for Visual Tasks? **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [arXiv:2003.14323](https://arxiv.org/abs/2003.14323) · 📚 被引 82
 - **作者**: Alejandro Newell, Jia Deng
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对自监督预训练在实际应用中的效用问题，即不同算法在不同任务和数据集上的表现差异。②通过合成数据集和多种下游任务，系统评估多种自监督算法，控制数据难度和标签数量。③相比以往研究，提供了更全面的实证分析，揭示线性评估与微调性能不相关。④发现自监督效用随标签数量增加而下降，且受任务和数据属性影响。
+- **摘要（英）**: This paper investigates the utility of self-supervised pretraining across synthetic datasets and downstream tasks. It systematically evaluates multiple algorithms, revealing that utility decreases with label availability and varies by task and data properties. It also finds linear evaluation does not correlate with finetuning performance.
+- **核心贡献**: 系统评估自监督预训练在不同条件下的效用，提供实证见解。
+- **创新点**: 利用合成数据实现可控实验，揭示关键影响因素。
+- **结果**: 发现线性评估与微调不相关，指导实践选择。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Self-supervised frameworks that learn denoising models with merely individual noisy images have shown strong capability and promising performance in various image denoising tasks. Existing self-supervised denoising frameworks are mostly built upon the same theoretical foundation, where the denoising models are required to be J-invariant. However, our analyses indicate that the current theory and the J-invariance may lead to denoising models with reduced performance. In this work, we introduce Noise2Same, a novel self-supervised denoising framework. In Noise2Same, a new self-supervised loss is proposed by deriving a self-supervised upper bound of the typical supervised loss. In particular, Noise2Same requires neither J-invariance nor extra information about the noise model and can be used in a wider range of denoising applications. We analyze our proposed Noise2Same both theoretically and experimentally. The experimental results show that our Noise2Same remarkably outperforms previous self-supervised denoising methods in terms of denoising performance and training efficiency. Our code is available at https://github.com/divelab/Noise2Same.
+> Recent advances have spurred incredible progress in self-supervised pretraining for vision. We investigate what factors may play a role in the utility of these pretraining methods for practitioners. To do this, we evaluate various self-supervised algorithms across a comprehensive array of synthetic datasets and downstream tasks. We prepare a suite of synthetic data that enables an endless supply of annotated images as well as full control over dataset difficulty. Our experiments offer insights into how the utility of self-supervision changes as the number of available labels grows as well as how the utility changes as a function of the downstream task and the properties of the training data. We also find that linear evaluation does not correlate with finetuning performance. Code and data is available at \href{https://www.github.com/princeton-vl/selfstudy}{github.com/princeton-vl/selfstudy}.
 
 </details>
 
-### Fast(er) Reconstruction of Shredded Text Documents via Self-Supervised Deep Asymmetric Metric Learning.
+### Fast(er) Reconstruction of Shredded Text Documents via Self-Supervised Deep Asymmetric Metric Learning. **⭐⭐** (相关度: 10%)
 - **链接**: [arXiv:2003.10063](https://arxiv.org/abs/2003.10063) · 📚 被引 7
 - **作者**: Thiago M. Paixão, Rodrigo Ferreira Berriel, Maria C. S. Boeres, Alessandro L. Koerich, Claudine Badue, Alberto F. De Souza et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①该论文针对机械碎纸文档自动重建中，成对碎片兼容性评估计算成本高的问题，传统深度模型需要对每对碎片进行推理，导致计算量随碎片数量呈二次方增长。②提出了一种可扩展的深度学习方法，通过自监督深度非对称度量学习，将碎片内容投影到公共度量空间，使推理次数从二次方降至线性。③相比现有方法，该方法不直接预测兼容性，而是利用非对称投影学习嵌入表示，显著降低了计算复杂度。④实验表明，该方法在保持重建精度的同时，大幅减少了推理开销，但摘要未提供具体数据。
+- **摘要（英）**: This paper addresses the high computational cost of pairwise compatibility evaluation in shredded document reconstruction, where deep models require inference for each pair, leading to quadratic scaling. It proposes a scalable deep learning approach using self-supervised asymmetric metric learning to project shred content into a common space, reducing inference to linear scaling. The method improves efficiency over existing approaches while maintaining reconstruction accuracy, though specific quantitative results are not detailed in the abstract.
+- **核心贡献**: 提出了一种线性扩展的碎片兼容性评估方法，通过非对称度量学习替代逐对推理。
+- **创新点**: 利用自监督非对称投影将碎片映射到公共度量空间，避免二次方推理。
+- **结果**: 推理次数从二次方降至线性，同时保持重建精度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We create a framework for bootstrapping visual representation learning from a primitive visual grouping capability. We operationalize grouping via a contour detector that partitions an image into regions, followed by merging of those regions into a tree hierarchy. A small supervised dataset suffices for training this grouping primitive. Across a large unlabeled dataset, we apply this learned primitive to automatically predict hierarchical region structure. These predictions serve as guidance for self-supervised contrastive feature learning: we task a deep network with producing per-pixel embeddings whose pairwise distances respect the region hierarchy. Experiments demonstrate that our approach can serve as state-of-the-art generic pre-training, benefiting downstream tasks. We additionally explore applications to semantic region search and video-based object instance tracking.
+> The reconstruction of shredded documents consists in arranging the pieces of paper (shreds) in order to reassemble the original aspect of such documents. This task is particularly relevant for supporting forensic investigation as documents may contain criminal evidence. As an alternative to the laborious and time-consuming manual process, several researchers have been investigating ways to perform automatic digital reconstruction. A central problem in automatic reconstruction of shredded documents is the pairwise compatibility evaluation of the shreds, notably for binary text documents. In this context, deep learning has enabled great progress for accurate reconstructions in the domain of mechanically-shredded documents. A sensitive issue, however, is that current deep model solutions require an inference whenever a pair of shreds has to be evaluated. This work proposes a scalable deep learning approach for measuring pairwise compatibility in which the number of inferences scales linearly (rather than quadratically) with the number of shreds. Instead of predicting compatibility directly, deep models are leveraged to asymmetrically project the raw shred content onto a common metric space in which distance is proportional to the compatibility. Experimental results show that our method has accuracy comparable to the state-of-the-art with a speed-up of about 22 times for a test instance with 505 shreds (20 mixed shredded-pages from different documents).
 
 </details>
 
@@ -525,4 +616,5 @@
 - Multi-Modal Domain Adaptation for Fine-Grained Action Recognition. → [multimodal](../multimodal/Guideline%202020.md)
 - Monocular Differentiable Rendering for Self-supervised 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202020.md)
 - Forget About the LiDAR: Self-Supervised Depth Estimators with MED Probability Volumes. → [multi-camera-perception](../multi-camera-perception/Guideline%202020.md)
+
 <!-- COMPLETE v1 papers=56 -->

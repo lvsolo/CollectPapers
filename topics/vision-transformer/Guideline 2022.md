@@ -3,7 +3,7 @@
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
 > 论文数: 17 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### A-ViT: Adaptive Tokens for Efficient Vision Transformer.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01054) · 📚 被引 316
@@ -110,18 +110,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Recent advances on Vision Transformer (ViT) and its improved variants have shown that self-attention-based networks surpass traditional Convolutional Neural Networks (CNNs) in most vision tasks. However, existing ViTs focus on the standard accuracy and computation cost, lacking the investigation of the intrinsic influence on model robustness and generalization. In this work, we conduct systematic evaluation on components of ViTs in terms of their impact on robustness to adversarial examples, common corruptions and distribution shifts. We find some components can be harmful to robustness. By using and combining robust components as building blocks of ViTs, we propose Robust Vision Transformer (RVT), which is a new vision transformer and has superior performance with strong robustness. We further propose two new plug-and-play techniques called position-aware attention scaling and patch-wise augmentation to augment our RVT, which we abbreviate as RVT*. The experimental results on ImageNet and six robustness benchmarks show the advanced robustness and generalization ability of RVT compared with previous ViTs and state-of-the-art CNNs. Furthermore, RVT-S* also achieves Top-1 rank on multiple robustness leaderboards including ImageNet-C and ImageNet-Sketch. The code will be available at \url{https://github.com/alibaba/easyrobust}.
-
-</details>
-
-### Affine Medical Image Registration with Coarse-to-Fine Vision Transformer.
-- **链接**: [arXiv:2203.15216](https://arxiv.org/abs/2203.15216) · [代码](https://github.com/cwmok/C2FViT) · 📚 被引 90
-- **作者**: Tony C. W. Mok, Albert C. S. Chung
-- **🏷️ 机构**: The Hong Kong University of Science and Technology,Department of Computer Science and Engineering
-- **会议**: CVPR 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Affine registration is indispensable in a comprehensive medical image registration pipeline. However, only a few studies focus on fast and robust affine registration algorithms. Most of these studies utilize convolutional neural networks (CNNs) to learn joint affine and non-parametric registration, while the standalone performance of the affine subnetwork is less explored. Moreover, existing CNN-based affine registration approaches focus either on the local misalignment or the global orientation and position of the input to predict the affine transformation matrix, which are sensitive to spatial initialization and exhibit limited generalizability apart from the training dataset. In this paper, we present a fast and robust learning-based algorithm, Coarse-to-Fine Vision Transformer (C2FViT), for 3D affine medical image registration. Our method naturally leverages the global connectivity and locality of the convolutional vision transformer and the multi-resolution strategy to learn the global affine registration. We evaluate our method on 3D brain atlas registration and template-matching normalization. Comprehensive results demonstrate that our method is superior to the existing CNNs-based affine registration methods in terms of registration accuracy, robustness and generalizability while preserving the runtime advantage of the learning-based methods. The source code is available at https://github.com/cwmok/C2FViT.
 
 </details>
 
@@ -495,4 +483,5 @@
 - Online Continual Learning with Contrastive Vision Transformer. → [continual-learning](../continual-learning/Guideline%202022.md)
 - UniNet: Unified Architecture Search with Convolution, Transformer, and MLP. → [neural-architecture-search](../neural-architecture-search/Guideline%202022.md)
 - VTC-LFC: Vision Transformer Compression with Low-Frequency Components. → [network-pruning](../network-pruning/Guideline%202022.md)
-<!-- COMPLETE v1 papers=39 -->
+
+<!-- COMPLETE v1 papers=38 -->

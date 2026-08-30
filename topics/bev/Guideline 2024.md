@@ -3,13 +3,18 @@
 > 领域: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
 > 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Mask2Map: Vectorized HD Map Construction Using Bird's Eye View Segmentation Masks.
-- **链接**: [arXiv:2407.13517](https://arxiv.org/abs/2407.13517) · [代码](https://github.com/SehwanChoi0307/Mask2Map) · 📚 被引 18
+### Mask2Map: Vectorized HD Map Construction Using Bird's Eye View Segmentation Masks. **⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2407.13517](https://arxiv.org/abs/2407.13517) · 📚 被引 18
 - **作者**: Sehwan Choi, Jungho Kim, Hongjae Shin, Jun Won Choi
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: 针对在线高精地图构建中BEV分割掩码与地图实例预测之间不一致的问题，提出Mask2Map方法，端到端预测场景中地图实例的类别和有序点集。方法包含实例级掩码预测网络（IMPNet）和掩码驱动地图预测网络（MMPNet），IMPNet生成掩码感知查询和BEV分割掩码以捕获全局语义，MMPNet通过位置查询生成器和几何特征提取器增强局部上下文。为解决网络间不一致，提出网络间去噪训练方法，统一IMPNet和MMPNet的匹配过程。相比已有方法，Mask2Map通过掩码引导的查询和几何特征提升了地图构建的精度和鲁棒性。
+- **摘要（英）**: This paper addresses the inconsistency between BEV segmentation masks and map instance prediction in online HD map construction. It proposes Mask2Map, an end-to-end method with an instance-level mask prediction network and a mask-driven map prediction network, enhanced by inter-network denoising training. This improves accuracy and robustness by leveraging mask-aware queries and geometric features.
+- **核心贡献**: 提出掩码驱动的高精地图构建框架，并引入网络间去噪训练解决预测不一致问题。
+- **创新点**: 利用BEV分割掩码生成点级几何特征，并通过去噪训练统一子网络匹配。
+- **结果**: 在公开数据集上验证了地图构建性能的提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +22,16 @@
 
 </details>
 
-### DA-BEV: Unsupervised Domain Adaptation for Bird's Eye View Perception.
+### DA-BEV: Unsupervised Domain Adaptation for Bird's Eye View Perception. **⭐⭐⭐⭐** (相关度: 95%)
 - **链接**: [arXiv:2401.08687](https://arxiv.org/abs/2401.08687) · 📚 被引 2
 - **作者**: Kai Jiang, Jiaxing Huang, Weiying Xie, Jie Lei, Yunsong Li, Ling Shao et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: 针对相机-only BEV感知在无监督域适应中未充分探索的问题，提出DA-BEV，首个域自适应相机-only BEV框架。方法利用图像视图特征和BEV特征的互补性，引入查询机制到域适应框架，包含基于查询的对抗学习（QAL）和基于查询的自训练（QST），分别利用图像视图或BEV特征来正则化另一方的适应。相比现有监督BEV方法，DA-BEV在无标注目标域上实现了有效的域适应。在多个数据集和任务（如3D检测和3D场景分割）上，DA-BEV一致性地取得了优越的域适应性能。
+- **摘要（英）**: This paper addresses the under-explored problem of unsupervised domain adaptation for camera-only BEV perception. It proposes DA-BEV, the first domain adaptive BEV framework, using query-based adversarial learning and self-training to exploit complementary image-view and BEV features. This achieves superior adaptation performance across multiple datasets and tasks.
+- **核心贡献**: 提出首个相机-only BEV域适应框架，通过查询机制实现图像视图和BEV特征的互补适应。
+- **创新点**: 设计基于查询的对抗学习和自训练策略，双向正则化不同视图特征的适应。
+- **结果**: 在多个数据集和任务上一致性地取得了优越的域适应性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -243,11 +253,16 @@
 
 </details>
 
-### Approaching Outside: Scaling Unsupervised 3D Object Detection from 2D Scene.
+### Approaching Outside: Scaling Unsupervised 3D Object Detection from 2D Scene. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2407.08569](https://arxiv.org/abs/2407.08569) · 📚 被引 9
 - **作者**: Ruiyang Zhang, Hu Zhang, Hang Yu, Zhedong Zheng
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: 针对无监督3D检测中LiDAR点云稀疏导致远距离和小物体检测性能差的问题，提出LiSe方法，是早期尝试将LiDAR与2D图像集成用于无监督3D检测的工作之一。方法上，设计自步学习流程，包含自适应采样和弱模型聚合策略，利用RGB图像提供精确的2D定位线索来补充LiDAR数据。自适应采样动态调整训练中伪标签的分布，防止模型过拟合于易检测样本（如近处和大物体），确保不同尺度和距离的平衡学习。相比仅使用LiDAR的无监督方法，LiSe在远距离和小物体检测上显著提升了性能。
+- **摘要（英）**: This paper tackles the challenge of unsupervised 3D detection where sparse LiDAR point clouds degrade performance on distant and small objects. It introduces LiSe, an early attempt integrating LiDAR with 2D images, using a self-paced learning pipeline with adaptive sampling and weak model aggregation to leverage RGB cues for precise 2D localization. This balances learning across object scales and distances, significantly improving detection of hard samples.
+- **核心贡献**: 提出首个融合LiDAR和2D图像的无监督3D检测框架，并设计自步学习策略平衡难易样本。
+- **创新点**: 引入自适应采样和弱模型聚合机制，动态调整伪标签分布以应对模态差异。
+- **结果**: 在远距离和小物体检测上相比仅LiDAR方法有显著性能提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -255,11 +270,16 @@
 
 </details>
 
-### CALICO: Self-Supervised Camera-LiDAR Contrastive Pre-training for BEV Perception.
+### CALICO: Self-Supervised Camera-LiDAR Contrastive Pre-training for BEV Perception. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [arXiv:2306.00349](https://arxiv.org/abs/2306.00349)
 - **作者**: Jiachen Sun, Haizhong Zheng, Qingzhao Zhang, Atul Prakash, Zhuoqing Mao, Chaowei Xiao
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2024
+- **摘要（中）**: 针对多模态BEV感知缺乏统一自监督预训练框架的问题，提出CALICO，将对比目标应用于LiDAR和相机骨干网络。方法包含两个阶段：点-区域对比（PRC）和区域感知蒸馏（RAD），PRC在LiDAR模态上平衡区域级和场景级表示学习，RAD实现自训练教师模型的对比蒸馏。相比现有单模态预训练方法，CALICO统一了多模态预训练，显著提升了3D检测和BEV地图分割任务性能。实验表明，CALICO在多个任务上大幅超越基线，验证了其有效性。
+- **摘要（英）**: This paper addresses the lack of a unified self-supervised pretraining framework for multimodal BEV perception. It proposes CALICO, applying contrastive objectives to both LiDAR and camera backbones via point-region contrast and region-aware distillation. This significantly improves performance on 3D detection and BEV map segmentation, outperforming baselines.
+- **核心贡献**: 提出首个统一的多模态BEV自监督预训练框架，结合点-区域对比和区域感知蒸馏。
+- **创新点**: 设计两阶段对比学习策略，在LiDAR和相机模态上实现区域级和场景级表示对齐。
+- **结果**: 在3D检测和BEV地图分割任务上显著超越基线性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -267,11 +287,16 @@
 
 </details>
 
-### DV-3DLane: End-to-end Multi-modal 3D Lane Detection with Dual-view Representation.
+### DV-3DLane: End-to-end Multi-modal 3D Lane Detection with Dual-view Representation. **⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2406.16072](https://arxiv.org/abs/2406.16072)
 - **作者**: Yueru Luo, Shuguang Cui, Zhen Li
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2024
+- **摘要（中）**: 针对单目3D车道检测中深度损失和光照变化导致精度下降的问题，提出DV-3DLane，一种端到端双视图多模态3D车道检测框架，融合图像和LiDAR点云。方法在透视视图（PV）和鸟瞰视图（BEV）双视图空间中学习多模态特征，包含三个设计：双向特征融合策略、统一查询生成方法、3D双视图可变形注意力机制。相比单目方法，DV-3DLane利用LiDAR几何线索实现精确定位，在公开基准OpenLane上验证了有效性和效率。
+- **摘要（英）**: This paper addresses the depth loss and lighting variation issues in monocular 3D lane detection. It proposes DV-3DLane, an end-to-end dual-view multimodal framework fusing images and LiDAR, with bidirectional feature fusion, unified query generation, and 3D dual-view deformable attention. This leverages geometric cues for accurate detection, validated on OpenLane.
+- **核心贡献**: 提出双视图多模态3D车道检测框架，通过双向融合和可变形注意力提升精度。
+- **创新点**: 设计3D双视图可变形注意力机制，在PV和BEV空间中聚合判别性特征。
+- **结果**: 在OpenLane基准上验证了有效性和效率。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -279,29 +304,34 @@
 
 </details>
 
-### Map It Anywhere: Empowering BEV Map Prediction using Large-scale Public Datasets.
+### Map It Anywhere: Empowering BEV Map Prediction using Large-scale Public Datasets. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/76218e28957e72ffddcd1c3e1e800043-Abstract-Datasets_and_Benchmarks_Track.html)
 - **作者**: Cherie Ho, Jiaye Zou, Omar Alama, Sai Mitheran Jagadesh Kumar, Cheng-Yu Chiang, Taneesh Gupta et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对BEV地图预测依赖昂贵标注数据、难以扩展至大规模场景的问题。②提出利用大规模公开数据集（如nuScenes、Argoverse等）进行BEV地图预测的通用方法，通过跨数据集迁移和统一标注格式增强泛化能力。③相比仅使用单一数据集训练，该方法能利用更多样化的数据分布提升地图预测的鲁棒性和覆盖范围。④摘要未提供具体数值，但强调在多个公开数据集上验证了有效性。
+- **摘要（英）**: This work tackles the high annotation cost in BEV map prediction by leveraging large-scale public datasets. It proposes a method to unify labels across datasets and enable cross-dataset training, improving generalization and robustness. The approach demonstrates competitive performance on multiple benchmarks, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出利用大规模公开数据集增强BEV地图预测泛化能力的框架。
+- **创新点**: 通过跨数据集标注统一和联合训练策略提升模型适应性。
+- **结果**: 在多个公开数据集上验证了地图预测性能的提升。
 
 ## 跨领域论文（完整笔记在其他领域）
 
-- CLIP-BEVFormer: Enhancing Multi-View Image-Based BEV Detector with Ground Truth Flow. → [vlm](../vlm/Guideline%202024.md)
-- GAFusion: Adaptive Fusing LiDAR and Camera with Multiple Guidance for 3D Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- UniMODE: Unified Monocular 3D Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- RCBEVDet: Radar-Camera Fusion in Bird's Eye View for 3D Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- IS-Fusion: Instance-Scene Collaborative Fusion for Multimodal 3D Object Detection. → [multimodal](../multimodal/Guideline%202024.md)
-- Decoupled Pseudo-Labeling for Semi-Supervised Monocular 3D Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
-- CRKD: Enhanced Camera-Radar Object Detection with Cross-Modality Knowledge Distillation. → [object-detection](../object-detection/Guideline%202024.md)
-- UnO: Unsupervised Occupancy Fields for Perception and Forecasting. → [occupancy](../occupancy/Guideline%202024.md)
-- SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
-- SparseOcc: Rethinking Sparse Latent Representation for Vision-Based Semantic Occupancy Prediction. → [occupancy](../occupancy/Guideline%202024.md)
-- DrivingGaussian: Composite Gaussian Splatting for Surrounding Dynamic Autonomous Driving Scenes. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-- Multiagent Multitraversal Multimodal Self-Driving: Open MARS Dataset. → [multimodal](../multimodal/Guideline%202024.md)
 - FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
 - SAMFusion: Sensor-Adaptive Multimodal Fusion for 3D Object Detection in Adverse Weather. → [multimodal](../multimodal/Guideline%202024.md)
 - SimPB: A Single Model for 2D and 3D Object Detection from Multiple Cameras. → [3d-detection](../3d-detection/Guideline%202024.md)
 - CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - Autonomous Driving with Spiking Neural Networks. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-<!-- COMPLETE v1 papers=20 -->
+
+### RCBEVDet: Radar-Camera Fusion in Bird's Eye View for 3D Object Detection. **⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01414)
+- **作者**: Zhiwei Lin, Zhe Liu, Zhongyu Xia, Xinhao Wang, Yongtao Wang, Shengxiang Qi et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对雷达-相机融合在BEV空间中的对齐和特征融合问题，雷达点稀疏且噪声大，相机图像密集但缺乏深度。②提出RCBEVDet，在BEV视角下设计雷达-相机融合网络，利用雷达的深度信息和相机的语义信息互补。③相比早期融合或后期融合，RCBEVDet在BEV空间进行深度融合，更好地处理了模态差异。④在nuScenes数据集上，RCBEVDet在3D检测精度上优于现有雷达-相机融合方法，尤其在恶劣天气和低光照条件下鲁棒性更强。
+- **摘要（英）**: This paper addresses the alignment and feature fusion challenges in radar-camera fusion within BEV space, where radar points are sparse and noisy while camera images are dense but lack depth. It proposes RCBEVDet, a network that fuses radar and camera features in BEV, leveraging radar depth and camera semantics. Compared to early or late fusion, RCBEVDet performs deep fusion in BEV, better handling modality differences. On nuScenes, it outperforms existing radar-camera fusion methods in 3D detection accuracy, with improved robustness in adverse weather and low-light conditions.
+- **核心贡献**: 提出BEV空间下的雷达-相机深度融合方法，提升3D检测鲁棒性。
+- **创新点**: 在BEV视角下设计多模态融合，有效结合雷达深度与相机语义。
+- **结果**: 在nuScenes上精度优于现有融合方法，恶劣条件下鲁棒性更强。
+
+<!-- COMPLETE v1 papers=21 -->

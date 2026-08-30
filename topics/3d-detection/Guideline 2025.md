@@ -3,29 +3,39 @@
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
 > 论文数: 18 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### UniMamba: Unified Spatial-Channel Representation Learning with Group-Efficient Mamba for LiDAR-based 3D Object Detection.
+### UniMamba: Unified Spatial-Channel Representation Learning with Group-Efficient Mamba for LiDAR-based 3D Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [arXiv:2503.12009](https://arxiv.org/abs/2503.12009) · 📚 被引 18
 - **作者**: Xin Jin, Haisheng Su, Kai Liu, Cong Ma, Wei Wu, Fei Hui et al.
 - **🏷️ 机构**: Chang&#x2019;an University, Shanghai Jiao Tong University,School of Computer Science, SenseAuto Research
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对LiDAR 3D检测中Transformer序列化破坏3D体素空间结构、分组导致感受野受限的问题。②提出UniMamba，融合3D卷积和状态空间模型（SSM），设计UniMamba块，包含空间局部建模、互补Z-order序列化和局部-全局序列聚合器。③相比Transformer，利用SSM的线性复杂度实现高效全局上下文聚合，同时保留局部空间细节。④在LiDAR 3D检测基准上验证了有效性和效率，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses the issues of spatial structure destruction and limited receptive field in Transformer-based LiDAR 3D detection. It proposes UniMamba, integrating 3D convolution and SSM in a multi-head manner, with a UniMamba block for local-global spatial aggregation. The method achieves efficient global context modeling with linear complexity, improving detection performance on LiDAR benchmarks.
+- **核心贡献**: 提出UniMamba，首个将SSM与3D卷积统一用于LiDAR 3D检测的框架。
+- **创新点**: 设计互补Z-order序列化和局部-全局聚合器，兼顾空间结构与全局依赖。
+- **结果**: 在LiDAR 3D检测任务上实现高效且准确的检测性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We revisit scene-level 3D object detection as the output of an object-centric framework capable of both localization and mapping using 3D oriented boxes as the underlying geometric primitive. While existing 3D object detection approaches operate globally and implicitly rely on the a priori existence of metric camera poses, our method, Rooms from Motion (RfM) operates on a collection of un-posed images. By replacing the standard 2D keypoint-based matcher of structure-from-motion with an object-centric matcher based on image-derived 3D boxes, we estimate metric camera poses, object tracks, and finally produce a global, semantic 3D object map. When a priori pose is available, we can significantly improve map quality through optimization of global 3D boxes against individual observations. RfM shows strong localization performance and subsequently produces maps of higher quality than leading point-based and multi-view 3D object detection methods on CA-1M and ScanNet++, despite these global methods relying on overparameterization through point clouds or dense volumes. Rooms from Motion achieves a general, object-centric representation which not only extends the work of Cubify Anything to full scenes but also allows for inherently sparse localization and parametric mapping proportional to the number of objects in a scene.
+> Recent advances in LiDAR 3D detection have demonstrated the effectiveness of Transformer-based frameworks in capturing the global dependencies from point cloud spaces, which serialize the 3D voxels into the flattened 1D sequence for iterative self-attention. However, the spatial structure of 3D voxels will be inevitably destroyed during the serialization process. Besides, due to the considerable number of 3D voxels and quadratic complexity of Transformers, multiple sequences are grouped before feeding to Transformers, leading to a limited receptive field. Inspired by the impressive performance of State Space Models (SSM) achieved in the field of 2D vision tasks, in this paper, we propose a novel Unified Mamba (UniMamba), which seamlessly integrates the merits of 3D convolution and SSM in a concise multi-head manner, aiming to perform "local and global" spatial context aggregation efficiently and simultaneously. Specifically, a UniMamba block is designed which mainly consists of spatial locality modeling, complementary Z-order serialization and local-global sequential aggregator. The spatial locality modeling module integrates 3D submanifold convolution to capture the dynamic spatial position embedding before serialization. Then the efficient Z-order curve is adopted for serialization both horizontally and vertically. Furthermore, the local-global sequential aggregator adopts the channel grouping strategy to efficiently encode both "local and global" spatial inter-dependencies using multi-head SSM. Additionally, an encoder-decoder architecture with stacked UniMamba blocks is formed to facilitate multi-scale spatial learning hierarchically. Extensive experiments are conducted on three popular datasets: nuScenes, Waymo and Argoverse 2. Particularly, our UniMamba achieves 70.2 mAP on the nuScenes dataset.
 
 </details>
 
-### Ev-3DOD: Pushing the Temporal Boundaries of 3D Object Detection with Event Cameras.
-- **链接**: [arXiv:2502.19630](https://arxiv.org/abs/2502.19630) · [代码](https://github.com/mickeykang16/Ev3DOD) · 📚 被引 3
+### Ev-3DOD: Pushing the Temporal Boundaries of 3D Object Detection with Event Cameras. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2502.19630](https://arxiv.org/abs/2502.19630) · 📚 被引 3
 - **作者**: Hoonhee Cho, Jae-Young Kang, Youngho Kim, Kuk-Jin Yoon
 - **🏷️ 机构**: KAIST
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对现有3D目标检测算法受限于固定帧率传感器（如LiDAR和相机）的延迟和带宽限制，无法满足自动驾驶对高速、低延迟检测需求的问题。②首次将异步事件相机引入3D目标检测，利用其高时间分辨率和低带宽特性，在无同步数据的帧间间隔内，通过事件相机检索先前3D信息实现检测。③提出了首个基于事件的3D目标检测数据集DSEC-3DOD，包含100 FPS的3D边界框标注，并建立了基准。④实验表明该方法能在高速场景下有效检测，弥补了传统方法的时序空白，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses the latency and bandwidth limitations of fixed-frame-rate sensors in 3D object detection for autonomous driving by introducing asynchronous event cameras for the first time. It leverages their high temporal resolution to enable detection during inter-frame intervals, and introduces the first event-based 3D detection dataset DSEC-3DOD with 100 FPS annotations, establishing a new benchmark. The method shows promise for high-speed scenarios, though specific performance numbers are not detailed in the abstract.
+- **核心贡献**: 首次将事件相机引入3D目标检测，并发布首个事件3D检测数据集和基准。
+- **创新点**: 利用事件相机的高时间分辨率实现帧间检测，突破传统传感器帧率限制。
+- **结果**: 在高速场景下实现有效3D检测，并建立事件3D检测基准。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> 3D object detection is essential for autonomous systems, enabling precise localization and dimension estimation. While LiDAR and RGB cameras are widely used, their fixed frame rates create perception gaps in high-speed scenarios. Event cameras, with their asynchronous nature and high temporal resolution, offer a solution by capturing motion continuously. The recent approach, which integrates event cameras with conventional sensors for continuous-time detection, struggles in fast-motion scenarios due to its dependency on synchronized sensors. We propose a novel stereo 3D object detection framework that relies solely on event cameras, eliminating the need for conventional 3D sensors. To compensate for the lack of semantic and geometric information in event data, we introduce a dual filter mechanism that extracts both. Additionally, we enhance regression by aligning bounding boxes with object-centric information. Experiments show that our method outperforms prior approaches in dynamic environments, demonstrating the potential of event cameras for robust, continuous-time 3D perception. The code is available at https://github.com/mickeykang16/Ev-Stereo3D.
+> Detecting 3D objects in point clouds plays a crucial role in autonomous driving systems. Recently, advanced multi-modal methods incorporating camera information have achieved notable performance. For a safe and effective autonomous driving system, algorithms that excel not only in accuracy but also in speed and low latency are essential. However, existing algorithms fail to meet these requirements due to the latency and bandwidth limitations of fixed frame rate sensors, e.g., LiDAR and camera. To address this limitation, we introduce asynchronous event cameras into 3D object detection for the first time. We leverage their high temporal resolution and low bandwidth to enable high-speed 3D object detection. Our method enables detection even during inter-frame intervals when synchronized data is unavailable, by retrieving previous 3D information through the event camera. Furthermore, we introduce the first event-based 3D object detection dataset, DSEC-3DOD, which includes ground-truth 3D bounding boxes at 100 FPS, establishing the first benchmark for event-based 3D detectors. The code and dataset are available at https://github.com/mickeykang16/Ev3DOD.
 
 </details>
 
@@ -71,35 +81,38 @@
 
 </details>
 
-### FSHNet: Fully Sparse Hybrid Network for 3D Object Detection.
-- **链接**: [arXiv:2506.03714](https://arxiv.org/abs/2506.03714) · [代码](https://github.com/Say2L/FSHNet) · 📚 被引 3
+### FSHNet: Fully Sparse Hybrid Network for 3D Object Detection. **⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_FSHNet_Fully_Sparse_Hybrid_Network_for_3D_Object_Detection_CVPR_2025_paper.html) · 📚 被引 3
 - **作者**: Shuai Liu, Mingyue Cui, Boyang Li, Quanmin Liang, Tinghe Hong, Yunxiao Shan et al.
 - **🏷️ 机构**: Sun Yat-sen University,School of Computer Science and Engineering, Sun Yat-sen University,School of Artificial Intelligence
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对3D检测中全稀疏网络的计算效率和精度平衡问题。②提出FSHNet，一种全稀疏混合网络，可能结合稀疏卷积和Transformer以高效处理点云。③相比传统稠密或半稀疏方法，全稀疏设计减少计算量并保持高精度。④具体效果未在摘要中提供，需参考全文。
+- **摘要（英）**: This paper addresses the efficiency-accuracy trade-off in 3D detection, proposing a fully sparse hybrid network (FSHNet) that likely integrates sparse convolutions and transformers for efficient point cloud processing. Specific results are not available in the abstract.
+- **核心贡献**: 提出全稀疏混合网络架构用于3D检测。
+- **创新点**: 全稀疏设计减少计算开销。
+- **结果**: 具体效果未在摘要中说明。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Fully sparse 3D detectors have recently gained significant attention due to their efficiency in long-range detection. However, sparse 3D detectors extract features only from non-empty voxels, which impairs long-range interactions and causes the center feature missing. The former weakens the feature extraction capability, while the latter hinders network optimization. To address these challenges, we introduce the Fully Sparse Hybrid Network (FSHNet). FSHNet incorporates a proposed SlotFormer block to enhance the long-range feature extraction capability of existing sparse encoders. The SlotFormer divides sparse voxels using a slot partition approach, which, compared to traditional window partition, provides a larger receptive field. Additionally, we propose a dynamic sparse label assignment strategy to deeply optimize the network by providing more high-quality positive samples. To further enhance performance, we introduce a sparse upsampling module to refine downsampled voxels, preserving fine-grained details crucial for detecting small objects. Extensive experiments on the Waymo, nuScenes, and Argoverse2 benchmarks demonstrate the effectiveness of FSHNet. The code is available at https://github.com/Say2L/FSHNet.
-
-</details>
-
-### MonoTAKD: Teaching Assistant Knowledge Distillation for Monocular 3D Object Detection.
-- **链接**: [arXiv:2404.04910](https://arxiv.org/abs/2404.04910) · [代码](https://github.com/hoiliu-0801/MonoTAKD) · 📚 被引 6
+### MonoTAKD: Teaching Assistant Knowledge Distillation for Monocular 3D Object Detection. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_MonoTAKD_Teaching_Assistant_Knowledge_Distillation_for_Monocular_3D_Object_Detection_CVPR_2025_paper.html) · 📚 被引 6
 - **作者**: Hou-I Liu, Christine Wu, Jen-Hao Cheng, Wenhao Chai, Shian-Yun Wang, Gaowen Liu et al.
 - **🏷️ 机构**: National Yang Ming Chiao Tung University, University of Washington, University of Southern California
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对单目3D检测中知识蒸馏的教师-学生差距问题。②提出MonoTAKD，引入助教知识蒸馏，可能通过中间层监督缓解教师和学生能力不匹配。③相比传统蒸馏，助教机制提供更平滑的知识迁移。④具体效果未在摘要中提供，需参考全文。
+- **摘要（英）**: This paper addresses the teacher-student gap in knowledge distillation for monocular 3D detection, proposing a teaching assistant-based approach (MonoTAKD) to facilitate smoother knowledge transfer. Specific results are not available in the abstract.
+- **核心贡献**: 提出助教知识蒸馏方法用于单目3D检测。
+- **创新点**: 利用助教模型缓解师生能力差距。
+- **结果**: 具体效果未在摘要中说明。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Monocular 3D object detection (Mono3D) holds noteworthy promise for autonomous driving applications owing to the cost-effectiveness and rich visual context of monocular camera sensors. However, depth ambiguity poses a significant challenge, as it requires extracting precise 3D scene geometry from a single image, resulting in suboptimal performance when transferring knowledge from a LiDAR-based teacher model to a camera-based student model. To facilitate effective distillation, we introduce Monocular Teaching Assistant Knowledge Distillation (MonoTAKD), which proposes a camera-based teaching assistant (TA) model to transfer robust 3D visual knowledge to the student model, leveraging the smaller feature representation gap. Additionally, we define 3D spatial cues as residual features that capture the differences between the teacher and the TA models. We then leverage these cues to improve the student model's 3D perception capabilities. Experimental results show that our MonoTAKD achieves state-of-the-art performance on the KITTI3D dataset. Furthermore, we evaluate the performance on nuScenes and KITTI raw datasets to demonstrate the generalization of our model to multi-view 3D and unsupervised data settings. Our code is available at https://github.com/hoiliu-0801/MonoTAKD.
-
-</details>
-
-### RICCARDO: Radar Hit Prediction and Convolution for Camera-Radar 3D Object Detection.
-- **链接**: [arXiv:2504.09086](https://arxiv.org/abs/2504.09086) · [代码](https://github.com/longyunf/riccardo) · 📚 被引 5
+### RICCARDO: Radar Hit Prediction and Convolution for Camera-Radar 3D Object Detection. **⭐⭐⭐⭐** (相关度: 88%)
+- **链接**: [arXiv:2504.09086](https://arxiv.org/abs/2504.09086) · 📚 被引 5
 - **作者**: Yunfei Long, Abhinav Kumar, Xiaoming Liu, Daniel D. Morris
 - **🏷️ 机构**: Michigan State University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对雷达-相机融合中雷达命中点分布复杂且未显式建模的问题。②提出RICCARDO，首先构建模型预测基于物体属性的雷达命中分布，然后利用该分布作为核函数匹配实际雷达点，最后融合阶段结合上下文细化匹配分数。③相比黑盒融合方法，显式利用雷达物理模型提升可解释性和精度。④在nuScenes上达到最先进的雷达-相机检测性能。
+- **摘要（英）**: This paper addresses the complex radar hit distribution in radar-camera fusion by explicitly modeling it. RICCARDO predicts radar hit distributions conditioned on object properties, uses them as kernels to match measured radar points, and refines scores with context fusion, achieving state-of-the-art performance on nuScenes.
+- **核心贡献**: 提出基于雷达命中分布预测和卷积的融合方法，提升3D检测性能。
+- **创新点**: 显式利用雷达物理分布模型辅助融合。
+- **结果**: 在nuScenes上达到最先进性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -107,11 +120,16 @@
 
 </details>
 
-### GBlobs: Explicit Local Structure via Gaussian Blobs for Improved Cross-Domain LiDAR-based 3D Object Detection.
+### GBlobs: Explicit Local Structure via Gaussian Blobs for Improved Cross-Domain LiDAR-based 3D Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [arXiv:2503.08639](https://arxiv.org/abs/2503.08639) · 📚 被引 2
 - **作者**: Dusan Malic, Christian Fruhwirth-Reisinger, Samuel Schulter, Horst Possegger
 - **🏷️ 机构**: Christian Doppler Laboratory for Embedded Machine Learning, Amazon
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对LiDAR 3D检测器跨域泛化能力差的问题，现有方法过度依赖全局几何特征（如笛卡尔坐标），导致模型偏向位置信息而忽视局部结构。②提出GBlobs，通过高斯斑点编码点云邻域，显式利用局部结构，无需额外参数，可无缝集成到现有检测器中。③相比仅用全局特征的方法，GBlobs增强了模型对域偏移的鲁棒性，且不牺牲域内性能。④在单源域泛化基准上，Waymo->KITTI提升超过21 mAP，KITTI->Waymo提升13 mAP，nuScenes->KITTI提升12 mAP；多源域泛化也超越SOTA 17、12和5 mAP。
+- **摘要（英）**: This paper addresses the poor cross-domain generalization of LiDAR-based 3D detectors by proposing GBlobs, which encode point cloud neighborhoods with Gaussian blobs to exploit explicit local structure. The method requires no extra parameters and integrates seamlessly into existing detectors, achieving over 21 mAP improvement on Waymo->KITTI and significant gains on other benchmarks without sacrificing in-domain performance.
+- **核心贡献**: 提出GBlobs局部结构编码方法，大幅提升LiDAR 3D检测的跨域泛化能力。
+- **创新点**: 利用高斯斑点显式建模点云局部邻域，替代全局几何特征依赖。
+- **结果**: 在多个跨域基准上超越SOTA，最高提升21 mAP。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -125,11 +143,16 @@
 - **🏷️ 机构**: Carnegie Mellon University, DENSO Corporation, DENSO International America, Inc.
 - **会议**: CVPR 2025
 
-### MonoDGP: Monocular 3D Object Detection with Decoupled-Query and Geometry-Error Priors.
-- **链接**: [arXiv:2410.19590](https://arxiv.org/abs/2410.19590) · [代码](https://github.com/PuFanqi23/MonoDGP) · 📚 被引 25
+### MonoDGP: Monocular 3D Object Detection with Decoupled-Query and Geometry-Error Priors. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2410.19590](https://arxiv.org/abs/2410.19590) · 📚 被引 25
 - **作者**: Fanqi Pu, Yifan Wang, Jiru Deng, Wenming Yang
 - **🏷️ 机构**: Tsinghua University,Shenzhen International Graduate School
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对单目3D检测中透视投影几何深度估计不准的问题，2D框高度无法反映实际投影中心高度，导致深度误差。②提出MonoDGP，采用透视不变几何误差修正投影公式，并解耦深度引导解码器，构建仅依赖视觉特征的2D解码器。③相比多深度预测的复杂分支，几何误差更简单有效，且系统讨论了其机制。④在KITTI等基准上，MonoDGP显著提升单目3D检测精度，尤其在深度估计和定位方面。
+- **摘要（英）**: This paper addresses depth estimation inaccuracies in monocular 3D detection by introducing perspective-invariant geometry errors to modify the projection formula, along with a decoupled depth-guided decoder. The method provides a simple alternative to multi-depth prediction, achieving significant improvements on KITTI benchmarks.
+- **核心贡献**: 提出几何误差修正和查询解耦的单目3D检测方法。
+- **创新点**: 透视不变几何误差替代多深度预测。
+- **结果**: 在KITTI上显著提升检测精度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -137,11 +160,16 @@
 
 </details>
 
-### Uncertainty Meets Diversity: A Comprehensive Active Learning Framework for Indoor 3D Object Detection.
+### Uncertainty Meets Diversity: A Comprehensive Active Learning Framework for Indoor 3D Object Detection. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2503.16125](https://arxiv.org/abs/2503.16125) · 📚 被引 3
 - **作者**: Jiangyi Wang, Na Zhao
 - **🏷️ 机构**: Singapore University of Technology and Design (SUTD)
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对室内3D检测中标注成本高、类别不平衡和场景多样性的问题，现有主动学习主要针对室外场景。②首次提出面向室内3D检测的主动学习框架，结合不确定性和多样性准则选择样本，并引入类感知自适应原型库。③不确定性同时考虑误检和漏检，多样性通过联合优化类别和场景分布。④在室内数据集上，该方法在减少标注量的同时保持高检测精度，优于随机采样和现有主动学习方法。
+- **摘要（英）**: This paper presents the first active learning framework for indoor 3D object detection, combining uncertainty and diversity criteria with a class-aware adaptive prototype bank. It effectively handles class imbalance and scene diversity, reducing annotation costs while maintaining high detection accuracy.
+- **核心贡献**: 首个室内3D检测主动学习框架，结合不确定性和多样性。
+- **创新点**: 类感知自适应原型库和联合优化策略。
+- **结果**: 在减少标注下保持高精度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -155,23 +183,44 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
 
-### ViKIENet: Towards Efficient 3D Object Detection with Virtual Key Instance Enhanced Network.
+### ViKIENet: Towards Efficient 3D Object Detection with Virtual Key Instance Enhanced Network. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yu_ViKIENet_Towards_Efficient_3D_Object_Detection_with_Virtual_Key_Instance_CVPR_2025_paper.html) · 📚 被引 9
 - **作者**: Zhuochen Yu, Bijie Qiu, Andy W. H. Khong
 - **🏷️ 机构**: Nanyang Technological University,School of Electrical and Electronic Engineering,Singapore
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对3D检测中计算效率与精度平衡的问题，现有方法依赖大量计算资源。②提出ViKIENet，通过虚拟关键实例增强网络，提升检测效率。③相比传统方法，虚拟关键实例提供更有效的特征表示。④摘要缺失，预期在保持精度的同时降低计算成本。
+- **摘要（英）**: This paper introduces ViKIENet, a virtual key instance enhanced network for efficient 3D object detection, aiming to balance accuracy and computational cost. It uses virtual key instances for better feature representation, though specific results are unavailable.
+- **核心贡献**: 提出虚拟关键实例增强的高效3D检测网络。
+- **创新点**: 虚拟关键实例特征增强机制。
+- **结果**: 预期提升效率，具体数据未提供。
 
-### SP3D: Boosting Sparsely-Supervised 3D Object Detection via Accurate Cross-Modal Semantic Prompts.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhao_SP3D_Boosting_Sparsely-Supervised_3D_Object_Detection_via_Accurate_Cross-Modal_Semantic_CVPR_2025_paper.html)
+### SP3D: Boosting Sparsely-Supervised 3D Object Detection via Accurate Cross-Modal Semantic Prompts. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2503.06467](https://arxiv.org/abs/2503.06467) · 📚 被引 7
 - **作者**: Shijia Zhao, Qiming Xia, Xusheng Guo, Pufan Zou, Maoji Zheng, Hai Wu et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Xiamen University,Fujian Key Laboratory of Sensing and Computing for Smart Cities,Xiamen,China
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对稀疏监督3D目标检测在标注极度稀缺时性能下降的问题，提出SP3D方法，利用大型多模态模型生成的跨模态语义提示来增强检测器的特征判别能力。方法包括边界约束中心聚类选择的置信点语义转移模块，以及基于语义提示种子点的动态聚类伪标签生成模块，并设计分布形状分数筛选高质量监督信号。在KITTI和Waymo数据集上的实验验证了其有效性。
+- **摘要（英）**: To address performance degradation in sparsely-supervised 3D object detection under extremely scarce annotations, SP3D leverages cross-modal semantic prompts from large multimodal models to boost feature discrimination. It introduces a confident points semantic transfer module and a dynamic cluster pseudo-label generation module with a distribution shape score for high-quality supervision. Experiments on KITTI and Waymo datasets validate its effectiveness.
+- **核心贡献**: 提出利用跨模态语义提示提升稀疏监督3D检测性能的新框架。
+- **创新点**: 将大型多模态模型生成的语义提示用于伪标签生成和特征增强。
+- **结果**: 在KITTI和Waymo数据集上验证了性能提升。
 
-### Learning Class Prototypes for Unified Sparse-Supervised 3D Object Detection.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Recently, sparsely-supervised 3D object detection has gained great attention, achieving performance close to fully-supervised 3D objectors while requiring only a few annotated instances. Nevertheless, these methods suffer challenges when accurate labels are extremely absent. In this paper, we propose a boosting strategy, termed SP3D, explicitly utilizing the cross-modal semantic prompts generated from Large Multimodal Models (LMMs) to boost the 3D detector with robust feature discrimination capability under sparse annotation settings. Specifically, we first develop a Confident Points Semantic Transfer (CPST) module that generates accurate cross-modal semantic prompts through boundary-constrained center cluster selection. Based on these accurate semantic prompts, which we treat as seed points, we introduce a Dynamic Cluster Pseudo-label Generation (DCPG) module to yield pseudo-supervision signals from the geometry shape of multi-scale neighbor points. Additionally, we design a Distribution Shape score (DS score) that chooses high-quality supervision signals for the initial training of the 3D detector. Experiments on the KITTI dataset and Waymo Open Dataset (WOD) have validated that SP3D can enhance the performance of sparsely supervised detectors by a large margin under meager labeling conditions. Moreover, we verified SP3D in the zero-shot setting, where its performance exceeded that of the state-of-the-art methods. The code is available at https://github.com/xmuqimingxia/SP3D.
+
+</details>
+
+### Learning Class Prototypes for Unified Sparse-Supervised 3D Object Detection. **⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_Learning_Class_Prototypes_for_Unified_Sparse-Supervised_3D_Object_Detection_CVPR_2025_paper.html) · 📚 被引 6
 - **作者**: Yun Zhu, Le Hui, Hang Yang, Jianjun Qian, Jin Xie, Jian Yang
 - **🏷️ 机构**: Nanjing University of Science and Technology,PCA Lab,Nanjing,China, Northwestern Polytechnical University,School of Electronics and Information,Xi&#x2019;an,China, Nanjing University,State Key Laboratory for Novel Software Technology,Nanjing,China
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对统一稀疏监督3D目标检测中类别信息利用不足的问题，提出学习类原型的方法。通过为每个类别学习代表性原型，增强模型对稀疏标注下的类别特征建模能力。方法可能涉及原型聚类和特征对齐，以提升检测性能。摘要缺失，但题目表明其核心是类原型学习。
+- **摘要（英）**: To address insufficient category information utilization in unified sparsely-supervised 3D object detection, this work proposes learning class prototypes. It enhances category feature modeling under sparse annotations by learning representative prototypes per class. The method likely involves prototype clustering and feature alignment to improve detection performance.
+- **核心贡献**: 提出类原型学习用于统一稀疏监督3D检测。
+- **创新点**: 利用类原型增强稀疏标注下的类别特征表示。
+- **结果**: 摘要缺失，未提供具体结果。
 
 ### DriveGEN: Generalized and Robust 3D Detection in Driving via Controllable Text-to-Image Diffusion Generation.
 - **链接**: [arXiv:2503.11122](https://arxiv.org/abs/2503.11122) · [代码](https://github.com/Hongbin98/DriveGEN) · 📚 被引 4
@@ -403,4 +452,5 @@
 - CodeMerge: Codebook-Guided Model Merging for Robust Test-Time Adaptation in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
 - SQS: Enhancing Sparse Perception Models via Query-based Splatting in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
 - Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency. → [video-understanding](../video-understanding/Guideline%202025.md)
+
 <!-- COMPLETE v1 papers=39 -->

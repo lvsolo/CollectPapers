@@ -3,13 +3,18 @@
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
 > 论文数: 31 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Track Any Anomalous Object: A Granular Video Anomaly Detection Pipeline.
+### Track Any Anomalous Object: A Granular Video Anomaly Detection Pipeline. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2506.05175](https://arxiv.org/abs/2506.05175) · 📚 被引 5
 - **作者**: Yuzhi Huang, Chenxin Li, Haitao Zhang, Zixu Lin, Yunlong Lin, Hengyu Liu et al.
 - **🏷️ 机构**: Xiamen University,Key Laboratory of Multimedia Trusted Perception and Efficien Computing, Ministry of Education of China, The Chinese University of Hong Kong
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对视频异常检测中缺乏细粒度分析（如异常像素）的问题，本文提出Track Any Anomalous Object (TAO)框架，首次将多个细粒度异常对象的检测集成到统一框架中。该方法将异常检测转化为像素级异常对象跟踪，通过将异常分数与分割和跟踪等下游任务关联，消除了阈值调整的需求，并在长视频序列中实现更精确的异常定位。实验表明，TAO在准确性和鲁棒性上设立了新基准。
+- **摘要（英）**: Addressing the lack of fine-grained analysis in video anomaly detection, this paper proposes TAO, a framework that integrates detection of multiple fine-grained anomalous objects by transforming the problem into pixel-level tracking. It links anomaly scores to downstream tasks like segmentation and tracking, removing threshold tuning and achieving precise localization, setting new benchmarks in accuracy and robustness.
+- **核心贡献**: 提出了TAO框架，将细粒度异常对象检测与跟踪集成，实现无需阈值调整的精确异常定位。
+- **创新点**: 将异常检测转化为像素级跟踪问题，并关联下游任务。
+- **结果**: TAO在准确性和鲁棒性上设立了新基准。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,17 +22,27 @@
 
 </details>
 
-### Mamba4D: Efficient 4D Point Cloud Video Understanding with Disentangled Spatial-Temporal State Space Models.
+### Mamba4D: Efficient 4D Point Cloud Video Understanding with Disentangled Spatial-Temporal State Space Models. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_Mamba4D_Efficient_4D_Point_Cloud_Video_Understanding_with_Disentangled_Spatial-Temporal_CVPR_2025_paper.html) · 📚 被引 20
 - **作者**: Jiuming Liu, Jinru Han, Lihao Liu, Angelica I. Avilés-Rivero, Chaokang Jiang, Zhe Liu et al.
 - **🏷️ 机构**: Shanghai Jiao Tong University,Department of Automation, University of Cambridge, China University of Mining and Technology
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对4D点云视频理解中计算效率低和时空建模不足的问题。②提出了Mamba4D，使用解耦的时空状态空间模型进行高效4D点云视频理解。③相比Transformer方法，通过状态空间模型降低计算复杂度并增强长程建模。④摘要未提供具体数据，但方法旨在提升效率和性能。
+- **摘要（英）**: This paper addresses the inefficiency and inadequate spatio-temporal modeling in 4D point cloud video understanding. It proposes Mamba4D, using disentangled spatial-temporal state space models for efficient understanding. It improves over Transformer methods by reducing complexity and enhancing long-range modeling, though specific results are not given in the abstract.
+- **核心贡献**: 提出解耦时空状态空间模型。
+- **创新点**: 状态空间模型用于4D点云。
+- **结果**: 未提供具体数据。
 
-### Adapting Pre-trained 3D Models for Point Cloud Video Understanding via Cross-frame Spatio-temporal Perception.
+### Adapting Pre-trained 3D Models for Point Cloud Video Understanding via Cross-frame Spatio-temporal Perception. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Lv_Adapting_Pre-trained_3D_Models_for_Point_Cloud_Video_Understanding_via_CVPR_2025_paper.html) · 📚 被引 2
 - **作者**: Baixuan Lv, Yaohua Zha, Tao Dai, Xue Yuerong, Ke Chen, Shu-Tao Xia
 - **🏷️ 机构**: Tsinghua University, Shenzhen University, Pengcheng Laboratory
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对点云视频理解中预训练3D模型适配不足的问题。②提出了跨帧时空感知方法，适配预训练3D模型用于点云视频理解。③相比直接微调，通过跨帧感知增强时空一致性。④摘要未提供具体数据，但方法旨在提升迁移性能。
+- **摘要（英）**: This paper addresses the inadequate adaptation of pre-trained 3D models for point cloud video understanding. It proposes a cross-frame spatio-temporal perception method to adapt pre-trained models. It improves over direct fine-tuning by enhancing spatio-temporal consistency, though specific results are not detailed in the abstract.
+- **核心贡献**: 提出跨帧时空感知适配方法。
+- **创新点**: 跨帧感知增强预训练模型。
+- **结果**: 未提供具体数据。
 
 ### BOLT: Boost Large Vision-Language Model Without Training for Long-form Video Understanding.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_BOLT_Boost_Large_Vision-Language_Model_Without_Training_for_Long-form_Video_CVPR_2025_paper.html)
@@ -35,23 +50,56 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2025
 
-### Video-XL: Extra-Long Vision Language Model for Hour-Scale Video Understanding.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Shu_Video-XL_Extra-Long_Vision_Language_Model_for_Hour-Scale_Video_Understanding_CVPR_2025_paper.html)
+### Video-XL: Extra-Long Vision Language Model for Hour-Scale Video Understanding. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2409.14485](https://arxiv.org/abs/2409.14485) · 📚 被引 36
 - **作者**: Yan Shu, Zheng Liu, Peitian Zhang, Minghao Qin, Junjie Zhou, Zhengyang Liang et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Shanghai Jiao Tong University,School of AI, BAAI
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对长视频理解中MLLM上下文长度有限和处理成本高的问题，本文提出Video-XL，利用MLLM固有的键值（KV）稀疏化能力压缩视觉输入。方法引入视觉总结标记（VST），为视频每个间隔总结视觉信息，并通过课程学习和复合数据策展进行训练，以克服长视频指令数据稀缺。动态压缩进一步优化压缩质量。实验表明，Video-XL在小时级视频理解上表现优异，有效保留细粒度视觉细节。
+- **摘要（英）**: This paper tackles long video understanding in MLLMs, proposing Video-XL with Visual Summarization Tokens to condense visual input via KV sparsification. It uses curriculum learning and composite data curation for training, with dynamic compression. Results show strong performance on hour-scale videos, preserving fine-grained details.
+- **核心贡献**: 提出Video-XL和VST机制，实现小时级视频高效理解。
+- **创新点**: 利用KV稀疏化能力，通过VST进行视觉总结。
+- **结果**: 在长视频理解任务上表现优异，保留细节。
 
-### VERA: Explainable Video Anomaly Detection via Verbalized Learning of Vision-Language Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Ye_VERA_Explainable_Video_Anomaly_Detection_via_Verbalized_Learning_of_Vision-Language_CVPR_2025_paper.html)
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Long video understanding poses a significant challenge for current Multi-modal Large Language Models (MLLMs). Notably, the MLLMs are constrained by their limited context lengths and the substantial costs while processing long videos. Although several existing methods attempt to reduce visual tokens, their strategies encounter severe bottleneck, restricting MLLMs' ability to perceive fine-grained visual details. In this work, we propose Video-XL, a novel approach that leverages MLLMs' inherent key-value (KV) sparsification capacity to condense the visual input. Specifically, we introduce a new special token, the Visual Summarization Token (VST), for each interval of the video, which summarizes the visual information within the interval as its associated KV. The VST module is trained by instruction fine-tuning, where two optimizing strategies are offered. 1.Curriculum learning, where VST learns to make small (easy) and large compression (hard) progressively. 2. Composite data curation, which integrates single-image, multi-image, and synthetic data to overcome the scarcity of long-video instruction data. The compression quality is further improved by dynamic compression, which customizes compression granularity based on the information density of different video intervals. Video-XL's effectiveness is verified from three aspects. First, it achieves a superior long-video understanding capability, outperforming state-of-the-art models of comparable sizes across multiple popular benchmarks. Second, it effectively preserves video information, with minimal compression loss even at 16x compression ratio. Third, it realizes outstanding cost-effectiveness, enabling high-quality processing of thousands of frames on a single A100 GPU.
+
+</details>
+
+### VERA: Explainable Video Anomaly Detection via Verbalized Learning of Vision-Language Models. **⭐⭐⭐⭐** (相关度: 50%)
+- **链接**: [arXiv:2412.01095](https://arxiv.org/abs/2412.01095) · 📚 被引 37
 - **作者**: Muchao Ye, Weiyang Liu, Pan He
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: The University of Iowa, Max Planck Institute for Intelligent Systems,T&#x00FC;bingen, Auburn University
 - **会议**: CVPR 2025
+- **摘要（中）**: 这篇论文针对视频异常检测中现有方法依赖额外推理模块或指令微调导致计算和标注成本高的问题。提出了VERA框架，通过语言化学习使VLM无需修改参数即可进行可解释的视频异常检测。VERA自动将复杂推理分解为针对不同异常模式的引导问题，并作为可学习参数，通过数据驱动的语言交互优化，使用粗粒度标注数据。该方法在检测异常的同时提供可理解的解释，降低了计算和标注开销。
+- **摘要（英）**: This paper addresses the high computational and annotation costs in explainable video anomaly detection, where existing methods rely on specialized modules or instruction tuning. It introduces VERA, a verbalized learning framework that enables VLMs to detect anomalies without parameter modification, decomposing reasoning into learnable guiding questions optimized via verbal interactions. VERA provides comprehensible explanations while reducing overhead.
+- **核心贡献**: 提出VERA框架，通过语言化学习实现无需参数修改的可解释视频异常检测。
+- **创新点**: 将推理分解为可学习的引导问题，利用数据驱动交互优化。
+- **结果**: 在降低计算和标注成本的同时，实现异常检测和解释生成。
 
-### Apollo: An Exploration of Video Understanding in Large Multimodal Models.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zohar_Apollo__An_Exploration_of_Video_Understanding_in_Large_Multimodal_CVPR_2025_paper.html)
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> The rapid advancement of vision-language models (VLMs) has established a new paradigm in video anomaly detection (VAD): leveraging VLMs to simultaneously detect anomalies and provide comprehendible explanations for the decisions. Existing work in this direction often assumes the complex reasoning required for VAD exceeds the capabilities of pretrained VLMs. Consequently, these approaches either incorporate specialized reasoning modules during inference or rely on instruction tuning datasets through additional training to adapt VLMs for VAD. However, such strategies often incur substantial computational costs or data annotation overhead. To address these challenges in explainable VAD, we introduce a verbalized learning framework named VERA that enables VLMs to perform VAD without model parameter modifications. Specifically, VERA automatically decomposes the complex reasoning required for VAD into reflections on simpler, more focused guiding questions capturing distinct abnormal patterns. It treats these reflective questions as learnable parameters and optimizes them through data-driven verbal interactions between learner and optimizer VLMs, using coarsely labeled training data. During inference, VERA embeds the learned questions into model prompts to guide VLMs in generating segment-level anomaly scores, which are then refined into frame-level scores via the fusion of scene and temporal contexts. Experimental results on challenging benchmarks demonstrate that the learned questions of VERA are highly adaptable, significantly improving both detection performance and explainability of VLMs for VAD.
+
+</details>
+
+### Apollo: An Exploration of Video Understanding in Large Multimodal Models. **⭐⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [arXiv:2412.10360](https://arxiv.org/abs/2412.10360) · 📚 被引 6
 - **作者**: Orr Zohar, Xiaohan Wang, Yann Dubois, Nikhil Mehta, Tong Xiao, Philippe Hansen-Estruch et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Meta GenAI, Stanford University
 - **会议**: CVPR 2025
+- **摘要（中）**: 这篇论文针对视频理解在大规模多模态模型中机制不明、设计决策缺乏依据的问题。进行了全面研究，发现缩放一致性，即小模型和数据集上的设计决策可有效迁移到大模型。基于此，探索了视频采样、架构、数据组成和训练调度等方面，证明fps采样优于均匀帧采样，并确定最佳视觉编码器。该研究为视频-LMMs的设计提供了实证指导，降低训练和评估成本。
+- **摘要（英）**: This paper addresses the poor understanding of video understanding mechanisms in large multimodal models, leading to unjustified design decisions. It presents a comprehensive study discovering Scaling Consistency, where decisions on smaller models transfer to larger ones, and explores video sampling, architectures, and data composition. It demonstrates fps sampling is preferable to uniform sampling and identifies best vision encoders, providing empirical guidance.
+- **核心贡献**: 揭示缩放一致性并系统探索视频-LMMs设计因素，提供实证指导。
+- **创新点**: 发现缩放一致性，使小规模实验有效指导大规模模型设计。
+- **结果**: 证明fps采样优于均匀采样，并确定最佳视觉编码器。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Despite the rapid integration of video perception capabilities into Large Multimodal Models (LMMs), the underlying mechanisms driving their video understanding remain poorly understood. Consequently, many design decisions in this domain are made without proper justification or analysis. The high computational cost of training and evaluating such models, coupled with limited open research, hinders the development of video-LMMs. To address this, we present a comprehensive study that helps uncover what effectively drives video understanding in LMMs. We begin by critically examining the primary contributors to the high computational requirements associated with video-LMM research and discover Scaling Consistency, wherein design and training decisions made on smaller models and datasets (up to a critical size) effectively transfer to larger models. Leveraging these insights, we explored many video-specific aspects of video-LMMs, including video sampling, architectures, data composition, training schedules, and more. For example, we demonstrated that fps sampling during training is vastly preferable to uniform frame sampling and which vision encoders are the best for video representation. Guided by these findings, we introduce Apollo, a state-of-the-art family of LMMs that achieve superior performance across different model sizes. Our models can perceive hour-long videos efficiently, with Apollo-3B outperforming most existing $7$B models with an impressive 55.1 on LongVideoBench. Apollo-7B is state-of-the-art compared to 7B LMMs with a 70.9 on MLVU, and 63.3 on Video-MME.
+
+</details>
 
 ### M-LLM Based Video Frame Selection for Efficient Video Understanding.
 - **链接**: [arXiv:2502.19680](https://arxiv.org/abs/2502.19680) · 📚 被引 17
@@ -1037,4 +1085,5 @@
 - 6D Object Pose Tracking in Internet Videos for Robotic Manipulation. → [tracking](../tracking/Guideline%202025.md)
 - LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding. → [network-pruning](../network-pruning/Guideline%202025.md)
 - Bisecle: Binding and Separation in Continual Learning for Video Language Understanding. → [continual-learning](../continual-learning/Guideline%202025.md)
+
 <!-- COMPLETE v1 papers=103 -->

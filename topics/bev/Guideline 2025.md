@@ -3,13 +3,18 @@
 > 领域: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
 > 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### ForestLPR: LiDAR Place Recognition in Forests Attentioning Multiple BEV Density Images.
+### ForestLPR: LiDAR Place Recognition in Forests Attentioning Multiple BEV Density Images. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Shen_ForestLPR_LiDAR_Place_Recognition_in_Forests_Attentioning_Multiple_BEV_Density_CVPR_2025_paper.html) · 📚 被引 6
 - **作者**: Yanqing Shen, Turcan Tuna, Marco Hutter, César Cadena, Nanning Zheng
 - **🏷️ 机构**: Xi&#x2019;an Jiaotong University,Institute of Artificial Intelligence and Robotics, ETH Zurich,Robotic Systems Lab
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对森林环境中LiDAR地点识别因结构相似而困难的问题，本文提出ForestLPR方法，通过关注多个BEV密度图像来提升识别性能。该方法利用多视角BEV密度图作为输入，并设计注意力机制融合特征。相比已有工作，该方法能更鲁棒地处理森林场景的复杂结构。实验表明，在森林数据集上取得了优于现有方法的识别精度。
+- **摘要（英）**: This paper tackles the challenge of LiDAR place recognition in forests, where structural similarity hinders performance. ForestLPR is proposed to attend to multiple BEV density images for robust recognition. It leverages multi-view BEV density maps with an attention mechanism for feature fusion. Experiments show superior accuracy on forest datasets compared to existing methods.
+- **核心贡献**: 提出基于多BEV密度图像的森林LiDAR地点识别方法。
+- **创新点**: 利用注意力机制融合多BEV密度图。
+- **结果**: 在森林数据集上取得优于现有方法的精度。
 
 ### SDGOCC: Semantic and Depth-Guided Bird's-Eye View Transformation for 3D Multimodal Occupancy Prediction.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Duan_SDGOCC_Semantic_and_Depth-Guided_Birds-Eye_View_Transformation_for_3D_Multimodal_CVPR_2025_paper.html)
@@ -187,4 +192,5 @@
 - See through the Dark: Learning Illumination-affined Representations for Nighttime Occupancy Prediction. → [occupancy](../occupancy/Guideline%202025.md)
 - SQS: Enhancing Sparse Perception Models via Query-based Splatting in Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
 - Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency. → [video-understanding](../video-understanding/Guideline%202025.md)
+
 <!-- COMPLETE v1 papers=12 -->

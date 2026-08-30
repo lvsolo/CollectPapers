@@ -3,33 +3,57 @@
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
 > 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### L-SWAG: Layer-Sample Wise Activation with Gradients Information for Zero-Shot NAS on Vision Transformers.
+### L-SWAG: Layer-Sample Wise Activation with Gradients Information for Zero-Shot NAS on Vision Transformers. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2505.07300](https://arxiv.org/abs/2505.07300) · 📚 被引 2
 - **作者**: Sofia Casarin, Sergio Escalera, Oswald Lanz
 - **🏷️ 机构**: Free University of Bozen-Bolzano,Bolzano,Italy, Computer Vision Center,Barcelona,Spain
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对现有零成本NAS代理主要适用于卷积搜索空间、难以泛化到Vision Transformer（ViT）的问题，本文提出了L-SWAG指标，利用层采样激活与梯度信息来统一评估卷积和Transformer架构，并构建了基于Autoformer搜索空间的新基准。此外，作者引入LIBRA-NAS方法，通过机器学习模型组合互补的代理信息并重新对齐偏差，以进一步提升搜索性能。实验在14个任务上验证了L-SWAG的泛化性，并展示了LIBRA-NAS在ViT搜索上的优势。
+- **摘要（英）**: This paper addresses the limitation of zero-cost NAS proxies that are mostly designed for convolutional search spaces and fail to generalize to Vision Transformers. It proposes L-SWAG, a novel metric leveraging layer-wise activation and gradient information to characterize both CNN and ViT architectures, along with a new Autoformer-based benchmark. To further boost performance, LIBRA-NAS is introduced to strategically combine complementary proxies via an ML model with bias re-alignment, validated across 14 tasks.
+- **核心贡献**: 提出了首个适用于ViT的零成本NAS代理L-SWAG及配套基准和组合方法LIBRA-NAS。
+- **创新点**: 将零成本代理从CNN扩展到ViT，并通过梯度与激活信息实现跨架构泛化。
+- **结果**: 在14个任务上验证了L-SWAG的泛化性，LIBRA-NAS进一步提升了搜索性能。
 
-### TF-MAS: Training-free Mamba2 Architecture Search.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/08561abd6843266509d95bf30b856283-Abstract-Conference.html) · 📚 被引 0
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Training-free Neural Architecture Search (NAS) efficiently identifies high-performing neural networks using zero-cost (ZC) proxies. Unlike multi-shot and one-shot NAS approaches, ZC-NAS is both (i) time-efficient, eliminating the need for model training, and (ii) interpretable, with proxy designs often theoretically grounded. Despite rapid developments in the field, current SOTA ZC proxies are typically constrained to well-established convolutional search spaces. With the rise of Large Language Models shaping the future of deep learning, this work extends ZC proxy applicability to Vision Transformers (ViTs). We present a new benchmark using the Autoformer search space evaluated on 6 distinct tasks and propose Layer-Sample Wise Activation with Gradients information (L-SWAG), a novel, generalizable metric that characterizes both convolutional and transformer architectures across 14 tasks. Additionally, previous works highlighted how different proxies contain complementary information, motivating the need for a ML model to identify useful combinations. To further enhance ZC-NAS, we therefore introduce LIBRA-NAS (Low Information gain and Bias Re-Alignment), a method that strategically combines proxies to best represent a specific benchmark. Integrated into the NAS search, LIBRA-NAS outperforms evolution and gradient-based NAS techniques by identifying an architecture with a 17.0% test error on ImageNet1k in just 0.1 GPU days.
+
+</details>
+
+### TF-MAS: Training-free Mamba2 Architecture Search. **⭐⭐** (相关度: 30%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/08561abd6843266509d95bf30b856283-Abstract-Conference.html)
 - **作者**: Yi Fan, Yu-Bin Yang
 - **🏷️ 机构**: Nanjing University, NanjingUniversity
 - **会议**: NeurIPS 2025
+- **摘要（中）**: ①针对Mamba2架构搜索中训练开销大的问题，提出无需训练的搜索方法。②通过分析Mamba2的线性注意力特性，设计代理指标直接评估候选架构性能，避免训练。③相比传统NAS方法，省去了训练成本，但缺乏对搜索空间多样性的深入探索。④摘要未提供具体数据，效果未知。
+- **摘要（英）**: This paper addresses the high training cost in Mamba2 architecture search by proposing a training-free method. It uses proxy metrics based on Mamba2's linear attention properties to evaluate architectures without training. Compared to conventional NAS, it reduces computational overhead but lacks exploration of search space diversity. No specific results are reported in the abstract.
+- **核心贡献**: 提出首个针对Mamba2的训练免费架构搜索框架。
+- **创新点**: 利用Mamba2线性注意力特性设计无需训练的评估代理。
+- **结果**: 摘要未给出量化结果，效果待验证。
 
-> Evaluation is a critical but costly procedure in neural architecture search (NAS). Performance predictors have been widely adopted to reduce evaluation costs by directly estimating architecture performance. The effectiveness of predictors is heavily influenced by the choice of loss functions. While traditional predictors employ regression loss functions to evaluate the absolute accuracy of architectures, recent approaches have explored various ranking-based loss functions, such as pairwise and listwise ranking losses, to focus on the ranking of architecture performance. Despite their success in NAS, the effectiveness and characteristics of these loss functions have not been thoroughly investigated. In this paper, we conduct the first comprehensive study on loss functions in performance predictors, categorizing them into three main types: regression, ranking, and weighted loss functions. Specifically, we assess eight loss functions using a range of NAS-relevant metrics on 13 tasks across five search spaces. Our results reveal that specific categories of loss functions can be effectively combined to enhance predictor-based NAS. Furthermore, our findings could provide practical guidance for selecting appropriate loss functions for various tasks. We hope this work provides meaningful insights to guide the development of loss functions for predictor-based methods in the NAS community.
-
-### TensorRL-QAS: Reinforcement learning with tensor networks for improved quantum architecture search.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/af008ae1c0301e218ee89a86833198e3-Abstract-Conference.html) · 📚 被引 0
+### TensorRL-QAS: Reinforcement learning with tensor networks for improved quantum architecture search. **⭐⭐** (相关度: 20%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/af008ae1c0301e218ee89a86833198e3-Abstract-Conference.html)
 - **作者**: Akash Kundu, Stefano Mangini
 - **🏷️ 机构**: Delft University of Technology, University of Helsinki
 - **会议**: NeurIPS 2025
+- **摘要（中）**: ①针对量子架构搜索中计算复杂度和搜索效率问题，结合强化学习与张量网络。②利用张量网络压缩量子电路表示，强化学习驱动搜索过程。③相比传统量子NAS，提高了搜索效率并降低了模拟成本。④摘要未提供具体性能数据。
+- **摘要（英）**: This paper addresses the computational complexity and search efficiency in quantum architecture search by combining reinforcement learning with tensor networks. Tensor networks compress quantum circuit representations, while RL drives the search. Compared to conventional quantum NAS, it improves search efficiency and reduces simulation cost. No specific results are reported.
+- **核心贡献**: 提出张量网络增强的强化学习量子架构搜索方法。
+- **创新点**: 将张量网络引入量子NAS以降低模拟复杂度。
+- **结果**: 摘要未给出量化效果。
 
-### Subnet-Aware Dynamic Supernet Training for Neural Architecture Search.
+### Subnet-Aware Dynamic Supernet Training for Neural Architecture Search. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2503.10740](https://arxiv.org/abs/2503.10740) · 📚 被引 6
 - **作者**: Jeimin Jeon, Youngmin Oh, Junghyup Lee, Donghyeon Baek, Dohyung Kim, Chanho Eom et al.
 - **🏷️ 机构**: Yonsei University, Samsung Research, Samsung Advanced Institute of Technology
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对N-shot NAS中超级网络训练采用静态策略（如统一学习率调度）导致子网训练不公平和动量更新噪声大的问题，本文提出了动态超级网络训练技术。具体包括复杂度感知的学习率调度器（CaLR），根据子网复杂度自适应调整学习率衰减，缓解不公平性；以及动量分离技术（MS），将结构相似的子网分组并使用独立动量，避免噪声动量问题。该方法可低成本集成到多种N-shot NAS方法中，显著提升搜索性能。
+- **摘要（英）**: This paper tackles the issues of unfair supernet training and noisy momentum updates in N-shot NAS caused by static training strategies. It introduces a complexity-aware learning rate scheduler (CaLR) that adapts LR decay to subnet complexity, and a momentum separation technique (MS) that groups similar subnets with separate momenta. The approach is plug-and-play with marginal cost and drastically improves search performance.
+- **核心贡献**: 提出了动态超级网络训练方法，通过CaLR和MS分别解决不公平性和噪声动量问题。
+- **创新点**: 首次将子网复杂度感知的学习率调度和动量分离引入N-shot NAS训练。
+- **结果**: 在多种N-shot NAS方法上验证了显著性能提升，且额外开销极小。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -37,19 +61,22 @@
 
 </details>
 
-### Training-free Neural Architecture Search through Variance of Knowledge of Deep Network Weights.
+### Training-free Neural Architecture Search through Variance of Knowledge of Deep Network Weights. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2502.04975](https://arxiv.org/abs/2502.04975) · 📚 被引 4
 - **作者**: Ondrej Týbl, Lukás Neumann
 - **🏷️ 机构**: Czech Technical University in Prague,CMP Visual Recognition Group, Faculty of Electrical Engineering
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对NAS中候选网络需从头训练导致计算成本高昂的问题，本文提出了一种基于Fisher信息的训练免费代理，用于估计网络在图像分类任务上的预期精度。该代理具有统计学理论基础，无需训练即可评估架构性能，显著降低NAS计算开销。在三个公开数据集和两个搜索空间上，该代理达到了最先进的性能，并提出了新的评估指标。
+- **摘要（英）**: This paper proposes a training-free proxy based on Fisher Information to estimate image classification accuracy without training candidate networks, addressing the high computational cost of NAS. The proxy has strong statistical grounding and achieves state-of-the-art results on three datasets and two search spaces, with a new evaluation metric introduced.
+- **核心贡献**: 提出了基于Fisher信息的训练免费NAS代理，并验证了其有效性。
+- **创新点**: 将Fisher信息理论应用于零成本代理设计，提供理论支撑。
+- **结果**: 在多个数据集和搜索空间上达到SOTA性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Deep learning has revolutionized computer vision, but it achieved its tremendous success using deep network architectures which are mostly hand-crafted and therefore likely suboptimal. Neural Architecture Search (NAS) aims to bridge this gap by following a well-defined optimization paradigm which systematically looks for the best architecture, given objective criterion such as maximal classification accuracy. The main limitation of NAS is however its astronomical computational cost, as it typically requires training each candidate network architecture from scratch. In this paper, we aim to alleviate this limitation by proposing a novel training-free proxy for image classification accuracy based on Fisher Information. The proposed proxy has a strong theoretical background in statistics and it allows estimating expected image classification accuracy of a given deep network without training the network, thus significantly reducing computational cost of standard NAS algorithms. Our training-free proxy achieves state-of-the-art results on three public datasets and in two search spaces, both when evaluated using previously proposed metrics, as well as using a new metric that we propose which we demonstrate is more informative for practical NAS applications. The source code is publicly available at http://www.github.com/ondratybl/VKDNW
 
 </details>
-
-## 🆕 增量新增
 
 ### Loss Functions for Predictor-Based Neural Architecture Search. **⭐⭐⭐** (相关度: 45%)
 - **链接**: [arXiv:2506.05869](https://arxiv.org/abs/2506.05869)
@@ -183,4 +210,5 @@
 - **核心贡献**: 将可微NAS应用于算术电路自动优化。
 - **创新点**: 首次将DARTS类方法用于电路级设计。
 - **结果**: 在电路面积和延迟上取得改进。
+
 <!-- COMPLETE v1 papers=16 -->

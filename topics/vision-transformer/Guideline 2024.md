@@ -3,35 +3,33 @@
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
 > 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### CLAMP-ViT: Contrastive Data-Free Learning for Adaptive Post-training Quantization of ViTs.
+### CLAMP-ViT: Contrastive Data-Free Learning for Adaptive Post-training Quantization of ViTs. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72855-6_18) · 📚 被引 11
 - **作者**: Akshat Ramachandran, Souvik Kundu, Tushar Krishna
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①论文针对ViT量化后性能下降且需要原始数据微调的问题。②提出了CLAMP-ViT，一种对比无数据学习框架，用于自适应后训练量化，无需原始训练数据。③相比已有量化方法，CLAMP-ViT利用对比学习生成伪数据，并自适应调整量化参数，减少精度损失。④摘要未提供具体数据，但声称在多个ViT模型上优于现有无数据量化方法。
+- **摘要（英）**: This paper addresses the performance degradation of quantized ViTs and the need for original data during fine-tuning. It proposes CLAMP-ViT, a contrastive data-free learning framework for adaptive post-training quantization, eliminating the need for original data. It uses contrastive learning to generate pseudo-data and adapt quantization parameters, showing improvements over existing data-free methods, though no specific numbers are in the abstract.
+- **核心贡献**: 提出无数据对比学习框架用于ViT自适应量化，降低部署成本。
+- **创新点**: 利用对比学习生成伪数据，实现无需原始数据的量化校准。
+- **结果**: 在多个ViT模型上优于现有无数据量化方法，具体数据未在摘要中给出。
 
-### Rotary Position Embedding for Vision Transformer.
-- **链接**: [arXiv:2403.13298](https://arxiv.org/abs/2403.13298) · [代码](https://github.com/naver-ai/rope-vit) · 📚 被引 58
+### Rotary Position Embedding for Vision Transformer. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2403.13298](https://arxiv.org/abs/2403.13298) · 📚 被引 58
 - **作者**: Byeongho Heo, Song Park, Dongyoon Han, Sangdoo Yun
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+- **摘要（中）**: ①针对旋转位置编码（RoPE）在视觉Transformer中应用不足的问题。②系统分析了RoPE在2D视觉数据上的实现，并验证其外推性能。③相比现有位置编码，RoPE在推理时分辨率增加时保持精度，提升ImageNet-1k、COCO检测和ADE-20k分割性能。④实验证明RoPE以最小额外计算开销提升骨干网络性能。
+- **摘要（英）**: This paper provides a comprehensive analysis of Rotary Position Embedding for Vision Transformers, demonstrating impressive extrapolation performance and improvements on ImageNet-1k, COCO, and ADE-20k. It offers practical guidelines for integrating RoPE into ViTs.
+- **核心贡献**: 系统验证RoPE在视觉任务中的有效性。
+- **创新点**: 将RoPE适配到2D视觉数据并展示外推优势。
+- **结果**: 在多个基准上提升性能，计算开销小。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Rotary Position Embedding (RoPE) performs remarkably on language models, especially for length extrapolation of Transformers. However, the impacts of RoPE on computer vision domains have been underexplored, even though RoPE appears capable of enhancing Vision Transformer (ViT) performance in a way similar to the language domain. This study provides a comprehensive analysis of RoPE when applied to ViTs, utilizing practical implementations of RoPE for 2D vision data. The analysis reveals that RoPE demonstrates impressive extrapolation performance, i.e., maintaining precision while increasing image resolution at inference. It eventually leads to performance improvement for ImageNet-1k, COCO detection, and ADE-20k segmentation. We believe this study provides thorough guidelines to apply RoPE into ViT, promising improved backbone performance with minimal extra computational overhead. Our code and pre-trained models are available at https://github.com/naver-ai/rope-vit
-
-</details>
-
-</details>
-
-</details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Vision Transformers (ViTs) are increasingly used in computer vision due to their high performance, but their vulnerability to adversarial attacks is a concern. Existing methods lack a solid theoretical basis, focusing mainly on empirical training adjustments. This study introduces SpecFormer, tailored to fortify ViTs against adversarial attacks, with theoretical underpinnings. We establish local Lipschitz bounds for the self-attention layer and propose the Maximum Singular Value Penalization (MSVP) to precisely manage these bounds By incorporating MSVP into ViTs' attention layers, we enhance the model's robustness without compromising training efficiency. SpecFormer, the resulting model, outperforms other state-of-the-art models in defending against adversarial attacks, as proven by experiments on CIFAR and ImageNet datasets. Code is released at https://github.com/microsoft/robustlearn.
 
 </details>
 
@@ -43,27 +41,27 @@
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-### Removing Rows and Columns of Tokens in Vision Transformer Enables Faster Dense Prediction Without Retraining.
+### Removing Rows and Columns of Tokens in Vision Transformer Enables Faster Dense Prediction Without Retraining. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73220-1_19) · 📚 被引 1
 - **作者**: Diwei Su, Cheng Fei, Jianxu Luo
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对密集预测任务中ViT计算开销大、推理速度慢的问题。②提出一种无需重新训练即可移除token行和列的方法，通过结构化剪枝减少计算量。③相比现有剪枝方法，该方法无需微调即可直接应用于预训练模型，显著提升推理速度。④在多个密集预测任务上验证了有效性，但具体加速比和精度损失数据未在摘要中提供。
+- **摘要（英）**: This paper addresses the high computational cost of ViTs in dense prediction tasks by proposing a method to remove rows and columns of tokens without retraining. It enables direct application to pretrained models, significantly improving inference speed while maintaining accuracy, though specific metrics are not given in the abstract.
+- **核心贡献**: 提出无需重训的token行列移除方法，加速ViT密集预测。
+- **创新点**: 结构化剪枝无需微调，直接应用于预训练模型。
+- **结果**: 在密集预测任务上显著提升推理速度。
 
-### FairViT: Fair Vision Transformer via Adaptive Masking.
+### FairViT: Fair Vision Transformer via Adaptive Masking. **⭐⭐⭐** (相关度: 55%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73650-6_26) · 📚 被引 5
 - **作者**: Bowei Tian, Ruijie Du, Yanning Shen
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
-
-</details>
-
-> Vision Transformers (ViTs) demonstrate remarkable performance in image classification through visual-token interaction learning, particularly when equipped with local information via region attention or convolutions. Although such architectures improve the feature aggregation from different granularities, they often fail to contribute to the robustness of the networks. Neural Cellular Automata (NCA) enables the modeling of global visual-token representations through local interactions, with its training strategies and architecture design conferring strong generalization ability and robustness against noisy input. In this paper, we propose Adaptor Neural Cellular Automata (AdaNCA) for Vision Transformers that uses NCA as plug-and-play adaptors between ViT layers, thus enhancing ViT's performance and robustness against adversarial samples as well as out-of-distribution inputs. To overcome the large computational overhead of standard NCAs, we propose Dynamic Interaction for more efficient interaction learning. Using our analysis of AdaNCA placement and robustness improvement, we also develop an algorithm for identifying the most effective insertion points for AdaNCA. With less than a 3% increase in parameters, AdaNCA contributes to more than 10% absolute improvement in accuracy under adversarial attacks on the ImageNet1K benchmark. Moreover, we demonstrate with extensive evaluations across eight robustness benchmarks and four ViT architectures that AdaNCA, as a plug-and-play module, consistently improves the robustness of ViTs.
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> While Transformers have rapidly gained popularity in various computer vision applications, post-hoc explanations of their internal mechanisms remain largely unexplored. Vision Transformers extract visual information by representing image regions as transformed tokens and integrating them via attention weights. However, existing post-hoc explanation methods merely consider these attention weights, neglecting crucial information from the transformed tokens, which fails to accurately illustrate the rationales behind the models' predictions. To incorporate the influence of token transformation into interpretation, we propose TokenTM, a novel post-hoc explanation method that utilizes our introduced measurement of token transformation effects. Specifically, we quantify token transformation effects by measuring changes in token lengths and correlations in their directions pre- and post-transformation. Moreover, we develop initialization and aggregation rules to integrate both attention weights and token transformation effects across all layers, capturing holistic token contributions throughout the model. Experimental results on segmentation and perturbation tests demonstrate the superiority of our proposed TokenTM compared to state-of-the-art Vision Transformer explanation methods.
-
-</details>
+- **摘要（中）**: ①针对视觉Transformer中的公平性问题，提出自适应掩码策略。②通过动态掩码敏感区域来减少模型对特定属性的偏见。③相比固定掩码方法，自适应机制能更灵活地平衡公平性与性能。④实验显示在公平性指标上有所提升，但具体数据未在摘要中提供。
+- **摘要（英）**: This paper proposes FairViT, an adaptive masking strategy to mitigate fairness issues in vision transformers by dynamically masking sensitive regions. It balances fairness and performance more flexibly than fixed masking, improving fairness metrics, though specific results are not detailed.
+- **核心贡献**: 提出自适应掩码机制提升ViT的公平性。
+- **创新点**: 动态掩码敏感区域以平衡公平与性能。
+- **结果**: 在公平性指标上取得提升。
 
 ### On the Faithfulness of Vision Transformer Explanations. **⭐⭐⭐** (相关度: 30%)
 - **链接**: [arXiv:2404.01415](https://arxiv.org/abs/2404.01415) · 📚 被引 14
@@ -84,23 +82,38 @@
 
 ## 跨领域论文（完整笔记在其他领域）
 
-### Fairness-Aware Vision Transformer via Debiased Self-Attention.
+### Fairness-Aware Vision Transformer via Debiased Self-Attention. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72913-3_20) · 📚 被引 4
 - **作者**: Yao Qiang, Chengyin Li, Prashant Khanduri, Dongxiao Zhu
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对视觉Transformer在自注意力机制中可能引入偏见的问题。②提出一种去偏自注意力方法，通过调整注意力权重来减少模型对敏感属性的依赖。③相比标准ViT，该方法在保持分类性能的同时提升公平性指标。④实验表明在多个公平性基准上有效降低偏见，但具体数据未在摘要中提供。
+- **摘要（英）**: This paper tackles bias in vision transformers by proposing a debiased self-attention mechanism that adjusts attention weights to reduce reliance on sensitive attributes. It maintains classification performance while improving fairness metrics on multiple benchmarks, though specific numbers are not detailed in the abstract.
+- **核心贡献**: 提出去偏自注意力机制以提升ViT的公平性。
+- **创新点**: 在自注意力层直接进行去偏处理。
+- **结果**: 在公平性基准上有效降低偏见，保持性能。
 
-### Removing Rows and Columns of Tokens in Vision Transformer Enables Faster Dense Prediction Without Retraining.
+### Removing Rows and Columns of Tokens in Vision Transformer Enables Faster Dense Prediction Without Retraining. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73220-1_19) · 📚 被引 1
 - **作者**: Diwei Su, Cheng Fei, Jianxu Luo
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对密集预测任务中ViT计算开销大、推理速度慢的问题。②提出一种无需重新训练即可移除token行和列的方法，通过结构化剪枝减少计算量。③相比现有剪枝方法，该方法无需微调即可直接应用于预训练模型，显著提升推理速度。④在多个密集预测任务上验证了有效性，但具体加速比和精度损失数据未在摘要中提供。
+- **摘要（英）**: This paper addresses the high computational cost of ViTs in dense prediction tasks by proposing a method to remove rows and columns of tokens without retraining. It enables direct application to pretrained models, significantly improving inference speed while maintaining accuracy, though specific metrics are not given in the abstract.
+- **核心贡献**: 提出无需重训的token行列移除方法，加速ViT密集预测。
+- **创新点**: 结构化剪枝无需微调，直接应用于预训练模型。
+- **结果**: 在密集预测任务上显著提升推理速度。
 
-### FairViT: Fair Vision Transformer via Adaptive Masking.
+### FairViT: Fair Vision Transformer via Adaptive Masking. **⭐⭐⭐** (相关度: 55%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73650-6_26) · 📚 被引 5
 - **作者**: Bowei Tian, Ruijie Du, Yanning Shen
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对视觉Transformer中的公平性问题，提出自适应掩码策略。②通过动态掩码敏感区域来减少模型对特定属性的偏见。③相比固定掩码方法，自适应机制能更灵活地平衡公平性与性能。④实验显示在公平性指标上有所提升，但具体数据未在摘要中提供。
+- **摘要（英）**: This paper proposes FairViT, an adaptive masking strategy to mitigate fairness issues in vision transformers by dynamically masking sensitive regions. It balances fairness and performance more flexibly than fixed masking, improving fairness metrics, though specific results are not detailed.
+- **核心贡献**: 提出自适应掩码机制提升ViT的公平性。
+- **创新点**: 动态掩码敏感区域以平衡公平与性能。
+- **结果**: 在公平性指标上取得提升。
 
 ### GiT: Towards Generalist Vision Transformer Through Universal Language Interface.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73397-0_4) · 📚 被引 6
@@ -324,11 +337,16 @@
 - **创新点**: 通过token补偿机制实现成本调整。
 - **结果**: 未提供具体数据。
 
-### Siamese Vision Transformers are Scalable Audio-Visual Learners.
+### Siamese Vision Transformers are Scalable Audio-Visual Learners. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2403.19638](https://arxiv.org/abs/2403.19638) · 📚 被引 4
 - **作者**: Yan-Bo Lin, Gedas Bertasius
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对传统音视频方法依赖独立骨干网络导致成本高、难以扩展的问题。②提出AVSiam框架，使用单一共享ViT骨干处理音频和视觉输入，并采用对比学习目标与多比例随机掩码方案进行预训练。③相比已有工作，显著提升参数效率、降低GPU内存占用，并支持更大模型与数据集规模，且能稳健处理纯音频、纯视觉及音视频输入。④在AudioSet和VGGSound上的音视频分类与检索任务中取得与先前方法相当或更优的结果。
+- **摘要（英）**: This paper addresses the high cost and poor scalability of traditional audio-visual methods that rely on independent backbones. It proposes AVSiam, a framework using a single shared vision transformer to process both modalities with contrastive learning and multi-ratio random masking, improving parameter efficiency and scalability. AVSiam achieves competitive or better results on AudioSet and VGGSound for classification and retrieval.
+- **核心贡献**: 提出共享ViT骨干的音视频孪生网络，实现高效可扩展的预训练。
+- **创新点**: 单一共享骨干处理多模态输入，结合多比例掩码对比学习。
+- **结果**: 在AudioSet和VGGSound上取得与先前方法相当或更优的性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -476,4 +494,5 @@
 - Synergistic Patch Pruning for Vision Transformer: Unifying Intra- & Inter-Layer Patch Importance. → [network-pruning](../network-pruning/Guideline%202024.md)
 - Effective pruning of web-scale datasets based on complexity of concept clusters. → [network-pruning](../network-pruning/Guideline%202024.md)
 - Visual Prompt Tuning in Null Space for Continual Learning. → [continual-learning](../continual-learning/Guideline%202024.md)
+
 <!-- COMPLETE v1 papers=39 -->

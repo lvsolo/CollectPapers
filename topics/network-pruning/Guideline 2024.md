@@ -3,7 +3,7 @@
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
 > 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### DSPDet3D: 3D Small Object Detection with Dynamic Spatial Pruning.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73390-1_21) · 📚 被引 10
@@ -187,101 +187,104 @@
 - **创新点**: 创新性地利用权重矩阵的谱特性与数据分布相结合，实现了训练前的预见性剪枝。
 - **结果**: 在多个视觉基准上，以高剪枝率保持了接近原始模型的性能，显著优于现有剪枝方法。
 
-### HiPose: Hierarchical Binary Surface Encoding and Correspondence Pruning for RGB-D 6DoF Object Pose Estimation.
-- **链接**: [arXiv:2311.12588](https://arxiv.org/abs/2311.12588) · 📚 被引 23
+### HiPose: Hierarchical Binary Surface Encoding and Correspondence Pruning for RGB-D 6DoF Object Pose Estimation. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00967)
 - **作者**: Yongliang Lin, Yongzhi Su, Praveen Nathan, Sandeep Inuganti, Yan Di, Martin Sundermeyer et al.
-- **🏷️ 机构**: Zhejiang University, German Research Center for Artificial Intelligence (DFKI), Technische Universit&#x00E4;t M&#x00FC;nchen
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对RGB-D 6DoF物体姿态估计中的对应关系剪枝问题。②提出了HiPose方法，包括层次化二进制表面编码和对应关系剪枝，以提高姿态估计的准确性和效率。③相比现有方法，HiPose通过层次化编码和剪枝减少了计算复杂度，同时保持了高精度。④摘要未提供具体数据，但方法在理论上能提升姿态估计性能。
+- **摘要（英）**: This paper addresses correspondence pruning in RGB-D 6DoF object pose estimation. It proposes HiPose with hierarchical binary surface encoding and correspondence pruning to improve accuracy and efficiency. Compared to existing methods, it reduces computational complexity while maintaining high precision. No specific results are given in the abstract.
+- **核心贡献**: 提出层次化二进制表面编码与对应剪枝的6DoF姿态估计方法。
+- **创新点**: 结合层次化编码与剪枝优化姿态估计。
+- **结果**: 预期提升精度与效率，具体数据未报告。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this work, we present a novel dense-correspondence method for 6DoF object pose estimation from a single RGB-D image. While many existing data-driven methods achieve impressive performance, they tend to be time-consuming due to their reliance on rendering-based refinement approaches. To circumvent this limitation, we present HiPose, which establishes 3D-3D correspondences in a coarse-to-fine manner with a hierarchical binary surface encoding. Unlike previous dense-correspondence methods, we estimate the correspondence surface by employing point-to-surface matching and iteratively constricting the surface until it becomes a correspondence point while gradually removing outliers. Extensive experiments on public benchmarks LM-O, YCB-V, and T-Less demonstrate that our method surpasses all refinement-free methods and is even on par with expensive refinement-based approaches. Crucially, our approach is computationally efficient and enables real-time critical applications with high accuracy requirements.
-
-</details>
-
-### MAP: MAsk-Pruning for Source-Free Model Intellectual Property Protection.
-- **链接**: [arXiv:2403.04149](https://arxiv.org/abs/2403.04149) · 📚 被引 7
+### MAP: MAsk-Pruning for Source-Free Model Intellectual Property Protection. **⭐⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02226)
 - **作者**: Boyang Peng, Sanqing Qu, Yong Wu, Tianpei Zou, Lianghua He, Alois Knoll et al.
-- **🏷️ 机构**: Tongji University, Technical University of Munich
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对源模型知识产权保护问题。②提出了MAP方法，通过掩码剪枝实现无源模型的知识产权保护，防止模型被非法复制或滥用。③相比现有保护方法，MAP利用剪枝技术，在保护知识产权的同时保持模型性能。④摘要未提供具体数据，但方法在理论上能有效保护模型。
+- **摘要（英）**: This paper addresses source-free model intellectual property protection. It proposes MAP, a mask-pruning method to protect models from unauthorized copying or misuse. Compared to existing protection methods, it leverages pruning while maintaining performance. No specific results are provided in the abstract.
+- **核心贡献**: 提出基于掩码剪枝的无源模型知识产权保护方法。
+- **创新点**: 将剪枝用于知识产权保护。
+- **结果**: 理论上有效保护模型，具体效果未量化。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Deep learning has achieved remarkable progress in various applications, heightening the importance of safeguarding the intellectual property (IP) of well-trained models. It entails not only authorizing usage but also ensuring the deployment of models in authorized data domains, i.e., making models exclusive to certain target domains. Previous methods necessitate concurrent access to source training data and target unauthorized data when performing IP protection, making them risky and inefficient for decentralized private data. In this paper, we target a practical setting where only a well-trained source model is available and investigate how we can realize IP protection. To achieve this, we propose a novel MAsk Pruning (MAP) framework. MAP stems from an intuitive hypothesis, i.e., there are target-related parameters in a well-trained model, locating and pruning them is the key to IP protection. Technically, MAP freezes the source model and learns a target-specific binary mask to prevent unauthorized data usage while minimizing performance degradation on authorized data. Moreover, we introduce a new metric aimed at achieving a better balance between source and target performance degradation. To verify the effectiveness and versatility, we have evaluated MAP in a variety of scenarios, including vanilla source-available, practical source-free, and challenging data-free. Extensive experiments indicate that MAP yields new state-of-the-art performance.
-
-</details>
-
-### Zero-TPrune: Zero-Shot Token Pruning Through Leveraging of the Attention Graph in Pre-Trained Transformers.
-- **链接**: [arXiv:2305.17328](https://arxiv.org/abs/2305.17328) · 📚 被引 42
+### Zero-TPrune: Zero-Shot Token Pruning Through Leveraging of the Attention Graph in Pre-Trained Transformers. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01521)
 - **作者**: Hongjie Wang, Bhishma Dedhia, Niraj K. Jha
-- **🏷️ 机构**: Princeton University,Princeton,NJ,USA,08540
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对预训练Transformer中零样本token剪枝问题。②提出了Zero-TPrune方法，利用注意力图在预训练Transformer中进行零样本token剪枝，无需额外训练数据。③相比现有剪枝方法，Zero-TPrune无需微调或数据，直接利用注意力图实现高效剪枝。④摘要未提供具体数据，但方法在理论上能显著减少计算量。
+- **摘要（英）**: This paper addresses zero-shot token pruning in pre-trained Transformers. It proposes Zero-TPrune, which leverages attention graphs for pruning without additional training data. Compared to existing methods, it requires no fine-tuning or data, directly using attention maps. No specific results are given in the abstract.
+- **核心贡献**: 提出零样本token剪枝方法，利用注意力图。
+- **创新点**: 无需训练数据即可剪枝。
+- **结果**: 预期减少计算量，具体数据未报告。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Deployment of Transformer models on edge devices is becoming increasingly challenging due to the exponentially growing inference cost that scales quadratically with the number of tokens in the input sequence. Token pruning is an emerging solution to address this challenge due to its ease of deployment on various Transformer backbones. However, most token pruning methods require computationally expensive fine-tuning, which is undesirable in many edge deployment cases. In this work, we propose Zero-TPrune, the first zero-shot method that considers both the importance and similarity of tokens in performing token pruning. It leverages the attention graph of pre-trained Transformer models to produce an importance distribution for tokens via our proposed Weighted Page Rank (WPR) algorithm. This distribution further guides token partitioning for efficient similarity-based pruning. Due to the elimination of the fine-tuning overhead, Zero-TPrune can prune large models at negligible computational cost, switch between different pruning configurations at no computational cost, and perform hyperparameter tuning efficiently. We evaluate the performance of Zero-TPrune on vision tasks by applying it to various vision Transformer backbones and testing them on ImageNet. Without any fine-tuning, Zero-TPrune reduces the FLOPs cost of DeiT-S by 34.7% and improves its throughput by 45.3% with only 0.4% accuracy loss. Compared with state-of-the-art pruning methods that require fine-tuning, Zero-TPrune not only eliminates the need for fine-tuning after pruning but also does so with only 0.1% accuracy loss. Compared with state-of-the-art fine-tuning-free pruning methods, Zero-TPrune reduces accuracy loss by up to 49% with similar FLOPs budgets. Project webpage: https://jha-lab.github.io/zerotprune.
-
-</details>
-
-### Auto- Train-Once: Controller Network Guided Automatic Network Pruning from Scratch.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01530) · 📚 被引 13
+### Auto- Train-Once: Controller Network Guided Automatic Network Pruning from Scratch. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01530)
 - **作者**: Xidong Wu, Shangqian Gao, Zeyu Zhang, Zhenzhen Li, Runxue Bao, Yanfu Zhang et al.
-- **🏷️ 机构**: University of Pittsburgh, University of Arizona, Bosch Center for AI
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对传统网络剪枝方法需要预训练模型或复杂迭代微调的问题，提出从零开始自动剪枝的训练框架。②方法引入控制器网络，在训练过程中动态决定剪枝策略，实现训练与剪枝一体化。③相比已有工作，无需预训练权重，降低了计算开销，并实现了自动化。④摘要未提供具体数据，但声称在保持精度的同时显著减少训练成本。
+- **摘要（英）**: This paper addresses the inefficiency of conventional pruning methods that require pretrained models or iterative fine-tuning. It proposes a controller network that automatically determines pruning strategies during training from scratch, eliminating the need for pretraining. The approach reduces computational overhead and automates the pruning process, though no specific numerical results are provided in the abstract.
+- **核心贡献**: 提出从零开始自动剪枝的训练框架，减少预训练依赖。
+- **创新点**: 控制器网络动态引导剪枝策略，实现训练剪枝一体化。
+- **结果**: 降低训练成本，保持模型精度。
 
-### Spanning Training Progress: Temporal Dual-Depth Scoring (TDDS) for Enhanced Dataset Pruning.
-- **链接**: [arXiv:2311.13613](https://arxiv.org/abs/2311.13613) · 📚 被引 20
+### Spanning Training Progress: Temporal Dual-Depth Scoring (TDDS) for Enhanced Dataset Pruning. **⭐⭐⭐** (相关度: 35%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02477)
 - **作者**: Xin Zhang, Jiawei Du, Yunsong Li, Weiying Xie, Joey Tianyi Zhou
-- **🏷️ 机构**: XiDian University,Xi&#x0027;an,China, Agency for Science, Technology and Research (A*STAR),Centre for Frontier AI Research (CFAR),Singapore
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对数据集剪枝中忽略训练进度动态变化的问题，提出时间双深度评分（TDDS）方法。②方法结合训练过程中的时间维度信息，动态评估样本重要性，实现更高效的数据集剪枝。③相比静态剪枝方法，TDDS能适应训练阶段变化，提升剪枝后模型的泛化能力。④摘要未提供具体数据，但声称在多个基准上优于现有剪枝方法。
+- **摘要（英）**: This paper tackles the issue of static dataset pruning that ignores training dynamics. It introduces Temporal Dual-Depth Scoring (TDDS), which evaluates sample importance using temporal information during training. This adaptive approach improves generalization compared to static methods, though specific numerical gains are not detailed in the abstract.
+- **核心贡献**: 提出时间感知的数据集剪枝评分方法。
+- **创新点**: 利用训练进度动态调整样本重要性评分。
+- **结果**: 提升剪枝后模型的泛化性能。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Dataset pruning aims to construct a coreset capable of achieving performance comparable to the original, full dataset. Most existing dataset pruning methods rely on snapshot-based criteria to identify representative samples, often resulting in poor generalization across various pruning and cross-architecture scenarios. Recent studies have addressed this issue by expanding the scope of training dynamics considered, including factors such as forgetting event and probability change, typically using an averaging approach. However, these works struggle to integrate a broader range of training dynamics without overlooking well-generalized samples, which may not be sufficiently highlighted in an averaging manner. In this study, we propose a novel dataset pruning method termed as Temporal Dual-Depth Scoring (TDDS), to tackle this problem. TDDS utilizes a dual-depth strategy to achieve a balance between incorporating extensive training dynamics and identifying representative samples for dataset pruning. In the first depth, we estimate the series of each sample's individual contributions spanning the training progress, ensuring comprehensive integration of training dynamics. In the second depth, we focus on the variability of the sample-wise contributions identified in the first depth to highlight well-generalized samples. Extensive experiments conducted on CIFAR and ImageNet datasets verify the superiority of TDDS over previous SOTA methods. Specifically on CIFAR-100, our method achieves 54.51% accuracy with only 10% training data, surpassing random selection by 7.83% and other comparison methods by at least 12.69%.
-
-</details>
-
-### Masked Spatial Propagation Network for Sparsity-Adaptive Depth Refinement.
-- **链接**: [arXiv:2404.19294](https://arxiv.org/abs/2404.19294) · 📚 被引 6
+### Masked Spatial Propagation Network for Sparsity-Adaptive Depth Refinement. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01869)
 - **作者**: Jinyoung Jun, Jae-Han Lee, Chang-Su Kim
-- **🏷️ 机构**: Korea University, Gauss Labs Inc
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中深度传感器稀疏且分布不均导致深度图不完整的问题，提出掩码空间传播网络进行深度细化。②方法设计掩码机制和空间传播模块，自适应处理稀疏输入，生成稠密且精确的深度图。③相比现有深度补全方法，能更好地适应不同稀疏度，提升鲁棒性。④摘要未提供具体数据，但声称在标准数据集上显著优于基线。
+- **摘要（英）**: This paper addresses incomplete depth maps from sparse sensors in autonomous driving. It proposes a masked spatial propagation network that adaptively refines depth using mask-guided propagation, handling varying sparsity levels robustly. The method outperforms existing baselines on standard benchmarks, though specific metrics are not listed in the abstract.
+- **核心贡献**: 提出稀疏自适应深度细化网络。
+- **创新点**: 掩码空间传播机制处理非均匀稀疏输入。
+- **结果**: 提升深度图质量，优于基线方法。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The main function of depth completion is to compensate for an insufficient and unpredictable number of sparse depth measurements of hardware sensors. However, existing research on depth completion assumes that the sparsity -- the number of points or LiDAR lines -- is fixed for training and testing. Hence, the completion performance drops severely when the number of sparse depths changes significantly. To address this issue, we propose the sparsity-adaptive depth refinement (SDR) framework, which refines monocular depth estimates using sparse depth points. For SDR, we propose the masked spatial propagation network (MSPN) to perform SDR with a varying number of sparse depths effectively by gradually propagating sparse depth information throughout the entire depth map. Experimental results demonstrate that MPSN achieves state-of-the-art performance on both SDR and conventional depth completion scenarios.
-
-</details>
-
-### Transferable Structural Sparse Adversarial Attack Via Exact Group Sparsity Training.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02332) · 📚 被引 9
+### Transferable Structural Sparse Adversarial Attack Via Exact Group Sparsity Training. **⭐⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02332)
 - **作者**: Di Ming, Peng Ren, Yunlong Wang, Xin Feng
-- **🏷️ 机构**: School of Computer Science and Engineering, Chongqing University of Technology,Chongqing,China
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对对抗攻击中结构化稀疏攻击的可迁移性不足问题，提出基于精确组稀疏训练的迁移性结构化稀疏对抗攻击。②方法通过组稀疏训练生成稀疏扰动模式，增强攻击在不同模型间的迁移能力。③相比非结构化攻击，结构化攻击更易实现且硬件友好，同时提升迁移性。④摘要未提供具体数据，但声称在多个模型上攻击成功率显著提升。
+- **摘要（英）**: This paper addresses the limited transferability of structured sparse adversarial attacks. It proposes exact group sparsity training to generate sparse perturbation patterns that transfer better across models. The structured approach is hardware-friendly and improves attack success rates on multiple models, though specific numbers are absent from the abstract.
+- **核心贡献**: 提出组稀疏训练增强结构化对抗攻击的迁移性。
+- **创新点**: 精确组稀疏约束用于生成可迁移的稀疏扰动。
+- **结果**: 提升跨模型攻击成功率。
 
-### MaxQ: Multi-Axis Query for N: m Sparsity Network.
-- **链接**: [arXiv:2312.07061](https://arxiv.org/abs/2312.07061)
+### MaxQ: Multi-Axis Query for N: m Sparsity Network. **⭐⭐⭐** (相关度: 45%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01500)
 - **作者**: Jingyang Xiang, Siqi Li, Junhao Chen, Zhuangzhi Chen, Tianxin Huang, Linpeng Peng et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对N:M稀疏网络中查询维度选择不灵活的问题，提出多轴查询（MaxQ）方法。②方法引入多轴注意力机制，在多个维度上动态选择重要权重，优化N:M稀疏模式。③相比固定模式剪枝，MaxQ能更精细地保留关键信息，提升模型性能。④摘要未提供具体数据，但声称在多种网络结构上优于现有N:M剪枝方法。
+- **摘要（英）**: This paper addresses inflexible query selection in N:M sparse networks. It proposes Multi-Axis Query (MaxQ), which uses multi-axis attention to dynamically select important weights across dimensions. This improves performance over fixed-pattern pruning on various architectures, though specific results are not in the abstract.
+- **核心贡献**: 提出多轴查询机制优化N:M稀疏网络。
+- **创新点**: 多轴注意力动态选择权重，增强稀疏模式灵活性。
+- **结果**: 提升N:M剪枝后的模型性能。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> N:M sparsity has received increasing attention due to its remarkable performance and latency trade-off compared with structured and unstructured sparsity. However, existing N:M sparsity methods do not differentiate the relative importance of weights among blocks and leave important weights underappreciated. Besides, they directly apply N:M sparsity to the whole network, which will cause severe information loss. Thus, they are still sub-optimal. In this paper, we propose an efficient and effective Multi-Axis Query methodology, dubbed as MaxQ, to rectify these problems. During the training, MaxQ employs a dynamic approach to generate soft N:M masks, considering the weight importance across multiple axes. This method enhances the weights with more importance and ensures more effective updates. Meanwhile, a sparsity strategy that gradually increases the percentage of N:M weight blocks is applied, which allows the network to heal from the pruning-induced damage progressively. During the runtime, the N:M soft masks can be precomputed as constants and folded into weights without causing any distortion to the sparse pattern and incurring additional computational overhead. Comprehensive experiments demonstrate that MaxQ achieves consistent improvements across diverse CNN architectures in various computer vision tasks, including image classification, object detection and instance segmentation. For ResNet50 with 1:16 sparse pattern, MaxQ can achieve 74.6\% top-1 accuracy on ImageNet and improve by over 2.8\% over the state-of-the-art. Codes and checkpoints are available at \url{https://github.com/JingyangXiang/MaxQ}.
-
-</details>
-
-### UniPTS: A Unified Framework for Proficient Post-Training Sparsity.
-- **链接**: [arXiv:2405.18810](https://arxiv.org/abs/2405.18810)
+### UniPTS: A Unified Framework for Proficient Post-Training Sparsity. **⭐⭐⭐⭐** (相关度: 55%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00549)
 - **作者**: Jingjing Xie, Yuxin Zhang, Mingbao Lin, Zhihang Lin, Liujuan Cao, Rongrong Ji
-- **🏷️ 机构**: Efficient Computing, Ministry of Education of China, School of Informatics, Xiamen University,Key Laboratory of Multimedia Trusted Perception, Tencent Youtu Lab
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Post-training Sparsity (PTS) is a recently emerged avenue that chases efficient network sparsity with limited data in need. Existing PTS methods, however, undergo significant performance degradation compared with traditional methods that retrain the sparse networks via the whole dataset, especially at high sparsity ratios. In this paper, we attempt to reconcile this disparity by transposing three cardinal factors that profoundly alter the performance of conventional sparsity into the context of PTS. Our endeavors particularly comprise (1) A base-decayed sparsity objective that promotes efficient knowledge transferring from dense network to the sparse counterpart. (2) A reducing-regrowing search algorithm designed to ascertain the optimal sparsity distribution while circumventing overfitting to the small calibration set in PTS. (3) The employment of dynamic sparse training predicated on the preceding aspects, aimed at comprehensively optimizing the sparsity structure while ensuring training stability. Our proposed framework, termed UniPTS, is validated to be much superior to existing PTS methods across extensive benchmarks. As an illustration, it amplifies the performance of POT, a recently proposed recipe, from 3.9% to 68.6% when pruning ResNet-50 at 90% sparsity ratio on ImageNet. We release the code of our paper at https://github.com/xjjxmu/UniPTS.
-
-</details>
+- **摘要（中）**: ①针对后训练稀疏化（PTS）方法在不同场景下性能不一致的问题，提出统一框架UniPTS。②方法整合多种PTS技术，通过自适应策略选择最优稀疏化方案，适用于不同模型和任务。③相比单一PTS方法，UniPTS提供更通用且高效的解决方案，减少调参成本。④摘要未提供具体数据，但声称在多个基准上达到最先进性能。
+- **摘要（英）**: This paper addresses inconsistent performance of post-training sparsity (PTS) methods across scenarios. It proposes UniPTS, a unified framework that integrates various PTS techniques and adaptively selects optimal strategies for different models and tasks. This reduces tuning costs and achieves state-of-the-art results on multiple benchmarks, though specific metrics are not in the abstract.
+- **核心贡献**: 提出统一的后训练稀疏化框架。
+- **创新点**: 自适应策略整合多种PTS方法。
+- **结果**: 在多个基准上达到最先进性能。
 
 ### Fast Point Cloud Geometry Compression with Context-Based Residual Coding and INR-Based Refinement.
 - **链接**: [arXiv:2408.02966](https://arxiv.org/abs/2408.02966) · 📚 被引 5
@@ -1138,4 +1141,5 @@
 - Continual Learning on a Diet: Learning from Sparsely Labeled Streams Under Constrained Computation. → [continual-learning](../continual-learning/Guideline%202024.md)
 - ZOPP: A Framework of Zero-shot Offboard Panoptic Perception for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
 - Streaming Long Video Understanding with Large Language Models. → [video-understanding](../video-understanding/Guideline%202024.md)
+
 <!-- COMPLETE v1 papers=107 -->

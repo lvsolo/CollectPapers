@@ -3,35 +3,51 @@
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
 > 论文数: 97 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Target-aware Dual Adversarial Learning and a Multi-scenario Multi-Modality Benchmark to Fuse Infrared and Visible for Object Detection.
+### Target-aware Dual Adversarial Learning and a Multi-scenario Multi-Modality Benchmark to Fuse Infrared and Visible for Object Detection. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2203.16220](https://arxiv.org/abs/2203.16220) · 📚 被引 1108
 - **作者**: Jinyuan Liu, Xin Fan, Zhanbo Huang, Guanyao Wu, Risheng Liu, Wei Zhong et al.
 - **🏷️ 机构**: School of Software Technology, Dalian University of Technology, DUT-RU International School of Information Science &#x0026; Engineering, Dalian University of Technology
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对红外与可见光图像融合用于目标检测时，现有方法缺乏对目标感知和跨模态对抗性学习的充分探索，且缺少多场景多模态基准的问题。②提出了目标感知的双对抗学习框架，并构建了一个多场景多模态基准数据集。③改进点在于通过目标级注意力引导对抗生成，增强融合图像中的目标特征，同时基准覆盖多种复杂场景。④实验表明该方法在融合质量和检测精度上优于现有融合检测方法，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses the lack of target-aware adversarial fusion and comprehensive benchmarks for infrared-visible object detection. It proposes a dual adversarial learning framework with target awareness and introduces a multi-scenario multi-modality benchmark. The method improves fusion quality and detection accuracy over existing approaches, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出目标感知双对抗学习框架及多场景多模态基准。
+- **创新点**: 将目标级注意力引入对抗融合过程。
+- **结果**: 在融合和检测性能上优于现有方法。
 
-### Omni-DETR: Omni-Supervised Object Detection with Transformers.
+### Omni-DETR: Omni-Supervised Object Detection with Transformers. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2203.16089](https://arxiv.org/abs/2203.16089) · 📚 被引 39
 - **作者**: Pei Wang, Zhaowei Cai, Hao Yang, Gurumurthy Swaminathan, Nuno Vasconcelos, Bernt Schiele et al.
 - **🏷️ 机构**: UC San Diego, AWS AI Labs
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对DETR类检测器依赖大量人工标注，难以利用海量未标注数据的问题。②提出了Omni-DETR，一种基于Transformer的全监督目标检测框架，结合了自训练和知识蒸馏策略。③改进点在于统一了不同监督信号（如检测框、分类标签）的利用方式，并通过一致性正则化提升伪标签质量。④实验表明在多个基准上显著提升了检测性能，尤其在数据稀缺场景下，但具体数值未在摘要中给出。
+- **摘要（英）**: This work tackles the challenge of leveraging unlabeled data for DETR-based detectors. Omni-DETR integrates self-training and knowledge distillation within a unified Transformer framework, improving pseudo-label quality via consistency regularization. It achieves notable performance gains on multiple benchmarks, especially under limited annotation settings.
+- **核心贡献**: 提出Omni-DETR框架，统一利用多源监督信号。
+- **创新点**: 结合自训练与蒸馏的Transformer全监督策略。
+- **结果**: 在多个基准上提升检测性能。
 
-### Explore Spatio-temporal Aggregation for Insubstantial Object Detection: Benchmark Dataset and Baseline.
-- **链接**: [arXiv:2206.11459](https://arxiv.org/abs/2206.11459) · [代码](https://github.com/CalayZhou/IOD-Video) · 📚 被引 25
+### Explore Spatio-temporal Aggregation for Insubstantial Object Detection: Benchmark Dataset and Baseline. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2206.11459](https://arxiv.org/abs/2206.11459) · 📚 被引 25
 - **作者**: Kailai Zhou, Yibo Wang, Tao Lv, Yunqian Li, Linsen Chen, Qiu Shen et al.
 - **🏷️ 机构**: Nanjing University,Nanjing,China
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对不显著目标（如小目标、低对比度目标）检测中时空聚合不足的问题。②提出了一个时空聚合方法，并构建了相应的基准数据集。③改进点在于利用时序信息增强目标特征，并通过空间-时间注意力机制提升检测鲁棒性。④实验表明该方法在基准上优于现有检测器，但摘要未提供具体性能数据。
+- **摘要（英）**: This paper addresses the challenge of detecting insubstantial objects by exploring spatio-temporal aggregation. It proposes a novel aggregation method and introduces a benchmark dataset. The approach leverages temporal cues and attention mechanisms to improve robustness, outperforming existing detectors on the benchmark.
+- **核心贡献**: 提出时空聚合方法及不显著目标检测基准。
+- **创新点**: 将时空注意力用于不显著目标特征增强。
+- **结果**: 在基准上取得优于现有方法的性能。
 
-### Omni-DETR: Omni-Supervised Object Detection with Transformers.
+### Omni-DETR: Omni-Supervised Object Detection with Transformers. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2203.16089](https://arxiv.org/abs/2203.16089) · 📚 被引 39
 - **作者**: Pei Wang, Zhaowei Cai, Hao Yang, Gurumurthy Swaminathan, Nuno Vasconcelos, Bernt Schiele et al.
 - **🏷️ 机构**: UC San Diego, AWS AI Labs
 - **会议**: CVPR 2022
-
-> We endeavor on a rarely explored task named Insubstantial Object Detection (IOD), which aims to localize the object with following characteristics: (1) amorphous shape with indistinct boundary; (2) similarity to surroundings; (3) absence in color. Accordingly, it is far more challenging to distinguish insubstantial objects in a single static frame and the collaborative representation of spatial and temporal information is crucial. Thus, we construct an IOD-Video dataset comprised of 600 videos (141,017 frames) covering various distances, sizes, visibility, and scenes captured by different spectral ranges. In addition, we develop a spatio-temporal aggregation framework for IOD, in which different backbones are deployed and a spatio-temporal aggregation loss (STAloss) is elaborately designed to leverage the consistency along the time axis. Experiments conducted on IOD-Video dataset demonstrate that spatio-temporal aggregation can significantly improve the performance of IOD. We hope our work will attract further researches into this valuable yet challenging task. The code will be available at: \url{https://github.com/CalayZhou/IOD-Video}.
-
-</details>
+- **摘要（中）**: ①针对DETR类检测器依赖大量人工标注，难以利用海量未标注数据的问题。②提出了Omni-DETR，一种基于Transformer的全监督目标检测框架，结合了自训练和知识蒸馏策略。③改进点在于统一了不同监督信号（如检测框、分类标签）的利用方式，并通过一致性正则化提升伪标签质量。④实验表明在多个基准上显著提升了检测性能，尤其在数据稀缺场景下，但具体数值未在摘要中给出。
+- **摘要（英）**: This work tackles the challenge of leveraging unlabeled data for DETR-based detectors. Omni-DETR integrates self-training and knowledge distillation within a unified Transformer framework, improving pseudo-label quality via consistency regularization. It achieves notable performance gains on multiple benchmarks, especially under limited annotation settings.
+- **核心贡献**: 提出Omni-DETR框架，统一利用多源监督信号。
+- **创新点**: 结合自训练与蒸馏的Transformer全监督策略。
+- **结果**: 在多个基准上提升检测性能。
 
 ### OW-DETR: Open-world Detection Transformer.
 - **链接**: [arXiv:2112.01513](https://arxiv.org/abs/2112.01513) · [代码](https://github.com/akshitac8/OW-DETR) · 📚 被引 215
@@ -45,11 +61,16 @@
 
 </details>
 
-### Point-Level Region Contrast for Object Detection Pre-Training.
+### Point-Level Region Contrast for Object Detection Pre-Training. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2202.04639](https://arxiv.org/abs/2202.04639) · 📚 被引 39
 - **作者**: Yutong Bai, Xinlei Chen, Alexander Kirillov, Alan L. Yuille, Alexander C. Berg
 - **🏷️ 机构**: Facebook AI Research (FAIR), Johns Hopkins University
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对目标检测预训练中定位与识别需求不匹配的问题，提出点级区域对比学习（Point-Level Region Contrast）。该方法直接从不同区域采样点对进行对比学习，相比区域级聚合表示更鲁棒，并通过在线知识蒸馏隐式改善区域分配。实验表明该方法在多个检测和分割任务上优于现有预训练方法，并提供了详细消融分析。
+- **摘要（英）**: To address the mismatch between localization and recognition in detection pre-training, this paper proposes point-level region contrast, which samples point pairs from different regions for contrastive learning, improving robustness and enabling implicit region refinement via online distillation. It outperforms state-of-the-art pre-training methods on multiple detection and segmentation benchmarks.
+- **核心贡献**: 提出点级区域对比预训练方法，增强检测模型的定位与识别能力。
+- **创新点**: 在点级进行对比学习，并利用在线知识蒸馏优化区域分配。
+- **结果**: 在多个检测和分割任务上超越现有预训练方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -57,11 +78,16 @@
 
 </details>
 
-### DETReg: Unsupervised Pretraining with Region Priors for Object Detection.
+### DETReg: Unsupervised Pretraining with Region Priors for Object Detection. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2106.04550](https://arxiv.org/abs/2106.04550) · 📚 被引 113
 - **作者**: Amir Bar, Xin Wang, Vadim Kantorov, Colorado J. Reed, Roei Herzig, Gal Chechik et al.
 - **🏷️ 机构**: Tel-Aviv University, Microsoft Research, Berkeley AI Research
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对现有自监督预训练仅关注骨干网络而忽略检测架构关键部分的问题，提出DETReg方法，预训练整个检测网络包括定位和嵌入组件。该方法在预训练时预测目标位置以匹配无监督区域提议生成器的输出，并同时对齐特征嵌入与自监督图像编码器的嵌入。在COCO、PASCAL VOC和Airbus Ship基准上微调后优于竞争基线，尤其在低数据场景（如1%标签）和少样本学习中表现突出。
+- **摘要（英）**: To address the limitation of self-supervised pretraining that focuses only on backbones, DETReg pretrains the entire detection network, predicting object localizations to match unsupervised region proposals and aligning embeddings with a self-supervised encoder. It improves over baselines on COCO, PASCAL VOC, and Airbus Ship, especially in low-data regimes like 1% labels and few-shot settings.
+- **核心贡献**: 提出首个预训练完整检测网络的自监督方法，包括定位和嵌入组件。
+- **创新点**: 结合区域提议生成器和自监督编码器，联合优化定位与嵌入。
+- **结果**: 在多个基准上超越基线，低数据场景提升显著。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -69,11 +95,16 @@
 
 </details>
 
-### Label Matching Semi-Supervised Object Detection.
-- **链接**: [arXiv:2206.06608](https://arxiv.org/abs/2206.06608) · [代码](https://github.com/hikvision-research/SSOD)
+### Label Matching Semi-Supervised Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2206.06608](https://arxiv.org/abs/2206.06608)
 - **作者**: Binbin Chen, Weijie Chen, Shicai Yang, Yunyi Xuan, Jie Song, Di Xie et al.
 - **🏷️ 机构**: ZJU
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对半监督目标检测中自训练导致的标签不匹配和确认偏差问题，提出LabelMatch框架，从分布级和实例级两个互补角度解决。分布级通过蒙特卡洛采样近似未标注数据类别分布，引入自适应置信度阈值生成无偏伪标签；实例级提出提议自分配机制，将学生模型的提议注入教师模型以生成准确伪标签。该方法有效缓解标签不匹配，提升半监督检测性能。
+- **摘要（英）**: To address label mismatch and confirmation bias in semi-supervised object detection, LabelMatch proposes a framework with distribution-level adaptive thresholds via Monte Carlo sampling and instance-level proposal self-assignment to generate accurate pseudo labels. It effectively mitigates label mismatch and improves detection performance.
+- **核心贡献**: 提出分布级和实例级互补的标签匹配框架，提升半监督检测性能。
+- **创新点**: 引入自适应分布感知阈值和提议自分配机制。
+- **结果**: 在多个半监督检测基准上取得显著提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -81,11 +112,16 @@
 
 </details>
 
-### Dense Learning based Semi-Supervised Object Detection.
-- **链接**: [arXiv:2204.07300](https://arxiv.org/abs/2204.07300) · [代码](https://github.com/chenbinghui1/DSL) · 📚 被引 81
+### Dense Learning based Semi-Supervised Object Detection. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2204.07300](https://arxiv.org/abs/2204.07300) · 📚 被引 81
 - **作者**: Binghui Chen, Pengyu Li, Xiang Chen, Biao Wang, Lei Zhang, Xian-Sheng Hua
 - **🏷️ 机构**: Alibaba Group, The Hong Kong Polytechnic University
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对半监督目标检测中锚框检测器主导、锚框自由检测器需求未满足的问题，提出基于密集学习的锚框自由SSOD算法DSL。引入自适应过滤策略生成多级精确密集像素级伪标签，聚合教师产生稳定伪标签，以及尺度间和补丁间的不确定性一致性正则化。在MS-COCO和PASCAL-VOC上大幅超越现有方法，刷新SOTA。
+- **摘要（英）**: To bridge the gap in semi-supervised object detection for anchor-free detectors, we propose DSL, a dense learning-based algorithm. It introduces adaptive filtering for pseudo-labels, an aggregated teacher, and uncertainty-consistency regularization. DSL achieves new state-of-the-art performance on MS-COCO and PASCAL-VOC.
+- **核心贡献**: 提出DSL算法，实现锚框自由检测器的高效半监督学习。
+- **创新点**: 自适应过滤和聚合教师策略提升伪标签质量。
+- **结果**: 在MS-COCO和PASCAL-VOC上大幅超越现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -93,11 +129,16 @@
 
 </details>
 
-### Implicit Motion Handling for Video Camouflaged Object Detection.
+### Implicit Motion Handling for Video Camouflaged Object Detection. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2203.07363](https://arxiv.org/abs/2203.07363) · 📚 被引 79
 - **作者**: Xuelian Cheng, Huan Xiong, Deng-Ping Fan, Yiran Zhong, Mehrtash Harandi, Tom Drummond et al.
 - **🏷️ 机构**: Monash University,Faculty of Engineering, Mohamed bin Zayed University of Artificial Intelligence, CVL, ETH Zurich
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对视频伪装目标检测中运动估计误差累积的问题，提出统一运动估计和分割的优化框架。构建密集相关体积隐式捕获帧间运动，利用分割监督联合优化。引入时空变换器增强时序一致性。该方法避免显式光流或单应性估计，减少误差传播。
+- **摘要（英）**: To address error accumulation in video camouflaged object detection, we propose a unified framework that implicitly captures motion via dense correlation volumes and jointly optimizes motion estimation and segmentation. A spatio-temporal transformer enforces temporal consistency. This avoids explicit motion estimation, reducing error propagation.
+- **核心贡献**: 提出隐式运动处理框架，统一运动估计和分割。
+- **创新点**: 密集相关体积和联合优化避免显式运动估计。
+- **结果**: 在VCOD任务上有效提升检测性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -805,4 +846,5 @@
 - Object Discovery via Contrastive Learning for Weakly Supervised Object Detection. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
 - Deformable Feature Aggregation for Dynamic Multi-modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
 - Multimodal Object Detection via Probabilistic Ensembling. → [multimodal](../multimodal/Guideline%202022.md)
+
 <!-- COMPLETE v1 papers=87 -->

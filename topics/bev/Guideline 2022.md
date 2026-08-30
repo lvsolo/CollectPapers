@@ -3,21 +3,24 @@
 > 领域: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
 > 论文数: 1 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### BEVFormer: Learning Bird's-Eye-View Representation from Multi-camera Images via Spatiotemporal Transformers.
-- **链接**: [arXiv:2203.17270](https://arxiv.org/abs/2203.17270) · [代码](https://github.com/zhiqi-li/BEVFormer) · 📚 被引 1287
+### BEVFormer: Learning Bird's-Eye-View Representation from Multi-camera Images via Spatiotemporal Transformers. **⭐⭐⭐⭐⭐** (相关度: 100%)
+- **链接**: [arXiv:2203.17270](https://arxiv.org/abs/2203.17270) · 📚 被引 1287
 - **作者**: Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima, Tong Lu et al.
 - **🏷️ 机构**: Shanghai AI Lab, Tsinghua / Shanghai AI Lab
 - **会议**: ECCV 2022
+- **摘要（中）**: ①针对多相机图像下3D感知任务（如3D检测和地图分割）中缺乏统一BEV表示和时序信息利用不足的问题。②提出了BEVFormer框架，通过预定义的网格状BEV查询，利用空间交叉注意力聚合多相机视角的空间特征，并通过时序自注意力循环融合历史BEV信息。③相比已有方法，首次在BEV空间中同时建模空间和时间信息，支持多任务，且无需昂贵的深度估计。④在nuScenes测试集上NDS达到56.9%，比之前最优方法高9.0点，与基于LiDAR的方法性能相当，并显著提升了速度估计精度和低可见度下的召回率。
+- **摘要（英）**: This paper addresses the lack of unified BEV representation and temporal modeling in multi-camera 3D perception. It proposes BEVFormer, which uses spatiotemporal transformers with grid-shaped BEV queries and spatial cross-attention plus temporal self-attention to aggregate multi-view and historical features. It achieves 56.9% NDS on nuScenes test, surpassing prior art by 9.0 points and matching LiDAR-based methods.
+- **核心贡献**: 提出基于时空Transformer的统一BEV表示框架，支持多任务3D感知。
+- **创新点**: 通过网格化BEV查询结合空间交叉注意力和时序自注意力，实现多视角与时序信息的联合建模。
+- **结果**: 在nuScenes上NDS达56.9%，超越现有方法并媲美LiDAR基线。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > 3D visual perception tasks, including 3D detection and map segmentation based on multi-camera images, are essential for autonomous driving systems. In this work, we present a new framework termed BEVFormer, which learns unified BEV representations with spatiotemporal transformers to support multiple autonomous driving perception tasks. In a nutshell, BEVFormer exploits both spatial and temporal information by interacting with spatial and temporal space through predefined grid-shaped BEV queries. To aggregate spatial information, we design spatial cross-attention that each BEV query extracts the spatial features from the regions of interest across camera views. For temporal information, we propose temporal self-attention to recurrently fuse the history BEV information. Our approach achieves the new state-of-the-art 56.9\% in terms of NDS metric on the nuScenes \texttt{test} set, which is 9.0 points higher than previous best arts and on par with the performance of LiDAR-based baselines. We further show that BEVFormer remarkably improves the accuracy of velocity estimation and recall of objects under low visibility conditions. The code is available at \url{https://github.com/zhiqi-li/BEVFormer}.
 
 </details>
-
-## 🆕 增量新增
 
 ### Lidar Point Cloud Guided Monocular 3D Object Detection. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2104.09035](https://arxiv.org/abs/2104.09035)
@@ -92,4 +95,5 @@
 - VISTA: Boosting 3D Object Detection via Dual Cross-VIew SpaTial Attention. → [object-detection](../object-detection/Guideline%202022.md)
 - A Versatile Multi-View Framework for LiDAR-based 3D Object Detection with Guidance from Panoptic Segmentation. → [object-detection](../object-detection/Guideline%202022.md)
 - Quo Vadis: Is Trajectory Forecasting the Key Towards Long-Term Multi-Object Tracking? → [tracking](../tracking/Guideline%202022.md)
+
 <!-- COMPLETE v1 papers=5 -->

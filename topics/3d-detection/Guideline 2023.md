@@ -3,7 +3,7 @@
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
 > 论文数: 36 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### Surround-View Vision-based 3D Detection for Autonomous Driving: A Survey.
 - **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00348)
@@ -59,15 +59,20 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
-### itKD: Interchange Transfer-based Knowledge Distillation for 3D Object Detection.
+### itKD: Interchange Transfer-based Knowledge Distillation for 3D Object Detection. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2205.15531](https://arxiv.org/abs/2205.15531) · 📚 被引 34
 - **作者**: Hyeon Cho, Junyong Choi, Geonwoo Baek, Wonjun Hwang
 - **🏷️ 机构**: Ajou University
 - **会议**: CVPR 2023
+- **摘要（中）**: 针对3D点云检测模型计算量大、难以部署的问题，提出了一种基于交换传递的知识蒸馏方法itKD。该方法利用共享自编码器对教师和学生网络的通道特征进行压缩和解压，通过压缩表示损失和交换重建损失来对齐特征，并引入头部注意力损失以匹配检测信息。实验表明，该方法能有效训练轻量级模型，在保持精度的同时提升计算效率。
+- **摘要（英）**: To address the computational inefficiency of 3D point cloud detectors, this paper proposes itKD, an interchange transfer-based knowledge distillation method. It uses a shared autoencoder for channel-wise compression and decompression, with losses for compressed representation and interchange reconstruction, plus a head attention loss. Experiments show it effectively trains lightweight models with improved efficiency.
+- **核心贡献**: 提出了一种基于交换传递的知识蒸馏框架，用于训练轻量级3D检测模型。
+- **创新点**: 通过共享自编码器和交换重建机制实现特征对齐，并引入注意力损失。
+- **结果**: 在保持检测精度的同时显著降低了模型计算量。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> False negatives (FN) in 3D object detection, {\em e.g.}, missing predictions of pedestrians, vehicles, or other obstacles, can lead to potentially dangerous situations in autonomous driving. While being fatal, this issue is understudied in many current 3D detection methods. In this work, we propose Hard Instance Probing (HIP), a general pipeline that identifies \textit{FN} in a multi-stage manner and guides the models to focus on excavating difficult instances. For 3D object detection, we instantiate this method as FocalFormer3D, a simple yet effective detector that excels at excavating difficult objects and improving prediction recall. FocalFormer3D features a multi-stage query generation to discover hard objects and a box-level transformer decoder to efficiently distinguish objects from massive object candidates. Experimental results on the nuScenes and Waymo datasets validate the superior performance of FocalFormer3D. The advantage leads to strong performance on both detection and tracking, in both LiDAR and multi-modal settings. Notably, FocalFormer3D achieves a 70.5 mAP and 73.9 NDS on nuScenes detection benchmark, while the nuScenes tracking benchmark shows 72.1 AMOTA, both ranking 1st place on the nuScenes LiDAR leaderboard. Our code is available at \url{https://github.com/NVlabs/FocalFormer3D}.
+> Point-cloud based 3D object detectors recently have achieved remarkable progress. However, most studies are limited to the development of network architectures for improving only their accuracy without consideration of the computational efficiency. In this paper, we first propose an autoencoder-style framework comprising channel-wise compression and decompression via interchange transfer-based knowledge distillation. To learn the map-view feature of a teacher network, the features from teacher and student networks are independently passed through the shared autoencoder; here, we use a compressed representation loss that binds the channel-wised compression knowledge from both student and teacher networks as a kind of regularization. The decompressed features are transferred in opposite directions to reduce the gap in the interchange reconstructions. Lastly, we present an head attention loss to match the 3D object detection information drawn by the multi-head self-attention mechanism. Through extensive experiments, we verify that our method can train the lightweight model that is well-aligned with the 3D point cloud detection task and we demonstrate its superiority using the well-known public datasets; e.g., Waymo and nuScenes.
 
 </details>
 
@@ -83,33 +88,48 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
-### MSF: Motion-guided Sequential Fusion for Efficient 3D Object Detection from Point Cloud Sequences.
-- **链接**: [arXiv:2303.08316](https://arxiv.org/abs/2303.08316) · [代码](https://github.com/skyhehe123/MSF) · 📚 被引 33
+### MSF: Motion-guided Sequential Fusion for Efficient 3D Object Detection from Point Cloud Sequences. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2303.08316](https://arxiv.org/abs/2303.08316) · 📚 被引 33
 - **作者**: Chenhang He, Ruihuang Li, Yabin Zhang, Shuai Li, Lei Zhang
 - **🏷️ 机构**: The Hong Kong Polytechnic University
 - **会议**: CVPR 2023
+- **摘要（中）**: 针对多帧点云检测中Detect-and-Fuse框架计算冗余的问题，提出运动引导的序列融合方法MSF。该方法利用物体运动的连续性，在当前帧生成3D proposals并基于估计速度传播到前序帧，然后从序列中池化感兴趣点并编码为proposal特征。提出双向特征聚合模块促进跨帧交互，并通过体素采样优化点云池化速度。MSF在提升效率的同时保持了高精度。
+- **摘要（英）**: To address the computational redundancy in multi-frame point cloud detection, this paper proposes Motion-guided Sequential Fusion (MSF). It generates 3D proposals in the current frame, propagates them to previous frames using estimated velocities, and pools points-of-interest for feature encoding. A Bidirectional Feature Aggregation module enhances cross-frame interactions, and voxel-based sampling optimizes pooling speed. MSF achieves better efficiency while maintaining accuracy.
+- **核心贡献**: 提出了一种运动引导的序列融合方法，显著提升了多帧3D检测的效率。
+- **创新点**: 利用运动连续性引导proposal传播，并设计了双向特征聚合和快速池化技术。
+- **结果**: 在保持高精度的同时，大幅降低了计算开销。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Recent camera-based 3D object detection methods have introduced sequential frames to improve the detection performance hoping that multiple frames would mitigate the large depth estimation error. Despite improved detection performance, prior works rely on naive fusion methods (e.g., concatenation) or are limited to static scenes (e.g., temporal stereo), neglecting the importance of the motion cue of objects. These approaches do not fully exploit the potential of sequential images and show limited performance improvements. To address this limitation, we propose a novel 3D object detection model, P2D (Predict to Detect), that integrates a prediction scheme into a detection framework to explicitly extract and leverage motion features. P2D predicts object information in the current frame using solely past frames to learn temporal motion features. We then introduce a novel temporal feature aggregation method that attentively exploits Bird's-Eye-View (BEV) features based on predicted object information, resulting in accurate 3D object detection. Experimental results demonstrate that P2D improves mAP and NDS by 3.0% and 3.7% compared to the sequential image-based baseline, illustrating that incorporating a prediction scheme can significantly improve detection accuracy.
+> Point cloud sequences are commonly used to accurately detect 3D objects in applications such as autonomous driving. Current top-performing multi-frame detectors mostly follow a Detect-and-Fuse framework, which extracts features from each frame of the sequence and fuses them to detect the objects in the current frame. However, this inevitably leads to redundant computation since adjacent frames are highly correlated. In this paper, we propose an efficient Motion-guided Sequential Fusion (MSF) method, which exploits the continuity of object motion to mine useful sequential contexts for object detection in the current frame. We first generate 3D proposals on the current frame and propagate them to preceding frames based on the estimated velocities. The points-of-interest are then pooled from the sequence and encoded as proposal features. A novel Bidirectional Feature Aggregation (BiFA) module is further proposed to facilitate the interactions of proposal features across frames. Besides, we optimize the point cloud pooling by a voxel-based sampling technique so that millions of points can be processed in several milliseconds. The proposed MSF method achieves not only better efficiency than other multi-frame detectors but also leading accuracy, with 83.12% and 78.30% mAP on the LEVEL1 and LEVEL2 test sets of Waymo Open Dataset, respectively. Codes can be found at \url{https://github.com/skyhehe123/MSF}.
 
 </details>
 
-### Density-Insensitive Unsupervised Domain Adaption on 3D Object Detection.
-- **链接**: [arXiv:2304.09446](https://arxiv.org/abs/2304.09446) · 📚 被引 40
+### Density-Insensitive Unsupervised Domain Adaption on 3D Object Detection. **⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01684) · 📚 被引 40
 - **作者**: Qianjiang Hu, Daizong Liu, Wei Hu
 - **🏷️ 机构**: Wangxuan Institute of Computer Technology, Peking University,Beijing,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对无监督域适应在3D目标检测中因点云密度差异大导致性能下降的问题。②提出了一种密度不敏感的域适应方法，通过设计密度感知的特征对齐和样本加权策略，减少源域与目标域之间点云密度分布差异的影响。③相比现有域适应方法，该方法显式建模密度变化，提高了在稀疏和密集场景下的泛化能力。④在多个基准数据集上验证了有效性，显著提升了目标域检测精度。
+- **摘要（英）**: This paper addresses the issue of density variation in unsupervised domain adaptation for 3D object detection. It proposes a density-insensitive method that aligns features and weights samples based on density distributions, improving generalization across domains. Experiments show significant accuracy gains on target benchmarks.
+- **核心贡献**: 提出密度不敏感的无监督域适应框架，提升3D检测跨域性能。
+- **创新点**: 引入密度感知的对齐与加权机制。
+- **结果**: 在多个数据集上显著提升目标域检测精度。
 
-### MSMDFusion: Fusing LiDAR and Camera at Multiple Scales with Multi-Depth Seeds for 3D Object Detection.
-- **链接**: [arXiv:2209.03102](https://arxiv.org/abs/2209.03102) · [代码](https://github.com/SxJyJay/MSMDFusion) · 📚 被引 144
+### MSMDFusion: Fusing LiDAR and Camera at Multiple Scales with Multi-Depth Seeds for 3D Object Detection. **⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2209.03102](https://arxiv.org/abs/2209.03102) · 📚 被引 144
 - **作者**: Yang Jiao, Zequn Jie, Shaoxiang Chen, Jingjing Chen, Lin Ma, Yu-Gang Jiang
 - **🏷️ 机构**: School of CS, Fudan University,Shanghai Key Lab of Intell. Info. Processing, Meituan
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对LiDAR与相机融合中深度信息利用不足和跨模态交互粒度不够的问题。②提出MSMDFusion框架，包含多深度反投影（MDU）方法，利用深度感知设计增强种子点提升，并在体素空间实现细粒度跨模态融合。③相比现有方法，MDU更好地利用深度信息，融合策略支持多尺度交互，提高了2D语义与3D点云的融合可靠性。④在nuScenes和Waymo数据集上取得了领先的3D检测性能。
+- **摘要（英）**: This paper tackles insufficient depth exploitation and coarse cross-modal interaction in LiDAR-camera fusion. It introduces MSMDFusion with multi-depth unprojection and fine-grained voxel-level fusion, improving semantic-geometric alignment. The method achieves state-of-the-art results on nuScenes and Waymo.
+- **核心贡献**: 提出多深度反投影与多尺度融合框架，提升3D检测精度。
+- **创新点**: 深度感知的种子提升和体素级细粒度交互。
+- **结果**: 在主流基准上达到领先性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> One of the main challenges in LiDAR-based 3D object detection is that the sensors often fail to capture the complete spatial information about the objects due to long distance and occlusion. Two-stage detectors with point cloud completion approaches tackle this problem by adding more points to the regions of interest (RoIs) with a pre-trained network. However, these methods generate dense point clouds of objects for all region proposals, assuming that objects always exist in the RoIs. This leads to the indiscriminate point generation for incorrect proposals as well. Motivated by this, we propose Point Generation R-CNN (PG-RCNN), a novel end-to-end detector that generates semantic surface points of foreground objects for accurate detection. Our method uses a jointly trained RoI point generation module to process the contextual information of RoIs and estimate the complete shape and displacement of foreground objects. For every generated point, PG-RCNN assigns a semantic feature that indicates the estimated foreground probability. Extensive experiments show that the point clouds generated by our method provide geometrically and semantically rich information for refining false positive and misaligned proposals. PG-RCNN achieves competitive performance on the KITTI benchmark, with significantly fewer parameters than state-of-the-art models. The code is available at https://github.com/quotation2520/PG-RCNN.
+> Fusing LiDAR and camera information is essential for achieving accurate and reliable 3D object detection in autonomous driving systems. This is challenging due to the difficulty of combining multi-granularity geometric and semantic features from two drastically different modalities. Recent approaches aim at exploring the semantic densities of camera features through lifting points in 2D camera images (referred to as seeds) into 3D space, and then incorporate 2D semantics via cross-modal interaction or fusion techniques. However, depth information is under-investigated in these approaches when lifting points into 3D space, thus 2D semantics can not be reliably fused with 3D points. Moreover, their multi-modal fusion strategy, which is implemented as concatenation or attention, either can not effectively fuse 2D and 3D information or is unable to perform fine-grained interactions in the voxel space. To this end, we propose a novel framework with better utilization of the depth information and fine-grained cross-modal interaction between LiDAR and camera, which consists of two important components. First, a Multi-Depth Unprojection (MDU) method with depth-aware designs is used to enhance the depth quality of the lifted points at each interaction level. Second, a Gated Modality-Aware Convolution (GMA-Conv) block is applied to modulate voxels involved with the camera modality in a fine-grained manner and then aggregate multi-modal features into a unified space. Together they provide the detection head with more comprehensive features from LiDAR and camera. On the nuScenes test benchmark, our proposed method, abbreviated as MSMDFusion, achieves state-of-the-art 3D object detection results with 71.5% mAP and 74.0% NDS, and strong tracking results with 74.0% AMOTA without using test-time-augmentation and ensemble techniques. The code is available at https://github.com/SxJyJay/MSMDFusion.
 
 </details>
 
@@ -119,21 +139,31 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
-### LoGoNet: Towards Accurate 3D Object Detection with Local-to-Global Cross- Modal Fusion.
+### LoGoNet: Towards Accurate 3D Object Detection with Local-to-Global Cross- Modal Fusion. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01681) · 📚 被引 181
 - **作者**: Xin Li, Tao Ma, Yuenan Hou, Botian Shi, Yuchen Yang, Youquan Liu et al.
 - **🏷️ 机构**: The Chinese University of Hong Kong, Shanghai AI Laboratory, Fudan University
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对3D检测中局部与全局跨模态融合不充分的问题。②提出LoGoNet，设计局部到全局的融合模块，先对齐局部几何与语义，再通过全局注意力整合上下文信息。③相比仅局部或全局融合，该方法兼顾细节与全局一致性，提升复杂场景下的检测鲁棒性。④在KITTI和nuScenes上取得领先结果。
+- **摘要（英）**: This paper addresses insufficient local-global cross-modal fusion in 3D detection. LoGoNet integrates local geometric alignment with global context attention, improving robustness. It achieves state-of-the-art performance on KITTI and nuScenes.
+- **核心贡献**: 提出局部到全局的跨模态融合网络。
+- **创新点**: 分层融合策略结合全局上下文。
+- **结果**: 在多个基准上达到领先精度。
 
-### PillarNeXt: Rethinking Network Designs for 3D Object Detection in LiDAR Point Clouds.
+### PillarNeXt: Rethinking Network Designs for 3D Object Detection in LiDAR Point Clouds. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2305.04925](https://arxiv.org/abs/2305.04925) · 📚 被引 182
 - **作者**: Jinyu Li, Chenxu Luo, Xiaodong Yang
 - **🏷️ 机构**: QCraft
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对LiDAR点云检测中复杂局部聚合器设计是否必要的问题。②重新审视基于柱状（pillar）的模型，通过借鉴2D检测的成功经验（如扩大感受野）和现代化训练策略，简化网络设计。③相比复杂点聚合器，该方法在保持高精度的同时显著降低延迟，挑战了精细几何建模的必要性。④在Waymo和nuScenes上取得最先进性能，同时推理速度更快。
+- **摘要（英）**: This paper questions the necessity of complex local aggregators in LiDAR detection. PillarNeXt simplifies designs by adopting 2D detection insights like larger receptive fields, achieving SOTA on Waymo and nuScenes with lower latency.
+- **核心贡献**: 证明简化柱状模型可达到最先进性能。
+- **创新点**: 重新设计网络架构与训练策略。
+- **结果**: 在两大基准上实现精度与速度的平衡。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> LiDAR-based 3D detection has made great progress in recent years. However, the performance of 3D detectors is considerably limited when deployed in unseen environments, owing to the severe domain gap problem. Existing domain adaptive 3D detection methods do not adequately consider the problem of the distributional discrepancy in feature space, thereby hindering generalization of detectors across domains. In this work, we propose a novel unsupervised domain adaptive \textbf{3D} detection framework, namely \textbf{G}eometry-aware \textbf{P}rototype \textbf{A}lignment (\textbf{GPA-3D}), which explicitly leverages the intrinsic geometric relationship from point cloud objects to reduce the feature discrepancy, thus facilitating cross-domain transferring. Specifically, GPA-3D assigns a series of tailored and learnable prototypes to point cloud objects with distinct geometric structures. Each prototype aligns BEV (bird's-eye-view) features derived from corresponding point cloud objects on source and target domains, reducing the distributional discrepancy and achieving better adaptation. The evaluation results obtained on various benchmarks, including Waymo, nuScenes and KITTI, demonstrate the superiority of our GPA-3D over the state-of-the-art approaches for different adaptation scenarios. The MindSpore version code will be publicly available at \url{https://github.com/Liz66666/GPA3D}.
+> In order to deal with the sparse and unstructured raw point clouds, LiDAR based 3D object detection research mostly focuses on designing dedicated local point aggregators for fine-grained geometrical modeling. In this paper, we revisit the local point aggregators from the perspective of allocating computational resources. We find that the simplest pillar based models perform surprisingly well considering both accuracy and latency. Additionally, we show that minimal adaptions from the success of 2D object detection, such as enlarging receptive field, significantly boost the performance. Extensive experiments reveal that our pillar based networks with modernized designs in terms of architecture and training render the state-of-the-art performance on the two popular benchmarks: Waymo Open Dataset and nuScenes. Our results challenge the common intuition that the detailed geometry modeling is essential to achieve high performance for 3D object detection.
 
 </details>
 
@@ -732,4 +762,5 @@
 - Time Will Tell: New Outlooks and A Baseline for Temporal Multi-View 3D Object Detection. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
 - CoDA: Collaborative Novel Box Discovery and Cross-modal Alignment for Open-vocabulary 3D Object Detection. → [open-set-detection](../open-set-detection/Guideline%202023.md)
 - CluB: Cluster Meets BEV for LiDAR-Based 3D Object Detection. → [bev](../bev/Guideline%202023.md)
+
 <!-- COMPLETE v1 papers=82 -->

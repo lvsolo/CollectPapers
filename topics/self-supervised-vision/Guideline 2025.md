@@ -3,61 +3,74 @@
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
 > 论文数: 54 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### BOE-ViT: Boosting Orientation Estimation with Equivariance in Self-Supervised 3D Subtomogram Alignment.
+### BOE-ViT: Boosting Orientation Estimation with Equivariance in Self-Supervised 3D Subtomogram Alignment. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Jiang_BOE-ViT_Boosting_Orientation_Estimation_with_Equivariance_in_Self-Supervised_3D_Subtomogram_CVPR_2025_paper.html)
 - **作者**: Runmin Jiang, Jackson Daggett, Shriya Pingulkar, Yizhou Zhao, Priyanshu Dhingra, Daniel Brown et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Carnegie Mellon University, K. J. Somaiya College of Engineering, Rajiv Gandhi Institute of Petroleum Technology
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对自监督3D亚断层图像对齐中方向估计精度不足的问题。②提出BOE-ViT，利用等变性（equivariance）增强方向估计，在自监督框架下进行3D亚断层图像对齐。③相比现有方法，通过引入等变性约束，提升了对旋转变化的鲁棒性和对齐精度。④摘要未提供具体数据，但方法在方向估计任务上具有理论优势。
+- **摘要（英）**: This paper addresses the issue of inaccurate orientation estimation in self-supervised 3D subtomogram alignment. It proposes BOE-ViT, which leverages equivariance to enhance orientation estimation within a self-supervised framework. Compared to existing methods, it improves robustness to rotational variations and alignment accuracy. Specific quantitative results are not provided in the abstract.
+- **核心贡献**: 提出基于等变性的自监督方向估计方法，提升3D亚断层图像对齐性能。
+- **创新点**: 将等变性约束引入自监督3D对齐任务。
+- **结果**: 在方向估计任务上实现更优的对齐精度（具体数据未给出）。
 
-### Multi-Scale Neighborhood Occupancy Masked Autoencoder for Self-Supervised Learning in LiDAR Point Clouds.
+### Multi-Scale Neighborhood Occupancy Masked Autoencoder for Self-Supervised Learning in LiDAR Point Clouds. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [arXiv:2502.20316](https://arxiv.org/abs/2502.20316) · 📚 被引 5
 - **作者**: Mohamed Abdelsamad, Michael Ulrich, Claudius Gläser, Abhinav Valada
 - **🏷️ 机构**: Bosch Center for AI, University of Freiburg
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对LiDAR点云掩码自编码器中大面积空区域导致的信息泄露和高计算复杂度问题，提出多尺度邻域占用掩码自编码器（NOMAE）。方法仅在非掩码体素邻域内进行占用重建，并通过分层掩码生成技术捕捉不同尺寸物体特征。在nuScenes和Waymo数据集上对语义分割和3D检测任务进行了评估，与判别式和生成式SSL方法对比。
+- **摘要（英）**: To address information leakage and high computational complexity in masked autoencoders for LiDAR point clouds due to large empty areas, NOMAE performs occupancy reconstruction only in neighborhoods of non-masked voxels. It incorporates hierarchical mask generation for multi-scale feature capture. Evaluations on nuScenes and Waymo for segmentation and detection show effectiveness.
+- **核心贡献**: 提出邻域占用重建的掩码自编码器，提升LiDAR点云自监督学习效率。
+- **创新点**: 仅在非掩码体素邻域内重建占用，避免信息泄露并降低复杂度。
+- **结果**: 在多个数据集和任务上优于现有SSL方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Self-supervised learning (SSL) has emerged as a powerful paradigm for learning representations without labeled data, often by enforcing invariance to input transformations such as rotations or blurring. Recent studies have highlighted two pivotal properties for effective representations: (i) avoiding dimensional collapse-where the learned features occupy only a low-dimensional subspace, and (ii) enhancing uniformity of the induced distribution. In this work, we introduce T-REGS, a simple regularization framework for SSL based on the length of the Minimum Spanning Tree (MST) over the learned representation. We provide theoretical analysis demonstrating that T-REGS simultaneously mitigates dimensional collapse and promotes distribution uniformity on arbitrary compact Riemannian manifolds. Several experiments on synthetic data and on classical SSL benchmarks validate the effectiveness of our approach at enhancing representation quality.
+> Masked autoencoders (MAE) have shown tremendous potential for self-supervised learning (SSL) in vision and beyond. However, point clouds from LiDARs used in automated driving are particularly challenging for MAEs since large areas of the 3D volume are empty. Consequently, existing work suffers from leaking occupancy information into the decoder and has significant computational complexity, thereby limiting the SSL pre-training to only 2D bird's eye view encoders in practice. In this work, we propose the novel neighborhood occupancy MAE (NOMAE) that overcomes the aforementioned challenges by employing masked occupancy reconstruction only in the neighborhood of non-masked voxels. We incorporate voxel masking and occupancy reconstruction at multiple scales with our proposed hierarchical mask generation technique to capture features of objects of different sizes in the point cloud. NOMAEs are extremely flexible and can be directly employed for SSL in existing 3D architectures. We perform extensive evaluations on the nuScenes and Waymo Open datasets for the downstream perception tasks of semantic segmentation and 3D object detection, comparing with both discriminative and generative SSL methods. The results demonstrate that NOMAE sets the new state-of-the-art on multiple benchmarks for multiple point cloud perception tasks.
 
 </details>
 
-### PSA-SSL: Pose and Size-aware Self-Supervised Learning on LiDAR Point Clouds.
-- **链接**: [arXiv:2503.13914](https://arxiv.org/abs/2503.13914) · [代码](https://github.com/TRAILab/PSA-SSL) · 📚 被引 4
+### PSA-SSL: Pose and Size-aware Self-Supervised Learning on LiDAR Point Clouds. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2503.13914](https://arxiv.org/abs/2503.13914) · 📚 被引 4
 - **作者**: Barza Nisar, Steven L. Waslander
 - **🏷️ 机构**: University of Toronto Robotics Institute
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对现有3D点云自监督学习预文本任务忽略物体姿态和尺度信息的问题，提出PSA-SSL方法。通过定义自监督边界框回归预文本任务保留姿态和尺寸信息，并引入LiDAR波束模式增强以学习传感器无关特征。在Waymo、nuScenes和SemanticKITTI数据集上，单预训练模型在有限标签的语义分割任务上取得显著提升。
+- **摘要（英）**: To address the neglect of object pose and scale in 3D point cloud SSL pretext tasks, PSA-SSL defines a self-supervised bounding box regression task to retain geometric information. It also incorporates LiDAR beam pattern augmentation for sensor-agnostic features. Experiments on Waymo, nuScenes, and SemanticKITTI show significant improvements in segmentation with limited labels.
+- **核心贡献**: 提出姿态和尺寸感知的自监督学习框架，提升3D点云特征质量。
+- **创新点**: 引入边界框回归预文本任务和波束模式增强。
+- **结果**: 在多个自动驾驶数据集上优于现有SSL方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> MEMS gyroscopes play a critical role in inertial navigation and motion control applications but typically suffer from a fundamental trade-off between measurement range and noise performance. Existing hardware-based solutions aimed at mitigating this issue introduce additional complexity, cost, and scalability challenges. Deep-learning methods primarily focus on noise reduction and typically require precisely aligned ground-truth signals, making them difficult to deploy in practical scenarios and leaving the fundamental trade-off unresolved. To address these challenges, we introduce Mixture of Experts for MEMS Gyroscopes (MoE-Gyro), a novel self-supervised framework specifically designed for simultaneous over-range signal reconstruction and noise suppression. MoE-Gyro employs two experts: an Over-Range Reconstruction Expert (ORE), featuring a Gaussian-Decay Attention mechanism for reconstructing saturated segments; and a Denoise Expert (DE), utilizing dual-branch complementary masking combined with FFT-guided augmentation for robust noise reduction. A lightweight gating module dynamically routes input segments to the appropriate expert. Furthermore, existing evaluation lack a comprehensive standard for assessing multi-dimensional signal enhancement. To bridge this gap, we introduce IMU Signal Enhancement Benchmark (ISEBench), an open-source benchmarking platform comprising the GyroPeak-100 dataset and a unified evaluation of IMU signal enhancement methods. We evaluate MoE-Gyro using our proposed ISEBench, demonstrating that our framework significantly extends the measurable range from 450 deg/s to 1500 deg/s, reduces Bias Instability by 98.4%, and achieves state-of-the-art performance, effectively addressing the long-standing trade-off in inertial sensing.
+> Self-supervised learning (SSL) on 3D point clouds has the potential to learn feature representations that can transfer to diverse sensors and multiple downstream perception tasks. However, recent SSL approaches fail to define pretext tasks that retain geometric information such as object pose and scale, which can be detrimental to the performance of downstream localization and geometry-sensitive 3D scene understanding tasks, such as 3D semantic segmentation and 3D object detection. We propose PSA-SSL, a novel extension to point cloud SSL that learns object pose and size-aware (PSA) features. Our approach defines a self-supervised bounding box regression pretext task, which retains object pose and size information. Furthermore, we incorporate LiDAR beam pattern augmentation on input point clouds, which encourages learning sensor-agnostic features. Our experiments demonstrate that with a single pretrained model, our light-weight yet effective extensions achieve significant improvements on 3D semantic segmentation with limited labels across popular autonomous driving datasets (Waymo, nuScenes, SemanticKITTI). Moreover, our approach outperforms other state-of-the-art SSL methods on 3D semantic segmentation (using up to 10 times less labels), as well as on 3D object detection. Our code will be released on https://github.com/TRAILab/PSA-SSL.
 
 </details>
 
-### A Unified Approach to Interpreting Self-supervised Pre-training Methods for 3D Point Clouds via Interactions.
+### A Unified Approach to Interpreting Self-supervised Pre-training Methods for 3D Point Clouds via Interactions. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Li_A_Unified_Approach_to_Interpreting_Self-supervised_Pre-training_Methods_for_3D_CVPR_2025_paper.html) · 📚 被引 1
 - **作者**: Qiang Li, Jian Ruan, Fanghao Wu, Yuchi Chen, Zhihua Wei, Wen Shen
 - **🏷️ 机构**: Tongji University,Shanghai,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对3D点云自监督预训练方法缺乏统一解释框架的问题。②提出一种基于交互（interactions）的统一视角，用于解释多种自监督预训练方法。③相比零散的方法分析，提供了理论统一性，有助于理解不同方法的共性。④摘要未提供具体实验数据，主要贡献在理论层面。
+- **摘要（英）**: This paper addresses the lack of a unified interpretation framework for self-supervised pre-training methods on 3D point clouds. It proposes a unified perspective based on interactions to explain various methods. Compared to fragmented analyses, it offers theoretical unification, aiding understanding of commonalities. No specific experimental data is provided in the abstract.
+- **核心贡献**: 提出基于交互的统一解释框架，连接多种3D点云自监督方法。
+- **创新点**: 从交互角度统一自监督预训练的理论基础。
+- **结果**: 提供理论洞见，无具体实验数据。
 
-### Self-Supervised Large Scale Point Cloud Completion for Archaeological Site Restoration.
-- **链接**: [arXiv:2503.04030](https://arxiv.org/abs/2503.04030) · 📚 被引 2
-- **作者**: Aocheng Li, James Zimmer-Dauphinee, Rajesh Kalyanam, Ian Lindsay, Parker VanValkenburgh, Steven A. Wernke et al.
-- **🏷️ 机构**: Purdue University, Vanderbilt University, Brown University
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The shape of objects is an important source of visual information in a wide range of applications. One of the core challenges of shape quantification is to ensure that the extracted measurements remain invariant to transformations that preserve an object's intrinsic geometry, such as changing its size, orientation, and position in the image. In this work, we introduce ShapeEmbed, a self-supervised representation learning framework designed to encode the contour of objects in 2D images, represented as a Euclidean distance matrix, into a shape descriptor that is invariant to translation, scaling, rotation, reflection, and point indexing. Our approach overcomes the limitations of traditional shape descriptors while improving upon existing state-of-the-art autoencoder-based approaches. We demonstrate that the descriptors learned by our framework outperform their competitors in shape classification tasks on natural and biological images. We envision our approach to be of particular relevance to biological imaging applications.
-
-</details>
-
-### On-Device Self-Supervised Learning of Low-Latency Monocular Depth from Only Events.
+### On-Device Self-Supervised Learning of Low-Latency Monocular Depth from Only Events. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2412.06359](https://arxiv.org/abs/2412.06359) · 📚 被引 1
 - **作者**: Jesse J. Hagenaars, Yilun Wu, Federico Paredes-Vallés, Stein Stroobants, Guido C. H. E. de Croon
 - **🏷️ 机构**: MAVLab, TU Delft, EUISPC, Sony Semiconductor Solutions Europe, Sony Europe B.V
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对事件相机在资源受限机器人（如小型无人机）上在线自监督单目深度估计的计算效率瓶颈。②提出改进对比最大化的时间和内存效率，实现设备端在线学习，并验证在线学习提升深度估计和避障性能。③相比仅预训练，在线学习在真实无人机上获得更准确深度和更优避障；相比现有自监督方法，达到最先进深度估计性能。④实验表明，所提管线高效且性能领先，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses the computational bottleneck of online self-supervised monocular depth estimation from event cameras on resource-constrained robots. It improves the time and memory efficiency of contrast maximization, enabling on-device learning, and demonstrates that online learning yields more accurate depth and better obstacle avoidance than pre-training alone. The proposed pipeline achieves state-of-the-art depth estimation among self-supervised methods, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 首次实现事件相机单目深度估计的设备端在线自监督学习。
+- **创新点**: 通过优化对比最大化管线的时间和内存效率，突破在线学习计算瓶颈。
+- **结果**: 在线学习显著提升深度估计精度和避障成功率，并达到自监督方法最先进水平。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -65,11 +78,16 @@
 
 </details>
 
-### Improved Monocular Depth Prediction Using Distance Transform Over Pre-semantic Contours with Self-supervised Neural Networks.
+### Improved Monocular Depth Prediction Using Distance Transform Over Pre-semantic Contours with Self-supervised Neural Networks. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2605.08320](https://arxiv.org/abs/2605.08320) · 📚 被引 2
 - **作者**: Marwane Hariat, Antoine Manzanera, David Filliat
 - **🏷️ 机构**: Institut Polytechnique de Paris,U2IS, ENSTA,Palaiseau,France
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对自监督单目深度估计在低纹理区域深度预测模糊的问题，提出在预语义轮廓上应用距离变换以增强空间信息，联合估计轮廓、深度和自运动。理论证明距离变换是最优方差增强技术，在KITTI、Cityscapes、Waymo等数据集上超越现有自监督方法。
+- **摘要（英）**: To address ambiguous depth in low-texture areas for self-supervised MDE, this work applies distance transform over pre-semantic contours to augment spatial information, jointly estimating contours, depth, and ego-motion. It theoretically proves optimality and outperforms self-supervised methods on KITTI, Cityscapes, Waymo, etc.
+- **核心贡献**: 提出基于距离变换的预语义轮廓增强方法，提升自监督深度估计性能。
+- **创新点**: 理论证明距离变换在低纹理区域方差增强中的最优性。
+- **结果**: 在多个数据集上超越现有自监督深度估计方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -277,16 +295,6 @@
 - **🏷️ 机构**: University of Chicago,USA, Toyota Technological Institute at Chicago,USA
 - **会议**: ICCV 2025
 
-### Orthogonal Contrastive Learning for Multi-Representation fMRI Analysis.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/a81a1eabfb6cbece73ddd0e6a1645d67-Abstract-Conference.html) · 📚 被引 0
-- **作者**: Tony Yousefnezhad
-- **🏷️ 机构**: Learning by Machine
-- **会议**: NeurIPS 2025
-
-> We present PROGRESSOR, a novel framework that learns a task-agnostic reward function from videos, enabling policy training through goal-conditioned reinforcement learning (RL) without manual supervision. Underlying this reward is an estimate of the distribution over task progress as a function of the current, initial, and goal observations that is learned in a self-supervised fashion. Crucially, PROGRESSOR refines rewards adversarially during online RL training by pushing back predictions for out-of-distribution observations, to mitigate distribution shift inherent in non-expert observations. Utilizing this progress prediction as a dense reward together with an adversarial push-back, we show that PROGRESSOR enables robots to learn complex behaviors without any external supervision. Pretrained on large-scale egocentric human video from EPIC-KITCHENS, PROGRESSOR requires no fine-tuning on in-domain task-specific data for generalization to real-robot offline RL under noisy demonstrations, outperforming contemporary methods that provide dense visual reward for robotic learning. Our findings highlight the potential of PROGRESSOR for scalable robotic applications where direct action labels and task-specific rewards are not readily available.
-
-</details>
-
 ### Adversarial Robustness of Discriminative Self-Supervised Learning in Vision.
 - **链接**: [arXiv:2503.06361](https://arxiv.org/abs/2503.06361) · 📚 被引 0
 - **作者**: Ömer Veysel Çagatan, Ömer Faruk Tal, M. Emre Gürsoy
@@ -320,18 +328,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Dynamic scene reconstruction is a long-term challenge in 3D vision. Existing plane-based methods in dynamic Gaussian splatting suffer from an unsuitable low-rank assumption, causing feature overlap and poor rendering quality. Although 4D hash encoding provides an explicit representation without low-rank constraints, directly applying it to the entire dynamic scene leads to substantial hash collisions and redundancy. To address these challenges, we present DASH, a real-time dynamic scene rendering framework that employs 4D hash encoding coupled with self-supervised decomposition. Our approach begins with a self-supervised decomposition mechanism that separates dynamic and static components without manual annotations or precomputed masks. Next, we introduce a multiresolution 4D hash encoder for dynamic elements, providing an explicit representation that avoids the low-rank assumption. Finally, we present a spatio-temporal smoothness regularization strategy to mitigate unstable deformation artifacts. Experiments on real-world datasets demonstrate that DASH achieves state-of-the-art dynamic rendering performance, exhibiting enhanced visual quality at real-time speeds of 264 FPS on a single 4090 GPU. Code: https://github.com/chenj02/DASH.
-
-</details>
-
-### SAMora: Enhancing SAM through Hierarchical Self-Supervised Pre-Training for Medical Images.
-- **链接**: [arXiv:2511.08626](https://arxiv.org/abs/2511.08626) · [代码](https://github.com/ShChen233/SAMora) · 📚 被引 1
-- **作者**: Shuhang Chen, Hangjie Yuan, Pengwei Liu, Hanxue Gu, Tao Feng, Dong Ni
-- **🏷️ 机构**: Zhejiang University, Duke University, Tsinghua University
-- **会议**: ICCV 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The Segment Anything Model (SAM) has demonstrated significant potential in medical image segmentation. Yet, its performance is limited when only a small amount of labeled data is available, while there is abundant valuable yet often overlooked hierarchical information in medical data. To address this limitation, we draw inspiration from self-supervised learning and propose SAMora, an innovative framework that captures hierarchical medical knowledge by applying complementary self-supervised learning objectives at the image, patch, and pixel levels. To fully exploit the complementarity of hierarchical knowledge within LoRAs, we introduce HL-Attn, a hierarchical fusion module that integrates multi-scale features while maintaining their distinct characteristics. SAMora is compatible with various SAM variants, including SAM2, SAMed, and H-SAM. Experimental results on the Synapse, LA, and PROMISE12 datasets demonstrate that SAMora outperforms existing SAM variants. It achieves state-of-the-art performance in both few-shot and fully supervised settings while reducing fine-tuning epochs by 90%. The code is available at https://github.com/ShChen233/SAMora.
 
 </details>
 
@@ -401,12 +397,6 @@
 
 </details>
 
-### CoSMIC: Continual Self-Supervised Learning for Multi-Domain Medical Imaging Via Conditional Mutual Information Maximization.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02140) · 📚 被引 0
-- **作者**: Yihang Liu, Ying Wen, Longzhen Yang, Lianghua He, Heng Tao Shen
-- **🏷️ 机构**: Tongji University, East China Normal University
-- **会议**: ICCV 2025
-
 ### TESPEC: Temporally-Enhanced Self-Supervised Pretraining for Event Cameras.
 - **链接**: [arXiv:2508.00913](https://arxiv.org/abs/2508.00913) · 📚 被引 1
 - **作者**: Mohammad Mohammadi, Ziyi Wu, Igor Gilitschenski
@@ -428,18 +418,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Outside of urban hubs, autonomous cars and trucks have to master driving on intercity highways. Safe, long-distance highway travel at speeds exceeding 100 km/h demands perception distances of at least 250 m, which is about five times the 50-100m typically addressed in city driving, to allow sufficient planning and braking margins. Increasing the perception ranges also allows to extend autonomy from light two-ton passenger vehicles to large-scale forty-ton trucks, which need a longer planning horizon due to their high inertia. However, most existing perception approaches focus on shorter ranges and rely on Bird's Eye View (BEV) representations, which incur quadratic increases in memory and compute costs as distance grows. To overcome this limitation, we built on top of a sparse representation and introduced an efficient 3D encoding of multi-modal and temporal features, along with a novel self-supervised pre-training scheme that enables large-scale learning from unlabeled camera-LiDAR data. Our approach extends perception distances to 250 meters and achieves an 26.6% improvement in mAP in object detection and a decrease of 30.5% in Chamfer Distance in LiDAR forecasting compared to existing methods, reaching distances up to 250 meters. Project Page: https://light.princeton.edu/lrs4fusion/
-
-</details>
-
-### Structure-Aware Semantic Discrepancy and Consistency for 3D Medical Image Self-Supervised Learning.
-- **链接**: [arXiv:2507.02581](https://arxiv.org/abs/2507.02581) · 📚 被引 3
-- **作者**: Tan Pan, Zhaorui Tan, Kaiyu Guo, Dongli Xu, Weidi Xu, Chen Jiang et al.
-- **🏷️ 机构**: AI3, Fudan University, Shanghai Academy of Artificial Intelligence for Science, The University of Queensland
-- **会议**: ICCV 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> 3D medical image self-supervised learning (mSSL) holds great promise for medical analysis. Effectively supporting broader applications requires considering anatomical structure variations in location, scale, and morphology, which are crucial for capturing meaningful distinctions. However, previous mSSL methods partition images with fixed-size patches, often ignoring the structure variations. In this work, we introduce a novel perspective on 3D medical images with the goal of learning structure-aware representations. We assume that patches within the same structure share the same semantics (semantic consistency) while those from different structures exhibit distinct semantics (semantic discrepancy). Based on this assumption, we propose an mSSL framework named $S^2DC$, achieving Structure-aware Semantic Discrepancy and Consistency in two steps. First, $S^2DC$ enforces distinct representations for different patches to increase semantic discrepancy by leveraging an optimal transport strategy. Second, $S^2DC$ advances semantic consistency at the structural level based on neighborhood similarity distribution. By bridging patch-level and structure-level representations, $S^2DC$ achieves structure-aware representations. Thoroughly evaluated across 10 datasets, 4 tasks, and 3 modalities, our proposed method consistently outperforms the state-of-the-art methods in mSSL.
 
 </details>
 
@@ -467,18 +445,6 @@
 - **🏷️ 机构**: School of Computer Science and Engineering, Nanjing University of Science and Technology, School of Computer Science and Engineering, Southeast University,Key Laboratory of New Generation Artificial Intelligence Technology and Its Interdisciplinary Applications
 - **会议**: ICCV 2025
 
-### An OpenMind for 3D Medical Vision Self-supervised Learning.
-- **链接**: [arXiv:2412.17041](https://arxiv.org/abs/2412.17041) · 📚 被引 5
-- **作者**: Tassilo Wald, Constantin Ulrich, Jonathan Suprijadi, Sebastian Ziegler, Michal Nohel, Robin Peretzke et al.
-- **🏷️ 机构**: German Cancer Research Center (DKFZ),Division of Medical Image Computing,Heidelberg,Germany, Brno University of Technology,Faculty of Electrical Engineering and Communication,Czech Republic
-- **会议**: ICCV 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The field of self-supervised learning (SSL) for 3D medical images lacks consistency and standardization. While many methods have been developed, it is impossible to identify the current state-of-the-art, due to i) varying and small pretraining datasets, ii) varying architectures, and iii) being evaluated on differing downstream datasets. In this paper, we bring clarity to this field and lay the foundation for further method advancements through three key contributions: We a) publish the largest publicly available pre-training dataset comprising 114k 3D brain MRI volumes, enabling all practitioners to pre-train on a large-scale dataset. We b) benchmark existing 3D self-supervised learning methods on this dataset for a state-of-the-art CNN and Transformer architecture, clarifying the state of 3D SSL pre-training. Among many findings, we show that pre-trained methods can exceed a strong from-scratch nnU-Net ResEnc-L baseline. Lastly, we c) publish the code of our pre-training and fine-tuning frameworks and provide the pre-trained models created during the benchmarking process to facilitate rapid adoption and reproduction.
-
-</details>
-
 ### S3E: Self-Supervised State Estimation for Radar-Inertial System.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02477)
 - **作者**: Shengpeng Wang, Yulong Xie, Qing Liao, Wei Wang
@@ -497,12 +463,6 @@
 - **🏷️ 机构**: Zhejiang University, Rutgers University, Nanyang Technological University
 - **会议**: CVPR 2025
 
-### DyCON: Dynamic Uncertainty-aware Consistency and Contrastive Learning for Semi-supervised Medical Image Segmentation.
-- **链接**: [arXiv:2504.04566](https://arxiv.org/abs/2504.04566) · 📚 被引 25
-- **作者**: Maregu Assefa, Muzammal Naseer, Iyyakutti Iyappan Ganapathi, Syed Sadaf Ali, Mohamed L. Seghier, Naoufel Werghi
-- **🏷️ 机构**: C2PS - Khalifa University of Science and Technology,Abu Dhabi,UAE
-- **会议**: CVPR 2025
-
 ### USP: Unified Self-Supervised Pretraining for Image Generation and Understanding.
 - **链接**: [arXiv:2503.06132](https://arxiv.org/abs/2503.06132) · 📚 被引 3
 - **作者**: Xiangxiang Chu, Renda Li, Yong Wang
@@ -511,12 +471,6 @@
 
 > Semi-supervised learning in medical image segmentation leverages unlabeled data to reduce annotation burdens through consistency learning. However, current methods struggle with class imbalance and high uncertainty from pathology variations, leading to inaccurate segmentation in 3D medical images. To address these challenges, we present DyCON, a Dynamic Uncertainty-aware Consistency and Contrastive Learning framework that enhances the generalization of consistency methods with two complementary losses: Uncertainty-aware Consistency Loss (UnCL) and Focal Entropy-aware Contrastive Loss (FeCL). UnCL enforces global consistency by dynamically weighting the contribution of each voxel to the consistency loss based on its uncertainty, preserving high-uncertainty regions instead of filtering them out. Initially, UnCL prioritizes learning from uncertain voxels with lower penalties, encouraging the model to explore challenging regions. As training progress, the penalty shift towards confident voxels to refine predictions and ensure global consistency. Meanwhile, FeCL enhances local feature discrimination in imbalanced regions by introducing dual focal mechanisms and adaptive confidence adjustments into the contrastive principle. These mechanisms jointly prioritizes hard positives and negatives while focusing on uncertain sample pairs, effectively capturing subtle lesion variations under class imbalance. Extensive evaluations on four diverse medical image segmentation datasets (ISLES'22, BraTS'19, LA, Pancreas) show DyCON's superior performance against SOTA methods.
 
-### DyCON: Dynamic Uncertainty-aware Consistency and Contrastive Learning for Semi-supervised Medical Image Segmentation.
-- **链接**: [arXiv:2504.04566](https://arxiv.org/abs/2504.04566) · 📚 被引 25
-- **作者**: Maregu Assefa, Muzammal Naseer, Iyyakutti Iyappan Ganapathi, Syed Sadaf Ali, Mohamed L. Seghier, Naoufel Werghi
-- **🏷️ 机构**: C2PS - Khalifa University of Science and Technology,Abu Dhabi,UAE
-- **会议**: CVPR 2025
-
 ### Rayzer: a Self-Supervised Large View Synthesis Model.
 - **链接**: [arXiv:2505.00702](https://arxiv.org/abs/2505.00702) · 📚 被引 4
 - **作者**: Hanwen Jiang, Hao Tan, Peng Wang, Hai Jin, Yue Zhao, Sai Bi et al.
@@ -524,12 +478,6 @@
 - **会议**: ICCV 2025
 
 > Semi-supervised learning in medical image segmentation leverages unlabeled data to reduce annotation burdens through consistency learning. However, current methods struggle with class imbalance and high uncertainty from pathology variations, leading to inaccurate segmentation in 3D medical images. To address these challenges, we present DyCON, a Dynamic Uncertainty-aware Consistency and Contrastive Learning framework that enhances the generalization of consistency methods with two complementary losses: Uncertainty-aware Consistency Loss (UnCL) and Focal Entropy-aware Contrastive Loss (FeCL). UnCL enforces global consistency by dynamically weighting the contribution of each voxel to the consistency loss based on its uncertainty, preserving high-uncertainty regions instead of filtering them out. Initially, UnCL prioritizes learning from uncertain voxels with lower penalties, encouraging the model to explore challenging regions. As training progress, the penalty shift towards confident voxels to refine predictions and ensure global consistency. Meanwhile, FeCL enhances local feature discrimination in imbalanced regions by introducing dual focal mechanisms and adaptive confidence adjustments into the contrastive principle. These mechanisms jointly prioritizes hard positives and negatives while focusing on uncertain sample pairs, effectively capturing subtle lesion variations under class imbalance. Extensive evaluations on four diverse medical image segmentation datasets (ISLES'22, BraTS'19, LA, Pancreas) show DyCON's superior performance against SOTA methods.
-
-### CoSMIC: Continual Self-Supervised Learning for Multi-Domain Medical Imaging Via Conditional Mutual Information Maximization.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02140) · 📚 被引 0
-- **作者**: Yihang Liu, Ying Wen, Longzhen Yang, Lianghua He, Heng Tao Shen
-- **🏷️ 机构**: Tongji University, East China Normal University
-- **会议**: ICCV 2025
 
 ### Instruct-CLIP: Improving Instruction-Guided Image Editing with Automated Data Refinement Using Contrastive Learning.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Instruct-CLIP_Improving_Instruction-Guided_Image_Editing_with_Automated_Data_Refinement_Using_CVPR_2025_paper.html)
@@ -625,12 +573,6 @@
 - **🏷️ 机构**: UNSW,Sydney, DZ-Matrix, Columbia University
 - **会议**: ICCV 2025
 
-### Vector Contrastive Learning for Pixel-Wise Pretraining in Medical Vision.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01844) · 📚 被引 2
-- **作者**: Yuting He, Shuo Li
-- **🏷️ 机构**: Case Western Reserve University,Dept. of BME,Cleveland,US
-- **会议**: ICCV 2025
-
 ### Robust Dataset Condensation using Supervised Contrastive Learning.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00274) · 📚 被引 0
 - **作者**: Nicole Hee-Yeon Kim, Hwanjun Song
@@ -677,12 +619,6 @@
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02027) · 📚 被引 0
 - **作者**: Haochen Zhao, Jianwei Niu, Xuefeng Liu, Xiaozheng Xie, Li Kuang, Haotian Yang et al.
 - **🏷️ 机构**: SCSE, Beihang University,State Key Laboratory of Virtual Reality Technology and Systems, School of Computer and Communication Engineering, University of Science and Technology Beijing, Hangzhou International Innovation Institute of Beihang University
-- **会议**: ICCV 2025
-
-### Harnessing Massive Satellite Imagery with Efficient Masked Image Modeling.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00652) · 📚 被引 6
-- **作者**: Fengxiang Wang, Hongzhen Wang, Di Wang, Zonghao Guo, Zhenyu Zhong, Long Lan et al.
-- **🏷️ 机构**: College of Computer Science and Technology, National University of Defense Technology, Xiaomi Corp., School of Computer Science, Wuhan University
 - **会议**: ICCV 2025
 
 ### Beyond [cls]: Exploring the True Potential of Masked Image Modeling Representations.
@@ -741,12 +677,6 @@
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02027) · 📚 被引 0
 - **作者**: Haochen Zhao, Jianwei Niu, Xuefeng Liu, Xiaozheng Xie, Li Kuang, Haotian Yang et al.
 - **🏷️ 机构**: SCSE, Beihang University,State Key Laboratory of Virtual Reality Technology and Systems, School of Computer and Communication Engineering, University of Science and Technology Beijing, Hangzhou International Innovation Institute of Beihang University
-- **会议**: ICCV 2025
-
-### Harnessing Massive Satellite Imagery with Efficient Masked Image Modeling.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00652) · 📚 被引 6
-- **作者**: Fengxiang Wang, Hongzhen Wang, Di Wang, Zonghao Guo, Zhenyu Zhong, Long Lan et al.
-- **🏷️ 机构**: College of Computer Science and Technology, National University of Defense Technology, Xiaomi Corp., School of Computer Science, Wuhan University
 - **会议**: ICCV 2025
 
 ### Beyond [cls]: Exploring the True Potential of Masked Image Modeling Representations.
@@ -1241,4 +1171,5 @@
 - AD-GS: Object-Aware B-Spline Gaussian Splatting for Self-Supervised Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
 - AMD: Adaptive Momentum and Decoupled Contrastive Learning Framework for Robust Long-Tail Trajectory Prediction. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
 - Enhancing End-to-End Autonomous Driving with Latent World Model. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
-<!-- COMPLETE v1 papers=130 -->
+
+<!-- COMPLETE v1 papers=118 -->

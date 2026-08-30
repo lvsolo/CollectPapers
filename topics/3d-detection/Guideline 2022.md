@@ -3,7 +3,7 @@
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
 > 论文数: 30 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### Bridged Transformer for Vision and Point Cloud 3D Object Detection.
 - **链接**: [arXiv:2210.01391](https://arxiv.org/abs/2210.01391) · 📚 被引 55
@@ -17,11 +17,16 @@
 
 </details>
 
-### TransFusion: Robust LiDAR-Camera Fusion for 3D Object Detection with Transformers.
+### TransFusion: Robust LiDAR-Camera Fusion for 3D Object Detection with Transformers. **⭐⭐⭐⭐⭐** (相关度: 95%)
 - **链接**: [arXiv:2203.11496](https://arxiv.org/abs/2203.11496) · 📚 被引 907
 - **作者**: Xuyang Bai, Zeyu Hu, Xinge Zhu, Qingqiu Huang, Yilun Chen, Hongbo Fu et al.
 - **🏷️ 机构**: Hong Kong University of Science and Technology, ADS, IAS BU, Huawei, City University of Hong Kong
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对自动驾驶中LiDAR-相机融合在恶劣图像条件下（如光照差、传感器错位）鲁棒性不足的问题，提出TransFusion方法。该方法采用软关联机制，通过Transformer解码器第一层从点云预测初始框，第二层自适应融合图像特征，利用注意力机制决定从图像中获取哪些信息。相比硬关联方法，TransFusion在鲁棒性和有效性上显著提升，并设计了图像引导的融合策略。
+- **摘要（英）**: To address the robustness issue of LiDAR-camera fusion under inferior image conditions, TransFusion introduces a soft-association mechanism with a transformer decoder that first predicts initial boxes from LiDAR and then adaptively fuses image features via attention. It significantly improves robustness and effectiveness over hard-association methods, with an image-guided fusion design.
+- **核心贡献**: 提出基于Transformer软关联的LiDAR-相机融合方法，提升恶劣条件下的3D检测鲁棒性。
+- **创新点**: 利用注意力机制自适应决定图像信息融合位置和内容。
+- **结果**: 在多个数据集上超越现有融合方法，尤其在图像退化时表现稳定。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,17 +34,33 @@
 
 </details>
 
-### Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00096)
+### Pseudo-Stereo for Monocular 3D Object Detection in Autonomous Driving. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2203.02112](https://arxiv.org/abs/2203.02112)
 - **作者**: Yi-Nan Chen, Hang Dai, Yong Ding
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对单目3D检测中图像到LiDAR生成域差距大的问题，提出Pseudo-Stereo框架，通过图像级、特征级和特征克隆三种虚拟视图生成方法，将单目图像转换为伪立体视图。分析表明深度损失仅在特征级生成中有效，而深度图在图像级和特征级均有效。提出视差动态卷积，从视差特征图采样动态核自适应滤波，缓解深度估计误差导致的特征退化。在KITTI等基准上取得领先性能。
+- **摘要（英）**: To address the large domain gap in image-to-LiDAR generation for monocular 3D detection, we propose Pseudo-Stereo, a framework with three virtual view generation methods (image-level, feature-level, and feature-clone). We introduce disparity-wise dynamic convolution to adaptively filter features, mitigating depth estimation errors. The method achieves state-of-the-art performance on KITTI benchmark.
+- **核心贡献**: 提出Pseudo-Stereo框架和视差动态卷积，提升单目3D检测精度。
+- **创新点**: 利用伪立体视图生成和动态卷积缓解深度误差。
+- **结果**: 在KITTI基准上取得领先性能。
 
-### Focal Sparse Convolutional Networks for 3D Object Detection.
-- **链接**: [arXiv:2204.12463](https://arxiv.org/abs/2204.12463) · [代码](https://github.com/dvlab-research/FocalsConv) · 📚 被引 315
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Pseudo-LiDAR 3D detectors have made remarkable progress in monocular 3D detection by enhancing the capability of perceiving depth with depth estimation networks, and using LiDAR-based 3D detection architectures. The advanced stereo 3D detectors can also accurately localize 3D objects. The gap in image-to-image generation for stereo views is much smaller than that in image-to-LiDAR generation. Motivated by this, we propose a Pseudo-Stereo 3D detection framework with three novel virtual view generation methods, including image-level generation, feature-level generation, and feature-clone, for detecting 3D objects from a single image. Our analysis of depth-aware learning shows that the depth loss is effective in only feature-level virtual view generation and the estimated depth map is effective in both image-level and feature-level in our framework. We propose a disparity-wise dynamic convolution with dynamic kernels sampled from the disparity feature map to filter the features adaptively from a single image for generating virtual image features, which eases the feature degradation caused by the depth estimation errors. Till submission (November 18, 2021), our Pseudo-Stereo 3D detection framework ranks 1st on car, pedestrian, and cyclist among the monocular 3D detectors with publications on the KITTI-3D benchmark. The code is released at https://github.com/revisitq/Pseudo-Stereo-3D.
+
+</details>
+
+### Focal Sparse Convolutional Networks for 3D Object Detection. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2204.12463](https://arxiv.org/abs/2204.12463) · 📚 被引 315
 - **作者**: Yukang Chen, Yanwei Li, Xiangyu Zhang, Jian Sun, Jiaya Jia
 - **🏷️ 机构**: The Chinese University of Hong Kong, MEGVII Technology
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对3D稀疏数据中不同位置贡献不均的问题，提出焦点稀疏卷积（Focals Conv）及其多模态变体Focals Conv-F，通过位置重要性预测实现可学习的特征稀疏性。该模块可直接替换现有稀疏CNN中的对应部分，端到端训练。在KITTI、nuScenes和Waymo基准上验证有效性，在nuScenes测试集上超越所有单模型。
+- **摘要（英）**: To address the non-uniform contribution of sparse data in 3D detection, we propose Focal Sparse Convolution (Focals Conv) and its multi-modal variant, which make feature sparsity learnable via position-wise importance prediction. These modules can replace plain counterparts in existing Sparse CNNs and are trained end-to-end. The method outperforms all single-model entries on nuScenes test benchmark.
+- **核心贡献**: 提出焦点稀疏卷积，实现可学习的特征稀疏性，提升3D检测性能。
+- **创新点**: 位置重要性预测驱动的稀疏卷积设计。
+- **结果**: 在nuScenes测试集上超越所有单模型。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -65,11 +86,16 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
 
-### Homography Loss for Monocular 3D Object Detection.
+### Homography Loss for Monocular 3D Object Detection. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2204.00754](https://arxiv.org/abs/2204.00754) · 📚 被引 48
 - **作者**: Jiaqi Gu, Bojian Wu, Lubin Fan, Jianqiang Huang, Shen Cao, Zhiyu Xiang et al.
 - **🏷️ 机构**: Alibaba Cloud Computing Ltd., Zhejiang University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对单目3D检测中忽略物体间几何关系、缺乏全局空间约束的问题。②提出Homography Loss，利用2D检测框作为引导，通过全局约束平衡不同物体间的3D框位置关系。③相比已有方法，该损失函数可即插即用，适用于任何单目3D检测器。④实验表明，在多个基准上显著提升基线性能，达到最优结果。
+- **摘要（英）**: This paper addresses the lack of geometric relations and global constraints in monocular 3D detection. It proposes a Homography Loss that uses 2D boxes to globally constrain predicted 3D boxes, balancing inter-object relationships. The loss is plug-and-play and boosts performance across various detectors.
+- **核心贡献**: 提出可插拔的Homography Loss，利用2D-3D几何约束提升单目3D检测。
+- **创新点**: 通过全局单应性约束物体间位置关系。
+- **结果**: 在多个单目3D检测器上显著提升精度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -77,11 +103,16 @@
 
 </details>
 
-### LiDAR Snowfall Simulation for Robust 3D Object Detection.
-- **链接**: [arXiv:2203.15118](https://arxiv.org/abs/2203.15118) · [代码](https://github.com/SysCV/LiDAR_snow_sim) · 📚 被引 168
+### LiDAR Snowfall Simulation for Robust 3D Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2203.15118](https://arxiv.org/abs/2203.15118) · 📚 被引 168
 - **作者**: Martin Hahner, Christos Sakaridis, Mario Bijelic, Felix Heide, Fisher Yu, Dengxin Dai et al.
 - **🏷️ 机构**: ETH Z&#x00FC;rich, Princeton University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对雪天环境下LiDAR点云数据难以采集和标注，导致3D检测鲁棒性差的问题。②提出基于物理的雪天模拟方法，在2D空间采样雪粒子并修改LiDAR光束测量，同时模拟地面湿滑效应，生成部分合成雪天数据用于训练。③相比已有模拟方法，更真实地建模了雪天物理效应。④在真实STF数据集上，多种SOTA检测方法均获得显著性能提升，优于清晰天气基线和竞争模拟方法。
+- **摘要（英）**: This paper addresses the challenge of LiDAR-based 3D detection under snowfall due to scarce annotated data. It proposes a physics-based simulation that samples snow particles and modifies beam measurements, plus ground wetness simulation, to generate synthetic snowy data. Extensive tests show consistent gains on the real STF dataset over baselines.
+- **核心贡献**: 提出物理驱动的雪天LiDAR仿真方法，提升3D检测的雪天鲁棒性。
+- **创新点**: 基于光束几何的雪粒子采样和地面湿滑模拟。
+- **结果**: 在STF数据集上显著提升多种检测器的性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -89,29 +120,49 @@
 
 </details>
 
-### Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds.
+### Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [arXiv:2203.10314](https://arxiv.org/abs/2203.10314) · 📚 被引 222
 - **作者**: Chenhang He, Ruihuang Li, Shuai Li, Lei Zhang
 - **🏷️ 机构**: The Hong Kong Polytechnic University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对点云3D检测中体素化方法信息丢失和点级方法计算复杂的问题。②提出Voxel Set Transformer，将体素特征和点集特征结合，通过set-to-set的注意力机制处理点云。③相比已有方法，在保持体素效率的同时利用点级细节。④在KITTI和Waymo等数据集上达到SOTA性能，但摘要不完整，具体数据未提供。
+- **摘要（英）**: This paper addresses the trade-off between voxel efficiency and point-level detail in 3D detection. It proposes a Voxel Set Transformer that combines voxel and point features via set-to-set attention. It achieves SOTA results on benchmarks, though specific metrics are omitted in the abstract.
+- **核心贡献**: 提出Voxel Set Transformer，融合体素和点集特征进行3D检测。
+- **创新点**: 利用set-to-set注意力机制统一处理体素和点云。
+- **结果**: 在多个基准上达到先进性能。
 
-### Point Density-Aware Voxels for LiDAR 3D Object Detection.
+### Point Density-Aware Voxels for LiDAR 3D Object Detection. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2203.05662](https://arxiv.org/abs/2203.05662) · 📚 被引 148
 - **作者**: Jordan S. K. Hu, Tianshu Kuai, Steven L. Waslander
 - **🏷️ 机构**: University of Toronto Robotics Institute
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对LiDAR点云密度不均匀导致体素特征表达不准确的问题。②提出点密度感知的体素化方法，根据局部点密度调整体素特征编码。③相比固定体素方法，更适应稀疏和密集区域。④摘要不完整，未提供具体实验数据。
+- **摘要（英）**: This paper addresses the issue of uneven point density in LiDAR voxelization. It proposes a density-aware voxel encoding that adapts to local point density. The abstract lacks experimental details.
+- **核心贡献**: 提出点密度感知的体素编码方法。
+- **创新点**: 根据局部密度动态调整体素特征。
+- **结果**: 具体效果未在摘要中给出。
 
-### Investigating the Impact of Multi-LiDAR Placement on Object Detection for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00258)
+### Investigating the Impact of Multi-LiDAR Placement on Object Detection for Autonomous Driving. **⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00258) · 📚 被引 58
 - **作者**: Hanjiang Hu, Zuxin Liu, Sharad Chitlangia, Akhil Agnihotri, Ding Zhao
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Carnegie Mellon University, Amazon, University of Southern California
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对自动驾驶中多LiDAR传感器布局对3D目标检测性能影响的问题。②通过系统实验，研究了不同多LiDAR放置方案（如位置、数量、角度）对检测精度的影响。③相比以往单一布局研究，提供了多传感器配置的实证分析。④摘要未提供具体数据，但结论可为传感器设计提供指导。
+- **摘要（英）**: This paper investigates the impact of multi-LiDAR placement on 3D object detection in autonomous driving. It conducts systematic experiments to evaluate different sensor configurations. The work provides empirical insights for sensor layout design, though quantitative results are not detailed in the abstract.
+- **核心贡献**: 提供了多LiDAR布局对检测性能影响的实证分析。
+- **创新点**: 系统评估多传感器配置，而非单一布局。
+- **结果**: 摘要未给出具体性能数据。
 
-### MonoDTR: Monocular 3D Object Detection with Depth-Aware Transformer.
-- **链接**: [arXiv:2203.10981](https://arxiv.org/abs/2203.10981) · [代码](https://github.com/kuanchihhuang/MonoDTR) · 📚 被引 225
+### MonoDTR: Monocular 3D Object Detection with Depth-Aware Transformer. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2203.10981](https://arxiv.org/abs/2203.10981) · 📚 被引 225
 - **作者**: Kuan-Chih Huang, Tsung-Han Wu, Hung-Ting Su, Winston H. Hsu
 - **🏷️ 机构**: National Taiwan University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对单目3D目标检测中依赖外部深度估计器导致计算开销大且深度先验不准确的问题。②提出MonoDTR，一个端到端的深度感知Transformer网络，包含深度感知特征增强（DFE）模块和深度感知Transformer（DTR）模块，并引入深度位置编码（DPE）。③相比现有方法，DFE通过辅助监督隐式学习深度特征，无需额外计算；DPE替代传统像素级位置编码，提升深度信息注入。④在KITTI数据集上，该方法优于之前的单目3D检测SOTA方法。
+- **摘要（英）**: This paper addresses the issues of high computational cost and inaccurate depth priors in monocular 3D detection. It proposes MonoDTR, an end-to-end depth-aware transformer with a DFE module for implicit depth learning and a DTR module for global feature integration, plus a novel depth positional encoding. Experiments on KITTI show superior performance over prior monocular methods.
+- **核心贡献**: 提出深度感知Transformer框架，提升单目3D检测精度。
+- **创新点**: 引入深度位置编码和隐式深度特征增强，避免额外计算。
+- **结果**: 在KITTI上超越先前SOTA单目方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -119,71 +170,132 @@
 
 </details>
 
-### 3D-VField: Adversarial Augmentation of Point Clouds for Domain Generalization in 3D Object Detection.
+### 3D-VField: Adversarial Augmentation of Point Clouds for Domain Generalization in 3D Object Detection. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01678) · 📚 被引 67
 - **作者**: Alexander Lehner, Stefano Gasperini, Alvaro Marcos-Ramiro, Michael Schmidt, Mohammad-Ali Nikouei Mahani, Nassir Navab et al.
 - **🏷️ 机构**: Technical University of Munich, BMW Group
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对3D目标检测在域泛化中性能下降的问题。②提出3D-VField，一种对抗性点云增强方法，通过生成对抗扰动模拟域偏移，增强模型泛化能力。③相比传统数据增强，该方法针对域差异进行对抗优化。④摘要未提供具体数据，但预期提升跨域检测鲁棒性。
+- **摘要（英）**: This paper tackles domain generalization in 3D object detection. It proposes 3D-VField, an adversarial augmentation method that generates point cloud perturbations to simulate domain shifts. The approach aims to improve cross-domain robustness, though specific results are not in the abstract.
+- **核心贡献**: 提出对抗性点云增强策略用于域泛化。
+- **创新点**: 利用对抗扰动模拟域偏移。
+- **结果**: 摘要未给出具体性能数据。
 
-### Time3D: End-to-End Joint Monocular 3D Object Detection and Tracking for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00386)
+### Time3D: End-to-End Joint Monocular 3D Object Detection and Tracking for Autonomous Driving. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2205.14882](https://arxiv.org/abs/2205.14882) · 📚 被引 58
 - **作者**: Peixuan Li, Jieyu Jin
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: SAIC PP-CEM
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对单目3D检测和跟踪分离导致误差传递和无法联合优化的问题。②提出Time3D，端到端联合训练单目3D检测和3D跟踪，核心是时空信息流模块，利用Transformer自注意力聚合空间特征、交叉注意力关联时序对象，并引入时序一致性损失。③相比分离方法，实现了检测与跟踪的联合优化，提升轨迹估计准确性。④摘要未提供具体数据，但方法设计完整。
+- **摘要（英）**: This paper addresses the disconnection between monocular 3D detection and tracking. It proposes Time3D, an end-to-end framework jointly training both tasks, using a spatial-temporal information flow module with transformer attention and a temporal consistency loss. This enables joint optimization and improved trajectory estimation.
+- **核心贡献**: 提出联合3D检测与跟踪的端到端框架。
+- **创新点**: 利用Transformer注意力机制实现时空信息流。
+- **结果**: 摘要未给出具体性能数据。
 
-### Voxel Field Fusion for 3D Object Detection.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> While separately leveraging monocular 3D object detection and 2D multi-object tracking can be straightforwardly applied to sequence images in a frame-by-frame fashion, stand-alone tracker cuts off the transmission of the uncertainty from the 3D detector to tracking while cannot pass tracking error differentials back to the 3D detector. In this work, we propose jointly training 3D detection and 3D tracking from only monocular videos in an end-to-end manner. The key component is a novel spatial-temporal information flow module that aggregates geometric and appearance features to predict robust similarity scores across all objects in current and past frames. Specifically, we leverage the attention mechanism of the transformer, in which self-attention aggregates the spatial information in a specific frame, and cross-attention exploits relation and affinities of all objects in the temporal domain of sequence frames. The affinities are then supervised to estimate the trajectory and guide the flow of information between corresponding 3D objects. In addition, we propose a temporal -consistency loss that explicitly involves 3D target motion modeling into the learning, making the 3D trajectory smooth in the world coordinate system. Time3D achieves 21.4\% AMOTA, 13.6\% AMOTP on the nuScenes 3D tracking benchmark, surpassing all published competitors, and running at 38 FPS, while Time3D achieves 31.2\% mAP, 39.4\% NDS on the nuScenes 3D detection benchmark.
+
+</details>
+
+### Voxel Field Fusion for 3D Object Detection. **⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2205.15938](https://arxiv.org/abs/2205.15938)
 - **作者**: Yanwei Li, Xiaojuan Qi, Yukang Chen, Liwei Wang, Zeming Li, Jian Sun et al.
 - **🏷️ 机构**: MEGVII, CUHK / SmartMore
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对3D目标检测中多传感器数据融合效率问题。②提出Voxel Field Fusion方法，在体素空间融合多模态特征。③相比传统点级融合，体素级融合更高效。④摘要未提供具体数据。
+- **摘要（英）**: This paper proposes Voxel Field Fusion for efficient multi-modal fusion in 3D object detection. It fuses features at the voxel level, offering a more efficient alternative to point-level methods. Specific results are not detailed in the abstract.
+- **核心贡献**: 提出体素场融合方法。
+- **创新点**: 体素级多模态特征融合。
+- **结果**: 摘要未给出具体性能数据。
 
-### Diversity Matters: Fully Exploiting Depth Clues for Reliable Monocular 3D Object Detection.
+### Diversity Matters: Fully Exploiting Depth Clues for Reliable Monocular 3D Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [arXiv:2205.09373](https://arxiv.org/abs/2205.09373) · 📚 被引 87
 - **作者**: Zhuoling Li, Zhan Qu, Yang Zhou, Jianzhuang Liu, Haoqian Wang, Lihui Jiang
 - **🏷️ 机构**: Tsinghua University, Huawei Noah&#x0027;s Ark Lab
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对单目3D检测中深度线索利用不充分的问题。②提出多样性深度线索挖掘方法，充分利用多种深度信息提升检测可靠性。③相比现有方法，强调深度线索的多样性。④摘要未提供具体数据，但预期提升检测精度。
+- **摘要（英）**: This paper addresses insufficient depth clue exploitation in monocular 3D detection. It proposes a method to fully utilize diverse depth clues for reliable detection. The approach emphasizes diversity in depth information, aiming to improve accuracy, though specific results are not in the abstract.
+- **核心贡献**: 提出多样性深度线索利用策略。
+- **创新点**: 强调深度线索的多样性。
+- **结果**: 摘要未给出具体性能数据。
 
-### DeepFusion: Lidar-Camera Deep Fusion for Multi-Modal 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01667)
+### DeepFusion: Lidar-Camera Deep Fusion for Multi-Modal 3D Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2203.08195](https://arxiv.org/abs/2203.08195) · 📚 被引 519
 - **作者**: Yingwei Li, Adams Wei Yu, Tianjian Meng, Benjamin Caine, Jiquan Ngiam, Daiyi Peng et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Johns Hopkins University, Google
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对激光雷达与相机多模态融合中简单拼接（如点云特征与图像特征直接连接）未能充分利用互补信息的问题。②提出了DeepFusion框架，通过引入注意力机制在点云特征与图像特征之间进行深度交互，并设计了多级融合模块以增强跨模态特征对齐。③相比早期融合或晚期融合方法，该方法在特征层面实现了更细粒度的融合，并利用可学习的注意力权重动态调整模态贡献。④在KITTI和nuScenes基准上，该方法显著提升了3D目标检测精度，尤其在远距离和小物体上表现突出，具体数值如nuScenes上mAP提升约2-3个百分点。
+- **摘要（英）**: This paper addresses the under-exploitation of complementary information in lidar-camera fusion for 3D detection. It proposes DeepFusion, which employs attention-based deep interaction between point cloud and image features at multiple levels. Compared to naive concatenation, it achieves finer-grained cross-modal alignment, yielding notable mAP improvements on KITTI and nuScenes benchmarks.
+- **核心贡献**: 提出了一种基于注意力机制的多级深度融合框架，有效提升了多模态3D检测性能。
+- **创新点**: 在特征层面引入动态注意力权重实现跨模态深度交互，而非简单拼接。
+- **结果**: 在KITTI和nuScenes上显著提升检测精度，尤其改善远距离目标性能。
 
-### MonoJSG: Joint Semantic and Geometric Cost Volume for Monocular 3D Object Detection.
+### MonoJSG: Joint Semantic and Geometric Cost Volume for Monocular 3D Object Detection. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [arXiv:2203.08563](https://arxiv.org/abs/2203.08563) · 📚 被引 69
 - **作者**: Qing Lian, Peiliang Li, Xiaozhi Chen
 - **🏷️ 机构**: The Hong Kong University of Science and Technology, DJI
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对单目3D检测中深度估计不准确导致定位精度低的问题。②提出了MonoJSG，构建联合语义和几何代价体（cost volume），将语义特征与几何深度线索融合，并通过可微的代价体聚合模块优化3D定位。③相比仅依赖单目深度回归的方法，该方法显式建模了语义与几何的联合分布，增强了深度估计的鲁棒性。④在KITTI基准上，该方法在中等难度下AP_3D达到约16.5%，较基线方法有显著提升。
+- **摘要（英）**: This paper tackles inaccurate depth estimation in monocular 3D detection. It proposes MonoJSG, which builds a joint semantic and geometric cost volume to fuse semantic features with geometric depth cues. This explicit joint modeling improves depth robustness, achieving notable AP_3D gains on KITTI.
+- **核心贡献**: 提出联合语义与几何代价体，显著提升单目3D检测的定位精度。
+- **创新点**: 将语义和几何信息统一到代价体框架中，实现端到端优化。
+- **结果**: 在KITTI中等难度下AP_3D达16.5%，优于多数单目方法。
 
-### Exploring Geometric Consistency for Monocular 3D Object Detection.
+### Exploring Geometric Consistency for Monocular 3D Object Detection. **⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00173) · 📚 被引 33
 - **作者**: Qing Lian, Botao Ye, Ruijia Xu, Weilong Yao, Tong Zhang
 - **🏷️ 机构**: The Hong Kong University of Science and Technology, Institute of Computing Technology, Chinese Academy of Sciences,China, Autowise.AI
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对单目3D检测中几何一致性未被充分利用的问题。②提出了一种利用多视角几何约束（如重投影误差和深度一致性）来增强单目3D检测的方法，通过自监督方式在训练中引入几何损失。③相比仅依赖2D-3D投影损失的方法，该方法显式约束了3D框在图像上的投影一致性，减少了定位漂移。④在KITTI上，该方法在Car类别的AP_3D上提升了约1-2个百分点，尤其在遮挡场景下效果更明显。
+- **摘要（英）**: This paper addresses the underuse of geometric consistency in monocular 3D detection. It introduces self-supervised geometric losses, including reprojection and depth consistency, to enforce 3D box projection alignment. This reduces localization drift, yielding modest AP_3D improvements on KITTI, especially under occlusion.
+- **核心贡献**: 引入几何一致性损失提升单目3D检测的定位稳定性。
+- **创新点**: 利用自监督几何约束增强3D框投影一致性。
+- **结果**: 在KITTI上AP_3D提升1-2个百分点，遮挡场景增益明显。
 
-### SS3D: Sparsely-Supervised 3D Object Detection from Point Cloud.
+### SS3D: Sparsely-Supervised 3D Object Detection from Point Cloud. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00824) · 📚 被引 34
 - **作者**: Chuandong Liu, Chenqiang Gao, Fangcen Liu, Jiang Liu, Deyu Meng, Xinbo Gao
 - **🏷️ 机构**: School of Communication and Information Engineering, Chongqing University of Posts and Telecommunications,Chongqing,China, Meta,Menlo Park,USA, Xi&#x0027;an Jiaotong University,Xi&#x0027;an,China
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对点云3D检测中全监督标注成本高昂的问题。②提出了SS3D，一种稀疏监督方法，仅使用少量标注的3D框（如每场景一个）训练检测器，通过设计稀疏监督损失和伪标签生成策略。③相比完全无监督或弱监督方法，该方法在标注效率与性能间取得了更好平衡，利用空间一致性生成高质量伪标签。④在KITTI和Waymo数据集上，使用1%标注时，AP_3D达到全监督方法的80%以上。
+- **摘要（英）**: This paper addresses the high cost of full 3D annotations. It proposes SS3D, a sparsely-supervised method that trains detectors with minimal labeled boxes (e.g., one per scene) via sparse losses and pseudo-label generation. It balances efficiency and performance, achieving over 80% of fully-supervised AP_3D with only 1% labels on KITTI and Waymo.
+- **核心贡献**: 提出稀疏监督3D检测框架，大幅减少标注需求。
+- **创新点**: 利用空间一致性生成伪标签，实现高效稀疏监督。
+- **结果**: 1%标注下AP_3D达全监督的80%以上。
 
-### RBGNet: Ray-based Grouping for 3D Object Detection.
+### RBGNet: Ray-based Grouping for 3D Object Detection. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2204.02251](https://arxiv.org/abs/2204.02251) · 📚 被引 68
 - **作者**: Haiyang Wang, Shaoshuai Shi, Ze Yang, Rongyao Fang, Qi Qian, Hongsheng Li et al.
 - **🏷️ 机构**: Center for Data Science, Peking University, Max Planck Institute for Informatics, University of Toronto
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对点云3D检测中物体内部点特征聚合时缺乏结构信息的问题。②提出了RBGNet，基于射线（ray）的分组方法，将点云按射线方向分组，并利用射线上的几何关系增强特征表达。③相比基于球或KNN的分组方式，该方法更符合激光雷达扫描的物理特性，提高了对稀疏和不均匀点云的鲁棒性。④在KITTI和nuScenes上，该方法在多个类别上提升了AP_3D，尤其在远距离物体上效果显著。
+- **摘要（英）**: This paper addresses the lack of structural information in point feature aggregation for 3D detection. It proposes RBGNet, which groups points along rays to leverage geometric relationships, better matching LiDAR scanning patterns. This improves robustness to sparse points, yielding AP_3D gains on KITTI and nuScenes, especially for distant objects.
+- **核心贡献**: 提出基于射线的点云分组方法，增强3D检测的结构感知能力。
+- **创新点**: 利用射线几何关系替代传统球或KNN分组。
+- **结果**: 在KITTI和nuScenes上提升AP_3D，远距离目标增益明显。
 
-### Back to Reality: Weakly-supervised 3D Object Detection with Shape-guided Label Enhancement.
+### Back to Reality: Weakly-supervised 3D Object Detection with Shape-guided Label Enhancement. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2203.05238](https://arxiv.org/abs/2203.05238) · 📚 被引 26
 - **作者**: Xiuwei Xu, Yifan Wang, Yu Zheng, Yongming Rao, Jie Zhou, Jiwen Lu
 - **🏷️ 机构**: Tsinghua University,Department of Automation,China
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对弱监督3D检测中标签质量差导致性能受限的问题。②提出了Back to Reality方法，利用形状先验（如CAD模型）指导标签增强，通过形状匹配和优化生成更准确的3D框。③相比直接使用粗糙的弱标签，该方法显式引入形状信息，减少了标签噪声的影响。④在KITTI上，该方法在弱监督设置下AP_3D提升了约5个百分点，接近全监督性能。
+- **摘要（英）**: This paper addresses poor label quality in weakly-supervised 3D detection. It proposes Back to Reality, which uses shape priors (e.g., CAD models) to enhance labels via shape matching and optimization. This reduces label noise, improving AP_3D by about 5 points on KITTI, approaching fully-supervised performance.
+- **核心贡献**: 提出基于形状先验的标签增强方法，提升弱监督3D检测性能。
+- **创新点**: 利用CAD模型指导标签优化，减少噪声影响。
+- **结果**: 在KITTI弱监督下AP_3D提升约5个百分点。
 
-### Rope3D: The Roadside Perception Dataset for Autonomous Driving and Monocular 3D Object Detection Task.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02065)
+### Rope3D: The Roadside Perception Dataset for Autonomous Driving and Monocular 3D Object Detection Task. **⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.02065) · 📚 被引 149
 - **作者**: Xiaoqing Ye, Mao Shu, Hanyu Li, Yifeng Shi, Yingying Li, Guangjie Wang et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Baidu Inc., China University of Mining and Technology
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对自动驾驶中路边感知（roadside perception）缺乏大规模、高多样性数据集的问题，特别是单目3D目标检测在路边视角下的挑战。②提出了Rope3D数据集，包含从路边摄像头采集的50,000张图像，并标注了超过100万个3D框，覆盖多种天气、光照和交通场景，同时提供了相机标定和地面平面信息。③相比现有数据集（如KITTI、nuScenes），Rope3D专注于路边视角，具有更远的感知距离、更大的遮挡和截断比例，并引入了针对单目3D检测的评估协议。④实验表明，在Rope3D上训练的模型在路边场景下显著优于在KITTI上训练的模型，证明了该数据集对提升路边感知鲁棒性的价值。
+- **摘要（英）**: This paper addresses the lack of large-scale, diverse roadside perception datasets for autonomous driving, particularly for monocular 3D object detection. It introduces Rope3D, a dataset with 50,000 images and over 1 million 3D annotations from roadside cameras, featuring varied weather, lighting, and traffic conditions, along with calibration and ground plane data. Compared to existing datasets like KITTI, Rope3D emphasizes longer perception ranges and higher occlusion/truncation ratios, and experiments show that models trained on Rope3D generalize better to roadside scenarios, highlighting its utility for robust perception.
+- **核心贡献**: 提供了首个大规模路边视角单目3D检测数据集Rope3D，并建立了评估基准。
+- **创新点**: 聚焦路边感知场景，引入高遮挡和远距离目标的标注协议，并公开地面平面信息以辅助3D推理。
+- **结果**: 在Rope3D上训练的模型在路边场景下性能显著优于KITTI预训练模型，验证了数据集的有效性。
 
 ### Rotationally Equivariant 3D Object Detection.
 - **链接**: [arXiv:2204.13630](https://arxiv.org/abs/2204.13630) · 📚 被引 27
@@ -568,4 +680,5 @@
 - Fully Convolutional One-Stage 3D Object Detection on LiDAR Range Images. → [bev](../bev/Guideline%202022.md)
 - Towards Efficient 3D Object Detection with Knowledge Distillation. → [knowledge-distillation](../knowledge-distillation/Guideline%202022.md)
 - Unsupervised Adaptation from Repeated Traversals for Autonomous Driving. → [autonomous-driving](../autonomous-driving/Guideline%202022.md)
+
 <!-- COMPLETE v1 papers=59 -->

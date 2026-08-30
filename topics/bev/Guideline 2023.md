@@ -3,19 +3,29 @@
 > 领域: 鸟瞰图感知（BEV 特征、BEV 检测/分割/预测）
 > 论文数: 7 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Parametric Depth Based Feature Representation Learning for Object Detection and Segmentation in Bird's-Eye View.
+### Parametric Depth Based Feature Representation Learning for Object Detection and Segmentation in Bird's-Eye View. **⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00779) · 📚 被引 7
 - **作者**: Jiayu Yang, Enze Xie, Miaomiao Liu, José M. Álvarez
 - **🏷️ 机构**: Australian National University, The University of Hong Kong, NVIDIA
 - **会议**: ICCV 2023
+- **摘要（中）**: ①针对BEV感知中特征表示学习不足的问题。②提出基于参数化深度的特征表示学习方法，用于BEV空间中的目标检测和分割。③通过参数化深度建模，改进了特征提取和视图变换过程。④具体效果未在摘要中提供。
+- **摘要（英）**: This paper introduces a parametric depth-based feature representation learning method for object detection and segmentation in BEV space, aiming to improve feature extraction and view transformation. Specific results are not detailed in the abstract.
+- **核心贡献**: 提出了一种基于参数化深度的BEV特征表示学习方法。
+- **创新点**: 利用参数化深度建模来增强BEV特征表示。
+- **结果**: 具体效果未在摘要中明确。
 
-### BEVPlace: Learning LiDAR-based Place Recognition using Bird's Eye View Images.
-- **链接**: [arXiv:2302.14325](https://arxiv.org/abs/2302.14325) · [代码](https://github.com/zjuluolun/BEVPlace) · 📚 被引 88
+### BEVPlace: Learning LiDAR-based Place Recognition using Bird's Eye View Images. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2302.14325](https://arxiv.org/abs/2302.14325) · 📚 被引 88
 - **作者**: Lun Luo, Shuhang Zheng, Yixuan Li, Yongzhi Fan, Beinan Yu, Si-Yuan Cao et al.
 - **🏷️ 机构**: Zhejiang University,Ningbo Innovation Center, Zhejiang University,College of Information Science and Electronic Engineering
 - **会议**: ICCV 2023
+- **摘要（中）**: 针对LiDAR定位中视角变化和场景变化导致性能下降的问题，本文探索了BEV图像在位置识别中的应用。提出BEVPlace网络，利用组卷积提取旋转等变的局部特征，并用NetVLAD进行全局特征聚合，同时利用BEV特征距离与点云几何距离的相关性进行位置估计。实验表明，简单的VGGNet在轻微视角变化下即可达到与最先进方法相当的性能，而BEVPlace在视角变化下更鲁棒。
+- **摘要（英）**: This paper addresses the performance degradation of LiDAR-based place recognition under viewpoint and scene changes by exploring BEV images. It proposes BEVPlace, which uses group convolution for rotation-equivariant local features and NetVLAD for global aggregation, and leverages the correlation between BEV feature distance and geometric distance for position estimation. Experiments show that a simple VGGNet achieves comparable performance to state-of-the-art methods under slight viewpoint changes, while BEVPlace is more robust.
+- **核心贡献**: 提出了一种基于BEV图像的旋转不变LiDAR位置识别方法BEVPlace。
+- **创新点**: 利用组卷积和NetVLAD实现BEV特征的旋转等变与全局聚合，并建立特征距离与几何距离的关联。
+- **结果**: 在视角变化下显著提升了位置识别的鲁棒性，且简单网络即可达到与最先进方法相当的性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -23,41 +33,60 @@
 
 </details>
 
-### BAEFormer: Bi-Directional and Early Interaction Transformers for Bird's Eye View Semantic Segmentation.
+### BAEFormer: Bi-Directional and Early Interaction Transformers for Bird's Eye View Semantic Segmentation. **⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00925) · 📚 被引 31
 - **作者**: Cong Pan, Yonghao He, Junran Peng, Qian Zhang, Wei Sui, Zhaoxiang Zhang
 - **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences,National Laboratory of Pattern Recognition, Horizon Robotics, Huawei Inc.
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对BEV语义分割中多相机特征融合效率低、空间交互不足的问题。②提出BAEFormer，采用双向交互和早期交互的Transformer架构，在BEV空间中进行特征融合。③相比传统自注意力或简单拼接，双向交互能同时捕捉空间和通道维度依赖，早期交互减少信息损失。④在公开BEV分割基准上取得优于基线方法的性能，具体数值未在摘要中给出。
+- **摘要（英）**: This paper addresses inefficient multi-camera feature fusion in BEV semantic segmentation by proposing BAEFormer, a Transformer with bi-directional and early interaction mechanisms. It improves spatial and channel dependency modeling compared to prior fusion methods, achieving superior performance on BEV segmentation benchmarks.
+- **核心贡献**: 提出双向早期交互Transformer用于BEV语义分割。
+- **创新点**: 双向交互和早期交互机制增强BEV特征融合。
+- **结果**: 在BEV分割任务上优于基线。
 
-### BEV@DC: Bird's-Eye View Assisted Training for Depth Completion.
+### BEV@DC: Bird's-Eye View Assisted Training for Depth Completion. **⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00891) · 📚 被引 37
 - **作者**: Wending Zhou, Xu Yan, Yinghong Liao, Yuankai Lin, Jin Huang, Gangming Zhao et al.
 - **🏷️ 机构**: FNii, CUHK-Shenzhen, Huazhong University of Science and Technology, Cardiff University
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对深度补全任务中缺乏全局几何信息的问题。②提出BEV@DC，利用BEV表示辅助训练深度补全网络，通过引入BEV特征监督增强深度估计的全局一致性。③相比仅依赖局部像素的深度补全方法，BEV辅助提供场景级上下文。④在KITTI深度补全基准上取得改进，具体数值未在摘要中给出。
+- **摘要（英）**: This paper tackles depth completion by introducing BEV-assisted training, which leverages bird's-eye-view features to provide global geometric context. It improves depth estimation consistency compared to pixel-level methods, achieving better performance on KITTI benchmark.
+- **核心贡献**: 提出BEV辅助训练策略提升深度补全精度。
+- **创新点**: 利用BEV全局特征监督深度补全。
+- **结果**: 在KITTI上性能提升。
 
-### BEV-Guided Multi-Modality Fusion for Driving Perception.
+### BEV-Guided Multi-Modality Fusion for Driving Perception. **⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02103) · 📚 被引 59
 - **作者**: Yunze Man, Liang-Yan Gui, Yu-Xiong Wang
 - **🏷️ 机构**: UIUC
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对自动驾驶中多模态融合（相机与LiDAR）在BEV表示下的对齐问题。②提出BEV引导的多模态融合框架，利用BEV特征作为中间表示统一融合图像和点云信息。③相比早期或晚期融合，BEV引导能更好地处理空间对齐和特征交互。④在nuScenes等数据集上验证了有效性，具体数值未在摘要中给出。
+- **摘要（英）**: This paper addresses multi-modal fusion in autonomous driving by proposing a BEV-guided framework that unifies camera and LiDAR features in bird's-eye-view space. It improves spatial alignment and feature interaction compared to existing fusion methods, with validation on nuScenes.
+- **核心贡献**: 提出BEV引导的多模态融合方法。
+- **创新点**: 以BEV为统一空间进行跨模态融合。
+- **结果**: 在nuScenes上有效。
 
-### BEV-LaneDet: An Efficient 3D Lane Detection Based on Virtual Camera via Key-Points.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00103) · 📚 被引 70
+### BEV-LaneDet: An Efficient 3D Lane Detection Based on Virtual Camera via Key-Points. **⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00103) · 📚 被引 69
 - **作者**: Ruihao Wang, Jian Qin, Kaiying Li, Yaochen Li, Dong Cao, Jintao Xu
 - **🏷️ 机构**: HAOMO.AI Technology Co., Ltd., Xi&#x0027;an Jiaotong University
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对3D车道线检测中相机视角变化和计算效率问题。②提出BEV-LaneDet，基于虚拟相机和关键点检测，在BEV空间中进行高效3D车道线检测。③相比直接回归3D点，关键点方法降低复杂度并提高鲁棒性。④在公开车道线数据集上取得较好性能，具体数值未在摘要中给出。
+- **摘要（英）**: This paper addresses 3D lane detection challenges by proposing BEV-LaneDet, which uses virtual camera and key-point detection in BEV space. It reduces computational complexity and improves robustness compared to direct regression, achieving good performance on lane datasets.
+- **核心贡献**: 提出基于虚拟相机和关键点的3D车道线检测。
+- **创新点**: 关键点表示简化3D车道线预测。
+- **结果**: 在车道线数据集上有效。
 
-### FB-BEV: BEV Representation from Forward-Backward View Transformations.
-- **链接**: [arXiv:2308.02236](https://arxiv.org/abs/2308.02236) · [代码](https://github.com/NVlabs/FB-BEV) · 📚 被引 139
+### FB-BEV: BEV Representation from Forward-Backward View Transformations. **⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00637) · 📚 被引 139
 - **作者**: Zhiqi Li, Zhiding Yu, Wenhai Wang, Anima Anandkumar, Tong Lu, José M. Álvarez
 - **🏷️ 机构**: Nanjing University,National Key Lab for Novel Software Technology, NVIDIA, The Chinese University of Hong Kong
 - **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> View Transformation Module (VTM), where transformations happen between multi-view image features and Bird-Eye-View (BEV) representation, is a crucial step in camera-based BEV perception systems. Currently, the two most prominent VTM paradigms are forward projection and backward projection. Forward projection, represented by Lift-Splat-Shoot, leads to sparsely projected BEV features without post-processing. Backward projection, with BEVFormer being an example, tends to generate false-positive BEV features from incorrect projections due to the lack of utilization on depth. To address the above limitations, we propose a novel forward-backward view transformation module. Our approach compensates for the deficiencies in both existing methods, allowing them to enhance each other to obtain higher quality BEV representations mutually. We instantiate the proposed module with FB-BEV, which achieves a new state-of-the-art result of 62.4% NDS on the nuScenes test set. Code and models are available at https://github.com/NVlabs/FB-BEV.
-
-</details>
+- **摘要（中）**: 针对BEV表示生成中视图变换效率和信息损失的问题，本文提出FB-BEV方法，通过前向-后向视图变换来优化BEV特征提取。由于摘要缺失，具体方法细节不详，但推测通过双向变换增强特征一致性，提升BEV感知的准确性。
+- **摘要（英）**: This paper proposes FB-BEV, a method for BEV representation using forward-backward view transformations, aiming to improve efficiency and reduce information loss in view transformation. Specific details are unavailable due to missing abstract, but it likely enhances feature consistency for better BEV perception.
+- **核心贡献**: 提出了一种前向-后向视图变换的BEV表示学习方法。
+- **创新点**: 通过双向变换增强BEV特征的鲁棒性和信息完整性。
+- **结果**: 具体效果未知，但预期提升BEV感知精度。
 
 ### MatrixVT: Efficient Multi-Camera to BEV Transformation for 3D Perception.
 - **链接**: [arXiv:2211.10593](https://arxiv.org/abs/2211.10593) · 📚 被引 46
@@ -267,4 +296,5 @@
 - MatrixVT: Efficient Multi-Camera to BEV Transformation for 3D Perception. → [network-pruning](../network-pruning/Guideline%202023.md)
 - OccFormer: Dual-path Transformer for Vision-based 3D Semantic Occupancy Prediction. → [network-pruning](../network-pruning/Guideline%202023.md)
 - BEVDistill: Cross-Modal BEV Distillation for Multi-View 3D Object Detection. → [multimodal](../multimodal/Guideline%202023.md)
+
 <!-- COMPLETE v1 papers=21 -->

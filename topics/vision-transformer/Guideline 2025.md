@@ -3,39 +3,68 @@
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
 > 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### APHQ-ViT: Post-Training Quantization with Average Perturbation Hessian Based Reconstruction for Vision Transformers.
+### APHQ-ViT: Post-Training Quantization with Average Perturbation Hessian Based Reconstruction for Vision Transformers. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2504.02508](https://arxiv.org/abs/2504.02508) · 📚 被引 5
 - **作者**: Zhuguanyu Wu, Jiayi Zhang, Jiaxin Chen, Jinyang Guo, Di Huang, Yunhong Wang
 - **🏷️ 机构**: Beihang University,State Key Laboratory of Virtual Reality Technology and Systems,China, Beihang University,School of Artificial Intelligence,Beijing,China, Beihang University,School of Computer Science and Engineering,Beijing,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对视觉Transformer（ViT）在后训练量化（PTQ）中，尤其是超低位宽下精度严重下降的问题。②提出了APHQ-ViT方法，基于平均扰动Hessian（APH）损失进行重要性估计，并设计了MLP重建（MR）方法，通过将MLP中的GELU替换为ReLU并在小规模无标签校准集上重建。③改进点在于更准确地估计输出重要性，并专门处理post-GELU激活的量化难题。④实验表明，APHQ-ViT在线性量化下取得了显著优于现有PTQ方法的性能，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses the severe accuracy drop of Vision Transformers (ViTs) under ultra-low-bit post-training quantization (PTQ). It proposes APHQ-ViT, which uses an average perturbation Hessian (APH) loss for importance estimation and an MLP reconstruction method that replaces GELU with ReLU to handle post-GELU activations. Experiments demonstrate significant improvements over existing PTQ methods with linear quantization.
+- **核心贡献**: 提出基于APH损失和MLP重建的ViT后训练量化方法，显著提升超低位宽下的量化精度。
+- **创新点**: 引入平均扰动Hessian损失和ReLU替换策略，解决了ViT量化中重要性估计不准和post-GELU激活退化的问题。
+- **结果**: 在线性量化下取得了优于现有PTQ方法的性能，具体数据未在摘要中给出。
 
-### EA-Vit: Efficient Adaptation for Elastic Vision Transformer.
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Vision Transformers (ViTs) have become one of the most commonly used backbones for vision tasks. Despite their remarkable performance, they often suffer significant accuracy drops when quantized for practical deployment, particularly by post-training quantization (PTQ) under ultra-low bits. Recently, reconstruction-based PTQ methods have shown promising performance in quantizing Convolutional Neural Networks (CNNs). However, they fail when applied to ViTs, primarily due to the inaccurate estimation of output importance and the substantial accuracy degradation in quantizing post-GELU activations. To address these issues, we propose \textbf{APHQ-ViT}, a novel PTQ approach based on importance estimation with Average Perturbation Hessian (APH). Specifically, we first thoroughly analyze the current approximation approaches with Hessian loss, and propose an improved average perturbation Hessian loss. To deal with the quantization of the post-GELU activations, we design an MLP Reconstruction (MR) method by replacing the GELU function in MLP with ReLU and reconstructing it by the APH loss on a small unlabeled calibration set. Extensive experiments demonstrate that APHQ-ViT using linear quantizers outperforms existing PTQ methods by substantial margins in 3-bit and 4-bit across different vision tasks. The source code is available at https://github.com/GoatWu/APHQ-ViT.
+
+</details>
+
+### EA-Vit: Efficient Adaptation for Elastic Vision Transformer. **⭐⭐** (相关度: 35%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00104) · 📚 被引 1
 - **作者**: Chen Zhu, Wangbo Zhao, Huiwen Zhang, Yuhao Zhou, Weidong Tang, Shuo Wang et al.
 - **🏷️ 机构**: National University of Singapore, Xidian University, Houmo AI
 - **会议**: ICCV 2025
+- **摘要（中）**: ①针对弹性视觉Transformer（Elastic ViT）在适应新任务时效率低下的问题。②提出了EA-Vit方法，实现高效的自适应调整。③改进点在于通过高效适应策略减少计算开销。④摘要未提供具体实验数据。
+- **摘要（英）**: This paper addresses the inefficiency of adapting elastic Vision Transformers to new tasks. It proposes EA-Vit for efficient adaptation, aiming to reduce computational overhead. The abstract lacks specific experimental results.
+- **核心贡献**: 提出一种高效适应弹性ViT的方法。
+- **创新点**: 通过高效适应策略优化弹性ViT的调整过程。
+- **结果**: 摘要未提供具体效果数据。
 
-### Efficient Adaptation of Pre-Trained Vision Transformer Underpinned by Approximately Orthogonal Fine-Tuning Strategy.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00464) · 📚 被引 0
+### Efficient Adaptation of Pre-Trained Vision Transformer Underpinned by Approximately Orthogonal Fine-Tuning Strategy. **⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00464)
 - **作者**: Yiting Yang, Hao Luo, Yuan Sun, Qingsen Yan, Haokui Zhang, Wei Dong et al.
 - **🏷️ 机构**: Xi&#x0027;an University of Architecture and Technology, University of Electronic Science and Technology of China, Northwestern Polytechnical University
 - **会议**: ICCV 2025
+- **摘要（中）**: ①针对预训练ViT模型在微调时面临的计算和存储开销问题。②提出一种基于近似正交微调策略的高效适配方法，旨在减少微调参数并保持模型性能。③改进点在于利用正交性约束优化微调过程，提高参数效率。④摘要为空，无法获取具体效果数据。
+- **摘要（英）**: This paper tackles the high computational and storage costs of fine-tuning pre-trained Vision Transformers by proposing an approximately orthogonal fine-tuning strategy. The method aims to reduce trainable parameters while preserving performance, but the abstract lacks experimental details and quantitative results.
+- **核心贡献**: 提出近似正交微调策略用于高效适配预训练ViT。
+- **创新点**: 将正交性约束应用于微调过程以提升参数效率。
+- **结果**: 未提供具体实验结果。
 
-</details>
-
-### Similarity-Guided Layer-Adaptive Vision Transformer for UAV Tracking.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xue_Similarity-Guided_Layer-Adaptive_Vision_Transformer_for_UAV_Tracking_CVPR_2025_paper.html) · 📚 被引 56
+### Similarity-Guided Layer-Adaptive Vision Transformer for UAV Tracking. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Xue_Similarity-Guided_Layer-Adaptive_Vision_Transformer_for_UAV_Tracking_CVPR_2025_paper.html) · 📚 被引 54
 - **作者**: Chaocan Xue, Bineng Zhong, Qihua Liang, Yaozong Zheng, Ning Li, Yuanliang Xue et al.
 - **🏷️ 机构**: Guangxi Normal University,Key Laboratory of Education Blockchain and Intelligent Technology, Ministry of Education,Guilin,China,541004, Xi&#x2019;an Research Institute of High Technology,Xi&#x2019;an,China,710025
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对无人机（UAV）跟踪中目标外观变化和计算资源受限的问题。②提出了相似度引导的层自适应视觉Transformer（Similarity-Guided Layer-Adaptive ViT），根据目标相似度动态调整网络层。③改进点在于通过层自适应机制平衡精度和效率。④摘要未提供具体实验数据。
+- **摘要（英）**: This paper addresses challenges in UAV tracking, such as appearance changes and limited computational resources. It proposes a similarity-guided layer-adaptive Vision Transformer that dynamically adjusts network layers based on target similarity. The abstract lacks specific experimental results.
+- **核心贡献**: 提出一种相似度引导的层自适应ViT用于UAV跟踪。
+- **创新点**: 通过层自适应机制动态调整网络结构，平衡跟踪精度和效率。
+- **结果**: 摘要未提供具体效果数据。
 
-### BHViT: Binarized Hybrid Vision Transformer.
+### BHViT: Binarized Hybrid Vision Transformer. **⭐⭐⭐⭐** (相关度: 45%)
 - **链接**: [arXiv:2503.02394](https://arxiv.org/abs/2503.02394) · 📚 被引 32
 - **作者**: Tian Gao, Yu Zhang, Zhiyuan Zhang, Huajun Liu, Kaijie Yin, Chengzhong Xu et al.
 - **🏷️ 机构**: Nanjing University of Science and Technology, Shanghai Jiaotong University, Singapore Management University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对视觉Transformer（ViT）在边缘设备上部署时，二值化导致性能大幅下降的问题。②提出了BHViT，一种二值化友好的混合ViT架构及其全二值化模型，基于三个关键观察：利用局部信息交互和层级特征聚合减少冗余计算，提出基于移位操作的模块增强二值MLP性能，以及基于量化分解的注意力矩阵二值化方法。③改进点在于针对ViT结构差异设计二值化策略，而非直接套用CNN方法。④实验表明，BHViT在全二值化下取得了显著优于现有方法的性能，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses the significant performance drop when binarizing Vision Transformers (ViTs) for edge deployment. It proposes BHViT, a binarization-friendly hybrid ViT architecture with full binarization, guided by three observations: local information interaction, shift-based MLP enhancement, and quantization-decomposition-based attention binarization. Experiments show significant improvements over existing methods, though specific numbers are not in the abstract.
+- **核心贡献**: 提出BHViT，一种二值化友好的混合ViT架构，实现高效的全二值化模型。
+- **创新点**: 结合局部信息交互、移位操作和量化分解，解决ViT二值化的性能退化问题。
+- **结果**: 在全二值化下取得了显著优于现有方法的性能，具体数据未在摘要中给出。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -43,17 +72,16 @@
 
 </details>
 
-### LibraGrad: Balancing Gradient Flow for Universally Better Vision Transformer Attributions.
+### LibraGrad: Balancing Gradient Flow for Universally Better Vision Transformer Attributions. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2411.16760](https://arxiv.org/abs/2411.16760) · 📚 被引 1
 - **作者**: Faridoun Mehri, Mahdieh Soleymani Baghshah, Mohammad Taher Pilehvar
 - **🏷️ 机构**: Sharif University of Technology,Iran, Cardiff University,UK
 - **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Why do gradient-based explanations struggle with Transformers, and how can we improve them? We identify gradient flow imbalances in Transformers that violate FullGrad-completeness, a critical property for attribution faithfulness that CNNs naturally possess. To address this issue, we introduce LibraGrad -- a theoretically grounded post-hoc approach that corrects gradient imbalances through pruning and scaling of backward paths, without changing the forward pass or adding computational overhead. We evaluate LibraGrad using three metric families: Faithfulness, which quantifies prediction changes under perturbations of the most and least relevant features; Completeness Error, which measures attribution conservation relative to model outputs; and Segmentation AP, which assesses alignment with human perception. Extensive experiments across 8 architectures, 4 model sizes, and 4 datasets show that LibraGrad universally enhances gradient-based methods, outperforming existing white-box methods -- including Transformer-specific approaches -- across all metrics. We demonstrate superior qualitative results through two complementary evaluations: precise text-prompted region highlighting on CLIP models and accurate class discrimination between co-occurring animals on ImageNet-finetuned models -- two settings on which existing methods often struggle. LibraGrad is effective even on the attention-free MLP-Mixer architecture, indicating potential for extension to other modern architectures. Our code is freely available at https://github.com/NightMachinery/LibraGrad.
-
-</details>
+- **摘要（中）**: 针对Transformer中梯度解释方法存在梯度流不平衡、违反FullGrad完备性的问题，本文提出LibraGrad方法。该方法通过剪枝和缩放反向路径来纠正梯度不平衡，无需改变前向传播或增加计算开销。相比已有方法，LibraGrad在8种架构、4种模型规模和4个数据集上普遍提升梯度方法性能，超越现有白盒方法，包括Transformer专用方法。
+- **摘要（英）**: Addressing gradient flow imbalances in Transformers that violate FullGrad-completeness, this paper proposes LibraGrad, a post-hoc approach that corrects gradient imbalances via pruning and scaling backward paths without altering the forward pass. It universally enhances gradient-based methods across 8 architectures, 4 model sizes, and 4 datasets, outperforming existing white-box methods on all metrics.
+- **核心贡献**: 提出LibraGrad，纠正Transformer梯度流不平衡，提升归因忠实性。
+- **创新点**: 基于FullGrad完备性的梯度路径剪枝与缩放。
+- **结果**: 在多个架构和数据集上超越现有白盒方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -240,4 +268,5 @@
 - Preserving Deep Representations in One-Shot Pruning: A Hessian-Free Second-Order Optimization Framework. → [network-pruning](../network-pruning/Guideline%202025.md)
 - OATS: Outlier-Aware Pruning Through Sparse and Low Rank Decomposition. → [network-pruning](../network-pruning/Guideline%202025.md)
 - Effective Interplay between Sparsity and Quantization: From Theory to Practice. → [network-pruning](../network-pruning/Guideline%202025.md)
+
 <!-- COMPLETE v1 papers=22 -->

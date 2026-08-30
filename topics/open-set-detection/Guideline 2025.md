@@ -3,17 +3,22 @@
 > 领域: 开放类检测总类（开放词表 OVD / 开放世界 OWOD / 开集 OOD / 未知类检测）
 > 论文数: 35 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Any3DIS: Class-Agnostic 3D Instance Segmentation by 2D Mask Tracking.
+### Any3DIS: Class-Agnostic 3D Instance Segmentation by 2D Mask Tracking. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2411.16183](https://arxiv.org/abs/2411.16183) · 📚 被引 2
 - **作者**: Phuc Nguyen, Minh Luu, Anh Tuan Tran, Cuong Pham, Khoi Nguyen
 - **🏷️ 机构**: MovianAI, Qualcomm AI Research, Qualcomm Vietnam Company Limited
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对3D实例分割中因无监督合并策略导致的过分割问题，本文提出3D-Aware 2D Mask Tracking模块，利用SAM-2的3D先验确保跨帧掩码一致性，并通过3D Mask Optimization模块采用动态规划选择最优视图集，细化超点生成精确的3D提案。相比现有启发式合并方法，该方法减少了冗余提案，实现了场景内全面的物体覆盖。实验表明，该方法在3D实例分割任务上显著提升了精度和效率。
+- **摘要（英）**: This paper addresses over-segmentation in 3D instance segmentation by introducing a 3D-Aware 2D Mask Tracking module that leverages SAM-2's 3D priors for consistent masks, and a 3D Mask Optimization module using dynamic programming to select optimal views for refining superpoints. It reduces redundant proposals and achieves comprehensive object coverage, improving accuracy and efficiency over heuristic merging methods.
+- **核心贡献**: 提出了一种结合2D掩码跟踪和动态规划优化的3D实例分割方法，有效减少了过分割。
+- **创新点**: 利用SAM-2的3D先验和动态规划视图选择，实现了更精确的3D提案生成。
+- **结果**: 在3D实例分割任务上显著减少了冗余提案，提升了分割精度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Open-Vocabulary Multi-Object Tracking (OV-MOT) aims to enable approaches to track objects without being limited to a predefined set of categories. Current OV-MOT methods typically rely primarily on instance-level detection and association, often overlooking trajectory information that is unique and essential for object tracking tasks. Utilizing trajectory information can enhance association stability and classification accuracy, especially in cases of occlusion and category ambiguity, thereby improving adaptability to novel classes. Thus motivated, in this paper we propose \textbf{TRACT}, an open-vocabulary tracker that leverages trajectory information to improve both object association and classification in OV-MOT. Specifically, we introduce a \textit{Trajectory Consistency Reinforcement} (\textbf{TCR}) strategy, that benefits tracking performance by improving target identity and category consistency. In addition, we present \textbf{TraCLIP}, a plug-and-play trajectory classification module. It integrates \textit{Trajectory Feature Aggregation} (\textbf{TFA}) and \textit{Trajectory Semantic Enrichment} (\textbf{TSE}) strategies to fully leverage trajectory information from visual and language perspectives for enhancing the classification results. Extensive experiments on OV-TAO show that our TRACT significantly improves tracking performance, highlighting trajectory information as a valuable asset for OV-MOT. Code will be released.
+> Existing 3D instance segmentation methods frequently encounter issues with over-segmentation, leading to redundant and inaccurate 3D proposals that complicate downstream tasks. This challenge arises from their unsupervised merging approach, where dense 2D instance masks are lifted across frames into point clouds to form 3D candidate proposals without direct supervision. These candidates are then hierarchically merged based on heuristic criteria, often resulting in numerous redundant segments that fail to combine into precise 3D proposals. To overcome these limitations, we propose a 3D-Aware 2D Mask Tracking module that uses robust 3D priors from a 2D mask segmentation and tracking foundation model (SAM-2) to ensure consistent object masks across video frames. Rather than merging all visible superpoints across views to create a 3D mask, our 3D Mask Optimization module leverages a dynamic programming algorithm to select an optimal set of views, refining the superpoints to produce a final 3D proposal for each object. Our approach achieves comprehensive object coverage within the scene while reducing unnecessary proposals, which could otherwise impair downstream applications. Evaluations on ScanNet200 and ScanNet++ confirm the effectiveness of our method, with improvements across Class-Agnostic, Open-Vocabulary, and Open-Ended 3D Instance Segmentation tasks.
 
 </details>
 
@@ -29,23 +34,22 @@
 
 </details>
 
-### Advancing Generalizable Tumor Segmentation with Anomaly-Aware Open-Vocabulary Attention Maps and Frozen Foundation Diffusion Models.
-- **链接**: [arXiv:2505.02753](https://arxiv.org/abs/2505.02753) · [代码](https://github.com/Yankai96/DiffuGTS) · 📚 被引 1
-- **作者**: Yankai Jiang, Peng Zhang, Donglin Yang, Yuan Tian, Hai Lin, Xiaosong Wang
-- **🏷️ 机构**: Shanghai AI Laboratory, Zhejiang University, The University of British Columbia
+### Fine-Grained Image-Text Correspondence with Cost Aggregation for Open-Vocabulary Part Segmentation. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2501.09688](https://arxiv.org/abs/2501.09688) · 📚 被引 1
+- **作者**: Jiho Choi, Seonho Lee, Minhyun Lee, Seungho Lee, Hyunjung Shim
+- **🏷️ 机构**: KAIST,Republic of Korea, Samsung Electronics,Republic of Korea
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对开放词汇部分分割中图像-文本对应和对齐困难及结构理解不足的问题，本文提出PartCATSeg框架，集成对象感知的部分级成本聚合、组合损失和DINO结构引导。该方法通过分离对象和部分级成本处理，增强部分分割精度，并利用组合损失捕捉部分-对象关系。实验在Pascal-Part-116等数据集上显著优于现有方法，为未见类别泛化设立了新基线。
+- **摘要（英）**: This paper proposes PartCATSeg for open-vocabulary part segmentation, integrating object-aware cost aggregation, compositional loss, and DINO structural guidance. It enhances part-level precision and part-object relationships, outperforming state-of-the-art on Pascal-Part-116 and other benchmarks.
+- **核心贡献**: 提出了一个结合成本聚合和结构引导的开放词汇部分分割框架。
+- **创新点**: 采用分离成本聚合和组合损失，增强部分级对齐和结构理解。
+- **结果**: 在多个部分分割数据集上取得了领先性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We explore Generalizable Tumor Segmentation, aiming to train a single model for zero-shot tumor segmentation across diverse anatomical regions. Existing methods face limitations related to segmentation quality, scalability, and the range of applicable imaging modalities. In this paper, we uncover the potential of the internal representations within frozen medical foundation diffusion models as highly efficient zero-shot learners for tumor segmentation by introducing a novel framework named DiffuGTS. DiffuGTS creates anomaly-aware open-vocabulary attention maps based on text prompts to enable generalizable anomaly segmentation without being restricted by a predefined training category list. To further improve and refine anomaly segmentation masks, DiffuGTS leverages the diffusion model, transforming pathological regions into high-quality pseudo-healthy counterparts through latent space inpainting, and applies a novel pixel-level and feature-level residual learning approach, resulting in segmentation masks with significantly enhanced quality and generalization. Comprehensive experiments on four datasets and seven tumor categories demonstrate the superior performance of our method, surpassing current state-of-the-art models across multiple zero-shot settings. Codes are available at https://github.com/Yankai96/DiffuGTS.
+> Open-Vocabulary Part Segmentation (OVPS) is an emerging field for recognizing fine-grained parts in unseen categories. We identify two primary challenges in OVPS: (1) the difficulty in aligning part-level image-text correspondence, and (2) the lack of structural understanding in segmenting object parts. To address these issues, we propose PartCATSeg, a novel framework that integrates object-aware part-level cost aggregation, compositional loss, and structural guidance from DINO. Our approach employs a disentangled cost aggregation strategy that handles object and part-level costs separately, enhancing the precision of part-level segmentation. We also introduce a compositional loss to better capture part-object relationships, compensating for the limited part annotations. Additionally, structural guidance from DINO features improves boundary delineation and inter-part understanding. Extensive experiments on Pascal-Part-116, ADE20K-Part-234, and PartImageNet datasets demonstrate that our method significantly outperforms state-of-the-art approaches, setting a new baseline for robust generalization to unseen part categories.
 
 </details>
-
-### Fine-Grained Image-Text Correspondence with Cost Aggregation for Open-Vocabulary Part Segmentation.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Choi_Fine-Grained_Image-Text_Correspondence_with_Cost_Aggregation_for_Open-Vocabulary_Part_Segmentation_CVPR_2025_paper.html)
-- **作者**: Jiho Choi, Seonho Lee, Minhyun Lee, Seungho Lee, Hyunjung Shim
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
 
 ### GROVE: A Generalized Reward for Learning Open-Vocabulary Physical Skill.
 - **链接**: [arXiv:2504.04191](https://arxiv.org/abs/2504.04191) · 📚 被引 5
@@ -59,11 +63,16 @@
 
 </details>
 
-### LLMDet: Learning Strong Open-Vocabulary Object Detectors under the Supervision of Large Language Models.
-- **链接**: [arXiv:2501.18954](https://arxiv.org/abs/2501.18954) · [代码](https://github.com/iSEE-Laboratory/LLMDet) · 📚 被引 30
+### LLMDet: Learning Strong Open-Vocabulary Object Detectors under the Supervision of Large Language Models. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [arXiv:2501.18954](https://arxiv.org/abs/2501.18954) · 📚 被引 30
 - **作者**: Shenghao Fu, Qize Yang, Qijie Mo, Junkai Yan, Xihan Wei, Jingke Meng et al.
 - **🏷️ 机构**: Sun Yat-sen University,School of Computer Science and Engineering,China, Alibaba Group,Tongyi Lab
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对开放词汇检测器在区域级标注数据下性能受限的问题，本文提出LLMDet，通过LLM生成图像级详细描述，与检测器协同训练，结合标准接地损失和描述生成损失。该方法利用LLM生成区域级和图像级描述，显著提升了检测器的开放词汇能力，并展示了改进的检测器可增强大型多模态模型，实现互利。实验表明，LLMDet在多个基准上优于基线。
+- **摘要（英）**: This paper proposes LLMDet, an open-vocabulary detector co-trained with a large language model using image-level captions, combining grounding and caption generation losses. It improves open-vocabulary ability and shows mutual benefits with large multimodal models, outperforming baselines.
+- **核心贡献**: 提出了一个利用LLM监督的开放词汇检测器，并构建了GroundingCap-1M数据集。
+- **创新点**: 通过LLM生成的详细描述进行协同训练，实现检测与多模态模型的互利。
+- **结果**: 在开放词汇检测任务上显著优于基线，并增强了多模态模型。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -83,11 +92,16 @@
 
 </details>
 
-### Exploring Simple Open-Vocabulary Semantic Segmentation.
+### Exploring Simple Open-Vocabulary Semantic Segmentation. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2401.12217](https://arxiv.org/abs/2401.12217) · 📚 被引 7
 - **作者**: Zihang Lai
 - **🏷️ 机构**: University of Oxford,Visual Geometry Group (VGG)
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对开放词汇语义分割中依赖图像级视觉语言模型、真实掩码和自定义分组编码器的问题，本文提出S-Seg模型，仅利用伪掩码和语言训练MaskFormer，无需上述元素即可实现强性能。该模型可直接从公开图像-文本数据集训练，直接优化像素级特征与语言对齐，训练后无需微调即可泛化到多个测试数据集。S-Seg具有数据可扩展性，并通过自训练持续改进，为未来研究提供了简单有效的基线。
+- **摘要（英）**: This paper introduces S-Seg, a novel open-vocabulary semantic segmentation model that trains a MaskFormer using only pseudo-masks and language, without relying on image-level VL models, ground truth masks, or custom grouping encoders. It directly optimizes pixel-level feature-language alignment and can be trained from public image-text datasets, generalizing well across datasets without fine-tuning. S-Seg offers scalability with data and consistent improvements with self-training, serving as a solid baseline.
+- **核心贡献**: 提出S-Seg，一种仅依赖伪掩码和语言训练的开放词汇语义分割模型，无需复杂组件。
+- **创新点**: 创新性地直接训练像素级特征与语言对齐，简化了训练流程并提升泛化性。
+- **结果**: S-Seg在多个测试数据集上无需微调即表现出强性能，并具有数据可扩展性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -95,11 +109,16 @@
 
 </details>
 
-### Effective SAM Combination for Open-Vocabulary Semantic Segmentation.
+### Effective SAM Combination for Open-Vocabulary Semantic Segmentation. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2411.14723](https://arxiv.org/abs/2411.14723) · 📚 被引 5
 - **作者**: Minhyeok Lee, Suhwan Cho, Jungho Lee, Sunghun Yang, Heeseung Choi, Ig-Jae Kim et al.
 - **🏷️ 机构**: Yonsei University, Korea Institute of Science and Technology (KIST)
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对开放词汇语义分割中两阶段方法（如SAM+CLIP）计算成本高和内存效率低的问题，本文提出ESC-Net，一种单阶段开放词汇分割模型，利用SAM解码器块进行类无关分割，并嵌入从图像-文本相关性生成的伪提示到SAM的可提示分割框架中，实现精确掩码预测。ESC-Net在ADE20K、PASCAL-VOC和PASCAL-Context等基准上优于先前方法，在效率和准确性上均表现出色，消融研究验证了其鲁棒性。
+- **摘要（英）**: This paper proposes ESC-Net, a one-stage open-vocabulary segmentation model that leverages SAM decoder blocks for class-agnostic segmentation and embeds pseudo prompts from image-text correlations into SAM's promptable framework for refined mask prediction. It outperforms prior methods on benchmarks like ADE20K, PASCAL-VOC, and PASCAL-Context in both efficiency and accuracy. Ablation studies demonstrate robustness across challenging conditions.
+- **核心贡献**: 提出ESC-Net，一种单阶段开放词汇分割模型，结合SAM解码器和伪提示提升效率与准确性。
+- **创新点**: 创新性地将伪提示嵌入SAM框架，实现单阶段高效分割。
+- **结果**: ESC-Net在多个基准上优于先前方法，效率和准确性均提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -107,11 +126,16 @@
 
 </details>
 
-### Mosaic3D: Foundation Dataset and Model for Open-Vocabulary 3D Segmentation.
+### Mosaic3D: Foundation Dataset and Model for Open-Vocabulary 3D Segmentation. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2502.02548](https://arxiv.org/abs/2502.02548) · 📚 被引 3
 - **作者**: Junha Lee, Chunghyun Park, Jaesung Choe, Yu-Chiang Frank Wang, Jan Kautz, Minsu Cho et al.
 - **🏷️ 机构**: NVIDIA, POSTECH
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对开放词汇3D场景理解中精确区域分割、全面文本描述和数据集规模不足的问题，本文提出自动数据生成管道和训练框架，利用开放词汇图像分割模型和区域感知视觉语言模型生成高质量3D掩码-文本对，构建Mosaic3D-5.6M数据集（超过30K场景、5.6M掩码-文本对）。基于此，提出Mosaic3D基础模型，结合对比学习训练的3D编码器和轻量掩码解码器，用于开放词汇3D语义和实例分割，在ScanNet200、Matterport3D和ScanNet++上达到最先进性能。
+- **摘要（英）**: This paper addresses challenges in open-vocabulary 3D scene understanding by introducing an automatic pipeline that generates high-quality 3D mask-text pairs using open-vocabulary image segmentation and region-aware VLMs, creating the Mosaic3D-5.6M dataset with over 30K scenes. It proposes Mosaic3D, a foundation model with a contrastive-learned 3D encoder and lightweight mask decoder, achieving state-of-the-art results on ScanNet200, Matterport3D, and ScanNet++. The large-scale data and ablation studies validate its effectiveness.
+- **核心贡献**: 构建Mosaic3D-5.6M大规模数据集并提出Mosaic3D基础模型，实现开放词汇3D分割。
+- **创新点**: 创新性地利用自动管道生成3D掩码-文本对，结合对比学习训练基础模型。
+- **结果**: 在多个3D分割基准上达到最先进性能，验证了大规模数据的有效性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -119,11 +143,16 @@
 
 </details>
 
-### Mask-Adapter: The Devil is in the Masks for Open-Vocabulary Segmentation.
-- **链接**: [arXiv:2412.04533](https://arxiv.org/abs/2412.04533) · [代码](https://github.com/hustvl/MaskAdapter) · 📚 被引 14
+### Mask-Adapter: The Devil is in the Masks for Open-Vocabulary Segmentation. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2412.04533](https://arxiv.org/abs/2412.04533) · 📚 被引 14
 - **作者**: Yongkang Li, Tianheng Cheng, Bin Feng, Wenyu Liu, Xinggang Wang
 - **🏷️ 机构**: Huazhong University of Science &amp; Technology,School of EIC
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对开放词汇分割中掩码池化导致准确掩码分类失败的问题，本文揭示掩码池化的性能限制，并提出Mask-Adapter方法，从提议掩码中提取语义激活图，提供更丰富的上下文信息，确保掩码与CLIP对齐。此外，提出掩码一致性损失，鼓励IoU相似的提议掩码获得相似CLIP嵌入，增强模型对掩码变化的鲁棒性。Mask-Adapter可即插即用地集成到基于掩码池化的开放词汇分割方法中，提升分类准确性。
+- **摘要（英）**: This paper identifies limitations of mask pooling in open-vocabulary segmentation and introduces Mask-Adapter, which extracts semantic activation maps from proposal masks to provide richer context and ensure mask-CLIP alignment. It also proposes a mask consistency loss to enhance robustness to varying masks by encouraging similar IoUs to yield similar CLIP embeddings. Mask-Adapter integrates plug-and-play into mask-pooling methods, delivering more accurate classification results.
+- **核心贡献**: 提出Mask-Adapter，通过语义激活图和掩码一致性损失提升开放词汇分割的分类准确性。
+- **创新点**: 创新性地从掩码提取语义激活图，并引入掩码一致性损失增强鲁棒性。
+- **结果**: Mask-Adapter在开放词汇分割任务上提升了分类准确性，集成简便。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -131,17 +160,16 @@
 
 </details>
 
-### SegEarth-OV: Towards Training-Free Open-Vocabulary Segmentation for Remote Sensing Images.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Li_SegEarth-OV_Towards_Training-Free_Open-Vocabulary_Segmentation_for_Remote_Sensing_Images_CVPR_2025_paper.html) · 📚 被引 51
-- **作者**: Kaiyu Li, Ruixun Liu, Xiangyong Cao, Xueru Bai, Feng Zhou, Deyu Meng et al.
-- **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Software Engineering,Xi&#x2019;an,China,710049, Xi&#x2019;an Jiaotong University,School of Computer Science and Technology,Xi&#x2019;an,China,710049, Xidian University
-- **会议**: CVPR 2025
-
-### Anomize: Better Open Vocabulary Video Anomaly Detection.
+### Anomize: Better Open Vocabulary Video Anomaly Detection. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2503.18094](https://arxiv.org/abs/2503.18094) · 📚 被引 15
 - **作者**: Fei Li, Wenxuan Liu, Jingjing Chen, Ruixu Zhang, Yuran Wang, Xian Zhong et al.
 - **🏷️ 机构**: Wuhan University,National Engineering Research Center for Multimedia Software, School of Computer Science, Peking University,State Key Laboratory for Multimedia Information Processing, School of Computer Science, Fudan University,Shanghai Key Lab of Intelligent Information Processing, School of Computer Science
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对开放词汇视频异常检测中新颖异常的检测模糊性和分类混淆问题，本文提出Anomize框架，利用多源补充信息，结合多层级视觉数据和匹配文本信息来缓解检测模糊性，并通过引入标签关系指导新标签编码，改善新颖视频与标签的对齐，减少分类混淆。Anomize在UCF-Crime和XD-Violence数据集上取得优越性能，验证了其在开放词汇视频异常检测中的有效性。
+- **摘要（英）**: This paper addresses detection ambiguity and categorization confusion in open-vocabulary video anomaly detection by proposing Anomize, which leverages multi-source supplementary information from multi-level visual data and matching text to mitigate ambiguity, and incorporates label relations to guide new label encoding for better alignment. Anomize achieves superior performance on UCF-Crime and XD-Violence datasets, demonstrating its effectiveness in OVVAD.
+- **核心贡献**: 提出Anomize框架，通过多源信息和标签关系解决开放词汇视频异常检测中的模糊性和混淆问题。
+- **创新点**: 创新性地结合多层级视觉数据和标签关系编码，提升新颖异常检测和分类能力。
+- **结果**: 在UCF-Crime和XD-Violence数据集上取得优越性能，验证了有效性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -149,17 +177,16 @@
 
 </details>
 
-### SeeGround: See and Ground for Zero-Shot Open-Vocabulary 3D Visual Grounding.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html)
-- **作者**: Rong Li, Shijie Li, Lingdong Kong, Xulei Yang, Junwei Liang
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2025
-
-### SGC-Net: Stratified Granular Comparison Network for Open-Vocabulary HOI Detection.
-- **链接**: [arXiv:2503.00414](https://arxiv.org/abs/2503.00414) · [代码](https://github.com/Phil0212/SGC-Net) · 📚 被引 1
+### SGC-Net: Stratified Granular Comparison Network for Open-Vocabulary HOI Detection. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2503.00414](https://arxiv.org/abs/2503.00414) · 📚 被引 1
 - **作者**: Xin Lin, Chong Shi, Zuopeng Yang, Haojin Tang, Zhili Zhou
 - **🏷️ 机构**: Guangzhou University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对开放词汇人-物交互（OV-HOI）检测中特征粒度不足和语义相似性混淆的问题。②提出了分层粒度比较网络（SGC-Net），包含粒度感知对齐模块（聚合全局语义与局部细节）和层次分组比较模块（利用LLM递归比较分组类别以生成细粒度描述）。③改进点在于利用中间层视觉特征进行对齐，并通过LLM生成区分性描述来缓解CLIP的类别偏见。④实验表明该方法在OV-HOI检测基准上显著优于现有方法，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses feature granularity deficiency and semantic similarity confusion in open-vocabulary human-object interaction (OV-HOI) detection. It proposes a stratified granular comparison network (SGC-Net) with a granularity sensing alignment module and a hierarchical group comparison module, leveraging intermediate visual features and LLM-generated descriptions. The method achieves state-of-the-art performance on OV-HOI benchmarks, though specific numbers are not provided in the abstract.
+- **核心贡献**: 提出了SGC-Net，通过分层粒度比较网络解决OV-HOI检测中的特征粒度不足和语义混淆问题。
+- **创新点**: 创新性地结合粒度感知对齐和层次分组比较，利用LLM生成区分性描述。
+- **结果**: 在OV-HOI检测基准上取得领先性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -167,23 +194,38 @@
 
 </details>
 
-### ReasonGrounder: LVLM-Guided Hierarchical Feature Splatting for Open-Vocabulary 3D Visual Grounding and Reasoning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html)
+### ReasonGrounder: LVLM-Guided Hierarchical Feature Splatting for Open-Vocabulary 3D Visual Grounding and Reasoning. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.html) · 📚 被引 5
 - **作者**: Zhenyang Liu, Yikai Wang, Sixiao Zheng, Tongying Pan, Longfei Liang, Yanwei Fu et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: Fudan University, Nanyang Technological University, NeuHelium Co., Ltd
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对开放词汇3D视觉定位与推理中跨模态对齐和场景理解不足的问题。②提出了ReasonGrounder，利用大型视觉语言模型（LVLM）引导的分层特征splatting方法，将2D语义特征投影到3D空间进行推理。③改进点在于通过LVLM提供语义指导，结合分层特征表示增强3D场景的细粒度理解。④实验在多个3D视觉定位基准上展示了优越性能，具体数据未在摘要中给出。
+- **摘要（英）**: This paper tackles open-vocabulary 3D visual grounding and reasoning by proposing ReasonGrounder, which uses LVLM-guided hierarchical feature splatting to project 2D semantic features into 3D space. The method enhances fine-grained scene understanding through LVLM guidance and hierarchical representations. It achieves superior performance on multiple 3D grounding benchmarks, though specific metrics are not detailed in the abstract.
+- **核心贡献**: 提出了ReasonGrounder，一种LVLM引导的分层特征splatting方法，用于开放词汇3D视觉定位与推理。
+- **创新点**: 创新性地利用LVLM语义指导3D特征投影，实现跨模态细粒度推理。
+- **结果**: 在3D视觉定位基准上取得领先结果。
 
-### Parameter-efficient Fine-tuning in Hyperspherical Space for Open-vocabulary Semantic Segmentation.
+### Parameter-efficient Fine-tuning in Hyperspherical Space for Open-vocabulary Semantic Segmentation. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Peng_Parameter-efficient_Fine-tuning_in_Hyperspherical_Space_for_Open-vocabulary_Semantic_Segmentation_CVPR_2025_paper.html) · 📚 被引 4
 - **作者**: Zelin Peng, Zhengqin Xu, Zhilin Zeng, Yu Huang, Yaoming Wang, Wei Shen
 - **🏷️ 机构**: Shanghai Jiao Tong University,MoE Key Lab of Artificial Intelligence, AI Institute, Meituan
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对开放词汇语义分割中参数高效微调（PEFT）在超球面空间中的适配问题。②提出了在超球面空间中进行参数高效微调的方法，通过约束特征分布提升CLIP的泛化能力。③改进点在于利用超球面几何特性优化微调过程，减少参数更新同时保持特征判别性。④实验在多个语义分割数据集上验证了有效性，具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses parameter-efficient fine-tuning (PEFT) for open-vocabulary semantic segmentation in hyperspherical space. It proposes a method that constrains feature distributions during fine-tuning to enhance CLIP's generalization. The approach leverages hyperspherical geometry to reduce parameter updates while maintaining discriminative features. Experiments on segmentation datasets demonstrate effectiveness, though specific numbers are not provided.
+- **核心贡献**: 提出了超球面空间中的参数高效微调方法，用于开放词汇语义分割。
+- **创新点**: 创新性地将超球面几何约束引入PEFT，平衡效率与性能。
+- **结果**: 在语义分割数据集上验证了有效性。
 
-### Understanding Fine-tuning CLIP for Open-vocabulary Semantic Segmentation in Hyperbolic Space.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Peng_Understanding_Fine-tuning_CLIP_for_Open-vocabulary_Semantic_Segmentation_in_Hyperbolic_Space_CVPR_2025_paper.html)
+### Understanding Fine-tuning CLIP for Open-vocabulary Semantic Segmentation in Hyperbolic Space. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Peng_Understanding_Fine-tuning_CLIP_for_Open-vocabulary_Semantic_Segmentation_in_Hyperbolic_Space_CVPR_2025_paper.html) · 📚 被引 7
 - **作者**: Zelin Peng, Zhengqin Xu, Zhilin Zeng, Changsong Wen, Yu Huang, Menglin Yang et al.
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: AI Institute, Shanghai Jiao Tong University,MoE Key Lab of Artificial Intelligence, Hong Kong University of Science and Technology,Guangzhou, MBZUAI
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对CLIP在开放词汇语义分割中微调时特征空间结构不理想的问题。②提出了在双曲空间中理解并微调CLIP的方法，利用双曲几何的层次特性改善特征表示。③改进点在于分析双曲空间对CLIP特征分布的影响，并设计相应的微调策略。④实验表明该方法在多个分割基准上提升了性能，具体数据未在摘要中给出。
+- **摘要（英）**: This paper investigates fine-tuning CLIP for open-vocabulary semantic segmentation in hyperbolic space, leveraging hierarchical properties to improve feature representations. It analyzes the impact of hyperbolic geometry on CLIP features and designs a tailored fine-tuning strategy. Experiments on segmentation benchmarks show performance gains, though specific metrics are not detailed.
+- **核心贡献**: 提出了双曲空间中的CLIP微调方法，用于开放词汇语义分割。
+- **创新点**: 创新性地利用双曲几何的层次特性优化CLIP特征空间。
+- **结果**: 在分割基准上提升了性能。
 
 ### Semantic Library Adaptation: LoRA Retrieval and Fusion for Open-Vocabulary Semantic Segmentation.
 - **链接**: [arXiv:2503.21780](https://arxiv.org/abs/2503.21780) · 📚 被引 3
@@ -1147,4 +1189,5 @@
 > Understanding and synthesizing realistic 3D hand-object interactions (HOI) is critical for applications ranging from immersive AR/VR to dexterous robotics. Existing methods struggle with generalization, performing well on closed-set objects and predefined tasks but failing to handle unseen objects or open-vocabulary instructions. We introduce OpenHOI, the first framework for open-world HOI synthesis, capable of generating long-horizon manipulation sequences for novel objects guided by free-form language commands. Our approach integrates a 3D Multimodal Large Language Model (MLLM) fine-tuned for joint affordance grounding and semantic task decomposition, enabling precise localization of interaction regions (e.g., handles, buttons) and breakdown of complex instructions (e.g., "Find a water bottle and take a sip") into executable sub-tasks. To synthesize physically plausible interactions, we propose an affordance-driven diffusion model paired with a training-free physics refinement stage that minimizes penetration and optimizes affordance alignment. Evaluations across diverse scenarios demonstrate OpenHOI's superiority over state-of-the-art methods in generalizing to novel object categories, multi-stage tasks, and complex language instructions. Our project page at \href{https://openhoi.github.io}
 
 </details>
-<!-- COMPLETE v1 papers=115 -->
+
+<!-- COMPLETE v1 papers=112 -->

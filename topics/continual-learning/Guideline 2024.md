@@ -3,7 +3,7 @@
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
 > 论文数: 30 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### Hebbian Learning based Orthogonal Projection for Continual Learning of Spiking Neural Networks.
 - **链接**: [arXiv:2402.11984](https://arxiv.org/abs/2402.11984)
@@ -590,11 +590,16 @@
 - **创新点**: 利用自组织映射动态调整特征分布，无需任务边界。
 - **结果**: 在多个基准上显著降低遗忘并提升新类准确率。
 
-### FCS: Feature Calibration and Separation for Non-Exemplar Class Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02692) · 📚 被引 29
+### FCS: Feature Calibration and Separation for Non-Exemplar Class Incremental Learning. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02692)
 - **作者**: Qiwei Li, Yuxin Peng, Jiahuan Zhou
-- **🏷️ 机构**: Wangxuan Institute of Computer Technology, Peking University,Beijing,China,100871
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对无样本类增量学习（Non-Exemplar Class Incremental Learning）中无法存储旧样本导致的特征漂移问题。②提出了FCS方法，包含特征校准（Feature Calibration）和特征分离（Feature Separation）两个模块，前者通过统计信息校正旧类特征分布，后者增强新旧类特征的判别性。③相比现有无样本方法，FCS在特征层面同时处理漂移和混淆，无需额外存储。④在CIFAR-100、ImageNet等基准上取得了显著优于现有方法的准确率，尤其在长序列增量场景下优势明显。
+- **摘要（英）**: This paper addresses feature drift in non-exemplar class incremental learning without storing old samples. It proposes FCS with feature calibration to correct old class distributions and feature separation to enhance discriminability. Compared to existing methods, FCS handles drift and confusion at the feature level without extra storage. It achieves significantly higher accuracy on CIFAR-100 and ImageNet, especially in long sequences.
+- **核心贡献**: 提出了无样本类增量学习的特征校准与分离方法。
+- **创新点**: 双模块协同处理特征漂移与类别混淆。
+- **结果**: 在多个基准上显著提升准确率。
 
 ### Task-Adaptive Saliency Guidance for Exemplar-Free Class Incremental Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02261) · 📚 被引 8
@@ -1128,4 +1133,5 @@
 
 - SDDGR: Stable Diffusion-Based Deep Generative Replay for Class Incremental Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
 - Boosting Continual Learning of Vision-Language Models via Mixture-of-Experts Adapters. → [vlm](../vlm/Guideline%202024.md)
+
 <!-- COMPLETE v1 papers=116 -->

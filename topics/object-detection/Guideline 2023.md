@@ -3,13 +3,18 @@
 > 领域: 通用 2D 目标检测（检测器架构、密集预测、小物体/旋转框/NMS 等）
 > 论文数: 101 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection.
+### DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection. **⭐⭐⭐⭐⭐** (相关度: 95%)
 - **链接**: [出版页](https://openreview.net/forum?id=3mRwyG5one)
 - **作者**: Hao Zhang, Feng Li, Shilong Liu, Lei Zhang, Hang Su, Jun Zhu et al.
 - **🏷️ 机构**: PolyU / OPPO
-- **会议**: CVPR 2023
+- **会议**: ICLR 2023
+- **摘要（中）**: DINO提出改进的去噪锚框机制，通过对比去噪训练和混合查询选择，增强DETR的收敛性和检测精度。该方法在COCO上达到SOTA性能，成为后续研究的重要基线。
+- **摘要（英）**: DINO introduces improved denoising anchor boxes with contrastive denoising training and mixed query selection, enhancing convergence and accuracy of DETR. It achieves state-of-the-art results on COCO and serves as a key baseline.
+- **核心贡献**: 提出改进的去噪锚框机制，显著提升DETR检测性能。
+- **创新点**: 结合对比去噪和混合查询选择，优化训练稳定性和精度。
+- **结果**: 在COCO上达到SOTA，并成为广泛使用的基线。
 
 ### Learning Object-Language Alignments for Open-Vocabulary Object Detection.
 - **链接**: [出版页](https://openreview.net/forum?id=mjHlitXvReu)
@@ -17,27 +22,37 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
-### Continual Detection Transformer for Incremental Object Detection.
+### Continual Detection Transformer for Incremental Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2304.03110](https://arxiv.org/abs/2304.03110) · 📚 被引 93
 - **作者**: Yaoyao Liu, Bernt Schiele, Andrea Vedaldi, Christian Rupprecht
 - **🏷️ 机构**: Max Planck Institute for Informatics, Saarland Informatics Campus, University of Oxford,Visual Geometry Group,Department of Engineering Science
 - **会议**: CVPR 2023
+- **摘要（中）**: 针对增量目标检测中灾难性遗忘问题，提出连续检测Transformer，通过检测器知识蒸馏损失和校准策略，有效利用知识蒸馏和示例回放。在COCO上达到SOTA性能。
+- **摘要（英）**: This paper proposes Continual Detection Transformer (CL-DETR) for incremental object detection, addressing catastrophic forgetting via detector knowledge distillation loss and calibration strategy. It achieves state-of-the-art results on COCO.
+- **核心贡献**: 提出适用于Transformer检测器的增量学习框架。
+- **创新点**: 设计检测器知识蒸馏损失和标签分布校准策略。
+- **结果**: 在COCO上达到SOTA性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Language-based object detection is a promising direction towards building a natural interface to describe objects in images that goes far beyond plain category names. While recent methods show great progress in that direction, proper evaluation is lacking. With OmniLabel, we propose a novel task definition, dataset, and evaluation metric. The task subsumes standard- and open-vocabulary detection as well as referring expressions. With more than 28K unique object descriptions on over 25K images, OmniLabel provides a challenging benchmark with diverse and complex object descriptions in a naturally open-vocabulary setting. Moreover, a key differentiation to existing benchmarks is that our object descriptions can refer to one, multiple or even no object, hence, providing negative examples in free-form text. The proposed evaluation handles the large label space and judges performance via a modified average precision metric, which we validate by evaluating strong language-based baselines. OmniLabel indeed provides a challenging test bed for future research on language-based detection.
+> Incremental object detection (IOD) aims to train an object detector in phases, each with annotations for new object categories. As other incremental settings, IOD is subject to catastrophic forgetting, which is often addressed by techniques such as knowledge distillation (KD) and exemplar replay (ER). However, KD and ER do not work well if applied directly to state-of-the-art transformer-based object detectors such as Deformable DETR and UP-DETR. In this paper, we solve these issues by proposing a ContinuaL DEtection TRansformer (CL-DETR), a new method for transformer-based IOD which enables effective usage of KD and ER in this context. First, we introduce a Detector Knowledge Distillation (DKD) loss, focusing on the most informative and reliable predictions from old versions of the model, ignoring redundant background predictions, and ensuring compatibility with the available ground-truth labels. We also improve ER by proposing a calibration strategy to preserve the label distribution of the training set, therefore better matching training and testing statistics. We conduct extensive experiments on COCO 2017 and demonstrate that CL-DETR achieves state-of-the-art results in the IOD setting.
 
 </details>
 
-### 3D Video Object Detection with Learnable Object-Centric Global Optimization.
-- **链接**: [arXiv:2303.15416](https://arxiv.org/abs/2303.15416) · [代码](https://github.com/jiaweihe1996/BA-Det) · 📚 被引 10
+### 3D Video Object Detection with Learnable Object-Centric Global Optimization. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [arXiv:2303.15416](https://arxiv.org/abs/2303.15416) · 📚 被引 10
 - **作者**: Jiawei He, Yuntao Chen, Naiyan Wang, Zhaoxiang Zhang
 - **🏷️ 机构**: Institute of Automation, Chinese Academy of Sciences (CASIA),CRIPAC, HKISI_CAS,Centre for Artificial Intelligence and Robotics, TuSimple
 - **会议**: CVPR 2023
+- **摘要（中）**: 针对3D视频目标检测中运动物体违反多视图几何约束的问题，提出BA-Det，将物体作为一等公民进行基于对应关系的优化。通过物体中心时序对应学习和特征度量束调整，实现端到端优化。在Waymo数据集上达到SOTA性能，且计算开销小。
+- **摘要（英）**: This paper proposes BA-Det for 3D video object detection, treating objects as first-class citizens in correspondence-based optimization. It introduces object-centric temporal correspondence learning and featuremetric bundle adjustment, achieving SOTA on Waymo with marginal computation cost.
+- **核心贡献**: 提出物体中心束调整框架，提升3D视频检测精度。
+- **创新点**: 将物体作为优化主体，解决运动物体几何约束问题。
+- **结果**: 在Waymo上达到SOTA，计算开销小。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Object localization in general environments is a fundamental part of vision systems. While dominating on the COCO benchmark, recent Transformer-based detection methods are not competitive in diverse domains. Moreover, these methods still struggle to very accurately estimate the object bounding boxes in complex environments. We introduce Cascade-DETR for high-quality universal object detection. We jointly tackle the generalization to diverse domains and localization accuracy by proposing the Cascade Attention layer, which explicitly integrates object-centric information into the detection decoder by limiting the attention to the previous box prediction. To further enhance accuracy, we also revisit the scoring of queries. Instead of relying on classification scores, we predict the expected IoU of the query, leading to substantially more well-calibrated confidences. Lastly, we introduce a universal object detection benchmark, UDB10, that contains 10 datasets from diverse domains. While also advancing the state-of-the-art on COCO, Cascade-DETR substantially improves DETR-based detectors on all datasets in UDB10, even by over 10 mAP in some cases. The improvements under stringent quality requirements are even more pronounced. Our code and models will be released at https://github.com/SysCV/cascade-detr.
+> We explore long-term temporal visual correspondence-based optimization for 3D video object detection in this work. Visual correspondence refers to one-to-one mappings for pixels across multiple images. Correspondence-based optimization is the cornerstone for 3D scene reconstruction but is less studied in 3D video object detection, because moving objects violate multi-view geometry constraints and are treated as outliers during scene reconstruction. We address this issue by treating objects as first-class citizens during correspondence-based optimization. In this work, we propose BA-Det, an end-to-end optimizable object detector with object-centric temporal correspondence learning and featuremetric object bundle adjustment. Empirically, we verify the effectiveness and efficiency of BA-Det for multiple baseline 3D detectors under various setups. Our BA-Det achieves SOTA performance on the large-scale Waymo Open Dataset (WOD) with only marginal computation cost. Our code is available at https://github.com/jiaweihe1996/BA-Det.
 
 </details>
 
@@ -53,33 +68,48 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
 
-### Detection Hub: Unifying Object Detection Datasets via Query Adaptation on Language Embedding.
+### Detection Hub: Unifying Object Detection Datasets via Query Adaptation on Language Embedding. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2206.03484](https://arxiv.org/abs/2206.03484) · 📚 被引 10
 - **作者**: Lingchen Meng, Xiyang Dai, Yinpeng Chen, Pengchuan Zhang, Dongdong Chen, Mengchen Liu et al.
 - **🏷️ 机构**: School of CS, Fudan University,Shanghai Key Lab of Intell. Info. Processing, Microsoft
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对多数据集联合训练中类别差异和域间隙导致性能下降的问题，提出Detection Hub框架。②通过数据集感知设计（学习数据集嵌入以调整查询和卷积核）和类别语义对齐（用词嵌入替代one-hot表示）实现统一检测。③相比现有方法，有效缓解数据集不一致性，实现跨数据集学习。④实验表明联合训练显著优于单独训练，并在UODB基准上达到SoTA性能。
+- **摘要（英）**: This paper addresses taxonomy and domain inconsistencies in multi-dataset object detection by proposing Detection Hub, which uses dataset-aware query adaptation and semantic category alignment via word embeddings. It enables effective joint training, achieving significant gains over single-dataset training and SoTA on UODB benchmark.
+- **核心贡献**: 提出Detection Hub，实现多数据集统一检测并提升性能。
+- **创新点**: 数据集感知的查询和卷积核适应，以及语言嵌入类别对齐。
+- **结果**: 在UODB基准上达到SoTA。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We propose DiffusionDet, a new framework that formulates object detection as a denoising diffusion process from noisy boxes to object boxes. During the training stage, object boxes diffuse from ground-truth boxes to random distribution, and the model learns to reverse this noising process. In inference, the model refines a set of randomly generated boxes to the output results in a progressive way. Our work possesses an appealing property of flexibility, which enables the dynamic number of boxes and iterative evaluation. The extensive experiments on the standard benchmarks show that DiffusionDet achieves favorable performance compared to previous well-established detectors. For example, DiffusionDet achieves 5.3 AP and 4.8 AP gains when evaluated with more boxes and iteration steps, under a zero-shot transfer setting from COCO to CrowdHuman. Our code is available at https://github.com/ShoufaChen/DiffusionDet.
+> Combining multiple datasets enables performance boost on many computer vision tasks. But similar trend has not been witnessed in object detection when combining multiple datasets due to two inconsistencies among detection datasets: taxonomy difference and domain gap. In this paper, we address these challenges by a new design (named Detection Hub) that is dataset-aware and category-aligned. It not only mitigates the dataset inconsistency but also provides coherent guidance for the detector to learn across multiple datasets. In particular, the dataset-aware design is achieved by learning a dataset embedding that is used to adapt object queries as well as convolutional kernels in detection heads. The categories across datasets are semantically aligned into a unified space by replacing one-hot category representations with word embedding and leveraging the semantic coherence of language embedding. Detection Hub fulfills the benefits of large data on object detection. Experiments demonstrate that joint training on multiple datasets achieves significant performance gains over training on each dataset alone. Detection Hub further achieves SoTA performance on UODB benchmark with wide variety of datasets.
 
 </details>
 
-### Pixels, Regions, and Objects: Multiple Enhancement for Salient Object Detection.
+### Pixels, Regions, and Objects: Multiple Enhancement for Salient Object Detection. **⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00967) · 📚 被引 132
 - **作者**: Yi Wang, Ruili Wang, Xin Fan, Tianzhu Wang, Xiangjian He
 - **🏷️ 机构**: DUT-RU International School of Information Science and Engineering, Dalian University of Technology,China, School of Mathematical and Computational Sciences, Massey University,New Zealand, School of Computer Science, University of Nottingham Ningbo China,Ningbo,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对显著目标检测中像素、区域和对象多层次信息利用不足的问题，提出多重增强方法。②方法结合像素级、区域级和对象级增强策略，提升显著目标检测性能。③相比现有方法，更全面地利用多尺度信息。④摘要未提供具体实验数据，效果未知。
+- **摘要（英）**: This paper addresses insufficient multi-level information utilization in salient object detection by proposing multiple enhancement strategies at pixel, region, and object levels. It aims to improve performance, but no experimental details are provided in the abstract.
+- **核心贡献**: 提出多层次增强的显著目标检测方法。
+- **创新点**: 结合像素、区域和对象级增强。
+- **结果**: 未提供具体效果。
 
-### Curricular Object Manipulation in LiDAR-based Object Detection.
-- **链接**: [arXiv:2304.04248](https://arxiv.org/abs/2304.04248) · [代码](https://github.com/ZZY816/COM) · 📚 被引 15
+### Curricular Object Manipulation in LiDAR-based Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2304.04248](https://arxiv.org/abs/2304.04248) · 📚 被引 15
 - **作者**: Ziyue Zhu, Qiang Meng, Xiao Wang, Ke Wang, Liujiang Yan, Jian Yang
 - **🏷️ 机构**: College of Computer Science, Nankai University,Tianjin Key Laboratory of Visual Computing and Intelligent Perception, Didi Chuxing
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对LiDAR 3D目标检测中训练样本难度分布不均的问题，提出课程学习框架COM。②设计COMLoss动态预测目标难度并调整损失权重，以及COMAug策略在GT-Aug基础上按难度聚类和渐进增强。③相比现有方法，通过课程学习提升模型性能和泛化能力。④实验和消融研究验证了框架的有效性和通用性，代码已开源。
+- **摘要（英）**: This paper explores curriculum learning in LiDAR-based 3D detection by proposing COM, which includes COMLoss for dynamic difficulty-based loss weighting and COMAug for progressive augmentation. It improves model performance and generalization, validated by extensive experiments, with code available.
+- **核心贡献**: 提出课程学习框架COM，提升LiDAR 3D检测性能。
+- **创新点**: 动态难度预测和渐进增强策略。
+- **结果**: 实验验证了有效性和通用性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> In Video Object Detection (VID), a common practice is to leverage the rich temporal contexts from the video to enhance the object representations in each frame. Existing methods treat the temporal contexts obtained from different objects indiscriminately and ignore their different identities. While intuitively, aggregating local views of the same object in different frames may facilitate a better understanding of the object. Thus, in this paper, we aim to enable the model to focus on the identity-consistent temporal contexts of each object to obtain more comprehensive object representations and handle the rapid object appearance variations such as occlusion, motion blur, etc. However, realizing this goal on top of existing VID models faces low-efficiency problems due to their redundant region proposals and nonparallel frame-wise prediction manner. To aid this, we propose ClipVID, a VID model equipped with Identity-Consistent Aggregation (ICA) layers specifically designed for mining fine-grained and identity-consistent temporal contexts. It effectively reduces the redundancies through the set prediction strategy, making the ICA layers very efficient and further allowing us to design an architecture that makes parallel clip-wise predictions for the whole video clip. Extensive experimental results demonstrate the superiority of our method: a state-of-the-art (SOTA) performance (84.7% mAP) on the ImageNet VID dataset while running at a speed about 7x faster (39.3 fps) than previous SOTAs.
+> This paper explores the potential of curriculum learning in LiDAR-based 3D object detection by proposing a curricular object manipulation (COM) framework. The framework embeds the curricular training strategy into both the loss design and the augmentation process. For the loss design, we propose the COMLoss to dynamically predict object-level difficulties and emphasize objects of different difficulties based on training stages. On top of the widely-used augmentation technique called GT-Aug in LiDAR detection tasks, we propose a novel COMAug strategy which first clusters objects in ground-truth database based on well-designed heuristics. Group-level difficulties rather than individual ones are then predicted and updated during training for stable results. Model performance and generalization capabilities can be improved by sampling and augmenting progressively more difficult objects into the training samples. Extensive experiments and ablation studies reveal the superior and generality of the proposed framework. The code is available at https://github.com/ZZY816/COM.
 
 </details>
 
@@ -532,18 +562,6 @@
 - **作者**: Hang Xu, Xinyuan Liu, Qiang Zhao, Yike Ma, Chenggang Yan, Feng Dai
 - **🏷️ 机构**: Hangzhou Dianzi University,Hangzhou,China, Institute of Computing Technology, Chinese Academy of Sciences,Key Laboratory of Intelligent Information Processing of Chinese Academy of Sciences,Beijing,China
 - **会议**: CVPR 2023
-
-### Generating Features with Increased Crop-Related Diversity for Few-Shot Object Detection.
-- **链接**: [arXiv:2304.05096](https://arxiv.org/abs/2304.05096) · 📚 被引 50
-- **作者**: Jingyi Xu, Hieu Le, Dimitris Samaras
-- **🏷️ 机构**: Stony Brook University, EPFL
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Anchor-based detectors have been continuously developed for object detection. However, the individual anchor box makes it difficult to predict the boundary's offset accurately. Instead of taking each bounding box as a closed individual, we consider using multiple boxes together to get prediction boxes. To this end, this paper proposes the \textbf{Box Decouple-Couple(BDC) strategy} in the inference, which no longer discards the overlapping boxes, but decouples the corner points of these boxes. Then, according to each corner's score, we couple the corner points to select the most accurate corner pairs. To meet the BDC strategy, a simple but novel model is designed named the \textbf{Anchor-Intermediate Detector(AID)}, which contains two head networks, i.e., an anchor-based head and an anchor-free \textbf{Corner-aware head}. The corner-aware head is able to score the corners of each bounding box to facilitate the coupling between corner points. Extensive experiments on MS COCO show that the proposed anchor-intermediate detector respectively outperforms their baseline RetinaNet and GFL method by $\sim$2.4 and $\sim$1.2 AP on the MS COCO test-dev dataset without any bells and whistles. Code is available at: https://github.com/YilongLv/AID.
-
-</details>
 
 ### DetCLIPv2: Scalable Open-Vocabulary Object Detection Pre-training via Word-Region Alignment.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02250)
@@ -1058,4 +1076,5 @@
 - ObjectFusion: Multi-modal 3D Object Detection with Object-Centric Fusion. → [3d-detection](../3d-detection/Guideline%202023.md)
 - Object as Query: Lifting any 2D Object Detector to 3D Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
 - Exploring Object-Centric Temporal Modeling for Efficient Multi-View 3D Object Detection. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
-<!-- COMPLETE v1 papers=104 -->
+
+<!-- COMPLETE v1 papers=103 -->

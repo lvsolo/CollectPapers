@@ -3,13 +3,18 @@
 > 领域: 占用栅格 / 占用网络（Occupancy Prediction / Occ3D）
 > 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### RadarOcc: Robust 3D Occupancy Prediction with 4D Imaging Radar.
+### RadarOcc: Robust 3D Occupancy Prediction with 4D Imaging Radar. **⭐⭐⭐⭐** (相关度: 88%)
 - **链接**: [arXiv:2405.14014](https://arxiv.org/abs/2405.14014) · 📚 被引 26
 - **作者**: Fangqiang Ding, Xiangyu Wen, Yunzhou Zhu, Yiming Li, Chris Xiaoxuan Lu
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对恶劣天气下LiDAR和相机占用预测鲁棒性不足的问题。②提出RadarOcc，利用4D成像雷达张量直接处理，采用多普勒描述符、旁瓣感知稀疏化和距离自注意力。③相比稀疏点云方法，保留更多场景细节并减少坐标变换误差。④在基准上展示了鲁棒的占用预测性能。
+- **摘要（英）**: This paper addresses the robustness issue of occupancy prediction in adverse weather. It proposes RadarOcc using 4D imaging radar tensors with Doppler descriptors and range-wise attention. This preserves details and reduces errors, achieving robust performance on benchmarks.
+- **核心贡献**: 首次利用4D雷达张量进行占用预测。
+- **创新点**: 设计多普勒描述符和球面特征聚合。
+- **结果**: 在恶劣条件下保持高精度占用预测。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +22,16 @@
 
 </details>
 
-### OctreeOcc: Efficient and Multi-Granularity Occupancy Prediction Using Octree Queries.
+### OctreeOcc: Efficient and Multi-Granularity Occupancy Prediction Using Octree Queries. **⭐⭐⭐⭐⭐** (相关度: 92%)
 - **链接**: [arXiv:2312.03774](https://arxiv.org/abs/2312.03774) · 📚 被引 21
 - **作者**: Yuhang Lu, Xinge Zhu, Tai Wang, Yuexin Ma
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对密集网格占用预测计算量大且小物体细节丢失的问题。②提出OctreeOcc，利用八叉树表示自适应捕捉3D信息，结合图像语义优化初始结构并迭代修正。③相比密集网格方法，提供可变粒度并降低计算开销。④在基准上超越SOTA，计算量减少15%-24%。
+- **摘要（英）**: This paper addresses the high computation and detail loss in dense grid occupancy prediction. It proposes OctreeOcc using octree representation with semantic refinement. This offers variable granularity and reduces computation by 15%-24%, surpassing SOTA.
+- **核心贡献**: 提出基于八叉树的占用预测框架。
+- **创新点**: 利用图像语义迭代优化八叉树结构。
+- **结果**: 超越SOTA并显著降低计算开销。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,19 +39,22 @@
 
 </details>
 
-### OPUS: Occupancy Prediction Using a Sparse Set.
+### OPUS: Occupancy Prediction Using a Sparse Set. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [arXiv:2409.09350](https://arxiv.org/abs/2409.09350) · 📚 被引 10
 - **作者**: Jiabao Wang, Zhaojiang Liu, Qiang Meng, Liujiang Yan, Ke Wang, Jie Yang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
+- **摘要（中）**: ①针对密集体素占用预测中空体素计算浪费的问题。②提出OPUS，将占用预测视为集合预测，用Transformer编码器-解码器和可学习查询同时预测位置和类别。③采用Chamfer距离损失实现端到端训练，避免复杂稀疏化。④在基准上实现了高效且准确的预测。
+- **摘要（英）**: This paper addresses the waste of computation on empty voxels in occupancy prediction. It proposes OPUS as a set prediction paradigm with transformer and learnable queries. Using Chamfer loss enables end-to-end training, achieving efficient and accurate results.
+- **核心贡献**: 将占用预测重构为集合预测问题。
+- **创新点**: 用Chamfer距离损失实现大规模集合比较。
+- **结果**: 在基准上实现高效准确预测。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Occupancy prediction, aiming at predicting the occupancy status within voxelized 3D environment, is quickly gaining momentum within the autonomous driving community. Mainstream occupancy prediction works first discretize the 3D environment into voxels, then perform classification on such dense grids. However, inspection on sample data reveals that the vast majority of voxels is unoccupied. Performing classification on these empty voxels demands suboptimal computation resource allocation, and reducing such empty voxels necessitates complex algorithm designs. To this end, we present a novel perspective on the occupancy prediction task: formulating it as a streamlined set prediction paradigm without the need for explicit space modeling or complex sparsification procedures. Our proposed framework, called OPUS, utilizes a transformer encoder-decoder architecture to simultaneously predict occupied locations and classes using a set of learnable queries. Firstly, we employ the Chamfer distance loss to scale the set-to-set comparison problem to unprecedented magnitudes, making training such model end-to-end a reality. Subsequently, semantic classes are adaptively assigned using nearest neighbor search based on the learned locations. In addition, OPUS incorporates a suite of non-trivial strategies to enhance model performance, including coarse-to-fine learning, consistent point sampling, and adaptive re-weighting, etc. Finally, compared with current state-of-the-art methods, our lightest model achieves superior RayIoU on the Occ3D-nuScenes dataset at near 2x FPS, while our heaviest model surpasses previous best results by 6.1 RayIoU.
 
 </details>
-
-## 🆕 增量新增
 
 ### COTR: Compact Occupancy TRansformer for Vision-Based 3D Occupancy Prediction. **⭐⭐⭐⭐** (相关度: 95%)
 - **链接**: [arXiv:2312.01919](https://arxiv.org/abs/2312.01919) · 📚 被引 49
@@ -149,4 +162,17 @@
 > While 3D object bounding box (bbox) representation has been widely used in autonomous driving perception, it lacks the ability to capture the precise details of an object's intrinsic geometry. Recently, occupancy has emerged as a promising alternative for 3D scene perception. However, constructing a high-resolution occupancy map remains infeasible for large scenes due to computational constraints. Recognizing that foreground objects only occupy a small portion of the scene, we introduce object-centric occupancy as a supplement to object bboxes. This representation not only provides intricate details for detected objects but also enables higher voxel resolution in practical applications. We advance the development of object-centric occupancy perception from both data and algorithm perspectives. On the data side, we construct the first object-centric occupancy dataset from scratch using an automated pipeline. From the algorithmic standpoint, we introduce a novel object-centric occupancy completion network equipped with an implicit shape decoder that manages dynamic-size occupancy generation. This network accurately predicts the complete object-centric occupancy volume for inaccurate object proposals by leveraging temporal information from long sequences. Our method demonstrates robust performance in completing object shapes under noisy detection and tracking conditions. Additionally, we show that our occupancy features significantly enhance the detection results of state-of-the-art 3D object detectors, especially for incomplete or distant objects in the Waymo Open Dataset.
 
 </details>
-<!-- COMPLETE v1 papers=10 -->
+
+
+### SelfOcc: Self-Supervised Vision-Based 3D Occupancy Prediction. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01885)
+- **作者**: Yuanhui Huang, Wenzhao Zheng, Borui Zhang, Jie Zhou, Jiwen Lu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中3D占用预测依赖昂贵3D标注的问题。②提出SelfOcc，一种自监督框架，利用视频序列和多视图几何，通过可微渲染和深度估计来训练3D占用网络，无需3D标签。③相比现有自监督方法，SelfOcc在稀疏和稠密占用预测上均取得更优性能，并支持单目和多相机输入。④在SemanticKITTI和nuScenes数据集上，SelfOcc在IoU和mIoU指标上显著优于基线，展示了强大的泛化能力。
+- **摘要（英）**: This paper addresses the high cost of 3D annotations for occupancy prediction in autonomous driving. It proposes SelfOcc, a self-supervised framework that trains 3D occupancy networks using video sequences and multi-view geometry via differentiable rendering and depth estimation, eliminating the need for 3D labels. SelfOcc outperforms existing self-supervised methods on SemanticKITTI and nuScenes, achieving superior IoU and mIoU, and supports both monocular and multi-camera inputs.
+- **核心贡献**: 提出SelfOcc，首个无需3D标注的自监督3D占用预测框架。
+- **创新点**: 利用可微渲染和深度估计实现自监督训练，支持多视图几何。
+- **结果**: 在SemanticKITTI和nuScenes上显著优于现有自监督基线。
+
+<!-- COMPLETE v1 papers=11 -->

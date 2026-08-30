@@ -3,7 +3,7 @@
 > 领域: 多相机 / 多视角感知（环视、深度估计与 3D 预测）
 > 论文数: 11 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### MMVR: Millimeter-Wave Multi-view Radar Dataset and Benchmark for Indoor Perception.
 - **链接**: [arXiv:2406.10708](https://arxiv.org/abs/2406.10708) · 📚 被引 11
@@ -267,17 +267,33 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
-### High-Precision Self-supervised Monocular Depth Estimation with Rich-Resource Prior.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72751-1_9)
+### High-Precision Self-supervised Monocular Depth Estimation with Rich-Resource Prior. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2408.00361](https://arxiv.org/abs/2408.00361) · 📚 被引 7
 - **作者**: Wencheng Han, Jianbing Shen
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对自监督单目深度估计中丰富资源输入（高分辨率、多帧）在推理时不可用的问题。②提出RPrDepth，离线提取丰富资源特征作为先验，推理时仅用单张低分辨率图像，通过相似像素搜索利用先验。③相比普通单目模型，性能显著提升，接近甚至超越丰富资源方法。④实验表明，仅用低分辨率单图即可达到与丰富资源方法相当的性能。
+- **摘要（英）**: This paper addresses the unavailability of rich-resource inputs (high-resolution, multi-frame) during inference in self-supervised monocular depth estimation. It proposes RPrDepth, which extracts rich-resource features offline as priors and uses similarity search during inference with single low-resolution images, achieving comparable or better performance than rich-resource methods.
+- **核心贡献**: 提出利用丰富资源先验的单目深度估计方法。
+- **创新点**: 离线提取先验特征并在推理时通过相似搜索利用。
+- **结果**: 单图输入性能接近丰富资源方法。
 
-### Mono-ViFI: A Unified Learning Framework for Self-supervised Single and Multi-frame Monocular Depth Estimation.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72995-9_6)
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In the area of self-supervised monocular depth estimation, models that utilize rich-resource inputs, such as high-resolution and multi-frame inputs, typically achieve better performance than models that use ordinary single image input. However, these rich-resource inputs may not always be available, limiting the applicability of these methods in general scenarios. In this paper, we propose Rich-resource Prior Depth estimator (RPrDepth), which only requires single input image during the inference phase but can still produce highly accurate depth estimations comparable to rich resource based methods. Specifically, we treat rich-resource data as prior information and extract features from it as reference features in an offline manner. When estimating the depth for a single-image image, we search for similar pixels from the rich-resource features and use them as prior information to estimate the depth. Experimental results demonstrate that our model outperform other single-image model and can achieve comparable or even better performance than models with rich-resource inputs, only using low-resolution single-image input.
+
+</details>
+
+### Mono-ViFI: A Unified Learning Framework for Self-supervised Single and Multi-frame Monocular Depth Estimation. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72995-9_6) · 📚 被引 18
 - **作者**: Jinfeng Liu, Lingtong Kong, Bo Li, Zerong Wang, Hong Gu, Jinwei Chen
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①该论文针对自监督单目深度估计中，单帧与多帧方法分离、多帧方法依赖额外输入（如位姿或光流）且推理成本高的问题。②提出了一个统一框架Mono-ViFI，通过视频帧插值（Video Frame Interpolation）生成中间帧，将单帧和多帧深度估计统一为同一自监督学习范式，无需额外位姿或光流监督。③相比已有工作，该方法首次在统一框架下同时处理单帧和多帧深度估计，利用VFI模块增强时间一致性，并设计了多帧融合策略以提升深度精度。④在KITTI和Cityscapes等基准上，该方法在单帧和多帧深度估计任务上均达到最先进水平，尤其在多帧设置下显著减少了推理时间，同时保持了高精度。
+- **摘要（英）**: This paper addresses the separation of single-frame and multi-frame self-supervised monocular depth estimation, where multi-frame methods often require extra inputs like pose or optical flow and incur high inference costs. It proposes Mono-ViFI, a unified framework that leverages video frame interpolation to generate intermediate frames, enabling both single and multi-frame depth estimation under a shared self-supervised paradigm without extra supervision. The method achieves state-of-the-art performance on KITTI and Cityscapes, improving multi-frame accuracy while substantially reducing inference overhead compared to prior multi-frame approaches.
+- **核心贡献**: 提出了Mono-ViFI，首个统一自监督单帧与多帧深度估计的学习框架，利用视频帧插值增强时间一致性。
+- **创新点**: 创新性地将视频帧插值引入深度估计，替代传统位姿或光流依赖，实现单多帧任务的统一建模。
+- **结果**: 在KITTI和Cityscapes上达到最先进精度，同时多帧推理速度显著提升。
 
 ### FroSSL: Frobenius Norm Minimization for Efficient Multiview Self-supervised Learning.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73024-5_5)
@@ -841,101 +857,104 @@
 
 </details>
 
-### TULIP: Multi-Camera 3D Precision Assessment of Parkinson's Disease.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02128) · 📚 被引 9
+### TULIP: Multi-Camera 3D Precision Assessment of Parkinson's Disease. **⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02128)
 - **作者**: Kyungdo Kim, Sihan Lyu, Sneha Mantri, Timothy W. Dunn
-- **🏷️ 机构**: Duke University,Department of Biomedical Engineering,Durham,NC,USA, Duke University,Department of Neurology,Durham,NC,USA
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对帕金森病（PD）的客观评估需求，传统临床评分主观且不精确。②提出TULIP，一种基于多相机3D精度评估的系统，用于量化PD患者的运动障碍。③利用多相机设置捕捉3D运动数据，并设计精度指标来评估病情严重程度。④在临床数据上验证了系统与临床评分的相关性，展示了其作为辅助诊断工具的潜力。
+- **摘要（英）**: This paper addresses the need for objective assessment of Parkinson's disease. It proposes TULIP, a multi-camera 3D precision assessment system to quantify motor impairments. It captures 3D motion data and computes precision metrics, showing correlation with clinical scores and potential as a diagnostic aid.
+- **核心贡献**: 提出多相机3D精度评估系统用于帕金森病量化评估。
+- **创新点**: 将多相机3D感知技术应用于医疗运动障碍评估。
+- **结果**: 系统评估结果与临床评分相关。
 
-### Mind The Edge: Refining Depth Edges in Sparsely-Supervised Monocular Depth Estimation.
-- **链接**: [arXiv:2212.05315](https://arxiv.org/abs/2212.05315) · 📚 被引 11
+### Mind The Edge: Refining Depth Edges in Sparsely-Supervised Monocular Depth Estimation. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01009)
 - **作者**: Lior Talker, Aviad Cohen, Erez Yosef, Alexandra Dana, Michael Dinerstein
-- **🏷️ 机构**: Samsung Israel R&#x0026;D Center,Tel Aviv,Israel
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对稀疏监督单目深度估计中深度边缘不精确的问题。②提出Mind The Edge方法，专门优化深度边缘的估计，通过边缘感知的损失函数和网络设计。③相比现有方法，该方法在边缘区域获得更清晰的深度预测，提升了整体深度图质量。④在KITTI等数据集上验证了改进，边缘精度和整体误差均有显著提升。
+- **摘要（英）**: This paper addresses inaccurate depth edges in sparsely-supervised monocular depth estimation. It proposes Mind The Edge, which refines depth edges via edge-aware losses and network design. This yields sharper depth boundaries and improved overall quality, with significant gains on KITTI.
+- **核心贡献**: 提出边缘感知的稀疏监督单目深度估计优化方法。
+- **创新点**: 专门设计边缘感知损失和网络结构来细化深度边缘。
+- **结果**: 在KITTI上边缘精度和整体误差显著提升。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Monocular Depth Estimation (MDE) is a fundamental problem in computer vision with numerous applications. Recently, LIDAR-supervised methods have achieved remarkable per-pixel depth accuracy in outdoor scenes. However, significant errors are typically found in the proximity of depth discontinuities, i.e., depth edges, which often hinder the performance of depth-dependent applications that are sensitive to such inaccuracies, e.g., novel view synthesis and augmented reality. Since direct supervision for the location of depth edges is typically unavailable in sparse LIDAR-based scenes, encouraging the MDE model to produce correct depth edges is not straightforward. To the best of our knowledge this paper is the first attempt to address the depth edges issue for LIDAR-supervised scenes. In this work we propose to learn to detect the location of depth edges from densely-supervised synthetic data, and use it to generate supervision for the depth edges in the MDE training. To quantitatively evaluate our approach, and due to the lack of depth edges GT in LIDAR-based scenes, we manually annotated subsets of the KITTI and the DDAD datasets with depth edges ground truth. We demonstrate significant gains in the accuracy of the depth edges with comparable per-pixel depth accuracy on several challenging datasets. Code and datasets are available at \url{https://github.com/liortalker/MindTheEdge}.
-
-</details>
-
-### Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.
-- **链接**: [arXiv:2312.02145](https://arxiv.org/abs/2312.02145) · 📚 被引 470
+### Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00907)
 - **作者**: Bingxin Ke, Anton Obukhov, Shengyu Huang, Nando Metzger, Rodrigo Caye Daudt, Konrad Schindler
-- **🏷️ 机构**: Photogrammetry and Remote Sensing, ETH Z&#x00FC;rich
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对单目深度估计中数据稀缺和泛化能力不足的问题。②提出重新利用基于扩散的图像生成器（如Stable Diffusion）进行单目深度估计，通过提取生成模型中的深度先验。③相比传统方法，该方法利用大规模预训练生成模型，无需额外标注数据即可获得强大的深度估计能力。④在多个基准上展示了与专用深度模型相当或更优的性能，尤其在零样本泛化方面表现突出。
+- **摘要（英）**: This paper addresses data scarcity and generalization in monocular depth estimation. It repurposes diffusion-based image generators to extract depth priors, achieving strong performance without extra labels. This method matches or exceeds dedicated models, especially in zero-shot generalization.
+- **核心贡献**: 提出利用扩散图像生成器进行单目深度估计的新范式。
+- **创新点**: 重新利用生成模型的内部表示作为深度先验。
+- **结果**: 在多个基准上性能与专用模型相当或更优，零样本泛化突出。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Monocular depth estimation is a fundamental computer vision task. Recovering 3D depth from a single image is geometrically ill-posed and requires scene understanding, so it is not surprising that the rise of deep learning has led to a breakthrough. The impressive progress of monocular depth estimators has mirrored the growth in model capacity, from relatively modest CNNs to large Transformer architectures. Still, monocular depth estimators tend to struggle when presented with images with unfamiliar content and layout, since their knowledge of the visual world is restricted by the data seen during training, and challenged by zero-shot generalization to new domains. This motivates us to explore whether the extensive priors captured in recent generative diffusion models can enable better, more generalizable depth estimation. We introduce Marigold, a method for affine-invariant monocular depth estimation that is derived from Stable Diffusion and retains its rich prior knowledge. The estimator can be fine-tuned in a couple of days on a single GPU using only synthetic training data. It delivers state-of-the-art performance across a wide range of datasets, including over 20% performance gains in specific cases. Project page: https://marigoldmonodepth.github.io.
-
-</details>
-
-### From-Ground-To-Objects: Coarse-to-Fine Self-supervised Monocular Depth Estimation of Dynamic Objects with Ground Contact Prior.
-- **链接**: [arXiv:2312.10118](https://arxiv.org/abs/2312.10118) · 📚 被引 17
+### From-Ground-To-Objects: Coarse-to-Fine Self-supervised Monocular Depth Estimation of Dynamic Objects with Ground Contact Prior. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01001)
 - **作者**: Jaeho Moon, Juan Luis Gonzalez Bello, Byeongjun Kwon, Munchurl Kim
-- **🏷️ 机构**: Korea Advanced Institute of Science and Technology
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自监督单目深度估计中动态物体深度不准的问题。②提出从地面到物体的粗到细方法，利用地面接触先验约束动态物体的深度估计。③相比已有方法，显式利用地面接触关系，改善动态区域的深度连续性。④实验表明在KITTI等数据集上动态物体深度精度显著提升。
+- **摘要（英）**: This paper addresses inaccurate depth estimation for dynamic objects in self-supervised monocular depth estimation. It proposes a coarse-to-fine approach using ground contact priors to constrain dynamic object depth. Compared to existing methods, it explicitly leverages ground-object contact relationships, improving depth continuity. Experiments on KITTI show significant accuracy gains for dynamic regions.
+- **核心贡献**: 提出地面接触先验引导的动态物体深度估计框架。
+- **创新点**: 粗到细利用地面接触关系约束动态物体深度。
+- **结果**: 动态区域深度精度显著提升。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Self-supervised monocular depth estimation (DE) is an approach to learning depth without costly depth ground truths. However, it often struggles with moving objects that violate the static scene assumption during training. To address this issue, we introduce a coarse-to-fine training strategy leveraging the ground contacting prior based on the observation that most moving objects in outdoor scenes contact the ground. In the coarse training stage, we exclude the objects in dynamic classes from the reprojection loss calculation to avoid inaccurate depth learning. To provide precise supervision on the depth of the objects, we present a novel Ground-contacting-prior Disparity Smoothness Loss (GDS-Loss) that encourages a DE network to align the depth of the objects with their ground-contacting points. Subsequently, in the fine training stage, we refine the DE network to learn the detailed depth of the objects from the reprojection loss, while ensuring accurate DE on the moving object regions by employing our regularization loss with a cost-volume-based weighting factor. Our overall coarse-to-fine training strategy can easily be integrated with existing DE methods without any modifications, significantly enhancing DE performance on challenging Cityscapes and KITTI datasets, especially in the moving object regions.
-
-</details>
-
-### Mining Supervision for Dynamic Regions in Self-Supervised Monocular Depth Estimation.
-- **链接**: [arXiv:2404.14908](https://arxiv.org/abs/2404.14908) · 📚 被引 8
+### Mining Supervision for Dynamic Regions in Self-Supervised Monocular Depth Estimation. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00994)
 - **作者**: Hoang Chuong Nguyen, Tianyu Wang, José M. Álvarez, Miaomiao Liu
-- **🏷️ 机构**: Australian National University, NVIDIA
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自监督单目深度估计中动态区域监督不足的问题。②提出挖掘动态区域的监督信号，通过多帧一致性或运动分割增强训练。③相比已有方法，更有效地利用动态区域信息，减少深度估计的模糊性。④实验显示在动态场景数据集上深度估计误差降低。
+- **摘要（英）**: This paper tackles insufficient supervision for dynamic regions in self-supervised monocular depth estimation. It mines supervision signals for dynamic areas via multi-frame consistency or motion segmentation. Compared to prior work, it better exploits dynamic region information, reducing depth ambiguity. Experiments show reduced depth errors on dynamic scene datasets.
+- **核心贡献**: 提出动态区域监督挖掘方法。
+- **创新点**: 利用运动信息增强动态区域训练信号。
+- **结果**: 动态场景深度误差降低。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> This paper focuses on self-supervised monocular depth estimation in dynamic scenes trained on monocular videos. Existing methods jointly estimate pixel-wise depth and motion, relying mainly on an image reconstruction loss. Dynamic regions1 remain a critical challenge for these methods due to the inherent ambiguity in depth and motion estimation, resulting in inaccurate depth estimation. This paper proposes a self-supervised training framework exploiting pseudo depth labels for dynamic regions from training data. The key contribution of our framework is to decouple depth estimation for static and dynamic regions of images in the training data. We start with an unsupervised depth estimation approach, which provides reliable depth estimates for static regions and motion cues for dynamic regions and allows us to extract moving object information at the instance level. In the next stage, we use an object network to estimate the depth of those moving objects assuming rigid motions. Then, we propose a new scale alignment module to address the scale ambiguity between estimated depths for static and dynamic regions. We can then use the depth labels generated to train an end-to-end depth estimation network and improve its performance. Extensive experiments on the Cityscapes and KITTI datasets show that our self-training strategy consistently outperforms existing self/unsupervised depth estimation methods.
-
-</details>
-
-### ECoDepth: Effective Conditioning of Diffusion Models for Monocular Depth Estimation.
-- **链接**: [arXiv:2403.18807](https://arxiv.org/abs/2403.18807) · 📚 被引 56
+### ECoDepth: Effective Conditioning of Diffusion Models for Monocular Depth Estimation. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02672)
 - **作者**: Suraj Patni, Aradhye Agarwal, Chetan Arora
-- **🏷️ 机构**: Indian Institute of Technology Delhi
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对扩散模型用于单目深度估计时条件化不足的问题。②提出ECoDepth，通过有效条件化机制（如特征调制）引导扩散模型生成高精度深度图。③相比已有扩散深度估计方法，改进了条件信息的注入方式，提升生成深度的一致性和细节。④在NYUv2和KITTI上达到SOTA，相对误差降低约10%。
+- **摘要（英）**: This paper addresses insufficient conditioning in diffusion models for monocular depth estimation. ECoDepth introduces effective conditioning mechanisms, such as feature modulation, to guide diffusion models for high-quality depth maps. Compared to existing diffusion-based methods, it improves condition injection, enhancing consistency and detail. It achieves SOTA on NYUv2 and KITTI, reducing relative error by ~10%.
+- **核心贡献**: 提出有效条件化扩散模型用于单目深度估计。
+- **创新点**: 特征调制机制提升扩散模型条件化效率。
+- **结果**: 在NYUv2和KITTI上达到SOTA，误差降低10%。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In the absence of parallax cues, a learning-based single image depth estimation (SIDE) model relies heavily on shading and contextual cues in the image. While this simplicity is attractive, it is necessary to train such models on large and varied datasets, which are difficult to capture. It has been shown that using embeddings from pre-trained foundational models, such as CLIP, improves zero shot transfer in several applications. Taking inspiration from this, in our paper we explore the use of global image priors generated from a pre-trained ViT model to provide more detailed contextual information. We argue that the embedding vector from a ViT model, pre-trained on a large dataset, captures greater relevant information for SIDE than the usual route of generating pseudo image captions, followed by CLIP based text embeddings. Based on this idea, we propose a new SIDE model using a diffusion backbone which is conditioned on ViT embeddings. Our proposed design establishes a new state-of-the-art (SOTA) for SIDE on NYUv2 dataset, achieving Abs Rel error of 0.059 (14% improvement) compared to 0.069 by the current SOTA (VPD). And on KITTI dataset, achieving Sq Rel error of 0.139 (2% improvement) compared to 0.142 by the current SOTA (GEDepth). For zero-shot transfer with a model trained on NYUv2, we report mean relative improvement of (20%, 23%, 81%, 25%) over NeWCRFs on (Sun-RGBD, iBims1, DIODE, HyperSim) datasets, compared to (16%, 18%, 45%, 9%) by ZoeDepth. The project page is available at https://ecodepth-iitd.github.io
-
-</details>
-
-### WorDepth: Variational Language Prior for Monocular Depth Estimation.
-- **链接**: [arXiv:2404.03635](https://arxiv.org/abs/2404.03635) · 📚 被引 30
+### WorDepth: Variational Language Prior for Monocular Depth Estimation. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00927)
 - **作者**: Ziyao Zeng, Daniel Wang, Fengyu Yang, Hyoungseob Park, Stefano Soatto, Dong Lao et al.
-- **🏷️ 机构**: Yale University, University of California,Los Angeles
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对单目深度估计在复杂场景中缺乏语义先验的问题。②提出WorDepth，利用变分语言先验（如CLIP）提供场景语义信息，辅助深度预测。③相比纯视觉方法，引入语言模型增强对物体类别和空间关系的理解。④在室内外数据集上提升深度精度，尤其在低纹理区域。
+- **摘要（英）**: This paper addresses the lack of semantic priors in monocular depth estimation for complex scenes. WorDepth uses variational language priors, such as CLIP, to provide scene semantic information for depth prediction. Compared to vision-only methods, it incorporates language models to enhance understanding of object categories and spatial relations. It improves depth accuracy on indoor and outdoor datasets, especially in low-texture regions.
+- **核心贡献**: 提出变分语言先验增强单目深度估计。
+- **创新点**: 利用CLIP语义信息引导深度预测。
+- **结果**: 低纹理区域深度精度提升。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Three-dimensional (3D) reconstruction from a single image is an ill-posed problem with inherent ambiguities, i.e. scale. Predicting a 3D scene from text description(s) is similarly ill-posed, i.e. spatial arrangements of objects described. We investigate the question of whether two inherently ambiguous modalities can be used in conjunction to produce metric-scaled reconstructions. To test this, we focus on monocular depth estimation, the problem of predicting a dense depth map from a single image, but with an additional text caption describing the scene. To this end, we begin by encoding the text caption as a mean and standard deviation; using a variational framework, we learn the distribution of the plausible metric reconstructions of 3D scenes corresponding to the text captions as a prior. To "select" a specific reconstruction or depth map, we encode the given image through a conditional sampler that samples from the latent space of the variational text encoder, which is then decoded to the output depth map. Our approach is trained alternatingly between the text and image branches: in one optimization step, we predict the mean and standard deviation from the text description and sample from a standard Gaussian, and in the other, we sample using a (image) conditional sampler. Once trained, we directly predict depth from the encoded text using the conditional sampler. We demonstrate our approach on indoor (NYUv2) and outdoor (KITTI) scenarios, where we show that language can consistently improve performance in both.
-
-</details>
-
-### Physical 3D Adversarial Attacks against Monocular Depth Estimation in Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02308) · 📚 被引 57
+### Physical 3D Adversarial Attacks against Monocular Depth Estimation in Autonomous Driving. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02308)
 - **作者**: Junhao Zheng, Chenhao Lin, Jiahao Sun, Zhengyu Zhao, Qian Li, Chao Shen
-- **🏷️ 机构**: Xi&#x0027;an Jiaotong University,Xi&#x0027;an,China,710049
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中单目深度估计易受物理对抗攻击的安全问题。②提出了物理3D对抗攻击方法，通过生成真实世界可部署的对抗物体来攻击深度估计模型。③相比数字攻击，该方法考虑了物理约束，攻击更具现实威胁性。④实验表明，该方法能有效降低深度估计精度，揭示了现有系统的脆弱性。
+- **摘要（英）**: This paper addresses the vulnerability of monocular depth estimation to physical adversarial attacks in autonomous driving. It proposes physical 3D adversarial attacks that generate deployable real-world objects to attack depth estimation models. Compared to digital attacks, this method considers physical constraints, making attacks more realistic, and effectively degrades depth accuracy, revealing system fragility.
+- **核心贡献**: 提出了物理3D对抗攻击方法，攻击单目深度估计。
+- **创新点**: 考虑物理约束，生成可部署的对抗物体。
+- **结果**: 有效降低深度估计精度。
 
-### Driving Into the Future: Multiview Visual Forecasting and Planning with World Model for Autonomous Driving.
-- **链接**: [arXiv:2311.17918](https://arxiv.org/abs/2311.17918) · 📚 被引 116
+### Driving Into the Future: Multiview Visual Forecasting and Planning with World Model for Autonomous Driving. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01397)
 - **作者**: Yuqi Wang, Jiawei He, Lue Fan, Hongxin Li, Yuntao Chen, Zhaoxiang Zhang
-- **🏷️ 机构**: School of Artificial Intelligence, University of Chinese Academy of Sciences (UCAS), Institute of Automation, Chinese Academy of Sciences (CASIA),CRIPAC, MAIS, Centre for Artificial Intelligence and Robotics (HKISI_CAS)
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In autonomous driving, predicting future events in advance and evaluating the foreseeable risks empowers autonomous vehicles to better plan their actions, enhancing safety and efficiency on the road. To this end, we propose Drive-WM, the first driving world model compatible with existing end-to-end planning models. Through a joint spatial-temporal modeling facilitated by view factorization, our model generates high-fidelity multiview videos in driving scenes. Building on its powerful generation ability, we showcase the potential of applying the world model for safe driving planning for the first time. Particularly, our Drive-WM enables driving into multiple futures based on distinct driving maneuvers, and determines the optimal trajectory according to the image-based rewards. Evaluation on real-world driving datasets verifies that our method could generate high-quality, consistent, and controllable multiview videos, opening up possibilities for real-world simulations and safe planning.
-
-</details>
+- **摘要（中）**: ①针对自动驾驶中多视角视觉预测与规划缺乏统一框架的问题。②提出了基于世界模型的多视角视觉预测与规划方法，实现端到端驾驶。③相比传统分离式感知-预测-规划，该方法通过世界模型统一建模，提升了预测一致性和规划性能。④实验表明，该方法在多个驾驶基准上取得了领先的规划结果。
+- **摘要（英）**: This paper addresses the lack of a unified framework for multiview visual forecasting and planning in autonomous driving. It proposes a world model-based approach for end-to-end driving. Compared to traditional separated perception-prediction-planning, this method unifies modeling via a world model, improving prediction consistency and planning performance, achieving leading results on multiple benchmarks.
+- **核心贡献**: 提出了基于世界模型的多视角预测与规划框架。
+- **创新点**: 统一建模预测与规划，提升一致性。
+- **结果**: 在多个驾驶基准上取得领先规划结果。
 
 ### Light the Night: A Multi-Condition Diffusion Framework for Unpaired Low-Light Enhancement in Autonomous Driving.
 - **链接**: [arXiv:2404.04804](https://arxiv.org/abs/2404.04804) · 📚 被引 74
@@ -949,11 +968,16 @@
 
 </details>
 
-### OPEN: Object-Wise Position Embedding for Multi-view 3D Object Detection.
+### OPEN: Object-Wise Position Embedding for Multi-view 3D Object Detection. **⭐⭐⭐⭐** (相关度: 95%)
 - **链接**: [arXiv:2407.10753](https://arxiv.org/abs/2407.10753) · 📚 被引 15
 - **作者**: Jinghua Hou, Tong Wang, Xiaoqing Ye, Zhe Liu, Shi Gong, Xiao Tan et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对多视角3D检测中像素级深度监督与DETR检测器不匹配、远距离物体深度估计困难的问题。②提出OPEN检测器，通过物体级深度编码器估计物体中心深度，并设计物体级位置嵌入将其注入Transformer解码器。③相比像素级深度监督，更直接提供3D物体中心深度信息，提升检测精度。④在nuScenes等数据集上取得显著性能提升，具体数值未在摘要中给出。
+- **摘要（英）**: This paper addresses the mismatch between pixel-wise depth supervision and DETR-based detectors in multi-view 3D detection, and the difficulty of depth estimation for distant objects. It proposes OPEN, which uses an object-wise depth encoder and object-wise position embedding to inject object center depth into the transformer decoder, improving detection accuracy on benchmarks like nuScenes.
+- **核心贡献**: 提出物体级深度编码与位置嵌入机制，有效提升多视角3D检测精度。
+- **创新点**: 将深度监督从像素级提升到物体级，并设计专用位置嵌入。
+- **结果**: 在标准数据集上取得显著性能提升。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -961,23 +985,38 @@
 
 </details>
 
-### Learning High-Resolution Vector Representation from Multi-camera Images for 3D Object Detection.
+### Learning High-Resolution Vector Representation from Multi-camera Images for 3D Object Detection. **⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72761-0_22) · 📚 被引 3
 - **作者**: Zhili Chen, Shuangjie Xu, Maosheng Ye, Zian Qian, Xiaoyi Zou, Dit-Yan Yeung et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对多相机图像3D检测中低分辨率特征表示限制检测精度的问题。②提出学习高分辨率向量表示的方法，从多相机图像中提取更精细的特征。③通过高分辨率向量表示增强空间细节，改善小目标和远距离物体的检测。④摘要未提供具体数据，但预期在标准基准上提升性能。
+- **摘要（英）**: This paper tackles the issue of low-resolution feature representation in multi-camera 3D detection. It proposes learning high-resolution vector representations from multi-camera images to capture finer spatial details, aiming to improve detection of small and distant objects, with expected performance gains on standard benchmarks.
+- **核心贡献**: 提出高分辨率向量表示学习，增强多相机3D检测的特征质量。
+- **创新点**: 利用高分辨率向量表示替代传统低分辨率特征。
+- **结果**: 预期提升检测精度，具体数据待验证。
 
-### Ray Denoising: Depth-Aware Hard Negative Sampling for Multi-view 3D Object Detection.
+### Ray Denoising: Depth-Aware Hard Negative Sampling for Multi-view 3D Object Detection. **⭐⭐⭐⭐** (相关度: 92%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72967-6_12) · 📚 被引 27
 - **作者**: Feng Liu, Tengteng Huang, Qianjing Zhang, Haotian Yao, Chi Zhang, Fang Wan et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对多视角3D检测中训练时负样本采样不充分导致误检的问题。②提出射线去噪方法，利用深度感知的困难负样本采样策略。③通过射线方向感知深度信息，选择更难的负样本，提升模型判别能力。④在标准数据集上减少误检，提升检测精度。
+- **摘要（英）**: This paper addresses insufficient hard negative sampling in multi-view 3D detection training. It proposes ray denoising with depth-aware hard negative sampling, using ray-direction depth information to select more challenging negatives, improving model discrimination and reducing false positives on standard benchmarks.
+- **核心贡献**: 提出深度感知的困难负样本采样方法，改善多视角3D检测训练。
+- **创新点**: 结合射线几何信息进行负样本选择。
+- **结果**: 减少误检并提升检测精度。
 
-### AEDNet: Adaptive Embedding and Multiview-Aware Disentanglement for Point Cloud Completion.
+### AEDNet: Adaptive Embedding and Multiview-Aware Disentanglement for Point Cloud Completion. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73247-8_8) · 📚 被引 4
 - **作者**: Zhiheng Fu, Longguang Wang, Lian Xu, Zhiyong Wang, Hamid Laga, Yulan Guo et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①针对点云补全中嵌入表示和视角解耦不足的问题。②提出AEDNet，采用自适应嵌入和多视角感知解耦机制。③通过自适应嵌入增强特征表达，多视角解耦提升补全质量。④在点云补全基准上取得改进，具体数据未提供。
+- **摘要（英）**: This paper addresses limitations in embedding and view disentanglement for point cloud completion. It proposes AEDNet with adaptive embedding and multiview-aware disentanglement, enhancing feature representation and completion quality, with improvements on point cloud completion benchmarks.
+- **核心贡献**: 提出自适应嵌入与多视角解耦的点云补全方法。
+- **创新点**: 结合多视角信息进行解耦学习。
+- **结果**: 在补全基准上取得改进。
 
 ### BLINK: Multimodal Large Language Models Can See but Not Perceive.
 - **链接**: [arXiv:2404.12390](https://arxiv.org/abs/2404.12390) · 📚 被引 60
@@ -1326,4 +1365,39 @@
 - FroSSL: Frobenius Norm Minimization for Efficient Multiview Self-supervised Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
 - CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
 - Autonomous Driving with Spiking Neural Networks. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
-<!-- COMPLETE v1 papers=128 -->
+
+
+### Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs.
+- **链接**: [arXiv:2406.16860](https://arxiv.org/abs/2406.16860) · 📚 被引 20
+- **作者**: Peter Tong, Ellis Brown, Penghao Wu, Sanghyun Woo, Adithya Iyer, Sai Charitha Akula et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We introduce Cambrian-1, a family of multimodal LLMs (MLLMs) designed with a vision-centric approach. While stronger language models can enhance multimodal capabilities, the design choices for vision components are often insufficiently explored and disconnected from visual representation learning research. This gap hinders accurate sensory grounding in real-world scenarios. Our study uses LLMs and visual instruction tuning as an interface to evaluate various visual representations, offering new insights into different models and architectures -- self-supervised, strongly supervised, or combinations thereof -- based on experiments with over 20 vision encoders. We critically examine existing MLLM benchmarks, address the difficulties involved in consolidating and interpreting results from various tasks, and introduce a new vision-centric benchmark, CV-Bench. To further improve visual grounding, we propose the Spatial Vision Aggregator (SVA), a dynamic and spatially-aware connector that integrates high-resolution vision features with LLMs while reducing the number of tokens. Additionally, we discuss the curation of high-quality visual instruction-tuning data from publicly available sources, emphasizing the importance of data source balancing and distribution ratio. Collectively, Cambrian-1 not only achieves state-of-the-art performance but also serves as a comprehensive, open cookbook for instruction-tuned MLLMs. We provide model weights, code, supporting tools, datasets, and detailed instruction-tuning and evaluation recipes. We hope our release will inspire and accelerate advancements in multimodal systems and visual representation learning.
+
+</details>
+
+### Needle In A Multimodal Haystack.
+- **链接**: [arXiv:2406.07230](https://arxiv.org/abs/2406.07230)
+- **作者**: Weiyun Wang, Shuibo Zhang, Yiming Ren, Yuchen Duan, Tiantong Li, Shuo Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> With the rapid advancement of multimodal large language models (MLLMs), their evaluation has become increasingly comprehensive. However, understanding long multimodal content, as a foundational ability for real-world applications, remains underexplored. In this work, we present Needle In A Multimodal Haystack (MM-NIAH), the first benchmark specifically designed to systematically evaluate the capability of existing MLLMs to comprehend long multimodal documents. Our benchmark includes three types of evaluation tasks: multimodal retrieval, counting, and reasoning. In each task, the model is required to answer the questions according to different key information scattered throughout the given multimodal document. Evaluating the leading MLLMs on MM-NIAH, we observe that existing models still have significant room for improvement on these tasks, especially on vision-centric evaluation. We hope this work can provide a platform for further research on long multimodal document comprehension and contribute to the advancement of MLLMs. Code and benchmark are released at https://github.com/OpenGVLab/MM-NIAH.
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection. → [object-detection](../object-detection/Guideline%202024.md)
+- SimPB: A Single Model for 2D and 3D Object Detection from Multiple Cameras. → [3d-detection](../3d-detection/Guideline%202024.md)
+- BLINK: Multimodal Large Language Models Can See but Not Perceive. → [vlm](../vlm/Guideline%202024.md)
+- FroSSL: Frobenius Norm Minimization for Efficient Multiview Self-supervised Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
+- CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202024.md)
+- Autonomous Driving with Spiking Neural Networks. → [autonomous-driving](../autonomous-driving/Guideline%202024.md)
+
+<!-- COMPLETE v1 papers=130 -->

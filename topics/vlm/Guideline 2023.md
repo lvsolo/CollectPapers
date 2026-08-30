@@ -3,13 +3,18 @@
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
 > 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### CLIP2: Contrastive Language-Image-Point Pretraining from Real-World Point Cloud Data.
+### CLIP2: Contrastive Language-Image-Point Pretraining from Real-World Point Cloud Data. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2303.12417](https://arxiv.org/abs/2303.12417) · 📚 被引 84
 - **作者**: Yihan Zeng, Chenhan Jiang, Jiageng Mao, Jianhua Han, Chaoqiang Ye, Qingqiu Huang et al.
 - **🏷️ 机构**: Huawei Noah&#x0027;s Ark Lab, Hong Kong University of Science and Technology, The Chinese University of Hong Kong
 - **会议**: CVPR 2023
+- **摘要（中）**: ①该论文针对将2D视觉语言模型（VLM）成功迁移到3D点云理解时，文本-3D数据对稀缺的问题。②提出了对比语言-图像-点云预训练（CLIP²），通过新颖的代理对齐机制直接学习真实场景中可迁移的3D点云表示，利用2D和3D场景中自然存在的对应关系构建对齐的文本-图像-点代理，并设计跨模态对比目标。③相比已有工作，CLIP²避免了中间2D表示的信息损失，直接学习3D几何信息。④在室内和室外场景的实验表明，学习到的3D表示具有很好的迁移能力，但具体数值未在摘要中提供。
+- **摘要（英）**: This paper addresses the challenge of adapting 2D vision-language models to 3D point cloud understanding due to limited text-3D data pairs. It proposes CLIP², which learns transferable 3D point cloud representations via a novel proxy alignment mechanism, exploiting natural correspondences in 2D and 3D scenarios and using cross-modal contrastive objectives. Compared to existing works, CLIP² avoids information loss from intermediate 2D representations. Experiments on indoor and outdoor scenarios demonstrate strong transferability, though specific numbers are not provided.
+- **核心贡献**: 提出了CLIP²，实现直接学习可迁移的3D点云表示。
+- **创新点**: 利用代理对齐机制和跨模态对比学习，避免中间表示信息损失。
+- **结果**: 在室内外场景中展示了良好的迁移能力。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,21 +22,20 @@
 
 </details>
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Contrastive Language-Image Pre-training, benefiting from large-scale unlabeled text-image pairs, has demonstrated great performance in open-world vision understanding tasks. However, due to the limited Text-3D data pairs, adapting the success of 2D Vision-Language Models (VLM) to the 3D space remains an open problem. Existing works that leverage VLM for 3D understanding generally resort to constructing intermediate 2D representations for the 3D data, but at the cost of losing 3D geometry information. To take a step toward open-world 3D vision understanding, we propose Contrastive Language-Image-Point Cloud Pretraining (CLIP$^2$) to directly learn the transferable 3D point cloud representation in realistic scenarios with a novel proxy alignment mechanism. Specifically, we exploit naturally-existed correspondences in 2D and 3D scenarios, and build well-aligned and instance-based text-image-point proxies from those complex scenarios. On top of that, we propose a cross-modal contrastive objective to learn semantic and instance-level aligned point cloud representation. Experimental results on both indoor and outdoor scenarios show that our learned 3D representation has great transfer ability in downstream tasks, including zero-shot and few-shot 3D recognition, which boosts the state-of-the-art methods by large margins. Furthermore, we provide analyses of the capability of different representations in real scenarios and present the optional ensemble scheme.
-
-</details>
-
-### Joint Visual Grounding and Tracking with Natural Language Specification.
-- **链接**: [arXiv:2303.12027](https://arxiv.org/abs/2303.12027) · [代码](https://github.com/lizhou-cs/JointNLT) · 📚 被引 139
+### Joint Visual Grounding and Tracking with Natural Language Specification. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2303.12027](https://arxiv.org/abs/2303.12027) · 📚 被引 139
 - **作者**: Li Zhou, Zikun Zhou, Kaige Mao, Zhenyu He
 - **🏷️ 机构**: Harbin Institute of Technology,Shenzhen, Peng Cheng Laboratory
 - **会议**: CVPR 2023
+- **摘要（中）**: 针对自然语言规范跟踪中视觉定位与跟踪分离、缺乏端到端训练的问题，本文提出联合视觉定位与跟踪框架，将两者统一为基于视觉-语言参考的定位任务。通过多源关系建模模块建立参考与测试图像的关系，并设计时间建模模块利用全局语义信息提升外观变化适应性。该方法有效改善了跟踪性能，但摘要未提供具体数据。
+- **摘要（英）**: To address the separation of visual grounding and tracking in natural language specification tracking, this paper proposes a joint framework that unifies them as a localization task based on visual-language references. It introduces multi-source relation modeling and temporal modeling modules, improving adaptability to appearance changes, though specific results are not detailed.
+- **核心贡献**: 提出联合视觉定位与跟踪的统一框架。
+- **创新点**: 多源关系建模与时间建模结合语言语义。
+- **结果**: 提升跟踪适应性，但未提供具体数值。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Pre-training across 3D vision and language remains under development because of limited training data. Recent works attempt to transfer vision-language pre-training models to 3D vision. PointCLIP converts point cloud data to multi-view depth maps, adopting CLIP for shape classification. However, its performance is restricted by the domain gap between rendered depth maps and images, as well as the diversity of depth distributions. To address this issue, we propose CLIP2Point, an image-depth pre-training method by contrastive learning to transfer CLIP to the 3D domain, and adapt it to point cloud classification. We introduce a new depth rendering setting that forms a better visual effect, and then render 52,460 pairs of images and depth maps from ShapeNet for pre-training. The pre-training scheme of CLIP2Point combines cross-modality learning to enforce the depth features for capturing expressive visual and textual features and intra-modality learning to enhance the invariance of depth aggregation. Additionally, we propose a novel Dual-Path Adapter (DPA) module, i.e., a dual-path structure with simplified adapters for few-shot learning. The dual-path structure allows the joint use of CLIP and CLIP2Point, and the simplified adapter can well fit few-shot tasks without post-search. Experimental results show that CLIP2Point is effective in transferring CLIP knowledge to 3D vision. Our CLIP2Point outperforms PointCLIP and other self-supervised 3D networks, achieving state-of-the-art results on zero-shot and few-shot classification.
+> Tracking by natural language specification aims to locate the referred target in a sequence based on the natural language description. Existing algorithms solve this issue in two steps, visual grounding and tracking, and accordingly deploy the separated grounding model and tracking model to implement these two steps, respectively. Such a separated framework overlooks the link between visual grounding and tracking, which is that the natural language descriptions provide global semantic cues for localizing the target for both two steps. Besides, the separated framework can hardly be trained end-to-end. To handle these issues, we propose a joint visual grounding and tracking framework, which reformulates grounding and tracking as a unified task: localizing the referred target based on the given visual-language references. Specifically, we propose a multi-source relation modeling module to effectively build the relation between the visual-language references and the test image. In addition, we design a temporal modeling module to provide a temporal clue with the guidance of the global semantic information for our model, which effectively improves the adaptability to the appearance variations of the target. Extensive experimental results on TNL2K, LaSOT, OTB99, and RefCOCOg demonstrate that our method performs favorably against state-of-the-art algorithms for both tracking and grounding. Code is available at https://github.com/lizhou-cs/JointNLT.
 
 </details>
 
@@ -406,18 +410,6 @@
 - **作者**: Emmanuelle Salin, Stéphane Ayache, Benoît Favre
 - **🏷️ 机构**: Aix Marseille Univ, Universit&#x00E9; de Toulon,CNRS, LIS,Marseille,France
 - **会议**: ICCV 2023
-
-### ClipCrop: Conditioned Cropping Driven by Vision-Language Model.
-- **链接**: [arXiv:2211.11492](https://arxiv.org/abs/2211.11492) · 📚 被引 5
-- **作者**: Zhihang Zhong, Mingxi Cheng, Zhirong Wu, Yuhui Yuan, Yinqiang Zheng, Ji Li et al.
-- **🏷️ 机构**: The University of Tokyo,Japan, Microsoft Research
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Image cropping has progressed tremendously under the data-driven paradigm. However, current approaches do not account for the intentions of the user, which is an issue especially when the composition of the input image is complex. Moreover, labeling of cropping data is costly and hence the amount of data is limited, leading to poor generalization performance of current algorithms in the wild. In this work, we take advantage of vision-language models as a foundation for creating robust and user-intentional cropping algorithms. By adapting a transformer decoder with a pre-trained CLIP-based detection model, OWL-ViT, we develop a method to perform cropping with a text or image query that reflects the user's intention as guidance. In addition, our pipeline design allows the model to learn text-conditioned aesthetic cropping with a small cropping dataset, while inheriting the open-vocabulary ability acquired from millions of text-image pairs. We validate our model through extensive experiments on existing datasets as well as a new cropping test set we compiled that is characterized by content ambiguity.
-
-</details>
 
 ### TinyCLIP: CLIP Distillation via Affinity Mimicking and Weight Inheritance.
 - **链接**: [arXiv:2309.12314](https://arxiv.org/abs/2309.12314) · 📚 被引 73
@@ -864,4 +856,5 @@
 - Exploring Open-Vocabulary Semantic Segmentation from CLIP Vision Encoder Distillation Only. → [open-set-detection](../open-set-detection/Guideline%202023.md)
 - Open-VCLIP: Transforming CLIP to an Open-vocabulary Video Model via Interpolated Weight Optimization. → [open-set-detection](../open-set-detection/Guideline%202023.md)
 - Convolutions Die Hard: Open-Vocabulary Segmentation with Single Frozen Convolutional CLIP. → [open-set-detection](../open-set-detection/Guideline%202023.md)
-<!-- COMPLETE v1 papers=68 -->
+
+<!-- COMPLETE v1 papers=67 -->

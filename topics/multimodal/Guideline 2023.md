@@ -3,39 +3,46 @@
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
 > 论文数: 29 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### A Large-Scale Outdoor Multi-modal Dataset and Benchmark for Novel View Synthesis and Implicit Scene Reconstruction.
+### A Large-Scale Outdoor Multi-modal Dataset and Benchmark for Novel View Synthesis and Implicit Scene Reconstruction. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2301.06782](https://arxiv.org/abs/2301.06782) · 📚 被引 33
 - **作者**: Chongshan Lu, Fukun Yin, Xin Chen, Wen Liu, Tao Chen, Gang Yu et al.
 - **🏷️ 机构**: Fudan University,School of Information Science and Technology,China, Tencent PCG,China, Fudan University,Academy for Engineering and Technology,China
 - **会议**: ICCV 2023
+- **摘要（中）**: ①该论文针对户外大规模多模态新视角合成和隐式场景重建缺乏基准数据集的问题。②构建了一个大规模户外多模态数据集，并提供了用于新视角合成和隐式场景重建的基准测试。③相比已有工作，该数据集覆盖了更丰富的户外场景和多模态数据（如图像、LiDAR等），为相关研究提供了标准化的评估平台。④由于摘要不完整，具体效果数据未提供，但基准的建立有助于推动该领域的发展。
+- **摘要（英）**: This paper addresses the lack of large-scale outdoor multimodal benchmarks for novel view synthesis and implicit scene reconstruction. It constructs a large-scale outdoor multimodal dataset and provides a benchmark for these tasks. Compared to existing works, the dataset covers richer outdoor scenes and multimodal data, offering a standardized evaluation platform. Specific performance metrics are not available due to incomplete abstract.
+- **核心贡献**: 构建了大规模户外多模态数据集和基准，填补了该领域的空白。
+- **创新点**: 数据集覆盖多模态和复杂户外场景，提供标准化评估。
+- **结果**: 基准的建立为后续研究提供了基础，但具体效果未在摘要中体现。
 
-### MMST-ViT: Climate Change-aware Crop Yield Prediction via Multi-Modal Spatial-Temporal Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00531)
-- **作者**: Fudong Lin, Summer Crawford, Kaleb Guillot, Yihe Zhang, Yan Chen, Xu Yuan et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
-
-### Multimodality Helps Unimodality: Cross-Modal Few-Shot Learning with Multimodal Models.
+### Multimodality Helps Unimodality: Cross-Modal Few-Shot Learning with Multimodal Models. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2301.06267](https://arxiv.org/abs/2301.06267) · 📚 被引 118
 - **作者**: Zhiqiu Lin, Samuel Yu, Zhiyi Kuang, Deepak Pathak, Deva Ramanan
 - **🏷️ 机构**: Carnegie Mellon University
 - **会议**: CVPR 2023
+- **摘要（中）**: 针对少样本学习中单模态样本不足的问题，提出利用多模态基础模型（如CLIP）的跨模态编码器，将不同模态的样本作为额外少样本示例。通过简单地将类名作为附加训练样本，将n-shot问题转化为(n+1)-shot，并可与现有方法结合。在多个少样本基准上取得SOTA结果，表明多模态信息能显著提升单模态分类性能。
+- **摘要（英）**: This paper addresses the insufficiency of unimodal few-shot samples by leveraging cross-modal encoders from multimodal foundation models like CLIP, treating examples from different modalities as additional few-shot samples. By repurposing class names as extra training samples, it converts n-shot into (n+1)-shot problems, achieving SOTA results with simple linear classifiers and compatibility with existing methods.
+- **核心贡献**: 提出跨模态适应策略，利用多模态样本增强少样本学习。
+- **创新点**: 将类名等文本样本作为额外训练数据，简单有效。
+- **结果**: 在少样本基准上取得SOTA结果。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The goal of multimodal summarization is to extract the most important information from different modalities to form output summaries. Unlike the unimodal summarization, the multimodal summarization task explicitly leverages cross-modal information to help generate more reliable and high-quality summaries. However, existing methods fail to leverage the temporal correspondence between different modalities and ignore the intrinsic correlation between different samples. To address this issue, we introduce Align and Attend Multimodal Summarization (A2Summ), a unified multimodal transformer-based model which can effectively align and attend the multimodal input. In addition, we propose two novel contrastive losses to model both inter-sample and intra-sample correlations. Extensive experiments on two standard video summarization datasets (TVSum and SumMe) and two multimodal summarization datasets (Daily Mail and CNN) demonstrate the superiority of A2Summ, achieving state-of-the-art performances on all datasets. Moreover, we collected a large-scale multimodal summarization dataset BLiSS, which contains livestream videos and transcribed texts with annotated summaries. Our code and dataset are publicly available at ~\url{https://boheumd.github.io/A2Summ/}.
+> The ability to quickly learn a new task with minimal instruction - known as few-shot learning - is a central aspect of intelligent agents. Classical few-shot benchmarks make use of few-shot samples from a single modality, but such samples may not be sufficient to characterize an entire concept class. In contrast, humans use cross-modal information to learn new concepts efficiently. In this work, we demonstrate that one can indeed build a better ${\bf visual}$ dog classifier by ${\bf read}$ing about dogs and ${\bf listen}$ing to them bark. To do so, we exploit the fact that recent multimodal foundation models such as CLIP learn cross-modal encoders that map different modalities to the same representation space. Specifically, we propose a simple strategy for ${\bf cross-modal}$ ${\bf adaptation}$: we treat examples from different modalities as additional few-shot examples. For example, by simply repurposing class names as an additional training sample, we trivially turn any n-shot learning problem into a (n+1)-shot problem. This allows us to produce SOTA results with embarrassingly simple linear classifiers. We show that our approach can be combined with existing methods such as prefix tuning, adapters, and classifier ensembling. Finally, to explore other modalities beyond vision and language, we construct the first (to our knowledge) audiovisual few-shot benchmark and use cross-modal training to improve the performance of both image and audio classification.
 
 </details>
 
-### Multimodal Industrial Anomaly Detection via Hybrid Fusion.
-- **链接**: [arXiv:2303.00601](https://arxiv.org/abs/2303.00601) · [代码](https://github.com/nomewang/M3DM) · 📚 被引 200
+### Multimodal Industrial Anomaly Detection via Hybrid Fusion. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [arXiv:2303.00601](https://arxiv.org/abs/2303.00601) · 📚 被引 200
 - **作者**: Yue Wang, Jinlong Peng, Jiangning Zhang, Ran Yi, Yabiao Wang, Chengjie Wang
 - **🏷️ 机构**: Shanghai Jiao Tong University,Shanghai,China, Tencent,Youtu Lab
 - **会议**: CVPR 2023
+- **摘要（中）**: 针对多模态工业异常检测中直接拼接特征导致干扰的问题，提出M3DM方法，采用混合融合方案：无监督特征融合通过patch-wise对比学习促进模态交互，决策层融合使用多个记忆库和额外分类器避免信息丢失。提出点特征对齐操作，在MVTec-3D AD数据集上检测和分割精度均超越SOTA。
+- **摘要（英）**: To mitigate feature disturbance from direct concatenation in multimodal industrial anomaly detection, this paper proposes M3DM with a hybrid fusion scheme: unsupervised feature fusion via patch-wise contrastive learning and decision-level fusion with multiple memory banks and novelty classifiers. A point feature alignment operation is introduced, achieving SOTA detection and segmentation precision on MVTec-3D AD.
+- **核心贡献**: 提出M3DM混合融合方法，提升多模态异常检测性能。
+- **创新点**: 采用patch-wise对比学习和决策层多记忆库融合。
+- **结果**: 在MVTec-3D AD上检测和分割精度均达SOTA。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -49,31 +56,31 @@
 - **🏷️ 机构**: University of Bonn
 - **会议**: CVPR 2023
 
-### Seeing With Sound: Long-Range Acoustic Beamforming for Multimodal Scene Understanding.
+### Seeing With Sound: Long-Range Acoustic Beamforming for Multimodal Scene Understanding. **⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00101) · 📚 被引 4
 - **作者**: Praneeth Chakravarthula, Jim Aldon D'Souza, Ethan Tseng, Joe Bartusek, Felix Heide
 - **🏷️ 机构**: Princeton University, Algolux
 - **会议**: CVPR 2023
+- **摘要（中）**: ①该论文针对长距离声学波束成形在多模态场景理解中的应用问题，但摘要为空，无法获取具体研究内容。②由于摘要缺失，无法判断其提出的方法或具体实现。③缺乏摘要信息，无法评估其与现有工作的改进点。④由于没有实验数据，无法报告具体效果。
+- **摘要（英）**: This paper addresses long-range acoustic beamforming for multimodal scene understanding, but the abstract is empty, making it impossible to assess the proposed method or results. Without abstract details, no specific contributions or experimental outcomes can be summarized.
+- **核心贡献**: 摘要缺失，无法确定核心贡献。
+- **创新点**: 摘要缺失，无法确定创新点。
+- **结果**: 摘要缺失，无法报告效果。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-### Enhanced Multimodal Representation Learning with Cross-modal KD.
+### Enhanced Multimodal Representation Learning with Cross-modal KD. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2306.07646](https://arxiv.org/abs/2306.07646) · 📚 被引 13
 - **作者**: Mengxi Chen, Linyu Xing, Yu Wang, Ya Zhang
 - **🏷️ 机构**: Shanghai Jiao Tong University
 - **会议**: CVPR 2023
+- **摘要（中）**: ①该论文针对跨模态知识蒸馏中互信息最大化目标导致弱教师捷径解的问题，即教师模型为最大化互信息而变得与学生一样弱，从而限制了多模态表示学习的提升。②提出了在原有目标上增加教师与辅助模态模型之间的互信息项，并通过最小化给定学生条件下教师的条件熵来缩小信息差距；设计了基于对比学习和对抗学习的训练方案来分别优化这两个目标。③相比现有KD方法，创新性地引入辅助模态信息约束和条件熵正则，有效避免了弱教师退化。④在视频识别、视频检索和情感分类三个多模态基准数据集上，该方法优于一系列最先进方法，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses the short-cut solution in cross-modal knowledge distillation where mutual information maximization leads to a weak teacher, limiting representation learning. It introduces an additional mutual information term between teacher and auxiliary modality, plus conditional entropy minimization, optimized via contrastive and adversarial learning. The method outperforms state-of-the-art approaches on video recognition, retrieval, and emotion classification benchmarks.
+- **核心贡献**: 提出了一种防止弱教师捷径的跨模态知识蒸馏框架，通过辅助模态互信息和条件熵约束增强学生模型。
+- **创新点**: 创新性地结合对比学习和对抗学习来优化互信息与条件熵，有效避免教师退化。
+- **结果**: 在三个多模态基准上超越现有最先进方法，验证了方法的有效性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > This paper explores the tasks of leveraging auxiliary modalities which are only available at training to enhance multimodal representation learning through cross-modal Knowledge Distillation (KD). The widely adopted mutual information maximization-based objective leads to a short-cut solution of the weak teacher, i.e., achieving the maximum mutual information by simply making the teacher model as weak as the student model. To prevent such a weak solution, we introduce an additional objective term, i.e., the mutual information between the teacher and the auxiliary modality model. Besides, to narrow down the information gap between the student and teacher, we further propose to minimize the conditional entropy of the teacher given the student. Novel training schemes based on contrastive learning and adversarial learning are designed to optimize the mutual information and the conditional entropy, respectively. Experimental results on three popular multimodal benchmark datasets have shown that the proposed method outperforms a range of state-of-the-art approaches for video recognition, video retrieval and emotion classification.
-
-</details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> This paper explores the tasks of leveraging auxiliary modalities which are only available at training to enhance multimodal representation learning through cross-modal Knowledge Distillation (KD). The widely adopted mutual information maximization-based objective leads to a short-cut solution of the weak teacher, i.e., achieving the maximum mutual information by simply making the teacher model as weak as the student model. To prevent such a weak solution, we introduce an additional objective term, i.e., the mutual information between the teacher and the auxiliary modality model. Besides, to narrow down the information gap between the student and teacher, we further propose to minimize the conditional entropy of the teacher given the student. Novel training schemes based on contrastive learning and adversarial learning are designed to optimize the mutual information and the conditional entropy, respectively. Experimental results on three popular multimodal benchmark datasets have shown that the proposed method outperforms a range of state-of-the-art approaches for video recognition, video retrieval and emotion classification.
-
-</details>
 
 </details>
 
@@ -639,4 +646,5 @@
 - Leveraging Vision-Centric Multi-Modal Expertise for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
 - STXD: Structural and Temporal Cross-Modal Distillation for Multi-View 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
 - Unleash the Potential of Image Branch for Cross-modal 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202023.md)
-<!-- COMPLETE v1 papers=65 -->
+
+<!-- COMPLETE v1 papers=64 -->

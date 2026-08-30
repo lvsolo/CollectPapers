@@ -3,7 +3,7 @@
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
 > 论文数: 29 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### Meta-attention for ViT-backed Continual Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00025)
@@ -11,11 +11,16 @@
 - **🏷️ 机构**: ZJU
 - **会议**: CVPR 2022
 
-### vCLIMB: A Novel Video Class Incremental Learning Benchmark.
+### vCLIMB: A Novel Video Class Incremental Learning Benchmark. **⭐⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2201.09381](https://arxiv.org/abs/2201.09381) · 📚 被引 35
 - **作者**: Andrés Villa, Kumail Alhamoud, Victor Escorcia, Fabian Caba Heilbron, Juan León Alcázar, Bernard Ghanem
 - **🏷️ 机构**: Pontificia Universidad Cat&#x00F3;lica de Chile, King Abdullah University of Science and Technology (KAUST), Samsung AI Center Cambridge
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对视频持续学习领域缺乏标准化基准的问题，本文提出vCLIMB基准，专注于类增量学习，均匀分配类别分布，并发现视频数据中帧级记忆选择和未修剪数据影响采样策略的独特挑战。为解决这些问题，提出时间一致性正则化，可应用于基于记忆的持续学习方法，在未修剪持续学习任务上提升基线高达24%。
+- **摘要（英）**: This paper introduces vCLIMB, a standardized video continual learning benchmark focusing on class incremental learning with uniform class distribution, and identifies unique challenges in frame-level memory selection and untrimmed data sampling. A temporal consistency regularization is proposed to address these, improving baseline performance by up to 24% on untrimmed tasks.
+- **核心贡献**: 提出了视频持续学习基准vCLIMB和时间一致性正则化方法，解决了视频数据中的独特挑战。
+- **创新点**: 首次系统分析视频持续学习中的帧级记忆和未修剪数据问题，并设计针对性正则化。
+- **结果**: 在vCLIMB上显著提升持续学习性能，最高提升24%。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -23,11 +28,16 @@
 
 </details>
 
-### Overcoming Catastrophic Forgetting in Incremental Object Detection via Elastic Response Distillation.
+### Overcoming Catastrophic Forgetting in Incremental Object Detection via Elastic Response Distillation. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2204.02136](https://arxiv.org/abs/2204.02136) · 📚 被引 117
 - **作者**: Tao Feng, Mang Wang, Hangjie Yuan
 - **🏷️ 机构**: Alibaba Group, Zhejiang University
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对增量目标检测（IOD）中灾难性遗忘问题，本文提出弹性响应蒸馏（ERD）方法，专注于从分类头和回归头弹性学习响应，通过弹性响应选择（ERS）策略评估位置质量并提供有价值响应，并强调不同响应在蒸馏中应分配不同重要性。在MS COCO上的实验表明，ERD有效缓解遗忘，提升增量检测性能。
+- **摘要（英）**: This paper addresses catastrophic forgetting in incremental object detection (IOD) by proposing Elastic Response Distillation (ERD), which focuses on elastically learning responses from classification and regression heads, with an Elastic Response Selection (ERS) strategy to evaluate location quality and assign importance. Experiments on MS COCO demonstrate ERD effectively mitigates forgetting and improves incremental detection performance.
+- **核心贡献**: 提出了弹性响应蒸馏方法，通过选择性响应蒸馏提升增量目标检测性能。
+- **创新点**: 引入弹性响应选择策略，动态评估响应质量并分配重要性，优于传统蒸馏方法。
+- **结果**: 在MS COCO上验证了方法的有效性，显著缓解灾难性遗忘。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -35,17 +45,27 @@
 
 </details>
 
-### Continual Learning with Lifelong Vision Transformer.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00027)
+### Continual Learning with Lifelong Vision Transformer. **⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00027) · 📚 被引 63
 - **作者**: Zhen Wang, Liu Liu, Yiqun Duan, Yajing Kong, Dacheng Tao
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: The University of Sydney,Australia, University of Technology Sydney,Australia, JD Explore Academy,China
 - **会议**: CVPR 2022
+- **摘要（中）**: 该论文摘要缺失，无法获取具体内容。根据标题推测，可能涉及使用终身视觉Transformer进行持续学习，但缺乏详细信息。
+- **摘要（英）**: The abstract is missing, so specific details are unavailable. Based on the title, it likely explores lifelong vision transformers for continual learning, but no concrete information is provided.
+- **核心贡献**: 未知，因摘要缺失。
+- **创新点**: 未知，因摘要缺失。
+- **结果**: 未知，因摘要缺失。
 
-### Learning to Prompt for Continual Learning.
-- **链接**: [arXiv:2112.08654](https://arxiv.org/abs/2112.08654) · [代码](https://github.com/google-research/l2p)
+### Learning to Prompt for Continual Learning. **⭐⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2112.08654](https://arxiv.org/abs/2112.08654)
 - **作者**: Zifeng Wang, Zizhao Zhang, Chen-Yu Lee, Han Zhang, Ruoxi Sun, Xiaoqi Ren et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对传统持续学习依赖重放缓冲区或任务身份的问题，本文提出L2P方法，通过动态提示（prompts）预训练模型，在无需任务身份的情况下顺序学习任务。提示作为可学习参数存储在记忆空间中，优化以管理任务不变和任务特定知识，保持模型可塑性。在多个图像分类基准上，L2P一致优于现有方法，甚至在没有重放缓冲区的情况下达到与基于重放方法竞争的结果。
+- **摘要（英）**: This paper proposes L2P, a new continual learning paradigm that dynamically prompts a pre-trained model to learn tasks sequentially without task identity at test time. Prompts are learnable parameters in a memory space, optimized to manage task-invariant and task-specific knowledge, achieving state-of-the-art results on image classification benchmarks and competitive performance with rehearsal-based methods even without a buffer.
+- **核心贡献**: 提出了基于动态提示的持续学习框架，无需任务身份和重放缓冲区。
+- **创新点**: 将提示学习引入持续学习，通过可学习提示管理知识，创新性强。
+- **结果**: 在多个基准上超越现有方法，且无缓冲区时仍具竞争力。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -53,11 +73,16 @@
 
 </details>
 
-### Learning Bayesian Sparse Networks with Full Experience Replay for Continual Learning.
+### Learning Bayesian Sparse Networks with Full Experience Replay for Continual Learning. **⭐⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2202.10203](https://arxiv.org/abs/2202.10203) · 📚 被引 35
 - **作者**: Qingsen Yan, Dong Gong, Yuhang Liu, Anton van den Hengel, Javen Qinfeng Shi
 - **🏷️ 机构**: The Australian Institute for Machine Learning, The University of Adelaide,Australia
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对持续学习中的灾难性遗忘问题，现有方法仍受任务间干扰影响。②提出了稀疏神经网络持续学习（SNCL），使用变分贝叶斯稀疏先验激活神经元，并采用全经验回放（FER）提供监督，同时开发了损失感知的储层采样策略。③相比已有方法，通过稀疏激活减少参数干扰，保留模型容量给未来任务，且与网络结构和任务边界无关。④实验表明SNCL在多个基准上有效缓解遗忘，性能优于现有方法。
+- **摘要（英）**: This paper addresses catastrophic forgetting in continual learning, proposing SNCL, a sparse neural network with variational Bayesian sparsity priors and full experience replay. It minimizes parameter interference and achieves superior performance on benchmarks.
+- **核心贡献**: 提出了SNCL，通过稀疏激活和全经验回放减少任务间干扰。
+- **创新点**: 变分贝叶斯稀疏先验结合损失感知采样，实现动态稀疏网络。
+- **结果**: 在多个持续学习基准上有效缓解遗忘，性能优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -65,11 +90,16 @@
 
 </details>
 
-### Online Continual Learning on a Contaminated Data Stream with Blurry Task Boundaries.
-- **链接**: [arXiv:2203.15355](https://arxiv.org/abs/2203.15355) · [代码](https://github.com/clovaai/puridiver) · 📚 被引 23
+### Online Continual Learning on a Contaminated Data Stream with Blurry Task Boundaries. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2203.15355](https://arxiv.org/abs/2203.15355) · 📚 被引 23
 - **作者**: Jihwan Bang, Hyunseo Koh, Seulki Park, Hwanjun Song, Jung-Woo Ha, Jonghyun Choi
 - **🏷️ 机构**: NAVER CLOVA, NAVER AI Lab
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对在线持续学习中数据流含噪声标签和模糊任务边界的问题，本文强调情景记忆中样本多样性和纯净性的重要性，提出统一方法结合标签噪声感知的多样采样和半监督学习进行鲁棒学习。在CIFAR10/100、mini-WebVision和Food-101N等数据集上，该方法显著优于现有持续学习方法。
+- **摘要（英）**: This paper addresses online continual learning with noisy labels and blurry task boundaries, emphasizing the need for both diversity and purity in episodic memory. A unified approach combining label-noise-aware diverse sampling and semi-supervised learning is proposed, significantly outperforming prior methods on CIFAR10/100, mini-WebVision, and Food-101N.
+- **核心贡献**: 提出了在噪声数据流中平衡记忆多样性和纯净性的持续学习策略。
+- **创新点**: 结合标签噪声感知采样和半监督学习，统一处理多样性和纯净性。
+- **结果**: 在多个真实和合成噪声数据集上显著优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -77,11 +107,16 @@
 
 </details>
 
-### Probing Representation Forgetting in Supervised and Unsupervised Continual Learning.
+### Probing Representation Forgetting in Supervised and Unsupervised Continual Learning. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2203.13381](https://arxiv.org/abs/2203.13381) · 📚 被引 46
 - **作者**: MohammadReza Davari, Nader Asadi, Sudhir P. Mudur, Rahaf Aljundi, Eugene Belilovsky
 - **🏷️ 机构**: Concordia University, Toyota Motor Europe
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对持续学习中灾难性遗忘的度量问题，传统方法仅关注任务性能下降，忽略了表示变化。②提出表示遗忘概念，通过比较新任务前后最优线性分类器的性能差异来度量。③重新审视标准持续学习基准，发现无显式遗忘控制的模型表示遗忘较小，尤其在长任务序列中。④该视角为持续学习提供新见解，可能改变对遗忘机制的理解。
+- **摘要（英）**: This paper introduces representation forgetting, measured by the performance difference of an optimal linear classifier before and after new tasks. It revisits continual learning benchmarks and finds that models without explicit forgetting control often exhibit small representation forgetting, especially in longer sequences. This provides new insights into catastrophic forgetting.
+- **核心贡献**: 提出表示遗忘度量并重新评估持续学习基准。
+- **创新点**: 区分表示变化与知识丢失，提供更细粒度的遗忘分析。
+- **结果**: 发现无显式控制模型在长序列中表示遗忘较小。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -89,11 +124,16 @@
 
 </details>
 
-### DyTox: Transformers for Continual Learning with DYnamic TOken eXpansion.
-- **链接**: [arXiv:2111.11326](https://arxiv.org/abs/2111.11326) · 📚 被引 319
+### DyTox: Transformers for Continual Learning with DYnamic TOken eXpansion. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2111.11326](https://arxiv.org/abs/2111.11326) · 📚 被引 318
 - **作者**: Arthur Douillard, Alexandre Ramé, Guillaume Couairon, Matthieu Cord
 - **🏷️ 机构**: Sorbonne Universite
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对持续学习中动态架构方法需要任务标识符、参数扩展难以平衡且任务间信息共享不足的问题。②提出基于Transformer的编码器-解码器框架，通过动态扩展特殊token来为每个任务定制解码器前向传播，编码器和解码器在所有任务间共享。③相比现有方法，无需任务标识符，无需超参数调优控制扩展，内存和时间开销极小。④在CIFAR100上取得优秀结果，在大型ImageNet数据集上达到最先进性能。
+- **摘要（英）**: This paper addresses the limitations of dynamic architectures in continual learning, which require task identifiers and complex tuning. It proposes a Transformer encoder-decoder framework with dynamic token expansion to specialize decoder forward passes per task while sharing parameters. The method achieves excellent results on CIFAR100 and state-of-the-art performance on large-scale ImageNet, with negligible overhead.
+- **核心贡献**: 提出了一种基于动态token扩展的Transformer架构，实现了无需任务标识符的高效持续学习。
+- **创新点**: 通过动态扩展特殊token而非参数，实现了任务特化与参数共享的平衡。
+- **结果**: 在CIFAR100和ImageNet上达到最先进性能，且内存和时间开销极小。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -101,17 +141,27 @@
 
 </details>
 
-### Not Just Selection, but Exploration: Online Class-Incremental Continual Learning via Dual View Consistency.
+### Not Just Selection, but Exploration: Online Class-Incremental Continual Learning via Dual View Consistency. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00729) · 📚 被引 73
 - **作者**: Yanan Gu, Xu Yang, Kun Wei, Cheng Deng
 - **🏷️ 机构**: School of Electronic Engineering, Xidian University,Xi&#x0027;an,China,710071
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对在线类增量持续学习中仅选择样本不足以有效利用数据的问题。②提出基于双视图一致性的方法，在样本选择之外强调探索，通过一致性约束增强模型对未选择样本的利用。③相比仅依赖回放选择的现有方法，增加了探索机制，提升了数据利用效率。④在多个基准上验证了方法的有效性，但摘要未提供具体数据。
+- **摘要（英）**: This paper tackles the limitation of sample selection in online class-incremental continual learning by introducing a dual view consistency approach. It emphasizes exploration beyond selection to better utilize data, improving over replay-based methods. The method shows effectiveness on benchmarks, though specific results are not detailed in the abstract.
+- **核心贡献**: 提出了双视图一致性机制，结合探索与选择提升在线类增量学习性能。
+- **创新点**: 将探索机制引入样本选择，利用双视图一致性增强数据利用。
+- **结果**: 在基准测试上验证了有效性，但具体数据未在摘要中给出。
 
-### On Generalizing Beyond Domains in Cross-Domain Continual Learning.
+### On Generalizing Beyond Domains in Cross-Domain Continual Learning. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2203.03970](https://arxiv.org/abs/2203.03970) · 📚 被引 30
 - **作者**: Christian Simon, Masoud Faraki, Yi-Hsuan Tsai, Xiang Yu, Samuel Schulter, Yumin Suh et al.
 - **🏷️ 机构**: The Australian National University, Phiar Technologies, Monash University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对跨域持续学习中模型在未见领域上泛化能力不足的问题。②提出使用马氏距离计算类相似度作为分类器参数，并采用指数移动平均进行知识蒸馏，以学习语义特征。③相比现有持续学习算法，该方法在域偏移下能更好地处理遗忘问题，提升泛化能力。④在多个分布下学习新任务时准确率显著提升。
+- **摘要（英）**: This paper addresses the generalization issue in cross-domain continual learning by equipping the classifier with Mahalanobis similarity metrics and using exponential moving average for distillation. It learns semantically meaningful features, improving over existing methods under domain shifts. The approach boosts accuracy when learning new tasks across multiple distributions.
+- **核心贡献**: 提出了基于马氏距离的类相似度分类器和EMA蒸馏方法，提升跨域持续学习泛化能力。
+- **创新点**: 将马氏距离引入分类器参数，并结合EMA蒸馏增强知识保留。
+- **结果**: 在域偏移下准确率显著提升，优于现有持续学习算法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -119,11 +169,16 @@
 
 </details>
 
-### GCR: Gradient Coreset based Replay Buffer Selection for Continual Learning.
+### GCR: Gradient Coreset based Replay Buffer Selection for Continual Learning. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2111.11210](https://arxiv.org/abs/2111.11210) · 📚 被引 105
 - **作者**: Rishabh Tiwari, KrishnaTeja Killamsetty, Rishabh K. Iyer, Pradeep Shenoy
 - **🏷️ 机构**: Indian Institute of Technology (ISM),Department of Physics,Dhanbad, University of Texas at Dallas,Department of Computer Science, Google Research,India
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对回放式持续学习中缓冲区样本选择策略不佳导致灾难性遗忘的问题。②提出梯度核心集回放（GCR）策略，通过优化准则选择和更新缓冲区，使核心集近似所有已见数据的梯度。③相比现有方法，GCR在离线持续学习设置中取得2%-4%的绝对提升，在线/流式设置中提升达5%。④结合监督对比学习进一步增强了效果。
+- **摘要（英）**: This paper proposes Gradient Coreset Replay (GCR) for buffer selection in replay-based continual learning, optimizing a criterion to approximate the gradient of all seen data. It achieves 2%-4% absolute gains in offline settings and up to 5% in online settings over state-of-the-art. The method also benefits from supervised contrastive learning.
+- **核心贡献**: 提出了基于梯度近似的核心集选择策略，显著提升回放式持续学习性能。
+- **创新点**: 以梯度匹配为优化目标选择缓冲区样本，适用于离线与在线设置。
+- **结果**: 在离线设置中提升2%-4%，在线设置中提升达5%。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -131,11 +186,16 @@
 
 </details>
 
-### Continual Learning for Visual Search with Backward Consistent Feature Embedding.
+### Continual Learning for Visual Search with Backward Consistent Feature Embedding. **⭐⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2205.13384](https://arxiv.org/abs/2205.13384) · 📚 被引 27
 - **作者**: Timmy S. T. Wan, Jun-Cheng Chen, Tzer-Yi Wu, Chu-Song Chen
 - **🏷️ 机构**: National Taiwan University, Academia Sinica, Ucfunnel Co. Ltd.
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对视觉搜索中图库集增量增长且模型更新需重新提取特征的高计算成本问题，本文提出一种持续学习方法，通过保持后向一致的嵌入空间来处理增量图库。方法设计了会话间数据一致性、邻居会话模型一致性和会话内判别性损失，以训练持续学习器，并支持模糊边界场景下新类别的出现。实验在多个基准上验证了该方法在保持嵌入一致性的同时，有效处理了增量学习，降低了计算开销。
+- **摘要（英）**: This paper addresses continual learning for visual search with incrementally growing galleries, proposing a method that enforces backward-consistent feature embeddings via inter-session coherence, neighbor-session model coherence, and intra-session discrimination losses. It handles both disjoint and blurry boundary scenarios, reducing re-computation costs. Experiments demonstrate effectiveness across benchmarks.
+- **核心贡献**: 首次提出后向一致的持续学习框架，支持增量图库和模糊边界新类。
+- **创新点**: 通过多损失约束实现嵌入空间的后向一致性。
+- **结果**: 在多个基准上有效处理增量学习，降低计算成本。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -143,17 +203,27 @@
 
 </details>
 
-### MetaFSCIL: A Meta-Learning Approach for Few-Shot Class Incremental Learning.
+### MetaFSCIL: A Meta-Learning Approach for Few-Shot Class Incremental Learning. **⭐⭐⭐** (相关度: 45%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01377) · 📚 被引 155
 - **作者**: Zhixiang Chi, Li Gu, Huan Liu, Yang Wang, Yuanhao Yu, Jin Tang
 - **🏷️ 机构**: Noah&#x0027;s Ark Lab, Huawei Technologies
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对少样本类增量学习中新类样本稀少导致模型难以适应的问题。②提出元学习框架MetaFSCIL，通过元学习策略使模型快速适应新类。③相比传统类增量方法，该方法专门针对少样本场景，利用元学习提升泛化能力。④摘要未提供具体数据，但方法在少样本设置下具有潜力。
+- **摘要（英）**: This paper addresses few-shot class incremental learning by proposing a meta-learning framework, MetaFSCIL, to enable rapid adaptation to new classes with limited samples. It leverages meta-learning to improve generalization over traditional methods. Specific results are not provided in the abstract.
+- **核心贡献**: 提出了元学习框架用于少样本类增量学习，提升新类适应能力。
+- **创新点**: 将元学习应用于类增量学习，解决少样本下的快速适应问题。
+- **结果**: 具体效果未在摘要中给出。
 
-### Learning to Imagine: Diversify Memory for Incremental Learning using Unlabeled Data.
-- **链接**: [arXiv:2204.08932](https://arxiv.org/abs/2204.08932) · 📚 被引 38
+### Learning to Imagine: Diversify Memory for Incremental Learning using Unlabeled Data. **⭐⭐⭐** (相关度: 45%)
+- **链接**: [arXiv:2204.08932](https://arxiv.org/abs/2204.08932) · 📚 被引 37
 - **作者**: Yu-Ming Tang, Yi-Xing Peng, Wei-Shi Zheng
 - **🏷️ 机构**: Sun Yat-sen University,School of Computer Science and Engineering,China
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对增量学习中样本数量有限导致灾难性遗忘的问题。②提出利用未标注数据生成多样化的样本，通过可学习特征生成器结合语义和语义无关信息。③引入语义对比学习和语义解耦对比学习，保证生成样本的语义一致性和多样性。④方法不增加推理开销，有效缓解遗忘。
+- **摘要（英）**: This paper addresses catastrophic forgetting in incremental learning with limited exemplars. It proposes a learnable feature generator that diversifies exemplars using unlabeled data, with semantic contrastive learning for consistency and decoupling for diversity. The method reduces forgetting without extra inference cost.
+- **核心贡献**: 利用未标注数据生成多样化样本以缓解增量学习遗忘。
+- **创新点**: 结合语义和语义无关信息进行特征生成。
+- **结果**: 有效防止遗忘，但未提供具体数值。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -161,11 +231,16 @@
 
 </details>
 
-### Forward Compatible Few-Shot Class-Incremental Learning.
-- **链接**: [arXiv:2203.06953](https://arxiv.org/abs/2203.06953) · [代码](https://github.com/zhoudw-zdw/CVPR22-Fact)
+### Forward Compatible Few-Shot Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [arXiv:2203.06953](https://arxiv.org/abs/2203.06953)
 - **作者**: Da-Wei Zhou, Fu-Yun Wang, Han-Jia Ye, Liang Ma, Shiliang Pu, De-Chuan Zhan
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对少样本类增量学习（FSCIL）中现有方法仅回顾式地适应旧模型的问题，本文提出前向兼容训练（FACT），通过预留嵌入空间给未来新类来前瞻性地准备模型更新。方法分配虚拟原型以压缩已知类嵌入并保留新类空间，同时预测可能的新类并准备更新过程，虚拟原型在推理时作为代理构建更强分类器。实验表明，FACT在多个FSCIL基准上显著优于现有方法，有效缓解了灾难性遗忘。
+- **摘要（英）**: This paper proposes Forward Compatible Training (FACT) for few-shot class-incremental learning, which reserves embedding space for future classes via virtual prototypes and forecasts possible updates. This prospective approach contrasts with retrospective methods, improving adaptability. Experiments show significant gains over state-of-the-art on FSCIL benchmarks.
+- **核心贡献**: 提出前向兼容训练框架，通过虚拟原型预留空间实现高效FSCIL。
+- **创新点**: 从回顾式转向前瞻式学习，利用虚拟原型准备未来更新。
+- **结果**: 在多个FSCIL基准上显著优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -173,11 +248,16 @@
 
 </details>
 
-### Self-Sustaining Representation Expansion for Non-Exemplar Class-Incremental Learning.
+### Self-Sustaining Representation Expansion for Non-Exemplar Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 55%)
 - **链接**: [arXiv:2203.06359](https://arxiv.org/abs/2203.06359) · 📚 被引 153
 - **作者**: Kai Zhu, Wei Zhai, Yang Cao, Jiebo Luo, Zhengjun Zha
 - **🏷️ 机构**: University of Science and Technology of China, University of Rochester
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对无样本类增量学习中无法保存旧类样本导致特征保留困难的问题。②提出自维持表示扩展方案，包括结构重组策略融合主分支扩展和侧分支更新，以及主分支蒸馏传递不变知识，并设计原型选择机制增强新旧类判别。③相比现有方法，该方案无需旧样本即可有效保留旧特征。④在三个基准上分别超越最先进方法3%、3%和6%。
+- **摘要（英）**: This paper proposes a self-sustaining representation expansion scheme for non-exemplar class-incremental learning, using structure reorganization and distillation to retain old features without storing samples. A prototype selection mechanism enhances discrimination between old and new classes. It outperforms state-of-the-art by 3%, 3%, and 6% on three benchmarks.
+- **核心贡献**: 提出了自维持表示扩展方案，实现无样本类增量学习中的特征保留。
+- **创新点**: 通过结构重组和原型选择机制，在无旧样本条件下维持旧特征。
+- **结果**: 在三个基准上分别提升3%、3%和6%。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -185,11 +265,16 @@
 
 </details>
 
-### Doodle It Yourself: Class Incremental Learning by Drawing a Few Sketches.
+### Doodle It Yourself: Class Incremental Learning by Drawing a Few Sketches. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2203.14843](https://arxiv.org/abs/2203.14843) · 📚 被引 26
 - **作者**: Ayan Kumar Bhunia, Viswanatha Reddy Gajjala, Subhadeep Koley, Rohit Kundu, Aneeshan Sain, Tao Xiang et al.
 - **🏷️ 机构**: University of Surrey,SketchX, CVSSP,United Kingdom
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对少样本类增量学习（FSCIL）中照片数据可能受隐私限制且模型仅从单一模态学习的问题，本文提出DIY框架，利用草图作为新类支持模态。方法结合梯度共识实现域不变学习、知识蒸馏保留旧类信息、图注意力网络传递新旧类消息，使用户可自由绘制草图来学习识别照片。实验表明，草图作为类支持比文本更有效，在多个基准上提升了FSCIL性能。
+- **摘要（英）**: This paper proposes a DIY framework for FSCIL that uses sketches as a new modality for class support, addressing privacy constraints and multi-modal learning. It integrates gradient consensus, knowledge distillation, and graph attention networks. Experiments show sketches outperform text as support, improving FSCIL performance.
+- **核心贡献**: 首次引入草图模态支持FSCIL，实现从草图到照片的跨域学习。
+- **创新点**: 利用草图作为类支持，结合多种技术实现域不变学习。
+- **结果**: 草图支持优于文本，在基准上提升性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -197,11 +282,16 @@
 
 </details>
 
-### Incremental Learning in Semantic Segmentation from Image Labels.
-- **链接**: [arXiv:2112.01882](https://arxiv.org/abs/2112.01882) · [代码](https://github.com/fcdl94/WILSON) · 📚 被引 58
+### Incremental Learning in Semantic Segmentation from Image Labels. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [arXiv:2112.01882](https://arxiv.org/abs/2112.01882) · 📚 被引 58
 - **作者**: Fabio Cermelli, Dario Fontanel, Antonio Tavera, Marco Ciccone, Barbara Caputo
 - **🏷️ 机构**: Politecnico di Torino
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对语义分割模型在增量学习新类别时依赖昂贵像素级标注、且现有方法需离线生成伪标签的问题。②提出弱监督增量学习框架WILSON，利用图像级标签训练的辅助分类器在线生成软伪标签，并受分割模型正则化，实现无离线伪标签的增量更新。③相比现有离线弱监督方法，通过软标签处理噪声，无需存储旧数据。④在Pascal VOC和COCO上超越离线弱监督方法，性能接近全监督增量学习。
+- **摘要（英）**: This paper addresses incremental semantic segmentation with image-level labels, proposing WILSON, which uses an auxiliary classifier for online soft pseudo-label generation, outperforming offline weakly-supervised methods and matching fully-supervised incremental learning on Pascal VOC and COCO.
+- **核心贡献**: 提出首个在线弱监督增量语义分割框架，减少对像素级标注的依赖。
+- **创新点**: 利用辅助分类器在线生成软标签，避免离线伪标签生成。
+- **结果**: 在Pascal VOC和COCO上性能优于离线弱监督方法，接近全监督结果。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -209,23 +299,38 @@
 
 </details>
 
-### Few-Shot Incremental Learning for Label-to-Image Translation.
+### Few-Shot Incremental Learning for Label-to-Image Translation. **⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00368) · 📚 被引 9
 - **作者**: Pei Chen, Yangkang Zhang, Zejian Li, Lingyun Sun
 - **🏷️ 机构**: Alibaba-Zhejiang University Joint Institute of Frontier Technologies, Zhejiang University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对标签到图像翻译任务中的少样本增量学习问题，摘要缺失，无法获取具体方法细节。②由于摘要为空，无法评估其方法或改进。③缺乏可验证的实验数据。④效果未知。
+- **摘要（英）**: The abstract is missing, so the problem, method, and results cannot be assessed; likely focuses on few-shot incremental learning for label-to-image translation.
+- **核心贡献**: 未知。
+- **创新点**: 未知。
+- **结果**: 未知。
 
-### Federated Class-Incremental Learning.
+### Federated Class-Incremental Learning. **⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00992)
 - **作者**: Jiahua Dong, Lixu Wang, Zhen Fang, Gan Sun, Shichao Xu, Xiao Wang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对联邦学习中的类别增量学习问题，摘要缺失，无法获取具体方法。②由于摘要为空，无法评估方法或改进。③缺乏实验数据。④效果未知。
+- **摘要（英）**: The abstract is missing, so the problem, method, and results cannot be assessed; likely addresses class-incremental learning in federated settings.
+- **核心贡献**: 未知。
+- **创新点**: 未知。
+- **结果**: 未知。
 
-### Constrained Few-shot Class-incremental Learning.
-- **链接**: [arXiv:2203.16588](https://arxiv.org/abs/2203.16588) · [代码](https://github.com/IBM/constrained-FSCIL)
+### Constrained Few-shot Class-incremental Learning. **⭐⭐⭐** (相关度: 55%)
+- **链接**: [arXiv:2203.16588](https://arxiv.org/abs/2203.16588)
 - **作者**: Michael Hersche, Geethan Karunaratne, Giovanni Cherubini, Luca Benini, Abu Sebastian, Abbas Rahimi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对持续学习新类时需满足内存和计算约束的问题，本文提出C-FSCIL框架，由冻结的元学习特征提取器、可训练固定大小全连接层和可重写的动态增长记忆组成。方法利用超维度嵌入，在固定维度空间中表达更多类，并通过准正交对齐提高类向量质量，提供三种更新模式以权衡精度和计算成本。实验表明，C-FSCIL在满足约束的同时，在多个基准上取得了有竞争力的性能。
+- **摘要（英）**: This paper proposes C-FSCIL for constrained few-shot class-incremental learning, using a frozen meta-learned extractor, a fixed-size FC layer, and a dynamic memory. Hyperdimensional embeddings enable many classes with minimal interference, and quasi-orthogonal alignment improves quality. Experiments show competitive performance under strict constraints.
+- **核心贡献**: 提出满足内存和计算约束的C-FSCIL框架，利用超维度嵌入实现高效增量学习。
+- **创新点**: 结合超维度计算和准正交对齐，支持动态类增长。
+- **结果**: 在约束下取得有竞争力的性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -233,11 +338,16 @@
 
 </details>
 
-### Energy-based Latent Aligner for Incremental Learning.
-- **链接**: [arXiv:2203.14952](https://arxiv.org/abs/2203.14952) · 📚 被引 37
+### Energy-based Latent Aligner for Incremental Learning. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [arXiv:2203.14952](https://arxiv.org/abs/2203.14952) · 📚 被引 36
 - **作者**: K. J. Joseph, Salman Khan, Fahad Shahbaz Khan, Rao Muhammad Anwer, Vineeth N. Balasubramanian
 - **🏷️ 机构**: Indian Institute of Technology,Hyderabad,India, Mohamed bin Zayed University of AI,UAE
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对增量学习中参数更新不匹配导致旧知识遗忘的问题。②提出基于能量的潜在对齐器ELI，学习能量流形使旧任务潜在表示低能量、新任务高能量，以抵消表示偏移，可作为即插即用模块。③相比现有方法，提供隐式正则化，无需额外存储。④在CIFAR-100、ImageNet子集、ImageNet 1k和Pascal VOC上，加入ELI后一致提升多种类增量学习方法，并在SOTA增量检测器上提升超5%。
+- **摘要（英）**: This paper proposes ELI, an energy-based latent aligner that learns an energy manifold to counter representational shift in incremental learning, serving as a plug-and-play module; it consistently improves multiple methods on CIFAR-100, ImageNet, and Pascal VOC, with over 5% gain on SOTA incremental detectors.
+- **核心贡献**: 提出能量基潜在对齐器，作为通用模块缓解增量学习中的表示偏移。
+- **创新点**: 利用能量流形隐式正则化，无需旧样本。
+- **结果**: 在多个数据集和多种方法上一致提升，检测任务提升超5%。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -245,11 +355,16 @@
 
 </details>
 
-### Class-Incremental Learning by Knowledge Distillation with Adaptive Feature Consolidation.
+### Class-Incremental Learning by Knowledge Distillation with Adaptive Feature Consolidation. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2204.00895](https://arxiv.org/abs/2204.00895) · 📚 被引 197
 - **作者**: Minsoo Kang, Jaeyoo Park, Bohyung Han
 - **🏷️ 机构**: ECE, ASRI, &#x0026; IPAI, Seoul National University
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对类增量学习中的灾难性遗忘问题，提出基于知识蒸馏的自适应特征巩固方法。通过估计特征变化与损失增加的关系，最小化损失上界，并利用特征图重要性限制关键特征更新。相比现有方法，在标准数据集上显著提升准确率。
+- **摘要（英）**: This paper addresses catastrophic forgetting in class-incremental learning by proposing knowledge distillation with adaptive feature consolidation. It estimates the relationship between feature changes and loss increases, minimizing the loss upper bound and restricting updates of important features. Experiments show significant accuracy improvements over existing methods on standard datasets.
+- **核心贡献**: 提出一种基于特征重要性的自适应知识蒸馏策略，缓解灾难性遗忘。
+- **创新点**: 通过损失上界最小化与特征重要性估计，实现鲁棒性与灵活性的平衡。
+- **结果**: 在标准数据集上显著提升类增量学习准确率。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -257,11 +372,16 @@
 
 </details>
 
-### Towards Better Plasticity-Stability Trade-off in Incremental Learning: A Simple Linear Connector.
-- **链接**: [arXiv:2110.07905](https://arxiv.org/abs/2110.07905) · [代码](https://github.com/lingl1024/Connector) · 📚 被引 52
+### Towards Better Plasticity-Stability Trade-off in Incremental Learning: A Simple Linear Connector. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2110.07905](https://arxiv.org/abs/2110.07905) · 📚 被引 52
 - **作者**: Guoliang Lin, Hanlu Chu, Hanjiang Lai
 - **🏷️ 机构**: Sun Yat-sen University,Guangdong,China, South China Normal University,Guangdong,China
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对增量学习中可塑性-稳定性困境，且无法存储旧样本的场景。②提出使用损失景观中的模式连通性，连接旧任务的零空间投影和新任务的SGD优化点，以平衡新旧知识。③相比现有方法，无需旧样本，通过线性连接实现简单有效的权衡控制。④在多个基准数据集上显著提升，10-split-CIFAR-100上达到79.79%准确率。
+- **摘要（英）**: This paper addresses the plasticity-stability dilemma without storing old samples by using mode connectivity to connect null-space projection and SGD optima, achieving notable improvements and 79.79% accuracy on 10-split-CIFAR-100.
+- **核心贡献**: 提出基于模式连通性的无样本增量学习方法，改善可塑性-稳定性权衡。
+- **创新点**: 利用损失景观连通性连接新旧任务最优解。
+- **结果**: 在多个基准上显著提升，CIFAR-100准确率达79.79%。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -671,4 +791,5 @@
 
 - Meta-attention for ViT-backed Continual Learning. → [vision-transformer](../vision-transformer/Guideline%202022.md)
 - Generative Negative Text Replay for Continual Vision-Language Pretraining. → [vlm](../vlm/Guideline%202022.md)
+
 <!-- COMPLETE v1 papers=65 -->

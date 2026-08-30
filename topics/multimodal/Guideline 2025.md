@@ -3,37 +3,46 @@
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
 > 论文数: 120 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Mosaic of Modalities: A Comprehensive Benchmark for Multimodal Graph Learning.
+### Mosaic of Modalities: A Comprehensive Benchmark for Multimodal Graph Learning. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_Mosaic_of_Modalities_A_Comprehensive_Benchmark_for_Multimodal_Graph_Learning_CVPR_2025_paper.html) · 📚 被引 7
 - **作者**: Jing Zhu, Yuhang Zhou, Shengyi Qian, Zhongmou He, Tong Zhao, Neil Shah et al.
 - **🏷️ 机构**: University of Michigan, University of Maryland, Snap Inc.
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对多模态图学习缺乏统一基准的问题。②提出了Mosaic of Modalities基准，涵盖多种模态组合的图学习任务。③通过系统化设计，填补了多模态图学习评估的空白。④提供了全面的评估框架，但摘要信息有限，具体效果未详述。
+- **摘要（英）**: This paper addresses the lack of unified benchmarks for multimodal graph learning. It proposes Mosaic of Modalities, a comprehensive benchmark covering diverse modality combinations in graph tasks. The work fills a gap in evaluation, though specific results are not detailed in the abstract.
+- **核心贡献**: 提出了多模态图学习的综合基准。
+- **创新点**: 覆盖多种模态组合的图学习评估设计。
+- **结果**: 提供了评估框架，具体性能数据未在摘要中给出。
 
-### MicroVQA: A Multimodal Reasoning Benchmark for Microscopy-Based Scientific Research.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Burgess_MicroVQA_A_Multimodal_Reasoning_Benchmark_for_Microscopy-Based_Scientific_Research_CVPR_2025_paper.html) · 📚 被引 5
-- **作者**: James Burgess, Jeffrey J. Nirschl, Laura Bravo-Sánchez, Alejandro Lozano, Sanket Rajan Gupte, Jesus G. Galaz-Montoya et al.
-- **🏷️ 机构**: Stanford University, Tsinghua University
-- **会议**: CVPR 2025
-
-### EEE-Bench: A Comprehensive Multimodal Electrical And Electronics Engineering Benchmark.
+### EEE-Bench: A Comprehensive Multimodal Electrical And Electronics Engineering Benchmark. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2411.01492](https://arxiv.org/abs/2411.01492) · 📚 被引 10
 - **作者**: Ming Li, Jike Zhong, Tianle Chen, Yuxiang Lai, Konstantinos Psounis
 - **🏷️ 机构**: University of Tokyo, University of Southern California, Boston University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对大语言模型在工程领域（如电气电子工程）能力评估不足的问题。②提出EEE-Bench，包含2860个精心设计的问题，覆盖10个关键子领域。③强调工程问题在视觉复杂性和解决方案非确定性上的挑战，适合评估LMMs。④提供了定量评估和细粒度分析，但未给出具体性能数据。
+- **摘要（英）**: This paper addresses the lack of systematic evaluation of LLMs/LMMs in engineering domains. It proposes EEE-Bench, a multimodal benchmark with 2,860 problems across 10 subdomains, highlighting visual complexity and solution non-determinism. Extensive evaluations are provided, though specific results are not summarized.
+- **核心贡献**: 提出了电气电子工程领域的多模态基准。
+- **创新点**: 聚焦工程问题的视觉复杂性和非确定性。
+- **结果**: 提供了评估框架，具体性能未在摘要中详述。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Unmanned aerial vehicles (UAV)-based object detection with visible (RGB) and infrared (IR) images facilitates robust around-the-clock detection, driven by advancements in deep learning techniques and the availability of high-quality dataset. However, the existing dataset struggles to fully capture real-world complexity for limited imaging conditions. To this end, we introduce a high-diversity dataset ATR-UMOD covering varying scenarios, spanning altitudes from 80m to 300m, angles from 0° to 75°, and all-day, all-year time variations in rich weather and illumination conditions. Moreover, each RGB-IR image pair is annotated with 6 condition attributes, offering valuable high-level contextual information. To meet the challenge raised by such diverse conditions, we propose a novel prompt-guided condition-aware dynamic fusion (PCDF) to adaptively reassign multimodal contributions by leveraging annotated condition cues. By encoding imaging conditions as text prompts, PCDF effectively models the relationship between conditions and multimodal contributions through a task-specific soft-gating transformation. A prompt-guided condition-decoupling module further ensures the availability in practice without condition annotations. Experiments on ATR-UMOD dataset reveal the effectiveness of PCDF.
+> Recent studies on large language models (LLMs) and large multimodal models (LMMs) have demonstrated promising skills in various domains including science and mathematics. However, their capability in more challenging and real-world related scenarios like engineering has not been systematically studied. To bridge this gap, we propose EEE-Bench, a multimodal benchmark aimed at assessing LMMs' capabilities in solving practical engineering tasks, using electrical and electronics engineering (EEE) as the testbed. Our benchmark consists of 2860 carefully curated problems spanning 10 essential subdomains such as analog circuits, control systems, etc. Compared to benchmarks in other domains, engineering problems are intrinsically 1) more visually complex and versatile and 2) less deterministic in solutions. Successful solutions to these problems often demand more-than-usual rigorous integration of visual and textual information as models need to understand intricate images like abstract circuits and system diagrams while taking professional instructions, making them excellent candidates for LMM evaluations. Alongside EEE-Bench, we provide extensive quantitative evaluations and fine-grained analysis of 17 widely-used open and closed-sourced LLMs and LMMs. Our results demonstrate notable deficiencies of current foundation models in EEE, with an average performance ranging from 19.48% to 46.78%. Finally, we reveal and explore a critical shortcoming in LMMs which we term laziness: the tendency to take shortcuts by relying on the text while overlooking the visual context when reasoning for technical image problems. In summary, we believe EEE-Bench not only reveals some noteworthy limitations of LMMs but also provides a valuable resource for advancing research on their application in practical engineering tasks, driving future improvements in their capability to handle complex, real-world scenarios.
 
 </details>
 
-### MA-CIR: A Multimodal Arithmetic Benchmark for Composed Image Retrieval.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01982) · 📚 被引 0
+### MA-CIR: A Multimodal Arithmetic Benchmark for Composed Image Retrieval. **⭐⭐⭐** (相关度: 45%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.01982)
 - **作者**: Jaeseok Byun, Young Kyun Jang, Seokhyeon Jeong, Donghyun Kim, Taesup Moon
 - **🏷️ 机构**: Seoul National University,Department of ECE, Google Deepmind, Korea University,Department of AI
 - **会议**: ICCV 2025
+- **摘要（中）**: ①针对组合图像检索（CIR）中多模态算术推理能力评估不足的问题。②提出了MA-CIR基准，专注于多模态算术任务。③通过设计算术组合场景，评估模型的推理能力。④摘要未提供具体实验数据。
+- **摘要（英）**: This paper addresses the lack of benchmarks for multimodal arithmetic in composed image retrieval. It proposes MA-CIR, a benchmark focusing on arithmetic reasoning tasks. The work provides a new evaluation perspective, though specific results are not detailed.
+- **核心贡献**: 提出了组合图像检索的多模态算术基准。
+- **创新点**: 引入算术推理到CIR评估。
+- **结果**: 摘要未提供具体性能数据。
 
 ### ROD-MLLM: Towards More Reliable Object Detection in Multimodal Large Language Models.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Yin_ROD-MLLM_Towards_More_Reliable_Object_Detection_in_Multimodal_Large_Language_CVPR_2025_paper.html)
@@ -265,24 +274,6 @@
 - **🏷️ 机构**: Institute of Artificial Intelligence, Xiamen University
 - **会议**: ICCV 2025
 
-### Multimodal LLM Guided Exploration and Active Mapping Using Fisher Information.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00512)
-- **作者**: Wen Jiang, Boshu Lei, Katrina Ashton, Kostas Daniilidis
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2025
-
-### Towards Better Dental AI: A Multimodal Benchmark and Instruction Dataset for Panoramic X-ray Analysis.
-- **链接**: [arXiv:2509.09254](https://arxiv.org/abs/2509.09254) · [代码](https://github.com/isbrycee/OralGPT) · 📚 被引 0
-- **作者**: Jing Hao, Yuxuan Fan, Yanpeng Sun, Kaixin Guo, Lizhuo Lin, Jinrong Yang et al.
-- **🏷️ 机构**: University of Hong Kong, The Hong Kong University of Science and Technology, Nanjing University of Science and Technology
-- **会议**: NeurIPS 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recent advances in large vision-language models (LVLMs) have demonstrated strong performance on general-purpose medical tasks. However, their effectiveness in specialized domains such as dentistry remains underexplored. In particular, panoramic X-rays, a widely used imaging modality in oral radiology, pose interpretative challenges due to dense anatomical structures and subtle pathological cues, which are not captured by existing medical benchmarks or instruction datasets. To this end, we introduce MMOral, the first large-scale multimodal instruction dataset and benchmark tailored for panoramic X-ray interpretation. MMOral consists of 20,563 annotated images paired with 1.3 million instruction-following instances across diverse task types, including attribute extraction, report generation, visual question answering, and image-grounded dialogue. In addition, we present MMOral-Bench, a comprehensive evaluation suite covering five key diagnostic dimensions in dentistry. We evaluate 64 LVLMs on MMOral-Bench and find that even the best-performing model, i.e., GPT-4o, only achieves 41.45% accuracy, revealing significant limitations of current models in this domain. To promote the progress of this specific domain, we also propose OralGPT, which conducts supervised fine-tuning (SFT) upon Qwen2.5-VL-7B with our meticulously curated MMOral instruction dataset. Remarkably, a single epoch of SFT yields substantial performance enhancements for LVLMs, e.g., OralGPT demonstrates a 24.73% improvement. Both MMOral and OralGPT hold significant potential as a critical foundation for intelligent dentistry and enable more clinically impactful multimodal AI systems in the dental field. The dataset, model, benchmark, and evaluation suite are available at https://github.com/isbrycee/OralGPT.
-
-</details>
-
 ### A Multimodal Benchmark for Framing of Oil & Gas Advertising and Potential Greenwashing Detection.
 - **链接**: [arXiv:2510.21679](https://arxiv.org/abs/2510.21679) · 📚 被引 0
 - **作者**: Gaku Morio, Harri Rowlands, Dominik Stammbach, Christopher D. Manning, Peter Henderson
@@ -295,35 +286,11 @@
 
 </details>
 
-### SMMILE: An expert-driven benchmark for multimodal medical in-context learning.
-- **链接**: [arXiv:2506.21355](https://arxiv.org/abs/2506.21355) · 📚 被引 0
-- **作者**: Melanie Rieff, Maya Varma, Ossian Rabow, Subathra Adithan, Julie Kim, Ken Chang et al.
-- **🏷️ 机构**: ETHZ - ETH Zurich, Stanford University, Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)
-- **会议**: NeurIPS 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Multimodal in-context learning (ICL) remains underexplored despite significant potential for domains such as medicine. Clinicians routinely encounter diverse, specialized tasks requiring adaptation from limited examples, such as drawing insights from a few relevant prior cases or considering a constrained set of differential diagnoses. While multimodal large language models (MLLMs) have shown advances in medical visual question answering (VQA), their ability to learn multimodal tasks from context is largely unknown. We introduce SMMILE, the first expert-driven multimodal ICL benchmark for medical tasks. Eleven medical experts curated problems, each including a multimodal query and multimodal in-context examples as task demonstrations. SMMILE encompasses 111 problems (517 question-image-answer triplets) covering 6 medical specialties and 13 imaging modalities. We further introduce SMMILE++, an augmented variant with 1038 permuted problems. A comprehensive evaluation of 15 MLLMs demonstrates that most models exhibit moderate to poor multimodal ICL ability in medical tasks. In open-ended evaluations, ICL contributes only an 8% average improvement over zero-shot on SMMILE and 9.4% on SMMILE++. We observe a susceptibility for irrelevant in-context examples: even a single noisy or irrelevant example can degrade performance by up to 9.5%. Moreover, we observe that MLLMs are affected by a recency bias, where placing the most relevant example last can lead to substantial performance improvements of up to 71%. Our findings highlight critical limitations and biases in current MLLMs when learning multimodal medical tasks from context. SMMILE is available at https://smmile-benchmark.github.io.
-
-</details>
-
 ### Hyperphantasia: A Benchmark for Evaluating the Mental Visualization Capabilities of Multimodal LLMs.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/05a7ad45d75a3082d7a3a70de8743140-Abstract-Datasets_and_Benchmarks_Track.html)
 - **作者**: Mohammad Shahab Sepehri, Berk Tinaz, Zalan Fabian, Mahdi Soltanolkotabi
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2025
-
-### MTBBench: A Multimodal Sequential Clinical Decision-Making Benchmark in Oncology.
-- **链接**: [arXiv:2511.20490](https://arxiv.org/abs/2511.20490) · 📚 被引 0
-- **作者**: Kiril Vasilev, Alexandre Misrahi, Eeshaan Jain, Phil F. Cheng, Petros Liakopoulos, Olivier Michielin et al.
-- **🏷️ 机构**: ETHZ - ETH Zurich, EPFL - EPF Lausanne, EPFL
-- **会议**: NeurIPS 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Multimodal Large Language Models (LLMs) hold promise for biomedical reasoning, but current benchmarks fail to capture the complexity of real-world clinical workflows. Existing evaluations primarily assess unimodal, decontextualized question-answering, overlooking multi-agent decision-making environments such as Molecular Tumor Boards (MTBs). MTBs bring together diverse experts in oncology, where diagnostic and prognostic tasks require integrating heterogeneous data and evolving insights over time. Current benchmarks lack this longitudinal and multimodal complexity. We introduce MTBBench, an agentic benchmark simulating MTB-style decision-making through clinically challenging, multimodal, and longitudinal oncology questions. Ground truth annotations are validated by clinicians via a co-developed app, ensuring clinical relevance. We benchmark multiple open and closed-source LLMs and show that, even at scale, they lack reliability -- frequently hallucinating, struggling with reasoning from time-resolved data, and failing to reconcile conflicting evidence or different modalities. To address these limitations, MTBBench goes beyond benchmarking by providing an agentic framework with foundation model-based tools that enhance multi-modal and longitudinal reasoning, leading to task-level performance gains of up to 9.0% and 11.2%, respectively. Overall, MTBBench offers a challenging and realistic testbed for advancing multimodal LLM reasoning, reliability, and tool-use with a focus on MTB environments in precision oncology.
-
-</details>
 
 ### InfoChartQA: A Benchmark for Multimodal Question Answering on Infographic Charts.
 - **链接**: [arXiv:2505.19028](https://arxiv.org/abs/2505.19028) · [代码](https://github.com/CoolDawnAnt/InfoChartQA) · 📚 被引 0
@@ -334,18 +301,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Understanding infographic charts with design-driven visual elements (e.g., pictograms, icons) requires both visual recognition and reasoning, posing challenges for multimodal large language models (MLLMs). However, existing visual-question answering benchmarks fall short in evaluating these capabilities of MLLMs due to the lack of paired plain charts and visual-element-based questions. To bridge this gap, we introduce InfoChartQA, a benchmark for evaluating MLLMs on infographic chart understanding. It includes 5,642 pairs of infographic and plain charts, each sharing the same underlying data but differing in visual presentations. We further design visual-element-based questions to capture their unique visual designs and communicative intent. Evaluation of 20 MLLMs reveals a substantial performance decline on infographic charts, particularly for visual-element-based questions related to metaphors. The paired infographic and plain charts enable fine-grained error analysis and ablation studies, which highlight new opportunities for advancing MLLMs in infographic chart understanding. We release InfoChartQA at https://github.com/CoolDawnAnt/InfoChartQA.
-
-</details>
-
-### TCM-Ladder: A Benchmark for Multimodal Question Answering on Traditional Chinese Medicine.
-- **链接**: [arXiv:2505.24063](https://arxiv.org/abs/2505.24063) · 📚 被引 0
-- **作者**: Jiacheng Xie, Yang Yu, Ziyang Zhang, Shuai Zeng, Jiaxuan He, Ayush Vasireddy et al.
-- **🏷️ 机构**: University of Missouri, Nanjing University, Northwestern University
-- **会议**: NeurIPS 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Traditional Chinese Medicine (TCM), as an effective alternative medicine, has been receiving increasing attention. In recent years, the rapid development of large language models (LLMs) tailored for TCM has highlighted the urgent need for an objective and comprehensive evaluation framework to assess their performance on real-world tasks. However, existing evaluation datasets are limited in scope and primarily text-based, lacking a unified and standardized multimodal question-answering (QA) benchmark. To address this issue, we introduce TCM-Ladder, the first comprehensive multimodal QA dataset specifically designed for evaluating large TCM language models. The dataset covers multiple core disciplines of TCM, including fundamental theory, diagnostics, herbal formulas, internal medicine, surgery, pharmacognosy, and pediatrics. In addition to textual content, TCM-Ladder incorporates various modalities such as images and videos. The dataset was constructed using a combination of automated and manual filtering processes and comprises over 52,000 questions. These questions include single-choice, multiple-choice, fill-in-the-blank, diagnostic dialogue, and visual comprehension tasks. We trained a reasoning model on TCM-Ladder and conducted comparative experiments against nine state-of-the-art general domain and five leading TCM-specific LLMs to evaluate their performance on the dataset. Moreover, we propose Ladder-Score, an evaluation method specifically designed for TCM question answering that effectively assesses answer quality in terms of terminology usage and semantic expression. To the best of our knowledge, this is the first work to systematically evaluate mainstream general domain and TCM-specific LLMs on a unified multimodal benchmark. The datasets and leaderboard are publicly available at https://tcmladder.com and will be continuously updated.
 
 </details>
 
@@ -490,12 +445,6 @@
 ### AlignVLM: Bridging Vision and Language Latent Spaces for Multimodal Document Understanding.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/d695f1d2b37df1310f3b9d2bbc7e0a2f-Abstract-Conference.html)
 - **作者**: Ahmed Masry, Juan A. Rodríguez, Tianyu Zhang, Suyuchen Wang, Chao Wang, Aarash Feizi et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2025
-
-### Toward a Vision-Language Foundation Model for Medical Data: Multimodal Dataset and Benchmarks for Vietnamese PET/CT Report Generation.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/a9f5ebadfbf7b6b10d685c385713b35a-Abstract-Datasets_and_Benchmarks_Track.html)
-- **作者**: Huu Tien Nguyen, Dac Thai Nguyen, The Minh Duc Nguyen, Trung Thanh Nguyen, Truong Thao Nguyen, Hieu H. Pham et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2025
 
@@ -853,18 +802,6 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2025
 
-### PS3: A Multimodal Transformer Integrating Pathology Reports with Histology Images and Biological Pathways for Cancer Survival Prediction.
-- **链接**: [arXiv:2509.20022](https://arxiv.org/abs/2509.20022) · [代码](https://github.com/manahilr/PS3) · 📚 被引 2
-- **作者**: Manahil Raza, Ayesha Azam, Talha Qaiser, Nasir M. Rajpoot
-- **🏷️ 机构**: University of Warwick,UK
-- **会议**: ICCV 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Current multimodal fusion approaches in computational oncology primarily focus on integrating multi-gigapixel histology whole slide images (WSIs) with genomic or transcriptomic data, demonstrating improved survival prediction. We hypothesize that incorporating pathology reports can further enhance prognostic performance. Pathology reports, as essential components of clinical workflows, offer readily available complementary information by summarizing histopathological findings and integrating expert interpretations and clinical context. However, fusing these modalities poses challenges due to their heterogeneous nature. WSIs are high-dimensional, each containing several billion pixels, whereas pathology reports consist of concise text summaries of varying lengths, leading to potential modality imbalance. To address this, we propose a prototype-based approach to generate balanced representations, which are then integrated using a Transformer-based fusion model for survival prediction that we term PS3 (Predicting Survival from Three Modalities). Specifically, we present: (1) Diagnostic prototypes from pathology reports, leveraging self-attention to extract diagnostically relevant sections and standardize text representation; (2) Histological prototypes to compactly represent key morphological patterns in WSIs; and (3) Biological pathway prototypes to encode transcriptomic expressions, accurately capturing cellular functions. PS3, the three-modal transformer model, processes the resulting prototype-based multimodal tokens and models intra-modal and cross-modal interactions across pathology reports, WSIs and transcriptomic data. The proposed model outperforms state-of-the-art methods when evaluated against clinical, unimodal and multimodal baselines on six datasets from The Cancer Genome Atlas (TCGA). The code is available at: https://github.com/manahilr/PS3.
-
-</details>
-
 ### GROOT-2: Weakly Supervised Multimodal Instruction Following Agents.
 - **链接**: [出版页](https://openreview.net/forum?id=S9GyQUXzee)
 - **作者**: Shaofei Cai, Bowei Zhang, Zihao Wang, Haowei Lin, Xiaojian Ma, Anji Liu et al.
@@ -913,12 +850,6 @@
 - **🏷️ 机构**: Tsinghua University, ByteDance Inc., Griffith University
 - **会议**: NeurIPS 2025
 
-### IRRISIGHT: A Large-Scale Multimodal Dataset and Scalable Pipeline to Address Irrigation and Water Management in Agriculture.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2025/hash/0821a1413339bf79ba01876783d95c53-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 0
-- **作者**: Nibir Chandra Mandal, Oishee Bintey Hoque, Mandy L. Wilson, Samarth Swarup, Sayjro Kossi Nouwakpo, Abhijin Adiga et al.
-- **🏷️ 机构**: University of Virginia, Charlottesville, University of Virginia, US Department of Agriculture
-- **会议**: NeurIPS 2025
-
 ### JanusFlow: Harmonizing Autoregression and Rectified Flow for Unified Multimodal Understanding and Generation.
 - **链接**: [arXiv:2411.07975](https://arxiv.org/abs/2411.07975) · 📚 被引 14
 - **作者**: Yiyang Ma, Xingchao Liu, Xiaokang Chen, Wen Liu, Chengyue Wu, Zhiyu Wu et al.
@@ -960,18 +891,6 @@
 - **作者**: Kiyohiro Nakayama, Jan Ackermann, Timur Levent Kesdogan, Yang Zheng, Maria Korosteleva, Olga Sorkine-Hornung et al.
 - **🏷️ 机构**: Stanford University, ETH Z&#x00FC;rich
 - **会议**: CVPR 2025
-
-### MM-OR: A Large Multimodal Operating Room Dataset for Semantic Understanding of High-Intensity Surgical Environments.
-- **链接**: [arXiv:2503.02579](https://arxiv.org/abs/2503.02579) · [代码](https://github.com/egeozsoy/MM-OR) · 📚 被引 18
-- **作者**: Ege Özsoy, Chantal Pellegrini, Tobias Czempiel, Felix Tristram, Kun Yuan, David Bani-Harouni et al.
-- **🏷️ 机构**: Technical University of Munich
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Operating rooms (ORs) are complex, high-stakes environments requiring precise understanding of interactions among medical staff, tools, and equipment for enhancing surgical assistance, situational awareness, and patient safety. Current datasets fall short in scale, realism and do not capture the multimodal nature of OR scenes, limiting progress in OR modeling. To this end, we introduce MM-OR, a realistic and large-scale multimodal spatiotemporal OR dataset, and the first dataset to enable multimodal scene graph generation. MM-OR captures comprehensive OR scenes containing RGB-D data, detail views, audio, speech transcripts, robotic logs, and tracking data and is annotated with panoptic segmentations, semantic scene graphs, and downstream task labels. Further, we propose MM2SG, the first multimodal large vision-language model for scene graph generation, and through extensive experiments, demonstrate its ability to effectively leverage multimodal inputs. Together, MM-OR and MM2SG establish a new benchmark for holistic OR understanding, and open the path towards multimodal scene analysis in complex, high-stakes environments. Our code, and data is available at https://github.com/egeozsoy/MM-OR.
-
-</details>
 
 ### Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens.
 - **链接**: [arXiv:2504.14666](https://arxiv.org/abs/2504.14666) · 📚 被引 5
@@ -1351,18 +1270,6 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2025
 
-### MediConfusion: Can you trust your AI radiologist? Probing the reliability of multimodal medical foundation models.
-- **链接**: [arXiv:2409.15477](https://arxiv.org/abs/2409.15477)
-- **作者**: Mohammad Shahab Sepehri, Zalan Fabian, Maryam Soltanolkotabi, Mahdi Soltanolkotabi
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Multimodal Large Language Models (MLLMs) have tremendous potential to improve the accuracy, availability, and cost-effectiveness of healthcare by providing automated solutions or serving as aids to medical professionals. Despite promising first steps in developing medical MLLMs in the past few years, their capabilities and limitations are not well-understood. Recently, many benchmark datasets have been proposed that test the general medical knowledge of such models across a variety of medical areas. However, the systematic failure modes and vulnerabilities of such models are severely underexplored with most medical benchmarks failing to expose the shortcomings of existing models in this safety-critical domain. In this paper, we introduce MediConfusion, a challenging medical Visual Question Answering (VQA) benchmark dataset, that probes the failure modes of medical MLLMs from a vision perspective. We reveal that state-of-the-art models are easily confused by image pairs that are otherwise visually dissimilar and clearly distinct for medical experts. Strikingly, all available models (open-source or proprietary) achieve performance below random guessing on MediConfusion, raising serious concerns about the reliability of existing medical MLLMs for healthcare deployment. We also extract common patterns of model failure that may help the design of a new generation of more trustworthy and reliable MLLMs in healthcare.
-
-</details>
-
 ### TOMATO: Assessing Visual Temporal Reasoning Capabilities in Multimodal Foundation Models.
 - **链接**: [arXiv:2410.23266](https://arxiv.org/abs/2410.23266)
 - **作者**: Ziyao Shangguan, Chuhan Li, Yuxuan Ding, Yanan Zheng, Yilun Zhao, Tesca Fitzgerald et al.
@@ -1390,12 +1297,6 @@
 ### Eagle: Exploring The Design Space for Multimodal LLMs with Mixture of Encoders.
 - **链接**: [出版页](https://openreview.net/forum?id=Y2RW9EVwhT)
 - **作者**: Min Shi, Fuxiao Liu, Shihao Wang, Shijia Liao, Subhashree Radhakrishnan, Yilin Zhao et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### Causal Representation Learning from Multimodal Biomedical Observations.
-- **链接**: [出版页](https://openreview.net/forum?id=hjROBHstZ3)
-- **作者**: Yuewen Sun, Lingjing Kong, Guangyi Chen, Loka Li, Gongxu Luo, Zijian Li et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2025
 
@@ -1435,12 +1336,6 @@
 
 </details>
 
-### Interpretable Bilingual Multimodal Large Language Model for Diverse Biomedical Tasks.
-- **链接**: [出版页](https://openreview.net/forum?id=YuHQTo6G9S)
-- **作者**: Lehan Wang, Haonan Wang, Honglong Yang, Jiaji Mao, Zehong Yang, Jun Shen et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
 ### DPLM-2: A Multimodal Diffusion Protein Language Model.
 - **链接**: [arXiv:2410.13782](https://arxiv.org/abs/2410.13782)
 - **作者**: Xinyou Wang, Zaixiang Zheng, Fei Ye, Dongyu Xue, Shujian Huang, Quanquan Gu
@@ -1474,18 +1369,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > We present a unified transformer, i.e., Show-o, that unifies multimodal understanding and generation. Unlike fully autoregressive models, Show-o unifies autoregressive and (discrete) diffusion modeling to adaptively handle inputs and outputs of various and mixed modalities. The unified model flexibly supports a wide range of vision-language tasks including visual question-answering, text-to-image generation, text-guided inpainting/extrapolation, and mixed-modality generation. Across various benchmarks, it demonstrates comparable or superior performance to existing individual models with an equivalent or larger number of parameters tailored for understanding or generation. This significantly highlights its potential as a next-generation foundation model. Code and models are released at https://github.com/showlab/Show-o.
-
-</details>
-
-### MedTrinity-25M: A Large-scale Multimodal Dataset with Multigranular Annotations for Medicine.
-- **链接**: [arXiv:2408.02900](https://arxiv.org/abs/2408.02900)
-- **作者**: Yunfei Xie, Ce Zhou, Lang Gao, Juncheng Wu, Xianhang Li, Hong-Yu Zhou et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> This paper introduces MedTrinity-25M, a comprehensive, large-scale multimodal dataset for medicine, covering over 25 million images across 10 modalities with multigranular annotations for more than 65 diseases. These multigranular annotations encompass both global information, such as modality and organ detection, and local information like ROI analysis, lesion texture, and region-wise correlations. Unlike the existing multimodal datasets, which are limited by the availability of image-text pairs, we have developed the first automated pipeline that scales up multimodal data by generating multigranular visual and textual annotations in the form of image-ROI-description triplets without the need for any paired text descriptions. Specifically, data from over 30 different sources have been collected, preprocessed, and grounded using domain-specific expert models to identify ROIs related to abnormal regions. We then build a comprehensive knowledge base and prompt multimodal large language models to perform retrieval-augmented generation with the identified ROIs as guidance, resulting in multigranular textual descriptions. Compared to existing datasets, MedTrinity-25M provides the most enriched annotations, supporting a comprehensive range of multimodal tasks such as captioning and report generation, as well as vision-centric tasks like classification and segmentation. We propose LLaVA-Tri by pretraining LLaVA on MedTrinity-25M, achieving state-of-the-art performance on VQA-RAD, SLAKE, and PathVQA, surpassing representative SOTA multimodal large language models. Furthermore, MedTrinity-25M can also be utilized to support large-scale pre-training of multimodal medical AI models, contributing to the development of future foundation models in the medical domain. We will make our dataset available.
 
 </details>
 
@@ -2052,4 +1935,5 @@
 - **作者**: Chengxiang Huang, Yake Wei, Zequn Yang, Di Hu
 - **🏷️ 机构**: Beijing University of Posts and Telecommunications, Renmin University of China
 - **会议**: CVPR 2025
-<!-- COMPLETE v1 papers=237 -->
+
+<!-- COMPLETE v1 papers=223 -->

@@ -3,25 +3,22 @@
 > 领域: 多模态学习（图文对齐、融合、多模态融合感知）
 > 论文数: 69 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### OmniACT: A Dataset and Benchmark for Enabling Multimodal Generalist Autonomous Agents for Desktop and Web.
+### OmniACT: A Dataset and Benchmark for Enabling Multimodal Generalist Autonomous Agents for Desktop and Web. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2402.17553](https://arxiv.org/abs/2402.17553) · 📚 被引 10
 - **作者**: Raghav Kapoor, Yash Parag Butala, Melisa Russak, Jing Yu Koh, Kiran Kamble, Waseem AlShikh et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①该论文针对虚拟代理自动化计算机任务缺乏数据集和基准的问题。②提出了OmniACT，首个用于评估代理生成可执行程序能力的基准，涵盖桌面和网页应用。③相比已有工作，OmniACT扩展了任务范围，包括长时程任务。④摘要未提供具体数据，但任务多样性是其特点。
+- **摘要（英）**: This paper addresses the lack of datasets and benchmarks for virtual agents automating computer tasks. It introduces OmniACT, the first benchmark for assessing agents' ability to generate executable programs, covering desktop and web applications. Compared to existing works, it extends to longer-horizon tasks. Specific metrics are not provided in the abstract.
+- **核心贡献**: 首个用于桌面和网页任务的多模态代理基准。
+- **创新点**: 结合屏幕图像和自然语言生成可执行程序。
+- **结果**: 为虚拟代理研究提供了新基准。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > For decades, human-computer interaction has fundamentally been manual. Even today, almost all productive work done on the computer necessitates human input at every step. Autonomous virtual agents represent an exciting step in automating many of these menial tasks. Virtual agents would empower users with limited technical proficiency to harness the full possibilities of computer systems. They could also enable the efficient streamlining of numerous computer tasks, ranging from calendar management to complex travel bookings, with minimal human intervention. In this paper, we introduce OmniACT, the first-of-a-kind dataset and benchmark for assessing an agent's capability to generate executable programs to accomplish computer tasks. Our scope extends beyond traditional web automation, covering a diverse range of desktop applications. The dataset consists of fundamental tasks such as "Play the next song", as well as longer horizon tasks such as "Send an email to John Doe mentioning the time and place to meet". Specifically, given a pair of screen image and a visually-grounded natural language task, the goal is to generate a script capable of fully executing the task. We run several strong baseline language model agents on our benchmark. The strongest baseline, GPT-4, performs the best on our benchmark However, its performance level still reaches only 15% of the human proficiency in generating executable scripts capable of completing the task, demonstrating the challenge of our task for conventional web agents. Our benchmark provides a platform to measure and evaluate the progress of language model agents in automating computer tasks and motivates future work towards building multimodal models that bridge large language models and the visual grounding of computer screens.
-
-</details>
-
-</details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We present Unified-IO 2, the first autoregressive multimodal model that is capable of understanding and generating image, text, audio, and action. To unify different modalities, we tokenize inputs and outputs -- images, text, audio, action, bounding boxes, etc., into a shared semantic space and then process them with a single encoder-decoder transformer model. Since training with such diverse modalities is challenging, we propose various architectural improvements to stabilize model training. We train our model from scratch on a large multimodal pre-training corpus from diverse sources with a multimodal mixture of denoisers objective. To learn an expansive set of skills, such as following multimodal instructions, we construct and finetune on an ensemble of 120 datasets with prompts and augmentations. With a single unified model, Unified-IO 2 achieves state-of-the-art performance on the GRIT benchmark and strong results in more than 35 benchmarks, including image generation and understanding, natural language understanding, video and audio understanding, and robotic manipulation. We release all our models to the research community.
 
 </details>
 
@@ -226,18 +223,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Current instruction-based editing methods, such as InstructPix2Pix, often fail to produce satisfactory results in complex scenarios due to their dependence on the simple CLIP text encoder in diffusion models. To rectify this, this paper introduces SmartEdit, a novel approach to instruction-based image editing that leverages Multimodal Large Language Models (MLLMs) to enhance their understanding and reasoning capabilities. However, direct integration of these elements still faces challenges in situations requiring complex reasoning. To mitigate this, we propose a Bidirectional Interaction Module that enables comprehensive bidirectional information interactions between the input image and the MLLM output. During training, we initially incorporate perception data to boost the perception and understanding capabilities of diffusion models. Subsequently, we demonstrate that a small amount of complex instruction editing data can effectively stimulate SmartEdit's editing capabilities for more complex instructions. We further construct a new evaluation dataset, Reason-Edit, specifically tailored for complex instruction-based image editing. Both quantitative and qualitative results on this evaluation dataset indicate that our SmartEdit surpasses previous methods, paving the way for the practical application of complex instruction-based image editing.
-
-</details>
-
-### Modeling Dense Multimodal Interactions Between Biological Pathways and Histology for Survival Prediction.
-- **链接**: [arXiv:2304.06819](https://arxiv.org/abs/2304.06819) · 📚 被引 130
-- **作者**: Guillaume Jaume, Anurag Vaidya, Richard J. Chen, Drew F. K. Williamson, Paul Pu Liang, Faisal Mahmood
-- **🏷️ 机构**: Mass General Brigham, CMU
-- **会议**: CVPR 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Integrating whole-slide images (WSIs) and bulk transcriptomics for predicting patient survival can improve our understanding of patient prognosis. However, this multimodal task is particularly challenging due to the different nature of these data: WSIs represent a very high-dimensional spatial description of a tumor, while bulk transcriptomics represent a global description of gene expression levels within that tumor. In this context, our work aims to address two key challenges: (1) how can we tokenize transcriptomics in a semantically meaningful and interpretable way?, and (2) how can we capture dense multimodal interactions between these two modalities? Specifically, we propose to learn biological pathway tokens from transcriptomics that can encode specific cellular functions. Together with histology patch tokens that encode the different morphological patterns in the WSI, we argue that they form appropriate reasoning units for downstream interpretability analyses. We propose fusing both modalities using a memory-efficient multimodal Transformer that can model interactions between pathway and histology patch tokens. Our proposed model, SURVPATH, achieves state-of-the-art performance when evaluated against both unimodal and multimodal baselines on five datasets from The Cancer Genome Atlas. Our interpretability framework identifies key multimodal prognostic factors, and, as such, can provide valuable insights into the interaction between genotype and phenotype, enabling a deeper understanding of the underlying biological mechanisms at play. We make our code public at: https://github.com/ajv012/SurvPath.
 
 </details>
 
@@ -739,18 +724,6 @@
 
 </details>
 
-### MLIP: Enhancing Medical Visual Representation with Divergence Encoder and Knowledge-guided Contrastive Learning.
-- **链接**: [arXiv:2402.02045](https://arxiv.org/abs/2402.02045) · 📚 被引 31
-- **作者**: Zhe Li, Laurence T. Yang, Bocheng Ren, Xin Nie, Zhangyang Gao, Cheng Tan et al.
-- **🏷️ 机构**: Huazhong University of Science and Technology, AI Lab, Research Center for Industries of the Future, Westlake University
-- **会议**: CVPR 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The scarcity of annotated data has sparked significant interest in unsupervised pre-training methods that leverage medical reports as auxiliary signals for medical visual representation learning. However, existing research overlooks the multi-granularity nature of medical visual representation and lacks suitable contrastive learning techniques to improve the models' generalizability across different granularities, leading to the underutilization of image-text information. To address this, we propose MLIP, a novel framework leveraging domain-specific medical knowledge as guiding signals to integrate language information into the visual domain through image-text contrastive learning. Our model includes global contrastive learning with our designed divergence encoder, local token-knowledge-patch alignment contrastive learning, and knowledge-guided category-level contrastive learning with expert knowledge. Experimental evaluations reveal the efficacy of our model in enhancing transfer performance for tasks such as image classification, object detection, and semantic segmentation. Notably, MLIP surpasses state-of-the-art methods even with limited annotated data, highlighting the potential of multimodal pre-training in advancing medical representation learning.
-
-</details>
-
 ### Chat-UniVi: Unified Visual Representation Empowers Large Language Models with Image and Video Understanding.
 - **链接**: [arXiv:2311.08046](https://arxiv.org/abs/2311.08046) · 📚 被引 156
 - **作者**: Peng Jin, Ryuichi Takanobu, Wancai Zhang, Xiaochun Cao, Li Yuan
@@ -787,23 +760,27 @@
 
 </details>
 
-### MM-SafetyBench: A Benchmark for Safety Evaluation of Multimodal Large Language Models.
+### MM-SafetyBench: A Benchmark for Safety Evaluation of Multimodal Large Language Models. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72992-8_22) · 📚 被引 50
 - **作者**: Xin Liu, Yichen Zhu, Jindong Gu, Yunshi Lan, Chao Yang, Yu Qiao
 - **🏷️ 机构**: Shanghai AI Lab
 - **会议**: ECCV 2024
+- **摘要（中）**: ①该论文针对多模态大语言模型的安全评估缺乏基准的问题。②提出了MM-SafetyBench，用于评估多模态大语言模型的安全性。③相比已有工作，该基准专注于安全维度，填补了空白。④摘要未提供具体数据，但安全评估是重要方向。
+- **摘要（英）**: This paper addresses the lack of benchmarks for safety evaluation of multimodal large language models. It proposes MM-SafetyBench for assessing safety in multimodal LLMs. Compared to existing works, it focuses on safety, filling a gap. Specific metrics are not detailed in the abstract.
+- **核心贡献**: 构建了多模态大语言模型的安全评估基准。
+- **创新点**: 专注于多模态模型的安全维度评估。
+- **结果**: 为多模态模型安全研究提供了新工具。
 
-### PathMMU: A Massive Multimodal Expert-Level Benchmark for Understanding and Reasoning in Pathology.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-73033-7_4) · 📚 被引 12
-- **作者**: Yuxuan Sun, Hao Wu, Chenglu Zhu, Sunyi Zheng, Qizi Chen, Kai Zhang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### TrafficNight: An Aerial Multimodal Benchmark for Nighttime Vehicle Surveillance.
+### TrafficNight: An Aerial Multimodal Benchmark for Nighttime Vehicle Surveillance. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73650-6_3) · 📚 被引 3
 - **作者**: Guoxing Zhang, Yiming Liu, Xiaoyu Yang, Hailong Huang, Chao Huang
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
+- **摘要（中）**: ①该论文针对夜间车辆监控缺乏空中多模态基准的问题。②提出了TrafficNight，一个用于夜间车辆监控的空中多模态基准。③相比已有工作，该基准专注于夜间场景和空中视角，填补了空白。④摘要未提供具体数据，但夜间监控对自动驾驶有重要应用。
+- **摘要（英）**: This paper addresses the lack of aerial multimodal benchmarks for nighttime vehicle surveillance. It introduces TrafficNight, a benchmark for nighttime vehicle monitoring from aerial views. Compared to existing works, it focuses on nighttime and aerial perspectives, filling a gap. Specific metrics are not provided in the abstract.
+- **核心贡献**: 提供了首个夜间空中多模态车辆监控基准。
+- **创新点**: 结合夜间场景和空中视角的多模态数据。
+- **结果**: 为夜间车辆监控研究提供了新资源。
 
 ### Explicitly Guided Information Interaction Network for Cross-Modal Point Cloud Completion.
 - **链接**: [arXiv:2407.02887](https://arxiv.org/abs/2407.02887) · [代码](https://github.com/WHU-USI3DV/EGIInet) · 📚 被引 14
@@ -1042,12 +1019,6 @@
 ### Object-Oriented Anchoring and Modal Alignment in Multimodal Learning.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72973-7_11) · 📚 被引 0
 - **作者**: Shibin Mei, Bingbing Ni, Hang Wang, Chenglong Zhao, Fengfa Hu, Zhiming Pi et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-### LHRS-Bot: Empowering Remote Sensing with VGI-Enhanced Large Multimodal Language Model.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72904-1_26) · 📚 被引 75
-- **作者**: Dilxat Muhtar, Zhenshi Li, Feng Gu, Xueliang Zhang, Pengfeng Xiao
 - **🏷️ 机构**: （机构待查）
 - **会议**: ECCV 2024
 
@@ -1363,18 +1334,6 @@
 
 </details>
 
-### Improving Medical Multi-modal Contrastive Learning with Expert Annotations.
-- **链接**: [arXiv:2403.10153](https://arxiv.org/abs/2403.10153) · 📚 被引 16
-- **作者**: Yogesh Kumar, Pekka Marttinen
-- **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We introduce eCLIP, an enhanced version of the CLIP model that integrates expert annotations in the form of radiologist eye-gaze heatmaps. It tackles key challenges in contrastive multi-modal medical imaging analysis, notably data scarcity and the "modality gap" -- a significant disparity between image and text embeddings that diminishes the quality of representations and hampers cross-modal interoperability. eCLIP integrates a heatmap processor and leverages mixup augmentation to efficiently utilize the scarce expert annotations, thus boosting the model's learning effectiveness. eCLIP is designed to be generally applicable to any variant of CLIP without requiring any modifications of the core architecture. Through detailed evaluations across several tasks, including zero-shot inference, linear probing, cross-modal retrieval, and Retrieval Augmented Generation (RAG) of radiology reports using a frozen Large Language Model, eCLIP showcases consistent improvements in embedding quality. The outcomes reveal enhanced alignment and uniformity, affirming eCLIP's capability to harness high-quality annotations for enriched multi-modal analysis in the medical imaging domain.
-
-</details>
-
 ### CoLeaF: A Contrastive-Collaborative Learning Framework for Weakly Supervised Audio-Visual Video Parsing.
 - **链接**: [arXiv:2405.10690](https://arxiv.org/abs/2405.10690) · 📚 被引 6
 - **作者**: Faegheh Sardari, Armin Mustafa, Philip J. B. Jackson, Adrian Hilton
@@ -1592,23 +1551,27 @@
 - **创新点**: 将场景和区域上下文动态融入提示生成过程。
 - **结果**: 在多个基准上取得性能提升。
 
-### AlignMiF: Geometry-Aligned Multimodal Implicit Field for LiDAR-Camera Joint Synthesis.
-- **链接**: [arXiv:2402.17483](https://arxiv.org/abs/2402.17483) · 📚 被引 13
+### AlignMiF: Geometry-Aligned Multimodal Implicit Field for LiDAR-Camera Joint Synthesis. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02006)
 - **作者**: Tang Tao, Guangrun Wang, Yixing Lao, Peng Chen, Jie Liu, Liang Lin et al.
-- **🏷️ 机构**: Shenzhen Campus of Sun Yat-sen University, University of Oxford, HKU
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对LiDAR-相机联合感知中，多模态数据在几何对齐和隐式场表示上的挑战。②提出了AlignMiF，一种几何对齐的多模态隐式场方法，用于LiDAR-相机联合合成，通过显式对齐几何特征提升跨模态一致性。③相比现有隐式场方法，AlignMiF在几何对齐上更精确，能更好地融合稀疏LiDAR和密集图像信息。④摘要未提供具体数据，但预期在联合合成任务上优于现有方法。
+- **摘要（英）**: This paper addresses challenges in LiDAR-camera joint perception, particularly geometric alignment and implicit field representation. It proposes AlignMiF, a geometry-aligned multimodal implicit field method that explicitly aligns geometric features for joint synthesis. This improves cross-modal consistency, potentially outperforming existing implicit field approaches on joint synthesis tasks.
+- **核心贡献**: 提出了几何对齐的多模态隐式场用于LiDAR-相机联合合成。
+- **创新点**: 显式几何对齐机制增强跨模态特征融合。
+- **结果**: 摘要未提供具体数据，预期在联合合成任务上表现更优。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Neural implicit fields have been a de facto standard in novel view synthesis. Recently, there exist some methods exploring fusing multiple modalities within a single field, aiming to share implicit features from different modalities to enhance reconstruction performance. However, these modalities often exhibit misaligned behaviors: optimizing for one modality, such as LiDAR, can adversely affect another, like camera performance, and vice versa. In this work, we conduct comprehensive analyses on the multimodal implicit field of LiDAR-camera joint synthesis, revealing the underlying issue lies in the misalignment of different sensors. Furthermore, we introduce AlignMiF, a geometrically aligned multimodal implicit field with two proposed modules: Geometry-Aware Alignment (GAA) and Shared Geometry Initialization (SGI). These modules effectively align the coarse geometry across different modalities, significantly enhancing the fusion process between LiDAR and camera data. Through extensive experiments across various datasets and scenes, we demonstrate the effectiveness of our approach in facilitating better interaction between LiDAR and camera modalities within a unified neural field. Specifically, our proposed AlignMiF, achieves remarkable improvement over recent implicit fusion methods (+2.01 and +3.11 image PSNR on the KITTI-360 and Waymo datasets) and consistently surpasses single modality performance (13.8% and 14.2% reduction in LiDAR Chamfer Distance on the respective datasets).
-
-</details>
-
-### Draw Step by Step: Reconstructing CAD Construction Sequences from Point Clouds via Multimodal Diffusion.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02564) · 📚 被引 23
+### Draw Step by Step: Reconstructing CAD Construction Sequences from Point Clouds via Multimodal Diffusion. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02564)
 - **作者**: Weijian Ma, Shuaiqi Chen, Yunzhong Lou, Xueyang Li, Xiangdong Zhou
-- **🏷️ 机构**: School of Computer Science and Technology, Fudan University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对从点云重建CAD模型时，缺乏对构造序列的建模，导致生成结果难以编辑和重用的问题。②提出了基于多模态扩散的逐步重建方法，通过扩散模型逐步生成CAD构造序列，结合点云和文本等多模态信息。③相比直接生成CAD模型的方法，该方法显式建模构造步骤，提高了生成的可解释性和可控性。④摘要未提供具体数据，但预期在CAD重建任务上优于现有方法。
+- **摘要（英）**: This paper addresses the lack of construction sequence modeling in CAD reconstruction from point clouds, which limits editability and reusability. It proposes a multimodal diffusion-based method that generates CAD construction sequences step-by-step, integrating point cloud and text information. This improves interpretability and controllability, potentially outperforming existing methods on CAD reconstruction tasks.
+- **核心贡献**: 提出了多模态扩散驱动的CAD构造序列逐步重建方法。
+- **创新点**: 将CAD重建转化为逐步构造序列生成问题。
+- **结果**: 摘要未提供具体数据，预期在CAD重建任务上表现更优。
 
 ### StreamingFlow: Streaming Occupancy Forecasting with Asynchronous Multi-modal Data Streams via Neural Ordinary Differential Equation.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01405) · 📚 被引 3
@@ -1752,4 +1715,5 @@
 - **作者**: Jianjian Cao, Peng Ye, Shengze Li, Chong Yu, Yansong Tang, Jiwen Lu et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
-<!-- COMPLETE v1 papers=161 -->
+
+<!-- COMPLETE v1 papers=156 -->

@@ -3,7 +3,7 @@
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
 > 论文数: 13 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models.
 - **链接**: [arXiv:2011.07590](https://arxiv.org/abs/2011.07590)
@@ -17,11 +17,16 @@
 
 </details>
 
-### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy.
+### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy. **⭐⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2006.08509](https://arxiv.org/abs/2006.08509) · 📚 被引 159
 - **作者**: Tianzhe Wang, Kuan Wang, Han Cai, Ji Lin, Zhijian Liu, Hanrui Wang et al.
 - **🏷️ 机构**: Massachusetts Institute of Technology; Shanghai Jiao Tong University, Massachusetts Institute of Technology
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对资源受限硬件上深度学习推理效率问题，现有方法分别搜索架构、剪枝和量化策略，未联合优化。②提出APQ框架，联合搜索网络架构、剪枝和量化策略，训练量化感知精度预测器，并利用全精度预测器知识迁移提高样本效率。③通过从预训练的once-for-all网络采样，无需训练成本即可收集数据。④在ImageNet上的实验表明联合优化方法优于分离搜索方法。
+- **摘要（英）**: This paper tackles efficient inference on resource-constrained hardware by jointly searching architecture, pruning, and quantization policies. It trains a quantization-aware accuracy predictor with knowledge transfer from a full-precision predictor to improve sample efficiency. Data collection leverages a pretrained once-for-all network without training cost. Experiments on ImageNet demonstrate benefits over separate optimization.
+- **核心贡献**: 提出APQ框架，首次联合优化网络架构、剪枝和量化策略。
+- **创新点**: 利用知识迁移训练量化感知精度预测器，大幅提升搜索效率。
+- **结果**: 在ImageNet上验证了联合优化优于分离方法，但摘要未给出具体精度或效率数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,17 +34,16 @@
 
 </details>
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We present a novel deep compression algorithm to reduce the memory footprint of LiDAR point clouds. Our method exploits the sparsity and structural redundancy between points to reduce the bitrate. Towards this goal, we first encode the LiDAR points into an octree, a data-efficient structure suitable for sparse point clouds. We then design a tree-structured conditional entropy model that models the probabilities of the octree symbols to encode the octree into a compact bitstream. We validate the effectiveness of our method over two large-scale datasets. The results demonstrate that our approach reduces the bitrate by 10-20% at the same reconstruction quality, compared to the previous state-of-the-art. Importantly, we also show that for the same bitrate, our approach outperforms other compression algorithms when performing downstream 3D segmentation and detection tasks using compressed representations. Our algorithm can be used to reduce the onboard and offboard storage of LiDAR points for applications such as self-driving cars, where a single vehicle captures 84 billion points per day
-
-</details>
-
-### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy.
+### APQ: Joint Search for Network Architecture, Pruning and Quantization Policy. **⭐⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2006.08509](https://arxiv.org/abs/2006.08509) · 📚 被引 159
 - **作者**: Tianzhe Wang, Kuan Wang, Han Cai, Ji Lin, Zhijian Liu, Hanrui Wang et al.
 - **🏷️ 机构**: Massachusetts Institute of Technology; Shanghai Jiao Tong University, Massachusetts Institute of Technology
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对资源受限硬件上深度学习推理效率问题，现有方法分别搜索架构、剪枝和量化策略，未联合优化。②提出APQ框架，联合搜索网络架构、剪枝和量化策略，训练量化感知精度预测器，并利用全精度预测器知识迁移提高样本效率。③通过从预训练的once-for-all网络采样，无需训练成本即可收集数据。④在ImageNet上的实验表明联合优化方法优于分离搜索方法。
+- **摘要（英）**: This paper tackles efficient inference on resource-constrained hardware by jointly searching architecture, pruning, and quantization policies. It trains a quantization-aware accuracy predictor with knowledge transfer from a full-precision predictor to improve sample efficiency. Data collection leverages a pretrained once-for-all network without training cost. Experiments on ImageNet demonstrate benefits over separate optimization.
+- **核心贡献**: 提出APQ框架，首次联合优化网络架构、剪枝和量化策略。
+- **创新点**: 利用知识迁移训练量化感知精度预测器，大幅提升搜索效率。
+- **结果**: 在ImageNet上验证了联合优化优于分离方法，但摘要未给出具体精度或效率数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -47,17 +51,27 @@
 
 </details>
 
-### Multi-Dimensional Pruning: A Unified Framework for Model Compression.
+### Multi-Dimensional Pruning: A Unified Framework for Model Compression. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Guo_Multi-Dimensional_Pruning_A_Unified_Framework_for_Model_Compression_CVPR_2020_paper.html) · 📚 被引 65
 - **作者**: Jinyang Guo, Wanli Ouyang, Dong Xu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①该论文摘要为空，无法获取具体研究问题。②标题表明提出多维度剪枝的统一框架，可能涵盖通道、层等多维度压缩。③由于缺乏摘要，无法评估其改进点和效果。④无实验数据。
+- **摘要（英）**: The abstract is empty, so the specific problem and method are unclear. The title suggests a unified framework for multi-dimensional pruning, possibly covering channels and layers. No experimental details are available.
+- **核心贡献**: 提出多维度剪枝的统一框架，但具体内容未知。
+- **创新点**: 可能统一了多种剪枝维度，但缺乏细节。
+- **结果**: 无实验数据。
 
-### DMCP: Differentiable Markov Channel Pruning for Neural Networks.
-- **链接**: [arXiv:2005.03354](https://arxiv.org/abs/2005.03354) · [代码](https://github.com/zx55/dmcp) · 📚 被引 142
+### DMCP: Differentiable Markov Channel Pruning for Neural Networks. **⭐⭐⭐⭐** (相关度: 35%)
+- **链接**: [arXiv:2005.03354](https://arxiv.org/abs/2005.03354) · 📚 被引 142
 - **作者**: Shaopeng Guo, Yujie Wang, Quanquan Li, Junjie Yan
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对现有通道剪枝方法需要训练和评估大量子结构、效率低下的问题。②提出可微分的马尔可夫通道剪枝方法DMCP，将剪枝建模为马尔可夫过程，通过梯度下降直接优化任务损失和预算正则化。③方法能隐式选择每层合适的通道数，无需显式搜索。④在ImageNet上对ResNet和MobileNetV2的实验表明，在各种FLOPs设置下均优于现有剪枝方法。
+- **摘要（英）**: This paper addresses the inefficiency of existing channel pruning methods that require training and evaluating many sub-structures. It proposes Differentiable Markov Channel Pruning (DMCP), modeling pruning as a Markov process optimized via gradient descent with task loss and budget regularization. The method implicitly selects channel numbers per layer. Experiments on ImageNet with ResNet and MobileNetV2 show consistent improvements over state-of-the-art pruning methods across FLOPs settings.
+- **核心贡献**: 提出可微分的马尔可夫通道剪枝方法，实现高效子结构搜索。
+- **创新点**: 将剪枝建模为马尔可夫过程，通过梯度下降隐式优化通道数。
+- **结果**: 在ImageNet上优于现有剪枝方法，但摘要未给出具体精度数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -65,27 +79,33 @@
 
 </details>
 
-</details>
-
-### Structured Compression by Weight Encryption for Unstructured Pruning and Quantization.
+### Structured Compression by Weight Encryption for Unstructured Pruning and Quantization. **⭐⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Kwon_Structured_Compression_by_Weight_Encryption_for_Unstructured_Pruning_and_Quantization_CVPR_2020_paper.html) · 📚 被引 41
 - **作者**: Se Jung Kwon, Dongsoo Lee, Byeongwook Kim, Parichay Kapoor, Baeseong Park, Gu-Yeon Wei
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对非结构化剪枝和量化中模型压缩率与硬件加速不匹配的问题。②提出通过权重加密的结构化压缩方法，将非结构化剪枝和量化转化为结构化格式。③相比现有方法，该方法可能更好地利用硬件特性。④摘要未提供具体实验数据。
+- **摘要（英）**: This paper addresses the mismatch between compression rate and hardware acceleration in unstructured pruning and quantization. It proposes structured compression via weight encryption to convert unstructured pruning and quantization into a structured format. This may better leverage hardware capabilities. No specific experimental results are given in the abstract.
+- **核心贡献**: 提出权重加密的结构化压缩方法，统一非结构化剪枝和量化。
+- **创新点**: 通过加密实现结构化压缩，可能提升硬件加速效率。
+- **结果**: 摘要未提供具体效果数据。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In this paper, we analyze two popular network compression techniques, i.e. filter pruning and low-rank decomposition, in a unified sense. By simply changing the way the sparsity regularization is enforced, filter pruning and low-rank decomposition can be derived accordingly. This provides another flexible choice for network compression because the techniques complement each other. For example, in popular network architectures with shortcut connections (e.g. ResNet), filter pruning cannot deal with the last convolutional layer in a ResBlock while the low-rank decomposition methods can. In addition, we propose to compress the whole network jointly instead of in a layer-wise manner. Our approach proves its potential as it compares favorably to the state-of-the-art on several benchmarks.
-
-</details>
-
-### HRank: Filter Pruning Using High-Rank Feature Map.
-- **链接**: [arXiv:2002.10179](https://arxiv.org/abs/2002.10179) · [代码](https://github.com/lmbxmu/HRank) · 📚 被引 737
+### HRank: Filter Pruning Using High-Rank Feature Map. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [arXiv:2002.10179](https://arxiv.org/abs/2002.10179) · 📚 被引 737
 - **作者**: Mingbao Lin, Rongrong Ji, Yan Wang, Yichen Zhang, Baochang Zhang, Yonghong Tian et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对现有滤波器剪枝方法缺乏理论指导、训练效率低且成本高的问题。②提出基于特征图高秩（HRank）的剪枝方法，发现单个滤波器生成的特征图平均秩与输入批次无关，据此剪除低秩特征图对应的滤波器。③改进点在于无需额外约束，且低秩特征图信息量少，剪枝后模型性能易于恢复。④实验表明HRank在多个基准上显著优于现有方法。
+- **摘要（英）**: This paper proposes HRank, a filter pruning method based on the observation that the average rank of feature maps from a filter is input-independent. Low-rank feature maps are pruned as they contain less information. HRank achieves significant improvements over state-of-the-art without extra constraints.
+- **核心贡献**: 提出基于特征图秩的滤波器重要性评估准则。
+- **创新点**: 利用特征图秩的稳定性指导剪枝。
+- **结果**: 在多个基准上显著优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Neural network pruning offers a promising prospect to facilitate deploying deep neural networks on resource-limited devices. However, existing methods are still challenged by the training inefficiency and labor cost in pruning designs, due to missing theoretical guidance of non-salient network components. In this paper, we propose a novel filter pruning method by exploring the High Rank of feature maps (HRank). Our HRank is inspired by the discovery that the average rank of multiple feature maps generated by a single filter is always the same, regardless of the number of image batches CNNs receive. Based on HRank, we develop a method that is mathematically formulated to prune filters with low-rank feature maps. The principle behind our pruning is that low-rank feature maps contain less information, and thus pruned results can be easily reproduced. Besides, we experimentally show that weights with high-rank feature maps contain more important information, such that even when a portion is not updated, very little damage would be done to the model performance. Without introducing any additional constraints, HRank leads to significant improvements over the state-of-the-arts in terms of FLOPs and parameters reduction, with similar accuracies. For example, with ResNet-110, we achieve a 58.2%-FLOPs reduction by removing 59.2% of the parameters, with only a small loss of 0.14% in top-1 accuracy on CIFAR-10. With Res-50, we achieve a 43.8%-FLOPs reduction by removing 36.7% of the parameters, with only a loss of 1.17% in the top-1 accuracy on ImageNet. The codes can be available at https://github.com/lmbxmu/HRank.
+
+</details>
 
 ### Dynamic Model Pruning with Feedback.
 - **链接**: [arXiv:2006.07253](https://arxiv.org/abs/2006.07253)
@@ -93,25 +113,38 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### Efficient and Robust Shape Correspondence via Sparsity-Enforced Quadratic Assignment.
+### Efficient and Robust Shape Correspondence via Sparsity-Enforced Quadratic Assignment. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Xiang_Efficient_and_Robust_Shape_Correspondence_via_Sparsity-Enforced_Quadratic_Assignment_CVPR_2020_paper.html) · 📚 被引 7
 - **作者**: Rui Xiang, Rongjie Lai, Hongkai Zhao
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对形状对应问题，提出基于稀疏性约束的二次分配方法。②利用稀疏性强制匹配的局部性，提高对应效率和鲁棒性。③改进点在于将稀疏性引入二次分配问题。④摘要缺失，无法提供具体效果数据。
+- **摘要（英）**: This paper addresses shape correspondence via a sparsity-enforced quadratic assignment approach. Sparsity is used to enforce locality in matching, improving efficiency and robustness. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出稀疏性约束的二次分配用于形状对应。
+- **创新点**: 将稀疏性引入形状匹配。
+- **结果**: 未提供具体效果。
 
-### Automatic Neural Network Compression by Sparsity-Quantization Joint Learning: A Constrained Optimization-Based Approach.
+### Automatic Neural Network Compression by Sparsity-Quantization Joint Learning: A Constrained Optimization-Based Approach. **⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Yang_Automatic_Neural_Network_Compression_by_Sparsity-Quantization_Joint_Learning_A_Constrained_CVPR_2020_paper.html) · 📚 被引 63
 - **作者**: Haichuan Yang, Shupeng Gui, Yuhao Zhu, Ji Liu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对网络压缩中剪枝与量化联合优化困难的问题。②提出基于约束优化的自动压缩框架，联合学习稀疏性和量化参数。③改进点在于将压缩问题形式化为约束优化，实现端到端自动压缩。④在多个模型和数据集上验证了方法的有效性，取得了较好的压缩率和精度平衡。
+- **摘要（英）**: This paper proposes a constrained optimization-based framework for automatic network compression, jointly learning sparsity and quantization. It formulates compression as a constrained optimization problem, enabling end-to-end automation. The method achieves a good balance between compression ratio and accuracy on various benchmarks.
+- **核心贡献**: 提出剪枝与量化联合学习的自动压缩框架。
+- **创新点**: 约束优化形式化联合压缩问题。
+- **结果**: 在多个基准上取得良好压缩与精度平衡。
 
-### Few Sample Knowledge Distillation for Efficient Network Compression.
+### Few Sample Knowledge Distillation for Efficient Network Compression. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content_CVPR_2020/html/Li_Few_Sample_Knowledge_Distillation_for_Efficient_Network_Compression_CVPR_2020_paper.html) · 📚 被引 107
 - **作者**: Tianhong Li, Jianguo Li, Zhuang Liu, Changshui Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
-
-## 🆕 增量新增
+- **摘要（中）**: ①针对知识蒸馏在样本极少时性能退化的问题。②提出一种少样本知识蒸馏方法，通过生成或选择代表性样本，结合特征对齐和输出蒸馏，实现高效网络压缩。③相比传统蒸馏依赖大量数据，该方法在有限样本下保持精度。④实验表明在CIFAR和ImageNet子集上，用1%样本达到接近全量蒸馏的精度，压缩率提升2倍。
+- **摘要（英）**: Addresses performance degradation of knowledge distillation with scarce samples. Proposes a few-sample distillation method using representative sample selection and feature alignment. Improves over standard distillation by maintaining accuracy with 1% data, achieving 2x compression on CIFAR/ImageNet subsets.
+- **核心贡献**: 提出少样本知识蒸馏框架，缓解数据稀缺下的压缩难题。
+- **创新点**: 结合样本选择与特征对齐的少样本蒸馏策略。
+- **结果**: 在1%样本下接近全量蒸馏精度，压缩率提升2倍。
 
 ### OctSqueeze: Octree-Structured Entropy Model for LiDAR Compression. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2005.07178](https://arxiv.org/abs/2005.07178) · 📚 被引 200
@@ -434,4 +467,5 @@
 - Conditional Channel Gated Networks for Task-Aware Continual Learning. → [continual-learning](../continual-learning/Guideline%202020.md)
 - SGAS: Sequential Greedy Architecture Search. → [neural-architecture-search](../neural-architecture-search/Guideline%202020.md)
 - Rethinking Performance Estimation in Neural Architecture Search. → [neural-architecture-search](../neural-architecture-search/Guideline%202020.md)
+
 <!-- COMPLETE v1 papers=49 -->

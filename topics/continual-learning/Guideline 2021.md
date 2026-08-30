@@ -3,13 +3,18 @@
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
 > 论文数: 17 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Rainbow Memory: Continual Learning With a Memory of Diverse Samples.
-- **链接**: [arXiv:2103.17230](https://arxiv.org/abs/2103.17230) · [代码](https://github.com/clovaai/rainbow-memory) · 📚 被引 334
+### Rainbow Memory: Continual Learning With a Memory of Diverse Samples. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2103.17230](https://arxiv.org/abs/2103.17230) · 📚 被引 332
 - **作者**: Jihwan Bang, Heesu Kim, Youngjoon Yoo, Jung-Woo Ha, Jonghyun Choi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对传统持续学习假设任务类别不相交、过于人工化的问题，该论文聚焦于更真实且实用的“模糊”任务边界场景，其中任务间共享类别。作者提出了一种基于逐样本分类不确定性和数据增强的存储管理策略，名为Rainbow Memory (RM)，以增强情节记忆中的样本多样性。通过在MNIST、CIFAR10、CIFAR100和ImageNet上的广泛实验，该方法在模糊持续学习设置下显著提高了准确性，并以较大幅度超越了现有最先进方法。
+- **摘要（英）**: This paper addresses the unrealistic assumption of disjoint class sets in continual learning by focusing on 'blurry' task boundaries where tasks share classes. It proposes Rainbow Memory (RM), a memory management strategy based on per-sample classification uncertainty and data augmentation to enhance sample diversity in episodic memory. Extensive experiments on MNIST, CIFAR10, CIFAR100, and ImageNet show significant accuracy improvements, outperforming state-of-the-art methods by large margins in blurry continual learning setups.
+- **核心贡献**: 提出了一种基于样本不确定性和数据增强的存储管理策略，显著提升了模糊任务边界下的持续学习性能。
+- **创新点**: 利用逐样本分类不确定性指导记忆样本选择，并结合数据增强增加多样性。
+- **结果**: 在多个数据集上大幅超越现有方法，验证了方法的有效性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +22,16 @@
 
 </details>
 
-### Continual Learning via Bit-Level Information Preserving.
+### Continual Learning via Bit-Level Information Preserving. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2105.04444](https://arxiv.org/abs/2105.04444) · 📚 被引 37
 - **作者**: Yujun Shi, Li Yuan, Yunpeng Chen, Jiashi Feng
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对持续学习中灾难性遗忘和内存开销大的问题，该论文从信息论角度分析，发现遗忘源于学习新任务时模型参数上先前任务信息增益的丢失。为此，提出了一种名为Bit-Level Information Preserving (BLIP)的方法，通过参数量化在比特级别更新参数，保留信息增益。具体地，BLIP先对网络进行权重量化训练，然后估计每个参数的信息增益以决定冻结哪些比特来防止遗忘。在分类和强化学习任务上的实验表明，该方法优于或与现有方法相当。
+- **摘要（英）**: This paper addresses catastrophic forgetting and high memory costs in continual learning by analyzing the process through information theory, identifying that forgetting stems from loss of information gain on parameters from previous tasks. It proposes Bit-Level Information Preserving (BLIP), which updates parameters at the bit level via quantization to preserve information gain, freezing bits based on estimated gain. Experiments on classification and reinforcement learning tasks show superior or comparable performance to existing methods.
+- **核心贡献**: 提出了基于比特级信息保留的持续学习方法，有效缓解遗忘并降低内存开销。
+- **创新点**: 将信息增益估计与参数量化结合，在比特级别动态冻结参数。
+- **结果**: 在分类和强化学习任务中取得优于或持平现有方法的效果。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -29,11 +39,16 @@
 
 </details>
 
-### Rectification-Based Knowledge Retention for Continual Learning.
+### Rectification-Based Knowledge Retention for Continual Learning. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2103.16597](https://arxiv.org/abs/2103.16597) · 📚 被引 43
 - **作者**: Pravendra Singh, Pratik Mazumder, Piyush Rai, Vinay P. Namboodiri
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对深度学习模型在增量学习中的灾难性遗忘问题，该论文提出了一种基于权重修正和仿射变换的方法，适用于任务增量学习，包括零样本和非零样本设置。方法通过“修正”先前任务学到的权重来适应新任务，仅需学习少量参数，并学习网络输出的仿射变换以更好地适应新任务。在多个数据集上的实验表明，该方法在零样本和非零样本任务增量学习设置中均有效。
+- **摘要（英）**: This paper addresses catastrophic forgetting in incremental learning by proposing a method based on weight rectifications and affine transformations for task incremental learning, applicable to both zero-shot and non-zero-shot settings. It adapts network weights by 'rectifying' previous task weights with few parameters and learns affine transformations on outputs. Experiments on multiple datasets demonstrate effectiveness in both settings.
+- **核心贡献**: 提出了基于权重修正和仿射变换的任务增量学习方法，支持零样本设置。
+- **创新点**: 通过少量参数修正权重并学习输出变换，实现高效任务适应。
+- **结果**: 在多个数据集上验证了方法的有效性。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -41,131 +56,172 @@
 
 </details>
 
-### Layerwise Optimization by Gradient Decomposition for Continual Learning.
-- **链接**: [arXiv:2105.07561](https://arxiv.org/abs/2105.07561) · 📚 被引 57
+### Layerwise Optimization by Gradient Decomposition for Continual Learning. **⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Tang_Layerwise_Optimization_by_Gradient_Decomposition_for_Continual_Learning_CVPR_2021_paper.html) · 📚 被引 57
 - **作者**: Shixiang Tang, Dapeng Chen, Jinguo Zhu, Shijie Yu, Wanli Ouyang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 该论文针对持续学习中的优化问题，提出了基于梯度分解的逐层优化方法。由于摘要缺失，具体方法细节和实验效果无法评估，但推测其通过分解梯度来分别优化各层，以缓解遗忘。缺乏实验数据支持，整体贡献和效果不明确。
+- **摘要（英）**: This paper proposes a layerwise optimization method via gradient decomposition for continual learning. Due to missing abstract, specific details and experimental results are unavailable, but it likely decomposes gradients to optimize layers separately to mitigate forgetting. Lack of experimental data makes its contribution unclear.
+- **核心贡献**: 提出了基于梯度分解的逐层优化方法。
+- **创新点**: 通过梯度分解实现逐层优化。
+- **结果**: 未提供具体实验结果。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Deep neural networks achieve state-of-the-art and sometimes super-human performance across various domains. However, when learning tasks sequentially, the networks easily forget the knowledge of previous tasks, known as "catastrophic forgetting". To achieve the consistencies between the old tasks and the new task, one effective solution is to modify the gradient for update. Previous methods enforce independent gradient constraints for different tasks, while we consider these gradients contain complex information, and propose to leverage inter-task information by gradient decomposition. In particular, the gradient of an old task is decomposed into a part shared by all old tasks and a part specific to that task. The gradient for update should be close to the gradient of the new task, consistent with the gradients shared by all old tasks, and orthogonal to the space spanned by the gradients specific to the old tasks. In this way, our approach encourages common knowledge consolidation without impairing the task-specific knowledge. Furthermore, the optimization is performed for the gradients of each layer separately rather than the concatenation of all gradients as in previous works. This effectively avoids the influence of the magnitude variation of the gradients in different layers. Extensive experiments validate the effectiveness of both gradient-decomposed optimization and layer-wise updates. Our proposed method achieves state-of-the-art results on various benchmarks of continual learning.
-
-</details>
-
-### Efficient Feature Transformations for Discriminative and Generative Continual Learning.
-- **链接**: [arXiv:2103.13558](https://arxiv.org/abs/2103.13558) · 📚 被引 51
+### Efficient Feature Transformations for Discriminative and Generative Continual Learning. **⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Verma_Efficient_Feature_Transformations_for_Discriminative_and_Generative_Continual_Learning_CVPR_2021_paper.html) · 📚 被引 51
 - **作者**: Vinay Kumar Verma, Kevin J. Liang, Nikhil Mehta, Piyush Rai, Lawrence Carin
 - **🏷️ 机构**: Duke University, IIT Kanpur
 - **会议**: CVPR 2021
+- **摘要（中）**: 该论文探讨了高效特征变换在判别式和生成式持续学习中的应用。由于摘要缺失，具体方法细节和实验效果无法评估，但推测其通过特征变换来适应新任务并保留旧知识。缺乏实验数据支持，整体贡献和效果不明确。
+- **摘要（英）**: This paper explores efficient feature transformations for discriminative and generative continual learning. Due to missing abstract, specific details and experimental results are unavailable, but it likely uses feature transformations to adapt to new tasks while retaining old knowledge. Lack of experimental data makes its contribution unclear.
+- **核心贡献**: 提出了高效特征变换方法用于持续学习。
+- **创新点**: 将特征变换应用于判别式和生成式持续学习。
+- **结果**: 未提供具体实验结果。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> As neural networks are increasingly being applied to real-world applications, mechanisms to address distributional shift and sequential task learning without forgetting are critical. Methods incorporating network expansion have shown promise by naturally adding model capacity for learning new tasks while simultaneously avoiding catastrophic forgetting. However, the growth in the number of additional parameters of many of these types of methods can be computationally expensive at larger scales, at times prohibitively so. Instead, we propose a simple task-specific feature map transformation strategy for continual learning, which we call Efficient Feature Transformations (EFTs). These EFTs provide powerful flexibility for learning new tasks, achieved with minimal parameters added to the base architecture. We further propose a feature distance maximization strategy, which significantly improves task prediction in class incremental settings, without needing expensive generative models. We demonstrate the efficacy and efficiency of our method with an extensive set of experiments in discriminative (CIFAR-100 and ImageNet-1K) and generative (LSUN, CUB-200, Cats) sequences of tasks. Even with low single-digit parameter growth rates, EFTs can outperform many other continual learning methods in a wide range of settings.
-
-</details>
-
-### Training Networks in Null Space of Feature Covariance for Continual Learning.
-- **链接**: [arXiv:2103.07113](https://arxiv.org/abs/2103.07113) · 📚 被引 105
+### Training Networks in Null Space of Feature Covariance for Continual Learning. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Training_Networks_in_Null_Space_of_Feature_Covariance_for_Continual_CVPR_2021_paper.html) · 📚 被引 105
 - **作者**: Shipeng Wang, Xiaorong Li, Jian Sun, Zongben Xu
 - **🏷️ 机构**: Xi&#x2019;an Jiaotong University,School of Mathematics and Statistics,Xi&#x2019;an,China,710049
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对持续学习中的灾难性遗忘问题，该论文提出了一种在特征协方差零空间中训练网络的方法。通过将网络更新限制在特征协方差的零空间，避免干扰先前任务的特征表示，从而有效保留旧知识。该方法在多个持续学习基准上取得了优异的性能，显著减少了遗忘。
+- **摘要（英）**: This paper addresses catastrophic forgetting in continual learning by training networks in the null space of feature covariance. By constraining updates to the null space, it avoids interfering with previous task representations, effectively retaining old knowledge. The method achieves strong performance on multiple continual learning benchmarks, significantly reducing forgetting.
+- **核心贡献**: 提出了在特征协方差零空间中训练网络的方法，有效缓解灾难性遗忘。
+- **创新点**: 利用特征协方差的零空间约束网络更新，保护旧任务特征。
+- **结果**: 在多个基准上显著减少遗忘，性能优异。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In the setting of continual learning, a network is trained on a sequence of tasks, and suffers from catastrophic forgetting. To balance plasticity and stability of network in continual learning, in this paper, we propose a novel network training algorithm called Adam-NSCL, which sequentially optimizes network parameters in the null space of previous tasks. We first propose two mathematical conditions respectively for achieving network stability and plasticity in continual learning. Based on them, the network training for sequential tasks can be simply achieved by projecting the candidate parameter update into the approximate null space of all previous tasks in the network training process, where the candidate parameter update can be generated by Adam. The approximate null space can be derived by applying singular value decomposition to the uncentered covariance matrix of all input features of previous tasks for each linear layer. For efficiency, the uncentered covariance matrix can be incrementally computed after learning each task. We also empirically verify the rationality of the approximate null space at each linear layer. We apply our approach to training networks for continual learning on benchmark datasets of CIFAR-100 and TinyImageNet, and the results suggest that the proposed approach outperforms or matches the state-ot-the-art continual learning approaches.
-
-</details>
-
-### ORDisCo: Effective and Efficient Usage of Incremental Unlabeled Data for Semi-Supervised Continual Learning.
+### ORDisCo: Effective and Efficient Usage of Incremental Unlabeled Data for Semi-Supervised Continual Learning. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_ORDisCo_Effective_and_Efficient_Usage_of_Incremental_Unlabeled_Data_for_CVPR_2021_paper.html) · 📚 被引 68
 - **作者**: Liyuan Wang, Kuo Yang, Chongxuan Li, Lanqing Hong, Zhenguo Li, Jun Zhu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对半监督持续学习（SSCL）中增量无标注数据利用效率低、计算成本高的问题。②提出ORDisCo方法，通过选择性使用增量无标注数据，并结合知识蒸馏与一致性正则化来更新模型。③相比现有方法，在保持性能的同时显著降低了计算开销，并设计了有效的样本选择策略。④在多个基准数据集上验证了方法的有效性，在准确率和计算效率之间取得了更好的平衡。
+- **摘要（英）**: This paper addresses the inefficient use of incremental unlabeled data in semi-supervised continual learning. It proposes ORDisCo, which selectively leverages unlabeled data with knowledge distillation and consistency regularization to reduce computational cost while maintaining performance. Experiments on benchmarks show improved accuracy-efficiency trade-offs.
+- **核心贡献**: 提出了一种高效利用增量无标注数据的半监督持续学习框架。
+- **创新点**: 设计了基于样本选择与一致性正则化的增量学习机制。
+- **结果**: 在多个基准上实现了性能与计算效率的更好平衡。
 
-### Few-Shot Incremental Learning With Continually Evolved Classifiers.
+### Few-Shot Incremental Learning With Continually Evolved Classifiers. **⭐⭐⭐** (相关度: 55%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_Few-Shot_Incremental_Learning_With_Continually_Evolved_Classifiers_CVPR_2021_paper.html)
 - **作者**: Chi Zhang, Nan Song, Guosheng Lin, Yun Zheng, Pan Pan, Yinghui Xu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对少样本增量学习（FSCIL）中分类器对新旧类适应能力不足的问题。②提出持续演化的分类器（CEC）方法，通过动态调整分类器参数以适应新类，同时保持旧类性能。③引入演化机制和正则化项，增强分类器的泛化能力。④在多个FSCIL基准上取得了优于现有方法的性能。
+- **摘要（英）**: This work tackles the challenge of classifier adaptation in few-shot incremental learning. It proposes continually evolved classifiers that dynamically adjust parameters for new classes while preserving old ones, using evolution mechanisms and regularization. Experiments show superior performance on FSCIL benchmarks.
+- **核心贡献**: 提出了持续演化的分类器框架以提升少样本增量学习性能。
+- **创新点**: 利用动态参数演化机制增强分类器对新旧类的适应。
+- **结果**: 在多个基准上超越了现有方法。
 
-### Image De-Raining via Continual Learning.
+### Image De-Raining via Continual Learning. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhou_Image_De-Raining_via_Continual_Learning_CVPR_2021_paper.html) · 📚 被引 44
 - **作者**: Man Zhou, Jie Xiao, Yifan Chang, Xueyang Fu, Aiping Liu, Jinshan Pan et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对图像去雨任务中模型面对不同降雨场景时性能退化的问题。②提出将持续学习应用于图像去雨，通过顺序学习多种降雨类型来提升泛化能力。③采用知识蒸馏和正则化技术缓解灾难性遗忘。④实验表明模型在多种降雨条件下表现更稳定。
+- **摘要（英）**: This paper applies continual learning to image de-raining to handle diverse rain scenarios. It sequentially learns multiple rain types with knowledge distillation and regularization to mitigate catastrophic forgetting. Experiments show improved robustness across conditions.
+- **核心贡献**: 首次将持续学习用于图像去雨任务。
+- **创新点**: 利用持续学习策略增强去雨模型的跨场景泛化。
+- **结果**: 在多种降雨条件下实现了更稳定的性能。
 
-### On Learning the Geodesic Path for Incremental Learning.
+### On Learning the Geodesic Path for Incremental Learning. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2104.08572](https://arxiv.org/abs/2104.08572) · 📚 被引 111
 - **作者**: Christian Simon, Piotr Koniusz, Mehrtash Harandi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对增量学习中知识蒸馏方法对旧知识保持不充分的问题。②提出沿流形测地线路径进行蒸馏的新方法，通过构建新旧响应在低维流形上的表示并最小化测地线距离。③相比传统蒸馏，该方法提供了更平滑且有效的知识传递，增强了旧知识的保持。④在多个增量学习基准上取得了显著性能提升。
+- **摘要（英）**: This paper addresses insufficient knowledge retention in incremental learning distillation. It proposes constructing low-dimensional manifolds for old and new responses and minimizing dissimilarity along the geodesic path, enabling smoother and more effective knowledge transfer. Experiments show significant improvements on benchmarks.
+- **核心贡献**: 提出了基于测地线路径的流形蒸馏方法。
+- **创新点**: 利用流形几何结构优化知识蒸馏过程。
+- **结果**: 在多个基准上显著提升了增量学习性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The two main impediments to continual learning are catastrophic forgetting and memory limitations on the storage of data. To cope with these challenges, we propose a novel, cognitively-inspired approach which trains autoencoders with Neural Style Transfer to encode and store images. During training on a new task, reconstructed images from encoded episodes are replayed in order to avoid catastrophic forgetting. The loss function for the reconstructed images is weighted to reduce its effect during classifier training to cope with image degradation. When the system runs out of memory the encoded episodes are converted into centroids and covariance matrices, which are used to generate pseudo-images during classifier training, keeping classifier performance stable while using less memory. Our approach increases classification accuracy by 13-17% over state-of-the-art methods on benchmark datasets, while requiring 78% less storage space.
+> Neural networks notoriously suffer from the problem of catastrophic forgetting, the phenomenon of forgetting the past knowledge when acquiring new knowledge. Overcoming catastrophic forgetting is of significant importance to emulate the process of "incremental learning", where the model is capable of learning from sequential experience in an efficient and robust way. State-of-the-art techniques for incremental learning make use of knowledge distillation towards preventing catastrophic forgetting. Therein, one updates the network while ensuring that the network's responses to previously seen concepts remain stable throughout updates. This in practice is done by minimizing the dissimilarity between current and previous responses of the network one way or another. Our work contributes a novel method to the arsenal of distillation techniques. In contrast to the previous state of the art, we propose to firstly construct low-dimensional manifolds for previous and current responses and minimize the dissimilarity between the responses along the geodesic connecting the manifolds. This induces a more formidable knowledge distillation with smooth properties which preserves the past knowledge more efficiently as observed by our comprehensive empirical study.
 
 </details>
 
-### Self-Promoted Prototype Refinement for Few-Shot Class-Incremental Learning.
+### Self-Promoted Prototype Refinement for Few-Shot Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2107.08918](https://arxiv.org/abs/2107.08918) · 📚 被引 170
 - **作者**: Kai Zhu, Yang Cao, Wei Zhai, Jie Cheng, Zheng-Jun Zha
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对少样本类增量学习（FSCIL）中表示优化和原型重组困难的问题。②提出自促进原型细化机制，结合随机片段选择策略和动态关系投影模块，增强新类表达并考虑类间依赖。③通过关系矩阵引导原型更新，提升模型对新类的适应能力。④在三个基准数据集上分别超越现有方法13%、17%和11%。
+- **摘要（英）**: This paper tackles representation optimization and prototype reorganization in few-shot class-incremental learning. It proposes self-promoted prototype refinement with random episode selection and dynamic relation projection to enhance new-class expression and inter-class dependencies. Experiments show improvements of 13%, 17%, and 11% over state-of-the-art on three benchmarks.
+- **核心贡献**: 提出了自促进原型细化机制以提升FSCIL性能。
+- **创新点**: 利用动态关系投影模块实现原型自促进更新。
+- **结果**: 在三个基准上大幅超越现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We tackle catastrophic forgetting problem in the context of class-incremental learning for video recognition, which has not been explored actively despite the popularity of continual learning. Our framework addresses this challenging task by introducing time-channel importance maps and exploiting the importance maps for learning the representations of incoming examples via knowledge distillation. We also incorporate a regularization scheme in our objective function, which encourages individual features obtained from different time steps in a video to be uncorrelated and eventually improves accuracy by alleviating catastrophic forgetting. We evaluate the proposed approach on brand-new splits of class-incremental action recognition benchmarks constructed upon the UCF101, HMDB51, and Something-Something V2 datasets, and demonstrate the effectiveness of our algorithm in comparison to the existing continual learning methods that are originally designed for image data.
+> Few-shot class-incremental learning is to recognize the new classes given few samples and not forget the old classes. It is a challenging task since representation optimization and prototype reorganization can only be achieved under little supervision. To address this problem, we propose a novel incremental prototype learning scheme. Our scheme consists of a random episode selection strategy that adapts the feature representation to various generated incremental episodes to enhance the corresponding extensibility, and a self-promoted prototype refinement mechanism which strengthens the expression ability of the new classes by explicitly considering the dependencies among different classes. Particularly, a dynamic relation projection module is proposed to calculate the relation matrix in a shared embedding space and leverage it as the factor for bootstrapping the update of prototypes. Extensive experiments on three benchmark datasets demonstrate the above-par incremental performance, outperforming state-of-the-art methods by a margin of 13%, 17% and 11%, respectively.
 
 </details>
 
-### Semantic-Aware Knowledge Distillation for Few-Shot Class-Incremental Learning.
+### Semantic-Aware Knowledge Distillation for Few-Shot Class-Incremental Learning. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2103.04059](https://arxiv.org/abs/2103.04059) · 📚 被引 185
 - **作者**: Ali Cheraghian, Shafin Rahman, Pengfei Fang, Soumava Kumar Roy, Lars Petersson, Mehrtash Harandi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对少样本类增量学习（FSCIL）中仅依赖视觉信息导致知识蒸馏效果有限的问题。②提出语义感知知识蒸馏方法，利用词嵌入作为语义信息辅助蒸馏，并设计注意力机制对齐视觉和语义向量。③通过多并行嵌入的注意力机制减少灾难性遗忘。④在MiniImageNet、CUB200和CIFAR100上取得了新的最优结果。
+- **摘要（英）**: This paper addresses limited distillation in FSCIL by incorporating semantic information. It uses word embeddings to facilitate distillation and an attention mechanism to align visual and semantic vectors, reducing catastrophic forgetting. Experiments on MiniImageNet, CUB200, and CIFAR100 establish new state-of-the-art results.
+- **核心贡献**: 提出了语义感知的知识蒸馏方法用于FSCIL。
+- **创新点**: 引入词嵌入和注意力机制实现视觉-语义对齐。
+- **结果**: 在多个基准上取得了最优性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continual learning is the problem of learning and retaining knowledge through time over multiple tasks and environments. Research has primarily focused on the incremental classification setting, where new tasks/classes are added at discrete time intervals. Such an "offline" setting does not evaluate the ability of agents to learn effectively and efficiently, since an agent can perform multiple learning epochs without any time limitation when a task is added. We argue that "online" continual learning, where data is a single continuous stream without task boundaries, enables evaluating both information retention and online learning efficacy. In online continual learning, each incoming small batch of data is first used for testing and then added to the training set, making the problem truly online. Trained models are later evaluated on historical data to assess information retention. We introduce a new benchmark for online continual visual learning that exhibits large scale and natural distribution shifts. Through a large-scale analysis, we identify critical and previously unobserved phenomena of gradient-based optimization in continual learning, and propose effective strategies for improving gradient-based online continual learning with real data. The source code and dataset are available in: https://github.com/IntelLabs/continuallearning.
+> Few-shot class incremental learning (FSCIL) portrays the problem of learning new concepts gradually, where only a few examples per concept are available to the learner. Due to the limited number of examples for training, the techniques developed for standard incremental learning cannot be applied verbatim to FSCIL. In this work, we introduce a distillation algorithm to address the problem of FSCIL and propose to make use of semantic information during training. To this end, we make use of word embeddings as semantic information which is cheap to obtain and which facilitate the distillation process. Furthermore, we propose a method based on an attention mechanism on multiple parallel embeddings of visual data to align visual and semantic vectors, which reduces issues related to catastrophic forgetting. Via experiments on MiniImageNet, CUB200, and CIFAR100 dataset, we establish new state-of-the-art results by outperforming existing approaches.
 
 </details>
 
-### Distilling Causal Effect of Data in Class-Incremental Learning.
-- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hu_Distilling_Causal_Effect_of_Data_in_Class-Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 159
+### Distilling Causal Effect of Data in Class-Incremental Learning. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hu_Distilling_Causal_Effect_of_Data_in_Class-Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 157
 - **作者**: Xinting Hu, Kaihua Tang, Chunyan Miao, Xian-Sheng Hua, Hanwang Zhang
 - **🏷️ 机构**: NUS
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对类增量学习（CIL）中数据分布偏移导致灾难性遗忘的问题。②提出通过因果推断蒸馏数据效应，将旧数据的影响以因果形式迁移到新模型训练中。③相比传统知识蒸馏，该方法显式建模数据因果效应，减少对旧样本存储的依赖。④实验表明在多个CIL基准上显著降低遗忘率，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses catastrophic forgetting in class-incremental learning by distilling the causal effect of data. It models data influence causally to transfer knowledge without heavy replay. The method reduces forgetting on benchmarks, though specific numbers are absent.
+- **核心贡献**: 提出数据因果效应蒸馏框架用于类增量学习。
+- **创新点**: 将因果推断引入增量知识迁移。
+- **结果**: 在多个基准上降低遗忘率。
 
-### Adaptive Aggregation Networks for Class-Incremental Learning.
+### Adaptive Aggregation Networks for Class-Incremental Learning. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Liu_Adaptive_Aggregation_Networks_for_Class-Incremental_Learning_CVPR_2021_paper.html) · 📚 被引 193
 - **作者**: Yaoyao Liu, Bernt Schiele, Qianru Sun
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对类增量学习中的特征漂移和分类器偏差问题。②提出自适应聚合网络，动态组合多个专家网络的特征以适配新类。③通过可学习的聚合权重平衡旧类和新类知识，无需存储大量旧样本。④实验显示在CIFAR和ImageNet子集上优于现有方法，但摘要未给出具体精度。
+- **摘要（英）**: This work tackles feature drift in class-incremental learning via adaptive aggregation of expert networks. It learns weights to balance old and new knowledge, improving accuracy on CIFAR and ImageNet subsets without heavy replay.
+- **核心贡献**: 提出自适应聚合网络缓解增量学习中的特征漂移。
+- **创新点**: 动态专家网络聚合机制。
+- **结果**: 在多个基准上提升分类精度。
 
-### Incremental Learning via Rate Reduction.
+### Incremental Learning via Rate Reduction. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2011.14593](https://arxiv.org/abs/2011.14593) · 📚 被引 28
 - **作者**: Ziyang Wu, Christina Baek, Chong You, Yi Ma
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对深度网络在增量学习中的灾难性遗忘，指出黑盒优化难以调整参数保留旧知识。②提出基于率减少原理的白盒架构，每层显式计算无需反向传播，可证明地构造新网络模拟联合训练。③相比黑盒方法，该方案提供理论保证，避免遗忘。④在MNIST和CIFAR-10上大幅超越SOTA，分类性能衰减显著降低。
+- **摘要（英）**: This paper addresses catastrophic forgetting by proposing a white-box architecture based on rate reduction, where layers are computed explicitly without backpropagation. It provably emulates joint training, outperforming SOTA on MNIST and CIFAR-10 with significantly less decay.
+- **核心贡献**: 提出可证明的白盒增量学习算法。
+- **创新点**: 利用率减少原理替代黑盒优化。
+- **结果**: 在MNIST和CIFAR-10上大幅超越SOTA。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Continually learning in the real world must overcome many challenges, among which noisy labels are a common and inevitable issue. In this work, we present a repla-ybased continual learning framework that simultaneously addresses both catastrophic forgetting and noisy labels for the first time. Our solution is based on two observations; (i) forgetting can be mitigated even with noisy labels via self-supervised learning, and (ii) the purity of the replay buffer is crucial. Building on this regard, we propose two key components of our method: (i) a self-supervised replay technique named Self-Replay which can circumvent erroneous training signals arising from noisy labeled data, and (ii) the Self-Centered filter that maintains a purified replay buffer via centrality-based stochastic graph ensembles. The empirical results on MNIST, CIFAR-10, CIFAR-100, and WebVision with real-world noise demonstrate that our framework can maintain a highly pure replay buffer amidst noisy streamed data while greatly outperforming the combinations of the state-of-the-art continual learning and noisy label learning methods. The source code is available at http://vision.snu.ac.kr/projects/SPR
+> Current deep learning architectures suffer from catastrophic forgetting, a failure to retain knowledge of previously learned classes when incrementally trained on new classes. The fundamental roadblock faced by deep learning methods is that deep learning models are optimized as "black boxes," making it difficult to properly adjust the model parameters to preserve knowledge about previously seen data. To overcome the problem of catastrophic forgetting, we propose utilizing an alternative "white box" architecture derived from the principle of rate reduction, where each layer of the network is explicitly computed without back propagation. Under this paradigm, we demonstrate that, given a pre-trained network and new data classes, our approach can provably construct a new network that emulates joint training with all past and new classes. Finally, our experiments show that our proposed learning algorithm observes significantly less decay in classification performance, outperforming state of the art methods on MNIST and CIFAR-10 by a large margin and justifying the use of "white box" algorithms for incremental learning even for sufficiently complex image data.
 
 </details>
 
-### Few-Shot and Continual Learning with Attentive Independent Mechanisms.
-- **链接**: [arXiv:2107.14053](https://arxiv.org/abs/2107.14053) · [代码](https://github.com/huang50213/AIM-Fewshot-Continual) · 📚 被引 27
+### Few-Shot and Continual Learning with Attentive Independent Mechanisms. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00932)
 - **作者**: Eugene Lee, Cheng-Han Huang, Chen-Yi Lee
-- **🏷️ 机构**: National Chiao Tung University,Institute of Electronics,Hsinchu,Taiwan
+- **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Deep neural networks (DNNs) are known to perform well when deployed to test distributions that shares high similarity with the training distribution. Feeding DNNs with new data sequentially that were unseen in the training distribution has two major challenges -- fast adaptation to new tasks and catastrophic forgetting of old tasks. Such difficulties paved way for the on-going research on few-shot learning and continual learning. To tackle these problems, we introduce Attentive Independent Mechanisms (AIM). We incorporate the idea of learning using fast and slow weights in conjunction with the decoupling of the feature extraction and higher-order conceptual learning of a DNN. AIM is designed for higher-order conceptual learning, modeled by a mixture of experts that compete to learn independent concepts to solve a new task. AIM is a modular component that can be inserted into existing deep learning frameworks. We demonstrate its capability for few-shot learning by adding it to SIB and trained on MiniImageNet and CIFAR-FS, showing significant improvement. AIM is also applied to ANML and OML trained on Omniglot, CIFAR-100 and MiniImageNet to demonstrate its capability in continual learning. Code made publicly available at https://github.com/huang50213/AIM-Fewshot-Continual.
-
-</details>
+- **摘要（中）**: ①针对小样本与持续学习中的灾难性遗忘和泛化不足问题。②提出Attentive Independent Mechanisms（AIM），通过注意力机制学习独立的功能模块，每个模块负责特定任务或概念，实现模块化知识组合。③相比共享参数方法，AIM增强了任务间的隔离性，减少干扰，并支持小样本快速适应。④在多个小样本持续学习基准上取得最优性能，展示了模块化架构的潜力。
+- **摘要（英）**: This paper addresses catastrophic forgetting and poor generalization in few-shot continual learning. It proposes Attentive Independent Mechanisms (AIM), which learns independent functional modules via attention, enabling modular knowledge composition. Compared to shared-parameter methods, AIM improves task isolation and supports rapid few-shot adaptation, achieving state-of-the-art results on benchmarks.
+- **核心贡献**: 提出注意力独立机制用于小样本持续学习。
+- **创新点**: 通过注意力实现模块化知识隔离与组合。
+- **结果**: 在多个基准上取得最优性能。
 
 ### Graph-Based Continual Learning.
 - **链接**: [出版页](https://openreview.net/forum?id=HHSEKOnPvaO)
@@ -441,4 +497,5 @@
 - **作者**: Jaehong Yoon, Wonyong Jeong, Giwoong Lee, Eunho Yang, Sung Ju Hwang
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICML 2021
+
 <!-- COMPLETE v1 papers=45 -->

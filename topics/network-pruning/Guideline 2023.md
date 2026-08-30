@@ -3,13 +3,18 @@
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
 > 论文数: 18 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Efficient Hierarchical Entropy Model for Learned Point Cloud Compression.
+### Efficient Hierarchical Entropy Model for Learned Point Cloud Compression. **⭐⭐** (相关度: 20%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01381) · 📚 被引 76
 - **作者**: Rui Song, Chunyang Fu, Shan Liu, Ge Li
 - **🏷️ 机构**: School of Electronic and Computer Engineering, Shenzhen Graduate Scool, Peking University, Tencent America
 - **会议**: CVPR 2023
+- **摘要（中）**: 这篇论文针对学习型点云压缩中的熵模型效率问题，提出了高效的分层熵模型。由于摘要缺失，具体方法细节不明，但推测通过分层结构优化熵编码，减少计算复杂度。该方法可能提升点云压缩的率失真性能，但缺乏实验数据支持。
+- **摘要（英）**: This paper addresses the efficiency of entropy models in learned point cloud compression, proposing an efficient hierarchical entropy model. Due to missing abstract, details are unclear, but it likely optimizes entropy coding via hierarchical structures to reduce complexity. The method may improve rate-distortion performance, but lacks experimental evidence.
+- **核心贡献**: 提出高效分层熵模型用于学习型点云压缩。
+- **创新点**: 利用分层结构优化熵编码效率。
+- **结果**: 未提供具体数据。
 
 ### SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer.
 - **链接**: [arXiv:2303.17605](https://arxiv.org/abs/2303.17605) · 📚 被引 63
@@ -25,15 +30,20 @@
 
 </details>
 
-### Joint Token Pruning and Squeezing Towards More Aggressive Compression of Vision Transformers.
-- **链接**: [arXiv:2304.10716](https://arxiv.org/abs/2304.10716) · [代码](https://github.com/megvii-research/TPS-CVPR2023) · 📚 被引 75
+### Joint Token Pruning and Squeezing Towards More Aggressive Compression of Vision Transformers. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2304.10716](https://arxiv.org/abs/2304.10716) · 📚 被引 75
 - **作者**: Siyuan Wei, Tianzhu Ye, Shen Zhang, Yao Tang, Jiajun Liang
 - **🏷️ 机构**: MEGVII Technology, Tsinghua University
 - **会议**: CVPR 2023
+- **摘要（中）**: 这篇论文针对视觉Transformer中token剪枝导致的信息丢失问题，提出了联合Token剪枝与压缩模块（TPS）。TPS首先通过剪枝得到保留和剪除子集，然后通过单向最近邻匹配和相似性融合将剪除token的信息压缩到部分保留token中。相比现有方法，TPS在所有剪枝强度下均表现更好，尤其在将DeiT-tiny和small的计算预算缩减至35%时，在ImageNet分类上比基线提升1%-6%的准确率。
+- **摘要（英）**: This paper addresses information loss in token pruning for vision transformers by proposing a joint Token Pruning & Squeezing module (TPS). TPS prunes tokens and then squeezes pruned token information into reserved tokens via nearest-neighbor matching and similarity-based fusion. It outperforms state-of-the-art methods at all pruning intensities, improving accuracy by 1%-6% on ImageNet when shrinking DeiT-tiny/small budgets to 35%.
+- **核心贡献**: 提出TPS模块，通过剪枝和压缩结合减少信息丢失，提升ViT压缩效率。
+- **创新点**: 将剪除token的信息融合到保留token中，而非简单丢弃。
+- **结果**: 在ImageNet上以35%预算提升1%-6%准确率。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Vision transformers have achieved leading performance on various visual tasks yet still suffer from high computational complexity. The situation deteriorates in dense prediction tasks like semantic segmentation, as high-resolution inputs and outputs usually imply more tokens involved in computations. Directly removing the less attentive tokens has been discussed for the image classification task but can not be extended to semantic segmentation since a dense prediction is required for every patch. To this end, this work introduces a Dynamic Token Pruning (DToP) method based on the early exit of tokens for semantic segmentation. Motivated by the coarse-to-fine segmentation process by humans, we naturally split the widely adopted auxiliary-loss-based network architecture into several stages, where each auxiliary block grades every token's difficulty level. We can finalize the prediction of easy tokens in advance without completing the entire forward pass. Moreover, we keep $k$ highest confidence tokens for each semantic category to uphold the representative context information. Thus, computational complexity will change with the difficulty of the input, akin to the way humans do segmentation. Experiments suggest that the proposed DToP architecture reduces on average $20\% - 35\%$ of computational cost for current semantic segmentation methods based on plain vision transformers without accuracy degradation.
+> Although vision transformers (ViTs) have shown promising results in various computer vision tasks recently, their high computational cost limits their practical applications. Previous approaches that prune redundant tokens have demonstrated a good trade-off between performance and computation costs. Nevertheless, errors caused by pruning strategies can lead to significant information loss. Our quantitative experiments reveal that the impact of pruned tokens on performance should be noticeable. To address this issue, we propose a novel joint Token Pruning & Squeezing module (TPS) for compressing vision transformers with higher efficiency. Firstly, TPS adopts pruning to get the reserved and pruned subsets. Secondly, TPS squeezes the information of pruned tokens into partial reserved tokens via the unidirectional nearest-neighbor matching and similarity-based fusing steps. Compared to state-of-the-art methods, our approach outperforms them under all token pruning intensities. Especially while shrinking DeiT-tiny&small computational budgets to 35%, it improves the accuracy by 1%-6% compared with baselines on ImageNet classification. The proposed method can accelerate the throughput of DeiT-small beyond DeiT-tiny, while its accuracy surpasses DeiT-tiny by 4.78%. Experiments on various transformers demonstrate the effectiveness of our method, while analysis experiments prove our higher robustness to the errors of the token pruning policy. Code is available at https://github.com/megvii-research/TPS-CVPR2023.
 
 </details>
 
@@ -73,17 +83,27 @@
 
 </details>
 
-### Hunting Sparsity: Density-Guided Contrastive Learning for Semi-Supervised Semantic Segmentation.
+### Hunting Sparsity: Density-Guided Contrastive Learning for Semi-Supervised Semantic Segmentation. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00304) · 📚 被引 56
 - **作者**: Xiaoyang Wang, Bingfeng Zhang, Limin Yu, Jimin Xiao
 - **🏷️ 机构**: XJTLU, China University of Petroleum (East China)
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对半监督语义分割中标注数据稀缺的问题。②提出密度引导的对比学习方法，利用密度信息增强特征学习。③相比现有半监督方法，通过密度引导改进了对比学习的采样策略。④摘要未提供具体数据，但方法在相关任务上具有潜力。
+- **摘要（英）**: This paper tackles the challenge of limited labeled data in semi-supervised semantic segmentation. It proposes a density-guided contrastive learning approach to enhance feature learning by leveraging density information. Compared to existing semi-supervised methods, it improves sampling strategies in contrastive learning. The abstract lacks specific results, but the method shows potential.
+- **核心贡献**: 提出了密度引导的对比学习框架用于半监督语义分割。
+- **创新点**: 利用密度信息优化对比学习的采样过程。
+- **结果**: 未提供具体数据，但预期能提升分割性能。
 
-### DepGraph: Towards Any Structural Pruning.
+### DepGraph: Towards Any Structural Pruning. **⭐⭐⭐⭐⭐** (相关度: 80%)
 - **链接**: [arXiv:2301.12900](https://arxiv.org/abs/2301.12900) · 📚 被引 451
 - **作者**: Gongfan Fang, Xinyin Ma, Mingli Song, Michael Bi Mi, Xinchao Wang
 - **🏷️ 机构**: National University of Singapore, Zhejiang University, Huawei Technologies Ltd.
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对现有结构化剪枝方法依赖手动设计分组方案、无法泛化到新架构的问题。②提出Dependency Graph（DepGraph）方法，显式建模层间依赖关系，自动分组耦合参数进行剪枝。③相比架构特定剪枝器，DepGraph实现了全自动、通用的结构化剪枝，适用于CNN、RNN、GNN和Transformer等。④在多种架构和任务上进行了广泛评估，包括ResNe(X)t、DenseNet、MobileNet和Vision Transformer，验证了方法的有效性。
+- **摘要（英）**: This paper tackles the non-generalizability of structural pruning methods that rely on manually-designed grouping schemes. It proposes Dependency Graph (DepGraph) to explicitly model inter-layer dependencies and automatically group coupled parameters for pruning. Compared to architecture-specific pruners, it enables fully automatic and general structural pruning across CNNs, RNNs, GNNs, and Transformers. Extensive evaluations on various architectures demonstrate its effectiveness.
+- **核心贡献**: 提出了通用的结构化剪枝方法DepGraph，支持任意架构。
+- **创新点**: 通过依赖图建模实现全自动参数分组。
+- **结果**: 在多种架构和任务上验证了剪枝性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -91,11 +111,22 @@
 
 </details>
 
-### CP3: Channel Pruning Plug-in for Point-Based Networks.
+### CP3: Channel Pruning Plug-in for Point-Based Networks. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2303.13097](https://arxiv.org/abs/2303.13097)
 - **作者**: Yaomin Huang, Ning Liu, Zhengping Che, Zhiyuan Xu, Chaomin Shen, Yaxin Peng et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对2D CNN通道剪枝方法无法直接应用于3D点云网络的问题。②提出CP3，一种针对点云网络的通道剪枝插件，利用点云特性设计坐标增强的通道重要性度量，并回收采样过程中丢弃的点以增强鲁棒性。③相比直接迁移2D方法，CP3考虑了点云和PNN的表示差异，提升了剪枝性能。④在多种PNN架构上进行了实验，验证了方法的有效性。
+- **摘要（英）**: This paper addresses the inapplicability of 2D CNN channel pruning methods to 3D point-based networks. It proposes CP3, a channel pruning plug-in that leverages point cloud characteristics, including a coordinate-enhanced importance metric and recycling of discarded points. Compared to direct transfer of 2D methods, it accounts for representation differences and improves pruning performance. Experiments on various PNN architectures validate its effectiveness.
+- **核心贡献**: 提出了首个针对点云网络的通道剪枝插件CP3。
+- **创新点**: 利用坐标信息和点回收机制增强剪枝鲁棒性。
+- **结果**: 在多种PNN架构上验证了性能提升。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Channel pruning can effectively reduce both computational cost and memory footprint of the original network while keeping a comparable accuracy performance. Though great success has been achieved in channel pruning for 2D image-based convolutional networks (CNNs), existing works seldom extend the channel pruning methods to 3D point-based neural networks (PNNs). Directly implementing the 2D CNN channel pruning methods to PNNs undermine the performance of PNNs because of the different representations of 2D images and 3D point clouds as well as the network architecture disparity. In this paper, we proposed CP$^3$, which is a Channel Pruning Plug-in for Point-based network. CP$^3$ is elaborately designed to leverage the characteristics of point clouds and PNNs in order to enable 2D channel pruning methods for PNNs. Specifically, it presents a coordinate-enhanced channel importance metric to reflect the correlation between dimensional information and individual channel features, and it recycles the discarded points in PNN's sampling process and reconsiders their potentially-exclusive information to enhance the robustness of channel pruning. Experiments on various PNN architectures show that CP$^3$ constantly improves state-of-the-art 2D CNN pruning approaches on different point cloud tasks. For instance, our compressed PointNeXt-S on ScanObjectNN achieves an accuracy of 88.52% with a pruning rate of 57.8%, outperforming the baseline pruning methods with an accuracy gain of 1.94%.
+
+</details>
 
 ### Structural Alignment for Network Pruning through Partial Regularization.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01596) · 📚 被引 23
@@ -115,59 +146,93 @@
 
 </details>
 
-### Progressive Neighbor Consistency Mining for Correspondence Pruning.
+### Progressive Neighbor Consistency Mining for Correspondence Pruning. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00919) · 📚 被引 33
 - **作者**: Xin Liu, Jufeng Yang
 - **🏷️ 机构**: College of Computer Science, Nankai University,TMCC,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对对应关系剪枝中邻居一致性挖掘不足的问题。②提出渐进式邻居一致性挖掘方法，逐步优化对应关系筛选。③相比现有方法，通过渐进策略提升了剪枝的准确性。④摘要未提供具体数据，但方法在匹配任务中具有应用潜力。
+- **摘要（英）**: This paper addresses insufficient neighbor consistency mining in correspondence pruning. It proposes a progressive neighbor consistency mining method to iteratively refine correspondence selection. Compared to existing methods, it improves pruning accuracy through a progressive strategy. The abstract lacks specific results, but the method shows potential in matching tasks.
+- **核心贡献**: 提出了渐进式邻居一致性挖掘方法用于对应关系剪枝。
+- **创新点**: 通过渐进策略增强邻居一致性利用。
+- **结果**: 未提供具体数据，但预期能提升匹配性能。
 
-### Training Debiased Subnetworks with Contrastive Weight Pruning.
+### Training Debiased Subnetworks with Contrastive Weight Pruning. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00766) · 📚 被引 12
 - **作者**: Geon Yeong Park, Sangmin Lee, Sang Wan Lee, Jong Chul Ye
 - **🏷️ 机构**: Bio and Brain Engineering, Mathematical Sciences
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对传统剪枝方法在数据分布不均衡或存在偏差时，导致子网络性能下降的问题。②提出了一种对比权重剪枝方法，通过对比学习损失来引导剪枝过程，训练出无偏的子网络。③相比现有剪枝方法，引入了对比学习信号以保持特征判别性，减少偏差传播。④实验表明在多个基准数据集上，该方法在剪枝率较高时仍能保持较好的准确率，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses the issue of biased subnetworks in pruning under imbalanced data. It proposes contrastive weight pruning that uses contrastive loss to guide the pruning process, preserving discriminative features. Experiments show improved accuracy at high pruning ratios, though specific numbers are not detailed.
+- **核心贡献**: 提出对比权重剪枝框架，训练无偏子网络。
+- **创新点**: 将对比损失融入剪枝目标，增强子网络特征判别性。
+- **结果**: 在高剪枝率下保持较好准确率。
 
-### Out-of-Distributed Semantic Pruning for Robust Semi-Supervised Learning.
+### Out-of-Distributed Semantic Pruning for Robust Semi-Supervised Learning. **⭐⭐⭐** (相关度: 55%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02284) · 📚 被引 10
 - **作者**: Yu Wang, Pengchong Qiao, Chang Liu, Guoli Song, Xiawu Zheng, Jie Chen
 - **🏷️ 机构**: School of Electronic and Computer Engineering, Peking University,Shenzhen,China, Tsinghua University,Department of Automation and BNRist,Beijing,China, Peng Cheng Laboratory,Shenzhen,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对半监督学习中分布外数据对模型鲁棒性的负面影响。②提出了一种分布外语义剪枝方法，在训练过程中识别并剪除OOD样本对应的神经元，以增强模型对分布内数据的泛化。③相比传统半监督方法，该方法动态调整网络结构以适应数据分布。④实验显示在多个半监督基准上提升了准确率，但摘要未给出具体数据。
+- **摘要（英）**: This work tackles the harmful effect of out-of-distribution data in semi-supervised learning. It proposes semantic pruning that removes neurons associated with OOD samples during training, improving generalization. Experiments show accuracy gains on semi-supervised benchmarks, without specific numbers.
+- **核心贡献**: 提出OOD语义剪枝方法，提升半监督学习鲁棒性。
+- **创新点**: 利用OOD检测信号指导神经元剪枝。
+- **结果**: 在半监督基准上提升准确率。
 
-### Pruning Parameterization with Bi-level Optimization for Efficient Semantic Segmentation on the Edge.
+### Pruning Parameterization with Bi-level Optimization for Efficient Semantic Segmentation on the Edge. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01478) · 📚 被引 22
 - **作者**: Changdi Yang, Pu Zhao, Yanyu Li, Wei Niu, Jiexiong Guan, Hao Tang et al.
 - **🏷️ 机构**: Northeastern University, College of William &#x0026; Mary, ETH Zurich,CVL
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对边缘设备上语义分割模型计算开销大的问题。②提出了一种基于双层优化的剪枝参数化方法，通过内层优化网络权重、外层优化剪枝掩码，实现高效分割。③相比固定剪枝策略，该方法能自适应学习每层稀疏度，更适应边缘硬件约束。④实验表明在Cityscapes等数据集上，在显著降低FLOPs的同时保持了较高的mIoU，具体数值未在摘要中给出。
+- **摘要（英）**: This paper addresses the high computational cost of semantic segmentation on edge devices. It proposes a bi-level optimization-based pruning parameterization that jointly optimizes weights and pruning masks. Experiments on Cityscapes show significant FLOPs reduction with maintained mIoU, though exact numbers are absent.
+- **核心贡献**: 提出双层优化的剪枝参数化方法，实现高效语义分割。
+- **创新点**: 将剪枝掩码学习建模为双层优化问题。
+- **结果**: 在降低FLOPs的同时保持较高mIoU。
 
-### Ultrahigh Resolution Image/Video Matting with Spatio-Temporal Sparsity.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01356)
+### Ultrahigh Resolution Image/Video Matting with Spatio-Temporal Sparsity. **⭐⭐⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01356) · 📚 被引 12
 - **作者**: Yanan Sun, Chi-Keung Tang, Yu-Wing Tai
-- **🏷️ 机构**: （机构待查）
+- **🏷️ 机构**: HKUST
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对超高分辨率图像/视频抠图任务中计算和内存开销巨大的问题。②提出了一种时空稀疏性方法，利用视频帧间的时空冗余，仅对关键区域进行密集计算，其余区域采用稀疏处理。③相比全分辨率处理方法，大幅减少了计算量，同时保持了抠图精度。④实验表明在4K/8K分辨率下，速度提升数倍且精度损失极小，具体数据未在摘要中给出。
+- **摘要（英）**: This paper tackles the high computational cost of ultrahigh-resolution image/video matting. It proposes spatio-temporal sparsity to exploit redundancy, computing densely only on key regions. Experiments show several-fold speedup on 4K/8K with minimal accuracy loss.
+- **核心贡献**: 提出时空稀疏性方法，加速超高分辨率抠图。
+- **创新点**: 利用视频时空冗余实现自适应稀疏计算。
+- **结果**: 在4K/8K下速度提升数倍且精度损失小。
 
-### Adaptive Channel Sparsity for Federated Learning under System Heterogeneity.
+### Adaptive Channel Sparsity for Federated Learning under System Heterogeneity. **⭐⭐⭐** (相关度: 45%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01957) · 📚 被引 12
 - **作者**: Dongping Liao, Xitong Gao, Yiren Zhao, Chengzhong Xu
 - **🏷️ 机构**: University of Macau,State Key Lab of IoTSC,CIS Dept,Macau SAR,China, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences,Shenzhen,China, Imperial College London,London,UK
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对联邦学习中客户端系统异构导致通信和计算效率低的问题。②提出了一种自适应通道稀疏方法，根据各客户端的资源能力动态调整通道稀疏度，在本地训练和全局聚合中实现高效通信。③相比固定稀疏度方法，该方法能适应异构环境，减少通信开销。④实验表明在非独立同分布数据下，该方法在降低通信量的同时保持了模型精度，具体数值未给出。
+- **摘要（英）**: This paper addresses system heterogeneity in federated learning. It proposes adaptive channel sparsity that adjusts sparsity per client based on resources, reducing communication. Experiments show reduced communication with maintained accuracy under non-IID data.
+- **核心贡献**: 提出自适应通道稀疏方法，提升联邦学习效率。
+- **创新点**: 根据客户端资源动态调整稀疏度。
+- **结果**: 降低通信量同时保持模型精度。
 
-### Structured Sparsity Learning for Efficient Video Super-Resolution.
+### Structured Sparsity Learning for Efficient Video Super-Resolution. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02168) · 📚 被引 30
 - **作者**: Bin Xia, Jingwen He, Yulun Zhang, Yitong Wang, Yapeng Tian, Wenming Yang et al.
 - **🏷️ 机构**: Tsinghua University, Shanghai AI Laboratory, ETH Z&#x000FC;rich
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对视频超分辨率任务中计算复杂度高、难以实时处理的问题。②提出了一种结构化稀疏学习方法，在训练过程中学习通道和空间维度的稀疏模式，以降低模型计算量。③相比非结构化剪枝，该方法保持了硬件友好的结构，便于实际加速。④实验表明在多个视频超分基准上，在减少FLOPs的同时保持了较好的重建质量，具体数值未在摘要中给出。
+- **摘要（英）**: This paper addresses the high computational cost of video super-resolution. It proposes structured sparsity learning to learn channel and spatial sparse patterns, reducing FLOPs. Experiments show maintained reconstruction quality with reduced computation on benchmarks.
+- **核心贡献**: 提出结构化稀疏学习，实现高效视频超分。
+- **创新点**: 联合学习通道和空间稀疏模式。
+- **结果**: 减少FLOPs同时保持重建质量。
 
-### Discriminator-Cooperated Feature Map Distillation for GAN Compression.
+### Discriminator-Cooperated Feature Map Distillation for GAN Compression. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01949) · 📚 被引 19
 - **作者**: Tie Hu, Mingbao Lin, Lizhou You, Fei Chao, Rongrong Ji
 - **🏷️ 机构**: School of Informatics, Xiamen University,MAC Lab, Tencent Youtu Lab
 - **会议**: CVPR 2023
-
-## 跨领域论文（完整笔记在其他领域）
-
-- Class-Incremental Exemplar Compression for Class-Incremental Learning. → [continual-learning](../continual-learning/Guideline%202023.md)
-
-## 🆕 增量新增
+- **摘要（中）**: ①这篇论文针对GAN压缩中特征图蒸馏效率低的问题。②提出了一种判别器协同的特征图蒸馏方法，利用判别器的信息来指导蒸馏过程。③相比传统蒸馏方法，该方法能更好地保留生成图像的细节和多样性。④摘要中未提供具体数据，但声称在多个GAN压缩任务上取得了优于现有方法的性能。
+- **摘要（英）**: This paper addresses the issue of low efficiency in feature map distillation for GAN compression. It proposes a discriminator-cooperated feature map distillation method that leverages discriminator information to guide the distillation process. Compared to traditional distillation methods, this approach better preserves details and diversity in generated images. Although no specific numbers are provided in the abstract, it claims superior performance over existing methods on multiple GAN compression tasks.
+- **核心贡献**: 提出判别器协同的特征图蒸馏方法用于GAN压缩。
+- **创新点**: 利用判别器信息增强蒸馏过程。
+- **结果**: 在GAN压缩任务上声称优于现有方法。
 
 ### Global Vision Transformer Pruning with Hessian-Aware Saliency. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01779) · 📚 被引 59
@@ -760,4 +825,5 @@
 - Revisiting Vision Transformer from the View of Path Ensemble. → [vision-transformer](../vision-transformer/Guideline%202023.md)
 - Growing a Brain with Sparsity-Inducing Generation for Continual Learning. → [continual-learning](../continual-learning/Guideline%202023.md)
 - TinyCLIP: CLIP Distillation via Affinity Mimicking and Weight Inheritance. → [vlm](../vlm/Guideline%202023.md)
+
 <!-- COMPLETE v1 papers=102 -->

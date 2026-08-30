@@ -3,13 +3,24 @@
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
 > 论文数: 12 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Arch-Graph: Acyclic Architecture Relation Predictor for Task-Transferable Neural Architecture Search.
+### Arch-Graph: Acyclic Architecture Relation Predictor for Task-Transferable Neural Architecture Search. **⭐⭐⭐⭐** (相关度: 25%)
 - **链接**: [arXiv:2204.05941](https://arxiv.org/abs/2204.05941) · 📚 被引 21
 - **作者**: Minbin Huang, Zhijian Huang, Changlin Li, Xin Chen, Hang Xu, Zhenguo Li et al.
 - **🏷️ 机构**: Shenzhen Campus of Sun Yat-sen University, ReLER AAII, UTS, The University of Hong Kong
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对NAS中跨任务迁移时任务相关性建模不足的问题。②提出了Arch-Graph，一种可迁移的NAS方法，通过将任务嵌入作为预测器输入来利用多任务相关性，并将NAS形式化为架构关系图预测问题，通过最大加权无环子图（MWAS）优化确保图的无环性。③相比已有工作，Arch-Graph显式建模任务相关性，并引入图结构约束提升排序可靠性。④实验表明，Arch-Graph能有效排序候选架构，在多个任务上取得优于现有方法的性能（具体数据未在摘要中给出）。
+- **摘要（英）**: This paper addresses the neglected modeling of task correlations in transferable NAS. It proposes Arch-Graph, which leverages task embeddings as predictor input for fast adaptation and formulates NAS as architecture relation graph prediction with acyclicity constraints via Maximal Weighted Acyclic Subgraph (MWAS). Compared to prior work, it explicitly models task correlations and enforces graph constraints for reliable ranking. Experiments demonstrate effective architecture ranking and superior performance across tasks, though specific numbers are not in the abstract.
+- **核心贡献**: 提出Arch-Graph，通过任务嵌入和图关系预测实现任务可迁移的NAS。
+- **创新点**: 将NAS转化为最大加权无环子图问题，显式建模任务相关性。
+- **结果**: 在多个任务上有效排序架构，性能优于现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Neural Architecture Search (NAS) aims to find efficient models for multiple tasks. Beyond seeking solutions for a single task, there are surging interests in transferring network design knowledge across multiple tasks. In this line of research, effectively modeling task correlations is vital yet highly neglected. Therefore, we propose \textbf{Arch-Graph}, a transferable NAS method that predicts task-specific optimal architectures with respect to given task embeddings. It leverages correlations across multiple tasks by using their embeddings as a part of the predictor's input for fast adaptation. We also formulate NAS as an architecture relation graph prediction problem, with the relational graph constructed by treating candidate architectures as nodes and their pairwise relations as edges. To enforce some basic properties such as acyclicity in the relational graph, we add additional constraints to the optimization process, converting NAS into the problem of finding a Maximal Weighted Acyclic Subgraph (MWAS). Our algorithm then strives to eliminate cycles and only establish edges in the graph if the rank results can be trusted. Through MWAS, Arch-Graph can effectively rank candidate models for each task with only a small budget to finetune the predictor. With extensive experiments on TransNAS-Bench-101, we show Arch-Graph's transferability and high sample efficiency across numerous tasks, beating many NAS methods designed for both single-task and multi-task search. It is able to find top 0.16\% and 0.29\% architectures on average on two search spaces under the budget of only 50 models.
+
+</details>
 
 ### Large-Scale Graph Neural Architecture Search.
 - **链接**: [出版页](https://proceedings.mlr.press/v162/guan22d.html)
@@ -25,11 +36,16 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICML 2022
 
-### ISNAS-DIP: Image-Specific Neural Architecture Search for Deep Image Prior.
-- **链接**: [arXiv:2111.15362](https://arxiv.org/abs/2111.15362) · [代码](https://github.com/ozgurkara99/ISNAS-DIP) · 📚 被引 18
+### ISNAS-DIP: Image-Specific Neural Architecture Search for Deep Image Prior. **⭐⭐⭐** (相关度: 15%)
+- **链接**: [arXiv:2111.15362](https://arxiv.org/abs/2111.15362) · 📚 被引 18
 - **作者**: Metin Ersin Arican, Ozgur Kara, Gustav Bredell, Ender Konukoglu
 - **🏷️ 机构**: Bogazici University,Department of Electrical and Electronics Engineering,Istanbul,Turkey, ETH-Zurich,Department of Information Technology and Electrical Engineering,Zurich,Switzerland
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对深度图像先验（DIP）框架中架构选择依赖图像且传统NAS成本过高的问题。②提出了ISNAS-DIP，一种图像特定的NAS策略，通过大幅减少训练量实现逐图像架构搜索。③相比已有工作，该方法利用DIP中架构最优性依赖于图像的洞察，避免了为整个数据集搜索的昂贵过程。④实验在包含522个模型的NAS数据集上验证了有效性，并进行了广泛实验（具体数据未在摘要中给出）。
+- **摘要（英）**: This paper addresses the image-dependent optimal architectures in Deep Image Prior (DIP) and the prohibitive cost of standard NAS. It proposes ISNAS-DIP, an image-specific NAS strategy requiring substantially less training, enabling per-image search. Compared to prior work, it leverages the insight that optimal architectures depend on the image, avoiding dataset-level search. Experiments on a 522-model NAS dataset and extensive tests demonstrate effectiveness, though specific metrics are not in the abstract.
+- **核心贡献**: 提出ISNAS-DIP，实现DIP框架下的图像特定NAS，显著降低计算成本。
+- **创新点**: 利用DIP中架构依赖图像的洞察，设计轻量级逐图像搜索策略。
+- **结果**: 在NAS数据集上验证了有效性，性能优于传统方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -37,11 +53,22 @@
 
 </details>
 
-### Demystifying the Neural Tangent Kernel from a Practical Perspective: Can it be trusted for Neural Architecture Search without training?
-- **链接**: [arXiv:2203.14577](https://arxiv.org/abs/2203.14577) · [代码](https://github.com/nutellamok/DemystifyingNTK) · 📚 被引 17
+### Demystifying the Neural Tangent Kernel from a Practical Perspective: Can it be trusted for Neural Architecture Search without training? **⭐⭐⭐⭐** (相关度: 30%)
+- **链接**: [arXiv:2203.14577](https://arxiv.org/abs/2203.14577) · 📚 被引 17
 - **作者**: Jisoo Mok, Byunggook Na, Ji-Hoon Kim, Dongyoon Han, Sungroh Yoon
 - **🏷️ 机构**: Seoul National University,Department of ECE, NAVER AI Lab
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对基于神经正切核（NTK）的免训练NAS指标在现代架构中不可靠的问题。②提出了Label-Gradient Alignment (LGA)，一种新的NTK指标，通过最小训练量捕捉现代架构的非线性优势。③相比已有NTK指标，LGA考虑了NTK的时间演化，揭示了现代架构的高度非线性特性。④实验表明，LGA在少量训练后能获得与训练后测试准确率有意义的秩相关，优于现有免训练方法（具体数据未在摘要中给出）。
+- **摘要（英）**: This paper addresses the unreliability of NTK-based training-free NAS metrics for modern architectures. It proposes Label-Gradient Alignment (LGA), a novel NTK metric that captures nonlinear advantages with minimal training. Compared to prior NTK metrics, LGA accounts for NTK time evolution and modern architectures' nonlinearity. Experiments show LGA achieves meaningful rank correlation with post-training accuracy after minimal training, outperforming existing training-free methods, though specific numbers are not in the abstract.
+- **核心贡献**: 提出LGA指标，改进NTK在NAS中的性能预测可靠性。
+- **创新点**: 通过NTK时间演化分析，引入标签-梯度对齐捕捉非线性优势。
+- **结果**: 在少量训练下获得更好的秩相关，优于现有免训练方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In Neural Architecture Search (NAS), reducing the cost of architecture evaluation remains one of the most crucial challenges. Among a plethora of efforts to bypass training of each candidate architecture to convergence for evaluation, the Neural Tangent Kernel (NTK) is emerging as a promising theoretical framework that can be utilized to estimate the performance of a neural architecture at initialization. In this work, we revisit several at-initialization metrics that can be derived from the NTK and reveal their key shortcomings. Then, through the empirical analysis of the time evolution of NTK, we deduce that modern neural architectures exhibit highly non-linear characteristics, making the NTK-based metrics incapable of reliably estimating the performance of an architecture without some amount of training. To take such non-linear characteristics into account, we introduce Label-Gradient Alignment (LGA), a novel NTK-based metric whose inherent formulation allows it to capture the large amount of non-linear advantage present in modern neural architectures. With minimal amount of training, LGA obtains a meaningful level of rank correlation with the post-training test accuracy of an architecture. Lastly, we demonstrate that LGA, complemented with few epochs of training, successfully guides existing search algorithms to achieve competitive search performances with significantly less search cost. The code is available at: https://github.com/nutellamok/DemystifyingNTK.
+
+</details>
 
 ### TabNAS: Rejection Sampling for Neural Architecture Search on Tabular Datasets.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2022/hash/4e392aa9bc70ed731d3c9c32810f92fb-Abstract-Conference.html) · 📚 被引 1
@@ -53,29 +80,27 @@
 
 </details>
 
-### Distribution Consistent Neural Architecture Search.
+### Distribution Consistent Neural Architecture Search. **⭐⭐** (相关度: 15%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01061) · 📚 被引 7
 - **作者**: Junyi Pan, Chong Sun, Yizhou Zhou, Ying Zhang, Chen Li
 - **🏷️ 机构**: WeChat, Tencent Inc
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对NAS中分布一致性问题，但摘要不完整，具体问题描述缺失。②提出了Distribution Consistent Neural Architecture Search方法，但具体技术细节未给出。③由于摘要不完整，无法评估与已有工作的改进点。④效果数据未提供。
+- **摘要（英）**: This paper addresses distribution consistency in NAS, but the abstract is incomplete, lacking specific problem details. It proposes a distribution-consistent NAS method, but technical specifics are absent. Due to the incomplete abstract, improvements over prior work cannot be assessed, and no performance data is provided.
+- **核心贡献**: 提出分布一致的NAS方法，但细节未知。
+- **创新点**: 未明确。
+- **结果**: 未提供。
 
-### HyperSegNAS: Bridging One-Shot Neural Architecture Search with 3D Medical Image Segmentation using HyperNet.
-- **链接**: [arXiv:2112.10652](https://arxiv.org/abs/2112.10652) · 📚 被引 32
-- **作者**: Cheng Peng, Andriy Myronenko, Ali Hatamizadeh, Vishwesh Nath, Md Mahfuzur Rahman Siddiquee, Yufan He et al.
-- **🏷️ 机构**: Johns Hopkins University, NVIDIA, Arizona State University
-- **会议**: CVPR 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Semantic segmentation of 3D medical images is a challenging task due to the high variability of the shape and pattern of objects (such as organs or tumors). Given the recent success of deep learning in medical image segmentation, Neural Architecture Search (NAS) has been introduced to find high-performance 3D segmentation network architectures. However, because of the massive computational requirements of 3D data and the discrete optimization nature of architecture search, previous NAS methods require a long search time or necessary continuous relaxation, and commonly lead to sub-optimal network architectures. While one-shot NAS can potentially address these disadvantages, its application in the segmentation domain has not been well studied in the expansive multi-scale multi-path search space. To enable one-shot NAS for medical image segmentation, our method, named HyperSegNAS, introduces a HyperNet to assist super-net training by incorporating architecture topology information. Such a HyperNet can be removed once the super-net is trained and introduces no overhead during architecture search. We show that HyperSegNAS yields better performing and more intuitive architectures compared to the previous state-of-the-art (SOTA) segmentation networks; furthermore, it can quickly and accurately find good architecture candidates under different computing constraints. Our method is evaluated on public datasets from the Medical Segmentation Decathlon (MSD) challenge, and achieves SOTA performances.
-
-</details>
-
-### Global Convergence of MAML and Theory-Inspired Neural Architecture Search for Few-Shot Learning.
+### Global Convergence of MAML and Theory-Inspired Neural Architecture Search for Few-Shot Learning. **⭐⭐⭐⭐** (相关度: 35%)
 - **链接**: [arXiv:2203.09137](https://arxiv.org/abs/2203.09137) · 📚 被引 34
 - **作者**: Haoxiang Wang, Yite Wang, Ruoyu Sun, Bo Li
 - **🏷️ 机构**: University of Illinois Urbana-Champaign
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对MAML在深度神经网络中理论收敛性未知以及少样本学习NAS成本高的问题。②证明了过参数化DNN下MAML以线性速率收敛到全局最优，并提出了MetaNTK-NAS，一种基于MetaNTK的免训练NAS方法。③相比已有工作，提供了MAML的全局收敛理论，并利用MetaNTK实现高效架构搜索。④在miniImageNet和tieredImageNet上，MetaNTK-NAS性能与最先进方法相当或更好，同时享受超过100倍加速。
+- **摘要（英）**: This paper addresses the unknown convergence of MAML with DNNs and the high cost of NAS for few-shot learning. It proves MAML converges to global optima at a linear rate with over-parameterized DNNs and proposes MetaNTK-NAS, a training-free NAS method using MetaNTK. Compared to prior work, it provides global convergence theory and efficient architecture ranking. On miniImageNet and tieredImageNet, MetaNTK-NAS achieves comparable or better performance than state-of-the-art NAS with over 100x speedup.
+- **核心贡献**: 证明MAML全局收敛性并提出MetaNTK-NAS实现高效少样本NAS。
+- **创新点**: 引入MetaNTK理论，实现免训练架构搜索。
+- **结果**: 性能与SOTA相当，速度提升超100倍。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -83,11 +108,16 @@
 
 </details>
 
-### Shapley-NAS: Discovering Operation Contribution for Neural Architecture Search.
-- **链接**: [arXiv:2206.09811](https://arxiv.org/abs/2206.09811) · [代码](https://github.com/Euphoria16/Shapley-NAS.git) · 📚 被引 55
+### Shapley-NAS: Discovering Operation Contribution for Neural Architecture Search. **⭐⭐⭐** (相关度: 30%)
+- **链接**: [arXiv:2206.09811](https://arxiv.org/abs/2206.09811) · 📚 被引 55
 - **作者**: Han Xiao, Ziwei Wang, Zheng Zhu, Jie Zhou, Jiwen Lu
 - **🏷️ 机构**: Tsinghua University,Department of Automation,China
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对可微架构搜索（DARTS）中梯度下降更新的架构参数无法准确反映操作对任务性能的真实贡献，导致搜索效果不佳的问题，提出基于Shapley值的操作贡献评估方法（Shapley-NAS）。该方法利用Shapley值量化超网中操作在所有组合下的边际贡献，并迭代优化超网权重和更新架构参数，从而选择贡献显著的操作。由于精确计算Shapley值是NP难的，采用基于蒙特卡洛采样和早期截断的近似算法。实验表明该方法能有效提升搜索架构的性能。
+- **摘要（英）**: This paper addresses the issue that architecture parameters updated by gradient descent in differentiable architecture search (DARTS) fail to reflect the true contribution of operations to task performance. It proposes Shapley-NAS, which uses Shapley values to quantify the marginal contribution of operations by considering all possible combinations, and iteratively optimizes supernet weights and architecture parameters. Since exact Shapley value computation is NP-hard, a Monte-Carlo sampling algorithm with early truncation is employed. Experiments demonstrate improved performance of searched architectures.
+- **核心贡献**: 提出基于Shapley值的操作贡献评估方法，改进可微架构搜索。
+- **创新点**: 利用Shapley值替代梯度幅度评估操作重要性。
+- **结果**: 搜索的架构在多个基准上性能优于DARTS。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -95,17 +125,27 @@
 
 </details>
 
-### Performance-Aware Mutual Knowledge Distillation for Improving Neural Architecture Search.
+### Performance-Aware Mutual Knowledge Distillation for Improving Neural Architecture Search. **⭐⭐** (相关度: 25%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01162) · 📚 被引 13
 - **作者**: Pengtao Xie, Xuefeng Du
 - **🏷️ 机构**: University of California, San Diego,La Jolla,CA,United States, University of Wisconsin-Madison,Madison,WI,United States
 - **会议**: CVPR 2022
+- **摘要（中）**: 该论文针对神经架构搜索中性能评估与知识蒸馏结合的问题，提出性能感知的互知识蒸馏方法。由于摘要缺失，具体方法细节不明，但推测通过互蒸馏提升搜索过程的性能感知能力。该方法可能涉及教师和学生网络的协同优化，以改善搜索效率。实验效果未在摘要中提供。
+- **摘要（英）**: This paper addresses the integration of performance awareness and mutual knowledge distillation in neural architecture search. Due to the missing abstract, specific method details are unclear, but it likely involves collaborative optimization of teacher and student networks to improve search efficiency. Experimental results are not provided in the abstract.
+- **核心贡献**: 提出性能感知的互知识蒸馏方法用于NAS。
+- **创新点**: 将互知识蒸馏与性能感知结合。
+- **结果**: 未提供具体实验结果。
 
-### β-DARTS: Beta-Decay Regularization for Differentiable Architecture Search.
+### β-DARTS: Beta-Decay Regularization for Differentiable Architecture Search. **⭐⭐⭐** (相关度: 35%)
 - **链接**: [arXiv:2203.01665](https://arxiv.org/abs/2203.01665) · 📚 被引 111
 - **作者**: Peng Ye, Baopu Li, Yikang Li, Tao Chen, Jiayuan Fan, Wanli Ouyang
 - **🏷️ 机构**: Fudan University, BAIDU USA LLC, Shanghai AI Laboratory
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对DARTS类方法在搜索过程中存在的性能崩溃鲁棒性弱和搜索架构泛化能力差的问题，提出Beta-Decay正则化方法。该方法通过约束激活架构参数的值和方差不过大，稳定搜索过程。论文提供了深入的理论分析解释其工作原理，并在NAS-Bench-201上验证了稳定性和跨数据集迁移性，且对训练时间和数据依赖较小。
+- **摘要（英）**: This paper addresses the weak robustness to performance collapse and poor generalization of DARTS-based methods. It proposes Beta-Decay regularization to constrain the value and variance of activated architecture parameters, stabilizing the search process. Theoretical analysis is provided, and experiments on NAS-Bench-201 show improved stability and transferability across datasets, with less dependence on training time and data.
+- **核心贡献**: 提出Beta-Decay正则化，解决DARTS性能崩溃和泛化问题。
+- **创新点**: 通过约束架构参数的值和方差来稳定搜索。
+- **结果**: 在NAS-Bench-201上搜索更稳定，架构迁移性更好。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -113,11 +153,16 @@
 
 </details>
 
-### BaLeNAS: Differentiable Architecture Search via the Bayesian Learning Rule.
+### BaLeNAS: Differentiable Architecture Search via the Bayesian Learning Rule. **⭐⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2111.13204](https://arxiv.org/abs/2111.13204) · 📚 被引 15
 - **作者**: Miao Zhang, Shirui Pan, Xiaojun Chang, Steven Su, Jilin Hu, Gholamreza Haffari et al.
 - **🏷️ 机构**: Aalborg University, Monash University, ReLER, AAII, UTS
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对可微架构搜索（DARTS）在搜索过程中易产生退化架构的问题，将NAS形式化为分布学习问题，将架构权重松弛为高斯分布，并利用自然梯度变分推断（NGVI）优化架构分布。该方法基于现有代码库即可实现，不增加额外内存和计算消耗，增强了探索性和稳定性。在NAS-Bench-201和NAS-Bench-1shot1基准上验证了显著改进，并利用后验分布进一步优化架构选择。
+- **摘要（英）**: This paper addresses the deterioration of architectures in differentiable NAS by formulating it as a distribution learning problem, relaxing architecture weights into Gaussian distributions, and optimizing via natural-gradient variational inference (NGVI). The method is easy to implement on existing codebases without extra memory or computation, enhancing exploration and stability. Experiments on NAS-Bench-201 and NAS-Bench-1shot1 show significant improvements, and the posterior distribution is leveraged for better architecture selection.
+- **核心贡献**: 将NAS转化为分布学习，利用贝叶斯推断提升搜索稳定性和性能。
+- **创新点**: 采用自然梯度变分推断优化架构分布。
+- **结果**: 在多个基准上显著优于现有DARTS方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -125,25 +170,33 @@
 
 </details>
 
-### Neural Architecture Search with Representation Mutual Information.
+### Neural Architecture Search with Representation Mutual Information. **⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01161)
 - **作者**: Xiawu Zheng, Xiang Fei, Lei Zhang, Chenglin Wu, Fei Chao, Jianzhuang Liu et al.
 - **🏷️ 机构**: PolyU / OPPO
 - **会议**: CVPR 2022
+- **摘要（中）**: 该论文提出利用表示互信息（Representation Mutual Information）进行神经架构搜索。由于摘要缺失，具体方法细节不明，推测通过衡量架构表示之间的互信息来指导搜索过程。该方法可能旨在提升搜索效率或架构质量。实验效果未在摘要中提供。
+- **摘要（英）**: This paper proposes using representation mutual information for neural architecture search. Due to the missing abstract, specific details are unclear, but it likely guides the search by measuring mutual information between architecture representations. Experimental results are not provided.
+- **核心贡献**: 提出基于表示互信息的NAS方法。
+- **创新点**: 利用互信息作为搜索信号。
+- **结果**: 未提供具体实验结果。
 
-### Training-free Transformer Architecture Search.
+### Training-free Transformer Architecture Search. **⭐⭐⭐⭐** (相关度: 45%)
 - **链接**: [arXiv:2203.12217](https://arxiv.org/abs/2203.12217) · 📚 被引 56
 - **作者**: Qinqin Zhou, Kekai Sheng, Xiawu Zheng, Ke Li, Xing Sun, Yonghong Tian et al.
 - **🏷️ 机构**: School of Informatics, Xiamen University,Media Analytics and Computing Lab, Tencent Youtu Lab, Peng Cheng Laboratory
 - **会议**: CVPR 2022
+- **摘要（中）**: 针对现有Transformer架构搜索（TAS）耗时且CNN中的零成本代理不适用于ViT搜索空间的问题，首次提出训练免费的TAS方案（TF-TAS）。观察到ViT中多头自注意力（MSA）和多层感知机（MLP）特性不同，且MSA的突触多样性显著影响性能，据此设计模块化策略，从突触多样性和突触显著性两个理论角度评估和排序ViT架构（DSS-indicator）。实验表明DSS-indicator的评估结果与ViT模型测试准确率强相关，搜索效率高。
+- **摘要（英）**: This paper addresses the time-consuming nature of Transformer Architecture Search (TAS) and the poor generalization of CNN zero-cost proxies to ViT search spaces. It proposes the first training-free TAS scheme (TF-TAS), observing that MSA and MLP properties differ and MSA synaptic diversity notably affects performance. A modular strategy evaluates ViT architectures from synaptic diversity and saliency perspectives (DSS-indicator), showing strong correlation with test accuracies and high efficiency.
+- **核心贡献**: 首次提出训练免费的Transformer架构搜索方法。
+- **创新点**: 基于突触多样性和显著性设计零成本代理指标。
+- **结果**: DSS-indicator与ViT准确率强相关，搜索高效。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Recently, Vision Transformer (ViT) has achieved remarkable success in several computer vision tasks. The progresses are highly relevant to the architecture design, then it is worthwhile to propose Transformer Architecture Search (TAS) to search for better ViTs automatically. However, current TAS methods are time-consuming and existing zero-cost proxies in CNN do not generalize well to the ViT search space according to our experimental observations. In this paper, for the first time, we investigate how to conduct TAS in a training-free manner and devise an effective training-free TAS (TF-TAS) scheme. Firstly, we observe that the properties of multi-head self-attention (MSA) and multi-layer perceptron (MLP) in ViTs are quite different and that the synaptic diversity of MSA affects the performance notably. Secondly, based on the observation, we devise a modular strategy in TF-TAS that evaluates and ranks ViT architectures from two theoretical perspectives: synaptic diversity and synaptic saliency, termed as DSS-indicator. With DSS-indicator, evaluation results are strongly correlated with the test accuracies of ViT models. Experimental results demonstrate that our TF-TAS achieves a competitive performance against the state-of-the-art manually or automatically design ViT architectures, and it promotes the searching efficiency in ViT search space greatly: from about $24$ GPU days to less than $0.5$ GPU days. Moreover, the proposed DSS-indicator outperforms the existing cutting-edge zero-cost approaches (e.g., TE-score and NASWOT).
 
 </details>
-
-## 🆕 增量新增
 
 ### MAE-DET: Revisiting Maximum Entropy Principle in Zero-Shot NAS for Efficient Object Detection. **⭐⭐⭐** (相关度: 80%)
 - **链接**: [出版页](https://proceedings.mlr.press/v162/sun22c.html)
@@ -427,4 +480,5 @@
 - ViTAS: Vision Transformer Architecture Search. → [vision-transformer](../vision-transformer/Guideline%202022.md)
 - SuperTickets: Drawing Task-Agnostic Lottery Tickets from Supernets via Jointly Architecture Searching and Parameter Pruning. → [network-pruning](../network-pruning/Guideline%202022.md)
 - Ensemble Knowledge Guided Sub-network Search and Fine-Tuning for Filter Pruning. → [network-pruning](../network-pruning/Guideline%202022.md)
-<!-- COMPLETE v1 papers=42 -->
+
+<!-- COMPLETE v1 papers=41 -->

@@ -3,13 +3,18 @@
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
 > 论文数: 22 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Driving by the Rules: A Benchmark for Integrating Traffic Sign Regulations into Vectorized HD Map.
-- **链接**: [arXiv:2410.23780](https://arxiv.org/abs/2410.23780) · [代码](https://github.com/MIV-XJTU/MapDR) · 📚 被引 3
+### Driving by the Rules: A Benchmark for Integrating Traffic Sign Regulations into Vectorized HD Map. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2410.23780](https://arxiv.org/abs/2410.23780) · 📚 被引 3
 - **作者**: Xinyuan Chang, Maixuan Xue, Xinran Liu, Zheng Pan, Xing Wei
 - **🏷️ 机构**: Alibaba Group,Amap, Xi&#x2019;an Jiaotong University
 - **会议**: CVPR 2025
+- **摘要（中）**: 针对在线高精地图构建中忽略交通规则层的问题，本文提出MapDR数据集，包含超过10000个标注视频片段，用于从交通标志中提取驾驶规则并与局部感知的矢量化高精地图关联。基于该基准，作者定义了将交通规则集成到在线高精地图的新任务，并提供了模块化（VLE-MEE）和端到端（RuleVLM）的基线解决方案。相比现有工作，该研究填补了交通标志规则集成方面的关键空白，为可靠自动驾驶系统的发展做出贡献。
+- **摘要（英）**: Addressing the neglect of traffic regulation layers in online HD mapping, this paper introduces MapDR, a dataset with over 10,000 annotated video clips for extracting driving rules from traffic signs and associating them with vectorized local HD maps. It defines a new task of integrating traffic regulations into online maps and provides modular (VLE-MEE) and end-to-end (RuleVLM) baselines, filling a critical gap and advancing reliable autonomous driving.
+- **核心贡献**: 提出了MapDR数据集和交通规则集成任务，并提供了两种基线解决方案。
+- **创新点**: 首次将交通标志规则提取与在线矢量化高精地图关联，定义了新任务。
+- **结果**: MapDR包含超过10000个标注视频片段，基线方法展示了有效性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -762,4 +767,5 @@
 - RLGF: Reinforcement Learning with Geometric Feedback for Autonomous Driving Video Generation. → [occupancy](../occupancy/Guideline%202025.md)
 - Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency. → [video-understanding](../video-understanding/Guideline%202025.md)
 - MVU-Eval: Towards Multi-Video Understanding Evaluation for Multimodal LLMs. → [video-understanding](../video-understanding/Guideline%202025.md)
+
 <!-- COMPLETE v1 papers=70 -->

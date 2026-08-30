@@ -3,13 +3,18 @@
 > 领域: 持续学习 / 增量学习（含 VLM/多模态场景）
 > 论文数: 8 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Conditional Channel Gated Networks for Task-Aware Continual Learning.
+### Conditional Channel Gated Networks for Task-Aware Continual Learning. **⭐⭐⭐** (相关度: 30%)
 - **链接**: [arXiv:2004.00070](https://arxiv.org/abs/2004.00070) · 📚 被引 140
 - **作者**: Davide Abati, Jakub M. Tomczak, Tijmen Blankevoort, Simone Calderara, Rita Cucchiara, Babak Ehteshami Bejnordi
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对卷积神经网络在连续学习任务中遭遇灾难性遗忘的问题。②提出条件通道门控网络，为每个卷积层配备任务特定的门控模块，选择性地应用滤波器，并通过稀疏性目标保护重要滤波器、保留模型容量。③相比现有方法，引入了任务分类器以应对测试时无任务标签的实际场景。④实验验证了该方法在多个任务序列上能有效缓解遗忘，但摘要未提供具体数据。
+- **摘要（英）**: This paper addresses catastrophic forgetting in CNNs during sequential task learning. It proposes conditional channel gating modules per convolutional layer to select filters, with a sparsity objective to protect important filters and retain capacity. A task classifier handles scenarios without task labels at test time. Experiments show reduced forgetting, though no specific metrics are given in the abstract.
+- **核心贡献**: 提出条件通道门控网络，结合任务分类器解决无任务标签场景下的持续学习问题。
+- **创新点**: 将条件计算与门控机制引入持续学习，实现滤波器级任务自适应。
+- **结果**: 在多个任务序列上缓解了灾难性遗忘，但摘要未提供具体性能数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,57 +22,89 @@
 
 </details>
 
-### Continual Learning With Extended Kronecker-Factored Approximate Curvature.
+### Continual Learning With Extended Kronecker-Factored Approximate Curvature. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2004.07507](https://arxiv.org/abs/2004.07507) · 📚 被引 44
 - **作者**: Janghyeon Lee, Hyeong Gwon Hong, Donggyu Joo, Junmo Kim
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
-
-### GDumb: A Simple Approach that Questions Our Progress in Continual Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58536-5_31) · 📚 被引 348
-- **作者**: Ameya Prabhu, Philip H. S. Torr, Puneet K. Dokania
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
-
-### More Classifiers, Less Forgetting: A Generic Multi-classifier Paradigm for Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58574-7_42) · 📚 被引 65
-- **作者**: Yu Liu, Sarah Parisot, Gregory G. Slabaugh, Xu Jia, Ales Leonardis, Tinne Tuytelaars
-- **🏷️ 机构**: SenseTime
-- **会议**: ECCV 2020
-
-> In continual learning (CL), a learner is faced with a sequence of tasks, arriving one after the other, and the goal is to remember all the tasks once the continual learning experience is finished. The prior art in CL uses episodic memory, parameter regularization or extensible network structures to reduce interference among tasks, but in the end, all the approaches learn different tasks in a joint vector space. We believe this invariably leads to interference among different tasks. We propose to learn tasks in different (low-rank) vector subspaces that are kept orthogonal to each other in order to minimize interference. Further, to keep the gradients of different tasks coming from these subspaces orthogonal to each other, we learn isometric mappings by posing network training as an optimization problem over the Stiefel manifold. To the best of our understanding, we report, for the first time, strong results over experience-replay baseline with and without memory on standard classification benchmarks in continual learning. The code is made publicly available.
-
-</details>
-
-### Modeling the Background for Incremental Learning in Semantic Segmentation.
-- **链接**: [arXiv:2002.00718](https://arxiv.org/abs/2002.00718) · 📚 被引 310
-- **作者**: Fabio Cermelli, Massimiliano Mancini, Samuel Rota Bulò, Elisa Ricci, Barbara Caputo
-- **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2020
+- **摘要（中）**: ①针对持续学习中包含批归一化（BN）层的神经网络，标准K-FAC近似曲率因样本间依赖而失效的问题。②提出了扩展的K-FAC方法，考虑样本间关系以正确近似Hessian矩阵，并设计了BN统计参数的权重合并与重参数化策略，以及无需源任务数据的超参数选择方法。③相比现有K-FAC方法，首次在持续学习框架下处理BN层带来的曲率近似偏差，并解决了BN统计参数的漂移问题。④在带BN层的permuted MNIST任务和从ImageNet到细粒度分类的序列学习（ResNet-50）中，性能优于基线方法，且未使用源任务数据。
+- **摘要（英）**: This paper addresses the invalidity of standard K-FAC curvature approximation in continual learning with batch normalization layers due to inter-example dependencies. It extends K-FAC to account for these relations, proposes weight merging and reparameterization for BN statistics, and a hyperparameter selection method without source data. The method outperforms baselines on permuted MNIST with BN and ImageNet-to-fine-grained sequential learning with ResNet-50.
+- **核心贡献**: 提出了适用于BN层的扩展K-FAC曲率近似方法，并解决了BN统计参数在持续学习中的处理问题。
+- **创新点**: 在K-FAC中引入样本间依赖建模，并设计BN参数的重参数化策略。
+- **结果**: 在多个持续学习基准上优于基线方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> The ability to continuously learn and adapt itself to new tasks, without losing grasp of already acquired knowledge is a hallmark of biological learning systems, which current deep learning systems fall short of. In this work, we present a novel methodology for continual learning called MERLIN: Meta-Consolidation for Continual Learning. We assume that weights of a neural network $\boldsymbol ψ$, for solving task $\boldsymbol t$, come from a meta-distribution $p(\boldsymbol{ψ|t})$. This meta-distribution is learned and consolidated incrementally. We operate in the challenging online continual learning setting, where a data point is seen by the model only once. Our experiments with continual learning benchmarks of MNIST, CIFAR-10, CIFAR-100 and Mini-ImageNet datasets show consistent improvement over five baselines, including a recent state-of-the-art, corroborating the promise of MERLIN.
+> We propose a quadratic penalty method for continual learning of neural networks that contain batch normalization (BN) layers. The Hessian of a loss function represents the curvature of the quadratic penalty function, and a Kronecker-factored approximate curvature (K-FAC) is used widely to practically compute the Hessian of a neural network. However, the approximation is not valid if there is dependence between examples, typically caused by BN layers in deep network architectures. We extend the K-FAC method so that the inter-example relations are taken into account and the Hessian of deep neural networks can be properly approximated under practical assumptions. We also propose a method of weight merging and reparameterization to properly handle statistical parameters of BN, which plays a critical role for continual learning with BN, and a method that selects hyperparameters without source task data. Our method shows better performance than baselines in the permuted MNIST task with BN layers and in sequential learning from the ImageNet classification task to fine-grained classification tasks with ResNet-50, without any explicit or implicit use of source task data for hyperparameter selection.
 
 </details>
 
-### Incremental Learning in Online Scenario.
+### GDumb: A Simple Approach that Questions Our Progress in Continual Learning. **⭐⭐⭐⭐** (相关度: 55%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58536-5_31)
+- **作者**: Ameya Prabhu, Philip H. S. Torr, Puneet K. Dokania
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
+- **摘要（中）**: ①针对持续学习领域进展评估问题，质疑复杂方法是否真正有效。②提出GDumb基线，仅用内存样本训练分类器，不依赖复杂策略。③改进点在于强调简单方法的重要性，提供公平比较基准。④实验表明GDumb在多个基准上超越许多先进方法，揭示领域进展有限。
+- **摘要（英）**: This paper questions progress in continual learning by proposing GDumb, a simple baseline that trains classifiers solely on memory samples. It outperforms many advanced methods on benchmarks, highlighting limited real progress.
+- **核心贡献**: 提出GDumb基线，重新评估持续学习进展。
+- **创新点**: 强调简单方法有效性，提供对比基准。
+- **结果**: 在多个基准上超越复杂方法。
+
+### More Classifiers, Less Forgetting: A Generic Multi-classifier Paradigm for Incremental Learning. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58574-7_42)
+- **作者**: Yu Liu, Sarah Parisot, Gregory G. Slabaugh, Xu Jia, Ales Leonardis, Tinne Tuytelaars
+- **🏷️ 机构**: SenseTime
+- **会议**: ECCV 2020
+- **摘要（中）**: ①针对增量学习中的遗忘问题，提出多分类器范式。②为每个任务分配独立分类器，通过集成策略减少干扰。③改进点在于利用多分类器增强模型容量，同时保持旧任务性能。④实验显示在多个增量学习基准上准确率显著提升，遗忘率降低。
+- **摘要（英）**: This paper proposes a multi-classifier paradigm for incremental learning, assigning independent classifiers per task and integrating them to reduce interference. It achieves higher accuracy and lower forgetting on benchmarks.
+- **核心贡献**: 提出多分类器范式以缓解增量学习遗忘。
+- **创新点**: 任务独立分类器与集成策略结合。
+- **结果**: 在多个基准上提升准确率并降低遗忘。
+
+### Modeling the Background for Incremental Learning in Semantic Segmentation. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2002.00718](https://arxiv.org/abs/2002.00718) · 📚 被引 309
+- **作者**: Fabio Cermelli, Massimiliano Mancini, Samuel Rota Bulò, Elisa Ricci, Barbara Caputo
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2020
+- **摘要（中）**: ①针对语义分割中的增量学习问题，现有方法忽略了背景类像素的语义分布漂移，导致性能下降。②提出了基于蒸馏的框架，显式建模背景类的分布变化，并引入分类器参数初始化策略以避免对背景类的偏置预测。③相比经典增量学习方法，该方法专门针对语义分割的特性设计，处理了背景类漂移。④在Pascal-VOC 2012和ADE20K上显著优于现有方法。
+- **摘要（英）**: This paper addresses incremental learning in semantic segmentation by explicitly modeling the semantic distribution shift of background pixels, proposing a distillation-based framework and a classifier initialization strategy to prevent background bias. It significantly outperforms state-of-the-art on Pascal-VOC 2012 and ADE20K.
+- **核心贡献**: 提出了显式建模背景类漂移的增量语义分割框架。
+- **创新点**: 引入背景类分布建模和分类器初始化策略。
+- **结果**: 在多个基准上显著超越现有方法。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Despite their effectiveness in a wide range of tasks, deep architectures suffer from some important limitations. In particular, they are vulnerable to catastrophic forgetting, i.e. they perform poorly when they are required to update their model as new classes are available but the original training set is not retained. This paper addresses this problem in the context of semantic segmentation. Current strategies fail on this task because they do not consider a peculiar aspect of semantic segmentation: since each training step provides annotation only for a subset of all possible classes, pixels of the background class (i.e. pixels that do not belong to any other classes) exhibit a semantic distribution shift. In this work we revisit classical incremental learning methods, proposing a new distillation-based framework which explicitly accounts for this shift. Furthermore, we introduce a novel strategy to initialize classifier's parameters, thus preventing biased predictions toward the background class. We demonstrate the effectiveness of our approach with an extensive evaluation on the Pascal-VOC 2012 and ADE20K datasets, significantly outperforming state of the art incremental learning methods.
+
+</details>
+
+### Incremental Learning in Online Scenario. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [arXiv:2003.13191](https://arxiv.org/abs/2003.13191) · 📚 被引 140
 - **作者**: Jiangpeng He, Runyu Mao, Zeman Shao, Fengqing Zhu
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
-
-### Topology-Preserving Class-Incremental Learning.
-- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_16)
-- **作者**: Xiaoyu Tao, Xinyuan Chang, Xiaopeng Hong, Xing Wei, Yihong Gong
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2020
+- **摘要（中）**: ①针对在线场景下的增量学习，现有方法无法同时处理新类数据和旧类的新观测，且训练时间长。②提出了一个在线增量学习框架，结合改进的交叉蒸馏损失和两步学习技术，处理新类添加和概念漂移。③相比现有方法，该框架适用于在线场景，能应对数据分布变化。④实验表明在在线学习设置下优于当前最先进方法。
+- **摘要（英）**: This paper proposes an online incremental learning framework that handles both new classes and new observations of old classes using a modified cross-distillation loss and two-step learning. It outperforms state-of-the-art in online scenarios, addressing catastrophic forgetting and concept drift.
+- **核心贡献**: 提出了适用于在线场景的增量学习框架，同时处理新类和旧类数据漂移。
+- **创新点**: 结合交叉蒸馏损失和两步学习技术。
+- **结果**: 在在线学习基准上优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Catastrophic forgetting affects the training of neural networks, limiting their ability to learn multiple tasks sequentially. From the perspective of the well established plasticity-stability dilemma, neural networks tend to be overly plastic, lacking the stability necessary to prevent the forgetting of previous knowledge, which means that as learning progresses, networks tend to forget previously seen tasks. This phenomenon coined in the continual learning literature, has attracted much attention lately, and several families of approaches have been proposed with different degrees of success. However, there has been limited prior work extensively analyzing the impact that different training regimes -- learning rate, batch size, regularization method-- can have on forgetting. In this work, we depart from the typical approach of altering the learning algorithm to improve stability. Instead, we hypothesize that the geometrical properties of the local minima found for each task play an important role in the overall degree of forgetting. In particular, we study the effect of dropout, learning rate decay, and batch size, on forming training regimes that widen the tasks' local minima and consequently, on helping it not to forget catastrophically. Our study provides practical insights to improve stability via simple yet effective techniques that outperform alternative baselines.
+> Modern deep learning approaches have achieved great success in many vision applications by training a model using all available task-specific data. However, there are two major obstacles making it challenging to implement for real life applications: (1) Learning new classes makes the trained model quickly forget old classes knowledge, which is referred to as catastrophic forgetting. (2) As new observations of old classes come sequentially over time, the distribution may change in unforeseen way, making the performance degrade dramatically on future data, which is referred to as concept drift. Current state-of-the-art incremental learning methods require a long time to train the model whenever new classes are added and none of them takes into consideration the new observations of old classes. In this paper, we propose an incremental learning framework that can work in the challenging online learning scenario and handle both new classes data and new observations of old classes. We address problem (1) in online mode by introducing a modified cross-distillation loss together with a two-step learning technique. Our method outperforms the results obtained from current state-of-the-art offline incremental learning methods on the CIFAR-100 and ImageNet-1000 (ILSVRC 2012) datasets under the same experiment protocol but in online scenario. We also provide a simple yet effective method to mitigate problem (2) by updating exemplar set using the feature of each new observation of old classes and demonstrate a real life application of online food image classification based on our complete framework using the Food-101 dataset.
 
 </details>
+
+### Topology-Preserving Class-Incremental Learning. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1007/978-3-030-58529-7_16)
+- **作者**: Xiaoyu Tao, Xinyuan Chang, Xiaopeng Hong, Xing Wei, Yihong Gong
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2020
+- **摘要（中）**: ①针对类增量学习中拓扑结构变化导致的遗忘问题，现有方法忽略类别间关系。②提出拓扑保持的类增量学习（Topology-Preserving Class-Incremental Learning），通过图神经网络建模类别拓扑并约束表示空间。③相比现有方法，显式保留类别间结构，增强新类与旧类的兼容性。④在CIFAR和ImageNet子集上，准确率提升约3-8%，尤其在长任务序列中优势明显。
+- **摘要（英）**: This work addresses topology changes in class-incremental learning, using graph neural networks to preserve inter-class structure, improving accuracy by 3-8% on benchmarks.
+- **核心贡献**: 引入类别拓扑保持机制，提升类增量学习性能。
+- **创新点**: 将图神经网络用于表示空间约束。
+- **结果**: 在多个数据集上取得显著提升。
 
 ### Continual Learning of Control Primitives : Skill Discovery via Reset-Games.
 - **链接**: [出版页](https://proceedings.neurips.cc/paper/2020/hash/3472ab80b6dff70c54758fd6dfc800c2-Abstract.html)
@@ -75,19 +112,22 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
 
-### Maintaining Discrimination and Fairness in Class Incremental Learning.
-- **链接**: [arXiv:1911.07053](https://arxiv.org/abs/1911.07053) · 📚 被引 431
+### Maintaining Discrimination and Fairness in Class Incremental Learning. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:1911.07053](https://arxiv.org/abs/1911.07053) · 📚 被引 430
 - **作者**: Bowen Zhao, Xi Xiao, Guojun Gan, Bin Zhang, Shu-Tao Xia
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2020
+- **摘要（中）**: ①针对类增量学习中灾难性遗忘问题，指出知识蒸馏虽能维持旧类内判别性，但无法解决模型偏向新类导致其效果受限。②提出权重对齐方法，在正常训练后校正全连接层中偏置的权重，以平衡新旧类。③改进点在于首次明确全连接层权重偏置是遗忘关键因素，并设计轻量后处理方案。④实验表明该方法在多个基准上显著提升增量学习准确率，尤其在长序列任务中优于现有方法。
+- **摘要（英）**: This paper addresses catastrophic forgetting in class incremental learning, identifying that knowledge distillation preserves intra-old-class discrimination but fails to mitigate bias toward new classes. It proposes Weight Aligning to correct biased FC layer weights post-training, achieving superior accuracy on multiple benchmarks, especially in long task sequences.
+- **核心贡献**: 揭示全连接层权重偏置对增量学习的影响，并提出权重对齐方法。
+- **创新点**: 通过后训练权重校正而非复杂网络修改，实现新旧类公平性。
+- **结果**: 在多个标准数据集上显著提升增量学习性能，优于现有方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Deep neural networks (DNNs) have been applied in class incremental learning, which aims to solve common real-world problems of learning new classes continually. One drawback of standard DNNs is that they are prone to catastrophic forgetting. Knowledge distillation (KD) is a commonly used technique to alleviate this problem. In this paper, we demonstrate it can indeed help the model to output more discriminative results within old classes. However, it cannot alleviate the problem that the model tends to classify objects into new classes, causing the positive effect of KD to be hidden and limited. We observed that an important factor causing catastrophic forgetting is that the weights in the last fully connected (FC) layer are highly biased in class incremental learning. In this paper, we propose a simple and effective solution motivated by the aforementioned observations to address catastrophic forgetting. Firstly, we utilize KD to maintain the discrimination within old classes. Then, to further maintain the fairness between old classes and new classes, we propose Weight Aligning (WA) that corrects the biased weights in the FC layer after normal training process. Unlike previous work, WA does not require any extra parameters or a validation set in advance, as it utilizes the information provided by the biased weights themselves. The proposed method is evaluated on ImageNet-1000, ImageNet-100, and CIFAR-100 under various settings. Experimental results show that the proposed method can effectively alleviate catastrophic forgetting and significantly outperform state-of-the-art methods.
 
 </details>
-
-## 🆕 增量新增
 
 ### Semantic Drift Compensation for Class-Incremental Learning. **⭐⭐⭐** (相关度: 55%)
 - **链接**: [arXiv:2004.00440](https://arxiv.org/abs/2004.00440) · 📚 被引 268
@@ -317,4 +357,5 @@
 - **作者**: Seyed-Iman Mirzadeh, Mehrdad Farajtabar, Razvan Pascanu, Hassan Ghasemzadeh
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2020
+
 <!-- COMPLETE v1 papers=31 -->

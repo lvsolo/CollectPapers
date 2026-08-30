@@ -3,83 +3,129 @@
 > 领域: 神经架构搜索（NAS、Zero-Cost、搜索空间）
 > 论文数: 5 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### MDL-NAS: A Joint Multi-domain Learning Framework for Vision Transformer.
+### MDL-NAS: A Joint Multi-domain Learning Framework for Vision Transformer. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01924) · 📚 被引 16
 - **作者**: Shiguang Wang, Tao Xie, Jian Cheng, Xingcheng Zhang, Haijun Liu
 - **🏷️ 机构**: University of Electronic Science and Technology of China, Harbin Institute of Technology, SenseTime Research
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对Vision Transformer在多领域联合学习中的架构设计问题。②提出了MDL-NAS，一个联合多领域学习的NAS框架。③相比单领域NAS，支持跨领域共享与特定架构搜索。④摘要未给出具体数据，但框架旨在提升多任务泛化能力。
+- **摘要（英）**: This paper addresses architecture design for Vision Transformers in joint multi-domain learning. It proposes MDL-NAS, a NAS framework for multi-domain learning. Compared to single-domain NAS, it supports cross-domain sharing and specific architecture search. The abstract lacks specific data, but the framework aims to improve multi-task generalization.
+- **核心贡献**: 提出了面向Vision Transformer的联合多领域NAS框架。
+- **创新点**: 在多领域学习中联合搜索共享与特定架构。
+- **结果**: 旨在提升多任务泛化，具体效果未在摘要中量化。
 
-### DisWOT: Student Architecture Search for Distillation WithOut Training.
-- **链接**: [arXiv:2303.15678](https://arxiv.org/abs/2303.15678) · 📚 被引 60
+### DisWOT: Student Architecture Search for Distillation WithOut Training. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01145) · 📚 被引 60
 - **作者**: Peijie Dong, Lujun Li, Zimian Wei
 - **🏷️ 机构**: National University of Defense Technology, Chinese Academy of Sciences
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对知识蒸馏中学生架构搜索需要训练成本高的问题。②提出了DisWOT，一种无需训练的学生架构搜索方法。③相比现有方法，通过蒸馏损失代理指标实现零训练搜索。④摘要未给出具体数据，但方法显著降低搜索成本。
+- **摘要（英）**: This paper addresses the high training cost of student architecture search in knowledge distillation. It proposes DisWOT, a training-free student architecture search method. Compared to existing methods, it uses distillation loss proxies for zero-training search. The abstract lacks specific data, but the method significantly reduces search cost.
+- **核心贡献**: 提出了无需训练的知识蒸馏学生架构搜索方法。
+- **创新点**: 利用蒸馏代理指标实现零训练架构搜索。
+- **结果**: 显著降低搜索成本，具体性能未在摘要中量化。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Knowledge distillation (KD) is an effective training strategy to improve the lightweight student models under the guidance of cumbersome teachers. However, the large architecture difference across the teacher-student pairs limits the distillation gains. In contrast to previous adaptive distillation methods to reduce the teacher-student gap, we explore a novel training-free framework to search for the best student architectures for a given teacher. Our work first empirically show that the optimal model under vanilla training cannot be the winner in distillation. Secondly, we find that the similarity of feature semantics and sample relations between random-initialized teacher-student networks have good correlations with final distillation performances. Thus, we efficiently measure similarity matrixs conditioned on the semantic activation maps to select the optimal student via an evolutionary algorithm without any training. In this way, our student architecture search for Distillation WithOut Training (DisWOT) significantly improves the performance of the model in the distillation stage with at least 180$\times$ training acceleration. Additionally, we extend similarity metrics in DisWOT as new distillers and KD-based zero-proxies. Our experiments on CIFAR, ImageNet and NAS-Bench-201 demonstrate that our technique achieves state-of-the-art results on different search spaces. Our project and code are available at https://lilujunai.github.io/DisWOT-CVPR2023/.
-
-</details>
-
-### Adversarially Robust Neural Architecture Search for Graph Neural Networks.
+### Adversarially Robust Neural Architecture Search for Graph Neural Networks. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [arXiv:2304.04168](https://arxiv.org/abs/2304.04168) · 📚 被引 21
 - **作者**: Beini Xie, Heng Chang, Ziwei Zhang, Xin Wang, Daixin Wang, Zhiqiang Zhang et al.
 - **🏷️ 机构**: Tsinghua University, Ant Group, Yale University
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对图神经网络易受对抗攻击且现有防御方法缺乏架构级鲁棒性的问题。②提出了G-RNA，一个面向GNN的鲁棒NAS框架，设计包含图结构掩码操作的搜索空间，并定义鲁棒性度量引导搜索。③相比现有图NAS，首次从架构角度增强鲁棒性。④摘要未给出具体数据，但框架能有效搜索最优防御架构。
+- **摘要（英）**: This paper addresses GNN vulnerability to adversarial attacks and the lack of architectural robustness in existing defenses. It proposes G-RNA, a robust NAS framework for GNNs, designing a search space with graph structure mask operations and a robustness metric. Compared to existing graph NAS, it enhances robustness from an architectural perspective. The abstract lacks specific data, but the framework effectively searches optimal defensive architectures.
+- **核心贡献**: 提出了面向GNN的鲁棒NAS框架G-RNA。
+- **创新点**: 将图结构掩码操作和鲁棒性度量融入NAS搜索空间。
+- **结果**: 有效搜索防御架构，具体性能未在摘要中量化。
 
-### Evolutionary Neural Architecture Search for Transformer in Knowledge Tracing.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/3e53d82a1113e3d240059a9195668edc-Abstract-Conference.html) · 📚 被引 6
-- **作者**: Shangshang Yang, Xiaoshan Yu, Ye Tian, Xueming Yan, Haiping Ma, Xingyi Zhang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Neural Architecture Search (NAS) has shown promising performance in the automatic design of vision transformers (ViT) exceeding 1G FLOPs. However, designing lightweight and low-latency ViT models for diverse mobile devices remains a big challenge. In this work, we propose ElasticViT, a two-stage NAS approach that trains a high-quality ViT supernet over a very large search space that supports a wide range of mobile devices, and then searches an optimal sub-network (subnet) for direct deployment. However, prior supernet training methods that rely on uniform sampling suffer from the gradient conflict issue: the sampled subnets can have vastly different model sizes (e.g., 50M vs. 2G FLOPs), leading to different optimization directions and inferior performance. To address this challenge, we propose two novel sampling techniques: complexity-aware sampling and performance-aware sampling. Complexity-aware sampling limits the FLOPs difference among the subnets sampled across adjacent training steps, while covering different-sized subnets in the search space. Performance-aware sampling further selects subnets that have good accuracy, which can reduce gradient conflicts and improve supernet quality. Our discovered models, ElasticViT models, achieve top-1 accuracy from 67.2% to 80.0% on ImageNet from 60M to 800M FLOPs without extra retraining, outperforming all prior CNNs and ViTs in terms of accuracy and latency. Our tiny and small models are also the first ViT models that surpass state-of-the-art CNNs with significantly lower latency on mobile devices. For instance, ElasticViT-S1 runs 2.62x faster than EfficientNet-B0 with 0.1% higher accuracy.
+> Graph Neural Networks (GNNs) obtain tremendous success in modeling relational data. Still, they are prone to adversarial attacks, which are massive threats to applying GNNs to risk-sensitive domains. Existing defensive methods neither guarantee performance facing new data/tasks or adversarial attacks nor provide insights to understand GNN robustness from an architectural perspective. Neural Architecture Search (NAS) has the potential to solve this problem by automating GNN architecture designs. Nevertheless, current graph NAS approaches lack robust design and are vulnerable to adversarial attacks. To tackle these challenges, we propose a novel Robust Neural Architecture search framework for GNNs (G-RNA). Specifically, we design a robust search space for the message-passing mechanism by adding graph structure mask operations into the search space, which comprises various defensive operation candidates and allows us to search for defensive GNNs. Furthermore, we define a robustness metric to guide the search procedure, which helps to filter robust architectures. In this way, G-RNA helps understand GNN robustness from an architectural perspective and effectively searches for optimal adversarial robust GNNs. Extensive experimental results on benchmark datasets show that G-RNA significantly outperforms manually designed robust GNNs and vanilla graph NAS baselines by 12.1% to 23.4% under adversarial attacks.
 
 </details>
 
-### HOTNAS: Hierarchical Optimal Transport for Neural Architecture Search.
+### Evolutionary Neural Architecture Search for Transformer in Knowledge Tracing. **⭐⭐** (相关度: 10%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/3e53d82a1113e3d240059a9195668edc-Abstract-Conference.html)
+- **作者**: Shangshang Yang, Xiaoshan Yu, Ye Tian, Xueming Yan, Haiping Ma, Xingyi Zhang
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2023
+- **摘要（中）**: ①该论文针对知识追踪（Knowledge Tracing）任务中Transformer架构的人工设计依赖问题，提出使用进化神经架构搜索（NAS）自动搜索最优Transformer结构。②方法上，采用进化算法在搜索空间中迭代优化Transformer的层数、头数、维度等超参数，并利用代理模型加速评估。③相比手工设计的Transformer，该方法能自动适应知识追踪数据的特性，减少人工调参成本。④摘要未提供具体性能数据，但声称搜索到的架构在基准数据集上优于基线模型。
+- **摘要（英）**: This paper addresses the manual design dependency of Transformer architectures in Knowledge Tracing by proposing an evolutionary neural architecture search (NAS) method to automatically discover optimal structures. It employs evolutionary algorithms to iteratively optimize hyperparameters like layer count, heads, and dimensions, with surrogate models for efficient evaluation. Compared to hand-crafted Transformers, it reduces tuning effort and adapts to data characteristics, though no specific numeric results are provided in the abstract.
+- **核心贡献**: 提出将进化NAS应用于知识追踪的Transformer架构搜索。
+- **创新点**: 将进化算法与Transformer架构搜索结合，实现自动化设计。
+- **结果**: 声称在基准数据集上优于基线，但缺乏具体数据支撑。
+
+### HOTNAS: Hierarchical Optimal Transport for Neural Architecture Search. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01154) · 📚 被引 15
 - **作者**: Jiechao Yang, Yong Liu, Hongteng Xu
 - **🏷️ 机构**: Gaoling School of Artificial Intelligence, Renmin University of China,Beijing,China
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对NAS中架构距离度量不准确的问题。②提出了HOTNAS，基于层次最优传输的NAS方法。③相比现有方法，利用最优传输理论改进架构相似性度量。④摘要未给出具体数据，但旨在提升搜索效率与准确性。
+- **摘要（英）**: This paper addresses inaccurate architecture distance metrics in NAS. It proposes HOTNAS, a hierarchical optimal transport-based NAS method. Compared to existing methods, it improves architecture similarity measurement using optimal transport theory. The abstract lacks specific data, but it aims to enhance search efficiency and accuracy.
+- **核心贡献**: 提出了基于层次最优传输的NAS方法。
+- **创新点**: 将最优传输理论应用于架构距离度量。
+- **结果**: 旨在提升搜索效率与准确性，具体效果未在摘要中量化。
 
-### Differentiable Architecture Search with Random Features.
-- **链接**: [arXiv:2208.08835](https://arxiv.org/abs/2208.08835) · 📚 被引 19
+### Differentiable Architecture Search with Random Features. **⭐⭐⭐⭐** (相关度: 60%)
+- **链接**: [arXiv:2208.08835](https://arxiv.org/abs/2208.08835) · 📚 被引 18
 - **作者**: Xuanyang Zhang, Yonggang Li, Xiangyu Zhang, Yongtao Wang, Jian Sun
 - **🏷️ 机构**: MEGVII Technology, Peking University
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对DARTS在架构搜索中出现的性能崩溃问题。②提出仅训练BatchNorm的DARTS新范式，并引入随机特征（Random Features）来稀释跳跃连接在超网络优化中的辅助作用，使搜索算法更公平地选择操作。③相比原DARTS，通过理论分析和实验验证了随机特征的有效性，并实例化为RF-DARTS和RF-PCDARTS。④在CIFAR-10上达到94.36%测试准确率（NAS-Bench-201中最优结果），迁移到ImageNet上取得24.0%的top-1错误率，且在多个数据集上表现稳健。
+- **摘要（英）**: This paper addresses the performance collapse issue in DARTS by proposing a new paradigm that trains only BatchNorm and introducing random features to dilute the auxiliary role of skip-connections, enabling fairer operation selection. The improved RF-DARTS achieves 94.36% accuracy on CIFAR-10 and 24.0% top-1 error on ImageNet, demonstrating robustness across datasets.
+- **核心贡献**: 提出随机特征机制和仅训练BatchNorm的DARTS变体，有效缓解性能崩溃。
+- **创新点**: 利用随机特征稀释跳跃连接影响，实现更公平的架构搜索。
+- **结果**: 在CIFAR-10和ImageNet上取得最优或接近最优的性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Blending multiple convolutional kernels is proved advantageous in neural architecture design. However, current two-stage neural architecture search methods are mainly limited to single-path search spaces. How to efficiently search models of multi-path structures remains a difficult problem. In this paper, we are motivated to train a one-shot multi-path supernet to accurately evaluate the candidate architectures. Specifically, we discover that in the studied search spaces, feature vectors summed from multiple paths are nearly multiples of those from a single path. Such disparity perturbs the supernet training and its ranking ability. Therefore, we propose a novel mechanism called Shadow Batch Normalization (SBN) to regularize the disparate feature statistics. Extensive experiments prove that SBNs are capable of stabilizing the optimization and improving ranking performance. We call our unified multi-path one-shot approach as MixPath, which generates a series of models that achieve state-of-the-art results on ImageNet.
+> Differentiable architecture search (DARTS) has significantly promoted the development of NAS techniques because of its high search efficiency and effectiveness but suffers from performance collapse. In this paper, we make efforts to alleviate the performance collapse problem for DARTS from two aspects. First, we investigate the expressive power of the supernet in DARTS and then derive a new setup of DARTS paradigm with only training BatchNorm. Second, we theoretically find that random features dilute the auxiliary connection role of skip-connection in supernet optimization and enable search algorithm focus on fairer operation selection, thereby solving the performance collapse problem. We instantiate DARTS and PC-DARTS with random features to build an improved version for each named RF-DARTS and RF-PCDARTS respectively. Experimental results show that RF-DARTS obtains \textbf{94.36\%} test accuracy on CIFAR-10 (which is the nearest optimal result in NAS-Bench-201), and achieves the newest state-of-the-art top-1 test error of \textbf{24.0\%} on ImageNet when transferring from CIFAR-10. Moreover, RF-DARTS performs robustly across three datasets (CIFAR-10, CIFAR-100, and SVHN) and four search spaces (S1-S4). Besides, RF-PCDARTS achieves even better results on ImageNet, that is, \textbf{23.9\%} top-1 and \textbf{7.1\%} top-5 test error, surpassing representative methods like single-path, training-free, and partial-channel paradigms directly searched on ImageNet.
 
 </details>
 
-### Extensible and Efficient Proxy for Neural Architecture Search.
+### Extensible and Efficient Proxy for Neural Architecture Search. **⭐⭐** (相关度: 45%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.00570) · 📚 被引 11
 - **作者**: Yuhong Li, Jiajie Li, Cong Hao, Pan Li, Jinjun Xiong, Deming Chen
 - **🏷️ 机构**: University of Illinois at Urbana-Champaign, University at Buffalo, Georgia Institute of Technology
 - **会议**: ICCV 2023
+- **摘要（中）**: ①该论文摘要为空，无法获取具体研究问题。②从标题推测，研究可扩展且高效的NAS代理方法。③可能旨在提高NAS搜索效率。④由于缺乏摘要和实验数据，无法评估具体效果。
+- **摘要（英）**: The abstract is empty, so the specific problem is unclear. Based on the title, it likely focuses on developing extensible and efficient proxies for NAS, but no details or results are available.
+- **核心贡献**: 未知，因摘要缺失。
+- **创新点**: 未知，因摘要缺失。
+- **结果**: 未知，因摘要缺失。
 
-### An Experimental Protocol for Neural Architecture Search in Super-Resolution.
+### An Experimental Protocol for Neural Architecture Search in Super-Resolution. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00447) · 📚 被引 2
 - **作者**: Jesús Leopoldo Llano García, Raúl Monroy, Víctor Adrián Sosa-Hernández
 - **🏷️ 机构**: School of Engineering and Sciences,Tecnologico de Monterrey,Mexico,52926
 - **会议**: ICCV 2023
+- **摘要（中）**: ①针对超分辨率任务中NAS实验协议不统一、结果难以比较的问题。②提出一个标准化的实验协议，用于超分辨率NAS的评估和比较。③可能包括数据集、训练设置、评估指标等规范化。④由于摘要为空，具体效果未知，但旨在提升研究可复现性。
+- **摘要（英）**: This paper proposes a standardized experimental protocol for NAS in super-resolution to address inconsistent evaluation practices. It likely specifies datasets, training settings, and metrics, but details are unavailable due to the empty abstract.
+- **核心贡献**: 提出超分辨率NAS的实验协议。
+- **创新点**: 标准化评估流程。
+- **结果**: 未知，因摘要缺失。
 
-### DONNAv2 - Lightweight Neural Architecture Search for Vision tasks.
+### DONNAv2 - Lightweight Neural Architecture Search for Vision tasks. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCVW60793.2023.00149) · 📚 被引 3
 - **作者**: Sweta Priyadarshi, Tianyu Jiang, Hsin-Pai Cheng, Sendil Krishna, Viswanath Ganapathy, Chirag Patel
 - **🏷️ 机构**: Qualcomm AI Research,San Diego,CA,USA,92121
 - **会议**: ICCV 2023
+- **摘要（中）**: ①针对视觉任务中神经架构搜索（NAS）计算开销大的问题。②提出了DONNAv2，一种轻量级NAS方法，旨在高效搜索视觉任务的架构。③相比已有工作，可能通过改进搜索策略或代理模型来降低计算成本。④摘要缺失，无法提供具体效果数据。
+- **摘要（英）**: ①Addresses the high computational cost of NAS for vision tasks. ②Proposes DONNAv2, a lightweight NAS method for efficient architecture search. ③Improves upon prior work by potentially reducing search overhead. ④Effectiveness not detailed due to missing abstract.
+- **核心贡献**: 提出轻量级NAS方法DONNAv2，降低视觉任务架构搜索成本。
+- **创新点**: 轻量化设计可能引入高效搜索策略。
+- **结果**: 效果未明确，因摘要缺失。
 
-### InstaTune: Instantaneous Neural Architecture Search During Fine-Tuning.
+### InstaTune: Instantaneous Neural Architecture Search During Fine-Tuning. **⭐⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2308.15609](https://arxiv.org/abs/2308.15609) · 📚 被引 3
 - **作者**: Sharath Nittur Sridhar, Souvik Kundu, Sairam Sundaresan, Maciej Szankin, Anthony Sarah
 - **🏷️ 机构**: Intel Labs,San Diego,USA
 - **会议**: ICCV 2023
+- **摘要（中）**: ①针对One-Shot NAS训练超网络耗时且需从头训练的问题。②提出InstaTune，在微调阶段利用预训练权重生成超网络，并提取子网络。③改进点在于无需从头训练，节省时间和计算资源，且子网络针对目标任务优化。④通过多目标进化搜索，但摘要未提供具体性能数据。
+- **摘要（英）**: ①Addresses the time-consuming training of super-networks in One-Shot NAS. ②Proposes InstaTune, which leverages pre-trained weights to generate super-networks during fine-tuning. ③Improves by avoiding scratch training and optimizing sub-networks for target tasks. ④Uses multi-objective evolutionary search, but specific results are not provided.
+- **核心贡献**: 提出微调阶段生成超网络的NAS方法，降低计算开销。
+- **创新点**: 利用预训练权重在微调中构建超网络，实现即插即用。
+- **结果**: 具体效果未给出，但理论上节省大量资源。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -87,23 +133,38 @@
 
 </details>
 
-### Multi-task Graph Neural Architecture Search with Task-aware Collaboration and Curriculum.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/4e839c9c398c58c878a394633b806ccd-Abstract-Conference.html) · 📚 被引 3
+### Multi-task Graph Neural Architecture Search with Task-aware Collaboration and Curriculum. **⭐⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/4e839c9c398c58c878a394633b806ccd-Abstract-Conference.html)
 - **作者**: Yijian Qin, Xin Wang, Ziwei Zhang, Hong Chen, Wenwu Zhu
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
+- **摘要（中）**: ①针对多任务图神经网络架构搜索中任务间冲突和搜索效率低的问题。②提出MTG-NAS，引入任务感知协作机制和课程学习策略，动态调整任务权重和搜索顺序。③相比单任务NAS，更好地平衡多任务性能。④在多个多任务图数据集上，MTG-NAS在各项任务上均优于现有方法。
+- **摘要（英）**: ①Addresses task conflicts and low search efficiency in multi-task GNN architecture search. ②Proposes MTG-NAS with task-aware collaboration and curriculum learning to dynamically adjust task weights and search order. ③Better balances multi-task performance than single-task NAS. ④Outperforms existing methods on multiple multi-task graph datasets.
+- **核心贡献**: 提出任务感知协作与课程学习的多任务GNN NAS。
+- **创新点**: 动态任务权重和课程搜索策略。
+- **结果**: 多任务性能全面优于现有方法。
 
-### Construction of Hierarchical Neural Architecture Search Spaces based on Context-free Grammars.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/4869f3f967dfe954439408dd92c50ee1-Abstract-Conference.html) · 📚 被引 2
+### Construction of Hierarchical Neural Architecture Search Spaces based on Context-free Grammars. **⭐⭐⭐** (相关度: 55%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/4869f3f967dfe954439408dd92c50ee1-Abstract-Conference.html)
 - **作者**: Simon Schrodi, Danny Stoll, Binxin Ru, Rhea Sanjay Sukthanker, Thomas Brox, Frank Hutter
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
+- **摘要（中）**: ①针对NAS搜索空间设计缺乏层次性和可扩展性的问题。②提出基于上下文无关文法的层次化搜索空间构建方法，通过文法规则生成结构化架构。③相比扁平搜索空间，支持更复杂和可解释的架构。④在图像分类任务上，搜索到的层次架构性能优于手工设计。
+- **摘要（英）**: ①Addresses the lack of hierarchy and scalability in NAS search space design. ②Proposes a hierarchical search space construction based on context-free grammars, generating structured architectures via grammar rules. ③Supports more complex and interpretable architectures than flat spaces. ④On image classification, searched hierarchical architectures outperform manual designs.
+- **核心贡献**: 提出基于文法的层次化NAS搜索空间构建方法。
+- **创新点**: 用上下文无关文法定义层次化架构空间。
+- **结果**: 搜索架构性能优于手工设计。
 
-### Evolutionary Neural Architecture Search for Transformer in Knowledge Tracing.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/3e53d82a1113e3d240059a9195668edc-Abstract-Conference.html) · 📚 被引 6
+### Evolutionary Neural Architecture Search for Transformer in Knowledge Tracing. **⭐⭐** (相关度: 10%)
+- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/3e53d82a1113e3d240059a9195668edc-Abstract-Conference.html)
 - **作者**: Shangshang Yang, Xiaoshan Yu, Ye Tian, Xueming Yan, Haiping Ma, Xingyi Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
+- **摘要（中）**: ①该论文针对知识追踪（Knowledge Tracing）任务中Transformer架构的人工设计依赖问题，提出使用进化神经架构搜索（NAS）自动搜索最优Transformer结构。②方法上，采用进化算法在搜索空间中迭代优化Transformer的层数、头数、维度等超参数，并利用代理模型加速评估。③相比手工设计的Transformer，该方法能自动适应知识追踪数据的特性，减少人工调参成本。④摘要未提供具体性能数据，但声称搜索到的架构在基准数据集上优于基线模型。
+- **摘要（英）**: This paper addresses the manual design dependency of Transformer architectures in Knowledge Tracing by proposing an evolutionary neural architecture search (NAS) method to automatically discover optimal structures. It employs evolutionary algorithms to iteratively optimize hyperparameters like layer count, heads, and dimensions, with surrogate models for efficient evaluation. Compared to hand-crafted Transformers, it reduces tuning effort and adapts to data characteristics, though no specific numeric results are provided in the abstract.
+- **核心贡献**: 提出将进化NAS应用于知识追踪的Transformer架构搜索。
+- **创新点**: 将进化算法与Transformer架构搜索结合，实现自动化设计。
+- **结果**: 声称在基准数据集上优于基线，但缺乏具体数据支撑。
 
 ### Unsupervised Graph Neural Architecture Search with Disentangled Self-Supervision.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/e78399fc43dbb2d87b7e1e6906ce5baf-Abstract-Conference.html) · 📚 被引 1
@@ -267,4 +328,5 @@
 - **核心贡献**: 提出基于LLM和进化的代码级架构搜索框架。
 - **创新点**: 利用LLM生成架构代码并结合进化策略迭代优化。
 - **结果**: 在多个任务上优于现有LLM-based NAS方法。
+
 <!-- COMPLETE v1 papers=27 -->

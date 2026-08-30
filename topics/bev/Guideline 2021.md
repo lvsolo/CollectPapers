@@ -13,19 +13,16 @@
 
 </details>
 
-### BEV-Net: Assessing Social Distancing Compliance by Joint People Localization and Geometric Reasoning.
-- **链接**: [arXiv:2110.04931](https://arxiv.org/abs/2110.04931) · 📚 被引 9
+### BEV-Net: Assessing Social Distancing Compliance by Joint People Localization and Geometric Reasoning. **⭐⭐** (相关度: 30%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00535)
 - **作者**: Zhirui Dai, Yuepeng Jiang, Yi Li, Bo Liu, Antoni B. Chan, Nuno Vasconcelos
-- **🏷️ 机构**: UC San Diego,Department of Electrical and Computer Engineering, Wormpex AI Research, City University of Hong Kong,Department of Computer Science
+- **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Social distancing, an essential public health measure to limit the spread of contagious diseases, has gained significant attention since the outbreak of the COVID-19 pandemic. In this work, the problem of visual social distancing compliance assessment in busy public areas, with wide field-of-view cameras, is considered. A dataset of crowd scenes with people annotations under a bird's eye view (BEV) and ground truth for metric distances is introduced, and several measures for the evaluation of social distance detection systems are proposed. A multi-branch network, BEV-Net, is proposed to localize individuals in world coordinates and identify high-risk regions where social distancing is violated. BEV-Net combines detection of head and feet locations, camera pose estimation, a differentiable homography module to map image into BEV coordinates, and geometric reasoning to produce a BEV map of the people locations in the scene. Experiments on complex crowded scenes demonstrate the power of the approach and show superior performance over baselines derived from methods in the literature. Applications of interest for public health decision makers are finally discussed. Datasets, code and pretrained models are publicly available at GitHub.
-
-</details>
-
-## 🆕 增量新增
+- **摘要（中）**: ①针对社交距离合规评估问题，需要同时进行人群定位和几何推理，但现有方法多依赖单目深度估计或独立检测。②提出了BEV-Net，通过联合人员定位和几何推理，在鸟瞰视角下计算人员间距离以评估社交距离合规性。③相比传统基于图像平面距离的方法，BEV-Net利用几何推理提升距离估计的准确性。④在公开数据集上验证了有效性，但缺乏具体量化指标。
+- **摘要（英）**: This paper addresses social distancing compliance assessment by proposing BEV-Net, which jointly performs people localization and geometric reasoning in bird's-eye view to compute inter-person distances. Compared to image-plane distance methods, it improves distance estimation accuracy via geometric reasoning. Validation on public datasets shows effectiveness, though specific quantitative metrics are not reported.
+- **核心贡献**: 提出联合人员定位与几何推理的BEV-Net用于社交距离评估。
+- **创新点**: 在BEV空间中进行几何推理以提升距离估计精度。
+- **结果**: 在公开数据集上验证有效性，但缺乏具体量化结果。
 
 ### SE-SSD: Self-Ensembling Single-Stage Object Detector From Point Cloud. **⭐⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [arXiv:2104.09804](https://arxiv.org/abs/2104.09804) · 📚 被引 388
@@ -71,4 +68,5 @@
 > 3D object tracking in point clouds is still a challenging problem due to the sparsity of LiDAR points in dynamic environments. In this work, we propose a Siamese voxel-to-BEV tracker, which can significantly improve the tracking performance in sparse 3D point clouds. Specifically, it consists of a Siamese shape-aware feature learning network and a voxel-to-BEV target localization network. The Siamese shape-aware feature learning network can capture 3D shape information of the object to learn the discriminative features of the object so that the potential target from the background in sparse point clouds can be identified. To this end, we first perform template feature embedding to embed the template's feature into the potential target and then generate a dense 3D shape to characterize the shape information of the potential target. For localizing the tracked target, the voxel-to-BEV target localization network regresses the target's 2D center and the $z$-axis center from the dense bird's eye view (BEV) feature map in an anchor-free manner. Concretely, we compress the voxelized point cloud along $z$-axis through max pooling to obtain a dense BEV feature map, where the regression of the 2D center and the $z$-axis center can be performed more effectively. Extensive evaluation on the KITTI and nuScenes datasets shows that our method significantly outperforms the current state-of-the-art methods by a large margin.
 
 </details>
+
 <!-- COMPLETE v1 papers=4 -->

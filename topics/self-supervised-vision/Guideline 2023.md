@@ -3,19 +3,29 @@
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
 > 论文数: 110 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### GD-MAE: Generative Decoder for MAE Pre-Training on LiDAR Point Clouds.
+### GD-MAE: Generative Decoder for MAE Pre-Training on LiDAR Point Clouds. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00907) · 📚 被引 71
 - **作者**: Honghui Yang, Tong He, Jiaheng Liu, Hua Chen, Boxi Wu, Binbin Lin et al.
 - **🏷️ 机构**: Zhejiang University,State Key Lab of CAD&#x0026;CG, Shanghai AI Laboratory, COMAC Beijing Aircraft Technology Research Institute
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对LiDAR点云预训练中MAE方法重建原始点云导致计算开销大、语义信息利用不足的问题。②提出了GD-MAE，采用生成式解码器，将点云体素化后仅重建被掩蔽的体素特征，而非原始点，并引入辅助任务预测体素密度。③相比现有MAE方法，显著降低了计算复杂度，同时增强了模型对几何结构的理解。④在多个下游任务（如3D检测、分割）上取得了与现有方法相当或更优的性能，且训练效率更高。
+- **摘要（英）**: This paper addresses the inefficiency and limited semantic exploitation in MAE pre-training on LiDAR point clouds. It proposes GD-MAE with a generative decoder that reconstructs masked voxel features instead of raw points, plus a density prediction auxiliary task. This reduces computational cost while improving geometric understanding, achieving comparable or better performance on downstream tasks with higher efficiency.
+- **核心贡献**: 提出了一种基于生成式解码器的LiDAR点云MAE预训练方法，降低计算开销并提升语义建模。
+- **创新点**: 创新性地将重建目标从原始点改为体素特征，并引入密度预测辅助任务。
+- **结果**: 在多个下游任务上性能与现有方法相当，训练效率显著提升。
 
-### DeepMapping2: Self-Supervised Large-Scale LiDAR Map Optimization.
+### DeepMapping2: Self-Supervised Large-Scale LiDAR Map Optimization. **⭐⭐⭐⭐** (相关度: 85%)
 - **链接**: [arXiv:2212.06331](https://arxiv.org/abs/2212.06331) · 📚 被引 13
 - **作者**: Chao Chen, Xinhao Liu, Yiming Li, Li Ding, Chen Feng
 - **🏷️ 机构**: New York University, University of Rochester
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对大规模LiDAR点云地图优化中全局配准收敛慢、缺乏闭环和精确对应点的问题。②提出DeepMapping2，通过基于闭环的地图拓扑组织训练批次，并引入自监督局部到全局点一致性损失，利用成对配准增强训练。③相比原DeepMapping，改进了训练策略和损失函数，显著提升大规模数据上的收敛性和精度。④在KITTI、NCLT和Nebula数据集上的实验和消融研究验证了方法的有效性。
+- **摘要（英）**: This paper addresses the challenges of large-scale LiDAR map optimization, including slow convergence and lack of loop closures. DeepMapping2 introduces topology-based batch organization and a self-supervised local-to-global consistency loss to improve registration. Experiments on KITTI, NCLT, and Nebula demonstrate its effectiveness.
+- **核心贡献**: 提出DeepMapping2，通过拓扑批次组织和一致性损失提升大规模LiDAR地图优化性能。
+- **创新点**: 创新性地利用闭环拓扑和局部到全局一致性损失增强自监督配准。
+- **结果**: 在多个公开数据集上显著提升地图优化精度和收敛速度。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -23,23 +33,38 @@
 
 </details>
 
-### PointCMP: Contrastive Mask Prediction for Self-supervised Learning on Point Cloud Videos.
+### PointCMP: Contrastive Mask Prediction for Self-supervised Learning on Point Cloud Videos. **⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00123) · 📚 被引 26
 - **作者**: Zhiqiang Shen, Xiaoxiao Sheng, Longguang Wang, Yulan Guo, Qiong Liu, Xi Zhou
 - **🏷️ 机构**: Shanghai Jiao Tong University, Aviation University of Air Force, Sun Yat-sen University
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对点云视频自监督学习缺乏有效对比学习策略的问题。②提出PointCMP，利用对比掩码预测进行自监督学习，在点云视频上捕捉时空特征。③相比静态点云方法，引入时间维度增强动态理解。④实验显示在视频理解任务上性能提升。
+- **摘要（英）**: This paper addresses self-supervised learning on point cloud videos by proposing contrastive mask prediction. PointCMP captures spatio-temporal features effectively. Experiments show improvements on video understanding tasks.
+- **核心贡献**: 提出PointCMP，用于点云视频的自监督对比掩码预测。
+- **创新点**: 将对比学习与掩码预测结合，处理点云视频时空特征。
+- **结果**: 在视频理解任务上取得性能提升。
 
-### ACL-SPC: Adaptive Closed-Loop System for Self-Supervised Point Cloud Completion.
+### ACL-SPC: Adaptive Closed-Loop System for Self-Supervised Point Cloud Completion. **⭐⭐⭐** (相关度: 65%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00910) · 📚 被引 27
 - **作者**: Sangmin Hong, Mohsen Yavartanoo, Reyhaneh Neshatavar, Kyoung Mu Lee
 - **🏷️ 机构**: IPAI, Seoul National University,Dept. of ECE &#x0026; ASRI,Seoul,Korea
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对点云补全任务中自监督学习缺乏闭环反馈的问题。②提出ACL-SPC，设计自适应闭环系统，通过迭代优化补全过程。③相比静态补全方法，引入闭环机制提升鲁棒性。④实验表明在补全精度上优于现有方法。
+- **摘要（英）**: This paper addresses self-supervised point cloud completion by proposing an adaptive closed-loop system. ACL-SPC iteratively refines completion with feedback. Experiments show improved accuracy over existing methods.
+- **核心贡献**: 提出ACL-SPC，自适应闭环系统用于自监督点云补全。
+- **创新点**: 创新性地引入闭环反馈机制优化补全过程。
+- **结果**: 在补全精度上优于现有方法。
 
-### ToThePoint: Efficient Contrastive Learning of 3D Point Clouds via Recycling.
+### ToThePoint: Efficient Contrastive Learning of 3D Point Clouds via Recycling. **⭐⭐⭐** (相关度: 75%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.02086) · 📚 被引 14
 - **作者**: Xinglin Li, Jiajing Chen, Jinhui Ouyang, Hanhui Deng, Senem Velipasalar, Di Wu
 - **🏷️ 机构**: Hunan University,China, Syracuse University,NY,USA
 - **会议**: CVPR 2023
+- **摘要（中）**: ①针对3D点云对比学习计算效率低的问题。②提出ToThePoint，通过回收利用特征实现高效对比学习，减少计算开销。③相比传统对比学习，优化资源利用，提升训练效率。④实验显示在保持性能的同时显著降低计算成本。
+- **摘要（英）**: This paper addresses the computational inefficiency of contrastive learning on 3D point clouds. ToThePoint recycles features for efficient learning. It reduces computational cost while maintaining performance.
+- **核心贡献**: 提出ToThePoint，通过特征回收实现高效点云对比学习。
+- **创新点**: 创新性地回收利用特征，降低计算开销。
+- **结果**: 在保持性能的同时显著降低计算成本。
 
 ### Implicit Autoencoder for Point-Cloud Self-Supervised Representation Learning.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01336) · 📚 被引 44
@@ -104,18 +129,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > This paper aims to learn a domain-generalizable (DG) person re-identification (ReID) representation from large-scale videos \textbf{without any annotation}. Prior DG ReID methods employ limited labeled data for training due to the high cost of annotation, which restricts further advances. To overcome the barriers of data and annotation, we propose to utilize large-scale unsupervised data for training. The key issue lies in how to mine identity information. To this end, we propose an Identity-seeking Self-supervised Representation learning (ISR) method. ISR constructs positive pairs from inter-frame images by modeling the instance association as a maximum-weight bipartite matching problem. A reliability-guided contrastive loss is further presented to suppress the adverse impact of noisy positive pairs, ensuring that reliable positive pairs dominate the learning process. The training cost of ISR scales approximately linearly with the data size, making it feasible to utilize large-scale data for training. The learned representation exhibits superior generalization ability. \textbf{Without human annotation and fine-tuning, ISR achieves 87.0\% Rank-1 on Market-1501 and 56.4\% Rank-1 on MSMT17}, outperforming the best supervised domain-generalizable method by 5.0\% and 19.5\%, respectively. In the pre-training$\rightarrow$fine-tuning scenario, ISR achieves state-of-the-art performance, with 88.4\% Rank-1 on MSMT17. The code is at \url{https://github.com/dcp15/ISR_ICCV2023_Oral}.
-
-</details>
-
-### SimFIR: A Simple Framework for Fisheye Image Rectification with Self-supervised Representation Learning.
-- **链接**: [arXiv:2308.09040](https://arxiv.org/abs/2308.09040) · 📚 被引 27
-- **作者**: Hao Feng, Wendi Wang, Jiajun Deng, Wengang Zhou, Li Li, Houqiang Li
-- **🏷️ 机构**: University of Science and Technology of China,CAS Key Laboratory of Technology in GIPAS,EEIS Department, The University of Sydney
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In fisheye images, rich distinct distortion patterns are regularly distributed in the image plane. These distortion patterns are independent of the visual content and provide informative cues for rectification. To make the best of such rectification cues, we introduce SimFIR, a simple framework for fisheye image rectification based on self-supervised representation learning. Technically, we first split a fisheye image into multiple patches and extract their representations with a Vision Transformer (ViT). To learn fine-grained distortion representations, we then associate different image patches with their specific distortion patterns based on the fisheye model, and further subtly design an innovative unified distortion-aware pretext task for their learning. The transfer performance on the downstream rectification task is remarkably boosted, which verifies the effectiveness of the learned representations. Extensive experiments are conducted, and the quantitative and qualitative results demonstrate the superiority of our method over the state-of-the-art algorithms as well as its strong generalization ability on real-world fisheye images.
 
 </details>
 
@@ -320,18 +333,6 @@
 - **作者**: Wenbin He, Suphanut Jamonnak, Liang Gou, Liu Ren
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2023
-
-### Geometric Visual Similarity Learning in 3D Medical Image Self-Supervised Pre-training.
-- **链接**: [arXiv:2303.00874](https://arxiv.org/abs/2303.00874) · [代码](https://github.com/YutingHe-list/GVSL) · 📚 被引 54
-- **作者**: Yuting He, Guanyu Yang, Rongjun Ge, Yang Chen, Jean-Louis Coatrieux, Boyu Wang et al.
-- **🏷️ 机构**: Southeast University, Nanjing University of Aeronautics and Astronautics, University of Rennes 1
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Learning inter-image similarity is crucial for 3D medical images self-supervised pre-training, due to their sharing of numerous same semantic regions. However, the lack of the semantic prior in metrics and the semantic-independent variation in 3D medical images make it challenging to get a reliable measurement for the inter-image similarity, hindering the learning of consistent representation for same semantics. We investigate the challenging problem of this task, i.e., learning a consistent representation between images for a clustering effect of same semantic features. We propose a novel visual similarity learning paradigm, Geometric Visual Similarity Learning, which embeds the prior of topological invariance into the measurement of the inter-image similarity for consistent representation of semantic regions. To drive this paradigm, we further construct a novel geometric matching head, the Z-matching head, to collaboratively learn the global and local similarity of semantic regions, guiding the efficient representation learning for different scale-level inter-image semantic features. Our experiments demonstrate that the pre-training with our learning of inter-image similarity yields more powerful inner-scene, inter-scene, and global-local transferring ability on four challenging 3D medical image tasks. Our codes and pre-trained models will be publicly available on https://github.com/YutingHe-list/GVSL.
-
-</details>
 
 ### ReVISE: Self-Supervised Speech Resynthesis with Visual Input for Universal and Generalized Speech Regeneration.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01802) · 📚 被引 18
@@ -543,12 +544,6 @@
 
 </details>
 
-### Self-supervised Monocular Underwater Depth Recovery, Image Restoration, and a Real-sea Video Dataset.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01125) · 📚 被引 32
-- **作者**: Nisha Varghese, Ashish Kumar, A. N. Rajagopalan
-- **🏷️ 机构**: Indian Institute of Technology Madras,India
-- **会议**: ICCV 2023
-
 ### Noise2Info: Noisy Image to Information of Noise for Self-Supervised Image Denoising.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51070.2023.01469) · 📚 被引 17
 - **作者**: Jiachuan Wang, Shimin Di, Lei Chen, Charles Wang Wai Ng
@@ -624,18 +619,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Self-supervised learning in computer vision aims to leverage the inherent structure and relationships within data to learn meaningful representations without explicit human annotation, enabling a holistic understanding of visual scenes. Robustness in vision machine learning ensures reliable and consistent performance, enhancing generalization, adaptability, and resistance to noise, variations, and adversarial attacks. Self-supervised paradigms, namely contrastive learning, knowledge distillation, mutual information maximization, and clustering, have been considered to have shown advances in invariant learning representations. This work investigates the robustness of learned representations of self-supervised learning approaches focusing on distribution shifts and image corruptions in computer vision. Detailed experiments have been conducted to study the robustness of self-supervised learning methods on distribution shifts and image corruptions. The empirical analysis demonstrates a clear relationship between the performance of learned representations within self-supervised paradigms and the severity of distribution shifts and corruptions. Notably, higher levels of shifts and corruptions are found to significantly diminish the robustness of the learned representations. These findings highlight the critical impact of distribution shifts and image corruptions on the performance and resilience of self-supervised learning methods, emphasizing the need for effective strategies to mitigate their adverse effects. The study strongly advocates for future research in the field of self-supervised representation learning to prioritize the key aspects of safety and robustness in order to ensure practical applicability. The source code and results are available on GitHub.
-
-</details>
-
-### Contrastive Image Synthesis and Self-supervised Feature Adaptation for Cross-Modality Biomedical Image Segmentation.
-- **链接**: [arXiv:2207.13240](https://arxiv.org/abs/2207.13240) · 📚 被引 3
-- **作者**: Xinrong Hu, Corey Wang, Yiyu Shi
-- **🏷️ 机构**: University of Notre Dame,Department of Computer Science and Engineering, Northwestern University
-- **会议**: ICCV 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> This work presents a novel framework CISFA (Contrastive Image synthesis and Self-supervised Feature Adaptation)that builds on image domain translation and unsupervised feature adaptation for cross-modality biomedical image segmentation. Different from existing works, we use a one-sided generative model and add a weighted patch-wise contrastive loss between sampled patches of the input image and the corresponding synthetic image, which serves as shape constraints. Moreover, we notice that the generated images and input images share similar structural information but are in different modalities. As such, we enforce contrastive losses on the generated images and the input images to train the encoder of a segmentation model to minimize the discrepancy between paired images in the learned embedding space. Compared with existing works that rely on adversarial learning for feature adaptation, such a method enables the encoder to learn domain-independent features in a more explicit way. We extensively evaluate our methods on segmentation tasks containing CT and MRI images for abdominal cavities and whole hearts. Experimental results show that the proposed framework not only outputs synthetic images with less distortion of organ shapes, but also outperforms state-of-the-art domain adaptation methods by a large margin.
 
 </details>
 
@@ -939,18 +922,6 @@
 
 </details>
 
-### Dynamic Graph Enhanced Contrastive Learning for Chest X-Ray Report Generation.
-- **链接**: [arXiv:2303.10323](https://arxiv.org/abs/2303.10323) · 📚 被引 176
-- **作者**: Mingjie Li, Bingqian Lin, Zicong Chen, Haokun Lin, Xiaodan Liang, Xiaojun Chang
-- **🏷️ 机构**: AAII, University of Technology Sydney,ReLER, School of ISE, Sun Yat-Sen University, The University of Hong Kong
-- **会议**: CVPR 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Automatic radiology reporting has great clinical potential to relieve radiologists from heavy workloads and improve diagnosis interpretation. Recently, researchers have enhanced data-driven neural networks with medical knowledge graphs to eliminate the severe visual and textual bias in this task. The structures of such graphs are exploited by using the clinical dependencies formed by the disease topic tags via general knowledge and usually do not update during the training process. Consequently, the fixed graphs can not guarantee the most appropriate scope of knowledge and limit the effectiveness. To address the limitation, we propose a knowledge graph with Dynamic structure and nodes to facilitate medical report generation with Contrastive Learning, named DCL. In detail, the fundamental structure of our graph is pre-constructed from general knowledge. Then we explore specific knowledge extracted from the retrieved reports to add additional nodes or redefine their relations in a bottom-up manner. Each image feature is integrated with its very own updated graph before being fed into the decoder module for report generation. Finally, this paper introduces Image-Report Contrastive and Image-Report Matching losses to better represent visual features and textual information. Evaluated on IU-Xray and MIMIC-CXR datasets, our DCL outperforms previous state-of-the-art models on these two benchmarks.
-
-</details>
-
 ### Promoting Semantic Connectivity: Dual Nearest Neighbors Contrastive Learning for Unsupervised Domain Generalization.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00342) · 📚 被引 12
 - **作者**: Yuchen Liu, Yaoming Wang, Yabo Chen, Wenrui Dai, Chenglin Li, Junni Zou et al.
@@ -968,12 +939,6 @@
 > The recent growth in the consumption of online media by children during early childhood necessitates data-driven tools enabling educators to filter out appropriate educational content for young learners. This paper presents an approach for detecting educational content in online videos. We focus on two widely used educational content classes: literacy and math. For each class, we choose prominent codes (sub-classes) based on the Common Core Standards. For example, literacy codes include `letter names', `letter sounds', and math codes include `counting', `sorting'. We pose this as a fine-grained multilabel classification problem as videos can contain multiple types of educational content and the content classes can get visually similar (e.g., `letter names' vs `letter sounds'). We propose a novel class prototypes based supervised contrastive learning approach that can handle fine-grained samples associated with multiple labels. We learn a class prototype for each class and a loss function is employed to minimize the distances between a class prototype and the samples from the class. Similarly, distances between a class prototype and the samples from other classes are maximized. As the alignment between visual and audio cues are crucial for effective comprehension, we consider a multimodal transformer network to capture the interaction between visual and audio cues in videos while learning the embedding for videos. For evaluation, we present a dataset, APPROVE, employing educational videos from YouTube labeled with fine-grained education classes by education researchers. APPROVE consists of 193 hours of expert-annotated videos with 19 classes. The proposed approach outperforms strong baselines on APPROVE and other benchmarks such as Youtube-8M, and COIN. The dataset is available at https://github.com/rohit-gupta/MMContrast/tree/main/APPROVE
 
 </details>
-
-### Pseudo-Label Guided Contrastive Learning for Semi-Supervised Medical Image Segmentation.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01895) · 📚 被引 187
-- **作者**: Hritam Basak, Zhaozheng Yin
-- **🏷️ 机构**: Stony Brook University,NY,USA
-- **会议**: CVPR 2023
 
 ### Weakly-Supervised Domain Adaptive Semantic Segmentation with Prototypical Contrastive Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01481) · 📚 被引 30
@@ -1045,12 +1010,6 @@
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.01015)
 - **作者**: Shao-Yuan Lo, Poojan Oza, Sumanth Chennupati, Alejandro Galindo, Vishal M. Patel
 - **🏷️ 机构**: （机构待查）
-- **会议**: CVPR 2023
-
-### Change-Aware Sampling and Contrastive Learning for Satellite Images.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52729.2023.00509) · 📚 被引 96
-- **作者**: Utkarsh Mall, Bharath Hariharan, Kavita Bala
-- **🏷️ 机构**: Cornell University
 - **会议**: CVPR 2023
 
 ### MobileVOS: Real-Time Video Object Segmentation Contrastive Learning meets Knowledge Distillation.
@@ -1371,18 +1330,6 @@
 
 </details>
 
-### Keypoint-Augmented Self-Supervised Learning for Medical Image Segmentation with Limited Annotation.
-- **链接**: [arXiv:2310.01680](https://arxiv.org/abs/2310.01680) · [代码](https://github.com/zshyang/kaf.git) · 📚 被引 4
-- **作者**: Zhangsihao Yang, Mengwei Ren, Kaize Ding, Guido Gerig, Yalin Wang
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Pretraining CNN models (i.e., UNet) through self-supervision has become a powerful approach to facilitate medical image segmentation under low annotation regimes. Recent contrastive learning methods encourage similar global representations when the same image undergoes different transformations, or enforce invariance across different image/patch features that are intrinsically correlated. However, CNN-extracted global and local features are limited in capturing long-range spatial dependencies that are essential in biological anatomy. To this end, we present a keypoint-augmented fusion layer that extracts representations preserving both short- and long-range self-attention. In particular, we augment the CNN feature map at multiple scales by incorporating an additional input that learns long-range spatial self-attention among localized keypoint features. Further, we introduce both global and local self-supervised pretraining for the framework. At the global scale, we obtain global representations from both the bottleneck of the UNet, and by aggregating multiscale keypoint features. These global features are subsequently regularized through image-level contrastive objectives. At the local scale, we define a distance-based criterion to first establish correspondences among keypoints and encourage similarity between their features. Through extensive experiments on both MRI and CT segmentation tasks, we demonstrate the architectural advantages of our proposed method in comparison to both CNN and Transformer-based UNets, when all architectures are trained with randomly initialized weights. With our proposed pretraining strategy, our method further outperforms existing SSL methods by producing more robust self-attention and achieving state-of-the-art segmentation results. The code is available at https://github.com/zshyang/kaf.git.
-
-</details>
-
 ### Self-supervised Graph Neural Networks via Low-Rank Decomposition.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/6c33e4ea4ddfb05a78541022ab5a1fb9-Abstract-Conference.html) · 📚 被引 1
 - **作者**: Liang Yang, Runjie Shi, Qiuliang Zhang, Bingxin Niu, Zhen Wang, Xiaochun Cao et al.
@@ -1515,18 +1462,6 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2023
 
-### Reconstructing the Mind's Eye: fMRI-to-Image with Contrastive Learning and Diffusion Priors.
-- **链接**: [arXiv:2305.18274](https://arxiv.org/abs/2305.18274) · 📚 被引 23
-- **作者**: Paul S. Scotti, Atmadeep Banerjee, Jimmie Goode, Stepan Shabalin, Alex Nguyen, Ethan Cohen et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We present MindEye, a novel fMRI-to-image approach to retrieve and reconstruct viewed images from brain activity. Our model comprises two parallel submodules that are specialized for retrieval (using contrastive learning) and reconstruction (using a diffusion prior). MindEye can map fMRI brain activity to any high dimensional multimodal latent space, like CLIP image space, enabling image reconstruction using generative models that accept embeddings from this latent space. We comprehensively compare our approach with other existing methods, using both qualitative side-by-side comparisons and quantitative evaluations, and show that MindEye achieves state-of-the-art performance in both reconstruction and retrieval tasks. In particular, MindEye can retrieve the exact original image even among highly similar candidates indicating that its brain embeddings retain fine-grained image-specific information. This allows us to accurately retrieve images even from large-scale databases like LAION-5B. We demonstrate through ablations that MindEye's performance improvements over previous methods result from specialized submodules for retrieval and reconstruction, improved training techniques, and training models with orders of magnitude more parameters. Furthermore, we show that MindEye can better preserve low-level image features in the reconstructions by using img2img, with outputs from a separate autoencoder. All code is available on GitHub.
-
-</details>
-
 ### Feature Dropout: Revisiting the Role of Augmentations in Contrastive Learning.
 - **链接**: [arXiv:2212.08378](https://arxiv.org/abs/2212.08378) · 📚 被引 0
 - **作者**: Alex Tamkin, Margalit Glasgow, Xiluo He, Noah D. Goodman
@@ -1580,12 +1515,6 @@
 > Graph Contrastive Learning (GCL) has shown superior performance in representation learning in graph-structured data. Despite their success, most existing GCL methods rely on prefabricated graph augmentation and homophily assumptions. Thus, they fail to generalize well to heterophilic graphs where connected nodes may have different class labels and dissimilar features. In this paper, we study the problem of conducting contrastive learning on homophilic and heterophilic graphs. We find that we can achieve promising performance simply by considering an asymmetric view of the neighboring nodes. The resulting simple algorithm, Asymmetric Contrastive Learning for Graphs (GraphACL), is easy to implement and does not rely on graph augmentations and homophily assumptions. We provide theoretical and empirical evidence that GraphACL can capture one-hop local neighborhood information and two-hop monophily similarity, which are both important for modeling heterophilic graphs. Experimental results show that the simple GraphACL significantly outperforms state-of-the-art graph contrastive learning and self-supervised learning methods on homophilic and heterophilic graphs. The code of GraphACL is available at https://github.com/tengxiao1/GraphACL.
 
 </details>
-
-### Spatially Resolved Gene Expression Prediction from Histology Images via Bi-modal Contrastive Learning.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2023/hash/df656d6ed77b565e8dcdfbf568aead0a-Abstract-Conference.html) · 📚 被引 21
-- **作者**: Ronald Xie, Kuan Pang, Sai Chung, Catia Perciani, Sonya MacParland, Bo Wang et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2023
 
 ### Enhancing Adversarial Contrastive Learning via Adversarial Invariant Regularization.
 - **链接**: [arXiv:2305.00374](https://arxiv.org/abs/2305.00374) · [代码](https://github.com/GodXuxilie/Enhancing_ACL_via_AIR) · 📚 被引 2
@@ -2091,4 +2020,5 @@
 - Self-Supervised Monocular Depth Estimation by Direction-aware Cumulative Convolution Network. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
 - Self-supervised Monocular Depth Estimation: Let's Talk About The Weather. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
 - 3D Distillation: Improving Self-Supervised Monocular Depth Estimation on Reflective Surfaces. → [multi-camera-perception](../multi-camera-perception/Guideline%202023.md)
-<!-- COMPLETE v1 papers=219 -->
+
+<!-- COMPLETE v1 papers=209 -->

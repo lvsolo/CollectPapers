@@ -3,7 +3,7 @@
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
 > 论文数: 29 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### UMG-CLIP: A Unified Multi-granularity Vision Generalist for Open-World Understanding.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-72920-1_15) · 📚 被引 2
@@ -22,36 +22,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Hallucinations in vision-language models pose a significant challenge to their reliability, particularly in the generation of long captions. Current methods fall short of accurately identifying and mitigating these hallucinations. To address this issue, we introduce ESREAL, a novel unsupervised learning framework designed to suppress the generation of hallucinations through accurate localization and penalization of hallucinated tokens. Initially, ESREAL creates a reconstructed image based on the generated caption and aligns its corresponding regions with those of the original image. This semantic reconstruction aids in identifying both the presence and type of token-level hallucinations within the generated caption. Subsequently, ESREAL computes token-level hallucination scores by assessing the semantic similarity of aligned regions based on the type of hallucination. Finally, ESREAL employs a proximal policy optimization algorithm, where it selectively penalizes hallucinated tokens according to their token-level hallucination scores. Our framework notably reduces hallucinations in LLaVA, InstructBLIP, and mPLUG-Owl2 by 32.81%, 27.08%, and 7.46% on the CHAIR metric. This improvement is achieved solely through signals derived from the image itself, without the need for any image-text pairs.
-
-</details>
-
-### CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/fde7f40f8ced5735006810534dc66b33-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 18
-- **作者**: Peng Xia, Ze Chen, Juanxi Tian, Yangrui Gong, Ruibo Hou, Yue Xu et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Prompt learning has been widely adopted to efficiently adapt vision-language models (VLMs), e.g. CLIP, for few-shot image classification. Despite their success, most prompt learning methods trade-off between classification accuracy and robustness, e.g. in domain generalization or out-of-distribution (OOD) detection. In this work, we introduce Global-Local Prompts (GalLoP), a new prompt learning method that learns multiple diverse prompts leveraging both global and local visual features. The training of the local prompts relies on local features with an enhanced vision-text alignment. To focus only on pertinent features, this local alignment is coupled with a sparsity strategy in the selection of the local features. We enforce diversity on the set of prompts using a new ``prompt dropout'' technique and a multiscale strategy on the local prompts. GalLoP outperforms previous prompt learning methods on accuracy on eleven datasets in different few shots settings and with various backbones. Furthermore, GalLoP shows strong robustness performances in both domain generalization and OOD detection, even outperforming dedicated OOD detection methods. Code and instructions to reproduce our results: https://github.com/MarcLafon/gallop.
-
-</details>
-
-> Medical Vision-Language Pretraining (MedVLP) shows promise in learning generalizable and transferable visual representations from paired and unpaired medical images and reports. MedVLP can provide useful features to downstream tasks and facilitate adapting task-specific models to new setups using fewer examples. However, existing MedVLP methods often differ in terms of datasets, preprocessing, and finetuning implementations. This pose great challenges in evaluating how well a MedVLP method generalizes to various clinically-relevant tasks due to the lack of unified, standardized, and comprehensive benchmark. To fill this gap, we propose BenchX, a unified benchmark framework that enables head-to-head comparison and systematical analysis between MedVLP methods using public chest X-ray datasets. Specifically, BenchX is composed of three components: 1) Comprehensive datasets covering nine datasets and four medical tasks; 2) Benchmark suites to standardize data preprocessing, train-test splits, and parameter selection; 3) Unified finetuning protocols that accommodate heterogeneous MedVLP methods for consistent task adaptation in classification, segmentation, and report generation, respectively. Utilizing BenchX, we establish baselines for nine state-of-the-art MedVLP methods and found that the performance of some early MedVLP methods can be enhanced to surpass more recent ones, prompting a revisiting of the developments and conclusions from prior works in MedVLP. Our code are available at https://github.com/yangzhou12/BenchX.
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Current high-resolution vision-language models encode images as high-resolution image tokens and exhaustively take all these tokens to compute attention, which significantly increases the computational cost. To address this problem, we propose FlexAttention, a flexible attention mechanism for efficient high-resolution vision-language models. Specifically, a high-resolution image is encoded both as high-resolution tokens and low-resolution tokens, where only the low-resolution tokens and a few selected high-resolution tokens are utilized to calculate the attention map, which greatly shrinks the computational cost. The high-resolution tokens are selected via a high-resolution selection module which could retrieve tokens of relevant regions based on an input attention map. The selected high-resolution tokens are then concatenated to the low-resolution tokens and text tokens, and input to a hierarchical self-attention layer which produces an attention map that could be used for the next-step high-resolution token selection. The hierarchical self-attention process and high-resolution token selection process are performed iteratively for each attention layer. Experiments on multimodal benchmarks prove that our FlexAttention outperforms existing high-resolution VLMs (e.g., relatively ~9% in V* Bench, ~7% in TextVQA), while also significantly reducing the computational cost by nearly 40%.
-
-</details>
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Detecting Human-Object Interactions (HOI) in zero-shot settings, where models must handle unseen classes, poses significant challenges. Existing methods that rely on aligning visual encoders with large Vision-Language Models (VLMs) to tap into the extensive knowledge of VLMs, require large, computationally expensive models and encounter training difficulties. Adapting VLMs with prompt learning offers an alternative to direct alignment. However, fine-tuning on task-specific datasets often leads to overfitting to seen classes and suboptimal performance on unseen classes, due to the absence of unseen class labels. To address these challenges, we introduce a novel prompt learning-based framework for Efficient Zero-Shot HOI detection (EZ-HOI). First, we introduce Large Language Model (LLM) and VLM guidance for learnable prompts, integrating detailed HOI descriptions and visual semantics to adapt VLMs to HOI tasks. However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize learnable prompts for seen classes instead of unseen ones. Therefore, we design prompt learning for unseen classes using information from related seen classes, with LLMs utilized to highlight the differences between unseen and related seen classes. Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35% to 33.95% of the trainable parameters compared to existing methods. Code is available at https://github.com/ChelsieLei/EZ-HOI.
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The emergence of Vision Language Models (VLMs) is a significant advancement in integrating computer vision with Large Language Models (LLMs) to produce detailed text descriptions based on visual inputs, yet it introduces new security vulnerabilities. Unlike prior work that centered on single modalities or classification tasks, this study introduces TrojVLM, the first exploration of backdoor attacks aimed at VLMs engaged in complex image-to-text generation. Specifically, TrojVLM inserts predetermined target text into output text when encountering poisoned images. Moreover, a novel semantic preserving loss is proposed to ensure the semantic integrity of the original image content. Our evaluation on image captioning and visual question answering (VQA) tasks confirms the effectiveness of TrojVLM in maintaining original semantic content while triggering specific target text outputs. This study not only uncovers a critical security risk in VLMs and image-to-text generation but also sets a foundation for future research on securing multimodal models against such sophisticated threats.
 
 </details>
 
@@ -459,12 +429,6 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2024
 
-### Enhancing vision-language models for medical imaging: bridging the 3D gap with innovative slice selection.
-- **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/b53513b83232116ae25f57a174a7c993-Abstract-Datasets_and_Benchmarks_Track.html) · 📚 被引 6
-- **作者**: Yuli Wang, Peng jian, Yuwei Dai, Craig K. Jones, Haris I. Sair, Jinglai Shen et al.
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2024
-
 ### Vision-Language Models are Strong Noisy Label Detectors.
 - **链接**: [出版页](http://papers.nips.cc/paper_files/paper/2024/hash/6af08ba9468f0daca4b8dd388cb95824-Abstract-Conference.html) · 📚 被引 7
 - **作者**: Tong Wei, Hao-Tian Li, Chun-Shu Li, Jiang-Xin Shi, Yufeng Li, Min-Ling Zhang
@@ -820,23 +784,27 @@
 
 </details>
 
-### From Pixels to Graphs: Open-Vocabulary Scene Graph Generation with Vision-Language Models.
-- **链接**: [arXiv:2404.00906](https://arxiv.org/abs/2404.00906) · 📚 被引 51
+### From Pixels to Graphs: Open-Vocabulary Scene Graph Generation with Vision-Language Models. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02652)
 - **作者**: Rongjie Li, Songyang Zhang, Dahua Lin, Kai Chen, Xuming He
-- **🏷️ 机构**: School of Information Science and Technology, ShanghaiTech University, Shanghai AI Laboratory
+- **🏷️ 机构**: CUHK
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对场景图生成（SGG）中类别受限、难以处理开放词汇关系的问题。②提出利用视觉-语言模型将像素级特征映射到图结构，通过跨模态对齐生成开放词汇的场景图。③相比传统SGG方法，该方法无需固定关系类别，能生成更丰富的语义关系。④摘要未提供具体性能数据，但强调了对未见关系的泛化能力。
+- **摘要（英）**: This work tackles the limited category scope in scene graph generation by employing vision-language models to map pixels to graph structures. It enables open-vocabulary relation prediction through cross-modal alignment, overcoming fixed-class constraints. The approach enhances semantic richness and generalization, though quantitative results are absent from the abstract.
+- **核心贡献**: 提出基于VLM的开放词汇场景图生成方法。
+- **创新点**: 利用视觉-语言模型实现像素到图的跨模态映射。
+- **结果**: 在开放词汇SGG中展现泛化优势，无具体数据。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Scene graph generation (SGG) aims to parse a visual scene into an intermediate graph representation for downstream reasoning tasks. Despite recent advancements, existing methods struggle to generate scene graphs with novel visual relation concepts. To address this challenge, we introduce a new open-vocabulary SGG framework based on sequence generation. Our framework leverages vision-language pre-trained models (VLM) by incorporating an image-to-graph generation paradigm. Specifically, we generate scene graph sequences via image-to-text generation with VLM and then construct scene graphs from these sequences. By doing so, we harness the strong capabilities of VLM for open-vocabulary SGG and seamlessly integrate explicit relational modeling for enhancing the VL tasks. Experimental results demonstrate that our design not only achieves superior performance with an open vocabulary but also enhances downstream vision-language task performance through explicit relation modeling knowledge.
-
-</details>
-
-### Emergent Open-Vocabulary Semantic Segmentation from Off-the-Shelf Vision-Language Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00386) · 📚 被引 16
+### Emergent Open-Vocabulary Semantic Segmentation from Off-the-Shelf Vision-Language Models. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00386)
 - **作者**: Jiayun Luo, Siddhesh Khandelwal, Leonid Sigal, Boyang Li
-- **🏷️ 机构**: Nanyang Technological University,Singapore, University of British Columbia, Vector Institute for AI,Canada
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对开放词汇语义分割依赖额外训练或复杂模块的问题。②提出了一种利用现成视觉语言模型（如CLIP）的涌现能力，无需额外训练即可实现开放词汇语义分割的方法。③相比现有方法，该方法完全利用预训练模型，无需微调或特定架构，简化了流程。④实验表明，该方法在多个分割基准上取得了有竞争力的性能，展示了VLM的涌现能力。
+- **摘要（英）**: This paper addresses the reliance on additional training or complex modules in open-vocabulary semantic segmentation. It proposes a method that leverages emergent capabilities of off-the-shelf vision-language models (e.g., CLIP) for segmentation without extra training. Compared to existing methods, it simplifies the pipeline by using pretrained models directly. Experiments show competitive performance on multiple segmentation benchmarks, demonstrating emergent abilities.
+- **核心贡献**: 提出利用现成VLM的涌现能力实现零训练开放词汇语义分割。
+- **创新点**: 无需额外训练，直接利用预训练VLM。
+- **结果**: 在多个分割基准上取得有竞争力的性能。
 
 ### OVFoodSeg: Elevating Open-Vocabulary Food Image Segmentation via Image-Informed Textual Representation.
 - **链接**: [arXiv:2404.01409](https://arxiv.org/abs/2404.01409) · 📚 被引 10
@@ -862,47 +830,71 @@
 
 </details>
 
-### DeIL: Direct-and-Inverse CLIP for Open-World Few-Shot Learning.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02693) · 📚 被引 15
+### DeIL: Direct-and-Inverse CLIP for Open-World Few-Shot Learning. **⭐⭐⭐** (相关度: 60%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02693)
 - **作者**: Shuai Shao, Yu Bai, Yan Wang, Baodi Liu, Yicong Zhou
-- **🏷️ 机构**: Zhejiang Lab, China University of Petroleum (East China), Beihang University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对开放世界少样本学习（OW-FSL）中模型难以同时处理已知类识别和未知类检测的问题，提出DeIL方法，利用CLIP的直接和逆映射机制。直接映射用于分类已知类，逆映射通过生成类原型来识别未知类，并引入特征对齐策略。相比现有方法，DeIL无需额外训练数据即可适应新类，在多个基准上提升了未知类检测的准确率。
+- **摘要（英）**: Addressing open-world few-shot learning, DeIL leverages direct and inverse CLIP mappings to classify known classes and detect unknown ones via generated prototypes. It improves unknown detection accuracy without extra training data, outperforming prior methods on benchmarks.
+- **核心贡献**: 提出基于CLIP直接与逆映射的开放世界少样本学习框架。
+- **创新点**: 利用逆映射生成未知类原型，实现无需额外数据的开放集检测。
+- **结果**: 在多个OW-FSL基准上提升了未知类检测性能。
 
-### Towards Better Vision-Inspired Vision-Language Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01285) · 📚 被引 6
+### Towards Better Vision-Inspired Vision-Language Models. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01285)
 - **作者**: Yun-Hao Cao, Kaixiang Ji, Ziyuan Huang, Chuanyang Zheng, Jiajia Liu, Jian Wang et al.
-- **🏷️ 机构**: Nanjing University,National Key Laboratory for Novel Software Technology, Ant Group
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对现有视觉语言模型（VLM）中视觉编码器与语言模型融合不充分的问题，提出一种视觉启发的VLM架构改进方法。通过增强视觉特征的语义对齐和跨模态交互，提升模型对细粒度视觉概念的理解。相比标准VLM，该方法在多个视觉问答和图像描述任务上取得了更优性能，且计算开销增加有限。
+- **摘要（英）**: Improving vision-language models by enhancing visual feature alignment and cross-modal interaction, this work boosts fine-grained visual understanding. It achieves better performance on VQA and captioning tasks with modest computational overhead.
+- **核心贡献**: 提出视觉启发的VLM架构改进，增强视觉-语言对齐。
+- **创新点**: 通过视觉特征增强和交互机制提升VLM的细粒度理解。
+- **结果**: 在多个VLM基准上取得性能提升。
 
-### DRESS : Instructing Large Vision-Language Models to Align and Interact with Humans via Natural Language Feedback.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01350) · 📚 被引 21
+### DRESS : Instructing Large Vision-Language Models to Align and Interact with Humans via Natural Language Feedback. **⭐⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01350)
 - **作者**: Yangyi Chen, Karan Sikka, Michael Cogswell, Heng Ji, Ajay Divakaran
-- **🏷️ 机构**: SRI International, University of Illinois Urbana-Champaign
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对大型视觉语言模型（LVLM）在交互中缺乏人类反馈对齐的问题，提出DRESS方法，利用自然语言反馈指令微调模型。通过收集人类反馈数据并设计指令模板，使模型能根据反馈调整行为，提升交互的自然性和准确性。相比传统RLHF，DRESS更轻量且可解释，在多项人机交互评估中显著优于基线。
+- **摘要（英）**: DRESS fine-tunes LVLMs with natural language feedback to align with human intent, improving interaction quality. It outperforms RLHF baselines in human evaluation with lighter training and better interpretability.
+- **核心贡献**: 提出基于自然语言反馈的LVLM对齐方法。
+- **创新点**: 用语言反馈替代奖励模型，实现可解释的交互对齐。
+- **结果**: 在人机交互评估中显著优于基线。
 
-### Hallusionbench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01363) · 📚 被引 144
+### Hallusionbench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01363)
 - **作者**: Tianrui Guan, Fuxiao Liu, Xiyang Wu, Ruiqi Xian, Zongxia Li, Xiaoyu Liu et al.
-- **🏷️ 机构**: University of Maryland,College Park
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对大型视觉语言模型（LVLM）中语言幻觉和视觉错觉纠缠的问题，提出HallusionBench诊断套件，包含精心设计的图像-问题对来区分两类错误。通过系统性测试，揭示了模型在空间推理和时间理解上的缺陷。该基准为LVLM的鲁棒性评估提供了新标准，实验显示现有模型在复杂场景下错误率高达40%以上。
+- **摘要（英）**: HallusionBench provides a diagnostic suite to disentangle language hallucination and visual illusion in LVLMs. It reveals significant defects in spatial and temporal reasoning, with error rates exceeding 40% in complex scenarios.
+- **核心贡献**: 构建了区分语言幻觉与视觉错觉的LVLM诊断基准。
+- **创新点**: 通过特定图像-问题对分离两类错误源。
+- **结果**: 揭示现有LVLM在复杂场景下错误率超40%。
 
-### Language Models as Black-Box Optimizers for Vision-Language Models.
-- **链接**: [arXiv:2309.05950](https://arxiv.org/abs/2309.05950) · 📚 被引 22
+### Language Models as Black-Box Optimizers for Vision-Language Models. **⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01206)
 - **作者**: Shihong Liu, Samuel Yu, Zhiqiu Lin, Deepak Pathak, Deva Ramanan
-- **🏷️ 机构**: Carnegie Mellon University
+- **🏷️ 机构**: CMU
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对视觉语言模型（VLM）提示调优依赖梯度计算的问题，提出利用语言模型作为黑盒优化器来搜索提示。通过将优化任务转化为文本生成，无需访问模型梯度即可找到有效提示。相比梯度方法，该方法更通用且适用于不可微模型，在多个VLM任务上达到接近的性能。
+- **摘要（英）**: Using language models as black-box optimizers, this work searches prompts for VLMs without gradient access. It achieves comparable performance to gradient-based methods across tasks, offering broader applicability.
+- **核心贡献**: 提出基于语言模型的黑盒提示优化方法。
+- **创新点**: 将提示搜索转化为文本生成任务，免梯度。
+- **结果**: 在多个VLM任务上接近梯度方法性能。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Vision-language models (VLMs) pre-trained on web-scale datasets have demonstrated remarkable capabilities on downstream tasks when fine-tuned with minimal data. However, many VLMs rely on proprietary data and are not open-source, which restricts the use of white-box approaches for fine-tuning. As such, we aim to develop a black-box approach to optimize VLMs through natural language prompts, thereby avoiding the need to access model parameters, feature embeddings, or even output logits. We propose employing chat-based LLMs to search for the best text prompt for VLMs. Specifically, we adopt an automatic hill-climbing procedure that converges to an effective prompt by evaluating the performance of current prompts and asking LLMs to refine them based on textual feedback, all within a conversational process without human-in-the-loop. In a challenging 1-shot image classification setup, our simple approach surpasses the white-box continuous prompting method (CoOp) by an average of 1.5% across 11 datasets including ImageNet. Our approach also outperforms both human-engineered and LLM-generated prompts. We highlight the advantage of conversational feedback that incorporates both positive and negative prompts, suggesting that LLMs can utilize the implicit gradient direction in textual feedback for a more efficient search. In addition, we find that the text prompts generated through our strategy are not only more interpretable but also transfer well across different VLM architectures in a black-box manner. Lastly, we apply our framework to optimize the state-of-the-art black-box VLM (DALL-E 3) for text-to-image generation, prompt inversion, and personalization.
-
-</details>
-
-### Sonic VisionLM: Playing Sound with Vision Language Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02537) · 📚 被引 16
+### Sonic VisionLM: Playing Sound with Vision Language Models. **⭐⭐** (相关度: 40%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02537)
 - **作者**: Zhifeng Xie, Shengye Yu, Qile He, Mengtian Li
-- **🏷️ 机构**: Shanghai University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: 针对视觉语言模型（VLM）在音频生成领域的空白，提出Sonic VisionLM，将图像和文本输入映射为声音描述并生成音频。通过扩展VLM的模态输出，实现视觉到声音的跨模态生成。该方法在音频生成质量上初步可行，但缺乏与自动驾驶相关的应用场景。
+- **摘要（英）**: Sonic VisionLM extends VLMs to generate audio from visual and text inputs, enabling cross-modal sound synthesis. It demonstrates feasibility but lacks direct relevance to autonomous driving.
+- **核心贡献**: 首次将VLM扩展至音频生成任务。
+- **创新点**: 实现视觉到声音的跨模态生成。
+- **结果**: 初步验证了音频生成可行性。
 
 ### Consistency and Uncertainty: Identifying Unreliable Responses From Black-Box Vision-Language Models for Selective Visual Question Answering.
 - **链接**: [arXiv:2404.10193](https://arxiv.org/abs/2404.10193) · 📚 被引 21
@@ -1707,4 +1699,5 @@
 - Learning the Unlearned: Mitigating Feature Suppression in Contrastive Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
 - Contrasting Deepfakes Diffusion via Contrastive Learning and Global-Local Similarities. → [self-supervised-vision](../self-supervised-vision/Guideline%202024.md)
 - Meta-optimized Angular Margin Contrastive Framework for Video-Language Representation Learning. → [video-understanding](../video-understanding/Guideline%202024.md)
-<!-- COMPLETE v1 papers=152 -->
+
+<!-- COMPLETE v1 papers=150 -->

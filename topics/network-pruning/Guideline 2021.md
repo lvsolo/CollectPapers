@@ -3,31 +3,40 @@
 > 领域: 网络剪枝 / 模型压缩（结构化剪枝、稀疏化）
 > 论文数: 10 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### NPAS: A Compiler-Aware Framework of Unified Network Pruning and Architecture Search for Beyond Real-Time Mobile Acceleration.
+### NPAS: A Compiler-Aware Framework of Unified Network Pruning and Architecture Search for Beyond Real-Time Mobile Acceleration. **⭐⭐⭐** (相关度: 30%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Li_NPAS_A_Compiler-Aware_Framework_of_Unified_Network_Pruning_and_Architecture_CVPR_2021_paper.html) · 📚 被引 25
 - **作者**: Zhengang Li, Geng Yuan, Wei Niu, Pu Zhao, Yanyu Li, Yuxuan Cai et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对移动端加速中网络剪枝与架构搜索分离导致效率低下的问题。②提出编译器感知的统一剪枝与架构搜索框架NPAS，联合优化模型结构和编译器映射。③相比单独剪枝或NAS，通过编译器反馈实现端到端加速。④摘要缺失，无法提供具体数据。
+- **摘要（英）**: This paper addresses the inefficiency of separating network pruning and architecture search for mobile acceleration. It proposes NPAS, a compiler-aware framework unifying pruning and NAS with compiler feedback. This enables end-to-end acceleration beyond real-time. Specific results are unavailable due to missing abstract.
+- **核心贡献**: 提出编译器感知的统一剪枝与架构搜索框架。
+- **创新点**: 将编译器优化反馈融入剪枝和搜索过程。
+- **结果**: 未提供具体效果数据。
 
-### Network Pruning via Performance Maximization.
+### Network Pruning via Performance Maximization. **⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Gao_Network_Pruning_via_Performance_Maximization_CVPR_2021_paper.html) · 📚 被引 110
 - **作者**: Shangqian Gao, Feihu Huang, Weidong Cai, Heng Huang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 该论文针对网络剪枝问题，提出了一种基于性能最大化的剪枝方法，旨在在压缩模型的同时保持或提升性能。由于摘要缺失，具体方法细节和实验效果无法评估。
+- **摘要（英）**: This paper proposes a network pruning method based on performance maximization, aiming to compress models while maintaining or improving performance. Due to the missing abstract, specific method details and experimental results cannot be assessed.
+- **核心贡献**: 提出了一种基于性能最大化的网络剪枝方法。
+- **创新点**: 以性能最大化为目标进行剪枝，可能区别于传统基于重要性或稀疏性的方法。
+- **结果**: 由于摘要缺失，具体效果未知。
 
-### Learnable Motion Coherence for Correspondence Pruning.
+### Learnable Motion Coherence for Correspondence Pruning. **⭐⭐⭐⭐** (相关度: 60%)
 - **链接**: [arXiv:2011.14563](https://arxiv.org/abs/2011.14563) · 📚 被引 62
 - **作者**: Yuan Liu, Lingjie Liu, Cheng Lin, Zhen Dong, Wenping Wang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
-
-### Achieving on-Mobile Real-Time Super-Resolution with Neural Architecture and Pruning Search.
-- **链接**: [arXiv:2108.08910](https://arxiv.org/abs/2108.08910) · 📚 被引 52
-- **作者**: Zheng Zhan, Yifan Gong, Pu Zhao, Geng Yuan, Wei Niu, Yushu Wu et al.
-- **🏷️ 机构**: Northeastern University, College of William &#x0026; Mary, Cleveland State University
-- **会议**: ICCV 2021
+- **摘要（中）**: 针对稀疏且分布不均匀的对应点中建模运动一致性的挑战，提出了一种名为拉普拉斯运动一致性网络（LMCNet）的方法，用于对应点剪枝。该方法通过图拉普拉斯算子将运动一致性拟合为平滑函数，并推导出闭式解，从而设计可微分层来捕获全局运动一致性，并与局部一致性结合以鲁棒地检测内点。实验表明，在相对相机姿态估计和动态场景对应点剪枝任务中，LMCNet优于现有最先进方法。
+- **摘要（英）**: This paper tackles the challenge of modeling motion coherence on sparse and unevenly distributed correspondences by proposing the Laplacian Motion Coherence Network (LMCNet). It formulates coherent motion fitting as a smooth function on a graph with a closed-form solution via graph Laplacian, enabling a differentiable layer for global coherence, combined with local coherence for robust inlier detection. Experiments show superior performance in relative camera pose estimation and dynamic scene correspondence pruning.
+- **核心贡献**: 提出了LMCNet，利用图拉普拉斯闭式解实现全局运动一致性学习，用于对应点剪枝。
+- **创新点**: 创新性地将运动一致性拟合转化为图拉普拉斯闭式解，并集成到可微学习框架中。
+- **结果**: 在相对相机姿态估计和动态场景剪枝任务中优于最先进方法。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -35,29 +44,38 @@
 
 </details>
 
-### Manifold Regularized Dynamic Network Pruning.
-- **链接**: [arXiv:2103.05861](https://arxiv.org/abs/2103.05861) · 📚 被引 87
+### Achieving on-Mobile Real-Time Super-Resolution with Neural Architecture and Pruning Search. **⭐⭐⭐** (相关度: 25%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00478)
+- **作者**: Zheng Zhan, Yifan Gong, Pu Zhao, Geng Yuan, Wei Niu, Yushu Wu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对移动端实时超分辨率任务中模型需同时满足精度和速度要求的问题。②结合神经架构搜索（NAS）和剪枝搜索，自动设计高效超分网络结构并确定剪枝策略。③相比单独使用NAS或剪枝，联合搜索能更好地平衡精度、参数量和推理延迟。④摘要未提供具体数据，但声称在移动端实现实时推理且保持高精度。
+- **摘要（英）**: This paper addresses the need for efficient super-resolution models on mobile devices by combining neural architecture search and pruning search. The joint search optimizes accuracy, parameter count, and latency, achieving real-time inference on mobile platforms. Specific metrics are not provided in the abstract.
+- **核心贡献**: 提出NAS与剪枝联合搜索的移动端超分模型设计方法。
+- **创新点**: 联合优化网络架构和剪枝策略。
+- **结果**: 在移动端实现实时超分推理并保持高精度。
+
+### Manifold Regularized Dynamic Network Pruning. **⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Tang_Manifold_Regularized_Dynamic_Network_Pruning_CVPR_2021_paper.html) · 📚 被引 87
 - **作者**: Yehui Tang, Yunhe Wang, Yixing Xu, Yiping Deng, Chao Xu, Dacheng Tao et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 该论文提出了一种基于流形正则化的动态网络剪枝方法，旨在在剪枝过程中保持数据的流形结构。由于摘要缺失，具体方法细节和实验效果无法评估。
+- **摘要（英）**: This paper proposes a manifold regularized dynamic network pruning method, aiming to preserve data manifold structure during pruning. Due to the missing abstract, specific method details and experimental results cannot be assessed.
+- **核心贡献**: 提出了一种结合流形正则化的动态网络剪枝方法。
+- **创新点**: 将流形正则化引入动态剪枝过程，以保持数据几何结构。
+- **结果**: 由于摘要缺失，具体效果未知。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Neural network pruning is an essential approach for reducing the computational complexity of deep models so that they can be well deployed on resource-limited devices. Compared with conventional methods, the recently developed dynamic pruning methods determine redundant filters variant to each input instance which achieves higher acceleration. Most of the existing methods discover effective sub-networks for each instance independently and do not utilize the relationship between different inputs. To maximally excavate redundancy in the given network architecture, this paper proposes a new paradigm that dynamically removes redundant filters by embedding the manifold information of all instances into the space of pruned networks (dubbed as ManiDP). We first investigate the recognition complexity and feature similarity between images in the training set. Then, the manifold relationship between instances and the pruned sub-networks will be aligned in the training procedure. The effectiveness of the proposed method is verified on several benchmarks, which shows better performance in terms of both accuracy and computational cost compared to the state-of-the-art methods. For example, our method can reduce 55.3% FLOPs of ResNet-34 with only 0.57% top-1 accuracy degradation on ImageNet.
-
-</details>
-
-### Convolutional Neural Network Pruning With Structural Redundancy Reduction.
-- **链接**: [arXiv:2104.03438](https://arxiv.org/abs/2104.03438) · 📚 被引 175
+### Convolutional Neural Network Pruning With Structural Redundancy Reduction. **⭐⭐** (相关度: 50%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Convolutional_Neural_Network_Pruning_With_Structural_Redundancy_Reduction_CVPR_2021_paper.html) · 📚 被引 175
 - **作者**: Zi Wang, Chengcheng Li, Xiangyang Wang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Convolutional neural network (CNN) pruning has become one of the most successful network compression approaches in recent years. Existing works on network pruning usually focus on removing the least important filters in the network to achieve compact architectures. In this study, we claim that identifying structural redundancy plays a more essential role than finding unimportant filters, theoretically and empirically. We first statistically model the network pruning problem in a redundancy reduction perspective and find that pruning in the layer(s) with the most structural redundancy outperforms pruning the least important filters across all layers. Based on this finding, we then propose a network pruning approach that identifies structural redundancy of a CNN and prunes filters in the selected layer(s) with the most redundancy. Experiments on various benchmark network architectures and datasets show that our proposed approach significantly outperforms the previous state-of-the-art.
-
-</details>
+- **摘要（中）**: 该论文针对卷积神经网络剪枝问题，提出了一种基于结构冗余减少的剪枝方法，旨在去除冗余结构以压缩模型。由于摘要缺失，具体方法细节和实验效果无法评估。
+- **摘要（英）**: This paper addresses convolutional neural network pruning by proposing a method based on structural redundancy reduction, aiming to remove redundant structures for model compression. Due to the missing abstract, specific method details and experimental results cannot be assessed.
+- **核心贡献**: 提出了一种基于结构冗余减少的CNN剪枝方法。
+- **创新点**: 通过减少结构冗余来实现高效剪枝。
+- **结果**: 由于摘要缺失，具体效果未知。
 
 ### Joint-DetNAS: Upgrade Your Detector With NAS, Pruning and Dynamic Distillation.
 - **链接**: [arXiv:2105.12971](https://arxiv.org/abs/2105.12971) · 📚 被引 25
@@ -71,35 +89,38 @@
 
 </details>
 
-### Multi-Decoding Deraining Network and Quasi-Sparsity Based Training.
+### Multi-Decoding Deraining Network and Quasi-Sparsity Based Training. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Multi-Decoding_Deraining_Network_and_Quasi-Sparsity_Based_Training_CVPR_2021_paper.html) · 📚 被引 33
 - **作者**: Yinglong Wang, Chao Ma, Bing Zeng
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 该论文针对图像去雨问题，提出了一种多解码去雨网络和基于准稀疏性的训练方法。多解码结构可能用于捕获不同尺度的雨纹特征，而准稀疏性训练可能用于增强模型的鲁棒性。由于摘要不完整，具体方法细节和实验效果无法全面评估。
+- **摘要（英）**: This paper addresses image deraining by proposing a multi-decoding deraining network and a quasi-sparsity based training method. The multi-decoding structure may capture rain streaks at different scales, and quasi-sparsity training may enhance robustness. Due to the incomplete abstract, specific details and results cannot be fully assessed.
+- **核心贡献**: 提出了多解码去雨网络和准稀疏性训练方法。
+- **创新点**: 多解码结构和准稀疏性训练的结合可能提升去雨性能。
+- **结果**: 由于摘要不完整，具体效果未知。
 
-### Exploring Sparsity in Image Super-Resolution for Efficient Inference.
+### Exploring Sparsity in Image Super-Resolution for Efficient Inference. **⭐⭐** (相关度: 20%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Wang_Exploring_Sparsity_in_Image_Super-Resolution_for_Efficient_Inference_CVPR_2021_paper.html) · 📚 被引 291
 - **作者**: Longguang Wang, Xiaoyu Dong, Yingqian Wang, Xinyi Ying, Zaiping Lin, Wei An et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: ①针对图像超分辨率任务中模型计算量过大、难以高效推理的问题。②提出利用网络稀疏性（剪枝）来减少超分模型的冗余计算，探索不同剪枝策略对超分性能的影响。③相比通用剪枝方法，该工作聚焦于超分任务特有的结构（如残差块和上采样层），并分析稀疏度与性能的权衡。④摘要未提供具体数据，但表明在保持超分质量的同时显著降低推理成本。
+- **摘要（英）**: This paper addresses the high computational cost of image super-resolution models for efficient inference. It explores network sparsity via pruning, tailored to SR-specific structures like residual blocks and upsampling layers, analyzing the trade-off between sparsity and performance. The abstract lacks quantitative results but indicates significant inference cost reduction with maintained quality.
+- **核心贡献**: 探索了图像超分任务中网络剪枝的稀疏性策略。
+- **创新点**: 将剪枝技术适配到超分网络的结构特性。
+- **结果**: 在保持超分质量的同时降低推理成本。
 
-### Effective Sparsification of Neural Networks With Global Sparsity Constraint.
-- **链接**: [arXiv:2105.01571](https://arxiv.org/abs/2105.01571) · 📚 被引 32
+### Effective Sparsification of Neural Networks With Global Sparsity Constraint. **⭐⭐⭐** (相关度: 30%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Zhou_Effective_Sparsification_of_Neural_Networks_With_Global_Sparsity_Constraint_CVPR_2021_paper.html) · 📚 被引 32
 - **作者**: Xiao Zhou, Weizhong Zhang, Hang Xu, Tong Zhang
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Weight pruning is an effective technique to reduce the model size and inference time for deep neural networks in real-world deployments. However, since magnitudes and relative importance of weights are very different for different layers of a neural network, existing methods rely on either manual tuning or handcrafted heuristic rules to find appropriate pruning rates individually for each layer. This approach generally leads to suboptimal performance. In this paper, by directly working on the probability space, we propose an effective network sparsification method called {\it probabilistic masking} (ProbMask), which solves a natural sparsification formulation under global sparsity constraint. The key idea is to use probability as a global criterion for all layers to measure the weight importance. An appealing feature of ProbMask is that the amounts of weight redundancy can be learned automatically via our constraint and thus we avoid the problem of tuning pruning rates individually for different layers in a network. Extensive experimental results on CIFAR-10/100 and ImageNet demonstrate that our method is highly effective, and can outperform previous state-of-the-art methods by a significant margin, especially in the high pruning rate situation. Notably, the gap of Top-1 accuracy between our ProbMask and existing methods can be up to 10\%. As a by-product, we show ProbMask is also highly effective in identifying supermasks, which are subnetworks with high performance in a randomly weighted dense neural network.
-
-</details>
-
-## 跨领域论文（完整笔记在其他领域）
-
-- VoxelContext-Net: An Octree Based Framework for Point Cloud Compression. → [3d-detection](../3d-detection/Guideline%202021.md)
-
-## 🆕 增量新增
+- **摘要（中）**: ①针对传统剪枝方法缺乏全局稀疏度约束、导致各层剪枝率不均衡的问题。②提出一种全局稀疏度约束的训练方法，在优化过程中动态调整各层权重的重要性，实现整体稀疏度目标。③相比逐层独立剪枝，该方法能自动分配各层稀疏度，提升模型整体压缩率。④摘要未提供具体数据，但强调在相同全局稀疏度下优于现有方法。
+- **摘要（英）**: This paper tackles the issue of imbalanced layer-wise pruning rates in traditional methods by introducing a global sparsity constraint during training. It dynamically adjusts weight importance across layers to meet a global sparsity target, outperforming existing methods at the same overall sparsity level. No specific numbers are given in the abstract.
+- **核心贡献**: 提出带全局稀疏度约束的神经网络剪枝训练方法。
+- **创新点**: 在训练中动态分配各层稀疏度以实现全局目标。
+- **结果**: 在相同全局稀疏度下优于现有剪枝方法。
 
 ### ResRep: Lossless CNN Pruning via Decoupling Remembering and Forgetting. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00447)
@@ -338,4 +359,5 @@
 - Joint-DetNAS: Upgrade Your Detector With NAS, Pruning and Dynamic Distillation. → [neural-architecture-search](../neural-architecture-search/Guideline%202021.md)
 - Neural Architecture Search on ImageNet in Four GPU Hours: A Theoretically Inspired Perspective. → [neural-architecture-search](../neural-architecture-search/Guideline%202021.md)
 - 3D Siamese Voxel-to-BEV Tracker for Sparse Point Clouds. → [bev](../bev/Guideline%202021.md)
+
 <!-- COMPLETE v1 papers=30 -->

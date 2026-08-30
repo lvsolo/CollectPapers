@@ -3,7 +3,7 @@
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
 > 论文数: 6 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### MeMViT: Memory-Augmented Multiscale Vision Transformer for Efficient Long-Term Video Recognition.
 - **链接**: [arXiv:2201.08383](https://arxiv.org/abs/2201.08383) · [代码](https://github.com/facebookresearch/memvit) · 📚 被引 165
@@ -23,11 +23,16 @@
 - **🏷️ 机构**: Shanghai Jiao Tong University, Tencent AI Lab, The Chinese University of Hong Kong
 - **会议**: CVPR 2022
 
-### Revisiting the "Video" in Video-Language Understanding.
+### Revisiting the "Video" in Video-Language Understanding. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2206.01720](https://arxiv.org/abs/2206.01720)
 - **作者**: Shyamal Buch, Cristóbal Eyzaguirre, Adrien Gaidon, Jiajun Wu, Li Fei-Fei, Juan Carlos Niebles
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对视频语言理解任务中，事件时间性理解是否必要的问题。②提出了ATP（atemporal probe）模型，通过图像级理解约束多模态模型的基线性能，用于分析视频语言基准。③发现即使在大规模视频语言模型和旨在测试深层理解的场景中，时间性理解往往不是实现强性能所必需的。④ATP可用于改进数据集和模型设计，帮助识别时间挑战性数据子集。
+- **摘要（英）**: This paper revisits video-language understanding by proposing ATP, an atemporal probe that bounds baseline accuracy using image-level understanding. It reveals that temporal understanding is often unnecessary for strong performance, and ATP aids in improving dataset and model design.
+- **核心贡献**: 提出ATP模型，量化视频语言任务中时间性理解的必要性。
+- **创新点**: 通过图像级约束探针，揭示基准的局限性。
+- **结果**: 证明时间性理解非必需，并改进基准设计。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -35,18 +40,16 @@
 
 </details>
 
-### Recurring the Transformer for Video Action Recognition.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01367) · 📚 被引 125
+### Recurring the Transformer for Video Action Recognition. **⭐** (相关度: 10%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01367) · 📚 被引 124
 - **作者**: Jiewen Yang, Xingbo Dong, Liujun Liu, Chao Zhang, Jiajun Shen, Dahai Yu
 - **🏷️ 机构**: TCL Corporate Research (HK) Co., Ltd
 - **会议**: CVPR 2022
-
-## 跨领域论文（完整笔记在其他领域）
-
-- Cross-Architecture Self-supervised Video Representation Learning. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
-- TransRank: Self-supervised Video Representation Learning via Ranking-based Transformation Recognition. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
-
-## 🆕 增量新增
+- **摘要（中）**: ①这篇论文针对视频动作识别中Transformer架构的递归改进问题，但摘要内容缺失，无法获取具体方法细节。②由于摘要为空，无法判断其提出的方法或具体做法。③同样无法评估其相比已有工作的改进点。④由于缺乏摘要信息，无法提供效果数据。
+- **摘要（英）**: This paper addresses the issue of recurring Transformer for video action recognition, but the abstract is missing, making it impossible to assess the proposed method, improvements, or results.
+- **核心贡献**: 无法确定核心贡献。
+- **创新点**: 无法确定创新点。
+- **结果**: 无法确定效果。
 
 ### Point Primitive Transformer for Long-Term 4D Point Cloud Video Understanding. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2208.00281](https://arxiv.org/abs/2208.00281) · 📚 被引 30
@@ -124,4 +127,5 @@
 - Federated Self-supervised Learning for Video Understanding. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
 - Self-supervised Sparse Representation for Video Anomaly Detection. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
 - Learning a Condensed Frame for Memory-Efficient Video Class-Incremental Learning. → [continual-learning](../continual-learning/Guideline%202022.md)
+
 <!-- COMPLETE v1 papers=8 -->

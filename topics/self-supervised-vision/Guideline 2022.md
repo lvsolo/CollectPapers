@@ -3,25 +3,40 @@
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
 > 论文数: 79 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Self-Supervised Global-Local Structure Modeling for Point Cloud Domain Adaptation with Reliable Voted Pseudo Labels.
+### Self-Supervised Global-Local Structure Modeling for Point Cloud Domain Adaptation with Reliable Voted Pseudo Labels. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00627) · 📚 被引 60
 - **作者**: Hehe Fan, Xiaojun Chang, Wanyue Zhang, Yi Cheng, Ying Sun, Mohan S. Kankanhalli
 - **🏷️ 机构**: School of Computing, National University of Singapore, ReLER Lab, AAII, University of Technology,Sydney, Max Planck Institute for Informatics
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对点云领域自适应中标签稀缺和域间差异导致性能下降的问题，提出了一种自监督全局-局部结构建模方法。②方法通过全局和局部结构建模来学习域不变特征，并利用可靠的投票伪标签进行训练，以增强跨域泛化能力。③相比现有域自适应方法，该方法无需目标域标签，且通过自监督方式缓解了伪标签噪声问题。④实验表明该方法在多个点云域自适应基准上取得了优于现有方法的性能。
+- **摘要（英）**: This paper addresses point cloud domain adaptation by proposing a self-supervised global-local structure modeling approach with reliable voted pseudo labels. It learns domain-invariant features and mitigates pseudo-label noise without target labels, achieving superior performance on multiple benchmarks.
+- **核心贡献**: 提出了一种结合全局-局部结构建模和可靠投票伪标签的自监督点云域自适应方法。
+- **创新点**: 利用自监督全局-局部结构建模增强域不变性，并设计投票机制提高伪标签可靠性。
+- **结果**: 在多个点云域自适应任务上取得了优于现有方法的性能。
 
-### RigidFlow: Self-Supervised Scene Flow Learning on Point Clouds by Local Rigidity Prior.
+### RigidFlow: Self-Supervised Scene Flow Learning on Point Clouds by Local Rigidity Prior. **⭐⭐⭐⭐** (相关度: 65%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01645) · 📚 被引 48
 - **作者**: Ruibo Li, Chi Zhang, Guosheng Lin, Zhe Wang, Chunhua Shen
 - **🏷️ 机构**: Nanyang Technological University,S-Lab for Advanced Intelligence, School of Computer Science and Engineering, Nanyang Technological University, SenseTime Research
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对点云场景流估计依赖大量标注数据且泛化性差的问题，提出了一种基于局部刚性先验的自监督学习方法。②方法利用局部刚性假设，通过自监督方式训练场景流估计网络，无需真实流标注。③相比有监督方法，该方法在跨域场景下具有更好的泛化能力，且避免了昂贵的标注成本。④实验在多个点云场景流数据集上验证了方法的有效性，性能接近甚至超越有监督方法。
+- **摘要（英）**: This paper proposes RigidFlow, a self-supervised scene flow learning method on point clouds using a local rigidity prior. It eliminates the need for ground-truth flow labels and improves cross-domain generalization, achieving performance comparable to supervised methods on multiple datasets.
+- **核心贡献**: 提出了一种基于局部刚性先验的自监督点云场景流学习方法。
+- **创新点**: 将局部刚性假设引入自监督训练，有效替代了昂贵的流标注。
+- **结果**: 在多个数据集上性能接近甚至超越有监督方法。
 
-### Self-Supervised Arbitrary-Scale Point Clouds Upsampling via Implicit Neural Representation.
-- **链接**: [arXiv:2204.08196](https://arxiv.org/abs/2204.08196) · [代码](https://github.com/xnowbzhao/sapcu) · 📚 被引 63
+### Self-Supervised Arbitrary-Scale Point Clouds Upsampling via Implicit Neural Representation. **⭐⭐⭐⭐** (相关度: 70%)
+- **链接**: [arXiv:2204.08196](https://arxiv.org/abs/2204.08196) · 📚 被引 63
 - **作者**: Wenbo Zhao, Xianming Liu, Zhiwei Zhong, Junjun Jiang, Wei Gao, Ge Li et al.
 - **🏷️ 机构**: Harbin Institute of Technology, Peking University Shenzhen Graduate School, Tsinghua University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对点云上采样任务依赖成对监督数据和不同尺度需独立训练网络的问题，提出了一种自监督且支持任意尺度放大的方法。②方法将上采样视为在隐式曲面上寻找种子点的最近投影点，定义两个隐式神经函数分别估计投影方向和距离，并通过两个前置任务进行自监督训练。③相比现有监督方法，该方法无需成对数据，且单一网络即可处理任意放大倍数。④实验表明该方法在多个数据集上取得了与监督方法相当甚至更优的性能。
+- **摘要（英）**: This paper proposes a self-supervised arbitrary-scale point cloud upsampling method via implicit neural representation, formulating upsampling as finding nearest projection points on an implicit surface. It eliminates paired supervision and supports flexible magnification with a single network, achieving competitive or better performance than supervised methods.
+- **核心贡献**: 提出了一种自监督且支持任意尺度放大的点云上采样方法。
+- **创新点**: 利用隐式神经表示和双前置任务实现自监督上采样，无需成对数据。
+- **结果**: 在多个数据集上性能与监督方法相当或更优。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -83,18 +98,6 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2022
 
-### Self-Supervised Material and Texture Representation Learning for Remote Sensing Tasks.
-- **链接**: [arXiv:2112.01715](https://arxiv.org/abs/2112.01715) · 📚 被引 63
-- **作者**: Peri Akiva, Matthew Purri, Matthew J. Leotta
-- **🏷️ 机构**: Rutgers University, Kitware Inc
-- **会议**: CVPR 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Self-supervised learning aims to learn image feature representations without the usage of manually annotated labels. It is often used as a precursor step to obtain useful initial network weights which contribute to faster convergence and superior performance of downstream tasks. While self-supervision allows one to reduce the domain gap between supervised and unsupervised learning without the usage of labels, the self-supervised objective still requires a strong inductive bias to downstream tasks for effective transfer learning. In this work, we present our material and texture based self-supervision method named MATTER (MATerial and TExture Representation Learning), which is inspired by classical material and texture methods. Material and texture can effectively describe any surface, including its tactile properties, color, and specularity. By extension, effective representation of material and texture can describe other semantic classes strongly associated with said material and texture. MATTER leverages multi-temporal, spatially aligned remote sensing imagery over unchanged regions to learn invariance to illumination and viewing angle as a mechanism to achieve consistency of material and texture representation. We show that our self-supervision pre-training method allows for up to 24.22% and 6.33% performance increase in unsupervised and fine-tuned setups, and up to 76% faster convergence on change detection, land cover classification, and semantic segmentation tasks.
-
-</details>
-
 ### Directional Self-supervised Learning for Heavy Image Augmentations.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01619) · 📚 被引 17
 - **作者**: Yalong Bai, Yifan Yang, Wei Zhang, Tao Mei
@@ -113,11 +116,16 @@
 
 </details>
 
-### Knowledge-Driven Self-Supervised Representation Learning for Facial Action Unit Recognition.
+### Knowledge-Driven Self-Supervised Representation Learning for Facial Action Unit Recognition. **⭐⭐⭐** (相关度: 50%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01977) · 📚 被引 41
 - **作者**: Yanan Chang, Shangfei Wang
 - **🏷️ 机构**: University of Science and Technology of China,Hefei,Anhui,China
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对面部动作单元（AU）识别中标注成本高和类不平衡问题，提出了一种知识驱动的自监督表征学习方法。②方法利用AU之间的先验知识（如共现关系）设计自监督任务，以学习更具判别性的表征。③相比通用自监督方法，该方法结合了领域知识，更适应AU识别的特定需求。④实验在多个AU识别基准上验证了方法的有效性，性能优于现有自监督基线。
+- **摘要（英）**: This paper proposes a knowledge-driven self-supervised representation learning method for facial action unit recognition, leveraging prior knowledge of AU co-occurrence to design pretext tasks. It improves discriminative representation and outperforms generic self-supervised baselines on multiple benchmarks.
+- **核心贡献**: 提出了一种知识驱动的自监督AU识别方法，利用AU共现先验设计预训练任务。
+- **创新点**: 将AU领域知识引入自监督学习，增强表征的判别性。
+- **结果**: 在多个AU识别基准上优于现有自监督方法。
 
 ### Self-Supervised Image Representation Learning with Geometric Set Consistency.
 - **链接**: [arXiv:2203.15361](https://arxiv.org/abs/2203.15361) · 📚 被引 9
@@ -155,11 +163,16 @@
 
 </details>
 
-### SPAct: Self-supervised Privacy Preservation for Action Recognition.
-- **链接**: [arXiv:2203.15205](https://arxiv.org/abs/2203.15205) · [代码](https://github.com/DAVEISHAN/SPAct) · 📚 被引 66
+### SPAct: Self-supervised Privacy Preservation for Action Recognition. **⭐⭐⭐** (相关度: 40%)
+- **链接**: [arXiv:2203.15205](https://arxiv.org/abs/2203.15205) · 📚 被引 66
 - **作者**: Ishan Rajendrakumar Dave, Chen Chen, Mubarak Shah
 - **🏷️ 机构**: Center for Research in Computer Vision, University of Central Florida,Orlando,USA
 - **会议**: CVPR 2022
+- **摘要（中）**: ①针对视频动作识别中视觉隐私泄露问题，现有方法需要隐私标签，但标注成本高。②提出SPAct框架，包含匿名化函数、自监督隐私移除分支和动作识别分支，通过最小最大优化和对比自监督损失训练。③首次在无需隐私标签的情况下实现隐私移除，利用自监督学习挖掘未标注数据潜力。④在已知动作和隐私属性的协议下，取得了与现有监督方法相当的动作-隐私权衡。
+- **摘要（英）**: This paper addresses visual privacy leakage in action recognition without requiring privacy labels. It proposes SPAct, a self-supervised framework with an anonymization function, a privacy removal branch, and an action recognition branch, trained via minimax optimization and contrastive loss. It achieves competitive action-privacy trade-offs compared to supervised methods.
+- **核心贡献**: 提出首个无需隐私标签的自监督隐私移除框架。
+- **创新点**: 利用对比自监督损失实现隐私移除与动作识别的联合优化。
+- **结果**: 在标准协议下达到与监督方法相当的隐私-动作权衡。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -173,18 +186,6 @@
 - **🏷️ 机构**: CUHK
 - **会议**: CVPR 2022
 
-### Incremental Cross-view Mutual Distillation for Self-supervised Medical CT Synthesis.
-- **链接**: [arXiv:2112.10325](https://arxiv.org/abs/2112.10325) · 📚 被引 26
-- **作者**: Chaowei Fang, Liang Wang, Dingwen Zhang, Jun Xu, Yixuan Yuan, Junwei Han
-- **🏷️ 机构**: Xidian University, Northwestern Polytechnical University, Nankai University
-- **会议**: CVPR 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Due to the constraints of the imaging device and high cost in operation time, computer tomography (CT) scans are usually acquired with low intra-slice resolution. Improving the intra-slice resolution is beneficial to the disease diagnosis for both human experts and computer-aided systems. To this end, this paper builds a novel medical slice synthesis to increase the between-slice resolution. Considering that the ground-truth intermediate medical slices are always absent in clinical practice, we introduce the incremental cross-view mutual distillation strategy to accomplish this task in the self-supervised learning manner. Specifically, we model this problem from three different views: slice-wise interpolation from axial view and pixel-wise interpolation from coronal and sagittal views. Under this circumstance, the models learned from different views can distill valuable knowledge to guide the learning processes of each other. We can repeat this process to make the models synthesize intermediate slice data with increasing inter-slice resolution. To demonstrate the effectiveness of the proposed approach, we conduct comprehensive experiments on a large-scale CT dataset. Quantitative and qualitative comparison results show that our method outperforms state-of-the-art algorithms by clear margins.
-
-</details>
-
 ### Self-Supervised Models are Continual Learners.
 - **链接**: [arXiv:2112.04215](https://arxiv.org/abs/2112.04215) · 📚 被引 134
 - **作者**: Enrico Fini, Victor G. Turrisi da Costa, Xavier Alameda-Pineda, Elisa Ricci, Karteek Alahari, Julien Mairal
@@ -194,18 +195,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Self-supervised models have been shown to produce comparable or better visual representations than their supervised counterparts when trained offline on unlabeled data at scale. However, their efficacy is catastrophically reduced in a Continual Learning (CL) scenario where data is presented to the model sequentially. In this paper, we show that self-supervised loss functions can be seamlessly converted into distillation mechanisms for CL by adding a predictor network that maps the current state of the representations to their past state. This enables us to devise a framework for Continual self-supervised visual representation Learning that (i) significantly improves the quality of the learned representations, (ii) is compatible with several state-of-the-art self-supervised objectives, and (iii) needs little to no hyperparameter tuning. We demonstrate the effectiveness of our approach empirically by training six popular self-supervised models in various CL settings.
-
-</details>
-
-### DiRA: Discriminative, Restorative, and Adversarial Learning for Self-supervised Medical Image Analysis.
-- **链接**: [arXiv:2204.10437](https://arxiv.org/abs/2204.10437) · [代码](https://github.com/JLiangLab/DiRA) · 📚 被引 88
-- **作者**: Fatemeh Haghighi, Mohammad Reza Hosseinzadeh Taher, Michael B. Gotway, Jianming Liang
-- **🏷️ 机构**: Arizona State University, Mayo Clinic
-- **会议**: CVPR 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Discriminative learning, restorative learning, and adversarial learning have proven beneficial for self-supervised learning schemes in computer vision and medical imaging. Existing efforts, however, omit their synergistic effects on each other in a ternary setup, which, we envision, can significantly benefit deep semantic representation learning. To realize this vision, we have developed DiRA, the first framework that unites discriminative, restorative, and adversarial learning in a unified manner to collaboratively glean complementary visual information from unlabeled medical images for fine-grained semantic representation learning. Our extensive experiments demonstrate that DiRA (1) encourages collaborative learning among three learning ingredients, resulting in more generalizable representation across organs, diseases, and modalities; (2) outperforms fully supervised ImageNet models and increases robustness in small data regimes, reducing annotation cost across multiple medical imaging applications; (3) learns fine-grained semantic representation, facilitating accurate lesion localization with only image-level annotation; and (4) enhances state-of-the-art restorative approaches, revealing that DiRA is a general mechanism for united representation learning. All code and pre-trained models are available at https: //github.com/JLiangLab/DiRA.
 
 </details>
 
@@ -230,18 +219,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Self-supervised methods have significantly closed the gap with end-to-end supervised learning for image classification. In the case of human action videos, however, where both appearance and motion are significant factors of variation, this gap remains significant. One of the key reasons for this is that sampling pairs of similar video clips, a required step for many self-supervised contrastive learning methods, is currently done conservatively to avoid false positives. A typical assumption is that similar clips only occur temporally close within a single video, leading to insufficient examples of motion similarity. To mitigate this, we propose SLIC, a clustering-based self-supervised contrastive learning method for human action videos. Our key contribution is that we improve upon the traditional intra-video positive sampling by using iterative clustering to group similar video instances. This enables our method to leverage pseudo-labels from the cluster assignments to sample harder positives and negatives. SLIC outperforms state-of-the-art video retrieval baselines by +15.4% on top-1 recall on UCF101 and by +5.7% when directly transferred to HMDB51. With end-to-end finetuning for action classification, SLIC achieves 83.2% top-1 accuracy (+0.8%) on UCF101 and 54.5% on HMDB51 (+1.6%). SLIC is also competitive with the state-of-the-art in action classification after self-supervised pretraining on Kinetics400.
-
-</details>
-
-### Noise Distribution Adaptive Self-Supervised Image Denoising using Tweedie Distribution and Score Matching.
-- **链接**: [arXiv:2112.03696](https://arxiv.org/abs/2112.03696) · 📚 被引 18
-- **作者**: Kwanyoung Kim, Taesung Kwon, Jong Chul Ye
-- **🏷️ 机构**: Kim Jaechul Graduate School of AI, KAIST,Department of Bio and Brain Engineering
-- **会议**: CVPR 2022
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Tweedie distributions are a special case of exponential dispersion models, which are often used in classical statistics as distributions for generalized linear models. Here, we reveal that Tweedie distributions also play key roles in modern deep learning era, leading to a distribution independent self-supervised image denoising formula without clean reference images. Specifically, by combining with the recent Noise2Score self-supervised image denoising approach and the saddle point approximation of Tweedie distribution, we can provide a general closed-form denoising formula that can be used for large classes of noise distributions without ever knowing the underlying noise distribution. Similar to the original Noise2Score, the new approach is composed of two successive steps: score matching using perturbed noisy images, followed by a closed form image denoising formula via distribution-independent Tweedie's formula. This also suggests a systematic algorithm to estimate the noise model and noise parameters for a given noisy image data set. Through extensive experiments, we demonstrate that the proposed method can accurately estimate noise models and parameters, and provide the state-of-the-art self-supervised image denoising performance in the benchmark dataset and real-world dataset.
 
 </details>
 
@@ -473,12 +450,6 @@
 
 </details>
 
-### Cross-patch Dense Contrastive Learning for Semi-supervised Segmentation of Cellular Nuclei in Histopathologic Images.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.01137) · 📚 被引 79
-- **作者**: Huisi Wu, Zhaoze Wang, Youyi Song, Lin Yang, Jing Qin
-- **🏷️ 机构**: Shenzhen University, The Hong Kong Polytechnic University
-- **会议**: CVPR 2022
-
 ### Noise Is Also Useful: Negative Correlation-Steered Latent Contrastive Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52688.2022.00013) · 📚 被引 16
 - **作者**: Jiexi Yan, Lei Luo, Chenghao Xu, Cheng Deng, Heng Huang
@@ -551,11 +522,16 @@
 - **🏷️ 机构**: School of Computer Science and Technology, Beijing Institute of Technology
 - **会议**: CVPR 2022
 
-### SimMIM: a Simple Framework for Masked Image Modeling.
-- **链接**: [arXiv:2111.09886](https://arxiv.org/abs/2111.09886) · [代码](https://github.com/microsoft/SimMIM) · 📚 被引 1154
+### SimMIM: a Simple Framework for Masked Image Modeling. **⭐⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2111.09886](https://arxiv.org/abs/2111.09886) · 📚 被引 1154
 - **作者**: Zhenda Xie, Zheng Zhang, Yue Cao, Yutong Lin, Jianmin Bao, Zhuliang Yao et al.
 - **🏷️ 机构**: Tsinghua University, Microsoft Research Asia, Xi&#x0027;an Jiaotong University
 - **会议**: CVPR 2022
+- **摘要（中）**: ①该论文针对掩码图像建模方法中复杂设计（如块状掩码、离散VAE标记化）的必要性问题，提出了一个简化框架SimMIM。②方法采用随机掩码、直接回归原始RGB像素值，并使用轻量线性预测头，系统研究了各组件的影响。③相比现有方法，SimMIM简化了设计但性能更强，证明了简单设计足以学习良好表征。④使用ViT-B在ImageNet-1K上预训练后微调达到83.8% top-1准确率，超越之前最佳方法0.6%；在SwinV2-H（约6.5亿参数）上达到87.1%。
+- **摘要（英）**: This paper presents SimMIM, a simple framework for masked image modeling using random masking, raw pixel regression, and a linear prediction head. It systematically shows that simple designs achieve strong representation learning, surpassing prior methods with ViT-B (83.8% top-1) and SwinV2-H (87.1%) on ImageNet-1K.
+- **核心贡献**: 提出了一个简化且高效的掩码图像建模框架SimMIM，并系统验证了各组件的作用。
+- **创新点**: 证明了随机掩码、像素回归和线性头等简单设计即可超越复杂方法。
+- **结果**: 在ImageNet-1K上以ViT-B达到83.8%准确率，SwinV2-H达到87.1%。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -1510,4 +1486,5 @@
 - CMD: Self-supervised 3D Action Representation Learning with Cross-Modal Mutual Distillation. → [multimodal](../multimodal/Guideline%202022.md)
 - Action-Based Contrastive Learning for Trajectory Prediction. → [autonomous-driving](../autonomous-driving/Guideline%202022.md)
 - Learning Audio-Visual Speech Representation by Masked Multimodal Cluster Prediction. → [multimodal](../multimodal/Guideline%202022.md)
-<!-- COMPLETE v1 papers=154 -->
+
+<!-- COMPLETE v1 papers=149 -->

@@ -3,13 +3,18 @@
 > 领域: 视觉语言模型（多模态大模型、CLIP 系、grounding）
 > 论文数: 120 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Towards Long-Horizon Vision-Language Navigation: Platform, Benchmark and Method.
+### Towards Long-Horizon Vision-Language Navigation: Platform, Benchmark and Method. **⭐⭐⭐** (相关度: 40%)
 - **链接**: [arXiv:2412.09082](https://arxiv.org/abs/2412.09082) · 📚 被引 15
 - **作者**: Xinshuai Song, Weixing Chen, Yang Liu, Weikai Chen, Guanbin Li, Liang Lin
 - **🏷️ 机构**: Sun Yat-sen University,China
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对现有视觉语言导航（VLN）方法局限于单阶段导航，难以应对复杂动态环境中多阶段、长时程任务的问题。②提出了长时程视觉语言导航（LH-VLN）任务，开发了自动数据生成平台NavGen，构建了包含3260个任务、平均150步的LHPR-VLN基准，并提出了独立成功率（ISR）、条件成功率（CSR）和基于真值的CSR权重（CGT）等评估指标。③改进点在于首次专门针对长时程VLN任务设计基准和指标，并通过双向多粒度生成方式提升数据效用。④摘要未提供具体效果数据，但基准和指标为长时程导航评估提供了新工具。
+- **摘要（英）**: This paper addresses the limitation of existing VLN methods in multi-stage and long-horizon tasks by proposing a new task LH-VLN, an automated data generation platform NavGen, and a benchmark LHPR-VLN with 3,260 tasks averaging 150 steps. It introduces novel metrics ISR, CSR, and CGT for fine-grained evaluation. The work provides a foundation for long-horizon navigation research, though specific performance gains are not reported in the abstract.
+- **核心贡献**: 提出了首个长时程视觉语言导航基准LHPR-VLN及配套评估指标。
+- **创新点**: 引入多阶段长时程导航任务和双向多粒度数据生成方法。
+- **结果**: 构建了大规模长时程导航基准，但未报告模型性能提升数据。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -17,11 +22,16 @@
 
 </details>
 
-### Forensics-Bench: A Comprehensive Forgery Detection Benchmark Suite for Large Vision Language Models.
+### Forensics-Bench: A Comprehensive Forgery Detection Benchmark Suite for Large Vision Language Models. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2503.15024](https://arxiv.org/abs/2503.15024) · 📚 被引 3
 - **作者**: Jin Wang, Chenghui Lv, Xian Li, Shichao Dong, Huadong Li, Kelu Yao et al.
 - **🏷️ 机构**: The University of Hong Kong, Hangzhou Institute for Advanced Study, Zhejiang University
 - **会议**: CVPR 2025
+- **摘要（中）**: ①针对大视觉语言模型（LVLMs）在伪造媒体检测上缺乏综合评估基准的问题。②构建了Forensics-Bench基准套件，包含63,292个多选视觉问题，覆盖112种伪造检测类型，从伪造语义、模态、任务、类型和模型五个视角评估。③相比现有基准，规模更大、类型更全面，并系统评估了22个开源和3个闭源LVLMs。④实验揭示了当前LVLMs在伪造检测上的能力与局限，为后续研究提供参考。
+- **摘要（英）**: This paper addresses the lack of comprehensive benchmarks for evaluating LVLMs on forgery detection. It introduces Forensics-Bench, a suite with 63,292 questions covering 112 forgery types across five perspectives, and evaluates 22 open-source and 3 proprietary LVLMs. The benchmark provides systematic insights into LVLMs' capabilities and limitations in forgery detection.
+- **核心贡献**: 构建了首个大规模、多类型的LVLM伪造检测综合基准。
+- **创新点**: 从五个视角系统设计伪造检测评估维度。
+- **结果**: 全面评估了25个LVLMs，揭示了其在伪造检测上的性能差距。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -291,18 +301,6 @@
 
 </details>
 
-### SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding.
-- **链接**: [arXiv:2410.11761](https://arxiv.org/abs/2410.11761) · 📚 被引 17
-- **作者**: Ying Chen, Guoan Wang, Yuanfeng Ji, Yanjun Li, Jin Ye, Tianbin Li et al.
-- **🏷️ 机构**: Shanghai AI Laboratory, Stanford University, Xiamen University
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Despite the progress made by multimodal large language models (MLLMs) in computational pathology, they remain limited by a predominant focus on patch-level analysis, missing essential contextual information at the whole-slide level. The lack of large-scale instruction datasets and the gigapixel scale of whole slide images (WSIs) pose significant developmental challenges. In this paper, we present SlideChat, the first vision-language assistant capable of understanding gigapixel whole-slide images, exhibiting excellent multimodal conversational capability and response complex instruction across diverse pathology scenarios. To support its development, we created SlideInstruction, the largest instruction-following dataset for WSIs consisting of 4.2K WSI captions and 176K VQA pairs with multiple categories. Furthermore, we propose SlideBench, a multimodal benchmark that incorporates captioning and VQA tasks to assess SlideChat's capabilities in varied clinical settings such as microscopy, diagnosis. Compared to both general and specialized MLLMs, SlideChat exhibits exceptional capabilities achieving state-of-the-art performance on 18 of 22 tasks. For example, it achieved an overall accuracy of 81.17% on SlideBench-VQA (TCGA), and 54.15% on SlideBench-VQA (BCNB). Our code, data, and model is publicly accessible at https://uni-medical.github.io/SlideChat.github.io.
-
-</details>
-
 ### Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Vision-Language Models.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html) · 📚 被引 46
 - **作者**: Matt Deitke, Christopher Clark, Sangho Lee, Rohun Tripathi, Yue Yang, Jae Sung Park et al.
@@ -485,12 +483,6 @@
 - **🏷️ 机构**: School of Computer Science, Hangzhou Dianzi University,Zhejiang Key Laboratory of Space Information Sensing and Transmission,Hangzhou,China, Li Auto Inc.,China
 - **会议**: ICCV 2025
 
-### Normal and Abnormal Pathology Knowledge-Augmented Vision-Language Model for Anomaly Detection in Pathology Images.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.02049) · 📚 被引 0
-- **作者**: Jinsol Song, Jiamu Wang, Anh Tien Nguyen, Keunho Byeon, Sangjeong Ahn, Sung Hak Lee et al.
-- **🏷️ 机构**: Korea University, The Catholic University of Korea
-- **会议**: ICCV 2025
-
 ### Structured Policy Optimization: Enhance Large Vision-Language Model via Self-Referenced Dialogue.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV51701.2025.00077) · 📚 被引 0
 - **作者**: Guohao Sun, Can Qin, Yihao Feng, Zeyuan Chen, Ran Xu, Sohail A. Dianat et al.
@@ -575,18 +567,6 @@
 
 </details>
 
-### BiomedCoOp: Learning to Prompt for Biomedical Vision-Language Models.
-- **链接**: [arXiv:2411.15232](https://arxiv.org/abs/2411.15232) · 📚 被引 22
-- **作者**: Taha Koleilat, Hojat Asgariandehkordi, Hassan Rivaz, Yiming Xiao
-- **🏷️ 机构**: Concordia University,Montreal,Canada
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Recent advancements in vision-language models (VLMs), such as CLIP, have demonstrated substantial success in self-supervised representation learning for vision tasks. However, effectively adapting VLMs to downstream applications remains challenging, as their accuracy often depends on time-intensive and expertise-demanding prompt engineering, while full model fine-tuning is costly. This is particularly true for biomedical images, which, unlike natural images, typically suffer from limited annotated datasets, unintuitive image contrasts, and nuanced visual features. Recent prompt learning techniques, such as Context Optimization (CoOp) intend to tackle these issues, but still fall short in generalizability. Meanwhile, explorations in prompt learning for biomedical image analysis are still highly limited. In this work, we propose BiomedCoOp, a novel prompt learning framework that enables efficient adaptation of BiomedCLIP for accurate and highly generalizable few-shot biomedical image classification. Our approach achieves effective prompt context learning by leveraging semantic consistency with average prompt ensembles from Large Language Models (LLMs) and knowledge distillation with a statistics-based prompt selection strategy. We conducted comprehensive validation of our proposed framework on 11 medical datasets across 9 modalities and 10 organs against existing state-of-the-art methods, demonstrating significant improvements in both accuracy and generalizability. The code is publicly available at https://github.com/HealthX-Lab/BiomedCoOp.
-
-</details>
-
 ### VLsI: Verbalized Layers-to-Interactions from Large to Small Vision Language Models.
 - **链接**: [arXiv:2412.01822](https://arxiv.org/abs/2412.01822) · 📚 被引 4
 - **作者**: Byung-Kwan Lee, Ryo Hachiuma, Yu-Chiang Frank Wang, Yong Man Ro, Yueh-Hua Wu
@@ -596,18 +576,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > The recent surge in high-quality visual instruction tuning samples from closed-source vision-language models (VLMs) such as GPT-4V has accelerated the release of open-source VLMs across various model sizes. However, scaling VLMs to improve performance using larger models brings significant computational challenges, especially for deployment on resource-constrained devices like mobile platforms and robots. To address this, we propose VLsI: Verbalized Layers-to-Interactions, a new VLM family in 2B and 7B model sizes, which prioritizes efficiency without compromising accuracy. VLsI leverages a unique, layer-wise distillation process, introducing intermediate "verbalizers" that map features from each layer to natural language space, allowing smaller VLMs to flexibly align with the reasoning processes of larger VLMs. This approach mitigates the training instability often encountered in output imitation and goes beyond typical final-layer tuning by aligning the small VLMs' layer-wise progression with that of the large ones. We validate VLsI across ten challenging vision-language benchmarks, achieving notable performance gains (11.0% for 2B and 17.4% for 7B) over GPT-4V without the need for model scaling, merging, or architectural changes.
-
-</details>
-
-### Cropper: Vision-Language Model for Image Cropping through In-Context Learning.
-- **链接**: [arXiv:2408.07790](https://arxiv.org/abs/2408.07790) · 📚 被引 4
-- **作者**: Seung Hyun Lee, Jijun Jiang, Yiran Xu, Zhuofang Li, Junjie Ke, Yinxiao Li et al.
-- **🏷️ 机构**: Google Research, Google, Google DeepMind
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The goal of image cropping is to identify visually appealing crops in an image. Conventional methods are trained on specific datasets and fail to adapt to new requirements. Recent breakthroughs in large vision-language models (VLMs) enable visual in-context learning without explicit training. However, downstream tasks with VLMs remain under explored. In this paper, we propose an effective approach to leverage VLMs for image cropping. First, we propose an efficient prompt retrieval mechanism for image cropping to automate the selection of in-context examples. Second, we introduce an iterative refinement strategy to iteratively enhance the predicted crops. The proposed framework, we refer to as Cropper, is applicable to a wide range of cropping tasks, including free-form cropping, subject-aware cropping, and aspect ratio-aware cropping. Extensive experiments demonstrate that Cropper significantly outperforms state-of-the-art methods across several benchmarks.
 
 </details>
 
@@ -647,18 +615,6 @@
 - **🏷️ 机构**: University of Toronto,Vector Institute, NVIDIA
 - **会议**: CVPR 2025
 
-### BIOMEDICA: An Open Biomedical Image-Caption Archive, Dataset, and Vision-Language Models Derived from Scientific Literature.
-- **链接**: [arXiv:2501.07171](https://arxiv.org/abs/2501.07171) · 📚 被引 14
-- **作者**: Alejandro Lozano, Min Woo Sun, James Burgess, Liangyu Chen, Jeffrey J. Nirschl, Jeffrey Gu et al.
-- **🏷️ 机构**: Stanford University
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> The development of vision-language models (VLMs) is driven by large-scale and diverse multimodal datasets. However, progress toward generalist biomedical VLMs is limited by the lack of annotated, publicly accessible datasets across biology and medicine. Existing efforts are restricted to narrow domains, missing the full diversity of biomedical knowledge encoded in scientific literature. To address this gap, we introduce BIOMEDICA, a scalable, open-source framework to extract, annotate, and serialize the entirety of the PubMed Central Open Access subset into an easy-to-use, publicly accessible dataset. Our framework produces a comprehensive archive with over 24 million unique image-text pairs from over 6 million articles. Metadata and expert-guided annotations are also provided. We demonstrate the utility and accessibility of our resource by releasing BMCA-CLIP, a suite of CLIP-style models continuously pre-trained on the BIOMEDICA dataset via streaming, eliminating the need to download 27 TB of data locally. On average, our models achieve state-of-the-art performance across 40 tasks - spanning pathology, radiology, ophthalmology, dermatology, surgery, molecular biology, parasitology, and cell biology - excelling in zero-shot classification with a 6.56% average improvement (as high as 29.8% and 17.5% in dermatology and ophthalmology, respectively), and stronger image-text retrieval, all while using 10x less compute. To foster reproducibility and collaboration, we release our codebase and dataset for the broader research community.
-
-</details>
-
 ### Benchmarking Large Vision-Language Models via Directed Scene Graph for Comprehensive Image Captioning.
 - **链接**: [arXiv:2412.08614](https://arxiv.org/abs/2412.08614) · 📚 被引 6
 - **作者**: Fan Lu, Wei Wu, Kecheng Zheng, Shuailei Ma, Biao Gong, Jiawei Liu et al.
@@ -680,18 +636,6 @@
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
 > Zero-shot multi-label recognition (MLR) with Vision-Language Models (VLMs) faces significant challenges without training data, model tuning, or architectural modifications. Existing approaches require prompt tuning or architectural adaptations, limiting zero-shot applicability. Our work proposes a novel solution treating VLMs as black boxes, leveraging scores without training data or ground truth. Using large language model insights on object co-occurrence, we introduce compound prompts grounded in realistic object combinations. Analysis of these prompt scores reveals VLM biases and ``AND''/``OR'' signal ambiguities, notably that maximum compound scores are surprisingly suboptimal compared to second-highest scores. We address these through a debiasing and score-fusion algorithm that corrects image bias and clarifies VLM response behaviors. Our method enhances other zero-shot approaches, consistently improving their results. Experiments show superior mean Average Precision (mAP) compared to methods requiring training data, achieved through refined object ranking for robust zero-shot MLR.
-
-</details>
-
-### VILA-M3: Enhancing Vision-Language Models with Medical Expert Knowledge.
-- **链接**: [arXiv:2411.12915](https://arxiv.org/abs/2411.12915) · 📚 被引 27
-- **作者**: Vishwesh Nath, Wenqi Li, Dong Yang, Andriy Myronenko, Mingxin Zheng, Yao Lu et al.
-- **🏷️ 机构**: NVIDIA
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Generalist vision language models (VLMs) have made significant strides in computer vision, but they fall short in specialized fields like healthcare, where expert knowledge is essential. In traditional computer vision tasks, creative or approximate answers may be acceptable, but in healthcare, precision is paramount.Current large multimodal models like Gemini and GPT-4o are insufficient for medical tasks due to their reliance on memorized internet knowledge rather than the nuanced expertise required in healthcare. VLMs are usually trained in three stages: vision pre-training, vision-language pre-training, and instruction fine-tuning (IFT). IFT has been typically applied using a mixture of generic and healthcare data. In contrast, we propose that for medical VLMs, a fourth stage of specialized IFT is necessary, which focuses on medical data and includes information from domain expert models. Domain expert models developed for medical use are crucial because they are specifically trained for certain clinical tasks, e.g. to detect tumors and classify abnormalities through segmentation and classification, which learn fine-grained features of medical data$-$features that are often too intricate for a VLM to capture effectively especially in radiology. This paper introduces a new framework, VILA-M3, for medical VLMs that utilizes domain knowledge via expert models. Through our experiments, we show an improved state-of-the-art (SOTA) performance with an average improvement of ~9% over the prior SOTA model Med-Gemini and ~6% over models trained on the specific tasks. Our approach emphasizes the importance of domain expertise in creating precise, reliable VLMs for medical applications.
 
 </details>
 
@@ -856,18 +800,6 @@
 - **作者**: Baoshun Tong, Hanjiang Lai, Yan Pan, Jian Yin
 - **🏷️ 机构**: Sun Yat-Sen University,China
 - **会议**: CVPR 2025
-
-### STING-BEE: Towards Vision-Language Model for Real-World X-ray Baggage Security Inspection.
-- **链接**: [arXiv:2504.02823](https://arxiv.org/abs/2504.02823) · 📚 被引 9
-- **作者**: Divya Velayudhan, Abdelfatah Hassan Ahmed, Mohamad Alansari, Neha Gour, Abderaouf Behouch, Taimur Hassan et al.
-- **🏷️ 机构**: Khalifa University of Science and Technology, Abu Dhabi University, University of Bonn
-- **会议**: CVPR 2025
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Advancements in Computer-Aided Screening (CAS) systems are essential for improving the detection of security threats in X-ray baggage scans. However, current datasets are limited in representing real-world, sophisticated threats and concealment tactics, and existing approaches are constrained by a closed-set paradigm with predefined labels. To address these challenges, we introduce STCray, the first multimodal X-ray baggage security dataset, comprising 46,642 image-caption paired scans across 21 threat categories, generated using an X-ray scanner for airport security. STCray is meticulously developed with our specialized protocol that ensures domain-aware, coherent captions, that lead to the multi-modal instruction following data in X-ray baggage security. This allows us to train a domain-aware visual AI assistant named STING-BEE that supports a range of vision-language tasks, including scene comprehension, referring threat localization, visual grounding, and visual question answering (VQA), establishing novel baselines for multi-modal learning in X-ray baggage security. Further, STING-BEE shows state-of-the-art generalization in cross-domain settings. Code, data, and models are available at https://divs1159.github.io/STING-BEE/.
-
-</details>
 
 ### TAPT: Test-Time Adversarial Prompt Tuning for Robust Inference in Vision-Language Models.
 - **链接**: [arXiv:2411.13136](https://arxiv.org/abs/2411.13136) · 📚 被引 3
@@ -1172,12 +1104,6 @@
 ### Self-Introspective Decoding: Alleviating Hallucinations for Large Vision-Language Models.
 - **链接**: [出版页](https://openreview.net/forum?id=rsZwwjYHuD)
 - **作者**: Fushuo Huo, Wenchao Xu, Zhong Zhang, Haozhao Wang, Zhicheng Chen, Peilin Zhao
-- **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2025
-
-### TEOChat: A Large Vision-Language Assistant for Temporal Earth Observation Data.
-- **链接**: [出版页](https://openreview.net/forum?id=pZz0nOroGv)
-- **作者**: Jeremy Andrew Irvin, Emily Ruoyu Liu, Joyce Chuyi Chen, Ines Dormoy, Jinyoung Kim, Samar Khanna et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: ICLR 2025
 
@@ -1775,4 +1701,5 @@
 - **作者**: Yinan Liang, Ziwei Wang, Xiuwei Xu, Jie Zhou, Jiwen Lu
 - **🏷️ 机构**: Tsinghua University, Nanyang Technological University
 - **会议**: CVPR 2025
-<!-- COMPLETE v1 papers=181 -->
+
+<!-- COMPLETE v1 papers=173 -->

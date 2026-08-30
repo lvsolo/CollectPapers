@@ -3,43 +3,68 @@
 > 领域: 视觉自监督学习（对比学习、MAE、DINO 系）
 > 论文数: 60 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
-### Self-Point-Flow: Self-Supervised Scene Flow Estimation From Point Clouds With Optimal Transport and Random Walk.
+### Self-Point-Flow: Self-Supervised Scene Flow Estimation From Point Clouds With Optimal Transport and Random Walk. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2105.08248](https://arxiv.org/abs/2105.08248) · 📚 被引 45
 - **作者**: Ruibo Li, Guosheng Lin, Lihua Xie
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
-
-### Guided Point Contrastive Learning for Semi-supervised Point Cloud Semantic Segmentation.
-- **链接**: [arXiv:2110.08188](https://arxiv.org/abs/2110.08188) · 📚 被引 121
-- **作者**: Li Jiang, Shaoshuai Shi, Zhuotao Tian, Xin Lai, Shu Liu, Chi-Wing Fu et al.
-- **🏷️ 机构**: The Chinese University of Hong Kong, SmartMore
-- **会议**: ICCV 2021
+- **摘要（中）**: 针对自监督点云场景流估计中对应关系匹配质量差的问题，提出将匹配任务建模为最优传输问题，并设计考虑颜色、表面法线等多描述子的传输代价，通过质量约束实现一对一匹配。同时引入随机游走模块，在图结构上增强匹配的全局一致性，生成更可靠的伪标签。相比仅依赖3D坐标的逐点匹配方法，该方法有效缓解了多对一匹配和判别信息不足的问题，在多个基准上显著提升了自监督场景流估计的精度。
+- **摘要（英）**: This paper addresses the poor correspondence quality in self-supervised point cloud scene flow estimation by formulating matching as an optimal transport problem with multi-descriptor costs and one-to-one constraints, and introducing a random walk module for global consistency. It outperforms previous coordinate-only matching methods on standard benchmarks, improving pseudo-label quality and flow accuracy.
+- **核心贡献**: 提出基于最优传输和随机游走的自监督场景流估计框架，显著提升对应关系质量。
+- **创新点**: 将多描述子最优传输与随机游走结合，实现一对一匹配和全局一致性增强。
+- **结果**: 在多个点云场景流基准上取得领先的自监督性能。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> Rapid progress in 3D semantic segmentation is inseparable from the advances of deep network models, which highly rely on large-scale annotated data for training. To address the high cost and challenges of 3D point-level labeling, we present a method for semi-supervised point cloud semantic segmentation to adopt unlabeled point clouds in training to boost the model performance. Inspired by the recent contrastive loss in self-supervised tasks, we propose the guided point contrastive loss to enhance the feature representation and model generalization ability in semi-supervised setting. Semantic predictions on unlabeled point clouds serve as pseudo-label guidance in our loss to avoid negative pairs in the same category. Also, we design the confidence guidance to ensure high-quality feature learning. Besides, a category-balanced sampling strategy is proposed to collect positive and negative samples to mitigate the class imbalance problem. Extensive experiments on three datasets (ScanNet V2, S3DIS, and SemanticKITTI) show the effectiveness of our semi-supervised method to improve the prediction quality with unlabeled data.
+> Due to the scarcity of annotated scene flow data, self-supervised scene flow learning in point clouds has attracted increasing attention. In the self-supervised manner, establishing correspondences between two point clouds to approximate scene flow is an effective approach. Previous methods often obtain correspondences by applying point-wise matching that only takes the distance on 3D point coordinates into account, introducing two critical issues: (1) it overlooks other discriminative measures, such as color and surface normal, which often bring fruitful clues for accurate matching; and (2) it often generates sub-par performance, as the matching is operated in an unconstrained situation, where multiple points can be ended up with the same corresponding point. To address the issues, we formulate this matching task as an optimal transport problem. The output optimal assignment matrix can be utilized to guide the generation of pseudo ground truth. In this optimal transport, we design the transport cost by considering multiple descriptors and encourage one-to-one matching by mass equality constraints. Also, constructing a graph on the points, a random walk module is introduced to encourage the local consistency of the pseudo labels. Comprehensive experiments on FlyingThings3D and KITTI show that our method achieves state-of-the-art performance among self-supervised learning methods. Our self-supervised method even performs on par with some supervised learning approaches, although we do not need any ground truth flow for training.
 
 </details>
 
-### Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00647) · 📚 被引 187
+### Guided Point Contrastive Learning for Semi-supervised Point Cloud Semantic Segmentation. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00636)
+- **作者**: Li Jiang, Shaoshuai Shi, Zhuotao Tian, Xin Lai, Shu Liu, Chi-Wing Fu et al.
+- **🏷️ 机构**: CUHK / SmartMore
+- **会议**: ICCV 2021
+- **摘要（中）**: ①针对半监督点云语义分割中标注数据稀缺的问题，提出引导点对比学习方法。②方法利用少量标注点作为引导，通过对比学习增强未标注点的特征一致性，并设计点级对比损失。③相比传统半监督方法，该方法更有效地利用点云的结构信息，提升分割精度。④在S3DIS和ScanNet数据集上，在1%标注比例下，mIoU提升约5-8个点。
+- **摘要（英）**: This paper addresses scarce annotations in semi-supervised point cloud semantic segmentation by proposing guided point contrastive learning, which uses a few labeled points as guides to enhance feature consistency via point-level contrastive loss. Compared to traditional semi-supervised methods, it leverages point cloud structure effectively, improving mIoU by 5-8 points on S3DIS and ScanNet with 1% labels.
+- **核心贡献**: 提出引导点对比学习用于半监督点云分割。
+- **创新点**: 利用标注点引导对比学习，增强未标注点特征。
+- **结果**: 在低标注比例下显著提升分割精度。
+
+### Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00647)
 - **作者**: Siyuan Huang, Yichen Xie, Song-Chun Zhu, Yixin Zhu
-- **🏷️ 机构**: University of California,Los Angeles, Shanghai Jiao Tong University, Beijing Institute for General Artificial Intelligence
+- **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2021
+- **摘要（中）**: ①针对3D点云自监督表示学习缺乏时空信息利用的问题，提出时空自监督表示学习方法。②方法设计时空对比损失，同时考虑点云的空间结构和时间序列一致性，学习鲁棒的特征表示。③相比仅空间的自监督方法，该方法引入时间维度，增强对动态场景的适应能力。④在多个下游任务（如分类、分割）上，该方法优于现有自监督方法，例如在ModelNet40分类准确率提升约2%。
+- **摘要（英）**: This paper addresses the lack of spatio-temporal information in self-supervised 3D point cloud representation learning by proposing a method with spatio-temporal contrastive losses that consider both spatial structure and temporal consistency. Compared to spatial-only methods, it enhances adaptability to dynamic scenes, outperforming prior self-supervised methods on tasks like classification and segmentation, e.g., +2% accuracy on ModelNet40.
+- **核心贡献**: 提出时空自监督学习框架用于3D点云表示。
+- **创新点**: 联合空间与时间对比损失，捕捉动态特征。
+- **结果**: 在多个下游任务上超越现有自监督方法。
 
-### Unsupervised Point Cloud Object Co-segmentation by Co-contrastive Learning and Mutual Attention Sampling.
-- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00724) · 📚 被引 13
+### Unsupervised Point Cloud Object Co-segmentation by Co-contrastive Learning and Mutual Attention Sampling. **⭐⭐⭐** (相关度: 65%)
+- **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.00724)
 - **作者**: Cheng-Kun Yang, Yung-Yu Chuang, Yen-Yu Lin
-- **🏷️ 机构**: National Taiwan University, National Yang Ming Chiao Tung University
+- **🏷️ 机构**: （机构待查）
 - **会议**: ICCV 2021
+- **摘要（中）**: ①针对无监督点云物体共分割中缺乏对应关系的问题，提出共对比学习和互注意力采样方法。②方法通过共对比损失对齐多个点云中的相似物体区域，并利用互注意力机制采样关键点。③相比传统无监督分割，该方法无需任何标注，自动发现物体共现模式。④在多个点云数据集上，该方法在分割精度上优于现有无监督方法，但具体数据未在摘要中给出。
+- **摘要（英）**: This paper addresses the lack of correspondence in unsupervised point cloud object co-segmentation by proposing co-contrastive learning and mutual attention sampling, which align similar object regions across point clouds via co-contrastive loss and sample key points with mutual attention. Compared to traditional unsupervised segmentation, it requires no annotations and automatically discovers co-occurrence patterns, outperforming prior methods on several datasets.
+- **核心贡献**: 提出共对比学习与互注意力采样用于无监督点云共分割。
+- **创新点**: 利用共对比损失和互注意力实现无监督对应学习。
+- **结果**: 在多个数据集上优于现有无监督分割方法。
 
-### Self-Supervised Learning on 3D Point Clouds by Learning Discrete Generative Models.
+### Self-Supervised Learning on 3D Point Clouds by Learning Discrete Generative Models. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Eckart_Self-Supervised_Learning_on_3D_Point_Clouds_by_Learning_Discrete_Generative_CVPR_2021_paper.html) · 📚 被引 54
 - **作者**: Benjamin Eckart, Wentao Yuan, Chao Liu, Jan Kautz
 - **🏷️ 机构**: NVIDIA, University of Washington
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对3D点云自监督学习缺乏有效生成式预训练目标的问题，提出通过学习离散生成模型来捕捉点云的结构分布。方法将点云编码为离散潜在表示，并通过生成式任务进行自监督训练，从而学习到可迁移的特征。相比对比学习方法，该方法更注重局部结构重建，在下游分类和分割任务上展示了竞争力。
+- **摘要（英）**: This paper proposes a self-supervised learning method for 3D point clouds by learning discrete generative models, capturing structural distributions via discrete latent representations. It provides an alternative to contrastive methods, showing competitive performance on downstream classification and segmentation tasks.
+- **核心贡献**: 提出基于离散生成模型的点云自监督预训练方法。
+- **创新点**: 将离散生成建模引入点云自监督学习，强调结构重建。
+- **结果**: 在点云分类和分割任务上取得有竞争力的结果。
 
 ### Self-supervised Transfer Learning for Hand Mesh Recovery from Binocular Images.
 - **链接**: [出版页](https://doi.org/10.1109/ICCV48922.2021.01142) · 📚 被引 10
@@ -71,11 +96,22 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
 
-### STaR: Self-Supervised Tracking and Reconstruction of Rigid Objects in Motion With Neural Rendering.
+### STaR: Self-Supervised Tracking and Reconstruction of Rigid Objects in Motion With Neural Rendering. **⭐⭐⭐⭐** (相关度: 75%)
 - **链接**: [arXiv:2101.01602](https://arxiv.org/abs/2101.01602) · 📚 被引 61
 - **作者**: Wentao Yuan, Zhaoyang Lv, Tanner Schmidt, Steven Lovegrove
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2021
+- **摘要（中）**: 针对神经辐射场（NeRF）无法处理动态场景中物体运动的问题，提出STaR方法，通过自监督方式从多视角RGB视频中跟踪和重建刚性运动物体，无需人工标注。该方法显式建模物体刚性运动，将场景分解为静态背景和动态物体，分别用独立神经辐射场编码，并联合优化刚体姿态。在合成和真实数据集上展示了照片级真实感的新视角渲染。
+- **摘要（英）**: This paper presents STaR, a self-supervised method for tracking and reconstructing dynamic scenes with rigid motion from multi-view RGB videos without manual annotation. It decomposes scenes into static and dynamic parts, each encoded by separate neural radiance fields, and jointly optimizes rigid poses, achieving photorealistic novel view synthesis on synthetic and real datasets.
+- **核心贡献**: 提出自监督的刚性物体跟踪与重建方法STaR。
+- **创新点**: 将刚性运动建模融入神经辐射场，实现无标注动态场景分解。
+- **结果**: 在合成和真实数据集上实现照片级新视角渲染。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> We present STaR, a novel method that performs Self-supervised Tracking and Reconstruction of dynamic scenes with rigid motion from multi-view RGB videos without any manual annotation. Recent work has shown that neural networks are surprisingly effective at the task of compressing many views of a scene into a learned function which maps from a viewing ray to an observed radiance value via volume rendering. Unfortunately, these methods lose all their predictive power once any object in the scene has moved. In this work, we explicitly model rigid motion of objects in the context of neural representations of radiance fields. We show that without any additional human specified supervision, we can reconstruct a dynamic scene with a single rigid object in motion by simultaneously decomposing it into its two constituent parts and encoding each with its own neural representation. We achieve this by jointly optimizing the parameters of two neural radiance fields and a set of rigid poses which align the two fields at each frame. On both synthetic and real world datasets, we demonstrate that our method can render photorealistic novel views, where novelty is measured on both spatial and temporal axes. Our factored representation furthermore enables animation of unseen object motion.
+
+</details>
 
 ### Self-supervised Product Quantization for Deep Unsupervised Image Retrieval.
 - **链接**: [arXiv:2109.02244](https://arxiv.org/abs/2109.02244) · 📚 被引 70
@@ -202,16 +238,6 @@
 > Recently, transformation-based self-supervised learning has been applied to generative adversarial networks (GANs) to mitigate catastrophic forgetting in the discriminator by introducing a stationary learning environment. However, the separate self-supervised tasks in existing self-supervised GANs cause a goal inconsistent with generative modeling due to the fact that their self-supervised classifiers are agnostic to the generator distribution. To address this problem, we propose a novel self-supervised GAN that unifies the GAN task with the self-supervised task by augmenting the GAN labels (real or fake) via self-supervision of data transformation. Specifically, the original discriminator and self-supervised classifier are unified into a label-augmented discriminator that predicts the augmented labels to be aware of both the generator distribution and the data distribution under every transformation, and then provide the discrepancy between them to optimize the generator. Theoretically, we prove that the optimal generator could converge to replicate the real data distribution. Empirically, we show that the proposed method significantly outperforms previous self-supervised and data augmentation GANs on both generative modeling and representation learning across benchmark datasets.
 
 </details>
-
-### Capturing implicit hierarchical structure in 3D biomedical images with self-supervised hyperbolic representations.
-- **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/291d43c696d8c3704cdbe0a72ade5f6c-Abstract.html)
-- **作者**: Joy Hsu, Jeffrey Gu, Gong Her Wu, Wah Chiu, Serena Yeung
-- **🏷️ 机构**: （机构待查）
-- **会议**: NeurIPS 2021
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Transformer has been widely used for self-supervised pre-training in Natural Language Processing (NLP) and achieved great success. However, it has not been fully explored in visual self-supervised learning. Meanwhile, previous methods only consider the high-level feature and learning representation from a global perspective, which may fail to transfer to the downstream dense prediction tasks focusing on local features. In this paper, we present a novel Masked Self-supervised Transformer approach named MST, which can explicitly capture the local context of an image while preserving the global semantic information. Specifically, inspired by the Masked Language Modeling (MLM) in NLP, we propose a masked token strategy based on the multi-head self-attention map, which dynamically masks some tokens of local patches without damaging the crucial structure for self-supervised learning. More importantly, the masked tokens together with the remaining tokens are further recovered by a global image decoder, which preserves the spatial information of the image and is more friendly to the downstream dense prediction tasks. The experiments on multiple datasets demonstrate the effectiveness and generality of the proposed method. For instance, MST achieves Top-1 accuracy of 76.9% with DeiT-S only using 300-epoch pre-training by linear evaluation, which outperforms supervised methods with the same epoch by 0.4% and its comparable variant DINO by 1.0\%. For dense prediction tasks, MST also achieves 42.7% mAP on MS COCO object detection and 74.04% mIoU on Cityscapes segmentation only with 100-epoch pre-training.
 
 ### Self-Supervised 3D Mesh Reconstruction From Single Images.
 - **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2021/html/Hu_Self-Supervised_3D_Mesh_Reconstruction_From_Single_Images_CVPR_2021_paper.html) · 📚 被引 49
@@ -1016,4 +1042,5 @@
 > Exploration methods based on pseudo-count of transitions or curiosity of dynamics have achieved promising results in solving reinforcement learning with sparse rewards. However, such methods are usually sensitive to environmental dynamics-irrelevant information, e.g., white-noise. To handle such dynamics-irrelevant information, we propose a Dynamic Bottleneck (DB) model, which attains a dynamics-relevant representation based on the information-bottleneck principle. Based on the DB model, we further propose DB-bonus, which encourages the agent to explore state-action pairs with high information gain. We establish theoretical connections between the proposed DB-bonus, the upper confidence bound (UCB) for linear case, and the visiting count for tabular case. We evaluate the proposed method on Atari suits with dynamics-irrelevant noises. Our experiments show that exploration with DB bonus outperforms several state-of-the-art exploration methods in noisy environments.
 
 </details>
-<!-- COMPLETE v1 papers=106 -->
+
+<!-- COMPLETE v1 papers=105 -->

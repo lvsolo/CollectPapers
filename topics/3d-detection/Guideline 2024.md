@@ -3,7 +3,7 @@
 > 领域: 3D 目标检测（LiDAR / 相机 / 多模态融合）
 > 论文数: 27 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### V-DETR: DETR with Vertex Relative Position Encoding for 3D Object Detection.
 - **链接**: [arXiv:2308.04409](https://arxiv.org/abs/2308.04409) · [代码](https://github.com/yichaoshen-MS/V-DETR)
@@ -143,11 +143,16 @@
 
 </details>
 
-### CaKDP: Category-Aware Knowledge Distillation and Pruning Framework for Lightweight 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01452) · 📚 被引 17
+### CaKDP: Category-Aware Knowledge Distillation and Pruning Framework for Lightweight 3D Object Detection. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01452)
 - **作者**: Haonan Zhang, Longjun Liu, Yuqi Huang, Zhao Yang, Xinyu Lei, Bihan Wen
-- **🏷️ 机构**: National Engineering Research Center for Visual Information and Applications, and Institute of Artificial Intelligence and Robotics, Xi&#x0027;an Jiaotong University,National Key Laboratory of Human-Machine Hybrid Augmented Intelligence, Nanyang Technological University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对3D目标检测模型在资源受限设备上部署时参数量大、计算量高的问题。②提出CaKDP框架，结合类别感知的知识蒸馏与剪枝，通过类别级特征对齐和结构化剪枝，实现模型压缩。③相比通用蒸馏和剪枝方法，引入类别感知机制，保留关键类别特征，减少精度损失。④在KITTI和nuScenes数据集上，CaKDP在压缩模型至约30%参数时，mAP下降不超过2%，优于现有方法。
+- **摘要（英）**: ①This paper tackles the issue of large parameter and computational overhead in 3D object detection models for deployment on resource-constrained devices. ②It proposes CaKDP, a framework combining category-aware knowledge distillation and pruning, using class-level feature alignment and structured pruning for model compression. ③Compared to generic distillation and pruning, it introduces category awareness to preserve critical class features and reduce accuracy drop. ④On KITTI and nuScenes, CaKDP reduces parameters to ~30% with mAP drop under 2%, outperforming existing methods.
+- **核心贡献**: 提出类别感知蒸馏与剪枝联合框架，实现高效3D检测模型压缩。
+- **创新点**: 将类别信息融入蒸馏和剪枝过程，提升压缩后模型性能。
+- **结果**: 在显著压缩模型的同时保持高精度，优于现有压缩方法。
 
 ### FSD-BEV: Foreground Self-distillation for Multi-view 3D Object Detection.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73242-3_7)
@@ -365,11 +370,16 @@
 
 </details>
 
-### Prompt3D: Random Prompt Assisted Weakly-Supervised 3D Object Detection.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02649) · 📚 被引 5
+### Prompt3D: Random Prompt Assisted Weakly-Supervised 3D Object Detection. **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02649)
 - **作者**: Xiaohong Zhang, Huisheng Ye, Jingwen Li, Qinyu Tang, Yuanqi Li, Yanwen Guo et al.
-- **🏷️ 机构**: Nanjing University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对弱监督3D目标检测中标注成本高、依赖精确3D框的问题。②提出Prompt3D方法，利用随机提示（如点云区域提示）辅助弱监督训练，通过提示引导模型关注目标区域，减少对完整标注的依赖。③相比传统弱监督方法，引入提示机制增强了模型的可学习性，降低了标注要求。④在KITTI和SUN-RGBD数据集上，Prompt3D在仅使用点级标注时，AP达到全监督方法的80%以上，展示了弱监督潜力。
+- **摘要（英）**: ①This paper addresses the high annotation cost and dependence on precise 3D boxes in weakly-supervised 3D object detection. ②It proposes Prompt3D, which uses random prompts (e.g., point cloud region hints) to assist weakly-supervised training, guiding the model to focus on target regions and reducing reliance on full annotations. ③Compared to traditional weakly-supervised methods, the prompt mechanism enhances learnability and lowers annotation requirements. ④On KITTI and SUN-RGBD, Prompt3D achieves over 80% of fully-supervised AP with only point-level annotations, demonstrating its potential.
+- **核心贡献**: 提出随机提示辅助的弱监督3D检测框架，降低标注成本。
+- **创新点**: 将提示机制引入弱监督3D检测，提升模型对稀疏标注的利用效率。
+- **结果**: 在点级标注下达到全监督80%以上精度，验证了弱监督可行性。
 
 ### Three Pillars Improving Vision Foundation Model Distillation for Lidar.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02033) · 📚 被引 28
@@ -751,4 +761,5 @@
 - **核心贡献**: 提出了解耦伪标签框架，提升半监督单目3D检测的精度和稳定性。
 - **创新点**: 将分类和回归伪标签生成解耦，独立优化阈值。
 - **结果**: 在KITTI和nuScenes上以少量标注数据取得显著性能提升。
+
 <!-- COMPLETE v1 papers=58 -->

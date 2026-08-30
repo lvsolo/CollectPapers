@@ -3,7 +3,7 @@
 > 领域: 视觉 Transformer（ViT、混合架构、高效注意力）
 > 论文数: 9 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### Swin Transformer: Hierarchical Vision Transformer using Shifted Windows.
 - **链接**: [arXiv:2103.14030](https://arxiv.org/abs/2103.14030) · [代码](https://github.com/microsoft/Swin-Transformer) · 📚 被引 30009
@@ -89,17 +89,27 @@
 
 </details>
 
-### Adder Attention for Vision Transformer.
+### Adder Attention for Vision Transformer. **⭐⭐⭐** (相关度: 60%)
 - **链接**: [出版页](https://proceedings.neurips.cc/paper/2021/hash/a57e8915461b83adefb011530b711704-Abstract.html)
 - **作者**: Han Shu, Jiahao Wang, Hanting Chen, Lin Li, Yujiu Yang, Yunhe Wang
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2021
+- **摘要（中）**: 该论文针对视觉Transformer中的注意力机制，提出使用加法注意力替代标准乘法注意力，但摘要内容为空，无法获取具体方法细节。通常此类工作旨在降低计算复杂度或提升效率，通过加法操作减少乘法运算。由于缺乏摘要信息，无法评估其具体改进和效果。
+- **摘要（英）**: This paper proposes Adder Attention for Vision Transformers, but the abstract is empty, so no specific method or results are available. Typically, such work aims to reduce computational complexity by replacing multiplication with addition.
+- **核心贡献**: 未明确，因摘要缺失。
+- **创新点**: 未明确，因摘要缺失。
+- **结果**: 未明确，因摘要缺失。
 
-### ViTAE: Vision Transformer Advanced by Exploring Intrinsic Inductive Bias.
+### ViTAE: Vision Transformer Advanced by Exploring Intrinsic Inductive Bias. **⭐⭐⭐⭐** (相关度: 70%)
 - **链接**: [arXiv:2106.03348](https://arxiv.org/abs/2106.03348)
 - **作者**: Yufei Xu, Qiming Zhang, Jing Zhang, Dacheng Tao
 - **🏷️ 机构**: （机构待查）
 - **会议**: NeurIPS 2021
+- **摘要（中）**: 针对视觉Transformer缺乏内在归纳偏置（如局部性和尺度不变性）而依赖大规模训练数据的问题，该论文提出ViTAE，通过卷积探索内在归纳偏置。ViTAE使用空间金字塔缩减模块，利用不同膨胀率的卷积将图像下采样为具有丰富多尺度上下文的token，从而获得尺度不变性；并在每个Transformer层中并行卷积块与多头自注意力，融合特征后输入前馈网络，获得局部性。实验表明，ViTAE在多个视觉任务上表现优异，尤其在数据效率方面有显著提升。
+- **摘要（英）**: This paper proposes ViTAE to address the lack of intrinsic inductive bias in Vision Transformers by incorporating convolutions. It uses spatial pyramid reduction modules for multi-scale context and parallel convolution blocks with self-attention for locality, achieving scale invariance and improved data efficiency. ViTAE demonstrates strong performance across various vision tasks.
+- **核心贡献**: 提出ViTAE架构，通过卷积探索内在归纳偏置，增强ViT的局部性和尺度不变性。
+- **创新点**: 在Transformer中集成多尺度卷积和并行卷积块，无需大规模数据即可学习鲁棒特征。
+- **结果**: ViTAE在多个任务上取得优异性能，并显著提升数据效率。
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
@@ -233,4 +243,5 @@
 - History Aware Multimodal Transformer for Vision-and-Language Navigation. → [multimodal](../multimodal/Guideline%202021.md)
 - VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text. → [self-supervised-vision](../self-supervised-vision/Guideline%202021.md)
 - Chasing Sparsity in Vision Transformers: An End-to-End Exploration. → [network-pruning](../network-pruning/Guideline%202021.md)
+
 <!-- COMPLETE v1 papers=17 -->

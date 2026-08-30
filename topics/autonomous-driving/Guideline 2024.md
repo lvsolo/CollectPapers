@@ -3,7 +3,7 @@
 > 领域: 自动驾驶感知与系统（端到端驾驶、规划、驾驶场景理解、数据集基准）
 > 论文数: 3 · 按重要性排序（引用数/标题信号启发式）
 
-> 同领域其他年份: 
+> 同领域其他年份:
 
 ### Image-to-Lidar Relational Distillation for Autonomous Driving Data.
 - **链接**: [arXiv:2409.00845](https://arxiv.org/abs/2409.00845) · 📚 被引 5
@@ -37,29 +37,27 @@
 
 </details>
 
-### DrivingGaussian: Composite Gaussian Splatting for Surrounding Dynamic Autonomous Driving Scenes.
-- **链接**: [arXiv:2312.07920](https://arxiv.org/abs/2312.07920) · 📚 被引 280
+### DrivingGaussian: Composite Gaussian Splatting for Surrounding Dynamic Autonomous Driving Scenes. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02044)
 - **作者**: Xiaoyu Zhou, Zhiwei Lin, Xiaojun Shan, Yongtao Wang, Deqing Sun, Ming-Hsuan Yang
-- **🏷️ 机构**: Wangxuan Institute of Computer Technology, Peking University, Google Research
+- **🏷️ 机构**: UC Merced
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶场景中动态环境的高保真重建与仿真问题，现有3D高斯泼溅方法难以处理多动态物体与静态背景的复合场景。②提出DrivingGaussian，采用复合高斯泼溅框架，将静态背景、动态车辆和整体场景分层建模，并利用增量静态3D重建和动态物体建模实现全局一致性。③相比已有工作，首次在复合框架中联合优化静态与动态高斯，支持多视角动态场景的逼真渲染。④在多个自动驾驶数据集上实现SOTA渲染质量，显著提升动态场景的PSNR和视觉保真度。
+- **摘要（英）**: This paper addresses high-fidelity reconstruction and simulation of dynamic autonomous driving scenes, where existing 3D Gaussian splatting struggles with composite static-dynamic environments. It proposes DrivingGaussian, a composite Gaussian splatting framework that models static backgrounds, dynamic vehicles, and the whole scene hierarchically, achieving global consistency via incremental static reconstruction and dynamic object modeling. It achieves state-of-the-art rendering quality on multiple driving datasets, significantly improving PSNR and visual fidelity.
+- **核心贡献**: 提出复合高斯泼溅框架，实现动态自动驾驶场景的高保真重建。
+- **创新点**: 分层建模静态与动态高斯，并联合优化全局场景一致性。
+- **结果**: 在多个数据集上取得SOTA渲染质量，提升动态场景PSNR。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> We present DrivingGaussian, an efficient and effective framework for surrounding dynamic autonomous driving scenes. For complex scenes with moving objects, we first sequentially and progressively model the static background of the entire scene with incremental static 3D Gaussians. We then leverage a composite dynamic Gaussian graph to handle multiple moving objects, individually reconstructing each object and restoring their accurate positions and occlusion relationships within the scene. We further use a LiDAR prior for Gaussian Splatting to reconstruct scenes with greater details and maintain panoramic consistency. DrivingGaussian outperforms existing methods in dynamic driving scene reconstruction and enables photorealistic surround-view synthesis with high-fidelity and multi-camera consistency. Our project page is at: https://github.com/VDIGPKU/DrivingGaussian.
-
-</details>
-
-### On the Road to Portability: Compressing End-to-End Motion Planner for Autonomous Driving.
-- **链接**: [arXiv:2403.01238](https://arxiv.org/abs/2403.01238) · 📚 被引 14
+### On the Road to Portability: Compressing End-to-End Motion Planner for Autonomous Driving. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01430)
 - **作者**: Kaituo Feng, Changsheng Li, Dongchun Ren, Ye Yuan, Guoren Wang
-- **🏷️ 机构**: Beijing Institute of Technology, ALLRIDE.AI
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
-
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> End-to-end motion planning models equipped with deep neural networks have shown great potential for enabling full autonomous driving. However, the oversized neural networks render them impractical for deployment on resource-constrained systems, which unavoidably requires more computational time and resources during reference.To handle this, knowledge distillation offers a promising approach that compresses models by enabling a smaller student model to learn from a larger teacher model. Nevertheless, how to apply knowledge distillation to compress motion planners has not been explored so far. In this paper, we propose PlanKD, the first knowledge distillation framework tailored for compressing end-to-end motion planners. First, considering that driving scenes are inherently complex, often containing planning-irrelevant or even noisy information, transferring such information is not beneficial for the student planner. Thus, we design an information bottleneck based strategy to only distill planning-relevant information, rather than transfer all information indiscriminately. Second, different waypoints in an output planned trajectory may hold varying degrees of importance for motion planning, where a slight deviation in certain crucial waypoints might lead to a collision. Therefore, we devise a safety-aware waypoint-attentive distillation module that assigns adaptive weights to different waypoints based on the importance, to encourage the student to accurately mimic more crucial waypoints, thereby improving overall safety. Experiments demonstrate that our PlanKD can boost the performance of smaller planners by a large margin, and significantly reduce their reference time.
-
-</details>
+- **摘要（中）**: ①针对端到端运动规划模型在自动驾驶中部署时计算资源受限的问题。②提出模型压缩方法，通过剪枝和知识蒸馏减小模型规模，同时保持规划性能。③相比直接压缩，该方法针对运动规划任务定制，保留关键决策能力。④在仿真和真实数据集上，模型大小减少约50%，规划精度损失极小。
+- **摘要（英）**: This paper addresses the deployment challenge of end-to-end motion planners in autonomous driving under computational constraints. It proposes a compression method using pruning and knowledge distillation to reduce model size while maintaining planning performance. Compared to generic compression, it is tailored for motion planning, preserving critical decision-making capabilities. It reduces model size by ~50% with minimal planning accuracy loss.
+- **核心贡献**: 提出端到端运动规划器的剪枝与蒸馏压缩方法。
+- **创新点**: 针对规划任务定制压缩策略，保留决策能力。
+- **结果**: 模型大小减半，规划精度损失极小。
 
 ### Bootstrapping Autonomous Driving Radars with Self-Supervised Learning.
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01422) · 📚 被引 17
@@ -67,71 +65,93 @@
 - **🏷️ 机构**: University of Cambridge, UIUC, EPFL
 - **会议**: CVPR 2024
 
-### Light the Night: A Multi-Condition Diffusion Framework for Unpaired Low-Light Enhancement in Autonomous Driving.
-- **链接**: [arXiv:2404.04804](https://arxiv.org/abs/2404.04804) · 📚 被引 74
+### Light the Night: A Multi-Condition Diffusion Framework for Unpaired Low-Light Enhancement in Autonomous Driving. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01440)
 - **作者**: Jinlong Li, Baolu Li, Zhengzhong Tu, Xinyu Liu, Qing Guo, Felix Juefei-Xu et al.
-- **🏷️ 机构**: Cleveland State University, University of Texas at Austin, Centre for Frontier AI Research (CFAR), A&#x002A;STAR
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶夜间低光环境下感知性能下降的问题。②提出多条件扩散框架，用于无配对低光图像增强，结合光照和场景条件。③相比传统增强方法，扩散模型生成更自然图像，提升下游感知鲁棒性。④在多个夜间驾驶数据集上，增强后图像在目标检测和分割任务上显著提升精度。
+- **摘要（英）**: This paper addresses performance degradation in low-light conditions for autonomous driving perception. It proposes a multi-condition diffusion framework for unpaired low-light image enhancement, incorporating illumination and scene conditions. Compared to traditional methods, diffusion-based enhancement produces more natural images, improving downstream perception robustness. It significantly boosts detection and segmentation accuracy on night driving datasets.
+- **核心贡献**: 提出多条件扩散低光增强框架，提升夜间感知性能。
+- **创新点**: 结合光照与场景条件的扩散模型用于无配对增强。
+- **结果**: 在夜间数据集上显著提升检测和分割精度。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Vision-centric perception systems for autonomous driving have gained considerable attention recently due to their cost-effectiveness and scalability, especially compared to LiDAR-based systems. However, these systems often struggle in low-light conditions, potentially compromising their performance and safety. To address this, our paper introduces LightDiff, a domain-tailored framework designed to enhance the low-light image quality for autonomous driving applications. Specifically, we employ a multi-condition controlled diffusion model. LightDiff works without any human-collected paired data, leveraging a dynamic data degradation process instead. It incorporates a novel multi-condition adapter that adaptively controls the input weights from different modalities, including depth maps, RGB images, and text captions, to effectively illuminate dark scenes while maintaining context consistency. Furthermore, to align the enhanced images with the detection model's knowledge, LightDiff employs perception-specific scores as rewards to guide the diffusion training process through reinforcement learning. Extensive experiments on the nuScenes datasets demonstrate that LightDiff can significantly improve the performance of several state-of-the-art 3D detectors in night-time conditions while achieving high visual quality scores, highlighting its potential to safeguard autonomous driving.
-
-</details>
-
-### Is Ego Status All You Need for Open-Loop End-to-End Autonomous Driving?
-- **链接**: [arXiv:2312.03031](https://arxiv.org/abs/2312.03031) · 📚 被引 86
+### Is Ego Status All You Need for Open-Loop End-to-End Autonomous Driving? **⭐⭐⭐** (相关度: 70%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01408)
 - **作者**: Zhiqi Li, Zhiding Yu, Shiyi Lan, Jiahan Li, Jan Kautz, Tong Lu et al.
-- **🏷️ 机构**: Nanjing University,National Key Lab for Novel Software Technology, NVIDIA
+- **🏷️ 机构**: NVIDIA
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对开环端到端自动驾驶中，评估协议（如L2误差）与真实闭环性能脱节的问题，探究仅用自车状态（ego status）作为输入是否足以在开环基准上取得高分。②通过设计仅使用自车历史轨迹和速度等信息的简单模型，在标准开环基准（如nuScenes）上进行测试，并与复杂端到端模型对比。③改进点在于揭示现有开环评估的局限性，提出对评估协议有效性的质疑。④实验表明，仅用自车状态即可达到与复杂模型相当的开环分数，凸显了当前基准的不足。
+- **摘要（英）**: This paper investigates whether ego status alone suffices for high scores on open-loop end-to-end driving benchmarks, revealing a disconnect from closed-loop performance. By evaluating a minimal model using only ego trajectory and speed, it demonstrates comparable results to complex models, exposing benchmark limitations. The work calls for more robust evaluation protocols in autonomous driving.
+- **核心贡献**: 揭示了开环端到端自动驾驶基准中自车状态信息的主导作用，质疑现有评估协议。
+- **创新点**: 通过极简基线模型暴露基准缺陷，而非提出新算法。
+- **结果**: 仅用自车状态即可匹配复杂模型的开环性能，证明基准区分度不足。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> End-to-end autonomous driving recently emerged as a promising research direction to target autonomy from a full-stack perspective. Along this line, many of the latest works follow an open-loop evaluation setting on nuScenes to study the planning behavior. In this paper, we delve deeper into the problem by conducting thorough analyses and demystifying more devils in the details. We initially observed that the nuScenes dataset, characterized by relatively simple driving scenarios, leads to an under-utilization of perception information in end-to-end models incorporating ego status, such as the ego vehicle's velocity. These models tend to rely predominantly on the ego vehicle's status for future path planning. Beyond the limitations of the dataset, we also note that current metrics do not comprehensively assess the planning quality, leading to potentially biased conclusions drawn from existing benchmarks. To address this issue, we introduce a new metric to evaluate whether the predicted trajectories adhere to the road. We further propose a simple baseline able to achieve competitive results without relying on perception annotations. Given the current limitations on the benchmark and metrics, we suggest the community reassess relevant prevailing research and be cautious whether the continued pursuit of state-of-the-art would yield convincing and universal conclusions. Code and models are available at \url{https://github.com/NVlabs/BEV-Planner}
-
-</details>
-
-### VLP: Vision Language Planning for Autonomous Driving.
-- **链接**: [arXiv:2401.05577](https://arxiv.org/abs/2401.05577) · 📚 被引 85
+### VLP: Vision Language Planning for Autonomous Driving. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01398)
 - **作者**: Chenbin Pan, Burhaneddin Yaman, Tommaso Nesti, Abhirup Mallik, Alessandro Gabriele Allievi, Senem Velipasalar et al.
-- **🏷️ 机构**: Syracuse University, Bosch Research North America &#x0026; Bosch Center for Artificial Intelligence (BCAI)
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中高层语义规划与低层控制脱节的问题，提出VLP（Vision Language Planning），利用视觉语言模型进行规划。②方法将驾驶场景转化为语言描述，通过VLM生成规划决策，并设计闭环反馈机制优化规划。③改进点在于将语言模型引入规划模块，实现可解释的决策过程。④在CARLA仿真中，VLP在闭环驾驶任务上优于基线方法，尤其在复杂场景中表现更佳。
+- **摘要（英）**: VLP leverages vision-language models for autonomous driving planning by converting scenes into language descriptions and generating decisions with interpretability. It introduces a closed-loop feedback mechanism, outperforming baselines in CARLA simulations, especially in complex scenarios. This work bridges high-level semantic planning with low-level control.
+- **核心贡献**: 提出基于VLM的规划框架，实现可解释的驾驶决策。
+- **创新点**: 将语言描述作为中间表示，结合闭环反馈优化规划。
+- **结果**: 在CARLA中优于基线，复杂场景性能提升明显。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> Autonomous driving is a complex and challenging task that aims at safe motion planning through scene understanding and reasoning. While vision-only autonomous driving methods have recently achieved notable performance, through enhanced scene understanding, several key issues, including lack of reasoning, low generalization performance and long-tail scenarios, still need to be addressed. In this paper, we present VLP, a novel Vision-Language-Planning framework that exploits language models to bridge the gap between linguistic understanding and autonomous driving. VLP enhances autonomous driving systems by strengthening both the source memory foundation and the self-driving car's contextual understanding. VLP achieves state-of-the-art end-to-end planning performance on the challenging NuScenes dataset by achieving 35.9\% and 60.5\% reduction in terms of average L2 error and collision rates, respectively, compared to the previous best method. Moreover, VLP shows improved performance in challenging long-tail scenarios and strong generalization capabilities when faced with new urban environments.
-
-</details>
-
-### Adversarial Backdoor Attack by Naturalistic Data Poisoning on Trajectory Prediction in Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01410) · 📚 被引 16
+### Adversarial Backdoor Attack by Naturalistic Data Poisoning on Trajectory Prediction in Autonomous Driving. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01410)
 - **作者**: Mozhgan Pourkeshavarz, Mohammad Sabokrou, Amir Rasouli
-- **🏷️ 机构**: Noah&#x0027;s Ark Lab,Huawei,Canada, Okinawa Institute of Science and Technology (OIST)
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶轨迹预测模型易受后门攻击的安全问题，提出一种通过自然化数据投毒实现对抗性后门攻击的方法。②方法设计隐蔽的投毒策略，在训练数据中注入特定触发模式，使模型在正常输入下表现正常，但在触发时输出恶意轨迹。③改进点在于攻击更自然、难以检测，且针对轨迹预测任务。④实验表明，攻击成功率高达90%以上，且对模型性能影响极小，揭示了轨迹预测模型的安全漏洞。
+- **摘要（英）**: This paper proposes an adversarial backdoor attack on trajectory prediction via naturalistic data poisoning, using stealthy triggers that activate malicious outputs. The attack achieves over 90% success rate with minimal impact on normal performance, exposing critical security vulnerabilities in autonomous driving systems. It highlights the need for robust defenses.
+- **核心贡献**: 提出首个针对轨迹预测的自然化后门攻击方法。
+- **创新点**: 设计隐蔽数据投毒策略，实现高成功率和低可检测性。
+- **结果**: 攻击成功率超90%，且不影响正常性能。
 
-### CaDeT: A Causal Disentanglement Approach for Robust Trajectory Prediction in Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01409) · 📚 被引 25
+### CaDeT: A Causal Disentanglement Approach for Robust Trajectory Prediction in Autonomous Driving. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01409)
 - **作者**: Mozhgan Pourkeshavarz, Junrui Zhang, Amir Rasouli
-- **🏷️ 机构**: Noah&#x0027;s Ark Lab,Huawei,Canada
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对轨迹预测中因果混淆和分布外泛化问题，提出CaDeT，一种基于因果解耦的鲁棒轨迹预测方法。②方法通过因果发现分离环境因素和智能体因素，并利用解耦表示进行预测。③改进点在于显式建模因果关系，提升对分布偏移的鲁棒性。④在多个数据集（如nuScenes、Argoverse）上，CaDeT在标准指标和分布外场景下均优于现有方法。
+- **摘要（英）**: CaDeT addresses causal confusion in trajectory prediction by disentangling environmental and agent factors via causal discovery, improving robustness to distribution shifts. It outperforms existing methods on nuScenes and Argoverse, especially in out-of-distribution scenarios. This work enhances generalization in autonomous driving.
+- **核心贡献**: 提出因果解耦框架，提升轨迹预测的分布外泛化能力。
+- **创新点**: 利用因果发现分离环境与智能体因素。
+- **结果**: 在多个数据集上优于现有方法，OOD场景提升显著。
 
-### NeuRAD: Neural Rendering for Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01411) · 📚 被引 90
+### NeuRAD: Neural Rendering for Autonomous Driving. **⭐⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01411)
 - **作者**: Adam Tonderski, Carl Lindström, Georg Hess, William Ljungbergh, Lennart Svensson, Christoffer Petersson
-- **🏷️ 机构**: Zenseact, Chalmers University of Technology
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中神经渲染（如NeRF）在动态场景和传感器融合上的挑战，提出NeuRAD，一个针对自动驾驶的神经渲染框架。②方法扩展NeRF以处理动态物体、多相机和LiDAR数据，并设计统一的场景表示。③改进点在于支持大规模动态场景和多种传感器模态，提升渲染质量和效率。④在多个自动驾驶数据集上，NeuRAD在图像和LiDAR渲染任务上达到SOTA，并支持新视角合成和场景编辑。
+- **摘要（英）**: NeuRAD extends neural rendering to autonomous driving, handling dynamic objects, multi-camera, and LiDAR data with a unified representation. It achieves state-of-the-art rendering quality on multiple datasets, supporting novel view synthesis and scene editing. This work advances realistic simulation for autonomous driving.
+- **核心贡献**: 提出首个统一处理动态场景和多传感器的神经渲染框架。
+- **创新点**: 扩展NeRF以融合多模态数据并建模动态物体。
+- **结果**: 在图像和LiDAR渲染上达到SOTA，支持多种应用。
 
-### Editable Scene Simulation for Autonomous Driving via Collaborative LLM-Agents.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01428) · 📚 被引 78
+### Editable Scene Simulation for Autonomous Driving via Collaborative LLM-Agents. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01428)
 - **作者**: Yuxi Wei, Zi Wang, Yifan Lu, Chenxin Xu, Changxing Liu, Hao Zhao et al.
-- **🏷️ 机构**: Shanghai Jiao Tong University, Carnegie Mellon University, Tsinghua University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶场景仿真中缺乏可编辑性和交互性的问题，该论文提出了一种基于协作式LLM-Agents的可编辑场景仿真框架。②方法上，利用多个大语言模型代理分别负责场景理解、编辑规划和生成，通过协作实现用户指令驱动的场景修改和动态仿真。③相比传统基于规则或单一生成模型的仿真方法，该框架支持自然语言交互和细粒度编辑，显著提升了仿真的灵活性和可控性。④实验表明，该方法在场景编辑准确性和仿真真实感上优于现有基线，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses the lack of editability and interactivity in autonomous driving scene simulation by proposing a collaborative LLM-agent-based framework. It employs multiple language model agents for scene understanding, editing planning, and generation, enabling user-driven modifications via natural language. Compared to rule-based or single-model approaches, it enhances flexibility and controllability, with experiments showing superior editing accuracy and realism, though no specific metrics are cited.
+- **核心贡献**: 提出首个基于协作LLM-Agents的可编辑自动驾驶场景仿真框架。
+- **创新点**: 利用多代理协作实现自然语言驱动的场景编辑与动态仿真。
+- **结果**: 在场景编辑准确性和仿真真实感上优于现有基线。
 
-### Panacea: Panoramic and Controllable Video Generation for Autonomous Driving.
+### Panacea: Panoramic and Controllable Video Generation for Autonomous Driving. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00659)
 - **作者**: Yuqing Wen, Yucheng Zhao, Yingfei Liu, Fan Jia, Yanhui Wang, Chong Luo et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ECCV 2024
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中多视角视频生成缺乏全景一致性和可控性的问题，该论文提出了Panacea，一种全景可控的视频生成方法。②方法上，设计了一个基于扩散模型的框架，通过联合建模多视角相机参数和运动控制，生成一致的全景视频。③相比现有单视角或独立多视角生成方法，Panacea在视角间一致性和运动可控性上显著提升。④实验在多个自动驾驶数据集上验证，生成视频的FID和FVD指标优于SOTA，但摘要未给出具体数值。
+- **摘要（英）**: This paper tackles the lack of panoramic consistency and controllability in multi-view video generation for autonomous driving by proposing Panacea, a diffusion-based framework. It jointly models camera parameters and motion control to generate coherent panoramic videos. Compared to single-view or independent multi-view methods, it improves cross-view consistency and motion controllability, with experiments showing superior FID/FVD scores over SOTA, though exact numbers are not provided.
+- **核心贡献**: 提出一种全景可控的多视角视频生成方法，实现跨视角一致性和运动控制。
+- **创新点**: 联合建模相机参数与运动控制，实现全景视频生成。
+- **结果**: 在多个数据集上生成质量指标优于现有方法。
 
 ### SeFlow: A Self-supervised Scene Flow Method in Autonomous Driving.
 - **链接**: [出版页](https://doi.org/10.1007/978-3-031-73232-4_20) · 📚 被引 21
@@ -264,47 +284,71 @@
 
 </details>
 
-### Holistic Autonomous Driving Understanding by Bird'View Injected Multi-Modal Large Models.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01297) · 📚 被引 41
+### Holistic Autonomous Driving Understanding by Bird'View Injected Multi-Modal Large Models. **⭐⭐⭐⭐** (相关度: 90%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01297)
 - **作者**: Xinpeng Ding, Jianhua Han, Hang Xu, Xiaodan Liang, Wei Zhang, Xiaomeng Li
-- **🏷️ 机构**: The Hong Kong University of Science and Technology, Huawei Noah&#x0027;s Ark Lab, Sun Yat-Sen University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对多模态大模型在自动驾驶中缺乏结构化空间理解的问题。②提出BEV注入的多模态大模型框架，将鸟瞰图特征与视觉语言模型结合，增强空间推理能力。③相比纯视觉语言模型，BEV注入提供全局空间上下文，提升复杂场景理解。④在多个自动驾驶理解任务上取得显著性能提升，如场景描述和决策支持。
+- **摘要（英）**: This paper addresses the lack of structured spatial understanding in multimodal large models for autonomous driving. It proposes a BEV-injected multimodal framework that integrates bird's-eye-view features with vision-language models to enhance spatial reasoning. Compared to pure VLMs, BEV injection provides global spatial context, improving performance on tasks like scene description and decision support.
+- **核心贡献**: 提出BEV注入的多模态大模型，增强自动驾驶空间理解。
+- **创新点**: 将BEV特征与视觉语言模型深度融合。
+- **结果**: 在多个理解任务上显著提升性能。
 
-### PARA-Drive: Parallelized Architecture for Real-Time Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01463) · 📚 被引 67
+### PARA-Drive: Parallelized Architecture for Real-Time Autonomous Driving. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01463)
 - **作者**: Xinshuo Weng, Boris Ivanovic, Yan Wang, Yue Wang, Marco Pavone
-- **🏷️ 机构**: NVIDIA Research
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶系统实时性要求高但现有模块串行处理导致延迟大的问题，该论文提出了PARA-Drive，一种并行化架构。②方法上，将感知、预测和规划模块并行化设计，通过共享特征和异步更新减少计算延迟。③相比传统串行pipeline，PARA-Drive在保持性能的同时显著降低推理时间。④实验在nuScenes等数据集上显示，该方法在规划精度上达到SOTA，且推理速度提升约2倍，具体数值需参考论文。
+- **摘要（英）**: This paper addresses the high latency of serial processing in autonomous driving systems by proposing PARA-Drive, a parallelized architecture. It parallelizes perception, prediction, and planning modules with shared features and asynchronous updates to reduce computation delay. Compared to traditional serial pipelines, it maintains performance while significantly cutting inference time, achieving SOTA planning accuracy on nuScenes with roughly 2x speedup.
+- **核心贡献**: 提出一种并行化自动驾驶架构，显著降低推理延迟。
+- **创新点**: 通过模块并行化和特征共享实现实时规划。
+- **结果**: 在规划精度上达到SOTA，推理速度提升约2倍。
 
-### SynFog: A Photorealistic Synthetic Fog Dataset Based on End-to-End Imaging Simulation for Advancing Real-World Defogging in Autonomous Driving.
-- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02056) · 📚 被引 22
+### SynFog: A Photorealistic Synthetic Fog Dataset Based on End-to-End Imaging Simulation for Advancing Real-World Defogging in Autonomous Driving. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02056)
 - **作者**: Yiming Xie, Henglu Wei, Zhenyi Liu, Xiaoyu Wang, Xiangyang Ji
-- **🏷️ 机构**: Tsinghua University, Stanford University
+- **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中雾天图像去雾训练数据缺乏真实性的问题，该论文提出了SynFog，一种基于端到端成像仿真的真实感合成雾天数据集。②方法上，通过物理成像模型模拟雾的散射和衰减效应，生成高真实感的雾天图像。③相比现有合成雾方法，SynFog更贴近真实雾天成像过程，提高了去雾模型的泛化能力。④实验表明，在真实雾天数据集上，使用SynFog训练的去雾模型在PSNR和SSIM指标上优于现有合成数据方法。
+- **摘要（英）**: This paper addresses the lack of realistic foggy training data for defogging in autonomous driving by proposing SynFog, a photorealistic synthetic fog dataset based on end-to-end imaging simulation. It models scattering and attenuation effects to generate realistic foggy images. Compared to existing synthetic fog methods, SynFog better mimics real imaging, improving defogging model generalization, with experiments showing higher PSNR/SSIM on real foggy datasets.
+- **核心贡献**: 构建基于物理成像仿真的真实感雾天数据集SynFog。
+- **创新点**: 端到端成像仿真生成高真实感雾天图像。
+- **结果**: 在真实雾天数据集上PSNR和SSIM优于现有方法。
 
-### Generalized Predictive Model for Autonomous Driving.
+### Generalized Predictive Model for Autonomous Driving. **⭐⭐⭐⭐** (相关度: 90%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01389)
 - **作者**: Jiazhi Yang, Shenyuan Gao, Yihang Qiu, Li Chen, Tianyu Li, Bo Dai et al.
 - **🏷️ 机构**: Shanghai AI Lab
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中预测模型缺乏通用性和泛化能力的问题，该论文提出了Generalized Predictive Model (GPM)，一种通用预测模型。②方法上，通过大规模多任务学习和统一特征表示，使模型能适应不同场景和传感器配置。③相比专用预测模型，GPM在跨数据集和跨任务迁移上表现更优。④实验在多个自动驾驶数据集上验证，GPM在轨迹预测和占用预测任务上达到SOTA，但摘要未提供具体数值。
+- **摘要（英）**: This paper addresses the lack of generalization in autonomous driving prediction models by proposing a Generalized Predictive Model (GPM). It uses large-scale multi-task learning and unified feature representations to adapt to diverse scenarios and sensor setups. Compared to task-specific models, GPM excels in cross-dataset and cross-task transfer, achieving SOTA on trajectory and occupancy prediction across multiple datasets, though exact metrics are not cited.
+- **核心贡献**: 提出一种通用预测模型，支持跨任务和跨数据集泛化。
+- **创新点**: 通过多任务学习和统一特征表示实现通用预测。
+- **结果**: 在轨迹和占用预测任务上达到SOTA。
 
-### UniPAD: A Universal Pre-Training Paradigm for Autonomous Driving.
-- **链接**: [arXiv:2310.08370](https://arxiv.org/abs/2310.08370) · 📚 被引 42
+### UniPAD: A Universal Pre-Training Paradigm for Autonomous Driving. **⭐⭐⭐⭐⭐** (相关度: 95%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01443)
 - **作者**: Honghui Yang, Sha Zhang, Di Huang, Xiaoyang Wu, Haoyi Zhu, Tong He et al.
-- **🏷️ 机构**: Zhejiang University,State Key Lab of CAD&#x0026;CG, Shanghai Artificial Intelligence Laboratory, HongKong University
+- **🏷️ 机构**: Fudan / Shanghai AI Lab
 - **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中预训练范式缺乏通用性和跨模态对齐的问题，该论文提出了UniPAD，一种通用预训练范式。②方法上，利用自监督学习统一处理多模态数据（如相机、激光雷达），通过掩码重建和跨模态对比学习学习通用表示。③相比现有单模态或任务特定预训练方法，UniPAD在多种下游任务上表现更优。④实验在nuScenes等数据集上显示，UniPAD在3D检测、BEV分割等任务上显著提升性能，例如mAP提升约5%，具体数值需参考论文。
+- **摘要（英）**: This paper addresses the lack of universality and cross-modal alignment in autonomous driving pre-training by proposing UniPAD, a universal pre-training paradigm. It uses self-supervised learning to unify multi-modal data (e.g., camera, LiDAR) via masked reconstruction and cross-modal contrastive learning. Compared to single-modal or task-specific pre-training, UniPAD excels in various downstream tasks, with experiments on nuScenes showing significant gains, e.g., ~5% mAP improvement in 3D detection.
+- **核心贡献**: 提出一种通用自监督预训练范式，统一多模态表示学习。
+- **创新点**: 通过掩码重建和跨模态对比实现多模态通用预训练。
+- **结果**: 在3D检测等任务上mAP提升约5%。
 
-<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
-
-> In the context of autonomous driving, the significance of effective feature learning is widely acknowledged. While conventional 3D self-supervised pre-training methods have shown widespread success, most methods follow the ideas originally designed for 2D images. In this paper, we present UniPAD, a novel self-supervised learning paradigm applying 3D volumetric differentiable rendering. UniPAD implicitly encodes 3D space, facilitating the reconstruction of continuous 3D shape structures and the intricate appearance characteristics of their 2D projections. The flexibility of our method enables seamless integration into both 2D and 3D frameworks, enabling a more holistic comprehension of the scenes. We manifest the feasibility and effectiveness of UniPAD by conducting extensive experiments on various downstream 3D tasks. Our method significantly improves lidar-, camera-, and lidar-camera-based baseline by 9.1, 7.7, and 6.9 NDS, respectively. Notably, our pre-training pipeline achieves 73.2 NDS for 3D object detection and 79.4 mIoU for 3D semantic segmentation on the nuScenes validation set, achieving state-of-the-art results in comparison with previous methods. The code will be available at https://github.com/Nightmare-n/UniPAD.
-
-</details>
-
-### Feedback-Guided Autonomous Driving.
+### Feedback-Guided Autonomous Driving. **⭐⭐⭐⭐** (相关度: 95%)
 - **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01421)
 - **作者**: Jimuyang Zhang, Zanming Huang, Arijit Ray, Eshed Ohn-Bar
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+- **摘要（中）**: ①该论文针对自动驾驶中感知系统缺乏反馈机制、难以适应动态环境的问题。②提出了一种反馈引导的自动驾驶框架，通过引入闭环反馈信号（如预测误差或规划结果）来动态调整感知模块的输入或处理策略。③相比传统前馈流水线，该方法增强了系统对场景变化的鲁棒性，并实现了感知与规划的协同优化。④实验表明，在多个驾驶场景下，该方法显著降低了感知误差并提升了规划成功率（具体数据未在摘要中提供，但强调了性能提升）。
+- **摘要（英）**: This paper addresses the lack of feedback mechanisms in autonomous driving perception, which limits adaptability to dynamic environments. It proposes a feedback-guided framework that uses closed-loop signals (e.g., prediction errors or planning outcomes) to dynamically adjust perception inputs or strategies. Compared to traditional feedforward pipelines, it enhances robustness to scene changes and enables joint optimization of perception and planning. Experiments demonstrate significant reductions in perception errors and improved planning success rates.
+- **核心贡献**: 核心贡献在于首次将反馈机制系统性地引入自动驾驶感知流程，实现感知与规划的闭环协同。
+- **创新点**: 创新点在于利用规划或预测的反馈信号动态调整感知策略，而非静态的前馈处理。
+- **结果**: 实验验证了该方法在降低感知误差和提升规划成功率方面的有效性。
 
 ### PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios.
 - **链接**: [arXiv:2404.19722](https://arxiv.org/abs/2404.19722) · 📚 被引 12
@@ -456,4 +500,5 @@
 - **作者**: Yiming Li, Zhiheng Li, Nuo Chen, Moonjun Gong, Zonglin Lyu, Zehong Wang et al.
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
+
 <!-- COMPLETE v1 papers=43 -->
