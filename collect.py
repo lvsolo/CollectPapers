@@ -410,32 +410,76 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
                 # 清理例外：老文件里含全局排除领域的污染条目时必须重写（剔除后重新盖章）
                 polluted = _count_polluted(old)
                 if m and new_n <= old_n and polluted == 0:
-                    log(f"  [keep] {out.name}: 已完整({old_n}篇) ≥ 新数据({new_n}篇)，跳过重写")
-                    written.append(out)
-                    continue
+                    # 裸条目修复：老条目缺 LLM 摘要但新渲染带 → 需要条目级替换（heal），不整体 keep
+                    def _title_of(blk: str) -> str:
+                        first = blk.strip().splitlines()[0] if blk.strip() else ""
+                        t = re.sub(r"^### (?:\d+\. )?", "", first).strip()
+                        return re.split(r"\*\*", t)[0].strip()
+                    old_block_list = [b for b in re.split(r"(?=^### )", old, flags=re.M)
+                                      if b.strip().startswith("### ")]
+                    new_block_by_title = {_title_of(b): b for b in re.split(r"(?=^### )", new_text, flags=re.M)
+                                          if b.strip().startswith("### ")}
+                    bare = sum(1 for b in old_block_list
+                               if "摘要（中）" not in b
+                               and _title_of(b) in new_block_by_title
+                               and "摘要（中）" in new_block_by_title[_title_of(b)])
+                    if bare == 0:
+                        log(f"  [keep] {out.name}: 已完整({old_n}篇)且无裸条目，跳过重写")
+                        written.append(out)
+                        continue
+                    log(f"  [heal] {out.name}: {bare} 条裸条目可补摘要 → 走替换合并")
                 if new_n > 0:
-                    # 增量合并：从新渲染中提取老文件里没有的论文条目追加到尾部
+                    # 条目级三路处理（用户核心要求的最终形态）：
+                    #   heal  — 老条目缺摘要而新渲染有 → 用新条目替换该条（其余不动）
+                    #   merge — 全新论文 → 追加到尾部
+                    #   drop  — 老条目命中全局排除（污染）或新渲染已剔除 → 从老文件移除
                     def _title_of(block: str) -> str:
                         first = block.strip().splitlines()[0] if block.strip() else ""
                         t = re.sub(r"^### (?:\d+\. )?", "", first).strip()
                         return re.split(r"\*\*", t)[0].strip()
-                    old_titles = {_title_of(b) for b in re.split(r"(?=^### )", old, flags=re.M)
-                                  if b.strip().startswith("### ")}
-                    add_blocks = [b.rstrip() for b in re.split(r"(?=^### )", new_text, flags=re.M)
-                                  if b.strip().startswith("### ") and _title_of(b)
-                                  and _title_of(b) not in old_titles]
-                    if add_blocks:
-                        merged = old.rstrip() + "\n\n## 🆕 增量新增\n\n" + "\n\n".join(add_blocks) + "\n"
-                        stamp = f"<!-- COMPLETE v1 papers={old_n + len(add_blocks)} -->"
-                        merged = re.sub(r"<!-- COMPLETE v1 papers=\d+ -->", "", merged).rstrip() + f"\n{stamp}\n"
-                        out.write_text(merged, encoding="utf-8")
-                        log(f"  [merge] {out.name}: 追加 {len(add_blocks)} 篇（原 {old_n} 篇保留不动）")
+
+                    old_parts = [b for b in re.split(r"(?=^### )", old, flags=re.M)
+                                 if b.strip().startswith("### ")]
+                    head_part = old.split("### ")[0] if "### " in old else old
+                    new_by_title = {_title_of(b): b.rstrip() for b in re.split(r"(?=^### )", new_text, flags=re.M)
+                                    if b.strip().startswith("### ")}
+                    gex_pats = [re.compile(re.escape(k), re.I) for k in CONFIG.get("global_exclude", [])]
+
+                    healed, dropped, kept = 0, 0, 0
+                    final_blocks = []
+                    for b in old_parts:
+                        t = _title_of(b)
+                        # 污染剔除：标题命中全局排除 → 删
+                        if any(p.search(t) for p in gex_pats):
+                            dropped += 1
+                            continue
+                        # heal：老条目无摘要、新渲染有 → 替换
+                        nb = new_by_title.get(t)
+                        if nb and "摘要（中）" not in b and "摘要（中）" in nb:
+                            final_blocks.append(nb)
+                            healed += 1
+                        else:
+                            final_blocks.append(b.rstrip())
+                            kept += 1
+                    # merge：新论文追加
+                    old_titles_after = {_title_of(b) for b in final_blocks}
+                    added = [nb for t, nb in new_by_title.items()
+                             if t not in old_titles_after
+                             and not any(p.search(t) for p in gex_pats)]
+                    if healed or dropped or added:
+                        body = head_part.rstrip()
+                        for b in final_blocks + added:
+                            body += "\n\n" + b
+                        n_final = len(final_blocks) + len(added)
+                        body = re.sub(r"<!-- COMPLETE v1 papers=\d+ -->", "", body).rstrip()
+                        out.write_text(body + f"\n\n<!-- COMPLETE v1 papers={n_final} -->\n", encoding="utf-8")
+                        log(f"  [sync] {out.name}: 保留{kept} 治愈{healed} 剔除{dropped} 新增{len(added)}")
                     else:
-                        # 无新论文：只补盖印章（不改内容）
+                        # 完全无变化：只确保印章存在
                         if not m:
                             out.write_text(old.rstrip() + f"\n{STAMP.replace('papers=N', f'papers={old_n}')}\n",
                                            encoding="utf-8")
-                        log(f"  [keep] {out.name}: 无新论文，原样保留")
+                        log(f"  [keep] {out.name}: 无变化，原样保留")
                     written.append(out)
                     continue
             if new_text.count("\n### ") > 0 or len(papers) > 0:
