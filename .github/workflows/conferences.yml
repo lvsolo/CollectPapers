@@ -196,6 +196,9 @@ jobs:
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
         run: |
           rm -f .cache/.gitignore   # 防 Actions cache 复活嵌套 gitignore（同 collect）
+          # 关键：git 里的状态文件优先于 cache 快照（cache 可能是旧版，会覆盖 checkout
+          # 出来的新版 llm_evals.json/batches —— 摘要丢失事故的根因之一）
+          git checkout -- .cache/ 2>/dev/null || true
           python3 collect.py --llm-only
 
       - name: Commit LLM summaries (regenerate-over)
