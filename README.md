@@ -33,6 +33,7 @@
 
 ## 📰 最近日报（arXiv daily）
 
+- [2026-09-04](daily/arxiv_report_2026-09-04.md)
 - [2026-09-03](daily/arxiv_report_2026-09-03.md)
 - [2026-09-02](daily/arxiv_report_2026-09-02.md)
 - [2026-08-30](daily/arxiv_report_2026-08-30.md)
