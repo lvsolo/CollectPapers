@@ -1,6 +1,7 @@
 """CollectPapers 共享库：领域分类、arXiv/DBLP 抓取、LLM 评估、机构标注。"""
 
 import html
+import datetime as dt
 import json
 import os
 import re
@@ -131,32 +132,80 @@ def get_classifier() -> Classifier:
 # ----------------------------------------------------------------------
 # arXiv 抓取
 # ----------------------------------------------------------------------
-def arxiv_fetch(query: str, max_results: int, sortby: str = "submittedDate") -> list[dict]:
-    """按查询抓 arXiv，返回 [{arxiv_id,title,abstract,authors,cats,date,url}]。"""
-    q = urllib.parse.quote(query)
-    url = (f"http://export.arxiv.org/api/query?search_query={q}"
-           f"&max_results={max_results}&sortBy={sortby}&sortOrder=descending")
-    raw = http_get(url, cache_hours=6, retries=3)
-    if raw is None:
-        return []
-    try:
-        root = ET.fromstring(raw)
-    except ET.ParseError:
-        return []
-    papers = []
-    for e in root.findall("a:entry", ARXIV_NS):
-        aid = (e.findtext("a:id", "", ARXIV_NS) or "").split("/abs/")[-1]
-        aid = re.sub(r"v\d+$", "", aid)
-        papers.append({
-            "arxiv_id": aid,
-            "title": " ".join((e.findtext("a:title", "", ARXIV_NS) or "").split()),
-            "abstract": " ".join((e.findtext("a:summary", "", ARXIV_NS) or "").split()),
-            "authors": [a.findtext("a:name", "", ARXIV_NS) for a in e.findall("a:author", ARXIV_NS)],
-            "cats": [c.get("term") for c in e.findall("a:category", ARXIV_NS)],
-            "date": e.findtext("a:published", "", ARXIV_NS)[:10],
-            "url": f"https://arxiv.org/abs/{aid}",
-        })
-    return papers
+ARXIV_COMMENT_NS = {"a": "http://www.w3.org/2005/Atom", "ax": "http://arxiv.org/schemas/atom"}
+
+
+def arxiv_conference_papers(venue: str, year: int, window_days: int = 60,
+                            deadline_hint: str | None = None) -> list[dict]:
+    """arXiv 会议通道：抓会议 deadline 时间窗的 cs.CV/cs.LG 提交，过滤 comment
+    字段声明 'Accepted ... <VENUE> <YEAR>' 的论文。用于 DBLP 尚无条目年份
+    （如 2026：会议已开、proceedings 未出，DBLP 空白，但论文已在 arXiv）。
+
+    deadline_hint: 'YYYY-MM-DD'（会议投稿 deadline，据此定窗口中心）。
+    返回格式与 dblp_conference_papers 对齐（venue 字段 = 会议名）。
+    """
+    # 各会议投稿 deadline 位置：(<VENUE> Y 年的会议，deadline 在 Y+dy 年的 month 月)
+    # CVPR Y → Y-1年11月；ECCV/ICCV Y → Y-1年3月；NeurIPS Y → Y年5月；
+    # ICLR Y → Y-1年9月；ICML Y → Y-1年2月
+    DEADLINE_MONTH = {"CVPR": (-1, 11), "ECCV": (-1, 3), "ICCV": (-1, 3),
+                      "NeurIPS": (0, 5), "ICLR": (-1, 9), "ICML": (-1, 2)}
+    dy, mo = DEADLINE_MONTH.get(venue, (-1, 11))
+    dyear = year + dy
+    center = dt.date(dyear, mo, 15)
+    start = (center - dt.timedelta(days=window_days)).strftime("%Y%m%d")
+    end = (center + dt.timedelta(days=window_days)).strftime("%Y%m%d")
+
+    out: list[dict] = []
+    seen_ids: set[str] = set()
+    for cat in ("cs.CV", "cs.LG", "cs.RO"):
+        offset = 0
+        while True:
+            q = urllib.parse.quote(
+                f"cat:{cat} AND submittedDate:[{start} TO {end}]")
+            url = (f"http://export.arxiv.org/api/query?search_query={q}"
+                   f"&start={offset}&max_results=100&sortBy=submittedDate")
+            raw = http_get(url, cache_hours=72, retries=3)
+            if raw is None:
+                break
+            try:
+                root = ET.fromstring(raw)
+            except ET.ParseError:
+                break
+            entries = root.findall("a:entry", ARXIV_COMMENT_NS)
+            if not entries:
+                break
+            for e in entries:
+                comment = e.findtext("ax:comment", "", ARXIV_COMMENT_NS) or ""
+                # comment 必须声明该会议该年份（accepted/Camera-ready/published 等）
+                if not re.search(rf"{venue}\s*{year}", comment, re.I):
+                    continue
+                if not re.search(r"accept|camera|proceed|publish", comment, re.I):
+                    continue
+                aid = (e.findtext("a:id", "", ARXIV_COMMENT_NS) or "").split("/abs/")[-1]
+                aid = re.sub(r"v\d+$", "", aid)
+                if aid in seen_ids:
+                    continue
+                seen_ids.add(aid)
+                out.append({
+                    "title": " ".join((e.findtext("a:title", "", ARXIV_COMMENT_NS) or "").split()),
+                    "abstract": " ".join((e.findtext("a:summary", "", ARXIV_COMMENT_NS) or "").split()),
+                    "authors": [a.findtext("a:name", "", ARXIV_COMMENT_NS)
+                                for a in e.findall("a:author", ARXIV_COMMENT_NS)],
+                    "year": year,
+                    "venue": venue,
+                    "ee": f"https://arxiv.org/abs/{aid}",
+                    "doi": "",
+                    "arxiv_id": aid,
+                    "date": e.findtext("a:published", "", ARXIV_COMMENT_NS)[:10],
+                    "url": f"https://arxiv.org/abs/{aid}",
+                    "_source": "arxiv-comment",
+                })
+            offset += 100
+            if offset >= 900:  # 每类最多扫 900 条（deadline 窗口内命中领域论文有限）
+                break
+            time.sleep(3.2)  # arXiv 官方建议 3s 间隔
+    log(f"  arXiv conference channel: {venue} {year} → {len(out)} papers (comment-declared)")
+    return out
 
 
 def arxiv_by_ids(ids: list[str]) -> list[dict]:

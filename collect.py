@@ -573,6 +573,11 @@ def main():
             log(f"[{conf['name']} {year}] fetching from DBLP...")
             papers = dblp_conference_papers(conf["dblp_venue"], year) if dblp_enabled else []
             log(f"  got {len(papers)} raw papers")
+            if not papers and year >= dt.date.today().year - 1:
+                # DBLP 空白（proceedings 未出版，如 2026 各会）→ arXiv comment 声明通道。
+                # 会议已开完、论文已在 arXiv 上声明 "Accepted to <VENUE> <YEAR>"
+                log(f"  DBLP empty for {conf['name']} {year}, trying arXiv conference channel...")
+                papers = common.arxiv_conference_papers(conf["dblp_venue"], year)
             matched = 0
             for p in papers:
                 p["arxiv_id"] = find_arxiv_id(p)
