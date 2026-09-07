@@ -1,19 +1,25 @@
 # Video Understanding — 2026 Guideline
 
 > 领域: 视频理解（动作识别、时序动作、视频大模型）
-> 论文数: 1 · 按重要性排序（引用数/标题信号启发式）
+> 论文数: 4 · 按重要性排序（引用数/标题信号启发式）
 
 > 同领域其他年份: 
 
-### Privacy Beyond Pixels: Latent Anonymization for Privacy-Preserving Video Understanding
-- **链接**: [arXiv:2511.08666](https://arxiv.org/abs/2511.08666)
-- **作者**: Joseph Fioresi, Ishan Rajendrakumar Dave, Mubarak Shah
+### Mind the Generative Details: Direct Localized Detail Preference Optimization for Video Diffusion Models
+- **链接**: [arXiv:2601.04068](https://arxiv.org/abs/2601.04068) · [代码](https://github.com/1170300714/Local-DPO)
+- **作者**: Zitong Huang, Kaidong Zhang, Yukang Ding, Chao Gao, Rui Ding, Ying Chen et al.
 - **🏷️ 机构**: （机构待查）
-- **会议**: ICLR 2026
+- **会议**: CVPR 2026
 
 <details><summary>📄 arXiv 原始摘要（点击展开）</summary>
 
-> We introduce a novel formulation of visual privacy preservation for video foundation models that operates entirely in the latent space. While spatio-temporal features learned by foundation models have deepened general understanding of video content, sharing or storing these extracted visual features for downstream tasks inadvertently reveals sensitive personal information like skin color, gender, or clothing. Current privacy preservation methods focus on input-pixel-level anonymization, which requires retraining the entire utility video model and results in task-specific anonymization, making them unsuitable for recent video foundational models. To address these challenges, we introduce a lightweight Anonymizing Adapter Module (AAM) that removes private information from video features while retaining general task utility. AAM can be applied in a plug-and-play fashion to frozen video encoders, minimizing the computational burden of finetuning and re-extracting features. Our framework employs three newly designed training objectives: (1) a clip-level self-supervised privacy objective to reduce mutual information between static clips, (2) a co-training objective to retain utility across seen tasks, and (3) a latent consistency loss for generalization on unseen tasks. Our extensive evaluations demonstrate a significant 35% reduction in privacy leakage while maintaining near-baseline utility performance across various downstream tasks: Action Recognition (Kinetics400, UCF101, HMDB51), Temporal Action Detection (THUMOS14), and Anomaly Detection (UCF-Crime). We also provide an analysis on anonymization for sensitive temporal attribute recognition. Additionally, we propose new protocols for assessing gender bias in action recognition models, showing that our method effectively mitigates such biases and promotes more equitable video understanding. https://joefioresi718.github.io/SPLAVU_webpage/
+> Aligning text-to-video diffusion models with human preferences is crucial for generating high-quality videos. Existing Direct Preference Otimization (DPO) methods rely on multi-sample ranking and task-specific critic models, which is inefficient and often yields ambiguous global supervision. To address these limitations, we propose LocalDPO, a novel post-training framework that constructs localized preference pairs from real videos and optimizes alignment at the spatio-temporal region level. We design an automated pipeline to efficiently collect preference pair data that generates preference pairs with a single inference per prompt, eliminating the need for external critic models or manual annotation. Specifically, we treat high-quality real videos as positive samples and generate corresponding negatives by locally corrupting them with random spatio-temporal masks and restoring only the masked regions using the frozen base model. During training, we introduce a region-aware DPO loss that restricts preference learning to corrupted areas for rapid convergence. Experiments on Wan2.1 and CogVideoX demonstrate that LocalDPO consistently improves video fidelity, temporal coherence and human preference scores over other post-training approaches, establishing a more efficient and fine-grained paradigm for video generator alignment.The code is available at https://github.com/1170300714/Local-DPO.
 
 </details>
-<!-- COMPLETE v1 papers=1 -->
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Mimic Human Cognition, Master Multi-Image Reasoning: A Meta-Action Framework for Enhanced Visual Understanding → [multimodal](../multimodal/Guideline%202026.md)
+- Context Matters: Peer-Aware Student Behavioral Engagement Measurement via VLM Action Parsing and LLM Sequence Classification → [vlm](../vlm/Guideline%202026.md)
+- VideoAuto-R1: Video Auto Reasoning via Thinking Once, Answering Twice → [multimodal](../multimodal/Guideline%202026.md)
+<!-- COMPLETE v1 papers=4 -->
