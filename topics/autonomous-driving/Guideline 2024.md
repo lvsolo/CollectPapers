@@ -501,4 +501,17 @@
 - **🏷️ 机构**: （机构待查）
 - **会议**: CVPR 2024
 
-<!-- COMPLETE v1 papers=43 -->
+
+
+### Physical 3D Adversarial Attacks against Monocular Depth Estimation in Autonomous Driving. **⭐⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.02308)
+- **作者**: Junhao Zheng, Chenhao Lin, Jiahao Sun, Zhengyu Zhao, Qian Li, Chao Shen
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对自动驾驶中单目深度估计模型易受物理对抗攻击的安全问题。②提出了物理3D对抗攻击方法，通过生成真实世界的3D物体（如贴纸或形状）来欺骗深度估计。③相比数字攻击，该方法考虑了物理可实现性和视角变化，更贴近实际威胁。④实验表明，攻击能显著降低深度估计精度，并验证了在真实场景中的有效性。
+- **摘要（英）**: This paper addresses the vulnerability of monocular depth estimation in autonomous driving to physical adversarial attacks. It proposes physical 3D adversarial attacks that generate real-world 3D objects to deceive depth models. Unlike digital attacks, the method considers physical realizability and viewpoint changes, demonstrating significant depth estimation degradation in real-world scenarios.
+- **核心贡献**: 提出了物理3D对抗攻击方法，针对单目深度估计的安全威胁。
+- **创新点**: 设计物理可实现的3D攻击，考虑真实世界约束。
+- **结果**: 在真实场景中显著降低深度估计精度。
+
+<!-- COMPLETE v1 papers=44 -->

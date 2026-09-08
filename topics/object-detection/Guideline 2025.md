@@ -891,4 +891,18 @@
 - **🏷️ 机构**: Yonsei University, ETRI
 - **会议**: ICCV 2025
 
-<!-- COMPLETE v1 papers=87 -->
+
+
+### RICCARDO: Radar Hit Prediction and Convolution for Camera-Radar 3D Object Detection.
+- **链接**: [arXiv:2504.09086](https://arxiv.org/abs/2504.09086) · 📚 被引 5
+- **作者**: Yunfei Long, Abhinav Kumar, Xiaoming Liu, Daniel D. Morris
+- **🏷️ 机构**: Michigan State University
+- **会议**: CVPR 2025
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Radar hits reflect from points on both the boundary and internal to object outlines. This results in a complex distribution of radar hits that depends on factors including object category, size, and orientation. Current radar-camera fusion methods implicitly account for this with a black-box neural network. In this paper, we explicitly utilize a radar hit distribution model to assist fusion. First, we build a model to predict radar hit distributions conditioned on object properties obtained from a monocular detector. Second, we use the predicted distribution as a kernel to match actual measured radar points in the neighborhood of the monocular detections, generating matching scores at nearby positions. Finally, a fusion stage combines context with the kernel detector to refine the matching scores. Our method achieves the state-of-the-art radar-camera detection performance on nuScenes. Our source code is available at https://github.com/longyunf/riccardo.
+
+</details>
+
+<!-- COMPLETE v1 papers=88 -->

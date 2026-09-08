@@ -1172,4 +1172,17 @@
 - AMD: Adaptive Momentum and Decoupled Contrastive Learning Framework for Robust Long-Tail Trajectory Prediction. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
 - Enhancing End-to-End Autonomous Driving with Latent World Model. → [autonomous-driving](../autonomous-driving/Guideline%202025.md)
 
-<!-- COMPLETE v1 papers=118 -->
+
+
+### GeoDepth: From Point-to-Depth to Plane-to-Depth Modeling for Self-Supervised Monocular Depth Estimation. **⭐⭐⭐** (相关度: 75%)
+- **链接**: [出版页](https://openaccess.thecvf.com/content/CVPR2025/html/Wu_GeoDepth_From_Point-to-Depth_to_Plane-to-Depth_Modeling_for_Self-Supervised_Monocular_Depth_CVPR_2025_paper.html) · 📚 被引 9
+- **作者**: Haifeng Wu, Shuhang Gu, Lixin Duan, Wen Li
+- **🏷️ 机构**: University of Electronic Science and Technology of China
+- **会议**: CVPR 2025
+- **摘要（中）**: ①这篇论文针对自监督单目深度估计中，从点到深度建模的局限性，可能影响深度预测的准确性。②提出了GeoDepth方法，将建模从点级提升到平面级，以更全面地利用几何信息。③相比已有工作，平面级建模能更好地捕捉场景结构，提升深度估计的鲁棒性。④摘要未提供具体数据，但预期能改善自监督深度估计的性能。
+- **摘要（英）**: This paper addresses limitations of point-to-depth modeling in self-supervised monocular depth estimation, proposing GeoDepth to shift to plane-to-depth modeling for better geometric utilization. This approach aims to enhance robustness and accuracy, though specific results are not detailed in the abstract.
+- **核心贡献**: 提出GeoDepth方法，采用平面到深度建模提升自监督单目深度估计。
+- **创新点**: 从点级到平面级的建模转变，增强几何信息利用。
+- **结果**: 预期提升深度估计性能，但具体数据未给出。
+
+<!-- COMPLETE v1 papers=119 -->

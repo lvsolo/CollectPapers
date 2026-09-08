@@ -52,4 +52,23 @@
 - Unsupervised Domain Adaptation for Monocular 3D Object Detection via Self-training. → [3d-detection](../3d-detection/Guideline%202022.md)
 - LiDAR Distillation: Bridging the Beam-Induced Domain Gap for 3D Object Detection. → [3d-detection](../3d-detection/Guideline%202022.md)
 - SPIRAL: Self-supervised Perturbation-Invariant Representation Learning for Speech Pre-Training. → [self-supervised-vision](../self-supervised-vision/Guideline%202022.md)
-<!-- COMPLETE v1 papers=2 -->
+
+
+### LiDAR Distillation: Bridging the Beam-Induced Domain Gap for 3D Object Detection. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [arXiv:2203.14956](https://arxiv.org/abs/2203.14956)
+- **作者**: Yi Wei, Zibu Wei, Yongming Rao, Jiaxin Li, Jie Zhou, Jiwen Lu
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2022
+- **摘要（中）**: ①针对不同线束LiDAR导致的3D检测领域差距问题，即量产车低线束LiDAR与公开数据集高线束LiDAR之间的性能下降。②提出LiDAR Distillation方法，通过下采样高线束点云生成低线束伪LiDAR，并采用教师-学生框架蒸馏高线束数据中的丰富信息。③相比现有域自适应方法，关键在于训练中对齐源域和目标域的点云密度。④在Waymo、nuScenes和KITTI数据集上使用三种不同LiDAR检测器进行实验，验证了方法的有效性。
+- **摘要（英）**: This paper addresses the domain gap in 3D object detection caused by different LiDAR beams. It proposes LiDAR Distillation, which generates low-beam pseudo LiDAR by downsampling high-beam point clouds and uses a teacher-student framework to distill rich information. The key improvement is aligning point cloud density between source and target domains during training, and experiments on Waymo, nuScenes, and KITTI demonstrate effectiveness.
+- **核心贡献**: 提出LiDAR蒸馏方法，通过密度对齐和教师-学生框架有效缓解不同线束LiDAR引起的3D检测领域差距。
+- **创新点**: 发现点云密度对齐是关键，并设计渐进式框架生成低线束伪LiDAR进行知识蒸馏。
+- **结果**: 在多个数据集和检测器上验证了方法的有效性，显著提升了跨线束场景下的3D检测性能。
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In this paper, we propose the LiDAR Distillation to bridge the domain gap induced by different LiDAR beams for 3D object detection. In many real-world applications, the LiDAR points used by mass-produced robots and vehicles usually have fewer beams than that in large-scale public datasets. Moreover, as the LiDARs are upgraded to other product models with different beam amount, it becomes challenging to utilize the labeled data captured by previous versions' high-resolution sensors. Despite the recent progress on domain adaptive 3D detection, most methods struggle to eliminate the beam-induced domain gap. We find that it is essential to align the point cloud density of the source domain with that of the target domain during the training process. Inspired by this discovery, we propose a progressive framework to mitigate the beam-induced domain shift. In each iteration, we first generate low-beam pseudo LiDAR by downsampling the high-beam point clouds. Then the teacher-student framework is employed to distill rich information from the data with more beams. Extensive experiments on Waymo, nuScenes and KITTI datasets with three different LiDAR-based detectors demonstrate the effectiveness of our LiDAR Distillation. Notably, our approach does not increase any additional computation cost for inference.
+
+</details>
+
+<!-- COMPLETE v1 papers=3 -->

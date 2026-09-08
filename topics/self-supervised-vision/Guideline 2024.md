@@ -977,4 +977,52 @@
 
 </details>
 
-<!-- COMPLETE v1 papers=99 -->
+
+
+### From-Ground-To-Objects: Coarse-to-Fine Self-supervised Monocular Depth Estimation of Dynamic Objects with Ground Contact Prior. **⭐⭐⭐⭐** (相关度: 85%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.01001)
+- **作者**: Jaeho Moon, Juan Luis Gonzalez Bello, Byeongjun Kwon, Munchurl Kim
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对自监督单目深度估计中动态物体（如车辆、行人）深度不准确的问题。②提出从地面到物体的粗到细方法，利用地面接触先验来约束动态物体的深度估计，先估计地面平面，再细化物体深度。③改进点在于引入几何先验，减少动态区域的尺度模糊性。④实验在KITTI等数据集上动态区域深度误差显著降低，具体数值未在摘要中给出。
+- **摘要（英）**: This paper tackles inaccurate depth for dynamic objects in self-supervised monocular estimation by proposing a coarse-to-fine approach that leverages ground contact priors, first estimating the ground plane then refining object depths. It reduces scale ambiguity in dynamic regions, with experiments on KITTI showing significant error reduction, though exact numbers are absent.
+- **核心贡献**: 提出地面接触先验引导的动态物体深度估计框架。
+- **创新点**: 粗到细的地面-物体联合估计策略。
+- **结果**: 在KITTI上动态区域深度误差显著降低。
+
+### Mining Supervision for Dynamic Regions in Self-Supervised Monocular Depth Estimation. **⭐⭐⭐** (相关度: 80%)
+- **链接**: [出版页](https://doi.org/10.1109/CVPR52733.2024.00994)
+- **作者**: Hoang Chuong Nguyen, Tianyu Wang, José M. Álvarez, Miaomiao Liu
+- **🏷️ 机构**: （机构待查）
+- **会议**: CVPR 2024
+- **摘要（中）**: ①针对自监督单目深度估计中动态区域缺乏有效监督信号的问题。②提出一种挖掘动态区域监督的方法，通过识别运动物体并生成伪标签或调整损失权重来增强训练。③改进点在于更精细地处理动态区域，避免静态假设导致的误差。④实验显示在动态场景数据集上深度精度提升，但摘要未提供具体数据。
+- **摘要（英）**: This paper addresses insufficient supervision for dynamic regions in self-supervised monocular depth estimation by mining supervision signals, such as generating pseudo-labels or reweighting losses for moving objects. It improves robustness in dynamic scenes, with experiments showing enhanced depth accuracy, though no specific metrics are given.
+- **核心贡献**: 提出动态区域监督挖掘策略。
+- **创新点**: 自适应损失加权与伪标签生成。
+- **结果**: 提升动态场景深度精度。
+
+### High-Precision Self-supervised Monocular Depth Estimation with Rich-Resource Prior.
+- **链接**: [arXiv:2408.00361](https://arxiv.org/abs/2408.00361) · 📚 被引 7
+- **作者**: Wencheng Han, Jianbing Shen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> In the area of self-supervised monocular depth estimation, models that utilize rich-resource inputs, such as high-resolution and multi-frame inputs, typically achieve better performance than models that use ordinary single image input. However, these rich-resource inputs may not always be available, limiting the applicability of these methods in general scenarios. In this paper, we propose Rich-resource Prior Depth estimator (RPrDepth), which only requires single input image during the inference phase but can still produce highly accurate depth estimations comparable to rich resource based methods. Specifically, we treat rich-resource data as prior information and extract features from it as reference features in an offline manner. When estimating the depth for a single-image image, we search for similar pixels from the rich-resource features and use them as prior information to estimate the depth. Experimental results demonstrate that our model outperform other single-image model and can achieve comparable or even better performance than models with rich-resource inputs, only using low-resolution single-image input.
+
+</details>
+
+### Mono-ViFI: A Unified Learning Framework for Self-supervised Single and Multi-frame Monocular Depth Estimation.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72995-9_6) · 📚 被引 18
+- **作者**: Jinfeng Liu, Lingtong Kong, Bo Li, Zerong Wang, Hong Gu, Jinwei Chen
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+### Improving Domain Generalization in Self-supervised Monocular Depth Estimation via Stabilized Adversarial Training.
+- **链接**: [出版页](https://doi.org/10.1007/978-3-031-72691-0_11) · 📚 被引 3
+- **作者**: Yuanqi Yao, Gang Wu, Kui Jiang, Siao Liu, Jian Kuai, Xianming Liu et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: ECCV 2024
+
+<!-- COMPLETE v1 papers=104 -->
