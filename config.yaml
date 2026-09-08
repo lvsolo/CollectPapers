@@ -162,6 +162,51 @@ topics:
       - vehicle crashworthiness
       - engine control
 
+  - name: Mono 3D Detection
+    slug: mono-3d-detection
+    description: 单目 3D 检测（Monocular 3D Object Detection，含单目深度支撑的 3D 感知）
+    parent: [3d-detection, multi-camera-perception]   # 单目 3D 是 3D 检测/环视感知的子领域：命中时本领域优先归属
+    min_year: 2021     # 用户指定收录范围 2021-2026
+    weight: 1.2
+    keywords:
+      - monocular 3d object detection
+      - monocular 3d detection
+      - monocular 3d
+      - mono3d
+      - mono 3d
+      - monocular object detection
+      - monocular detection
+      - single-view 3d
+      - single image 3d
+      - 3d from a single image
+      - image-only 3d detection
+      - camera-only 3d object
+      - monocular 3d localization
+      - monocular bev
+      - monocular scene understanding
+      - pseudo-lidar
+      - pseudo lidar
+      - monocular velocity
+      - monocular 3d tracking
+      - monocular occupanc
+      # 支撑技术（单目 3D 的深度基础）
+      - monocular depth estimation
+      - self-supervised monocular depth
+      - monocular metric depth
+      - scale-aware monocular
+      # 代表方法系（标题常含）
+      - smoke
+      - monoDLE
+      - monoFlex
+      - monoRCNN
+      - PET
+      - MonoDETR
+    must_any: '\b(mono3d|mono.?3d|monocular|single.?view|single.?image|pseudo.?lidar)\b'
+    exclude:
+      - stereo
+      - event camera
+      - omnidirectional
+
   - name: 3D Detection
     slug: 3d-detection
     description: 3D 目标检测（LiDAR / 相机 / 多模态融合）

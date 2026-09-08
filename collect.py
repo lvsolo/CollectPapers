@@ -324,6 +324,17 @@ def generate_guidelines(bucket: dict, out_dir: Path) -> list[Path]:
     written = []
     classifier = Classifier(CONFIG["topics"])
     topic_by_slug = {t["slug"]: t for t in CONFIG["topics"]}
+    # topic 级 min_year（如 mono-3d 只收 2021+）：渲染前剔除过新年份
+    for slug in list(bucket.keys()):
+        my = topic_by_slug.get(slug, {}).get("min_year")
+        if my:
+            drop = [y for y in bucket[slug] if y < my]
+            for y in drop:
+                del bucket[slug][y]
+            if drop:
+                log(f"  [{slug}] min_year={my}: 跳过 {drop}")
+            if not bucket[slug]:
+                del bucket[slug]
     # 跨领域去重：同一篇论文（title 归一）只在一个领域完整展开，其余领域给链接
     primary_owner: dict[str, str] = {}   # norm_title -> slug（第一个收录的领域）
     for slug in sorted(bucket.keys()):
