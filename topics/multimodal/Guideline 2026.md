@@ -96,4 +96,25 @@
 - MVGGT: Multimodal Visual Geometry Grounded Transformer for Multiview 3D Referring Expression Segmentation → [multi-camera-perception](../multi-camera-perception/Guideline%202026.md)
 - Omni-View: Unlocking How Generation Facilitates Understanding in Unified 3D Model based on Multiview images → [multi-camera-perception](../multi-camera-perception/Guideline%202026.md)
 
-<!-- COMPLETE v1 papers=5 -->
+
+
+### ELSA3D: Elastic Semantic Anchoring for Unified 3D Understanding and Generation
+- **链接**: [arXiv:2607.06565](https://arxiv.org/abs/2607.06565)
+- **作者**: Tianjiao Yu, Xinzhuo Li, Yifan Shen, Onkar Susladkar, Yuanzhe Liu, Xiaona Zhou et al.
+- **🏷️ 机构**: （机构待查）
+- **会议**: NeurIPS 2026
+
+<details><summary>📄 arXiv 原始摘要（点击展开）</summary>
+
+> Unified 3D foundation models aspire to generate 3D assets and reason about them in language within a single backbone, but their text-3D interaction remains largely implicit. Existing methods concatenate text and 3D tokens into a flat sequence and rely on self-attention, collapsing coarse structural cues and fine geometric details into one undifferentiated representation. We introduce ELSA3D, a unified 3D model that addresses this with elastic semantic anchoring, structuring language and geometric reasoning jointly along matched abstraction scales. ELSA3D represents geometry with a scale-aware octree tokenizer and introduces Anchor Tokens, sparse cross-modal units that select semantic cues, route them to the most relevant 3D scale, retrieve scale-specific geometric evidence, and write the fused signal back into the unified representation, keeping interaction sparse yet precise. A lightweight per-block router makes both computation and reasoning elastic, choosing which text tokens instantiate anchors at which geometric scale so that cross-modal capacity concentrates where alignment is most needed. ELSA3D achieves state-of-the-art performance across image-to-3D generation, text-to-3D generation, and 3D captioning, outperforming the strongest unified baseline while roughly halving FLOPs and inference latency relative to the non-elastic version of the same model.
+
+</details>
+
+## 跨领域论文（完整笔记在其他领域）
+
+- Explore with Long-term Memory: A Benchmark and Multimodal LLM-based Reinforcement Learning Framework for Embodied Exploration → [vlm](../vlm/Guideline%202026.md)
+- Mimic Human Cognition, Master Multi-Image Reasoning: A Meta-Action Framework for Enhanced Visual Understanding → [mono-3d-detection](../mono-3d-detection/Guideline%202026.md)
+- MVGGT: Multimodal Visual Geometry Grounded Transformer for Multiview 3D Referring Expression Segmentation → [multi-camera-perception](../multi-camera-perception/Guideline%202026.md)
+- Omni-View: Unlocking How Generation Facilitates Understanding in Unified 3D Model based on Multiview images → [multi-camera-perception](../multi-camera-perception/Guideline%202026.md)
+
+<!-- COMPLETE v1 papers=6 -->
